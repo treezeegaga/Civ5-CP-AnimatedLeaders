@@ -1,0 +1,319 @@
+# Builds a multiplayer mod pack (pseudo-DLC) from an installed Community Patch, the same way
+# Gedemon's MP Modpacks Maker does, but offline:
+#   Override\CIV5Units.xml         the whole gameplay database as CP left it (schema + every row)
+#   Override\CIV5Units_Mongol.xml  text CP adds or changes, as <Replace> rows
+#   Override\<base file>.xml       empty files that stop the base game database XML from loading
+#   Mods\(1) Community Patch\...   CP's Lua, UI, art, audio and DLL
+#   UI\InGame.lua                  CP's InGame.lua with its InGameUIAddins listed by name
+#
+# Needs the game cache to hold a database built with Community Patch active: enable CP in the
+# Mods menu, click Next, then close the game without going back to the main menu.
+#
+#   powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 [-Install]
+param(
+    [string]$CivDir = "C:\Program Files (x86)\Steam\steamapps\common\Sid Meier's Civilization V",
+    [string]$MyGames = "$([Environment]::GetFolderPath('MyDocuments'))\My Games\Sid Meier's Civilization 5",
+    [string]$BaselineLocDb = (Join-Path $PSScriptRoot "data\baseline\Localization-Merged.vanilla.db"),
+    [string]$PackName = "MP_CPLeaderheads",
+    [string]$OutRoot = "$env:TEMP\cpmodpack\out",
+    [string]$GameDb = "",
+    [string]$LocDb = "",
+    [string]$Dll = "",   # gameplay DLL to ship; defaults to the one in CP's MODS folder
+    [switch]$LeaderheadsOff,   # ship MP_LEADERHEADS = 0 (the 2D diplomacy screens, for comparison tests)
+    [switch]$DryRun,   # allow a database built without CP, to test the export
+    [switch]$Install
+)
+
+$ErrorActionPreference = "Stop"
+. (Join-Path $PSScriptRoot "Sqlite.ps1")
+
+$cpDir = Join-Path $MyGames "MODS\(1) Community Patch"
+$cache = Join-Path $MyGames "cache"
+$snapshot = Join-Path $PSScriptRoot "data\cp-snapshot"
+
+# Every game launch rewrites the cache, so build from a snapshot taken while the cache last held a
+# full Community Patch database (CP's mod or this pack loaded).
+if (-not $GameDb) {
+    $cacheGameDb = Join-Path $cache "Civ5DebugDatabase.db"
+    $r = @(Invoke-SqliteQuery $cacheGameDb "SELECT (SELECT count(*) FROM sqlite_master WHERE type='table') AS n, (SELECT count(*) FROM sqlite_master WHERE name='CustomModOptions') AS cmo")
+    if ($r[0]["cmo"] -eq 1 -and $r[0]["n"] -gt 700) {
+        New-Item -ItemType Directory -Force $snapshot | Out-Null
+        Copy-Item $cacheGameDb (Join-Path $snapshot "Civ5DebugDatabase.db") -Force
+        Copy-Item (Join-Path $cache "Localization-Merged.db") (Join-Path $snapshot "Localization-Merged.db") -Force
+        Write-Output "== Snapshot taken from the cache ($($r[0]["n"]) tables)"
+    }
+    elseif (Test-Path (Join-Path $snapshot "Civ5DebugDatabase.db")) {
+        Write-Output "== Cache doesn't hold a Community Patch database; using the snapshot from $((Get-Item (Join-Path $snapshot "Civ5DebugDatabase.db")).LastWriteTime)"
+    }
+    $GameDb = Join-Path $snapshot "Civ5DebugDatabase.db"
+    if (-not $LocDb) { $LocDb = Join-Path $snapshot "Localization-Merged.db" }
+}
+$gameDb = $GameDb
+$locDb = if ($LocDb) { $LocDb } else { Join-Path $cache "Localization-Merged.db" }
+$out = Join-Path $OutRoot $PackName
+$utf8 = New-Object Text.UTF8Encoding($false)
+
+function Write-Step([string]$msg) { Write-Output "== $msg" }
+
+function Escape-Xml([string]$s) {
+    return $s.Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;").Replace('"', "&quot;")
+}
+
+function Get-Scalar([string]$db, [string]$sql) {
+    $r = @(Invoke-SqliteQuery $db $sql)
+    if ($r.Count -eq 0) { return $null }
+    return $r[0][0]
+}
+
+# ---------------------------------------------------------------------------------------------
+Write-Step "Checking the cached database was built with Community Patch"
+if ((Get-Scalar $gameDb "SELECT count(*) FROM sqlite_master WHERE type='table' AND name='CustomModOptions'") -ne 1) {
+    if (-not $DryRun) {
+        throw "The cached database has no CustomModOptions table, so it was not built with Community Patch. Enable CP in the Mods menu, click Next, then close the game without going back."
+    }
+    Write-Warning "Dry run: database was built without Community Patch"
+}
+else {
+    $mpLeaderheads = Get-Scalar $gameDb "SELECT Value FROM CustomModOptions WHERE Name='MP_LEADERHEADS'"
+    Write-Output "   MP_LEADERHEADS = $mpLeaderheads"
+    if ($mpLeaderheads -ne 1) { Write-Warning "MP_LEADERHEADS is not 1 in the cached database; the pack will have 3D MP leaders turned off." }
+}
+
+if (Test-Path $out) { Remove-Item -Recurse -Force $out }
+New-Item -ItemType Directory -Force (Join-Path $out "Override"), (Join-Path $out "UI"), (Join-Path $out "Mods") | Out-Null
+
+# ---------------------------------------------------------------------------------------------
+Write-Step "Exporting the gameplay database"
+# Some tables exist before any XML loads, and redefining one makes the XML loader abandon the whole
+# file. Same lists as CP's own Modpack Maker (ModpackMaker.lua): rewrite the rows of these without a
+# <Table> definition...
+$coreTables = @{}
+foreach ($n in "ArtDefine_LandmarkTypes", "ArtDefine_Landmarks", "ArtDefine_StrategicView", "ArtDefine_UnitInfoMemberInfos",
+    "ArtDefine_UnitInfos", "ArtDefine_UnitMemberCombatWeapons", "ArtDefine_UnitMemberCombats", "ArtDefine_UnitMemberInfos",
+    "Audio_2DSounds", "Audio_3DSounds", "Audio_ScriptTypes", "Audio_SoundLoadTypes", "Audio_SoundScapeElementScripts",
+    "Audio_SoundScapeElements", "Audio_SoundScapes", "Audio_SoundTypes", "Audio_Sounds", "Audio_SpeakerChannels",
+    "Map_Folders", "Map_Sizes", "Maps") { $coreTables[$n] = $true }
+# ...and leave these, which the engine fills in itself, alone.
+$engineTables = @("ApplicationInfo", "DownloadableContent", "MapScriptOptionPossibleValues", "MapScriptOptions",
+    "MapScriptRequiredDLC", "MapScripts", "ScannedFiles")
+$tables = @(Invoke-SqliteQuery $gameDb "SELECT name, sql FROM sqlite_master WHERE type='table' ORDER BY rowid") |
+    Where-Object { $_["name"] -notlike "sqlite_*" -and $engineTables -notcontains $_["name"] }
+# The loader abandons the rest of the file at the first failure, so write the core tables (rows
+# only) last: a problem there can't take the gameplay tables down with it.
+$tables = @($tables | Where-Object { -not $coreTables.ContainsKey($_["name"]) }) + @($tables | Where-Object { $coreTables.ContainsKey($_["name"]) })
+
+$sb = New-Object Text.StringBuilder (16MB)
+[void]$sb.Append("<?xml version=`"1.0`" encoding=`"utf-8`"?>`r`n<!-- Generated by Build-CPModpack.ps1 from the Community Patch game database -->`r`n<GameData>`r`n")
+$rowCount = 0
+foreach ($t in $tables) {
+    $name = $t["name"]
+    $createSql = [string]$t["sql"]
+    $cols = @(Invoke-SqliteQuery $gameDb "PRAGMA table_info('$name')")
+    $fks = @(Invoke-SqliteQuery $gameDb "PRAGMA foreign_key_list('$name')")
+
+    # Single-column UNIQUE constraints come back as automatic unique indexes.
+    $uniqueCols = @{}
+    foreach ($ix in @(Invoke-SqliteQuery $gameDb "PRAGMA index_list('$name')")) {
+        if ($ix["unique"] -eq 1 -and $ix["origin"] -eq "u") {
+            $ixCols = @(Invoke-SqliteQuery $gameDb "PRAGMA index_info('$($ix["name"])')")
+            if ($ixCols.Count -eq 1) { $uniqueCols[$ixCols[0]["name"]] = $true }
+        }
+    }
+
+    $isCore = $coreTables.ContainsKey($name)
+    if (-not $isCore) { [void]$sb.Append("`t<Table name=`"$name`">`r`n") }
+    $types = @{}
+    foreach ($c in $cols) {
+        $cn = $c["name"]
+        $type = ([string]$c["type"]).ToLower()
+        if ($type -eq "") { $type = "text" }
+        $types[$cn] = $type
+        $attrs = "name=`"$cn`" type=`"$type`""
+        if ($c["pk"] -gt 0) {
+            $attrs += " primarykey=`"true`""
+            if ($createSql -match "(?i)['`"]?$([regex]::Escape($cn))['`"]?\s+integer\s+primary\s+key\s+autoincrement") { $attrs += " autoincrement=`"true`"" }
+        }
+        if ($c["notnull"] -eq 1) { $attrs += " notnull=`"true`"" }
+        if ($uniqueCols.ContainsKey($cn)) { $attrs += " unique=`"true`"" }
+        if ($null -ne $c["dflt_value"]) {
+            $d = [string]$c["dflt_value"]
+            if ($d.Length -ge 2 -and (($d[0] -eq "'" -and $d[-1] -eq "'") -or ($d[0] -eq '"' -and $d[-1] -eq '"'))) { $d = $d.Substring(1, $d.Length - 2) }
+            $attrs += " default=`"$(Escape-Xml $d)`""
+        }
+        $fk = $fks | Where-Object { $_["from"] -eq $cn } | Select-Object -First 1
+        if ($fk) { $attrs += " reference=`"$($fk["table"])($($fk["to"]))`"" }
+        if (-not $isCore) { [void]$sb.Append("`t`t<Column $attrs/>`r`n") }
+    }
+    if (-not $isCore) { [void]$sb.Append("`t</Table>`r`n") }
+    [void]$sb.Append("`t<$name>`r`n`t`t<Delete/>`r`n")
+
+    foreach ($row in @(Invoke-SqliteQuery $gameDb "SELECT * FROM '$name' ORDER BY rowid")) {
+        [void]$sb.Append("`t`t<Row>")
+        foreach ($cn in $row.Keys) {
+            $v = $row[$cn]
+            if ($null -eq $v) { continue }
+            if ($types[$cn] -eq "boolean" -and ($v -is [long])) { $s = if ($v -ne 0) { "true" } else { "false" } }
+            elseif ($v -is [double]) { $s = $v.ToString("R", [Globalization.CultureInfo]::InvariantCulture) }
+            else { $s = Escape-Xml ([string]$v) }
+            [void]$sb.Append("<$cn>$s</$cn>")
+        }
+        [void]$sb.Append("</Row>`r`n")
+        $rowCount++
+    }
+    [void]$sb.Append("`t</$name>`r`n")
+}
+[void]$sb.Append("</GameData>`r`n")
+# The snapshot can come from a test run with the option switched off; the pack decides it here.
+$dbXml = $sb.ToString()
+$want = if ($LeaderheadsOff) { 0 } else { 1 }
+$optionRow = [regex]"<Name>MP_LEADERHEADS</Name><Value>\d+</Value>"
+if ($optionRow.IsMatch($dbXml)) {
+    $dbXml = $optionRow.Replace($dbXml, "<Name>MP_LEADERHEADS</Name><Value>$want</Value>")
+}
+else {
+    # Database built from a stock CP (without the patched NewCustomModOptions.xml): add the row.
+    $close = "`t</CustomModOptions>`r`n"
+    if (-not $dbXml.Contains($close)) { throw "No CustomModOptions table in the database" }
+    $dbXml = $dbXml.Replace($close, "`t`t<Row><Class>5</Class><Name>MP_LEADERHEADS</Name><Value>$want</Value></Row>`r`n$close")
+}
+Write-Output "   MP_LEADERHEADS shipped as $want"
+[IO.File]::WriteAllText((Join-Path $out "Override\CIV5Units.xml"), $dbXml, $utf8)
+Write-Output "   $($tables.Count) tables, $rowCount rows"
+
+# ---------------------------------------------------------------------------------------------
+Write-Step "Exporting text that Community Patch adds or changes"
+$tableFor = @{}
+foreach ($l in @(Invoke-SqliteQuery $locDb "SELECT Type, TableName FROM Languages")) { $tableFor[$l["Type"]] = $l["TableName"] }
+# Languages only lists en_US; the others use upper-case table names (Language_DE_DE, Language_ZH_HANT_HK).
+foreach ($tn in @(Invoke-SqliteQuery $locDb "SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'Language\_%' ESCAPE '\'" | ForEach-Object { $_["name"] })) {
+    foreach ($lang in @(Invoke-SqliteQuery $locDb "SELECT DISTINCT Language FROM LocalizedText" | ForEach-Object { $_["Language"] })) {
+        if (-not $tableFor.ContainsKey($lang) -and $tn -eq "Language_$($lang.ToUpper())") { $tableFor[$lang] = $tn }
+    }
+}
+$baseline = @{}
+foreach ($r in @(Invoke-SqliteQuery $BaselineLocDb "SELECT Language, Tag, Text, Gender, Plurality FROM LocalizedText")) {
+    $baseline["$($r['Language'])|$($r['Tag'])"] = "$($r['Text'])|$($r['Gender'])|$($r['Plurality'])"
+}
+$byLang = @{}
+foreach ($r in @(Invoke-SqliteQuery $locDb "SELECT Language, Tag, Text, Gender, Plurality FROM LocalizedText ORDER BY Language, Tag")) {
+    $key = "$($r['Language'])|$($r['Tag'])"
+    if ($baseline.ContainsKey($key) -and $baseline[$key] -eq "$($r['Text'])|$($r['Gender'])|$($r['Plurality'])") { continue }
+    if (-not $byLang.ContainsKey($r["Language"])) { $byLang[$r["Language"]] = New-Object Collections.ArrayList }
+    [void]$byLang[$r["Language"]].Add($r)
+}
+$tb = New-Object Text.StringBuilder (4MB)
+[void]$tb.Append("<?xml version=`"1.0`" encoding=`"utf-8`"?>`r`n<!-- Generated by Build-CPModpack.ps1: text Community Patch adds or changes -->`r`n<GameData>`r`n")
+$textCount = 0
+foreach ($lang in ($byLang.Keys | Sort-Object)) {
+    $tableName = $tableFor[$lang]
+    if (-not $tableName) { Write-Warning "No language table for $lang; skipping its text"; continue }
+    [void]$tb.Append("`t<$tableName>`r`n")
+    foreach ($r in $byLang[$lang]) {
+        [void]$tb.Append("`t`t<Replace Tag=`"$(Escape-Xml $r['Tag'])`"><Text>$(Escape-Xml $r['Text'])</Text>")
+        if ($null -ne $r["Gender"]) { [void]$tb.Append("<Gender>$(Escape-Xml $r['Gender'])</Gender>") }
+        if ($null -ne $r["Plurality"]) { [void]$tb.Append("<Plurality>$(Escape-Xml $r['Plurality'])</Plurality>") }
+        [void]$tb.Append("</Replace>`r`n")
+        $textCount++
+    }
+    [void]$tb.Append("`t</$tableName>`r`n")
+}
+[void]$tb.Append("</GameData>`r`n")
+[IO.File]::WriteAllText((Join-Path $out "Override\CIV5Units_Mongol.xml"), $tb.ToString(), $utf8)
+Write-Output "   $textCount strings in $($byLang.Count) languages"
+
+# ---------------------------------------------------------------------------------------------
+Write-Step "Blanking the base game database files"
+# Every XML under Assets whose root is <GameData>, except text-only files (kept, so all languages
+# survive) and scenario files (not used in MP). Matched by name, so one empty file covers the base
+# game, Expansion and Expansion2 copies.
+$ownPacks = "MPLeaderScreens|MPLeaderProbe|MPModsButton|$([regex]::Escape($PackName))"
+$blank = New-Object Collections.Generic.HashSet[string] ([StringComparer]::OrdinalIgnoreCase)
+foreach ($f in Get-ChildItem (Join-Path $CivDir "Assets") -Recurse -Filter *.xml -File) {
+    if ($f.FullName -match "\\DLC\\($ownPacks)\\" -or $f.FullName -match "\\Scenarios\\") { continue }
+    if ((Get-Content $f.FullName -TotalCount 40 | Out-String) -notmatch "<GameData") { continue }
+    $raw = [IO.File]::ReadAllText($f.FullName)
+    $isText = ($raw -match "<Language_") -and -not [regex]::IsMatch($raw, "<(?!Language_|Row|Update|Delete|Replace|Where|Set|Text|Gender|Plurality|GameData|/)[A-Za-z_]+[\s>]")
+    if (-not $isText) { [void]$blank.Add($f.Name) }
+}
+$blankCount = 0
+foreach ($n in $blank) {
+    $p = Join-Path $out "Override\$n"
+    if (-not (Test-Path $p)) { [IO.File]::WriteAllBytes($p, [byte[]]@()); $blankCount++ }
+}
+Write-Output "   $blankCount empty files"
+
+# ---------------------------------------------------------------------------------------------
+Write-Step "Copying Community Patch's UI, Lua, art, audio and DLL"
+$cpOut = Join-Path $out "Mods\(1) Community Patch"
+$copied = 0
+foreach ($dir in "Assets", "Core Files", "LUA", "Kit") {
+    foreach ($f in Get-ChildItem (Join-Path $cpDir $dir) -Recurse -File) {
+        $rel = $f.FullName.Substring($cpDir.Length + 1)
+        if ($rel -eq "Core Files\Overrides\InGame.lua") { continue }   # replaced by UI\InGame.lua below
+        $dst = Join-Path $cpOut $rel
+        New-Item -ItemType Directory -Force (Split-Path $dst) | Out-Null
+        Copy-Item $f.FullName $dst
+        $copied++
+    }
+}
+$dllSource = if ($Dll) { $Dll } else { Join-Path $cpDir "CvGameCore_Expansion2.dll" }
+Copy-Item $dllSource (Join-Path $cpOut "CvGameCore_Expansion2.dll")
+$copied++
+Write-Output "   DLL from $dllSource"
+Write-Output "   $copied files"
+
+# ---------------------------------------------------------------------------------------------
+Write-Step "Writing InGame.lua with CP's InGameUIAddins"
+[xml]$modinfo = Get-Content (Get-ChildItem $cpDir -Filter *.modinfo | Select-Object -First 1).FullName -Raw
+$addins = @($modinfo.Mod.EntryPoints.EntryPoint | Where-Object { $_.type -eq "InGameUIAddin" } | ForEach-Object { [IO.Path]::GetFileNameWithoutExtension($_.file) })
+$inGame = [IO.File]::ReadAllText((Join-Path $cpDir "Core Files\Overrides\InGame.lua"))
+$marker = '-- Modpacks will add "g_uiAddins[#g_uiAddins + 1] = fileName" lines below'
+if (-not $inGame.Contains($marker)) { throw "CP's InGame.lua no longer has the modpack marker line" }
+$lines = ($addins | ForEach-Object { "g_uiAddins[#g_uiAddins + 1] = `"$_`"" }) -join "`r`n"
+$inGame = $inGame.Replace($marker, "$marker`r`n$lines")
+[IO.File]::WriteAllText((Join-Path $out "UI\InGame.lua"), $inGame, $utf8)
+Write-Output "   $($addins.Count) addins: $($addins -join ', ')"
+
+# ---------------------------------------------------------------------------------------------
+Write-Step "Writing the package file"
+# Priority 300 puts the pack above Expansion2 (200), so its CvGameCore_Expansion2.dll, Lua and
+# Override files win by name. SteamApp and Key are Brave New World's, as in CP's own Modpack Maker
+# (CvGame::CreateMPMP): without them the pack can drop out of the DLC set when hosting MP, which
+# swaps the DLL mid-setup and crashes reading the PreGame stream.
+$pkg = @"
+<?xml version="1.0" encoding="utf-8"?>
+<Civ5Package>
+	<GUID>{3C2A6E58-9F0B-4C61-A7D4-2B1E8F5C9D70}</GUID>
+	<SteamApp>235580</SteamApp>
+	<Version>1</Version>
+	<Priority>300</Priority>
+	<Key>bf6d34a0074b7ad4b1d1716475f7f7fe</Key>
+	<PTags>
+		<Tag>Version</Tag>
+	</PTags>
+	<Name>
+		<Value language="en_US">Community Patch MP Pack (3D leaders)</Value>
+	</Name>
+	<Description>
+		<Value language="en_US">Community Patch 5.4.8 as a multiplayer mod pack, with 3D leader scenes for AI diplomacy in network MP.</Value>
+	</Description>
+	<UISkin name="Expansion2Primary" set="Expansion2" platform="Common">
+		<GameplaySkin>
+			<Directory>Mods</Directory>
+			<Directory>UI</Directory>
+		</GameplaySkin>
+	</UISkin>
+</Civ5Package>
+"@
+[IO.File]::WriteAllText((Join-Path $out "$PackName.Civ5Pkg"), $pkg, $utf8)
+
+$size = (Get-ChildItem $out -Recurse -File | Measure-Object Length -Sum).Sum
+Write-Output ("Built {0} ({1:N1} MB)" -f $out, ($size / 1MB))
+
+if ($Install) {
+    $dst = Join-Path $CivDir "Assets\DLC\$PackName"
+    if (Get-Process -Name CivilizationV_DX11, CivilizationV, CivilizationV_Tablet -ErrorAction SilentlyContinue) { throw "Civ V is running. Close it before installing." }
+    if (Test-Path $dst) { Remove-Item -Recurse -Force $dst }
+    Copy-Item -Recurse $out $dst
+    Write-Output "Installed to $dst"
+}

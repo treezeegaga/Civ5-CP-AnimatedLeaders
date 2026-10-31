@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Same shape as EUI's UI_bc1/EUI_2.Civ5Pkg: a Skin-only UISkin that adds a directory to
+     Brave New World's skin. A GameplaySkin block here would replace BNW's styles and fonts. -->
+<Civ5Package>
+	<GUID>{802FF2D7-9542-4AE9-ADC8-0640B1FC59B1}</GUID>
+	<Version>1</Version>
+	<Priority>250</Priority>
+	<PTags>
+		<Tag>Version</Tag>
+	</PTags>
+	<Name>
+		<Value language="en_US">MP Leader Screens</Value>
+	</Name>
+	<Description>
+		<Value language="en_US">Shows 2D leader art behind AI diplomacy screens in network multiplayer.</Value>
+	</Description>
+
+	<UISkin name="Expansion2Primary" set="Expansion2" platform="Common">
+		<Skin>
+			<Directory>UI</Directory>
+		</Skin>
+	</UISkin>
+
+</Civ5Package>

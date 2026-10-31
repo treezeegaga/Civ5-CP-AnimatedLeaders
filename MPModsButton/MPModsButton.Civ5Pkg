@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shows the Mods menu's Multiplayer button, which Firaxis hid in ModsMenu.lua. Same shape as
+     EUI's UI_bc1/EUI_2.Civ5Pkg: a Skin-only UISkin that adds a directory to Brave New World's skin. -->
+<Civ5Package>
+	<GUID>{FF6FB1EE-6C54-4F57-A18E-AD1DBD89A42C}</GUID>
+	<Version>1</Version>
+	<Priority>250</Priority>
+	<PTags>
+		<Tag>Version</Tag>
+	</PTags>
+	<Name>
+		<Value language="en_US">Mods Multiplayer Button</Value>
+	</Name>
+	<Description>
+		<Value language="en_US">Shows the hidden Multiplayer button in the Mods menu.</Value>
+	</Description>
+
+	<UISkin name="Expansion2Primary" set="Expansion2" platform="Common">
+		<Skin>
+			<Directory>UI</Directory>
+		</Skin>
+	</UISkin>
+
+</Civ5Package>

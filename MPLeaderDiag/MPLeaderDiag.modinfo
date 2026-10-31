@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="4baf72e4-04d3-470b-9142-fb1612216561" version="1">
+  <Properties>
+    <Name>MP Leaderheads Diagnostics</Name>
+    <Teaser>Logs the leader screen state for testing the MP Leaderheads DLL.</Teaser>
+    <Description>Testing aid. Logs the game state when a leader screen opens, and can request leader scene preloads. Writes to Lua.log.</Description>
+    <Authors>treezeegaga</Authors>
+    <HideSetupGame>0</HideSetupGame>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>1</SupportsMultiplayer>
+    <SupportsHotSeat>1</SupportsHotSeat>
+    <SupportsMac>1</SupportsMac>
+    <ReloadAudioSystem>0</ReloadAudioSystem>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+  </Properties>
+  <Dependencies />
+  <References />
+  <Blocks />
+  <Files>
+    <File md5="455CAE0D948944B265B74EE97F3411D6" import="0">MPLeaderDiag.lua</File>
+    <File md5="A7A556ECB4F4B29107BE7D8354D91C2A" import="0">MPLeaderDiag.xml</File>
+  </Files>
+  <EntryPoints>
+    <EntryPoint type="InGameUIAddin" file="MPLeaderDiag.xml">
+      <Name>MP Leaderheads Diagnostics</Name>
+      <Description>Leader screen state logging</Description>
+    </EntryPoint>
+  </EntryPoints>
+</Mod>

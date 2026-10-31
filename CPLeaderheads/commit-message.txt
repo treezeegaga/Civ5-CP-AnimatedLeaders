@@ -1,0 +1,12 @@
+Show 3D leader scenes for AI diplomacy in network MP
+
+The EXE's leaderhead system asks ICvPreGame1::isNetworkMultiplayerGame
+whether to run and bails in network MP. Answer "not MP" to just its four
+call sites (enter/leave leader view, preload scene, activate scene) for
+the DX11, DX9 and Tablet EXEs. Gameplay code reads CvPreGame directly,
+so synced state is untouched.
+
+Also request AI leader scene preloads at the start of the local
+player's turn in network MP, since the EXE only does that in SP.
+
+New CustomModOption MP_LEADERHEADS (default 1).

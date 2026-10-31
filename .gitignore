@@ -1,0 +1,10 @@
+# Game databases (Firaxis data; rebuilt from your own install)
+CPModpack/data/
+
+# Binaries: built DLLs and PDBs, stock CP backups, release zips (the zip ships as a release asset)
+CPLeaderheads/build/
+CPLeaderheads/backup/
+*.zip
+
+# Third-party NuGet package used by tools/re (download Iced 1.21.0 from NuGet)
+tools/re/iced/
