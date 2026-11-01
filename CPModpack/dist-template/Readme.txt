@@ -1,5 +1,5 @@
-Community Patch MP pack - with 3D leader screens
-=================================================
+CP with Animated Leaders
+========================
 
 Community Patch 5.4.8 for multiplayer, plus animated 3D leaders when you talk to AI
 civilizations in multiplayer games.
@@ -30,4 +30,4 @@ CREDITS AND LICENSE
   Source code of the modified DLL:
   https://github.com/treezeegaga/Community-Patch-DLL/tree/mp-leaderheads
   Pack builder and installer:
-  https://github.com/treezeegaga/Civ5-MP-Leaderheads
+  https://github.com/treezeegaga/Civ5-CP-AnimatedLeaders

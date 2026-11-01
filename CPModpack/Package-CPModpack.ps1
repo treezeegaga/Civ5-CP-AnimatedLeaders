@@ -1,15 +1,15 @@
 # Packages a built mod pack into a one-click zip for other players:
-#   CP-MP-Leaderheads\Install.bat, Uninstall.bat, Readme.txt
-#   CP-MP-Leaderheads\files\install.ps1, PackVersion.txt, MP_CPLeaderheads\...
+#   CP-Animated-Leaders\Install.bat, Uninstall.bat, Readme.txt
+#   CP-Animated-Leaders\files\install.ps1, PackVersion.txt, MP_CPLeaderheads\...
 #
 #   powershell -ExecutionPolicy Bypass -File CPModpack\Package-CPModpack.ps1
 param(
     [string]$PackDir = "$env:TEMP\cpmodpack\out\MP_CPLeaderheads",
-    [string]$OutZip = (Join-Path $PSScriptRoot "CP-MP-Leaderheads.zip")
+    [string]$OutZip = (Join-Path $PSScriptRoot "CP-Animated-Leaders.zip")
 )
 
 $ErrorActionPreference = "Stop"
-$name = "CP-MP-Leaderheads"
+$name = "CP-Animated-Leaders"
 $stage = "$env:TEMP\cpmodpack\dist"
 $root = Join-Path $stage $name
 

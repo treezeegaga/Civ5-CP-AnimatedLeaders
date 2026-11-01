@@ -1,6 +1,6 @@
-# Community Patch MP pack (3D leaders): build tools
+# CP with Animated Leaders: build tools
 
-`CP-MP-Leaderheads.zip` is what players get: unzip, double-click `Install.bat`.
+`CP-Animated-Leaders.zip` is what players get: unzip, double-click `Install.bat`.
 
 ## Rebuilding
 
@@ -12,7 +12,7 @@
 2. Build and package:
 
    ```
-   powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll CPLeaderheads\build\CvGameCore_Expansion2.msvc-final.dll
+   powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll CPLeaderheads\build\CvGameCore_Expansion2.msvc-coredrive.dll
    powershell -ExecutionPolicy Bypass -File CPModpack\Package-CPModpack.ps1
    ```
 
@@ -29,7 +29,7 @@ Same layout as CP's own Modpack Maker (`(5) Modpack Maker for VP` and `CvGame::C
 | `Override\CIV5Units_Mongol.xml` | Text CP adds or changes, as `<Replace>` rows |
 | `Override\*.xml` (empty) | Stops the base game database files loading |
 | `Mods\(1) Community Patch\` | CP's Lua, UI, art, audio, and the patched DLL |
-| `UI\InGame.lua` | CP's InGame.lua with its InGameUIAddins listed at the modpack marker |
+| `UI\InGame.lua` | CP's InGame.lua with its InGameUIAddins listed at the modpack marker, plus a per-frame call to `Game.UpdateCoreInLeaderScene` on the leader screen |
 | `MP_CPLeaderheads.Civ5Pkg` | Priority 300, Brave New World's SteamApp/Key |
 
 Things learned the hard way:
@@ -41,6 +41,10 @@ Things learned the hard way:
 
 ## Known behaviour
 
-While a 3D leader screen is open in MP, the local game core stops updating (0 updates/s in game
-state 12, measured with `probe\MPLeaderTick.lua`) and catches up afterwards. Other players keep
-playing. CP's 2D screen keeps updating (~9/s). See `..\CPLeaderheads\README.md` for the DLL side.
+The base game pauses its game core on the leader screen. The pack keeps it running in MP: the
+`UI\InGame.lua` snippet drives it each frame while the game state is 12 (the leader view), at the
+same 9-10 updates a second as the map, measured with `probe\MPLeaderTick.lua`. See
+`..\CPLeaderheads\README.md` for the DLL side.
+
+Lua.log shows `Error loading VPUI_loader.lua` from CP's tooltip script (that file is part of
+Vox Populi's UI, which this pack doesn't include); it is harmless.

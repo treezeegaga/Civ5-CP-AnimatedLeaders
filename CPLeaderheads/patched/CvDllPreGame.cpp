@@ -341,59 +341,152 @@ bool CvDllPreGame::isMinorCiv(PlayerTypes p)
 //   - the leader message handler: activate a loaded scene and play its animation
 // Answering "not network MP" to just these call sites enables 3D leaders in MP. Gameplay code
 // reads CvPreGame directly and never comes through here, so nothing synced is affected.
-// Addresses are return addresses at the EXE's preferred image base (0x400000), one row per
-// binary variant, ordered as above.
-static const DWORD s_aLeaderheadCallSitesDX11[4] = { 0x0051b2cc, 0x005db1ab, 0x005985d1, 0x006ec841 };
-static const DWORD s_aLeaderheadCallSitesDX9[4] = { 0x007b24ac, 0x00428ecb, 0x00460781, 0x0049d3e1 };
-static const DWORD s_aLeaderheadCallSitesTablet[4] = { 0x006ce90c, 0x0079977b, 0x004f15c1, 0x0072d6e1 };
+//
+// Taking the single player path when entering the leader view also pauses the game core thread:
+// the EXE increments a counter (InterlockedIncrement) that the game core update loop checks
+// before calling CvDllGame::Update, and the leader view's End decrements it again if it is
+// non-zero. The increment follows the enter site directly with no call back into the DLL in
+// between, so in network MP the counter is set to -1 there and the increment brings it back to 0.
+// As a safety net it is also cleared at the activate and leave sites.
+//
+// That alone is not enough: only the map view's Update (GameViewState) runs the game core. Each
+// frame it adds the frame time to a timer and, once the timer passes the update interval, calls
+// the EXE function that schedules the "Game Core" task (or runs CvGame::update directly on a
+// single core). The leader view never does, so in network MP this player's simulation would stop
+// for as long as they talk. UpdateGameCoreInLeaderScene does the same thing while a leader scene
+// is up; the in-game UI calls it every frame through Game.UpdateCoreInLeaderScene.
+//
+// Addresses are at the EXE's preferred image base (0x400000), one entry per binary variant: the
+// return addresses of the four call sites, ordered as above, the pause counter, the application
+// global (the map view object is at +0x1460), the map view's game core timer, and the function
+// that runs the game core.
+enum LeaderheadCallSite
+{
+	LEADERHEAD_SITE_ENTER,
+	LEADERHEAD_SITE_LEAVE,
+	LEADERHEAD_SITE_PRELOAD,
+	LEADERHEAD_SITE_ACTIVATE,
+	NUM_LEADERHEAD_SITES
+};
+struct LeaderheadExeAddresses
+{
+	DWORD aCallSites[NUM_LEADERHEAD_SITES];
+	DWORD uiPauseCounter;
+	DWORD uiAppGlobal;
+	DWORD uiGameCoreTimer;
+	DWORD uiRunGameCore;
+};
+static const LeaderheadExeAddresses s_kLeaderheadDX11 = { { 0x0051b2cc, 0x005db1ab, 0x005985d1, 0x006ec841 }, 0x02de044c, 0x00cc8e74, 0x00ccf91c, 0x0053af10 };
+static const LeaderheadExeAddresses s_kLeaderheadDX9 = { { 0x007b24ac, 0x00428ecb, 0x00460781, 0x0049d3e1 }, 0x02dd024c, 0x00cb8cf4, 0x00cbf764, 0x00535b30 };
+static const LeaderheadExeAddresses s_kLeaderheadTablet = { { 0x006ce90c, 0x0079977b, 0x004f15c1, 0x0072d6e1 }, 0x02de2434, 0x00cca8f0, 0x00cd139c, 0x005ddc50 };
 
-static bool IsLeaderheadCallSite(void* pReturnAddress)
+static const LeaderheadExeAddresses* s_pLeaderheadAddresses = NULL;
+static DWORD s_uiLeaderheadExeBase = 0;
+// Set at the enter site and cleared at the leave site, in network MP only.
+static bool s_bInLeaderScene = false;
+
+static void InitLeaderheadAddresses()
 {
 #ifdef WIN32
 	// The EXE can't change while the DLL is loaded, so work out the variant once.
-	static const DWORD* s_pCallSites = NULL;
-	static DWORD s_uiBaseAddr = 0;
 	static bool s_bInitialized = false;
-	if (!s_bInitialized)
+	if (s_bInitialized)
+		return;
+	char moduleName[1024];
+	if (GetModuleFileName(NULL, moduleName, sizeof(moduleName)))
 	{
-		char moduleName[1024];
-		if (GetModuleFileName(NULL, moduleName, sizeof(moduleName)))
-		{
-			size_t len = strlen(moduleName);
-			if (len >= 17 && _stricmp(moduleName + len - 17, "CivilizationV.exe") == 0)
-				s_pCallSites = s_aLeaderheadCallSitesDX9;
-			else if (len >= 22 && _stricmp(moduleName + len - 22, "CivilizationV_DX11.exe") == 0)
-				s_pCallSites = s_aLeaderheadCallSitesDX11;
-			else if (len >= 24 && _stricmp(moduleName + len - 24, "CivilizationV_Tablet.exe") == 0)
-				s_pCallSites = s_aLeaderheadCallSitesTablet;
-		}
-		s_uiBaseAddr = (DWORD)GetModuleHandleA(NULL);
-		s_bInitialized = true;
+		size_t len = strlen(moduleName);
+		if (len >= 17 && _stricmp(moduleName + len - 17, "CivilizationV.exe") == 0)
+			s_pLeaderheadAddresses = &s_kLeaderheadDX9;
+		else if (len >= 22 && _stricmp(moduleName + len - 22, "CivilizationV_DX11.exe") == 0)
+			s_pLeaderheadAddresses = &s_kLeaderheadDX11;
+		else if (len >= 24 && _stricmp(moduleName + len - 24, "CivilizationV_Tablet.exe") == 0)
+			s_pLeaderheadAddresses = &s_kLeaderheadTablet;
 	}
-	if (s_pCallSites == NULL)
-		return false;
-
-	// Same rebasing as CvDllGame::InitExeStuff: preferred-base address -> RVA -> actual address.
-	DWORD uiReturnAddr = (DWORD)pReturnAddress;
-	for (int i = 0; i < 4; i++)
-	{
-		if (uiReturnAddr == s_uiBaseAddr + (s_pCallSites[i] - 0x400000))
-			return true;
-	}
-#else
-	(void)pReturnAddress;
+	s_uiLeaderheadExeBase = (DWORD)GetModuleHandleA(NULL);
+	s_bInitialized = true;
 #endif
-	return false;
+}
+
+// Same rebasing as CvDllGame::InitExeStuff: preferred-base address -> RVA -> actual address.
+static DWORD RebaseLeaderheadAddress(DWORD uiPreferred)
+{
+	return s_uiLeaderheadExeBase + (uiPreferred - 0x400000);
+}
+
+// Which leaderhead call site (LeaderheadCallSite) a return address belongs to, or -1.
+static int GetLeaderheadCallSite(void* pReturnAddress)
+{
+	InitLeaderheadAddresses();
+	if (s_pLeaderheadAddresses == NULL)
+		return -1;
+
+	DWORD uiReturnAddr = (DWORD)pReturnAddress;
+	for (int i = 0; i < NUM_LEADERHEAD_SITES; i++)
+	{
+		if (uiReturnAddr == RebaseLeaderheadAddress(s_pLeaderheadAddresses->aCallSites[i]))
+			return i;
+	}
+	return -1;
 }
 
 bool CvDllPreGame::isNetworkMultiplayerGame()
 {
 	// Check the call site first: it is cheap and false for every caller but four, so
 	// gCustomMods is only read from inside a running game.
-	if (IsLeaderheadCallSite(LEADERHEAD_RETURN_ADDRESS()) && MOD_MP_LEADERHEADS)
+	int iSite = GetLeaderheadCallSite(LEADERHEAD_RETURN_ADDRESS());
+	if (iSite >= 0 && MOD_MP_LEADERHEADS)
+	{
+		if (iSite != LEADERHEAD_SITE_PRELOAD && CvPreGame::isNetworkMultiplayerGame())
+		{
+			volatile LONG* pPauseCounter = reinterpret_cast<volatile LONG*>(RebaseLeaderheadAddress(s_pLeaderheadAddresses->uiPauseCounter));
+			InterlockedExchange(pPauseCounter, iSite == LEADERHEAD_SITE_ENTER ? -1 : 0);
+			if (iSite == LEADERHEAD_SITE_ENTER)
+				s_bInLeaderScene = true;
+			else if (iSite == LEADERHEAD_SITE_LEAVE)
+				s_bInLeaderScene = false;
+		}
 		return false;
+	}
 
 	return CvPreGame::isNetworkMultiplayerGame();
+}
+
+// Runs the game core the way the map view's Update does (see above). Main thread only.
+void UpdateGameCoreInLeaderScene(float fDeltaTime)
+{
+#ifdef WIN32
+	if (!s_bInLeaderScene || s_pLeaderheadAddresses == NULL || !MOD_MP_LEADERHEADS || !CvPreGame::isNetworkMultiplayerGame())
+		return;
+
+	char* pApp = *reinterpret_cast<char**>(RebaseLeaderheadAddress(s_pLeaderheadAddresses->uiAppGlobal));
+	if (pApp == NULL)
+		return;
+	void* pGameView = *reinterpret_cast<void**>(pApp + 0x1460);
+	if (pGameView == NULL)
+		return;
+
+	// __thiscall functions, called as __fastcall with an unused edx.
+	typedef float (__fastcall *GetIntervalFn)(void* pThis, void* pUnused);
+	typedef bool (__fastcall *IsBlockedFn)(void* pThis, void* pUnused);
+	typedef void (__fastcall *RunGameCoreFn)(void* pThis, void* pUnused, int bArg);
+	void** pVtable = *reinterpret_cast<void***>(pGameView);
+	GetIntervalFn pGetInterval = reinterpret_cast<GetIntervalFn>(pVtable[0x198 / sizeof(void*)]);
+	IsBlockedFn pIsBlocked = reinterpret_cast<IsBlockedFn>(pVtable[0x3a4 / sizeof(void*)]);
+	RunGameCoreFn pRunGameCore = reinterpret_cast<RunGameCoreFn>(RebaseLeaderheadAddress(s_pLeaderheadAddresses->uiRunGameCore));
+
+	float* pfTimer = reinterpret_cast<float*>(RebaseLeaderheadAddress(s_pLeaderheadAddresses->uiGameCoreTimer));
+	bool bBlocked = pIsBlocked(pGameView, NULL);
+	*pfTimer += fDeltaTime;
+	if (*pfTimer > pGetInterval(pGameView, NULL))
+	{
+		if (!bBlocked)
+			pRunGameCore(pGameView, NULL, 1);
+		*pfTimer = 0.0f;
+	}
+#else
+	(void)fDeltaTime;
+#endif
 }
 //------------------------------------------------------------------------------
 bool CvDllPreGame::isPitBoss()

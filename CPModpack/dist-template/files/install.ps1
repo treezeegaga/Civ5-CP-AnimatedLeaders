@@ -1,11 +1,11 @@
-# Installs or removes the Community Patch MP pack (3D leaders) for Civilization V.
+# Installs or removes CP with Animated Leaders for Civilization V.
 # Run through Install.bat / Uninstall.bat.
 param([switch]$Uninstall, [string]$CivDir = "")
 
 $ErrorActionPreference = "Stop"
 $PackName = "MP_CPLeaderheads"
 $here = $PSScriptRoot
-$Host.UI.RawUI.WindowTitle = "Community Patch MP pack (3D leaders)"
+$Host.UI.RawUI.WindowTitle = "CP with Animated Leaders"
 
 function Finish([int]$code) {
     Write-Host ""
@@ -51,7 +51,7 @@ function Find-CivDir {
 
 try {
     Say ""
-    Say "=== Community Patch MP pack (3D leaders) ===" Cyan
+    Say "=== CP with Animated Leaders ===" Cyan
     $version = (Get-Content (Join-Path $here "PackVersion.txt") -ErrorAction SilentlyContinue | Select-Object -First 1)
     if ($version) { Say "Pack version: $version" }
     Say ""

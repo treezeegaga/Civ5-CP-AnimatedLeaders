@@ -271,6 +271,20 @@ $marker = '-- Modpacks will add "g_uiAddins[#g_uiAddins + 1] = fileName" lines b
 if (-not $inGame.Contains($marker)) { throw "CP's InGame.lua no longer has the modpack marker line" }
 $lines = ($addins | ForEach-Object { "g_uiAddins[#g_uiAddins + 1] = `"$_`"" }) -join "`r`n"
 $inGame = $inGame.Replace($marker, "$marker`r`n$lines")
+# Only the map view runs the game core, so while a 3D leader scene (game state 12) is up in network
+# MP, the DLL's Game.UpdateCoreInLeaderScene runs it instead, every frame.
+$inGame += @"
+
+-- CP with Animated Leaders: keep the game core running while a 3D leader scene is up in network
+-- multiplayer. Game state 12 is the leader view.
+if Game.UpdateCoreInLeaderScene and Game.IsNetworkMultiPlayer() then
+	Events.LocalMachineAppUpdate.Add( function( tickCount, timeIncrement )
+		if UI.GetCurrentGameState() == 12 then
+			Game.UpdateCoreInLeaderScene( timeIncrement );
+		end
+	end );
+end
+"@.Replace("`r`n", "`n").Replace("`n", "`r`n")
 [IO.File]::WriteAllText((Join-Path $out "UI\InGame.lua"), $inGame, $utf8)
 Write-Output "   $($addins.Count) addins: $($addins -join ', ')"
 
@@ -292,7 +306,7 @@ $pkg = @"
 		<Tag>Version</Tag>
 	</PTags>
 	<Name>
-		<Value language="en_US">Community Patch MP Pack (3D leaders)</Value>
+		<Value language="en_US">CP with Animated Leaders</Value>
 	</Name>
 	<Description>
 		<Value language="en_US">Community Patch 5.4.8 as a multiplayer mod pack, with 3D leader scenes for AI diplomacy in network MP.</Value>
