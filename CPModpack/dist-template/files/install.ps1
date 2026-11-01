@@ -141,6 +141,9 @@ try {
     Say "  2. Multiplayer > Internet or LAN > host or join a NEW game."
     Say "     (Old saves from the unmodded game can't be loaded with this pack.)"
     Say "  3. Everyone in the game needs this same pack. Compare the pack version above."
+    Say "  4. Everyone must also start the game the same way when Steam asks:" Yellow
+    Say "     all pick the DirectX 11 option (recommended). Mixing DirectX 9 and 11" Yellow
+    Say "     in one game crashes it when the first turn ends." Yellow
     Say ""
     Say "To go back to the normal game, run Uninstall.bat."
     Finish 0

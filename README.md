@@ -8,7 +8,9 @@ Community Patch 5.4.8, shipped as a one-click mod pack.
 **[CP-Animated-Leaders.zip](https://github.com/treezeegaga/Civ5-CP-AnimatedLeaders/releases/latest/download/CP-Animated-Leaders.zip)**
 (latest release). Needs Civilization V with all expansions and DLC. Unzip, double-click
 `Install.bat`, then play multiplayer without enabling any mods. Everyone in a game needs the same
-pack version, which the installer shows.
+pack version, which the installer shows, and everyone must start Civ V with the same DirectX
+version (pick the DirectX 11 option when Steam asks): mixing DirectX 9 and 11 crashes the game
+when the first turn ends.
 
 ## Credits and license
 
@@ -42,7 +44,10 @@ fails to load.
 ## Status
 
 - Working: 3D leaders in network MP, and the game keeps running while a leader screen is open
-  (9-10 game core updates a second, same as the map). Tested solo on LAN with the DX9 EXE;
-  one-click zip build `5F2D34BF`.
-- Not yet done: a test with a second human player; the DX11 and Tablet EXEs (their addresses
-  were found by signature).
+  (9-10 game core updates a second, same as the map). One-click zip build `5F2D34BF`.
+- Tested on LAN with two humans on two PCs, both on the DX9 EXE: 15 turns, no crash or desync.
+  The turn change waits until whoever is on a 3D leader screen leaves it (intended: the turn
+  shouldn't end mid-diplomacy).
+- Known: one PC on DX9 and another on DX11 crashes the DX9 PC when turn 0 ends (the EXE's net
+  message handler hits an unknown type id). Everyone has to use the same DirectX version.
+- Not yet tested in game: the DX11 and Tablet EXEs (their addresses were found by signature).

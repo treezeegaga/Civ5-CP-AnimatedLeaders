@@ -15,6 +15,9 @@ PLAY
   - Multiplayer > Internet or LAN > host or join a NEW game.
   - Old saves from the unmodded game won't load while the pack is installed.
   - Everyone in the game needs the same pack version (shown by the installer).
+  - Everyone must start the game with the same DirectX version. When Steam asks how to
+    launch, all pick the DirectX 11 option (recommended). Mixing DirectX 9 and 11 in one game
+    crashes it when the first turn ends.
 
 UNINSTALL
   Double-click Uninstall.bat to go back to the normal game.
