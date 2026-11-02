@@ -148,7 +148,7 @@ install one. Each C build includes everything before it unless noted. All change
 | c6 | `5ef069e` | greedy tall civs: army cap of cities + 1 | 3 | 46.5% ± 2.1 | 88% | worse, 0-3. Greedy civs drew wars |
 | c7 | `0b3dda2` | greedy tall build order; warmongers target the greediest neighbour | 1 | 45.3% | | worse (cap still on) |
 | c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
-| c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | see below | | | |
+| c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 1 | 52.9% | | ahead in its first game; needs more games |
 
 What each build does, in detail:
 - **c1:** candidate `GetOpeningBook()`:
@@ -214,8 +214,29 @@ What each build does, in detail:
 
 ### c7c results
 
-c7c game 1 was running when this file was written (logging on); its result is added below if it finished
-before the handover.
+**Game 1** (`0222211E`, logging on): **c 52.9%** strength (no-military 52.8%), score c 580 vs b 560.
+Its first launch failed ("main menu never showed"), and the retry ran normally.
+
+| | Civs |
+|---|---|
+| **c** | China (warmonger, wide); Egypt, Sweden, India (tall, greedy) |
+| **b** | Mongols, Polynesia, Iroquois (wide); Ethiopia (tall) |
+
+- **The can-win check delayed the war.** China picked the Iroquois at T55 ("warmonger timing attack,
+  greediest neighbour") but only declared at T81, 26 turns later, presumably waiting until the check
+  passed.
+  - It attempted Osininka from T81 to T102, with expected damage per turn of 55, 128, 73 and then 38
+    against 200 needed. The usual bleed-out.
+  - No city changed hands in the whole game.
+  - China still finished with 6 cities, 52 population (the most) and military 194.
+- **The greedy tall civs were left alone this time.**
+  - Nobody declared on Egypt, Sweden or India. The only other war was India declaring on China at T144.
+  - Egypt reached 6 cities, Sweden 47 population. The c7c closed-borders rule was in force.
+- **The b Mongols stalled.** They were stuck on 8 techs from T60 to T150 and ended with 13 population and
+  5 cities. That flatters c's share; the cause wasn't investigated.
+- **Ethiopia (b) led on score (795)** through religion: first pantheon T10, first religion T37. It had
+  4 cities but military 235. Polynesia (b) founded the other religion; c founded none.
+- **One game is not a verdict.** c7c needs about 5 more games, with logging off after game 2.
 
 ## City captures
 

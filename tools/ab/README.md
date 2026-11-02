@@ -111,7 +111,7 @@ searches more positions in battles of up to 9 units, so if AI turns feel slower 
   became c1's candidate bundle instead.
 - **C builds c1–c7c** (fork branch `claude/ab-c1`) are listed in [RESULTS.md](RESULTS.md).
   - **Best so far: c4 (`ea22df3`)**, 5-1 at 51.6% ± 1.1, p 10%. It is not frozen.
-  - **Newest: c7c (`2e9fad1`).**
+  - **Newest: c7c (`2e9fad1`)**, 52.9% in its 1 game.
 
 ### Installing a C build
 
