@@ -38,6 +38,20 @@ fine; games shorter than 100 turns aren't counted.
   Never play multiplayer with the test pack.
 - A specific build instead of the newest: `-Release ab-<commit>` (e.g. `ab-80746d8`).
 
+### Unattended games
+
+`tools\ab\Run-Games.ps1` plays test games back to back with nobody at the keyboard: it starts Civ V
+windowed, clicks through the setup (ticking Quick Combat and Quick Movement, which Civ doesn't remember),
+moves the window to the left half of the screen, stops each game at turn 150 (`-StopTurn`) and logs one
+line per game to `tools\ab\Run-Games.log`. Create `tools\ab\STOP` to stop after the current game. It needs
+the test pack installed (`Run-ABTest.ps1 -NoLaunch`), windowed mode in `GraphicsSettingsDX9.ini`
+(`FullScreen = 0`, `WindowResX = 1914`, `WindowResY = 2034`) and the setup screen already on Prince,
+Standard, Quick and 8 civs on separate teams. Its click positions are for a 3840x2160 screen at 150%.
+
+With `LoggingEnabled = 1` and `AILog = 1` in `config.ini`, test games write Civ's AI logs, and
+`tools\ab\Digest-ABLogs.ps1` boils them down to a few lines per civ: early builds, settlers ordered,
+found-city operations and idle settlers.
+
 Doing it by hand: download the DLL from the release (or the **MSVC Release** artifact of a Build run on
 the fork branch), run `CPModpack\Build-CPModpack.ps1 -Dll <dll> -ABTest -Install`, start a game as
 above, and run `Summarize-ABTest.ps1` afterwards.
