@@ -423,9 +423,13 @@ runs the same check-in on its own, as the user asked; to stop it, disable that s
      `ab-ai-<topic>-latest` releases passed.
    - Their pack-repo branches: new RESULTS.md entries and requests. Merge them into
      `claude/sleepy-hopper-x77moh` (fast-forward or merge, never dropping anyone's lines).
-   - **Patch relay:** the topic sessions have no push access to the fork. They commit their DLL work as
-     `git format-patch` files under `tools/ab/patches/<topic>/` on their pack-repo branch. The lead applies
-     the new ones to `ai/<topic>` (`git am`), pushes, and tells the session the commit and the build result.
+   - **Patch relay:** sessions without push access to the fork (Economy, Diplomacy; War has had access since
+     2026-11-02 and pushes `ai/war` itself) commit their DLL work as `git format-patch` files under
+     `tools/ab/patches/<topic>/` on their pack-repo branch. The lead applies the new ones to `ai/<topic>`
+     (`git am --keep-cr`), pushes, and tells the session the commit and the build result.
+   - **Flag count:** the candidate-flag masks are 32-bit ints, so 31 flags at most (bit 31 is undefined).
+     There are 22 on `ai/economy` and 26 across all branches. The lead widens them to 64 bits in its next
+     `CvGame`/`CvPlayer` change on `claude/ab-c1`, before anyone appends flag 31.
 3. **The PC runner** (`claude/sleepy-hopper-x77moh`): new results CSVs and `Run-Games.log` lines. Run the
    summary and the scoreboard. Check for "REPLAY DIFFERS", "WRONG SETUP", stalls and failed starts.
 4. **Act on it:**

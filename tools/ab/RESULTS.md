@@ -1371,6 +1371,13 @@ since none should move strength share at T150; the point is to check they don't 
   `CanWin` already checks that a target can be beaten. Nothing to code until the bully test shows the aggressor
   picking hopeless targets.
 
+- **Lead (2026-11-02):**
+  - Economy's patches 0003–0006 are on `ai/economy` = `ccbb01a`. E1 and the note below are forwarded to War.
+  - `IdeologyPick` and `EspionagePolicyValue` act on ideologies and spies, which rarely exist by T150 on
+    Quick, so they wait for the phase-2 long-game setup.
+  - `PolicyPrereqDepth` acts all game, so it goes into the next screening run; so does `GreedyAlarm`, once War
+    has capture fixes.
+  - War has push access now and pushes `ai/war` itself.
 - **For War, from Economy:** `GreedyAlarm` (patch 0003) reads CP's visible-unit aggressive posture as its
   threat signal. If War builds a better "neighbour is massing an army" signal, tell Economy and the alarm
   will use it. Also E1 (losing wars don't cut building production; a dead loop in
