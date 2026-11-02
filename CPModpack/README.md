@@ -17,7 +17,33 @@
    ```
 
    `-Install` on the builder also installs the pack locally. `-LeaderheadsOff` ships the 2D
-   diplomacy screens (`MP_LEADERHEADS = 0`) for comparison tests.
+   diplomacy screens (`MP_LEADERHEADS = 0`) for comparison tests. `-StockRules` ships CP's own
+   Prince instead of the even one below.
+
+## Even rules on Prince
+
+CP's Prince still favours the AI. The builder rewrites the `HANDICAP_PRINCE` row while exporting,
+so on Prince an AI ends up with exactly what a human gets, and prints each change:
+
+| Column | CP | Pack | Why |
+|---|---|---|---|
+| `AIResearchPercent`, `AIPolicyPercent` | 85, 75 | 100, 100 | AI paid 15% less for techs, 25% less for policies |
+| `AIHappinessDefault` | 15 | 9 | a human gets 9 |
+| `AIEmpireSizeUnhappinessMod`, `AIPopulationUnhappinessMod` | -10, -10 | 0, 0 | AI had 10% less unhappiness |
+| `AIUnitSupplyBase`, `AIUnitSupplyPerCity`, `AIUnitSupplyBonusPercent` | 7, 3, 20 | 5, 2, 0 | a human gets 5 + 2 per city, no bonus |
+| `AIImprovementCostPercent`, `AIUnitCostPercent`, `AIUnitUpgradePercent` | 50, 85, 50 | 100, 100, 100 | AI paid less maintenance and half price upgrades |
+| `AIBonusVSBarbarians` | 60 | 40 | a human gets 40 |
+| `HumanStrengthPerceptionMod` | 20 | 0 | AI rated humans 20% stronger than they are |
+| `TacticalSimMax*` (positions, branches, choices) | 256, 4, 4 | Deity's 2560, 5, 5 | how hard the tactical AI searches; not a bonus |
+
+The values aren't hard-coded: an AI gets its own row (`HANDICAP_AI_DEFAULT`) plus the game
+difficulty's `AI...` columns, a human gets their own row, so each `AIx` is set to Prince's `x`
+minus (or, for cost percentages, divided by) `HANDICAP_AI_DEFAULT`'s `x`, and each `Humanx` (how
+the AI treats humans) to its `AIx` twin (how it treats other AIs), or 0. Prince rows of
+`HandicapInfo_AI*` tables (AI-only free techs and yields) are left out, and the builder warns if
+another `HandicapInfo_*` list differs between Prince and `HANDICAP_AI_DEFAULT`. It also ships
+`HUMAN_USES_AI_MECHANICS = 1` (the AI drops its human-only exceptions, such as not spreading
+religion to human teammates). Only Prince is changed: on other difficulties the AI keeps CP's bonuses.
 
 ## How the pack works
 

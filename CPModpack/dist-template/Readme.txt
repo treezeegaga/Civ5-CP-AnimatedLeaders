@@ -13,6 +13,9 @@ INSTALL
 PLAY
   - Start Civilization V normally. Do NOT enable mods in the Mods menu.
   - Multiplayer > Internet or LAN > host or join a NEW game.
+  - Everyone should pick Prince difficulty. On Prince this pack gives the AI exactly the same
+    rules as human players: no cheaper techs, policies or upgrades, no extra happiness or units.
+    On other difficulties the AI gets Community Patch's usual bonuses.
   - Old saves from the unmodded game won't load while the pack is installed.
   - Everyone in the game needs the same pack version (shown by the installer).
   - Everyone must start the game with the same DirectX version. When Steam asks how to

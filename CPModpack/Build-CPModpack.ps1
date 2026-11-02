@@ -20,6 +20,7 @@ param(
     [string]$LocDb = "",
     [string]$Dll = "",   # gameplay DLL to ship; defaults to the one in CP's MODS folder
     [switch]$LeaderheadsOff,   # ship MP_LEADERHEADS = 0 (the 2D diplomacy screens, for comparison tests)
+    [switch]$StockRules,   # ship CP's own Prince (by default Prince gives AIs and humans the same rules)
     [switch]$DryRun,   # allow a database built without CP, to test the export
     [switch]$Install
 )
@@ -81,6 +82,85 @@ else {
 
 if (Test-Path $out) { Remove-Item -Recurse -Force $out }
 New-Item -ItemType Directory -Force (Join-Path $out "Override"), (Join-Path $out "UI"), (Join-Path $out "Mods") | Out-Null
+
+# ---------------------------------------------------------------------------------------------
+# Even rules on Prince (-StockRules ships CP's own). In CP 5.4.8 Prince still favours the AI: 15%
+# cheaper techs, 25% cheaper policies, 15 free happiness against a human's 9, less unhappiness, more
+# unit supply, cheaper maintenance and upgrades, a bigger bonus against barbarians, and it rates
+# humans 20% stronger than they are. The game core works out what an AI gets as its own row
+# (HANDICAP_AI_DEFAULT) plus the game difficulty's "AI..." columns; a human gets their own row. So
+# on Prince each "AIx" column is set to what makes an AI's total equal a human's, and each "Humanx"
+# column (how the AI treats humans) to its "AIx" twin (how it treats other AIs), or 0 without one.
+# The tactical AI also gets Deity's search budget: that's how hard it thinks, not a bonus.
+$rowEdits = @{}       # "Table|Type or Name" -> ordered column -> value, applied while exporting
+$dropPrinceRows = @{} # HandicapInfo_AI* tables whose Prince rows are left out
+$isCpDb = (Get-Scalar $gameDb "SELECT count(*) FROM sqlite_master WHERE type='table' AND name='CustomModOptions'") -eq 1
+if (-not $StockRules -and -not $isCpDb) { Write-Warning "Dry run without Community Patch: leaving the difficulty rules alone" }
+if (-not $StockRules -and $isCpDb) {
+    Write-Step "Evening out the rules on Prince"
+    $hi = @{}
+    foreach ($r in @(Invoke-SqliteQuery $gameDb "SELECT * FROM HandicapInfos")) { $hi[[string]$r["Type"]] = $r }
+    foreach ($t in "HANDICAP_PRINCE", "HANDICAP_AI_DEFAULT", "HANDICAP_DEITY") {
+        if (-not $hi.ContainsKey($t)) { throw "HandicapInfos has no $t row" }
+    }
+    $prince = $hi["HANDICAP_PRINCE"]; $aiDefault = $hi["HANDICAP_AI_DEFAULT"]; $deity = $hi["HANDICAP_DEITY"]
+    # Cost percentages multiply (an AI pays its own row's % times the difficulty's AI %); the rest add.
+    $multiplied = @("ImprovementCostPercent", "BuildingCostPercent", "UnitCostPercent", "InflationPercent",
+        "UnitUpgradePercent", "GrowthPercent", "ResearchPercent", "PolicyPercent", "ProphetPercent",
+        "GreatPeoplePercent", "GoldenAgePercent", "CivilianPercent", "TrainPercent", "WorldTrainPercent",
+        "ConstructPercent", "WorldConstructPercent", "CreatePercent", "WorldCreatePercent")
+    $edits = [ordered]@{}
+    foreach ($col in @($prince.Keys)) {
+        if ($col -clike "AI*" -or $col -clike "Human*" -or -not $prince.Contains("AI$col")) { continue }
+        $p = [long]$prince[$col]; $a = [long]$aiDefault[$col]
+        if ($multiplied -contains $col) {
+            if ($a -eq 0) { throw "HANDICAP_AI_DEFAULT has $col = 0, so AI costs can't be matched to a human's" }
+            if ($a -ne 100) { Write-Warning "HANDICAP_AI_DEFAULT has $col = $a (expected 100)" }
+            $v = [long][Math]::Round(100.0 * $p / $a)
+        }
+        else {
+            if ($a -ne 0) { Write-Warning "HANDICAP_AI_DEFAULT has $col = $a (expected 0)" }
+            $v = $p - $a
+        }
+        if ([long]$prince["AI$col"] -ne $v) { $edits["AI$col"] = $v }
+    }
+    foreach ($col in @($prince.Keys)) {
+        if ($col -cnotlike "Human*") { continue }
+        $twin = "AI" + $col.Substring(5)
+        $v = if ($prince.Contains($twin)) { [long]$prince[$twin] } else { 0 }
+        if ([long]$prince[$col] -ne $v) { $edits[$col] = $v }
+    }
+    foreach ($col in "TacticalSimMaxCompletedPositions", "TacticalSimMaxBranches", "TacticalSimMaxChoicesPerUnit") {
+        if ([long]$prince[$col] -ne [long]$deity[$col]) { $edits[$col] = [long]$deity[$col] }
+    }
+    $rowEdits["HandicapInfos|HANDICAP_PRINCE"] = $edits
+    foreach ($k in $edits.Keys) { Write-Output ("   Prince {0}: {1} -> {2}" -f $k, $prince[$k], $edits[$k]) }
+
+    # Per-difficulty lists: the HandicapInfo_AI* ones go to AIs only (AI free techs, VP's AI yield
+    # bonuses), so Prince gets none. The others go to a player by their own row; AIs use
+    # HANDICAP_AI_DEFAULT's, which should match Prince's.
+    $childTables = @(Invoke-SqliteQuery $gameDb "SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'HandicapInfo\_%' ESCAPE '\' ORDER BY name" | ForEach-Object { $_["name"] })
+    foreach ($tn in $childTables) {
+        $cols = @(Invoke-SqliteQuery $gameDb "PRAGMA table_info('$tn')" | ForEach-Object { $_["name"] })
+        if ($cols -notcontains "HandicapType") { continue }
+        if ($tn -clike "HandicapInfo_AI*") {
+            $n = Get-Scalar $gameDb "SELECT count(*) FROM '$tn' WHERE HandicapType='HANDICAP_PRINCE'"
+            if ($n -gt 0) { $dropPrinceRows[$tn] = $true; Write-Output "   Leaving out $n Prince rows of $tn" }
+            continue
+        }
+        $listCols = @($cols | Where-Object { $_ -ne "HandicapType" })
+        if ($listCols.Count -eq 0) { continue }
+        $sel = ($listCols | ForEach-Object { "COALESCE(`"$_`", '')" }) -join " || '|' || "
+        $rowsOf = { param($h) @(Invoke-SqliteQuery $gameDb "SELECT $sel AS k FROM '$tn' WHERE HandicapType='$h' ORDER BY k" | ForEach-Object { [string]$_["k"] }) -join ";" }
+        $pr = & $rowsOf "HANDICAP_PRINCE"; $ai = & $rowsOf "HANDICAP_AI_DEFAULT"
+        if ($pr -ne $ai) { Write-Warning "$tn differs between HANDICAP_PRINCE ($pr) and HANDICAP_AI_DEFAULT ($ai): humans and AIs get different lists" }
+    }
+
+    # The AI treats humans the same as other AIs where CP otherwise makes exceptions.
+    $rowEdits["CustomModOptions|HUMAN_USES_AI_MECHANICS"] = [ordered]@{ Value = 1 }
+    Write-Output "   HUMAN_USES_AI_MECHANICS = 1"
+}
+$appliedEdits = @{}
 
 # ---------------------------------------------------------------------------------------------
 Write-Step "Exporting the gameplay database"
@@ -148,6 +228,15 @@ foreach ($t in $tables) {
     [void]$sb.Append("`t<$name>`r`n`t`t<Delete/>`r`n")
 
     foreach ($row in @(Invoke-SqliteQuery $gameDb "SELECT * FROM '$name' ORDER BY rowid")) {
+        if ($dropPrinceRows.ContainsKey($name) -and $row["HandicapType"] -eq "HANDICAP_PRINCE") { continue }
+        $editKey = if ($row.Contains("Type")) { "$name|$($row["Type"])" } elseif ($row.Contains("Name")) { "$name|$($row["Name"])" } else { $null }
+        if ($editKey -and $rowEdits.ContainsKey($editKey)) {
+            foreach ($c in $rowEdits[$editKey].Keys) {
+                if (-not $row.Contains($c)) { throw "$name has no column $c" }
+                $row[$c] = $rowEdits[$editKey][$c]
+            }
+            $appliedEdits[$editKey] = $true
+        }
         [void]$sb.Append("`t`t<Row>")
         foreach ($cn in $row.Keys) {
             $v = $row[$cn]
@@ -163,6 +252,7 @@ foreach ($t in $tables) {
     [void]$sb.Append("`t</$name>`r`n")
 }
 [void]$sb.Append("</GameData>`r`n")
+foreach ($k in $rowEdits.Keys) { if (-not $appliedEdits.ContainsKey($k)) { throw "No row for $k in the database" } }
 # The snapshot can come from a test run with the option switched off; the pack decides it here.
 $dbXml = $sb.ToString()
 $want = if ($LeaderheadsOff) { 0 } else { 1 }
