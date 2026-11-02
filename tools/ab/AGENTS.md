@@ -214,7 +214,7 @@ and goals, diplomacy changes how decisions are computed from them.
 
 | Setting | Value | Why |
 |---|---|---|
-| Map | Pangaea for most games; Continents for about 1 in 5 (reported separately) | Pangaea puts everyone in contact; Continents catches breakage in naval and embarked-unit code |
+| Map | Pangaea, always (the user's decision, 2026-11-02) | Pangaea puts everyone in contact. Naval and embarked-unit code goes untested by these games, so watch for breakage there in real play |
 | Size / civs | Standard, 8 civs, separate teams | 4 vs 4 per game |
 | Resources | Strategic Balance | Cuts starting-position luck |
 | Ancient ruins | Off | Free settlers and techs are pure luck |
@@ -384,8 +384,8 @@ questions**.
 3. CSV rows record settings, flip flag and enabled fixes.
 4. `Summarize-ABTest.ps1`: SPRT (gainer and no-worse) per fix, the screening regression, and the
    expected-games estimate.
-5. Update the `Run-Games.ps1` click script for the new setup (Pangaea / Continents rotation,
-   Strategic Balance, ruins off).
+5. Update the `Run-Games.ps1` click script for the new setup (Pangaea every game, Strategic Balance,
+   ruins off).
 6. Re-run the no-fix baseline under the new setup; record σ.
 7. Check whether difficulty changes AI logic beyond handicap bonuses (open question 1).
 8. Check on existing data whether turn-100 standings predict turn-150 ones.

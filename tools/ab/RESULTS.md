@@ -526,6 +526,13 @@ read as games arrive):
 | 2m | 5 | −0.35 | +0.67 | running |
 | c6 | 3 | −2.10 | −1.29 | too few results |
 
+### Decision: Pangaea only (user, 2026-11-02)
+
+Test games are always played on Pangaea. The planned rotation with Continents for about 1 game in 5 is
+dropped. The cost: naval and embarked-unit code isn't exercised by the test games, so a change that
+breaks it would only show in real play. Job 5 now just makes sure every game is set to Pangaea,
+Strategic Balance and no ruins.
+
 ## Requests
 
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
@@ -558,7 +565,7 @@ swapped. With the bundle it plays the same AI as c7c, so both games also count a
    - `Run-Games.log` says "replay matches the first game" for game 2.
    - `AIABTest_c7c_settings.csv` has the `Warmonger` and settings columns (`Flip` ... `Build`), and the two
      games' GameIds are the same apart from a trailing `F` on the second.
-   - The settings columns say Pangaea or whatever map was picked, Quick, Prince, Standard, `StopTurn` 150, and
+   - The settings columns say Pangaea, Quick, Prince, Standard, `StopTurn` 150, and
      `Fixes` lists the bundle for c civs and `none` for b civs. Copy the `MapOptions` value into the report:
      it shows how Civ names the map options, which job 5 needs.
    - Same civs in the same player slots in both games; same `Warmonger` values; `Group` swapped (each c in
