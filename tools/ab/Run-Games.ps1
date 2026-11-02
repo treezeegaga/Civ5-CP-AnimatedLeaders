@@ -244,6 +244,7 @@ function Wait-TestGame([string[]]$knownIds) {
     $started = Get-Date
     $lastRows = -1; $lastChange = Get-Date
     $checked = $false
+    $timed = $false
     while ($true) {
         Start-Sleep 20
         if (-not (Get-CivWindow)) { return "civ exited" }
@@ -260,6 +261,13 @@ function Wait-TestGame([string[]]$knownIds) {
             $checked = $true
             $wrong = Test-Setup $mine
             if ($wrong) { return "WRONG SETUP ($($last.GameId)): $wrong" }
+        }
+        if (-not $timed -and [int]$last.Turn -ge 100) {
+            # how long the first 100 turns take, to weigh turn-100 screening against full games (lead job 8);
+            # straight to the log, since this function's output is its return value
+            $timed = $true
+            $line = "{0:yyyy-MM-dd HH:mm:ss}    turn 100 after {1:N0} minutes" -f (Get-Date), ((Get-Date) - $started).TotalMinutes
+            Add-Content -Path $Log -Value $line; Write-Host $line
         }
         if ($mine | Where-Object { $_.Final -eq '1' }) { return "won at turn $($last.Turn) ($($last.GameId))" }
         if ([int]$last.Turn -ge $StopTurn) { return "turn $($last.Turn) ($($last.GameId))" }

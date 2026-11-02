@@ -169,5 +169,5 @@ C builds. Instead:
 configuration in a file it also prints the SPRT (gainer and no-worse LLRs, on pairs when the file has them),
 the expected number of pairs, and for screening runs a regression of each civ's strength on its screened
 flags. `-Delta` sets δ (default 2 points), `-Sigma` a known spread, `-AtTurn 100` judges every game at turn
-100 instead of its last turn. Send its output (or
+100 instead of its last turn. `Compare-ABTurns.ps1` checks how well turn-100 standings predict turn 150. Send its output (or
 the CSV files) back after a handful of games.

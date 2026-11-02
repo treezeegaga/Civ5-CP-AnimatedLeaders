@@ -645,6 +645,46 @@ all the same advantages and disadvantages. Let's just have everyone play at King
 - **Players:** pick King when hosting. On other difficulties the AI keeps CP's usual bonuses. The pack's
   Readme.txt says so.
 
+### Do turn-100 standings predict turn-150 ones? (lead job 8)
+
+**Mostly yes.** Data: the 54 games in `results/` that logged both turns (22 files, Prince, random maps,
+unpaired). Reproduce with `tools\ab\Compare-ABTurns.ps1`.
+
+| Measure | Result |
+|---|---|
+| Group gain at T100 vs T150, per game | correlation 0.88, slope 0.97 |
+| Build averages (9 builds with 3+ games) | correlation 0.92, slope 0.81 |
+| Each civ's own share (432 civs) | correlation 0.86, slope 0.99 |
+| Spread of one game within a build | 4.00 points at T100, 3.86 at T150 |
+| Change from T100 to T150 in one game | spread 2.37 points, average −0.25 |
+
+The side ahead at T100 was still ahead at T150 in 40 of 54 games. Every change of side came from a close
+T100 result:
+
+| T100 margin | Games | Changed side by T150 |
+|---|---|---|
+| 0–1 points | 11 | 7 |
+| 1–2 points | 12 | 6 |
+| 2–4 points | 14 | 0 |
+| 4+ points | 17 | 1 |
+
+Build averages at both turns (points of gain): 2p +2.51 / +2.38, c4 +0.93 / +1.55, c6 −3.08 / −3.53,
+c1 −0.93 / −0.88, c2 +0.07 / −1.03, 2m +0.52 / +0.40, 2n +1.26 / +0.73.
+
+**What it means**
+- **Screening at turn 100 is sound for strength.** An edge at T100 is about the size it will be at T150,
+  and T100 isn't noisier. For the same verdict, a T100 test needs about 1.1× (game-level slope) to 1.6×
+  (build-level slope) as many games. It pays off if a T100 game takes less than about 60–90% of a T150
+  game's time. Late turns are the slow ones, so it very likely does. `Run-Games.ps1` now logs
+  "turn 100 after N minutes" to measure it.
+- **War is the exception to watch.** c4's edge grew after T100 (+0.93 to +1.55), the only build that clearly
+  did, and it's the conquest build. Fixes whose point is war (most of War's) may only show late. They get
+  their SPRT at T150 or later, as AGENTS.md already says, and shouldn't be dropped on a T100 screen alone.
+- **Use:** screening runs read with `Summarize-ABTest.ps1 -AtTurn 100`; the confirming SPRT reads the final
+  turn. The two can come from the same games (Run-Games stops at T150 by default, and every game logs T100).
+- **Caveat:** this is old-setup data (Prince, random maps, single games). Rerun `Compare-ABTurns.ps1` once
+  about 20 King pairs are in.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates

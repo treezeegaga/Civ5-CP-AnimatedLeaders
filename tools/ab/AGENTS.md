@@ -500,4 +500,6 @@ Paste one into a new session. Each assumes the repos are attached:
    even rules.
 2. Where should committed results live: CSVs in `tools/ab/results/`, or only the summary?
 3. Can Civ V run two games at once on the PC (or a second PC) to double throughput?
-4. Is the turn-100 screen trustworthy for this AI? (First jobs, item 8.)
+4. Is the turn-100 screen trustworthy for this AI? **Mostly yes (lead job 8, RESULTS.md):** turn-100
+   strength predicts turn 150 with correlation 0.88 and slope about 1, with no extra noise. War fixes may
+   only show later, so they're confirmed at T150+. Recheck on King pairs.
