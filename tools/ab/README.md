@@ -22,6 +22,11 @@ Results so far, build by build, are in [RESULTS.md](RESULTS.md); the raw CSVs ar
   - The split is warmonger-balanced, so c gets a warmonger whenever the game has one; RESULTS.md has
     the details.
 - **When a C build passes the bar**, it becomes the new B and the next candidates are tested against it.
+- **One flag per idea** (from build `c7c_flags`): every candidate change sits behind its own flag,
+  `UsesCandidateAI(FIX_xx)` in the DLL. `AIABTest.ini` in `Documents\My Games\Sid Meier's Civilization 5`
+  picks which flags group c runs (`Fixes =`), and which ones are screened instead (`Screen =`: each on for a
+  random half of the AI civs). With no file c runs the bundle, the same AI as c7c. See
+  [AIABTest.ini.example](AIABTest.ini.example); RESULTS.md lists the flags.
 
 **The verdict is the strength share:** the test group's share of the game's techs, population, land,
 military and cities, averaged, at the last logged turn (50% = even).
@@ -118,8 +123,9 @@ searches more positions in battles of up to 9 units, so if AI turns feel slower 
 The fork's CI only publishes releases from `claude/sleepy-hopper-x77moh`, so `Run-ABTest.ps1` can't fetch
 C builds. Instead:
 
-1. Push the change to `claude/ab-c1`. Set the batch name (`AI_AB_TEST_BATCH` in CvGame.cpp, e.g.
-   `"c7c"`), so its games go to their own `AIABTest_<batch>.csv`.
+1. Push the change to `claude/ab-c1`, behind its own flag. Set the batch name (`AI_AB_TEST_BATCH` in
+   CvGame.cpp, e.g. `"c7c_flags"`) when the build changes what the AI does with the same settings, so its
+   games go to their own `AIABTest_<batch>.csv`. A new flag that is off by default doesn't need a new name.
 2. Start the build:
    ```
    gh workflow run build_vp.yml --repo treezeegaga/Community-Patch-DLL --ref claude/ab-c1
@@ -135,7 +141,8 @@ C builds. Instead:
    ```
    powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCore_Expansion2.dll -ABTest -Install
    ```
-6. Play games with `Run-Games.ps1`, and read results with `Run-ABTest.ps1 -Summary`. For B-vs-C files,
+6. Put the `AIABTest.ini` that RESULTS.md asks for in My Games (or none, for the bundle). Play games with
+   `Run-Games.ps1`, and read results with `Run-ABTest.ps1 -Summary`. For B-vs-C files,
    the summary's "new" column is c and its "cp" column is b.
 
 `gh run cancel` sometimes has no effect, and a hung run blocks later runs on the branch. Use

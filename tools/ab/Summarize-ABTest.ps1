@@ -173,6 +173,17 @@ foreach ($grp in "new", "cp") {
         (& $avg "Military"), (& $avg "Wonders"), (& $avg "Lost"))
 }
 
+# Warmongers per group (files from c7c_flags on): the c/b split deals warmongers out c first, so c has more of them
+# whenever a game has an odd number, and their personalities differ from the rest
+if ($rows[0].PSObject.Properties.Name -contains "Warmonger") {
+    Write-Output ""
+    $cells = foreach ($grp in "new", "cp") {
+        $n = @($games | ForEach-Object { $_.Civs } | Where-Object { $_.Group -eq $grp -and $_.Warmonger -eq "1" }).Count
+        "{0} {1:N1}" -f $grp, ($n / $games.Count)
+    }
+    Write-Output ("Warmongers per game: {0}" -f ($cells -join ", "))
+}
+
 # Early-game milestones (files from batch2a on): turn the 2nd-4th cities were founded, National College,
 # and which opening plan the civ followed. Averages count only civs that reached the milestone.
 if ($rows[0].PSObject.Properties.Name -contains "City2Turn") {

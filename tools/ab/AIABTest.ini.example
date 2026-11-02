@@ -1,0 +1,18 @@
+; AI A/B test settings for C builds (fork branch claude/ab-c1, from c7c_flags on).
+; Copy to Documents\My Games\Sid Meier's Civilization 5\AIABTest.ini. A test game reads it once, when it
+; starts, and saves the settings with the game, so changing it never affects a game already running.
+; No file, or an empty line, means the bundle: the same AI as c7c.
+;
+; Flag names (any case): WidePlans BoxedIn LongWide BoxedInWar TimingAttack SiegeTechs SiegeBook
+; DeclareTiming GrowthTech AqueductValue GreedyArmyCap GreedyBook GreedyTarget CanWin ClosedBorders
+; Lists: names separated by commas or spaces; "bundle" = every flag but LongWide and GreedyArmyCap,
+; "all", "none", and "-Name" takes a flag out again. Unknown names go to AIABTest_errors.txt next to this file.
+;
+; Examples:
+;   Fixes = CanWin               group c runs only CanWin (an SPRT test of one idea)
+;   Fixes = bundle, -CanWin      the bundle without CanWin (ablation)
+;   Fixes = none                 c runs nothing: an A/A game that measures the split's bias
+;   Screen = SiegeBook, CanWin   each listed flag is on for a random half of the AI civs (screening)
+[ABTest]
+Fixes = bundle
+Screen =

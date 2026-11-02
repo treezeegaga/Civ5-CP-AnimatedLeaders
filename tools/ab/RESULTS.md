@@ -149,6 +149,7 @@ install one. Each C build includes everything before it unless noted. All change
 | c7 | `0b3dda2` | greedy tall build order; warmongers target the greediest neighbour | 1 | 45.3% | | worse (cap still on) |
 | c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
 | c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 1 | 52.9% | | ahead in its first game; needs more games |
+| c7c_flags | `46fc076` | c7c with one flag per idea (see Fixes below) and a Warmonger column; with no `AIABTest.ini` it plays the same as c7c | 0 | | | CI build running; then games |
 
 What each build does, in detail:
 - **c1:** candidate `GetOpeningBook()`:
@@ -352,8 +353,8 @@ unless marked as suspected.
   log (c4 game 1's log was lost this way). Logging costs about 15% speed, so the practice was: on for
   the first 2 games of a bundle, then off. Test games read `LoggingEnabled` and `AILog` from
   `config.ini` (fork `4cf291b`); before that, the test pack wrote no AI logs.
-- **The results CSV has no warmonger column**, so b's warmongers can't be identified afterwards. The
-  `Book` column records the opening plan.
+- **The results CSV had no warmonger column** before `c7c_flags`, so b's warmongers in older files can't be
+  identified afterwards. The `Book` column records the opening plan.
 - **`Summarize-ABTest.ps1` relabels B-vs-C files:** in its output, "new" means c and "cp" means b. It
   says so at the top of each B-vs-C section. Its parameters are `-Csv <file>` for one file and
   `-MyGames <folder>` for all files in a folder; there is no `-Path`.
@@ -406,3 +407,69 @@ cross-checked.
 when the true gain is 0 or δ, and up to **8.7 · σ²/δ²** when it sits halfway between them (the
 slowest case). AGENTS.md says 5.9. I worked these out myself, not from the Stockfish pages, and
 `Summarize-ABTest.ps1` prints them from job 4 on.
+
+## Fixes
+
+### Candidate flags (lead job 1, fork commit `46fc076`, build `c7c_flags`)
+
+Every C idea so far now has its own flag, `UsesCandidateAI(FIX_xx)` (fork `CvPlayer.h`,
+`CandidateFixTypes`). `AIABTest.ini` (see [AIABTest.ini.example](AIABTest.ini.example)) picks what
+group c runs (`Fixes =`) and what is screened (`Screen =`: on for a random half of the AI civs, dealt
+warmongers first and drawn separately for each flag from the map seed). The test game reads the file
+once at the start and saves it with the game. **No file = the bundle = c7c.** Outside a test game every
+civ runs the bundle.
+
+| Flag | From | What it does | Off means | In the bundle | Evidence so far |
+|---|---|---|---|---|---|
+| `WidePlans` | c1/c2 (2q, 2r) | warmongers, aggressive and expansionist culture civs play the wide plan | B's plan choice | yes | c1, c2: 49.1%, 49.0% over 5 games each. Not better alone |
+| `BoxedIn` | c1 (2u) | a settler idle 10+ turns means no land left (settling stops) | B: only "no site at all" | yes | c1: c's tall civs got fewer cities (3.7 vs 4.4) |
+| `LongWide` | c1 (2s) | wide opening to 8 cities, T130 Standard | 6 cities, T100 | **no** | c1: no extra cities |
+| `BoxedInWar` | c3 | a boxed-in wide civ attacks the nearest neighbour blocking it, if not stronger | no war | yes | none measured alone |
+| `TimingAttack` | c3/c3b | a warmonger attacks a weak close neighbour; committed target; no targets with defensive allies | no war | yes | c3 54.0% (1 game), c3b 39.8% (1 game) |
+| `SiegeTechs` | c4 | warmonger research: Pottery, Wheel, Mathematics, Bronze Working, Archery, Writing | B's book techs | yes | part of c4 (51.6%, 6 games) |
+| `SiegeBook` | c4/c5 | warmonger capital: 3 catapults, 2 spearmen, 2 archers after the 2nd settler | B's book | yes | part of c4/c5. No longer needs `WidePlans` |
+| `DeclareTiming` | c4/c5 | declare once 2 siege + 4 other land units (fallback T90 Standard) | from T45 Standard (c3) | yes | part of c4/c5 |
+| `GrowthTech` | c5/c5b | tall civs head for Engineering once the capital is size 6 | no | yes | c5b 52.3% (1 game) |
+| `AqueductValue` | c5/c5b | tall civs count the aqueduct's kept food twice | no | yes | with GrowthTech |
+| `GreedyArmyCap` | c6 | tall civs keep cities + 1 land units outside war and emergencies | no cap | **no** | c6: 0-3, 46.5% |
+| `GreedyBook` | c7 | tall capital book on to aqueduct and university, to T130 Standard; its techs | B's tall book, to T80 | yes | c7 45.3% (1 game, with the cap) |
+| `GreedyTarget` | c7 | warmongers pick the neighbour with the fewest land units per city | the weakest (c4) | yes | none measured alone |
+| `CanWin` | c7c | war only if the siege sketch brings down the nearest city within 20 turns | no check | yes | c7c 52.9% (1 game) |
+| `ClosedBorders` | c7c | tall civs never give open borders to majors | B | yes | c7c 52.9% (1 game) |
+
+Dependencies: `DeclareTiming`, `GreedyTarget` and `CanWin` only matter with `TimingAttack` on (and
+`CanWin` with `BoxedInWar` too); the warmonger flags only touch warmongers; `GreedyBook`, `GrowthTech`,
+`AqueductValue`, `ClosedBorders` and `GreedyArmyCap` only touch tall-plan civs, so which civs they reach
+depends on `WidePlans`.
+
+None of these has passed. Each will get a hypothesis entry (measure, δ, test) when it's queued for an
+SPRT; the screening run (lead job 4 onwards) decides which go first.
+
+## Requests
+
+- **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
+  (`s_aiCommittedTarget`), which isn't saved, so a reloaded game re-picks. Not a multiplayer desync
+  (every computer runs the same turns), but it should be game state before anything ships.
+
+## Instructions for the PC runner
+
+### 2026-11-02: smoke test of `c7c_flags` (1 game)
+
+Goal: check that the flags build runs and writes the new column. With no `AIABTest.ini` it plays the
+same AI as c7c, so this game also counts as a second c7c game.
+
+1. Check out this repo's branch `claude/admiring-fermi-qyl4j3` (the lead's branch, until it's merged into
+   `claude/sleepy-hopper-x77moh`) and pull.
+2. Download the DLL from fork run **41538287476** (commit `46fc076`, the head of `claude/ab-c1`):
+   ```
+   gh run download 41538287476 --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>
+   ```
+   The artifact name must contain `g46fc076` (e.g. `VP_MSVC_Release_24cc575-17-g46fc076xx`).
+3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCoreDLL_Expansion2.dll -ABTest -Install`
+4. Make sure there is **no** `AIABTest.ini` in `Documents\My Games\Sid Meier's Civilization 5`.
+5. One game with `Run-Games.ps1`, the usual setup (Prince, Standard, Quick, 8 civs), logging on.
+6. Check: `AIABTest_c7c_flags.csv` exists with a `Warmonger` column, and there is no
+   `AIABTest_errors.txt`. Commit the CSV to `tools/ab/results/`, plus `Run-Games.log`, and push.
+
+Don't start a longer run yet: paired games, the new map setup and the SPRT summary (lead jobs 2-6)
+come first.
