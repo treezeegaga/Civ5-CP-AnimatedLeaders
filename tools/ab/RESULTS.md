@@ -1167,6 +1167,40 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War audit: `CvHomelandAI` (2026-11-02)
+
+No `AI_AB_TEST` changes were in this file, so all of this is CP's code. None of it repeats AUDIT.md. Lines are in
+`CvHomelandAI.cpp` on `ai/war`. Same format as AUDIT.md:
+
+| # | Area | Where | Bug | Fix | Status |
+|---|---|---|---|---|---|
+| H1 | Upgrades / gold | `:1880`, `:1950` | **Inverted condition:** the gold saved for unit upgrades is cancelled only when there is no such request, so it is never cancelled. The early `return` when every upgrade is done doesn't cancel either. At war its priority is 500 + flavour × 50 × 100 (up to ~250k), so a stale request goes on blocking lower-priority purchases after its unit has upgraded or died. (`:1974` cancels too, but only to restart it at once.) Same kind of bug as AUDIT 6 | Cancel when the request exists, and before the `return` | confirmed, flag `UpgradeSaveCancel` |
+| H2 | Aircraft | `:5681`, `:5697`, `:7112` | **A healing aircraft never stays in the quietest base:** the loop that sorts bases quietest first `continue`s past the plane's own base instead of stopping, so it rebases to the next base it can reach every turn. The "do we need to move" guard is always true, because every base scores at least 1. Rebasing ends its moves, so it never heals. The combat loop (`:5776`) gets this right with `break` | Stop at its own base; rebase only to a strictly quieter one | confirmed, flag `AirRebaseHeal`. Little effect before planes (not in T150 Quick games) |
+| H3 | Escorts | `:1013`, `:653` | Worker escort targets (aux 123) pass the `< 500` test meant to let only unimportant sentries take a "peek" step, so an escort can step off its worker and end the turn without moving back | Exempt worker targets by type | mismatch confirmed, effect plausible |
+| H4 | Escorts | `:640–654` | Worker escort targets use each worker's position before `PlotWorkerMoves` moves it, so the escort goes to the tile the worker has left | Build them after the worker moves | plausible |
+| H5 | Navy | `:2614–2629` | An unassigned warship outside its territory that hasn't moved for 7 turns is scrapped, or killed when it can't be scrapped (which also gets around VP's no-disbanding-next-to-enemies rule). A ship pinned by enemies never moves and is deleted | Skip while in danger or at war; never `kill` | plausible (naval: not in Pangaea tests) |
+| H6 | Fog cheat | `:2531`, `:4031`, `:5916`, `:5948` | `MOVEFLAG_PRETEND_ALL_REVEALED`: paths home for idle units and civilians use the real terrain of unexplored tiles | Drop the flag for the new AI | confirmed, small |
+
+Checked, not bugs: the garrison strength maths, the sort orders, the safety thresholds, patrol zones, the
+upgrade flavour loop, and the deliberate "peek and return" sentry moves.
+
+### FIX_UPGRADE_SAVE_CANCEL: drop the stale upgrade-gold request (War, bug H1)
+- Hypothesis: with the cancel working, gold saved for an upgrade that's no longer needed goes back to other
+  purchases (buildings, units, settlers). It's a bug fix, so the test is that it does no harm.
+- Measure: strength share at T150; gold spent on purchases (digest) as the mechanism.
+- δ: no-worse test at δ = 2
+- Build: `ai/war` commit `0bc96d3` (on `4917284`); patch `patches/war/0002`
+- Test: SPRT no-worse, paired, T150 (or screen it at T100: it's an economy effect)
+- Status: hypothesis
+
+### FIX_AIR_REBASE_HEAL: healing aircraft stay in the quietest base (War, bug H2)
+- Hypothesis: damaged planes heal instead of rebasing every turn. No effect in T150 Quick games (no planes), so it
+  can't be tested there; it's a correctness fix for real games.
+- Measure: none in the standard test. Check in a late-era save that a damaged bomber heals.
+- δ: none. A no-worse check only once long games or late-era saves exist.
+- Build: same commit as UpgradeSaveCancel
+- Status: hypothesis; waits for a late-game test
+
 ### Screening run 1: plan (lead, 2026-11-02)
 
 - **Why:** 19 candidate flags exist, from c1–c7c, Economy and War. At about 3 pairs an hour, an SPRT per flag
