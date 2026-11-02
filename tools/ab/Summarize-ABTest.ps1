@@ -29,6 +29,13 @@ if (-not (Test-Path $Csv)) { throw "No results file at $Csv. Play a test game wi
 $rows = @(Import-Csv $Csv)
 if ($rows.Count -eq 0) { throw "$Csv has no rows" }
 
+# B-vs-C builds label the groups c (candidate changes) and b (the base build); report c in the "new" column and b in
+# the "cp" column
+if (@($rows | Where-Object { $_.Group -eq 'c' }).Count -gt 0) {
+    foreach ($r in $rows) { if ($r.Group -eq 'c') { $r.Group = 'new' } elseif ($r.Group -eq 'b') { $r.Group = 'cp' } }
+    Write-Output "B-vs-C build: below, 'new' is the candidate group c and 'cp' is the base group b."
+}
+
 # Two-sided sign test: chance of a split at least this uneven if both groups were equally good.
 function Get-SignTestP([int]$wins, [int]$n) {
     if ($n -eq 0) { return 1.0 }
