@@ -935,9 +935,8 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
 - Test: SPRT gainer, paired, standard King setup, T100 (`Summarize-ABTest.ps1 -AtTurn 100`), group c
   running `Fixes = SettlersFirst` against B. Or screened with `SettlerOverlap` in one run.
 - Status: written, not built.
-- Notes: this session's push to the fork was refused (no push access was granted), so the commit only
-  exists as a patch; the user decides how it gets to `ai/economy`.
-
+- Notes: Economy has no push access to the fork, so the commit goes to the lead as
+  `tools/ab/patches/economy/0001-*.patch` (on `6b8ebde`); the lead applies it to `ai/economy`.
 ### SettlerOverlap: the next book settler trains while the last one walks (Economy)
 - Hypothesis: with B's "one settler at a time", a settler in training or walking blocks the next, and
   the capital falls through to a 8-20-turn building. Counting only settlers in training (and at most one
