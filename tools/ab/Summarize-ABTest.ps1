@@ -20,6 +20,7 @@ param(
     [int]$AtTurn = 0,     # judge every game at this turn instead of its last (games that didn't log it are left out)
     [double]$Delta = 2.0, # SPRT: the smallest gain worth keeping, in strength-share points
     [double]$Sigma = 0,   # SPRT games estimate: spread of one result (pair or game) in points; 0 = measure it
+    [switch]$Scoreboard,  # one row per results file for the scoreboard at the top of RESULTS.md, instead of the full report
     [string]$MyGames = "$([Environment]::GetFolderPath('MyDocuments'))\My Games\Sid Meier's Civilization 5"
 )
 
@@ -30,6 +31,14 @@ if (-not $Csv) {
     # changes, wrote AIABTest.csv), so results from different builds are never mixed.
     $files = @(Get-ChildItem -Path $MyGames -Filter "AIABTest*.csv" -ErrorAction SilentlyContinue | Sort-Object LastWriteTime)
     if ($files.Count -eq 0) { throw "No AIABTest*.csv in $MyGames. Play a test game with the -ABTest pack first." }
+    if ($Scoreboard) {
+        Write-Output "| Results file | Games | Strength share of the test group | Aggressor's cities at the end | Cities per war | Coalition: civs at war with it; turns to 2+ | Deals per civ per 10 turns | Banned behaviours | Seconds per turn |"
+        Write-Output "|---|---|---|---|---|---|---|---|---|"
+        foreach ($f in $files) {
+            try { & $PSCommandPath -Csv $f.FullName -MinTurn $MinTurn -AtTurn $AtTurn -Scoreboard } catch { Write-Output ("| {0} | {1} |" -f $f.BaseName, $_.Exception.Message) }
+        }
+        return
+    }
     foreach ($f in $files) {
         Write-Output ""
         Write-Output ("===== {0} =====" -f $f.Name)
@@ -45,7 +54,7 @@ if ($rows.Count -eq 0) { throw "$Csv has no rows" }
 # the "cp" column
 if (@($rows | Where-Object { $_.Group -eq 'c' }).Count -gt 0) {
     foreach ($r in $rows) { if ($r.Group -eq 'c') { $r.Group = 'new' } elseif ($r.Group -eq 'b') { $r.Group = 'cp' } }
-    Write-Output "B-vs-C build: below, 'new' is the candidate group c and 'cp' is the base group b."
+    if (-not $Scoreboard) { Write-Output "B-vs-C build: below, 'new' is the candidate group c and 'cp' is the base group b." }
 }
 
 # Two-sided sign test: chance of a split at least this uneven if both groups were equally good.
@@ -214,6 +223,47 @@ foreach ($g in ($rows | Group-Object GameId)) {
 }
 
 # ---- Bully and builders tests, diplomacy and banned behaviours (lead job 10; files from c7c_roles on) ----
+# The bully test's numbers per game (lead job 10): the aggressor's share of all cities at T100 and at the end, its
+# captures and wars, how many civs are at war with it at the end, and the turns from its first conquest until two or
+# more civs were at war with it (-1 = never, $null = it took no city).
+function Get-BullyStats {
+    $bullyGames = @($roleGames | Where-Object { $_.Civs[0].Mode -eq "bully" })
+    if ($bullyGames.Count -eq 0) { return }
+    $byGame = @{}
+    foreach ($grp in ($rows | Group-Object GameId)) { $byGame[$grp.Name] = $grp.Group }
+    $num = { param($r, $col) if ($r -and $r.$col -ne $null -and $r.$col -ne "") { [double]$r.$col } else { 0.0 } }
+    $rowsAt = { param($gid, $turn) @($byGame[$gid] | Where-Object { [int]$_.Turn -eq $turn -and $_.Final -ne "1" } | Group-Object Player | ForEach-Object { $_.Group[-1] }) }
+    $cityShare = { param($civs, $player)
+        $all = ($civs | ForEach-Object { [double]$_.Cities } | Measure-Object -Sum).Sum
+        $mine = @($civs | Where-Object { $_.Player -eq $player })
+        if ($all -le 0 -or $mine.Count -eq 0) { 0.0 } else { 100.0 * [double]$mine[0].Cities / $all } }
+    foreach ($g in $bullyGames) {
+        $agg = @($g.Civs | Where-Object { $_.Role -eq "aggressor" })[0]
+        $tall = @($g.Civs | Where-Object { $_.Role -eq "tall" })[0]
+        if (-not $agg) { continue }
+        $t100 = & $rowsAt $g.GameId 100
+        $turns = @($byGame[$g.GameId] | Where-Object { $_.Final -ne "1" } | ForEach-Object { [int]$_.Turn } | Sort-Object -Unique)
+        $firstCapture = @(foreach ($t in $turns) { $r = @(& $rowsAt $g.GameId $t | Where-Object { $_.Player -eq $agg.Player }); if ($r.Count -and (& $num $r[0] "CitiesCaptured") -gt 0) { $t; break } })
+        $coalition = $null
+        if ($firstCapture.Count) {
+            $joined = @(foreach ($t in ($turns | Where-Object { $_ -ge $firstCapture[0] })) {
+                if (@(& $rowsAt $g.GameId $t | Where-Object { $_.AtWarAggressor -eq "1" }).Count -ge 2) { $t; break } })
+            $coalition = if ($joined.Count) { $joined[0] - $firstCapture[0] } else { -1 }
+        }
+        [pscustomobject]@{
+            GameId = $g.GameId; BaseId = $g.BaseId; Flipped = $g.Flipped
+            Aggressor = ($agg.Civ -replace 'CIVILIZATION_', '')
+            Share100 = if ($t100.Count) { & $cityShare $t100 $agg.Player } else { $null }
+            ShareEnd = & $cityShare $g.Civs $agg.Player
+            Captured = & $num $agg "CitiesCaptured"
+            Wars = & $num $agg "WarsDeclared"
+            AtWar = @($g.Civs | Where-Object { $_.AtWarAggressor -eq "1" }).Count
+            CoalitionTurns = $coalition
+            TallText = if ($tall) { "{0}/{1}/{2}" -f (& $num $tall "WarsOnUs"), (& $num $tall "Friends"), (& $num $tall "Pacts") } else { "-" }
+        }
+    }
+}
+
 function Show-RoleTests {
 if (-not ($rows[0].PSObject.Properties.Name -contains "Role")) { return }
     $byGame = @{}
@@ -227,39 +277,21 @@ if (-not ($rows[0].PSObject.Properties.Name -contains "Role")) { return }
         if ($all -le 0 -or $mine.Count -eq 0) { 0.0 } else { 100.0 * [double]$mine[0].Cities / $all } }
     $rowsAt = { param($gid, $turn) @($byGame[$gid] | Where-Object { [int]$_.Turn -eq $turn -and $_.Final -ne "1" } | Group-Object Player | ForEach-Object { $_.Group[-1] }) }
 
-    $bully = @($roleGames | Where-Object { $_.Civs[0].Mode -eq "bully" })
+    $bully = @(Get-BullyStats)
     if ($bully.Count -gt 0) {
         Write-Output ""
         Write-Output "Bully test: the aggressor against the rest. With c = the defenders, without = all on B (flipped game)."
         Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,9} {5,9} {6,10} {7,10} {8,-22}" -f "Game", "c?", "Aggressor", "Cities100", "CitiesEnd", "Captured", "AtWarWith", "Coalition", "Tall civ: wars on it/friends/pacts")
-        $shareEnd = @{}
-        foreach ($g in $bully) {
-            $agg = @($g.Civs | Where-Object { $_.Role -eq "aggressor" })[0]
-            $tall = @($g.Civs | Where-Object { $_.Role -eq "tall" })[0]
-            if (-not $agg) { continue }
-            $t100 = & $rowsAt $g.GameId 100
-            $s100 = if ($t100.Count) { "{0:N1}%" -f (& $cityShare $t100 $agg.Player) } else { "-" }
-            $sEnd = & $cityShare $g.Civs $agg.Player
-            $shareEnd[$g.GameId] = $sEnd
-            $atWar = @($g.Civs | Where-Object { $_.AtWarAggressor -eq "1" }).Count
-            # how many turns from the aggressor's first conquest until two or more civs were at war with it
-            $aggRows = & $civRows $g.GameId $agg.Player
-            $first = @($aggRows | Where-Object { (& $num $_ "CitiesCaptured") -gt 0 })
-            $coal = "-"
-            if ($first.Count) {
-                $t0 = [int]$first[0].Turn
-                $joined = @(foreach ($t in (@($byGame[$g.GameId] | Where-Object { [int]$_.Turn -ge $t0 -and $_.Final -ne "1" } | ForEach-Object { [int]$_.Turn } | Sort-Object -Unique))) {
-                    if (@(& $rowsAt $g.GameId $t | Where-Object { $_.AtWarAggressor -eq "1" }).Count -ge 2) { $t; break } })
-                $coal = if ($joined.Count) { "+{0} turns" -f ($joined[0] - $t0) } else { "never" }
-            }
-            $tallText = if ($tall) { "{0}/{1}/{2}" -f (& $num $tall "WarsOnUs"), (& $num $tall "Friends"), (& $num $tall "Pacts") } else { "-" }
-            $withC = if ($g.Flipped) { "no" } else { "yes" }
-            Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,8:N1}% {5,9} {6,10} {7,10} {8,-22}" -f $g.GameId, $withC, ($agg.Civ -replace 'CIVILIZATION_', ''), $s100, $sEnd, (& $num $agg "CitiesCaptured"), $atWar, $coal, $tallText)
+        foreach ($b in $bully) {
+            $s100 = if ($b.Share100 -ne $null) { "{0:N1}%" -f $b.Share100 } else { "-" }
+            $coal = if ($b.CoalitionTurns -eq $null) { "-" } elseif ($b.CoalitionTurns -lt 0) { "never" } else { "+{0} turns" -f $b.CoalitionTurns }
+            $withC = if ($b.Flipped) { "no" } else { "yes" }
+            Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,8:N1}% {5,9} {6,10} {7,10} {8,-22}" -f $b.GameId, $withC, $b.Aggressor, $s100, $b.ShareEnd, $b.Captured, $b.AtWar, $coal, $b.TallText)
         }
         # pairs: the aggressor's final share of all cities with c defenders minus without (negative = the candidate held better)
         $diffs = @(foreach ($p in ($bully | Group-Object BaseId | Where-Object { $_.Count -eq 2 })) {
             $gc = @($p.Group | Where-Object { -not $_.Flipped })[0]; $gb = @($p.Group | Where-Object { $_.Flipped })[0]
-            if ($gc -and $gb -and $shareEnd.ContainsKey($gc.GameId) -and $shareEnd.ContainsKey($gb.GameId)) { $shareEnd[$gc.GameId] - $shareEnd[$gb.GameId] } })
+            if ($gc -and $gb) { $gc.ShareEnd - $gb.ShareEnd } })
         if ($diffs.Count -ge 2) {
             $m = ($diffs | Measure-Object -Average).Average
             $sd = [Math]::Sqrt((($diffs | ForEach-Object { ($_ - $m) * ($_ - $m) }) | Measure-Object -Sum).Sum / ($diffs.Count - 1))
@@ -300,6 +332,44 @@ if (-not ($rows[0].PSObject.Properties.Name -contains "Role")) { return }
         Write-Output ("  {0,-5} {1,8:N2} {2,8:N2} {3,9:N2} {4,9:N1} {5,8:N1} {6,7:N1} {7,11:N1} {8,12} {9,12}" -f $grp, (& $rate "Deals"), (& $rate "WarsDeclared"), (& $rate "CitiesCaptured"), (& $avg "Friends"), (& $avg "Pacts"), (& $avg "Denouncing"), (& $avg "Influential"), (& $sum "WorkersStolen"), (& $sum "WonderChops"))
     }
     Write-Output "  (Deals count each side, so one deal between two civs adds 1 to each. StolenCivil and WonderChops are game totals: the banned behaviours, target 0.)"
+}
+
+# ---- Scoreboard row (lead job 11): the milestone measures for one results file ----
+if ($Scoreboard) {
+    $cols = $rows[0].PSObject.Properties.Name
+    $numOf = { param($r, $col) if ($r -and $r.$col -ne $null -and $r.$col -ne "") { [double]$r.$col } else { 0.0 } }
+    $strength = "-"
+    if ($games.Count -gt 0) {
+        $vals = @($games | ForEach-Object { [double]$_.NewStrength })
+        $mean = ($vals | Measure-Object -Average).Average
+        $strength = if ($vals.Count -ge 2) {
+            $se = [Math]::Sqrt((($vals | ForEach-Object { ($_ - $mean) * ($_ - $mean) }) | Measure-Object -Sum).Sum / ($vals.Count - 1) / $vals.Count)
+            "{0:N1}% +/- {1:N1}" -f $mean, $se
+        } else { "{0:N1}%" -f $mean }
+    }
+    $aggShare = "-"; $perWar = "-"; $coalition = "-"
+    $bs = @(Get-BullyStats)
+    if ($bs.Count -gt 0) {
+        $aggShare = "{0:N1}%" -f ($bs | Measure-Object ShareEnd -Average).Average
+        $wars = ($bs | Measure-Object Wars -Sum).Sum
+        $perWar = if ($wars -gt 0) { "{0:N2}" -f (($bs | Measure-Object Captured -Sum).Sum / $wars) } else { "no wars" }
+        $speeds = @($bs | Where-Object { $_.CoalitionTurns -ne $null -and $_.CoalitionTurns -ge 0 } | ForEach-Object { $_.CoalitionTurns })
+        $never = @($bs | Where-Object { $_.CoalitionTurns -eq -1 }).Count
+        $speedText = if ($speeds.Count) { "{0:N0} turns" -f ($speeds | Measure-Object -Average).Average } else { "-" }
+        if ($never) { $speedText += ", never in $never" }
+        $coalition = "{0:N1}; {1}" -f ($bs | Measure-Object AtWar -Average).Average, $speedText
+    }
+    $allCivs = @(@($games) + @($roleGames) | ForEach-Object { $g = $_; $_.Civs | ForEach-Object { [pscustomobject]@{ C = $_; T = [Math]::Max(1, $g.Turn) } } })
+    $nGames = $games.Count + $roleGames.Count
+    $deals = if ($cols -contains "Deals" -and $allCivs.Count) { "{0:N2}" -f ($allCivs | ForEach-Object { 10.0 * (& $numOf $_.C "Deals") / $_.T } | Measure-Object -Average).Average } else { "-" }
+    $banned = if ($cols -contains "WorkersStolen" -and $nGames) { "{0:N1} per game" -f ((($allCivs | ForEach-Object { (& $numOf $_.C "WorkersStolen") + (& $numOf $_.C "WonderChops") } | Measure-Object -Sum).Sum) / $nGames) } else { "-" }
+    $secs = "-"
+    if ($cols -contains "TurnSecs") {
+        $t = @($rows | Where-Object { (& $numOf $_ "TurnSecs") -gt 0 } | Group-Object GameId, Turn | ForEach-Object { & $numOf $_.Group[0] "TurnSecs" })
+        if ($t.Count) { $secs = "{0:N1}" -f ($t | Measure-Object -Average).Average }
+    }
+    Write-Output ("| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |" -f [IO.Path]::GetFileNameWithoutExtension($Csv), $nGames, $strength, $aggShare, $perWar, $coalition, $deals, $banned, $secs)
+    return
 }
 
 if ($games.Count -eq 0 -and $roleGames.Count -gt 0) {

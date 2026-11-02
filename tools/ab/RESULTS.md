@@ -1,5 +1,27 @@
 # AI A/B test results
 
+## Scoreboard
+
+One row per milestone build: where the AI stands against each goal in [AGENTS.md](AGENTS.md). Rows are filled
+from `Summarize-ABTest.ps1 -MyGames tools\ab\results -Scoreboard`, which prints one row per results file.
+
+| Build | Setup | Strength share (games) | Aggressor's share of all cities, end (bully test) | Cities per aggressor war | Coalition: civs at war with it at the end; turns from its first conquest to 2+ | Deals per civ per 10 turns | Banned behaviours per game | Seconds per AI turn |
+|---|---|---|---|---|---|---|---|---|
+| **Goal** (proposed, to agree with the players) | King, even rules | **≥ 55%** against CP | **≤ 20%** (a fair share with 8 civs is 12.5%) | **≤ 1** | **2+ civs within 20 turns** | **0.5–2** (a lively world without spam; check against the first measurement) | **0** | **≤ 1.25× B's** |
+| A: CP | | 50% (reference) | not measured | not measured | not measured | not measured | not measured | not measured |
+| B: batch 2p (`24cc575`) | Prince, even rules, random maps, single games | 52.4% ± 0.7 against CP (5) | not measured | not measured | not measured | not measured | not measured | not measured |
+| c4 (`ea22df3`), best C so far | same | 51.6% ± 1.1 against B (6) | not measured | not measured | not measured | not measured | not measured | not measured |
+| c7c (`2e9fad1`), newest C | same | 52.9% against B (1) | not measured | not measured | not measured | not measured | not measured | not measured |
+| c7c_roles (`6b8ebde`): the bundle again, with every measure | King, even rules, Pangaea, Strategic Balance, no ruins, pairs | waiting for games | waiting for the bully test | | | | | |
+
+- **The diplomacy, war and timing columns** only exist from build `c7c_roles` on. Older builds can't
+  be filled in.
+- **"Strength share" is against whatever the test group was compared with:** CP for stage 1, B for C builds.
+  At King, "strength against CP" needs an A-vs-B build (`kABTestVersusBase = false`, AGENTS.md), so that
+  number is re-measured when a milestone is frozen.
+- **Done** when every goal holds in the same build, at King, under the standard setup, plus the friends'
+  verdict after real multiplayer games (AGENTS.md: no obvious blunders, a conqueror pays for every city).
+
 Everything the A/B test games have shown up to 2026-11-02: each build, its results, and what we learned.
 [README.md](README.md) explains how to run the tests. [AUDIT.md](AUDIT.md) lists the batch 1 and batch 2a–2e fixes.
 
@@ -783,6 +805,19 @@ terrible". The aggressor is simply the most aggressive personality, playing B. F
 default for both head-start keys, which remain available. If the aggressor never takes a city, even from B
 defenders, the bully test has nothing to measure for now. That itself says the AIs already hold against a
 plain aggressive AI, and the real test is games against the friend.
+
+### The scoreboard (lead job 11)
+
+- **The table** is at the top of this file, with one row per milestone build and a goal row.
+- **`Summarize-ABTest.ps1 -Scoreboard`** prints one ready-made row per results file: games, strength share,
+  the aggressor's city share at the end, cities per aggressor war, coalition size and speed,
+  deals per civ per 10 turns, banned behaviours per game, and seconds per AI turn.
+- **Seconds per AI turn** come from a new DLL column, `TurnSecs` (fork `6b8ebde`, still in `c7c_roles` since
+  no games used that file yet). It's the real seconds per game turn since the last logged row, measured on
+  the PC, so it compares builds only on the same PC and setup.
+- **The goal numbers are proposals**, waiting for the players: strength ≥ 55% against CP; the aggressor
+  ≤ 20% of all cities at the end; ≤ 1 city per war; 2+ civs at war with it within 20 turns of its first
+  conquest; 0.5–2 deals per civ per 10 turns; 0 banned behaviours; AI turns no more than 25% slower than B.
 
 ## Requests
 

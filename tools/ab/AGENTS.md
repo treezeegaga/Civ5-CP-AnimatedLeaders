@@ -374,6 +374,9 @@ questions**.
 
 ## Experiment lead: first jobs
 
+Status 2026-11-02: all done except job 6 (the King baseline), which needs games from the PC. Each job's
+entry is in RESULTS.md, and the scoreboard is at its top.
+
 0. Done by the previous chat: RESULTS.md, README past 2e, CSVs in `tools/ab/results/`. Check
    that `Summarize-ABTest.ps1 -MyGames tools\ab\results` reproduces the numbers in RESULTS.md.
 1. Per-idea flags: `UsesCandidateAI(FIX_xx)` with each flag enabled per civ, so candidates can be
