@@ -18,33 +18,49 @@
 
    `-Install` on the builder also installs the pack locally. `-LeaderheadsOff` ships the 2D
    diplomacy screens (`MP_LEADERHEADS = 0`) for comparison tests. `-StockRules` ships CP's own
-   Prince instead of the even one below. `-ABTest` ships `AI_AB_TEST = 1`, a test pack for AI-only
+   difficulties instead of the even King below. `-ABTest` ships `AI_AB_TEST = 1`, a test pack for AI-only
    games ([`../tools/ab/README.md`](../tools/ab/README.md)); don't play multiplayer with it.
 
-## Even rules on Prince
+## Even rules on King
 
-CP's Prince still favours the AI. The builder rewrites the `HANDICAP_PRINCE` row while exporting,
-so on Prince an AI ends up with exactly what a human gets, and prints each change:
+Everyone plays on King (the players' decision, 2026-11-02: "all the humans and all the AI play by the
+exact same rules"). CP's King favours the AI a lot. The builder rewrites the `HANDICAP_KING` row while
+exporting, so on King an AI ends up with exactly what a human gets, and prints each change:
 
 | Column | CP | Pack | Why |
 |---|---|---|---|
 | `AIResearchPercent`, `AIPolicyPercent` | 85, 75 | 100, 100 | AI paid 15% less for techs, 25% less for policies |
+| `AIBuildingCostPercent`, `AIUnitCostPercent`, `AIImprovementCostPercent` | 85, 80, 50 | 100, 100, 100 | AI paid less building, unit and improvement maintenance |
+| `AITrainPercent`, `AIConstructPercent`, `AICreatePercent`, `AICivilianPercent`, `AIProphetPercent` | 85 each | 100 each | AI built units, buildings, projects, settlers and workers, and got prophets, 15% cheaper |
+| their `...PerEraModifier`s and `AIUnitUpgradePerEraModifier`, `AIGrowthPerEraModifier` | -2 each | 0 each | and 2% cheaper still every era |
+| `AIUnitUpgradePercent` | 38 | 100 | AI upgraded units at 38% of the price |
+| `AIGrowthPercent` | 90 | 100 | AI cities needed 10% less food to grow |
+| `AIWorkRateModifier` | 20 | 0 | AI workers worked 20% faster |
+| `AIFreeXP` | 10 | 0 | AI units started with 10 XP |
+| `AIStartingDefenseUnits` | 1 | 0 | AI started with an extra defender |
 | `AIHappinessDefault` | 15 | 9 | a human gets 9 |
 | `AIEmpireSizeUnhappinessMod`, `AIPopulationUnhappinessMod` | -10, -10 | 0, 0 | AI had 10% less unhappiness |
-| `AIUnitSupplyBase`, `AIUnitSupplyPerCity`, `AIUnitSupplyBonusPercent` | 7, 3, 20 | 5, 2, 0 | a human gets 5 + 2 per city, no bonus |
-| `AIImprovementCostPercent`, `AIUnitCostPercent`, `AIUnitUpgradePercent` | 50, 85, 50 | 100, 100, 100 | AI paid less maintenance and half price upgrades |
-| `AIBonusVSBarbarians` | 60 | 40 | a human gets 40 |
-| `HumanStrengthPerceptionMod` | 20 | 0 | AI rated humans 20% stronger than they are |
-| `TacticalSimMax*` (positions, branches, choices) | 256, 4, 4 | Deity's 2560, 5, 5 | how hard the tactical AI searches; not a bonus |
+| `AIUnitSupplyBase`, `AIUnitSupplyPerCity`, `AIUnitSupplyBonusPercent` | 7, 3, 30 | 5, 2, 0 | a human gets 5 + 2 per city, no bonus |
+| `AIBonusVSBarbarians` | 60 | 30 | a human gets 30 |
+| `HumanStrengthPerceptionMod` | 25 | 0 | AI rated humans 25% stronger than they are |
+| `TacticalSimMax*` (positions, branches, choices) | 384, 4, 4 | Deity's 2560, 5, 5 | how hard the tactical AI searches; not a bonus |
+| `HandicapInfo_AIFreeTechs` and other `HandicapInfo_AI*` King rows | | left out | AI-only free techs and yields |
 
-The values aren't hard-coded: an AI gets its own row (`HANDICAP_AI_DEFAULT`) plus the game
-difficulty's `AI...` columns, a human gets their own row, so each `AIx` is set to Prince's `x`
-minus (or, for cost percentages, divided by) `HANDICAP_AI_DEFAULT`'s `x`, and each `Humanx` (how
-the AI treats humans) to its `AIx` twin (how it treats other AIs), or 0. Prince rows of
-`HandicapInfo_AI*` tables (AI-only free techs and yields) are left out, and the builder warns if
-another `HandicapInfo_*` list differs between Prince and `HANDICAP_AI_DEFAULT`. It also ships
-`HUMAN_USES_AI_MECHANICS = 1` (the AI drops its human-only exceptions, such as not spreading
-religion to human teammates). Only Prince is changed: on other difficulties the AI keeps CP's bonuses.
+The values aren't hard-coded, and the table is what the builder's step prints for CP 5.4.8's difficulty data
+(checked on a test database built from it; the real game database also has the base game's columns, which
+the step treats the same way). An AI gets its own row (`HANDICAP_AI_DEFAULT`) plus the game difficulty's
+`AI...` columns, a human gets their own row, so each `AIx` is set to King's `x` minus (or, for cost
+percentages, divided by) `HANDICAP_AI_DEFAULT`'s `x`, and each `Humanx` (how the AI treats humans) to its
+`AIx` twin (how it treats other AIs), or 0. King rows of `HandicapInfo_AI*` tables are left out, and the
+builder warns if another `HandicapInfo_*` list differs between King and `HANDICAP_AI_DEFAULT`. It also
+ships `HUMAN_USES_AI_MECHANICS = 1` (the AI drops its human-only exceptions, such as not spreading religion
+to human teammates). Only King is changed: on other difficulties the AI keeps CP's bonuses.
+`-EvenDifficulty <name>` evens out another difficulty instead (it was Prince until 2026-11-02).
+
+What stays as CP has it on King, for everyone alike: the combat search budget (raised to Deity's above),
+and the diplomacy weights that scale with difficulty (aggression toward disliked civs 6, peace holding 16
+turns before a new war, disputes weighing 100-110%). A human's own King row and the game's King row are
+the same row, so the AI applies these the same way to humans and AIs.
 
 ## How the pack works
 

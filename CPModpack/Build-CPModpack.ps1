@@ -20,7 +20,8 @@ param(
     [string]$LocDb = "",
     [string]$Dll = "",   # gameplay DLL to ship; defaults to the one in CP's MODS folder
     [switch]$LeaderheadsOff,   # ship MP_LEADERHEADS = 0 (the 2D diplomacy screens, for comparison tests)
-    [switch]$StockRules,   # ship CP's own Prince (by default Prince gives AIs and humans the same rules)
+    [string]$EvenDifficulty = "KING",   # the difficulty on which AIs and humans play by the same rules (everyone plays King)
+    [switch]$StockRules,   # ship CP's own difficulties (by default -EvenDifficulty gives AIs and humans the same rules)
     [switch]$ABTest,   # ship AI_AB_TEST = 1: a test pack for AI-only games (see tools\ab\README.md); not for normal play
     [switch]$DryRun,   # allow a database built without CP, to test the export
     [switch]$Install
@@ -85,26 +86,30 @@ if (Test-Path $out) { Remove-Item -Recurse -Force $out }
 New-Item -ItemType Directory -Force (Join-Path $out "Override"), (Join-Path $out "UI"), (Join-Path $out "Mods") | Out-Null
 
 # ---------------------------------------------------------------------------------------------
-# Even rules on Prince (-StockRules ships CP's own). In CP 5.4.8 Prince still favours the AI: 15%
-# cheaper techs, 25% cheaper policies, 15 free happiness against a human's 9, less unhappiness, more
-# unit supply, cheaper maintenance and upgrades, a bigger bonus against barbarians, and it rates
-# humans 20% stronger than they are. The game core works out what an AI gets as its own row
-# (HANDICAP_AI_DEFAULT) plus the game difficulty's "AI..." columns; a human gets their own row. So
-# on Prince each "AIx" column is set to what makes an AI's total equal a human's, and each "Humanx"
-# column (how the AI treats humans) to its "AIx" twin (how it treats other AIs), or 0 without one.
-# The tactical AI also gets Deity's search budget: that's how hard it thinks, not a bonus.
+# Even rules on King (-EvenDifficulty picks another; -StockRules ships CP's own). In CP 5.4.8 King
+# favours the AI: 15% cheaper techs, buildings, units and great prophets, 25% cheaper policies, 62%
+# cheaper upgrades, half-price maintenance, faster growth and workers, free XP, an extra starting
+# defender, 15 free happiness against a human's 9, less unhappiness, more unit supply, a bigger bonus
+# against barbarians, and it rates humans 25% stronger than they are. The game core works out what
+# an AI gets as its own row (HANDICAP_AI_DEFAULT) plus the game difficulty's "AI..." columns; a human
+# gets their own row. So on the even difficulty each "AIx" column is set to what makes an AI's total
+# equal a human's, and each "Humanx" column (how the AI treats humans) to its "AIx" twin (how it
+# treats other AIs), or 0 without one. The tactical AI also gets Deity's search budget: that's how
+# hard it thinks, not a bonus.
+$evenType = "HANDICAP_" + $EvenDifficulty.ToUpperInvariant()
 $rowEdits = @{}       # "Table|Type or Name" -> ordered column -> value, applied while exporting
-$dropPrinceRows = @{} # HandicapInfo_AI* tables whose Prince rows are left out
+$dropEvenRows = @{}   # HandicapInfo_AI* tables whose rows for the even difficulty are left out
 $isCpDb = (Get-Scalar $gameDb "SELECT count(*) FROM sqlite_master WHERE type='table' AND name='CustomModOptions'") -eq 1
 if (-not $StockRules -and -not $isCpDb) { Write-Warning "Dry run without Community Patch: leaving the difficulty rules alone" }
 if (-not $StockRules -and $isCpDb) {
-    Write-Step "Evening out the rules on Prince"
+    $evenName = (Get-Culture).TextInfo.ToTitleCase($EvenDifficulty.ToLowerInvariant())
+    Write-Step "Evening out the rules on $evenName"
     $hi = @{}
     foreach ($r in @(Invoke-SqliteQuery $gameDb "SELECT * FROM HandicapInfos")) { $hi[[string]$r["Type"]] = $r }
-    foreach ($t in "HANDICAP_PRINCE", "HANDICAP_AI_DEFAULT", "HANDICAP_DEITY") {
+    foreach ($t in $evenType, "HANDICAP_AI_DEFAULT", "HANDICAP_DEITY") {
         if (-not $hi.ContainsKey($t)) { throw "HandicapInfos has no $t row" }
     }
-    $prince = $hi["HANDICAP_PRINCE"]; $aiDefault = $hi["HANDICAP_AI_DEFAULT"]; $deity = $hi["HANDICAP_DEITY"]
+    $prince = $hi[$evenType]; $aiDefault = $hi["HANDICAP_AI_DEFAULT"]; $deity = $hi["HANDICAP_DEITY"]
     # Cost percentages multiply (an AI pays its own row's % times the difficulty's AI %); the rest add.
     $multiplied = @("ImprovementCostPercent", "BuildingCostPercent", "UnitCostPercent", "InflationPercent",
         "UnitUpgradePercent", "GrowthPercent", "ResearchPercent", "PolicyPercent", "ProphetPercent",
@@ -134,27 +139,27 @@ if (-not $StockRules -and $isCpDb) {
     foreach ($col in "TacticalSimMaxCompletedPositions", "TacticalSimMaxBranches", "TacticalSimMaxChoicesPerUnit") {
         if ([long]$prince[$col] -ne [long]$deity[$col]) { $edits[$col] = [long]$deity[$col] }
     }
-    $rowEdits["HandicapInfos|HANDICAP_PRINCE"] = $edits
-    foreach ($k in $edits.Keys) { Write-Output ("   Prince {0}: {1} -> {2}" -f $k, $prince[$k], $edits[$k]) }
+    $rowEdits["HandicapInfos|$evenType"] = $edits
+    foreach ($k in $edits.Keys) { Write-Output ("   {0} {1}: {2} -> {3}" -f $evenName, $k, $prince[$k], $edits[$k]) }
 
     # Per-difficulty lists: the HandicapInfo_AI* ones go to AIs only (AI free techs, VP's AI yield
-    # bonuses), so Prince gets none. The others go to a player by their own row; AIs use
-    # HANDICAP_AI_DEFAULT's, which should match Prince's.
+    # bonuses), so the even difficulty gets none. The others go to a player by their own row; AIs use
+    # HANDICAP_AI_DEFAULT's, which should match the even difficulty's.
     $childTables = @(Invoke-SqliteQuery $gameDb "SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'HandicapInfo\_%' ESCAPE '\' ORDER BY name" | ForEach-Object { $_["name"] })
     foreach ($tn in $childTables) {
         $cols = @(Invoke-SqliteQuery $gameDb "PRAGMA table_info('$tn')" | ForEach-Object { $_["name"] })
         if ($cols -notcontains "HandicapType") { continue }
         if ($tn -clike "HandicapInfo_AI*") {
-            $n = Get-Scalar $gameDb "SELECT count(*) FROM '$tn' WHERE HandicapType='HANDICAP_PRINCE'"
-            if ($n -gt 0) { $dropPrinceRows[$tn] = $true; Write-Output "   Leaving out $n Prince rows of $tn" }
+            $n = Get-Scalar $gameDb "SELECT count(*) FROM '$tn' WHERE HandicapType='$evenType'"
+            if ($n -gt 0) { $dropEvenRows[$tn] = $true; Write-Output "   Leaving out $n $evenName rows of $tn" }
             continue
         }
         $listCols = @($cols | Where-Object { $_ -ne "HandicapType" })
         if ($listCols.Count -eq 0) { continue }
         $sel = ($listCols | ForEach-Object { "COALESCE(`"$_`", '')" }) -join " || '|' || "
         $rowsOf = { param($h) @(Invoke-SqliteQuery $gameDb "SELECT $sel AS k FROM '$tn' WHERE HandicapType='$h' ORDER BY k" | ForEach-Object { [string]$_["k"] }) -join ";" }
-        $pr = & $rowsOf "HANDICAP_PRINCE"; $ai = & $rowsOf "HANDICAP_AI_DEFAULT"
-        if ($pr -ne $ai) { Write-Warning "$tn differs between HANDICAP_PRINCE ($pr) and HANDICAP_AI_DEFAULT ($ai): humans and AIs get different lists" }
+        $pr = & $rowsOf $evenType; $ai = & $rowsOf "HANDICAP_AI_DEFAULT"
+        if ($pr -ne $ai) { Write-Warning "$tn differs between $evenType ($pr) and HANDICAP_AI_DEFAULT ($ai): humans and AIs get different lists" }
     }
 
     # The AI treats humans the same as other AIs where CP otherwise makes exceptions.
@@ -229,7 +234,7 @@ foreach ($t in $tables) {
     [void]$sb.Append("`t<$name>`r`n`t`t<Delete/>`r`n")
 
     foreach ($row in @(Invoke-SqliteQuery $gameDb "SELECT * FROM '$name' ORDER BY rowid")) {
-        if ($dropPrinceRows.ContainsKey($name) -and $row["HandicapType"] -eq "HANDICAP_PRINCE") { continue }
+        if ($dropEvenRows.ContainsKey($name) -and $row["HandicapType"] -eq $evenType) { continue }
         $editKey = if ($row.Contains("Type")) { "$name|$($row["Type"])" } elseif ($row.Contains("Name")) { "$name|$($row["Name"])" } else { $null }
         if ($editKey -and $rowEdits.ContainsKey($editKey)) {
             foreach ($c in $rowEdits[$editKey].Keys) {

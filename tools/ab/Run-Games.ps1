@@ -10,7 +10,7 @@
 
     Needs the test pack installed (Run-ABTest.ps1 -NoLaunch), windowed mode in GraphicsSettingsDX9.ini
     (FullScreen = 0, WindowResX = 1914, WindowResY = 2034 on a 3840x2160 screen) and the setup screens
-    already set to Pangaea, Prince, Standard, Quick, 8 civs on separate teams (Civ remembers those, not the
+    already set to Pangaea, King, Standard, Quick, 8 civs on separate teams (Civ remembers those, not the
     Quick Combat/Movement boxes). Ruins and the resources setting aren't clicked: the test DLL sets them
     from AIABTest.ini (Ruins = 0, MapOption5 = 5 for Strategic Balance). Once a game logs its first rows
     (turn 10), the runner checks its map, options, pace, difficulty, size and civ count against the
@@ -43,7 +43,7 @@ param(
     # the setup every game must have; checked against the first results rows (files from c7c_settings on)
     [string]$ExpectMap = "Pangaea",
     [string]$ExpectPace = "GAMESPEED_QUICK",
-    [string]$ExpectDifficulty = "HANDICAP_PRINCE",
+    [string]$ExpectDifficulty = "HANDICAP_KING",
     [string]$ExpectSize = "WORLDSIZE_STANDARD",
     [int]$ExpectCivs = 8,
     [int]$StopTurn = 150,

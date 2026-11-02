@@ -61,7 +61,7 @@ starts Civ V:
 powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1
 ```
 
-Then in Civ V: Single Player > Set Up Game, **Prince**, Standard map with **8 civs**, **Quick** pace,
+Then in Civ V: Single Player > Set Up Game, **King**, **Pangaea**, Standard map with **8 civs**, **Quick** pace,
 and Quick Combat and Quick Movement under Advanced Setup (Civ V remembers these next time). Start the
 game and leave it running. Observer mode turns itself on at the start (the same as Ctrl+Shift+O), so
 the AI plays every civ until someone wins. Standings are saved every 10 turns, so quitting early is
@@ -79,7 +79,7 @@ windowed, clicks through the setup (ticking Quick Combat and Quick Movement, whi
 moves the window to the left half of the screen, stops each game at turn 150 (`-StopTurn`) and logs one
 line per game to `tools\ab\Run-Games.log`. Create `tools\ab\STOP` to stop after the current game. It needs
 the test pack installed (`Run-ABTest.ps1 -NoLaunch`), windowed mode in `GraphicsSettingsDX9.ini`
-(`FullScreen = 0`, `WindowResX = 1914`, `WindowResY = 2034`) and the setup screen already on Prince,
+(`FullScreen = 0`, `WindowResX = 1914`, `WindowResY = 2034`) and the setup screen already on Pangaea, King,
 Standard, Quick and 8 civs on separate teams. Its click positions are for a 3840x2160 screen at 150%.
 
 **Paired games** (C builds from fork commit `7097d49` on): by default `Run-Games.ps1` plays games in pairs. The
@@ -90,7 +90,7 @@ whether the second game's start matched the first ("replay matches the first gam
 STOP file takes effect after the current pair. `-Unpaired` plays single games; `-NoSettings` leaves
 `AIABTest.ini` alone.
 
-**The setup** (from fork commit `614af3d`): every test game is Pangaea, Standard, 8 civs, Quick, Prince, with
+**The setup** (from fork commit `614af3d`): every test game is Pangaea, Standard, 8 civs, Quick, King, with
 Strategic Balance and no ancient ruins. Set the first five once on Civ's setup screen; the DLL sets ruins and
 resources from `AIABTest.ini` (`-Ruins`, `-Resources`). After turn 10 the runner checks the game's settings
 columns against `-ExpectMap`, `-ExpectPace`, `-ExpectDifficulty`, `-ExpectSize` and `-ExpectCivs` and stops

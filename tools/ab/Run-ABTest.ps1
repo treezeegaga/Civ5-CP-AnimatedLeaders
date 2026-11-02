@@ -108,7 +108,8 @@ Start-Civ
 Write-Step "In Civ V"
 Write-Host @"
 Single Player > Set Up Game:
-  - Difficulty: Prince
+  - Difficulty: King
+  - Map type: Pangaea
   - Map size: Standard, 8 civilizations (Civ V remembers these settings next time)
   - Game pace: Quick
   - Advanced Setup: tick Quick Combat and Quick Movement

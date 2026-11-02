@@ -1,8 +1,8 @@
 # CP with Animated Leaders
 
 Animated 3D leader screens for AI diplomacy in Civilization V network multiplayer, on top of
-Community Patch 5.4.8, shipped as a one-click mod pack. On Prince the AI plays by exactly the same
-rules as humans (see [`CPModpack/README.md`](CPModpack/README.md#even-rules-on-prince)).
+Community Patch 5.4.8, shipped as a one-click mod pack. Everyone plays on King, where the AI plays by
+exactly the same rules as humans (see [`CPModpack/README.md`](CPModpack/README.md#even-rules-on-king)).
 
 ## Download
 
@@ -52,6 +52,7 @@ fails to load.
   shouldn't end mid-diplomacy).
 - Known: one PC on DX9 and another on DX11 crashes the DX9 PC when turn 0 ends (the EXE's net
   message handler hits an unknown type id). Everyone has to use the same DirectX version.
-- Even rules on Prince and the `-ABTest` switch: the builder's export was run against a test
-  database made from CP's difficulty data, not yet built from a real game database or played.
+- Even rules (on King since 2026-11-02, Prince before) and the `-ABTest` switch: the builder's
+  even-rules step was run against a test database made from CP's difficulty data, not yet built from
+  a real game database or played.
 - Not yet tested in game: the DX11 and Tablet EXEs (their addresses were found by signature).

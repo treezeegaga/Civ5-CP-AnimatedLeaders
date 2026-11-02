@@ -220,7 +220,7 @@ and goals, diplomacy changes how decisions are computed from them.
 | Ancient ruins | Off | Free settlers and techs are pure luck |
 | Barbarians | On | Needed for settler-escort fixes |
 | City-states | Default | Realistic economy, needed for diplomacy |
-| Difficulty | Prince for now; confirm combat and war fixes at the difficulty the friends play (open question 1) | Same rules for everyone; combat search size and diplomacy weights scale with difficulty |
+| Difficulty | King, with the pack's even rules (the players' decision, 2026-11-02) | The friends play King too, and on King AIs and humans play by exactly the same rules; combat search size and diplomacy weights scale with difficulty |
 | Pace | Quick; confirm finalists on Standard now and then | Speed |
 | Leaders | Random | Paired games cancel the luck it adds |
 | Stop turn | 100 for screening, 150+ for confirmation | Short then long |
@@ -363,7 +363,7 @@ One file, append-only, read by every session. Each entry:
 - Measure: strength share at T150; units lost per war (digest)
 - δ: +2 points of strength share
 - Build: fork commit abc1234, ab-abc1234
-- Test: SPRT gainer, paired, Pangaea/Strategic Balance/no ruins/Quick/Prince
+- Test: SPRT gainer, paired, Pangaea/Strategic Balance/no ruins/Quick/King
 - Status: running 37 pairs, LLR +1.2 | passed | failed | merged in def5678
 - Notes:
 ```
@@ -495,9 +495,9 @@ Paste one into a new session. Each assumes the repos are attached:
 ## Open questions
 
 1. Does difficulty change AI logic beyond handicap bonuses? **Answered (lead job 7, RESULTS.md):
-   yes.** The combat search budget (256 positions at Prince, 2560 at Deity), war appetite, peace length and
-   dispute weights all scale with difficulty. Still open: which difficulty the friends play; combat fixes
-   should be confirmed there.
+   yes.** War appetite, peace length and dispute weights scale with difficulty (the pack gives the even
+   difficulty Deity's combat search budget). Settled: everyone, humans and test games, plays King with
+   even rules.
 2. Where should committed results live: CSVs in `tools/ab/results/`, or only the summary?
 3. Can Civ V run two games at once on the PC (or a second PC) to double throughput?
 4. Is the turn-100 screen trustworthy for this AI? (First jobs, item 8.)

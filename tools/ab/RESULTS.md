@@ -596,9 +596,11 @@ All levels in CP for reference:
   database. It's probably inactive, but I didn't check the base game's data.
 
 **What it means for testing**
-- **AI-only test games use the game's difficulty for every AI-vs-AI decision.** At Prince, the combat search
-  gets a tenth of Deity's positions. B's 2e changes (danger scoring, wider search in small battles) and any
-  War fix were tuned at that budget.
+- **AI-only test games use the game's difficulty for every AI-vs-AI decision.**
+- **Correction (same day):** the pack builder's even rules (`CPModpack/README.md`) already give the even
+  difficulty Deity's combat search budget. Every test pack so far was built with them, so test games were
+  searching with Deity's 2560 positions, not Prince's 256. The search-size point below only matters for
+  stock difficulties.
 - **In multiplayer, AI-vs-human decisions use each human's own difficulty.** AI-vs-AI decisions use the
   game's, which the exe passes to `CvGame::init`. I couldn't see which one the exe uses in multiplayer.
 - **Combat and war fixes should be confirmed at the difficulty the friends actually play**, if it isn't
@@ -611,9 +613,37 @@ All levels in CP for reference:
 - **Turn time:** at Deity the combat search does up to 10× the work, so AI turns in big battles will be
   slower than in our Prince games.
 
-**Open:** which difficulty do the friends play, and which difficulty is "the game's" in multiplayer
-(the host's)? If it isn't Prince, the standard setup should move to it, or at least finalists get confirmed
-at it.
+**Settled:** everyone plays King (next section), so the friends, the AIs and the test games all use King's
+row, and "which difficulty is the game's in multiplayer" no longer matters.
+
+### Decision: everyone plays King, by the same rules (user, 2026-11-02)
+
+The user's words: "I want all the humans and all the AI to play by all the exact same rules. Everyone gets
+all the same advantages and disadvantages. Let's just have everyone play at King."
+
+- **The pack.** `Build-CPModpack.ps1` now evens out King instead of Prince (`-EvenDifficulty`, default
+  `KING`). `CPModpack/README.md` has the full list. On King, CP gave AIs:
+  - 15% cheaper techs, buildings, units and great prophets; 25% cheaper policies; 62% cheaper upgrades;
+  - half-price improvement maintenance; 10% faster growth; 20% faster workers;
+  - 10 free XP on new units, an extra starting defender, more unit supply, 15 happiness against a
+    human's 9;
+  - and it rated human armies 25% stronger than they are.
+
+  All of that becomes the human value. AI-only free techs and yields are left out, and the AI's
+  human-only exceptions are off (`HUMAN_USES_AI_MECHANICS`).
+- **Checked.** I ran the builder's real even-rules step against a database built from CP's difficulty
+  data. It prints exactly the expected King edits, and `-EvenDifficulty Prince` still gives the old Prince
+  list. Not yet run on a real game database.
+- **Same for everyone at King:** the combat search (Deity's budget), aggression toward disliked civs (6),
+  peace holding 16 turns, disputes weighing 100–110%. A human's own row and the game's row are both King,
+  so the AI applies these to humans and AIs alike.
+- **Testing moves to King.** `Run-Games.ps1` expects `HANDICAP_KING`. `Run-ABTest.ps1`, README.md and
+  AGENTS.md say King.
+- **A new baseline.** Every result before 2026-11-02 (B included) is from Prince with even rules. B stays
+  the reference, but σ is measured again at King (job 6), and old and new results aren't pooled. The
+  `Difficulty` column keeps them apart.
+- **Players:** pick King when hosting. On other difficulties the AI keeps CP's usual bonuses. The pack's
+  Readme.txt says so.
 
 ## Requests
 
@@ -640,8 +670,10 @@ swapped. With the bundle it plays the same AI as c7c, so both games also count a
    gh run download <run id> --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>
    ```
    The artifact name must contain `g614af3d`.
-3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCoreDLL_Expansion2.dll -ABTest -Install`
-4. Set the setup screens once by hand: **Pangaea**, Standard, 8 civs on separate teams, Quick, Prince.
+3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCoreDLL_Expansion2.dll -ABTest -Install`.
+   It should print "Evening out the rules on King" and a list of King changes like the one in
+   `CPModpack/README.md`. Paste that list, and any warning about `HandicapInfo_` lists, into the report.
+4. Set the setup screens once by hand: **Pangaea**, Standard, 8 civs on separate teams, Quick, **King**.
    Civ remembers these. Ruins and resources are set by the DLL from `AIABTest.ini`, so leave those as
    they are. Logging on (`LoggingEnabled = 1`, `AILog = 1` in `config.ini`). Run one pair:
    ```
@@ -656,7 +688,7 @@ swapped. With the bundle it plays the same AI as c7c, so both games also count a
      resources after turn 10).
    - In the game: no ancient ruins on the map, and each capital has horses and iron nearby (Strategic
      Balance).
-   - The settings columns say Pangaea, Quick, Prince, Standard, `StopTurn` 150, `Ruins` 0, and
+   - The settings columns say Pangaea, Quick, King, Standard, `StopTurn` 150, `Ruins` 0, and
      `Fixes` lists the bundle for c civs and `none` for b civs. Copy the `MapOptions` value into the report:
      it shows how Civ names the map options, which job 5 needs.
    - Same civs in the same player slots in both games; same `Warmonger` values; `Group` swapped (each c in
