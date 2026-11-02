@@ -1268,6 +1268,24 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
   besieged city's owner and HP and each side's units lost per turn. Measure: captures out of runs, turns to capture.
   Does Civ V reseed the combat rolls on load? If not, runs with the same flags will repeat exactly and only the flags
   vary, which is what we want.
+- **Lead's answers to War (2026-11-02):**
+  - **Pushed:** patch 0001 applied cleanly to `ai/war` = `4917284` (on `6b8ebde`). Its push build publishes
+    `ab-ai-war-latest`. Before pushing, the lead checked that the identifiers it uses exist with the right
+    const-ness (`isProjectedToDieNextTurn`, `m_AllTargets`, `eAggressionLevel`, `getNeighborsUnchecked`). CI is
+    the first compile. `AIABTest.ini.example` now lists the War flags. Put later patches in
+    `tools/ab/patches/war/` (numbered 0002, ...).
+  - **Logged games:** queued as the PC runner's step 3, right after the baseline's logged pair. That's 2 games
+    with the bundle and 1 with the bundle plus your three flags, on `ab-ai-war-latest`, with the log files you
+    listed committed to `results/logs_<GameId>/`.
+  - **Battle tests:** yes, and determinism is on our side. CP's rolls hash the map seed with the turn, unit IDs
+    and plots (`CvGame::randCore`, `CvUnitCombat`), so the same save with the same flags plays out the same way.
+    Each save then gives one run per flag configuration, and variety comes from many saves, not repeats.
+    - The PC runner keeps the autosaves of the logged War games as the first saves.
+    - The runner mode (load a save with given `Fixes`, play N turns, log the besieged city and losses) needs
+      the Load Game screen's click positions, which only the PC runner can calibrate. The lead writes it after
+      the baseline, with the PC runner. Until then, SPRTs on paired games are the test.
+  - **Your two declaration issues** (the `static` committed target; coop wars, demands and city-state statements
+    not waiting for an army) are passed to Diplomacy.
 - **For Diplomacy (or the lead), from War:** two war-declaration issues in `CvDiplomacyAI`, which War doesn't own:
   1. The committed conquest target (`s_aiCommittedTarget` in `GetNewAIConquestTarget`) is a `static`, not game
      state. That's the request above "For War", but the file is Diplomacy's.
@@ -1279,6 +1297,14 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
   picking hopeless targets.
 
 ## Instructions for the PC runner
+
+**The queue, in order** (2026-11-02, updated by the lead at every check-in):
+1. The smoke-test pair (below).
+2. The King baseline's **logged pair** (baseline step 1).
+3. **War's 3 logged games** (below, after the baseline).
+4. The rest of the baseline: 19 pairs, logging off (baseline step 2).
+5. Then whatever the lead queues after the baseline (the first single-flag SPRTs: Economy's
+   `SettlersFirst` and `SettlerOverlap`, then War's flags).
 
 ### 2026-11-02: smoke test of `c7c_roles` with paired games (1 pair = 2 games)
 
@@ -1337,7 +1363,7 @@ the DLL sets Strategic Balance and no ruins).
    ```
    powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 2 -SaveLogs
    ```
-   Commit the two digests with the CSV and push.
+   Commit the two digests with the CSV and push. **Then do War's 3 logged games (next section) before step 2.**
 2. **Then logging off** (`LoggingEnabled = 0`; it costs about 15% speed), and the other 19 pairs, with group c
    running **no candidate changes**, so every civ plays B:
    ```
@@ -1349,4 +1375,29 @@ the DLL sets Strategic Balance and no ruins).
    ```
    powershell -ExecutionPolicy Bypass -File tools\ab\Summarize-ABTest.ps1 -Csv "$env:USERPROFILE\Documents\My Games\Sid Meier's Civilization 5\AIABTest_c7c_roles.csv"
    powershell -ExecutionPolicy Bypass -File tools\ab\Compare-ABTurns.ps1 -Folder "$env:USERPROFILE\Documents\My Games\Sid Meier's Civilization 5"
+   ```
+
+### 2026-11-02: War's 3 logged games (between the baseline's logged pair and the rest)
+
+War needs AI logs from real wars before its flags get an SPRT: how each war was declared, how attack operations
+end, and what happens at a siege. These are single games with the c7c bundle on, so c's warmongers attack.
+1. Install War's build:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-ai-war-latest -NoLaunch -NoUpdate
+   ```
+   The printed title must name `4917284` or later. If the release doesn't exist yet, its CI build is still running
+   or failed: skip this section, carry on with the baseline, and report it.
+2. Logging on (`LoggingEnabled = 1`, `AILog = 1`). Two games with the bundle alone, one with War's three flags on top:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Unpaired -Fixes bundle -MaxGames 2 -SaveLogs
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Unpaired -Fixes "bundle, SiegeStay, SiegePosture, DeclareAtBorder" -MaxGames 1 -SaveLogs
+   ```
+3. For each game, copy from `My Games\LogsArchive\<GameId>\` into `tools/ab/results/logs_<GameId>/`:
+   `OperationalAILog.csv`, `MilitaryAILog.csv`, the diplomacy logs (`DiplomacyAI*.csv`), and the tactical logs
+   (`*TacticalAI*.csv`). Leave out any file over 20 MB and list its size in the commit message instead.
+   Also copy the game's autosaves (`Saves\single\auto\`) into `My Games\LogsArchive\<GameId>\saves\`, but
+   don't commit them: they're for battle tests later.
+4. Commit the CSV, digests and logs, push, and **reinstall the baseline build** before baseline step 2:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-c-latest -NoLaunch -NoUpdate
    ```
