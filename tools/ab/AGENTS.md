@@ -409,6 +409,29 @@ entry is in RESULTS.md, and the scoreboard is at its top.
    cities per war, coalition size and speed, interactivity rate, banned-behaviour count, strength
    vs CP, AI turn time. Plus a goal row (set the numbers with the players) that says when we're done.
 
+## Experiment lead: the check-in ("avengers assemble")
+
+When the user says **"avengers assemble"**, the lead checks on every session and reports back in one
+summary:
+
+1. **The topic sessions** (IDs in RESULTS.md, "Sessions running"): for each one, `get_session` for its
+   status and its latest messages (`list_events`, kinds user/assistant/result): what it's doing, what it
+   found, what it's waiting for, whether it's stuck or failed.
+2. **Their branches.**
+   - The fork's `ai/war`, `ai/economy`, `ai/diplomacy`: new commits, and whether their CI builds and
+     `ab-ai-<topic>-latest` releases passed.
+   - Their pack-repo branches: new RESULTS.md entries and requests. Merge them into
+     `claude/sleepy-hopper-x77moh` (fast-forward or merge, never dropping anyone's lines).
+3. **The PC runner** (`claude/sleepy-hopper-x77moh`): new results CSVs and `Run-Games.log` lines. Run the
+   summary and the scoreboard. Check for "REPLAY DIFFERS", "WRONG SETUP", stalls and failed starts.
+4. **Act on it:**
+   - Update RESULTS.md: results, the scoreboard, instructions for the PC runner.
+   - Queue the tests the sessions are ready for.
+   - Answer requests aimed at the lead.
+   - Merge into `claude/ab-c1` only fixes that passed.
+   - Push and fast-forward `claude/sleepy-hopper-x77moh`.
+5. **Report** to the user: per session in a line or two, then results, decisions needed, and what runs next.
+
 ## War: first tasks (from the lead, 2026-11-02)
 
 **Offence first: get an AI army to actually take a city.** "Defence comes first" is the long-term aim, but
