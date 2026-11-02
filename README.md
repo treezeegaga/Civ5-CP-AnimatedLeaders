@@ -52,5 +52,6 @@ fails to load.
   shouldn't end mid-diplomacy).
 - Known: one PC on DX9 and another on DX11 crashes the DX9 PC when turn 0 ends (the EXE's net
   message handler hits an unknown type id). Everyone has to use the same DirectX version.
-- Not yet built or tested: even rules on Prince (builder change only; needs a rebuild on Windows).
+- Even rules on Prince and the `-ABTest` switch: the builder's export was run against a test
+  database made from CP's difficulty data, not yet built from a real game database or played.
 - Not yet tested in game: the DX11 and Tablet EXEs (their addresses were found by signature).
