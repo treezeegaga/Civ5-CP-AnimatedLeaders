@@ -733,6 +733,55 @@ moving (CP: below half). That's one `UsesNewAI()` branch in `CvAIOperation.cpp` 
 - **First run:** the merge into `claude/ab-c1` started push run 41543426404. It should publish `ab-9348566`
   and `ab-c-latest`. The DLL is the same AI as `614af3d`; only the workflow changed.
 
+### The bully test and the builders test (lead job 10, fork commit `59888a3`, build `c7c_roles`)
+
+**Setup.** `Run-Games.ps1 -Mode bully` or `-Mode builders` writes `Mode =` to `AIABTest.ini`. The DLL picks
+the roles from the map seed and the civs' personalities, so both games of a pair get the same ones:
+
+| Mode | Roles | What they play |
+|---|---|---|
+| `bully` | **aggressor**: a warmonger (warmonger trait or offense flavor 8+), else the most offensive personality | its own personality, plus a head start: `HeadStartProduction` (default +50% on all production) and `HeadStartGold` (default +3 gold per city per turn) |
+| | **tall**: the most science/culture-minded of the rest (nerd and smaller traits first) | the tall opening plan |
+| `builders` | **two builders**: the two most science/culture-minded civs, warmongers last | the tall opening plan; they start no wars (`CvTeam::canDeclareWar`), but a defensive pact can still pull them in |
+
+**How a test works.** The roles and the head start stay the same in both games of a pair; only the other
+AI civs change.
+- In these modes group c is every AI civ without a role, and the roles always run B.
+- In the second game of a pair (`Flip = 1`) there's no c at all, so the other AIs run B as well.
+- So a pair measures what the candidate changes do to the roles' games: how far the aggressor gets, and how
+  much pressure the builders feel.
+- The c/b strength split isn't used as a verdict in these modes, since the groups are 6 civs against 2.
+
+**New columns** (`AIABTest_c7c_roles.csv`):
+- `Mode`, `Role`.
+- Running counts: `WarsDeclared` (not pact calls), `WarsOnUs`, `CitiesCaptured`, `CitiesLost` (between
+  major civs), `Deals` (that went into effect), and the banned behaviours `WorkersStolen` (civilians captured
+  from city-states) and `WonderChops` (forests or jungles chopped into a city building a world wonder).
+- This turn's state toward the other major civs: `AtWar`, `AtWarAggressor`, `Pacts`, `Friends`,
+  `Denouncing`, `Influential` (civs it's culturally influential on).
+
+These are counted in the DLL rather than read from the AI logs, so they work with logging off and land
+in the same file as the verdict. `Digest-ABLogs.ps1` still covers what only the logs show.
+
+**`Summarize-ABTest.ps1`** prints, for bully games: the aggressor's share of all cities at T100 and at the
+end, its captures, how many civs are at war with it, how many turns after its first capture two or more
+civs were at war with it ("coalition"), and how the tall civ was treated (wars declared on it, friends,
+pacts). For pairs, it prints the aggressor's end-of-game city share with c defenders minus without. For
+builders games: wars declared on each builder, cities it lost, its deals, AI-vs-AI wars, cities changing
+hands, and the leading AI's techs. For every file with the new columns: deals, wars declared and captures
+per civ per 10 turns, friends, pacts, denouncements and influence, and the banned-behaviour totals, by
+group. Tested on synthetic files only.
+
+**Not built yet:**
+- Requests and joint-war proposals (only in the AI logs or diplomacy state; Diplomacy can add them).
+- Victory progress beyond techs and influence: delegates, spaceship. At T150 on Quick, no civ is near a
+  victory anyway.
+- An AI-turn-time column for the scoreboard (job 11).
+
+**The head start is a first guess:** +50% production and +3 gold per city per turn. A first bully run
+should check that B's aggressor actually snowballs. If it doesn't conquer anything with B defenders, the
+test has nothing to measure; raise the head start until it takes cities from B.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates

@@ -40,6 +40,10 @@ param(
     [switch]$NoSettings,              # leave AIABTest.ini alone (builds before c7c_flags, or a hand-written file)
     [int]$Ruins = 0,                  # AIABTest.ini Ruins = (0 = no ancient ruins)
     [int]$Resources = 5,              # AIABTest.ini MapOption5 = (Pangaea's resources option; 5 = Strategic Balance)
+    [ValidateSet("split", "bully", "builders")]
+    [string]$Mode = "split",          # AIABTest.ini Mode = : the usual c/b split, or the bully or builders test (RESULTS.md, lead job 10)
+    [int]$HeadStartProduction = 50,   # bully test: the aggressor's extra production, %
+    [int]$HeadStartGold = 3,          # bully test: the aggressor's extra gold per city per turn
     # the setup every game must have; checked against the first results rows (files from c7c_settings on)
     [string]$ExpectMap = "Pangaea",
     [string]$ExpectPace = "GAMESPEED_QUICK",
@@ -95,7 +99,8 @@ $ReplayFile = Join-Path $MyGames "AIABTest_lastgame.ini"
 function Write-Settings([string[]]$replay) {
     if ($NoSettings) { return }
     $lines = @("; written by Run-Games.ps1", "[ABTest]", "Fixes = $Fixes", "Screen = $Screen", "StopTurn = $StopTurn",
-        "Ruins = $Ruins", "MapOption5 = $Resources")
+        "Ruins = $Ruins", "MapOption5 = $Resources", "Mode = $Mode", "HeadStartProduction = $HeadStartProduction",
+        "HeadStartGold = $HeadStartGold")
     if ($replay) { $lines += "Flip = 1"; $lines += $replay } else { $lines += "Flip = 0" }
     [IO.File]::WriteAllLines($SettingsFile, [string[]]$lines, [Text.Encoding]::ASCII)
 }
@@ -304,7 +309,7 @@ while ($played -lt $MaxGames -or $pairReplay) {
         Write-Settings $pairReplay
         if ($wasFirstOfPair) { Remove-Item $ReplayFile -ErrorAction SilentlyContinue }
         $what = if ($pairReplay) { "second game of the pair (Flip = 1)" } elseif ($wasFirstOfPair) { "first game of a pair" } else { "single game" }
-        Write-Log "Starting game $($played + 1): $what; Fixes = $Fixes; Screen = $Screen"
+        Write-Log "Starting game $($played + 1): $what; Mode = $Mode; Fixes = $Fixes; Screen = $Screen"
         if (-not (Start-TestGame)) { Write-Log "Setup failed; retrying"; $failures++; if ($failures -ge 3) { Write-Log "Three failed starts in a row; giving up"; break }; continue }
 
         $replay = Read-Replay
