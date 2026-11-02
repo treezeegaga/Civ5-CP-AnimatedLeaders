@@ -951,6 +951,50 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
 - Test: SPRT gainer, paired, T100, `Fixes = SettlerOverlap`.
 - Status: written, not built.
 
+### CvPolicyAI audit (Economy, 2026-11-02)
+
+`CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
+scores), which was scanned for scores whose condition tests one field and whose value uses another.
+Fork `6b8ebde`; line numbers from there. In AUDIT.md's terms, all are **confirmed** (re-read, does what's
+described); impact is a judgement.
+
+| # | Where | Bug | Impact | Fix |
+|---|---|---|---|---|
+| P1 | `WeighPolicy`, ~4808 | "If we're itching to conquer a city-state, drop the diplomacy value" tests `GetCivApproach(eMinor) >= CIV_APPROACH_HOSTILE`. The enum runs WAR, HOSTILE, DECEPTIVE, GUARDED, AFRAID, NEUTRAL, FRIENDLY, so the test is true for every approach but WAR: the diplomacy-flavour value of a policy is dropped for nearly every civ, and kept only by civs planning war on a city-state. Every other approach test in the DLL uses `<=` | Medium, all game: Patronage and other diplomacy-flavoured policies undervalued by everyone, diplomat civs most | `<=`. Flag `DiploPolicyValue`, patch 0002 |
+| P2 | `DoChooseIdeology`, ~600 | An ideology is "ruled out" by setting its score to 0 (it doesn't support our clearly preferred victory, or `CanAdoptIdeology` says no), and later steps skip zeros. But the relations step can push the others below 0 (−500 for a hostile neighbour's ideology, −500 again if that's the biggest competitor), and the final pick is a plain maximum starting from index 0, so a ruled-out ideology at 0 beats them | Low in test games (ideologies come after T150 on Quick); real in full games | Pick only among ideologies not ruled out (track a flag, not 0) |
+| P3 | `PropagateWeights`, ~1027 | `PropagateWeights(..., iPropagationLevel++)`: AUDIT.md item 8's bug, in the policy copy. The first prerequisite recurses at the same level (one level deeper than intended), later ones a level shallower | Low: policy trees are shallow | `iPropagationLevel + 1` |
+| P4 | `WeightPolicyAttributes`, 2323 | `GetPassiveEspionageBonusModifier() != 0` scores `GetRigElectionInfluenceModifier() / 10` (copy-paste) | Low: espionage, late game | Use the passive espionage value |
+
+**Not bugs, but worth knowing** (design; tuning, not fixes):
+- **Older branches are penalised twice.** An unopened branch from an earlier era has each policy divided by
+  `max(2, era·5 − branch era)` in `WeighPolicy` (÷5 in the Classical era, ÷11 in the Medieval), then the
+  branch's total by `2·(era − branch era)` in `ChooseNextPolicy`, after the ×10% every new branch gets
+  (`POLICY_WEIGHT_PERCENT_DROP_NEW_BRANCH` = 90). A Tradition civ effectively can't pick up Liberty or Honor
+  once out of the Ancient era.
+- **Finishing first.** No new branch opens while any open branch can continue (`bNeedToFinish`), and
+  policies in an open branch are multiplied by the number already owned there.
+- `WeighBranch` counts a branch's opener twice (once in the loop over the branch's policies, once as
+  `GetFreePolicy`), and `GetCulturePerWonder` / `GetCultureWonderMultiplier` add `iNumWonders` outside the
+  product (`a * b + c`, probably meant `a * (b + c)`). Both small.
+- `aLevel3Tenets` in `ChooseNextPolicy` is filled and never read.
+
+**What to do:** P1 is the only one that touches T150 games, so it's the only one coded so far. P2-P4 are
+one-line fixes for later, best bundled into a "late-game bugs" no-worse test once games run past T150.
+Whether the policy AI picks well overall (which branches, in what order) needs `PolicyAILog` output from
+logged games, not more reading.
+
+### DiploPolicyValue: diplomacy-flavoured policies keep their value (Economy, audit P1)
+- Hypothesis: with the inverted test fixed, civs value Patronage and other diplomacy policies as CP
+  intended, so diplomat and city-state-friendly civs take them, earning more city-state allies (votes,
+  yields). Expect a small strength effect at T100-150 and more city-state alliances.
+- Measure: strength share at T150 (no-worse); policies taken by branch (`PolicyAILog`) and city-state
+  allies where the digest has them (mechanism).
+- δ: 2 points, as a **no-worse** test: it's a bug fix, kept unless it hurts.
+- Build: DLL commit `07ddeda` on `ai/economy`, flag `DiploPolicyValue` (`FIX_DIPLO_POLICY_VALUE`), as
+  `tools/ab/patches/economy/0002-*.patch` (after 0001). Not in the bundle.
+- Test: SPRT no-worse, paired, standard King setup, T150. Lower priority than the expansion flags.
+- Status: written, not built.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
@@ -969,7 +1013,7 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
     then, the turn it was finished or bought (`EXPANSION SETTLER - Bought`), its found-city operation's
     start, and the founding or abort. Also what the capital built while a book settler step was held, and
     turns with `EXPANSION SETTLER - Saving`.
-  - **Queue `SettlersFirst` and `SettlerOverlap`** after the baseline (T100 paired SPRTs, or one screening
+  - **Queue `SettlersFirst` and `SettlerOverlap`** (and later `DiploPolicyValue`, patch 0002) after the baseline (T100 paired SPRTs, or one screening
     run of both), once the commit is on `ai/economy` and `ab-ai-economy-latest` is built.
 
 ## Instructions for the PC runner

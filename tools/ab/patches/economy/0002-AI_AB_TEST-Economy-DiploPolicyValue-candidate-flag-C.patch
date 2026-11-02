@@ -1,0 +1,73 @@
+From 07ddeda7736db6be174cd516f128acb82fa3b3a1 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:48:50 +0000
+Subject: [PATCH] AI_AB_TEST Economy: DiploPolicyValue candidate flag
+ (CvPolicyAI: inverted city-state approach test dropped diplomacy policy
+ value)
+
+Not in the bundle.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp   | 6 +++---
+ CvGameCoreDLL_Expansion2/CvPlayer.h     | 1 +
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp | 8 +++++++-
+ 3 files changed, 11 insertions(+), 4 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 59c3c4e..01d1302 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33321,14 +33321,14 @@ static const bool kABTestVersusBase = true;
+ static const char* const kCandidateFixNames[NUM_CANDIDATE_FIXES] = {
+ 	"WidePlans", "BoxedIn", "LongWide", "BoxedInWar", "TimingAttack", "SiegeTechs", "SiegeBook", "DeclareTiming",
+ 	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders",
+-	"SettlersFirst", "SettlerOverlap" };
++	"SettlersFirst", "SettlerOverlap", "DiploPolicyValue" };
+ 
+ // The bundle: what group c ran in the last C build (c7c), and what every civ runs outside a test game. Off in it:
+ // LongWide (c1: c's wide civs got no more cities from the longer opening, and stopping settlers ended expansion that b
+ // completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars). Flags added after c7c stay out until they pass,
+-// so a game without AIABTest.ini still plays c7c: SettlersFirst, SettlerOverlap.
++// so a game without AIABTest.ini still plays c7c: SettlersFirst, SettlerOverlap, DiploPolicyValue.
+ static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP) | (1 << FIX_SETTLERS_FIRST) |
+-	(1 << FIX_SETTLER_OVERLAP)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
++	(1 << FIX_SETTLER_OVERLAP) | (1 << FIX_DIPLO_POLICY_VALUE)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
+ 
+ const char* CvPlayer::GetCandidateFixName(int iFix)
+ {
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 2e6a26f..1ddeb70 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -160,6 +160,7 @@ enum CandidateFixTypes
+ 	FIX_CLOSED_BORDERS,		// c7c: tall civs never give open borders to major civs
+ 	FIX_SETTLERS_FIRST,		// Economy: the capital's opening-book settlers come before its monument, shrine and worker. Not in the bundle
+ 	FIX_SETTLER_OVERLAP,	// Economy: the next book settler may start training while the last one walks to its site. Not in the bundle
++	FIX_DIPLO_POLICY_VALUE,	// Economy (CvPolicyAI audit P1): diplomacy-flavoured policies lose their value only when hostile to a city-state. Not in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index 5cdf141..1cb17a4 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -4805,7 +4805,13 @@ int CvPolicyAI::WeighPolicy(CvPlayer* pPlayer, PolicyTypes ePolicy)
+ 						// Loop through all minors - if we're itching to conquer, bail out on diplo policies.
+ 						if (GET_PLAYER(eMinor).isMinorCiv() && GET_PLAYER(eMinor).isAlive())
+ 						{
+-							if (pPlayer->GetDiplomacyAI()->GetCivApproach(eMinor) >= CIV_APPROACH_HOSTILE)
++							// AI_AB_TEST candidate (DiploPolicyValue): ">= HOSTILE" is true for every approach but WAR
++							// (WAR < HOSTILE < ... < FRIENDLY), so the diplomacy value was dropped for nearly every civ and
++							// kept only by those planning war on a city-state: the opposite of the comment above
++							bool bHostileToMinor = pPlayer->UsesCandidateAI(FIX_DIPLO_POLICY_VALUE) ?
++								pPlayer->GetDiplomacyAI()->GetCivApproach(eMinor) <= CIV_APPROACH_HOSTILE :
++								pPlayer->GetDiplomacyAI()->GetCivApproach(eMinor) >= CIV_APPROACH_HOSTILE;
++							if (bHostileToMinor)
+ 							{
+ 								iDiploValue -= iFlavorValue;
+ 								break;
+-- 
+2.43.0
+
