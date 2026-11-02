@@ -880,6 +880,77 @@ minutes a game; King games may run a little longer.
 - Then the first single-flag SPRTs, and a first bully pair to see whether the aggressor takes anything.
   A screening run of all flags at T100 is optional at this game speed.
 
+### Expansion pace: where the turns go, first pass (Economy, 2026-11-02)
+
+No logged King game exists yet, so this is from the results files (2p, c4, c7c), the one digest
+(`digest_c7c_game2.txt`) and the code. The logged games asked for under Requests confirm or correct it.
+
+**Founding turns by plan** (Quick, last row per civ; the new AI's own groups; `n` = civs that got there):
+
+| Build, group | 2nd city | 3rd city | 4th city | Cities at end |
+|---|---|---|---|---|
+| 2p new, wide (8) | T29 | T54 | T68 | 5.6 |
+| 2p new, tall (16) | T38 | T60 | T87 (9 of 16) | 4.0 |
+| c7c b, wide (9) | T27 | T57 | T76 | 5.4 |
+| c7c b, tall (19) | T38 | T68 | T83 (13 of 19) | 4.4 |
+| 2p cp (24) | T48 | T65 | T80 (13 of 24) | — |
+
+- **The 2nd-to-3rd city gap is 25-30 turns for both plans**, even for wide civs whose book asks for
+  settler after settler. Tall civs also start late: their 2nd city comes at T38.
+- **Gold sits unspent.** The new AI holds 150-230 gold from T20 to T60, against 70-150 for CP's AI,
+  while saving for a gold settler (about 370 on Quick). About one civ in two shows a 200+ drop before
+  T80 (a settler bought). That's 2j/2k doing what it says, slowly. Not first: a fix here trades tiles
+  and hurries for settlers, and the logs (`EXPANSION SETTLER - Saving/Bought`) should show how often
+  the buy actually lands.
+
+**What the code does between settlers** (`CvPlayer::GetOpeningBookProduction`, fork `9348566`):
+1. **The books put buildings between settlers.** Wide capital: Scout, Warrior, Warrior, **Settler**,
+   Worker, Shrine, **Settler**, Monument, **Settler** ×3, Library. Tall capital: Scout, Monument, Shrine,
+   Warrior, Warrior, **Settler**, Worker, **Settler**, **Settler**. On Quick a worker, shrine or monument
+   is 8-10 turns from a young capital, a settler 10-14. So the wide 2nd settler waits for a worker and a
+   shrine (16-20 turns), and the tall first settler for a monument, shrine and two warriors.
+2. **A held settler step falls through to the next building.** The book skips a settler while the last
+   one is on the map *or in training* ("one settler at a time"), while the city is size 1, or while
+   growth is ≤ 3 turns away, and then goes on down the list. The next item is usually a building, and
+   the city doesn't choose again until it's done. So every settler walk (3-4 turns in the digest) costs
+   a whole monument or library (8-20 turns) before the next settler starts. The digest has gaps that
+   fit, but can't prove it: Austria's settlers were ordered at T26, T34 and T55 and its cities came at
+   T42 and T89; Brazil's at T30 and T53, with one city, at T64. The logged games should show it.
+3. Other suspects, not yet checked against logs: happiness stopping settlers (`IsEmpireUnhappy`),
+   escorts (`IDLE SETTLER` turns: 3-10 per civ in the digest), and the book ending at T67 (wide) / T53
+   (tall) on Quick, after which the base AI's expansion strategy takes over.
+
+### SettlersFirst: the capital's book settlers come before its buildings (Economy)
+- Hypothesis: settlers that don't queue behind a worker, shrine and monument found the 2nd and 3rd
+  cities 10-15 turns sooner. Tall capital: Scout, Warrior, Warrior, Settler, Monument, Settler, Shrine,
+  Worker, Settler, then B's later steps (greedy book: the same, then aqueduct and university). Wide
+  capital: Scout, Warrior, Warrior, Settler, Settler, Worker, Settler, Shrine, Settler, Monument,
+  Settler, Library. Warriors stay first (2p's escort lesson). Risk: a later shrine may cost a pantheon
+  or religion (2l); strength share doesn't count religion, but watch the religion count.
+- Measure: strength share at T100 (verdict); `City2Turn`–`City4Turn` and cities at T100 (mechanism).
+  Expect the 3rd city by about T45 instead of T55-68.
+- δ: +2 points of strength share.
+- Build: DLL commit `a673085` on `ai/economy` (flag `SettlersFirst`, `FIX_SETTLERS_FIRST`; **not pushed
+  yet**, see Notes). Not in the bundle, so games without `AIABTest.ini` still play c7c.
+- Test: SPRT gainer, paired, standard King setup, T100 (`Summarize-ABTest.ps1 -AtTurn 100`), group c
+  running `Fixes = SettlersFirst` against B. Or screened with `SettlerOverlap` in one run.
+- Status: written, not built.
+- Notes: this session's push to the fork was refused (no push access was granted), so the commit only
+  exists as a patch; the user decides how it gets to `ai/economy`.
+
+### SettlerOverlap: the next book settler trains while the last one walks (Economy)
+- Hypothesis: with B's "one settler at a time", a settler in training or walking blocks the next, and
+  the capital falls through to a 8-20-turn building. Counting only settlers in training (and at most one
+  on the map) lets the next start at once, so each city after the 2nd comes about one walk-plus-building
+  (5-15 turns) sooner. Independent of SettlersFirst: it removes the fall-through, SettlersFirst the
+  built-in buildings.
+- Measure: as SettlersFirst. Also idle-settler turns in the digest (two settlers on the map at once
+  should stay rare).
+- δ: +2 points of strength share.
+- Build: same commit, flag `SettlerOverlap` (`FIX_SETTLER_OVERLAP`). Not in the bundle.
+- Test: SPRT gainer, paired, T100, `Fixes = SettlerOverlap`.
+- Status: written, not built.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
@@ -888,6 +959,18 @@ minutes a game; King games may run a little longer.
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
   (`s_aiCommittedTarget`), which isn't saved, so a reloaded game re-picks. Not a multiplayer desync
   (every computer runs the same turns), but it should be game state before anything ships.
+
+- **For the lead, from Economy (expansion pace, step 1 of Economy's first tasks):**
+  - **2-3 logged King games.** The cheapest way: the first pair of the King baseline with
+    `LoggingEnabled = 1`, copying `Logs\` aside after each game, plus `Digest-ABLogs.ps1 -UpToTurn 80`
+    for each into `tools/ab/results/`.
+  - **A per-settler timeline in `Digest-ABLogs.ps1`**, so the turns can be split into waiting, training,
+    walking and escort: for each settler, the city and turn it was started (book or not), the city's size
+    then, the turn it was finished or bought (`EXPANSION SETTLER - Bought`), its found-city operation's
+    start, and the founding or abort. Also what the capital built while a book settler step was held, and
+    turns with `EXPANSION SETTLER - Saving`.
+  - **Queue `SettlersFirst` and `SettlerOverlap`** after the baseline (T100 paired SPRTs, or one screening
+    run of both), once the commit is on `ai/economy` and `ab-ai-economy-latest` is built.
 
 ## Instructions for the PC runner
 
