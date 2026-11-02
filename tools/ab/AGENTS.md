@@ -535,7 +535,9 @@ Work on branch `ai/diplomacy`: pushes there build by themselves and publish `ab-
 ## Opening prompts
 
 Paste one into a new session. Each assumes the repos are attached:
-`treezeegaga/Civ5-CP-AnimatedLeaders` and `treezeegaga/Community-Patch-DLL`.
+`treezeegaga/Civ5-CP-AnimatedLeaders` and `treezeegaga/Community-Patch-DLL`. Topic sessions write their
+RESULTS.md entries and requests on their own branch of `treezeegaga/Civ5-CP-AnimatedLeaders`; the lead
+merges them into `claude/sleepy-hopper-x77moh`, which only the lead and the PC runner push to.
 
 ### Experiment lead
 
@@ -577,8 +579,8 @@ Paste one into a new session. Each assumes the repos are attached:
 > Read "Economy & victory: first tasks" in AGENTS.md first: expansion pace comes before everything below.
 > Audit items 1, 5-8, 12-14, 16, 17, 21-23, 28 and the opening book are already in B; RESULTS.md
 > has what the games showed about them (settling, religion, wide vs tall). New ideas each get a
-> `FIX_xx` flag behind `UsesCandidateAI()`. Start with the greedy problem in RESULTS.md (c6, c7c),
-> together with War, since greedy civs need an alarm. Then audit `CvPolicyAI` (not yet
+> `FIX_xx` flag behind `UsesCandidateAI()`. After expansion pace, take the greedy problem in RESULTS.md
+> (c6, c7c), together with War, since greedy civs need an alarm. Then audit `CvPolicyAI` (not yet
 > audited) and the late-game victory push for confirmed bugs. Every new idea gets a hypothesis
 > entry in RESULTS.md before code. Don't merge: the experiment lead does.
 
@@ -602,7 +604,8 @@ Paste one into a new session. Each assumes the repos are attached:
 > You're the diplomacy session for the Civ V AI optimization project. Read `tools/ab/AGENTS.md`,
 > `AUDIT.md` and `RESULTS.md` (repo `treezeegaga/Civ5-CP-AnimatedLeaders`, branch
 > `claude/sleepy-hopper-x77moh`). Work in `treezeegaga/Community-Patch-DLL` on branch
-> `ai/diplomacy`, and edit only the files AGENTS.md gives to Diplomacy. Read "The goal" and
+> `ai/diplomacy`, off the integration branch `claude/ab-c1`, and edit only the files AGENTS.md gives
+> to Diplomacy. Read "The goal" and
 > "Diplomacy: first tasks" in AGENTS.md first (an audit and a map before any code): the main job is making AIs gang up on a runaway conqueror (judged by
 > behaviour, never by being human) and be lively, engaged neighbours. Start with an audit of
 > `CvDiplomacyAI`, `CvDealAI`, `CvVotingClasses` and `CvMinorCivAI`: confirmed bugs first, in the
