@@ -10,6 +10,8 @@ reported it with code references but it hasn't been re-checked. Impact is a judg
 
 ## Batch 1: small confirmed bugs, low risk
 
+Coded in fork commit `6fd3058` (results go to `AIABTest_batch1.csv`).
+
 | # | Area | Where | Bug | Fix |
 |---|---|---|---|---|
 | 1 | Expansion | `CvUnitProductionAI.cpp:207` | A city with fewer than 2 regular buildings trains no units at all; the Palace doesn't count, so the capital builds 2 buildings before its first Settler or Worker | Exempt settlers and workers |
@@ -53,6 +55,28 @@ reported it with code references but it hasn't been re-checked. Impact is a judg
 - `CvDangerPlots.cpp:479-483`: unseen units inside known cities and barbarian camps count as danger.
 
 Remembering units seen last turn (`CvDangerPlots.cpp:277-297`) is fair and stays.
+
+## Strategy ideas from CivFanatics
+
+From search-result snippets of CivFanatics threads (the forum itself is blocked by this
+environment's network policy, so the full posts weren't read). Mostly vanilla BNW, Emperor to
+Deity, which applies to CP's rules. They give targets for batch 2 rather than code fixes.
+
+| Idea | Expert practice | Audit items it informs |
+|---|---|---|
+| Expansion pace | Scout, then settler at capital size 4-5 (~T40); 4 cities by ~T50-60 for tall play, 6-10 by ~T100 for wide play while each city brings a new luxury | 1, 14, 28 |
+| Science beeline | Writing, Philosophy, National College by ~T75-90, then Education/Universities; University called the best building | 12, 16, 17 |
+| Internal trade routes | Food caravans/cargo ships to the capital and new cities, Granary first | 21 (growth) |
+| Spend gold | Don't hoard: buy settlers early (e.g. with 500 gold by T50), libraries, National College | 5, 6, 23 |
+| Muster, then strike | 6-8 ranged units plus melee screens before attacking; kill the field army first, then the city | 15, 24-26 |
+| Defend smart | Fortified melee in front, ranged behind, walls, a mobile reaction group | 27 |
+| Policies | Tradition opener; Rationalism as soon as behind in tech; ideology by play style | policy AI (not yet audited) |
+
+Tricks players use against the AI, each pointing at a weakness: the AI attacks piecemeal from
+several sides; it suicides melee into walls and fortified units; it hovers around cities without
+attacking; it sits next to citadels; it sends siege and embarked units unescorted; it judges war by
+total military score (a few cheap units deter it); it accepts lump-sum-for-per-turn trades and
+doesn't punish broken deals; it hoards gold; it leaves workers and settlers unescorted.
 
 ## Not a problem
 

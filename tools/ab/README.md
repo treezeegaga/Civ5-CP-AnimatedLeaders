@@ -11,9 +11,10 @@ original ("cp"). Run enough games, and if "new" keeps finishing ahead, the chang
   which group a major civ is in: player ID plus map seed, odd = new. Over many games each slot plays
   both sides. Outside a test game every civ runs the new code, so the normal pack is unaffected.
 - Every AI change is written as `if (UsesNewAI()) { new } else { CP's code }`.
-- Every 10 turns, and when someone wins, each civ's standing is appended to
-  `Documents\My Games\Sid Meier's Civilization 5\AIABTest.csv`. The file is never cleared, so games
-  from many sessions collect there.
+- Every 10 turns, and when someone wins, each civ's standing is appended to a file in
+  `Documents\My Games\Sid Meier's Civilization 5`. Each build writes its own file, so results never
+  mix: `AIABTest.csv` from the first build (no AI changes), `AIABTest_batch1.csv` from batch 1, and so
+  on. Files are never cleared, so games from many sessions collect there.
 - `Summarize-ABTest.ps1` reads that file and reports how often each group finished ahead.
 
 ## Running test games
@@ -39,8 +40,12 @@ original ("cp"). Run enough games, and if "new" keeps finishing ahead, the chang
    powershell -ExecutionPolicy Bypass -File tools\ab\Summarize-ABTest.ps1
    ```
 
-## First run: an A/A test
+## Which build to test
 
-No AI code is gated on `UsesNewAI()` yet, so both groups run the same AI. Their results should come
-out about even, and how far apart they land shows how much luck there is, which tells us how many
-games a real change needs. Send the summary output (or the CSV) back after a handful of games.
+- **First build** (fork commit `7aecbfe`): no AI code gated on `UsesNewAI()`, so both groups run the
+  same AI. Their results should come out about even, and how far apart they land shows how much is
+  luck, which tells us how many games a real change needs.
+- **Batch 1** (fork commit `80746d8`): the 11 fixes listed in [AUDIT.md](AUDIT.md).
+
+`Summarize-ABTest.ps1` with no arguments reports each results file separately. Send its output (or
+the CSV files) back after a handful of games.

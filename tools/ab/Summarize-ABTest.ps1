@@ -6,11 +6,24 @@
 # how many games the "new" group (changed AI) finished ahead of the "cp" group (Community Patch's
 # AI) on average score, with a sign test for how likely that split is by chance.
 param(
-    [string]$Csv = "$([Environment]::GetFolderPath('MyDocuments'))\My Games\Sid Meier's Civilization 5\AIABTest.csv",
-    [int]$MinTurn = 100   # ignore games that stopped before this turn
+    [string]$Csv = "",    # one results file; by default every AIABTest*.csv in My Games, each on its own
+    [int]$MinTurn = 100,  # ignore games that stopped before this turn
+    [string]$MyGames = "$([Environment]::GetFolderPath('MyDocuments'))\My Games\Sid Meier's Civilization 5"
 )
 
 $ErrorActionPreference = "Stop"
+if (-not $Csv) {
+    # Each build of AI changes writes its own file (AIABTest_batch1.csv, ...; the first build, with no
+    # changes, wrote AIABTest.csv), so results from different builds are never mixed.
+    $files = @(Get-ChildItem -Path $MyGames -Filter "AIABTest*.csv" -ErrorAction SilentlyContinue | Sort-Object LastWriteTime)
+    if ($files.Count -eq 0) { throw "No AIABTest*.csv in $MyGames. Play a test game with the -ABTest pack first." }
+    foreach ($f in $files) {
+        Write-Output ""
+        Write-Output ("===== {0} =====" -f $f.Name)
+        try { & $PSCommandPath -Csv $f.FullName -MinTurn $MinTurn } catch { Write-Output "  $($_.Exception.Message)" }
+    }
+    return
+}
 if (-not (Test-Path $Csv)) { throw "No results file at $Csv. Play a test game with the -ABTest pack first." }
 $rows = @(Import-Csv $Csv)
 if ($rows.Count -eq 0) { throw "$Csv has no rows" }
