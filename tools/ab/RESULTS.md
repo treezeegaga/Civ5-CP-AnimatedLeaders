@@ -560,8 +560,66 @@ to be re-ticked every game), and new click positions can't be checked from a clo
 - **Not yet confirmed in a real game:** that Pangaea reads its resources option as "5". The smoke test
   checks it by looking for horses and iron next to each capital.
 
+### Does difficulty change AI logic beyond handicap bonuses? (lead job 7, open question 1)
+
+**Yes, in combat and diplomacy.** These are from reading the fork (`CvGameCoreDLL_Expansion2/`) and CP's
+`Database Changes/Difficulty/CoreDifficultyChanges.xml`. Besides the bonuses (cheaper units and
+buildings, free XP, happiness), these difficulty fields steer decisions:
+
+| What | Field | Prince | Deity | Whose difficulty |
+|---|---|---|---|---|
+| **Combat search size** (`CvTacticalAI.cpp` ~12252, ~12790) | `TacticalSimMaxCompletedPositions` | 256 | 2560 | the game's |
+| | `TacticalSimMaxBranches`, `MaxChoicesPerUnit` | 4, 4 | 5, 5 | the game's |
+| **War appetite** against civs it dislikes (`SelectBestApproachTowardsMajorCiv`, ~19655) | `AggressionIncrease` | 4 | 15 | target's if human, else the game's |
+| **Peace lasts** before re-declaring (several places in `CvDiplomacyAI`) | `PeaceTreatyDampenerTurns` | 18 | 11 | the game's |
+| **Competition sours opinion** (land, wonders, city-states, victory, tech, policy) | `*DisputePercent`, `*BlockPercent`, `*Mod` | 85–100% | 134–150% | target's if human, else the game's |
+| **Human armies look stronger** (~11606) | `HumanStrengthPerceptionMod` | +20% | +50% | humans only |
+| Opinion of humans | `HumanOpinionChange` | 0 | 0 | humans only (negative only below Prince) |
+
+All levels in CP for reference:
+
+| Field | Settler | Chieftain | Warlord | Prince | King | Emperor | Immortal | Deity |
+|---|---|---|---|---|---|---|---|---|
+| Search positions | 32 | 64 | 128 | 256 | 384 | 512 | 768 | 2560 |
+| Branches / choices per unit | 3 | 3 | 3 | 4 | 4 | 4 | 5 | 5 |
+| AggressionIncrease | 0 | 0 | 2 | 4 | 6 | 9 | 12 | 15 |
+| PeaceTreatyDampenerTurns | 20 | 20 | 20 | 18 | 16 | 14 | 12 | 11 |
+| Land/wonder/city-state dispute % | 50 | 60 | 70 | 85 | 100 | 110 | 125 | 134 |
+| Victory/tech/policy block % | 50 | 60 | 80 | 100 | 110 | 125 | 134 | 150 |
+| HumanStrengthPerceptionMod | 0 | 0 | 10 | 20 | 25 | 30 | 40 | 50 |
+
+**The same at every level in CP:**
+- The randomness of production, tech, policy and belief choices (`*ChoiceCutoffThreshold`, 90 everywhere).
+- The approach biases (`AI*`/`Human*ApproachChange*`, 0 everywhere).
+- `HumanTradeModifier` (0).
+- The "medium city, high difficulty" city strategy (`GetID() > 4`, Emperor and up) has no entry in CP's
+  database. It's probably inactive, but I didn't check the base game's data.
+
+**What it means for testing**
+- **AI-only test games use the game's difficulty for every AI-vs-AI decision.** At Prince, the combat search
+  gets a tenth of Deity's positions. B's 2e changes (danger scoring, wider search in small battles) and any
+  War fix were tuned at that budget.
+- **In multiplayer, AI-vs-human decisions use each human's own difficulty.** AI-vs-AI decisions use the
+  game's, which the exe passes to `CvGame::init`. I couldn't see which one the exe uses in multiplayer.
+- **Combat and war fixes should be confirmed at the difficulty the friends actually play**, if it isn't
+  Prince. A fix that wins with 256 search positions may not win with 2560, and the reverse. Strength-share
+  results from Prince games still hold for economy fixes. Bonuses apply to every AI alike in an AI-only
+  game, so they shift pace, not the A/B comparison.
+- **A note for Diplomacy:** `HumanStrengthPerceptionMod` makes AIs rate human armies 20–50% stronger than
+  they are, and only humans'. That runs against goal 2 ("judged by behaviour, never by whether a player is
+  human"). It may be one reason AIs hesitate to gang up on a human conqueror. Worth a look in their audit.
+- **Turn time:** at Deity the combat search does up to 10× the work, so AI turns in big battles will be
+  slower than in our Prince games.
+
+**Open:** which difficulty do the friends play, and which difficulty is "the game's" in multiplayer
+(the host's)? If it isn't Prince, the standard setup should move to it, or at least finalists get confirmed
+at it.
+
 ## Requests
 
+- **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
+  human military strength by 20% at Prince, 50% at Deity, and only for humans. Decide whether the new AI
+  should keep a human-only rule here (goal 2 says threats are judged by behaviour).
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
   (`s_aiCommittedTarget`), which isn't saved, so a reloaded game re-picks. Not a multiplayer desync
   (every computer runs the same turns), but it should be game state before anything ships.

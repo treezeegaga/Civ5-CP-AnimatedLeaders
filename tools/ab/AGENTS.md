@@ -220,7 +220,7 @@ and goals, diplomacy changes how decisions are computed from them.
 | Ancient ruins | Off | Free settlers and techs are pure luck |
 | Barbarians | On | Needed for settler-escort fixes |
 | City-states | Default | Realistic economy, needed for diplomacy |
-| Difficulty | Prince (see open question 1) | Same rules for everyone |
+| Difficulty | Prince for now; confirm combat and war fixes at the difficulty the friends play (open question 1) | Same rules for everyone; combat search size and diplomacy weights scale with difficulty |
 | Pace | Quick; confirm finalists on Standard now and then | Speed |
 | Leaders | Random | Paired games cancel the luck it adds |
 | Stop turn | 100 for screening, 150+ for confirmation | Short then long |
@@ -494,8 +494,10 @@ Paste one into a new session. Each assumes the repos are attached:
 
 ## Open questions
 
-1. Does difficulty change AI logic beyond handicap bonuses? The audit mentions a "Deity budget"
-   for the combat search. If so, test combat fixes at the difficulty people actually play.
+1. Does difficulty change AI logic beyond handicap bonuses? **Answered (lead job 7, RESULTS.md):
+   yes.** The combat search budget (256 positions at Prince, 2560 at Deity), war appetite, peace length and
+   dispute weights all scale with difficulty. Still open: which difficulty the friends play; combat fixes
+   should be confirmed there.
 2. Where should committed results live: CSVs in `tools/ab/results/`, or only the summary?
 3. Can Civ V run two games at once on the PC (or a second PC) to double throughput?
 4. Is the turn-100 screen trustworthy for this AI? (First jobs, item 8.)
