@@ -533,6 +533,10 @@ dropped. The cost: naval and embarked-unit code isn't exercised by the test game
 breaks it would only show in real play. Job 5 now just makes sure every game is set to Pangaea,
 Strategic Balance and no ruins.
 
+Continents may come back in a later version, as an occasional check on naval and embarked-unit code. The
+results rows already record `Map`, so Continents games would be kept apart from the Pangaea baseline
+automatically. They'd need their own σ, and their own setup in `Run-Games.ps1`.
+
 ## Requests
 
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
