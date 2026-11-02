@@ -26,7 +26,11 @@ function Read-Shared([string]$name) {
     $s = [IO.File]::Open($p, 'Open', 'Read', 'ReadWrite')
     $r = New-Object IO.StreamReader($s)
     $t = $r.ReadToEnd(); $r.Close()
-    return ($t -split "`r?`n")
+    # Some logs write the civ as "The_Maya", others as "The Maya"; use the spaced form everywhere
+    return ($t -split "`r?`n" | ForEach-Object {
+        $p = $_ -split ', ', 3
+        if ($p.Count -ge 2) { $p[1] = $p[1].Replace('_', ' '); $p -join ', ' } else { $_ }
+    })
 }
 function Get-Turn([string]$line) { [int](($line -split ', ')[0]) }
 
