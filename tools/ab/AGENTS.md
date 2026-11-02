@@ -409,6 +409,33 @@ entry is in RESULTS.md, and the scoreboard is at its top.
    cities per war, coalition size and speed, interactivity rate, banned-behaviour count, strength
    vs CP, AI turn time. Plus a goal row (set the numbers with the players) that says when we're done.
 
+## Experiment lead: the check-in ("avengers assemble")
+
+When the user says **"avengers assemble"**, the lead checks on every session and reports back in one
+summary. A scheduled task (`trig_011XWTtRZXtTjdt9KBqEG31m`, hourly at :42, firing into the lead's session)
+runs the same check-in on its own, as the user asked; to stop it, disable that scheduled task.
+
+1. **The topic sessions** (IDs in RESULTS.md, "Sessions running"): for each one, `get_session` for its
+   status and its latest messages (`list_events`, kinds user/assistant/result): what it's doing, what it
+   found, what it's waiting for, whether it's stuck or failed.
+2. **Their branches.**
+   - The fork's `ai/war`, `ai/economy`, `ai/diplomacy`: new commits, and whether their CI builds and
+     `ab-ai-<topic>-latest` releases passed.
+   - Their pack-repo branches: new RESULTS.md entries and requests. Merge them into
+     `claude/sleepy-hopper-x77moh` (fast-forward or merge, never dropping anyone's lines).
+   - **Patch relay:** the topic sessions have no push access to the fork. They commit their DLL work as
+     `git format-patch` files under `tools/ab/patches/<topic>/` on their pack-repo branch. The lead applies
+     the new ones to `ai/<topic>` (`git am`), pushes, and tells the session the commit and the build result.
+3. **The PC runner** (`claude/sleepy-hopper-x77moh`): new results CSVs and `Run-Games.log` lines. Run the
+   summary and the scoreboard. Check for "REPLAY DIFFERS", "WRONG SETUP", stalls and failed starts.
+4. **Act on it:**
+   - Update RESULTS.md: results, the scoreboard, instructions for the PC runner.
+   - Queue the tests the sessions are ready for.
+   - Answer requests aimed at the lead.
+   - Merge into `claude/ab-c1` only fixes that passed.
+   - Push and fast-forward `claude/sleepy-hopper-x77moh`.
+5. **Report** to the user: per session in a line or two, then results, decisions needed, and what runs next.
+
 ## War: first tasks (from the lead, 2026-11-02)
 
 **Offence first: get an AI army to actually take a city.** "Defence comes first" is the long-term aim, but
@@ -537,7 +564,9 @@ Work on branch `ai/diplomacy`: pushes there build by themselves and publish `ab-
 Paste one into a new session. Each assumes the repos are attached:
 `treezeegaga/Civ5-CP-AnimatedLeaders` and `treezeegaga/Community-Patch-DLL`. Topic sessions write their
 RESULTS.md entries and requests on their own branch of `treezeegaga/Civ5-CP-AnimatedLeaders`; the lead
-merges them into `claude/sleepy-hopper-x77moh`, which only the lead and the PC runner push to.
+merges them into `claude/sleepy-hopper-x77moh`, which only the lead and the PC runner push to. Sessions
+without push access to the fork commit their DLL work as patches under `tools/ab/patches/<topic>/` on that
+branch, and the lead applies them to `ai/<topic>` (see the check-in).
 
 ### Experiment lead
 
