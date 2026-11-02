@@ -295,7 +295,7 @@ if (-not ($rows[0].PSObject.Properties.Name -contains "Role")) { return }
         if ($diffs.Count -ge 2) {
             $m = ($diffs | Measure-Object -Average).Average
             $sd = [Math]::Sqrt((($diffs | ForEach-Object { ($_ - $m) * ($_ - $m) }) | Measure-Object -Sum).Sum / ($diffs.Count - 1))
-            Write-Output ("  Pairs: the aggressor's share of all cities with c defenders minus without: {0:+0.0;-0.0} points +/- {1:N1} over {2} pairs (negative = c held better)" -f $m, ($sd / [Math]::Sqrt($diffs.Count)), $diffs.Count)
+            Write-Output ("  Pairs: the aggressor's share of all cities with c defenders minus without: {0:+0.0;-0.0;0.0} points +/- {1:N1} over {2} pairs (negative = c held better)" -f $m, ($sd / [Math]::Sqrt($diffs.Count)), $diffs.Count)
         }
     }
 
@@ -509,7 +509,7 @@ foreach ($cfg in ($games | Group-Object Config)) {
     $mean = ($x | Measure-Object -Average).Average
     $sd = if ($n -ge 2) { [Math]::Sqrt((($x | ForEach-Object { ($_ - $mean) * ($_ - $mean) }) | Measure-Object -Sum).Sum / ($n - 1)) } else { [double]::NaN }
     $extra = if ($leftOver -gt 0) { "; $leftOver game(s) without their pair left out" } else { "" }
-    Write-Output ("    {0} {1}: gain {2:+0.00;-0.00} points (c share {3:N2}%), spread of one result {4:N2}{5}" -f $n, $kind, $mean, (50 + $mean), $sd, $extra)
+    Write-Output ("    {0} {1}: gain {2:+0.00;-0.00;0.00} points (c share {3:N2}%), spread of one result {4:N2}{5}" -f $n, $kind, $mean, (50 + $mean), $sd, $extra)
     foreach ($test in @(@{ Name = "gainer";    S0 = 0.0;            S1 = $Delta },
                         @{ Name = "no-worse";  S0 = -0.875 * $Delta; S1 = 0.125 * $Delta })) {
         $llr = Get-SprtLLR $x $test.S0 $test.S1
@@ -518,8 +518,8 @@ foreach ($cfg in ($games | Group-Object Config)) {
             elseif ($llr -ge $llrBound) { "PASSED" }
             elseif ($llr -le -$llrBound) { "FAILED" }
             else { "running" }
-        $llrText = if ($null -eq $llr) { "   -  " } else { "{0,6:+0.00;-0.00}" -f $llr }
-        Write-Output ("    {0,-9} H0 {1,5:+0.00;-0.00} H1 {2,5:+0.00;-0.00}  LLR {3}  {4}" -f $test.Name, $test.S0, $test.S1, $llrText, $state)
+        $llrText = if ($null -eq $llr) { "   -  " } else { "{0,6:+0.00;-0.00;0.00}" -f $llr }
+        Write-Output ("    {0,-9} H0 {1,5:+0.00;-0.00;0.00} H1 {2,5:+0.00;-0.00;0.00}  LLR {3}  {4}" -f $test.Name, $test.S0, $test.S1, $llrText, $state)
     }
     # Expected length (Wald): about 5.3 s^2/Delta^2 results when the true gain is at H0 or H1, 8.7 s^2/Delta^2 at worst
     $s = if ($Sigma -gt 0) { $Sigma } else { $sd }
@@ -591,7 +591,7 @@ if ($rows[0].PSObject.Properties.Name -contains "Screen") {
                 $se = $fit.SE[$i]
                 $t = if ($se -gt 0) { $eff / $se } else { 0 }
                 $pUp = Get-TOneSidedP $t $fit.DF
-                Write-Output ("  {0,-14} {1,6:+0.00;-0.00} +/- {2,4:N2}  as group share {3,6:+0.00;-0.00}  chance it's really no better: {4,4:P0}" -f $cols[$i], $eff, $se, ($eff * $nCivs / 4), $pUp)
+                Write-Output ("  {0,-14} {1,6:+0.00;-0.00;0.00} +/- {2,4:N2}  as group share {3,6:+0.00;-0.00;0.00}  chance it's really no better: {4,4:P0}" -f $cols[$i], $eff, $se, ($eff * $nCivs / 4), $pUp)
             }
             Write-Output "  Screening only ranks flags: confirm the promising ones with an SPRT on the flag alone."
         }

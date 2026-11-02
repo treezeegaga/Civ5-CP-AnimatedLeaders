@@ -11,7 +11,7 @@ from `Summarize-ABTest.ps1 -MyGames tools\ab\results -Scoreboard`, which prints 
 | A: CP | | 50% (reference) | not measured | not measured | not measured | not measured | not measured | not measured |
 | B: batch 2p (`24cc575`) | Prince, even rules, random maps, single games | 52.4% ± 0.7 against CP (5) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c4 (`ea22df3`), best C so far | same | 51.6% ± 1.1 against B (6) | not measured | not measured | not measured | not measured | not measured | not measured |
-| c7c (`2e9fad1`), newest C | same | 52.9% against B (1) | not measured | not measured | not measured | not measured | not measured | not measured |
+| c7c (`2e9fad1`), newest C | same | 50.0% ± 1.4 against B (7) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c7c_roles (`6b8ebde`): the bundle again, with every measure | King, even rules, Pangaea, Strategic Balance, no ruins, pairs | waiting for games | waiting for the bully test | | | | | |
 
 - **The diplomacy, war and timing columns** only exist from build `c7c_roles` on. Older builds can't
@@ -170,7 +170,7 @@ install one. Each C build includes everything before it unless noted. All change
 | c6 | `5ef069e` | greedy tall civs: army cap of cities + 1 | 3 | 46.5% ± 2.1 | 88% | worse, 0-3. Greedy civs drew wars |
 | c7 | `0b3dda2` | greedy tall build order; warmongers target the greediest neighbour | 1 | 45.3% | | worse (cap still on) |
 | c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
-| c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 1 | 52.9% | | ahead in its first game; needs more games |
+| c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 7 | 50.0% ± 1.4 | 50% | not better: 3-4. SPRT gainer LLR −1.00, no-worse +0.74 (both still running) |
 | c7c_flags | `46fc076`, `7097d49` | c7c with one flag per idea (see Fixes below) and a Warmonger column; `7097d49` adds paired games. With the bundle and `Flip = 0` it plays the same as c7c | 0 | | | superseded by c7c_settings before any games |
 | c7c_settings | `24f6ba8`, `614af3d` | c7c_flags with the game's settings in every row (lead job 3); `614af3d` sets ruins and map options from `AIABTest.ini` (job 5). The same AI as c7c with the bundle | 0 | | | built (CI run 41541130534); merged into `claude/ab-c1`; waiting for the smoke-test pair at King |
 
@@ -826,6 +826,29 @@ plain aggressive AI, and the real test is games against the friend.
   - AI turns no more than 25% slower than B.
 
   The deals band gets a second look once the first King games show what CP's AIs do.
+
+### c7c after 7 games (PC runner, games 2–7 merged from `claude/sleepy-hopper-x77moh`)
+
+| Game | c strength | No-military | Score c / b |
+|---|---|---|---|
+| 1 `0222211E` | 52.9% | 52.8% | 580 / 560 |
+| 2 `02347593` | 46.5% | 45.5% | 551 / 595 |
+| 3 `0240230B` | 53.8% | 52.2% | 554 / 549 |
+| 4 `02497CC2` | 54.6% | 53.0% | 610 / 490 |
+| 5 `0252DABA` | 48.7% | 50.8% | 600 / 596 |
+| 6 `025C2A49` | 48.4% | 51.9% | 557 / 648 |
+| 7 `02657620` | 45.1% | 47.5% | 581 / 615 |
+
+- **Overall:** 50.0% ± 1.4, 3-4, p 50%; no-military 50.5%. The 52.9% of game 1 was luck, as one game always
+  can be. SPRT (δ = 2, unpaired): gainer LLR −1.00, no-worse +0.74, both still running. The spread is 3.75
+  points per game, so a decision needs about 19–30 games.
+- **Reading:** the c7c bundle isn't better than B. Its ideas are now separate flags (lead job 1), and the
+  King setup with pairs is where they get tested one by one.
+- **Speed:** these games took **10 minutes each** to turn 150 (Run-Games.log, 17:33–18:24), not the hour
+  AGENTS.md assumed, so about 6 games an hour. That makes SPRTs of 20–40 pairs a matter of hours, and
+  turn-100 screening less important.
+- These are Prince games on the old setup (random maps, unpaired), so they don't go into the King baseline
+  (job 6).
 
 ## Requests
 
