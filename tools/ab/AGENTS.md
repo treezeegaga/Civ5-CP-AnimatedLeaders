@@ -1,0 +1,499 @@
+# AI optimization: how the sessions work together
+
+The test tooling and the audit are in [README.md](README.md) and [AUDIT.md](AUDIT.md); this file
+says what we're aiming for, who does what, and how a change gets from idea to kept.
+
+## The goal
+
+This pack is played in multiplayer by two friends who aren't experts: one a very aggressive
+warmonger, the other a tall builder. Today the AIs roll over: the warmonger conquers them one by
+one, ends up with ~100 cities and wins easily, and the game is boring. We want AIs that:
+
+1. **Put up a real fight.** Competent defence: walls, ranged units behind fortified melee, no
+   suicide attacks, counter-attacks, rebuilding after losses, no giving away cities cheaply in
+   peace deals. A conqueror should pay for every city.
+2. **Stop a runaway conqueror together.** Civs that conquer a lot become everyone's problem:
+   defensive pacts, joint wars, coordinated attacks, embargoes, World Congress votes against them.
+   This is judged by **behaviour** (cities taken, civs eliminated, warmonger score), never by
+   whether a player is human, and applies to AI bullies too. A peaceful tall player should find
+   allies, not enemies.
+3. **Are engaged in the world.** Lots of trade offers, friendships, alliances, requests, joint war
+   proposals, denouncements and wars of their own: a world that feels alive, without spamming.
+4. **Are extremely competent, but not experts.** Sound fundamentals and no blunders, played like
+   a good, honest human player, not a min-maxer. No cheese (see Banned behaviours), no cheating
+   (see Fog cheats in AUDIT.md).
+
+5. **Play many different styles, each one well.** Personality picks a real game plan, from
+   super greedy tall builds to early timing attacks, and the AI carries it out competently. Every
+   game should feel different depending on who's in it.
+
+6. **Bring the pressure when the humans don't.** The pack is also played by two friends who both
+   turtle. Then the AIs are the game: they race for wonders and victories, fight each other and
+   change the map, pull the humans into their wars and alliances, and attack a builder who
+   leaves itself weak, the way a human opportunist would. If the humans ignore the world, an AI
+   should be on track to win.
+
+7. **Adapt.** An archetype is a starting plan, not a script. Every plan has exit conditions
+   and the AI keeps re-reading the game: a timing attacker whose target walls up picks another
+   target or calls it off; a greedy tall civ that's threatened arms up; a conqueror facing a
+   coalition makes peace or digs in; a civ whose victory is blocked switches to another. The
+   same AI should cope with a warmonger game, a two-turtle game and anything in between, because
+   it reacts to what's happening, not to who the players are.
+
+Adaptation happens within a game. The AI doesn't learn across games: in multiplayer every
+computer must run the AI identically, so it can't read anything a single computer remembers.
+
+### Priorities: competence first, then flavour and fun
+
+The list above is where we're going, not the order we work in. Making the AI merely competent is
+already hard, so the work comes in two phases:
+
+**Phase 1: strength, until the AI is competent.** The number one priority is making the AI play
+better: bug fixes, combat, defence, expansion, economy, and not being exploitable in diplomacy.
+Strength share against CP's AI is the main measure. Flavour work waits, except the rules that are
+never optional (no cheating, banned behaviours, multiplayer-safe).
+
+**Phase 2: flavour and fun.** Archetypes, interactivity, coalitions tuned for fun, the
+two-turtle game. Strength becomes a guard: phase 2 changes must pass a no-worse test so they don't
+give back what phase 1 gained.
+
+**"Competent" means** (numbers to be set with the players before phase 1 ends):
+- clearly ahead of CP's AI on the rating ladder (e.g. worth a difficulty level)
+- the bully test: the head-started aggressor no longer rolls everyone over
+- most tricks on the exploit checklist no longer work
+- milestones at a good human player's pace (not an expert's)
+- no obvious blunders when we watch games or play against it
+
+The bully test, builders test and interactivity measures run from the start so we can see where
+the AI stands, but in phase 1 they're for tracking, not for deciding what merges.
+
+### Banned behaviours
+
+The new AI never does these, whatever they're worth:
+
+- Stealing workers from city-states
+- Rushing wonders by chopping forests
+- (add more as they come up in games)
+
+Each one is a hard rule in the strategy profile, and the tests count how often it happens (target: 0).
+
+## Where we are
+
+The full record is [RESULTS.md](RESULTS.md): every build, its games, the city captures, why wars
+fail, dead ends and fragile tooling. Read it before starting anything. In short:
+
+| Rung | Build | Status |
+|---|---|---|
+| **A** | Stock Community Patch | The anchor; every rating is measured from here |
+| **B** | Batch 2p, fork commit `24cc575` (on `claude/sleepy-hopper-x77moh`, whose head has moved on to unvalidated 2q-2u) | Beat A 5-0 on strength, 52.4% ± 0.7, p 1%. Frozen |
+| **C** | Candidates on fork branch `claude/ab-c1`, gated by `UsesCandidateAI()` | Best so far c4 (siege timing attack): 5-1, 51.6% ± 1.1, p 10%, not frozen. Latest c7c: 52.9% in 1 game |
+
+What follows from it:
+
+- **Real edges are small: 1.5-2.5 points of strength share**, and single games swing about ±5.
+  The per-game spread in RESULTS.md is roughly 3-5 points, so an unpaired SPRT test at δ = 2 needs
+  about 15-40 games. Paired games should cut that a lot. Most C verdicts so far are 1-3 games,
+  which can't tell good from bad, and each C build bundles several ideas. From here on: one idea
+  per flag, paired games, SPRT decides.
+- **The b/c split isn't neutral.** With W warmongers, c gets ceil(W/2) and b floor(W/2), so c has a
+  warmonger whenever there is one and b only with 2+. The groups have different personalities, so
+  50% may not be the no-change result. A flip option (start the alternation with b) on the same
+  seed makes each pair balanced. Until then, an A/A run (C with no changes) measures the bias.
+- **`kABTestVersusBase` is a compile-time constant** (`true` on `claude/ab-c1`): every civ runs B
+  and only `UsesCandidateAI()` splits. A vs B tests need a build with it `false`. A non-test pack
+  built from `claude/ab-c1` gives every civ every C change, untested ones included.
+- **The main open problem: cities almost never change hands.** About 11 lost cities in about 60
+  games, one elimination, and the candidate conquest code has never taken a city from b. RESULTS.md
+  already has a diagnosis from the AI logs: war declared before the army exists; the tactical AI
+  won't commit in enemy-dominated zones; armies bleed out below the city's 20 HP/turn healing;
+  early siege units have the same range as cities; wrong targets (c attacking c); defensive pacts;
+  short games. Captures happened only at 3-10x military superiority against a defender already at
+  war. That's phase 1's top priority for War, and the root of the original complaint from the
+  other side: an AI that can't take cities can't counter-attack a conqueror either.
+- **The greedy problem.** Greedy tall civs that cap their army get attacked (c6, 0-3). The idea
+  queued in RESULTS.md: keep greed, add an alarm (walls and archers when a neighbour masses an army).
+- **Existing work to reuse.** Fork branches `claude/ab-switches-diagnostics` and
+  `claude/ab-switches-diagnostics-2r` (release `ab-e9f7ecf`) have per-change switches and
+  diagnostic columns from a side session, based on 2r and unmerged; the matching pack branch
+  `claude/angry-goodall-0e693c` was never pushed. Start the per-idea flags from there if it fits.
+- **Game length.** Games stop at T150 on Quick, where armies are still small and civs have about
+  25-30 techs. War fixes may need longer games to show.
+
+Locations:
+
+- DLL code: `treezeegaga/Community-Patch-DLL`. B is commit `24cc575`; the
+  **integration branch** for new work is `claude/ab-c1` (candidates gated by
+  `UsesCandidateAI()`). Paths below are in `CvGameCoreDLL_Expansion2/`.
+- Test tooling and results: this repo, `tools/ab/`. Result CSVs are copied from the PC's
+  `Documents\My Games\Sid Meier's Civilization 5\AIABTest_<batch>.csv` into `tools/ab/results/`
+  unchanged; the PC runner keeps them up to date.
+- New AI changes are gated per idea: `if (UsesCandidateAI(FIX_xx)) { new } else { B's code }`.
+
+## Sessions
+
+Testing time is the bottleneck, not writing code. One Windows PC plays roughly one game an hour, so
+the setup is built to get the most out of each game, and no session merges anything that hasn't
+been measured.
+
+| Session | Job | Starts |
+|---|---|---|
+| **Experiment lead** | Test tooling, statistics, the results log, merging into the integration branch, choosing what's tested next | First |
+| **War** | Military execution: tactics, armies, war decisions. Defence against a conqueror comes first | After the lead's first jobs |
+| **Economy & victory** | Growth, research, buildings, gold, settling, the push to the target victory | With War: most phase 1 fixes are already coded |
+| **Diplomacy** | Phase 1: bugs and exploits (deal pricing, being bluffed, reacting to real threats). Phase 2: coalitions tuned for fun, alliances, joint wars, lively trade, game-theory decisions within the personality's limits | After War and Economy have passing fixes |
+| **Personality** | Each leader's strategy profile and archetype: which victory to aim for, risk appetite, wide or tall, hard rules (including the banned behaviours) | Phase 2, except the banned-behaviour rules, which come early |
+| **PC runner** (local, on the Windows PC) | Pulls builds, runs `Run-ABTest.ps1` / `Run-Games.ps1`, collects CSVs and logs, pushes results | Whenever games run |
+
+Cloud sessions can't reach the Windows PC, so anything that runs Civ V is the PC runner's job: the
+Claude desktop app, or `claude` in a terminal in this repo on that PC.
+
+### How personality and the others fit together
+
+Personality decides **what** a leader is trying to do and **the rules it plays by**. War, economy
+and diplomacy decide **how** to do it as well as possible within those limits. So personality
+publishes a strategy profile per leader, and the other three read it:
+
+- victory weights (domination, science, culture, diplomatic)
+- risk appetite
+- expansion style (wide / tall / conquest)
+- hard rules (e.g. honours deals, never attacks a friend, protects city-states)
+
+Each leader gets an **archetype**: a game plan with its own targets, carried out by the other
+sessions. A starting list (extends the opening book's Tall / Wide / Conquest):
+
+| Archetype | Plan | What doing it well means |
+|---|---|---|
+| Greedy tall | 3-4 cities, maximum infrastructure and wonders, minimal army | Walls and ranged defenders in time, friends and pacts with neighbours, never an easy target |
+| Wide expander | Settle fast, claim land and luxuries | Settlers escorted only where needed, happiness kept positive |
+| Early timing attack | Mass an army for a specific unit timing (e.g. composite bows or chariots, catapults) and strike the nearest weak neighbour | Strikes on time with the planned army, before walls; takes cities or makes peace for a good price, then switches to building |
+| Steady conqueror | Strong military economy, repeated wars all game | Fights with massed armies, consolidates conquests; triggers coalitions against itself like any other conqueror |
+| Diplomat / city-state patron | Allies, city-states, World Congress | Wins votes, holds alliances, organises coalitions |
+| Opportunist | Builds, but joins wars against weakened or isolated neighbours | Picks fights it can win, joins coalitions early |
+
+Archetypes can be weighted by victory type and mixed. Within an archetype, flavours still vary
+(risk, loyalty, forgiveness), so two timing attackers needn't feel the same.
+
+Constraints aren't only costs: a leader known to keep its word gets better deals and steadier
+allies. Diplomacy should cash in on that reputation, and every civ's AI should notice who keeps its word.
+
+## File ownership
+
+A session edits only the files it owns. To change someone else's file, write the request in the
+results log under **Requests** and the owner (or the lead) does it.
+
+| Owner | Files |
+|---|---|
+| Experiment lead | `tools/ab/*`, `UsesNewAI()` and the test options in `CvPlayer`, the CSV writer, `AGENTS.md`, `RESULTS.md` |
+| War | `CvTacticalAI`, `CvTacticalAnalysisMap`, `CvDangerPlots`, `CvMilitaryAI`, `CvArmyAI`, `CvAIOperation` (military operations), `CvHomelandAI` |
+| Economy & victory | `CvEconomicAI`, `CvTechAI`, `CvTechClasses`, `CvCityStrategyAI`, `CvBuildingProductionAI`, `CvUnitProductionAI`, `CvCityCitizens`, `CvPolicyAI`, `CvBuilderTaskingAI` (workers, including chopping), settling code and the opening book in `CvPlayer`, settler operations in `CvAIOperation` |
+| Personality | `CvGrandStrategyAI`, leader flavour data (SQL/XML), the opening-book plan choice, the strategy profile |
+| Diplomacy | `CvDiplomacyAI`, `CvDealAI`, `CvVotingClasses` (the World Congress AI, class `CvLeagueAI`), `CvMinorCivAI` (AI side) |
+
+`CvPlayer.cpp` and `CvAIOperation.cpp` are shared: name the function you're changing in the
+results log before you start. In `CvDiplomacyAI`'s attitude choice, personality changes the weights
+and goals, diplomacy changes how decisions are computed from them.
+
+## Rules
+
+1. **One idea per fix.** Each fix gets its own flag (`FIX_18`, `FIX_OPENING_BOOK`, ...). Never bundle.
+2. **Hypothesis before code.** In `RESULTS.md`: what should change, which measure shows it, and the
+   smallest gain worth keeping (δ).
+3. **Topic sessions work on their own DLL branch** (`ai/war`, `ai/economy`, `ai/personality`,
+   `ai/diplomacy`) off the integration branch (`claude/ab-c1`), and rebase onto it after each merge.
+4. **Only the experiment lead merges** into the integration branch, and only fixes that passed.
+5. **Bugs first, tuning second.** Fix confirmed bugs before tuning numbers.
+6. **Fair play.** The new AI uses only what a human player could see (see Fog cheats in AUDIT.md).
+7. **Multiplayer-safe.** AI decisions use only the game state, never anything stored on one
+   computer, so every computer in a multiplayer game computes the same thing (otherwise the game
+   desyncs).
+8. **Read `RESULTS.md` at the start of every session** and append to it before ending.
+
+## Testing
+
+### Standard test setup
+
+| Setting | Value | Why |
+|---|---|---|
+| Map | Pangaea for most games; Continents for about 1 in 5 (reported separately) | Pangaea puts everyone in contact; Continents catches breakage in naval and embarked-unit code |
+| Size / civs | Standard, 8 civs, separate teams | 4 vs 4 per game |
+| Resources | Strategic Balance | Cuts starting-position luck |
+| Ancient ruins | Off | Free settlers and techs are pure luck |
+| Barbarians | On | Needed for settler-escort fixes |
+| City-states | Default | Realistic economy, needed for diplomacy |
+| Difficulty | Prince (see open question 1) | Same rules for everyone |
+| Pace | Quick; confirm finalists on Standard now and then | Speed |
+| Leaders | Random | Paired games cancel the luck it adds |
+| Stop turn | 100 for screening, 150+ for confirmation | Short then long |
+
+Every CSV row records map type, resources, ruins, pace, difficulty, stop turn, the flip flag and the
+enabled fixes. Changing the setup starts a new baseline: re-run a build with no fixes enabled to
+measure the noise again.
+
+### Paired games
+
+Each map seed is played twice: once normally, once with `AI_AB_FLIP` on, which swaps the groups.
+Scoring the pair's average removes most of the map's luck. (Today the group comes from player ID +
+seed parity, so flipping needs its own option.)
+
+### Stopping rule: SPRT (the Stockfish Fishtest method)
+
+- Measure per **pair**: new group's share of total strength, minus 0.5.
+- **Gainer test**, for fixes meant to make the AI stronger: H0 gain = 0, H1 gain = δ.
+- **No-worse test**, for simplifications, fairness fixes and personality changes: H0 gain = −δ,
+  H1 gain = 0.
+- Stop at LLR ≥ +2.94 (pass) or ≤ −2.94 (fail): 5% chance of each kind of mistake.
+- Expected pairs under a true gain: about **5.9 · σ² / δ²**, where σ is the spread of per-pair
+  results measured on the no-fix baseline. If that's in the hundreds, raise δ or find a faster test.
+- Checking after every pair is fine with SPRT. With fixed game counts it isn't: don't stop a
+  t-test because it looks good.
+
+### Pipeline for a fix
+
+1. **Screen** (cheap): turn-100 games, many fixes at once. Each civ gets a random on/off for every
+   fix being screened; a regression of strength share on the fix flags estimates every fix's effect
+   from the same games. Fixes that look harmful are dropped, promising ones move on.
+2. **Confirm**: SPRT on the single fix, paired games, stop turn 150+.
+3. **Merge** into the integration branch. All later tests include it.
+4. **Regression check** now and then: the current integration build against CP and the last
+   kept build, so small losses don't pile up.
+
+Before trusting turn-100 screening, check on existing data that turn-100 standings predict final
+ones. Chess developers find short tests a poor predictor of long ones.
+
+### Faster tests for combat
+
+Battle fixes can be tested from saved games: load the same mid-war save repeatedly, let the AI
+play N turns, record the outcome of the fight. Minutes per run instead of hours, and much less luck.
+
+### Tuning numbers (SPSA)
+
+Once a fix has passed, its "first guess" numbers (danger multipliers, the 15% target edge, the 2/3
+army cut-off, ...) can be tuned with SPSA: nudge a few related numbers at once, randomly up or
+down, follow whatever wins more, with shrinking steps. Each value needs a start, min, max and step
+size. If values barely move after a long run, stop. Needs hundreds to thousands of games, so it
+waits for fast tests (saves, turn 100) and unattended runs.
+
+### Weaknesses, not just win rate
+
+The human tricks listed at the end of AUDIT.md are the exploit checklist. AI-only games can't show
+whether humans can still beat the AI with them, so each trick gets a check: a save or a scripted
+offer that sets up the trick, and whether the new AI falls for it. Diplomacy especially: winning
+against CP's old diplomacy may just mean exploiting it.
+
+### The bully test (the headline test)
+
+AI-only games where one civ plays the friend's role: a designated **aggressor**, with a warmonger
+profile and a head start (extra production and gold, enough to snowball against CP's AI), plus one
+civ with a tall profile in the user's role. The test option picks both slots. Measured per game:
+
+- **Aggressor's share of all cities** at turns 100 and 150, and civs it eliminates. This is the
+  headline number: lower means the AIs held.
+- **Cities the aggressor took per war**, and turns per city taken.
+- **Coalitions:** how many civs are at war with the aggressor or in defensive pacts against it,
+  and how many turns after its first conquest they joined.
+- **The tall civ's treatment:** wars declared on it vs. friendships and pacts with it. Being
+  peaceful shouldn't make it a target.
+
+Group comparison works as before (the aggressor runs CP or new code depending on the test), but
+the measure is what happens to the aggressor, not strength share.
+
+### The builders test
+
+AI-only games where two slots play the turtling friends: tall profiles, no head start, no
+aggression of their own. Measured per game:
+
+- **Pressure on the builders:** wars declared on them, cities they lose, turns at war. Some, not
+  a dogpile: attacks should come from opportunists and conquerors against builders with weak
+  defences, not from everyone at once.
+- **Pulled into the world:** offers, requests and joint-war or pact proposals made to the builders.
+- **Races:** wonders the AIs take from the builders, and at turn 150 how close the leading AI is
+  to a victory. If no AI is a credible threat, the builders have nothing to play against.
+- **A changing map:** AI-vs-AI wars and cities changing hands. A frozen map is a dull game.
+
+### Adaptation checks
+
+Saves that set up a change of situation, each played several times from the same turn:
+
+- A timing attacker's target has just built walls and archers: does it switch target or stand down?
+- A greedy tall civ sees an army massing on its border: does it arm up and seek pacts in time?
+- A conqueror has a coalition forming against it: does it make peace, split it, or dig in, rather
+  than keep marching into it?
+- A civ's victory is out of reach (wonders lost, votes lost): does it change its target?
+
+Each check passes if the response comes within a set number of turns.
+
+### Both games, every time (phase 2)
+
+The bully test and the builders test pull in opposite directions (coalitions that fire too
+easily make the turtle game dull; too much aggression turns it into a dogpile). Every candidate
+fix is checked on both, and the scoreboard shows them side by side. A fix that helps one and
+hurts the other doesn't merge.
+
+### Interactivity measures
+
+Per AI per 10 turns: trade offers made and accepted, friendships, defensive pacts, joint war
+proposals, requests, denouncements, wars declared. Aim for a band, not a maximum: too few is a dead
+world, too many is spam. The real check is multiplayer games: after each one, note in RESULTS.md
+whether the AIs felt engaged or annoying, and whether they put up a fight.
+
+### Banned-behaviour counts
+
+The log digest counts each banned behaviour per game. Target 0 for the new AI.
+
+### Personality tests
+
+Strength isn't enough. Two extra measures, by leader:
+- **Different?** Victory types pursued, wars started, settling pace, research path, deals made.
+  Leaders with different profiles should differ measurably.
+- **Viable?** Every profile type should win at a reasonable rate; none far below average.
+- **Done well?** Each archetype has its own checks, from the table under Sessions. For example:
+  timing attackers declare war in the planned window with the planned army and take a city;
+  greedy tall civs lead in science or culture at turn 100 and lose few cities when attacked.
+  An archetype that's viable but sloppy (wins by luck, or only against CP's AI) still needs work.
+
+## Results log (`tools/ab/RESULTS.md`)
+
+One file, append-only, read by every session. Each entry:
+
+```
+### FIX_18: combat danger penalty (War)
+- Hypothesis: units stop ending turns in lethal danger; fewer units lost per war
+- Measure: strength share at T150; units lost per war (digest)
+- δ: +2 points of strength share
+- Build: fork commit abc1234, ab-abc1234
+- Test: SPRT gainer, paired, Pangaea/Strategic Balance/no ruins/Quick/Prince
+- Status: running 37 pairs, LLR +1.2 | passed | failed | merged in def5678
+- Notes:
+```
+
+Sections: **Baseline** (σ per setup), **Fixes**, **Requests** (cross-owner changes), **Open
+questions**.
+
+## Experiment lead: first jobs
+
+0. Done by the previous chat: RESULTS.md, README past 2e, CSVs in `tools/ab/results/`. Check
+   that `Summarize-ABTest.ps1 -MyGames tools\ab\results` reproduces the numbers in RESULTS.md.
+1. Per-idea flags: `UsesCandidateAI(FIX_xx)` with each flag enabled per civ, so candidates can be
+   tested one at a time or screened together. Look at `claude/ab-switches-diagnostics` first.
+   Split the c4 and c7c ideas into flags (c4's research line, siege book and declare timing;
+   c7c's can-win check and closed borders), and add a warmonger column to the CSV.
+2. `AI_AB_FLIP` custom option (in `IsABTestCandidateSlot`, assign `(i % 2) == 1` instead of `== 0`;
+   the same in `IsABTestOddSlot` for A vs B), and paired-game support in `Run-Games.ps1` (each seed twice).
+3. CSV rows record settings, flip flag and enabled fixes.
+4. `Summarize-ABTest.ps1`: SPRT (gainer and no-worse) per fix, the screening regression, and the
+   expected-games estimate.
+5. Update the `Run-Games.ps1` click script for the new setup (Pangaea / Continents rotation,
+   Strategic Balance, ruins off).
+6. Re-run the no-fix baseline under the new setup; record σ.
+7. Check whether difficulty changes AI logic beyond handicap bonuses (open question 1).
+8. Check on existing data whether turn-100 standings predict turn-150 ones.
+9. Don't re-prove B fix by fix: it passed as a whole and is the new reference. Splitting it
+   (ablation) can wait until a B fix is suspected of hurting, e.g. item 26 in the city-capture problem.
+9a. CI publishes C builds as releases (like `ab-latest`), so the PC runner doesn't need
+   `gh run download`, and `Run-ABTest.ps1` can install them. Note the CI hang and force-cancel fix
+   in RESULTS.md.
+10. The bully test and the builders test: an option choosing the aggressor and tall slots, the
+   aggressor's head start, and digest counts for coalitions, interactivity, pressure on builders,
+   victory progress and banned behaviours.
+11. A scoreboard at the top of RESULTS.md, one row per milestone build: aggressor's city share,
+   cities per war, coalition size and speed, interactivity rate, banned-behaviour count, strength
+   vs CP, AI turn time. Plus a goal row (set the numbers with the players) that says when we're done.
+
+## Opening prompts
+
+Paste one into a new session. Each assumes the repos are attached:
+`treezeegaga/Civ5-CP-AnimatedLeaders` and `treezeegaga/Community-Patch-DLL`.
+
+### Experiment lead
+
+> You're the experiment lead for the Civ V AI optimization project. Read `tools/ab/AGENTS.md`,
+> `tools/ab/README.md`, `tools/ab/AUDIT.md` and `tools/ab/RESULTS.md` on branch
+> `claude/sleepy-hopper-x77moh` of `treezeegaga/Civ5-CP-AnimatedLeaders`, and the DLL fork
+> `treezeegaga/Community-Patch-DLL` (B on `claude/sleepy-hopper-x77moh`, candidates on
+> `claude/ab-c1`). You own the test tooling, statistics,
+> the results log and merges into the integration branch. Work through "Experiment lead: first
+> jobs" in AGENTS.md in order, one commit per job, and keep RESULTS.md up to date. You can't run
+> Civ V: when games are needed, write exact instructions for the PC runner session in RESULTS.md.
+
+### War
+
+> You're the war session for the Civ V AI optimization project. Read `tools/ab/AGENTS.md`,
+> `AUDIT.md` and `RESULTS.md` (repo `treezeegaga/Civ5-CP-AnimatedLeaders`, branch
+> `claude/sleepy-hopper-x77moh`). Work in `treezeegaga/Community-Patch-DLL` on branch `ai/war`,
+> off the integration branch `claude/ab-c1`, and edit only the files AGENTS.md gives to War.
+> Read "The goal" and "Where we are" in AGENTS.md: the top priority is competent war, attack and
+> defence, and the open problem is that cities almost never change hands. RESULTS.md ("Why wars
+> almost never take cities") already has a diagnosis from the AI logs: start from it, not from
+> scratch. Rank its causes by how much each would explain, confirm the top ones in the code, and
+> turn each into one testable fix: for example declaring only once the army has gathered,
+> committing to an assault instead of hovering, keeping damage above the city's healing, picking
+> targets the AI can actually beat. Also check whether audit item 26 (armies abort below 2/3
+> strength, already in B) makes operations give up early. Each fix gets its own `FIX_xx` flag
+> behind `UsesCandidateAI()` and a hypothesis entry in RESULTS.md before any code. Battle tests
+> from saved games would help: ask the experiment lead for them. After that, audit `CvHomelandAI`
+> and the rest of the war code for confirmed bugs the audit missed. Read the strategy profile once
+> Personality publishes it. Don't merge: the experiment lead does.
+
+### Economy & victory
+
+> You're the economy & victory session for the Civ V AI optimization project. Read
+> `tools/ab/AGENTS.md`, `AUDIT.md` and `RESULTS.md` (repo `treezeegaga/Civ5-CP-AnimatedLeaders`,
+> branch `claude/sleepy-hopper-x77moh`). Work in `treezeegaga/Community-Patch-DLL` on branch
+> `ai/economy`, off the integration branch (`claude/ab-c1`), and edit only the files AGENTS.md gives to Economy.
+> Audit items 1, 5-8, 12-14, 16, 17, 21-23, 28 and the opening book are already in B; RESULTS.md
+> has what the games showed about them (settling, religion, wide vs tall). New ideas each get a
+> `FIX_xx` flag behind `UsesCandidateAI()`. Start with the greedy problem in RESULTS.md (c6, c7c),
+> together with War, since greedy civs need an alarm. Then audit `CvPolicyAI` (not yet
+> audited) and the late-game victory push for confirmed bugs. Every new idea gets a hypothesis
+> entry in RESULTS.md before code. Don't merge: the experiment lead does.
+
+### Personality
+
+> You're the personality session for the Civ V AI optimization project. Read `tools/ab/AGENTS.md`,
+> `AUDIT.md` and `RESULTS.md` (repo `treezeegaga/Civ5-CP-AnimatedLeaders`, branch
+> `claude/sleepy-hopper-x77moh`). Work in `treezeegaga/Community-Patch-DLL` on branch
+> `ai/personality`. Personality decides what each leader tries to do and the rules it plays by;
+> War, Economy and Diplomacy decide how. Read "The goal" in AGENTS.md: leaders should play
+> clearly different game plans (the archetype table, from greedy tall to early timing attacks)
+> and each one competently. Your first job: design the strategy profile (archetype, victory
+> weights, risk appetite, expansion style, hard rules including the banned behaviours), and
+> assign an archetype to every leader, from CP's existing leader flavours,
+> `CvGrandStrategyAI` and the opening-book plan choice, and write it up for the other sessions as
+> a short spec in RESULTS.md before coding it. Your changes are judged by no-worse tests on
+> strength, plus whether leaders play measurably differently and every profile can still win.
+
+### Diplomacy
+
+> You're the diplomacy session for the Civ V AI optimization project. Read `tools/ab/AGENTS.md`,
+> `AUDIT.md` and `RESULTS.md` (repo `treezeegaga/Civ5-CP-AnimatedLeaders`, branch
+> `claude/sleepy-hopper-x77moh`). Work in `treezeegaga/Community-Patch-DLL` on branch
+> `ai/diplomacy`, and edit only the files AGENTS.md gives to Diplomacy. Read "The goal" in
+> AGENTS.md first: the main job is making AIs gang up on a runaway conqueror (judged by
+> behaviour, never by being human) and be lively, engaged neighbours. Start with an audit of
+> `CvDiplomacyAI`, `CvDealAI`, `CvVotingClasses` and `CvMinorCivAI`: confirmed bugs first, in the
+> format of AUDIT.md, and a map of what CP already has for warmonger penalties, coalitions,
+> defensive pacts and joint wars, and why it doesn't stop a conqueror today. Then apply game
+> theory within each leader's strategy profile: price deals
+> by time and the risk they end early (the lump-sum-for-per-turn exploit), make broken deals cost
+> reputation, judge deterrence by who would actually win a war, and form coalitions against the
+> leader. Lesson from Meta's Cicero: trustworthy strategy beats purely optimal strategy when
+> humans are playing. Test against the exploit checklist as well as win rate.
+
+### PC runner (local session on the Windows PC)
+
+> You're the PC runner for the Civ V AI optimization project, running on the Windows PC with
+> Civ V. In this repo (`treezeegaga/Civ5-CP-AnimatedLeaders`, branch
+> `claude/sleepy-hopper-x77moh`), read `tools/ab/AGENTS.md`, `README.md` and the newest
+> instructions for the PC runner in `RESULTS.md`. Pull, install the build they name with
+> `tools\ab\Run-ABTest.ps1`, run the games with `tools\ab\Run-Games.ps1`, then commit the new CSV
+> rows, `Run-Games.log` and any digest output to the results folder and push. Report stalls with
+> the screenshot the runner saves. Never play multiplayer with the test pack installed:
+> `Run-ABTest.ps1 -Restore` first.
+
+## Open questions
+
+1. Does difficulty change AI logic beyond handicap bonuses? The audit mentions a "Deity budget"
+   for the combat search. If so, test combat fixes at the difficulty people actually play.
+2. Where should committed results live: CSVs in `tools/ab/results/`, or only the summary?
+3. Can Civ V run two games at once on the PC (or a second PC) to double throughput?
+4. Is the turn-100 screen trustworthy for this AI? (First jobs, item 8.)
