@@ -493,6 +493,45 @@ The AI reaches its 4th city about 40 turns late, and one civ in five never does 
 
 Work on branch `ai/economy`: pushes there build by themselves and publish `ab-ai-economy-latest`.
 
+## Diplomacy: first tasks (from the lead, 2026-11-02)
+
+**An audit and a map first, no code yet.**
+- A coalition against a conqueror only works if its members can fight, and today AI armies rarely take a
+  city (War's first job), so "2+ civs at war with the aggressor" would mostly be wars on paper.
+- The audit costs no test games, so it runs alongside War and Economy without competing for the PC.
+
+1. **Map what CP already has against conquerors, and why it doesn't stop one.** That covers warmonger
+   penalties and how fast they decay, how threats are judged, defensive pacts, coop (joint) wars, World
+   Congress sanctions, the "afraid" approach and peace deals. For each: when it fires, against whom, and
+   why a steady conqueror gets through anyway. This answers the original complaint (the friend's ~100
+   cities) and points at the fixes.
+2. **Confirmed bugs in AUDIT.md's format** (where, what, fix): `CvDiplomacyAI`, `CvDealAI`,
+   `CvVotingClasses` (`CvLeagueAI`), `CvMinorCivAI`. Bugs first, tuning later.
+3. **The exploit checklist, deals first**, since these matter most against humans:
+   - lump-sum gold paid for per-turn gold, then a war that cancels the payments;
+   - being bluffed into concessions;
+   - cities given away cheaply in peace deals.
+
+   AI-only games can't show these, so each needs a scripted check (a save or a staged offer: does the AI
+   fall for it?). The audit says which exploits are real; the lead builds the check tooling for those.
+4. **Then coalition fixes.** One flag each, with a hypothesis before code, judged by the bully test:
+   - civs at war with the aggressor at the end;
+   - turns from its first conquest until 2+ civs are at war with it;
+   - the tall civ's treatment (wars on it, friends, pacts);
+
+   plus a no-worse SPRT on strength. The goal row on the scoreboard has the targets. The first bully pairs
+   (B everywhere) show the starting point.
+
+**Already done, skip:**
+- On King, the pack's even rules zero every human-only difficulty setting, including
+  `HumanStrengthPerceptionMod` (AIs rating human armies 25% stronger) and `HumanOpinionChange`. Still check
+  the code for human-only exceptions that don't come from the difficulty table.
+- Wars declared and suffered, deals, friends, defensive pacts, denouncements and being at war with the
+  aggressor are already in every results row. Requests and joint-war proposals aren't counted yet: add
+  them if a fix needs them.
+
+Work on branch `ai/diplomacy`: pushes there build by themselves and publish `ab-ai-diplomacy-latest`.
+
 ## Opening prompts
 
 Paste one into a new session. Each assumes the repos are attached:
@@ -563,8 +602,8 @@ Paste one into a new session. Each assumes the repos are attached:
 > You're the diplomacy session for the Civ V AI optimization project. Read `tools/ab/AGENTS.md`,
 > `AUDIT.md` and `RESULTS.md` (repo `treezeegaga/Civ5-CP-AnimatedLeaders`, branch
 > `claude/sleepy-hopper-x77moh`). Work in `treezeegaga/Community-Patch-DLL` on branch
-> `ai/diplomacy`, and edit only the files AGENTS.md gives to Diplomacy. Read "The goal" in
-> AGENTS.md first: the main job is making AIs gang up on a runaway conqueror (judged by
+> `ai/diplomacy`, and edit only the files AGENTS.md gives to Diplomacy. Read "The goal" and
+> "Diplomacy: first tasks" in AGENTS.md first (an audit and a map before any code): the main job is making AIs gang up on a runaway conqueror (judged by
 > behaviour, never by being human) and be lively, engaged neighbours. Start with an audit of
 > `CvDiplomacyAI`, `CvDealAI`, `CvVotingClasses` and `CvMinorCivAI`: confirmed bugs first, in the
 > format of AUDIT.md, and a map of what CP already has for warmonger penalties, coalitions,
