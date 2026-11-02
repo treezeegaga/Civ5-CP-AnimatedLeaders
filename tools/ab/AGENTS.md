@@ -409,6 +409,44 @@ entry is in RESULTS.md, and the scoreboard is at its top.
    cities per war, coalition size and speed, interactivity rate, banned-behaviour count, strength
    vs CP, AI turn time. Plus a goal row (set the numbers with the players) that says when we're done.
 
+## War: first tasks (from the lead, 2026-11-02)
+
+**Offence first: get an AI army to actually take a city.** "Defence comes first" is the long-term aim, but
+in AI-only games defence can't be measured until some AI can take cities.
+- About 11 cities changed hands in about 60 games, and no candidate build has ever captured one from b.
+- The bully test's aggressor plays B with no head start, so it probably won't conquer anything either.
+- It's also why AIs don't counter-attack a conqueror.
+
+Once attacks work, defence fixes get a real test: the bully test against a competent aggressor.
+
+1. **Look at the evidence first (cheap: games take about 10 minutes).** Ask the PC runner for a few
+   logged King games and read `Digest-ABLogs.ps1`'s "military ops ended" counts. They show how often
+   attacks die before reaching a city. `HalfStrength` is B's audit item 26 (abort below 2/3 strength);
+   if it dominates, ask the lead for the item 26 ablation (RESULTS.md, lead job 9).
+2. **Then fixes, one flag each, from RESULTS.md's diagnosis ("Why wars almost never take cities"),** in
+   this order:
+   - **Declare only when the army has gathered at its muster point.** Wars start before the army exists:
+     Greece declared at T77, its army formed at T85 and arrived at T101. The most bug-like cause, and the
+     easiest to test.
+   - **Keep siege damage above the city's healing.** Armies bleed out: the Ottomans' damage fell from
+     161 a turn to about 65, while a city heals 20 a turn. Pull back to heal, send replacements, or commit
+     all at once instead of trickling in.
+   - **Commit to the assault.** The tactical AI's "enemy-dominated zone, won't try to capture" rule
+     keeps armies hovering outside cities.
+3. **Build on the conquest flags that already exist.** c4's ideas (`TimingAttack`, `DeclareTiming`,
+   `SiegeBook`, `SiegeTechs`) and c7c's `CanWin` are separate flags now (RESULTS.md, "Candidate flags").
+   c4 was the best bundle so far (51.6%, 6 games), and c7c came out even (50.0%, 7 games). Once the King
+   baseline gives σ, the lead runs single-flag SPRTs on them at T150. Build on the ones that pass, and
+   don't redo them.
+
+**How War's fixes are judged.**
+- A hypothesis entry in RESULTS.md before any code.
+- One `FIX_xx` flag per idea, gated `UsesCandidateAI(FIX_xx)`, on branch `ai/war`. Pushes there build by
+  themselves and publish `ab-ai-war-latest`.
+- A paired SPRT at turn 150 or later, not a turn-100 screen alone: war effects show late (lead job 8).
+- Strength share is the verdict; `CitiesCaptured` (results file) is the measure that shows the mechanism.
+- Battle tests from saved games would make war fixes much faster to test: ask the lead when ready.
+
 ## Opening prompts
 
 Paste one into a new session. Each assumes the repos are attached:
@@ -432,9 +470,10 @@ Paste one into a new session. Each assumes the repos are attached:
 > `claude/sleepy-hopper-x77moh`). Work in `treezeegaga/Community-Patch-DLL` on branch `ai/war`,
 > off the integration branch `claude/ab-c1`, and edit only the files AGENTS.md gives to War.
 > Read "The goal" and "Where we are" in AGENTS.md: the top priority is competent war, attack and
-> defence, and the open problem is that cities almost never change hands. RESULTS.md ("Why wars
-> almost never take cities") already has a diagnosis from the AI logs: start from it, not from
-> scratch. Rank its causes by how much each would explain, confirm the top ones in the code, and
+> defence, and the open problem is that cities almost never change hands. Then read "War: first
+> tasks" in AGENTS.md: offence first, evidence from the logs before code, and the order of fixes.
+> RESULTS.md ("Why wars almost never take cities") already has a diagnosis from the AI logs: start
+> from it, not from scratch. Rank its causes by how much each would explain, confirm the top ones in the code, and
 > turn each into one testable fix: for example declaring only once the army has gathered,
 > committing to an assault instead of hovering, keeping damage above the city's healing, picking
 > targets the AI can actually beat. Also check whether audit item 26 (armies abort below 2/3
