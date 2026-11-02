@@ -363,3 +363,25 @@ unless marked as suspected.
   and diagnostic columns") built a batch 2r variant with per-change switches, published as fork release
   `ab-e9f7ecf`. That session reported its pack-repo changes as still unpushed, awaiting the user's OK.
   It is based on 2r, two batches behind the main line.
+
+## Baseline
+
+### Summary check (lead, 2026-11-02)
+
+`Summarize-ABTest.ps1 -MyGames tools\ab\results` (run with PowerShell 7 on Linux) reproduces every
+number in the stage 1 and stage 2 tables above: games, strength share, ± standard error, p and the
+no-military shares, for all 22 files.
+
+### σ: how much single games swing
+
+Per-game spread of the strength share within a build, pooled over the 9 builds with 3+ games (each
+build's own mean taken out, so real differences between builds don't count as noise):
+
+| Data | Games | σ per game |
+|---|---|---|
+| All 9 builds (2e, 2j, 2m, 2n, 2p, c1, c2, c4, c6) | 41 | 4.6 points |
+| Without 2e and 2j (the broken 1-city-stall builds) | 33 | 3.4 points |
+
+These are old-setup numbers (random maps, unpaired, T150). The new setup (job 6) measures σ again,
+per pair. What they imply for an unpaired SPRT at δ = 2 points (expected games ≈ 5.9 · σ² / δ²):
+about 17 games at σ = 3.4, 31 at σ = 4.6. Paired games should cut that.
