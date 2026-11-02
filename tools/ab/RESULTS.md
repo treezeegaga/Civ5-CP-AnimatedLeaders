@@ -880,6 +880,19 @@ minutes a game; King games may run a little longer.
 - Then the first single-flag SPRTs, and a first bully pair to see whether the aggressor takes anything.
   A screening run of all flags at T100 is optional at this game speed.
 
+## Sessions running (2026-11-02)
+
+| Session | ID | DLL branch | Started with |
+|---|---|---|---|
+| Experiment lead | `session_01G2NZj313wWzcZ8o56vVzZK` | `claude/admiring-fermi-qyl4j3` → `claude/ab-c1` | AGENTS.md "Experiment lead: first jobs" |
+| War | `session_01G2NZizcmgfGkXsgJcVcF7h` | `ai/war` | AGENTS.md "War: first tasks" |
+| Economy & victory | `session_01G2NZj2nf4FeZTEHWjvnhhA` | `ai/economy` | AGENTS.md "Economy & victory: first tasks" |
+| Diplomacy | `session_01G2NZj1hm6um5X9SZaXQCRZ` | `ai/diplomacy` | AGENTS.md "Diplomacy: first tasks" (audit only for now) |
+| PC runner | the local session on the Windows PC | none | the smoke-test pair, then the King baseline |
+
+The topic sessions push their RESULTS.md entries to their own branch of this repo, and the lead merges them
+into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
