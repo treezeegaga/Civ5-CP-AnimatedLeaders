@@ -197,7 +197,17 @@ function Wait-TestGame([string[]]$knownIds) {
         $last = $mine[-1]
         if ($mine | Where-Object { $_.Final -eq '1' }) { return "won at turn $($last.Turn) ($($last.GameId))" }
         if ([int]$last.Turn -ge $StopTurn) { return "turn $($last.Turn) ($($last.GameId))" }
-        if (((Get-Date) - $lastChange).TotalMinutes -ge $StallMinutes) { return "stalled at turn $($last.Turn) ($($last.GameId))" }
+        if (((Get-Date) - $lastChange).TotalMinutes -ge $StallMinutes) {
+            # keep what the screen showed and whether Civ was hung, to tell a hang from a blocking popup or crash dialog
+            $shot = Join-Path $PSScriptRoot ("stall-{0:yyyyMMdd-HHmmss}.png" -f (Get-Date))
+            try {
+                $bmp = New-Object System.Drawing.Bitmap 3840, 2160
+                $g = [System.Drawing.Graphics]::FromImage($bmp); $g.CopyFromScreen(0, 0, 0, 0, $bmp.Size); $g.Dispose()
+                $bmp.Save($shot); $bmp.Dispose()
+            } catch { $shot = "(screenshot failed)" }
+            $civ = Get-Process CivilizationV -ErrorAction SilentlyContinue | Select-Object -First 1
+            return "stalled at turn $($last.Turn) ($($last.GameId)); responding $($civ.Responding); screenshot $shot"
+        }
     }
 }
 
