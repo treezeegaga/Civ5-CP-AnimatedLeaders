@@ -1045,6 +1045,16 @@ every turn they aren't building a part, which is aggressive but deliberate.
 - **For Diplomacy:** L2 (a counting fix) and L3 (a design question) are in Diplomacy's file. Both are under
   Requests.
 
+
+**Lead's decision (2026-11-02): the victory push waits for phase 2.**
+- It belongs to goal 6 ("bring the pressure when the humans don't"), and phase 1 is strength first.
+- Testing it needs games that reach the Renaissance: Standard pace, or saves from later eras, played on
+  for N turns. That's a new test setup, built when phase 2 starts.
+- Until then, Economy's next work, in order:
+  1. the two expansion flags' tests, after the King baseline;
+  2. flags for the remaining confirmed `CvPolicyAI` bugs (P2–P4), each as a no-worse test at T150;
+  3. the greedy-tall alarm together with War, once War has its first capture fixes.
+
 ### Diplomacy: audit, map and plan (Diplomacy session, 2026-11-02)
 
 The audit is in [AUDIT.md](AUDIT.md), "Diplomacy audit": 13 confirmed bugs (D1-D13), the exploit checklist with a
