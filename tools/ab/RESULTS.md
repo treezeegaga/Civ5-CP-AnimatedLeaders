@@ -936,7 +936,7 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
   without `AIABTest.ini` still play c7c.
 - Test: SPRT gainer, paired, standard King setup, T100 (`Summarize-ABTest.ps1 -AtTurn 100`), group c
   running `Fixes = SettlersFirst` against B. Or screened with `SettlerOverlap` in one run.
-- Status: queued after the King baseline (lead); CI build running.
+- Status: in screening run 1 (test build `claude/ab-screen1`, after the King baseline).
 - Notes: Economy has no push access to the fork, so the commit goes to the lead as
   `tools/ab/patches/economy/0001-*.patch` (on `6b8ebde`); the lead applies it to `ai/economy`.
 
@@ -995,7 +995,8 @@ logged games, not more reading.
 - Build: fork commit `cfaf3db` on `ai/economy` (patch 0002 on `cbb3380`), flag `DiploPolicyValue`
   (`FIX_DIPLO_POLICY_VALUE`). Not in the bundle.
 - Test: SPRT no-worse, paired, standard King setup, T150. Lower priority than the expansion flags.
-- Status: queued after SettlersFirst and SettlerOverlap (lead); CI build running.
+- Status: in screening run 1 with SettlersFirst and SettlerOverlap (test build `claude/ab-screen1`, after the
+  King baseline).
 
 ### Late-game victory push audit (Economy, 2026-11-02)
 
@@ -1072,7 +1073,7 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
 - Measure: strength share at T150 (verdict). Mechanism, per civ from the c7c_roles columns: wars declared
   on tall civs, cities they lose, and `CitiesCaptured` against them.
 - δ: 2 points of strength share.
-- Build: DLL commit `9460739` (local), as `tools/ab/patches/economy/0003-*.patch` (on `cfaf3db`). Flag
+- Build: fork commit `ccbb01a` on `ai/economy` (patches 0003-0006 on `cfaf3db`, applied by the lead). Flag
   `GreedyAlarm` (`FIX_GREEDY_ALARM`), not in the bundle. Files: `CvCityStrategyAI` (the signal,
   `CityStrategyAIHelpers::GetGreedyAlarmThreat`), `CvBuildingProductionAI` (walls), `CvUnitProductionAI`
   (archers, cap).
@@ -1082,7 +1083,7 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
   2. `Fixes = GreedyAlarm`: the alarm alone, for any tall civ.
 
   The bundle flags stay on or off as the lead's baseline decides.
-- Status: written, not built. Needs War's view: War owns the threat side (`CvMilitaryAI`). This uses only an
+- Status: on `ai/economy`, CI pending. Goes into a screening run once War has capture fixes (lead). Needs War's view: War owns the threat side (`CvMilitaryAI`). This uses only an
   existing diplomacy signal and Economy's production files, so it doesn't touch War's code. If War builds a
   better "army massing" signal (muster points, siege units seen), the alarm should switch to it.
 - Notes: posture only sees units near our cities, so an army mustering out of sight isn't seen until it
@@ -1121,8 +1122,9 @@ judged by **no-worse** tests at T150 (δ = 2 points of strength share), lowest p
 | `PolicyPrereqDepth` (`FIX_POLICY_PREREQ_DEPTH`) | P3 | Prerequisites get flavour weight at `iPropagationLevel + 1` | Tiny: shallow policy trees. Flavour weights may be built before the test settings load at game start, in which case the flag only acts on later flavour updates |
 | `EspionagePolicyValue` (`FIX_ESPIONAGE_POLICY_VALUE`) | P4 | The passive espionage bonus is scored with its own value | Late game only |
 
-Status: written, not built. Suggestion for the lead: one screening run with all three rather than three SPRTs,
-since none should move strength share at T150; the point is to check they don't break anything.
+Status: on `ai/economy` as `ccbb01a`. Lead's plan: `PolicyPrereqDepth` goes into the next screening run;
+`IdeologyPick` and `EspionagePolicyValue` wait for phase 2's long-game setup, since ideologies and spies rarely
+exist by T150 on Quick.
 
 ## Requests
 
