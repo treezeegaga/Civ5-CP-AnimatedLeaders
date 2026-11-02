@@ -19,26 +19,28 @@ original ("cp"). Run enough games, and if "new" keeps finishing ahead, the chang
 
 ## Running test games
 
-1. Download the **MSVC** DLL from the fork's latest Build run on the branch above, and build a test
-   pack with it:
+One command does everything: updates this repo, shows the results so far, downloads the newest test
+DLL (the fork's CI publishes it as the `ab-latest` release), builds and installs the test pack, and
+starts Civ V:
 
-   ```
-   powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <path to the DLL> -ABTest -Install
-   ```
+```
+powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1
+```
 
-   Don't play multiplayer with the test pack. Reinstall the normal pack (same command without
-   `-ABTest`) before playing with friends.
-2. Start a **single player** game: Prince, an even number of civs (8 on a Standard map is good),
-   Quick game speed so games finish sooner, and Quick Combat and Quick Movement on.
-3. On turn 1, press **Ctrl+Shift+O** (Community Patch's observer mode). Every civ, yours included,
-   is now played by the AI. Leave it running; it goes on until someone wins.
-4. You can stop any time (Ctrl+Shift+O again, or quit). Standings already logged stay in the file.
-   Games that stop before turn 100 are left out of the summary.
-5. After a few games:
+Then in Civ V: Single Player > Set Up Game, **Prince**, Standard map with **8 civs**, **Quick** pace,
+and Quick Combat and Quick Movement under Advanced Setup (Civ V remembers these next time). Start the
+game and leave it running. Observer mode turns itself on at the start (the same as Ctrl+Shift+O), so
+the AI plays every civ until someone wins. Standings are saved every 10 turns, so quitting early is
+fine; games shorter than 100 turns aren't counted.
 
-   ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Summarize-ABTest.ps1
-   ```
+- Results so far: `tools\ab\Run-ABTest.ps1 -Summary`
+- **Before playing multiplayer**: `tools\ab\Run-ABTest.ps1 -Restore` puts the normal pack back.
+  Never play multiplayer with the test pack.
+- A specific build instead of the newest: `-Release ab-<commit>` (e.g. `ab-80746d8`).
+
+Doing it by hand: download the DLL from the release (or the **MSVC Release** artifact of a Build run on
+the fork branch), run `CPModpack\Build-CPModpack.ps1 -Dll <dll> -ABTest -Install`, start a game as
+above, and run `Summarize-ABTest.ps1` afterwards.
 
 ## Which build to test
 
