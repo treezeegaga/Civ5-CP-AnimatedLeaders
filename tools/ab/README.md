@@ -79,6 +79,14 @@ the test pack installed (`Run-ABTest.ps1 -NoLaunch`), windowed mode in `Graphics
 (`FullScreen = 0`, `WindowResX = 1914`, `WindowResY = 2034`) and the setup screen already on Prince,
 Standard, Quick and 8 civs on separate teams. Its click positions are for a 3840x2160 screen at 150%.
 
+**Paired games** (C builds from fork commit `7097d49` on): by default `Run-Games.ps1` plays games in pairs. The
+second game of a pair replays the first one's map seed, civs, leaders and city-states with the groups swapped
+(`Flip = 1`), so luck of the map and the draw cancels out within the pair. A flipped game's GameId ends in `F`.
+The runner writes `AIABTest.ini` before every game from `-Fixes` (default `bundle`) and `-Screen`, and logs
+whether the second game's start matched the first ("replay matches the first game" or "REPLAY DIFFERS"). A
+STOP file takes effect after the current pair. `-Unpaired` plays single games; `-NoSettings` leaves
+`AIABTest.ini` alone.
+
 With `LoggingEnabled = 1` and `AILog = 1` in `config.ini`, test games write Civ's AI logs, and
 `tools\ab\Digest-ABLogs.ps1` boils them down to a few lines per civ: early builds, settlers ordered,
 found-city operations and idle settlers.

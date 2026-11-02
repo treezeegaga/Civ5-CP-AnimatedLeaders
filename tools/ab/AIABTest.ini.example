@@ -13,6 +13,11 @@
 ;   Fixes = bundle, -CanWin      the bundle without CanWin (ablation)
 ;   Fixes = none                 c runs nothing: an A/A game that measures the split's bias
 ;   Screen = SiegeBook, CanWin   each listed flag is on for a random half of the AI civs (screening)
+;
+; Paired games: Run-Games.ps1 writes this file itself before every game (its -Fixes and -Screen). For the second
+; game of a pair it adds Flip = 1 (groups swapped) and the first game's MapSeed, SyncSeed and Player<i> lines,
+; copied from AIABTest_lastgame.ini, which every test game writes when it starts.
 [ABTest]
 Fixes = bundle
 Screen =
+Flip = 0

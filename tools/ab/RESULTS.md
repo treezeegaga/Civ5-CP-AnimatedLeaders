@@ -149,7 +149,7 @@ install one. Each C build includes everything before it unless noted. All change
 | c7 | `0b3dda2` | greedy tall build order; warmongers target the greediest neighbour | 1 | 45.3% | | worse (cap still on) |
 | c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
 | c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 1 | 52.9% | | ahead in its first game; needs more games |
-| c7c_flags | `46fc076` | c7c with one flag per idea (see Fixes below) and a Warmonger column; with no `AIABTest.ini` it plays the same as c7c | 0 | | | CI build running; then games |
+| c7c_flags | `46fc076`, `7097d49` | c7c with one flag per idea (see Fixes below) and a Warmonger column; `7097d49` adds paired games. With the bundle and `Flip = 0` it plays the same as c7c | 0 | | | CI builds running; then games |
 
 What each build does, in detail:
 - **c1:** candidate `GetOpeningBook()`:
@@ -445,6 +445,27 @@ depends on `WidePlans`.
 None of these has passed. Each will get a hypothesis entry (measure, δ, test) when it's queued for an
 SPRT; the screening run (lead job 4 onwards) decides which go first.
 
+### Paired games (lead job 2, fork commit `7097d49`)
+
+- **Flip.** `Flip = 1` in `AIABTest.ini` swaps the groups. The c/b split deals b first, the new/cp parity
+  inverts, and each screened flag goes to the other half of the civs. It's saved with the game. AGENTS.md
+  called this a custom option (`AI_AB_FLIP`). It's an ini key instead, so `Run-Games.ps1` can switch it
+  between games without rebuilding the pack.
+- **Replay.** Every test game writes `AIABTest_lastgame.ini` when it starts: map and sync seeds, each major
+  slot's civ and leader, each city-state slot's type. For the second game of a pair, `Run-Games.ps1` copies
+  those keys into `AIABTest.ini` with `Flip = 1`.
+  - The DLL applies them in `CvGame::init`, before the random generators are seeded and before
+    `InitPlayers` and the map script run (`init2`). So the pair should share map, civs, city-states and
+    starting spots.
+  - CP's rolls hash the map seed with the turn (`CvGame::randCore`), so personality flavors match too. The
+    warmonger set is then the same in both games, and the flipped split is the exact complement.
+  - Random leaders are picked by Civ before the DLL runs, which is why civs and city-states are replayed as
+    well as the seed.
+- **Not verified in a real game yet.** Whether Civ honours a seed and civ swap at that point is what the
+  smoke test checks. If it doesn't, the fallback is loading the turn-0 autosave for the second game.
+- **GameIds.** A flipped game's GameId ends in `F`. The summary pairs games in job 4; until then it lists the
+  two games separately.
+
 ## Requests
 
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
@@ -453,23 +474,35 @@ SPRT; the screening run (lead job 4 onwards) decides which go first.
 
 ## Instructions for the PC runner
 
-### 2026-11-02: smoke test of `c7c_flags` (1 game)
+### 2026-11-02: smoke test of `c7c_flags` with paired games (1 pair = 2 games)
 
-Goal: check that the flags build runs and writes the new column. With no `AIABTest.ini` it plays the
-same AI as c7c, so this game also counts as a second c7c game.
+Goal: check that the flags build runs, writes the new column, and replays a game with the groups
+swapped. With the bundle it plays the same AI as c7c, so both games also count as c7c games.
 
 1. Check out this repo's branch `claude/admiring-fermi-qyl4j3` (the lead's branch, until it's merged into
    `claude/sleepy-hopper-x77moh`) and pull.
-2. Download the DLL from fork run **41538287476** (commit `46fc076`, the head of `claude/ab-c1`):
+2. Download the DLL of fork commit `7097d49`. Its CI run is the newest run of the fork's Build workflow on
+   branch `claude/admiring-fermi-qyl4j3`; the lead will put the run id here once it has passed. Until then:
    ```
-   gh run download 41538287476 --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>
+   gh run list --repo treezeegaga/Community-Patch-DLL --workflow build_vp.yml --branch claude/admiring-fermi-qyl4j3 --limit 3
+   gh run download <run id> --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>
    ```
-   The artifact name must contain `g46fc076` (e.g. `VP_MSVC_Release_24cc575-17-g46fc076xx`).
+   The artifact name must contain `g7097d49`.
 3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCoreDLL_Expansion2.dll -ABTest -Install`
-4. Make sure there is **no** `AIABTest.ini` in `Documents\My Games\Sid Meier's Civilization 5`.
-5. One game with `Run-Games.ps1`, the usual setup (Prince, Standard, Quick, 8 civs), logging on.
-6. Check: `AIABTest_c7c_flags.csv` exists with a `Warmonger` column, and there is no
-   `AIABTest_errors.txt`. Commit the CSV to `tools/ab/results/`, plus `Run-Games.log`, and push.
+4. Logging on (`LoggingEnabled = 1`, `AILog = 1` in `config.ini`). Run one pair:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -MaxGames 2
+   ```
+   Copy `Logs\` aside after the first game (the second overwrites it).
+5. Check and report:
+   - `Run-Games.log` says "replay matches the first game" for game 2.
+   - `AIABTest_c7c_flags.csv` has a `Warmonger` column, and the two games' GameIds are the same apart from a
+     trailing `F` on the second.
+   - Same civs in the same player slots in both games; same `Warmonger` values; `Group` swapped (each c in
+     game 1 is b in game 2).
+   - A glance at the first turns of both games: the same map and starting spots.
+   - No `AIABTest_errors.txt` in My Games.
+6. Commit the CSV to `tools/ab/results/`, `Run-Games.log`, and any problems found, then push.
 
-Don't start a longer run yet: paired games, the new map setup and the SPRT summary (lead jobs 2-6)
-come first.
+If the replay differs or the maps don't match, say so and stop: paired games then need another way in
+(loading the turn-0 autosave instead).

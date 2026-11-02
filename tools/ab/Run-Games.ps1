@@ -17,13 +17,24 @@
     Windowed Civ only takes clicks in the place it first opened its window, so setup happens there and the
     window is moved afterwards, with the same messages a title-bar drag sends.
 
-    Create the file named by -StopFile to stop after the current game.
+    Create the file named by -StopFile to stop after the current game (after the current pair when games are paired).
+
+    Paired games (C builds from fork commit 7097d49 on): games are played in pairs on the same map. Before each game the
+    runner writes AIABTest.ini in My Games with -Fixes and -Screen. The first game of a pair is a normal game; when
+    it starts, the DLL writes its seeds, civs and city-states to AIABTest_lastgame.ini. The second game gets those
+    keys plus Flip = 1, so it replays the first game's start with the groups swapped. -Unpaired plays single games.
 
 .EXAMPLE
-    powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -MaxGames 1
+    powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -MaxGames 2
+.EXAMPLE
+    powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes CanWin -MaxGames 20
 #>
 param(
-    [int]$MaxGames = 1000,
+    [int]$MaxGames = 1000,            # games, not pairs (paired runs stop after a whole pair)
+    [string]$Fixes = "bundle",        # AIABTest.ini Fixes = (candidate flags group c runs)
+    [string]$Screen = "",             # AIABTest.ini Screen = (flags each on for a random half of the AI civs)
+    [switch]$Unpaired,                # single games instead of pairs
+    [switch]$NoSettings,              # leave AIABTest.ini alone (builds before c7c_flags, or a hand-written file)
     [int]$StopTurn = 150,
     [int]$StallMinutes = 30,          # no new results rows for this long = stuck; restart
     [switch]$AttachRunning,           # a test game is already running: finish it first, then start new ones
@@ -64,6 +75,25 @@ $P = @{
     StartGame     = @(2231, 2054)
     BeginJourney  = @(1920, 1453)
     Neutral       = @(1920, 300)    # black band at the top of the window, nothing to click there
+}
+
+$SettingsFile = Join-Path $MyGames "AIABTest.ini"
+$ReplayFile = Join-Path $MyGames "AIABTest_lastgame.ini"
+
+# AIABTest.ini for the next game: the flags, and for the second game of a pair the first game's replay keys and Flip = 1
+function Write-Settings([string[]]$replay) {
+    if ($NoSettings) { return }
+    $lines = @("; written by Run-Games.ps1", "[ABTest]", "Fixes = $Fixes", "Screen = $Screen")
+    if ($replay) { $lines += "Flip = 1"; $lines += $replay } else { $lines += "Flip = 0" }
+    [IO.File]::WriteAllLines($SettingsFile, [string[]]$lines, [Text.Encoding]::ASCII)
+}
+
+# The replay keys the DLL wrote when the current game started (MapSeed, SyncSeed, Player<i>), or $null
+function Read-Replay {
+    if (-not (Test-Path $ReplayFile)) { return $null }
+    $keys = @(Get-Content $ReplayFile | Where-Object { $_ -match '^\s*(MapSeed|SyncSeed|Player\d+)\s*=' } | ForEach-Object { $_.Trim() })
+    if ($keys.Count -eq 0) { return $null }
+    return $keys
 }
 
 function Write-Log([string]$text) {
@@ -214,18 +244,36 @@ function Wait-TestGame([string[]]$knownIds) {
 Remove-Item $StopFile -ErrorAction SilentlyContinue
 $played = 0
 $failures = 0
-while ($played -lt $MaxGames) {
-    if (Test-Path $StopFile) { Write-Log "Stop file found; stopping"; break }
+$pairReplay = $null   # set while the second game of a pair is due: the first game's replay keys
+while ($played -lt $MaxGames -or $pairReplay) {
+    if (-not $pairReplay -and (Test-Path $StopFile)) { Write-Log "Stop file found; stopping"; break }
     $known = Get-GameIds
     if ($AttachRunning -and $played -eq 0 -and $failures -eq 0 -and (Get-CivWindow)) {
-        # the newest game in the results file is the one running
+        # the newest game in the results file is the one running; it's played as a single game
         $f = Get-ResultsFile
         $current = if ($f) { (Import-Csv $f.FullName)[-1].GameId } else { $null }
         $known = @($known | Where-Object { $_ -ne $current })
         Write-Log "Finishing the game already running ($current)"
+        $wasFirstOfPair = $false
     } else {
-        Write-Log "Starting game $($played + 1)"
+        $wasFirstOfPair = (-not $Unpaired -and -not $NoSettings -and -not $pairReplay)
+        Write-Settings $pairReplay
+        if ($wasFirstOfPair) { Remove-Item $ReplayFile -ErrorAction SilentlyContinue }
+        $what = if ($pairReplay) { "second game of the pair (Flip = 1)" } elseif ($wasFirstOfPair) { "first game of a pair" } else { "single game" }
+        Write-Log "Starting game $($played + 1): $what; Fixes = $Fixes; Screen = $Screen"
         if (-not (Start-TestGame)) { Write-Log "Setup failed; retrying"; $failures++; if ($failures -ge 3) { Write-Log "Three failed starts in a row; giving up"; break }; continue }
+
+        $replay = Read-Replay
+        if ($wasFirstOfPair -and -not $replay) {
+            Write-Log "  no $ReplayFile after the start (a build before fork commit 7097d49?); playing single games"
+            $wasFirstOfPair = $false
+        }
+        if ($pairReplay -and $replay) {
+            # the second game should have started exactly like the first
+            $diff = @(Compare-Object $pairReplay $replay | ForEach-Object { $_.InputObject })
+            if ($diff.Count -eq 0) { Write-Log "  replay matches the first game" }
+            else { Write-Log ("  REPLAY DIFFERS from the first game: " + ($diff -join "; ")) }
+        }
     }
     $status = Wait-TestGame $known
     Stop-Civ
@@ -233,5 +281,7 @@ while ($played -lt $MaxGames) {
     if ($status -eq "never started") { $failures++; if ($failures -ge 3) { Write-Log "Three failed starts in a row; giving up"; break }; continue }
     $failures = 0
     $played++
+    if ($wasFirstOfPair) { $pairReplay = $replay } else { $pairReplay = $null }
 }
+if (-not $NoSettings) { Write-Settings $null }   # leave a plain file behind, so a game started by hand isn't a replay
 Write-Log "Runner finished after $played games"
