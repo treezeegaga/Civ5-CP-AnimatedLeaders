@@ -930,7 +930,7 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
 - Measure: strength share at T100 (verdict); `City2Turn`–`City4Turn` and cities at T100 (mechanism).
   Expect the 3rd city by about T45 instead of T55-68.
 - δ: +2 points of strength share.
-- Build: DLL commit `a673085` on `ai/economy` (flag `SettlersFirst`, `FIX_SETTLERS_FIRST`; **not pushed
+- Build: DLL commit `25740de` on `ai/economy` (on `6b8ebde`, c7c_roles) (flag `SettlersFirst`, `FIX_SETTLERS_FIRST`; **not pushed
   yet**, see Notes). Not in the bundle, so games without `AIABTest.ini` still play c7c.
 - Test: SPRT gainer, paired, standard King setup, T100 (`Summarize-ABTest.ps1 -AtTurn 100`), group c
   running `Fixes = SettlersFirst` against B. Or screened with `SettlerOverlap` in one run.
