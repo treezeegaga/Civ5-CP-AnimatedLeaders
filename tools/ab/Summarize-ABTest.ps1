@@ -83,6 +83,9 @@ foreach ($g in ($rows | Group-Object GameId)) {
         NewScore  = ($new | ForEach-Object { [double]$_.Score } | Measure-Object -Average).Average
         CpScore   = ($cp | ForEach-Object { [double]$_.Score } | Measure-Object -Average).Average
         NewStrength = 100.0 * ($shares | Measure-Object -Average).Average
+        # the same without military: with almost no city changing hands, an army is mostly upkeep, and a civ that
+        # builds few units shows its lead here
+        NewEconomy = 100.0 * (@(for ($i = 0; $i -lt $StrengthMetrics.Count; $i++) { if ($StrengthMetrics[$i] -ne 'Military') { $shares[$i] } }) | Measure-Object -Average).Average
         Civs      = $civs
         Total     = $total
     }
@@ -98,7 +101,7 @@ Write-Output "military and cities; 50% = even) and each group's average score (w
 foreach ($g in $games) {
     $ahead = if ($g.NewStrength -gt 50) { "new stronger" } elseif ($g.NewStrength -lt 50) { "cp stronger" } else { "even" }
     $won = if ($g.WinnerGrp) { "  won by $($g.WinnerGrp) ($($g.Victory))" } else { "" }
-    Write-Output ("  {0}  turn {1,3}  strength {2,5:N1}%  {3,-12}  score new {4,4:N0} cp {5,4:N0}{6}" -f $g.GameId, $g.Turn, $g.NewStrength, $ahead, $g.NewScore, $g.CpScore, $won)
+    Write-Output ("  {0}  turn {1,3}  strength {2,5:N1}%  {3,-12}  no-military {7,5:N1}%  score new {4,4:N0} cp {5,4:N0}{6}" -f $g.GameId, $g.Turn, $g.NewStrength, $ahead, $g.NewScore, $g.CpScore, $won, $g.NewEconomy)
 }
 
 $newAhead = @($games | Where-Object { $_.NewStrength -gt 50 }).Count
@@ -141,6 +144,7 @@ if ($games.Count -ge 2) {
     $pOne = if ($t -gt 0) { $ibeta / 2 } else { 1 - $ibeta / 2 }
     Write-Output ("Strength share {0:N1}% +/- {1:N1} (standard error); chance the new group is really no stronger than cp: {2:P0}" -f $mean, $se, $pOne)
 }
+Write-Output ("Strength share without military (techs, population, land, cities): {0:N1}%" -f ($games | Measure-Object NewEconomy -Average).Average)
 $newScoreAhead = @($games | Where-Object { $_.NewScore -gt $_.CpScore }).Count
 $cpScoreAhead = @($games | Where-Object { $_.NewScore -lt $_.CpScore }).Count
 Write-Output ("Games ahead on score: new {0}, cp {1}" -f $newScoreAhead, $cpScoreAhead)
