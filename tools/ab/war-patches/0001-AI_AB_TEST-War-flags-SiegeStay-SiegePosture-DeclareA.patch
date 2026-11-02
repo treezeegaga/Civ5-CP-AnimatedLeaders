@@ -1,0 +1,240 @@
+From 58d4c8d02ffea181ec362aae027f0657bca7465b Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:52:00 +0000
+Subject: [PATCH] AI_AB_TEST War: flags SiegeStay, SiegePosture,
+ DeclareAtBorder (off in the bundle)
+
+- SiegeStay (CvTacticalAI::PlotHealMoves): units within reach of a damaged
+  enemy city stay at the siege unless below a third of their HP or projected
+  to die, instead of leaving to heal at 20 damage.
+- SiegePosture (CvTacticalAI::PlotAttritionAttacks): the attrition posture
+  also runs the city attack at AL_LOW, so ranged units bombard the city.
+  ExecuteCaptureCityMoves takes the aggression level (default AL_HIGH).
+- DeclareAtBorder (CvAIOperationMilitary::CheckTransitionToNextStage): a
+  sneak attack counts as discovered only in or next to the target's
+  territory or within 2x deploy range of the target.
+
+Flag names appended in CvPlayer.h/.cpp (CandidateFixTypes,
+kCandidateFixNames); all three are left out of kCandidateFixBundle.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
+---
+ CvGameCoreDLL_Expansion2/CvAIOperation.cpp | 25 +++++++++++
+ CvGameCoreDLL_Expansion2/CvAIOperation.h   |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  9 ++--
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  3 ++
+ CvGameCoreDLL_Expansion2/CvTacticalAI.cpp  | 51 ++++++++++++++++++++--
+ CvGameCoreDLL_Expansion2/CvTacticalAI.h    |  3 +-
+ 6 files changed, 84 insertions(+), 8 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+index 59b8a8a2..75019b9c 100644
+--- a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
++++ b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+@@ -1534,6 +1534,23 @@ CvPlot* CvAIOperationMilitary::FindBestTarget(CvPlot ** ppMuster) const
+ 	return NULL;
+ }
+ 
++/// AI_AB_TEST (candidate, flag DeclareAtBorder): is this plot in or next to the enemy's territory?
++bool CvAIOperationMilitary::IsNextToEnemyTerritory(const CvPlot* pPlot) const
++{
++	if (!pPlot || m_eEnemy == NO_PLAYER)
++		return false;
++	if (pPlot->getOwner() == m_eEnemy)
++		return true;
++
++	CvPlot** aNeighbors = GC.getMap().getNeighborsUnchecked(pPlot);
++	for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
++	{
++		if (aNeighbors[iI] && aNeighbors[iI]->getOwner() == m_eEnemy)
++			return true;
++	}
++	return false;
++}
++
+ bool CvAIOperationMilitary::CheckTransitionToNextStage()
+ {
+ 	//only a single army right now!
+@@ -1629,6 +1646,14 @@ bool CvAIOperationMilitary::CheckTransitionToNextStage()
+ 							nVisible++;
+ 					}
+ 
++					//AI_AB_TEST (candidate, flag DeclareAtBorder): CP counts the army as discovered wherever it is, even in our own
++					//land when an enemy scout sees it, and the war then starts with the army disbanded far from the target (its
++					//units can't join a new attack for 5 turns). At peace nobody can attack it, so keep marching until it's at
++					//their border or close to the target.
++					if (nVisible>2 && GET_PLAYER(m_eOwner).UsesCandidateAI(FIX_DECLARE_AT_BORDER) &&
++						plotDistance(*pCenterOfMass, *pTarget) > 2 * GetDeployRange() && !IsNextToEnemyTerritory(pCenterOfMass))
++						nVisible = 0;
++
+ 					//the jig is up - happens also if we run up against the enemy border
+ 					if (nVisible>2)
+ 					{
+diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.h b/CvGameCoreDLL_Expansion2/CvAIOperation.h
+index 989afb22..d2810197 100644
+--- a/CvGameCoreDLL_Expansion2/CvAIOperation.h
++++ b/CvGameCoreDLL_Expansion2/CvAIOperation.h
+@@ -290,6 +290,7 @@ public:
+ 
+ 	virtual bool CheckTransitionToNextStage();
+ 	virtual void OnSuccess() const;
++	bool IsNextToEnemyTerritory(const CvPlot* pPlot) const;
+ 
+ protected:
+ 	//default version does nothing
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 8cdeb9b3..a1218ea1 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33320,12 +33320,15 @@ static const bool kABTestVersusBase = true;
+ // AI_AB_TEST candidate flags (see CandidateFixTypes in CvPlayer.h). These names go in AIABTest.ini and the results file.
+ static const char* const kCandidateFixNames[NUM_CANDIDATE_FIXES] = {
+ 	"WidePlans", "BoxedIn", "LongWide", "BoxedInWar", "TimingAttack", "SiegeTechs", "SiegeBook", "DeclareTiming",
+-	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders" };
++	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders",
++	"SiegeStay", "SiegePosture", "DeclareAtBorder" };
+ 
+ // The bundle: what group c ran in the last C build (c7c), and what every civ runs outside a test game. Off in it:
+ // LongWide (c1: c's wide civs got no more cities from the longer opening, and stopping settlers ended expansion that b
+-// completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars).
+-static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
++// completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars). Also off: the War flags added after c7c
++// (SiegeStay, SiegePosture, DeclareAtBorder), so the bundle stays c7c until they pass.
++static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP) |
++	(1 << FIX_SIEGE_STAY) | (1 << FIX_SIEGE_POSTURE) | (1 << FIX_DECLARE_AT_BORDER)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
+ 
+ const char* CvPlayer::GetCandidateFixName(int iFix)
+ {
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index b8958980..6441b726 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -158,6 +158,9 @@ enum CandidateFixTypes
+ 	FIX_GREEDY_TARGET,		// c7: warmongers pick the neighbour with the fewest land units per city; off: the weakest (c4)
+ 	FIX_CAN_WIN,			// c7c: war only if the siege sketch says the army brings down the nearest city
+ 	FIX_CLOSED_BORDERS,		// c7c: tall civs never give open borders to major civs
++	FIX_SIEGE_STAY,			// War: units at a siege stay unless below a third of their HP (not at 20 damage). Off in the bundle
++	FIX_SIEGE_POSTURE,		// War: the attrition posture also bombards the city (safe shots only). Off in the bundle
++	FIX_DECLARE_AT_BORDER,	// War: a sneak attack counts as discovered only at the target's border. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp b/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
+index 2d0fa226..14b5d0e7 100644
+--- a/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
+@@ -872,13 +872,13 @@ void CvTacticalAI::AssignBarbarianMoves()
+ }
+ 
+ /// Assign a group of units to take down each city we can capture
+-void CvTacticalAI::ExecuteCaptureCityMoves()
++void CvTacticalAI::ExecuteCaptureCityMoves(eAggressionLevel eMaxAggLvl)
+ {
+ 	// See how many moves of this type we can execute
+-	for (CvTacticalTarget* pTarget = GetFirstZoneTarget(AI_TACTICAL_TARGET_ENEMY_CITY, AL_HIGH); pTarget!=NULL; pTarget = GetNextZoneTarget(AL_HIGH))
++	for (CvTacticalTarget* pTarget = GetFirstZoneTarget(AI_TACTICAL_TARGET_ENEMY_CITY, eMaxAggLvl); pTarget!=NULL; pTarget = GetNextZoneTarget(eMaxAggLvl))
+ 	{
+ 		//mark the target whether the attack happened or not - we won't have a better chance this turn
+-		pTarget->SetLastAggLevel(AL_HIGH);
++		pTarget->SetLastAggLevel(eMaxAggLvl);
+ 
+ 		// See what units we have who can reach target this turn
+ 		CvPlot* pPlot = GC.getMap().plot(pTarget->GetTargetX(), pTarget->GetTargetY());
+@@ -975,7 +975,8 @@ void CvTacticalAI::ExecuteCaptureCityMoves()
+ 				}
+ 
+ 				//finally do the attack. be a bit more careful if we have few melee units
+-				ExecuteAttackWithUnits(pPlot, iMeleeCount>2 ? AL_HIGH : AL_MEDIUM);
++				//AI_AB_TEST: eMaxAggLvl is AL_HIGH except for the SiegePosture flag's safe-shots-only call
++				ExecuteAttackWithUnits(pPlot, eMaxAggLvl < AL_HIGH ? eMaxAggLvl : (iMeleeCount>2 ? AL_HIGH : AL_MEDIUM));
+ 
+ 				// Did it work?  If so, don't need a temporary dominance zone if had one here
+ 				if (pPlot->getOwner() == m_pPlayer->GetID())
+@@ -1394,13 +1395,49 @@ void CvTacticalAI::PlotHealMoves(bool bFirstPass)
+ 			continue;
+ 
+ 		if (pUnit->shouldHeal(bFirstPass))
++		{
++			// AI_AB_TEST (candidate, flag SiegeStay): a unit at a siege leaves at 20 damage when it isn't adjacent to an enemy
++			// (CvUnit::shouldHeal), so catapults and archers firing from 2 tiles drift home after one city shot and the
++			// damage per turn falls below the city's healing (a test siege went from 161 to 65 a turn). Stay instead.
++			if (m_pPlayer->UsesCandidateAI(FIX_SIEGE_STAY) && IsUnitNeededAtSiege(pUnit))
++				continue;
++
+ 			m_CurrentMoveUnits.push_back(CvTacticalUnit(pUnit->GetID()));
++		}
+ 	}
+ 
+ 	if(m_CurrentMoveUnits.size() > 0)
+ 		ExecuteHeals(bFirstPass);
+ }
+ 
++/// AI_AB_TEST (candidate, flag SiegeStay): is this unit part of a siege that is under way? It is if it's close
++/// enough to fire at (ranged) or attack (melee) a visible enemy city that is already damaged, and it isn't so hurt
++/// that it would die or be useless: at least a third of its HP and not projected to die next turn.
++bool CvTacticalAI::IsUnitNeededAtSiege(const CvUnit* pUnit) const
++{
++	if (!pUnit || !pUnit->IsCombatUnit() || pUnit->getDomainType() != DOMAIN_LAND)
++		return false;
++	if (pUnit->GetCurrHitPoints() * 3 < pUnit->GetMaxHitPoints() || pUnit->isProjectedToDieNextTurn())
++		return false;
++
++	const int iRange = pUnit->IsCanAttackRanged() ? max(2, pUnit->GetRange()) + 1 : 2;
++	for (size_t i = 0; i < m_AllTargets.size(); i++)
++	{
++		if (m_AllTargets[i].GetTargetType() != AI_TACTICAL_TARGET_ENEMY_CITY)
++			continue;
++
++		CvPlot* pCityPlot = GC.getMap().plot(m_AllTargets[i].GetTargetX(), m_AllTargets[i].GetTargetY());
++		if (!pCityPlot || !pCityPlot->isVisible(m_pPlayer->getTeam()) || plotDistance(*pUnit->plot(), *pCityPlot) > iRange)
++			continue;
++
++		CvCity* pCity = pCityPlot->getPlotCity();
++		if (pCity && pCity->getDamage() > 0)
++			return true;
++	}
++
++	return false;
++}
++
+ /// Assigns a barbarian to go protect an undefended camp
+ void CvTacticalAI::PlotBarbarianCampDefense()
+ {
+@@ -1845,6 +1882,12 @@ void CvTacticalAI::PlotAttritionAttacks(CvTacticalDominanceZone* pZone)
+ 		ExecuteDestroyEnemyUnits(*pTarget,AL_LOW);
+ 
+ 	//don't expose our units for city attacks here; if we are likely to succeed we don't call PlotAttritionAttacks
++	//AI_AB_TEST (candidate, flag SiegePosture): attrition is what a siege army of ranged units facing a stronger melee
++	//garrison gets, and without this it never fires at the city, so the army stands next to it for many turns. Run
++	//the city attack at the lowest aggression: the combat simulation then only takes safe shots (bombardment, or a
++	//capture that can't go wrong), and ExecuteCaptureCityMoves keeps its own checks (enemy-dominated zone, healing).
++	if (m_pPlayer->UsesCandidateAI(FIX_SIEGE_POSTURE))
++		ExecuteCaptureCityMoves(AL_LOW);
+ }
+ 
+ /// Defeat enemy units by using our advantage in numbers
+diff --git a/CvGameCoreDLL_Expansion2/CvTacticalAI.h b/CvGameCoreDLL_Expansion2/CvTacticalAI.h
+index 7a912470..acbd5e4c 100644
+--- a/CvGameCoreDLL_Expansion2/CvTacticalAI.h
++++ b/CvGameCoreDLL_Expansion2/CvTacticalAI.h
+@@ -387,7 +387,7 @@ private:
+ 	void AssignBarbarianMoves();
+ 
+ 	// Routines to manage identifying and implementing tactical moves
+-	void ExecuteCaptureCityMoves();
++	void ExecuteCaptureCityMoves(eAggressionLevel eMaxAggLvl = AL_HIGH);
+ 	void PlotGrabGoodyMoves();
+ 	void PlotMovesToSafety(bool bCombatUnits);
+ 	void PlotOperationalArmyMoves();
+@@ -397,6 +397,7 @@ private:
+ 	void PlotCivilianAttackMoves();
+ 	void ExecuteCivilianAttackMoves(AITacticalTargetType eTargetType);
+ 	void PlotHealMoves(bool bFirstPass);
++	bool IsUnitNeededAtSiege(const CvUnit* pUnit) const;
+ 	void PlotBarbarianAttacks();
+ 	void PlotBarbarianCampDefense();
+ 	void PlotBarbarianRoaming();
+-- 
+2.43.0
+
