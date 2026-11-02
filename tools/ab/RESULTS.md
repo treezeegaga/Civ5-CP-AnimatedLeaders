@@ -867,8 +867,8 @@ Goal: check that the newest build runs, writes all the new columns, and replays 
 swapped, at King with even rules. With the bundle it plays the same AI as c7c, so both games also count as
 c7c games.
 
-1. Check out this repo's branch `claude/admiring-fermi-qyl4j3` (the lead's branch, until it's merged into
-   `claude/sleepy-hopper-x77moh`) and pull.
+1. Finish or stop the game running now (create `tools\ab\STOP`), then pull `claude/sleepy-hopper-x77moh`.
+   Everything below is new since the c7c runs: King with even rules, paired games, new results files.
 2. Download, build and install in one go:
    ```
    powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-c-latest -NoLaunch -NoUpdate
