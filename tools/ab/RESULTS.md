@@ -150,7 +150,7 @@ install one. Each C build includes everything before it unless noted. All change
 | c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
 | c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 1 | 52.9% | | ahead in its first game; needs more games |
 | c7c_flags | `46fc076`, `7097d49` | c7c with one flag per idea (see Fixes below) and a Warmonger column; `7097d49` adds paired games. With the bundle and `Flip = 0` it plays the same as c7c | 0 | | | superseded by c7c_settings before any games |
-| c7c_settings | `24f6ba8`, `614af3d` | c7c_flags with the game's settings in every row (lead job 3); `614af3d` sets ruins and map options from `AIABTest.ini` (job 5). The same AI as c7c with the bundle | 0 | | | CI build running; then the smoke-test pair |
+| c7c_settings | `24f6ba8`, `614af3d` | c7c_flags with the game's settings in every row (lead job 3); `614af3d` sets ruins and map options from `AIABTest.ini` (job 5). The same AI as c7c with the bundle | 0 | | | built (CI run 41541130534); merged into `claude/ab-c1`; waiting for the smoke-test pair at King |
 
 What each build does, in detail:
 - **c1:** candidate `GetOpeningBook()`:
@@ -727,13 +727,11 @@ swapped. With the bundle it plays the same AI as c7c, so both games also count a
 
 1. Check out this repo's branch `claude/admiring-fermi-qyl4j3` (the lead's branch, until it's merged into
    `claude/sleepy-hopper-x77moh`) and pull.
-2. Download the DLL of fork commit `614af3d`. Its CI run is the newest run of the fork's Build workflow on
-   branch `claude/admiring-fermi-qyl4j3`; the lead will put the run id here once it has passed. Until then:
+2. Download the DLL of fork commit `614af3d`, now the head of `claude/ab-c1`. Its CI run **41541130534**
+   passed (MSVC and clang):
    ```
-   gh run list --repo treezeegaga/Community-Patch-DLL --workflow build_vp.yml --branch claude/admiring-fermi-qyl4j3 --limit 3
-   gh run download <run id> --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>
+   gh run download 41541130534 --repo treezeegaga/Community-Patch-DLL --name VP_MSVC_Release_24cc575-20-g614af3d04 -D <empty dir>
    ```
-   The artifact name must contain `g614af3d`.
 3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCoreDLL_Expansion2.dll -ABTest -Install`.
    It should print "Evening out the rules on King" and a list of King changes like the one in
    `CPModpack/README.md`. Paste that list, and any warning about `HandicapInfo_` lists, into the report.
