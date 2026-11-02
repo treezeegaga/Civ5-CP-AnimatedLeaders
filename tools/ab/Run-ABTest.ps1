@@ -6,7 +6,9 @@
     By default:
       1. updates this repo (git pull), if git is installed;
       2. prints the results collected so far;
-      3. downloads the newest test DLL from the fork's "ab-latest" GitHub release (no login needed);
+      3. downloads the newest test DLL from the fork's "ab-c-latest" GitHub release (no login needed): the
+         newest build of the integration branch claude/ab-c1. -Release picks another: ab-<commit> for one
+         build, ab-ai-<topic>-latest for a topic branch's newest, ab-latest for stage 1 (new AI vs CP);
       4. builds and installs the test pack (Build-CPModpack.ps1 -ABTest -Install);
       5. starts Civ V.
     In a test game observer mode turns itself on at the start, so after setting up the game there is
@@ -22,7 +24,7 @@
     powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Restore
 #>
 param(
-    [string]$Release = "ab-latest",   # or ab-<commit> for a specific build
+    [string]$Release = "ab-c-latest", # or ab-<commit> for a specific build, ab-latest for stage 1
     [switch]$Summary,                 # only print the results so far
     [switch]$Restore,                 # install the normal multiplayer pack again
     [switch]$NoLaunch,                # don't start Civ V
@@ -88,11 +90,16 @@ if ($Restore) {
 Show-Results
 
 Write-Step "Downloading the test DLL ($Release)"
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+# which build that is (a "latest" release moves with each build)
+try {
+    $info = Invoke-RestMethod -Uri "https://api.github.com/repos/treezeegaga/Community-Patch-DLL/releases/tags/$Release" -UseBasicParsing
+    Write-Host ("Release '{0}': {1}, published {2}" -f $Release, $info.name, $info.published_at)
+} catch { Write-Warning "Couldn't read the release's details ($($_.Exception.Message)); downloading anyway." }
 $dllDir = Join-Path $env:TEMP "cpmodpack\abtest\$Release"
 New-Item -ItemType Directory -Force -Path $dllDir | Out-Null
 $dll = Join-Path $dllDir "CvGameCore_Expansion2.dll"
 $url = "https://github.com/treezeegaga/Community-Patch-DLL/releases/download/$Release/CvGameCore_Expansion2.dll"
-[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
 try {
     Invoke-WebRequest -Uri $url -OutFile $dll -UseBasicParsing
 } catch {

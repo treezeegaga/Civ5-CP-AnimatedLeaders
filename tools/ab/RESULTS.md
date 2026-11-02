@@ -343,7 +343,8 @@ unless marked as suspected.
 ## Fragile or half-finished tooling
 
 - **CI cancels:** a plain `gh run cancel` often doesn't stop a run, and runs on a branch queue behind each
-  other. Use the force-cancel API above.
+  other. Use the force-cancel API above (README.md, "Stuck or queued runs"). Only one run per branch waits:
+  a newer one replaces the pending one, which then shows as cancelled (seen 2026-11-02, harmless).
 - **`Run-Games.ps1` click positions are hard-coded** for a 3840x2160 screen at 150% scaling, with Civ
   opening its window centred. Windowed Civ only takes clicks where it first opened, so setup happens
   there and the window is moved afterwards with title-bar-drag messages. Quick Combat and Quick
@@ -359,8 +360,8 @@ unless marked as suspected.
 - **`Summarize-ABTest.ps1` relabels B-vs-C files:** in its output, "new" means c and "cp" means b. It
   says so at the top of each B-vs-C section. Its parameters are `-Csv <file>` for one file and
   `-MyGames <folder>` for all files in a folder; there is no `-Path`.
-- **`Run-ABTest.ps1` only downloads releases** (`ab-latest` or `-Release ab-<sha>`), which come from
-  `claude/sleepy-hopper-x77moh`. C builds have to be installed by hand (README.md).
+- **`Run-ABTest.ps1` only downloads releases.** Fixed in lead job 9a: CI now publishes C and topic builds
+  as releases (`ab-c-latest`, `ab-<commit>`). Builds up to `614af3d` still have to be installed by hand.
 - **Side session's branch is unmerged:** pack branch `claude/angry-goodall-0e693c` ("per-change switches
   and diagnostic columns") built a batch 2r variant with per-change switches, published as fork release
   `ab-e9f7ecf`. That session reported its pack-repo changes as still unpushed, awaiting the user's OK.
@@ -708,6 +709,29 @@ moving (CP: below half). That's one `UsesNewAI()` branch in `CvAIOperation.cpp` 
 - **For a wider ablation,** the side branch `claude/ab-switches-diagnostics-2r` (release `ab-e9f7ecf`)
   already has a switch for each of B's changes (`AIChangeTypes`, 38 switches). It's based on 2r and
   unmerged, so it would need porting onto `claude/ab-c1`'s flags. It's not needed now.
+
+### C builds as releases (lead job 9a, fork commit `9348566`)
+
+- **Publishing.** The fork's CI (`build_vp.yml`) publishes every build of a `claude/` or `ai/` branch as
+  release `ab-<commit>`, titled with its branch. Each A/B branch also moves a "latest" release:
+
+  | Release | Branch |
+  |---|---|
+  | `ab-c-latest` | `claude/ab-c1` |
+  | `ab-ai-<topic>-latest` | `ai/<topic>` |
+  | `ab-latest` | `claude/sleepy-hopper-x77moh` (unchanged) |
+
+- **Builds on push.** Pushes to `claude/ab-c1` and `ai/**` build by themselves (path filter: DLL sources,
+  build scripts or the workflow), so nobody has to start a run by hand.
+- **`Run-ABTest.ps1`** installs `ab-c-latest` by default (`-Release ab-<commit>` for one build). It prints
+  the release's title, which names the commit and branch, because a "latest" release moves with every
+  build.
+- **CI notes**, also in README.md:
+  - A hung run blocks its branch. `gh run cancel` may not stop it; the force-cancel API does.
+  - A newer pending run replaces an older pending one on the same branch.
+  - The first build on a new branch spends about 12 minutes downloading the Windows SDK.
+- **First run:** the merge into `claude/ab-c1` started push run 41543426404. It should publish `ab-9348566`
+  and `ab-c-latest`. The DLL is the same AI as `614af3d`; only the workflow changed.
 
 ## Requests
 

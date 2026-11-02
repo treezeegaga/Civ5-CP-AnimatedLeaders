@@ -131,39 +131,46 @@ searches more positions in battles of up to 9 units, so if AI turns feel slower 
   - **2p (`24cc575`):** a warrior before the first settler. **It passed (5-0, p 1%) and is B.**
 - **Batches 2q–2u** were pushed to the same branch after 2p, but were never validated against CP. They
   became c1's candidate bundle instead.
-- **C builds c1–c7c** (fork branch `claude/ab-c1`) are listed in [RESULTS.md](RESULTS.md).
+- **C builds c1–c7c and c7c_settings** (fork branch `claude/ab-c1`) are listed in [RESULTS.md](RESULTS.md).
   - **Best so far: c4 (`ea22df3`)**, 5-1 at 51.6% ± 1.1, p 10%. It is not frozen.
   - **Newest: c7c (`2e9fad1`)**, 52.9% in its 1 game.
 
 ### Installing a C build
 
-The fork's CI only publishes releases from `claude/sleepy-hopper-x77moh`, so `Run-ABTest.ps1` can't fetch
-C builds. Instead:
+From fork commit `9348566` on, CI publishes every build of a `claude/` or `ai/` branch as a GitHub release,
+and pushes to `claude/ab-c1` and `ai/*` build by themselves. So:
 
-1. Push the change to `claude/ab-c1`, behind its own flag. Set the batch name (`AI_AB_TEST_BATCH` in
-   CvGame.cpp, e.g. `"c7c_flags"`) when the build changes what the AI does with the same settings, so its
-   games go to their own `AIABTest_<batch>.csv`. A new flag that is off by default doesn't need a new name.
-2. Start the build:
-   ```
-   gh workflow run build_vp.yml --repo treezeegaga/Community-Patch-DLL --ref claude/ab-c1
-   ```
-3. When the run finishes, download its DLL:
-   ```
-   gh run download <run id> --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>
-   ```
-4. Check that the artifact's name ends in the commit you pushed, e.g.
-   `VP_MSVC_Release_24cc575-15-g2e9fad187` for `2e9fad1`. Runs queue behind each other, and an older run
-   can finish first.
-5. Install it:
-   ```
-   powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCore_Expansion2.dll -ABTest -Install
-   ```
-6. Put the `AIABTest.ini` that RESULTS.md asks for in My Games (or none, for the bundle). Play games with
-   `Run-Games.ps1`, and read results with `Run-ABTest.ps1 -Summary`. For B-vs-C files,
-   the summary's "new" column is c and its "cp" column is b.
+1. Push the change to `claude/ab-c1` (or a topic branch `ai/<topic>`), behind its own flag. Set the batch
+   name (`AI_AB_TEST_BATCH` in CvGame.cpp, e.g. `"c7c_settings"`) when the build changes what the AI does
+   with the same settings, so its games go to their own `AIABTest_<batch>.csv`. A new flag that is off by
+   default doesn't need a new name.
+2. The push starts the build. Other branches build on demand:
+   `gh workflow run build_vp.yml --repo treezeegaga/Community-Patch-DLL --ref <branch>`.
+3. About 15 minutes later it's published as `ab-<commit>`, and also as:
 
-`gh run cancel` sometimes has no effect, and a hung run blocks later runs on the branch. Use
-`gh api -X POST repos/treezeegaga/Community-Patch-DLL/actions/runs/<id>/force-cancel`.
+   | Release | Branch |
+   |---|---|
+   | `ab-c-latest` | `claude/ab-c1` |
+   | `ab-ai-<topic>-latest` | `ai/<topic>` |
+   | `ab-latest` | `claude/sleepy-hopper-x77moh` (stage 1) |
+
+4. Install it: `powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -NoLaunch` takes
+   `ab-c-latest` by default; `-Release ab-<commit>` takes one build. It prints which commit the release
+   holds: check it's the one you want, since a "latest" release moves with every build.
+5. Put the settings RESULTS.md asks for into the `Run-Games.ps1` command (`-Fixes`, `-Screen`), play, and
+   read results with `Run-ABTest.ps1 -Summary`. For B-vs-C files, the summary's "new" column is c and its
+   "cp" column is b.
+
+Builds before `9348566` (up to `614af3d`) only exist as workflow artifacts:
+`gh run download <run id> --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>`,
+then `CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCore_Expansion2.dll -ABTest -Install`.
+
+**Stuck or queued runs.**
+- Only one run per branch waits in the queue: a newer one replaces the pending one (it shows as cancelled).
+  That's fine, because the newest commit contains the older ones.
+- `gh run cancel` sometimes has no effect, and a hung run blocks later runs on the branch. Use
+  `gh api -X POST repos/treezeegaga/Community-Patch-DLL/actions/runs/<id>/force-cancel`.
+- The first build on a new branch downloads the Windows SDK (about 12 minutes), then caches it.
 
 `Summarize-ABTest.ps1` with no arguments reports each results file separately. For each setup and flag
 configuration in a file it also prints the SPRT (gainer and no-worse LLRs, on pairs when the file has them),
