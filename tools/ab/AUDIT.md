@@ -47,8 +47,8 @@ game state. Targets are from the CivFanatics notes below; tune them against the 
 
 ## Batch 2: bigger behaviour changes, need tuning
 
-Status "2b" means coded in fork commit `8eaf65e`, and "2c" in fork commit `345b615`, with the
-change described. Build 2c contains everything (results go to `AIABTest_batch2c.csv`). The tuning
+Status "2b" means coded in fork commit `8eaf65e`, "2c" in `345b615` and "2d" in `25c26d8`, with the
+change described. Build 2d contains everything (results go to `AIABTest_batch2d.csv`). The tuning
 numbers are first guesses.
 
 | # | Area | Where | Problem | Status |
@@ -66,7 +66,7 @@ numbers are first guesses.
 | 22 | Buildings | `CvCityStrategyAI.cpp:4281` | Culture building value multiplied by 2-3 once per rival civ (up to x16) | 2b (confirmed): largest rival multiplier once |
 | 23 | Gold | `CvCityStrategyAI.cpp:1367` | Gold purchase weights a barely started item up to 100x | 2b (confirmed): up to x1.5 |
 | 24 | War | `CvMilitaryAI.cpp:902` | "Preferred target" cut-off measured against all civs' cities, so a walled human may never be attacked | 2b (confirmed): judged per owner |
-| 25 | War | `CvCityStrategyAI.cpp:912` | Only the muster city builds units for an attack | Likely |
+| 25 | War | `CvCityStrategyAI.cpp:912` | Only the muster city builds units for an attack | 2d (confirmed): every city is offered army units but CP keeps them only in the muster city; now any city within 8 tiles of a recruiting army's muster point can build for it, while open slots exceed units already in training elsewhere |
 | 26 | War | `CvAIOperation.cpp:868` | Armies keep marching at under half strength, never reinforced | 2b: abort below 2/3 while gathering or moving |
 | 27 | War | `CvMilitaryAI.cpp:2335` | No defensive response when one city is attacked but the war overall looks fine | 2b (confirmed): defend anyway |
 | 28 | Expansion | `CvAIOperation.cpp:1795`, `CvPlayer.cpp:47813` | Settlers wait for escorts in safe land (up to 42 turns) and walk to far sites, re-picking targets every turn | 2c (confirmed): no escort when the trip looks safe (no visible danger, at most 5 turns, no known camp or enemy city within 5 tiles); sites discounted by travel time, current target gets a 15% edge |
