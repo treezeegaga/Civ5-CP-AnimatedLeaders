@@ -57,9 +57,13 @@ never optional (no cheating, banned behaviours, multiplayer-safe).
 two-turtle game. Strength becomes a guard: phase 2 changes must pass a no-worse test so they don't
 give back what phase 1 gained.
 
-**"Competent" means** (numbers to be set with the players before phase 1 ends):
-- clearly ahead of CP's AI on the rating ladder (e.g. worth a difficulty level)
-- the bully test: the aggressor no longer rolls everyone over
+**"Competent" means** (numbers agreed with the players on 2026-11-02; they're the goal row of the scoreboard
+at the top of RESULTS.md):
+- clearly ahead of CP's AI: **strength share ≥ 55%** against CP, at King with even rules
+- the bully test: the aggressor no longer rolls everyone over: **≤ 20% of all cities** at the end, **≤ 1 city
+  per war**, and **2+ civs at war with it within 20 turns** of its first conquest
+- a lively world without spam: **0.5–2 deals per civ per 10 turns**
+- **0 banned behaviours**, and AI turns **no more than 25% slower** than B's
 - most tricks on the exploit checklist no longer work
 - milestones at a good human player's pace (not an expert's)
 - no obvious blunders when we watch games or play against it
