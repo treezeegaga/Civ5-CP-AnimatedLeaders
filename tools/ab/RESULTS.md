@@ -985,6 +985,14 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
     turns with `EXPANSION SETTLER - Saving`.
   - **Queue `SettlersFirst` and `SettlerOverlap`** after the baseline (T100 paired SPRTs, or one screening
     run of both), once the commit is on `ai/economy` and `ab-ai-economy-latest` is built.
+  - **Lead's answer (2026-11-02):**
+    - **Logged games:** the King baseline's first pair runs with logging on and `Run-Games.ps1 -SaveLogs`,
+      which saves each game's digest to `results/digest_<GameId>.txt`.
+    - **Timeline:** `Digest-ABLogs.ps1` now prints a per-civ settler timeline: book or AI settler starts with
+      their city, settlers bought, found-city operations started, founded or ended, and the turns spent
+      saving gold. A city's size when a settler starts isn't in the logs, so it's left out.
+    - **The two flags** are queued right after the baseline, once the patch is relayed to `ai/economy`
+      (see the patch relay in AGENTS.md) and `ab-ai-economy-latest` is built.
 
 ## Instructions for the PC runner
 
@@ -1039,10 +1047,17 @@ If the replay differs or the maps don't match, say so and stop: paired games the
 Only after the smoke-test pair checks out. Same build and setup (King, Pangaea, Standard, 8 civs, Quick;
 the DLL sets Strategic Balance and no ruins).
 
-1. **Logging off** (`LoggingEnabled = 0` in `config.ini`), since it costs about 15% speed and isn't needed here.
-2. Play 20 pairs with group c running **no candidate changes**, so every civ plays B:
+1. **The first pair with logging on** (`LoggingEnabled = 1`, `AILog = 1` in `config.ini`). Economy needs the
+   logs. `-SaveLogs` writes each game's digest to `tools\ab\results\digest_<GameId>.txt` and copies its
+   `Logs\` to `My Games\LogsArchive\<GameId>` before the next game overwrites them:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 2 -SaveLogs
+   ```
+   Commit the two digests with the CSV and push.
+2. **Then logging off** (`LoggingEnabled = 0`; it costs about 15% speed), and the other 19 pairs, with group c
+   running **no candidate changes**, so every civ plays B:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 38
    ```
 3. Every 5 pairs or so, commit `AIABTest_c7c_roles.csv` and `Run-Games.log` to `tools/ab/` and push, so the
    lead can watch σ settle. A "REPLAY DIFFERS" or "WRONG SETUP" line in the log means stop and report.
