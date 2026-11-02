@@ -996,6 +996,40 @@ logged games, not more reading.
 - Test: SPRT no-worse, paired, standard King setup, T150. Lower priority than the expansion flags.
 - Status: written, not built.
 
+### Diplomacy: audit, map and plan (Diplomacy session, 2026-11-02)
+
+The audit is in [AUDIT.md](AUDIT.md), "Diplomacy audit": 13 confirmed bugs (D1-D13), the exploit checklist with a
+verdict per trick, and the map of what CP has against a conqueror. No code yet.
+
+**Why a conqueror isn't stopped today, in one line:** every AI hates it (warmonger threat reaches CRITICAL) but
+judges the war one against one, so it picks AFRAID, and AFRAID switches off war targets, coop wars, sanctions and
+denouncing. Coop wars and pacts also need an existing friendship, and per-pair peace plus a 16-turn dampener lets the
+conqueror fight one civ at a time. Nothing in it is human-specific.
+
+**Exploits:** the lump-sum-for-per-turn trick is already blocked in ordinary trades (`BlockTemporaryForPermanentTrade`),
+but not in peace deals, where payments outlast the peace lock. Breaking deals by war costs no reputation. The
+help-request re-roll is real. Bluffing works on perceived strength and units at the border. Cities are not cheap in
+peace deals.
+
+**Plan.** Bugs first, each with its own flag so they can be screened together (the regression screen gives each flag
+its own estimate) and then confirmed one by one. Then game theory, one flag per idea:
+
+| Flag | Idea | Hypothesis | Measure | δ / test |
+|---|---|---|---|---|
+| `FIX_EASY_TARGET` | D1 + D2: "easy target" works for civs at peace | Opportunists start wars against weak or overstretched neighbours, including a conqueror whose army is away | `WarsDeclared` per civ, `CitiesCaptured`; bully test: wars on the aggressor | No-worse on strength (δ 2); gainer if it shows |
+| `FIX_DIPLO_D3` ... `FIX_DIPLO_D13` | One flag per confirmed bug | Correctness; no strength loss | Strength; per bug its mechanism (D3 war length, D4 wars on city-states, D9 deals, D11 city-state wars on the aggressor) | Screen together at T100, then no-worse each |
+| `FIX_COALITION_STRENGTH` | Judge a SEVERE or CRITICAL warmonger against the coalition, not alone: our strength plus that of civs that are visibly against it (at war with it, denouncing it, or lost a city to it in the last 30 turns), minus its own friends and pact partners | AFRAID gives way to GUARDED/HOSTILE/WAR toward a runaway, only when the coalition could actually win | Bully test: civs at war with the aggressor at the end; turns from first conquest to 2+ at war | Goal row: 2+ within 20 turns; no-worse on strength |
+| `FIX_COALITION_COOP` | Coop war against a SEVERE+ warmonger can be asked of any civ that is against it (not only friends), and the potential-war-target gate uses the coalition strength | More joint wars against the aggressor, none against a peaceful tall civ | Joint-war proposals (new count), coalition speed; the tall civ's wars | Bully and builders tests both |
+| `FIX_COALITION_PACT` | Defensive pacts get a "common threat" term (both rate the same civ SEVERE+), and a third pact is allowed while such a threat exists | Pacts form against the conqueror before it reaches the next victim | `Pacts`, aggressor's cities per war | Bully test |
+| `FIX_SANCTIONS` | World Congress counts warmonger threat whatever the approach (today only when worse than GUARDED) | Sanctions proposed and passed against a runaway | Sanction proposals (new count) | Bully test, long games |
+| `FIX_PEACE_PAYMENTS` | Per-turn items in a peace deal are valued over the turns the payer is actually bound (the peace lock), not the full deal | The peace-deal version of lump-sum-for-per-turn stops paying | Scripted check | Exploit check + no-worse |
+| `FIX_DEAL_REPUTATION` | Remember deals the other side cancelled by declaring war while it still owed payments: opinion penalty, and its per-turn promises are discounted by that record. Partners with a clean record get full value | Breaking deals costs trust; honest partners trade more (Cicero's lesson: be the partner others can rely on) | `Deals` per civ per 10 turns stays in the 0.5-2 band; scripted check | No-worse + exploit check |
+| `FIX_DEMAND_BLUFF` | Demands are judged by whether the demander could actually take a city (`CanTakeNearestCity`, from c7c's `FIX_CAN_WIN`), not by perceived strength and units at the border | Bluffs stop paying; real threats still get appeased | Scripted check | Exploit check + no-worse |
+
+All of these judge by behaviour (warmonger threat, cities taken, deals broken), never by who is human, and leave
+the leader's personality in charge (boldness, warmonger hate, loyalty still weigh as before). The first bully
+pairs (B everywhere) set the starting point for the coalition flags.
+
 ## Sessions running (2026-11-02)
 
 | Session | ID | DLL branch | Started with |
@@ -1017,6 +1051,25 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
   (`s_aiCommittedTarget`), which isn't saved, so a reloaded game re-picks. Not a multiplayer desync
   (every computer runs the same turns), but it should be game state before anything ships.
+- **Answer to the request above (Diplomacy):** at King the even rules set `HumanStrengthPerceptionMod` to 0, so
+  the 25% is gone. One human-only rule is left in the same function: a human's army is never rated below 100% while
+  it's above the starting rating, whereas an AI's below-average army is rated down to 50% (`CvDiplomacyAI.cpp:11602`).
+  It's small and only makes AIs more careful of humans; the new AI drops it with `FIX_COALITION_STRENGTH`, which
+  rewrites how threats are judged. Also: `HUMAN_USES_AI_MECHANICS = 1` only covers `isHuman(ISHUMAN_MECHANICS)`; the 32
+  `ISHUMAN_HANDICAP` checks in diplomacy follow `HUMAN_USES_AI_HANDICAP` (still 0). They read the human's own King
+  row, which equals the game's, so no other difference remains (AUDIT.md, "Human-only rules").
+- **For the lead (from Diplomacy):** scripted exploit checks, in this order: (1) a human surrenders with GPT in a
+  peace deal, waits out the peace lock and re-declares: how many payments did the AI get? (2) a human friend asks
+  for help repeatedly in one turn (D13); (3) a demand backed only by units parked at the border, from a civ that
+  couldn't take a city. A save per check plus a Lua or FireTuner script is enough.
+- **For the lead (from Diplomacy):** counts the coalition flags need in the results rows: coop (joint) war
+  proposals made and accepted, and World Congress sanction proposals, per civ, with the target. I can write the DLL
+  side if you prefer (they are raised in `CvDiplomacyAI` and `CvLeagueAI`), but the CSV writer is yours.
+- **For the lead (from Diplomacy):** no push access to the DLL here either. DLL changes will come as format-patch
+  files in `tools/ab/patches/diplomacy/` on pack branch `claude/ai-diplomacy`, based on `claude/ab-c1` `6b8ebde`.
+- **For War (from Diplomacy):** a coalition only matters if its members can take cities, so coalition flags are
+  judged on the bully test after War's first capture fixes. Also from the audit: D1 (easy targets never computed
+  for civs at peace) changes how often AIs start wars, so it may interact with `FIX_CAN_WIN` and the timing flags.
 
 - **For the lead, from Economy (expansion pace, step 1 of Economy's first tasks):**
   - **2-3 logged King games.** The cheapest way: the first pair of the King baseline with
