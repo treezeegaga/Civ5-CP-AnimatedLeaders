@@ -930,11 +930,12 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
 - Measure: strength share at T100 (verdict); `City2Turn`–`City4Turn` and cities at T100 (mechanism).
   Expect the 3rd city by about T45 instead of T55-68.
 - δ: +2 points of strength share.
-- Build: DLL commit `25740de` on `ai/economy` (on `6b8ebde`, c7c_roles) (flag `SettlersFirst`, `FIX_SETTLERS_FIRST`; **not pushed
-  yet**, see Notes). Not in the bundle, so games without `AIABTest.ini` still play c7c.
+- Build: fork commit `cbb3380` on `ai/economy` (patch 0001 applied by the lead on `6b8ebde`; flag `SettlersFirst`,
+  `FIX_SETTLERS_FIRST`), release `ab-cbb3380` / `ab-ai-economy-latest` once CI passes. Not in the bundle, so games
+  without `AIABTest.ini` still play c7c.
 - Test: SPRT gainer, paired, standard King setup, T100 (`Summarize-ABTest.ps1 -AtTurn 100`), group c
   running `Fixes = SettlersFirst` against B. Or screened with `SettlerOverlap` in one run.
-- Status: written, not built.
+- Status: queued after the King baseline (lead); CI build running.
 - Notes: Economy has no push access to the fork, so the commit goes to the lead as
   `tools/ab/patches/economy/0001-*.patch` (on `6b8ebde`); the lead applies it to `ai/economy`.
 
@@ -947,7 +948,7 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
 - Measure: as SettlersFirst. Also idle-settler turns in the digest (two settlers on the map at once
   should stay rare).
 - δ: +2 points of strength share.
-- Build: same commit, flag `SettlerOverlap` (`FIX_SETTLER_OVERLAP`). Not in the bundle.
+- Build: same commit (`cbb3380`), flag `SettlerOverlap` (`FIX_SETTLER_OVERLAP`). Not in the bundle.
 - Test: SPRT gainer, paired, T100, `Fixes = SettlerOverlap`.
 - Status: written, not built.
 
