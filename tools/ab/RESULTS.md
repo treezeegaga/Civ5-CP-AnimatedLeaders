@@ -996,6 +996,54 @@ logged games, not more reading.
 - Test: SPRT no-worse, paired, standard King setup, T150. Lower priority than the expansion flags.
 - Status: queued after SettlersFirst and SettlerOverlap (lead); CI build running.
 
+### Late-game victory push audit (Economy, 2026-11-02)
+
+Read at fork `6b8ebde`: who picks the victory to push for (`CvDiplomacyAI::DoUpdateCurrentVictoryPursuit`,
+`IsSeriousAboutVictory`, the `Get*VictoryProgress` / `IsCloseTo*` functions), and everything in Economy's
+files that reacts to it (`CvEconomicAI` GS_* strategies and helpers, `CvTechClasses` grand-strategy tech
+priorities, `CvCityStrategyAI` yield and building values, `CvUnitProductionAI` / `CvProjectProductionAI`
+spaceship, archaeologist and Utopia weights, `CvPolicyAI`), plus `CvPlayerAI::AI_doSpaceshipAndUtopiaProduction`.
+
+**How the push works.**
+1. **The pursuit.** Each turn the civ's current victory pursuit is, in order:
+   - its leader's eternal pursuit, if it has one;
+   - otherwise the first victory it's "close to", checked in the order science, culture, diplomacy, conquest
+     (thresholds: science 80, culture 60, diplomacy 55, domination 50; see below for what those measure);
+   - otherwise, if it isn't **serious about winning**, its primary pursuit from flavours;
+   - otherwise its active grand strategy.
+2. **Serious about winning** needs a grand strategy with priority above 500, victory competition on, and
+   for anything but conquest a **game era of Renaissance or later**. The game era is the rounded average of
+   all civs' eras.
+3. **What a pursuit changes:**
+   - tech priorities (+1 per matching flavour);
+   - city yield values (×2 for the pursuit's yields, another ×2 when close);
+   - building values (non-pursuit victory values ÷ (era + 1));
+   - policy weights (non-focus values halved);
+   - spaceship-part and project weights (×10 when going for science, ×10 again after Apollo);
+   - archaeologists (+5000 for culture);
+   - diplomat purchases (×4 for diplomacy) and city-state influence (+5× desire);
+   - disbanding aluminium units for spaceship parts.
+4. **Spaceship parts are built whatever the pursuit.** `AI_doSpaceshipAndUtopiaProduction` takes over
+   production in the best cities whenever any part can be built.
+
+**Findings.**
+
+| # | Where | What | Status | Impact |
+|---|---|---|---|---|
+| L1 | Test design, not code | Science, culture and diplomacy pursuits only become "serious" once the **average** era reaches Renaissance. In our games (T150 Quick, about 25-30 techs) that's rare, so every civ that isn't close to a victory plays its flavour-based primary pursuit, and most of the push above (the ×2/×10 terms, the serious-mode tech and policy focus) **never runs in test games**. Goal 6 ("an AI on track to win") can't be judged from T150 Quick games | confirmed | Large for goal 6: needs long games (Standard pace or late saves), not T150 Quick |
+| L2 | `CvDiplomacyAI::GetScienceVictoryProgress` (Diplomacy's file), ~3195 | "Projects completed" counts **every** project the team has (Manhattan Project, Utopia, ...) against "projects required" from the spaceship thresholds, and counts Apollo a second time after the loop. Progress = min(techs %, 78 + 21 × completed ÷ required), so once a civ knows 80% of the techs, any one project makes it "close to a science victory" | code confirmed; whether Apollo also has a threshold in the base game's data (which would make the double count consistent) wasn't checked: the base XML isn't in the fork | Low: very late game. Count only projects with a space-race threshold, each capped at its threshold |
+| L3 | `CvDiplomacyAI::GetDominationVictoryProgress` (Diplomacy's file), ~3104 | Domination progress is the larger of our share of the original capitals and **our share of all major civs' military might**. A civ with half the world's military is "close to world conquest" without having taken anything: it switches its pursuit to domination (unless close to another victory first), values production ×2, and others' endgame-aggression checks see it as near a win | design, confirmed | Matters for goals 2 and 7: a big army alone flips a builder into conquest mode, and makes it a target. For Diplomacy and Personality to weigh |
+
+**No confirmed bugs in Economy's own files** in the push itself: the reactions listed above do what
+their comments say. The spaceship-part takeover (point 4) clears and re-queues the best cities' production
+every turn they aren't building a part, which is aggressive but deliberate.
+
+**What follows.**
+- **For the lead:** victory-push changes need a long-game test: Standard pace to a late turn, or saves from
+  the Industrial era on. That needs a decision before Economy writes any victory-push fix.
+- **For Diplomacy:** L2 (a counting fix) and L3 (a design question) are in Diplomacy's file. Both are under
+  Requests.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
@@ -1016,6 +1064,14 @@ logged games, not more reading.
     turns with `EXPANSION SETTLER - Saving`.
   - **Queue `SettlersFirst` and `SettlerOverlap`** (and later `DiploPolicyValue`, patch 0002) after the baseline (T100 paired SPRTs, or one screening
     run of both), once the commit is on `ai/economy` and `ab-ai-economy-latest` is built.
+
+- **For Diplomacy, from Economy's victory-push audit:** L2 in `GetScienceVictoryProgress` (counts every
+  project, Apollo twice; count only space-race projects, capped at their thresholds) and L3 in
+  `GetDominationVictoryProgress` (half the world's military counts as "close to world conquest", which
+  flips the civ's pursuit to domination). See "Late-game victory push audit".
+- **For the lead, from Economy:** the victory push is almost never active in T150 Quick games (L1 in the
+  victory-push audit), so goal 6 needs a long-game test (Standard pace, or saves from the Industrial era on)
+  before any victory-push fix can be judged.
 
 ## Instructions for the PC runner
 
