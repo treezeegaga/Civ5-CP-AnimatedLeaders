@@ -1103,6 +1103,19 @@ Fix: `kPlayer.GetDiplomacyAI()->IsPlayerValid(eLoopPlayer)`. E1 is the one that 
 territory in effect (production while losing a war). Not coded yet: it would be one flag
 (`LosingWarBuildings`) judged with War's fixes, since its effect only shows in wars that go badly.
 
+### IdeologyPick, PolicyPrereqDepth, EspionagePolicyValue: the other CvPolicyAI bugs (Economy, audit P2-P4)
+One flag each, all out of the bundle, as patches 0004-0006 (in that order, after 0003). All three are bug fixes
+judged by **no-worse** tests at T150 (δ = 2 points of strength share), lowest priority in Economy's queue.
+
+| Flag | Audit | Change | What should show |
+|---|---|---|---|
+| `IdeologyPick` (`FIX_IDEOLOGY_PICK`) | P2 | Ruled-out ideologies are tracked in their own list. Later steps skip only those, and the pick is the best of the rest; if all are ruled out, CP's pick stands | Nothing at T150 Quick (ideologies come later). Kept as a no-worse fix for full games; can wait for phase 2's long games |
+| `PolicyPrereqDepth` (`FIX_POLICY_PREREQ_DEPTH`) | P3 | Prerequisites get flavour weight at `iPropagationLevel + 1` | Tiny: shallow policy trees. Flavour weights may be built before the test settings load at game start, in which case the flag only acts on later flavour updates |
+| `EspionagePolicyValue` (`FIX_ESPIONAGE_POLICY_VALUE`) | P4 | The passive espionage bonus is scored with its own value | Late game only |
+
+Status: written, not built. Suggestion for the lead: one screening run with all three rather than three SPRTs,
+since none should move strength share at T150; the point is to check they don't break anything.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates

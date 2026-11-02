@@ -1,0 +1,137 @@
+From 15b76da12de963d9eee253d3a765c11895cb790e Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:57:08 +0000
+Subject: [PATCH 4/6] AI_AB_TEST Economy: IdeologyPick candidate flag
+ (CvPolicyAI audit P2: a ruled-out ideology could win the pick)
+
+Not in the bundle.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp   |  7 +++---
+ CvGameCoreDLL_Expansion2/CvPlayer.h     |  1 +
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp | 29 ++++++++++++++++++++++---
+ 3 files changed, 31 insertions(+), 6 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 1088af3..39dae5f 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33321,15 +33321,16 @@ static const bool kABTestVersusBase = true;
+ static const char* const kCandidateFixNames[NUM_CANDIDATE_FIXES] = {
+ 	"WidePlans", "BoxedIn", "LongWide", "BoxedInWar", "TimingAttack", "SiegeTechs", "SiegeBook", "DeclareTiming",
+ 	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders",
+-	"SettlersFirst", "SettlerOverlap", "DiploPolicyValue", "GreedyAlarm" };
++	"SettlersFirst", "SettlerOverlap", "DiploPolicyValue", "GreedyAlarm", "IdeologyPick" };
+ 
+ // The bundle: what group c ran in the last C build (c7c), and what every civ runs outside a test game. Off in it:
+ // LongWide (c1: c's wide civs got no more cities from the longer opening, and stopping settlers ended expansion that b
+ // completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars). Flags added after c7c stay out until they pass,
+ // so a game without AIABTest.ini still plays c7c: SettlersFirst, SettlerOverlap, DiploPolicyValue,
+-// GreedyAlarm.
++// GreedyAlarm, IdeologyPick.
+ static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP) | (1 << FIX_SETTLERS_FIRST) |
+-	(1 << FIX_SETTLER_OVERLAP) | (1 << FIX_DIPLO_POLICY_VALUE) | (1 << FIX_GREEDY_ALARM)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
++	(1 << FIX_SETTLER_OVERLAP) | (1 << FIX_DIPLO_POLICY_VALUE) | (1 << FIX_GREEDY_ALARM) |
++	(1 << FIX_IDEOLOGY_PICK)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
+ 
+ const char* CvPlayer::GetCandidateFixName(int iFix)
+ {
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index c26638a..01836b5 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -163,6 +163,7 @@ enum CandidateFixTypes
+ 	FIX_DIPLO_POLICY_VALUE,	// Economy (CvPolicyAI audit P1): diplomacy-flavoured policies lose their value only when hostile to a city-state. Not in the bundle
+ 	FIX_GREEDY_ALARM,		// Economy (c8): a tall civ that sees a neighbour's army near its cities builds walls and ranged units (and lifts
+ 							// GreedyArmyCap). Not in the bundle
++	FIX_IDEOLOGY_PICK,		// Economy (CvPolicyAI audit P2): a ruled-out ideology can't win the pick when the others score below 0. Not in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index 1cb17a4..f204586 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -420,6 +420,11 @@ void CvPolicyAI::DoChooseIdeology(CvPlayer *pPlayer)
+ 	
+ 	// We will score each ideology in this vector
+ 	std::vector<int> vIdeologyPriorities(vIdeologyBranches.size(), 1);
++	// AI_AB_TEST candidate (IdeologyPick): CP marks a ruled-out ideology by setting its score to 0, but the relations
++	// step below can push the others to 0 or below, and the final pick is a plain maximum, so a ruled-out ideology
++	// could win (and an ideology that lands exactly on 0 skipped the later steps). The candidate tracks them apart.
++	const bool bTrackRuledOut = pPlayer->UsesCandidateAI(FIX_IDEOLOGY_PICK);
++	std::vector<bool> vRuledOut(vIdeologyBranches.size(), false);
+ 	int iGrandTotal = 0;
+ 	int iPriorityToDivide = /*1000*/ GD_INT_GET(IDEOLOGY_SCORE_GRAND_STRATS);
+ 	int iHappinessModifier = /*10*/ GD_INT_GET(IDEOLOGY_SCORE_HAPPINESS);
+@@ -467,13 +472,19 @@ void CvPolicyAI::DoChooseIdeology(CvPlayer *pPlayer)
+ 			{
+ 				CvPlayerPolicies* pPolicies = pPlayer->GetPlayerPolicies();
+ 				if (!pPolicies->CanAdoptIdeology(eBranch))
++				{
+ 					vIdeologyPriorities[i] = 0;
++					vRuledOut[i] = true;
++				}
+ 			}
+ 			
+ 			// Rule out one ideology if we are clearly (at least X% more priority) going for a victory this ideology doesn't support
+ 			int iClearPrefPercent = /*25*/ GD_INT_GET(IDEOLOGY_PERCENT_CLEAR_VICTORY_PREF);
+ 			if (iMaxUnsupported > (iMaxSupported * (100 + iClearPrefPercent) / 100))
++			{
+ 				vIdeologyPriorities[i] = 0;
++				vRuledOut[i] = true;
++			}
+ 		}
+ 	}
+ 
+@@ -486,7 +497,7 @@ void CvPolicyAI::DoChooseIdeology(CvPlayer *pPlayer)
+ 	for (size_t i = 0; i < vIdeologyPriorities.size(); i++)
+ 	{
+ 		// if we've ruled it out, move on to the next item in the loop
+-		if (vIdeologyPriorities[i] == 0)
++		if (bTrackRuledOut ? (bool)vRuledOut[i] : (vIdeologyPriorities[i] == 0))
+ 			continue;
+ 
+ 		// normalize
+@@ -566,7 +577,7 @@ void CvPolicyAI::DoChooseIdeology(CvPlayer *pPlayer)
+ 	for (size_t i = 0; i < vIdeologyPriorities.size(); i++)
+ 	{
+ 		// if we've ruled it out, move on to the next item in the loop
+-		if (vIdeologyPriorities[i] == 0)
++		if (bTrackRuledOut ? (bool)vRuledOut[i] : (vIdeologyPriorities[i] == 0))
+ 			continue;
+ 
+ 		PolicyBranchTypes eBranch = vIdeologyBranches[i];
+@@ -589,7 +600,7 @@ void CvPolicyAI::DoChooseIdeology(CvPlayer *pPlayer)
+ 	for (size_t i = 0; i < vIdeologyPriorities.size(); i++)
+ 	{
+ 		// if we've ruled it out, move on to the next item in the loop
+-		if (vIdeologyPriorities[i] == 0)
++		if (bTrackRuledOut ? (bool)vRuledOut[i] : (vIdeologyPriorities[i] == 0))
+ 			continue;
+ 
+ 		// now actually look at the policies in the branch and see how much we like them!
+@@ -607,6 +618,18 @@ void CvPolicyAI::DoChooseIdeology(CvPlayer *pPlayer)
+ 	    if (vIdeologyPriorities[i] > vIdeologyPriorities[iBestBranchIdx])
+ 	        iBestBranchIdx = i;
+ 	}
++	// candidate: the best of those not ruled out (if all were ruled out, CP's pick stands)
++	if (bTrackRuledOut)
++	{
++		int iBestOpen = -1;
++		for (size_t i = 0; i < vIdeologyPriorities.size(); ++i)
++		{
++			if (!vRuledOut[i] && (iBestOpen < 0 || vIdeologyPriorities[i] > vIdeologyPriorities[iBestOpen]))
++				iBestOpen = (int)i;
++		}
++		if (iBestOpen >= 0)
++			iBestBranchIdx = iBestOpen;
++	}
+ 	PolicyBranchTypes eChosenBranch = vIdeologyBranches[iBestBranchIdx];
+ 	
+ 	pPlayer->GetPlayerPolicies()->SetPolicyBranchUnlocked(eChosenBranch, true, false);
+-- 
+2.43.0
+
