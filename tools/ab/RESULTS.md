@@ -385,3 +385,24 @@ build's own mean taken out, so real differences between builds don't count as no
 These are old-setup numbers (random maps, unpaired, T150). The new setup (job 6) measures σ again,
 per pair. What they imply for an unpaired SPRT at δ = 2 points (expected games ≈ 5.9 · σ² / δ²):
 about 17 games at σ = 3.4, 31 at σ = 4.6. Paired games should cut that.
+
+### SPRT settings checked against Stockfish (lead, 2026-11-02, before job 4)
+
+Checked against official-stockfish.github.io (Fishtest docs) and Fishtest's source
+(`official-stockfish/fishtest`: `server/fishtest/stats/sprt.py`, `stats/LLRcalc.py`,
+`templates/tests_run.html.j2`). **chessprogramming.org could not be reached from this session**
+(DNS lookup error; this session started before the network settings were changed), so it isn't
+cross-checked.
+
+| Setting | AGENTS.md | Fishtest | Verdict |
+|---|---|---|---|
+| Pass / fail thresholds | LLR ≥ +2.94 / ≤ −2.94 | α = β = 0.05; bounds ln(β/(1−α)) = −2.944 and ln((1−β)/α) = +2.944 | Same |
+| Gainer test | H0 gain 0, H1 gain δ | "Standard STC" [0, 2], "Standard LTC" [0.5, 2.5] (normalized Elo) | Same shape. Fishtest's longer test starts H0 a little above 0 |
+| No-worse test | H0 −δ, H1 0 | "Non-regression" [−1.75, +0.25]: the same width as the gainer test, but H1 is slightly **above** 0 | Close. Ours accepts a change that is exactly neutral a bit more easily. Job 4 uses Fishtest's shape: [−0.875δ, +0.125δ] |
+| How pairs are scored | per pair: the average of the two games, minus 50% | Pentanomial: each pair of games (same opening, sides swapped) is one observation scored 0, ¼, ½, ¾ or 1; LLR = number of pairs × the per-pair LLR; per-game σ = √(2 · per-pair variance) | Same idea. Our pair result is continuous (the mean strength share of the two games), so the LLR uses Fishtest's normal approximation (`LLR_alt2`): LLR = N · (s1 − s0)(2·mean − s0 − s1) / (2·var), with var the variance of the pair results |
+| Units for the bounds | strength-share points | "Normalized Elo", so a test's expected length depends only on its bounds, not on the noise | Ours are in raw points, so test length depends on σ. That's why σ is measured per setup (job 6) |
+
+**Correction to AGENTS.md's games estimate.** Wald's approximation gives about **5.3 · σ²/δ² pairs**
+when the true gain is 0 or δ, and up to **8.7 · σ²/δ²** when it sits halfway between them (the
+slowest case). AGENTS.md says 5.9. I worked these out myself, not from the Stockfish pages, and
+`Summarize-ABTest.ps1` prints them from job 4 on.
