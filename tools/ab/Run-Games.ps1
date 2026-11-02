@@ -26,6 +26,7 @@ param(
     [int]$MaxGames = 1000,
     [int]$StopTurn = 150,
     [int]$StallMinutes = 30,          # no new results rows for this long = stuck; restart
+    [switch]$AttachRunning,           # a test game is already running: finish it first, then start new ones
     [string]$StopFile = "$PSScriptRoot\STOP",
     [string]$Log = "$PSScriptRoot\Run-Games.log",
     [string]$CivDir = "C:\Program Files (x86)\Steam\steamapps\common\Sid Meier's Civilization V",
@@ -50,6 +51,7 @@ public class AbInput {
 }
 "@
 [AbInput]::SetProcessDPIAware() | Out-Null
+. (Join-Path $PSScriptRoot "CivScreens.ps1")   # Get-CivScreen, Get-CivBeginButtonDistance
 
 # Physical screen positions of the buttons with Civ's window where it opens (top-left 963,63; client 1914x2034)
 $P = @{
@@ -88,11 +90,18 @@ function Set-CivFront {
 
 function Click([string]$name, [int]$waitMs = 1500) {
     Set-CivFront
+    # a click on an inactive window only activates it, so click the empty band at the top first
+    [AbInput]::SetCursorPos($P.Neutral[0], $P.Neutral[1]) | Out-Null; Start-Sleep -Milliseconds 100
+    [AbInput]::mouse_event(0x02, 0, 0, 0, [UIntPtr]::Zero); Start-Sleep -Milliseconds 60
+    [AbInput]::mouse_event(0x04, 0, 0, 0, [UIntPtr]::Zero); Start-Sleep -Milliseconds 300
     $xy = $P[$name]
     [AbInput]::SetCursorPos($xy[0] - 6, $xy[1] - 6) | Out-Null; Start-Sleep -Milliseconds 120
     [AbInput]::SetCursorPos($xy[0], $xy[1]) | Out-Null; Start-Sleep -Milliseconds 150
     [AbInput]::mouse_event(0x02, 0, 0, 0, [UIntPtr]::Zero); Start-Sleep -Milliseconds 60
     [AbInput]::mouse_event(0x04, 0, 0, 0, [UIntPtr]::Zero)
+    # move away so no hover tooltip covers what we check next
+    Start-Sleep -Milliseconds 100
+    [AbInput]::SetCursorPos($P.Neutral[0], $P.Neutral[1]) | Out-Null
     Start-Sleep -Milliseconds $waitMs
 }
 
@@ -119,30 +128,46 @@ function Test-Ticked([string]$name) {
 function Get-ResultsFile { Get-ChildItem $MyGames -Filter "AIABTest*.csv" -ErrorAction SilentlyContinue | Sort-Object LastWriteTime | Select-Object -Last 1 }
 function Get-GameIds { $f = Get-ResultsFile; if ($f) { @(Import-Csv $f.FullName | ForEach-Object { $_.GameId } | Sort-Object -Unique) } else { @() } }
 
+# True once the screen matches a saved one (CivScreens.json; same screen ~0, different screens 4 or more)
+function Test-Screen([string]$name) { $s = Get-CivScreen; return ($s.Name -eq $name -and $s.Distance -lt 2.5) }
+function Wait-Screen([string]$name, [int]$timeoutSec = 30) {
+    $until = (Get-Date).AddSeconds($timeoutSec)
+    while ((Get-Date) -lt $until) { if (Test-Screen $name) { return $true }; Start-Sleep 1 }
+    return $false
+}
+
 function Start-TestGame {
     Stop-Civ
     Start-Process (Join-Path $CivDir "CivilizationV.exe") -WorkingDirectory $CivDir
     for ($i = 0; $i -lt 60 -and -not (Get-CivWindow); $i++) { Start-Sleep 2 }
-    if (-not (Get-CivWindow)) { return $false }
+    if (-not (Get-CivWindow)) { Write-Log "  no Civ V window"; return $false }
 
-    # Intro movie, then the legal screen once loading is done
-    Start-Sleep 8
-    Press-Escape
-    Start-Sleep 30
-    Click Continue 3000
-    Click SinglePlayer 2000
-    Click SetUpGame 2000
-    Click AdvancedSetup 2500
-    foreach ($box in "QuickCombat", "QuickMovement") {
-        Set-CivFront
-        [AbInput]::SetCursorPos($P.Neutral[0], $P.Neutral[1]) | Out-Null; Start-Sleep -Milliseconds 400
-        if (-not (Test-Ticked $box)) { Click $box 800 }
+    # Intro movie, loading, then the legal screen. Click its Continue button until the main menu shows; never
+    # click there once the menu is up, because the menu's EXIT button is at nearly the same spot.
+    $until = (Get-Date).AddSeconds(240)
+    while (-not (Test-Screen menu)) {
+        if ((Get-Date) -gt $until) { Write-Log "  main menu never showed"; return $false }
+        Click Continue 4000
     }
-    [AbInput]::SetCursorPos($P.Neutral[0], $P.Neutral[1]) | Out-Null; Start-Sleep -Milliseconds 400
-    $ticked = (Test-Ticked QuickCombat) -and (Test-Ticked QuickMovement)
-    if (-not $ticked) { Write-Log "WARNING: Quick Combat/Movement not confirmed ticked; starting anyway" }
-    Click StartGame 45000
-    Click BeginJourney 8000
+    Click SinglePlayer
+    if (-not (Wait-Screen single)) { Write-Log "  Single Player menu never showed"; return $false }
+    Click SetUpGame
+    if (-not (Wait-Screen setup)) { Write-Log "  Set Up Game never showed"; return $false }
+    Click AdvancedSetup
+    if (-not (Wait-Screen advanced)) { Write-Log "  Advanced Setup never showed"; return $false }
+    foreach ($box in "QuickCombat", "QuickMovement") {
+        for ($try = 0; $try -lt 3 -and -not (Test-Ticked $box); $try++) { Click $box 800 }
+        if (-not (Test-Ticked $box)) { Write-Log "  couldn't tick $box"; return $false }
+    }
+    Click StartGame 5000
+
+    # Loading the map; then the "Begin Your Journey" screen
+    $until = (Get-Date).AddSeconds(240)
+    while ((Get-CivBeginButtonDistance) -ge 8) {
+        if ((Get-Date) -gt $until) { Write-Log "  Begin Your Journey never showed"; return $false }
+        Start-Sleep 3
+    }
+    for ($try = 0; $try -lt 3 -and (Get-CivBeginButtonDistance) -lt 8; $try++) { Click BeginJourney 3000 }
 
     # Move to the left half the way a title-bar drag would, and the Claude app to the right half
     $h = (Get-CivWindow).MainWindowHandle
@@ -182,8 +207,16 @@ $failures = 0
 while ($played -lt $MaxGames) {
     if (Test-Path $StopFile) { Write-Log "Stop file found; stopping"; break }
     $known = Get-GameIds
-    Write-Log "Starting game $($played + 1)"
-    if (-not (Start-TestGame)) { Write-Log "Civ V window never appeared"; $failures++; if ($failures -ge 3) { break }; continue }
+    if ($AttachRunning -and $played -eq 0 -and $failures -eq 0 -and (Get-CivWindow)) {
+        # the newest game in the results file is the one running
+        $f = Get-ResultsFile
+        $current = if ($f) { (Import-Csv $f.FullName)[-1].GameId } else { $null }
+        $known = @($known | Where-Object { $_ -ne $current })
+        Write-Log "Finishing the game already running ($current)"
+    } else {
+        Write-Log "Starting game $($played + 1)"
+        if (-not (Start-TestGame)) { Write-Log "Setup failed; retrying"; $failures++; if ($failures -ge 3) { Write-Log "Three failed starts in a row; giving up"; break }; continue }
+    }
     $status = Wait-TestGame $known
     Stop-Civ
     Write-Log "Game ended: $status"
