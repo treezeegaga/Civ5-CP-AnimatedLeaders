@@ -412,7 +412,8 @@ entry is in RESULTS.md, and the scoreboard is at its top.
 ## Experiment lead: the check-in ("avengers assemble")
 
 When the user says **"avengers assemble"**, the lead checks on every session and reports back in one
-summary:
+summary. A scheduled task (`trig_011XWTtRZXtTjdt9KBqEG31m`, hourly at :42, firing into the lead's session)
+runs the same check-in on its own, as the user asked; to stop it, disable that scheduled task.
 
 1. **The topic sessions** (IDs in RESULTS.md, "Sessions running"): for each one, `get_session` for its
    status and its latest messages (`list_events`, kinds user/assistant/result): what it's doing, what it

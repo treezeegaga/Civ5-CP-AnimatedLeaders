@@ -172,7 +172,8 @@ install one. Each C build includes everything before it unless noted. All change
 | c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
 | c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 7 | 50.0% ± 1.4 | 50% | not better: 3-4. SPRT gainer LLR −1.00, no-worse +0.74 (both still running) |
 | c7c_flags | `46fc076`, `7097d49` | c7c with one flag per idea (see Fixes below) and a Warmonger column; `7097d49` adds paired games. With the bundle and `Flip = 0` it plays the same as c7c | 0 | | | superseded by c7c_settings before any games |
-| c7c_settings | `24f6ba8`, `614af3d` | c7c_flags with the game's settings in every row (lead job 3); `614af3d` sets ruins and map options from `AIABTest.ini` (job 5). The same AI as c7c with the bundle | 0 | | | built (CI run 41541130534); merged into `claude/ab-c1`; waiting for the smoke-test pair at King |
+| c7c_settings | `24f6ba8`, `614af3d` | c7c_flags with the game's settings in every row (lead job 3); `614af3d` sets ruins and map options from `AIABTest.ini` (job 5). The same AI as c7c with the bundle | 0 | | | superseded by c7c_roles before any games |
+| c7c_roles | `59888a3`, `4b37724`, `6b8ebde` | c7c_settings plus the bully and builders tests, diplomacy and war counts, and `TurnSecs` (lead jobs 10–11). The same AI as c7c with the bundle | 0 | | | built (CI run 41545004119); `claude/ab-c1` fast-forwarded to `6b8ebde`, so `ab-c-latest` is it once the push build finishes; the smoke-test pair and the King baseline run on it |
 
 What each build does, in detail:
 - **c1:** candidate `GetOpeningBook()`:
