@@ -423,6 +423,9 @@ runs the same check-in on its own, as the user asked; to stop it, disable that s
      `ab-ai-<topic>-latest` releases passed.
    - Their pack-repo branches: new RESULTS.md entries and requests. Merge them into
      `claude/sleepy-hopper-x77moh` (fast-forward or merge, never dropping anyone's lines).
+   - **Patch relay:** the topic sessions have no push access to the fork. They commit their DLL work as
+     `git format-patch` files under `tools/ab/patches/<topic>/` on their pack-repo branch. The lead applies
+     the new ones to `ai/<topic>` (`git am`), pushes, and tells the session the commit and the build result.
 3. **The PC runner** (`claude/sleepy-hopper-x77moh`): new results CSVs and `Run-Games.log` lines. Run the
    summary and the scoreboard. Check for "REPLAY DIFFERS", "WRONG SETUP", stalls and failed starts.
 4. **Act on it:**
@@ -561,7 +564,9 @@ Work on branch `ai/diplomacy`: pushes there build by themselves and publish `ab-
 Paste one into a new session. Each assumes the repos are attached:
 `treezeegaga/Civ5-CP-AnimatedLeaders` and `treezeegaga/Community-Patch-DLL`. Topic sessions write their
 RESULTS.md entries and requests on their own branch of `treezeegaga/Civ5-CP-AnimatedLeaders`; the lead
-merges them into `claude/sleepy-hopper-x77moh`, which only the lead and the PC runner push to.
+merges them into `claude/sleepy-hopper-x77moh`, which only the lead and the PC runner push to. Sessions
+without push access to the fork commit their DLL work as patches under `tools/ab/patches/<topic>/` on that
+branch, and the lead applies them to `ai/<topic>` (see the check-in).
 
 ### Experiment lead
 
