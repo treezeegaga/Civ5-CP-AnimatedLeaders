@@ -239,11 +239,13 @@ seed parity, so flipping needs its own option.)
 
 - Measure per **pair**: new group's share of total strength, minus 0.5.
 - **Gainer test**, for fixes meant to make the AI stronger: H0 gain = 0, H1 gain = δ.
-- **No-worse test**, for simplifications, fairness fixes and personality changes: H0 gain = −δ,
-  H1 gain = 0.
+- **No-worse test**, for simplifications, fairness fixes and personality changes: H0 gain = −0.875δ,
+  H1 gain = +0.125δ (Fishtest's non-regression shape: as wide as the gainer test, slightly above 0).
 - Stop at LLR ≥ +2.94 (pass) or ≤ −2.94 (fail): 5% chance of each kind of mistake.
-- Expected pairs under a true gain: about **5.9 · σ² / δ²**, where σ is the spread of per-pair
-  results measured on the no-fix baseline. If that's in the hundreds, raise δ or find a faster test.
+- Expected pairs: about **5.3 · σ² / δ²** when the true gain is at H0 or H1, up to **8.7 · σ² / δ²**
+  when it's halfway (Wald), where σ is the spread of per-pair results measured on the no-fix baseline.
+  If that's in the hundreds, raise δ or find a faster test. `Summarize-ABTest.ps1` prints the LLRs and
+  this estimate for every setup and flag configuration in a results file.
 - Checking after every pair is fine with SPRT. With fixed game counts it isn't: don't stop a
   t-test because it looks good.
 

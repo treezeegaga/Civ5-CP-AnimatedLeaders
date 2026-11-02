@@ -488,6 +488,44 @@ file's setups and flag configurations, with the number of games and flipped game
 when a file mixes them. Strategic Balance shows up in `MapOptions` once we know how Civ numbers it (the smoke
 test reports it).
 
+### SPRT, screening regression and the games estimate (lead job 4)
+
+All in `Summarize-ABTest.ps1`, per setup and flag configuration (screened flags left out of the key):
+
+- **SPRT.** Fishtest's normal approximation, LLR = N (s1 − s0)(2·mean − s0 − s1) / (2·var).
+  - Gainer test: [0, δ]. No-worse test: [−0.875δ, +0.125δ].
+  - Pass at +2.944, fail at −2.944. δ defaults to 2 points.
+  - Results are pairs (mean c share of the two games, minus 50) when the file has complete pairs, and
+    single games otherwise.
+  - The LLR is shown from 2 results but only acted on from 5, because the variance comes from the data.
+    With 2–4 results it swings wildly.
+- **Games estimate.** 5.3 · σ²/δ² results at H0 or H1, up to 8.7 · σ²/δ², from the measured spread or
+  `-Sigma`.
+- **Screening regression.** Each civ's strength (its share of the game's five strength measures, so 12.5
+  points on average with 8 civs) against the screened flags it ran.
+  - With pairs: per civ, game 1 minus game 2, where every screened flag is swapped, so the civ and the map
+    cancel out.
+  - Without pairs: pooled, with an intercept and a warmonger term.
+  - "As group share" converts a per-civ effect into what it would add to the group running the flag
+    (n/4 × the effect).
+- **`-AtTurn N`** judges games at turn N (for turn-100 screening and job 8).
+- **Tested on synthetic data:** 20 pairs with known per-civ effects of +1.0, 0 and −0.5 came out at
+  +0.89 ± 0.11, +0.04 ± 0.11 and −0.35 ± 0.11. Shares absorb part of an effect, because the civs that
+  don't run the flag lose share too.
+
+The SPRT run after the fact on the old files (unpaired single games, so only a rough guide; a real SPRT is
+read as games arrive):
+
+| Build | Games | Gainer LLR | No-worse LLR | Reading |
+|---|---|---|---|---|
+| 2p (B) | 5 | +6.05 | +13.75 | both pass: B's freeze stands |
+| c4 | 6 | +0.98 | +4.05 | not worse than B; a gain of 2 points not shown yet |
+| c1 | 5 | −1.58 | −0.11 | running |
+| c2 | 5 | −1.18 | −0.16 | running |
+| 2e | 5 | −0.72 | −0.45 | running |
+| 2m | 5 | −0.35 | +0.67 | running |
+| c6 | 3 | −2.10 | −1.29 | too few results |
+
 ## Requests
 
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array

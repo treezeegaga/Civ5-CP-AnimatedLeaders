@@ -159,5 +159,9 @@ C builds. Instead:
 `gh run cancel` sometimes has no effect, and a hung run blocks later runs on the branch. Use
 `gh api -X POST repos/treezeegaga/Community-Patch-DLL/actions/runs/<id>/force-cancel`.
 
-`Summarize-ABTest.ps1` with no arguments reports each results file separately. Send its output (or
+`Summarize-ABTest.ps1` with no arguments reports each results file separately. For each setup and flag
+configuration in a file it also prints the SPRT (gainer and no-worse LLRs, on pairs when the file has them),
+the expected number of pairs, and for screening runs a regression of each civ's strength on its screened
+flags. `-Delta` sets δ (default 2 points), `-Sigma` a known spread, `-AtTurn 100` judges every game at turn
+100 instead of its last turn. Send its output (or
 the CSV files) back after a handful of games.
