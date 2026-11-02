@@ -685,6 +685,30 @@ c1 −0.93 / −0.88, c2 +0.07 / −1.03, 2m +0.52 / +0.40, 2n +1.26 / +0.73.
 - **Caveat:** this is old-setup data (Prince, random maps, single games). Rerun `Compare-ABTurns.ps1` once
   about 20 King pairs are in.
 
+### B is not re-proven fix by fix (lead job 9)
+
+B (batch 2p, fork `24cc575`) passed as a whole, 5-0 at 52.4%. Run after the fact, the SPRT on its five
+games passes both tests (gainer LLR +6.05, no-worse +13.75; job 4). It stays the reference. Its ~40 changes
+aren't tested one at a time. An ablation (B with one fix taken out) is done only when a B fix is suspected
+of hurting, with evidence.
+
+**First suspect: audit item 26.** B makes an army abort below 2/3 of its required slots while gathering or
+moving (CP: below half). That's one `UsesNewAI()` branch in `CvAIOperation.cpp` (~line 875), logged as
+`Ended: HalfStrength`. If attacks keep dying before they reach a city, this rule could be part of
+"cities almost never change hands".
+
+- **Evidence first.** `Digest-ABLogs.ps1` now prints, per civ, how its military operations ended over the
+  whole game (e.g. `military ops ended (whole game): HalfStrength 2, Success 1`). The PC runner's logged
+  games show how often item 26 fires, for b and c alike. The War session should look at these counts before
+  asking for an ablation.
+- **If it's suspected,** the ablation is one candidate flag, e.g. `B26Off`, gated as
+  `UsesNewAI() && !UsesCandidateAI(FIX_B26_OFF)`, so group c runs B without item 26 and group b runs B.
+  Test it with the gainer SPRT on paired King games at T150 or later (war shows late; job 8). If c wins,
+  dropping the rule becomes a candidate fix like any other.
+- **For a wider ablation,** the side branch `claude/ab-switches-diagnostics-2r` (release `ab-e9f7ecf`)
+  already has a switch for each of B's changes (`AIChangeTypes`, 38 switches). It's based on 2r and
+  unmerged, so it would need porting onto `claude/ab-c1`'s flags. It's not needed now.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates

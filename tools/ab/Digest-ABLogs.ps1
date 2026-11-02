@@ -6,8 +6,10 @@
     Needs LoggingEnabled = 1 and AILog = 1 in config.ini (test builds from fork commit 4cf291b on read them
     themselves). For each major civ: its A/B group and opening plan (from the results file), what its cities
     started building up to -UpToTurn (opening-book picks marked *), settlers ordered, found-city operations
-    started / succeeded / aborted, and turns its cities ran ENOUGH_SETTLERS while no found-city operation
-    existed (a settler standing idle).
+    started / succeeded / aborted, turns its cities ran ENOUGH_SETTLERS while no found-city operation
+    existed (a settler standing idle), and how its military operations ended over the whole game (by
+    reason; HalfStrength is the abort that audit item 26 made stricter in B: below 2/3 of the army's
+    required slots while gathering or moving).
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File tools\ab\Digest-ABLogs.ps1 -UpToTurn 60
@@ -49,12 +51,15 @@ if ($csv) {
 
 $chosen = @(Read-Shared "CityStrategyAIProductionLog.csv" | Where-Object { $_ -match ', CHOSEN: ' })
 $book = @(Read-Shared "CitySpecializationLog.csv" | Where-Object { $_ -match 'OPENING BOOK - Started' })
-$ops = @(Read-Shared "OperationalAILog.csv" | Where-Object { $_ -match ', OP_FOUND_CITY, ' })
+$allOps = @(Read-Shared "OperationalAILog.csv")
+$ops = @($allOps | Where-Object { $_ -match ', OP_FOUND_CITY, ' })
+# every other operation's end, for the military summary (lead job 9: is item 26's abort rule cutting attacks short?)
+$milEnds = @($allOps | Where-Object { $_ -match 'Ended: ' -and $_ -notmatch ', OP_FOUND_CITY, ' -and $_ -notmatch 'SETTLE|FOUND_CITY' })
 $strat = @(Read-Shared "CityStrategyAILog.csv" | Where-Object { $_ -match 'AICITYSTRATEGY_ENOUGH_SETTLERS, 1' })
 
 # Major civs are the ones whose names appear in the opening-book or ops logs alongside a results row; fall back to
 # every name in the found-city ops log
-$names = @($ops + $book | ForEach-Object { ($_ -split ', ')[1] } | Sort-Object -Unique)
+$names = @($ops + $book + $milEnds | ForEach-Object { ($_ -split ', ')[1] } | Sort-Object -Unique)
 $names += @($chosen | ForEach-Object { ($_ -split ', ')[1] } | Where-Object { $_ -eq (($_ -split ', ')[2]) } | Sort-Object -Unique)
 $names = @($names | Sort-Object -Unique)
 
@@ -75,6 +80,8 @@ $out = foreach ($n in $names) {
     # idle settler: ENOUGH_SETTLERS on in a turn where no found-city op line exists for this civ
     $opTurns = @{}; foreach ($l in $mineOps) { $opTurns[(Get-Turn $l)] = $true }
     $idle = @($strat | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { Get-Turn $_ } | Sort-Object -Unique | Where-Object { -not $opTurns[$_] })
+    $mil = @($milEnds | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { (($_ -split 'Ended: ')[1] -split '[;,]')[0].Trim() } |
+        Group-Object | Sort-Object Count -Descending | ForEach-Object { "$($_.Name) $($_.Count)" })
 
     [pscustomobject]@{
         Group = if ($row) { $row.Group } else { '?' }
@@ -86,6 +93,7 @@ $out = foreach ($n in $names) {
             "  settlers ordered T: " + ($settlers -join ',') + "   found-city ops started T: " + ($started -join ',') + "   cities founded T: " + ($success -join ',')
             $(if ($aborted.Count) { "  ops aborted: " + ($aborted -join ', ') })
             $(if ($idle.Count) { "  IDLE SETTLER turns: $($idle.Count) (first T$($idle[0]))" })
+            $(if ($mil.Count) { "  military ops ended (whole game): " + ($mil -join ', ') })
         ) | Where-Object { $_ }
     }
 }
