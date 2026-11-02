@@ -752,8 +752,9 @@ moving (CP: below half). That's one `UsesNewAI()` branch in `CvAIOperation.cpp` 
   - A hung run blocks its branch. `gh run cancel` may not stop it; the force-cancel API does.
   - A newer pending run replaces an older pending one on the same branch.
   - The first build on a new branch spends about 12 minutes downloading the Windows SDK.
-- **First run:** the merge into `claude/ab-c1` started push run 41543426404. It should publish `ab-9348566`
-  and `ab-c-latest`. The DLL is the same AI as `614af3d`; only the workflow changed.
+- **First run, verified:** the merge into `claude/ab-c1` started push run 41543426404, which published
+  `ab-9348566` and `ab-c-latest` at 23:22, each with `CvGameCore_Expansion2.dll`. Its DLL is the same AI as
+  `614af3d`; only the workflow changed.
 
 ### The bully test and the builders test (lead job 10, fork commit `59888a3`, build `c7c_roles`)
 
@@ -830,21 +831,23 @@ plain aggressive AI, and the real test is games against the friend.
 
 ## Instructions for the PC runner
 
-### 2026-11-02: smoke test of `c7c_settings` with paired games (1 pair = 2 games)
+### 2026-11-02: smoke test of `c7c_roles` with paired games (1 pair = 2 games)
 
-Goal: check that the flags build runs, writes the new column, and replays a game with the groups
-swapped. With the bundle it plays the same AI as c7c, so both games also count as c7c games.
+Goal: check that the newest build runs, writes all the new columns, and replays a game with the groups
+swapped, at King with even rules. With the bundle it plays the same AI as c7c, so both games also count as
+c7c games.
 
 1. Check out this repo's branch `claude/admiring-fermi-qyl4j3` (the lead's branch, until it's merged into
    `claude/sleepy-hopper-x77moh`) and pull.
-2. Download the DLL of fork commit `614af3d`, now the head of `claude/ab-c1`. Its CI run **41541130534**
-   passed (MSVC and clang):
+2. Download, build and install in one go:
    ```
-   gh run download 41541130534 --repo treezeegaga/Community-Patch-DLL --name VP_MSVC_Release_24cc575-20-g614af3d04 -D <empty dir>
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-c-latest -NoLaunch -NoUpdate
    ```
-3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCore_Expansion2.dll -ABTest -Install`.
-   It should print "Evening out the rules on King" and a list of King changes like the one in
-   `CPModpack/README.md`. Paste that list, and any warning about `HandicapInfo_` lists, into the report.
+   - The release title it prints must name **`6b8ebde`** (build `c7c_roles`). If it still names `9348566`,
+     the c7c_roles build isn't merged yet: wait, or install `9348566` (`c7c_settings`) and check what it has.
+   - The pack builder must print "Evening out the rules on King" and a list of King changes like the one in
+     `CPModpack/README.md`. Paste that list, and any warning about `HandicapInfo_` lists, into the report.
+3. (No separate install step any more: `Run-ABTest.ps1` runs `Build-CPModpack.ps1 -ABTest -Install`.)
 4. Set the setup screens once by hand: **Pangaea**, Standard, 8 civs on separate teams, Quick, **King**.
    Civ remembers these. Ruins and resources are set by the DLL from `AIABTest.ini`, so leave those as
    they are. Logging on (`LoggingEnabled = 1`, `AILog = 1` in `config.ini`). Run one pair:
@@ -854,8 +857,10 @@ swapped. With the bundle it plays the same AI as c7c, so both games also count a
    Copy `Logs\` aside after the first game (the second overwrites it).
 5. Check and report:
    - `Run-Games.log` says "replay matches the first game" for game 2.
-   - `AIABTest_c7c_settings.csv` has the `Warmonger` and settings columns (`Flip` ... `Build`), and the two
-     games' GameIds are the same apart from a trailing `F` on the second.
+   - `AIABTest_c7c_roles.csv` has the `Warmonger`, settings (`Flip` ... `Build`) and diplomacy columns
+     (`Mode` ... `TurnSecs`), and the two games' GameIds are the same apart from a trailing `F` on the
+     second. `Mode` says `split`, `Role` is empty, and `TurnSecs` is above 0 from the second logged turn on.
+   - `Run-Games.log` has a "turn 100 after N minutes" line for each game.
    - The runner didn't log "WRONG SETUP" (it checks map, pace, difficulty, size, 8 civs, ruins and
      resources after turn 10).
    - In the game: no ancient ruins on the map, and each capital has horses and iron nearby (Strategic
