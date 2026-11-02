@@ -732,7 +732,7 @@ swapped. With the bundle it plays the same AI as c7c, so both games also count a
    ```
    gh run download 41541130534 --repo treezeegaga/Community-Patch-DLL --name VP_MSVC_Release_24cc575-20-g614af3d04 -D <empty dir>
    ```
-3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCoreDLL_Expansion2.dll -ABTest -Install`.
+3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCore_Expansion2.dll -ABTest -Install`.
    It should print "Evening out the rules on King" and a list of King changes like the one in
    `CPModpack/README.md`. Paste that list, and any warning about `HandicapInfo_` lists, into the report.
 4. Set the setup screens once by hand: **Pangaea**, Standard, 8 civs on separate teams, Quick, **King**.
