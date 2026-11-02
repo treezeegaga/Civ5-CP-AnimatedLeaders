@@ -12,6 +12,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$StrengthMetrics = 'Techs', 'Population', 'Land', 'Military', 'Cities'
 if (-not $Csv) {
     # Each build of AI changes writes its own file (AIABTest_batch1.csv, ...; the first build, with no
     # changes, wrote AIABTest.csv), so results from different builds are never mixed.
@@ -60,6 +61,13 @@ foreach ($g in ($rows | Group-Object GameId)) {
     $total = ($civs | ForEach-Object { [double]$_.Score } | Measure-Object -Sum).Sum
     if ($total -le 0) { $total = 1 }
     $winner = @($civs | Where-Object { $_.Winner -eq "1" })
+
+    # Strength: the new group's share of the game's techs, population, land, military and cities, averaged (50% =
+    # even). Civ's score also counts religion (20 points a belief) and wonders, which add score more than power.
+    $shares = foreach ($m in $StrengthMetrics) {
+        $all = ($civs | ForEach-Object { [double]$_.$m } | Measure-Object -Sum).Sum
+        if ($all -le 0) { 0.5 } else { ($new | ForEach-Object { [double]$_.$m } | Measure-Object -Sum).Sum / $all }
+    }
     $games += [pscustomobject]@{
         GameId    = $g.Name
         Turn      = $turn
@@ -67,6 +75,7 @@ foreach ($g in ($rows | Group-Object GameId)) {
         WinnerGrp = if ($winner.Count -gt 0) { $winner[0].Group } else { "" }
         NewScore  = ($new | ForEach-Object { [double]$_.Score } | Measure-Object -Average).Average
         CpScore   = ($cp | ForEach-Object { [double]$_.Score } | Measure-Object -Average).Average
+        NewStrength = 100.0 * ($shares | Measure-Object -Average).Average
         Civs      = $civs
         Total     = $total
     }
@@ -77,18 +86,22 @@ if ($games.Count -eq 0) { throw "No test games reached turn $MinTurn yet" }
 Write-Output ""
 Write-Output ("{0} test games (turn {1} or later)" -f $games.Count, $MinTurn)
 Write-Output ""
-Write-Output "Per game (average score of each group at the last logged turn):"
+Write-Output "Per game at the last logged turn: the new group's strength share (its share of techs, population, land,"
+Write-Output "military and cities; 50% = even) and each group's average score (which also counts religion and wonders):"
 foreach ($g in $games) {
-    $ahead = if ($g.NewScore -gt $g.CpScore) { "new ahead" } elseif ($g.NewScore -lt $g.CpScore) { "cp ahead" } else { "tie" }
+    $ahead = if ($g.NewStrength -gt 50) { "new stronger" } elseif ($g.NewStrength -lt 50) { "cp stronger" } else { "even" }
     $won = if ($g.WinnerGrp) { "  won by $($g.WinnerGrp) ($($g.Victory))" } else { "" }
-    Write-Output ("  {0}  turn {1,3}  new {2,6:N0}  cp {3,6:N0}  {4}{5}" -f $g.GameId, $g.Turn, $g.NewScore, $g.CpScore, $ahead, $won)
+    Write-Output ("  {0}  turn {1,3}  strength {2,5:N1}%  {3,-12}  score new {4,4:N0} cp {5,4:N0}{6}" -f $g.GameId, $g.Turn, $g.NewStrength, $ahead, $g.NewScore, $g.CpScore, $won)
 }
 
-$newAhead = @($games | Where-Object { $_.NewScore -gt $_.CpScore }).Count
-$cpAhead = @($games | Where-Object { $_.NewScore -lt $_.CpScore }).Count
+$newAhead = @($games | Where-Object { $_.NewStrength -gt 50 }).Count
+$cpAhead = @($games | Where-Object { $_.NewStrength -lt 50 }).Count
 $p = Get-SignTestP $newAhead ($newAhead + $cpAhead)
 Write-Output ""
-Write-Output ("Games ahead on score: new {0}, cp {1} (ties left out); chance of a split this uneven by luck: {2:P0}" -f $newAhead, $cpAhead, $p)
+Write-Output ("Games stronger: new {0}, cp {1} (ties left out); chance of a split this uneven by luck: {2:P0}; average strength share {3:N1}%" -f $newAhead, $cpAhead, $p, ($games | Measure-Object NewStrength -Average).Average)
+$newScoreAhead = @($games | Where-Object { $_.NewScore -gt $_.CpScore }).Count
+$cpScoreAhead = @($games | Where-Object { $_.NewScore -lt $_.CpScore }).Count
+Write-Output ("Games ahead on score: new {0}, cp {1}" -f $newScoreAhead, $cpScoreAhead)
 $newWins = @($games | Where-Object { $_.WinnerGrp -eq "new" }).Count
 $cpWins = @($games | Where-Object { $_.WinnerGrp -eq "cp" }).Count
 Write-Output ("Games won outright: new {0}, cp {1}, unfinished {2}" -f $newWins, $cpWins, ($games.Count - $newWins - $cpWins))
