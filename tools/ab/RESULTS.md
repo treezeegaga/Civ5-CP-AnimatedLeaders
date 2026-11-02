@@ -1,0 +1,344 @@
+# AI A/B test results
+
+Everything the A/B test games have shown up to 2026-11-02: each build, its results, and what we learned.
+[README.md](README.md) explains how to run the tests. [AUDIT.md](AUDIT.md) lists the batch 1 and batch 2a–2e fixes.
+
+The raw results are in [results/](results/), one CSV per build, copied unchanged from
+`Documents\My Games\Sid Meier's Civilization 5`. To re-run the summary on those copies:
+
+```
+powershell -ExecutionPolicy Bypass -File tools\ab\Summarize-ABTest.ps1 -MyGames tools\ab\results
+```
+
+## How games are judged
+
+- **Test games:** AI-only, Prince, Standard map, 8 civs on separate teams, Quick pace, Quick Combat and
+  Quick Movement on, observer mode. They stop at turn 150. Games that end before turn 100 aren't counted.
+- **Strength share (the verdict).** For each of techs, population, land, military and cities, take the
+  test group's total as a share of all major civs' total. The strength share is the mean of those five
+  shares, from the last logged turn; 50% means even. Civ's own score is printed alongside but not used,
+  because religion (20 points per belief) and wonders inflate score far more than they add power.
+- **No-military share:** the same, without military. It was added for the greedy builds (c6 on), which
+  skip units on purpose.
+- **p-value:** a one-sided t-test on the per-game strength shares ("chance the new group is really no
+  stronger"). The sign test on wins and losses is also printed, but it throws away the margins.
+- **Bar to freeze a build:** p < 5%, which works out to roughly 9+ wins in 10 games, or a steady edge
+  over about 5 games. The user's goal is to iterate until a build passes the bar, freeze it as the new
+  base, and repeat.
+- **How big a real edge is:** a good build sits around 51.5–52.5%. Single games swing ±5 points, so one
+  game alone says almost nothing about a build.
+
+## The A/B/C ladder
+
+| Rung | What | Where |
+|---|---|---|
+| **A** | Community Patch's original AI ("cp") | fork `treezeegaga/Community-Patch-DLL`, code outside `UsesNewAI()` |
+| **B** | batch 2p, frozen 2026-11-02 after beating A 5-0 (52.4% ± 0.7, p 1%) | fork commit `24cc575` on branch `claude/sleepy-hopper-x77moh` |
+| **C** | candidate changes tested against B | fork branch `claude/ab-c1`, branched from `24cc575` |
+
+Stage 1 compared the new AI against A. Stage 2 compares C against B.
+
+### How groups are picked (fork `CvGameCoreDLL_Expansion2/CvPlayer.cpp`, near `CvPlayer::UsesNewAI`)
+
+- `kABTestVersusBase` is a compile-time switch.
+  - **false** (stage 1, branch `claude/sleepy-hopper-x77moh`): `UsesNewAI()` is true for a major civ
+    when `(mapRandomSeed + playerID)` is odd. That's half the civs, flipping with the seed, so each slot
+    plays both sides over many games. The CSV labels the groups `new` and `cp`.
+  - **true** (stage 2, branch `claude/ab-c1`): `UsesNewAI()` is true for every civ, so everyone runs B.
+    `UsesCandidateAI()` picks the half that also runs the C changes. The CSV labels the groups `c` and
+    `b`.
+- Outside a test game (`MOD_AI_AB_TEST` off), both functions return true for everyone.
+  - **Caution:** a non-test pack built from `claude/ab-c1` would give every civ the C changes, untested
+    ones included.
+
+#### Warmonger-balanced split (`IsABTestCandidateSlot`, added in c4)
+
+1. **Who counts as a warmonger** (`IsABTestWarmongerCiv`):
+   - a civ with the warmonger trait; or
+   - a civ whose `FLAVOR_OFFENSE` is 8 or more and at least its science and culture flavors, unless it
+     has the nerd, smaller or tourism trait.
+2. **Flavors vary per game.** They come from `GetPersonalityIndividualFlavor`, and CP shifts
+   personality flavors by up to ±2 per game (`CvFlavorManager::RandomizeWeights`,
+   `FLAVOR_RANDOMIZATION_RANGE`). So a borderline leader can count as a warmonger in one game and not
+   the next. Trait warmongers always count.
+3. **Ordering:**
+   - Take the AI majors in two passes, warmongers first, then everyone else.
+   - Within each pass, the order is rotated by the map seed: player `(seed + i) % MAX_MAJOR_CIVS`.
+4. **Dealing:** go down that list, alternating c, b, c, b…
+5. **Result:**
+   - With 8 civs, each group always gets 4.
+   - With W warmongers, c gets ceil(W/2) and b gets floor(W/2).
+   - c has a warmonger whenever the game has any; b has one only when there are 2 or more.
+6. **Recomputed every turn** (cached by seed and turn), so a reloaded save gets the same split.
+7. **Observed draws:** every lineup checked from c4 on had at least one c warmonger.
+   - c4 game 1: Poland (c) and the Huns (b).
+   - c5 game 1: the Ottomans (c) and Assyria (b).
+   - c5b game 1: the Aztecs and China (c).
+   - c6 game 1: 3 in c, 2 in b.
+   - c6 game 2: Persia and Japan (c).
+   - c7 game 1: Denmark and the Mongols (c).
+8. **b's warmongers are inferred.** The CSV has no warmonger column, and b's warmongers don't follow
+   c's research line, so their tech picks don't reveal them.
+9. **Why it exists:** before c4 the split was by parity, and random civ draws often gave c no warmonger,
+   which left the conquest changes untested.
+
+## Stage 1: new AI (B candidates) vs CP
+
+Fork branch `claude/sleepy-hopper-x77moh`. CI publishes each push as release `ab-<sha>`, plus `ab-latest`.
+Each batch includes everything before it.
+
+| Batch | Fork commit | Change | Games | Strength share | p | Verdict |
+|---|---|---|---|---|---|---|
+| first build | `7aecbfe` | the split only, no AI changes (luck baseline) | — | no results file on this PC | | |
+| 1 | `6fd3058` / `80746d8` | 11 audited bug fixes (AUDIT.md) | — | no results file on this PC | | |
+| 2a, 2b | `5539cfb`, `8eaf65e` | opening book; fog cheats removed, 10 more fixes | 0 | don't compile (missing include, fixed in 2c) | | |
+| 2c, 2d | `345b615`, `25c26d8` | settler escorts and travel time; nearby cities help build armies | 0 | replaced before their builds ran | | |
+| 2e | `60b57a0` | combat scoring (danger, tied escape moves, wider search); first full bundle | 5 | 46.3% ± 3.6 | 82% | worse. New-AI civs often stalled on 1 city |
+| 2f | `dbe370e`, `4edacf2` | settlers no longer idle when the site ranking finds nothing; direct-path travel times | 1 | 27.1% | | much worse (stall theory wrong) |
+| 2g | `0c6a900`, `47b2d5f` | buy settlers with gold (none had ever been bought), no scout purchases, book settlers wait for growth | 1 | 43.8% | | worse |
+| 2h | `fd2c64b` | one settler at a time | 0 | folded into 2i | | |
+| 2i | `fb324ce` | **ROOT CAUSE FIX:** found-city operations no longer need a spare military unit | 1 | 48.0% | | close to even |
+| 2j | `bc38d23` | save gold for the next settler first | 3 | 47.7% ± 4.1 | 69% | not better. Lost on score 0-3: CP founded 4 of 5 religions |
+| 2k | `b38a4fa` | keep saving while a settler walks; conquest opening retired | 0 | folded into 2l | | |
+| 2l | `f237af9` | early shrine in the opening book | 1 | 53.5% | | promising |
+| 2m | `37572bb` | settlers go unescorted after 5 turns with no danger (max 15) | 5 | 50.4% ± 1.8 | 42% | even |
+| 2n | `f07a917` | book settlers wait only for imminent growth | 4 | 50.7% ± 2.1 | 38% | even |
+| 2o | `a899eaa` | book gives way to wonders for its later buildings | 2 | 51.6% ± 1.8 | 27% | slightly ahead |
+| **2p** | **`24cc575`** | **warrior before the first settler** | **5** | **52.4% ± 0.7** | **1%** | **PASSED, 5-0. Frozen as B** |
+| 2q | `7e0d730` | warmongers play the wide plan | 0 | moved into c1 | | |
+| 2r | `b2cbf96` | expansionist culture civs play wide | 1 | 48.5% | | moved into c1 |
+| 2s | `32433bf` | wide opening settles longer (to T130 Standard, 8 cities) | 0 | CI run cancelled; folded into 2t | | |
+| 2t | `f956684` | early conquest decisions | 1 | 46.1% | | moved into c1/c3 |
+| 2u | `1583e4a` | 10+ turns of idle settlers means no land left | 0 | moved into c1 | | |
+
+Notes on stage 1:
+- **Root cause of the 1-city stalls (found with diagnostic logging, fork `accdf8f`):**
+  - `CvAIOperation::PreconditionsAreMet` never counts the settler for its own found-city operation,
+    because `IsUnitSuitableForRecruitment` skips `UNITAI_SETTLE`.
+  - So an operation only started if a spare military unit could be the escort.
+  - The new AI's book built no early military, and its starting warrior explored. So `addAIOperation`
+    silently discarded every operation; settlers stood idle and blocked more settlers
+    (`ENOUGH_SETTLERS`).
+  - Fixed in 2i: new-AI civilian operations need only a free civilian, and the book yields while a
+    found-city operation waits for its escort.
+- **Wrong theories before that:** `GetPlotsInReach` missing sites (2f replaced it with direct paths,
+  which was harmless), the tiny-army penalty, and escorts alone.
+- **After 2i, the new AI matched CP on cities, population and techs but lost on score:** CP founded 4 of
+  5 religions, since the book built no shrine. The 2l shrine fixed it. A Maya settler once waited 80
+  turns for an escort nobody built; that led to 2m.
+- **Opening plans:** the conquest opening scored 10% against 13.4% for tall, and was retired in 2k. In
+  2e–2p data, wide was the strongest plan (13.3% strength share, 5.3 cities, against 12.6% and 4.4 for
+  tall).
+- **2q–2u were never validated against CP.** Once 2p passed, they became c1's candidate bundle instead.
+
+## Stage 2: C vs B
+
+Fork branch `claude/ab-c1`. Its CI builds aren't published as releases; README.md explains how to
+install one. Each C build includes everything before it unless noted. All changes apply to group c only.
+
+| Build | Fork commit | Change | Games | c strength share | p | Verdict |
+|---|---|---|---|---|---|---|
+| c1 | `12aa2e1` | 2q + 2r + 2s + 2u: warmongers and expansionist culture civs wide, long wide opening, idle settler = no land | 5 | 49.1% ± 1.5 | 70% | not better |
+| c2 | `3a30d17` | plan choices only (2q, 2r); long opening and idle-settler stop off | 5 | 49.0% ± 1.9 | 70% | not better |
+| c3 | `d4e868b` | conquest (below) | 1 | 54.0% | | promising, but captured nothing |
+| c3b | `3abbb4e` | commit to one target; skip targets with defensive allies | 1 | 39.8% | | bad game: c military 71 vs b 166 |
+| **c4** | **`ea22df3`** | **warmonger siege timing attack; warmonger-balanced split** | **6** | **51.6% ± 1.1** | **10%** | **best so far, 5-1. Not frozen** |
+| c5 | `effc678` | bigger warmonger army; Engineering and aqueduct x2 for all c civs | 1 | 50.0% | | even |
+| c5b | `6c201ce` | Engineering and aqueducts for tall civs only | 1 | 52.3% | | ahead (no-military 52.8%) |
+| c6 | `5ef069e` | greedy tall civs: army cap of cities + 1 | 3 | 46.5% ± 2.1 | 88% | worse, 0-3. Greedy civs drew wars |
+| c7 | `0b3dda2` | greedy tall build order; warmongers target the greediest neighbour | 1 | 45.3% | | worse (cap still on) |
+| c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
+| c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | see below | | | |
+
+What each build does, in detail:
+- **c1:** candidate `GetOpeningBook()`:
+  - warmonger trait or expansionist → wide; nerd or smaller → tall;
+  - tourism civs → wide if expansion ≥ culture;
+  - offense ≥ 8 and ≥ science and culture → wide;
+  - expansion ≥ 7 and > science and culture → wide;
+  - otherwise tall.
+
+  Also the long wide opening (2s) and the idle-settler stop (2u). In c1, c's tall civs ended with fewer
+  cities (3.7 vs 4.4): stopping settlers after one stood idle 10 turns ended expansion that b's civs
+  later completed. Switches `kCandidateLongWideOpening` (now false) and `kCandidateBoxedInBySettlers` (on
+  again from c3) are in CvPlayer.cpp.
+- **c3:** `CvDiplomacyAI::GetNewAIConquestTarget`. It logs `CONQUEST: going for X (reason)` lines in
+  the AI logs.
+  - **Expansionists** that are boxed in (no reachable site, or a settler idle 10+ turns) attack their
+    blocker if it isn't stronger.
+  - **Warmongers** start a timing attack from about T30 on Quick against their weakest close neighbour.
+  - **Tall civs** start no wars.
+  - **Why the wars now stick:** the target goes into `vPlanningWarPlayers` in `DoUpdateWarTargets`, the
+    path CP uses for agreed coop wars, which skips the filters that had kept resetting 2t's WAR
+    approach (`GetPlayerApproachValue(WAR) > 0`, `IsWarSane`, the early-era conflict limit).
+- **c4:**
+  - **Research:** warmongers go Pottery → The Wheel → Mathematics → Bronze Working → Archery → Writing.
+  - **Capital book:** after the 2nd settler, 3 catapults (or the civ's own siege unit) and a spearman.
+  - **When to declare:** once 2 `UNITAI_CITY_BOMBARD` units exist, with a fallback at turn 90 on
+    Standard.
+- **c5:**
+  - **Bigger army:** the warmonger book adds 2 spearmen and 2 archers. The attack needs 2 siege units
+    plus 4 other land units, or turn 90 on Standard. The first c5 commit, `e946f11`, was only this.
+  - **Growth (user's idea, "growth is secretly OP"):** research Engineering once the capital is size 6
+    and the book is done, and count the aqueduct's food-kept value twice.
+- **c5b:** the growth push for tall-book civs only. The user's reasoning: warmongers' cities build the
+  army, and wide civs build settlers.
+- **c6:** tall c civs stop building land combat units once they have cities + 1, unless:
+  - at war with a major; or
+  - in `MILITARYAISTRATEGY_EMPIRE_DEFENSE(_CRITICAL)`; or
+  - building escorts for operations.
+
+  It's in `CvUnitProductionAI::CheckUnitBuildSanity`, behind `kCandidateGreedyArmyCap`. The user's
+  reasoning: "in a world where no one is able to capture a city, the civ who builds the least military
+  units wins".
+- **c7:**
+  - **Tall capital book (user's order):** Scout, Monument, Shrine, Warrior, Warrior, Settler, Worker,
+    Settler, Settler, Library, National College, Aqueduct, University.
+  - **Research:** Pottery, Writing, Philosophy, Engineering, Education.
+  - **Book length:** the tall book runs to T130 Standard (about T87 on Quick).
+  - **Targeting:** warmongers score targets by fewest land units per city, +50 for neighbours.
+- **c7b:** `kCandidateGreedyArmyCap = false`.
+- **c7c** (`04c954c` → `831ae8e` → `a8f4cf7` → final `2e9fad1`):
+  - **Can-win check (user's "only fight battles you know you will win"):** `CanTakeNearestCity` in
+    CvDiplomacyAI.cpp. It takes the target's city nearest our capital and needs 2+ melee units. It then
+    simulates up to 20 turns:
+    - every live ranged land unit fires (`GetRangeCombatDamage`);
+    - the city heals `CITY_HIT_POINTS_HEALED_PER_TURN` (20 in CP);
+    - the city hits our most damaging ranged unit for 1.5x its ranged damage, to cover the garrison.
+
+    War only goes ahead if the city reaches 0 HP within 20 turns. Earlier versions used fire ≥ 40% of
+    city HP per turn. The user corrected that: siege length doesn't matter, survivability does, and
+    later sieges take longer.
+  - **Closed borders (user: greedy players avoid open borders):** tall c civs never give open borders
+    to majors (`CvDealAI::GetOpenBordersValue` returns `INT_MAX` for the giving side).
+
+### c7c results
+
+c7c game 1 was running when this file was written (logging on); its result is added below if it finished
+before the handover.
+
+## City captures
+
+These are all the city losses in the result files: a civ's city count dropped between two 10-turn
+snapshots. The "probable taker" is a civ that gained a city in the same window. That's an inference,
+because a gain can also be a new settlement. Losses with no gainer could be to city-states or barbarians,
+or a city razed.
+
+| Results file | Game | When | Lost | Probable taker | What's known |
+|---|---|---|---|---|---|
+| batch2n | 02FB492B | T111–120 | Japan (cp) 6→5 | Spain (new) 5→6, military 193 vs 120 | logging off |
+| batch2n | 031D3FCB | T141–150 | Carthage (new) 5→4 | none | |
+| batch2t | 002FAEAF | T111–120 | Japan (new) 4→3, military 45 | Poland (new) 6→7 or Shoshone (new) 4→6 | Japan's 2t early conquest attacked fast-expanding Poland and was crushed |
+| c1 | 004A8B99 | T91–110 | **Egypt (b) 3→0, eliminated** | **Huns (b)** 7→8→10, military 161–171 vs Egypt's 18–63; China (c) 5→7 and Korea (c) 3→4 in the same window | the only elimination. CP's own war logic (both civs b). The Huns ended with 11 cities, military 350 |
+| c2 | 009C15B4 | T131–140 | Aztecs (b) 5→4, military 62 | China (b) 3→4, military 244, or Germany (b) 2→3 | logging off |
+| c2 | 009C15B4 | T141–150 | China (b) 4→3 | none | |
+| c2 | 00B10DE3 | T131–140 | Assyria (b) 3→2 | none | |
+| c6 | 015D85F3 | ~T120 | Aztecs (c) lost Xochicalco, 7→6, military 69 | **Inca (b)**, per the AI log | Inca declared about T109. The Inca's city count didn't rise that window, so the city was probably razed or the count lagged |
+| c7 | 01800DBC | T121–130, T141–150 | Denmark (c) 4→3→2, military 30→17 | **Mongols (c)** 5→6→7, military 182–206 | Denmark started its own war on Portugal (c) at T81, Egypt (b) joined T102, the Mongols declared T112 and besieged Kaupang for about 10 turns |
+
+That's about 11 lost cities in about 60 games, and only one civ eliminated. **The candidate conquest code
+(c3–c7) has never captured a city from b.** Its only capture was the Mongols (c) taking Denmark's cities,
+and Denmark is also c.
+
+### Why wars almost never take cities
+
+These are seen in the AI logs (`PlayerTacticalAILog.csv`, `OperationalAILog.csv`, `MilitaryAILog.csv`)
+unless marked as suspected.
+1. **War is declared before the army exists.**
+   - c4 game 2: Greece (Offense 10) got The Wheel at T19 and its first catapult at T58. It declared on
+     the Iroquois at T77. The attack operation only formed at T85, with 2 catapults and a warrior in a
+     9-slot formation filled to about 5 by T97, and it arrived at T101.
+   - c3: England declared at T93 with almost no army. 59 military at T130.
+2. **The tactical AI won't commit.** It logs "is in enemy dominated zone - won't try to capture". Melee
+   units attack a city only if they deal more damage than they take. Siege units are held back from
+   enemy-dominated zones.
+3. **The army bleeds out.** c5 game 1, the first real siege:
+   - The Ottoman army of 5 (2 warriors, a spearman, an archer, a catapult) formed at T56, before the
+     war, and declared on Siam at T64.
+   - The tactical AI planned "required damage 200, expected max damage per turn 161" on Muang Saluang.
+   - By T66–74 that fell to about 65 a turn as units got hurt, below the city's healing. The city held.
+4. **Ranges favour the city early.** In this pack (CP only), catapults, trebuchets and cannons have
+   range 2, the same as cities. Artillery is the first siege unit with range 3. So every early siege
+   takes city fire, and survivability decides it. Cities heal 20 HP a turn. The user suggested an
+   artillery beeline for longer games, but at T150 Quick civs have only about 25–30 techs, so it's out
+   of reach.
+5. **Wrong targets.**
+   - c warmongers often picked other c civs:
+     - c5b: the Aztecs and China picked each other.
+     - c6 game 1: China declared on Indonesia.
+     - c7: Denmark picked Portugal, the "greediest neighbour", which was also c.
+   - CP's own war logic also declares wars with no `CONQUEST` line (Japan in c6 game 2, Denmark in c3b),
+     and those are usually two-front messes.
+6. **Defensive pacts pull in third parties.** c3: Portugal joined England's war on Sweden. c3b skips
+   targets with defensive allies.
+7. **Short games.** At T150 on Quick, armies are still small.
+8. **What the captures had in common:** the taker had 3–10x the defender's military, and the defender was
+   usually already at war elsewhere (Huns 166 vs Egypt 18; Mongols 182 vs Denmark 30).
+9. **Strength is judged with full knowledge:** CP uses `GetMilitaryMight`, so hiding units doesn't fool
+   it.
+
+### The greedy problem (c6, c7)
+
+- **Greedy tall c civs drew wars.** In c6 game 3 Ethiopia was declared on by America, France and Assyria
+  (twice). In c6 game 2 Japan (c) and later the Ottomans (b) attacked Egypt (c, greedy). Egypt ended with
+  3 cities.
+- **The cap traded economy for being a target.** c6's no-military share (48.1%) was also below 50%, so
+  greed didn't even pay off in economy.
+- **The user's model of the equilibrium:** all civs compete to be the most greedy until warmongers get a
+  window to conquer them. So greedy civs need an alarm, and warmongers need to strike the greediest
+  neighbour quickly.
+
+## Ideas not built yet
+
+- **c8:** keep the greedy army cap, but add an alarm: walls and archers when a close neighbour, especially
+  a warmonger, masses an army or siege units.
+- Declare war only once the attack army has gathered at its muster point.
+- Warmongers target only b civs or a runaway leader: a coalition against the leader through CP's
+  coop-war system.
+- Unique-unit timing attacks (Zulu Impi at Civil Service, Hun battering rams).
+- Artillery or Dynamite beeline as a later warmonger timing. Needs games longer than T150.
+- A religion-free score, if score and strength keep diverging. The user decided against a
+  "progress toward victory" metric.
+- Culture and tourism measurement; city-state conquest.
+
+## Dead ends and hung builds
+
+- **2a and 2b don't compile** (missing include). **2c and 2d** were replaced before their builds ran.
+  **2h and 2k** were folded into the next batch unplayed.
+- **2s's CI run was cancelled** and folded into 2t. 2q–2u were never validated against CP.
+- **c1 and c2:** plan changes alone don't help (both 49.0–49.1% over 5 games). A wide or aggressive
+  plan only pays off if the civ actually conquers.
+- **c6's greedy cap:** 0-3, see above.
+- **c7b:** its CI MSVC build step hung for 47+ minutes, against about 8 normally. `gh run cancel` had no
+  effect for 2 hours, and the hung run blocked the queue, so c7c sat "pending". It only cleared with
+  `gh api -X POST repos/treezeegaga/Community-Patch-DLL/actions/runs/<id>/force-cancel`. c7c includes
+  all of c7b, so c7b was never played.
+- **Superseded downloads, never installed:** c5 `e946f11`, and the c7c intermediates `831ae8e` and
+  `a8f4cf7`. Always check the artifact name's sha before installing (e.g.
+  `VP_MSVC_Release_24cc575-15-g2e9fad187` = `2e9fad1`).
+
+## Fragile or half-finished tooling
+
+- **CI cancels:** a plain `gh run cancel` often doesn't stop a run, and runs on a branch queue behind each
+  other. Use the force-cancel API above.
+- **`Run-Games.ps1` click positions are hard-coded** for a 3840x2160 screen at 150% scaling, with Civ
+  opening its window centred. Windowed Civ only takes clicks where it first opened, so setup happens
+  there and the window is moved afterwards with title-bar-drag messages. Quick Combat and Quick
+  Movement must be ticked every game.
+- **Stalls:** after `-StallMinutes` (30) with no new results rows, `Run-Games.ps1` kills and restarts
+  Civ. It saves `stall-*.png` and Civ's responding state.
+- **AI logs are overwritten by each new game.** Copy `Logs\` between games if you need an earlier game's
+  log (c4 game 1's log was lost this way). Logging costs about 15% speed, so the practice was: on for
+  the first 2 games of a bundle, then off. Test games read `LoggingEnabled` and `AILog` from
+  `config.ini` (fork `4cf291b`); before that, the test pack wrote no AI logs.
+- **The results CSV has no warmonger column**, so b's warmongers can't be identified afterwards. The
+  `Book` column records the opening plan.
+- **`Summarize-ABTest.ps1` relabels B-vs-C files:** in its output, "new" means c and "cp" means b. It
+  says so at the top of each B-vs-C section. Its parameters are `-Csv <file>` for one file and
+  `-MyGames <folder>` for all files in a folder; there is no `-Path`.
+- **`Run-ABTest.ps1` only downloads releases** (`ab-latest` or `-Release ab-<sha>`), which come from
+  `claude/sleepy-hopper-x77moh`. C builds have to be installed by hand (README.md).
+- **Side session's branch is unmerged:** pack branch `claude/angry-goodall-0e693c` ("per-change switches
+  and diagnostic columns") built a batch 2r variant with per-change switches, published as fork release
+  `ab-e9f7ecf`. That session reported its pack-repo changes as still unpushed, awaiting the user's OK.
+  It is based on 2r, two batches behind the main line.

@@ -4,6 +4,32 @@ How we check that a change to the AI actually makes it stronger. A test game is 
 player game where half the civs run the changed AI code ("new") and half run Community Patch's
 original ("cp"). Run enough games, and if "new" keeps finishing ahead, the change is real.
 
+Results so far, build by build, are in [RESULTS.md](RESULTS.md); the raw CSVs are in [results/](results/).
+
+## The A/B/C ladder
+
+| Rung | What | Fork (`treezeegaga/Community-Patch-DLL`) |
+|---|---|---|
+| **A** | Community Patch's original AI | code outside `UsesNewAI()` |
+| **B** | batch 2p, frozen 2026-11-02 after beating A 5-0 on strength (52.4% ± 0.7, p 1%) | commit `24cc575`, branch `claude/sleepy-hopper-x77moh` |
+| **C** | candidate changes, tested against B | branch `claude/ab-c1` (branched from `24cc575`) |
+
+- **Stage 1** builds (branch `claude/sleepy-hopper-x77moh`) split the civs into `new` and `cp`.
+- **Stage 2** builds (branch `claude/ab-c1`, `kABTestVersusBase = true` in CvPlayer.cpp) give every civ
+  B: `UsesNewAI()` is true for all.
+  - Half of them also run the C changes, gated on `UsesCandidateAI()`. Their results file labels the
+    groups `c` and `b`.
+  - The split is warmonger-balanced, so c gets a warmonger whenever the game has one; RESULTS.md has
+    the details.
+- **When a C build passes the bar**, it becomes the new B and the next candidates are tested against it.
+
+**The verdict is the strength share:** the test group's share of the game's techs, population, land,
+military and cities, averaged, at the last logged turn (50% = even).
+- Civ's score is shown alongside but not used, because religion and wonders inflate it.
+- A build passes when a one-sided t-test on its per-game strength shares gives p < 5%. That's roughly
+  9+ wins in 10 games, or a steady edge of about 52% over 5.
+- The summary also prints a no-military share, for builds that skip units on purpose.
+
 ## How it works
 
 - DLL: `treezeegaga/Community-Patch-DLL`, branch `claude/sleepy-hopper-x77moh`. The custom mod
@@ -71,6 +97,49 @@ above, and run `Summarize-ABTest.ps1` afterwards.
 Fork commits `5539cfb` (2a) and `8eaf65e` (2b) don't compile (a missing include, fixed in 2c), so
 there are no builds for them. 2c (`345b615`) and 2d (`25c26d8`) were replaced by later batches before their builds started. 2e
 searches more positions in battles of up to 9 units, so if AI turns feel slower during wars, say so.
+
+- **Batches 2f–2p** (stage 1, each on top of the last). The full table is in [RESULTS.md](RESULTS.md).
+  - **2f–2h:** settler fixes.
+  - **2i (`fb324ce`):** the root-cause fix. Found-city operations had needed a spare military unit to
+    start, so new-AI civs sat on one city.
+  - **2j, 2k:** saving gold for settlers.
+  - **2l:** an early shrine.
+  - **2m, 2n:** unescorted settlers; settlers wait only for imminent growth.
+  - **2o:** the book gives way to wonders.
+  - **2p (`24cc575`):** a warrior before the first settler. **It passed (5-0, p 1%) and is B.**
+- **Batches 2q–2u** were pushed to the same branch after 2p, but were never validated against CP. They
+  became c1's candidate bundle instead.
+- **C builds c1–c7c** (fork branch `claude/ab-c1`) are listed in [RESULTS.md](RESULTS.md).
+  - **Best so far: c4 (`ea22df3`)**, 5-1 at 51.6% ± 1.1, p 10%. It is not frozen.
+  - **Newest: c7c (`2e9fad1`).**
+
+### Installing a C build
+
+The fork's CI only publishes releases from `claude/sleepy-hopper-x77moh`, so `Run-ABTest.ps1` can't fetch
+C builds. Instead:
+
+1. Push the change to `claude/ab-c1`. Set the batch name (`AI_AB_TEST_BATCH` in CvGame.cpp, e.g.
+   `"c7c"`), so its games go to their own `AIABTest_<batch>.csv`.
+2. Start the build:
+   ```
+   gh workflow run build_vp.yml --repo treezeegaga/Community-Patch-DLL --ref claude/ab-c1
+   ```
+3. When the run finishes, download its DLL:
+   ```
+   gh run download <run id> --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>
+   ```
+4. Check that the artifact's name ends in the commit you pushed, e.g.
+   `VP_MSVC_Release_24cc575-15-g2e9fad187` for `2e9fad1`. Runs queue behind each other, and an older run
+   can finish first.
+5. Install it:
+   ```
+   powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCore_Expansion2.dll -ABTest -Install
+   ```
+6. Play games with `Run-Games.ps1`, and read results with `Run-ABTest.ps1 -Summary`. For B-vs-C files,
+   the summary's "new" column is c and its "cp" column is b.
+
+`gh run cancel` sometimes has no effect, and a hung run blocks later runs on the branch. Use
+`gh api -X POST repos/treezeegaga/Community-Patch-DLL/actions/runs/<id>/force-cancel`.
 
 `Summarize-ABTest.ps1` with no arguments reports each results file separately. Send its output (or
 the CSV files) back after a handful of games.
