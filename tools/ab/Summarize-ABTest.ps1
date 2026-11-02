@@ -93,6 +93,28 @@ foreach ($g in ($rows | Group-Object GameId)) {
 
 if ($games.Count -eq 0) { throw "No test games reached turn $MinTurn yet" }
 
+# Settings (files from c7c_settings on): every row records the game's setup and which candidate flags each civ ran.
+# Games from different setups or flag configurations shouldn't be pooled: list them, so a mix is obvious.
+if ($rows[0].PSObject.Properties.Name -contains "Fixes") {
+    Write-Output ""
+    Write-Output "Setups and flag configurations in this file (games at turn $MinTurn or later):"
+    $configs = foreach ($g in $games) {
+        $c0 = $g.Civs[0]
+        $setup = "{0} {1}, {2}, {3}, {4}, ruins {5}, barbarians {6}, stop T{7}" -f $c0.Map, $c0.MapOptions, $c0.WorldSize, $c0.Pace, $c0.Difficulty, $c0.Ruins, $c0.Barbarians, $c0.StopTurn
+        $cFixes = @($g.Civs | Where-Object { $_.Group -eq "new" } | ForEach-Object { $_.Fixes } | Sort-Object -Unique)
+        $flags = "c runs {0}; screened {1}" -f ($cFixes -join " / "), $c0.Screen
+        [pscustomobject]@{ Setup = $setup; Flags = $flags; Flip = $c0.Flip; Build = $c0.Build }
+    }
+    foreach ($grp in ($configs | Group-Object Setup, Flags, Build)) {
+        $flips = @($grp.Group | Where-Object { $_.Flip -eq "1" }).Count
+        Write-Output ("  {0,3} games ({1} flipped)  {2}" -f $grp.Count, $flips, $grp.Group[0].Setup)
+        Write-Output ("        {0}; build {1}" -f $grp.Group[0].Flags, $grp.Group[0].Build)
+    }
+    if (@($configs | Group-Object Setup, Flags).Count -gt 1) {
+        Write-Output "  WARNING: more than one setup or flag configuration. The results below pool them; split the file to compare."
+    }
+}
+
 Write-Output ""
 Write-Output ("{0} test games (turn {1} or later)" -f $games.Count, $MinTurn)
 Write-Output ""

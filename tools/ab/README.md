@@ -27,6 +27,9 @@ Results so far, build by build, are in [RESULTS.md](RESULTS.md); the raw CSVs ar
   picks which flags group c runs (`Fixes =`), and which ones are screened instead (`Screen =`: each on for a
   random half of the AI civs). With no file c runs the bundle, the same AI as c7c. See
   [AIABTest.ini.example](AIABTest.ini.example); RESULTS.md lists the flags.
+- **Every row records its settings** (from build `c7c_settings`): flip, the flags the civ ran, the screened
+  flags, map, map options, ruins, barbarians, pace, difficulty, world size, stop turn and the DLL build.
+  The summary lists each file's setups and flag configurations and warns when a file mixes them.
 
 **The verdict is the strength share:** the test group's share of the game's techs, population, land,
 military and cities, averaged, at the last logged turn (50% = even).

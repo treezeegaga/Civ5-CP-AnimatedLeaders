@@ -149,7 +149,8 @@ install one. Each C build includes everything before it unless noted. All change
 | c7 | `0b3dda2` | greedy tall build order; warmongers target the greediest neighbour | 1 | 45.3% | | worse (cap still on) |
 | c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
 | c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 1 | 52.9% | | ahead in its first game; needs more games |
-| c7c_flags | `46fc076`, `7097d49` | c7c with one flag per idea (see Fixes below) and a Warmonger column; `7097d49` adds paired games. With the bundle and `Flip = 0` it plays the same as c7c | 0 | | | CI builds running; then games |
+| c7c_flags | `46fc076`, `7097d49` | c7c with one flag per idea (see Fixes below) and a Warmonger column; `7097d49` adds paired games. With the bundle and `Flip = 0` it plays the same as c7c | 0 | | | superseded by c7c_settings before any games |
+| c7c_settings | `24f6ba8` | c7c_flags with the game's settings in every row (lead job 3). The same AI as c7c with the bundle | 0 | | | CI build running; then the smoke-test pair |
 
 What each build does, in detail:
 - **c1:** candidate `GetOpeningBook()`:
@@ -466,6 +467,27 @@ SPRT; the screening run (lead job 4 onwards) decides which go first.
 - **GameIds.** A flipped game's GameId ends in `F`. The summary pairs games in job 4; until then it lists the
   two games separately.
 
+### Settings in every row (lead job 3, fork commit `24f6ba8`, build `c7c_settings`)
+
+New columns after `Warmonger`:
+
+| Column | What |
+|---|---|
+| `Flip` | 1 for the second game of a pair (groups swapped) |
+| `Fixes` | the candidate flags this civ ran, joined with `+`, or `none` |
+| `Screen` | the game's screened flags, or `none` |
+| `Map` | the map script's file name (e.g. `Pangaea`) |
+| `MapOptions` | every map option as `name=value`, joined with `;` (resources, sea level, ...) |
+| `Ruins`, `Barbarians` | 1 = on |
+| `Pace`, `Difficulty`, `WorldSize` | e.g. `GAMESPEED_QUICK`, `HANDICAP_PRINCE`, `WORLDSIZE_STANDARD` |
+| `StopTurn` | where `Run-Games.ps1` stops the game (it writes `StopTurn =` to `AIABTest.ini`); 0 = unknown |
+| `Build` | the DLL's git describe, e.g. `...-g24f6ba8...` |
+
+The header changed, so the file is `AIABTest_c7c_settings.csv`. `Summarize-ABTest.ps1` now lists each
+file's setups and flag configurations, with the number of games and flipped games for each, and warns
+when a file mixes them. Strategic Balance shows up in `MapOptions` once we know how Civ numbers it (the smoke
+test reports it).
+
 ## Requests
 
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
@@ -474,20 +496,20 @@ SPRT; the screening run (lead job 4 onwards) decides which go first.
 
 ## Instructions for the PC runner
 
-### 2026-11-02: smoke test of `c7c_flags` with paired games (1 pair = 2 games)
+### 2026-11-02: smoke test of `c7c_settings` with paired games (1 pair = 2 games)
 
 Goal: check that the flags build runs, writes the new column, and replays a game with the groups
 swapped. With the bundle it plays the same AI as c7c, so both games also count as c7c games.
 
 1. Check out this repo's branch `claude/admiring-fermi-qyl4j3` (the lead's branch, until it's merged into
    `claude/sleepy-hopper-x77moh`) and pull.
-2. Download the DLL of fork commit `7097d49`. Its CI run is the newest run of the fork's Build workflow on
+2. Download the DLL of fork commit `24f6ba8`. Its CI run is the newest run of the fork's Build workflow on
    branch `claude/admiring-fermi-qyl4j3`; the lead will put the run id here once it has passed. Until then:
    ```
    gh run list --repo treezeegaga/Community-Patch-DLL --workflow build_vp.yml --branch claude/admiring-fermi-qyl4j3 --limit 3
    gh run download <run id> --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>
    ```
-   The artifact name must contain `g7097d49`.
+   The artifact name must contain `g24f6ba8`.
 3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCoreDLL_Expansion2.dll -ABTest -Install`
 4. Logging on (`LoggingEnabled = 1`, `AILog = 1` in `config.ini`). Run one pair:
    ```
@@ -496,8 +518,11 @@ swapped. With the bundle it plays the same AI as c7c, so both games also count a
    Copy `Logs\` aside after the first game (the second overwrites it).
 5. Check and report:
    - `Run-Games.log` says "replay matches the first game" for game 2.
-   - `AIABTest_c7c_flags.csv` has a `Warmonger` column, and the two games' GameIds are the same apart from a
-     trailing `F` on the second.
+   - `AIABTest_c7c_settings.csv` has the `Warmonger` and settings columns (`Flip` ... `Build`), and the two
+     games' GameIds are the same apart from a trailing `F` on the second.
+   - The settings columns say Pangaea or whatever map was picked, Quick, Prince, Standard, `StopTurn` 150, and
+     `Fixes` lists the bundle for c civs and `none` for b civs. Copy the `MapOptions` value into the report:
+     it shows how Civ names the map options, which job 5 needs.
    - Same civs in the same player slots in both games; same `Warmonger` values; `Group` swapped (each c in
      game 1 is b in game 2).
    - A glance at the first turns of both games: the same map and starting spots.
