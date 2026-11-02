@@ -90,6 +90,12 @@ whether the second game's start matched the first ("replay matches the first gam
 STOP file takes effect after the current pair. `-Unpaired` plays single games; `-NoSettings` leaves
 `AIABTest.ini` alone.
 
+**The setup** (from fork commit `614af3d`): every test game is Pangaea, Standard, 8 civs, Quick, Prince, with
+Strategic Balance and no ancient ruins. Set the first five once on Civ's setup screen; the DLL sets ruins and
+resources from `AIABTest.ini` (`-Ruins`, `-Resources`). After turn 10 the runner checks the game's settings
+columns against `-ExpectMap`, `-ExpectPace`, `-ExpectDifficulty`, `-ExpectSize` and `-ExpectCivs` and stops
+with "WRONG SETUP" if they differ.
+
 With `LoggingEnabled = 1` and `AILog = 1` in `config.ini`, test games write Civ's AI logs, and
 `tools\ab\Digest-ABLogs.ps1` boils them down to a few lines per civ: early builds, settlers ordered,
 found-city operations and idle settlers.

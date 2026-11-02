@@ -10,8 +10,11 @@
 
     Needs the test pack installed (Run-ABTest.ps1 -NoLaunch), windowed mode in GraphicsSettingsDX9.ini
     (FullScreen = 0, WindowResX = 1914, WindowResY = 2034 on a 3840x2160 screen) and the setup screens
-    already set to Prince, Standard, Quick, 8 civs on separate teams (Civ remembers those, not the
-    Quick Combat/Movement boxes). Click positions assume Civ opens its window centred on a 3840x2160
+    already set to Pangaea, Prince, Standard, Quick, 8 civs on separate teams (Civ remembers those, not the
+    Quick Combat/Movement boxes). Ruins and the resources setting aren't clicked: the test DLL sets them
+    from AIABTest.ini (Ruins = 0, MapOption5 = 5 for Strategic Balance). Once a game logs its first rows
+    (turn 10), the runner checks its map, options, pace, difficulty, size and civ count against the
+    -Expect* values and stops if anything is off, so no games are spent on the wrong setup. Click positions assume Civ opens its window centred on a 3840x2160
     screen at 150% scaling, which it does on this machine.
 
     Windowed Civ only takes clicks in the place it first opened its window, so setup happens there and the
@@ -35,6 +38,14 @@ param(
     [string]$Screen = "",             # AIABTest.ini Screen = (flags each on for a random half of the AI civs)
     [switch]$Unpaired,                # single games instead of pairs
     [switch]$NoSettings,              # leave AIABTest.ini alone (builds before c7c_flags, or a hand-written file)
+    [int]$Ruins = 0,                  # AIABTest.ini Ruins = (0 = no ancient ruins)
+    [int]$Resources = 5,              # AIABTest.ini MapOption5 = (Pangaea's resources option; 5 = Strategic Balance)
+    # the setup every game must have; checked against the first results rows (files from c7c_settings on)
+    [string]$ExpectMap = "Pangaea",
+    [string]$ExpectPace = "GAMESPEED_QUICK",
+    [string]$ExpectDifficulty = "HANDICAP_PRINCE",
+    [string]$ExpectSize = "WORLDSIZE_STANDARD",
+    [int]$ExpectCivs = 8,
     [int]$StopTurn = 150,
     [int]$StallMinutes = 30,          # no new results rows for this long = stuck; restart
     [switch]$AttachRunning,           # a test game is already running: finish it first, then start new ones
@@ -83,7 +94,8 @@ $ReplayFile = Join-Path $MyGames "AIABTest_lastgame.ini"
 # AIABTest.ini for the next game: the flags, and for the second game of a pair the first game's replay keys and Flip = 1
 function Write-Settings([string[]]$replay) {
     if ($NoSettings) { return }
-    $lines = @("; written by Run-Games.ps1", "[ABTest]", "Fixes = $Fixes", "Screen = $Screen", "StopTurn = $StopTurn")
+    $lines = @("; written by Run-Games.ps1", "[ABTest]", "Fixes = $Fixes", "Screen = $Screen", "StopTurn = $StopTurn",
+        "Ruins = $Ruins", "MapOption5 = $Resources")
     if ($replay) { $lines += "Flip = 1"; $lines += $replay } else { $lines += "Flip = 0" }
     [IO.File]::WriteAllLines($SettingsFile, [string[]]$lines, [Text.Encoding]::ASCII)
 }
@@ -94,6 +106,24 @@ function Read-Replay {
     $keys = @(Get-Content $ReplayFile | Where-Object { $_ -match '^\s*(MapSeed|SyncSeed|Player\d+)\s*=' } | ForEach-Object { $_.Trim() })
     if ($keys.Count -eq 0) { return $null }
     return $keys
+}
+
+# What's wrong with a game's setup, from its first results rows; "" if it's right or the build doesn't record it
+function Test-Setup($gameRows) {
+    $r = $gameRows[0]
+    if (-not ($r.PSObject.Properties.Name -contains "Map")) { return "" }
+    $problems = @()
+    if ($r.Map -ne $ExpectMap) { $problems += "map $($r.Map) (want $ExpectMap)" }
+    if ($r.Pace -ne $ExpectPace) { $problems += "pace $($r.Pace) (want $ExpectPace)" }
+    if ($r.Difficulty -ne $ExpectDifficulty) { $problems += "difficulty $($r.Difficulty) (want $ExpectDifficulty)" }
+    if ($r.WorldSize -ne $ExpectSize) { $problems += "size $($r.WorldSize) (want $ExpectSize)" }
+    $civs = @($gameRows | Where-Object { $_.Turn -eq $r.Turn } | ForEach-Object { $_.Player } | Sort-Object -Unique).Count
+    if ($civs -ne $ExpectCivs) { $problems += "$civs civs (want $ExpectCivs)" }
+    if (-not $NoSettings) {
+        if ([int]$r.Ruins -ne $Ruins) { $problems += "ruins $($r.Ruins) (want $Ruins)" }
+        if (@($r.MapOptions -split ';') -notcontains "5=$Resources") { $problems += "map options $($r.MapOptions) (want 5=$Resources)" }
+    }
+    return ($problems -join "; ")
 }
 
 function Write-Log([string]$text) {
@@ -213,6 +243,7 @@ function Start-TestGame {
 function Wait-TestGame([string[]]$knownIds) {
     $started = Get-Date
     $lastRows = -1; $lastChange = Get-Date
+    $checked = $false
     while ($true) {
         Start-Sleep 20
         if (-not (Get-CivWindow)) { return "civ exited" }
@@ -225,6 +256,11 @@ function Wait-TestGame([string[]]$knownIds) {
             continue
         }
         $last = $mine[-1]
+        if (-not $checked) {
+            $checked = $true
+            $wrong = Test-Setup $mine
+            if ($wrong) { return "WRONG SETUP ($($last.GameId)): $wrong" }
+        }
         if ($mine | Where-Object { $_.Final -eq '1' }) { return "won at turn $($last.Turn) ($($last.GameId))" }
         if ([int]$last.Turn -ge $StopTurn) { return "turn $($last.Turn) ($($last.GameId))" }
         if (((Get-Date) - $lastChange).TotalMinutes -ge $StallMinutes) {
@@ -278,6 +314,7 @@ while ($played -lt $MaxGames -or $pairReplay) {
     $status = Wait-TestGame $known
     Stop-Civ
     Write-Log "Game ended: $status"
+    if ($status -like "WRONG SETUP*") { Write-Log "Stopping: fix the setup screens (or the -Expect* values) and start again"; break }
     if ($status -eq "never started") { $failures++; if ($failures -ge 3) { Write-Log "Three failed starts in a row; giving up"; break }; continue }
     $failures = 0
     $played++

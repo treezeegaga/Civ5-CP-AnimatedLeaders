@@ -150,7 +150,7 @@ install one. Each C build includes everything before it unless noted. All change
 | c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
 | c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 1 | 52.9% | | ahead in its first game; needs more games |
 | c7c_flags | `46fc076`, `7097d49` | c7c with one flag per idea (see Fixes below) and a Warmonger column; `7097d49` adds paired games. With the bundle and `Flip = 0` it plays the same as c7c | 0 | | | superseded by c7c_settings before any games |
-| c7c_settings | `24f6ba8` | c7c_flags with the game's settings in every row (lead job 3). The same AI as c7c with the bundle | 0 | | | CI build running; then the smoke-test pair |
+| c7c_settings | `24f6ba8`, `614af3d` | c7c_flags with the game's settings in every row (lead job 3); `614af3d` sets ruins and map options from `AIABTest.ini` (job 5). The same AI as c7c with the bundle | 0 | | | CI build running; then the smoke-test pair |
 
 What each build does, in detail:
 - **c1:** candidate `GetOpeningBook()`:
@@ -537,6 +537,29 @@ Continents may come back in a later version, as an occasional check on naval and
 results rows already record `Map`, so Continents games would be kept apart from the Pangaea baseline
 automatically. They'd need their own σ, and their own setup in `Run-Games.ps1`.
 
+### Setup: Pangaea, Strategic Balance, no ruins (lead job 5, fork commit `614af3d`)
+
+`Run-Games.ps1` doesn't click any new options. Civ forgets game options between games (Quick Combat has
+to be re-ticked every game), and new click positions can't be checked from a cloud session. So:
+
+- **Pangaea**, size, civs, pace and difficulty are remembered by Civ's setup screen. The PC runner sets
+  them once by hand.
+- **Ruins and resources** are set by the test DLL from `AIABTest.ini`, which `Run-Games.ps1` writes before
+  every game:
+  - `Ruins = 0` turns on "no ancient ruins". The map script's `AddGoodies` checks that option, and so does
+    popping a hut.
+  - `MapOption5 = 5` sets map option 5, the one `Map.GetCustomOption(5)` reads, to Strategic Balance.
+    `AssignStartingPlots` treats `resource_setting == 5` as Strategic Balance, and Pangaea's 5th option is
+    Resources.
+  - Both are set in `CvGame::init`, before the map script runs.
+  - New `Run-Games.ps1` parameters: `-Ruins` (default 0) and `-Resources` (default 5).
+- **Check.** After a game logs turn 10, `Run-Games.ps1` compares its map, pace, difficulty, world size,
+  civ count, ruins and option 5 with `-ExpectMap Pangaea`, `-ExpectPace GAMESPEED_QUICK`,
+  `-ExpectDifficulty HANDICAP_PRINCE`, `-ExpectSize WORLDSIZE_STANDARD` and `-ExpectCivs 8`. If anything
+  differs, it logs "WRONG SETUP" and stops.
+- **Not yet confirmed in a real game:** that Pangaea reads its resources option as "5". The smoke test
+  checks it by looking for horses and iron next to each capital.
+
 ## Requests
 
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
@@ -552,15 +575,17 @@ swapped. With the bundle it plays the same AI as c7c, so both games also count a
 
 1. Check out this repo's branch `claude/admiring-fermi-qyl4j3` (the lead's branch, until it's merged into
    `claude/sleepy-hopper-x77moh`) and pull.
-2. Download the DLL of fork commit `24f6ba8`. Its CI run is the newest run of the fork's Build workflow on
+2. Download the DLL of fork commit `614af3d`. Its CI run is the newest run of the fork's Build workflow on
    branch `claude/admiring-fermi-qyl4j3`; the lead will put the run id here once it has passed. Until then:
    ```
    gh run list --repo treezeegaga/Community-Patch-DLL --workflow build_vp.yml --branch claude/admiring-fermi-qyl4j3 --limit 3
    gh run download <run id> --repo treezeegaga/Community-Patch-DLL --pattern "VP_MSVC_Release*" -D <empty dir>
    ```
-   The artifact name must contain `g24f6ba8`.
+   The artifact name must contain `g614af3d`.
 3. Install: `powershell -ExecutionPolicy Bypass -File CPModpack\Build-CPModpack.ps1 -Dll <dir>\...\CvGameCoreDLL_Expansion2.dll -ABTest -Install`
-4. Logging on (`LoggingEnabled = 1`, `AILog = 1` in `config.ini`). Run one pair:
+4. Set the setup screens once by hand: **Pangaea**, Standard, 8 civs on separate teams, Quick, Prince.
+   Civ remembers these. Ruins and resources are set by the DLL from `AIABTest.ini`, so leave those as
+   they are. Logging on (`LoggingEnabled = 1`, `AILog = 1` in `config.ini`). Run one pair:
    ```
    powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -MaxGames 2
    ```
@@ -569,7 +594,11 @@ swapped. With the bundle it plays the same AI as c7c, so both games also count a
    - `Run-Games.log` says "replay matches the first game" for game 2.
    - `AIABTest_c7c_settings.csv` has the `Warmonger` and settings columns (`Flip` ... `Build`), and the two
      games' GameIds are the same apart from a trailing `F` on the second.
-   - The settings columns say Pangaea, Quick, Prince, Standard, `StopTurn` 150, and
+   - The runner didn't log "WRONG SETUP" (it checks map, pace, difficulty, size, 8 civs, ruins and
+     resources after turn 10).
+   - In the game: no ancient ruins on the map, and each capital has horses and iron nearby (Strategic
+     Balance).
+   - The settings columns say Pangaea, Quick, Prince, Standard, `StopTurn` 150, `Ruins` 0, and
      `Fixes` lists the bundle for c civs and `none` for b civs. Copy the `MapOptions` value into the report:
      it shows how Civ names the map options, which job 5 needs.
    - Same civs in the same player slots in both games; same `Warmonger` values; `Group` swapped (each c in
