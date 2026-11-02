@@ -447,6 +447,52 @@ Once attacks work, defence fixes get a real test: the bully test against a compe
 - Strength share is the verdict; `CitiesCaptured` (results file) is the measure that shows the mechanism.
 - Battle tests from saved games would make war fixes much faster to test: ask the lead when ready.
 
+## Economy & victory: first tasks (from the lead, 2026-11-02)
+
+**Expansion pace first.** It's the biggest gap between our AI and a good human player:
+
+| When cities get founded (Quick) | 2nd city | 3rd city | 4th city | Cities at T150 |
+|---|---|---|---|---|
+| Good human target (AUDIT.md: 4 cities by T50–60 Standard) | | | **T33–40** | |
+| B (batch 2p, new group, 5 games) | T35 | T59 | T79 (80% get there) | 4.9 |
+| c4 (6 games) | T31 | T61 | T73 (79%) | 5.1 |
+| c7c (7 games) | T34 | T65 | T87 (82%) | 5.0 |
+| CP's own AI | T32–49 | T61–65 | T80–84 | 4.7–5.1 |
+
+The AI reaches its 4th city about 40 turns late, and one civ in five never does by T150.
+- **It counts heavily in the verdict:** three of the five strength measures (cities, land, population)
+  grow with it. B's one big win, 2i (found-city operations without a spare unit), was an expansion fix.
+- **It's cheap to test:** economy effects show by T100 (lead job 8), games take about 10 minutes, and the
+  results file records city-founding turns (`City2Turn`–`City4Turn`).
+- **It's independent of War's work.**
+
+1. **Find where the turns go before writing fixes.** Ask the PC runner for 2–3 logged King baseline
+   games. `Digest-ABLogs.ps1` shows per civ:
+   - its early builds (opening-book picks marked);
+   - when settlers were ordered and found-city operations started;
+   - turns a settler stood idle.
+
+   Candidates to check:
+   - the first settler waiting for growth;
+   - one settler at a time (2h);
+   - long walks to sites;
+   - the book's monument and shrine coming first;
+   - happiness stopping settlers;
+   - saving gold that sits unspent (2j/2k).
+2. **Then one flag per cause,** with a hypothesis entry in RESULTS.md before any code.
+   - Test: paired games at T100, `Summarize-ABTest.ps1 -AtTurn 100`. Strength share is the verdict, and
+     the founding turns show the mechanism.
+   - The wide plan was already the strongest opening (13.3% strength share and 5.3 cities against 12.6% and
+     4.4 for tall, batches 2e–2p), so settling more and sooner looks promising.
+3. **Not first:**
+   - The greedy-tall problem (c6, c7) needs War's alarm too. The existing greedy flags (`GreedyBook`,
+     `GrowthTech`, `AqueductValue`, `ClosedBorders`) get single-flag SPRTs from the lead after the
+     baseline: don't redo them.
+   - Auditing `CvPolicyAI` and the late-game victory push come after expansion.
+   - Chop-rushing wonders is counted now (`WonderChops`); act only if the count isn't 0.
+
+Work on branch `ai/economy`: pushes there build by themselves and publish `ab-ai-economy-latest`.
+
 ## Opening prompts
 
 Paste one into a new session. Each assumes the repos are attached:
@@ -489,6 +535,7 @@ Paste one into a new session. Each assumes the repos are attached:
 > `tools/ab/AGENTS.md`, `AUDIT.md` and `RESULTS.md` (repo `treezeegaga/Civ5-CP-AnimatedLeaders`,
 > branch `claude/sleepy-hopper-x77moh`). Work in `treezeegaga/Community-Patch-DLL` on branch
 > `ai/economy`, off the integration branch (`claude/ab-c1`), and edit only the files AGENTS.md gives to Economy.
+> Read "Economy & victory: first tasks" in AGENTS.md first: expansion pace comes before everything below.
 > Audit items 1, 5-8, 12-14, 16, 17, 21-23, 28 and the opening book are already in B; RESULTS.md
 > has what the games showed about them (settling, religion, wide vs tall). New ideas each get a
 > `FIX_xx` flag behind `UsesCandidateAI()`. Start with the greedy problem in RESULTS.md (c6, c7c),
