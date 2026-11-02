@@ -937,6 +937,7 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
 - Status: written, not built.
 - Notes: Economy has no push access to the fork, so the commit goes to the lead as
   `tools/ab/patches/economy/0001-*.patch` (on `6b8ebde`); the lead applies it to `ai/economy`.
+
 ### SettlerOverlap: the next book settler trains while the last one walks (Economy)
 - Hypothesis: with B's "one settler at a time", a settler in training or walking blocks the next, and
   the capital falls through to a 8-20-turn building. Counting only settlers in training (and at most one
