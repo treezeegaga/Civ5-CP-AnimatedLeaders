@@ -406,6 +406,8 @@ build's own mean taken out, so real differences between builds don't count as no
 |---|---|---|
 | All 9 builds (2e, 2j, 2m, 2n, 2p, c1, c2, c4, c6) | 41 | 4.6 points |
 | Without 2e and 2j (the broken 1-city-stall builds) | 33 | 3.4 points |
+| c7c, 7 games (2026-11-02) | 7 | 3.75 points |
+| **King baseline (job 6): A/A pairs, standard setup** | waiting for games | σ per pair: ? |
 
 These are old-setup numbers (random maps, unpaired, T150). The new setup (job 6) measures σ again,
 per pair. What they imply for an unpaired SPRT at δ = 2 points (expected games ≈ 5.9 · σ² / δ²):
@@ -850,6 +852,34 @@ plain aggressive AI, and the real test is games against the friend.
 - These are Prince games on the old setup (random maps, unpaired), so they don't go into the King baseline
   (job 6).
 
+### The King baseline: plan (lead job 6)
+
+**What it measures.** The noise every test under the new setup is judged against. It's an **A/A run**:
+`-Fixes none`, so group c runs no candidate changes and every civ plays B. The setup is King with even
+rules, Pangaea, Strategic Balance, no ruins, Standard, 8 civs, Quick, paired games, stopped at T150. From
+it, in the summary's "c runs none" section:
+
+- **σ per pair** ("spread of one result"). This sets every SPRT's expected length: 5.3 · σ²/δ² pairs at
+  δ = 2. With the old per-game σ of 3.4–4.6 and pairs cutting it as hoped, a δ = 2 test should take 10–25
+  pairs. This run says how many.
+- **The average**, which should be 50% (gain 0): anything else is a bug in the split or the replay.
+- **First games against flipped games.** The difference is the c/b split's built-in bias (c gets the
+  extra warmonger when a game has an odd number). Pairs cancel it, but its size says how far unpaired old
+  results could be off.
+- **What pairing buys:** the summary now prints the single-game spread and how many unpaired games each
+  paired game is worth.
+- **T100 against T150 again** (`Compare-ABTurns.ps1`), on King pairs (job 8's recheck).
+- **AI turn time** (`TurnSecs`) and the diplomacy rates: B's row of the scoreboard at King.
+
+**Size.** 20 pairs gives σ to within about ±16%, which is enough to plan tests. It's about 7 hours at 10
+minutes a game; King games may run a little longer.
+
+**After it.**
+- σ goes into the Baseline table, B's King row into the scoreboard, and δ is confirmed (2 points unless σ
+  makes that impractical).
+- Then the first single-flag SPRTs, and a first bully pair to see whether the aggressor takes anything.
+  A screening run of all flags at T100 is optional at this game speed.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
@@ -906,3 +936,21 @@ c7c games.
 
 If the replay differs or the maps don't match, say so and stop: paired games then need another way in
 (loading the turn-0 autosave instead).
+
+### 2026-11-02, next: the King baseline (lead job 6), 20 pairs = 40 games, about 7 hours
+
+Only after the smoke-test pair checks out. Same build and setup (King, Pangaea, Standard, 8 civs, Quick;
+the DLL sets Strategic Balance and no ruins).
+
+1. **Logging off** (`LoggingEnabled = 0` in `config.ini`), since it costs about 15% speed and isn't needed here.
+2. Play 20 pairs with group c running **no candidate changes**, so every civ plays B:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40
+   ```
+3. Every 5 pairs or so, commit `AIABTest_c7c_roles.csv` and `Run-Games.log` to `tools/ab/` and push, so the
+   lead can watch σ settle. A "REPLAY DIFFERS" or "WRONG SETUP" line in the log means stop and report.
+4. When done, report the output of:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Summarize-ABTest.ps1 -Csv "$env:USERPROFILE\Documents\My Games\Sid Meier's Civilization 5\AIABTest_c7c_roles.csv"
+   powershell -ExecutionPolicy Bypass -File tools\ab\Compare-ABTurns.ps1 -Folder "$env:USERPROFILE\Documents\My Games\Sid Meier's Civilization 5"
+   ```

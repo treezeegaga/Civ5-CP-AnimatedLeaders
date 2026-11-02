@@ -510,6 +510,20 @@ foreach ($cfg in ($games | Group-Object Config)) {
     $sd = if ($n -ge 2) { [Math]::Sqrt((($x | ForEach-Object { ($_ - $mean) * ($_ - $mean) }) | Measure-Object -Sum).Sum / ($n - 1)) } else { [double]::NaN }
     $extra = if ($leftOver -gt 0) { "; $leftOver game(s) without their pair left out" } else { "" }
     Write-Output ("    {0} {1}: gain {2:+0.00;-0.00;0.00} points (c share {3:N2}%), spread of one result {4:N2}{5}" -f $n, $kind, $mean, (50 + $mean), $sd, $extra)
+    if ($pairs.Count -ge 2) {
+        # what pairing buys, and the split's own bias (lead job 6): the spread of single games, and the first games
+        # against the flipped ones (in an A/A run, where c and b both run B, a difference is the c/b split's bias:
+        # c gets the extra warmonger when a game has an odd number)
+        $inPairs = @($pairs | ForEach-Object { $_.Group })
+        $g1 = @($inPairs | Where-Object { -not $_.Flipped } | ForEach-Object { $_.NewStrength - 50 })
+        $g2 = @($inPairs | Where-Object { $_.Flipped } | ForEach-Object { $_.NewStrength - 50 })
+        $single = @($g1 + $g2)
+        $ms = ($single | Measure-Object -Average).Average
+        $sds = [Math]::Sqrt((($single | ForEach-Object { ($_ - $ms) * ($_ - $ms) }) | Measure-Object -Sum).Sum / ($single.Count - 1))
+        $gain = if ($sd -gt 0) { ($sds * $sds) / ($sd * $sd) } else { 0 }
+        Write-Output ("    single games: spread {0:N2}; each game played in a pair is worth {1:N1} unpaired games (an unpaired test would need that many times as many games)" -f $sds, ($gain / 2))
+        Write-Output ("    first games {0:+0.00;-0.00;0.00}, second (flipped) games {1:+0.00;-0.00;0.00}: the difference is the split's bias, cancelled within each pair" -f ($g1 | Measure-Object -Average).Average, ($g2 | Measure-Object -Average).Average)
+    }
     foreach ($test in @(@{ Name = "gainer";    S0 = 0.0;            S1 = $Delta },
                         @{ Name = "no-worse";  S0 = -0.875 * $Delta; S1 = 0.125 * $Delta })) {
         $llr = Get-SprtLLR $x $test.S0 $test.S1
