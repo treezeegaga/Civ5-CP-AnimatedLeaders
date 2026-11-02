@@ -113,5 +113,25 @@ foreach ($grp in "new", "cp") {
         (& $avg "Share"), (& $avg "Alive"), (& $avg "Cities"), (& $avg "Pop"), (& $avg "Techs"), (& $avg "Policies"),
         (& $avg "Military"), (& $avg "Wonders"), (& $avg "Lost"))
 }
+
+# Early-game milestones (files from batch2a on): turn the 2nd-4th cities were founded, National College,
+# and which opening plan the civ followed. Averages count only civs that reached the milestone.
+if ($rows[0].PSObject.Properties.Name -contains "City2Turn") {
+    Write-Output ""
+    Write-Output "Early game, average per civ at the last logged turn (turn founded; share of civs that got there):"
+    Write-Output ("  {0,-5} {1,14} {2,14} {3,14} {4,16}  {5}" -f "Group", "2nd city", "3rd city", "4th city", "NationalCollege", "Opening plans")
+    foreach ($grp in "new", "cp") {
+        $civs = @($games | ForEach-Object { $_.Civs } | Where-Object { $_.Group -eq $grp })
+        if ($civs.Count -eq 0) { continue }
+        $cells = foreach ($col in "City2Turn", "City3Turn", "City4Turn") {
+            $reached = @($civs | Where-Object { [int]$_.$col -ge 0 } | ForEach-Object { [double]$_.$col })
+            if ($reached.Count -eq 0) { "-" } else { "T{0:N0} ({1:P0})" -f ($reached | Measure-Object -Average).Average, ($reached.Count / $civs.Count) }
+        }
+        $nc = @($civs | Where-Object { $_.NationalCollege -eq "1" }).Count / $civs.Count
+        $plans = ($civs | Group-Object Book | Sort-Object Name | ForEach-Object { "$($_.Name) $($_.Count)" }) -join ", "
+        Write-Output ("  {0,-5} {1,14} {2,14} {3,14} {4,16:P0}  {5}" -f $grp, $cells[0], $cells[1], $cells[2], $nc, $plans)
+    }
+}
+
 Write-Output ""
 Write-Output "A difference only means something once the chance above is small (under 5%) over many games."

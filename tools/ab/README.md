@@ -46,6 +46,10 @@ original ("cp"). Run enough games, and if "new" keeps finishing ahead, the chang
   same AI. Their results should come out about even, and how far apart they land shows how much is
   luck, which tells us how many games a real change needs.
 - **Batch 1** (fork commit `80746d8`): the 11 fixes listed in [AUDIT.md](AUDIT.md).
+- **Batch 2a** (fork commit `5539cfb`): batch 1 plus the opening book (see [AUDIT.md](AUDIT.md)).
+  Its results file, `AIABTest_batch2a.csv`, also records when each civ founded its 2nd, 3rd and 4th
+  cities, whether it has the National College, and which opening plan it followed; the summary shows
+  these per group.
 
 `Summarize-ABTest.ps1` with no arguments reports each results file separately. Send its output (or
 the CSV files) back after a handful of games.

@@ -26,6 +26,25 @@ Coded in fork commit `6fd3058` (results go to `AIABTest_batch1.csv`).
 | 10 | War | `CvMilitaryAI.cpp:1845` | Defense levels: "below 3/4" is checked after "below 100%", so it's unreachable; the AI either feels fine or panics over one unit | Check the lower threshold first |
 | 11 | War | `CvMilitaryAI.cpp:848`, `879` | "Is our city exposed?" tests the AI's own route to the enemy, not the enemy's route to it | Use the reverse route's score |
 
+## Batch 2a: opening book
+
+Coded in fork commit `5539cfb` (results go to `AIABTest_batch2a.csv`), in `CvPlayer.cpp`
+(`GetOpeningBook` and the functions after it). Community Patch has no scripted opening; its early game
+runs on the same general scoring as the rest of the game. The new AI follows a short plan picked by
+personality:
+
+| Plan | Who | Capital builds | Other cities | Techs | First branch | Ends |
+|---|---|---|---|---|---|---|
+| Tall | Default; science, culture or "smaller" traits | Scout, Monument, Settler, Worker, Settler, Settler, Library, National College (settlers at size 3+) | Monument, Library | Pottery, Writing, Philosophy | Tradition | Turn 80 |
+| Wide | Expansionist trait, or expansion flavor >= 7 and above science and culture | Scout, Settler, Worker, Settler, Monument, Settler, Settler, Settler, Library (settlers at size 2+) | Monument | Pottery, Mining, Writing, Currency | Liberty | Turn 100 |
+| Conquest | Warmonger trait, or offense flavor >= 8 and at least expansion | Scout, Settler, Worker, Archer, Settler, Archer, Monument | Monument | Archery, Bronze Working, Writing, Construction | Honor | Turn 70 |
+
+A step is skipped when it can't be done now (city too small, no settle site, empire unhappy, not
+unlocked yet, scout after turn 20), so the start adapts to the map. Turn limits are for Standard
+speed and scale with game speed. The book also ends as soon as the civ is at war with a major civ.
+Tech steps research the prerequisites on the way. Nothing is saved; each step is worked out from the
+game state. Targets are from the CivFanatics notes below; tune them against the milestone columns.
+
 ## Batch 2: bigger behaviour changes, need tuning
 
 | # | Area | Where | Problem | Status |
