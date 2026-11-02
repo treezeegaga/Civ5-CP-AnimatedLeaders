@@ -44,6 +44,9 @@ param(
     [string]$Mode = "split",          # AIABTest.ini Mode = : the usual c/b split, or the bully or builders test (RESULTS.md, lead job 10)
     [int]$HeadStartProduction = 0,    # bully test: extra production for the aggressor, % (none by default)
     [int]$HeadStartGold = 0,          # bully test: extra gold per city per turn for the aggressor (none by default)
+    [switch]$SaveLogs,                # after each game: its log digest to results\digest_<GameId>.txt, its Logs\ to My Games\LogsArchive\<GameId>
+                                      # (needs LoggingEnabled = 1 and AILog = 1 in config.ini; the next game overwrites Logs\)
+    [int]$DigestUpToTurn = 80,        # -SaveLogs: how far the digest's build list and settler timeline go
     # the setup every game must have; checked against the first results rows (files from c7c_settings on)
     [string]$ExpectMap = "Pangaea",
     [string]$ExpectPace = "GAMESPEED_QUICK",
@@ -327,6 +330,18 @@ while ($played -lt $MaxGames -or $pairReplay) {
     $status = Wait-TestGame $known
     Stop-Civ
     Write-Log "Game ended: $status"
+    if ($SaveLogs -and $status -match '\(([0-9A-F]{16}F?)\)') {
+        # keep this game's AI logs before the next game overwrites them
+        $gid = $Matches[1]
+        try {
+            $digest = Join-Path $PSScriptRoot "results\digest_$gid.txt"
+            & (Join-Path $PSScriptRoot "Digest-ABLogs.ps1") -MyGames $MyGames -UpToTurn $DigestUpToTurn | Set-Content -Path $digest -Encoding UTF8
+            $archive = Join-Path $MyGames "LogsArchive\$gid"
+            New-Item -ItemType Directory -Force -Path $archive | Out-Null
+            Copy-Item -Path (Join-Path $MyGames "Logs\*") -Destination $archive -Recurse -Force
+            Write-Log "  logs saved: $digest and $archive"
+        } catch { Write-Log "  couldn't save the logs: $($_.Exception.Message)" }
+    }
     if ($status -like "WRONG SETUP*") { Write-Log "Stopping: fix the setup screens (or the -Expect* values) and start again"; break }
     if ($status -eq "never started") { $failures++; if ($failures -ge 3) { Write-Log "Three failed starts in a row; giving up"; break }; continue }
     $failures = 0

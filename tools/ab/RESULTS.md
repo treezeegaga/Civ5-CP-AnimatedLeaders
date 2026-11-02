@@ -172,7 +172,8 @@ install one. Each C build includes everything before it unless noted. All change
 | c7b | `2caf9d0` | c7 with the army cap off | 0 | CI build hung; skipped | | |
 | c7c | `2e9fad1` | c7b + can-win siege check + greedy civs refuse open borders | 7 | 50.0% ± 1.4 | 50% | not better: 3-4. SPRT gainer LLR −1.00, no-worse +0.74 (both still running) |
 | c7c_flags | `46fc076`, `7097d49` | c7c with one flag per idea (see Fixes below) and a Warmonger column; `7097d49` adds paired games. With the bundle and `Flip = 0` it plays the same as c7c | 0 | | | superseded by c7c_settings before any games |
-| c7c_settings | `24f6ba8`, `614af3d` | c7c_flags with the game's settings in every row (lead job 3); `614af3d` sets ruins and map options from `AIABTest.ini` (job 5). The same AI as c7c with the bundle | 0 | | | built (CI run 41541130534); merged into `claude/ab-c1`; waiting for the smoke-test pair at King |
+| c7c_settings | `24f6ba8`, `614af3d` | c7c_flags with the game's settings in every row (lead job 3); `614af3d` sets ruins and map options from `AIABTest.ini` (job 5). The same AI as c7c with the bundle | 0 | | | superseded by c7c_roles before any games |
+| c7c_roles | `59888a3`, `4b37724`, `6b8ebde` | c7c_settings plus the bully and builders tests, diplomacy and war counts, and `TurnSecs` (lead jobs 10–11). The same AI as c7c with the bundle | 0 | | | built (CI run 41545004119); `claude/ab-c1` fast-forwarded to `6b8ebde`, so `ab-c-latest` is it once the push build finishes; the smoke-test pair and the King baseline run on it |
 
 What each build does, in detail:
 - **c1:** candidate `GetOpeningBook()`:
@@ -1044,6 +1045,19 @@ every turn they aren't building a part, which is aggressive but deliberate.
 - **For Diplomacy:** L2 (a counting fix) and L3 (a design question) are in Diplomacy's file. Both are under
   Requests.
 
+## Sessions running (2026-11-02)
+
+| Session | ID | DLL branch | Started with |
+|---|---|---|---|
+| Experiment lead | `session_01G2NZj313wWzcZ8o56vVzZK` | `claude/admiring-fermi-qyl4j3` → `claude/ab-c1` | AGENTS.md "Experiment lead: first jobs" |
+| War | `session_01G2NZizcmgfGkXsgJcVcF7h` | `ai/war` | AGENTS.md "War: first tasks" |
+| Economy & victory | `session_01G2NZj2nf4FeZTEHWjvnhhA` | `ai/economy` | AGENTS.md "Economy & victory: first tasks" |
+| Diplomacy | `session_01G2NZj1hm6um5X9SZaXQCRZ` | `ai/diplomacy` | AGENTS.md "Diplomacy: first tasks" (audit only for now) |
+| PC runner | the local session on the Windows PC | none | the smoke-test pair, then the King baseline |
+
+The topic sessions push their RESULTS.md entries to their own branch of this repo, and the lead merges them
+into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
@@ -1064,6 +1078,14 @@ every turn they aren't building a part, which is aggressive but deliberate.
     turns with `EXPANSION SETTLER - Saving`.
   - **Queue `SettlersFirst` and `SettlerOverlap`** (and later `DiploPolicyValue`, patch 0002) after the baseline (T100 paired SPRTs, or one screening
     run of both), once the commit is on `ai/economy` and `ab-ai-economy-latest` is built.
+  - **Lead's answer (2026-11-02):**
+    - **Logged games:** the King baseline's first pair runs with logging on and `Run-Games.ps1 -SaveLogs`,
+      which saves each game's digest to `results/digest_<GameId>.txt`.
+    - **Timeline:** `Digest-ABLogs.ps1` now prints a per-civ settler timeline: book or AI settler starts with
+      their city, settlers bought, found-city operations started, founded or ended, and the turns spent
+      saving gold. A city's size when a settler starts isn't in the logs, so it's left out.
+    - **The two flags** are queued right after the baseline, once the patch is relayed to `ai/economy`
+      (see the patch relay in AGENTS.md) and `ab-ai-economy-latest` is built.
 
 - **For Diplomacy, from Economy's victory-push audit:** L2 in `GetScienceVictoryProgress` (counts every
   project, Apollo twice; count only space-race projects, capped at their thresholds) and L3 in
@@ -1126,10 +1148,17 @@ If the replay differs or the maps don't match, say so and stop: paired games the
 Only after the smoke-test pair checks out. Same build and setup (King, Pangaea, Standard, 8 civs, Quick;
 the DLL sets Strategic Balance and no ruins).
 
-1. **Logging off** (`LoggingEnabled = 0` in `config.ini`), since it costs about 15% speed and isn't needed here.
-2. Play 20 pairs with group c running **no candidate changes**, so every civ plays B:
+1. **The first pair with logging on** (`LoggingEnabled = 1`, `AILog = 1` in `config.ini`). Economy needs the
+   logs. `-SaveLogs` writes each game's digest to `tools\ab\results\digest_<GameId>.txt` and copies its
+   `Logs\` to `My Games\LogsArchive\<GameId>` before the next game overwrites them:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 2 -SaveLogs
+   ```
+   Commit the two digests with the CSV and push.
+2. **Then logging off** (`LoggingEnabled = 0`; it costs about 15% speed), and the other 19 pairs, with group c
+   running **no candidate changes**, so every civ plays B:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 38
    ```
 3. Every 5 pairs or so, commit `AIABTest_c7c_roles.csv` and `Run-Games.log` to `tools/ab/` and push, so the
    lead can watch σ settle. A "REPLAY DIFFERS" or "WRONG SETUP" line in the log means stop and report.

@@ -9,7 +9,9 @@
     started / succeeded / aborted, turns its cities ran ENOUGH_SETTLERS while no found-city operation
     existed (a settler standing idle), and how its military operations ended over the whole game (by
     reason; HalfStrength is the abort that audit item 26 made stricter in B: below 2/3 of the army's
-    required slots while gathering or moving).
+    required slots while gathering or moving), and a settler timeline up to -UpToTurn (Economy's request): each
+    settler started by the opening book or the normal choice, with its city; each one bought with gold; each
+    found-city operation's start, founding or abort; and the turns spent saving gold for a settler.
 
 .EXAMPLE
     powershell -ExecutionPolicy Bypass -File tools\ab\Digest-ABLogs.ps1 -UpToTurn 60
@@ -56,10 +58,11 @@ $ops = @($allOps | Where-Object { $_ -match ', OP_FOUND_CITY, ' })
 # every other operation's end, for the military summary (lead job 9: is item 26's abort rule cutting attacks short?)
 $milEnds = @($allOps | Where-Object { $_ -match 'Ended: ' -and $_ -notmatch ', OP_FOUND_CITY, ' -and $_ -notmatch 'SETTLE|FOUND_CITY' })
 $strat = @(Read-Shared "CityStrategyAILog.csv" | Where-Object { $_ -match 'AICITYSTRATEGY_ENOUGH_SETTLERS, 1' })
+$expansion = @(Read-Shared "PlayerHomelandAILog.csv" | Where-Object { $_ -match 'EXPANSION SETTLER - ' })
 
 # Major civs are the ones whose names appear in the opening-book or ops logs alongside a results row; fall back to
 # every name in the found-city ops log
-$names = @($ops + $book + $milEnds | ForEach-Object { ($_ -split ', ')[1] } | Sort-Object -Unique)
+$names = @($ops + $book + $milEnds + $expansion | ForEach-Object { ($_ -split ', ')[1] } | Sort-Object -Unique)
 $names += @($chosen | ForEach-Object { ($_ -split ', ')[1] } | Where-Object { $_ -eq (($_ -split ', ')[2]) } | Sort-Object -Unique)
 $names = @($names | Sort-Object -Unique)
 
@@ -80,6 +83,16 @@ $out = foreach ($n in $names) {
     # idle settler: ENOUGH_SETTLERS on in a turn where no found-city op line exists for this civ
     $opTurns = @{}; foreach ($l in $mineOps) { $opTurns[(Get-Turn $l)] = $true }
     $idle = @($strat | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { Get-Turn $_ } | Sort-Object -Unique | Where-Object { -not $opTurns[$_] })
+    # settler timeline (lead, for Economy): started (book/AI, city), bought, op started, founded, op ended
+    $tl = @()
+    $tl += @($book | Where-Object { $_ -match "^\d+, $n, " -and $_ -match 'OPENING BOOK - Started Settler' } | ForEach-Object { $c = $_ -split ', '; [pscustomobject]@{ T = [int]$c[0]; S = "settler (book) in $($c[2])" } })
+    $tl += @($chosen | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { $c = $_ -split ', '; if ($c.Count -gt 5 -and $c[5] -match '^Settler') { [pscustomobject]@{ T = [int]$c[0]; S = "settler (AI) in $($c[2])" } } })
+    $tl += @($expansion | Where-Object { $_ -match "^\d+, $n, " -and $_ -match 'Bought' } | ForEach-Object { [pscustomobject]@{ T = (Get-Turn $_); S = "BOUGHT " + (($_ -split 'Bought ')[1]) } })
+    $tl += @($mineOps | Where-Object { $_ -match 'found target for settler' } | ForEach-Object { [pscustomobject]@{ T = (Get-Turn $_); S = "op started" } })
+    $tl += @($mineOps | Where-Object { $_ -match 'City founded' } | ForEach-Object { [pscustomobject]@{ T = (Get-Turn $_); S = "FOUNDED" } })
+    $tl += @($mineOps | Where-Object { $_ -match 'Ended: ' -and $_ -notmatch 'Ended: Success' } | ForEach-Object { [pscustomobject]@{ T = (Get-Turn $_); S = "op ended: " + (($_ -split 'Ended: ')[1] -split ';')[0] } })
+    $timeline = @($tl | Where-Object { $_.T -le $UpToTurn } | Sort-Object T | ForEach-Object { "T$($_.T) $($_.S)" })
+    $saving = @($expansion | Where-Object { $_ -match "^\d+, $n, " -and $_ -match 'Saving' } | ForEach-Object { Get-Turn $_ } | Where-Object { $_ -le $UpToTurn } | Sort-Object -Unique)
     $mil = @($milEnds | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { (($_ -split 'Ended: ')[1] -split '[;,]')[0].Trim() } |
         Group-Object | Sort-Object Count -Descending | ForEach-Object { "$($_.Name) $($_.Count)" })
 
@@ -94,6 +107,8 @@ $out = foreach ($n in $names) {
             $(if ($aborted.Count) { "  ops aborted: " + ($aborted -join ', ') })
             $(if ($idle.Count) { "  IDLE SETTLER turns: $($idle.Count) (first T$($idle[0]))" })
             $(if ($mil.Count) { "  military ops ended (whole game): " + ($mil -join ', ') })
+            $(if ($timeline.Count) { "  settler timeline to T${UpToTurn}: " + ($timeline -join ' | ') })
+            $(if ($saving.Count) { "  saving gold for a settler: $($saving.Count) turns (T$($saving[0])-T$($saving[-1]))" })
         ) | Where-Object { $_ }
     }
 }
