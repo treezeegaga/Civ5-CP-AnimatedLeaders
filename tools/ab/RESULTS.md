@@ -880,6 +880,84 @@ minutes a game; King games may run a little longer.
 - Then the first single-flag SPRTs, and a first bully pair to see whether the aggressor takes anything.
   A screening run of all flags at T100 is optional at this game speed.
 
+### War session: why attacks fail, ranked against the code (2026-11-02)
+
+The causes in "Why wars almost never take cities", ranked by how much each would explain, each checked in the fork
+(`claude/ab-c1` at `6b8ebde`). Paths are in `CvGameCoreDLL_Expansion2/`. No new logs were read: the only digest in
+`results/` (c7c game 2) predates the "military ops ended" counts, so the ranking is from the code plus the log
+quotes above.
+
+**How an attack works in this code** (needed to read the rest). An attack operation only delivers an army: when its
+centre is within 3 tiles of the target city (`GetDeployRange`), it ends as a success, the army is disbanded, and a
+5-turn tactical focus area is put on the city (`CvAIOperationMilitary::OnSuccess`). From then on the siege is the
+tactical AI's, zone by zone: each zone gets a posture from the dominance ratio (`CvTacticalDominanceZone::SelectPostureSingleZone`)
+and the posture decides whether the city is attacked at all. A sneak attack is the same operation at peace: on
+arrival it tells the diplomacy AI `SetArmyInPlaceForAttack`, and `DoMakeWarOnPlayer` declares the next turn.
+
+| Rank | Cause (diagnosis number) | Confirmed in code | What it would explain |
+|---|---|---|---|
+| 1 | **The army bleeds out (3)** | Yes. `CvUnit::shouldHeal(false)`, the second heal pass (`CvTacticalAI::PlotHealMoves(false)`, after the attacks), sends any unit with **more than 20 damage** that isn't adjacent to an enemy back to heal. Catapults and archers fire from 2 tiles, so they aren't adjacent: one city shot (20–30 damage) and the unit leaves the siege the next time it doesn't fire. Units under 70% HP can't be recruited into a new attack either (`IsUnitSuitableForRecruitment`). Meanwhile the city heals 20 a turn (`CvCity::doTurn`), unless every adjacent tile is blockaded | The Ottomans' 161 → ~65 expected damage a turn in 8 turns: every siege, both groups |
+| 2 | **The tactical AI won't commit (2)** | Yes, two ways. (a) In the **attrition** posture `PlotAttritionAttacks` never attacks a city, not even with ranged units ("don't expose our units for city attacks here"). An enemy zone gets attrition when it's even but the enemy has more melee strength and we have ranged dominance: exactly a siege army of catapults and archers facing a garrison. (b) The zone counts the city's full strength as enemy ranged strength, scaled by its HP; when the enemy is 1.7× ours the posture is withdraw and `ExecuteCaptureCityMoves` logs "enemy dominated zone - won't try to capture". Damaged units count for less, so 1 feeds (b) | Armies standing 2–4 tiles from a city for many turns without firing at it |
+| 3 | **War declared before the army is there (1)** | Partly. The sneak attack does wait for its army, but its "discovered by enemy" shortcut (`CvAIOperationMilitary::CheckTransitionToNextStage`, moving state) counts as arriving when **3 or more of its units are visible to the enemy, wherever the army is**: an enemy scout or border city seeing it in our own land is enough. The army is then disbanded far from the target, its units can't join a new attack for 5 turns (`IsRecentlyDeployedFromOperation`), and the follow-up operation musters at our nearest city. That fits Greece (declared T77, attack formed T85, arrived T101). Other declaration paths (coop wars, demands, city-state statements) don't wait for an army at all; the diplomacy log says which one fired | The 10–25 turn gap between declaring and arriving, and the target's time to build walls and units |
+| 4 | Ranges favour the city early (4) | Structural (CP data), not a bug | Why 1 matters so much: every siege unit takes city fire |
+| 5 | Wrong targets (5) | Mostly a test artefact (c picking c) plus CP's own war logic. The choice is in `CvDiplomacyAI::GetNewAIConquestTarget` (not a War file): request below | Some wasted wars, no failed sieges |
+| 6 | Audit item 26, abort below 2/3 (B) | Fires only while gathering or moving (`CvAIOperation::UnitWasRemoved`; armies never reach the at-target state because they are disbanded on arrival). With the ancient formation (4 required slots) it aborts at 2 units left, as CP would at 1; classical-medieval (5 required) at 3 left, CP at 1. It ends thin armies on the way, which can't take a city anyway. The one digest has 1 `HalfStrength` in 24 aborts | Probably little. Count it before asking for an ablation (request below) |
+| — | (new) `NoTarget` aborts every turn | Unknown. In c7c game 2, five civs abort an operation with `NoTarget` on almost every turn for 10–20 turns in a row (Austria T130–T151). The digest's "ops aborted" line mixes all operation types, so it isn't clear which. An operation created and dropped every turn can tie up units | Unknown: the logs will say |
+
+**Not the cause:** a newly started attack doesn't pull back a just-delivered army: units within 3 tiles of the target
+or deployed in the last 5 turns aren't recruited (`IsUnitSuitableForRecruitment`).
+
+Each fix below gets one flag, **off in the bundle** (so a non-test pack and the c7c bundle stay as they are; turn it on
+with `Fixes =` or `Screen =`). Shared file: the flag names go in `CvPlayer.h` (`CandidateFixTypes`, appended at the
+end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing else in `CvPlayer` changes.
+
+### FIX_SIEGE_STAY: units at a siege don't leave to heal at 20 damage (War)
+- Hypothesis: units within 2 tiles (3 for ranged units) of an enemy city that is already damaged stay at the siege
+  unless they are below a third of their HP or projected to die next turn, instead of leaving at 20 damage. Damage per
+  turn on a besieged city stays above its 20 HP healing for longer, so more sieges end in a capture. Only the heal
+  decision in `CvTacticalAI::PlotHealMoves` changes; the first pass already uses the one-third rule, so in practice
+  this is the second pass (units that didn't attack this turn).
+- Measure: `CitiesCaptured` per game by group (the mechanism); strength share at T150 (the verdict). In logged games,
+  "attempting capture of X ... expected max damage per turn" should fall more slowly over a siege.
+- δ: +2 points of strength share; CitiesCaptured should rise from about 0.2 per game.
+- Build: local commit `58d4c8d` on `ai/war`, not pushed (no push access from this session: see Requests); patch in `war-patches/`
+- Test: SPRT gainer, paired, King/Pangaea/Strategic Balance/no ruins/Quick, T150. It only matters once a group is at
+  war, so screen it with `TimingAttack` on (the bundle) or in the bully test.
+- Status: hypothesis
+- Notes: risk: more units die at the siege. If losses climb without captures, try "stay only while expected damage
+  beats healing".
+
+### FIX_SIEGE_POSTURE: attrition posture also bombards the city (War)
+- Hypothesis: in an attrition zone (an even enemy zone where we have the ranged edge and they have the melee edge), the AI also runs the city attack
+  (`ExecuteCaptureCityMoves`) at the lowest aggression level, so the combat simulation only takes safe shots: ranged
+  units bombard, melee units only go in when it's safe or the city falls. Its other checks stay (not in an
+  enemy-dominated zone; damage minus healing must take the city within 13 turns). Armies stop standing next to cities
+  without firing.
+- Measure: CitiesCaptured by group; strength share at T150. In logged games, more "attempting capture" lines per
+  war-turn and fewer turns from arrival to the first city attack.
+- δ: +2 points of strength share
+- Build: same commit `58d4c8d` (all three flags in one commit, each behind its own flag)
+- Test: SPRT gainer, paired, T150, as above. Best tested together with SIEGE_STAY later (they act on the same
+  sieges), but each first on its own.
+- Status: hypothesis
+- Notes: the withdraw-when-dominated rule (cause 2b) is left alone on purpose: it's the tactical AI's safety
+  valve, and SIEGE_STAY should keep fewer zones from tipping into it.
+
+### FIX_DECLARE_AT_BORDER: a sneak attack declares only once its army reaches the target's border (War)
+- Hypothesis: the "discovered by enemy" shortcut only counts when the army's centre is in or next to the target
+  civ's territory, or within 6 tiles of the target city. Spotted earlier, it keeps marching (at peace nobody can
+  attack it), so war starts with the army at the border instead of at home, and the gap between declaring and
+  arriving shrinks from 10–25 turns to about 1–3.
+- Measure: turns from war declared to the first city attack (logged games, `OperationalAILog.csv` and
+  `PlayerTacticalAILog.csv`); CitiesCaptured; strength share at T150.
+- δ: +1.5 points of strength share (it only touches sneak attacks, so a smaller edge is worth keeping)
+- Build: same commit `58d4c8d` (all three flags in one commit, each behind its own flag)
+- Test: SPRT gainer, paired, T150.
+- Status: hypothesis
+- Notes: check in a logged game first that wars really come from this path: a war line in the diplomacy log right
+  after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
+  matters less and those paths need the same rule (they're in Diplomacy's files).
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
@@ -888,6 +966,39 @@ minutes a game; King games may run a little longer.
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
   (`s_aiCommittedTarget`), which isn't saved, so a reloaded game re-picks. Not a multiplayer desync
   (every computer runs the same turns), but it should be game state before anything ships.
+- **For the lead, from War: push my DLL commit.** This session couldn't attach `treezeegaga/Community-Patch-DLL`
+  with push access (the request was refused), so the three War flags are a local commit on `ai/war`, off
+  `claude/ab-c1` at `6b8ebde`, saved as `war-patches/0001-...patch` on this branch. Apply with `git am` on a new
+  `ai/war` from `claude/ab-c1` and push, so CI builds `ab-ai-war-latest`. It hasn't been compiled (no Windows toolchain
+  here): CI is the first compile. Also add `SiegeStay`, `SiegePosture`, `DeclareAtBorder` to `AIABTest.ini.example`.
+  Or the user can let the War session attach the repo and it pushes itself.
+- **For the lead / PC runner, from War: 3 logged King games before any SPRT on the War flags.** Same setup as the
+  baseline, bundle on (so warmongers attack), logging on, `Fixes` = bundle + `SiegeStay,SiegePosture,DeclareAtBorder`
+  for one game and the bundle alone for two, so both sides of each flag show up. Copy `OperationalAILog.csv`,
+  `MilitaryAILog.csv`, `DiplomacyAI_Messages_Log.csv` (or whichever file has the war declarations) and the
+  `*TacticalAILog*.csv` files of the warmongers to `results/logs_<game>/`, plus the digest. War reads from them:
+  - **how each war was declared:** "Discovered by enemy" versus "Transition to finished stage" just before it, or no
+    operation at all (coop war, demand, city-state statement);
+  - **military ops ended** per civ: is `HalfStrength` (audit item 26) a real share? Under ~20% of military operation
+    ends, no ablation is needed;
+  - **which operation type** ends with `NoTarget` on almost every turn (c7c game 2: Austria T130–T151 and four others);
+  - **heal moves next to a besieged city** and "attempting capture ... expected max damage per turn" over a siege.
+- **For the lead, from War: battle tests from saves.** War fixes act within a 10–20 turn siege, so a test that loads
+  the same mid-war save and plays 15 turns would give an answer in minutes. Wanted: (1) 3–5 saves, each with an AI
+  army 3–6 tiles from an enemy city at the turn war is declared (the c7c logged games have them: China vs the Iroquois
+  T81, the Ottomans vs Siam T64); (2) a runner mode that loads a save with given `Fixes`, plays N turns and writes the
+  besieged city's owner and HP and each side's units lost per turn. Measure: captures out of runs, turns to capture.
+  Does Civ V reseed the combat rolls on load? If not, runs with the same flags will repeat exactly and only the flags
+  vary, which is what we want.
+- **For Diplomacy (or the lead), from War:** two war-declaration issues in `CvDiplomacyAI`, which War doesn't own:
+  1. The committed conquest target (`s_aiCommittedTarget` in `GetNewAIConquestTarget`) is a `static`, not game
+     state. That's the request above "For War", but the file is Diplomacy's.
+  2. Declarations through coop wars (`CvDiplomacyAI.cpp` ~9625), demands (~34524) and city-state statements (~28209)
+     don't wait for an army in place. If the logged games show wars starting that way with no army near, those paths
+     should also go through the sneak-attack operation (`RequestCityAttack` then `IsArmyInPlaceForAttack`).
+- **For War (from War, noted): target choice.** c picking c in the test is an artefact of the split, not a bug, and
+  `CanWin` already checks that a target can be beaten. Nothing to code until the bully test shows the aggressor
+  picking hopeless targets.
 
 ## Instructions for the PC runner
 
