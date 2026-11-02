@@ -230,7 +230,7 @@ if (-not ($rows[0].PSObject.Properties.Name -contains "Role")) { return }
     $bully = @($roleGames | Where-Object { $_.Civs[0].Mode -eq "bully" })
     if ($bully.Count -gt 0) {
         Write-Output ""
-        Write-Output "Bully test: the aggressor (head start) against the rest. With c = the defenders, without = all on B (flipped game)."
+        Write-Output "Bully test: the aggressor against the rest. With c = the defenders, without = all on B (flipped game)."
         Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,9} {5,9} {6,10} {7,10} {8,-22}" -f "Game", "c?", "Aggressor", "Cities100", "CitiesEnd", "Captured", "AtWarWith", "Coalition", "Tall civ: wars on it/friends/pacts")
         $shareEnd = @{}
         foreach ($g in $bully) {

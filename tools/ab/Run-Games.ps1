@@ -42,8 +42,8 @@ param(
     [int]$Resources = 5,              # AIABTest.ini MapOption5 = (Pangaea's resources option; 5 = Strategic Balance)
     [ValidateSet("split", "bully", "builders")]
     [string]$Mode = "split",          # AIABTest.ini Mode = : the usual c/b split, or the bully or builders test (RESULTS.md, lead job 10)
-    [int]$HeadStartProduction = 50,   # bully test: the aggressor's extra production, %
-    [int]$HeadStartGold = 3,          # bully test: the aggressor's extra gold per city per turn
+    [int]$HeadStartProduction = 0,    # bully test: extra production for the aggressor, % (none by default)
+    [int]$HeadStartGold = 0,          # bully test: extra gold per city per turn for the aggressor (none by default)
     # the setup every game must have; checked against the first results rows (files from c7c_settings on)
     [string]$ExpectMap = "Pangaea",
     [string]$ExpectPace = "GAMESPEED_QUICK",

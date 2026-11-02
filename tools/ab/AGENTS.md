@@ -59,7 +59,7 @@ give back what phase 1 gained.
 
 **"Competent" means** (numbers to be set with the players before phase 1 ends):
 - clearly ahead of CP's AI on the rating ladder (e.g. worth a difficulty level)
-- the bully test: the head-started aggressor no longer rolls everyone over
+- the bully test: the aggressor no longer rolls everyone over
 - most tricks on the exploit checklist no longer work
 - milestones at a good human player's pace (not an expert's)
 - no obvious blunders when we watch games or play against it
@@ -284,9 +284,10 @@ against CP's old diplomacy may just mean exploiting it.
 
 ### The bully test (the headline test)
 
-AI-only games where one civ plays the friend's role: a designated **aggressor**, with a warmonger
-profile and a head start (extra production and gold, enough to snowball against CP's AI), plus one
-civ with a tall profile in the user's role. The test option picks both slots. Measured per game:
+AI-only games where one civ plays the friend's role: a designated **aggressor**, the most aggressive
+personality in the game, with no head start (the players' decision, 2026-11-02: the friend is aggressive,
+not a strong player, and CP's AI used to fold anyway), plus one civ with a tall profile in the user's role.
+The test option picks both slots. Measured per game:
 
 - **Aggressor's share of all cities** at turns 100 and 150, and civs it eliminates. This is the
   headline number: lower means the AIs held.
@@ -296,8 +297,8 @@ civ with a tall profile in the user's role. The test option picks both slots. Me
 - **The tall civ's treatment:** wars declared on it vs. friendships and pacts with it. Being
   peaceful shouldn't make it a target.
 
-Group comparison works as before (the aggressor runs CP or new code depending on the test), but
-the measure is what happens to the aggressor, not strength share.
+The aggressor and the tall civ run B; the other AIs run the candidate in the first game of a pair and
+B in the second, so the measure is what the candidate does to the aggressor's game, not strength share.
 
 ### The builders test
 
@@ -395,7 +396,7 @@ questions**.
    `gh run download`, and `Run-ABTest.ps1` can install them. Note the CI hang and force-cancel fix
    in RESULTS.md.
 10. The bully test and the builders test: an option choosing the aggressor and tall slots, the
-   aggressor's head start, and digest counts for coalitions, interactivity, pressure on builders,
+   aggressor's head start (later dropped: no head start), and digest counts for coalitions, interactivity, pressure on builders,
    victory progress and banned behaviours.
 11. A scoreboard at the top of RESULTS.md, one row per milestone build: aggressor's city share,
    cities per war, coalition size and speed, interactivity rate, banned-behaviour count, strength

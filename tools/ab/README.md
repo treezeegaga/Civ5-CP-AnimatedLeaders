@@ -90,8 +90,8 @@ whether the second game's start matched the first ("replay matches the first gam
 STOP file takes effect after the current pair. `-Unpaired` plays single games; `-NoSettings` leaves
 `AIABTest.ini` alone.
 
-**Bully and builders tests** (from build `c7c_roles`): `-Mode bully` gives one warmonger civ a head start
-(`-HeadStartProduction`, `-HeadStartGold`) and plays one civ tall; `-Mode builders` has two tall civs that start
+**Bully and builders tests** (from build `c7c_roles`): `-Mode bully` makes the most aggressive civ the
+aggressor (no head start; `-HeadStartProduction` and `-HeadStartGold` can add one) and plays one civ tall; `-Mode builders` has two tall civs that start
 no wars. The roles run B, and the other AIs run the candidate in the first game of each pair and B in the second.
 The summary reports the aggressor's conquests and the coalition against it, or the pressure on the builders.
 See RESULTS.md (lead job 10).

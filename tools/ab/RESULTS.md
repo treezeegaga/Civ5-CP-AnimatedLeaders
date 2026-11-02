@@ -740,11 +740,11 @@ the roles from the map seed and the civs' personalities, so both games of a pair
 
 | Mode | Roles | What they play |
 |---|---|---|
-| `bully` | **aggressor**: a warmonger (warmonger trait or offense flavor 8+), else the most offensive personality | its own personality, plus a head start: `HeadStartProduction` (default +50% on all production) and `HeadStartGold` (default +3 gold per city per turn) |
+| `bully` | **aggressor**: a warmonger (warmonger trait or offense flavor 8+), else the most offensive personality | its own personality, no head start (`HeadStartProduction` and `HeadStartGold` can add one; both default to 0) |
 | | **tall**: the most science/culture-minded of the rest (nerd and smaller traits first) | the tall opening plan |
 | `builders` | **two builders**: the two most science/culture-minded civs, warmongers last | the tall opening plan; they start no wars (`CvTeam::canDeclareWar`), but a defensive pact can still pull them in |
 
-**How a test works.** The roles and the head start stay the same in both games of a pair; only the other
+**How a test works.** The roles stay the same in both games of a pair; only the other
 AI civs change.
 - In these modes group c is every AI civ without a role, and the roles always run B.
 - In the second game of a pair (`Flip = 1`) there's no c at all, so the other AIs run B as well.
@@ -778,9 +778,11 @@ group. Tested on synthetic files only.
   victory anyway.
 - An AI-turn-time column for the scoreboard (job 11).
 
-**The head start is a first guess:** +50% production and +3 gold per city per turn. A first bully run
-should check that B's aggressor actually snowballs. If it doesn't conquer anything with B defenders, the
-test has nothing to measure; raise the head start until it takes cities from B.
+**No head start** (user, 2026-11-02): "my friend isn't that good, he is just aggressive and the vanilla AI was
+terrible". The aggressor is simply the most aggressive personality, playing B. Fork `4b37724` makes 0 the
+default for both head-start keys, which remain available. If the aggressor never takes a city, even from B
+defenders, the bully test has nothing to measure for now. That itself says the AIs already hold against a
+plain aggressive AI, and the real test is games against the friend.
 
 ## Requests
 
