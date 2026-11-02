@@ -99,6 +99,41 @@ $cpAhead = @($games | Where-Object { $_.NewStrength -lt 50 }).Count
 $p = Get-SignTestP $newAhead ($newAhead + $cpAhead)
 Write-Output ""
 Write-Output ("Games stronger: new {0}, cp {1} (ties left out); chance of a split this uneven by luck: {2:P0}; average strength share {3:N1}%" -f $newAhead, $cpAhead, $p, ($games | Measure-Object NewStrength -Average).Average)
+# The win count throws away the margins; a t-test on the per-game strength shares uses them, so a steady small edge
+# shows up in fewer games. (One-sided: is the new group's share above 50%?)
+if ($games.Count -ge 2) {
+    $vals = @($games | ForEach-Object { [double]$_.NewStrength })
+    $mean = ($vals | Measure-Object -Average).Average
+    $var = (($vals | ForEach-Object { ($_ - $mean) * ($_ - $mean) }) | Measure-Object -Sum).Sum / ($vals.Count - 1)
+    $se = [Math]::Sqrt($var / $vals.Count)
+    $t = if ($se -gt 0) { ($mean - 50) / $se } else { 0 }
+    # t distribution tail via the regularized incomplete beta function (Lentz continued fraction)
+    function Get-BetaCF([double]$a, [double]$b, [double]$x) {
+        $c = 1.0; $d = 1.0 - ($a + $b) * $x / ($a + 1); if ([Math]::Abs($d) -lt 1e-30) { $d = 1e-30 }; $d = 1 / $d; $h = $d
+        for ($m = 1; $m -le 200; $m++) {
+            $m2 = 2 * $m
+            $aa = $m * ($b - $m) * $x / (($a + $m2 - 1) * ($a + $m2))
+            $d = 1 + $aa * $d; if ([Math]::Abs($d) -lt 1e-30) { $d = 1e-30 }; $c = 1 + $aa / $c; if ([Math]::Abs($c) -lt 1e-30) { $c = 1e-30 }; $d = 1 / $d; $h *= $d * $c
+            $aa = -($a + $m) * ($a + $b + $m) * $x / (($a + $m2) * ($a + $m2 + 1))
+            $d = 1 + $aa * $d; if ([Math]::Abs($d) -lt 1e-30) { $d = 1e-30 }; $c = 1 + $aa / $c; if ([Math]::Abs($c) -lt 1e-30) { $c = 1e-30 }; $d = 1 / $d; $del = $d * $c; $h *= $del
+            if ([Math]::Abs($del - 1) -lt 1e-10) { break }
+        }
+        return $h
+    }
+    function Get-LogGamma([double]$z) {
+        $g = @(76.18009172947146, -86.50532032941677, 24.01409824083091, -1.231739572450155, 0.1208650973866179e-2, -0.5395239384953e-5)
+        $y = $z; $tmp = $z + 5.5; $tmp -= ($z + 0.5) * [Math]::Log($tmp); $ser = 1.000000000190015
+        foreach ($c in $g) { $y += 1; $ser += $c / $y }
+        return -$tmp + [Math]::Log(2.5066282746310005 * $ser / $z)
+    }
+    $df = $vals.Count - 1
+    $x = $df / ($df + $t * $t)
+    $a = $df / 2.0; $b = 0.5
+    $lbeta = (Get-LogGamma ($a + $b)) - (Get-LogGamma $a) - (Get-LogGamma $b) + $a * [Math]::Log($x) + $b * [Math]::Log(1 - $x)
+    $ibeta = if ($x -lt ($a + 1) / ($a + $b + 2)) { [Math]::Exp($lbeta) * (Get-BetaCF $a $b $x) / $a } else { 1 - [Math]::Exp($lbeta) * (Get-BetaCF $b $a (1 - $x)) / $b }
+    $pOne = if ($t -gt 0) { $ibeta / 2 } else { 1 - $ibeta / 2 }
+    Write-Output ("Strength share {0:N1}% +/- {1:N1} (standard error); chance the new group is really no stronger than cp: {2:P0}" -f $mean, $se, $pOne)
+}
 $newScoreAhead = @($games | Where-Object { $_.NewScore -gt $_.CpScore }).Count
 $cpScoreAhead = @($games | Where-Object { $_.NewScore -lt $_.CpScore }).Count
 Write-Output ("Games ahead on score: new {0}, cp {1}" -f $newScoreAhead, $cpScoreAhead)
