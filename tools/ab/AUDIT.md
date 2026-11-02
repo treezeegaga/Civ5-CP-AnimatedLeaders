@@ -47,31 +47,38 @@ game state. Targets are from the CivFanatics notes below; tune them against the 
 
 ## Batch 2: bigger behaviour changes, need tuning
 
+Status "2b" means coded in fork commit `8eaf65e` (results go to `AIABTest_batch2b.csv`), with the
+change described. The tuning numbers in 2b are first guesses.
+
 | # | Area | Where | Problem | Status |
 |---|---|---|---|---|
-| 12 | Buildings | `CvCityStrategyAI.cpp:4226`, `4253` | Flat yields scored as % increase, % buildings scored as absolute yield: University/Bank/Factory lose 5-20x to Monument/Shrine/Temple | Confirmed |
-| 13 | Buildings | `CvBuildingProductionAI.cpp:1329` | Under 3 military units per city, every building's value is cut 75% even in peacetime | Confirmed |
-| 14 | Expansion | `CvEconomicAI.cpp:5071` | Expansion stops after 3 cities if any stronger civ is a neighbour | Confirmed |
-| 15 | War | `CvMilitaryAI.cpp:2388` | Effectively one attack at a time across all enemies | Confirmed |
-| 16 | Research | `CvTechAI.cpp:104-110`, `391` | Civ/locale/victory-plan priorities are added once per flavor (~30-45 times), swamping personality; cost reweighting then favours the cheapest tech, so research goes broad instead of beelining | Confirmed |
-| 17 | Research | `CvTechClasses.cpp:1245` | Victory plan barely affects research; no planned beelines | Confirmed |
+| 12 | Buildings | `CvCityStrategyAI.cpp:4226`, `4253` | Flat yields scored as % increase, % buildings scored as absolute yield: University/Bank/Factory lose 5-20x to Monument/Shrine/Temple | 2b: modifiers scored as their percent |
+| 13 | Buildings | `CvBuildingProductionAI.cpp:1329` | Under 3 military units per city, every building's value is cut 75% even in peacetime | 2b: 3 per city only at war, 1 per city at peace |
+| 14 | Expansion | `CvEconomicAI.cpp:5071` | Expansion stops after 3 cities if any stronger civ is a neighbour | 2b: 4 cities guaranteed, stronger neighbour only stops it at war |
+| 15 | War | `CvMilitaryAI.cpp:2388` | Effectively one attack at a time across all enemies | 2b: a second attack when spare land units >= cities + 4 |
+| 16 | Research | `CvTechAI.cpp:104-110`, `391` | Civ/locale/victory-plan priorities are added once per flavor (~30-45 times), swamping personality; cost reweighting then favours the cheapest tech, so research goes broad instead of beelining | 2b: priorities once per tech (x10, x10, x30), cost weight 0.02 per turn left |
+| 17 | Research | `CvTechClasses.cpp:1245` | Victory plan barely affects research; no planned beelines | Opening book covers the early game; later game open |
 | 18 | Combat | `CvTacticalAI.cpp:8250`, `7951` | Damage taken weighted ~20x less than damage dealt; units end turns where visible enemies can deal 2x their HP | Likely |
 | 19 | Combat | `CvTacticalAI.cpp:12366` | Units starting the turn in danger get a huge starting penalty before safe plots are known, so their moves all tie | Likely |
 | 20 | Combat | `CvTacticalAI.cpp:39`, `12408` | Search goes greedy after 3 levels, so the 2560-position Deity budget can't be reached (~600-800) | Likely |
-| 21 | Cities | `CvCityCitizens.cpp:1933` | Specialised cities (half of them, plus all cities in a gold deficit) aim for +2 food and stagnate | Likely |
-| 22 | Buildings | `CvCityStrategyAI.cpp:4281` | Culture building value multiplied by 2-3 once per rival civ (up to x16) | Likely |
-| 23 | Gold | `CvCityStrategyAI.cpp:1367` | Gold purchase weights a barely started item up to 100x | Likely |
-| 24 | War | `CvMilitaryAI.cpp:902` | "Preferred target" cut-off measured against all civs' cities, so a walled human may never be attacked | Likely |
+| 21 | Cities | `CvCityCitizens.cpp:1933` | Specialised cities (half of them, plus all cities in a gold deficit) aim for +2 food and stagnate | 2b (confirmed): half the unspecialised target |
+| 22 | Buildings | `CvCityStrategyAI.cpp:4281` | Culture building value multiplied by 2-3 once per rival civ (up to x16) | 2b (confirmed): largest rival multiplier once |
+| 23 | Gold | `CvCityStrategyAI.cpp:1367` | Gold purchase weights a barely started item up to 100x | 2b (confirmed): up to x1.5 |
+| 24 | War | `CvMilitaryAI.cpp:902` | "Preferred target" cut-off measured against all civs' cities, so a walled human may never be attacked | 2b (confirmed): judged per owner |
 | 25 | War | `CvCityStrategyAI.cpp:912` | Only the muster city builds units for an attack | Likely |
-| 26 | War | `CvAIOperation.cpp:868` | Armies keep marching at under half strength, never reinforced | Likely |
-| 27 | War | `CvMilitaryAI.cpp:2335` | No defensive response when one city is attacked but the war overall looks fine | Likely |
+| 26 | War | `CvAIOperation.cpp:868` | Armies keep marching at under half strength, never reinforced | 2b: abort below 2/3 while gathering or moving |
+| 27 | War | `CvMilitaryAI.cpp:2335` | No defensive response when one city is attacked but the war overall looks fine | 2b (confirmed): defend anyway |
 | 28 | Expansion | `CvAIOperation.cpp:1795`, `CvPlayer.cpp:47813` | Settlers wait for escorts in safe land and walk to far sites, re-picking targets every turn | Likely |
 
-## Fog cheats to remove (the AI must use only what a human can see)
+## Fog cheats (the AI must use only what a human can see)
+
+Removed for the new AI in 2b.
 
 - `CvTacticalAnalysisMap.cpp:800-811`, `885-886`: unseen enemy units count at 50% strength; tiles
   next to visible ones are treated as visible.
 - `CvDangerPlots.cpp:479-483`: unseen units inside known cities and barbarian camps count as danger.
+  (The camp check also tested the camp against the barbarians' team, so even camps the AI never saw
+  counted.)
 
 Remembering units seen last turn (`CvDangerPlots.cpp:277-297`) is fair and stays.
 

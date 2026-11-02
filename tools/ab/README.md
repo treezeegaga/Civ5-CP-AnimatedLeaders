@@ -50,6 +50,8 @@ original ("cp"). Run enough games, and if "new" keeps finishing ahead, the chang
   Its results file, `AIABTest_batch2a.csv`, also records when each civ founded its 2nd, 3rd and 4th
   cities, whether it has the National College, and which opening plan it followed; the summary shows
   these per group.
+- **Batch 2b** (fork commit `8eaf65e`): batch 2a plus the fog cheats removed and the batch 2 fixes
+  marked "2b" in [AUDIT.md](AUDIT.md). Writes `AIABTest_batch2b.csv` with the same columns as 2a.
 
 `Summarize-ABTest.ps1` with no arguments reports each results file separately. Send its output (or
 the CSV files) back after a handful of games.
