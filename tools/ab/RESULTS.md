@@ -1167,6 +1167,23 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### Screening run 1: plan (lead, 2026-11-02)
+
+- **Why:** 19 candidate flags exist, from c1–c7c, Economy and War. At about 3 pairs an hour, an SPRT per flag
+  would take days. One screening run estimates every flag's effect per civ from the same 20 pairs (the paired
+  regression, lead job 4). Each game has every flag on for about half the civs, swapped within each pair.
+- **What's screened:** every idea except `LongWide` and `GreedyArmyCap`, which already failed.
+- **Reading it:** `Summarize-ABTest.ps1 -AtTurn 100` for the economy flags, and the final turn for the war flags
+  (job 8: war shows late).
+  - Flags that only act together with another one are diluted: `DeclareTiming`, `GreedyTarget` and `CanWin`
+    need `TimingAttack`, and `BoxedInWar` needs `BoxedIn` and wide civs. A weak estimate there means
+    "no main effect", not "useless".
+  - Screening only ranks. The top 2–3 flags get single-flag paired SPRTs. A flag that looks harmful is dropped
+    unless its owner has a reason to retest it.
+- **Build:** `claude/ab-screen1` (`db63d22`) is test-only: `claude/ab-c1` with `ai/economy` and `ai/war` merged,
+  every new flag off in the bundle, and its own results file. The flags are numbered 15–17 (Economy) and 18–20
+  (War) in this build only. When a flag passes, it's merged into `claude/ab-c1` on its own.
+
 ## Sessions running (2026-11-02)
 
 | Session | ID | DLL branch | Started with |
@@ -1303,8 +1320,8 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
 2. The King baseline's **logged pair** (baseline step 1).
 3. **War's 3 logged games** (below, after the baseline).
 4. The rest of the baseline: 19 pairs, logging off (baseline step 2).
-5. Then whatever the lead queues after the baseline (the first single-flag SPRTs: Economy's
-   `SettlersFirst` and `SettlerOverlap`, then War's flags).
+5. **Screening run 1** (below): every candidate flag at once, 20 pairs. Then the lead queues single-flag
+   SPRTs for the flags it ranks highest.
 
 ### 2026-11-02: smoke test of `c7c_roles` with paired games (1 pair = 2 games)
 
@@ -1401,3 +1418,19 @@ end, and what happens at a siege. These are single games with the c7c bundle on,
    ```
    powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-c-latest -NoLaunch -NoUpdate
    ```
+
+### After the baseline: screening run 1 (20 pairs = 40 games, about 7 hours)
+
+One run ranks every candidate idea from the same games (lead job 4's screening regression). The build is
+test-only: `claude/ab-screen1` = `claude/ab-c1` + `ai/economy` + `ai/war`, results in `AIABTest_screen1.csv`.
+1. Install it by commit (no "latest" alias for this branch):
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-db63d22 -NoLaunch -NoUpdate
+   ```
+   If that release doesn't exist, its CI build failed or is still running: report it and wait.
+2. Logging off. Group c runs nothing, and each screened flag is on for a random, warmonger-balanced half of the AI
+   civs, swapped in the second game of each pair:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, SiegeStay, SiegePosture, DeclareAtBorder"
+   ```
+3. Commit `AIABTest_screen1.csv` and `Run-Games.log` every 5 pairs or so, and push.
