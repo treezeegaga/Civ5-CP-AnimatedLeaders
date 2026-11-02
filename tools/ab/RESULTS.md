@@ -1099,9 +1099,17 @@ CP and in B. Confirmed by reading `CvDiplomacyAI::IsPlayerValid`.
 | E1 | `CvBuildingProductionAI.cpp` ~1346 | At war, cut non-defensive buildings' value by a further 50 points for each enemy we're losing to (war state worse than stalemate) | Medium in wars: an AI that's losing keeps building libraries and markets instead of units |
 | E2 | `CvCityStrategyAI.cpp` ~4303 | Value culture more when rivals' tourism is gaining on us (×2 to ×3) | Low. The B change there ("CP multiplies once per rival, ×16") fixes a loop that never runs, so it changed nothing |
 
-Fix: `kPlayer.GetDiplomacyAI()->IsPlayerValid(eLoopPlayer)`. E1 is the one that matters, and it's War
-territory in effect (production while losing a war). Not coded yet: it would be one flag
-(`LosingWarBuildings`) judged with War's fixes, since its effect only shows in wars that go badly.
+Fix: `kPlayer.GetDiplomacyAI()->IsPlayerValid(eLoopPlayer)`. Coded as two flags, out of the bundle:
+- **`LosingWarBuildings`** (`FIX_LOSING_WAR_BUILDINGS`, E1), patch 0007.
+  - Hypothesis: a civ losing a war (war state worse than stalemate) cuts non-defensive buildings by a
+    further 50 points per such enemy, so it builds units and walls instead.
+  - Measure: cities lost and strength share in games with wars. It only acts in wars that go badly, so it
+    can't show much until War's capture fixes make wars bite.
+  - Test: no-worse, T150, ideally queued alongside War's flags.
+- **`CultureRivalValue`** (`FIX_CULTURE_RIVAL_VALUE`, E2), patch 0008.
+  - Hypothesis: culture yields are valued ×2-×3 when a rival's tourism is rising against us, as CP and B
+    intended, so the civ defends culturally a little earlier.
+  - Test: no-worse, T150, low priority. Probably no effect at T150, where tourism is still small.
 
 ### IdeologyPick, PolicyPrereqDepth, EspionagePolicyValue: the other CvPolicyAI bugs (Economy, audit P2-P4)
 One flag each, all out of the bundle, as patches 0004-0006 (in that order, after 0003). All three are bug fixes
