@@ -18,7 +18,8 @@
 
    `-Install` on the builder also installs the pack locally. `-LeaderheadsOff` ships the 2D
    diplomacy screens (`MP_LEADERHEADS = 0`) for comparison tests. `-StockRules` ships CP's own
-   Prince instead of the even one below.
+   Prince instead of the even one below. `-ABTest` ships `AI_AB_TEST = 1`, a test pack for AI-only
+   games ([`../tools/ab/README.md`](../tools/ab/README.md)); don't play multiplayer with it.
 
 ## Even rules on Prince
 

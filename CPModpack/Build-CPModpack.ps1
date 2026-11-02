@@ -21,6 +21,7 @@ param(
     [string]$Dll = "",   # gameplay DLL to ship; defaults to the one in CP's MODS folder
     [switch]$LeaderheadsOff,   # ship MP_LEADERHEADS = 0 (the 2D diplomacy screens, for comparison tests)
     [switch]$StockRules,   # ship CP's own Prince (by default Prince gives AIs and humans the same rules)
+    [switch]$ABTest,   # ship AI_AB_TEST = 1: a test pack for AI-only games (see tools\ab\README.md); not for normal play
     [switch]$DryRun,   # allow a database built without CP, to test the export
     [switch]$Install
 )
@@ -253,20 +254,23 @@ foreach ($t in $tables) {
 }
 [void]$sb.Append("</GameData>`r`n")
 foreach ($k in $rowEdits.Keys) { if (-not $appliedEdits.ContainsKey($k)) { throw "No row for $k in the database" } }
-# The snapshot can come from a test run with the option switched off; the pack decides it here.
+# The snapshot can come from a test run with an option switched off; the pack decides these here.
 $dbXml = $sb.ToString()
-$want = if ($LeaderheadsOff) { 0 } else { 1 }
-$optionRow = [regex]"<Name>MP_LEADERHEADS</Name><Value>\d+</Value>"
-if ($optionRow.IsMatch($dbXml)) {
-    $dbXml = $optionRow.Replace($dbXml, "<Name>MP_LEADERHEADS</Name><Value>$want</Value>")
+function Set-ModOption([string]$name, [int]$value, [int]$class) {
+    $optionRow = [regex]"<Name>$name</Name><Value>-?\d+</Value>"
+    if ($optionRow.IsMatch($script:dbXml)) {
+        $script:dbXml = $optionRow.Replace($script:dbXml, "<Name>$name</Name><Value>$value</Value>")
+    }
+    else {
+        # Database built from a CP without this option in NewCustomModOptions.xml: add the row.
+        $close = "`t</CustomModOptions>`r`n"
+        if (-not $script:dbXml.Contains($close)) { throw "No CustomModOptions table in the database" }
+        $script:dbXml = $script:dbXml.Replace($close, "`t`t<Row><Class>$class</Class><Name>$name</Name><Value>$value</Value></Row>`r`n$close")
+    }
+    Write-Output "   $name shipped as $value"
 }
-else {
-    # Database built from a stock CP (without the patched NewCustomModOptions.xml): add the row.
-    $close = "`t</CustomModOptions>`r`n"
-    if (-not $dbXml.Contains($close)) { throw "No CustomModOptions table in the database" }
-    $dbXml = $dbXml.Replace($close, "`t`t<Row><Class>5</Class><Name>MP_LEADERHEADS</Name><Value>$want</Value></Row>`r`n$close")
-}
-Write-Output "   MP_LEADERHEADS shipped as $want"
+Set-ModOption "MP_LEADERHEADS" $(if ($LeaderheadsOff) { 0 } else { 1 }) 5
+Set-ModOption "AI_AB_TEST" $(if ($ABTest) { 1 } else { 0 }) 4
 [IO.File]::WriteAllText((Join-Path $out "Override\CIV5Units.xml"), $dbXml, $utf8)
 Write-Output "   $($tables.Count) tables, $rowCount rows"
 

@@ -31,6 +31,7 @@ under the GNU GPL v3 like Community Patch; free, and never to be sold.
 | `CPModpack/probe/` | Lua probe that logs game core updates per second (testing only) |
 | `MPLeaderScreens/` | Older 2D fallback (leader art behind the diplomacy UI), pseudo-DLC; not used |
 | `MPLeaderProbe/`, `MPLeaderDiag/`, `MPModsButton/` | Experiments from the investigation; not used |
+| `tools/ab/` | AI A/B tests: how to run AI-only test games with the `-ABTest` pack, and `Summarize-ABTest.ps1` for the results |
 | `tools/re/` | Reverse-engineering helpers: `dis.ps1` (Iced disassembler), `ctx.ps1`, `sigscan.ps1`, `sym.ps1` (PDB symbols), `xref.ps1` (references and calls to an address), `dllfn.ps1` (disassemble a DLL function by name from its PDB) |
 
 Not in git (see `.gitignore`): `CPModpack/data/` (game databases), `CPLeaderheads/build/` and
