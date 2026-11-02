@@ -1058,6 +1058,51 @@ every turn they aren't building a part, which is aggressive but deliberate.
 The topic sessions push their RESULTS.md entries to their own branch of this repo, and the lead merges them
 into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
 
+### GreedyAlarm: greedy civs wall up when a neighbour's army appears (Economy, the c8 idea)
+- Hypothesis: greedy tall civs drew wars because nothing told them a neighbour was massing (c6: 0-3, Egypt
+  attacked by three civs and a city-state). With an alarm they keep the greedy economy in peace, and when a
+  neighbour's army shows up near their cities they get walls in border cities (valued as if at war) and
+  archers (up to one ranged land unit per city plus one), and `GreedyArmyCap` stops capping. Expected
+  effect: fewer cities lost and fewer wars started on them, at a small production cost.
+- The signal: CP's military aggressive posture toward each met major civ at MEDIUM or above
+  (`CountAggressiveMilitaryScore`: visible units near our cities, 2 each outside their own land, 1 inside,
+  MEDIUM from 6). It counts **only units we can see**, so it's fair play. Tall-plan civs not at war only; war
+  has its own production rules. Note that CP ignores units of civs we give open borders to, so it works best
+  with `ClosedBorders` (in the bundle).
+- Measure: strength share at T150 (verdict). Mechanism, per civ from the c7c_roles columns: wars declared
+  on tall civs, cities they lose, and `CitiesCaptured` against them.
+- δ: 2 points of strength share.
+- Build: DLL commit `9460739` (local), as `tools/ab/patches/economy/0003-*.patch` (on `cfaf3db`). Flag
+  `GreedyAlarm` (`FIX_GREEDY_ALARM`), not in the bundle. Files: `CvCityStrategyAI` (the signal,
+  `CityStrategyAIHelpers::GetGreedyAlarmThreat`), `CvBuildingProductionAI` (walls), `CvUnitProductionAI`
+  (archers, cap).
+- Test: two configurations against B, paired, T150:
+  1. `Fixes = GreedyArmyCap+GreedyAlarm`: the c8 idea as stated (greed plus alarm). Against c6's 46.5%
+     (cap alone) it shows whether the alarm repairs the cap.
+  2. `Fixes = GreedyAlarm`: the alarm alone, for any tall civ.
+
+  The bundle flags stay on or off as the lead's baseline decides.
+- Status: written, not built. Needs War's view: War owns the threat side (`CvMilitaryAI`). This uses only an
+  existing diplomacy signal and Economy's production files, so it doesn't touch War's code. If War builds a
+  better "army massing" signal (muster points, siege units seen), the alarm should switch to it.
+- Notes: posture only sees units near our cities, so an army mustering out of sight isn't seen until it
+  moves up. That's also what a human sees.
+
+### Two dead loops: `IsPlayerValid` asked of the wrong player (Economy, found while writing GreedyAlarm)
+
+`GET_PLAYER(eLoopPlayer).GetDiplomacyAI()->IsPlayerValid(eLoopPlayer)` asks a player whether it is valid to
+**itself**, and `IsPlayerValid` returns false for one's own team. So both loops below never do anything, in
+CP and in B. Confirmed by reading `CvDiplomacyAI::IsPlayerValid`.
+
+| # | Where | Meant to do | Impact |
+|---|---|---|---|
+| E1 | `CvBuildingProductionAI.cpp` ~1346 | At war, cut non-defensive buildings' value by a further 50 points for each enemy we're losing to (war state worse than stalemate) | Medium in wars: an AI that's losing keeps building libraries and markets instead of units |
+| E2 | `CvCityStrategyAI.cpp` ~4303 | Value culture more when rivals' tourism is gaining on us (×2 to ×3) | Low. The B change there ("CP multiplies once per rival, ×16") fixes a loop that never runs, so it changed nothing |
+
+Fix: `kPlayer.GetDiplomacyAI()->IsPlayerValid(eLoopPlayer)`. E1 is the one that matters, and it's War
+territory in effect (production while losing a war). Not coded yet: it would be one flag
+(`LosingWarBuildings`) judged with War's fixes, since its effect only shows in wars that go badly.
+
 ## Requests
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
@@ -1094,6 +1139,11 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
 - **For the lead, from Economy:** the victory push is almost never active in T150 Quick games (L1 in the
   victory-push audit), so goal 6 needs a long-game test (Standard pace, or saves from the Industrial era on)
   before any victory-push fix can be judged.
+
+- **For War, from Economy:** `GreedyAlarm` (patch 0003) reads CP's visible-unit aggressive posture as its
+  threat signal. If War builds a better "neighbour is massing an army" signal, tell Economy and the alarm
+  will use it. Also E1 (losing wars don't cut building production; a dead loop in
+  `CvBuildingProductionAI`): Economy can code it as a flag whenever War wants it tested alongside its fixes.
 
 ## Instructions for the PC runner
 
