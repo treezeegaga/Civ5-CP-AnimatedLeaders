@@ -47,8 +47,9 @@ game state. Targets are from the CivFanatics notes below; tune them against the 
 
 ## Batch 2: bigger behaviour changes, need tuning
 
-Status "2b" means coded in fork commit `8eaf65e`, "2c" in `345b615` and "2d" in `25c26d8`, with the
-change described. Build 2d contains everything (results go to `AIABTest_batch2d.csv`). The tuning
+Status "2b" means coded in fork commit `8eaf65e`, "2c" in `345b615`, "2d" in `25c26d8` and "2e" in
+`60b57a0`, with the change described. Build 2e contains everything (results go to
+`AIABTest_batch2e.csv`). The tuning
 numbers are first guesses.
 
 | # | Area | Where | Problem | Status |
@@ -59,9 +60,9 @@ numbers are first guesses.
 | 15 | War | `CvMilitaryAI.cpp:2388` | Effectively one attack at a time across all enemies | 2b: a second attack when spare land units >= cities + 4 |
 | 16 | Research | `CvTechAI.cpp:104-110`, `391` | Civ/locale/victory-plan priorities are added once per flavor (~30-45 times), swamping personality; cost reweighting then favours the cheapest tech, so research goes broad instead of beelining | 2b: priorities once per tech (x10, x10, x30), cost weight 0.02 per turn left |
 | 17 | Research | `CvTechClasses.cpp:1245` | Victory plan barely affects research; no planned beelines | Opening book covers the early game; later game open |
-| 18 | Combat | `CvTacticalAI.cpp:8250`, `7951` | Damage taken weighted ~20x less than damage dealt; units end turns where visible enemies can deal 2x their HP | Likely |
-| 19 | Combat | `CvTacticalAI.cpp:12366` | Units starting the turn in danger get a huge starting penalty before safe plots are known, so their moves all tie | Likely |
-| 20 | Combat | `CvTacticalAI.cpp:39`, `12408` | Search goes greedy after 3 levels, so the 2560-position Deity budget can't be reached (~600-800) | Likely |
+| 18 | Combat | `CvTacticalAI.cpp:8250`, `7951` | Damage taken weighted ~10-20x less than damage dealt; units end turns where visible enemies can deal 2.4x their HP (4.3x after a kill) | 2e (confirmed): danger penalty doubled; survival cut-off hp² < 50×danger (CP 42), 30 after a kill or with nowhere to flee (CP 23) |
+| 19 | Combat | `CvTacticalAI.cpp:12366` | Units starting the turn in danger get a huge starting penalty before safe plots are known, so their moves all tie | 2e (confirmed): start plot scored SHRT_MIN and every move hit the SHRT_MAX cap; now a finite penalty that grows with danger, also used for units with no safe plot |
+| 20 | Combat | `CvTacticalAI.cpp:39`, `12408` | Search goes greedy after 3 levels, so the 2560-position Deity budget can't be reached (~600-800) | 2e (confirmed): 4 breadth-first levels when 9 or fewer units are involved |
 | 21 | Cities | `CvCityCitizens.cpp:1933` | Specialised cities (half of them, plus all cities in a gold deficit) aim for +2 food and stagnate | 2b (confirmed): half the unspecialised target |
 | 22 | Buildings | `CvCityStrategyAI.cpp:4281` | Culture building value multiplied by 2-3 once per rival civ (up to x16) | 2b (confirmed): largest rival multiplier once |
 | 23 | Gold | `CvCityStrategyAI.cpp:1367` | Gold purchase weights a barely started item up to 100x | 2b (confirmed): up to x1.5 |

@@ -46,14 +46,15 @@ original ("cp"). Run enough games, and if "new" keeps finishing ahead, the chang
   same AI. Their results should come out about even, and how far apart they land shows how much is
   luck, which tells us how many games a real change needs.
 - **Batch 1** (fork commit `80746d8`): the 11 fixes listed in [AUDIT.md](AUDIT.md).
-- **Batch 2d** (fork commit `25c26d8`): batch 1, plus the opening book, the fog cheats removed, and
-  the batch 2 fixes marked "2b", "2c" (settlers) and "2d" (army production) in [AUDIT.md](AUDIT.md).
-  Its results file, `AIABTest_batch2d.csv`, also records when each civ founded its 2nd, 3rd and 4th cities,
+- **Batch 2e** (fork commit `60b57a0`): batch 1, plus the opening book, the fog cheats removed, and
+  the batch 2 fixes marked "2b", "2c" (settlers), "2d" (army production) and "2e" (combat) in
+  [AUDIT.md](AUDIT.md). Its results file, `AIABTest_batch2e.csv`, also records when each civ founded its 2nd, 3rd and 4th cities,
   whether it has the National College, and which opening plan it followed; the summary shows these
   per group.
 
 Fork commits `5539cfb` (2a) and `8eaf65e` (2b) don't compile (a missing include, fixed in 2c), so
-there are no builds for them. 2c (`345b615`) was replaced by 2d before its build started.
+there are no builds for them. 2c (`345b615`) and 2d (`25c26d8`) were replaced by later batches before their builds started. 2e
+searches more positions in battles of up to 9 units, so if AI turns feel slower during wars, say so.
 
 `Summarize-ABTest.ps1` with no arguments reports each results file separately. Send its output (or
 the CSV files) back after a handful of games.
