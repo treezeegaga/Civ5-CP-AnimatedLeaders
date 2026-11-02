@@ -920,7 +920,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: `CitiesCaptured` per game by group (the mechanism); strength share at T150 (the verdict). In logged games,
   "attempting capture of X ... expected max damage per turn" should fall more slowly over a siege.
 - δ: +2 points of strength share; CitiesCaptured should rise from about 0.2 per game.
-- Build: local commit `58d4c8d` on `ai/war`, not pushed (no push access from this session: see Requests); patch in `war-patches/`
+- Build: `ai/war` commit `4917284` (release `ab-ai-war-latest` once CI passes); patch in `patches/war/`
 - Test: SPRT gainer, paired, King/Pangaea/Strategic Balance/no ruins/Quick, T150. It only matters once a group is at
   war, so screen it with `TimingAttack` on (the bundle) or in the bully test.
 - Status: hypothesis
@@ -936,7 +936,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: CitiesCaptured by group; strength share at T150. In logged games, more "attempting capture" lines per
   war-turn and fewer turns from arrival to the first city attack.
 - δ: +2 points of strength share
-- Build: same commit `58d4c8d` (all three flags in one commit, each behind its own flag)
+- Build: same commit `4917284` (all three flags in one commit, each behind its own flag)
 - Test: SPRT gainer, paired, T150, as above. Best tested together with SIEGE_STAY later (they act on the same
   sieges), but each first on its own.
 - Status: hypothesis
@@ -951,7 +951,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: turns from war declared to the first city attack (logged games, `OperationalAILog.csv` and
   `PlayerTacticalAILog.csv`); CitiesCaptured; strength share at T150.
 - δ: +1.5 points of strength share (it only touches sneak attacks, so a smaller edge is worth keeping)
-- Build: same commit `58d4c8d` (all three flags in one commit, each behind its own flag)
+- Build: same commit `4917284` (all three flags in one commit, each behind its own flag)
 - Test: SPRT gainer, paired, T150.
 - Status: hypothesis
 - Notes: check in a logged game first that wars really come from this path: a war line in the diplomacy log right
@@ -966,12 +966,10 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
   (`s_aiCommittedTarget`), which isn't saved, so a reloaded game re-picks. Not a multiplayer desync
   (every computer runs the same turns), but it should be game state before anything ships.
-- **For the lead, from War: push my DLL commit.** This session couldn't attach `treezeegaga/Community-Patch-DLL`
-  with push access (the request was refused), so the three War flags are a local commit on `ai/war`, off
-  `claude/ab-c1` at `6b8ebde`, saved as `war-patches/0001-...patch` on this branch. Apply with `git am` on a new
-  `ai/war` from `claude/ab-c1` and push, so CI builds `ab-ai-war-latest`. It hasn't been compiled (no Windows toolchain
-  here): CI is the first compile. Also add `SiegeStay`, `SiegePosture`, `DeclareAtBorder` to `AIABTest.ini.example`.
-  Or the user can let the War session attach the repo and it pushes itself.
+- **For the lead, from War: the DLL commit.** Done: the three War flags are on `ai/war` as `4917284` (on
+  `claude/ab-c1` at `6b8ebde`; the patch is also in `patches/war/`). The War session now has push access and pushes
+  `ai/war` itself. Not compiled anywhere else first: CI run 41549033176 is the first compile. Please add `SiegeStay`,
+  `SiegePosture`, `DeclareAtBorder` to `AIABTest.ini.example`.
 - **For the lead / PC runner, from War: 3 logged King games before any SPRT on the War flags.** Same setup as the
   baseline, bundle on (so warmongers attack), logging on, `Fixes` = bundle + `SiegeStay,SiegePosture,DeclareAtBorder`
   for one game and the bundle alone for two, so both sides of each flag show up. Copy `OperationalAILog.csv`,
