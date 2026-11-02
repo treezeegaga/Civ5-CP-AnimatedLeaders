@@ -991,10 +991,10 @@ logged games, not more reading.
 - Measure: strength share at T150 (no-worse); policies taken by branch (`PolicyAILog`) and city-state
   allies where the digest has them (mechanism).
 - δ: 2 points, as a **no-worse** test: it's a bug fix, kept unless it hurts.
-- Build: DLL commit `07ddeda` on `ai/economy`, flag `DiploPolicyValue` (`FIX_DIPLO_POLICY_VALUE`), as
-  `tools/ab/patches/economy/0002-*.patch` (after 0001). Not in the bundle.
+- Build: fork commit `cfaf3db` on `ai/economy` (patch 0002 on `cbb3380`), flag `DiploPolicyValue`
+  (`FIX_DIPLO_POLICY_VALUE`). Not in the bundle.
 - Test: SPRT no-worse, paired, standard King setup, T150. Lower priority than the expansion flags.
-- Status: written, not built.
+- Status: queued after SettlersFirst and SettlerOverlap (lead); CI build running.
 
 ## Requests
 
