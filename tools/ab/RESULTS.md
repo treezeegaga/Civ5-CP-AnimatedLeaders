@@ -1664,6 +1664,24 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: the siege package on ab-a86d57b: no gain, test stopped (Nov 3, about 10am ET)
+
+The lead's SPRT, 7 pairs, c running SiegeArmy, ArmyHandoff, SiegeStay and SiegePosture against B: c 49.9%, gain −0.08
+points. The gainer test **failed** (LLR −44); the no-worse test **passed**. No city captured in any game. The pair
+spread was 0.58 points, so the two games of a pair barely differed: there were almost no wars for the flags to act
+on (0.03–0.05 declarations per civ per 10 turns at King in split games).
+
+**War's reading.**
+- **Not evidence against the idea, only that split games can't test it.** The flags are harmless (no-worse passed)
+  and act only inside a war. SiegeArmy can also delay wars: a sneak attack waits for its army.
+- **The testbed is the bully test,** as the lead proposes. The aggressor runs the package (+ SiegeBar) against the
+  aggressor without it. The measures are cities captured and turns from declaration to the first capture. Its logged
+  games will also show whether the 20-turn wait cap is hit.
+- **The bigger lever may be war starts.** In 3 earlier logged games, 9 of 14 declarations came from diplomacy paths
+  (coop wars, demands) with no army, and B's own war logic rarely declares. War code can't start wars: the decision
+  is in `CvDiplomacyAI` (approach WAR, `GetNewAIConquestTarget`). That's for Diplomacy, or the lead. War's part is
+  making the wars that do start take cities.
+
 ### FIX_SIEGE_BAR: SiegeArmy waits for a third of the city's HP a turn, not a fifth (War)
 - Hypothesis: with SiegeArmy on, an attack waits until its expected damage a turn reaches the city's healing plus a
   **third** of its max HP (about 87 for 200 HP, 120 with walls) instead of a fifth (60 / 80). In pair 05D462A7 the
@@ -1672,7 +1690,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: CitiesCaptured by group; logged games: the waiting turns per attack (the same 20-turn cap) and the best
   expected damage at the city. Strength share at T150 (the verdict).
 - δ: +2 points of strength share
-- Build: `ai/war` commit `0c2d4ce`, patch `patches/war/0005`. Needs SiegeArmy on (it only changes SiegeArmy's bar)
+- Build: `ai/war` commit `0c2d4ce` (CI run 92 passed), patch `patches/war/0005`; test build `claude/ab-siege` `09e8743`. Needs SiegeArmy on (it only changes SiegeArmy's bar)
 - Test: siege package + SiegeBar against the siege package, paired, T150.
 - Risk: more attacks hit the 20-turn cap and march anyway, or wars start later. Watch the waiting turns.
 
