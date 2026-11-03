@@ -1129,7 +1129,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: `CitiesCaptured` per game by group (the mechanism); strength share at T150 (the verdict). In logged games,
   "attempting capture of X ... expected max damage per turn" should fall more slowly over a siege.
 - δ: +2 points of strength share; CitiesCaptured should rise from about 0.2 per game.
-- Build: `ai/war` commit `4917284` (release `ab-ai-war-latest` once CI passes); patch in `patches/war/`
+- Build: `ai/war` commit `5ae5a94` (rebased by the lead onto the 64-bit flag table, `cca50d8`); patch `patches/war/0001`
 - Test: SPRT gainer, paired, King/Pangaea/Strategic Balance/no ruins/Quick, T150. It only matters once a group is at
   war, so screen it with `TimingAttack` on (the bundle) or in the bully test.
 - Status: hypothesis
@@ -1145,7 +1145,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: CitiesCaptured by group; strength share at T150. In logged games, more "attempting capture" lines per
   war-turn and fewer turns from arrival to the first city attack.
 - δ: +2 points of strength share
-- Build: same commit `4917284` (all three flags in one commit, each behind its own flag)
+- Build: same commit `5ae5a94` (all three flags in one commit, each behind its own flag)
 - Test: SPRT gainer, paired, T150, as above. Best tested together with SIEGE_STAY later (they act on the same
   sieges), but each first on its own.
 - Status: hypothesis
@@ -1160,7 +1160,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: turns from war declared to the first city attack (logged games, `OperationalAILog.csv` and
   `PlayerTacticalAILog.csv`); CitiesCaptured; strength share at T150.
 - δ: +1.5 points of strength share (it only touches sneak attacks, so a smaller edge is worth keeping)
-- Build: same commit `4917284` (all three flags in one commit, each behind its own flag)
+- Build: same commit `5ae5a94` (all three flags in one commit, each behind its own flag)
 - Test: SPRT gainer, paired, T150.
 - Status: hypothesis
 - Notes: check in a logged game first that wars really come from this path: a war line in the diplomacy log right
@@ -1189,7 +1189,7 @@ upgrade flavour loop, and the deliberate "peek and return" sentry moves.
   purchases (buildings, units, settlers). It's a bug fix, so the test is that it does no harm.
 - Measure: strength share at T150; gold spent on purchases (digest) as the mechanism.
 - δ: no-worse test at δ = 2
-- Build: `ai/war` commit `0bc96d3` (on `4917284`); patch `patches/war/0002`
+- Build: `ai/war` commit `445009c` (on `5ae5a94`); patch `patches/war/0002`
 - Test: SPRT no-worse, paired, T150 (or screen it at T100: it's an economy effect)
 - Status: hypothesis
 
@@ -1299,7 +1299,8 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
   `claude/ab-c1` at `6b8ebde`; the patch is also in `patches/war/`). The War session now has push access and pushes
   `ai/war` itself. CI run 41549033176 compiled `4917284` cleanly (MSVC and clang, debug and release), then was
   cancelled at "Analyze build warnings" (the known hang), so no release came out of it. `0bc96d3`'s run was cancelled
-  before it started. Both get rebuilt when `ai/war` is rebased onto the new 64-bit-flag `claude/ab-c1`. Please add `SiegeStay`,
+  before it started (Actions was off). `ai/war` is now `445009c` (the lead's rebase onto `cca50d8`, 64-bit flag table),
+  pushed 2026-11-03 to rebuild both commits. Please add `SiegeStay`,
   `SiegePosture`, `DeclareAtBorder` to `AIABTest.ini.example`.
 - **For the lead / PC runner, from War: 3 logged King games before any SPRT on the War flags.** Same setup as the
   baseline, bundle on (so warmongers attack), logging on, `Fixes` = bundle + `SiegeStay,SiegePosture,DeclareAtBorder`
