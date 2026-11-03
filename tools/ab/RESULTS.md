@@ -1300,7 +1300,9 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
   `ai/war` itself. CI run 41549033176 compiled `4917284` cleanly (MSVC and clang, debug and release), then was
   cancelled at "Analyze build warnings" (the known hang), so no release came out of it. `0bc96d3`'s run was cancelled
   before it started (Actions was off). `ai/war` is now `445009c` (the lead's rebase onto `cca50d8`, 64-bit flag table),
-  pushed 2026-11-03 to rebuild both commits. Please add `SiegeStay`,
+  pushed 2026-11-03. **CI run 78 passed** (all five War flags compile), and so did the screening build `claude/ab-screen2`
+  (run 77, release `ab-b756936`). Screening run 2 has SiegeStay, SiegePosture, DeclareAtBorder and UpgradeSaveCancel.
+  `ai/war` is one commit behind `claude/ab-c1` (`fdad60d`, which only adds a Difficulty key); it gets rebased at the next push. Please add `SiegeStay`,
   `SiegePosture`, `DeclareAtBorder` to `AIABTest.ini.example`.
 - **For the lead / PC runner, from War: 3 logged King games before any SPRT on the War flags.** Same setup as the
   baseline, bundle on (so warmongers attack), logging on, `Fixes` = bundle + `SiegeStay,SiegePosture,DeclareAtBorder`
