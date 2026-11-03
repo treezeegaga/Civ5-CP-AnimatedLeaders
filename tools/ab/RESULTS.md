@@ -1651,6 +1651,18 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### FIX_SIEGE_BAR: SiegeArmy waits for a third of the city's HP a turn, not a fifth (War)
+- Hypothesis: with SiegeArmy on, an attack waits until its expected damage a turn reaches the city's healing plus a
+  **third** of its max HP (about 87 for 200 HP, 120 with walls) instead of a fifth (60 / 80). In pair 05D462A7 the
+  60 bar was met at the muster point, but the siege at the city peaked at 92/200 a turn and didn't take it. A bigger
+  army brings the city down in about 3 turns of full fire, faster than it heals and kills our units.
+- Measure: CitiesCaptured by group; logged games: the waiting turns per attack (the same 20-turn cap) and the best
+  expected damage at the city. Strength share at T150 (the verdict).
+- δ: +2 points of strength share
+- Build: next `ai/war` commit. Needs SiegeArmy on (it only changes SiegeArmy's bar)
+- Test: siege package + SiegeBar against the siege package, paired, T150.
+- Risk: more attacks hit the 20-turn cap and march anyway, or wars start later. Watch the waiting turns.
+
 ### War: the logged siege pair on the fix, 05D462A7 (ab-a86d57b) (2026-11-03)
 
 c 43.4% / 54.6% (pair 49.0%), no city changed hands.
