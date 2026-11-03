@@ -1,0 +1,120 @@
+From b61ba20e5de235df1fe0c8629c530e8d77a8cfe4 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 00:03:34 +0000
+Subject: [PATCH] AI_AB_TEST: flag CoalitionStrength (judge a runaway conqueror
+ against the coalition)
+
+From the Diplomacy audit's map: every AI judged a conqueror's army against
+its own alone (plus allies treaty-bound to it), saw it as POWERFUL or
+IMMENSE, picked AFRAID, and AFRAID switched off war targets, coop wars,
+sanctions and denouncing. With this flag, against a civ whose warmonger
+threat to us is SEVERE or CRITICAL, the strength estimate also counts the
+civs visibly against it: at war with it in full, denouncing it at half.
+Not its friends, pact partners, team or vassals, and only civs that can
+reach it. Only public facts are used. Its strength rating toward us falls
+only when the coalition really is strong enough, so AFRAID gives way to
+GUARDED, HOSTILE or WAR, and the potential-war-target and coop-war gates
+open with it.
+
+Left out of the bundle until tested (bully test, after War's capture
+fixes).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 42 ++++++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  6 ++--
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  2 ++
+ 3 files changed, 48 insertions(+), 2 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index 06f7f39..1be9516 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -11361,6 +11361,48 @@ void CvDiplomacyAI::DoUpdatePlayerStrengthEstimates()
+ 			iEnemyDefenseBonus += iThirdPartyDefenseValue;
+ 		}
+ 
++		// FIX_COALITION_STRENGTH: a conqueror isn't fought one against one. Against a civ whose warmongering is a severe
++		// or critical threat to us, also count the civs that are visibly against it: at war with it (in full; they keep
++		// its army busy) or denouncing it (at half; they would likely join). Not its friends, pact partners or team, and
++		// only civs that can reach it. Only public facts are used (wars and denouncements are announced). CP counted
++		// allies only once treaty-bound to us, so every civ judged a runaway alone, picked AFRAID, and nobody fought it.
++		if (GET_PLAYER(ePlayer).isMajorCiv() && GetWarmongerThreat(ePlayer) >= THREAT_SEVERE && GetPlayer()->UsesCandidateAI(FIX_COALITION_STRENGTH))
++		{
++			const TeamTypes eTheirTeam = GET_PLAYER(ePlayer).getTeam();
++			for (std::vector<PlayerTypes>::iterator it = vValidPlayers.begin(); it != vValidPlayers.end(); ++it)
++			{
++				PlayerTypes eLoopPlayer = *it;
++				CvPlayer& kLoopPlayer = GET_PLAYER(eLoopPlayer);
++				if (eLoopPlayer == ePlayer || !kLoopPlayer.isMajorCiv() || kLoopPlayer.getNumCities() <= 0 || kLoopPlayer.getTeam() == eOurTeam || kLoopPlayer.getTeam() == eTheirTeam)
++					continue;
++				if (std::find(vOurAllies.begin(), vOurAllies.end(), eLoopPlayer) != vOurAllies.end())
++					continue;
++				if (kLoopPlayer.IsInTerribleShapeForWar() || kLoopPlayer.IsVassalOfSomeone() || GET_PLAYER(ePlayer).IsVassalOfSomeone())
++					continue;
++				if (!kLoopPlayer.CanCrossOcean() && kLoopPlayer.GetProximityToPlayer(ePlayer) < PLAYER_PROXIMITY_CLOSE)
++					continue;
++
++				CvDiplomacyAI* pLoopDiplo = kLoopPlayer.GetDiplomacyAI();
++				if (pLoopDiplo->IsDoFAccepted(ePlayer) || pLoopDiplo->IsHasDefensivePact(ePlayer))
++					continue;
++
++				int iShare = 0;
++				if (GET_TEAM(kLoopPlayer.getTeam()).isAtWar(eTheirTeam))
++					iShare = 100;
++				else if (pLoopDiplo->IsDenouncedPlayer(ePlayer))
++					iShare = 50;
++				if (iShare == 0)
++					continue;
++
++				int iMemberMight = max(iBase + kLoopPlayer.GetMilitaryMight() - kLoopPlayer.GetNuclearMight(), 1);
++				iMemberMight = ComputeDynamicStrengthModifier(eLoopPlayer, ePlayer, iMemberMight);
++				iMemberMight = ComputeRatingStrengthAdjustment(eLoopPlayer, ePlayer, iMemberMight);
++				iMemberMight = iMemberMight * iShare / 100;
++				iAllyAttackBonus += iMemberMight;
++				iAllyDefenseBonus += iMemberMight;
++			}
++		}
++
+ 
+ 		// Calculate their overall ATTACK vs. our overall DEFENSE
+ 		int iTheirOverallAttack = iTheirMilitaryStrength + iEnemyAttackBonus;
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index eaa66a7..e24c0e1 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33321,13 +33321,15 @@ static const bool kABTestVersusBase = true;
+ static const char* const kCandidateFixNames[NUM_CANDIDATE_FIXES] = {
+ 	"WidePlans", "BoxedIn", "LongWide", "BoxedInWar", "TimingAttack", "SiegeTechs", "SiegeBook", "DeclareTiming",
+ 	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders",
+-	"EasyTarget", "DiploBugs", "LuxuryAsk", "CityStateBugs", "DealExploits" };
++	"EasyTarget", "DiploBugs", "LuxuryAsk", "CityStateBugs", "DealExploits",
++	"CoalitionStrength" };
+ 
+ // The bundle: what group c ran in the last C build (c7c), and what every civ runs outside a test game. Off in it:
+ // LongWide (c1: c's wide civs got no more cities from the longer opening, and stopping settlers ended expansion that b
+ // completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars). Also off: Diplomacy's flags, untested so far.
+ static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP) | (1 << FIX_EASY_TARGET) | (1 << FIX_DIPLO_BUGS) |
+-	(1 << FIX_LUXURY_ASK) | (1 << FIX_CITY_STATE_BUGS) | (1 << FIX_DEAL_EXPLOITS)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
++	(1 << FIX_LUXURY_ASK) | (1 << FIX_CITY_STATE_BUGS) | (1 << FIX_DEAL_EXPLOITS) |
++	(1 << FIX_COALITION_STRENGTH)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
+ 
+ const char* CvPlayer::GetCandidateFixName(int iFix)
+ {
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 3f351c4..d0d3dc8 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -165,6 +165,8 @@ enum CandidateFixTypes
+ 							// Game-wide: on when any major civ has it, so the bully test's pair measures it
+ 	FIX_DEAL_EXPLOITS,		// Diplomacy: per-turn items in a peace deal are valued for the turns the payer is bound plus half the
+ 							// rest; a demand is refused unless the demander's visible army could take one of our cities
++	FIX_COALITION_STRENGTH,	// Diplomacy: a severe or critical warmonger is judged against the coalition visibly against it (civs at
++							// war with it count in full, civs denouncing it at half), not against us alone
+ 	NUM_CANDIDATE_FIXES
+ };
+ 
+-- 
+2.43.0
+

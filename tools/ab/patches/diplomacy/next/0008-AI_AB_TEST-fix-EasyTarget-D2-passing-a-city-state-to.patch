@@ -1,0 +1,57 @@
+From 4dae61406add93d44e767c1e9401b6452e80ac8d Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 02:18:31 +0000
+Subject: [PATCH] AI_AB_TEST: fix EasyTarget (D2) passing a city-state to
+ IsPhonyWar
+
+Screening build 2 halted with CP's PRECONDITION in IsEndgameAggressiveTo
+("Player index out of bounds"). Path: DoUpdateEasyTargets, loop over the
+other wars we're in (all players, city-states included). With
+FIX_EASY_TARGET, D2 checks whether that other war is phony, so for a war
+with a city-state it called IsPhonyWar(city-state) -> IsWantsToConquer ->
+IsEndgameAggressiveTo(city-state). CP only ever calls IsPhonyWar for
+majors (e.g. the !bMajor guard in DoUpdatePeaceTreatyWillingness).
+
+- D2 now checks phony wars with major civs only (gated by EasyTarget, as
+  before; without the flag the code is CP's).
+- IsEndgameAggressiveTo returns false for a non-major index instead of
+  asserting (ungated: it only changes what was an out-of-bounds read).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 11 ++++++++---
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index fde96af..d22d770 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -3026,7 +3026,10 @@ bool CvDiplomacyAI::IsGoingForSpaceshipVictory() const
+ /// Are we extra aggressive towards this player because they're close to victory?
+ bool CvDiplomacyAI::IsEndgameAggressiveTo(PlayerTypes ePlayer) const
+ {
+-	PRECONDITION(ePlayer >= 0 && ePlayer < MAX_MAJOR_CIVS, "Player index out of bounds");
++	// AI_AB_TEST: never endgame-aggressive to a city-state (or an invalid index). CP asserted here; with FIX_EASY_TARGET's
++	// D2 fix a city-state reached it through IsPhonyWar and halted test games. Return false rather than read out of bounds.
++	if (ePlayer < 0 || ePlayer >= MAX_MAJOR_CIVS)
++		return false;
+ 	return m_abEndgameAggressiveTo[ePlayer];
+ }
+ 
+@@ -12151,8 +12154,10 @@ void CvDiplomacyAI::DoUpdateEasyTargets()
+ 				// Don't look at the guy we're already thinking about
+ 				if (IsPlayerValid(eLoopPlayer) && ePlayer != eLoopPlayer && IsAtWar(eLoopPlayer))
+ 				{
+-					// Ignore phony wars (FIX_EASY_TARGET, D2: the other war's, not the target's)
+-					if (IsPhonyWar(GetPlayer()->UsesCandidateAI(FIX_EASY_TARGET) ? eLoopPlayer : ePlayer))
++					// Ignore phony wars (FIX_EASY_TARGET, D2: the other war's, not the target's). Only wars with major civs
++					// can be phony: IsPhonyWar assumes a major (it reaches IsEndgameAggressiveTo), and this loop also
++					// meets city-states we're at war with.
++					if (GetPlayer()->UsesCandidateAI(FIX_EASY_TARGET) ? (GET_PLAYER(eLoopPlayer).isMajorCiv() && IsPhonyWar(eLoopPlayer)) : IsPhonyWar(ePlayer))
+ 					{
+ 						continue;
+ 					}
+-- 
+2.43.0
+

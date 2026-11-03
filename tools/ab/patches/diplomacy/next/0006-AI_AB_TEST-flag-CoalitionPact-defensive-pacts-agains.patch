@@ -1,0 +1,154 @@
+From 5c3aa013fabb0bc2df22499e6f2fad4d4b27cf18 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 00:07:33 +0000
+Subject: [PATCH 6/7] AI_AB_TEST: flag CoalitionPact (defensive pacts against a
+ shared warmonger threat)
+
+From the Diplomacy audit's map: defensive pacts were only made with
+existing friends and their score had no term for a common threat, so they
+never formed against a conqueror on purpose. With the flag, a civ that
+shares a SEVERE or CRITICAL warmonger threat with us (it has denounced the
+warmonger, lost a city to it, or lives close to it; never its friends or
+pact partners) is a pact candidate even without a friendship, and a pact
+scores +40 per shared threat (up to two). The usual checks still apply
+(IsGoodChoiceForDefensivePact, the pact limit, both sides must want it).
+
+IsVisiblyAgainstWarmonger is now the shared test for CoalitionCoop and
+CoalitionPact.
+
+Left out of the bundle until tested (bully and builders tests).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 50 +++++++++++++++++++---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.h   |  2 +
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  2 +-
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  2 +
+ 4 files changed, 50 insertions(+), 6 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index e6d76b0..f131802 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -22679,6 +22679,22 @@ void CvDiplomacyAI::DoUpdatePlanningExchanges()
+ 						vAcceptableDefensePacts.push_back(*it);
+ 					}
+ 				}
++
++				// FIX_COALITION_PACT: civs that share a runaway warmonger threat with us, friends or not
++				if (GetPlayer()->UsesCandidateAI(FIX_COALITION_PACT))
++				{
++					for (std::vector<PlayerTypes>::iterator it = vValidPlayers.begin(); it != vValidPlayers.end(); ++it)
++					{
++						if (!GET_PLAYER(*it).isMajorCiv() || std::find(vAcceptableDefensePacts.begin(), vAcceptableDefensePacts.end(), *it) != vAcceptableDefensePacts.end())
++							continue;
++
++						if (GET_TEAM(GET_PLAYER(*it).getTeam()).getAliveCount() > iDefensePactLimit)
++							continue;
++
++						if (GetNumSharedWarmongerThreats(*it) > 0 && IsGoodChoiceForDefensivePact(*it))
++							vAcceptableDefensePacts.push_back(*it);
++					}
++				}
+ 			}
+ 
+ 			// First we see if there's any Defensive Pacts we want to end!
+@@ -23327,6 +23343,10 @@ int CvDiplomacyAI::ScoreDefensivePactChoice(PlayerTypes eChoice, bool bCoastal)
+ 
+ 	iDPValue += GetCommonFoeScore(eChoice) / -2;
+ 
++	// FIX_COALITION_PACT: a pact against a common threat is worth more, up to two threats
++	if (GetPlayer()->UsesCandidateAI(FIX_COALITION_PACT))
++		iDPValue += 40 * min(2, GetNumSharedWarmongerThreats(eChoice));
++
+ 	// Have they liberated us?
+ 	if (WasResurrectedBy(eChoice))
+ 	{
+@@ -42299,11 +42319,17 @@ bool CvDiplomacyAI::IsValidCoopWarTarget(PlayerTypes eTargetPlayer, bool bAtWarE
+ /// Not its friends or pact partners. Coalitions against a conqueror shouldn't need an existing friendship.
+ bool CvDiplomacyAI::IsCoalitionPartnerAgainst(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer) const
+ {
+-	if (!GetPlayer()->UsesCandidateAI(FIX_COALITION_COOP))
+-		return false;
+-	if (eAllyPlayer == NO_PLAYER || eTargetPlayer == NO_PLAYER || eAllyPlayer == eTargetPlayer || eAllyPlayer == GetID())
++	return GetPlayer()->UsesCandidateAI(FIX_COALITION_COOP) && IsVisiblyAgainstWarmonger(eAllyPlayer, eTargetPlayer, false);
++}
++
++/// AI_AB_TEST: eTargetPlayer is a warmonger that is a severe or critical threat to us; is eAllyPlayer visibly against it?
++/// Public facts only: it has denounced it, or lost a city to it, or (bCountNeighbours, for defensive pacts) lives close to
++/// it and so is next in line. Never its friends, pact partners or team.
++bool CvDiplomacyAI::IsVisiblyAgainstWarmonger(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer, bool bCountNeighbours) const
++{
++	if (eAllyPlayer == NO_PLAYER || eTargetPlayer == NO_PLAYER || eAllyPlayer == eTargetPlayer || eAllyPlayer == GetID() || eTargetPlayer == GetID())
+ 		return false;
+-	if (!GET_PLAYER(eTargetPlayer).isMajorCiv() || GetWarmongerThreat(eTargetPlayer) < THREAT_SEVERE)
++	if (!GET_PLAYER(eTargetPlayer).isMajorCiv() || !GET_PLAYER(eTargetPlayer).isAlive() || GetWarmongerThreat(eTargetPlayer) < THREAT_SEVERE)
+ 		return false;
+ 	const CvPlayer& kAlly = GET_PLAYER(eAllyPlayer);
+ 	if (!kAlly.isAlive() || !kAlly.isMajorCiv() || kAlly.getNumCities() <= 0 || kAlly.getTeam() == GET_PLAYER(eTargetPlayer).getTeam())
+@@ -42311,7 +42337,21 @@ bool CvDiplomacyAI::IsCoalitionPartnerAgainst(PlayerTypes eAllyPlayer, PlayerTyp
+ 	const CvDiplomacyAI* pAllyDiplo = kAlly.GetDiplomacyAI();
+ 	if (pAllyDiplo->IsDoFAccepted(eTargetPlayer) || pAllyDiplo->IsHasDefensivePact(eTargetPlayer))
+ 		return false;
+-	return pAllyDiplo->IsDenouncedPlayer(eTargetPlayer) || pAllyDiplo->GetNumCitiesCapturedBy(eTargetPlayer) > 0;
++	if (pAllyDiplo->IsDenouncedPlayer(eTargetPlayer) || pAllyDiplo->GetNumCitiesCapturedBy(eTargetPlayer) > 0)
++		return true;
++	return bCountNeighbours && kAlly.GetProximityToPlayer(eTargetPlayer) >= PLAYER_PROXIMITY_CLOSE;
++}
++
++/// AI_AB_TEST FIX_COALITION_PACT: how many warmongers that threaten us (severe or critical) is eAllyPlayer also against?
++int CvDiplomacyAI::GetNumSharedWarmongerThreats(PlayerTypes eAllyPlayer) const
++{
++	int iCount = 0;
++	for (int iPlayerLoop = 0; iPlayerLoop < MAX_MAJOR_CIVS; iPlayerLoop++)
++	{
++		if (IsVisiblyAgainstWarmonger(eAllyPlayer, (PlayerTypes)iPlayerLoop, true))
++			iCount++;
++	}
++	return iCount;
+ }
+ 
+ /// Are we able to request a coop war with eAllyPlayer against eTargetPlayer?
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+index e210dbb..5acf38a 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+@@ -1491,6 +1491,8 @@ public:
+ 	bool IsValidCoopWarTarget(PlayerTypes eTargetPlayer, bool bAtWarException);
+ 	bool CanRequestCoopWar(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer);
+ 	bool IsCoalitionPartnerAgainst(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer) const; // AI_AB_TEST FIX_COALITION_COOP
++	bool IsVisiblyAgainstWarmonger(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer, bool bCountNeighbours) const; // AI_AB_TEST
++	int GetNumSharedWarmongerThreats(PlayerTypes eAllyPlayer) const; // AI_AB_TEST FIX_COALITION_PACT
+ 
+ 	bool DoTestCoopWarDesire(PlayerTypes eAllyPlayer, PlayerTypes& eChosenTargetPlayer);
+ 	int GetCoopWarDesireScore(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer, bool bAllyRequest);
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index ccdd59a..ef23cb6 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33333,7 +33333,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"GreedyArmyCap", false}, {"GreedyBook", true}, {"GreedyTarget", true}, {"CanWin", true}, {"ClosedBorders", true},
+ 	{"EasyTarget", false}, {"DiploBugs", false}, {"LuxuryAsk", false}, {"CityStateBugs", false},
+ 	{"DealExploits", false}, {"CoalitionStrength", false}, {"CoalitionCoop", false},
+-	{"Sanctions", false},
++	{"Sanctions", false}, {"CoalitionPact", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 865498f..44f41ef 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -171,6 +171,8 @@ enum CandidateFixTypes
+ 	FIX_COALITION_COOP,		// Diplomacy: joint wars against a severe or critical warmonger can be asked of any civ visibly against it
+ 							// (denouncing it, or it took one of their cities), not only of friends, even while we're wary of it
+ 	FIX_SANCTIONS,			// Diplomacy: World Congress sanctions weigh the target's warmonger threat whatever our approach to it
++	FIX_COALITION_PACT,		// Diplomacy: defensive pacts with civs that share a severe or critical warmonger threat, friends or not,
++							// scored higher for each threat shared
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+-- 
+2.43.0
+
