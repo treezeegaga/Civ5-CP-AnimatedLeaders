@@ -4,43 +4,43 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Overnight: PC 1 plays all of screening run 2 (28+ flags, 20 pairs, on the crash-fixed build). PC 2 finishes its current pair, then plays War's siege package (SiegeArmy + ArmyHandoff + SiegeStay + SiegePosture) against B: one logged pair, then 20 pairs.",
+   "detail": "Screening run 2 is done (21 pairs): DeclareAtBorder, SettlersBeforeWonders and PolicyPrereqDepth rank highest. PC 1 now tests the top five together; PC 2 reruns the siege test on War's fixed build.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 1,
    "name": "PC runner",
-   "detail": "Screening run 2, 20 pairs on ab-819be70, since 10:21pm.",
+   "detail": "Top-five bundle against B, paired, on ab-819be70 (since 6:36am).",
    "state": "running"
   },
   {
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "SiegeArmy and ArmyHandoff compiled; will read the logged siege pair when it lands.",
+   "detail": "Found and fixed a SiegeArmy bug (attacks were cancelled, not held); fix a86d57b compiled.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 3,
    "name": "Economy",
-   "detail": "Confirming the settler path bug; two new flags in screening.",
+   "detail": "Settler-operation fixes in patch 0011, not yet built.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 4,
    "name": "Diplomacy",
-   "detail": "Crash fix (0008) done and in the build.",
+   "detail": "Crash fix in; DealExploits ranks 5th in screening.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 5,
    "name": "Lead",
-   "detail": "Added ResearchSpent to the results (build 41037b8); check-ins slowed overnight.",
-   "state": "waiting"
+   "detail": "Read screening run 2; queued the top-five test.",
+   "state": "running"
   },
   {
    "section": "goal",
@@ -95,35 +95,35 @@
    "section": "session",
    "order": 6,
    "name": "PC runner 2",
-   "detail": "Finishing its screening pair, then the siege test on ab-f390090.",
+   "detail": "Switching to War's fixed siege build ab-a86d57b: one logged pair, then 20 pairs.",
    "state": "running"
   },
   {
    "section": "queue",
    "order": 1,
    "name": "Screening run 2",
-   "detail": "20 pairs ranking the candidate flags, on PC 1 (ab-819be70).",
-   "state": "running"
+   "detail": "Done: 21 pairs, ranking in the screening table.",
+   "state": "passed"
   },
   {
    "section": "queue",
    "order": 2,
-   "name": "Siege test, logged pair",
-   "detail": "SiegeArmy + ArmyHandoff + SiegeStay + SiegePosture against B, with logs, on PC 2.",
-   "state": "next"
+   "name": "Top-five bundle test",
+   "detail": "DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits against B, on PC 1.",
+   "state": "running"
   },
   {
    "section": "queue",
    "order": 3,
-   "name": "Siege test, 20 pairs",
-   "detail": "Same flags, logging off: cities captured and strength share.",
-   "state": "waiting"
+   "name": "Siege test on the fixed build",
+   "detail": "SiegeArmy + ArmyHandoff + SiegeStay + SiegePosture, logged pair then 20 pairs, on PC 2.",
+   "state": "running"
   },
   {
    "section": "queue",
    "order": 4,
    "name": "Single-flag tests",
-   "detail": "The top-ranked flags from screening, one at a time.",
+   "detail": "If the bundle passes: which flags carry it.",
    "state": "waiting"
   }
  ]

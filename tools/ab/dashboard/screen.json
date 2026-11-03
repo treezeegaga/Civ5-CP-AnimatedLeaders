@@ -1,3 +1,274 @@
 {
-  "rows": []
+  "rows": [
+    {
+      "build": "screen2",
+      "flag": "AqueductValue",
+      "effect": 0.046,
+      "se": 0.209,
+      "groupShare": 0.092,
+      "pNoBetter": 0.4134,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "BookFinishesSettlers",
+      "effect": 0.07,
+      "se": 0.217,
+      "groupShare": 0.14,
+      "pNoBetter": 0.3736,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "BoxedIn",
+      "effect": 0.171,
+      "se": 0.209,
+      "groupShare": 0.342,
+      "pNoBetter": 0.207,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "BoxedInWar",
+      "effect": -0.344,
+      "se": 0.211,
+      "groupShare": -0.688,
+      "pNoBetter": 0.9471,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "CanWin",
+      "effect": -0.224,
+      "se": 0.22,
+      "groupShare": -0.447,
+      "pNoBetter": 0.8441,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "ClosedBorders",
+      "effect": -0.315,
+      "se": 0.196,
+      "groupShare": -0.63,
+      "pNoBetter": 0.9443,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "CultureRivalValue",
+      "effect": -0.146,
+      "se": 0.241,
+      "groupShare": -0.291,
+      "pNoBetter": 0.7263,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "DealExploits",
+      "effect": 0.249,
+      "se": 0.204,
+      "groupShare": 0.497,
+      "pNoBetter": 0.1125,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "DealReputation",
+      "effect": 0.007,
+      "se": 0.21,
+      "groupShare": 0.014,
+      "pNoBetter": 0.4862,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "DeclareAtBorder",
+      "effect": 0.429,
+      "se": 0.209,
+      "groupShare": 0.858,
+      "pNoBetter": 0.0209,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "DeclareTiming",
+      "effect": -0.056,
+      "se": 0.207,
+      "groupShare": -0.112,
+      "pNoBetter": 0.6065,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "DiploBugs",
+      "effect": 0.209,
+      "se": 0.221,
+      "groupShare": 0.418,
+      "pNoBetter": 0.1733,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "DiploPolicyValue",
+      "effect": -0.127,
+      "se": 0.216,
+      "groupShare": -0.253,
+      "pNoBetter": 0.7204,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "EasyTarget",
+      "effect": -0.135,
+      "se": 0.216,
+      "groupShare": -0.27,
+      "pNoBetter": 0.7339,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "GreedyBook",
+      "effect": -0.011,
+      "se": 0.21,
+      "groupShare": -0.022,
+      "pNoBetter": 0.5208,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "GreedyTarget",
+      "effect": -0.061,
+      "se": 0.219,
+      "groupShare": -0.122,
+      "pNoBetter": 0.6094,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "GrowthTech",
+      "effect": -0.234,
+      "se": 0.2,
+      "groupShare": -0.468,
+      "pNoBetter": 0.8777,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "LosingWarBuildings",
+      "effect": 0.305,
+      "se": 0.208,
+      "groupShare": 0.611,
+      "pNoBetter": 0.0719,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "LuxuryAsk",
+      "effect": 0.056,
+      "se": 0.213,
+      "groupShare": 0.113,
+      "pNoBetter": 0.396,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "PolicyPrereqDepth",
+      "effect": 0.407,
+      "se": 0.218,
+      "groupShare": 0.814,
+      "pNoBetter": 0.0319,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "SettlerOverlap",
+      "effect": 0.192,
+      "se": 0.206,
+      "groupShare": 0.384,
+      "pNoBetter": 0.176,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "SettlersBeforeWonders",
+      "effect": 0.422,
+      "se": 0.212,
+      "groupShare": 0.844,
+      "pNoBetter": 0.0242,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "SettlersFirst",
+      "effect": -0.098,
+      "se": 0.209,
+      "groupShare": -0.196,
+      "pNoBetter": 0.6801,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "SiegeBook",
+      "effect": -0.296,
+      "se": 0.218,
+      "groupShare": -0.592,
+      "pNoBetter": 0.912,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "SiegePosture",
+      "effect": -0.089,
+      "se": 0.241,
+      "groupShare": -0.178,
+      "pNoBetter": 0.6438,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "SiegeStay",
+      "effect": -0.384,
+      "se": 0.224,
+      "groupShare": -0.768,
+      "pNoBetter": 0.9559,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "SiegeTechs",
+      "effect": 0.133,
+      "se": 0.221,
+      "groupShare": 0.267,
+      "pNoBetter": 0.2734,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "TimingAttack",
+      "effect": -0.052,
+      "se": 0.209,
+      "groupShare": -0.104,
+      "pNoBetter": 0.5978,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "UpgradeSaveCancel",
+      "effect": 0.187,
+      "se": 0.213,
+      "groupShare": 0.375,
+      "pNoBetter": 0.1907,
+      "observations": 168
+    },
+    {
+      "build": "screen2",
+      "flag": "WidePlans",
+      "effect": 0.04,
+      "se": 0.218,
+      "groupShare": 0.08,
+      "pNoBetter": 0.4275,
+      "observations": 168
+    }
+  ]
 }
