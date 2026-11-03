@@ -59,7 +59,8 @@ give back what phase 1 gained.
 
 **"Competent" means** (numbers agreed with the players on 2026-11-02; they're the goal row of the scoreboard
 at the top of RESULTS.md):
-- clearly ahead of CP's AI: **strength share ≥ 55%** against CP, at King with even rules
+- clearly ahead of CP's AI: **strength share ≥ 60%** against CP, at King with even rules (raised from 55% by the
+  user, 2026-11-03)
 - the bully test: the aggressor no longer rolls everyone over: **≤ 20% of all cities** at the end, **≤ 1 city
   per war**, and **2+ civs at war with it within 20 turns** of its first conquest
 - a lively world without spam: **0.5–2 deals per civ per 10 turns**

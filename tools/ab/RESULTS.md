@@ -7,7 +7,7 @@ from `Summarize-ABTest.ps1 -MyGames tools\ab\results -Scoreboard`, which prints 
 
 | Build | Setup | Strength share (games) | Aggressor's share of all cities, end (bully test) | Cities per aggressor war | Coalition: civs at war with it at the end; turns from its first conquest to 2+ | Deals per civ per 10 turns | Banned behaviours per game | Seconds per AI turn |
 |---|---|---|---|---|---|---|---|---|
-| **Goal** (agreed with the players, 2026-11-02) | King, even rules | **≥ 55%** against CP | **≤ 20%** (a fair share with 8 civs is 12.5%) | **≤ 1** | **2+ civs within 20 turns** | **0.5–2** (a lively world without spam; check against the first measurement) | **0** | **≤ 1.25× B's** |
+| **Goal** (agreed with the players, 2026-11-02; strength raised to 60% on 2026-11-03) | King, even rules | **≥ 60%** against CP | **≤ 20%** (a fair share with 8 civs is 12.5%) | **≤ 1** | **2+ civs within 20 turns** | **0.5–2** (a lively world without spam; check against the first measurement) | **0** | **≤ 1.25× B's** |
 | A: CP | | 50% (reference) | not measured | not measured | not measured | not measured | not measured | not measured |
 | B: batch 2p (`24cc575`) | Prince, even rules, random maps, single games | 52.4% ± 0.7 against CP (5) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c4 (`ea22df3`), best C so far | same | 51.6% ± 1.1 against B (6) | not measured | not measured | not measured | not measured | not measured | not measured |
@@ -820,7 +820,7 @@ plain aggressive AI, and the real test is games against the friend.
   no games used that file yet). It's the real seconds per game turn since the last logged row, measured on
   the PC, so it compares builds only on the same PC and setup.
 - **The goal numbers were agreed with the players on 2026-11-02:**
-  - strength ≥ 55% against CP;
+  - strength ≥ 55% against CP (raised to **60%** by the user on 2026-11-03);
   - the aggressor ≤ 20% of all cities at the end;
   - ≤ 1 city per war;
   - 2+ civs at war with it within 20 turns of its first conquest;

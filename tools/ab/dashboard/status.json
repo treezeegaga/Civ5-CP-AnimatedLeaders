@@ -4,8 +4,8 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "The PC runner is playing the smoke-test pair on King. New DLL builds are blocked: GitHub Actions is turned off on the DLL fork.",
-   "state": "blocked"
+   "detail": "Builds are running again: screening build 2 (all 39 flags) and War's flags compile now. The PC runner is playing the smoke-test pair on King.",
+   "state": "running"
   },
   {
    "section": "queue",
@@ -39,8 +39,8 @@
    "section": "queue",
    "order": 5,
    "name": "Screening run 2",
-   "detail": "20 pairs ranking all 39 candidate flags at once (needs its build: Actions).",
-   "state": "blocked"
+   "detail": "20 pairs ranking all 39 candidate flags at once (its build, run 77, is compiling).",
+   "state": "waiting"
   },
   {
    "section": "session",
@@ -53,14 +53,14 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Siege, attack posture and sneak-attack flags written; waiting for builds.",
-   "state": "waiting"
+   "detail": "Pushed its flags rebased onto the 64-bit table; build (run 78) compiling.",
+   "state": "running"
   },
   {
    "section": "session",
    "order": 3,
    "name": "Economy",
-   "detail": "Settler and policy flags (9) written; waiting for builds.",
+   "detail": "Wrote its expansion-pace reading procedure and a logging patch (0009); waiting for King logs.",
    "state": "waiting"
   },
   {
@@ -74,21 +74,14 @@
    "section": "session",
    "order": 5,
    "name": "Lead",
-   "detail": "Rebased every topic branch onto the 64-bit flag table; screening build 2 ready to compile.",
-   "state": "waiting"
-  },
-  {
-   "section": "blocker",
-   "order": 1,
-   "name": "GitHub Actions off on the DLL fork",
-   "detail": "Since 00:16 UTC no DLL builds. Turn it on: github.com/treezeegaga/Community-Patch-DLL/settings/actions",
-   "state": "blocked"
+   "detail": "Screening build 2 (run 77) compiling; then the integration branch and the topic branches move.",
+   "state": "running"
   },
   {
    "section": "goal",
    "order": 1,
    "name": "Strength against CP",
-   "detail": "≥ 55% (B: 52.4% on the old setup; no King results yet)",
+   "detail": "≥ 60% (raised from 55% on 2026-11-03; B: 52.4% on the old setup; no King results yet)",
    "state": "open"
   },
   {
