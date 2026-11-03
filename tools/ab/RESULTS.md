@@ -1122,6 +1122,48 @@ games show the hold reasons directly.
 - Test: screening, then SPRT gainer at T100.
 - Status: coded, not built.
 
+### Found-city operations: three bugs from the logs (Economy, 2026-11-03)
+
+From `OperationalAILog.csv` and `PlayerHomelandAILog.csv` of the smoke-test pair and War's three logged games (all
+King, `results/logs_*`). The code is in `CvAIOperation.cpp` (settler operations are Economy's) and
+`CvPlayer::GetBestSettlePlot` (settling: Economy's).
+
+| Case | What the logs show | Cost |
+|---|---|---|
+| Songhai (c), `02A37B03F`, T18-T36 | The settler stands at (26:16), one tile from its site (26:15). On each tile it "can found 1". Eight operations in a row: started with **"Found 0 potential units"** (no escort) yet moved at once; "no path to city site (26:15)", every turn; then "found better target (26:14)" → `Ended: LostPath`. On T36 the settler is killed (`LostCivilian`) | 2nd city at T54 instead of about T21, and a settler lost |
+| Germany (c), `02EA597F`, T29-T64 | One operation for 35 turns. Waited for an escort, went alone after 15 turns (2m), then **"no path to city site (50:28)" three times a turn for 20 turns**, each time re-picking (50:28). At T64 "found no suitable target in area"; then two operations a turn end `NoTarget` until T150 | **Germany ended the game with 1 city** |
+| China (b, B's own code), `02A37B03F`, T80-T88 | Escorted ("Units Recruited 2"), path found, yet `Ended: LostPath; Duration 0`, the turn each operation starts, nine turns running, with no "no path" line | About 9 turns of the 3rd/4th city |
+
+**The three bugs:**
+- **A. Escort dropped next to danger.** `CvAIOperationCivilian::Init` clears the escort slot whenever the settler can
+  reach the site this turn (`TurnsToReachTarget(...) < 1`), CP's shortcut. B added a safety test for its own
+  no-escort rule (`SettlerTripLooksSafe`: no visible danger, no camp or enemy city within 5 tiles), but the CP
+  shortcut bypasses it. (Songhai)
+- **B. Site choice and movement disagree about danger.** A settler without an escort checks and plans its path with
+  `MOVEFLAG_AI_ABORT_IN_DANGER` (`VerifyOrAdjustTarget`). Under that flag, a plot with danger above half the
+  settler's HP is impassable for the next two turns. But `GetBestSettlePlot` checks reachability without it. So
+  the site picked is one the settler then can't walk to, and `RetargetCivilian` picks it again, turn after turn.
+  (Songhai, Germany)
+- **C. A good path is called lost.** After the target check, `VerifyOrAdjustTarget` aborts with `LostPath` if
+  `GetPathEndFirstTurnPlot()` is NULL. That's also the case when the path is fine but has no step this turn,
+  e.g. a settler with no moves left when the operation is created, so the operation dies the turn it starts.
+  It also ignores the result of the path refresh after switching to a "better target". (China; the Songhai
+  switches)
+
+All three are in B as well as C (A and C are CP's code paths). One flag each, out of the bundle, as patch 0011:
+- **`SettlerEscortSafe`** (A): the "reachable this turn" shortcut drops the escort only if `SettlerTripLooksSafe`.
+- **`SettlerSitePathFlags`** (B): `GetBestSettlePlot`, when picking for a found-city operation whose settler
+  has no escort, checks paths with `MOVEFLAG_AI_ABORT_IN_DANGER` too. A site behind danger is skipped, so the
+  settler goes elsewhere or the operation ends and waits.
+- **`SettlerPathCheck`** (C): `LostPath` only when the settler really has no path to its (possibly new)
+  target. After switching to a better target with no path, it keeps the old target if that one still has a
+  path.
+
+Hypothesis (all three): fewer settlers stuck or lost, earlier 2nd-4th cities for the civs that hit them. Most
+civs never do, so the average effect is small but the tail is large (Germany: 1 city). Measure: strength share
+at T100 (no-worse, δ = 2), plus `City2Turn`-`City4Turn` and the number of civs with ≤ 2 cities at T100
+(mechanism). Test: screening (all three), then no-worse SPRTs. They're bug fixes, kept unless they hurt.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
