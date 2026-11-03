@@ -43,6 +43,27 @@ one, ends up with ~100 cities and wins easily, and the game is boring. We want A
 Adaptation happens within a game. The AI doesn't learn across games: in multiplayer every
 computer must run the AI identically, so it can't read anything a single computer remembers.
 
+### A rock-paper-scissors meta (the user's goal, 2026-11-03)
+
+No single play style should win everything. Three styles, each beating one and losing to one:
+- **Greedy** (few defensive units, all-in economy) **beats balanced** (non-aggressive, medium defence): in peace the
+  greedy civ out-grows it.
+- **Aggressive** (many attacking units) **beats greedy**: it punishes thin defence by taking cities.
+- **Balanced beats aggressive**: its defence holds, and the attacker has spent its production on an army for nothing.
+
+**Today there's no triangle:** no city fell in any King test game and wars are rare, so aggression never pays and greedy
+simply wins. What each side needs:
+- Aggressive beats greedy: attacks that take cities (War's siege work, tested in the bully test), and attackers that
+  pick thin targets (`GreedyTarget` already picks the neighbour with the fewest land units per city).
+- Greedy isn't free: a greedy civ notices danger and arms up in time (`GreedyAlarm`).
+- Balanced beats aggressive: a sensible defence holds against a real attack, not just against today's weak ones.
+- Reading neighbours: an AI that sees a thinly defended neighbour treats it as a target, as a strong human does.
+
+**How it's measured: a matchup test** (to build, after the bully test shows attacks can take cities). Each AI civ is
+assigned a style (an extension of the bully and builders roles, `Mode = styles`). Over many games, a 3x3 table records
+each style's strength share and cities captured or lost against each other style. The goal is met when each style
+clearly beats one and loses to one. The order: attacks that take cities, then `GreedyAlarm`, then the matchup test.
+
 ### Priorities: competence first, then flavour and fun
 
 The list above is where we're going, not the order we work in. Making the AI merely competent is
