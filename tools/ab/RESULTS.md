@@ -1543,6 +1543,22 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: the logged siege pair 043923C9 (ab-f390090) — SiegeArmy was broken (2026-11-03)
+
+c ran SiegeArmy, ArmyHandoff, SiegeStay and SiegePosture: 47.3% and 55.8%, no captures.
+- **Bug: SiegeArmy killed every attack it held back.** Each "SiegeArmy: waiting" line comes from a new operation ID
+  (78 lines over the pair, Assyria 2903, 2945, 2999... one per turn). Each one ends `NoUnits` with Duration 0 the
+  turn it's created: `CvPlayer::addAIOperation` aborts a new operation that needs more units built than it was
+  allowed, and SiegeArmy put the optional slots on that list from the first turn. So **no c attack ever waited and
+  grew**. c's attacks were simply cancelled, so this pair and the 20-pair run on `ab-f390090` measure that, not the
+  idea. Fixed in `a86d57b` on `ai/war` (no optional-slot requests on the creation turn; patch `patches/war/0004`).
+- **ArmyHandoff works as designed:** b's just-deployed units log "held back", and Portugal (c) "sent to reinforce".
+  It fired rarely (2 sends) because few c armies were delivered.
+- **No siege improved:** the best expected damage per turn was 75/200 (Songhai, b) and 70/200 (Assyria, b in the
+  replay), the same range as before.
+- **Next:** rerun the siege test on `ab-a86d57b` (CI building now) and drop the `ab-f390090` pairs from the verdict.
+  One logged game should show the same operation ID waiting for several turns, then marching bigger.
+
 ### War: what the 3 logged King games show (2026-11-03)
 
 Games 02DEF5BF and 02EA597F (bundle) and 02F5C9E3 (bundle + SiegeStay, SiegePosture, DeclareAtBorder), build

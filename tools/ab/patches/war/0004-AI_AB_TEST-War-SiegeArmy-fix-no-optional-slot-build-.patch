@@ -1,0 +1,36 @@
+From a86d57be3b0ec08523260b7152b13c0ed7f370ef Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 05:17:37 +0000
+Subject: [PATCH] AI_AB_TEST War: SiegeArmy fix: no optional-slot build
+ requests on the operation's first turn
+
+addAIOperation aborts a new operation that needs more units built than it was
+allowed (NoUnits). Asking for the optional slots at creation killed every
+waiting city attack the turn it was made (logged siege pair 043923C9: a new
+operation ID every turn, each ending NoUnits with Duration 0).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
+---
+ CvGameCoreDLL_Expansion2/CvAIOperation.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+index 5b3d5b6c8..500411bc4 100644
+--- a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
++++ b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+@@ -550,8 +550,9 @@ int CvAIOperation::GrabUnitsFromTheReserves(CvPlot* pMusterPlot, CvPlot* pTarget
+ 
+ 	std::stable_sort(choices.begin(),choices.end());
+ 
+-	//AI_AB_TEST (candidate, flag SiegeArmy)
+-	const bool bAskForOptionalSlots = IsArmyTooWeakForTarget(pArmy);
++	//AI_AB_TEST (candidate, flag SiegeArmy). Not on the turn the operation is created: CvPlayer::addAIOperation aborts a
++	//new operation that needs more units built than it was allowed (NoUnits), which killed every waiting attack at once
++	const bool bAskForOptionalSlots = GC.getGame().getGameTurn() > GetTurnStarted() && IsArmyTooWeakForTarget(pArmy);
+ 
+ 	//rebuild the list
+ 	int iCount = 0;
+-- 
+2.43.0
+
