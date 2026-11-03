@@ -1297,7 +1297,9 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
   before any victory-push fix can be judged.
 - **For the lead, from War: the DLL commit.** Done: the three War flags are on `ai/war` as `4917284` (on
   `claude/ab-c1` at `6b8ebde`; the patch is also in `patches/war/`). The War session now has push access and pushes
-  `ai/war` itself. Not compiled anywhere else first: CI run 41549033176 is the first compile. Please add `SiegeStay`,
+  `ai/war` itself. CI run 41549033176 compiled `4917284` cleanly (MSVC and clang, debug and release), then was
+  cancelled at "Analyze build warnings" (the known hang), so no release came out of it. `0bc96d3`'s run was cancelled
+  before it started. Both get rebuilt when `ai/war` is rebased onto the new 64-bit-flag `claude/ab-c1`. Please add `SiegeStay`,
   `SiegePosture`, `DeclareAtBorder` to `AIABTest.ini.example`.
 - **For the lead / PC runner, from War: 3 logged King games before any SPRT on the War flags.** Same setup as the
   baseline, bundle on (so warmongers attack), logging on, `Fixes` = bundle + `SiegeStay,SiegePosture,DeclareAtBorder`
