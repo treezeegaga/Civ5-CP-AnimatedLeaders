@@ -1083,7 +1083,8 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
   2. `Fixes = GreedyAlarm`: the alarm alone, for any tall civ.
 
   The bundle flags stay on or off as the lead's baseline decides.
-- Status: on `ai/economy`, CI pending. Goes into a screening run once War has capture fixes (lead). Needs War's view: War owns the threat side (`CvMilitaryAI`). This uses only an
+- Status: on `ai/economy`, CI pending. Goes into a screening run once War has capture fixes (lead). War: keep CP's
+  posture signal for now. Background: War owns the threat side (`CvMilitaryAI`). This uses only an
   existing diplomacy signal and Economy's production files, so it doesn't touch War's code. If War builds a
   better "army massing" signal (muster points, siege units seen), the alarm should switch to it.
 - Notes: posture only sees units near our cities, so an army mustering out of sight isn't seen until it
@@ -1107,10 +1108,12 @@ Fix: `kPlayer.GetDiplomacyAI()->IsPlayerValid(eLoopPlayer)`. Coded as two flags,
   - Measure: cities lost and strength share in games with wars. It only acts in wars that go badly, so it
     can't show much until War's capture fixes make wars bite.
   - Test: no-worse, T150, ideally queued alongside War's flags.
+  - Status: on `ai/economy` as `5531a3e` (with 0008). War wants it tested alongside its fixes.
 - **`CultureRivalValue`** (`FIX_CULTURE_RIVAL_VALUE`, E2), patch 0008.
   - Hypothesis: culture yields are valued ×2-×3 when a rival's tourism is rising against us, as CP and B
     intended, so the civ defends culturally a little earlier.
   - Test: no-worse, T150, low priority. Probably no effect at T150, where tourism is still small.
+  - Status: on `ai/economy` as `5531a3e`.
 
 ### IdeologyPick, PolicyPrereqDepth, EspionagePolicyValue: the other CvPolicyAI bugs (Economy, audit P2-P4)
 One flag each, all out of the bundle, as patches 0004-0006 (in that order, after 0003). All three are bug fixes
