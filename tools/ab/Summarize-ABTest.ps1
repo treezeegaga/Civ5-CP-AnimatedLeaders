@@ -21,6 +21,7 @@ param(
     [double]$Delta = 2.0, # SPRT: the smallest gain worth keeping, in strength-share points
     [double]$Sigma = 0,   # SPRT games estimate: spread of one result (pair or game) in points; 0 = measure it
     [switch]$Scoreboard,  # one row per results file for the scoreboard at the top of RESULTS.md, instead of the full report
+    [string]$Json = "",   # also write the games, SPRTs and screening ranks of one results file (-Csv) to this JSON file (the dashboard)
     [string]$MyGames = "$([Environment]::GetFolderPath('MyDocuments'))\My Games\Sid Meier's Civilization 5"
 )
 
@@ -503,6 +504,8 @@ if ($rows[0].PSObject.Properties.Name -contains "City2Turn") {
 
 # ---- SPRT per setup and flag configuration (lead job 4) ----
 $llrBound = [Math]::Log(0.95 / 0.05)   # 2.944: alpha = beta = 5%
+$jsonTests = New-Object System.Collections.ArrayList     # for -Json
+$jsonScreen = New-Object System.Collections.ArrayList
 Write-Output ""
 Write-Output ("SPRT (Fishtest method, normal approximation), Delta = {0:N1} points of strength share; pass at LLR >= +{1:N2}, fail at <= -{1:N2}:" -f $Delta, $llrBound)
 foreach ($cfg in ($games | Group-Object Config)) {
@@ -538,6 +541,9 @@ foreach ($cfg in ($games | Group-Object Config)) {
         Write-Output ("    single games: spread {0:N2}; each game played in a pair is worth {1:N1} unpaired games (an unpaired test would need that many times as many games)" -f $sds, ($gain / 2))
         Write-Output ("    first games {0:+0.00;-0.00;0.00}, second (flipped) games {1:+0.00;-0.00;0.00}: the difference is the split's bias, cancelled within each pair" -f ($g1 | Measure-Object -Average).Average, ($g2 | Measure-Object -Average).Average)
     }
+    $jsonTest = [ordered]@{ config = $cfg.Name; kind = ($kind -replace ' \(unpaired\)', ''); results = $n; gamesLeftOut = $leftOver
+        gain = [Math]::Round($mean, 3); share = [Math]::Round(50 + $mean, 3)
+        spread = if ($n -ge 2) { [Math]::Round($sd, 3) } else { $null } }
     foreach ($test in @(@{ Name = "gainer";    S0 = 0.0;            S1 = $Delta },
                         @{ Name = "no-worse";  S0 = -0.875 * $Delta; S1 = 0.125 * $Delta })) {
         $llr = Get-SprtLLR $x $test.S0 $test.S1
@@ -546,11 +552,17 @@ foreach ($cfg in ($games | Group-Object Config)) {
             elseif ($llr -ge $llrBound) { "PASSED" }
             elseif ($llr -le -$llrBound) { "FAILED" }
             else { "running" }
+        $key = if ($test.Name -eq "gainer") { "gainer" } else { "noWorse" }
+        $jsonTest[$key + "LLR"] = if ($null -eq $llr) { $null } else { [Math]::Round($llr, 3) }
+        $jsonTest[$key + "State"] = $state
         $llrText = if ($null -eq $llr) { "   -  " } else { "{0,6:+0.00;-0.00;0.00}" -f $llr }
         Write-Output ("    {0,-9} H0 {1,5:+0.00;-0.00;0.00} H1 {2,5:+0.00;-0.00;0.00}  LLR {3}  {4}" -f $test.Name, $test.S0, $test.S1, $llrText, $state)
     }
     # Expected length (Wald): about 5.3 s^2/Delta^2 results when the true gain is at H0 or H1, 8.7 s^2/Delta^2 at worst
     $s = if ($Sigma -gt 0) { $Sigma } else { $sd }
+    $jsonTest["expectedResults"] = if ($s -gt 0) { [Math]::Round(2 * 0.9 * $llrBound * $s * $s / ($Delta * $Delta), 1) } else { $null }
+    $jsonTest["expectedResultsWorst"] = if ($s -gt 0) { [Math]::Round($llrBound * $llrBound * $s * $s / ($Delta * $Delta), 1) } else { $null }
+    [void]$jsonTests.Add($jsonTest)
     if ($s -gt 0) {
         $src = if ($Sigma -gt 0) { "-Sigma" } else { "measured" }
         Write-Output ("    expected length at spread {0:N2} ({1}): about {2:N0} {3} if the true gain is 0 or Delta, up to {4:N0} if it's halfway" -f $s, $src,
@@ -620,6 +632,8 @@ if ($rows[0].PSObject.Properties.Name -contains "Screen") {
                 $t = if ($se -gt 0) { $eff / $se } else { 0 }
                 $pUp = Get-TOneSidedP $t $fit.DF
                 Write-Output ("  {0,-14} {1,6:+0.00;-0.00;0.00} +/- {2,4:N2}  as group share {3,6:+0.00;-0.00;0.00}  chance it's really no better: {4,4:P0}" -f $cols[$i], $eff, $se, ($eff * $nCivs / 4), $pUp)
+                [void]$jsonScreen.Add([ordered]@{ flag = $cols[$i]; effect = [Math]::Round($eff, 3); se = [Math]::Round($se, 3)
+                    groupShare = [Math]::Round($eff * $nCivs / 4, 3); pNoBetter = [Math]::Round($pUp, 4); observations = $Y.Count; design = $design })
             }
             Write-Output "  Screening only ranks flags: confirm the promising ones with an SPRT on the flag alone."
         }
@@ -627,6 +641,23 @@ if ($rows[0].PSObject.Properties.Name -contains "Screen") {
 }
 
 Show-RoleTests
+
+if ($Json) {
+    # what the dashboard reads; the same numbers as the report above
+    $r0 = $rows[0]
+    $has = { param($name) $r0.PSObject.Properties.Name -contains $name }
+    $out = [ordered]@{
+        file = [IO.Path]::GetFileName($Csv)
+        setup = [ordered]@{ difficulty = if (& $has "Difficulty") { $r0.Difficulty } else { $null }
+            map = if (& $has "Map") { $r0.Map } else { $null }; paired = (@($jsonTests | Where-Object { $_.kind -eq "pairs" }).Count -gt 0) }
+        delta = $Delta; llrBound = [Math]::Round($llrBound, 3)
+        games = @($games | ForEach-Object { [ordered]@{ gameId = $_.GameId; pair = $_.BaseId; flipped = [bool]$_.Flipped; turn = $_.Turn
+            config = $_.Config; share = [Math]::Round($_.NewStrength, 3); shareNoMilitary = [Math]::Round($_.NewEconomy, 3) } })
+        tests = @($jsonTests)
+        screen = @($jsonScreen)
+    }
+    [IO.File]::WriteAllText($Json, ($out | ConvertTo-Json -Depth 5), (New-Object Text.UTF8Encoding($false)))
+}
 
 Write-Output ""
 Write-Output "A difference only means something once the chance above is small (under 5%) over many games."

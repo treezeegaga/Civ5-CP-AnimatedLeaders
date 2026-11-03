@@ -1,0 +1,137 @@
+{
+ "rows": [
+  {
+   "section": "headline",
+   "order": 1,
+   "name": "Now",
+   "detail": "The PC runner is playing the smoke-test pair on King. New DLL builds are blocked: GitHub Actions is turned off on the DLL fork.",
+   "state": "blocked"
+  },
+  {
+   "section": "queue",
+   "order": 1,
+   "name": "Smoke-test pair",
+   "detail": "1 pair on King, Pangaea (build ab-6b8ebde): checks the new columns and that the second game replays the first.",
+   "state": "running"
+  },
+  {
+   "section": "queue",
+   "order": 2,
+   "name": "Baseline: logged pair",
+   "detail": "1 pair, every civ on B, AI logs on, for Economy.",
+   "state": "next"
+  },
+  {
+   "section": "queue",
+   "order": 3,
+   "name": "War's 3 logged games",
+   "detail": "Wars with the c7c bundle on, logs for War.",
+   "state": "waiting"
+  },
+  {
+   "section": "queue",
+   "order": 4,
+   "name": "Baseline: 19 more pairs",
+   "detail": "Every civ on B: measures how much a game swings, for the stopping tests.",
+   "state": "waiting"
+  },
+  {
+   "section": "queue",
+   "order": 5,
+   "name": "Screening run 2",
+   "detail": "20 pairs ranking all 39 candidate flags at once (needs its build: Actions).",
+   "state": "blocked"
+  },
+  {
+   "section": "session",
+   "order": 1,
+   "name": "PC runner",
+   "detail": "Smoke-test pair on King since 00:22 UTC.",
+   "state": "running"
+  },
+  {
+   "section": "session",
+   "order": 2,
+   "name": "War",
+   "detail": "Siege, attack posture and sneak-attack flags written; waiting for builds.",
+   "state": "waiting"
+  },
+  {
+   "section": "session",
+   "order": 3,
+   "name": "Economy",
+   "detail": "Settler and policy flags (9) written; waiting for builds.",
+   "state": "waiting"
+  },
+  {
+   "section": "session",
+   "order": 4,
+   "name": "Diplomacy",
+   "detail": "Coalition, sanction and deal flags (10) written; waiting for builds.",
+   "state": "waiting"
+  },
+  {
+   "section": "session",
+   "order": 5,
+   "name": "Lead",
+   "detail": "Rebased every topic branch onto the 64-bit flag table; screening build 2 ready to compile.",
+   "state": "waiting"
+  },
+  {
+   "section": "blocker",
+   "order": 1,
+   "name": "GitHub Actions off on the DLL fork",
+   "detail": "Since 00:16 UTC no DLL builds. Turn it on: github.com/treezeegaga/Community-Patch-DLL/settings/actions",
+   "state": "blocked"
+  },
+  {
+   "section": "goal",
+   "order": 1,
+   "name": "Strength against CP",
+   "detail": "≥ 55% (B: 52.4% on the old setup; no King results yet)",
+   "state": "open"
+  },
+  {
+   "section": "goal",
+   "order": 2,
+   "name": "Aggressor's share of all cities (bully test)",
+   "detail": "≤ 20% (not measured yet)",
+   "state": "open"
+  },
+  {
+   "section": "goal",
+   "order": 3,
+   "name": "Cities per aggressor war",
+   "detail": "≤ 1 (not measured yet)",
+   "state": "open"
+  },
+  {
+   "section": "goal",
+   "order": 4,
+   "name": "Coalition against a runaway",
+   "detail": "2+ civs within 20 turns (not measured yet)",
+   "state": "open"
+  },
+  {
+   "section": "goal",
+   "order": 5,
+   "name": "Deals per civ per 10 turns",
+   "detail": "0.5 to 2 (not measured yet)",
+   "state": "open"
+  },
+  {
+   "section": "goal",
+   "order": 6,
+   "name": "Banned behaviours",
+   "detail": "0 per game (not measured yet)",
+   "state": "open"
+  },
+  {
+   "section": "goal",
+   "order": 7,
+   "name": "Seconds per AI turn",
+   "detail": "≤ 1.25× B's (not measured yet)",
+   "state": "open"
+  }
+ ]
+}

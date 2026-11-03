@@ -427,6 +427,15 @@ When the user says **"avengers assemble"**, the lead checks on every session and
 summary. A scheduled task (`trig_011XWTtRZXtTjdt9KBqEG31m`, hourly at :42, firing into the lead's session)
 runs the same check-in on its own, as the user asked; to stop it, disable that scheduled task.
 
+**Updates for the user** (the user's choice, 2026-11-03):
+- **The dashboard** (https://claude.ai/artifact/SyxMyA8FPt5MMxegEKtjiq) is refreshed at every check-in:
+  `pwsh tools/ab/Export-Dashboard.ps1` writes `tests.json` and `games.json` (and `screen.json` once a screening run
+  has ranks) to `tools/ab/dashboard/`; the lead edits `status.json` by hand (headline, the PC runner's queue,
+  sessions, blockers, goals). Each file is uploaded as an asset to the dashboard and its source updated to the new
+  asset with a fresh `updated` time. The numbers are `Summarize-ABTest.ps1 -Json`'s, the same as the report.
+- **Phone notifications only for decisions**: a flag passes or fails its SPRT, a run stops (WRONG SETUP, REPLAY
+  DIFFERS, a stall, three failed starts), or something needs the user. Routine progress waits for the hourly summary.
+
 1. **The topic sessions** (IDs in RESULTS.md, "Sessions running"): for each one, `get_session` for its
    status and its latest messages (`list_events`, kinds user/assistant/result): what it's doing, what it
    found, what it's waiting for, whether it's stuck or failed.
