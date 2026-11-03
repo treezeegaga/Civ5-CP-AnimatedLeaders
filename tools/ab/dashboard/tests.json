@@ -467,6 +467,24 @@
       "noWorseState": "needs 2+ results",
       "expectedResults": null,
       "expectedResultsWorst": null
+    },
+    {
+      "test": "screen2 | Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs none; screened WidePlans+BoxedIn+BoxedInWar+TimingAttack+SiegeTechs+SiegeBook+DeclareTiming+GrowthTech+AqueductValue+GreedyBook+GreedyTarget+CanWin+ClosedBorders+SettlersFirst+SettlerOverlap+DiploPolicyValue+PolicyPrereqDepth+LosingWarBuildings+CultureRivalValue+EasyTarget+DiploBugs+LuxuryAsk+DealExploits+DealReputation+SiegeStay+SiegePosture+DeclareAtBorder+UpgradeSaveCancel+SettlersBeforeWonders+BookFinishesSettlers",
+      "build": "screen2",
+      "config": "none (every civ on B); screening 30 flags",
+      "setup": "King, Pangaea, pairs",
+      "current": true,
+      "kind": "pairs",
+      "results": 1,
+      "share": 51.613,
+      "gain": 1.613,
+      "spread": null,
+      "gainerLLR": null,
+      "gainerState": "needs 2+ results",
+      "noWorseLLR": null,
+      "noWorseState": "needs 2+ results",
+      "expectedResults": null,
+      "expectedResultsWorst": null
     }
   ]
 }

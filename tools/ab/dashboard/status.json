@@ -4,43 +4,43 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Screening run 2 is playing on both PCs (30 flags, 10 pairs each, results in about 3.5 hours). War's 3 logged games: no city changed hands in any of them.",
+   "detail": "Overnight: PC 1 plays all of screening run 2 (28+ flags, 20 pairs, on the crash-fixed build). PC 2 finishes its current pair, then plays War's siege package (SiegeArmy + ArmyHandoff + SiegeStay + SiegePosture) against B: one logged pair, then 20 pairs.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 1,
    "name": "PC runner",
-   "detail": "10 pairs of screening run 2 since 02:07 (ab-2d949f8).",
+   "detail": "Screening run 2, 20 pairs on ab-819be70, since 10:21pm.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Reading its 3 logged games: why no attack took a city.",
-   "state": "running"
+   "detail": "SiegeArmy and ArmyHandoff compiled; will read the logged siege pair when it lands.",
+   "state": "waiting"
   },
   {
    "section": "session",
    "order": 3,
    "name": "Economy",
-   "detail": "Confirming the settler path bug from the smoke-pair logs; two new flags in screening.",
-   "state": "running"
+   "detail": "Confirming the settler path bug; two new flags in screening.",
+   "state": "waiting"
   },
   {
    "section": "session",
    "order": 4,
    "name": "Diplomacy",
-   "detail": "Its build passed; reading the diplomacy logs from War's games.",
-   "state": "running"
+   "detail": "Crash fix (0008) done and in the build.",
+   "state": "waiting"
   },
   {
    "section": "session",
    "order": 5,
    "name": "Lead",
-   "detail": "Both PCs on screening run 2; waiting for the first pairs.",
-   "state": "running"
+   "detail": "Added ResearchSpent to the results (build 41037b8); check-ins slowed overnight.",
+   "state": "waiting"
   },
   {
    "section": "goal",
@@ -95,47 +95,33 @@
    "section": "session",
    "order": 6,
    "name": "PC runner 2",
-   "detail": "Calibrated (2560x1440); check pair of screening run 2 since 02:12, then 10 pairs.",
+   "detail": "Finishing its screening pair, then the siege test on ab-f390090.",
    "state": "running"
   },
   {
    "section": "queue",
    "order": 1,
-   "name": "Smoke-test pair",
-   "detail": "Passed.",
-   "state": "passed"
+   "name": "Screening run 2",
+   "detail": "20 pairs ranking the candidate flags, on PC 1 (ab-819be70).",
+   "state": "running"
   },
   {
    "section": "queue",
    "order": 2,
-   "name": "Baseline logged pair",
-   "detail": "Done: no-flag pairs replay identically, so the long baseline was cancelled.",
-   "state": "passed"
+   "name": "Siege test, logged pair",
+   "detail": "SiegeArmy + ArmyHandoff + SiegeStay + SiegePosture against B, with logs, on PC 2.",
+   "state": "next"
   },
   {
    "section": "queue",
    "order": 3,
-   "name": "War's 3 logged games",
-   "detail": "Done: no city changed hands in any game; logs with War.",
-   "state": "passed"
+   "name": "Siege test, 20 pairs",
+   "detail": "Same flags, logging off: cities captured and strength share.",
+   "state": "waiting"
   },
   {
    "section": "queue",
    "order": 4,
-   "name": "Screening run 2 (PC 1 half)",
-   "detail": "10 pairs ranking 30 flags at once, build ab-2d949f8.",
-   "state": "running"
-  },
-  {
-   "section": "queue",
-   "order": 5,
-   "name": "Screening run 2 (PC 2 half)",
-   "detail": "Check pair, then 10 pairs.",
-   "state": "running"
-  },
-  {
-   "section": "queue",
-   "order": 6,
    "name": "Single-flag tests",
    "detail": "The top-ranked flags from screening, one at a time.",
    "state": "waiting"

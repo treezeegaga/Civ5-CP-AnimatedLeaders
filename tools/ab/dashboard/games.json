@@ -780,6 +780,39 @@
       "share": 51.016,
       "shareNoMilitary": 51.171,
       "current": true
+    },
+    {
+      "build": "screen2",
+      "gameId": "0303DC430303DC43",
+      "pair": "0303DC430303DC43",
+      "flipped": false,
+      "turn": 110,
+      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs none; screened WidePlans+BoxedIn+BoxedInWar+TimingAttack+SiegeTechs+SiegeBook+DeclareTiming+GrowthTech+AqueductValue+GreedyBook+GreedyTarget+CanWin+ClosedBorders+SettlersFirst+SettlerOverlap+DiploPolicyValue+PolicyPrereqDepth+LosingWarBuildings+CultureRivalValue+EasyTarget+DiploBugs+LuxuryAsk+DealExploits+DealReputation+SiegeStay+SiegePosture+DeclareAtBorder+UpgradeSaveCancel+SettlersBeforeWonders+BookFinishesSettlers",
+      "share": 48.8,
+      "shareNoMilitary": 49.856,
+      "current": true
+    },
+    {
+      "build": "screen2",
+      "gameId": "0407761804077618",
+      "pair": "0407761804077618",
+      "flipped": false,
+      "turn": 150,
+      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs none; screened WidePlans+BoxedIn+BoxedInWar+TimingAttack+SiegeTechs+SiegeBook+DeclareTiming+GrowthTech+AqueductValue+GreedyBook+GreedyTarget+CanWin+ClosedBorders+SettlersFirst+SettlerOverlap+DiploPolicyValue+PolicyPrereqDepth+LosingWarBuildings+CultureRivalValue+EasyTarget+DiploBugs+LuxuryAsk+DealExploits+DealReputation+SiegeStay+SiegePosture+DeclareAtBorder+UpgradeSaveCancel+SettlersBeforeWonders+BookFinishesSettlers",
+      "share": 54.273,
+      "shareNoMilitary": 52.429,
+      "current": true
+    },
+    {
+      "build": "screen2",
+      "gameId": "0407761804077618F",
+      "pair": "0407761804077618",
+      "flipped": true,
+      "turn": 150,
+      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs none; screened WidePlans+BoxedIn+BoxedInWar+TimingAttack+SiegeTechs+SiegeBook+DeclareTiming+GrowthTech+AqueductValue+GreedyBook+GreedyTarget+CanWin+ClosedBorders+SettlersFirst+SettlerOverlap+DiploPolicyValue+PolicyPrereqDepth+LosingWarBuildings+CultureRivalValue+EasyTarget+DiploBugs+LuxuryAsk+DealExploits+DealReputation+SiegeStay+SiegePosture+DeclareAtBorder+UpgradeSaveCancel+SettlersBeforeWonders+BookFinishesSettlers",
+      "share": 48.952,
+      "shareNoMilitary": 50.756,
+      "current": true
     }
   ]
 }
