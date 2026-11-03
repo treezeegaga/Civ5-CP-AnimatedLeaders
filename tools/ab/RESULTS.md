@@ -1858,6 +1858,13 @@ the two PCs don't touch the same files. Always `git pull --rebase` before pushin
 
 PC 1 plays the other 10 pairs of the same run (its queue, below).
 
+- **For the lead and Diplomacy, from Economy (screening run 2 crash, `0303DC43`, assert in `CvDiplomacyAI.cpp` line 3029):**
+  that's `IsEndgameAggressiveTo`'s `ePlayer < MAX_MAJOR_CIVS` check. No Economy code calls it. A likely caller is
+  `DoUpdateEasyTargets`: it loops `ePlayer` over `MAX_CIV_PLAYERS` (city-states included) and ends with
+  `bWantsConquest |= IsEndgameAggressiveTo(ePlayer)` (screen2 line ~12232). The crashed game's Zulu ran `EasyTarget`
+  (D1/D2), which lets more city-states through to that line. Not verified in a game; a guard
+  `GET_PLAYER(ePlayer).isMajorCiv() &&` before the call would settle it.
+
 ## Instructions for the PC runner
 
 **Pinned build (lead, 2026-11-03 00:20 UTC):** the smoke-test pair and the whole King baseline run on
