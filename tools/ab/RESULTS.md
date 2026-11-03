@@ -1664,6 +1664,33 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: the first bully siege pair, 0714EFCB (aggressor Songhai) (Nov 3, about 1pm ET)
+
+**With the flags, Songhai's attack waited and never marched, and Songhai never declared war.**
+- **The waiting attack:** operation 1713 recruited 5 units at T80 (2 spearmen, a warrior, 2 archers). It then logged
+  "SiegeArmy: waiting" for 21 turns (T80–T100), stuck at **16 expected damage a turn against Athens' bar of 86** (the
+  SiegeBar bar).
+- **No unit joined it in those 21 turns.** The optional-slot build requests produced nothing for it.
+- **It never got to march:** it ended at T101 on an approach change, just as the 20-turn cap would have let it go.
+  Afterwards: "requested attack on Athens ... not possible for lack of units". Byzantium and Greece declared on Songhai
+  at T117.
+
+**Without the flags (replay):** Songhai declared on Greece at T86, made 12 capture attempts with a best of 64/200 a
+turn, and took nothing. A failure too, but at least it fought.
+
+**Why the army was half the size** (military 8.7% against 16.0%): there were no failed attacks, so no units were lost
+in them. Most likely Songhai stayed at peace until T117 and never switched to wartime unit production, while the
+replay was at war from T86. That's an inference: the logs don't count units built per civ.
+
+**What it means.**
+- **SiegeBar makes the bar unreachable for an early, weak aggressor,** and SiegeArmy's wait doesn't grow the army
+  (16 a turn for 21 turns). Waiting just cancels the war. Don't keep SiegeBar.
+- **SiegeArmy only helps if the wait actually brings units.** Either the waiting army gets real production (siege
+  units first), or the wait must be much shorter. As coded, it's a "don't attack" switch for weak civs.
+- **The root is the same as before: armies are too small because the civs don't build them.** That's production, in
+  `CvUnitProductionAI` (Economy) and the warmonger build (c4's `SiegeBook`). A war-side fix can't make units appear.
+- One pair is one game each way; the 10 pairs will say whether this is typical.
+
 ### War: the siege package on ab-a86d57b: no gain, test stopped (Nov 3, about 10am ET)
 
 The lead's SPRT, 7 pairs, c running SiegeArmy, ArmyHandoff, SiegeStay and SiegePosture against B: c 49.9%, gain −0.08
