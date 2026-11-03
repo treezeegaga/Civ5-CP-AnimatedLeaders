@@ -1491,6 +1491,10 @@ same target, "Duration" counting up from 20). That's Economy's (request below). 
 - **`DeclareAtBorder` had nothing to change:** every sneak attack in the three games was discovered within 6 tiles.
 - **Game 3's 53.6%** is one unpaired game, without a capture.
 
+**`CanWin` is optimistic** (c7c, `CvDiplomacyAI.cpp` `CanTakeNearestCity`): its siege sketch counts every ranged land unit
+the civ owns, wherever it is, not the army that will march. So it passes while the army that arrives has a fraction
+of that damage. `SiegeArmy` runs the same kind of check on the army itself.
+
 **The new order of fixes:** army size first (point 1), then the hand-off (point 2), then the siege flags already
 coded, which need a real siege to act on.
 
@@ -1503,7 +1507,7 @@ coded, which need a real siege to act on.
 - Measure: `CitiesCaptured` by group (the mechanism; it's 0 now). Logged games: the best "expected max damage per
   turn" against city HP. Strength share at T150 (the verdict).
 - δ: +2 points of strength share
-- Build: next `ai/war` commit
+- Build: `ai/war` commit `f390090` (on `claude/ab-c1` `9fadf3d`, merged in); patch `patches/war/0003`
 - Test: screen with the other War flags, then SPRT gainer, paired, T150.
 - Risk: attacks start later or not at all (the target walls up meanwhile). Watch `NoUnits` endings and the turns
   from declaration to first attack.
@@ -1515,7 +1519,7 @@ coded, which need a real siege to act on.
 - Measure: CitiesCaptured; in logged games, homeland sentry moves by just-deployed units (should be ~0) and turns from
   arrival to the first city attack.
 - δ: +1.5 points of strength share
-- Build: next `ai/war` commit
+- Build: `ai/war` commit `f390090` (on `claude/ab-c1` `9fadf3d`, merged in); patch `patches/war/0003`
 - Test: as above.
 
 ### War audit: `CvHomelandAI` (2026-11-02)

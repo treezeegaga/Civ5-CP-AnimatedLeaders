@@ -1,0 +1,177 @@
+From f390090e3f111602857d027aab6f8aeb547fb942 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 02:20:54 +0000
+Subject: [PATCH] AI_AB_TEST War: flags SiegeArmy, ArmyHandoff (off in the
+ bundle)
+
+From the 3 logged King games: no war brought a quarter of the damage a
+capture needs, and a delivered army walked home the turn after war began.
+
+- SiegeArmy (CvAIOperation): a land city attack (also the sneak attack)
+  stays in the recruiting stage until its units' expected damage on the
+  target city reaches the city's healing plus a fifth of its max HP, for up
+  to 20 turns, and meanwhile asks for units for its optional slots too.
+  Logs "SiegeArmy: waiting for more units ...".
+- ArmyHandoff (CvTacticalAI::PlotReinforcementMoves): units deployed by an
+  operation in the last 5 turns may reinforce an enemy city's zone even from
+  a zone that "needs" them, instead of falling through to the homeland AI's
+  sentry moves. Logs each case ("ArmyHandoff: ...").
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
+---
+ CvGameCoreDLL_Expansion2/CvAIOperation.cpp | 51 +++++++++++++++++++++-
+ CvGameCoreDLL_Expansion2/CvAIOperation.h   |  2 +
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  2 +
+ CvGameCoreDLL_Expansion2/CvTacticalAI.cpp  | 13 +++++-
+ 5 files changed, 66 insertions(+), 3 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+index 75019b9c2..5b3d5b6c8 100644
+--- a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
++++ b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+@@ -442,6 +442,46 @@ bool CvAIOperation::RecruitUnit(CvUnit* pUnit)
+ 	return false;
+ }
+ 
++/// AI_AB_TEST (candidate, flag SiegeArmy): the damage a turn this army's units would do to its target city
++int CvAIOperation::GetArmyExpectedCityDamage(CvArmyAI* pArmy) const
++{
++	CvCity* pCity = GetTargetPlot() ? GetTargetPlot()->getPlotCity() : NULL;
++	if (!pArmy || !pCity)
++		return 0;
++
++	int iTotal = 0;
++	for (CvUnit* pUnit = pArmy->GetFirstUnit(); pUnit; pUnit = pArmy->GetNextUnit(pUnit))
++	{
++		int iSelfDamage = 0, iGarrisonDamage = 0;
++		int iDamage = TacticalAIHelpers::GetSimulatedDamageFromAttackOnCity(pCity, pUnit, pUnit->plot(), iSelfDamage, iGarrisonDamage, true, 0, 0, 0, true);
++		//melee units only count if the attack isn't close to suicide (as in CvTacticalAI::ComputeTotalExpectedDamage)
++		if (pUnit->IsCanAttackRanged() || iDamage + iGarrisonDamage > iSelfDamage)
++			iTotal += iDamage;
++	}
++	return iTotal;
++}
++
++/// AI_AB_TEST (candidate, flag SiegeArmy): should this land city attack wait for more units? It should while its expected
++/// damage a turn is below the city's healing plus a fifth of its full HP (about 60 a turn for a 200 HP city, 80 with
++/// walls), for at most 20 turns after the operation started.
++bool CvAIOperation::IsArmyTooWeakForTarget(CvArmyAI* pArmy, bool bLog) const
++{
++	if (m_eType != AI_OPERATION_CITY_ATTACK_LAND || !GET_PLAYER(m_eOwner).UsesCandidateAI(FIX_SIEGE_ARMY))
++		return false;
++	CvCity* pCity = GetTargetPlot() ? GetTargetPlot()->getPlotCity() : NULL;
++	if (!pArmy || !pCity || GC.getGame().getGameTurn() - GetTurnStarted() >= 20)
++		return false;
++
++	int iNeeded = /*20*/ GD_INT_GET(CITY_HIT_POINTS_HEALED_PER_TURN) + pCity->GetMaxHitPoints() / 5;
++	int iExpected = GetArmyExpectedCityDamage(pArmy);
++	if (iExpected >= iNeeded)
++		return false;
++
++	if (bLog && GC.getLogging() && GC.getAILogging())
++		LogOperationSpecialMessage(CvString::format("SiegeArmy: waiting for more units, expected damage %d a turn, %s needs %d", iExpected, pCity->getNameNoSpace().c_str(), iNeeded));
++	return true;
++}
++
+ //negative return: error; otherwise number of additionally recruited units
+ int CvAIOperation::GrabUnitsFromTheReserves(CvPlot* pMusterPlot, CvPlot* pTargetPlot, CvArmyAI* pArmy)
+ {
+@@ -510,6 +550,9 @@ int CvAIOperation::GrabUnitsFromTheReserves(CvPlot* pMusterPlot, CvPlot* pTarget
+ 
+ 	std::stable_sort(choices.begin(),choices.end());
+ 
++	//AI_AB_TEST (candidate, flag SiegeArmy)
++	const bool bAskForOptionalSlots = IsArmyTooWeakForTarget(pArmy);
++
+ 	//rebuild the list
+ 	int iCount = 0;
+ 	m_viListOfUnitsWeStillNeedToBuild.clear();
+@@ -525,7 +568,9 @@ int CvAIOperation::GrabUnitsFromTheReserves(CvPlot* pMusterPlot, CvPlot* pTarget
+ 				iCount++;
+ 			else
+ 			{
+-				if (pArmy->GetSlotInfo(iI).m_requiredSlot)
++				//AI_AB_TEST (candidate, flag SiegeArmy): while the army is too weak to take its city, ask for units for the
++				//optional slots as well, otherwise only spare units already in the field could ever fill them
++				if (pArmy->GetSlotInfo(iI).m_requiredSlot || (bAskForOptionalSlots && pArmy->GetArmyAIState() == ARMYAISTATE_WAITING_FOR_UNITS_TO_REINFORCE))
+ 					m_viListOfUnitsWeStillNeedToBuild.push_back(opSlot);
+ 			}
+ 		}
+@@ -1566,7 +1611,9 @@ bool CvAIOperationMilitary::CheckTransitionToNextStage()
+ 		break;
+ 	case ARMYAISTATE_WAITING_FOR_UNITS_TO_REINFORCE:
+ 		{
+-			if(OperationalAIHelpers::HaveEnoughUnits(pThisArmy->GetSlotStatus(),0))
++			//AI_AB_TEST (candidate, flag SiegeArmy): the required slots alone make a 4-5 unit army, which in test games never
++			//brought a quarter of the damage needed to take a city. Keep recruiting until it can, for up to 20 turns.
++			if(OperationalAIHelpers::HaveEnoughUnits(pThisArmy->GetSlotStatus(),0) && !IsArmyTooWeakForTarget(pThisArmy, true))
+ 			{
+ 				pThisArmy->SetArmyAIState(ARMYAISTATE_WAITING_FOR_UNITS_TO_CATCH_UP);
+ 				m_eCurrentState = AI_OPERATION_STATE_GATHERING_FORCES;
+diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.h b/CvGameCoreDLL_Expansion2/CvAIOperation.h
+index d2810197a..93fcef961 100644
+--- a/CvGameCoreDLL_Expansion2/CvAIOperation.h
++++ b/CvGameCoreDLL_Expansion2/CvAIOperation.h
+@@ -205,6 +205,8 @@ public:
+ 
+ 	virtual bool RecruitUnit(CvUnit* pUnit);
+ 	virtual int GrabUnitsFromTheReserves(CvPlot* pMusterPlot, CvPlot* pTargetPlot, CvArmyAI* pArmy = NULL);
++	int GetArmyExpectedCityDamage(CvArmyAI* pArmy) const;
++	bool IsArmyTooWeakForTarget(CvArmyAI* pArmy, bool bLog = false) const;
+ 	virtual void UnitWasRemoved(int iArmyID, int iSlotID);
+ 	virtual CvPlot* ComputeTargetPlotForThisTurn(CvArmyAI* pArmy) const;
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index a4c44b704..3ac0b74e2 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33333,6 +33333,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"GreedyArmyCap", false}, {"GreedyBook", true}, {"GreedyTarget", true}, {"CanWin", true}, {"ClosedBorders", true},
+ 	{"SiegeStay", false}, {"SiegePosture", false}, {"DeclareAtBorder", false},
+ 	{"UpgradeSaveCancel", false}, {"AirRebaseHeal", false},
++	{"SiegeArmy", false}, {"ArmyHandoff", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 3e0451dbb..e87631b62 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -164,6 +164,8 @@ enum CandidateFixTypes
+ 	FIX_DECLARE_AT_BORDER,	// War: a sneak attack counts as discovered only at the target's border. Off in the bundle
+ 	FIX_UPGRADE_SAVE_CANCEL,// War (bug H1): the stale gold request for unit upgrades is cancelled. Off in the bundle
+ 	FIX_AIR_REBASE_HEAL,	// War (bug H2): healing aircraft stay in the quietest base. Off in the bundle
++	FIX_SIEGE_ARMY,			// War: a land city attack keeps recruiting until it can take its city (up to 20 turns). Off in the bundle
++	FIX_ARMY_HANDOFF,		// War: units just delivered by an attack may reinforce its target from any zone. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+diff --git a/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp b/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
+index 14b5d0e7c..aa519ca1b 100644
+--- a/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
+@@ -2062,7 +2062,18 @@ void CvTacticalAI::PlotReinforcementMoves(CvTacticalDominanceZone* pTargetZone)
+ 					if (pUnitZone->GetOverallDominanceFlag() != TACTICAL_DOMINANCE_FRIENDLY && pUnitZone->GetPosture() != TACTICAL_POSTURE_WITHDRAW)
+ 						if (!pPlot->isCity() || pPlot->getPlotCity()->isInDangerOfFalling() || pUnit->getDomainType() == DOMAIN_SEA)
+ 							if (!pUnit->isEmbarked()) //cannot fight if embarked, so we can take it!
+-								continue;
++							{
++								//AI_AB_TEST (candidate, flag ArmyHandoff): a unit just delivered by an attack operation belongs to the attack,
++								//not to the zone it happens to stand in. Held back here, it gets no tactical move and the homeland AI sends
++								//it to a sentry point at home (a test game's army walked home the turn after declaring war).
++								bool bHandoff = m_pPlayer->UsesCandidateAI(FIX_ARMY_HANDOFF) && pUnit->IsRecentlyDeployedFromOperation() &&
++									pUnit->getDomainType() == DOMAIN_LAND && pZoneCity->getTeam() != m_pPlayer->getTeam();
++								if (GC.getLogging() && GC.getAILogging() && pUnit->IsRecentlyDeployedFromOperation())
++									LogTacticalMessage(CvString::format("ArmyHandoff: %s %d just deployed, %s for zone %d (%s)", pUnit->getName().c_str(), pUnit->GetID(),
++										bHandoff ? "sent to reinforce" : "held back from reinforcing", pTargetZone->GetZoneID(), pZoneCity->getNameNoSpace().c_str()));
++								if (!bHandoff)
++									continue;
++							}
+ 				}
+ 
+ 				// Skip ranged if we only need melee
+-- 
+2.43.0
+
