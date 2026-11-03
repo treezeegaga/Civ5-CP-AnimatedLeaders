@@ -1940,6 +1940,8 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+**Siege test on PC 2 (lead, 2026-11-03 03:45 UTC, the user's request):** PC 2 left screening run 2 after its current pair; PC 1 now plays all 20 screening pairs. PC 2 plays War's siege package on `ab-f390090` (`ai/war`): group c runs `SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture` against B. First one logged pair (`-SaveLogs`, logs in `results/logs_<GameId>/`), then 20 pairs with logging off; results in `AIABTest_c7c_proposals@TREEDESKTOP.csv`. Measure: CitiesCaptured by group, then strength share (SPRT).
+
 **Screening build 2 crash fixed (lead, 2026-11-03 03:20 UTC):** `ab-2d949f8` halted games with "Player index out of bounds" (CvDiplomacyAI.cpp:3029) when an EasyTarget civ was at war with a city-state. Diplomacy's fix 0008 is in `ab-819be70` (`claude/ab-screen2` `819be70`, CI run 88). Install `ab-819be70` before playing on; games already finished on `2d949f8` still count (the fix only changes what used to crash).
 
 **The queue, in order** (updated 2026-11-03 01:35 UTC):
