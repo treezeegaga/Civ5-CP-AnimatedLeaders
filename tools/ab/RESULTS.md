@@ -1188,6 +1188,48 @@ Build: DLL commit `a0d8fcb` (on `ai/economy` rebased onto `9fadf3d`), patch 0011
 `GetBestSettlePlot`). Status: coded, not built. `SettlerPathCheck` logs "no path to better site (x:y), keeping (x:y)"
 when it keeps the old target.
 
+### Religion and faith in the logged King games (Economy, 2026-11-03, read-only)
+
+**What the logs can show.** The copied logs have no religion log. Founding turns, prophet use and faith purchases of
+missionaries and inquisitors are in `PlayerHomelandAILog.csv`. **Pantheons, beliefs, faith totals and faith
+buildings are not.** They're in `ReligionLog.csv` (founding, beliefs, faith purchases) and
+`PlayerBeliefReligionLog.csv` (belief scoring), from `CvReligionClasses.cpp`. Neither is in `Run-Games.ps1
+-SaveLogs`'s list, and the results CSV has no faith column.
+
+Per game (major civs with any religion activity; T = first "Great Prophet founding a religion", E = first
+"enhancing", M = missionaries bought, I = inquisitors bought):
+
+| Game | Civs |
+|---|---|
+| `02A37B03` | Celts T45 E104 M5; Songhai T55 E143 M4; Germany T67 E122 M4; Netherlands T70 E122 M6; Morocco T94 E138 M1 I1 |
+| `02A37B03F` | Celts T45 E102 M9; China T68 M4; Netherlands T68 E115 M6; Morocco T76 M3; Germany T91 E148 M2; no religion: Assyria M1, Indonesia M1, Songhai M4 |
+| `02DEF5BF` | Siam T55 E119 M1; Maya T58 E88 I2; Morocco T70 E141 M3; Zulus T80 M5; Huns T84 M1; none: Poland M2 |
+| `02EA597F` | Ethiopia T42 E96 M10; Celts T49 E102 M8; Brazil T73 E148 M3; India T73 M3; Sweden T86 E144 M2; none: Shoshone M1 |
+| `02F5C9E3` | Arabia T65 E128 M4; Babylon T66 E105 M5; Celts T73 M5; England T80 E133 M3; Spain T95 E143 M4; none: Sweden M1 |
+| `043923C9` / `F` | Spain T38 E71 M11-12 I2; France T56 E114-125 M6-7; Ottomans T59 E117-131 M1; Germany T65 E117-127 M4-7; Assyria T77 E141-151 M2-3; none: Songhai, Portugal (M1-2) |
+
+**Reading.**
+- **Every slot gets filled.** All five religions are founded in every game, at T38-T95, and most are enhanced by T150.
+  The religion's founder then buys 1-12 missionaries, spreading at home and to neighbours.
+- **Faith spent on religions the civ doesn't own.** Civs without a religion still buy missionaries (Assyria,
+  Indonesia, Songhai, Poland, Shoshone, Sweden, Portugal: 1-4 each). Those spread the majority religion in their
+  cities, which is someone else's: faith spent spreading another civ's religion. That is likely a gap rather
+  than a choice.
+- **Little else gets bought with faith.** Apart from missionaries and inquisitors, the only faith-type
+  purchases logged are a few plots (gold). No great people or faith buildings bought with faith appear. Either
+  they aren't logged in the homeland log, or faith piles up after the religion slots fill (from about T95).
+  The missing religion log would say which.
+
+**Bad beliefs or wasted faith?** Can't be judged without `ReligionLog.csv` / `PlayerBeliefReligionLog.csv`. Nothing
+in these logs points to a bug.
+
+**Candidate gap: missionaries for a religion the civ doesn't own.** The likely place is the faith-purchase choice in
+`CvReligionClasses.cpp` (`CvReligionAI::DoFaithPurchases` and its missionary checks). Beliefs are scored in
+`CvReligionAI::ScoreBelief*`, in the same file.
+
+**Before deciding on a religion session:** add `ReligionLog.csv` and `PlayerBeliefReligionLog.csv` to `-SaveLogs`,
+and a faith-stored column to the results CSV, then read one logged pair. That costs no extra games.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
