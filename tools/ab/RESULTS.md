@@ -2330,6 +2330,14 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Bug-fix bundle: PASSED the no-worse test (lead, 2026-11-03 3:50pm ET)
+
+The 8 screened level-2 fixes together in group c (`PolicyPrereqDepth, LosingWarBuildings, DiploBugs, UpgradeSaveCancel,
+LuxuryAsk, DiploPolicyValue, EasyTarget, CultureRivalValue`) against B, `ab-819be70`, PC 2,
+`AIABTest_bugfix8@TREEDESKTOP.csv`. **5 pairs: c 50.21%, gain +0.21 points; no-worse SPRT passed** (LLR +4.22), gainer
+failed (-3.49), as expected for bug fixes. Replays matched, no crash. By the level-2 rule all 8 merge into the C bundle.
+Next on PC 2: `DeclareAtBorder` alone (gainer SPRT), `AIABTest_declare@TREEDESKTOP.csv`.
+
 ### Queue for tonight (lead, 2026-11-03 1:45pm ET)
 
 - **PC 2 (now):** the bug-fix bundle, a no-worse test of the 8 screened level-2 fixes, on `ab-819be70`, results
