@@ -241,6 +241,7 @@ Why bug fixes still get a test: CP's numbers were tuned with the bugs in place, 
 (screening run 2: `CultureRivalValue`, a dead-loop fix, came out -0.29; `EasyTarget` -0.27 and a crash). Why ideas
 need the full test: intuition misleads. `SiegeStay` looked obviously right and screened last (-0.77, 96% chance it's
 worse). The level is set by the lead when the flag is added; a session can propose one in its RESULTS.md entry.
+The user can also rule a change obviously right: it then merges on code review and a clean smoke pair, like level 1.
 
 **The 41 flags, sorted (2026-11-03).** Screening run 2 effect as group share in brackets; "not screened" means it can't
 act in a 150-turn split game.
@@ -254,7 +255,10 @@ proposal counts, Economy's 0009 hold logging, Diplomacy's `IsEndgameAggressiveTo
 - Not screened: `IdeologyPick`, `EspionagePolicyValue` (act after T150), `AirRebaseHeal` (no aircraft by T150).
   They can't be measured in this setup, so they merge on code review and a clean smoke pair, and are re-checked in the
   longer games of phase 2. `CityStateBugs` goes with the bully test (it acts against a runaway).
-- Coming: Economy's `NoForeignMissionaries` and the settler-operation fixes (0011).
+- Coming: the settler-operation fixes (0011).
+- **Ruled obviously right by the user (2026-11-03), no test:** `NoForeignMissionaries`, a civ without its own religion
+  no longer buys missionaries (they spread a rival's religion with its faith). Merges on code review and a clean
+  smoke pair. A founder still buys missionaries for its own religion.
 
 *Level 3, new ideas: full gainer SPRT.*
 - c7c ideas: `WidePlans` (+0.08), `BoxedIn` (+0.34), `BoxedInWar` (-0.69), `TimingAttack` (-0.10), `SiegeTechs`
