@@ -1903,8 +1903,8 @@ the two PCs don't touch the same files. Always `git pull --rebase` before pushin
    Its log should show "replay matches the first game" and no "WRONG SETUP".
 
 **Then screening run 2**, as in "After the baseline: screening run 2" below, but on PC 2 and starting now:
-1. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-2d949f8 -NoLaunch -NoUpdate`
-   (the title must name `2d949f8`; if the release doesn't exist yet, CI is still building it: wait).
+1. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-819be70 -NoLaunch -NoUpdate`
+   (the title must name `819be70`, the crash fix; if the release doesn't exist yet, CI is still building it: wait).
 2. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 20 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"`
 3. Every 5 pairs or so: copy `AIABTest_screen2.csv` to `tools\ab\results\AIABTest_screen2@<COMPUTERNAME>.csv`
    (PC 1 keeps the plain name; the summary reads both files as one run), commit it with your log,
@@ -1939,6 +1939,8 @@ flipped game is the same game: all 120 result rows of pair `02C5BBF9` are identi
 no noise. That's good news for every real test: within a pair, everything that differs comes from the flags
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
+
+**Screening build 2 crash fixed (lead, 2026-11-03 03:20 UTC):** `ab-2d949f8` halted games with "Player index out of bounds" (CvDiplomacyAI.cpp:3029) when an EasyTarget civ was at war with a city-state. Diplomacy's fix 0008 is in `ab-819be70` (`claude/ab-screen2` `819be70`, CI run 88). Install `ab-819be70` before playing on; games already finished on `2d949f8` still count (the fix only changes what used to crash).
 
 **The queue, in order** (updated 2026-11-03 01:35 UTC):
 1. ~~The smoke-test pair~~ (passed).
@@ -2055,7 +2057,7 @@ flag added after c7c off in the bundle, results in `AIABTest_screen2.csv`. CI ru
 this one adds Economy's 0009 (logging) and 0010 (two flags), release `ab-2d949f8`.
 1. **Pull first** (the `Run-Games.ps1` start fix, `3d761c5`), then install the build by commit:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-2d949f8 -NoLaunch -NoUpdate
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-819be70 -NoLaunch -NoUpdate
    ```
 2. Logging off. Group c runs nothing, and each screened flag is on for a random, warmonger-balanced half of the AI
    civs, swapped in the second game of each pair. This build reads the `Difficulty` key that `Run-Games.ps1`
