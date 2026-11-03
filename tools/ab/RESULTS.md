@@ -1552,6 +1552,12 @@ c ran SiegeArmy, ArmyHandoff, SiegeStay and SiegePosture: 47.3% and 55.8%, no ca
   allowed, and SiegeArmy put the optional slots on that list from the first turn. So **no c attack ever waited and
   grew**. c's attacks were simply cancelled, so this pair and the 20-pair run on `ab-f390090` measure that, not the
   idea. Fixed in `a86d57b` on `ai/war` (no optional-slot requests on the creation turn; patch `patches/war/0004`).
+- **No c city attack ever marched,** and c's sneak attacks never declared a war. Every c city attack ended `NoUnits` on
+  its creation turn: 106 in the pair (Assyria 46, Spain 34 plus 2 `LostPath`, Songhai 18, Germany 6). Assyria's two
+  declarations (T70, T114) came with the Ottomans' war, not from an army. In the replay, with Germany, Songhai and Spain in
+  c, c declared no wars at all, while as b in the first game Germany and Songhai declared on Portugal. So the damage bar
+  was never reached because no attack lived long enough to try. Whether it's reachable by T150 can only be read from
+  `ab-a86d57b` games.
 - **ArmyHandoff works as designed:** b's just-deployed units log "held back", and Portugal (c) "sent to reinforce".
   It fired rarely (2 sends) because few c armies were delivered.
 - **No siege improved:** the best expected damage per turn was 75/200 (Songhai, b) and 70/200 (Assyria, b in the
