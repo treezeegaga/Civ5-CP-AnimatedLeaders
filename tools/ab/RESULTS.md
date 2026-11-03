@@ -1752,7 +1752,9 @@ the two PCs don't touch the same files. Always `git pull --rebase` before pushin
 2. **Copy from the first PC** through a shared network folder, so both PCs build exactly the same pack: Community
    Patch's mod folder and the repo's `CPModpack\data\` (the database snapshot; git ignores it).
    `tools\ab\Copy-RunnerFiles.ps1` does both ends and checks the copy (file count, size, the DLL's hash):
-   - the shared folder is `\\TREEDESKTOP\civrunner` (on PC 1, shared by the user on 2026-11-03);
+   - the computers are **PC 1 = `BOX`**, **PC 2 = `TREEDESKTOP`**. The shared folder `\\TREEDESKTOP\civrunner` is on
+     PC 2 (`C:\civrunner`), and BOX has no access to it ("Access is denied"), so on 2026-11-03 PC 1 exported to
+     `Documents\civrunner-export\` and the user carried the zip over. PC 2's copy matched (DLL `262AEE88C531`);
    - **PC runner 1:** `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Export \\TREEDESKTOP\civrunner`
      (safe while a game runs);
    - **PC runner 2**, after the clone (step 3) and starting Civ once:
