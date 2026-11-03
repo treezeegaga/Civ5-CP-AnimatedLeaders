@@ -1,0 +1,187 @@
+From 1e455227b3c5417218950fb561cfdded76f21ec7 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 01:19:49 +0000
+Subject: [PATCH] AI_AB_TEST Economy: SettlersBeforeWonders and
+ BookFinishesSettlers candidate flags (from the first logged King games:
+ capital wonders and the book ending before its settlers)
+
+SettlersBeforeWonders: no world wonder in the capital (neither the book's swap to the best wonder nor the normal choice) while the book is active and still has settlers to start. BookFinishesSettlers: the book stays active up to T100 Standard while a book settler is unstarted. Both out of the bundle. Adds CvPlayer::HasUnstartedBookSettlers and a shared lookup of the capital's book steps.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuildingProductionAI.cpp                |  6 ++
+ CvGameCoreDLL_Expansion2/CvCityAI.cpp         |  5 +-
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 87 ++++++++++++++++++-
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  3 +
+ 4 files changed, 99 insertions(+), 2 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index 867b612..6dd6696 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -182,6 +182,12 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 		}
+ 	}
+ 
++	// AI_AB_TEST candidate (SettlersBeforeWonders): no world wonder in the capital while the opening book still has
++	// settlers to start (in the first logged King games every B capital started one at T34-T48 and settler 2 waited)
++	if (isWorldWonderClass(kBuildingClassInfo) && m_pCity->isCapital() && kPlayer.UsesCandidateAI(FIX_SETTLERS_BEFORE_WONDERS) &&
++		kPlayer.IsOpeningBookActive() && kPlayer.HasUnstartedBookSettlers())
++		return SR_STRATEGY;
++
+ 	if (isNationalWonderClass(kBuildingClassInfo) || isWorldWonderClass(kBuildingClassInfo))
+ 	{
+ 		if (isWorldWonderClass(kBuildingClassInfo))
+diff --git a/CvGameCoreDLL_Expansion2/CvCityAI.cpp b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+index 89d877c..172fd6e 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+@@ -153,7 +153,10 @@ void CvCityAI::AI_chooseProduction(bool bInterruptWonders, bool bInterruptBuildi
+ 		// The book's later buildings (library and on) give way to the wonder this city is best placed for: over 7
+ 		// test games the new AI had a fifth of CP's wonders at turn 50, and CP's runaway civs were built on them.
+ 		// Monuments, shrines and units (settlers) keep priority.
+-		if (bBookPick && eBookOrder == ORDER_CONSTRUCT && eNextWonder != NO_BUILDING && !bAlreadyBuilt)
++		// Economy candidate (SettlersBeforeWonders): not while the book still has settlers to start. In the first logged King
++		// games every B capital started Stonehenge or the Great Library at T34-T48 with book settlers still to come
++		const bool bSettlersFirst = kOwner.UsesCandidateAI(FIX_SETTLERS_BEFORE_WONDERS) && isCapital() && kOwner.HasUnstartedBookSettlers();
++		if (bBookPick && eBookOrder == ORDER_CONSTRUCT && eNextWonder != NO_BUILDING && !bAlreadyBuilt && !bSettlersFirst)
+ 		{
+ 			static const BuildingClassTypes eMonumentClass = (BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_MONUMENT", true);
+ 			static const BuildingClassTypes eShrineClass = (BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_SHRINE", true);
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 81797f0..c71eeb8 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33339,6 +33339,8 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"EspionagePolicyValue", false},
+ 	{"LosingWarBuildings", false},
+ 	{"CultureRivalValue", false},
++	{"SettlersBeforeWonders", false},
++	{"BookFinishesSettlers", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+@@ -33739,7 +33741,17 @@ bool CvPlayer::IsOpeningBookActive() const
+ 	int iTallLimit = UsesCandidateAI(FIX_GREEDY_BOOK) ? 130 : 80;
+ 	int iTurnLimit = (eBook == OPENING_BOOK_WIDE) ? iWideLimit : (eBook == OPENING_BOOK_CONQUEST) ? 70 : iTallLimit;
+ 	iTurnLimit = iTurnLimit * GC.getGame().getGameSpeedInfo().getTrainPercent() / 100;
+-	return GC.getGame().getElapsedGameTurns() <= iTurnLimit;
++	if (GC.getGame().getElapsedGameTurns() <= iTurnLimit)
++		return true;
++
++	// Economy candidate (BookFinishesSettlers): in the first logged King games none of the 5 tall B civs had started its
++	// 3rd book settler when the book ended at T53 (Quick), and the normal AI then took 10-50 turns more for each city.
++	// The book stays on, up to turn 100 (Standard), while one of its settlers is still to be started.
++	if (UsesCandidateAI(FIX_BOOK_FINISHES_SETTLERS) &&
++		GC.getGame().getElapsedGameTurns() <= 100 * GC.getGame().getGameSpeedInfo().getTrainPercent() / 100 &&
++		HasUnstartedBookSettlers())
++		return true;
++	return false;
+ }
+ 
+ struct OpeningBookStep
+@@ -33818,6 +33830,79 @@ static const OpeningBookStep kOpeningConquestCapital[] = {
+ static const OpeningBookStep kOpeningConquestCity[] = {
+ 	{false, "BUILDINGCLASS_MONUMENT"} };
+ 
++/// AI_AB_TEST: the capital's opening-book steps (NULL if the civ has no book)
++static const OpeningBookStep* GetOpeningBookCapitalSteps(const CvPlayer& kPlayer, int& iNumSteps)
++{
++	iNumSteps = 0;
++	OpeningBookType eBook = kPlayer.GetOpeningBook();
++	if (eBook == OPENING_BOOK_NONE)
++		return NULL;
++#define AB_BOOK_STEPS(a) { iNumSteps = (int)(sizeof(a) / sizeof(OpeningBookStep)); return a; }
++	if (kPlayer.IsCandidateWarmonger(FIX_SIEGE_BOOK))
++		AB_BOOK_STEPS(kOpeningWarmongerCapital)
++	const bool bSF = kPlayer.UsesCandidateAI(FIX_SETTLERS_FIRST);
++	if (eBook == OPENING_BOOK_TALL)
++	{
++		if (kPlayer.UsesCandidateAI(FIX_GREEDY_BOOK))
++		{
++			if (bSF)
++				AB_BOOK_STEPS(kOpeningTallCapitalGreedySF)
++			AB_BOOK_STEPS(kOpeningTallCapitalGreedy)
++		}
++		if (bSF)
++			AB_BOOK_STEPS(kOpeningTallCapitalSF)
++		AB_BOOK_STEPS(kOpeningTallCapital)
++	}
++	if (eBook == OPENING_BOOK_WIDE)
++	{
++		if (kPlayer.UsesCandidateAI(FIX_LONG_WIDE))
++		{
++			if (bSF)
++				AB_BOOK_STEPS(kOpeningWideCapitalLongSF)
++			AB_BOOK_STEPS(kOpeningWideCapitalLong)
++		}
++		if (bSF)
++			AB_BOOK_STEPS(kOpeningWideCapitalSF)
++		AB_BOOK_STEPS(kOpeningWideCapital)
++	}
++	if (eBook == OPENING_BOOK_CONQUEST)
++		AB_BOOK_STEPS(kOpeningConquestCapital)
++	return NULL;
++#undef AB_BOOK_STEPS
++}
++
++/// AI_AB_TEST: does the capital's opening book still have a settler step that hasn't been started (or bought)? Settlers
++/// that became cities count as started. False when no land is left.
++bool CvPlayer::HasUnstartedBookSettlers() const
++{
++	if (!isMajorCiv() || isHuman() || getNumCities() == 0)
++		return false;
++	int iNumSteps = 0;
++	const OpeningBookStep* pSteps = GetOpeningBookCapitalSteps(*this, iNumSteps);
++	if (!pSteps)
++		return false;
++
++	int iWanted = 0;
++	UnitClassTypes eSettlerClass = NO_UNITCLASS;
++	for (int i = 0; i < iNumSteps; i++)
++	{
++		if (!pSteps[i].bUnit)
++			continue;
++		UnitClassTypes eClass = (UnitClassTypes)GC.getInfoTypeForString(pSteps[i].szClass, true);
++		UnitTypes eUnit = (eClass != NO_UNITCLASS) ? GetSpecificUnitType(eClass) : NO_UNIT;
++		CvUnitEntry* pkUnitInfo = (eUnit != NO_UNIT) ? GC.getUnitInfo(eUnit) : NULL;
++		if (pkUnitInfo && pkUnitInfo->IsFound())
++		{
++			iWanted++;
++			eSettlerClass = eClass;
++		}
++	}
++	if (iWanted == 0 || eSettlerClass == NO_UNITCLASS)
++		return false;
++	int iHave = getUnitClassCountPlusMaking(eSettlerClass) + getNumCities() - 1;
++	return iHave < iWanted && !IsBoxedInForSettling();
++}
++
+ /// AI_AB_TEST (logging only): why the book passed over a settler step in this city, and what it picked instead. The
+ /// expansion-pace reading in RESULTS.md uses it to tell the book's own buildings from a held settler falling through.
+ static void LogOpeningBookSettlerHeld(CvPlayer& kPlayer, CvCity* pCity, const char* szHeld, const char* szNext)
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 57c07b6..f92f78e 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -169,6 +169,8 @@ enum CandidateFixTypes
+ 	FIX_ESPIONAGE_POLICY_VALUE,	// Economy (CvPolicyAI audit P4): the passive espionage bonus is scored by its own value. Not in the bundle
+ 	FIX_LOSING_WAR_BUILDINGS,	// Economy (E1): a civ losing a war cuts non-defensive buildings further, as CP meant (dead loop). Not in the bundle
+ 	FIX_CULTURE_RIVAL_VALUE,	// Economy (E2): culture is valued more when a rival's tourism gains on us, as CP meant (dead loop). Not in the bundle
++	FIX_SETTLERS_BEFORE_WONDERS,	// Economy: no world wonder in the capital while the opening book still has settlers to start. Not in the bundle
++	FIX_BOOK_FINISHES_SETTLERS,	// Economy: the opening book stays active (to T100 Standard) until its settlers are started. Not in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+@@ -1740,6 +1742,7 @@ public:
+ 	OpeningBookType GetOpeningBook() const;
+ 	bool IsOpeningBookActive() const;
+ 	bool IsBoxedInForSettling() const;
++	bool HasUnstartedBookSettlers() const;
+ 	bool IsCandidateWarmonger(CandidateFixTypes eFix) const;
+ 	bool GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int& iData);
+ 	TechTypes GetOpeningBookTech() const;
+-- 
+2.43.0
+

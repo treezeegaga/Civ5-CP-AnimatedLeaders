@@ -1098,8 +1098,11 @@ games show the hold reasons directly.
   for strength share.
 - Measure: strength share at T100 (verdict). Mechanism: `City3Turn`, `City4Turn`, and the wonders count at T100.
 - δ: 2 points of strength share.
+- Build: DLL commit `1e45522` (on `dc117c9`), patch 0010, flag `SettlersBeforeWonders` (`FIX_SETTLERS_BEFORE_WONDERS`),
+  not in the bundle. Files: `CvCityAI` (the book's swap to wonders), `CvBuildingProductionAI` (world wonders in the
+  capital), `CvPlayer` (`HasUnstartedBookSettlers`).
 - Test: in a screening run with `SettlersFirst` (they're independent), then SPRT gainer at T100 if it looks good.
-- Status: written; coding next.
+- Status: coded, not built.
 
 ### BookFinishesSettlers: the opening book runs until its settlers are started (Economy)
 - Hypothesis: the tall book ends at T80 Standard (T53 Quick), and none of the 5 B tall civs in the first logged pair
@@ -1109,8 +1112,9 @@ games show the hold reasons directly.
   applies as before.
 - Measure: strength share at T100. Mechanism: `City3Turn`, `City4Turn` for tall civs.
 - δ: 2 points of strength share.
+- Build: same patch 0010, flag `BookFinishesSettlers` (`FIX_BOOK_FINISHES_SETTLERS`), not in the bundle.
 - Test: screening, then SPRT gainer at T100.
-- Status: written; coding next.
+- Status: coded, not built.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
