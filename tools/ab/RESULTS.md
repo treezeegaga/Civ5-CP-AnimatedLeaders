@@ -1651,6 +1651,22 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: the logged siege pair on the fix, 05D462A7 (ab-a86d57b) (2026-11-03)
+
+c 43.4% / 54.6% (pair 49.0%), no city changed hands.
+- **The SiegeArmy fix works.** Assyria (c, replay) kept one attack, operation 1906, waiting from T80 to T84 at 40–42
+  expected damage a turn against a bar of 60. It passed the bar by T87, marched at T88, arrived at T89 and declared
+  at T90. No more NoUnits churn.
+- **The siege got stronger but still fell short.** Assyria's best expected damage at its target was 92/200 a turn as c,
+  against 41/200 as b in the other game. Songhai reached 129/200 in both games whichever group it was in, so that
+  isn't the flag.
+- **The bar is reachable, not blocking:** only one c attack had to wait, for about 7 turns. **It's too low to win:**
+  60 a turn (healing plus a fifth of 200 HP) is met at the muster point, but at the city not every unit fires
+  every turn, and 92 − 20 healing still needs 3+ turns of full fire while the city shoots back.
+- **Next (one idea each, after the 20 pairs on ab-a86d57b give a first number):** raise the bar to healing plus a third
+  of HP (about 87 for 200 HP, 120 with walls), and/or fill the army's open slots with siege units first. The data says
+  the bar, not the slot count or the 20-turn limit, is what limits the siege.
+
 ### War: the logged siege pair 043923C9 (ab-f390090) — SiegeArmy was broken (2026-11-03)
 
 c ran SiegeArmy, ArmyHandoff, SiegeStay and SiegePosture: 47.3% and 55.8%, no captures.
