@@ -1654,10 +1654,12 @@ results files, so the two never mix. Its log is its own (`machines\<COMPUTERNAME
 the two PCs don't touch the same files. Always `git pull --rebase` before pushing.
 
 **One-time setup** (the user does steps 1–2; the runner does the rest):
-1. **Steam:** one Steam account can run a game on only one PC at a time. Either log PC 2's Steam in once with
-   "remember me" and then switch it to **Offline Mode** (Steam menu, Go Offline) before every run, or use a
-   second account that owns Civ V with Gods & Kings and Brave New World. Civ V with both expansions installed,
-   started once so `My Games\Sid Meier's Civilization 5` exists.
+1. **Steam:** one Steam account can run a game on only one PC at a time, so PC 2 uses the user's **second Steam
+   account** (they have two). It must own Civ V with Gods & Kings and Brave New World; check both expansions show
+   as installed under Civ V's DLC in Steam. Install Civ V and start it once so `My Games\Sid Meier's
+   Civilization 5` exists. (Without a second account: log PC 2 in once with "remember me" and switch it to
+   Offline Mode before every run.) Community Patch comes from the first PC (step 2), not the Workshop, so both
+   PCs have the same version.
 2. **Copy from the first PC** (USB stick or a network share), so both PCs build exactly the same pack:
    - `My Games\Sid Meier's Civilization 5\MODS\(1) Community Patch\` (the whole folder), to the same place;
    - the repo's `CPModpack\data\` folder (the Community Patch database snapshot and the baseline text
