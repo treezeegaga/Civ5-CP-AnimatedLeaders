@@ -1033,7 +1033,9 @@ interrupted-settler readings are exact from the logged King pair on.
 `size 1`, `unhappy`, `boxed in`, `growth due` or `one at a time`. `one at a time` followed by a building is
 exactly `SettlerOverlap`'s fall-through, so with it the cause 2 count is direct instead of inferred. It also
 gives city size at that moment, which the logs didn't have. The King baseline (`ab-6b8ebde`) predates it, so
-the first logged pair is read with the inferred method above.
+the first logged pair is read with the inferred method above. The digest prints them per civ (lead): `book SETTLER HELD to T<n>: <count> (<reason>
+<k>, ...)   built instead: <next> <k>, ...   first: T<t> <city> size <s> next <build> | ...`. The cause 2 count is the
+`one at a time` holds whose `next` is a building.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
@@ -1614,10 +1616,6 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
   `CvBuildingProductionAI`): Economy can code it as a flag whenever War wants it tested alongside its fixes.
 
 
-- **For the lead, from Economy (Digest-ABLogs.ps1, once patch 0009 is in a build):** count the `OPENING BOOK -
-  Settler held (<reason>), size <n>, next <build>` lines per civ, by reason, and list the ones whose `next` is a
-  building, with turn and city (e.g. `held: one at a time 4 (3 to a building: T19 Monument, ...), growth due 2,
-  size 1 1`).
 
 ## Instructions for the PC runner
 
