@@ -1791,6 +1791,14 @@ one (`Write-Log` wrote to the output stream, so "log, then return `$false`" came
 the smoke pair sat on "Begin Your Journey" until the user clicked it. Fixed, and when the button isn't recognised the
 runner now clicks it anyway; if the game still doesn't start, it sets the game up again.
 
+**Logs for the sessions (lead, 2026-11-03 01:30 UTC):** from `-SaveLogs` games on, after pulling, the runner copies
+each game's operation, military, diplomacy, tactical, book, production and homeland logs into
+`tools\ab\results\logs_<GameId>\` (files over 20 MB left out and named in the log). Commit that folder with the
+CSV. **One-off for Economy now:** from `My Games\LogsArchive\02A37B0302A37B03F\`, copy `OperationalAILog.csv`,
+`CitySpecializationLog.csv`, `CityStrategyAIProductionLog.csv` and `PlayerHomelandAILog.csv` into
+`tools\ab\results\logs_02A37B0302A37B03F\` (and the same for `02A37B0302A37B03`), commit and push. Economy needs the
+Songhai settler operation's "no path" and "found target" lines.
+
 **The queue, in order** (2026-11-02, updated by the lead at every check-in):
 1. The smoke-test pair (below).
 2. The King baseline's **logged pair** (baseline step 1).

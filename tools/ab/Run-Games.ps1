@@ -361,6 +361,19 @@ while ($played -lt $MaxGames -or $pairReplay) {
             New-Item -ItemType Directory -Force -Path $archive | Out-Null
             Copy-Item -Path (Join-Path $MyGames "Logs\*") -Destination $archive -Recurse -Force
             Write-Log "  logs saved: $digest and $archive"
+            # the logs the topic sessions read, into the repo (commit them with the results): War's operation, military,
+            # diplomacy and tactical logs, Economy's book, production and homeland logs. A file over 20 MB is left
+            # out and named in the runner log instead.
+            $keep = Join-Path $PSScriptRoot "results\logs_$gid"
+            New-Item -ItemType Directory -Force -Path $keep | Out-Null
+            $skipped = @()
+            foreach ($pattern in "OperationalAILog.csv", "MilitaryAILog.csv", "DiplomacyAI*.csv", "*TacticalAI*.csv",
+                "CitySpecializationLog.csv", "CityStrategyAIProductionLog.csv", "PlayerHomelandAILog.csv") {
+                foreach ($f in @(Get-ChildItem -Path $archive -Filter $pattern -File -ErrorAction SilentlyContinue)) {
+                    if ($f.Length -gt 20MB) { $skipped += ("{0} ({1:N0} MB)" -f $f.Name, ($f.Length / 1MB)) } else { Copy-Item $f.FullName $keep -Force }
+                }
+            }
+            Write-Log ("  logs for the sessions: $keep" + $(if ($skipped.Count) { "; left out (over 20 MB): " + ($skipped -join ", ") } else { "" }))
         } catch { Write-Log "  couldn't save the logs: $($_.Exception.Message)" }
     }
     if ($status -like "WRONG SETUP*") { Write-Log "Stopping: fix the setup screens (or the -Expect* values) and start again"; break }
