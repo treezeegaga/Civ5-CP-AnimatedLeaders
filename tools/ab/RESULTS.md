@@ -1395,6 +1395,22 @@ exist by T150 on Quick.
 
 ## Requests
 
+**Blocked (lead, 2026-11-03 00:25 UTC): GitHub Actions is disabled on `treezeegaga/Community-Patch-DLL`.** At
+00:16:55 every running build was cancelled mid-compile (runs 70, 71, 73, 74), and a new run is refused with
+"Actions has been disabled for this repository". The owner turns it back on under the fork's Settings → Actions →
+General. Run 75 (`27437f0`, 64-bit masks) finished first and published `ab-27437f0`. Waiting until Actions is
+back:
+- run 76 (`cca50d8`, Diplomacy's proposal counts), re-queued;
+- `claude/ab-screen2` (`6fa752e`), which is `cca50d8` + Economy + Diplomacy (0001–0007) + War, rebased onto the
+  flag table: 39 flags, results in `AIABTest_screen2.csv`;
+- `ai/economy` (`d950f88`), `ai/diplomacy` (`5788c4e`) and `ai/war` (`445009c`), each rebased onto `cca50d8`.
+The PC runner isn't affected: the baseline uses the published `ab-6b8ebde`.
+
+**Difficulty (PC runner, 2026-11-03):** editing `LastDifficulty` in `config.ini` does nothing (Civ rewrites it).
+The runner picked King once on the setup screen; Civ now remembers it. `Run-Games.ps1`'s turn-10 check caught the
+Prince game (`029BA19B`, a few turn-10 rows in `AIABTest_c7c_roles.csv`; the summary ignores games under turn 100).
+Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can't happen silently.
+
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
   human military strength by 20% at Prince, 50% at Deity, and only for humans. Decide whether the new AI
   should keep a human-only rule here (goal 2 says threats are judged by behaviour).
