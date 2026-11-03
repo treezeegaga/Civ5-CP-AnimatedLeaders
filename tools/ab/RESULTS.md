@@ -1660,10 +1660,15 @@ the two PCs don't touch the same files. Always `git pull --rebase` before pushin
    Civilization 5` exists. (Without a second account: log PC 2 in once with "remember me" and switch it to
    Offline Mode before every run.) Community Patch comes from the first PC (step 2), not the Workshop, so both
    PCs have the same version.
-2. **Copy from the first PC** (USB stick or a network share), so both PCs build exactly the same pack:
-   - `My Games\Sid Meier's Civilization 5\MODS\(1) Community Patch\` (the whole folder), to the same place;
-   - the repo's `CPModpack\data\` folder (the Community Patch database snapshot and the baseline text
-     database; git ignores it), into the clone on PC 2.
+2. **Copy from the first PC** through a shared network folder, so both PCs build exactly the same pack: Community
+   Patch's mod folder and the repo's `CPModpack\data\` (the database snapshot; git ignores it).
+   `tools\ab\Copy-RunnerFiles.ps1` does both ends and checks the copy (file count, size, the DLL's hash):
+   - the user shares a folder on PC 1 (`C:\CivRunner`: right-click, Properties, Sharing, Share, their own account);
+   - **PC runner 1:** `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Export C:\CivRunner`
+     (safe while a game runs);
+   - **PC runner 2**, after the clone (step 3) and starting Civ once:
+     `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Import \\<PC 1's name>\CivRunner\civ-runner-files.zip`
+     (Windows asks for PC 1's sign-in the first time). It ends "same as the first PC".
 3. Clone `treezeegaga/Civ5-CP-AnimatedLeaders`, branch `claude/sleepy-hopper-x77moh`, with push access (sign in to
    GitHub in Git Credential Manager on the first push).
 4. **Windowed Civ:** in `My Games\...\GraphicsSettingsDX9.ini`, `FullScreen = 0`. On a 3840x2160 screen at 150%
