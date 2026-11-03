@@ -1093,6 +1093,25 @@ Morocco (12).
 patch 0009's logging (it only logs) into the screening run 2 build if it isn't too late, so that run's logged
 games show the hold reasons directly.
 
+**Update with all logged King games so far (19 B civ-games).** Sources: the smoke-test pair's b civs, the first
+baseline pair `02C5BBF9` (counted once: both games are the same game), and the b civs of War's three logged games.
+18 of the 19 played tall.
+
+| Measure (B, tall) | Median | Note |
+|---|---|---|
+| 1st book settler started | T19 (T14-T33) | behind the tall book's monument, shrine and warriors |
+| 2nd city | T35.5 | |
+| 3rd city | T65.5 | 2 of 18 had no 3rd city by T80 |
+| world wonder started in the capital by T53 | 17 of 19, median T35 | Stonehenge, Great Library, Temple of Artemis, Pyramids |
+| book settlers started (tall book has 3) | 1 or 2, **never 3** (19 of 19) | the book always ended first |
+| saved 30+ turns and never bought a settler by T80 | 7 of 19 | 10 of 19 bought one, usually at T42-T79 |
+
+The same conclusions, on four times the data:
+- The book's opening delays settler 1 (`SettlersFirst`).
+- Capital wonders take the time of settler 2 (`SettlersBeforeWonders`).
+- The book ends before its 3rd settler every time (`BookFinishesSettlers`).
+- Gold saving pays off late or not at all in about a third of civs.
+
 ### SettlersBeforeWonders: no wonder in the capital while the book still has settlers to build (Economy)
 - Hypothesis: B's capitals start Stonehenge or the Great Library at T34-T48 with book settlers pending (6 of 6 B
   civs in the first logged King pair), and the 2nd-to-3rd city gap is 25-45 turns. While the book is active
