@@ -1453,11 +1453,12 @@ upgrade flavour loop, and the deliberate "peek and return" sentry moves.
 
 ### Screening run 2: plan (lead, 2026-11-03; replaces run 1, which was never played)
 
-- **Build:** `claude/ab-screen2` (`b756936`, release `ab-b756936`): all 39 flags, rebased onto the 64-bit flag
+- **Build:** `claude/ab-screen2` (`2d949f8`, release `ab-2d949f8`; first built as `b756936` before Economy's 0009 and
+  0010 were added on 2026-11-03): all 41 flags, rebased onto the 64-bit flag
   table, compiled together by CI run 77. Results in `AIABTest_screen2.csv`.
-- **Screened (28):** the 13 c7c ideas (all but `LongWide` and `GreedyArmyCap`, which failed); Economy's
+- **Screened (30):** the 13 c7c ideas (all but `LongWide` and `GreedyArmyCap`, which failed); Economy's
   `SettlersFirst`, `SettlerOverlap`, `DiploPolicyValue`, `PolicyPrereqDepth`, `LosingWarBuildings`,
-  `CultureRivalValue`; War's `SiegeStay`, `SiegePosture`, `DeclareAtBorder`, `UpgradeSaveCancel`; Diplomacy's
+  `CultureRivalValue`, and from the first logged King games `SettlersBeforeWonders`, `BookFinishesSettlers`; War's `SiegeStay`, `SiegePosture`, `DeclareAtBorder`, `UpgradeSaveCancel`; Diplomacy's
   `EasyTarget`, `DiploBugs`, `LuxuryAsk`, `DealExploits`, `DealReputation`.
 - **Left out, and where they're tested instead:**
   - `AirRebaseHeal`: no aircraft by turn 150.
@@ -1465,7 +1466,7 @@ upgrade flavour loop, and the deliberate "peek and return" sentry moves.
   - `GreedyAlarm`: waits for War's captures.
   - `CityStateBugs`, `CoalitionStrength`, `CoalitionCoop`, `Sanctions`, `CoalitionPact`: they act against a
     runaway conqueror, so they go to the bully test, where there is one.
-- **Reading it:** paired regression, 8 civs × 20 pairs = 160 differences for 28 flags. Each flag is on for half the
+- **Reading it:** paired regression, 8 civs × 20 pairs = 160 differences for 30 flags. Each flag is on for half the
   civs, so its effect is estimated from about 80 civ-pairs. Expect only large effects (about ±1 point per civ) to
   stand out. Screening only ranks: the top flags get single-flag paired SPRTs.
 - **Diplomacy's reading notes (2026-11-03):**
@@ -1765,13 +1766,13 @@ the two PCs don't touch the same files. Always `git pull --rebase` before pushin
    - `CivArea` `{X, Y, W, H}` (Civ's window below the title bar), `MenuPanel` and `BeginButton` `[x1, y1, x2, y2]`
      (the main menu's button panel; the "Begin Your Journey" button's text).
    Check with `Get-CivScreen` that each screen comes back with its own name at a distance under 2.5.
-7. One game to check: `Run-Games.ps1 -Fixes none -MaxGames 2 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"` (the first pair of the run below).
+7. One game to check: `Run-Games.ps1 -Fixes none -MaxGames 2 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"` (the first pair of the run below).
    Its log should show "replay matches the first game" and no "WRONG SETUP".
 
 **Then screening run 2**, as in "After the baseline: screening run 2" below, but on PC 2 and starting now:
-1. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-b756936 -NoLaunch -NoUpdate`
-   (the title must name `b756936`).
-2. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"`
+1. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-2d949f8 -NoLaunch -NoUpdate`
+   (the title must name `2d949f8`; if the release doesn't exist yet, CI is still building it: wait).
+2. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"`
 3. Every 5 pairs or so: copy `AIABTest_screen2.csv` to `tools\ab\results\`, commit it with your log,
    `git pull --rebase`, push.
 
@@ -1795,7 +1796,7 @@ runner now clicks it anyway; if the game still doesn't start, it sets the game u
 2. The King baseline's **logged pair** (baseline step 1).
 3. **War's 3 logged games** (below, after the baseline).
 4. The rest of the baseline: 19 pairs, logging off (baseline step 2).
-5. **Screening run 2** (below): 28 candidate flags at once, 20 pairs. Then the lead queues single-flag
+5. **Screening run 2** (below): 30 candidate flags at once, 20 pairs. Then the lead queues single-flag
    SPRTs for the flags it ranks highest.
 
 ### 2026-11-02: smoke test of `c7c_roles` with paired games (1 pair = 2 games)
@@ -1896,19 +1897,19 @@ end, and what happens at a siege. These are single games with the c7c bundle on,
 
 ### After the baseline: screening run 2 (20 pairs = 40 games, about 7 hours)
 
-Replaces screening run 1 (never played). One run ranks 28 candidate flags from the same games (lead job 4's
-screening regression). The build is test-only: `claude/ab-screen2` (`b756936`) = `claude/ab-c1` (`fdad60d`: 64-bit
+Replaces screening run 1 (never played). One run ranks 30 candidate flags from the same games (lead job 4's
+screening regression). The build is test-only: `claude/ab-screen2` (`2d949f8`) = `claude/ab-c1` (`fdad60d`: 64-bit
 flag table, proposal counts, the `Difficulty` key) + `ai/economy` + `ai/diplomacy` + `ai/war`, 39 flags, every
-flag added after c7c off in the bundle, results in `AIABTest_screen2.csv`. CI run 77 compiled it; release
-`ab-b756936`.
+flag added after c7c off in the bundle, results in `AIABTest_screen2.csv`. CI run 77 compiled an earlier version (`b756936`);
+this one adds Economy's 0009 (logging) and 0010 (two flags), release `ab-2d949f8`.
 1. **Pull first** (the `Run-Games.ps1` start fix, `3d761c5`), then install the build by commit:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-b756936 -NoLaunch -NoUpdate
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-2d949f8 -NoLaunch -NoUpdate
    ```
 2. Logging off. Group c runs nothing, and each screened flag is on for a random, warmonger-balanced half of the AI
    civs, swapped in the second game of each pair. This build reads the `Difficulty` key that `Run-Games.ps1`
    writes, so it plays King whatever the setup screen remembers:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"
    ```
 3. Commit `AIABTest_screen2.csv` and `Run-Games.log` every 5 pairs or so, and push.
