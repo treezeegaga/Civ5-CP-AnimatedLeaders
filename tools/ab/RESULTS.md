@@ -1082,6 +1082,12 @@ Morocco (12).
   started and ended with `LostPath` every two turns from T18 to T34, the settler was killed (`LostCivilian`),
   and the 2nd city came at T54. An unreachable site re-picked every turn is a settler-operation bug to look at
   (`CvAIOperation`, settler operations: Economy's).
+  - Reading the code (`CvAIOperationCivilianFoundCity::VerifyOrAdjustTarget`): a settler going without an escort
+    plans with `MOVEFLAG_AI_ABORT_IN_DANGER`, under which an end-of-turn plot in danger is impassable in the next
+    two turns. So a barbarian near the route leaves no path. The switch to a "better target" ignores
+    `GeneratePath`'s result and then aborts with `LostPath`, and the next operation picks the same site again.
+  - Still to confirm from `OperationalAILog.csv` (its "no path to city site" and "found target" lines) before
+    coding a fix. Requested from the PC runner's log archive.
 
 **What this changes.** Two new flags, both behind `UsesCandidateAI` with hypotheses below, and a request: put
 patch 0009's logging (it only logs) into the screening run 2 build if it isn't too late, so that run's logged
