@@ -374,7 +374,7 @@ while ($played -lt $MaxGames -or $pairReplay) {
             New-Item -ItemType Directory -Force -Path $keep | Out-Null
             $skipped = @()
             foreach ($pattern in "OperationalAILog.csv", "MilitaryAILog.csv", "DiplomacyAI*.csv", "*TacticalAI*.csv",
-                "CitySpecializationLog.csv", "CityStrategyAIProductionLog.csv", "PlayerHomelandAILog.csv") {
+                "CitySpecializationLog.csv", "CityStrategyAIProductionLog.csv", "PlayerHomelandAILog.csv", "ReligionLog.csv", "PlayerBeliefReligionLog.csv") {
                 foreach ($f in @(Get-ChildItem -Path $archive -Filter $pattern -File -ErrorAction SilentlyContinue)) {
                     if ($f.Length -gt 20MB) { $skipped += ("{0} ({1:N0} MB)" -f $f.Name, ($f.Length / 1MB)) } else { Copy-Item $f.FullName $keep -Force }
                 }
