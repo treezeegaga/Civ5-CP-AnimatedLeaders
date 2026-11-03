@@ -1069,7 +1069,7 @@ Morocco (12).
   book returning nothing). Expect a small effect. Keep it in screening run 2, but don't expect a pass.
 - **The biggest delay wasn't on the list: wonders in the capital.** 6 of 6 B civs started Stonehenge or the Great
   Library at T34-T48, while the book still had settler steps to do. Settler 2 then waited for the wonder (or was
-  replaced by it), and for 3 of 5 tall civs the book ended at T53 (Quick) with settlers unbuilt. The likely path
+  replaced by it), and for all 5 tall civs the book ended at T53 (Quick) without starting its 3rd settler. The likely path
   (`CvCityAI::AI_chooseProduction`): a settler step is held (most likely growth due), the book falls through to
   its library, and the rule that lets the book's later buildings "give way to wonders" (2o) swaps the library
   for a wonder. The other possibility is the book returning nothing and the normal choice picking the wonder.
@@ -1102,8 +1102,8 @@ games show the hold reasons directly.
 - Status: written; coding next.
 
 ### BookFinishesSettlers: the opening book runs until its settlers are started (Economy)
-- Hypothesis: the tall book ends at T80 Standard (T53 Quick), and 3 of 5 B tall civs in the first logged pair
-  hadn't started their 3rd book settler by then (Assyria not even its 2nd). After that, settling falls to the
+- Hypothesis: the tall book ends at T80 Standard (T53 Quick), and none of the 5 B tall civs in the first logged pair
+  had started its 3rd book settler by then (Assyria not even its 2nd; Germany's 3rd at T54 was the normal AI's). After that, settling falls to the
   normal economic AI, which is slower: 3rd city at T63-T87, 4th at T72-T114. With the flag, while any book
   settler step is unstarted, the book stays active up to T100 Standard (T67 Quick); after that the turn limit
   applies as before.
