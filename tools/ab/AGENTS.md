@@ -227,6 +227,53 @@ and goals, diplomacy changes how decisions are computed from them.
 
 ## Testing
 
+### How much evidence a change needs: three levels (the user's decision, 2026-11-03)
+
+Not every change needs a full gain test. As in Stockfish's testing, the evidence matches the risk:
+
+| Level | Kind of change | Needs | Then |
+|---|---|---|---|
+| **1. No effect on decisions** | Crash guards, logging, results columns, bookkeeping the AI never reads | Compiles, plus one smoke pair with no crash and a matching replay | Merge |
+| **2. Bug fix** | Code that plainly does something other than what it was written to do (inverted test, dead loop, wrong variable, wrong value scored), fixed to do what CP meant | A **no-worse SPRT** only ([-1.75, +0.25]): it mustn't hurt. Fixes can go in one bundle test; if the bundle fails, split it | Merge if no worse |
+| **3. New idea** | A new behaviour or strategy, or a retuned number | The full **gainer SPRT** ([0, +2]): it must gain | Merge if it passes |
+
+Why bug fixes still get a test: CP's numbers were tuned with the bugs in place, so a fix can upset that balance
+(screening run 2: `CultureRivalValue`, a dead-loop fix, came out -0.29; `EasyTarget` -0.27 and a crash). Why ideas
+need the full test: intuition misleads. `SiegeStay` looked obviously right and screened last (-0.77, 96% chance it's
+worse). The level is set by the lead when the flag is added; a session can propose one in its RESULTS.md entry.
+
+**The 41 flags, sorted (2026-11-03).** Screening run 2 effect as group share in brackets; "not screened" means it can't
+act in a 150-turn split game.
+
+*Level 1* (not flags; ungated, merged as they come): the `Difficulty` key, the `ResearchSpent`/`Faith` columns, the
+proposal counts, Economy's 0009 hold logging, Diplomacy's `IsEndgameAggressiveTo` guard (0008).
+
+*Level 2, bug fixes: one no-worse bundle test, then merge.*
+- Screened: `PolicyPrereqDepth` (+0.81), `LosingWarBuildings` (+0.61), `DiploBugs` (+0.42), `UpgradeSaveCancel`
+  (+0.37), `LuxuryAsk` (+0.11), `DiploPolicyValue` (-0.25), `EasyTarget` (-0.27), `CultureRivalValue` (-0.29).
+- Not screened: `IdeologyPick`, `EspionagePolicyValue` (act after T150), `AirRebaseHeal` (no aircraft by T150).
+  They can't be measured in this setup, so they merge on code review and a clean smoke pair, and are re-checked in the
+  longer games of phase 2. `CityStateBugs` goes with the bully test (it acts against a runaway).
+- Coming: Economy's `NoForeignMissionaries` and the settler-operation fixes (0011).
+
+*Level 3, new ideas: full gainer SPRT.*
+- c7c ideas: `WidePlans` (+0.08), `BoxedIn` (+0.34), `BoxedInWar` (-0.69), `TimingAttack` (-0.10), `SiegeTechs`
+  (+0.27), `SiegeBook` (-0.59), `DeclareTiming` (-0.11), `GrowthTech` (-0.47), `AqueductValue` (+0.09), `GreedyBook`
+  (-0.02), `GreedyTarget` (-0.12), `CanWin` (-0.45), `ClosedBorders` (-0.63). `LongWide` and `GreedyArmyCap` already
+  failed.
+- Economy: `SettlersBeforeWonders` (+0.84), `SettlerOverlap` (+0.38), `BookFinishesSettlers` (+0.14),
+  `SettlersFirst` (-0.20), `GreedyAlarm` (not screened: waits for captures).
+- War: `DeclareAtBorder` (+0.86), `SiegePosture` (-0.18), `SiegeStay` (-0.77), `SiegeArmy` and `ArmyHandoff` (on PC 2,
+  on the fixed build `ab-a86d57b`).
+- Diplomacy: `DealExploits` (+0.50), `DealReputation` (+0.01), and the coalition flags `CoalitionStrength`,
+  `CoalitionCoop`, `Sanctions`, `CoalitionPact` (the bully test).
+
+**Next tests from this:** PC 1's running top-five test mixes levels (`PolicyPrereqDepth` and `LosingWarBuildings` are
+level 2; `DeclareAtBorder`, `SettlersBeforeWonders`, `DealExploits` level 3). It still answers whether they gain
+together. After it: one no-worse test of the eight screened level-2 fixes together, then single gainer tests of the
+top level-3 ideas.
+
+
 ### Standard test setup
 
 | Setting | Value | Why |
