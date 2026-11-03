@@ -7,11 +7,11 @@ from `Summarize-ABTest.ps1 -MyGames tools\ab\results -Scoreboard`, which prints 
 
 | Build | Setup | Strength share (games) | Aggressor's share of all cities, end (bully test) | Cities per aggressor war | Coalition: civs at war with it at the end; turns from its first conquest to 2+ | Deals per civ per 10 turns | Banned behaviours per game | Seconds per AI turn |
 |---|---|---|---|---|---|---|---|---|
-| **Goal** (agreed with the players, 2026-11-02) | King, even rules | **≥ 55%** against CP | **≤ 20%** (a fair share with 8 civs is 12.5%) | **≤ 1** | **2+ civs within 20 turns** | **0.5–2** (a lively world without spam; check against the first measurement) | **0** | **≤ 1.25× B's** |
+| **Goal** (agreed with the players, 2026-11-02; strength raised to 60% on 2026-11-03) | King, even rules | **≥ 60%** against CP | **≤ 20%** (a fair share with 8 civs is 12.5%) | **≤ 1** | **2+ civs within 20 turns** | **0.5–2** (a lively world without spam; check against the first measurement) | **0** | **≤ 1.25× B's** |
 | A: CP | | 50% (reference) | not measured | not measured | not measured | not measured | not measured | not measured |
 | B: batch 2p (`24cc575`) | Prince, even rules, random maps, single games | 52.4% ± 0.7 against CP (5) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c4 (`ea22df3`), best C so far | same | 51.6% ± 1.1 against B (6) | not measured | not measured | not measured | not measured | not measured | not measured |
-| c7c (`2e9fad1`), newest C | same | 50.0% ± 1.4 against B (7) | not measured | not measured | not measured | not measured | not measured | not measured |
+| c7c (`2e9fad1`), newest C | same | 49.4% ± 1.1 against B (10) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c7c_roles (`6b8ebde`): the bundle again, with every measure | King, even rules, Pangaea, Strategic Balance, no ruins, pairs | waiting for games | waiting for the bully test | | | | | |
 
 - **The diplomacy, war and timing columns** only exist from build `c7c_roles` on. Older builds can't
@@ -820,7 +820,7 @@ plain aggressive AI, and the real test is games against the friend.
   no games used that file yet). It's the real seconds per game turn since the last logged row, measured on
   the PC, so it compares builds only on the same PC and setup.
 - **The goal numbers were agreed with the players on 2026-11-02:**
-  - strength ≥ 55% against CP;
+  - strength ≥ 55% against CP (raised to **60%** by the user on 2026-11-03);
   - the aggressor ≤ 20% of all cities at the end;
   - ≤ 1 city per war;
   - 2+ civs at war with it within 20 turns of its first conquest;
@@ -830,7 +830,7 @@ plain aggressive AI, and the real test is games against the friend.
 
   The deals band gets a second look once the first King games show what CP's AIs do.
 
-### c7c after 7 games (PC runner, games 2–7 merged from `claude/sleepy-hopper-x77moh`)
+### c7c after 10 games (PC runner, games 2–10 merged from `claude/sleepy-hopper-x77moh`)
 
 | Game | c strength | No-military | Score c / b |
 |---|---|---|---|
@@ -841,8 +841,16 @@ plain aggressive AI, and the real test is games against the friend.
 | 5 `0252DABA` | 48.7% | 50.8% | 600 / 596 |
 | 6 `025C2A49` | 48.4% | 51.9% | 557 / 648 |
 | 7 `02657620` | 45.1% | 47.5% | 581 / 615 |
+| 8 `026E87CF` | 45.5% | 47.4% | 552 / 622 |
+| 9 `02775318` | 52.0% | 51.0% | 533 / 614 |
+| 10 `028C4E70` | 46.4% | 46.1% | 542 / 645 |
 
-- **Overall:** 50.0% ± 1.4, 3-4, p 50%; no-military 50.5%. The 52.9% of game 1 was luck, as one game always
+- **After 10 games (lead, 2026-11-03):** 49.4% ± 1.1, 4-6, p 70%; no-military 49.8%; score ahead 4-6. SPRT
+  (δ = 2, unpaired, spread 3.62): gainer LLR **−2.47** (fails at −2.94, so about 2 more games like these end
+  it), no-worse +0.20. c7c is stopped here: the bundle's flags get tested one by one on King with pairs, and
+  the c7c_roles smoke pair plays the same bundle again. Its 4th city comes later than B's (T89 against T81),
+  though more c civs get there (85% against 82%); Economy's settler flags aim at exactly that.
+- **After 7 games:** 50.0% ± 1.4, 3-4, p 50%; no-military 50.5%. The 52.9% of game 1 was luck, as one game always
   can be. SPRT (δ = 2, unpaired): gainer LLR −1.00, no-worse +0.74, both still running. The spread is 3.75
   points per game, so a decision needs about 19–30 games.
 - **Reading:** the c7c bundle isn't better than B. Its ideas are now separate flags (lead job 1), and the
@@ -936,7 +944,7 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
   without `AIABTest.ini` still play c7c.
 - Test: SPRT gainer, paired, standard King setup, T100 (`Summarize-ABTest.ps1 -AtTurn 100`), group c
   running `Fixes = SettlersFirst` against B. Or screened with `SettlerOverlap` in one run.
-- Status: queued after the King baseline (lead); CI build running.
+- Status: in screening run 1 (test build `claude/ab-screen1`, after the King baseline).
 - Notes: Economy has no push access to the fork, so the commit goes to the lead as
   `tools/ab/patches/economy/0001-*.patch` (on `6b8ebde`); the lead applies it to `ai/economy`.
 
@@ -951,7 +959,168 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
 - δ: +2 points of strength share.
 - Build: same commit (`cbb3380`), flag `SettlerOverlap` (`FIX_SETTLER_OVERLAP`). Not in the bundle.
 - Test: SPRT gainer, paired, T100, `Fixes = SettlerOverlap`.
-- Status: written, not built.
+- Status: in screening run 1 (test build `claude/ab-screen1`, after the King baseline).
+
+### Expansion pace: how the logged games are read (Economy, fixed before the logs arrive)
+
+**Source.** `digest_<GameId>.txt` from `Run-Games.ps1 -SaveLogs` (run with `-UpToTurn 80` or more), one block
+per major civ. The lines read are:
+- **`builds to T..`**: every production start, `*` = opening-book pick.
+- **`settlers ordered T / found-city ops started T / cities founded T`**.
+- **`settler timeline to T..`**: `settler (book) in <city>`, `settler (AI) in <city>`, `BOUGHT`, `op started`,
+  `FOUNDED`, `op ended: <reason>`.
+- **`saving gold for a settler: N turns (Ta-Tb)`**.
+- **`IDLE SETTLER turns`**.
+- **`ops aborted`** (e.g. `LostCivilian`).
+
+From the results CSV: `City2Turn`-`City4Turn`, `Book`, `Gold`.
+
+**Per settler** (founded cities 2-4 of each civ, first 80 turns), each settler's life is split into five
+stretches. Read with care: "op started" is when the settler exists and has a target, so it stands in for "finished".
+1. **Wait:** from the previous settler's `op started` (or, for the first settler, turn 0) to this settler's
+   start. What the capital built in between is the **book's own steps** (cause 1) or **fall-through**
+   (cause 2: book buildings started while the previous settler was between `op started` and `FOUNDED`).
+2. **Train:** from the start to `op started`, or to `BOUGHT`.
+3. **Idle:** a gap after training with no op (`IDLE SETTLER` turns), i.e. waiting for an escort or a target.
+4. **Walk:** from `op started` to `FOUNDED`.
+5. **Lost:** `op ended: LostCivilian` and a replacement settler.
+
+**Readings for B (the baseline logged pair).** These say whether the diagnosis behind each flag is right,
+before any flag is tested:
+
+| Flag | Diagnosis is right if B shows | Wrong if |
+|---|---|---|
+| `SettlersFirst` | In the capital, the **wait** before book settlers 2 and 3 is mostly book steps (worker, shrine, monument; for tall civs also before settler 1): median ≥ 8 turns per settler | Waits are short (< 4 turns), or filled by non-book picks (wonders, AI units). Then reordering the book changes little |
+| `SettlerOverlap` | At least one **fall-through** per civ in the first 80 turns (a book building started while a settler walked), each pushing the next settler's start ≥ 5 turns past the founding | Walks are 1-2 turns and the next settler starts right after founding |
+
+The other causes, counted the same way, which become new flags only if they're large:
+- **Idle (escorts):** more than 5 idle turns per settler on average.
+- **Lost settlers:** `LostCivilian`.
+- **Interrupted settlers:** a settler start followed by another start in the same city with no `op started`.
+- **Gold.** The question: is saving locking gold away for nothing? It is if a civ shows ≥ 30 saving turns
+  before T80 with no `BOUGHT`. Then spending it elsewhere (a worker, tiles) is the candidate fix. If most
+  civs buy a settler within about 20 saving turns, saving works and stays.
+
+**Readings for the flags (screening run 1, c against b).** `City2Turn`-`City4Turn` per plan: the mechanism
+shows if c's 3rd city comes ≥ 5 turns earlier than b's, and c's fall-throughs drop to about 0 with
+`SettlerOverlap`. The verdict is still strength share at T100.
+
+**Tried on `digest_c7c_game2.txt`** (Prince, old digest without the timeline; 6 civs):
+- **Cause 1 shows.**
+  - Austria (wide): settler 1 started T7 and its op started at T16. Then came the worker, monument and
+    shrine; settler 2 only started at T26 (a 10-turn wait).
+  - Korea (tall): monument, shrine and two warriors came first, so settler 1 only started at T22.
+- **Cause 2 likely shows, not provable.** Austria's monument started at T19, the turn its first settler
+  founded, before the shrine. That fits a settler step held while the settler walked, and the book
+  falling to the next building.
+- **Things the procedure can't settle without one more field:**
+  - Austria's settler started at T34 only founded at T89.
+  - Brazil's settler started at T30 only got an op at T58. In between, a Great Library (Brazil T43,
+    Austria T39) was started somewhere: the settler may have been **replaced by a wonder**, or finished
+    and stood idle.
+  - The old digest's build list doesn't say which city started what, so the capital's queue can't be told
+    from the new cities'.
+- **Korea's 2nd city was delayed by a lost settler.** Its op ran T31-T48, ended `LostCivilian`, and the
+  replacement founded at T61. Escort and safety cost 30 turns there.
+
+**The missing field is in** (lead, `974919d`): the `builds to` line now reads `builds to T<n> (capital <name>; other
+cities named)`, and every build outside the capital ends in `(<City>)`. So the wait, fall-through and
+interrupted-settler readings are exact from the logged King pair on.
+
+**Why a settler was held, from builds with patch 0009 on** (Economy, logging only, no behaviour change; on
+`d950f88`). The book logs `<city>, OPENING BOOK - Settler held (<reason>), size <n>, next <build>` in
+`CitySpecializationLog.csv` whenever it passes over a settler step. The reason is the first one hit:
+`size 1`, `unhappy`, `boxed in`, `growth due` or `one at a time`. `one at a time` followed by a building is
+exactly `SettlerOverlap`'s fall-through, so with it the cause 2 count is direct instead of inferred. It also
+gives city size at that moment, which the logs didn't have. The King baseline (`ab-6b8ebde`) predates it, so
+the first logged pair is read with the inferred method above. The digest prints them per civ (lead): `book SETTLER HELD to T<n>: <count> (<reason>
+<k>, ...)   built instead: <next> <k>, ...   first: T<t> <city> size <s> next <build> | ...`. The cause 2 count is the
+`one at a time` holds whose `next` is a building.
+
+### Expansion pace: first logged King games (Economy, 2026-11-03)
+
+**Source:** the smoke-test pair `02A37B03` / `02A37B03F` (King, c7c bundle, logging on), digests in `results/`. The
+digests list 6 major civs per game. The flags are judged against B, so the reading uses the 6 civs playing **B**:
+- game 1: Germany (tall), Indonesia (wide), Songhai (tall);
+- game 2: Assyria, China, Morocco (all tall).
+
+These digests predate the city field and patch 0009, so the capital's queue is inferred from the book's step
+order.
+
+| B civ | 1st settler started | 2nd / 3rd / 4th city | Wait before settler 2 (capital), and what filled it | Saving gold |
+|---|---|---|---|---|
+| Germany (tall) | T17, after monument, warrior, shrine | T29 / T61 / T74 | 26 turns: worker\*, AI warrior, **Stonehenge** T39, **library\*** T43 | 35 turns, bought T65 |
+| Songhai (tall) | T17, after monument, shrine, warrior | T35 / T47 / T72 | 9 turns (warrior, worker\*). Settler 3: **Great Library** T47, and the book ended at T53 before it | 53 turns, never bought |
+| Assyria (tall) | T24, after monument, shrine, warrior | T38 / T87 / T104 | Never: worker\*, **Stonehenge** T39, **Royal Library\*** T39/T48. The book ended at T53 with settlers 2 and 3 unbuilt | 44 turns, never bought |
+| China (tall) | T24, after monument, warrior, shrine, worker | T37 / T78 / T93 | 13 turns, **Stonehenge** T34. The settler started T47 is followed at T48 by **Great Library**, and the city that started it didn't found until T78 (likely replaced) | 59 turns, bought T79 |
+| Morocco (tall) | T27, after monument, shrine, warrior, worker | T39 / T63 / T114 | 11 turns: **Stonehenge** T37, library\*, worker\* | 51 turns, bought T50 |
+| Indonesia (wide) | T10 | T22 / T67 / T83 | Never from the book: worker\*, monument\*, shrine\*, then **Great Library** T34 (14 turns). AI settler at T48 | 25 turns, never bought |
+
+(\* = opening-book pick.) Medians: 2nd city T37, 3rd T65, 4th T88. Walks are 2-3 turns, except Songhai (8) and
+Morocco (12).
+
+**Against the readings fixed beforehand:**
+- **`SettlersFirst`: diagnosis right, for settler 1.** Every tall civ started its first settler at T17-T27, behind
+  13-27 turns of monument, shrine, warriors and sometimes the worker. Indonesia (wide) started at T10. With
+  the reordered book, tall civs should start settler 1 at about T8-12. For settler 2 it's only partly right:
+  the book's own steps (worker) are a small part of the wait.
+- **`SettlerOverlap`: diagnosis mostly wrong.** Walks are 2-3 turns. The long holds happen around T34-T48, when
+  **no settler is on the map**, so the reason isn't "one at a time" (it must be growth due, unhappiness, or the
+  book returning nothing). Expect a small effect. Keep it in screening run 2, but don't expect a pass.
+- **The biggest delay wasn't on the list: wonders in the capital.** 6 of 6 B civs started Stonehenge or the Great
+  Library at T34-T48, while the book still had settler steps to do. Settler 2 then waited for the wonder (or was
+  replaced by it), and for all 5 tall civs the book ended at T53 (Quick) without starting its 3rd settler. The likely path
+  (`CvCityAI::AI_chooseProduction`): a settler step is held (most likely growth due), the book falls through to
+  its library, and the rule that lets the book's later buildings "give way to wonders" (2o) swaps the library
+  for a wonder. The other possibility is the book returning nothing and the normal choice picking the wonder.
+  Patch 0009's log line tells these apart.
+- **Gold:** B civs saved for a settler 25-59 turns before T80. 3 of 6 never bought (Songhai, Assyria, Indonesia)
+  and the others bought only at T50-T79. Saving locks 150-230 gold for 40-60 turns for at most one settler,
+  usually late. The procedure's threshold (≥ 30 saving turns, no buy) is met by 2 of 6. A fix is reasonable
+  but second to the wonders.
+- **Also seen in a c civ** (c7c bundle): Songhai (c, wide) built its first settler by T18. Its found-city op then
+  started and ended with `LostPath` every two turns from T18 to T34, the settler was killed (`LostCivilian`),
+  and the 2nd city came at T54. An unreachable site re-picked every turn is a settler-operation bug to look at
+  (`CvAIOperation`, settler operations: Economy's).
+  - Reading the code (`CvAIOperationCivilianFoundCity::VerifyOrAdjustTarget`): a settler going without an escort
+    plans with `MOVEFLAG_AI_ABORT_IN_DANGER`, under which an end-of-turn plot in danger is impassable in the next
+    two turns. So a barbarian near the route leaves no path. The switch to a "better target" ignores
+    `GeneratePath`'s result and then aborts with `LostPath`, and the next operation picks the same site again.
+  - Still to confirm from `OperationalAILog.csv` (its "no path to city site" and "found target" lines) before
+    coding a fix. Requested from the PC runner's log archive.
+
+**What this changes.** Two new flags, both behind `UsesCandidateAI` with hypotheses below, and a request: put
+patch 0009's logging (it only logs) into the screening run 2 build if it isn't too late, so that run's logged
+games show the hold reasons directly.
+
+### SettlersBeforeWonders: no wonder in the capital while the book still has settlers to build (Economy)
+- Hypothesis: B's capitals start Stonehenge or the Great Library at T34-T48 with book settlers pending (6 of 6 B
+  civs in the first logged King pair), and the 2nd-to-3rd city gap is 25-45 turns. While the book is active
+  and still has a settler step to do, the capital doesn't start a world wonder:
+  - the book's later buildings don't give way to wonders;
+  - the normal production choice skips world wonders in the capital.
+
+  Expected: the 3rd city 10-20 turns earlier, at the cost of some early wonders. Wonders count for score, not
+  for strength share.
+- Measure: strength share at T100 (verdict). Mechanism: `City3Turn`, `City4Turn`, and the wonders count at T100.
+- δ: 2 points of strength share.
+- Build: DLL commit `1e45522` (on `dc117c9`), patch 0010, flag `SettlersBeforeWonders` (`FIX_SETTLERS_BEFORE_WONDERS`),
+  not in the bundle. Files: `CvCityAI` (the book's swap to wonders), `CvBuildingProductionAI` (world wonders in the
+  capital), `CvPlayer` (`HasUnstartedBookSettlers`).
+- Test: in a screening run with `SettlersFirst` (they're independent), then SPRT gainer at T100 if it looks good.
+- Status: coded, not built.
+
+### BookFinishesSettlers: the opening book runs until its settlers are started (Economy)
+- Hypothesis: the tall book ends at T80 Standard (T53 Quick), and none of the 5 B tall civs in the first logged pair
+  had started its 3rd book settler by then (Assyria not even its 2nd; Germany's 3rd at T54 was the normal AI's). After that, settling falls to the
+  normal economic AI, which is slower: 3rd city at T63-T87, 4th at T72-T114. With the flag, while any book
+  settler step is unstarted, the book stays active up to T100 Standard (T67 Quick); after that the turn limit
+  applies as before.
+- Measure: strength share at T100. Mechanism: `City3Turn`, `City4Turn` for tall civs.
+- δ: 2 points of strength share.
+- Build: same patch 0010, flag `BookFinishesSettlers` (`FIX_BOOK_FINISHES_SETTLERS`), not in the bundle.
+- Test: screening, then SPRT gainer at T100.
+- Status: coded, not built.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
@@ -995,7 +1164,8 @@ logged games, not more reading.
 - Build: fork commit `cfaf3db` on `ai/economy` (patch 0002 on `cbb3380`), flag `DiploPolicyValue`
   (`FIX_DIPLO_POLICY_VALUE`). Not in the bundle.
 - Test: SPRT no-worse, paired, standard King setup, T150. Lower priority than the expansion flags.
-- Status: queued after SettlersFirst and SettlerOverlap (lead); CI build running.
+- Status: in screening run 1 with SettlersFirst and SettlerOverlap (test build `claude/ab-screen1`, after the
+  King baseline).
 
 ### Late-game victory push audit (Economy, 2026-11-02)
 
@@ -1240,7 +1410,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: `CitiesCaptured` per game by group (the mechanism); strength share at T150 (the verdict). In logged games,
   "attempting capture of X ... expected max damage per turn" should fall more slowly over a siege.
 - δ: +2 points of strength share; CitiesCaptured should rise from about 0.2 per game.
-- Build: local commit `58d4c8d` on `ai/war`, not pushed (no push access from this session: see Requests); patch in `war-patches/`
+- Build: `ai/war` commit `5ae5a94` (rebased by the lead onto the 64-bit flag table, `cca50d8`); patch `patches/war/0001`
 - Test: SPRT gainer, paired, King/Pangaea/Strategic Balance/no ruins/Quick, T150. It only matters once a group is at
   war, so screen it with `TimingAttack` on (the bundle) or in the bully test.
 - Status: hypothesis
@@ -1256,7 +1426,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: CitiesCaptured by group; strength share at T150. In logged games, more "attempting capture" lines per
   war-turn and fewer turns from arrival to the first city attack.
 - δ: +2 points of strength share
-- Build: same commit `58d4c8d` (all three flags in one commit, each behind its own flag)
+- Build: same commit `5ae5a94` (all three flags in one commit, each behind its own flag)
 - Test: SPRT gainer, paired, T150, as above. Best tested together with SIEGE_STAY later (they act on the same
   sieges), but each first on its own.
 - Status: hypothesis
@@ -1271,12 +1441,92 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: turns from war declared to the first city attack (logged games, `OperationalAILog.csv` and
   `PlayerTacticalAILog.csv`); CitiesCaptured; strength share at T150.
 - δ: +1.5 points of strength share (it only touches sneak attacks, so a smaller edge is worth keeping)
-- Build: same commit `58d4c8d` (all three flags in one commit, each behind its own flag)
+- Build: same commit `5ae5a94` (all three flags in one commit, each behind its own flag)
 - Test: SPRT gainer, paired, T150.
 - Status: hypothesis
 - Notes: check in a logged game first that wars really come from this path: a war line in the diplomacy log right
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
+
+### War audit: `CvHomelandAI` (2026-11-02)
+
+No `AI_AB_TEST` changes were in this file, so all of this is CP's code. None of it repeats AUDIT.md. Lines are in
+`CvHomelandAI.cpp` on `ai/war`. Same format as AUDIT.md:
+
+| # | Area | Where | Bug | Fix | Status |
+|---|---|---|---|---|---|
+| H1 | Upgrades / gold | `:1880`, `:1950` | **Inverted condition:** the gold saved for unit upgrades is cancelled only when there is no such request, so it is never cancelled. The early `return` when every upgrade is done doesn't cancel either. At war its priority is 500 + flavour × 50 × 100 (up to ~250k), so a stale request goes on blocking lower-priority purchases after its unit has upgraded or died. (`:1974` cancels too, but only to restart it at once.) Same kind of bug as AUDIT 6 | Cancel when the request exists, and before the `return` | confirmed, flag `UpgradeSaveCancel` |
+| H2 | Aircraft | `:5681`, `:5697`, `:7112` | **A healing aircraft never stays in the quietest base:** the loop that sorts bases quietest first `continue`s past the plane's own base instead of stopping, so it rebases to the next base it can reach every turn. The "do we need to move" guard is always true, because every base scores at least 1. Rebasing ends its moves, so it never heals. The combat loop (`:5776`) gets this right with `break` | Stop at its own base; rebase only to a strictly quieter one | confirmed, flag `AirRebaseHeal`. Little effect before planes (not in T150 Quick games) |
+| H3 | Escorts | `:1013`, `:653` | Worker escort targets (aux 123) pass the `< 500` test meant to let only unimportant sentries take a "peek" step, so an escort can step off its worker and end the turn without moving back | Exempt worker targets by type | mismatch confirmed, effect plausible |
+| H4 | Escorts | `:640–654` | Worker escort targets use each worker's position before `PlotWorkerMoves` moves it, so the escort goes to the tile the worker has left | Build them after the worker moves | plausible |
+| H5 | Navy | `:2614–2629` | An unassigned warship outside its territory that hasn't moved for 7 turns is scrapped, or killed when it can't be scrapped (which also gets around VP's no-disbanding-next-to-enemies rule). A ship pinned by enemies never moves and is deleted | Skip while in danger or at war; never `kill` | plausible (naval: not in Pangaea tests) |
+| H6 | Fog cheat | `:2531`, `:4031`, `:5916`, `:5948` | `MOVEFLAG_PRETEND_ALL_REVEALED`: paths home for idle units and civilians use the real terrain of unexplored tiles | Drop the flag for the new AI | confirmed, small |
+
+Checked, not bugs: the garrison strength maths, the sort orders, the safety thresholds, patrol zones, the
+upgrade flavour loop, and the deliberate "peek and return" sentry moves.
+
+### FIX_UPGRADE_SAVE_CANCEL: drop the stale upgrade-gold request (War, bug H1)
+- Hypothesis: with the cancel working, gold saved for an upgrade that's no longer needed goes back to other
+  purchases (buildings, units, settlers). It's a bug fix, so the test is that it does no harm.
+- Measure: strength share at T150; gold spent on purchases (digest) as the mechanism.
+- δ: no-worse test at δ = 2
+- Build: `ai/war` commit `445009c` (on `5ae5a94`); patch `patches/war/0002`
+- Test: SPRT no-worse, paired, T150 (or screen it at T100: it's an economy effect)
+- Status: hypothesis
+
+### FIX_AIR_REBASE_HEAL: healing aircraft stay in the quietest base (War, bug H2)
+- Hypothesis: damaged planes heal instead of rebasing every turn. No effect in T150 Quick games (no planes), so it
+  can't be tested there; it's a correctness fix for real games.
+- Measure: none in the standard test. Check in a late-era save that a damaged bomber heals.
+- δ: none. A no-worse check only once long games or late-era saves exist.
+- Build: same commit as UpgradeSaveCancel
+- Status: hypothesis; waits for a late-game test
+
+### Screening run 2: plan (lead, 2026-11-03; replaces run 1, which was never played)
+
+- **Build:** `claude/ab-screen2` (`2d949f8`, release `ab-2d949f8`; first built as `b756936` before Economy's 0009 and
+  0010 were added on 2026-11-03): all 41 flags, rebased onto the 64-bit flag
+  table, compiled together by CI run 77. Results in `AIABTest_screen2.csv`.
+- **Screened (30):** the 13 c7c ideas (all but `LongWide` and `GreedyArmyCap`, which failed); Economy's
+  `SettlersFirst`, `SettlerOverlap`, `DiploPolicyValue`, `PolicyPrereqDepth`, `LosingWarBuildings`,
+  `CultureRivalValue`, and from the first logged King games `SettlersBeforeWonders`, `BookFinishesSettlers`; War's `SiegeStay`, `SiegePosture`, `DeclareAtBorder`, `UpgradeSaveCancel`; Diplomacy's
+  `EasyTarget`, `DiploBugs`, `LuxuryAsk`, `DealExploits`, `DealReputation`.
+- **Left out, and where they're tested instead:**
+  - `AirRebaseHeal`: no aircraft by turn 150.
+  - `IdeologyPick`, `EspionagePolicyValue`: they act after turn 150 (phase 2, longer games).
+  - `GreedyAlarm`: waits for War's captures.
+  - `CityStateBugs`, `CoalitionStrength`, `CoalitionCoop`, `Sanctions`, `CoalitionPact`: they act against a
+    runaway conqueror, so they go to the bully test, where there is one.
+- **Reading it:** paired regression, 8 civs × 20 pairs = 160 differences for 30 flags. Each flag is on for half the
+  civs, so its effect is estimated from about 80 civ-pairs. Expect only large effects (about ±1 point per civ) to
+  stand out. Screening only ranks: the top flags get single-flag paired SPRTs.
+- **Diplomacy's reading notes (2026-11-03):**
+  - `EasyTarget` changes how often civs start wars, so it is the flag most likely to move strength either way. Read
+    `WarsDeclared` beside it; if it hurts, check whether its civs started more wars or were targeted more.
+  - `DealReputation` acts only after a civ breaks a payment deal by declaring war, which is rare between AIs:
+    expect it to look neutral here. Its real test is exploit check 1, run twice.
+  - `DealExploits` makes AI-to-AI demands pay off less often. Watch `Deals` and `WarsDeclared`: a refused demand can
+    lead to a war.
+  - Bully test, later: the four coalition flags and `CityStateBugs` all on together first, to see whether anything
+    moves the aggressor's city share at all, then one at a time. Only once War's flags produce captures; until then
+    the coalition has nothing to react to.
+
+### Screening run 1: plan (lead, 2026-11-02; replaced by run 2)
+
+- **Why:** 19 candidate flags exist, from c1–c7c, Economy and War. At about 3 pairs an hour, an SPRT per flag
+  would take days. One screening run estimates every flag's effect per civ from the same 20 pairs (the paired
+  regression, lead job 4). Each game has every flag on for about half the civs, swapped within each pair.
+- **What's screened:** every idea except `LongWide` and `GreedyArmyCap`, which already failed.
+- **Reading it:** `Summarize-ABTest.ps1 -AtTurn 100` for the economy flags, and the final turn for the war flags
+  (job 8: war shows late).
+  - Flags that only act together with another one are diluted: `DeclareTiming`, `GreedyTarget` and `CanWin`
+    need `TimingAttack`, and `BoxedInWar` needs `BoxedIn` and wide civs. A weak estimate there means
+    "no main effect", not "useless".
+  - Screening only ranks. The top 2–3 flags get single-flag paired SPRTs. A flag that looks harmful is dropped
+    unless its owner has a reason to retest it.
+- **Build:** `claude/ab-screen1` (`db63d22`) is test-only: `claude/ab-c1` with `ai/economy` and `ai/war` merged,
+  every new flag off in the bundle, and its own results file. The flags are numbered 15–17 (Economy) and 18–20
+  (War) in this build only. When a flag passes, it's merged into `claude/ab-c1` on its own.
 
 ## Sessions running (2026-11-02)
 
@@ -1291,7 +1541,94 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 The topic sessions push their RESULTS.md entries to their own branch of this repo, and the lead merges them
 into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
 
+### GreedyAlarm: greedy civs wall up when a neighbour's army appears (Economy, the c8 idea)
+- Hypothesis: greedy tall civs drew wars because nothing told them a neighbour was massing (c6: 0-3, Egypt
+  attacked by three civs and a city-state). With an alarm they keep the greedy economy in peace, and when a
+  neighbour's army shows up near their cities they get walls in border cities (valued as if at war) and
+  archers (up to one ranged land unit per city plus one), and `GreedyArmyCap` stops capping. Expected
+  effect: fewer cities lost and fewer wars started on them, at a small production cost.
+- The signal: CP's military aggressive posture toward each met major civ at MEDIUM or above
+  (`CountAggressiveMilitaryScore`: visible units near our cities, 2 each outside their own land, 1 inside,
+  MEDIUM from 6). It counts **only units we can see**, so it's fair play. Tall-plan civs not at war only; war
+  has its own production rules. Note that CP ignores units of civs we give open borders to, so it works best
+  with `ClosedBorders` (in the bundle).
+- Measure: strength share at T150 (verdict). Mechanism, per civ from the c7c_roles columns: wars declared
+  on tall civs, cities they lose, and `CitiesCaptured` against them.
+- δ: 2 points of strength share.
+- Build: fork commit `ccbb01a` on `ai/economy` (patches 0003-0006 on `cfaf3db`, applied by the lead). Flag
+  `GreedyAlarm` (`FIX_GREEDY_ALARM`), not in the bundle. Files: `CvCityStrategyAI` (the signal,
+  `CityStrategyAIHelpers::GetGreedyAlarmThreat`), `CvBuildingProductionAI` (walls), `CvUnitProductionAI`
+  (archers, cap).
+- Test: two configurations against B, paired, T150:
+  1. `Fixes = GreedyArmyCap+GreedyAlarm`: the c8 idea as stated (greed plus alarm). Against c6's 46.5%
+     (cap alone) it shows whether the alarm repairs the cap.
+  2. `Fixes = GreedyAlarm`: the alarm alone, for any tall civ.
+
+  The bundle flags stay on or off as the lead's baseline decides.
+- Status: on `ai/economy`, CI pending. Goes into a screening run once War has capture fixes (lead). War: keep CP's
+  posture signal for now. Background: War owns the threat side (`CvMilitaryAI`). This uses only an
+  existing diplomacy signal and Economy's production files, so it doesn't touch War's code. If War builds a
+  better "army massing" signal (muster points, siege units seen), the alarm should switch to it.
+- Notes: posture only sees units near our cities, so an army mustering out of sight isn't seen until it
+  moves up. That's also what a human sees.
+
+### Two dead loops: `IsPlayerValid` asked of the wrong player (Economy, found while writing GreedyAlarm)
+
+`GET_PLAYER(eLoopPlayer).GetDiplomacyAI()->IsPlayerValid(eLoopPlayer)` asks a player whether it is valid to
+**itself**, and `IsPlayerValid` returns false for one's own team. So both loops below never do anything, in
+CP and in B. Confirmed by reading `CvDiplomacyAI::IsPlayerValid`.
+
+| # | Where | Meant to do | Impact |
+|---|---|---|---|
+| E1 | `CvBuildingProductionAI.cpp` ~1346 | At war, cut non-defensive buildings' value by a further 50 points for each enemy we're losing to (war state worse than stalemate) | Medium in wars: an AI that's losing keeps building libraries and markets instead of units |
+| E2 | `CvCityStrategyAI.cpp` ~4303 | Value culture more when rivals' tourism is gaining on us (×2 to ×3) | Low. The B change there ("CP multiplies once per rival, ×16") fixes a loop that never runs, so it changed nothing |
+
+Fix: `kPlayer.GetDiplomacyAI()->IsPlayerValid(eLoopPlayer)`. Coded as two flags, out of the bundle:
+- **`LosingWarBuildings`** (`FIX_LOSING_WAR_BUILDINGS`, E1), patch 0007.
+  - Hypothesis: a civ losing a war (war state worse than stalemate) cuts non-defensive buildings by a
+    further 50 points per such enemy, so it builds units and walls instead.
+  - Measure: cities lost and strength share in games with wars. It only acts in wars that go badly, so it
+    can't show much until War's capture fixes make wars bite.
+  - Test: no-worse, T150, δ = 2 points of strength share; ideally queued alongside War's flags.
+  - Status: on `ai/economy` as `5531a3e` (with 0008). War wants it tested alongside its fixes.
+- **`CultureRivalValue`** (`FIX_CULTURE_RIVAL_VALUE`, E2), patch 0008.
+  - Hypothesis: culture yields are valued ×2-×3 when a rival's tourism is rising against us, as CP and B
+    intended, so the civ defends culturally a little earlier.
+  - Measure: strength share at T150 (no-worse); culture per turn and policies at T150 (mechanism).
+  - Test: no-worse, T150, δ = 2 points of strength share, low priority. Probably no effect at T150, where tourism is still small.
+  - Status: on `ai/economy` as `5531a3e`.
+
+### IdeologyPick, PolicyPrereqDepth, EspionagePolicyValue: the other CvPolicyAI bugs (Economy, audit P2-P4)
+One flag each, all out of the bundle, as patches 0004-0006 (in that order, after 0003). All three are bug fixes
+judged by **no-worse** tests at T150 (δ = 2 points of strength share), lowest priority in Economy's queue.
+
+| Flag | Audit | Change | What should show |
+|---|---|---|---|
+| `IdeologyPick` (`FIX_IDEOLOGY_PICK`) | P2 | Ruled-out ideologies are tracked in their own list. Later steps skip only those, and the pick is the best of the rest; if all are ruled out, CP's pick stands | Nothing at T150 Quick (ideologies come later). Kept as a no-worse fix for full games; can wait for phase 2's long games |
+| `PolicyPrereqDepth` (`FIX_POLICY_PREREQ_DEPTH`) | P3 | Prerequisites get flavour weight at `iPropagationLevel + 1` | Tiny: shallow policy trees. Flavour weights may be built before the test settings load at game start, in which case the flag only acts on later flavour updates |
+| `EspionagePolicyValue` (`FIX_ESPIONAGE_POLICY_VALUE`) | P4 | The passive espionage bonus is scored with its own value | Late game only |
+
+Status: on `ai/economy` as `ccbb01a`. Lead's plan: `PolicyPrereqDepth` goes into the next screening run;
+`IdeologyPick` and `EspionagePolicyValue` wait for phase 2's long-game setup, since ideologies and spies rarely
+exist by T150 on Quick.
+
 ## Requests
+
+**Blocked (lead, 2026-11-03 00:25 UTC): GitHub Actions is disabled on `treezeegaga/Community-Patch-DLL`.** At
+00:16:55 every running build was cancelled mid-compile (runs 70, 71, 73, 74), and a new run is refused with
+"Actions has been disabled for this repository". The owner turns it back on under the fork's Settings → Actions →
+General. Run 75 (`27437f0`, 64-bit masks) finished first and published `ab-27437f0`. Waiting until Actions is
+back:
+- run 76 (`cca50d8`, Diplomacy's proposal counts), re-queued;
+- `claude/ab-screen2` (`6fa752e`), which is `cca50d8` + Economy + Diplomacy (0001–0007) + War, rebased onto the
+  flag table: 39 flags, results in `AIABTest_screen2.csv`;
+- `ai/economy` (`d950f88`), `ai/diplomacy` (`5788c4e`) and `ai/war` (`445009c`), each rebased onto `cca50d8`.
+The PC runner isn't affected: the baseline uses the published `ab-6b8ebde`.
+
+**Difficulty (PC runner, 2026-11-03):** editing `LastDifficulty` in `config.ini` does nothing (Civ rewrites it).
+The runner picked King once on the setup screen; Civ now remembers it. `Run-Games.ps1`'s turn-10 check caught the
+Prince game (`029BA19B`, a few turn-10 rows in `AIABTest_c7c_roles.csv`; the summary ignores games under turn 100).
+Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can't happen silently.
 
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
   human military strength by 20% at Prince, 50% at Deity, and only for humans. Decide whether the new AI
@@ -1355,12 +1692,15 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
 - **For the lead, from Economy:** the victory push is almost never active in T150 Quick games (L1 in the
   victory-push audit), so goal 6 needs a long-game test (Standard pace, or saves from the Industrial era on)
   before any victory-push fix can be judged.
-- **For the lead, from War: push my DLL commit.** This session couldn't attach `treezeegaga/Community-Patch-DLL`
-  with push access (the request was refused), so the three War flags are a local commit on `ai/war`, off
-  `claude/ab-c1` at `6b8ebde`, saved as `war-patches/0001-...patch` on this branch. Apply with `git am` on a new
-  `ai/war` from `claude/ab-c1` and push, so CI builds `ab-ai-war-latest`. It hasn't been compiled (no Windows toolchain
-  here): CI is the first compile. Also add `SiegeStay`, `SiegePosture`, `DeclareAtBorder` to `AIABTest.ini.example`.
-  Or the user can let the War session attach the repo and it pushes itself.
+- **For the lead, from War: the DLL commit.** Done: the three War flags are on `ai/war` as `4917284` (on
+  `claude/ab-c1` at `6b8ebde`; the patch is also in `patches/war/`). The War session now has push access and pushes
+  `ai/war` itself. CI run 41549033176 compiled `4917284` cleanly (MSVC and clang, debug and release), then was
+  cancelled at "Analyze build warnings" (the known hang), so no release came out of it. `0bc96d3`'s run was cancelled
+  before it started (Actions was off). `ai/war` is now `445009c` (the lead's rebase onto `cca50d8`, 64-bit flag table),
+  pushed 2026-11-03. **CI run 78 passed** (all five War flags compile), and so did the screening build `claude/ab-screen2`
+  (run 77, release `ab-b756936`). Screening run 2 has SiegeStay, SiegePosture, DeclareAtBorder and UpgradeSaveCancel.
+  `ai/war` is one commit behind `claude/ab-c1` (`fdad60d`, which only adds a Difficulty key); it gets rebased at the next push. Please add `SiegeStay`,
+  `SiegePosture`, `DeclareAtBorder` to `AIABTest.ini.example`.
 - **For the lead / PC runner, from War: 3 logged King games before any SPRT on the War flags.** Same setup as the
   baseline, bundle on (so warmongers attack), logging on, `Fixes` = bundle + `SiegeStay,SiegePosture,DeclareAtBorder`
   for one game and the bundle alone for two, so both sides of each flag show up. Copy `OperationalAILog.csv`,
@@ -1407,15 +1747,113 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
   `CanWin` already checks that a target can be beaten. Nothing to code until the bully test shows the aggressor
   picking hopeless targets.
 
+- **Lead (2026-11-02):**
+  - Economy's patches 0003–0006 are on `ai/economy` = `ccbb01a`. E1 and the note below are forwarded to War.
+  - `IdeologyPick` and `EspionagePolicyValue` act on ideologies and spies, which rarely exist by T150 on
+    Quick, so they wait for the phase-2 long-game setup.
+  - `PolicyPrereqDepth` acts all game, so it goes into the next screening run; so does `GreedyAlarm`, once War
+    has capture fixes.
+  - War has push access now and pushes `ai/war` itself.
+- **For War, from Economy:** `GreedyAlarm` (patch 0003) reads CP's visible-unit aggressive posture as its
+  threat signal. If War builds a better "neighbour is massing an army" signal, tell Economy and the alarm
+  will use it. Also E1 (losing wars don't cut building production; a dead loop in
+  `CvBuildingProductionAI`): Economy can code it as a flag whenever War wants it tested alongside its fixes.
+
+
+
+## Instructions for PC runner 2 (the second PC, from 2026-11-03)
+
+The second PC plays **screening run 2** while the first PC plays the King baseline: different builds and different
+results files, so the two never mix. Its log is its own (`machines\<COMPUTERNAME>.json`, below), so pushes from
+the two PCs don't touch the same files. Always `git pull --rebase` before pushing.
+
+**One-time setup** (the user does steps 1–2; the runner does the rest):
+1. **Steam:** one Steam account can run a game on only one PC at a time, so PC 2 uses the user's **second Steam
+   account** (they have two). It must own Civ V with Gods & Kings and Brave New World; check both expansions show
+   as installed under Civ V's DLC in Steam. Install Civ V and start it once so `My Games\Sid Meier's
+   Civilization 5` exists. (Without a second account: log PC 2 in once with "remember me" and switch it to
+   Offline Mode before every run.) Community Patch comes from the first PC (step 2), not the Workshop, so both
+   PCs have the same version.
+2. **Copy from the first PC** through a shared network folder, so both PCs build exactly the same pack: Community
+   Patch's mod folder and the repo's `CPModpack\data\` (the database snapshot; git ignores it).
+   `tools\ab\Copy-RunnerFiles.ps1` does both ends and checks the copy (file count, size, the DLL's hash):
+   - the computers are **PC 1 = `BOX`**, **PC 2 = `TREEDESKTOP`**. The shared folder `\\TREEDESKTOP\civrunner` is on
+     PC 2 (`C:\civrunner`), and BOX has no access to it ("Access is denied"), so on 2026-11-03 PC 1 exported to
+     `Documents\civrunner-export\` and the user carried the zip over. PC 2's copy matched (DLL `262AEE88C531`);
+   - **PC runner 1:** `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Export \\TREEDESKTOP\civrunner`
+     (safe while a game runs);
+   - **PC runner 2**, after the clone (step 3) and starting Civ once:
+     `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Import \\TREEDESKTOP\civrunner\civ-runner-files.zip`
+     (Windows asks for PC 1's sign-in the first time). It ends "same as the first PC".
+3. Clone `treezeegaga/Civ5-CP-AnimatedLeaders`, branch `claude/sleepy-hopper-x77moh`, with push access (sign in to
+   GitHub in Git Credential Manager on the first push).
+4. **Windowed Civ:** in `My Games\...\GraphicsSettingsDX9.ini`, `FullScreen = 0`. On a 3840x2160 screen at 150%
+   scaling (the first PC's), `WindowResX = 1914`, `WindowResY = 2034`; on another screen, the largest window that
+   fits, and calibrate (step 6). In `config.ini`: `LoggingEnabled = 0`. Set the setup screens once: Pangaea,
+   Standard, Quick, King, 8 civs on separate teams (the screening build also forces King itself).
+5. **The machine file** `tools\ab\machines\<COMPUTERNAME>.json` (`$env:COMPUTERNAME`), committed:
+   `{"Log": "Run-Games-<COMPUTERNAME>.log"}`, plus step 6's values on a different screen. With it, the saved
+   screens go to `machines\<COMPUTERNAME>.screens.json`.
+6. **Calibrate.** Install the build (next list, step 1), start Civ by hand and, on each screen, dot-source
+   `tools\ab\CivScreens.ps1` and save it: `Save-CivScreen menu`, `single`, `setup`, `advanced`, and
+   `Save-CivBeginButton` on "Begin Your Journey". On the same 4K screen at 150% that's all. On another screen, first
+   measure from screenshots, in physical pixels, and put in the machine file:
+   - `Positions`: `Continue`, `SinglePlayer`, `SetUpGame`, `AdvancedSetup`, `QuickCombat`, `QuickMovement`,
+     `StartGame`, `BeginJourney`, `Neutral` (an empty band at the top of Civ's window), each `[x, y]`, where Civ
+     first opens its window;
+   - `CivArea` `{X, Y, W, H}` (Civ's window below the title bar), `MenuPanel` and `BeginButton` `[x1, y1, x2, y2]`
+     (the main menu's button panel; the "Begin Your Journey" button's text).
+   Check with `Get-CivScreen` that each screen comes back with its own name at a distance under 2.5.
+7. One game to check: `Run-Games.ps1 -Fixes none -MaxGames 2 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"` (the first pair of the run below).
+   Its log should show "replay matches the first game" and no "WRONG SETUP".
+
+**Then screening run 2**, as in "After the baseline: screening run 2" below, but on PC 2 and starting now:
+1. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-2d949f8 -NoLaunch -NoUpdate`
+   (the title must name `2d949f8`; if the release doesn't exist yet, CI is still building it: wait).
+2. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 20 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"`
+3. Every 5 pairs or so: copy `AIABTest_screen2.csv` to `tools\ab\results\AIABTest_screen2@<COMPUTERNAME>.csv`
+   (PC 1 keeps the plain name; the summary reads both files as one run), commit it with your log,
+   `git pull --rebase`, push.
+
+PC 1 plays the other 10 pairs of the same run (its queue, below).
+
 ## Instructions for the PC runner
 
-**The queue, in order** (2026-11-02, updated by the lead at every check-in):
-1. The smoke-test pair (below).
-2. The King baseline's **logged pair** (baseline step 1).
-3. **War's 3 logged games** (below, after the baseline).
-4. The rest of the baseline: 19 pairs, logging off (baseline step 2).
-5. Then whatever the lead queues after the baseline (the first single-flag SPRTs: Economy's
-   `SettlersFirst` and `SettlerOverlap`, then War's flags).
+**Pinned build (lead, 2026-11-03 00:20 UTC):** the smoke-test pair and the whole King baseline run on
+**`ab-6b8ebde`** (build `c7c_roles`, results in `AIABTest_c7c_roles.csv`), the build the PC runner installed at
+00:09. `ab-c-latest` is about to move to `cca50d8` (64-bit flag masks plus proposal counts, file
+`AIABTest_c7c_proposals.csv`); don't reinstall `ab-c-latest` until the baseline is finished, or its games
+split across two files. Wherever a step below reinstalls the baseline build, use `-Release ab-6b8ebde`.
+
+**Pull before the next `Run-Games.ps1` start (lead, 2026-11-03 00:55 UTC):** a failed start used to count as a good
+one (`Write-Log` wrote to the output stream, so "log, then return `$false`" came back true). That's why game 2 of
+the smoke pair sat on "Begin Your Journey" until the user clicked it. Fixed, and when the button isn't recognised the
+runner now clicks it anyway; if the game still doesn't start, it sets the game up again.
+
+**Logs for the sessions (lead, 2026-11-03 01:30 UTC):** from `-SaveLogs` games on, after pulling, the runner copies
+each game's operation, military, diplomacy, tactical, book, production and homeland logs into
+`tools\ab\results\logs_<GameId>\` (files over 20 MB left out and named in the log). Commit that folder with the
+CSV. **One-off for Economy now:** from `My Games\LogsArchive\02A37B0302A37B03F\`, copy `OperationalAILog.csv`,
+`CitySpecializationLog.csv`, `CityStrategyAIProductionLog.csv` and `PlayerHomelandAILog.csv` into
+`tools\ab\results\logs_02A37B0302A37B03F\` (and the same for `02A37B0302A37B03`), commit and push. Economy needs the
+Songhai settler operation's "no path" and "found target" lines.
+
+**Baseline step 2 is cancelled (lead, 2026-11-03 01:35 UTC).** The PC runner found that with `-Fixes none` the
+flipped game is the same game: all 120 result rows of pair `02C5BBF9` are identical, only `Group` swaps (49.0% then
+51.0%). Civ's replay is fully deterministic, so an A/A pair always averages exactly 50% and 19 more of them measure
+no noise. That's good news for every real test: within a pair, everything that differs comes from the flags
+tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
+first. B's seconds per turn come from the logged pair (logging costs about 15%).
+
+**The queue, in order** (updated 2026-11-03 01:35 UTC):
+1. ~~The smoke-test pair~~ (passed).
+2. ~~The King baseline's logged pair~~ (done: identical games, see above).
+3. **War's 3 logged games** (below), running now.
+4. **Screening run 2** (below), split between the two PCs: PC 1 plays 10 pairs (`-MaxGames 20`) on `ab-2d949f8`
+   and commits its file as `AIABTest_screen2.csv`; PC 2 plays the other 10 and commits as
+   `AIABTest_screen2@<COMPUTERNAME>.csv`. The summary reads both as one run. If PC 2 isn't playing yet when PC 1's
+   10 pairs end, PC 1 plays 10 more.
+5. The lead then queues single-flag SPRTs for the flags it ranks highest.
 
 ### 2026-11-02: smoke test of `c7c_roles` with paired games (1 pair = 2 games)
 
@@ -1510,5 +1948,24 @@ end, and what happens at a siege. These are single games with the c7c bundle on,
    don't commit them: they're for battle tests later.
 4. Commit the CSV, digests and logs, push, and **reinstall the baseline build** before baseline step 2:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-c-latest -NoLaunch -NoUpdate
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-6b8ebde -NoLaunch -NoUpdate
    ```
+
+### After the baseline: screening run 2 (20 pairs = 40 games, about 7 hours)
+
+Replaces screening run 1 (never played). One run ranks 30 candidate flags from the same games (lead job 4's
+screening regression). The build is test-only: `claude/ab-screen2` (`2d949f8`) = `claude/ab-c1` (`fdad60d`: 64-bit
+flag table, proposal counts, the `Difficulty` key) + `ai/economy` + `ai/diplomacy` + `ai/war`, 39 flags, every
+flag added after c7c off in the bundle, results in `AIABTest_screen2.csv`. CI run 77 compiled an earlier version (`b756936`);
+this one adds Economy's 0009 (logging) and 0010 (two flags), release `ab-2d949f8`.
+1. **Pull first** (the `Run-Games.ps1` start fix, `3d761c5`), then install the build by commit:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-2d949f8 -NoLaunch -NoUpdate
+   ```
+2. Logging off. Group c runs nothing, and each screened flag is on for a random, warmonger-balanced half of the AI
+   civs, swapped in the second game of each pair. This build reads the `Difficulty` key that `Run-Games.ps1`
+   writes, so it plays King whatever the setup screen remembers:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 20 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"
+   ```
+3. Commit `AIABTest_screen2.csv` and `Run-Games.log` every 5 pairs or so, and push.

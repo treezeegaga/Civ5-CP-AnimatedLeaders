@@ -15,12 +15,15 @@
 # - for screening runs (flags under Screen = in AIABTest.ini), a regression of each civ's strength on the screened
 #   flags it ran.
 param(
-    [string]$Csv = "",    # one results file; by default every AIABTest*.csv in My Games, each on its own
+    [string[]]$Csv = @(), # one results file, or several of one run read as one (comma-separated, e.g. a run split
+                          # over two PCs: AIABTest_screen2.csv and AIABTest_screen2@PC2.csv); by default every
+                          # AIABTest*.csv in My Games, each on its own
     [int]$MinTurn = 100,  # ignore games that stopped before this turn
     [int]$AtTurn = 0,     # judge every game at this turn instead of its last (games that didn't log it are left out)
     [double]$Delta = 2.0, # SPRT: the smallest gain worth keeping, in strength-share points
     [double]$Sigma = 0,   # SPRT games estimate: spread of one result (pair or game) in points; 0 = measure it
     [switch]$Scoreboard,  # one row per results file for the scoreboard at the top of RESULTS.md, instead of the full report
+    [string]$Json = "",   # also write the games, SPRTs and screening ranks of one results file (-Csv) to this JSON file (the dashboard)
     [string]$MyGames = "$([Environment]::GetFolderPath('MyDocuments'))\My Games\Sid Meier's Civilization 5"
 )
 
@@ -46,8 +49,11 @@ if (-not $Csv) {
     }
     return
 }
-if (-not (Test-Path $Csv)) { throw "No results file at $Csv. Play a test game with the -ABTest pack first." }
-$rows = @(Import-Csv $Csv)
+$Csv = @($Csv | ForEach-Object { $_ -split ',' } | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+foreach ($c in $Csv) { if (-not (Test-Path $c)) { throw "No results file at $c. Play a test game with the -ABTest pack first." } }
+# the run's name: the first file's, without a PC suffix after "@"
+$CsvName = [IO.Path]::GetFileNameWithoutExtension($Csv[0]) -replace '@.*$', ''
+$rows = @(Import-Csv -Path $Csv)
 if ($rows.Count -eq 0) { throw "$Csv has no rows" }
 
 # B-vs-C builds label the groups c (candidate changes) and b (the base build); report c in the "new" column and b in
@@ -116,8 +122,8 @@ function Get-OLS($X, [double[]]$y) {
     for ($i = 0; $i -lt $k; $i++) { $A[$i, ($k + $i)] = 1.0 }
     for ($c = 0; $c -lt $k; $c++) {
         $piv = $c
-        for ($r = $c + 1; $r -lt $k; $r++) { if ([Math]::Abs($A[$r, $c]) -gt [Math]::Abs($A[$piv, $c])) { $piv = $r } }
-        if ([Math]::Abs($A[$piv, $c]) -lt 1e-9) { return $null }   # a column never varies: can't be estimated
+        for ($r = $c + 1; $r -lt $k; $r++) { if ([Math]::Abs(($A[$r, $c])) -gt [Math]::Abs(($A[$piv, $c]))) { $piv = $r } }
+        if ([Math]::Abs(($A[$piv, $c])) -lt 1e-9) { return $null }   # a column never varies: can't be estimated
         if ($piv -ne $c) { for ($j = 0; $j -lt 2 * $k; $j++) { $tmp = $A[$c, $j]; $A[$c, $j] = $A[$piv, $j]; $A[$piv, $j] = $tmp } }
         $d = $A[$c, $c]
         for ($j = 0; $j -lt 2 * $k; $j++) { $A[$c, $j] /= $d }
@@ -137,7 +143,7 @@ function Get-OLS($X, [double[]]$y) {
     $df = $n - $k
     $s2 = if ($df -gt 0) { $rss / $df } else { [double]::NaN }
     $se = New-Object double[] $k
-    for ($i = 0; $i -lt $k; $i++) { $se[$i] = [Math]::Sqrt([Math]::Max(0.0, $s2 * $A[$i, ($k + $i)])) }
+    for ($i = 0; $i -lt $k; $i++) { $se[$i] = [Math]::Sqrt([Math]::Max(0.0, $s2 * ($A[$i, ($k + $i)]))) }
     return [pscustomobject]@{ Beta = $beta; SE = $se; DF = $df }
 }
 
@@ -260,6 +266,9 @@ function Get-BullyStats {
             AtWar = @($g.Civs | Where-Object { $_.AtWarAggressor -eq "1" }).Count
             CoalitionTurns = $coalition
             TallText = if ($tall) { "{0}/{1}/{2}" -f (& $num $tall "WarsOnUs"), (& $num $tall "Friends"), (& $num $tall "Pacts") } else { "-" }
+            # files from c7c_proposals on: joint wars and sanctions the other civs aimed at the aggressor
+            CoopVsAgg = ($g.Civs | ForEach-Object { & $num $_ "CoopWarAgreedVsAggressor" } | Measure-Object -Sum).Sum
+            SanctionsVsAgg = ($g.Civs | ForEach-Object { & $num $_ "SanctionsProposedVsAggressor" } | Measure-Object -Sum).Sum
         }
     }
 }
@@ -281,12 +290,13 @@ if (-not ($rows[0].PSObject.Properties.Name -contains "Role")) { return }
     if ($bully.Count -gt 0) {
         Write-Output ""
         Write-Output "Bully test: the aggressor against the rest. With c = the defenders, without = all on B (flipped game)."
-        Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,9} {5,9} {6,10} {7,10} {8,-22}" -f "Game", "c?", "Aggressor", "Cities100", "CitiesEnd", "Captured", "AtWarWith", "Coalition", "Tall civ: wars on it/friends/pacts")
+        Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,9} {5,9} {6,10} {7,10} {8,-22} {9}" -f "Game", "c?", "Aggressor", "Cities100", "CitiesEnd", "Captured", "AtWarWith", "Coalition", "Tall civ: wars on it/friends/pacts", "Joint wars/sanctions vs it")
         foreach ($b in $bully) {
             $s100 = if ($b.Share100 -ne $null) { "{0:N1}%" -f $b.Share100 } else { "-" }
             $coal = if ($b.CoalitionTurns -eq $null) { "-" } elseif ($b.CoalitionTurns -lt 0) { "never" } else { "+{0} turns" -f $b.CoalitionTurns }
             $withC = if ($b.Flipped) { "no" } else { "yes" }
-            Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,8:N1}% {5,9} {6,10} {7,10} {8,-22}" -f $b.GameId, $withC, $b.Aggressor, $s100, $b.ShareEnd, $b.Captured, $b.AtWar, $coal, $b.TallText)
+            $prop = if ($rows[0].PSObject.Properties.Name -contains "CoopWarAgreedVsAggressor") { "{0}/{1}" -f $b.CoopVsAgg, $b.SanctionsVsAgg } else { "-" }
+            Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,8:N1}% {5,9} {6,10} {7,10} {8,-22} {9}" -f $b.GameId, $withC, $b.Aggressor, $s100, $b.ShareEnd, $b.Captured, $b.AtWar, $coal, $b.TallText, $prop)
         }
         # pairs: the aggressor's final share of all cities with c defenders minus without (negative = the candidate held better)
         $diffs = @(foreach ($p in ($bully | Group-Object BaseId | Where-Object { $_.Count -eq 2 })) {
@@ -332,6 +342,16 @@ if (-not ($rows[0].PSObject.Properties.Name -contains "Role")) { return }
         Write-Output ("  {0,-5} {1,8:N2} {2,8:N2} {3,9:N2} {4,9:N1} {5,8:N1} {6,7:N1} {7,11:N1} {8,12} {9,12}" -f $grp, (& $rate "Deals"), (& $rate "WarsDeclared"), (& $rate "CitiesCaptured"), (& $avg "Friends"), (& $avg "Pacts"), (& $avg "Denouncing"), (& $avg "Influential"), (& $sum "WorkersStolen"), (& $sum "WonderChops"))
     }
     Write-Output "  (Deals count each side, so one deal between two civs adds 1 to each. StolenCivil and WonderChops are game totals: the banned behaviours, target 0.)"
+    if ($rows[0].PSObject.Properties.Name -contains "CoopWarAsked") {
+        Write-Output ("  {0,-5} {1,14} {2,15} {3,18} {4,17}" -f "Group", "JointWarAsked", "JointWarAgreed", "SanctionsProposed", "SanctionsPassed")
+        foreach ($grp in "new", "cp") {
+            $cs = @(@($games) + @($roleGames) | ForEach-Object { $g = $_; $_.Civs | Where-Object { $_.Group -eq $grp } | ForEach-Object { [pscustomobject]@{ C = $_; T = [Math]::Max(1, $g.Turn) } } })
+            if ($cs.Count -eq 0) { continue }
+            $rate = { param($col) ($cs | ForEach-Object { 10.0 * (& $num $_.C $col) / $_.T } | Measure-Object -Average).Average }
+            Write-Output ("  {0,-5} {1,14:N2} {2,15:N2} {3,18:N2} {4,17:N2}" -f $grp, (& $rate "CoopWarAsked"), (& $rate "CoopWarAgreed"), (& $rate "SanctionsProposed"), (& $rate "SanctionsPassed"))
+        }
+        Write-Output "  (per civ per 10 turns, counted for the civ that proposed)"
+    }
 }
 
 # ---- Scoreboard row (lead job 11): the milestone measures for one results file ----
@@ -368,7 +388,7 @@ if ($Scoreboard) {
         $t = @($rows | Where-Object { (& $numOf $_ "TurnSecs") -gt 0 } | Group-Object GameId, Turn | ForEach-Object { & $numOf $_.Group[0] "TurnSecs" })
         if ($t.Count) { $secs = "{0:N1}" -f ($t | Measure-Object -Average).Average }
     }
-    Write-Output ("| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |" -f [IO.Path]::GetFileNameWithoutExtension($Csv), $nGames, $strength, $aggShare, $perWar, $coalition, $deals, $banned, $secs)
+    Write-Output ("| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |" -f $CsvName, $nGames, $strength, $aggShare, $perWar, $coalition, $deals, $banned, $secs)
     return
 }
 
@@ -489,6 +509,8 @@ if ($rows[0].PSObject.Properties.Name -contains "City2Turn") {
 
 # ---- SPRT per setup and flag configuration (lead job 4) ----
 $llrBound = [Math]::Log(0.95 / 0.05)   # 2.944: alpha = beta = 5%
+$jsonTests = New-Object System.Collections.ArrayList     # for -Json
+$jsonScreen = New-Object System.Collections.ArrayList
 Write-Output ""
 Write-Output ("SPRT (Fishtest method, normal approximation), Delta = {0:N1} points of strength share; pass at LLR >= +{1:N2}, fail at <= -{1:N2}:" -f $Delta, $llrBound)
 foreach ($cfg in ($games | Group-Object Config)) {
@@ -524,6 +546,9 @@ foreach ($cfg in ($games | Group-Object Config)) {
         Write-Output ("    single games: spread {0:N2}; each game played in a pair is worth {1:N1} unpaired games (an unpaired test would need that many times as many games)" -f $sds, ($gain / 2))
         Write-Output ("    first games {0:+0.00;-0.00;0.00}, second (flipped) games {1:+0.00;-0.00;0.00}: the difference is the split's bias, cancelled within each pair" -f ($g1 | Measure-Object -Average).Average, ($g2 | Measure-Object -Average).Average)
     }
+    $jsonTest = [ordered]@{ config = $cfg.Name; kind = ($kind -replace ' \(unpaired\)', ''); results = $n; gamesLeftOut = $leftOver
+        gain = [Math]::Round($mean, 3); share = [Math]::Round(50 + $mean, 3)
+        spread = if ($n -ge 2) { [Math]::Round($sd, 3) } else { $null } }
     foreach ($test in @(@{ Name = "gainer";    S0 = 0.0;            S1 = $Delta },
                         @{ Name = "no-worse";  S0 = -0.875 * $Delta; S1 = 0.125 * $Delta })) {
         $llr = Get-SprtLLR $x $test.S0 $test.S1
@@ -532,11 +557,17 @@ foreach ($cfg in ($games | Group-Object Config)) {
             elseif ($llr -ge $llrBound) { "PASSED" }
             elseif ($llr -le -$llrBound) { "FAILED" }
             else { "running" }
+        $key = if ($test.Name -eq "gainer") { "gainer" } else { "noWorse" }
+        $jsonTest[$key + "LLR"] = if ($null -eq $llr) { $null } else { [Math]::Round($llr, 3) }
+        $jsonTest[$key + "State"] = $state
         $llrText = if ($null -eq $llr) { "   -  " } else { "{0,6:+0.00;-0.00;0.00}" -f $llr }
         Write-Output ("    {0,-9} H0 {1,5:+0.00;-0.00;0.00} H1 {2,5:+0.00;-0.00;0.00}  LLR {3}  {4}" -f $test.Name, $test.S0, $test.S1, $llrText, $state)
     }
     # Expected length (Wald): about 5.3 s^2/Delta^2 results when the true gain is at H0 or H1, 8.7 s^2/Delta^2 at worst
     $s = if ($Sigma -gt 0) { $Sigma } else { $sd }
+    $jsonTest["expectedResults"] = if ($s -gt 0) { [Math]::Round(2 * 0.9 * $llrBound * $s * $s / ($Delta * $Delta), 1) } else { $null }
+    $jsonTest["expectedResultsWorst"] = if ($s -gt 0) { [Math]::Round($llrBound * $llrBound * $s * $s / ($Delta * $Delta), 1) } else { $null }
+    [void]$jsonTests.Add($jsonTest)
     if ($s -gt 0) {
         $src = if ($Sigma -gt 0) { "-Sigma" } else { "measured" }
         Write-Output ("    expected length at spread {0:N2} ({1}): about {2:N0} {3} if the true gain is 0 or Delta, up to {4:N0} if it's halfway" -f $s, $src,
@@ -606,6 +637,8 @@ if ($rows[0].PSObject.Properties.Name -contains "Screen") {
                 $t = if ($se -gt 0) { $eff / $se } else { 0 }
                 $pUp = Get-TOneSidedP $t $fit.DF
                 Write-Output ("  {0,-14} {1,6:+0.00;-0.00;0.00} +/- {2,4:N2}  as group share {3,6:+0.00;-0.00;0.00}  chance it's really no better: {4,4:P0}" -f $cols[$i], $eff, $se, ($eff * $nCivs / 4), $pUp)
+                [void]$jsonScreen.Add([ordered]@{ flag = $cols[$i]; effect = [Math]::Round($eff, 3); se = [Math]::Round($se, 3)
+                    groupShare = [Math]::Round($eff * $nCivs / 4, 3); pNoBetter = [Math]::Round($pUp, 4); observations = $Y.Count; design = $design })
             }
             Write-Output "  Screening only ranks flags: confirm the promising ones with an SPRT on the flag alone."
         }
@@ -613,6 +646,23 @@ if ($rows[0].PSObject.Properties.Name -contains "Screen") {
 }
 
 Show-RoleTests
+
+if ($Json) {
+    # what the dashboard reads; the same numbers as the report above
+    $r0 = if ($games.Count) { $games[0].Civs[0] } else { $rows[0] }   # a counted game's setup, not a stopped one's
+    $has = { param($name) $r0.PSObject.Properties.Name -contains $name }
+    $out = [ordered]@{
+        file = ($Csv | ForEach-Object { [IO.Path]::GetFileName($_) }) -join ", "
+        setup = [ordered]@{ difficulty = if (& $has "Difficulty") { $r0.Difficulty } else { $null }
+            map = if (& $has "Map") { $r0.Map } else { $null }; paired = (@($jsonTests | Where-Object { $_.kind -eq "pairs" }).Count -gt 0) }
+        delta = $Delta; llrBound = [Math]::Round($llrBound, 3)
+        games = @($games | ForEach-Object { [ordered]@{ gameId = $_.GameId; pair = $_.BaseId; flipped = [bool]$_.Flipped; turn = $_.Turn
+            config = $_.Config; share = [Math]::Round($_.NewStrength, 3); shareNoMilitary = [Math]::Round($_.NewEconomy, 3) } })
+        tests = @($jsonTests)
+        screen = @($jsonScreen)
+    }
+    [IO.File]::WriteAllText($Json, ($out | ConvertTo-Json -Depth 5), (New-Object Text.UTF8Encoding($false)))
+}
 
 Write-Output ""
 Write-Output "A difference only means something once the chance above is small (under 5%) over many games."

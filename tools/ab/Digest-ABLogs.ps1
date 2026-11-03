@@ -52,7 +52,10 @@ if ($csv) {
 }
 
 $chosen = @(Read-Shared "CityStrategyAIProductionLog.csv" | Where-Object { $_ -match ', CHOSEN: ' })
-$book = @(Read-Shared "CitySpecializationLog.csv" | Where-Object { $_ -match 'OPENING BOOK - Started' })
+$specLog = @(Read-Shared "CitySpecializationLog.csv")
+$book = @($specLog | Where-Object { $_ -match 'OPENING BOOK - Started' })
+# Economy's patch 0009 (logging only): "<turn>, <civ>, <city>, OPENING BOOK - Settler held (<reason>), size <n>, next <build>"
+$held = @($specLog | Where-Object { $_ -match 'OPENING BOOK - Settler held \(' })
 $allOps = @(Read-Shared "OperationalAILog.csv")
 $ops = @($allOps | Where-Object { $_ -match ', OP_FOUND_CITY, ' })
 # every other operation's end, for the military summary (lead job 9: is item 26's abort rule cutting attacks short?)
@@ -70,9 +73,13 @@ $out = foreach ($n in $names) {
     $row = $civs.Values | Where-Object { $_.Civ -match ("CIVILIZATION_" + $n.ToUpper().Replace(' ', '_')) } | Select-Object -First 1
     if (-not $row -and $civs.Count -gt 0) { continue }   # city-state
     $builds = @()
-    $builds += $book | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { $c = $_ -split ', '; [pscustomobject]@{ T = [int]$c[0]; S = ($c[3] -replace 'OPENING BOOK - Started ', '') + '*' } }
-    $builds += $chosen | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { $c = $_ -split ', '; [pscustomobject]@{ T = [int]$c[0]; S = $c[5] } }
-    $early = @($builds | Where-Object { $_.T -le $UpToTurn } | Sort-Object T | ForEach-Object { "T$($_.T) $($_.S)" })
+    $builds += $book | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { $c = $_ -split ', '; [pscustomobject]@{ T = [int]$c[0]; S = ($c[3] -replace 'OPENING BOOK - Started ', '') + '*'; City = $c[2] } }
+    $builds += $chosen | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { $c = $_ -split ', '; [pscustomobject]@{ T = [int]$c[0]; S = $c[5]; City = $c[2] } }
+    # the capital is the city of the first build; builds elsewhere carry their city's name (for Economy: a settler
+    # replaced by a wonder in the capital, and the capital's queue against new cities')
+    $capital = @($builds | Sort-Object T | Select-Object -First 1 | ForEach-Object { $_.City })
+    $early = @($builds | Where-Object { $_.T -le $UpToTurn } | Sort-Object T | ForEach-Object {
+        if ($capital.Count -and $_.City -ne $capital[0]) { "T$($_.T) $($_.S) ($($_.City))" } else { "T$($_.T) $($_.S)" } })
     $settlers = @($builds | Where-Object { $_.S -match '^Settler' } | Sort-Object T | ForEach-Object { $_.T })
 
     $mineOps = @($ops | Where-Object { $_ -match "^\d+, $n, " })
@@ -93,6 +100,14 @@ $out = foreach ($n in $names) {
     $tl += @($mineOps | Where-Object { $_ -match 'Ended: ' -and $_ -notmatch 'Ended: Success' } | ForEach-Object { [pscustomobject]@{ T = (Get-Turn $_); S = "op ended: " + (($_ -split 'Ended: ')[1] -split ';')[0] } })
     $timeline = @($tl | Where-Object { $_.T -le $UpToTurn } | Sort-Object T | ForEach-Object { "T$($_.T) $($_.S)" })
     $saving = @($expansion | Where-Object { $_ -match "^\d+, $n, " -and $_ -match 'Saving' } | ForEach-Object { Get-Turn $_ } | Where-Object { $_ -le $UpToTurn } | Sort-Object -Unique)
+    # settler steps the opening book passed over, by reason and by what it built instead (Economy's request)
+    $mineHeld = @($held | Where-Object { $_ -match "^\d+, $n, " } | Where-Object { (Get-Turn $_) -le $UpToTurn })
+    $heldText = if ($mineHeld.Count) {
+        $why = @($mineHeld | ForEach-Object { if ($_ -match 'Settler held \(([^)]*)\)') { $Matches[1] } } | Group-Object | Sort-Object Count -Descending | ForEach-Object { "$($_.Name) $($_.Count)" })
+        $next = @($mineHeld | ForEach-Object { if ($_ -match ', next (.*)$') { $Matches[1].Trim() } } | Group-Object | Sort-Object Count -Descending | ForEach-Object { "$($_.Name) $($_.Count)" })
+        $first = @($mineHeld | Select-Object -First 3 | ForEach-Object { $c = $_ -split ', '; "T$($c[0]) $($c[2]) $(($c[4..($c.Count - 1)]) -join ' ')" })
+        "  book SETTLER HELD to T${UpToTurn}: $($mineHeld.Count) (" + ($why -join ', ') + ")   built instead: " + ($next -join ', ') + "   first: " + ($first -join ' | ')
+    }
     $mil = @($milEnds | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { (($_ -split 'Ended: ')[1] -split '[;,]')[0].Trim() } |
         Group-Object | Sort-Object Count -Descending | ForEach-Object { "$($_.Name) $($_.Count)" })
 
@@ -102,9 +117,10 @@ $out = foreach ($n in $names) {
         Plan = if ($row) { $row.Book } else { '' }
         Cities = if ($row) { $row.Cities } else { '' }
         Text = @(
-            "  builds to T${UpToTurn}: " + ($early -join ' | ')
+            "  builds to T${UpToTurn} (capital $(if ($capital.Count) { $capital[0] } else { '?' }); other cities named): " + ($early -join ' | ')
             "  settlers ordered T: " + ($settlers -join ',') + "   found-city ops started T: " + ($started -join ',') + "   cities founded T: " + ($success -join ',')
             $(if ($aborted.Count) { "  ops aborted: " + ($aborted -join ', ') })
+            $heldText
             $(if ($idle.Count) { "  IDLE SETTLER turns: $($idle.Count) (first T$($idle[0]))" })
             $(if ($mil.Count) { "  military ops ended (whole game): " + ($mil -join ', ') })
             $(if ($timeline.Count) { "  settler timeline to T${UpToTurn}: " + ($timeline -join ' | ') })

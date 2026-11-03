@@ -1,0 +1,153 @@
+From 9460739065e23f6f6a84f39f0dbe5ed061693915 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:56:02 +0000
+Subject: [PATCH] AI_AB_TEST Economy: GreedyAlarm candidate flag (c8: a tall
+ civ that sees a neighbour's army near its cities builds walls and archers,
+ lifting GreedyArmyCap)
+
+Uses CP's military aggressive posture (visible units only). Not in the bundle.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuildingProductionAI.cpp                |  4 +++
+ CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp | 29 +++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvCityStrategyAI.h   |  2 ++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         |  7 +++--
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  2 ++
+ .../CvUnitProductionAI.cpp                    | 11 ++++++-
+ 6 files changed, 51 insertions(+), 4 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index 51dd337..b4d55a9 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -783,6 +783,10 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 	else if (kPlayer.IsAtWarAnyMajor())
+ 		iDefenseMod += 150;
+ 
++	// AI_AB_TEST candidate (GreedyAlarm): a neighbour's army is at the border; wall up as if at war
++	if (!bIgnoreSituational && CityStrategyAIHelpers::GetGreedyAlarmThreat(kPlayer) != NO_PLAYER)
++		iDefenseMod += m_pCity->isBorderCity() ? 1000 : 300;
++
+ 	bool bDanger = !bIgnoreSituational && m_pCity->isUnderSiege();
+ 	if (bDanger)
+ 	{
+diff --git a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp
+index d205644..9822e86 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp
+@@ -5586,3 +5586,32 @@ int  CityStrategyAIHelpers::GetBuildingTraitValue(CvCity *pCity, YieldTypes eYie
+ 
+ 	return iBonus;
+ }
++
++/// AI_AB_TEST candidate (GreedyAlarm, the c8 idea in RESULTS.md): greedy tall civs that kept a small army drew wars
++/// (c6, 0-3). A good greedy player keeps the economy but watches the border: when a neighbour's army shows up near its
++/// cities it walls up and adds archers before the war starts. The signal is CP's military aggressive posture, which
++/// counts only units we can see near our cities (CountAggressiveMilitaryScore: 2 per unit outside their own land, 1
++/// inside it, MEDIUM from 6), so it uses nothing a human couldn't see. Not at war: war has its own production rules.
++PlayerTypes CityStrategyAIHelpers::GetGreedyAlarmThreat(const CvPlayer& kPlayer)
++{
++	if (!kPlayer.isMajorCiv() || kPlayer.isHuman() || !kPlayer.UsesCandidateAI(FIX_GREEDY_ALARM))
++		return NO_PLAYER;
++	if (kPlayer.GetOpeningBook() != OPENING_BOOK_TALL || kPlayer.IsAtWarAnyMajor())
++		return NO_PLAYER;
++
++	PlayerTypes eWorst = NO_PLAYER;
++	int iWorst = AGGRESSIVE_POSTURE_LOW;
++	for (int iPlayerLoop = 0; iPlayerLoop < MAX_MAJOR_CIVS; iPlayerLoop++)
++	{
++		PlayerTypes eLoopPlayer = (PlayerTypes)iPlayerLoop;
++		if (eLoopPlayer == kPlayer.GetID() || !kPlayer.GetDiplomacyAI()->IsPlayerValid(eLoopPlayer))
++			continue;
++		int iPosture = (int)kPlayer.GetDiplomacyAI()->GetMilitaryAggressivePosture(eLoopPlayer);
++		if (iPosture > iWorst)
++		{
++			iWorst = iPosture;
++			eWorst = eLoopPlayer;
++		}
++	}
++	return eWorst;
++}
+diff --git a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.h b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.h
+index e55c180..1a56027 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.h
++++ b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.h
+@@ -255,6 +255,8 @@ namespace CityStrategyAIHelpers
+ {
+ // CvCityStrategy namespace - non-member functions
+ int ReweightByTurnsLeft(int iOriginalWeight, int iTurnsLeft);
++// AI_AB_TEST candidate (GreedyAlarm): the major civ whose visible army near our cities alarms a tall civ, or NO_PLAYER
++PlayerTypes GetGreedyAlarmThreat(const CvPlayer& kPlayer);
+ int GetWeightThresholdModifier(AICityStrategyTypes eStrategy, CvCity* pCity);
+ 
+ // The following functions check triggers to see if a particular CityStrategy should be adopted/continued
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 01d1302..1088af3 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33321,14 +33321,15 @@ static const bool kABTestVersusBase = true;
+ static const char* const kCandidateFixNames[NUM_CANDIDATE_FIXES] = {
+ 	"WidePlans", "BoxedIn", "LongWide", "BoxedInWar", "TimingAttack", "SiegeTechs", "SiegeBook", "DeclareTiming",
+ 	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders",
+-	"SettlersFirst", "SettlerOverlap", "DiploPolicyValue" };
++	"SettlersFirst", "SettlerOverlap", "DiploPolicyValue", "GreedyAlarm" };
+ 
+ // The bundle: what group c ran in the last C build (c7c), and what every civ runs outside a test game. Off in it:
+ // LongWide (c1: c's wide civs got no more cities from the longer opening, and stopping settlers ended expansion that b
+ // completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars). Flags added after c7c stay out until they pass,
+-// so a game without AIABTest.ini still plays c7c: SettlersFirst, SettlerOverlap, DiploPolicyValue.
++// so a game without AIABTest.ini still plays c7c: SettlersFirst, SettlerOverlap, DiploPolicyValue,
++// GreedyAlarm.
+ static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP) | (1 << FIX_SETTLERS_FIRST) |
+-	(1 << FIX_SETTLER_OVERLAP) | (1 << FIX_DIPLO_POLICY_VALUE)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
++	(1 << FIX_SETTLER_OVERLAP) | (1 << FIX_DIPLO_POLICY_VALUE) | (1 << FIX_GREEDY_ALARM)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
+ 
+ const char* CvPlayer::GetCandidateFixName(int iFix)
+ {
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 1ddeb70..c26638a 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -161,6 +161,8 @@ enum CandidateFixTypes
+ 	FIX_SETTLERS_FIRST,		// Economy: the capital's opening-book settlers come before its monument, shrine and worker. Not in the bundle
+ 	FIX_SETTLER_OVERLAP,	// Economy: the next book settler may start training while the last one walks to its site. Not in the bundle
+ 	FIX_DIPLO_POLICY_VALUE,	// Economy (CvPolicyAI audit P1): diplomacy-flavoured policies lose their value only when hostile to a city-state. Not in the bundle
++	FIX_GREEDY_ALARM,		// Economy (c8): a tall civ that sees a neighbour's army near its cities builds walls and ranged units (and lifts
++							// GreedyArmyCap). Not in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+index 2a3c3c1..5dc95bf 100644
+--- a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+@@ -280,7 +280,8 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 		MilitaryAIStrategyTypes eCritical = (MilitaryAIStrategyTypes)GC.getInfoTypeForString("MILITARYAISTRATEGY_EMPIRE_DEFENSE_CRITICAL");
+ 		bool bThreatened = (eDefense != NO_MILITARYAISTRATEGY && kPlayer.GetMilitaryAI()->IsUsingStrategy(eDefense)) ||
+ 			(eCritical != NO_MILITARYAISTRATEGY && kPlayer.GetMilitaryAI()->IsUsingStrategy(eCritical));
+-		if (!bThreatened)
++		// GreedyAlarm: a neighbour's army near our cities lifts the cap
++		if (!bThreatened && CityStrategyAIHelpers::GetGreedyAlarmThreat(kPlayer) == NO_PLAYER)
+ 			return SR_STRATEGY;
+ 	}
+ 
+@@ -1449,6 +1450,14 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 				iBonus += pkUnitEntry->GetRangedCombat();
+ 			}
+ 
++			// AI_AB_TEST candidate (GreedyAlarm): archers behind the walls, up to one ranged land unit per city plus one
++			if (eDomain == DOMAIN_LAND && pkUnitEntry->GetRangedCombat() > 0 && pkUnitEntry->GetDefaultUnitAIType() == UNITAI_RANGED &&
++				CityStrategyAIHelpers::GetGreedyAlarmThreat(kPlayer) != NO_PLAYER &&
++				kPlayer.GetNumUnitsWithUnitAI(UNITAI_RANGED, true) <= kPlayer.getNumCities())
++			{
++				iBonus += 1000;
++			}
++
+ 			if (kPlayer.IsUnderrepresentedUnitType(pkUnitEntry->GetDefaultUnitAIType()))
+ 			{
+ 				iBonus += 200;
+-- 
+2.43.0
+

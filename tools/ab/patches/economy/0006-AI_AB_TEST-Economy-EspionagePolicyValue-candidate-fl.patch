@@ -1,0 +1,75 @@
+From e4f3e1c1a6c29c05c7c61bf8e6191746cb92201a Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:57:37 +0000
+Subject: [PATCH 6/6] AI_AB_TEST Economy: EspionagePolicyValue candidate flag
+ (CvPolicyAI audit P4: passive espionage bonus scored with the rig-election
+ value)
+
+Not in the bundle.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp   | 8 +++++---
+ CvGameCoreDLL_Expansion2/CvPlayer.h     | 1 +
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp | 6 +++++-
+ 3 files changed, 11 insertions(+), 4 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index e315cfd..d1db9d2 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33321,16 +33321,18 @@ static const bool kABTestVersusBase = true;
+ static const char* const kCandidateFixNames[NUM_CANDIDATE_FIXES] = {
+ 	"WidePlans", "BoxedIn", "LongWide", "BoxedInWar", "TimingAttack", "SiegeTechs", "SiegeBook", "DeclareTiming",
+ 	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders",
+-	"SettlersFirst", "SettlerOverlap", "DiploPolicyValue", "GreedyAlarm", "IdeologyPick", "PolicyPrereqDepth" };
++	"SettlersFirst", "SettlerOverlap", "DiploPolicyValue", "GreedyAlarm", "IdeologyPick", "PolicyPrereqDepth",
++	"EspionagePolicyValue" };
+ 
+ // The bundle: what group c ran in the last C build (c7c), and what every civ runs outside a test game. Off in it:
+ // LongWide (c1: c's wide civs got no more cities from the longer opening, and stopping settlers ended expansion that b
+ // completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars). Flags added after c7c stay out until they pass,
+ // so a game without AIABTest.ini still plays c7c: SettlersFirst, SettlerOverlap, DiploPolicyValue,
+-// GreedyAlarm, IdeologyPick, PolicyPrereqDepth.
++// GreedyAlarm, IdeologyPick, PolicyPrereqDepth, EspionagePolicyValue.
+ static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP) | (1 << FIX_SETTLERS_FIRST) |
+ 	(1 << FIX_SETTLER_OVERLAP) | (1 << FIX_DIPLO_POLICY_VALUE) | (1 << FIX_GREEDY_ALARM) |
+-	(1 << FIX_IDEOLOGY_PICK) | (1 << FIX_POLICY_PREREQ_DEPTH)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
++	(1 << FIX_IDEOLOGY_PICK) | (1 << FIX_POLICY_PREREQ_DEPTH) |
++	(1 << FIX_ESPIONAGE_POLICY_VALUE)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
+ 
+ const char* CvPlayer::GetCandidateFixName(int iFix)
+ {
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index ab2ade0..e7c24b7 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -165,6 +165,7 @@ enum CandidateFixTypes
+ 							// GreedyArmyCap). Not in the bundle
+ 	FIX_IDEOLOGY_PICK,		// Economy (CvPolicyAI audit P2): a ruled-out ideology can't win the pick when the others score below 0. Not in the bundle
+ 	FIX_POLICY_PREREQ_DEPTH,	// Economy (CvPolicyAI audit P3): policy weight passed to prerequisites at the right depth. Not in the bundle
++	FIX_ESPIONAGE_POLICY_VALUE,	// Economy (CvPolicyAI audit P4): the passive espionage bonus is scored by its own value. Not in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index a300094..497ffff 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -2350,7 +2350,11 @@ Firaxis::Array< int, NUM_YIELD_TYPES > CvPolicyAI::WeightPolicyAttributes(CvPlay
+ 	}
+ 	if (PolicyInfo->GetPassiveEspionageBonusModifier() != 0)
+ 	{
+-		yield[YIELD_SCIENCE] += PolicyInfo->GetRigElectionInfluenceModifier() / 10;
++		// AI_AB_TEST candidate (EspionagePolicyValue): CP scores this with the rig-election value (copy-paste)
++		if (pPlayer->UsesCandidateAI(FIX_ESPIONAGE_POLICY_VALUE))
++			yield[YIELD_SCIENCE] += PolicyInfo->GetPassiveEspionageBonusModifier() / 10;
++		else
++			yield[YIELD_SCIENCE] += PolicyInfo->GetRigElectionInfluenceModifier() / 10;
+ 	}
+ 	if (PolicyInfo->GetMilitaryUnitGiftExtraInfluence() != 0)
+ 	{
+-- 
+2.43.0
+

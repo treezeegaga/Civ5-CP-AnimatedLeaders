@@ -1,0 +1,18 @@
+{
+    "Log": "Run-Games-TREEDESKTOP.log",
+    "Screen": "2560x1440 at 100%; Civ window 1600x1400 (GraphicsSettingsDX9.ini WindowResX/Y; 1340 hid Quick Combat/Movement below the Advanced Setup list), opens at 480,20",
+    "Positions": {
+        "Continue": [1280, 939],
+        "SinglePlayer": [1280, 601],
+        "SetUpGame": [1280, 646],
+        "AdvancedSetup": [1358, 1027],
+        "QuickCombat": [1278, 1307],
+        "QuickMovement": [1278, 1330],
+        "StartGame": [1592, 1380],
+        "BeginJourney": [1280, 1084],
+        "Neutral": [1280, 80]
+    },
+    "CivArea": { "X": 483, "Y": 46, "W": 1594, "H": 1346 },
+    "MenuPanel": [1135, 575, 1425, 960],
+    "BeginButton": [1210, 1076, 1350, 1094]
+}

@@ -1,0 +1,73 @@
+From 0936638767b63c5c7a53611f30fc7840b5cd106b Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:57:37 +0000
+Subject: [PATCH 5/6] AI_AB_TEST Economy: PolicyPrereqDepth candidate flag
+ (CvPolicyAI audit P3: iPropagationLevel++ passed to the recursion)
+
+Not in the bundle.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp   | 6 +++---
+ CvGameCoreDLL_Expansion2/CvPlayer.h     | 1 +
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp | 7 ++++++-
+ 3 files changed, 10 insertions(+), 4 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 39dae5f..e315cfd 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33321,16 +33321,16 @@ static const bool kABTestVersusBase = true;
+ static const char* const kCandidateFixNames[NUM_CANDIDATE_FIXES] = {
+ 	"WidePlans", "BoxedIn", "LongWide", "BoxedInWar", "TimingAttack", "SiegeTechs", "SiegeBook", "DeclareTiming",
+ 	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders",
+-	"SettlersFirst", "SettlerOverlap", "DiploPolicyValue", "GreedyAlarm", "IdeologyPick" };
++	"SettlersFirst", "SettlerOverlap", "DiploPolicyValue", "GreedyAlarm", "IdeologyPick", "PolicyPrereqDepth" };
+ 
+ // The bundle: what group c ran in the last C build (c7c), and what every civ runs outside a test game. Off in it:
+ // LongWide (c1: c's wide civs got no more cities from the longer opening, and stopping settlers ended expansion that b
+ // completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars). Flags added after c7c stay out until they pass,
+ // so a game without AIABTest.ini still plays c7c: SettlersFirst, SettlerOverlap, DiploPolicyValue,
+-// GreedyAlarm, IdeologyPick.
++// GreedyAlarm, IdeologyPick, PolicyPrereqDepth.
+ static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP) | (1 << FIX_SETTLERS_FIRST) |
+ 	(1 << FIX_SETTLER_OVERLAP) | (1 << FIX_DIPLO_POLICY_VALUE) | (1 << FIX_GREEDY_ALARM) |
+-	(1 << FIX_IDEOLOGY_PICK)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
++	(1 << FIX_IDEOLOGY_PICK) | (1 << FIX_POLICY_PREREQ_DEPTH)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
+ 
+ const char* CvPlayer::GetCandidateFixName(int iFix)
+ {
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 01836b5..ab2ade0 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -164,6 +164,7 @@ enum CandidateFixTypes
+ 	FIX_GREEDY_ALARM,		// Economy (c8): a tall civ that sees a neighbour's army near its cities builds walls and ranged units (and lifts
+ 							// GreedyArmyCap). Not in the bundle
+ 	FIX_IDEOLOGY_PICK,		// Economy (CvPolicyAI audit P2): a ruled-out ideology can't win the pick when the others score below 0. Not in the bundle
++	FIX_POLICY_PREREQ_DEPTH,	// Economy (CvPolicyAI audit P3): policy weight passed to prerequisites at the right depth. Not in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index f204586..a300094 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -1046,7 +1046,12 @@ void CvPolicyAI::PropagateWeights(int iPolicy, int iWeight, int iPropagationPerc
+ 				// Recurse to its prereqs (assuming we have any weight left)
+ 				if(iPropagatedWeight > 0)
+ 				{
+-					PropagateWeights(iPrereq, iPropagatedWeight, iPropagationPercent, iPropagationLevel++);
++					// AI_AB_TEST candidate (PolicyPrereqDepth): CP passes iPropagationLevel++ (AUDIT.md item 8's bug, in the
++					// policy copy): the first prerequisite recurses at the same depth and later ones a level deeper each
++					if (m_pCurrentPolicies->GetPlayer()->UsesCandidateAI(FIX_POLICY_PREREQ_DEPTH))
++						PropagateWeights(iPrereq, iPropagatedWeight, iPropagationPercent, iPropagationLevel + 1);
++					else
++						PropagateWeights(iPrereq, iPropagatedWeight, iPropagationPercent, iPropagationLevel++);
+ 				}
+ 			}
+ 			else
+-- 
+2.43.0
+

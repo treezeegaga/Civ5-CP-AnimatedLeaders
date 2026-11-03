@@ -26,3 +26,7 @@
 Fixes = bundle
 Screen =
 Flip = 0
+
+; Difficulty: the game's difficulty (a HandicapInfos type), whatever Civ's setup screen remembers. Builds from
+; fork commit fdad60d on; older builds ignore it. Run-Games.ps1 writes its -ExpectDifficulty here.
+Difficulty = HANDICAP_KING

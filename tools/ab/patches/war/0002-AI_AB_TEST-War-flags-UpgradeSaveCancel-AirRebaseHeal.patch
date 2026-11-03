@@ -1,0 +1,92 @@
+From 445009c70701f8a2bebbcd6ffdc876ede24c3541 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:59:35 +0000
+Subject: [PATCH 2/2] AI_AB_TEST War: flags UpgradeSaveCancel, AirRebaseHeal
+ (CvHomelandAI bugs H1, H2; off in the bundle)
+
+- UpgradeSaveCancel (CvHomelandAI::PlotUpgradeMoves): the "no units to
+  upgrade" branch cancelled the upgrade gold request only when there was
+  none (inverted); it now cancels when there is one, and also when every
+  upgrade is done.
+- AirRebaseHeal (CvHomelandAI::PlotAircraftRebase): a healing aircraft no
+  longer skips past its own base to a busier one; it rebases only to a
+  strictly quieter base, so it stays put and heals.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
+---
+ CvGameCoreDLL_Expansion2/CvHomelandAI.cpp | 16 +++++++++++++++-
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp     |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h       |  2 ++
+ 3 files changed, 18 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp b/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
+index 399b4a7c8..de16fcbfb 100644
+--- a/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
+@@ -1877,7 +1877,10 @@ void CvHomelandAI::PlotUpgradeMoves()
+ 	// No units found, cancel request for money if we have one in
+ 	if(m_CurrentMoveUnits.size() == 0)
+ 	{
+-		if(!m_pPlayer->GetEconomicAI()->IsSavingForThisPurchase(PURCHASE_TYPE_UNIT_UPGRADE))
++		//AI_AB_TEST (candidate, flag UpgradeSaveCancel): CP's condition is inverted (it cancels only when there is
++		//nothing to cancel), so a stale upgrade request kept blocking lower-priority purchases
++		bool bSaving = m_pPlayer->GetEconomicAI()->IsSavingForThisPurchase(PURCHASE_TYPE_UNIT_UPGRADE);
++		if(m_pPlayer->UsesCandidateAI(FIX_UPGRADE_SAVE_CANCEL) ? bSaving : !bSaving)
+ 		{
+ 			m_pPlayer->GetEconomicAI()->CancelSaveForPurchase(PURCHASE_TYPE_UNIT_UPGRADE);
+ 		}
+@@ -1948,7 +1951,12 @@ void CvHomelandAI::PlotUpgradeMoves()
+ 
+ 		//return if there is nothing left to do
+ 		if (pFirstNonUpgradedUnit == NULL)
++		{
++			//AI_AB_TEST (candidate, flag UpgradeSaveCancel): every upgrade is done, so the gold request is stale
++			if (m_pPlayer->UsesCandidateAI(FIX_UPGRADE_SAVE_CANCEL))
++				m_pPlayer->GetEconomicAI()->CancelSaveForPurchase(PURCHASE_TYPE_UNIT_UPGRADE);
+ 			return;
++		}
+ 
+ 		// Couldn't do all upgrades this turn, get ready for highest priority unit to upgrade
+ 		int iAmountRequired = pFirstNonUpgradedUnit->upgradePrice(pFirstNonUpgradedUnit->GetUpgradeUnitType());
+@@ -5693,6 +5701,12 @@ void CvHomelandAI::ExecuteAircraftMoves()
+ 				if (!pUnit->canRebase() || !(it->pPlot->isCity()))
+ 					continue;
+ 
++				//AI_AB_TEST (candidate, flag AirRebaseHeal): the bases are sorted quietest first, so once we reach one no
++				//quieter than our own there is nothing better. CP skips past its own base and rebases to a busier one every
++				//turn, and a plane that rebases never heals.
++				if (m_pPlayer->UsesCandidateAI(FIX_AIR_REBASE_HEAL) && it->score >= scoreLookup[pUnit->plot()->GetPlotIndex()])
++					break;
++
+ 				//apparently we're already in the best possible base?
+ 				if (pUnit->plot() == it->pPlot)
+ 					continue;
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 121b1b5c6..a4c44b704 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33332,6 +33332,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"SiegeTechs", true}, {"SiegeBook", true}, {"DeclareTiming", true}, {"GrowthTech", true}, {"AqueductValue", true},
+ 	{"GreedyArmyCap", false}, {"GreedyBook", true}, {"GreedyTarget", true}, {"CanWin", true}, {"ClosedBorders", true},
+ 	{"SiegeStay", false}, {"SiegePosture", false}, {"DeclareAtBorder", false},
++	{"UpgradeSaveCancel", false}, {"AirRebaseHeal", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index b7c75ba6f..3e0451dbb 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -162,6 +162,8 @@ enum CandidateFixTypes
+ 	FIX_SIEGE_STAY,			// War: units at a siege stay unless below a third of their HP (not at 20 damage). Off in the bundle
+ 	FIX_SIEGE_POSTURE,		// War: the attrition posture also bombards the city (safe shots only). Off in the bundle
+ 	FIX_DECLARE_AT_BORDER,	// War: a sneak attack counts as discovered only at the target's border. Off in the bundle
++	FIX_UPGRADE_SAVE_CANCEL,// War (bug H1): the stale gold request for unit upgrades is cancelled. Off in the bundle
++	FIX_AIR_REBASE_HEAL,	// War (bug H2): healing aircraft stay in the quietest base. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+-- 
+2.43.0
+

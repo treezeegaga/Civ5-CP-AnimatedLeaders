@@ -1,7 +1,7 @@
-From 58d4c8d02ffea181ec362aae027f0657bca7465b Mon Sep 17 00:00:00 2001
+From 5ae5a941149b5f1ab7b287193b8e6faf3dada3e4 Mon Sep 17 00:00:00 2001
 From: Claude <noreply@anthropic.com>
 Date: Mon, 2 Nov 2026 23:52:00 +0000
-Subject: [PATCH] AI_AB_TEST War: flags SiegeStay, SiegePosture,
+Subject: [PATCH 1/2] AI_AB_TEST War: flags SiegeStay, SiegePosture,
  DeclareAtBorder (off in the bundle)
 
 - SiegeStay (CvTacticalAI::PlotHealMoves): units within reach of a damaged
@@ -22,14 +22,14 @@ Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
 ---
  CvGameCoreDLL_Expansion2/CvAIOperation.cpp | 25 +++++++++++
  CvGameCoreDLL_Expansion2/CvAIOperation.h   |  1 +
- CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  9 ++--
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  1 +
  CvGameCoreDLL_Expansion2/CvPlayer.h        |  3 ++
  CvGameCoreDLL_Expansion2/CvTacticalAI.cpp  | 51 ++++++++++++++++++++--
  CvGameCoreDLL_Expansion2/CvTacticalAI.h    |  3 +-
- 6 files changed, 84 insertions(+), 8 deletions(-)
+ 6 files changed, 79 insertions(+), 5 deletions(-)
 
 diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
-index 59b8a8a2..75019b9c 100644
+index 59b8a8a28..75019b9c2 100644
 --- a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
 +++ b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
 @@ -1534,6 +1534,23 @@ CvPlot* CvAIOperationMilitary::FindBestTarget(CvPlot ** ppMuster) const
@@ -72,7 +72,7 @@ index 59b8a8a2..75019b9c 100644
  					if (nVisible>2)
  					{
 diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.h b/CvGameCoreDLL_Expansion2/CvAIOperation.h
-index 989afb22..d2810197 100644
+index 989afb22e..d2810197a 100644
 --- a/CvGameCoreDLL_Expansion2/CvAIOperation.h
 +++ b/CvGameCoreDLL_Expansion2/CvAIOperation.h
 @@ -290,6 +290,7 @@ public:
@@ -84,33 +84,22 @@ index 989afb22..d2810197 100644
  protected:
  	//default version does nothing
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
-index 8cdeb9b3..a1218ea1 100644
+index bc95d5bf1..121b1b5c6 100644
 --- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
 +++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
-@@ -33320,12 +33320,15 @@ static const bool kABTestVersusBase = true;
- // AI_AB_TEST candidate flags (see CandidateFixTypes in CvPlayer.h). These names go in AIABTest.ini and the results file.
- static const char* const kCandidateFixNames[NUM_CANDIDATE_FIXES] = {
- 	"WidePlans", "BoxedIn", "LongWide", "BoxedInWar", "TimingAttack", "SiegeTechs", "SiegeBook", "DeclareTiming",
--	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders" };
-+	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders",
-+	"SiegeStay", "SiegePosture", "DeclareAtBorder" };
- 
- // The bundle: what group c ran in the last C build (c7c), and what every civ runs outside a test game. Off in it:
- // LongWide (c1: c's wide civs got no more cities from the longer opening, and stopping settlers ended expansion that b
--// completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars).
--static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
-+// completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars). Also off: the War flags added after c7c
-+// (SiegeStay, SiegePosture, DeclareAtBorder), so the bundle stays c7c until they pass.
-+static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP) |
-+	(1 << FIX_SIEGE_STAY) | (1 << FIX_SIEGE_POSTURE) | (1 << FIX_DECLARE_AT_BORDER)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
- 
- const char* CvPlayer::GetCandidateFixName(int iFix)
- {
+@@ -33331,6 +33331,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"WidePlans", true}, {"BoxedIn", true}, {"LongWide", false}, {"BoxedInWar", true}, {"TimingAttack", true},
+ 	{"SiegeTechs", true}, {"SiegeBook", true}, {"DeclareTiming", true}, {"GrowthTech", true}, {"AqueductValue", true},
+ 	{"GreedyArmyCap", false}, {"GreedyBook", true}, {"GreedyTarget", true}, {"CanWin", true}, {"ClosedBorders", true},
++	{"SiegeStay", false}, {"SiegePosture", false}, {"DeclareAtBorder", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
-index b8958980..6441b726 100644
+index b40a46896..b7c75ba6f 100644
 --- a/CvGameCoreDLL_Expansion2/CvPlayer.h
 +++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
-@@ -158,6 +158,9 @@ enum CandidateFixTypes
+@@ -159,6 +159,9 @@ enum CandidateFixTypes
  	FIX_GREEDY_TARGET,		// c7: warmongers pick the neighbour with the fewest land units per city; off: the weakest (c4)
  	FIX_CAN_WIN,			// c7c: war only if the siege sketch says the army brings down the nearest city
  	FIX_CLOSED_BORDERS,		// c7c: tall civs never give open borders to major civs
@@ -119,9 +108,9 @@ index b8958980..6441b726 100644
 +	FIX_DECLARE_AT_BORDER,	// War: a sneak attack counts as discovered only at the target's border. Off in the bundle
  	NUM_CANDIDATE_FIXES
  };
- 
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
 diff --git a/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp b/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
-index 2d0fa226..14b5d0e7 100644
+index 2d0fa226d..14b5d0e7c 100644
 --- a/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
 +++ b/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
 @@ -872,13 +872,13 @@ void CvTacticalAI::AssignBarbarianMoves()
@@ -215,7 +204,7 @@ index 2d0fa226..14b5d0e7 100644
  
  /// Defeat enemy units by using our advantage in numbers
 diff --git a/CvGameCoreDLL_Expansion2/CvTacticalAI.h b/CvGameCoreDLL_Expansion2/CvTacticalAI.h
-index 7a912470..acbd5e4c 100644
+index 7a912470e..acbd5e4c5 100644
 --- a/CvGameCoreDLL_Expansion2/CvTacticalAI.h
 +++ b/CvGameCoreDLL_Expansion2/CvTacticalAI.h
 @@ -387,7 +387,7 @@ private:

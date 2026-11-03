@@ -95,6 +95,16 @@ $P = @{
     Neutral       = @(1920, 300)    # black band at the top of the window, nothing to click there
 }
 
+# Another PC (lead, 2026-11-03): tools\ab\machines\<COMPUTERNAME>.json can override the click positions above
+# ("Positions": {"Continue": [x, y], ...}, physical pixels) and the log file ("Log": "Run-Games-pc2.log"), and holds
+# the screen areas CivScreens.ps1 reads. Without the file, everything is as on the first PC.
+$MachineFile = Join-Path $PSScriptRoot "machines\$env:COMPUTERNAME.json"
+if (Test-Path $MachineFile) {
+    $Machine = Get-Content $MachineFile -Raw | ConvertFrom-Json
+    if ($Machine.Positions) { foreach ($pp in $Machine.Positions.PSObject.Properties) { $P[$pp.Name] = @([int]$pp.Value[0], [int]$pp.Value[1]) } }
+    if ($Machine.Log -and -not $PSBoundParameters.ContainsKey('Log')) { $Log = Join-Path $PSScriptRoot $Machine.Log }
+}
+
 $SettingsFile = Join-Path $MyGames "AIABTest.ini"
 $ReplayFile = Join-Path $MyGames "AIABTest_lastgame.ini"
 
@@ -103,7 +113,7 @@ function Write-Settings([string[]]$replay) {
     if ($NoSettings) { return }
     $lines = @("; written by Run-Games.ps1", "[ABTest]", "Fixes = $Fixes", "Screen = $Screen", "StopTurn = $StopTurn",
         "Ruins = $Ruins", "MapOption5 = $Resources", "Mode = $Mode", "HeadStartProduction = $HeadStartProduction",
-        "HeadStartGold = $HeadStartGold")
+        "HeadStartGold = $HeadStartGold", "Difficulty = $ExpectDifficulty")
     if ($replay) { $lines += "Flip = 1"; $lines += $replay } else { $lines += "Flip = 0" }
     [IO.File]::WriteAllLines($SettingsFile, [string[]]$lines, [Text.Encoding]::ASCII)
 }
@@ -137,7 +147,10 @@ function Test-Setup($gameRows) {
 function Write-Log([string]$text) {
     $line = "{0:yyyy-MM-dd HH:mm:ss}  {1}" -f (Get-Date), $text
     Add-Content -Path $Log -Value $line
-    Write-Output $line
+    # to the console, not the output stream: a function's output is its return value, so a Write-Output here made
+    # Start-TestGame's "log, then return $false" return (line, $false), which counts as true (2026-11-03: a game left
+    # on "Begin Your Journey" until the user clicked it)
+    Write-Host $line
 }
 
 function Get-CivWindow { Get-Process CivilizationV -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowHandle -ne 0 } | Select-Object -First 1 }
@@ -231,11 +244,19 @@ function Start-TestGame {
 
     # Loading the map; then the "Begin Your Journey" screen
     $until = (Get-Date).AddSeconds(240)
+    $seen = $true
     while ((Get-CivBeginButtonDistance) -ge 8) {
-        if ((Get-Date) -gt $until) { Write-Log "  Begin Your Journey never showed"; return $false }
+        if ((Get-Date) -gt $until) { $seen = $false; break }
         Start-Sleep 3
     }
-    for ($try = 0; $try -lt 3 -and (Get-CivBeginButtonDistance) -lt 8; $try++) { Click BeginJourney 3000 }
+    if ($seen) {
+        for ($try = 0; $try -lt 3 -and (Get-CivBeginButtonDistance) -lt 8; $try++) { Click BeginJourney 3000 }
+    } else {
+        # the button often loads without matching the saved picture: click where it is anyway. If the game still
+        # doesn't start, Wait-TestGame says "never started" and the game is set up again.
+        Write-Log "  Begin Your Journey not recognised after 4 minutes; clicking it anyway"
+        for ($try = 0; $try -lt 3; $try++) { Click BeginJourney 3000 }
+    }
 
     # Move to the left half the way a title-bar drag would, and the Claude app to the right half
     $h = (Get-CivWindow).MainWindowHandle
@@ -339,7 +360,26 @@ while ($played -lt $MaxGames -or $pairReplay) {
             $archive = Join-Path $MyGames "LogsArchive\$gid"
             New-Item -ItemType Directory -Force -Path $archive | Out-Null
             Copy-Item -Path (Join-Path $MyGames "Logs\*") -Destination $archive -Recurse -Force
+            # the autosaves too (not committed): War's battle tests load them, and Civ keeps only the newest
+            $auto = Join-Path $MyGames "Saves\single\auto"
+            if (Test-Path $auto) {
+                New-Item -ItemType Directory -Force -Path (Join-Path $archive "saves") | Out-Null
+                Copy-Item -Path (Join-Path $auto "*") -Destination (Join-Path $archive "saves") -Force
+            }
             Write-Log "  logs saved: $digest and $archive"
+            # the logs the topic sessions read, into the repo (commit them with the results): War's operation, military,
+            # diplomacy and tactical logs, Economy's book, production and homeland logs. A file over 20 MB is left
+            # out and named in the runner log instead.
+            $keep = Join-Path $PSScriptRoot "results\logs_$gid"
+            New-Item -ItemType Directory -Force -Path $keep | Out-Null
+            $skipped = @()
+            foreach ($pattern in "OperationalAILog.csv", "MilitaryAILog.csv", "DiplomacyAI*.csv", "*TacticalAI*.csv",
+                "CitySpecializationLog.csv", "CityStrategyAIProductionLog.csv", "PlayerHomelandAILog.csv") {
+                foreach ($f in @(Get-ChildItem -Path $archive -Filter $pattern -File -ErrorAction SilentlyContinue)) {
+                    if ($f.Length -gt 20MB) { $skipped += ("{0} ({1:N0} MB)" -f $f.Name, ($f.Length / 1MB)) } else { Copy-Item $f.FullName $keep -Force }
+                }
+            }
+            Write-Log ("  logs for the sessions: $keep" + $(if ($skipped.Count) { "; left out (over 20 MB): " + ($skipped -join ", ") } else { "" }))
         } catch { Write-Log "  couldn't save the logs: $($_.Exception.Message)" }
     }
     if ($status -like "WRONG SETUP*") { Write-Log "Stopping: fix the setup screens (or the -Expect* values) and start again"; break }
