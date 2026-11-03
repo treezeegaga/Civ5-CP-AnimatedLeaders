@@ -1,0 +1,85 @@
+From a23a991f0b204f7011ce3f9a56666b8b1fbf32de Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:58:50 +0000
+Subject: [PATCH 2/4] AI_AB_TEST: the new AI's committed conquest target is
+ saved game state, not a static
+
+GetNewAIConquestTarget kept its committed target in a function-level static
+array. It was lost when a save was loaded, so a battle test from a save
+could pick a different target than the game it came from, and in real play
+it survived into the next game started in the same Civ process. (Test runs
+restart Civ for every game, so paired games weren't affected.) Now a
+CvDiplomacyAI member, set in Init and saved (appended at the end of
+Serialize). Same behaviour otherwise.
+
+Saves made with earlier builds won't load with this one (the save layout
+gains a field).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 14 ++++++++------
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.h   |  1 +
+ 2 files changed, 9 insertions(+), 6 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index 331a7d1..a7e9bb6 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -102,6 +102,7 @@ void CvDiplomacyAI::Init(CvPlayer* pPlayer)
+ 	m_eDemandTargetPlayer = NO_PLAYER;
+ 	m_eCSWarTarget = NO_PLAYER;
+ 	m_eCSBullyTarget = NO_PLAYER;
++	m_eNewAIConquestTarget = NO_PLAYER;
+ 
+ 	// Other Global Memory
+ 	m_bWasHumanLastUpdate = false;
+@@ -697,6 +698,9 @@ void CvDiplomacyAI::Serialize(DiplomacyAI& diplomacyAI, Visitor& visitor)
+ 	visitor(diplomacyAI.m_abVassalTaxLowered);
+ 	visitor(diplomacyAI.m_aiVassalGoldPerTurnTaxedSinceVassalStarted);
+ 	visitor(diplomacyAI.m_aiVassalGoldPerTurnCollectedSinceVassalStarted);
++
++	// AI_AB_TEST (appended last, so the rest of the layout is unchanged)
++	visitor(diplomacyAI.m_eNewAIConquestTarget);
+ }
+ 
+ /// Serialization read
+@@ -23431,10 +23435,9 @@ PlayerTypes CvDiplomacyAI::GetNewAIConquestTarget(const char*& szReason)
+ 	// Commit to a target once chosen: re-picking every turn (a test game had a civ switch between two targets and
+ 	// back) switches the approach away from WAR, which cancels the army being gathered, so the attack never came.
+ 	// A committed target is kept while it still passes the checks with one strength step of slack.
+-	// (Not saved with the game; a reload just picks again.)
+-	static int s_aiCommittedTarget[MAX_MAJOR_CIVS]; // target + 1, 0 = none
+-	const int iMe = (int)pPlayer->GetID();
+-	PlayerTypes eCommitted = (iMe >= 0 && iMe < MAX_MAJOR_CIVS) ? (PlayerTypes)(s_aiCommittedTarget[iMe] - 1) : NO_PLAYER;
++	// It's game state (m_eNewAIConquestTarget, saved): a static array survived into the next game in the same process
++	// and was lost on a reload, so a replayed or reloaded game could pick differently.
++	PlayerTypes eCommitted = m_eNewAIConquestTarget;
+ 
+ 	const CvCity* pCapital = pPlayer->getCapitalCity();
+ 	PlayerTypes eBest = NO_PLAYER;
+@@ -23505,8 +23508,7 @@ PlayerTypes CvDiplomacyAI::GetNewAIConquestTarget(const char*& szReason)
+ 		}
+ 	}
+ 
+-	if (iMe >= 0 && iMe < MAX_MAJOR_CIVS)
+-		s_aiCommittedTarget[iMe] = (int)eBest + 1;
++	m_eNewAIConquestTarget = eBest;
+ 	return eBest;
+ }
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+index 5ff8849..4cd7df9 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+@@ -1905,6 +1905,7 @@ private:
+ 	PlayerTypes m_eDemandTargetPlayer;
+ 	PlayerTypes m_eCSWarTarget;
+ 	PlayerTypes m_eCSBullyTarget;
++	PlayerTypes m_eNewAIConquestTarget; // AI_AB_TEST: the committed target of GetNewAIConquestTarget, saved with the game
+ 
+ 	// Other Global Memory
+ 	bool m_bAvoidDeals; // Not serialized!
+-- 
+2.43.0
+

@@ -1,0 +1,314 @@
+From baa2850aba669eac076374ba1719a0bca930d417 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:57:41 +0000
+Subject: [PATCH 1/4] AI_AB_TEST: Diplomacy bug fixes behind four candidate
+ flags (EasyTarget, DiploBugs, LuxuryAsk, CityStateBugs)
+
+From the Diplomacy audit (pack repo tools/ab/AUDIT.md, "Diplomacy audit"):
+- EasyTarget (D1, D2): civs at peace can be rated easy targets; CP skipped
+  them all because peace is war state -1. The phony-war check looks at the
+  other war, not the target.
+- DiploBugs: D3 phony-war peace offers can fire; D4 city-state war and bully
+  targets are reset each update; D5 recent-assist sign used the right way
+  round in three places; D6 full loyalty weight for defending a friend from
+  a weak attacker; D7 land dispute re-evaluates when it rises; D8 units near
+  another war aren't counted as aggressive posture; D12 the World Congress
+  AI compares resolution types when halving a repeat proposal; D13 a refused
+  help request starts a shorter wait (no same-turn re-roll).
+- LuxuryAsk (D9): when balancing a deal the AI can ask for the other
+  side's luxuries (CP only listed them for import-monopoly civs).
+- CityStateBugs (D10, D11): a city-state's alliance passes to a civ that
+  overtook the ally; city-states roll separately on joining a war against
+  an aggressor. Game-wide: on when any major civ has the flag.
+
+All four are left out of the bundle (kCandidateFixBundle) until tested.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDealAI.cpp        |  5 ++
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp   | 52 ++++++++++++++++----
+ CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp    | 26 +++++++++-
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp        |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h          |  5 ++
+ CvGameCoreDLL_Expansion2/CvVotingClasses.cpp |  8 +--
+ 6 files changed, 82 insertions(+), 15 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDealAI.cpp b/CvGameCoreDLL_Expansion2/CvDealAI.cpp
+index 48eb135..b34888e 100644
+--- a/CvGameCoreDLL_Expansion2/CvDealAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDealAI.cpp
+@@ -3904,6 +3904,11 @@ void CvDealAI::DoAddLuxuryResourceToThem(CvDeal* pDeal, PlayerTypes eThem, int&
+ 					}
+ 					viTradeValues.push_back(eResource, iItemValue);
+ 				}
++				// FIX_LUXURY_ASK (D9): CP only listed luxuries for civs whose imports count towards monopolies
++				else if (iItemValue > 0 && GetPlayer()->UsesCandidateAI(FIX_LUXURY_ASK))
++				{
++					viTradeValues.push_back(eResource, iItemValue);
++				}
+ 			}
+ 		}
+ 		// Sort the vector based on value to get the best possible item to trade.
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index 6eaffef..331a7d1 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -7608,7 +7608,8 @@ void CvDiplomacyAI::ChangeNumTimesTheyPlottedAgainstUs(PlayerTypes ePlayer, int
+ {
+ 	SetNumTimesTheyPlottedAgainstUs(ePlayer, GetNumTimesTheyPlottedAgainstUs(ePlayer) + iChange);
+ 	
+-	if (iChange > 0 && GetRecentAssistValue(ePlayer) < 0)
++	// FIX_DIPLO_BUGS (D5): positive assist is goodwill; plotting against us should wipe that, not our grievances
++	if (iChange > 0 && (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS) ? GetRecentAssistValue(ePlayer) > 0 : GetRecentAssistValue(ePlayer) < 0))
+ 	{
+ 		SetRecentAssistValue(ePlayer, 0);
+ 	}
+@@ -12043,7 +12044,8 @@ void CvDiplomacyAI::DoUpdateEasyTargets()
+ 				continue;
+ 			}
+ 
+-			if (eWarState < WAR_STATE_STALEMATE)
++			// FIX_EASY_TARGET (D1): at peace the war state is NO_WAR_STATE_TYPE (-1), so CP skipped every civ at peace here
++			if (eWarState < WAR_STATE_STALEMATE && !(GetPlayer()->UsesCandidateAI(FIX_EASY_TARGET) && eWarState == NO_WAR_STATE_TYPE))
+ 			{
+ 				SetEasyTarget(ePlayer, false);
+ 				continue;
+@@ -12093,8 +12095,8 @@ void CvDiplomacyAI::DoUpdateEasyTargets()
+ 				// Don't look at the guy we're already thinking about
+ 				if (IsPlayerValid(eLoopPlayer) && ePlayer != eLoopPlayer && IsAtWar(eLoopPlayer))
+ 				{
+-					// Ignore phony wars
+-					if (IsPhonyWar(ePlayer))
++					// Ignore phony wars (FIX_EASY_TARGET, D2: the other war's, not the target's)
++					if (IsPhonyWar(GetPlayer()->UsesCandidateAI(FIX_EASY_TARGET) ? eLoopPlayer : ePlayer))
+ 					{
+ 						continue;
+ 					}
+@@ -12422,6 +12424,7 @@ int CvDiplomacyAI::CountAggressiveMilitaryScore(PlayerTypes ePlayer, bool bHalve
+ 			continue;
+ 
+ 		// At war with someone? Because if this Unit is in the vicinity of another player he's already at war with, don't count this Unit as aggressive
++		bool bNearOtherWar = false; // FIX_DIPLO_BUGS (D8): CP's continue only left the inner loop, so every unit counted
+ 		if (bIsAtWarWithSomeone)
+ 		{
+ 			// Loop through all players...
+@@ -12438,10 +12441,19 @@ int CvDiplomacyAI::CountAggressiveMilitaryScore(PlayerTypes ePlayer, bool bHalve
+ 
+ 					// Is the unit close to the other player?
+ 					if (!bAlly && pUnitPlot->IsCloseToCity(eLoopOtherPlayer))
++					{
++						if (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS))
++						{
++							bNearOtherWar = true;
++							break;
++						}
+ 						continue;
++					}
+ 				}
+ 			}
+ 		}
++		if (bNearOtherWar)
++			continue;
+ 
+ 		// If the Unit is in the other team's territory, halve its "aggression value", since he may just be defending himself
+ 		if (bHalveDefenders && pUnitPlot->getOwner() != NO_PLAYER && GET_PLAYER(pUnitPlot->getOwner()).getTeam() == GET_PLAYER(ePlayer).getTeam())
+@@ -12807,7 +12819,8 @@ void CvDiplomacyAI::DoUpdateLandDisputeLevels()
+ 			{
+ 				SetLandDisputeLevel(ePlayer, eDisputeLevel);
+ 
+-				if (eCurrentDisputeLevel > eDisputeLevel)
++				// FIX_DIPLO_BUGS (D7): re-evaluate when the dispute rises, as the comment below says
++				if (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS) ? eDisputeLevel > eCurrentDisputeLevel : eCurrentDisputeLevel > eDisputeLevel)
+ 					vPlayersToReevaluate.push_back(ePlayer);
+ 
+ 				if (GC.getLogging() && GC.getAILogging())
+@@ -18724,7 +18737,14 @@ void CvDiplomacyAI::SelectBestApproachTowardsMajorCiv(PlayerTypes ePlayer, bool
+ 						{
+ 							bFriendUnderAttack = true;
+ 
+-							if (eMilitaryStrength < STRENGTH_POWERFUL)
++							// FIX_DIPLO_BUGS (D6): the full weight against a weak attacker; CP's order made it unreachable
++							if (eMilitaryStrength < STRENGTH_AVERAGE && GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS))
++							{
++								vApproachScores[CIV_APPROACH_WAR] += vApproachBias[CIV_APPROACH_WAR] * GetLoyalty();
++								vApproachScores[CIV_APPROACH_HOSTILE] += vApproachBias[CIV_APPROACH_HOSTILE] * GetLoyalty();
++								bThinkingAboutDogpiling = true;
++							}
++							else if (eMilitaryStrength < STRENGTH_POWERFUL)
+ 							{
+ 								vApproachScores[CIV_APPROACH_WAR] += vApproachBias[CIV_APPROACH_WAR] * GetLoyalty() / 2;
+ 								vApproachScores[CIV_APPROACH_HOSTILE] += vApproachBias[CIV_APPROACH_HOSTILE] * GetLoyalty() / 2;
+@@ -22286,7 +22306,7 @@ void CvDiplomacyAI::DoUpdatePlanningExchanges()
+ 				continue;
+ 			}
+ 			// Being nasty to us
+-			if (GetNumTimesTheyPlottedAgainstUs(*it) > 0 || GetNumTimesPerformedCoupAgainstUs(*it) > 0 || GetCoopWarAgreementScore(*it) < -1 || GetRecentAssistValue(*it) > 75 || GetNumTimesCultureBombed(*it) > 0)
++			if (GetNumTimesTheyPlottedAgainstUs(*it) > 0 || GetNumTimesPerformedCoupAgainstUs(*it) > 0 || GetCoopWarAgreementScore(*it) < -1 || (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS) ? GetRecentAssistValue(*it) < -75 : GetRecentAssistValue(*it) > 75) || GetNumTimesCultureBombed(*it) > 0)
+ 			{
+ 				continue;
+ 			}
+@@ -24211,6 +24231,12 @@ void CvDiplomacyAI::DoUpdateMinorCivApproaches()
+ 	}
+ 
+ 	// Now that we've set approaches, let's pick our war and bully targets (only one each).
++	// FIX_DIPLO_BUGS (D4): start from none, so a city-state we no longer want to fight or bully stops being the target
++	if (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS))
++	{
++		SetCSWarTargetPlayer(NO_PLAYER);
++		SetCSBullyTargetPlayer(NO_PLAYER);
++	}
+ 	bool bBullySet = false;
+ 	bool bWarSet = false;
+ 	for (int iPlayerVectorIndex = 0; iPlayerVectorIndex < vePlayerApproachWeights.size(); iPlayerVectorIndex++)
+@@ -25734,7 +25760,7 @@ void CvDiplomacyAI::DoUpdatePeaceTreatyWillingness(bool bMyTurn)
+ 		bool bCapturedAnyCityWeWantToLiberate = false;
+ 		bool bWeAreInAnyDanger = false;
+ 		bool bAnySeriousDangerUs = false;
+-		bool bAllWarsArePhony = false;
++		bool bAllWarsArePhony = GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS); // D3: CP started at false, so it never became true
+ 		bool bFailedAnyVassalagePrereq = false;
+ 		int iLowestWarScore = 0;
+ 		int iLowestTurnsSinceCityCapture = INT_MAX;
+@@ -33298,7 +33324,8 @@ void CvDiplomacyAI::DoPlayerDeclaredWarOnSomeone(PlayerTypes ePlayer, TeamTypes
+ 				// Clear positive diplomatic values
+ 				SetCommonFoeValue(ePlayer, 0);
+ 				SetVassalProtectValue(ePlayer, 0);
+-				if (GetRecentAssistValue(ePlayer) < 0)
++				// FIX_DIPLO_BUGS (D5): positive assist is the goodwill to clear; CP cleared the grievances instead
++				if (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS) ? GetRecentAssistValue(ePlayer) > 0 : GetRecentAssistValue(ePlayer) < 0)
+ 					SetRecentAssistValue(ePlayer, 0);
+ 			}
+ 		}
+@@ -57895,6 +57922,13 @@ void CvDiplomacyAI::DoHelpRequestMade(PlayerTypes ePlayer, DemandResponseTypes e
+ 		iNumTurns += GC.getGame().randRangeInclusive(0, /*10*/ GD_INT_GET(HELP_REQUEST_TURN_LIMIT_RAND), CvSeeder::fromRaw(0xd1c5ae34).mix(GetID()).mix(GET_PLAYER(ePlayer).GetID()));
+ 		SetHelpRequestTooSoonNumTurns(ePlayer, iNumTurns);
+ 	}
++	// FIX_DIPLO_BUGS (D13): a refusal also starts a (shorter) wait, so a human can't re-roll the answer the same turn.
++	// This runs on every machine (FROM_UI_DIPLO_EVENT_HUMAN_REQUEST), so it's multiplayer-safe.
++	else if (eResponse != DEMAND_RESPONSE_GIFT_REFUSE_TOO_SOON && GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS))
++	{
++		SetHelpRequestAcceptedTurn(ePlayer, GC.getGame().getGameTurn());
++		SetHelpRequestTooSoonNumTurns(ePlayer, max(1, /*20*/ GD_INT_GET(HELP_REQUEST_TURN_LIMIT_MIN) / 2));
++	}
+ }
+ 
+ /// Get how we think ePlayer has treated us as our master
+diff --git a/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp b/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp
+index 27be083..94c2615 100644
+--- a/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp
+@@ -11344,6 +11344,19 @@ int CvMinorCivAI::GetFriendshipNeededForNextLevel(PlayerTypes ePlayer)
+ 	return 0;
+ }
+ 
++/// AI_AB_TEST: city-state behaviour is shared by everyone, so its flag is on for the whole game when any major civ has it
++/// (in the bully test that's the first game of a pair, not the second)
++static bool AnyMajorUsesCandidateAI(CandidateFixTypes eFix)
++{
++	for (int iI = 0; iI < MAX_MAJOR_CIVS; iI++)
++	{
++		const CvPlayer& kPlayer = GET_PLAYER((PlayerTypes)iI);
++		if (kPlayer.isEverAlive() && kPlayer.isMajorCiv() && kPlayer.UsesCandidateAI(eFix))
++			return true;
++	}
++	return false;
++}
++
+ /// What happens when Friendship changes?
+ void CvMinorCivAI::DoFriendshipChangeEffects(const PlayerTypes ePlayer, const int iOldFriendshipTimes100, const int iNewFriendshipTimes100, const bool bFromQuest, const bool bAliveStatusChanged)
+ {
+@@ -11481,7 +11494,12 @@ void CvMinorCivAI::DoFriendshipChangeEffects(const PlayerTypes ePlayer, const in
+ 		else
+ 		{
+ 			// another player is now ally? the ally change is handled in DoFriendshipChangeEffects for the new ally
+-			DoFriendshipChangeEffects(eNewAlly, GetEffectiveFriendshipWithMajorTimes100(eNewAlly), GetEffectiveFriendshipWithMajorTimes100(eNewAlly));
++			// FIX_CITY_STATE_BUGS (D10): that call passes equal old and new values and returns at once, so the old ally
++			// kept the city-state; hand it over directly
++			if (AnyMajorUsesCandidateAI(FIX_CITY_STATE_BUGS) && IsFriendshipAboveAlliesThreshold(eNewAlly, GetEffectiveFriendshipWithMajor(eNewAlly)) && !IsAtWarWithPlayersTeam(eNewAlly))
++				SetAlly(eNewAlly, bFromQuest);
++			else
++				DoFriendshipChangeEffects(eNewAlly, GetEffectiveFriendshipWithMajorTimes100(eNewAlly), GetEffectiveFriendshipWithMajorTimes100(eNewAlly));
+ 		}
+ 	}
+ }
+@@ -16130,7 +16148,11 @@ void CvMinorCivAI::DoTeamDeclaredWarOnMe(TeamTypes eEnemyTeam)
+ 			if(GET_TEAM(pOtherMinorCiv->getTeam()).isAtWar(eEnemyTeam))
+ 				iChance += /*20*/ GD_INT_GET(PERMANENT_WAR_OTHER_AT_WAR);
+ 
+-			iRand = GC.getGame().randRangeInclusive(1, 100, CvSeeder::fromRaw(0x81afb53c).mix(m_pPlayer->GetPseudoRandomSeed()).mix(pEnemyTeam->GetID()));
++			// FIX_CITY_STATE_BUGS (D11): one roll per city-state; CP's seed left out eOtherMinorCiv, so all rolled the same
++			if (AnyMajorUsesCandidateAI(FIX_CITY_STATE_BUGS))
++				iRand = GC.getGame().randRangeInclusive(1, 100, CvSeeder::fromRaw(0x81afb53c).mix(m_pPlayer->GetPseudoRandomSeed()).mix(pEnemyTeam->GetID()).mix(eOtherMinorCiv));
++			else
++				iRand = GC.getGame().randRangeInclusive(1, 100, CvSeeder::fromRaw(0x81afb53c).mix(m_pPlayer->GetPseudoRandomSeed()).mix(pEnemyTeam->GetID()));
+ 			if (iRand <= iChance)
+ 			{
+ 				if(!pOtherMinorCiv->GetMinorCivAI()->IsWaryOfTeam(eEnemyTeam))
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index bc95d5b..5c59b6c 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33331,6 +33331,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"WidePlans", true}, {"BoxedIn", true}, {"LongWide", false}, {"BoxedInWar", true}, {"TimingAttack", true},
+ 	{"SiegeTechs", true}, {"SiegeBook", true}, {"DeclareTiming", true}, {"GrowthTech", true}, {"AqueductValue", true},
+ 	{"GreedyArmyCap", false}, {"GreedyBook", true}, {"GreedyTarget", true}, {"CanWin", true}, {"ClosedBorders", true},
++	{"EasyTarget", false}, {"DiploBugs", false}, {"LuxuryAsk", false}, {"CityStateBugs", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index b40a468..2559d54 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -159,6 +159,11 @@ enum CandidateFixTypes
+ 	FIX_GREEDY_TARGET,		// c7: warmongers pick the neighbour with the fewest land units per city; off: the weakest (c4)
+ 	FIX_CAN_WIN,			// c7c: war only if the siege sketch says the army brings down the nearest city
+ 	FIX_CLOSED_BORDERS,		// c7c: tall civs never give open borders to major civs
++	FIX_EASY_TARGET,		// Diplomacy D1+D2: civs at peace can be rated easy targets (CP skipped them all)
++	FIX_DIPLO_BUGS,			// Diplomacy D3-D8, D12, D13: confirmed diplomacy bugs (AUDIT.md, "Diplomacy audit")
++	FIX_LUXURY_ASK,			// Diplomacy D9: when balancing a deal the AI may ask for the other side's luxuries
++	FIX_CITY_STATE_BUGS,	// Diplomacy D10+D11: city-state alliance handover; city-states roll separately against an aggressor.
++							// Game-wide: on when any major civ has it, so the bully test's pair measures it
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+diff --git a/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp b/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp
+index 26aaca9..ea9c4f1 100644
+--- a/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp
++++ b/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp
+@@ -14103,13 +14103,13 @@ void CvLeagueAI::AllocateProposals(CvLeague* pLeague)
+ 						{
+ 							for (EnactProposalList::iterator it = pLeague->m_vLastTurnEnactProposals.begin(); it != pLeague->m_vLastTurnEnactProposals.end(); ++it)
+ 							{
+-								if (it->GetID() == pkInfo->GetID())
++								if (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS) ? it->GetType() == eResolution : it->GetID() == pkInfo->GetID()) // D12: CP compared a proposal's running ID with the resolution type
+ 									iScore /= 2;
+ 							}
+ 
+ 							for (RepealProposalList::iterator it = pLeague->m_vLastTurnRepealProposals.begin(); it != pLeague->m_vLastTurnRepealProposals.end(); ++it)
+ 							{
+-								if (it->GetID() == pkInfo->GetID())
++								if (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS) ? it->GetType() == eResolution : it->GetID() == pkInfo->GetID()) // D12: CP compared a proposal's running ID with the resolution type
+ 									iScore /= 2;
+ 							}
+ 
+@@ -14133,13 +14133,13 @@ void CvLeagueAI::AllocateProposals(CvLeague* pLeague)
+ 							{
+ 								for (EnactProposalList::iterator it = pLeague->m_vLastTurnEnactProposals.begin(); it != pLeague->m_vLastTurnEnactProposals.end(); ++it)
+ 								{
+-									if (it->GetID() == pkInfo->GetID())
++									if (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS) ? it->GetType() == eResolution : it->GetID() == pkInfo->GetID()) // D12: CP compared a proposal's running ID with the resolution type
+ 										iScore /= 2;
+ 								}
+ 
+ 								for (RepealProposalList::iterator it = pLeague->m_vLastTurnRepealProposals.begin(); it != pLeague->m_vLastTurnRepealProposals.end(); ++it)
+ 								{
+-									if (it->GetID() == pkInfo->GetID())
++									if (GetPlayer()->UsesCandidateAI(FIX_DIPLO_BUGS) ? it->GetType() == eResolution : it->GetID() == pkInfo->GetID()) // D12: CP compared a proposal's running ID with the resolution type
+ 										iScore /= 2;
+ 								}
+ 
+-- 
+2.43.0
+

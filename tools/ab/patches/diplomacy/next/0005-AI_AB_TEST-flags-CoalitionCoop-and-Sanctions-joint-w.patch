@@ -1,0 +1,168 @@
+From 50dd0e3f1e1fce99be203d112afecc0800fc3e04 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 00:06:33 +0000
+Subject: [PATCH 5/7] AI_AB_TEST: flags CoalitionCoop and Sanctions (joint wars
+ and sanctions against a runaway conqueror)
+
+From the Diplomacy audit's map, two more doors that stayed shut on a
+conqueror:
+- CoalitionCoop: joint wars could only be asked of friends (Declaration of
+  Friendship), and only against targets we were already hostile to. With
+  the flag, against a civ whose warmonger threat to us is SEVERE or
+  CRITICAL, we may also ask a civ that is visibly against it (has
+  denounced it, or lost a city to it), and being wary or afraid of the
+  target is no reason not to ask. Not its friends or pact partners. The
+  usual desire score still decides (it gates on war sanity, attack
+  targets, approach and opinion toward the partner).
+- Sanctions: the World Congress AI counted the target's warmonger threat
+  only when already hostile to it (approach worse than GUARDED). With the
+  flag it counts whatever the approach.
+
+Left out of the bundle until tested (bully test).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp   | 37 +++++++++++++++++---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.h     |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp        |  3 +-
+ CvGameCoreDLL_Expansion2/CvPlayer.h          |  3 ++
+ CvGameCoreDLL_Expansion2/CvVotingClasses.cpp |  8 ++++-
+ 5 files changed, 46 insertions(+), 6 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index 47239c4..e6d76b0 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -42294,11 +42294,32 @@ bool CvDiplomacyAI::IsValidCoopWarTarget(PlayerTypes eTargetPlayer, bool bAtWarE
+ 	return true;
+ }
+ 
++/// AI_AB_TEST FIX_COALITION_COOP: is eAllyPlayer a natural partner against eTargetPlayer, a warmonger that is a severe or
++/// critical threat to us? Judged from public facts only: eAllyPlayer has denounced it, or it has taken one of their cities.
++/// Not its friends or pact partners. Coalitions against a conqueror shouldn't need an existing friendship.
++bool CvDiplomacyAI::IsCoalitionPartnerAgainst(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer) const
++{
++	if (!GetPlayer()->UsesCandidateAI(FIX_COALITION_COOP))
++		return false;
++	if (eAllyPlayer == NO_PLAYER || eTargetPlayer == NO_PLAYER || eAllyPlayer == eTargetPlayer || eAllyPlayer == GetID())
++		return false;
++	if (!GET_PLAYER(eTargetPlayer).isMajorCiv() || GetWarmongerThreat(eTargetPlayer) < THREAT_SEVERE)
++		return false;
++	const CvPlayer& kAlly = GET_PLAYER(eAllyPlayer);
++	if (!kAlly.isAlive() || !kAlly.isMajorCiv() || kAlly.getNumCities() <= 0 || kAlly.getTeam() == GET_PLAYER(eTargetPlayer).getTeam())
++		return false;
++	const CvDiplomacyAI* pAllyDiplo = kAlly.GetDiplomacyAI();
++	if (pAllyDiplo->IsDoFAccepted(eTargetPlayer) || pAllyDiplo->IsHasDefensivePact(eTargetPlayer))
++		return false;
++	return pAllyDiplo->IsDenouncedPlayer(eTargetPlayer) || pAllyDiplo->GetNumCitiesCapturedBy(eTargetPlayer) > 0;
++}
++
+ /// Are we able to request a coop war with eAllyPlayer against eTargetPlayer?
+ bool CvDiplomacyAI::CanRequestCoopWar(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer)
+ {
+ 	// Must be teammates or have a Declaration of Friendship with eAllyPlayer to start any coop wars
+-	if (!IsTeammate(eAllyPlayer) && !IsDoFAccepted(eAllyPlayer))
++	// (FIX_COALITION_COOP: or be natural partners against a runaway warmonger)
++	if (!IsTeammate(eAllyPlayer) && !IsDoFAccepted(eAllyPlayer) && !IsCoalitionPartnerAgainst(eAllyPlayer, eTargetPlayer))
+ 		return false;
+ 
+ 	// Do we already have a coop war planned?
+@@ -42311,8 +42332,10 @@ bool CvDiplomacyAI::CanRequestCoopWar(PlayerTypes eAllyPlayer, PlayerTypes eTarg
+ /// Do we want to declare war on anyone with ePlayer?
+ bool CvDiplomacyAI::DoTestCoopWarDesire(PlayerTypes eAllyPlayer, PlayerTypes& eChosenTargetPlayer)
+ {
+-	// We can only ask our friends.
+-	if (!IsDoFAccepted(eAllyPlayer))
++	// We can only ask our friends. (FIX_COALITION_COOP: and, against a runaway warmonger, civs visibly against it; the
++	// target loop below checks which.)
++	const bool bFriend = IsDoFAccepted(eAllyPlayer);
++	if (!bFriend && !GetPlayer()->UsesCandidateAI(FIX_COALITION_COOP))
+ 		return false;
+ 
+ 	// Don't start a war if our empire is in bad shape for it
+@@ -42351,8 +42374,14 @@ bool CvDiplomacyAI::DoTestCoopWarDesire(PlayerTypes eAllyPlayer, PlayerTypes& eC
+ 		if (!CanRequestCoopWar(eAllyPlayer, eTarget))
+ 			continue;
+ 
++		// FIX_COALITION_COOP: a non-friend only against a runaway warmonger it's visibly against
++		const bool bCoalition = IsCoalitionPartnerAgainst(eAllyPlayer, eTarget);
++		if (!bFriend && !bCoalition)
++			continue;
++
+ 		// Only ask if we're sufficiently upset with the target
+-		if (GetBiggestCompetitor() != eTarget && GetCivApproach(eTarget) > CIV_APPROACH_DECEPTIVE)
++		// (FIX_COALITION_COOP: or it's a runaway warmonger; being wary or afraid of it alone is no reason not to ask)
++		if (GetBiggestCompetitor() != eTarget && GetCivApproach(eTarget) > CIV_APPROACH_DECEPTIVE && !bCoalition)
+ 			continue;
+ 
+ 		int iScore = GetCoopWarDesireScore(eAllyPlayer, eTarget, false);
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+index 4cd7df9..e210dbb 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+@@ -1490,6 +1490,7 @@ public:
+ 	// Coop Wars
+ 	bool IsValidCoopWarTarget(PlayerTypes eTargetPlayer, bool bAtWarException);
+ 	bool CanRequestCoopWar(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer);
++	bool IsCoalitionPartnerAgainst(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer) const; // AI_AB_TEST FIX_COALITION_COOP
+ 
+ 	bool DoTestCoopWarDesire(PlayerTypes eAllyPlayer, PlayerTypes& eChosenTargetPlayer);
+ 	int GetCoopWarDesireScore(PlayerTypes eAllyPlayer, PlayerTypes eTargetPlayer, bool bAllyRequest);
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 0e81e45..ccdd59a 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33332,7 +33332,8 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"SiegeTechs", true}, {"SiegeBook", true}, {"DeclareTiming", true}, {"GrowthTech", true}, {"AqueductValue", true},
+ 	{"GreedyArmyCap", false}, {"GreedyBook", true}, {"GreedyTarget", true}, {"CanWin", true}, {"ClosedBorders", true},
+ 	{"EasyTarget", false}, {"DiploBugs", false}, {"LuxuryAsk", false}, {"CityStateBugs", false},
+-	{"DealExploits", false}, {"CoalitionStrength", false},
++	{"DealExploits", false}, {"CoalitionStrength", false}, {"CoalitionCoop", false},
++	{"Sanctions", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index d2ba192..865498f 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -168,6 +168,9 @@ enum CandidateFixTypes
+ 							// rest; a demand is refused unless the demander's visible army could take one of our cities
+ 	FIX_COALITION_STRENGTH,	// Diplomacy: a severe or critical warmonger is judged against the coalition visibly against it (civs at
+ 							// war with it count in full, civs denouncing it at half), not against us alone
++	FIX_COALITION_COOP,		// Diplomacy: joint wars against a severe or critical warmonger can be asked of any civ visibly against it
++							// (denouncing it, or it took one of their cities), not only of friends, even while we're wary of it
++	FIX_SANCTIONS,			// Diplomacy: World Congress sanctions weigh the target's warmonger threat whatever our approach to it
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+diff --git a/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp b/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp
+index ea9c4f1..21e3e57 100644
+--- a/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp
++++ b/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp
+@@ -12541,14 +12541,20 @@ int CvLeagueAI::ScoreVoteChoiceYesNo(CvProposal* pProposal, int iChoice, bool bE
+ 		{
+ 			if (bForSelf)
+ 			{
++				// FIX_SANCTIONS: a warmonger's threat counts whatever our approach. CP only counted it when we were already
++				// hostile, so civs wary or afraid of a conqueror (the usual case) never voted to sanction it.
++				const bool bSanctionWarmongers = GetPlayer()->UsesCandidateAI(FIX_SANCTIONS);
+ 				if (GetPlayer()->GetDiplomacyAI()->GetCivApproach(eTargetPlayer) < CIV_APPROACH_GUARDED)
+ 				{
+ 					if (GetPlayer()->GetDiplomacyAI()->GetRawTargetValue(eTargetPlayer) > TARGET_VALUE_AVERAGE)
+ 					{
+ 						iExtra += (GetPlayer()->GetDiplomacyAI()->GetRawTargetValue(eTargetPlayer) - TARGET_VALUE_AVERAGE) * 100;
+ 					}
+-					iExtra += GetPlayer()->GetDiplomacyAI()->GetWarmongerThreat(eTargetPlayer) * 150;
++					if (!bSanctionWarmongers)
++						iExtra += GetPlayer()->GetDiplomacyAI()->GetWarmongerThreat(eTargetPlayer) * 150;
+ 				}
++				if (bSanctionWarmongers)
++					iExtra += GetPlayer()->GetDiplomacyAI()->GetWarmongerThreat(eTargetPlayer) * 150;
+ 
+ 				if (GetPlayer()->IsAtWarWith(eTargetPlayer))
+ 				{
+-- 
+2.43.0
+
