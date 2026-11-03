@@ -4,49 +4,49 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Screening run 2 is done (21 pairs): DeclareAtBorder, SettlersBeforeWonders and PolicyPrereqDepth rank highest. PC 1 now tests the top five together; PC 2 reruns the siege test on War's fixed build.",
+   "detail": "The top five screening flags passed together (+1.35 points, 5 pairs). PC 2 now tests 8 bug fixes together (no-worse). The siege package fails in split and bully games so far; War and Economy fixed why waiting armies never grew, and PC 1 retests it tonight.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 1,
    "name": "PC runner",
-   "detail": "Top-five bundle against B, paired, on ab-819be70 (since 6:36am).",
-   "state": "running"
+   "detail": "Screen locked since 6:47am ET; back tonight for the bully siege test on ab-095144c.",
+   "state": "blocked"
   },
   {
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Found and fixed a SiegeArmy bug (attacks were cancelled, not held); fix a86d57b compiled.",
+   "detail": "Fixed SiegeArmy so cities build for waiting attacks (1c30fb0); SiegeBar dropped.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 3,
    "name": "Economy",
-   "detail": "Settler-operation fixes in patch 0011, not yet built.",
+   "detail": "Found the waiting-army bug; missionary and settler fixes on ai/economy.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 4,
    "name": "Diplomacy",
-   "detail": "Crash fix in; DealExploits ranks 5th in screening.",
+   "detail": "DealExploits passed in the top five.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 5,
    "name": "Lead",
-   "detail": "Read screening run 2; queued the top-five test.",
+   "detail": "Added the Base and RoleFixes keys; queued tonight's tests.",
    "state": "running"
   },
   {
    "section": "goal",
    "order": 1,
    "name": "Strength against CP",
-   "detail": "≥ 60% (raised from 55% on 2026-11-03; B: 52.4% on the old setup; no King results yet)",
+   "detail": "≥ 60% (best so far: the top five at 51.35%, +1.35 points over B)",
    "state": "open"
   },
   {
@@ -95,35 +95,42 @@
    "section": "session",
    "order": 6,
    "name": "PC runner 2",
-   "detail": "Switching to War's fixed siege build ab-a86d57b: one logged pair, then 20 pairs.",
+   "detail": "Bug-fix bundle, no-worse test, on ab-819be70 since 1:36pm ET.",
    "state": "running"
   },
   {
    "section": "queue",
    "order": 1,
-   "name": "Screening run 2",
-   "detail": "Done: 21 pairs, ranking in the screening table.",
+   "name": "Top-five test",
+   "detail": "Passed: +1.35 points over B in 5 pairs.",
    "state": "passed"
   },
   {
    "section": "queue",
    "order": 2,
-   "name": "Top-five bundle test",
-   "detail": "DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits against B, on PC 1.",
-   "state": "running"
+   "name": "Siege package, split games",
+   "detail": "No gain (no wars to act on).",
+   "state": "failed"
   },
   {
    "section": "queue",
    "order": 3,
-   "name": "Siege test on the fixed build",
-   "detail": "SiegeArmy + ArmyHandoff + SiegeStay + SiegePosture, logged pair then 20 pairs, on PC 2.",
+   "name": "Bug-fix bundle",
+   "detail": "8 fixes together, no-worse test, on PC 2.",
    "state": "running"
   },
   {
    "section": "queue",
    "order": 4,
+   "name": "Bully siege test, fixed SiegeArmy",
+   "detail": "Aggressor with the package against itself without, on PC 1 tonight.",
+   "state": "next"
+  },
+  {
+   "section": "queue",
+   "order": 5,
    "name": "Single-flag tests",
-   "detail": "If the bundle passes: which flags carry it.",
+   "detail": "DeclareAtBorder, SettlersBeforeWonders, DealExploits one at a time.",
    "state": "waiting"
   }
  ]
