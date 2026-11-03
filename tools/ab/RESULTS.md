@@ -1227,6 +1227,17 @@ in these logs points to a bug.
 `CvReligionClasses.cpp` (`CvReligionAI::DoFaithPurchases` and its missionary checks). Beliefs are scored in
 `CvReligionAI::ScoreBelief*`, in the same file.
 
+### NoForeignMissionaries (Economy, patch 0012)
+- **Hypothesis:** a civ with no religion of its own stops faith-buying missionaries and inquisitors, which only
+  spread another civ's religion. Its faith then goes to faith buildings and great people instead. Small gain
+  for 1-3 civs a game.
+- **Measure:** strength share at T150 (no-worse). Mechanism: missionaries bought by civs without a religion
+  (homeland log, should be 0) and faith spent on buildings (`ReligionLog.csv`, from build `02c8d38` on).
+- **δ:** 2 points, no-worse.
+- **Build:** patch 0012 (on 0011), flag `NoForeignMissionaries` (`FIX_NO_FOREIGN_MISSIONARIES`), not in the bundle.
+  Applies cleanly with 0011 on `d4d4d70`. The guard is in `CvReligionAI::DoFaithPurchases` (`CvReligionClasses.cpp`).
+- **Status:** coded, not built.
+
 **Before deciding on a religion session:** add `ReligionLog.csv` and `PlayerBeliefReligionLog.csv` to `-SaveLogs`,
 and a faith-stored column to the results CSV, then read one logged pair. That costs no extra games.
 
