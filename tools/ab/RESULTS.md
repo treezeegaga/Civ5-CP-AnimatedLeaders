@@ -1370,6 +1370,74 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: what War's 3 logged King games show (Diplomacy session, 2026-11-03)
+
+Games `02DEF5BF`, `02EA597F` and `02F5C9E3` (build `ab-ai-war-latest` 445009c, results in `AIABTest_c7c_proposals.csv`), read
+from `DiplomacyAI_Log.csv` (each AI's approach, opinion, strength estimates and warmonger threat toward every major,
+every turn), `DiplomacyAI_Messages_Log.csv` and the results rows. Script:
+`tools/ab/diplo_logs.py <results folder>`. No city changed hands, so these show B's diplomacy without a conqueror.
+
+**1. The AFRAID diagnosis can't be checked here, and nothing contradicts it.**
+- **Warmonger threat was NONE** for every pair on every turn of all three games, and no pair was ever AFRAID.
+  That's what the code predicts: threat comes from conquests, and AFRAID needs a POWERFUL or IMMENSE neighbour.
+- **Strength estimates stayed between PATHETIC and Strong:** no civ pulled far ahead by T150.
+- **The check needs the bully test with a conqueror that takes cities** (War's work). Watch `W_THT` and `AFRAID` in
+  `DiplomacyAI_Log.csv` for the observers of the aggressor.
+
+**2. AI-to-AI demands never happen; joint-war proposals are rare.**
+
+| Game | Demands | Joint wars asked / agreed (counts) | Deals per civ per 10 turns | Wars declared | Friendships / pacts at T150 | Denouncements |
+|---|---|---|---|---|---|---|
+| `02DEF5BF` | 0 | 4 / 1 | 3.0 | 6 | 5 / 4 | 15 |
+| `02EA597F` | 0 | 5 / 0 | 2.2 | 3 | 6 / 3 | 9 |
+| `02F5C9E3` | 0 | 6 / 2 | 2.9 | 5 | 6 / 3 | 24 |
+
+- **The demand half of `DealExploits` and D13 (help requests) will look neutral in the screen.**
+  - No AI demanded anything from another AI in 450 game-turns.
+  - Help requests are human-only.
+  - So exploit checks 2 and 3 are their real test.
+- **Deals are already above the goal band** (0.5-2 per civ per 10 turns).
+  - Most are luxury swaps ("You have a Luxury I would like": 40-57 per game), renewals (30-51) and embassies.
+  - So `LuxuryAsk` (more luxury swaps) could push the rate further above the band.
+  - Either the band needs the second look the scoreboard promised, or `LuxuryAsk` isn't wanted. I'd raise the band: a
+    luxury swap is the kind of activity that makes the world feel alive, and nobody sees it as spam.
+- **The world isn't dead:** 9-24 denouncements per game (land, "enemy of friend", "untrustworthy", dogpiles), 3-6
+  friendships, 3-4 pacts.
+
+**3. Where `EasyTarget` (D1) would have acted.**
+- **What the proxy is.** Pairs at peace, with the observer at peace with everyone, the target close or a neighbour,
+  rated POOR or weaker, and the target value Favorable or better. That's roughly what `DoUpdateEasyTargets` evaluates
+  past its CP early exit.
+- **How many.** 14, 5 and 7 such pairs per game, holding for 3-57 turns.
+- **Most of them are friends** (opinion FRIEND/ALLY, approach FRIENDLY). A Declaration of Friendship zeroes WAR in the
+  approach scores, so D1 shouldn't turn those into wars.
+- **Where it can matter:** non-friends who are already cool on the target.
+  - `02DEF5BF`: Siam → the Huns (approach HOSTILE/WAR for 13 of 21 turns, war came at T130), Siam → the Maya (T108),
+    India → the Huns (T130).
+  - `02EA597F`: Sweden → Persia (27 turns, opinion Favorable, never war).
+  - `02F5C9E3`: Arabia → England (WAR approach 22 turns, never declared).
+- **Prediction.** These wars come a few turns earlier, plus a handful of new ones. A modest rise in `WarsDeclared`,
+  concentrated in non-friend pairs.
+
+**4. For War: the WAR approach is held for a long time before a war actually starts.**
+- **Sweden → Babylon** (`02F5C9E3`): WAR approach from T53, declared T109, so 56 turns.
+- **England → Germany:** 36 turns (T75-T111).
+- **Never declared:**
+  - The Celts → Babylon after their first war: WAR approach on 41 peace turns, target PATHETIC.
+  - Arabia → England: 22 turns, target PATHETIC.
+  - Sweden → Brazil (`02EA597F`): 17 turns, target PATHETIC.
+- **A peace treaty explains at most 16 of those turns** (the dampener).
+- **So the diplomacy side decides "war" long before the military side delivers.** That's War's "the army never
+  comes" problem, seen from the diplomacy logs. War can match these pairs and turns against
+  `OperationalAILog.csv`: was an attack operation formed, and why did it end?
+
+**What changes for Diplomacy.**
+- Nothing in the coalition plan: it still waits for captures.
+- The screen's verdict on `DealExploits` and `DealReputation` will be "no harm" at most. Their real tests are the
+  exploit checks, which don't need AI games.
+- I'll bring the war-delay pairs to War rather than touch declarations from the diplomacy side: the approach is
+  already WAR, so the delay is in the military AI.
+
 ### War session: why attacks fail, ranked against the code (2026-11-02)
 
 The causes in "Why wars almost never take cities", ranked by how much each would explain, each checked in the fork
