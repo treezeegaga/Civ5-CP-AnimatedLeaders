@@ -1693,7 +1693,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   (shared file) serves only *required* slots, so the optional slots SiegeArmy asked for were dropped, and no Songhai city
   ever got an "Operation unit" request in 21 turns. The city side already weights operation units at 5000+, above every
   building, so no production change is needed. Fixed inside SiegeArmy: `ai/war` `1c30fb0` (patch 0006) serves the
-  optional slots of an attack that SiegeArmy holds back as too weak. WarPrep stays a fallback if armies still don't fill.
+  optional slots of an attack that SiegeArmy holds back as too weak (built: CI run 100 passed). WarPrep stays a fallback if armies still don't fill.
   **Test:** the bully pair again, aggressor with SiegeArmy + ArmyHandoff (no SiegeBar) against itself without. Logs
   should show "Added ... to slot 5+" on a waiting operation and its expected damage rising.
 
