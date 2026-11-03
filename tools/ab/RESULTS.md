@@ -1023,9 +1023,9 @@ shows if c's 3rd city comes ≥ 5 turns earlier than b's, and c's fall-throughs 
 - **Korea's 2nd city was delayed by a lost settler.** Its op ran T31-T48, ended `LostCivilian`, and the
   replacement founded at T61. Escort and safety cost 30 turns there.
 
-**One field needed from `Digest-ABLogs.ps1`** (requested): the **city** on each `builds to` entry, or a separate
-`capital builds` line (every start in the capital, book or not). With it the wait, fall-through and
-interrupted-settler readings are exact. Everything else the procedure uses is already in the digest.
+**The missing field is in** (lead, `974919d`): the `builds to` line now reads `builds to T<n> (capital <name>; other
+cities named)`, and every build outside the capital ends in `(<City>)`. So the wait, fall-through and
+interrupted-settler readings are exact from the logged King pair on.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
@@ -1605,10 +1605,6 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
   will use it. Also E1 (losing wars don't cut building production; a dead loop in
   `CvBuildingProductionAI`): Economy can code it as a flag whenever War wants it tested alongside its fixes.
 
-- **For the lead, from Economy (Digest-ABLogs.ps1):** add the city to each `builds to T..` entry (the CHOSEN
-  and OPENING BOOK lines already carry it in field 2), or a `capital builds` line per civ. Without it the
-  expansion-pace procedure can't tell the capital's queue from new cities', which it needs for the wait,
-  fall-through and interrupted-settler readings ("Expansion pace: how the logged games are read").
 
 ## Instructions for the PC runner
 
