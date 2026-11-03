@@ -1370,6 +1370,33 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: the screening-build-2 crash (Diplomacy session, 2026-11-03)
+
+**What happened.** Screening build 2 (`2d949f8`) halted with CP's assert "Player index out of bounds" in
+`CvDiplomacyAI::IsEndgameAggressiveTo`. My bug, in `EasyTarget`'s D2 fix.
+
+**The path.**
+- `DoUpdateEasyTargets` loops over the other wars we're in, and that loop covers every player, city-states included.
+- D2 changed its phony-war test from the target to the other enemy, so a war with a city-state called
+  `IsPhonyWar(city-state)`.
+- That calls `IsWantsToConquer`, which calls `IsEndgameAggressiveTo(city-state)`, which asserts.
+- CP only ever calls `IsPhonyWar` for majors (for example, the `!bMajor ||` guard in `DoUpdatePeaceTreatyWillingness`).
+
+**When it fires.** Only when a civ that has the flag is checking a target while also at war with a city-state. So
+it shows up only in screened games, and in some of them.
+
+**Fix:** patch `next/0008`, on top of `ai/diplomacy` `04a533b`.
+- **The flagged change:** D2 checks phony wars with majors only. Still gated by `EasyTarget`; without the flag the code
+  is CP's.
+- **The callee:** `IsEndgameAggressiveTo` returns false for a non-major index instead of asserting. Ungated, since it
+  only replaces an out-of-bounds read.
+
+**Checked as well:**
+- D1 itself lets city-states at peace be rated easy targets. Every reader of `IsEasyTarget` already saw city-states
+  as easy targets during wars in CP, so no major-only path opens.
+- My other new code guards majors before calling anything major-only: `CoalitionStrength` (`isMajorCiv` first),
+  `IsVisiblyAgainstWarmonger`, and `DealReputation` (`ePlayer < MAX_MAJOR_CIVS`).
+
 ### Diplomacy: what War's 3 logged King games show (Diplomacy session, 2026-11-03)
 
 Games `02DEF5BF`, `02EA597F` and `02F5C9E3` (build `ab-ai-war-latest` 445009c, results in `AIABTest_c7c_proposals.csv`), read
