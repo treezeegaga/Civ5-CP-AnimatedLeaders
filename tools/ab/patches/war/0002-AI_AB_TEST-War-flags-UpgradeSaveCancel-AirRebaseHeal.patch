@@ -1,7 +1,7 @@
-From 0bc96d3303573b428101354d53b6145c350b1230 Mon Sep 17 00:00:00 2001
+From 445009c70701f8a2bebbcd6ffdc876ede24c3541 Mon Sep 17 00:00:00 2001
 From: Claude <noreply@anthropic.com>
 Date: Mon, 2 Nov 2026 23:59:35 +0000
-Subject: [PATCH] AI_AB_TEST War: flags UpgradeSaveCancel, AirRebaseHeal
+Subject: [PATCH 2/2] AI_AB_TEST War: flags UpgradeSaveCancel, AirRebaseHeal
  (CvHomelandAI bugs H1, H2; off in the bundle)
 
 - UpgradeSaveCancel (CvHomelandAI::PlotUpgradeMoves): the "no units to
@@ -16,9 +16,9 @@ Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
 ---
  CvGameCoreDLL_Expansion2/CvHomelandAI.cpp | 16 +++++++++++++++-
- CvGameCoreDLL_Expansion2/CvPlayer.cpp     |  7 ++++---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp     |  1 +
  CvGameCoreDLL_Expansion2/CvPlayer.h       |  2 ++
- 3 files changed, 21 insertions(+), 4 deletions(-)
+ 3 files changed, 18 insertions(+), 1 deletion(-)
 
 diff --git a/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp b/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
 index 399b4a7c8..de16fcbfb 100644
@@ -63,33 +63,22 @@ index 399b4a7c8..de16fcbfb 100644
  				if (pUnit->plot() == it->pPlot)
  					continue;
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
-index a1218ea15..435ac59d9 100644
+index 121b1b5c6..a4c44b704 100644
 --- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
 +++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
-@@ -33321,14 +33321,15 @@ static const bool kABTestVersusBase = true;
- static const char* const kCandidateFixNames[NUM_CANDIDATE_FIXES] = {
- 	"WidePlans", "BoxedIn", "LongWide", "BoxedInWar", "TimingAttack", "SiegeTechs", "SiegeBook", "DeclareTiming",
- 	"GrowthTech", "AqueductValue", "GreedyArmyCap", "GreedyBook", "GreedyTarget", "CanWin", "ClosedBorders",
--	"SiegeStay", "SiegePosture", "DeclareAtBorder" };
-+	"SiegeStay", "SiegePosture", "DeclareAtBorder", "UpgradeSaveCancel", "AirRebaseHeal" };
- 
- // The bundle: what group c ran in the last C build (c7c), and what every civ runs outside a test game. Off in it:
- // LongWide (c1: c's wide civs got no more cities from the longer opening, and stopping settlers ended expansion that b
- // completed) and GreedyArmyCap (c6, 0-3: the greedy tall civs drew wars). Also off: the War flags added after c7c
--// (SiegeStay, SiegePosture, DeclareAtBorder), so the bundle stays c7c until they pass.
-+// (SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, AirRebaseHeal), so the bundle stays c7c until they pass.
- static const int kCandidateFixBundle = ~((1 << FIX_LONG_WIDE) | (1 << FIX_GREEDY_ARMY_CAP) |
--	(1 << FIX_SIEGE_STAY) | (1 << FIX_SIEGE_POSTURE) | (1 << FIX_DECLARE_AT_BORDER)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
-+	(1 << FIX_SIEGE_STAY) | (1 << FIX_SIEGE_POSTURE) | (1 << FIX_DECLARE_AT_BORDER) |
-+	(1 << FIX_UPGRADE_SAVE_CANCEL) | (1 << FIX_AIR_REBASE_HEAL)) & ((1 << NUM_CANDIDATE_FIXES) - 1);
- 
- const char* CvPlayer::GetCandidateFixName(int iFix)
- {
+@@ -33332,6 +33332,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"SiegeTechs", true}, {"SiegeBook", true}, {"DeclareTiming", true}, {"GrowthTech", true}, {"AqueductValue", true},
+ 	{"GreedyArmyCap", false}, {"GreedyBook", true}, {"GreedyTarget", true}, {"CanWin", true}, {"ClosedBorders", true},
+ 	{"SiegeStay", false}, {"SiegePosture", false}, {"DeclareAtBorder", false},
++	{"UpgradeSaveCancel", false}, {"AirRebaseHeal", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
-index 6441b7267..184c87c15 100644
+index b7c75ba6f..3e0451dbb 100644
 --- a/CvGameCoreDLL_Expansion2/CvPlayer.h
 +++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
-@@ -161,6 +161,8 @@ enum CandidateFixTypes
+@@ -162,6 +162,8 @@ enum CandidateFixTypes
  	FIX_SIEGE_STAY,			// War: units at a siege stay unless below a third of their HP (not at 20 damage). Off in the bundle
  	FIX_SIEGE_POSTURE,		// War: the attrition posture also bombards the city (safe shots only). Off in the bundle
  	FIX_DECLARE_AT_BORDER,	// War: a sneak attack counts as discovered only at the target's border. Off in the bundle
@@ -97,7 +86,7 @@ index 6441b7267..184c87c15 100644
 +	FIX_AIR_REBASE_HEAL,	// War (bug H2): healing aircraft stay in the quietest base. Off in the bundle
  	NUM_CANDIDATE_FIXES
  };
- 
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
 -- 
 2.43.0
 
