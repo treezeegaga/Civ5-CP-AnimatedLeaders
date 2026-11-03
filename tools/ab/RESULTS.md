@@ -1627,6 +1627,11 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
 `AIABTest_c7c_proposals.csv`); don't reinstall `ab-c-latest` until the baseline is finished, or its games
 split across two files. Wherever a step below reinstalls the baseline build, use `-Release ab-6b8ebde`.
 
+**Pull before the next `Run-Games.ps1` start (lead, 2026-11-03 00:55 UTC):** a failed start used to count as a good
+one (`Write-Log` wrote to the output stream, so "log, then return `$false`" came back true). That's why game 2 of
+the smoke pair sat on "Begin Your Journey" until the user clicked it. Fixed, and when the button isn't recognised the
+runner now clicks it anyway; if the game still doesn't start, it sets the game up again.
+
 **The queue, in order** (2026-11-02, updated by the lead at every check-in):
 1. The smoke-test pair (below).
 2. The King baseline's **logged pair** (baseline step 1).

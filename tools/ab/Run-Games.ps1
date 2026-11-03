@@ -137,7 +137,10 @@ function Test-Setup($gameRows) {
 function Write-Log([string]$text) {
     $line = "{0:yyyy-MM-dd HH:mm:ss}  {1}" -f (Get-Date), $text
     Add-Content -Path $Log -Value $line
-    Write-Output $line
+    # to the console, not the output stream: a function's output is its return value, so a Write-Output here made
+    # Start-TestGame's "log, then return $false" return (line, $false), which counts as true (2026-11-03: a game left
+    # on "Begin Your Journey" until the user clicked it)
+    Write-Host $line
 }
 
 function Get-CivWindow { Get-Process CivilizationV -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowHandle -ne 0 } | Select-Object -First 1 }
@@ -231,11 +234,19 @@ function Start-TestGame {
 
     # Loading the map; then the "Begin Your Journey" screen
     $until = (Get-Date).AddSeconds(240)
+    $seen = $true
     while ((Get-CivBeginButtonDistance) -ge 8) {
-        if ((Get-Date) -gt $until) { Write-Log "  Begin Your Journey never showed"; return $false }
+        if ((Get-Date) -gt $until) { $seen = $false; break }
         Start-Sleep 3
     }
-    for ($try = 0; $try -lt 3 -and (Get-CivBeginButtonDistance) -lt 8; $try++) { Click BeginJourney 3000 }
+    if ($seen) {
+        for ($try = 0; $try -lt 3 -and (Get-CivBeginButtonDistance) -lt 8; $try++) { Click BeginJourney 3000 }
+    } else {
+        # the button often loads without matching the saved picture: click where it is anyway. If the game still
+        # doesn't start, Wait-TestGame says "never started" and the game is set up again.
+        Write-Log "  Begin Your Journey not recognised after 4 minutes; clicking it anyway"
+        for ($try = 0; $try -lt 3; $try++) { Click BeginJourney 3000 }
+    }
 
     # Move to the left half the way a title-bar drag would, and the Claude app to the right half
     $h = (Get-CivWindow).MainWindowHandle
