@@ -2330,6 +2330,18 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### C8: the new C bundle (lead, 2026-11-03 5:05pm ET)
+
+`claude/ab-c1` is now `9f77273`: all three topic branches merged (`ai/economy` `63c7b7b`, `ai/diplomacy` `6e83115`, `ai/war`
+`1c30fb0`; 48 flags, enum and table match, no doubled code), results file `AIABTest_c8.csv`. **The bundle is the 12 flags
+that passed:** `DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits` (top five,
+gainer passed), `DiploBugs, UpgradeSaveCancel, LuxuryAsk, DiploPolicyValue, EasyTarget, CultureRivalValue` (bug-fix
+bundle, no-worse passed) and `NoForeignMissionaries` (the user's ruling). The 13 c7c ideas leave the bundle: they never
+passed. Everything else stays off. `ab-c-latest` becomes C8 once CI passes.
+
+Test: C8 (`-Fixes bundle`) against B, paired, gainer SPRT, on whichever PC is free. Expected about +1.5 points (the top
+five's +1.35 plus whatever the extra fixes add). Topic branches now rebase onto `9f77273`.
+
 ### Bug-fix bundle: PASSED the no-worse test (lead, 2026-11-03 3:50pm ET)
 
 The 8 screened level-2 fixes together in group c (`PolicyPrereqDepth, LosingWarBuildings, DiploBugs, UpgradeSaveCancel,
