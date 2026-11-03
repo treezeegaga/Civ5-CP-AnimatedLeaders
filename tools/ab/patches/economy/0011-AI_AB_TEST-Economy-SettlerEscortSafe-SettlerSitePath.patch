@@ -1,0 +1,111 @@
+From a0d8fcbc60a00fa66f318e639ceab655083914bc Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 02:17:32 +0000
+Subject: [PATCH] AI_AB_TEST Economy: SettlerEscortSafe, SettlerSitePathFlags,
+ SettlerPathCheck candidate flags (three found-city operation bugs seen in the
+ logged King games)
+
+A: CP's reachable-this-turn shortcut drops the escort next to danger. B: an unescorted settler's site is chosen with path flags it doesn't move with, so it re-picks a site it can't reach. C: LostPath fires on a good path with no step this turn, and a switch to a better target ignores that target's path. All out of the bundle.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvAIOperation.cpp | 31 +++++++++++++++++++++-
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      | 10 +++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  3 +++
+ 3 files changed, 43 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+index 59b8a8a..2999a3d 100644
+--- a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
++++ b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+@@ -1854,7 +1854,13 @@ void CvAIOperationCivilian::Init(CvCity* /*pTarget*/, CvCity* /*pMuster*/)
+ 	pArmy->AddUnit(pOurCivilian->GetID(),0,true);
+ 
+ 	//a little hack - set the escort slot to not required if we can reach the target this turn
+-	if (bSkipEscort || pOurCivilian->TurnsToReachTarget(pTargetSite, CvUnit::MOVEFLAG_TURN_END_IS_NEXT_TURN, 1) < 1)
++	bool bReachableNow = pOurCivilian->TurnsToReachTarget(pTargetSite, CvUnit::MOVEFLAG_TURN_END_IS_NEXT_TURN, 1) < 1;
++	// AI_AB_TEST candidate (SettlerEscortSafe): CP drops the escort for a short trip even next to danger, which bypasses
++	// SettlerTripLooksSafe; then the lone settler can't path past the danger (MOVEFLAG_AI_ABORT_IN_DANGER) and waits
++	// beside it (a test game: one tile from its site for 16 turns, then killed)
++	if (bReachableNow && m_eType == AI_OPERATION_FOUND_CITY && GET_PLAYER(m_eOwner).UsesCandidateAI(FIX_SETTLER_ESCORT_SAFE))
++		bReachableNow = SettlerTripLooksSafe(pOurCivilian, pTargetSite);
++	if (bSkipEscort || bReachableNow)
+ 		pArmy->GetSlotStatus(1)->Clear();
+ 
+ 	SetUpArmy(pArmy,pMusterPlot,pTargetSite,NULL);
+@@ -2097,6 +2103,29 @@ AIOperationAbortReason CvAIOperationCivilianFoundCity::VerifyOrAdjustTarget(CvAr
+ 			return AI_ABORT_NO_TARGET;
+ 		}
+ 
++		// AI_AB_TEST candidate (SettlerPathCheck): CP switches without checking the new target's path and then aborts with
++		// LostPath when the path has no step this turn, which also happens to a good path when the settler has no moves
++		// left (an escorted settler's operation died the turn it started, nine turns running). The candidate switches
++		// only to a target it has a path to, and judges by the path itself.
++		if (GET_PLAYER(m_eOwner).UsesCandidateAI(FIX_SETTLER_PATH_CHECK))
++		{
++			if (pBetterTarget != GetTargetPlot())
++			{
++				if (pSettler->GeneratePath(pBetterTarget, iFlags))
++				{
++					SetTargetPlot(pBetterTarget);
++					pArmy->SetGoalPlot(pBetterTarget);
++				}
++				else
++				{
++					LogOperationSpecialMessage(CvString::format("no path to better site (%d:%d), keeping (%d:%d)",
++						pBetterTarget->getX(), pBetterTarget->getY(), m_iTargetX, m_iTargetY).c_str());
++					pSettler->GeneratePath(GetTargetPlot(), iFlags); // the current target's path (it has one, see above)
++				}
++			}
++			return NO_ABORT_REASON;
++		}
++
+ 		// switch if we have a better target
+ 		if (pBetterTarget != GetTargetPlot())
+ 		{
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index c71eeb8..4ba4850 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33341,6 +33341,9 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"CultureRivalValue", false},
+ 	{"SettlersBeforeWonders", false},
+ 	{"BookFinishesSettlers", false},
++	{"SettlerEscortSafe", false},
++	{"SettlerSitePathFlags", false},
++	{"SettlerPathCheck", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+@@ -48686,6 +48689,13 @@ CvPlot* CvPlayer::GetBestSettlePlot(CvUnit* pUnit, CvAIOperation* pOpToIgnore, b
+ 	//order by increasing score
+ 	std::stable_sort( vSettlePlots.begin(), vSettlePlots.end() );
+ 	int iFlags = CvUnit::MOVEFLAG_NO_ENEMY_TERRITORY | CvUnit::MOVEFLAG_PRETEND_ALL_REVEALED;
++	// AI_AB_TEST candidate (SettlerSitePathFlags): a found-city operation whose settler has no escort moves with
++	// MOVEFLAG_AI_ABORT_IN_DANGER (CvAIOperationCivilianFoundCity::VerifyOrAdjustTarget), so check sites the same way.
++	// Otherwise the best site can be one behind danger the settler can't walk to, re-picked every turn (a test game:
++	// "no path to city site" for 20 turns, and the civ ended with one city).
++	if (pUnit && pOpToIgnore && pOpToIgnore->GetOperationType() == AI_OPERATION_FOUND_CITY && UsesCandidateAI(FIX_SETTLER_SITE_PATH_FLAGS) &&
++		!static_cast<CvAIOperationCivilian*>(pOpToIgnore)->IsEscorted())
++		iFlags |= CvUnit::MOVEFLAG_AI_ABORT_IN_DANGER;
+ 
+ 	if (!pUnit)
+ 		return vSettlePlots.back().pPlot;
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index f92f78e..23bac63 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -171,6 +171,9 @@ enum CandidateFixTypes
+ 	FIX_CULTURE_RIVAL_VALUE,	// Economy (E2): culture is valued more when a rival's tourism gains on us, as CP meant (dead loop). Not in the bundle
+ 	FIX_SETTLERS_BEFORE_WONDERS,	// Economy: no world wonder in the capital while the opening book still has settlers to start. Not in the bundle
+ 	FIX_BOOK_FINISHES_SETTLERS,	// Economy: the opening book stays active (to T100 Standard) until its settlers are started. Not in the bundle
++	FIX_SETTLER_ESCORT_SAFE,	// Economy (found-city bug A): a settler that can reach its site this turn goes alone only if the trip looks safe
++	FIX_SETTLER_SITE_PATH_FLAGS,	// Economy (found-city bug B): an unescorted settler's site is checked with the path flags it will move with
++	FIX_SETTLER_PATH_CHECK,	// Economy (found-city bug C): LostPath only when there is really no path to the (new) target
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+-- 
+2.43.0
+
