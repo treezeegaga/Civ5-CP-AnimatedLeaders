@@ -728,6 +728,17 @@ branch, and the lead applies them to `ai/<topic>` (see the check-in).
 > `CvGrandStrategyAI` and the opening-book plan choice, and write it up for the other sessions as
 > a short spec in RESULTS.md before coding it. Your changes are judged by no-worse tests on
 > strength, plus whether leaders play measurably differently and every profile can still win.
+>
+> You also own **the rock-paper-scissors meta** (AGENTS.md, "A rock-paper-scissors meta"): greedy
+> beats balanced, aggressive beats greedy, balanced beats aggressive. Map every leader onto one of
+> the three styles (greedy, balanced, aggressive) as part of the profile. Build the **matchup test**
+> with the lead: a `Mode = styles` that assigns styles to the AI civs, and a 3x3 table of each
+> style's strength share and cities won or lost against each other style. When one side of the
+> triangle is too strong or too weak, you fix it by tuning the styles' numbers (unit counts, defence
+> levels, aggression thresholds). War, Economy and Diplomacy own the mechanics: attacks that take
+> cities, `GreedyAlarm`, target choice. Ask them, through the lead, when a side fails for lack of a
+> mechanic. Start when the bully test shows attacks can take cities; until then the lead holds the
+> meta.
 
 ### Diplomacy
 
