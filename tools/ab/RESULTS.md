@@ -1102,6 +1102,9 @@ with `git am` and checked to apply cleanly; not compiled here, CI is the first c
 | `tools/ab/patches/diplomacy/fixes/0001-...` | The bug fixes behind four flags: `EasyTarget` (D1, D2), `DiploBugs` (D3-D8, D12, D13), `LuxuryAsk` (D9), `CityStateBugs` (D10, D11). All four are left out of `kCandidateFixBundle`, so a non-test pack and `Fixes = bundle` don't get them until they pass | `ai/diplomacy` |
 | `tools/ab/patches/diplomacy/fixes/0002-...` | War's request: the committed conquest target (`GetNewAIConquestTarget`) becomes a saved `CvDiplomacyAI` member instead of a `static`. A save reload kept no target, so a battle test from a save could pick differently from its game; in real play the static survived into the next game in the same process. Test runs restart Civ every game, so pairs were never affected. **Saves made with earlier builds won't load with it** (one field appended to the save), so merge it before battle-test saves are made, or after they're no longer needed | `ai/diplomacy` (or `claude/ab-c1`, since it's War's code and changes no decision) |
 
+| `tools/ab/patches/diplomacy/fixes/0003-...` | Flag `DealExploits`: (a) per-turn gold and resources the other side pays in a **peace deal** are valued for the peace treaty's turns plus half of the rest (CP valued all of them, though a war after the lock cancels them); (b) a **demand** is refused unless the demander's units that the AI can see could take one of its cities (the c7c siege sketch run on visible land units within 5 tiles of each city; CP gave in on perceived total strength and units at the border). Checked by exploit checks 1 and 3, plus a no-worse test (AI-to-AI demands now pay less often) | `ai/diplomacy` |
+| `tools/ab/patches/diplomacy/fixes/0004-...` | Flag `CoalitionStrength`, the headline fix. Against a civ whose warmonger threat to us is SEVERE or CRITICAL, the strength estimate (`DoUpdatePlayerStrengthEstimates`) also counts the civs visibly against it: at war with it in full, denouncing it at half. Not its friends, pact partners, team or vassals, and only civs that can reach it. Only public facts. So AFRAID gives way when the coalition really could win, and the war-target and coop-war gates open with it. Hypothesis and measures: the `FIX_COALITION_STRENGTH` row of the plan above. Judged by the bully test once War's capture fixes work | `ai/diplomacy` |
+
 **Why the bug fixes share flags.** Flags are bits of a 32-bit mask (`1 << eFix`), 15 are taken, War's patch adds 3,
 and Economy and Personality will add more. One flag per bug (12) would use most of what's left. So:
 - `EasyTarget` alone: it changes how often AIs start wars, so it needs its own verdict.
@@ -1113,6 +1116,12 @@ and Economy and Personality will add more. One flag per bug (12) would use most 
 If `DiploBugs` fails its no-worse test, split it to find the culprit. **Merge note:** War's three flags and mine are
 both appended after `FIX_CLOSED_BORDERS`, so the second branch merged into `claude/ab-c1` gets a conflict in the enum,
 `kCandidateFixNames` and the bundle mask. Keep both lists, in either order: saved masks only matter within one build.
+
+**Flag budget (request for the lead).** With these, Diplomacy uses 6 bits (`EasyTarget`, `DiploBugs`, `LuxuryAsk`,
+`CityStateBugs`, `DealExploits`, `CoalitionStrength`). 15 + 6 + War's 3 = 24 of 32. Diplomacy still plans
+`CoalitionCoop`, `CoalitionPact`, `Sanctions` and `DealReputation`, so a widening is needed soon: the masks (`Fixes`,
+`Screen`, `kCandidateFixBundle`, saved in the game) could move to two ints or a 64-bit value. That's the lead's code
+(`CvPlayer`/`CvGame` test options). Until then I'm holding the next coalition flags.
 
 **Suggested tests.**
 1. `EasyTarget`, `DiploBugs`, `LuxuryAsk`: one screening run with all three randomised per civ (lead job 4's
