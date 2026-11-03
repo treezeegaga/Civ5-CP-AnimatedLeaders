@@ -103,7 +103,7 @@ function Write-Settings([string[]]$replay) {
     if ($NoSettings) { return }
     $lines = @("; written by Run-Games.ps1", "[ABTest]", "Fixes = $Fixes", "Screen = $Screen", "StopTurn = $StopTurn",
         "Ruins = $Ruins", "MapOption5 = $Resources", "Mode = $Mode", "HeadStartProduction = $HeadStartProduction",
-        "HeadStartGold = $HeadStartGold")
+        "HeadStartGold = $HeadStartGold", "Difficulty = $ExpectDifficulty")
     if ($replay) { $lines += "Flip = 1"; $lines += $replay } else { $lines += "Flip = 0" }
     [IO.File]::WriteAllLines($SettingsFile, [string[]]$lines, [Text.Encoding]::ASCII)
 }
