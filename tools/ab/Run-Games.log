@@ -383,3 +383,21 @@
 2026-11-03 06:43:28  Setup failed; retrying
 2026-11-03 06:43:29  Starting game 1: first game of a pair; Mode = split; Fixes = DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits; Screen = 
 2026-11-03 06:45:02  PC 1 (BOX): runner can't start game 1 of the 5-flag test: 'main menu never showed' twice; the screen shows the Windows lock screen/wallpaper, so Civ can't be clicked. Needs the user to unlock BOX.
+2026-11-03 06:47:55    main menu never showed
+2026-11-03 06:47:55  Setup failed; retrying
+2026-11-03 06:47:55  Three failed starts in a row; giving up
+2026-11-03 06:47:55  Runner finished after 0 games
+2026-11-03 17:28:10 ET  PC 1 (BOX): build ab-095144c installed, logging on; starting bully siege test (-MaxGames 2 -SaveLogs, RoleFixes SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture)
+2026-11-03 17:28:11  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 17:36:09    turn 100 after 7 minutes
+2026-11-03 17:40:12  Game ended: turn 150 (07614B7407614B74)
+2026-11-03 17:40:22    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_07614B7407614B74.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\07614B7407614B74
+2026-11-03 17:40:22    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_07614B7407614B74
+2026-11-03 17:40:22  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 17:41:37    replay matches the first game
+2026-11-03 17:48:17    turn 100 after 7 minutes
+2026-11-03 17:52:21  Game ended: turn 150 (07614B7407614B74F)
+2026-11-03 17:52:29    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_07614B7407614B74F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\07614B7407614B74F
+2026-11-03 17:52:29    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_07614B7407614B74F
+2026-11-03 17:52:29  Runner finished after 2 games
+2026-11-03 17:53:30 ET  PC 1 (BOX): bully siege logging pair done on ab-095144c (07614B74, replay matches; Songhai aggressor, 0 captured / 0 lost, 5 cities, strength 13.5% both games); logging off, starting -MaxGames 20
