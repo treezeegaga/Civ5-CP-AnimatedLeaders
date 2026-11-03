@@ -1,4 +1,4 @@
-From 03dd1c490cf53814fb8c05fab9fad3d44edd1675 Mon Sep 17 00:00:00 2001
+From b803c1fde2474c91fd475cf8074556ea648bb3b4 Mon Sep 17 00:00:00 2001
 From: Claude <noreply@anthropic.com>
 Date: Tue, 3 Nov 2026 12:12:14 +0000
 Subject: [PATCH] AI_AB_TEST Economy: NoForeignMissionaries candidate flag (a
@@ -11,8 +11,8 @@ Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
 ---
  CvGameCoreDLL_Expansion2/CvPlayer.cpp          | 1 +
  CvGameCoreDLL_Expansion2/CvPlayer.h            | 1 +
- CvGameCoreDLL_Expansion2/CvReligionClasses.cpp | 5 +++++
- 3 files changed, 7 insertions(+)
+ CvGameCoreDLL_Expansion2/CvReligionClasses.cpp | 6 ++++++
+ 3 files changed, 8 insertions(+)
 
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
 index 4ba4850..6258dd3 100644
@@ -27,33 +27,34 @@ index 4ba4850..6258dd3 100644
  // one line per flag, and room in the 64-bit masks
  typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
-index 23bac63..cae0304 100644
+index 23bac63..c970226 100644
 --- a/CvGameCoreDLL_Expansion2/CvPlayer.h
 +++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
 @@ -174,6 +174,7 @@ enum CandidateFixTypes
  	FIX_SETTLER_ESCORT_SAFE,	// Economy (found-city bug A): a settler that can reach its site this turn goes alone only if the trip looks safe
  	FIX_SETTLER_SITE_PATH_FLAGS,	// Economy (found-city bug B): an unescorted settler's site is checked with the path flags it will move with
  	FIX_SETTLER_PATH_CHECK,	// Economy (found-city bug C): LostPath only when there is really no path to the (new) target
-+	FIX_NO_FOREIGN_MISSIONARIES,	// Economy: a civ without its own religion doesn't faith-buy missionaries or inquisitors
++	FIX_NO_FOREIGN_MISSIONARIES,	// Economy: a civ without its own religion doesn't faith-buy missionaries (inquisitors unchanged)
  	NUM_CANDIDATE_FIXES
  };
  // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
 diff --git a/CvGameCoreDLL_Expansion2/CvReligionClasses.cpp b/CvGameCoreDLL_Expansion2/CvReligionClasses.cpp
-index 55ce2c7..975f48d 100644
+index 55ce2c7..8fda373 100644
 --- a/CvGameCoreDLL_Expansion2/CvReligionClasses.cpp
 +++ b/CvGameCoreDLL_Expansion2/CvReligionClasses.cpp
-@@ -7264,6 +7264,11 @@ bool CvReligionAI::DoFaithPurchases()
- 	if (!m_pPlayer->GetReligions()->HasCityWithMajorityReligion(eReligionToSpread))
- 		return false;
- 
+@@ -7390,6 +7390,12 @@ bool CvReligionAI::BuyMissionaryOrInquisitor(ReligionTypes eReligion)
+ /// Pick the right city to purchase a missionary in
+ bool CvReligionAI::BuyMissionary(ReligionTypes eReligion)
+ {
 +	// AI_AB_TEST candidate (NoForeignMissionaries): in the logged King games civs with no religion of their own bought 1-4
-+	// missionaries each, spreading another civ's religion with their faith. Save it for faith buildings and great people.
-+	if (eReligionWeFounded == NO_RELIGION && m_pPlayer->UsesCandidateAI(FIX_NO_FOREIGN_MISSIONARIES))
++	// missionaries each, spreading another civ's religion with their faith. Only missionaries, and only for those civs:
++	// a founder's own missionaries and all inquisitors are unchanged.
++	if (m_pPlayer->GetReligions()->GetOwnedReligion() == NO_RELIGION && m_pPlayer->UsesCandidateAI(FIX_NO_FOREIGN_MISSIONARIES))
 +		return false;
 +
- 	//THIRD PRIORITY
- 	// Might as well convert puppet-cities to build our religious strength
- 	const CvReligion* pSpreadReligion = GC.getGame().GetGameReligions()->GetReligion(eReligionToSpread, m_pPlayer->GetID());
+ 	UnitTypes eMissionary = m_pPlayer->GetSpecificUnitType("UNITCLASS_MISSIONARY");
+ 
+ 	CvCity *pCapital = m_pPlayer->getCapitalCity();
 -- 
 2.43.0
 
