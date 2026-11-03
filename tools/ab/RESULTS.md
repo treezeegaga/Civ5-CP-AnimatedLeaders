@@ -2221,6 +2221,21 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### The bully siege test: does a stronger aggressor take cities? (lead, 2026-11-03 11:00am ET)
+
+Build `claude/ab-siege` `07805c8` (`ai/war` `5043f05` with SiegeBar, plus the `RoleFixes` key from `claude/ab-c1`), release
+`ab-07805c8` once CI passes, results `AIABTest_bullysiege.csv`. In bully mode one civ is the aggressor (the most
+aggressive personality). `RoleFixes =` gives it the siege flags in the first game of each pair only; the flipped
+replay is the same game with the same aggressor, without them. Group c runs nothing (`-Fixes none`), so the aggressor's
+flags are the only difference in a pair.
+```
+powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Mode bully -Fixes none -RoleFixes "SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture, SiegeBar" -MaxGames 2 -SaveLogs
+```
+then logging off and `-MaxGames 20`. Measures (the summary's bully section): the aggressor's cities captured, its share
+of all cities at T150, turns to its first capture, and its strength share, first game against the replay. Commit as
+`AIABTest_bullysiege@<COMPUTERNAME>.csv` (PC 1 plain name). This is also the first test of the "aggressive beats
+greedy" side of the rock-paper-scissors goal.
+
 ### Siege package on the fixed build: no gain in split games (lead, 2026-11-03 10:10am ET)
 
 `ab-a86d57b`, group c ran `SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture` against B: 7 pairs (the logged pair plus 6),
