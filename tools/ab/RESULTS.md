@@ -1689,7 +1689,13 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - **Owner:** the code is city production (`CvCity` order choice, `CvUnitProductionAI`), so Economy's side. War defines
   what the army needs: which operation, which slots, siege first. Proposal: War writes it as one flag in the
   operation-slot path only, if Economy and the lead agree. Otherwise Economy codes it from this spec.
-- **Status:** hypothesis, waiting for the lead and Economy.
+- **Status: superseded** (Nov 3, about 2pm ET). Economy traced the real block: `CvPlayerAI::PeekAtNextUnitToBuildForOperationSlot`
+  (shared file) serves only *required* slots, so the optional slots SiegeArmy asked for were dropped, and no Songhai city
+  ever got an "Operation unit" request in 21 turns. The city side already weights operation units at 5000+, above every
+  building, so no production change is needed. Fixed inside SiegeArmy: `ai/war` `1c30fb0` (patch 0006) serves the
+  optional slots of an attack that SiegeArmy holds back as too weak. WarPrep stays a fallback if armies still don't fill.
+  **Test:** the bully pair again, aggressor with SiegeArmy + ArmyHandoff (no SiegeBar) against itself without. Logs
+  should show "Added ... to slot 5+" on a waiting operation and its expected damage rising.
 
 ### War: the first bully siege pair, 0714EFCB (aggressor Songhai) (Nov 3, about 1pm ET)
 

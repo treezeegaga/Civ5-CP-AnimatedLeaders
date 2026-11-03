@@ -1,0 +1,36 @@
+From 1c30fb07b71c81b1d7dfac67bf6123bfb03e1bf0 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 18:39:38 +0000
+Subject: [PATCH] AI_AB_TEST War: SiegeArmy fix: cities build the optional
+ slots of an attack it holds back
+
+CvPlayerAI::PeekAtNextUnitToBuildForOperationSlot only served required slots,
+so the optional-slot requests SiegeArmy added were dropped and no city ever
+built for a waiting attack (bully pair 0714EFCB: Songhai's op 1713 waited 21
+turns at 16 of 86 a turn; Economy found no 'Operation unit' entry in any
+Songhai city). IsArmyTooWeakForTarget is false unless SiegeArmy is on.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
+---
+ CvGameCoreDLL_Expansion2/CvPlayerAI.cpp | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayerAI.cpp b/CvGameCoreDLL_Expansion2/CvPlayerAI.cpp
+index fb434f122..c10e951dc 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayerAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayerAI.cpp
+@@ -1325,7 +1325,9 @@ OperationSlot CvPlayerAI::PeekAtNextUnitToBuildForOperationSlot(CvCity* pCity, b
+ 			if (!pThisArmy || !pThisArmy->GetSlotStatus(thisSlot.m_iSlotID)->IsFree())
+ 				continue;
+ 
+-			if (OperationalAIHelpers::IsSlotRequired(GetID(), thisSlot))
++			//AI_AB_TEST (candidate, flag SiegeArmy): an attack SiegeArmy holds back as too weak also gets its optional slots
++			//built; otherwise its requests are dropped here and the army never grows (a test game: 21 turns at 16 of 86 a turn)
++			if (OperationalAIHelpers::IsSlotRequired(GetID(), thisSlot) || pThisOperation->IsArmyTooWeakForTarget(pThisArmy))
+ 			{
+ 				bestSlot = thisSlot;
+ 				break;
+-- 
+2.43.0
+
