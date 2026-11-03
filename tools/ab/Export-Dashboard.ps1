@@ -17,12 +17,13 @@ New-Item -ItemType Directory -Force -Path $tmp | Out-Null
 $tests = New-Object System.Collections.ArrayList
 $games = New-Object System.Collections.ArrayList
 $screen = New-Object System.Collections.ArrayList
-foreach ($f in Get-ChildItem $Results -Filter "AIABTest*.csv") {
-    $build = $f.BaseName -replace '^AIABTest_?', ''
+# a run split over PCs has one file per PC (AIABTest_screen2.csv, AIABTest_screen2@PC2.csv): read them as one
+foreach ($grp in (Get-ChildItem $Results -Filter "AIABTest*.csv" | Group-Object { $_.BaseName -replace '@.*$', '' })) {
+    $build = $grp.Name -replace '^AIABTest_?', ''
     if (-not $build) { $build = "first" }
     $json = Join-Path $tmp "$build.json"
     Remove-Item $json -ErrorAction SilentlyContinue
-    try { & (Join-Path $PSScriptRoot "Summarize-ABTest.ps1") -Csv $f.FullName -Json $json | Out-Null } catch { continue }
+    try { & (Join-Path $PSScriptRoot "Summarize-ABTest.ps1") -Csv (@($grp.Group | ForEach-Object { $_.FullName }) -join ",") -Json $json | Out-Null } catch { continue }
     if (-not (Test-Path $json)) { continue }
     $d = Get-Content $json -Raw | ConvertFrom-Json
     $setup = if ($d.setup.difficulty) {

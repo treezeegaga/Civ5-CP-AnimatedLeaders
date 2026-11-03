@@ -15,7 +15,9 @@
 # - for screening runs (flags under Screen = in AIABTest.ini), a regression of each civ's strength on the screened
 #   flags it ran.
 param(
-    [string]$Csv = "",    # one results file; by default every AIABTest*.csv in My Games, each on its own
+    [string[]]$Csv = @(), # one results file, or several of one run read as one (comma-separated, e.g. a run split
+                          # over two PCs: AIABTest_screen2.csv and AIABTest_screen2@PC2.csv); by default every
+                          # AIABTest*.csv in My Games, each on its own
     [int]$MinTurn = 100,  # ignore games that stopped before this turn
     [int]$AtTurn = 0,     # judge every game at this turn instead of its last (games that didn't log it are left out)
     [double]$Delta = 2.0, # SPRT: the smallest gain worth keeping, in strength-share points
@@ -47,8 +49,11 @@ if (-not $Csv) {
     }
     return
 }
-if (-not (Test-Path $Csv)) { throw "No results file at $Csv. Play a test game with the -ABTest pack first." }
-$rows = @(Import-Csv $Csv)
+$Csv = @($Csv | ForEach-Object { $_ -split ',' } | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+foreach ($c in $Csv) { if (-not (Test-Path $c)) { throw "No results file at $c. Play a test game with the -ABTest pack first." } }
+# the run's name: the first file's, without a PC suffix after "@"
+$CsvName = [IO.Path]::GetFileNameWithoutExtension($Csv[0]) -replace '@.*$', ''
+$rows = @(Import-Csv -Path $Csv)
 if ($rows.Count -eq 0) { throw "$Csv has no rows" }
 
 # B-vs-C builds label the groups c (candidate changes) and b (the base build); report c in the "new" column and b in
@@ -383,7 +388,7 @@ if ($Scoreboard) {
         $t = @($rows | Where-Object { (& $numOf $_ "TurnSecs") -gt 0 } | Group-Object GameId, Turn | ForEach-Object { & $numOf $_.Group[0] "TurnSecs" })
         if ($t.Count) { $secs = "{0:N1}" -f ($t | Measure-Object -Average).Average }
     }
-    Write-Output ("| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |" -f [IO.Path]::GetFileNameWithoutExtension($Csv), $nGames, $strength, $aggShare, $perWar, $coalition, $deals, $banned, $secs)
+    Write-Output ("| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |" -f $CsvName, $nGames, $strength, $aggShare, $perWar, $coalition, $deals, $banned, $secs)
     return
 }
 
@@ -647,7 +652,7 @@ if ($Json) {
     $r0 = if ($games.Count) { $games[0].Civs[0] } else { $rows[0] }   # a counted game's setup, not a stopped one's
     $has = { param($name) $r0.PSObject.Properties.Name -contains $name }
     $out = [ordered]@{
-        file = [IO.Path]::GetFileName($Csv)
+        file = ($Csv | ForEach-Object { [IO.Path]::GetFileName($_) }) -join ", "
         setup = [ordered]@{ difficulty = if (& $has "Difficulty") { $r0.Difficulty } else { $null }
             map = if (& $has "Map") { $r0.Map } else { $null }; paired = (@($jsonTests | Where-Object { $_.kind -eq "pairs" }).Count -gt 0) }
         delta = $Delta; llrBound = [Math]::Round($llrBound, 3)

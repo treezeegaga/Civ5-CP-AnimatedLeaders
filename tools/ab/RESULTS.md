@@ -1772,11 +1772,12 @@ the two PCs don't touch the same files. Always `git pull --rebase` before pushin
 **Then screening run 2**, as in "After the baseline: screening run 2" below, but on PC 2 and starting now:
 1. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-2d949f8 -NoLaunch -NoUpdate`
    (the title must name `2d949f8`; if the release doesn't exist yet, CI is still building it: wait).
-2. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"`
-3. Every 5 pairs or so: copy `AIABTest_screen2.csv` to `tools\ab\results\`, commit it with your log,
+2. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 20 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"`
+3. Every 5 pairs or so: copy `AIABTest_screen2.csv` to `tools\ab\results\AIABTest_screen2@<COMPUTERNAME>.csv`
+   (PC 1 keeps the plain name; the summary reads both files as one run), commit it with your log,
    `git pull --rebase`, push.
 
-The first PC then skips screening run 2 and goes on with its own queue below.
+PC 1 plays the other 10 pairs of the same run (its queue, below).
 
 ## Instructions for the PC runner
 
@@ -1799,13 +1800,22 @@ CSV. **One-off for Economy now:** from `My Games\LogsArchive\02A37B0302A37B03F\`
 `tools\ab\results\logs_02A37B0302A37B03F\` (and the same for `02A37B0302A37B03`), commit and push. Economy needs the
 Songhai settler operation's "no path" and "found target" lines.
 
-**The queue, in order** (2026-11-02, updated by the lead at every check-in):
-1. The smoke-test pair (below).
-2. The King baseline's **logged pair** (baseline step 1).
-3. **War's 3 logged games** (below, after the baseline).
-4. The rest of the baseline: 19 pairs, logging off (baseline step 2).
-5. **Screening run 2** (below): 30 candidate flags at once, 20 pairs. Then the lead queues single-flag
-   SPRTs for the flags it ranks highest.
+**Baseline step 2 is cancelled (lead, 2026-11-03 01:35 UTC).** The PC runner found that with `-Fixes none` the
+flipped game is the same game: all 120 result rows of pair `02C5BBF9` are identical, only `Group` swaps (49.0% then
+51.0%). Civ's replay is fully deterministic, so an A/A pair always averages exactly 50% and 19 more of them measure
+no noise. That's good news for every real test: within a pair, everything that differs comes from the flags
+tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
+first. B's seconds per turn come from the logged pair (logging costs about 15%).
+
+**The queue, in order** (updated 2026-11-03 01:35 UTC):
+1. ~~The smoke-test pair~~ (passed).
+2. ~~The King baseline's logged pair~~ (done: identical games, see above).
+3. **War's 3 logged games** (below), running now.
+4. **Screening run 2** (below), split between the two PCs: PC 1 plays 10 pairs (`-MaxGames 20`) on `ab-2d949f8`
+   and commits its file as `AIABTest_screen2.csv`; PC 2 plays the other 10 and commits as
+   `AIABTest_screen2@<COMPUTERNAME>.csv`. The summary reads both as one run. If PC 2 isn't playing yet when PC 1's
+   10 pairs end, PC 1 plays 10 more.
+5. The lead then queues single-flag SPRTs for the flags it ranks highest.
 
 ### 2026-11-02: smoke test of `c7c_roles` with paired games (1 pair = 2 games)
 
@@ -1918,6 +1928,6 @@ this one adds Economy's 0009 (logging) and 0010 (two flags), release `ab-2d949f8
    civs, swapped in the second game of each pair. This build reads the `Difficulty` key that `Run-Games.ps1`
    writes, so it plays King whatever the setup screen remembers:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 20 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"
    ```
 3. Commit `AIABTest_screen2.csv` and `Run-Games.log` every 5 pairs or so, and push.
