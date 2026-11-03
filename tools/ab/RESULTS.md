@@ -1556,7 +1556,7 @@ c ran SiegeArmy, ArmyHandoff, SiegeStay and SiegePosture: 47.3% and 55.8%, no ca
   It fired rarely (2 sends) because few c armies were delivered.
 - **No siege improved:** the best expected damage per turn was 75/200 (Songhai, b) and 70/200 (Assyria, b in the
   replay), the same range as before.
-- **Next:** rerun the siege test on `ab-a86d57b` (CI building now) and drop the `ab-f390090` pairs from the verdict.
+- **Next:** rerun the siege test on `ab-a86d57b` (built: CI run 90 passed) and drop the `ab-f390090` pairs from the verdict.
   One logged game should show the same operation ID waiting for several turns, then marching bigger.
 
 ### War: what the 3 logged King games show (2026-11-03)
