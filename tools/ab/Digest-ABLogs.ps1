@@ -70,9 +70,13 @@ $out = foreach ($n in $names) {
     $row = $civs.Values | Where-Object { $_.Civ -match ("CIVILIZATION_" + $n.ToUpper().Replace(' ', '_')) } | Select-Object -First 1
     if (-not $row -and $civs.Count -gt 0) { continue }   # city-state
     $builds = @()
-    $builds += $book | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { $c = $_ -split ', '; [pscustomobject]@{ T = [int]$c[0]; S = ($c[3] -replace 'OPENING BOOK - Started ', '') + '*' } }
-    $builds += $chosen | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { $c = $_ -split ', '; [pscustomobject]@{ T = [int]$c[0]; S = $c[5] } }
-    $early = @($builds | Where-Object { $_.T -le $UpToTurn } | Sort-Object T | ForEach-Object { "T$($_.T) $($_.S)" })
+    $builds += $book | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { $c = $_ -split ', '; [pscustomobject]@{ T = [int]$c[0]; S = ($c[3] -replace 'OPENING BOOK - Started ', '') + '*'; City = $c[2] } }
+    $builds += $chosen | Where-Object { $_ -match "^\d+, $n, " } | ForEach-Object { $c = $_ -split ', '; [pscustomobject]@{ T = [int]$c[0]; S = $c[5]; City = $c[2] } }
+    # the capital is the city of the first build; builds elsewhere carry their city's name (for Economy: a settler
+    # replaced by a wonder in the capital, and the capital's queue against new cities')
+    $capital = @($builds | Sort-Object T | Select-Object -First 1 | ForEach-Object { $_.City })
+    $early = @($builds | Where-Object { $_.T -le $UpToTurn } | Sort-Object T | ForEach-Object {
+        if ($capital.Count -and $_.City -ne $capital[0]) { "T$($_.T) $($_.S) ($($_.City))" } else { "T$($_.T) $($_.S)" } })
     $settlers = @($builds | Where-Object { $_.S -match '^Settler' } | Sort-Object T | ForEach-Object { $_.T })
 
     $mineOps = @($ops | Where-Object { $_ -match "^\d+, $n, " })
@@ -102,7 +106,7 @@ $out = foreach ($n in $names) {
         Plan = if ($row) { $row.Book } else { '' }
         Cities = if ($row) { $row.Cities } else { '' }
         Text = @(
-            "  builds to T${UpToTurn}: " + ($early -join ' | ')
+            "  builds to T${UpToTurn} (capital $(if ($capital.Count) { $capital[0] } else { '?' }); other cities named): " + ($early -join ' | ')
             "  settlers ordered T: " + ($settlers -join ',') + "   found-city ops started T: " + ($started -join ',') + "   cities founded T: " + ($success -join ',')
             $(if ($aborted.Count) { "  ops aborted: " + ($aborted -join ', ') })
             $(if ($idle.Count) { "  IDLE SETTLER turns: $($idle.Count) (first T$($idle[0]))" })
