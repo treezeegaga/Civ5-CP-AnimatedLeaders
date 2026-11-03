@@ -1663,11 +1663,11 @@ the two PCs don't touch the same files. Always `git pull --rebase` before pushin
 2. **Copy from the first PC** through a shared network folder, so both PCs build exactly the same pack: Community
    Patch's mod folder and the repo's `CPModpack\data\` (the database snapshot; git ignores it).
    `tools\ab\Copy-RunnerFiles.ps1` does both ends and checks the copy (file count, size, the DLL's hash):
-   - the user shares a folder on PC 1 (`C:\CivRunner`: right-click, Properties, Sharing, Share, their own account);
-   - **PC runner 1:** `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Export C:\CivRunner`
+   - the shared folder is `\\TREEDESKTOP\civrunner` (on PC 1, shared by the user on 2026-11-03);
+   - **PC runner 1:** `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Export \\TREEDESKTOP\civrunner`
      (safe while a game runs);
    - **PC runner 2**, after the clone (step 3) and starting Civ once:
-     `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Import \\<PC 1's name>\CivRunner\civ-runner-files.zip`
+     `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Import \\TREEDESKTOP\civrunner\civ-runner-files.zip`
      (Windows asks for PC 1's sign-in the first time). It ends "same as the first PC".
 3. Clone `treezeegaga/Civ5-CP-AnimatedLeaders`, branch `claude/sleepy-hopper-x77moh`, with push access (sign in to
    GitHub in Git Credential Manager on the first push).
