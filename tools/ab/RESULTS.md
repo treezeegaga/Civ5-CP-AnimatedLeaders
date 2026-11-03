@@ -2221,6 +2221,19 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Siege package on the fixed build: no gain in split games (lead, 2026-11-03 10:10am ET)
+
+`ab-a86d57b`, group c ran `SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture` against B: 7 pairs (the logged pair plus 6),
+`AIABTest_siegefix@TREEDESKTOP.csv`. c 49.9%, gain -0.08 points; **gainer SPRT failed** (LLR -44), no-worse passed.
+No city changed hands; wars were rare (0.03 declarations per civ per 10 turns for c, 0.05 for b). Pair spread 0.58
+points: the two games of a pair barely differed, so the flags almost never acted. Stopped at 7 pairs. The 16 pairs on
+the buggy `ab-f390090` don't count.
+
+Reading: split games give siege code no wars to fight. Its testbed is the **bully test** (`Mode = bully`): the
+aggressor runs the package (+ `SiegeBar`) against the aggressor without, measured by cities captured and turns to the
+first capture. The SiegeBar split test is dropped in favour of that. Why B starts so few wars is a separate question
+for War and Diplomacy.
+
 **Next on PC 2, after its 20 siege pairs: SiegeBar on top of the siege package (lead, 2026-11-03).** War's `SiegeBar`
 (`ai/war` `0c2d4ce`) makes SiegeArmy wait for the city's healing plus a third of its HP a turn, not a fifth. Test build
 `claude/ab-siege` (`ai/war` + the new `Base` key; release `ab-09e8743` once CI passes; results file
