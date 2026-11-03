@@ -255,7 +255,8 @@ proposal counts, Economy's 0009 hold logging, Diplomacy's `IsEndgameAggressiveTo
 - Not screened: `IdeologyPick`, `EspionagePolicyValue` (act after T150), `AirRebaseHeal` (no aircraft by T150).
   They can't be measured in this setup, so they merge on code review and a clean smoke pair, and are re-checked in the
   longer games of phase 2. `CityStateBugs` goes with the bully test (it acts against a runaway).
-- Coming: the settler-operation fixes (0011).
+- Not screened yet: Economy's settler-operation fixes `SettlerEscortSafe`, `SettlerSitePathFlags`, `SettlerPathCheck`
+  (0011, on `ai/economy` `63c7b7b`): they join the bug-fix bundle test.
 - **Ruled obviously right by the user (2026-11-03), no test:** `NoForeignMissionaries`, a civ without its own religion
   no longer buys missionaries (they spread a rival's religion with its faith). Merges on code review and a clean
   smoke pair. A founder still buys missionaries for its own religion.
