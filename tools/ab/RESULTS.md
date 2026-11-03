@@ -1023,9 +1023,17 @@ shows if c's 3rd city comes ≥ 5 turns earlier than b's, and c's fall-throughs 
 - **Korea's 2nd city was delayed by a lost settler.** Its op ran T31-T48, ended `LostCivilian`, and the
   replacement founded at T61. Escort and safety cost 30 turns there.
 
-**One field needed from `Digest-ABLogs.ps1`** (requested): the **city** on each `builds to` entry, or a separate
-`capital builds` line (every start in the capital, book or not). With it the wait, fall-through and
-interrupted-settler readings are exact. Everything else the procedure uses is already in the digest.
+**The missing field is in** (lead, `974919d`): the `builds to` line now reads `builds to T<n> (capital <name>; other
+cities named)`, and every build outside the capital ends in `(<City>)`. So the wait, fall-through and
+interrupted-settler readings are exact from the logged King pair on.
+
+**Why a settler was held, from builds with patch 0009 on** (Economy, logging only, no behaviour change; on
+`d950f88`). The book logs `<city>, OPENING BOOK - Settler held (<reason>), size <n>, next <build>` in
+`CitySpecializationLog.csv` whenever it passes over a settler step. The reason is the first one hit:
+`size 1`, `unhappy`, `boxed in`, `growth due` or `one at a time`. `one at a time` followed by a building is
+exactly `SettlerOverlap`'s fall-through, so with it the cause 2 count is direct instead of inferred. It also
+gives city size at that moment, which the logs didn't have. The King baseline (`ab-6b8ebde`) predates it, so
+the first logged pair is read with the inferred method above.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
@@ -1605,10 +1613,11 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
   will use it. Also E1 (losing wars don't cut building production; a dead loop in
   `CvBuildingProductionAI`): Economy can code it as a flag whenever War wants it tested alongside its fixes.
 
-- **For the lead, from Economy (Digest-ABLogs.ps1):** add the city to each `builds to T..` entry (the CHOSEN
-  and OPENING BOOK lines already carry it in field 2), or a `capital builds` line per civ. Without it the
-  expansion-pace procedure can't tell the capital's queue from new cities', which it needs for the wait,
-  fall-through and interrupted-settler readings ("Expansion pace: how the logged games are read").
+
+- **For the lead, from Economy (Digest-ABLogs.ps1, once patch 0009 is in a build):** count the `OPENING BOOK -
+  Settler held (<reason>), size <n>, next <build>` lines per civ, by reason, and list the ones whose `next` is a
+  building, with turn and city (e.g. `held: one at a time 4 (3 to a building: T19 Monument, ...), growth due 2,
+  size 1 1`).
 
 ## Instructions for the PC runner
 
