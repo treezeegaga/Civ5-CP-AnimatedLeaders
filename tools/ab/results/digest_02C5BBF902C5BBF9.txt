@@ -1,0 +1,32 @@
+﻿Game 02C5BBF902C5BBF9 (AIABTest_c7c_roles.csv), last logged turn 150
+b    Denmark      tall      cities 7
+  builds to T80 (capital Copenhagen; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T19 Settler* | T30 Worker* | T35 Monument (Aarhus) | T36 Shrine (Aarhus) | T36 Settler | T46 Library | T53 Worker | T55 Work Boat | T57 Work Boat (Aarhus) | T58 Granary | T60 Worker | T64 Settler | T68 Hanging Gardens | T73 Granary (Aarhus) | T79 Work Boat (Kaupang) | T80 Work Boat (Kaupang) | T80 Scout
+  settlers ordered T: 19,36,64,83,92,93,100,103,134,135   found-city ops started T: 30,46,68,88,95,104,114   cities founded T: 35,79,94,102,114,122
+  ops aborted: T66 LostCivilian, T87 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget, T153 NoTarget
+  IDLE SETTLER turns: 3 (first T36)
+  military ops ended (whole game): NoUnits 1, LostPath 1
+  settler timeline to T80: T19 settler (book) in Copenhagen | T30 op started | T35 FOUNDED | T36 settler (AI) in Copenhagen | T46 op started | T64 settler (AI) in Copenhagen | T66 op ended: LostCivilian | T68 op started | T79 FOUNDED
+  saving gold for a settler: 40 turns (T6-T80)
+b    Rome         tall      cities 6
+  builds to T80 (capital Rome; other cities named): T0 Scout* | T3 Monument* | T7 Warrior* | T11 Shrine* | T14 Settler* | T22 Worker* | T25 Monument* (Antium) | T26 Stonehenge | T33 Library* (Antium) | T40 Great Library | T46 Library* | T51 Worker* | T52 Settler | T53 Work Boat (Antium) | T54 Work Boat (Antium) | T56 Granary | T59 National College | T60 Granary (Antium) | T62 Monument (Cumae) | T63 Granary (Cumae) | T63 Spearman | T65 Worker | T66 Shrine (Antium) | T70 Trireme (Antium) | T70 Writers' Guild | T73 Trireme (Antium) | T74 Trireme (Antium) | T75 Barracks | T76 Temple (Antium)
+  settlers ordered T: 14,52,83,111,117   found-city ops started T: 22,57,86,114,120   cities founded T: 25,62,91,121,127
+  IDLE SETTLER turns: 4 (first T52)
+  military ops ended (whole game): LostPath 2, DiploOpinionChange 1, HalfStrength 1, NoTarget 1
+  settler timeline to T80: T14 settler (book) in Rome | T22 op started | T25 FOUNDED | T52 settler (AI) in Rome | T56 BOUGHT in Rome. Cost: 370 | T57 op started | T62 FOUNDED
+  saving gold for a settler: 33 turns (T6-T80)
+c    Byzantium    tall      cities 5
+  builds to T80 (capital Constantinople; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T12 Warrior* | T16 Settler* | T27 Worker* | T31 Monument* (Adrianople) | T32 Library* (Adrianople) | T32 Settler* | T40 Worker* | T45 Library* | T46 Monument* (Nicaea) | T47 Work Boat (Adrianople) | T47 Library* (Nicaea) | T54 Work Boat | T59 Shrine (Adrianople) | T59 Warrior | T62 Settler | T67 Granary (Adrianople) | T68 Granary | T73 Worker | T75 Shrine (Nicaea) | T78 Writers' Guild
+  settlers ordered T: 16,32,62,92,93,105,106   found-city ops started T: 27,40,68,76,95   cities founded T: 31,46,86,103
+  ops aborted: T69 NoTarget, T70 NoTarget, T71 NoTarget, T72 NoTarget, T73 NoTarget, T74 NoTarget, T75 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget, T153 NoTarget
+  IDLE SETTLER turns: 4 (first T32)
+  military ops ended (whole game): NoUnits 14
+  settler timeline to T80: T16 settler (book) in Constantinople | T27 op started | T31 FOUNDED | T32 settler (book) in Constantinople | T40 op started | T46 FOUNDED | T62 settler (AI) in Constantinople | T68 op started | T69 op ended: NoTarget | T70 op ended: NoTarget | T71 op ended: NoTarget | T72 op ended: NoTarget | T73 op ended: NoTarget | T74 op ended: NoTarget | T75 op ended: NoTarget | T76 op started
+  saving gold for a settler: 40 turns (T6-T68)
+c    Poland       tall      cities 4
+  builds to T80 (capital Warsaw; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T17 Worker* | T24 Settler* | T32 Stonehenge | T34 Monument* (Krakow) | T35 Library* (Krakow) | T39 Worker* | T40 Settler* | T41 Warrior* | T44 Worker* | T45 Library* | T52 Worker* | T59 Settler | T60 Granary (Krakow) | T65 Granary | T68 Monument (Lodz) | T69 Shrine (Lodz) | T71 Spearman | T74 Warrior (Krakow) | T76 Spearman | T79 Granary (Lodz) | T79 Spearman | T80 Warrior (Krakow)
+  settlers ordered T: 24,40,59,81,83,84,90,106   found-city ops started T: 32,66,102   cities founded T: 34,68,110
+  ops aborted: T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget, T153 NoTarget
+  IDLE SETTLER turns: 5 (first T40)
+  military ops ended (whole game): NoTarget 4
+  settler timeline to T80: T24 settler (book) in Warsaw | T32 op started | T34 FOUNDED | T40 settler (book) in Warsaw | T59 settler (AI) in Warsaw | T65 BOUGHT in Warsaw. Cost: 370 | T66 op started | T68 FOUNDED
+  saving gold for a settler: 63 turns (T6-T80)
