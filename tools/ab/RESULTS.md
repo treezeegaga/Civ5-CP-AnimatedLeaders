@@ -1037,6 +1037,81 @@ the first logged pair is read with the inferred method above. The digest prints 
 <k>, ...)   built instead: <next> <k>, ...   first: T<t> <city> size <s> next <build> | ...`. The cause 2 count is the
 `one at a time` holds whose `next` is a building.
 
+### Expansion pace: first logged King games (Economy, 2026-11-03)
+
+**Source:** the smoke-test pair `02A37B03` / `02A37B03F` (King, c7c bundle, logging on), digests in `results/`. The
+digests list 6 major civs per game. The flags are judged against B, so the reading uses the 6 civs playing **B**:
+- game 1: Germany (tall), Indonesia (wide), Songhai (tall);
+- game 2: Assyria, China, Morocco (all tall).
+
+These digests predate the city field and patch 0009, so the capital's queue is inferred from the book's step
+order.
+
+| B civ | 1st settler started | 2nd / 3rd / 4th city | Wait before settler 2 (capital), and what filled it | Saving gold |
+|---|---|---|---|---|
+| Germany (tall) | T17, after monument, warrior, shrine | T29 / T61 / T74 | 26 turns: worker\*, AI warrior, **Stonehenge** T39, **library\*** T43 | 35 turns, bought T65 |
+| Songhai (tall) | T17, after monument, shrine, warrior | T35 / T47 / T72 | 9 turns (warrior, worker\*). Settler 3: **Great Library** T47, and the book ended at T53 before it | 53 turns, never bought |
+| Assyria (tall) | T24, after monument, shrine, warrior | T38 / T87 / T104 | Never: worker\*, **Stonehenge** T39, **Royal Library\*** T39/T48. The book ended at T53 with settlers 2 and 3 unbuilt | 44 turns, never bought |
+| China (tall) | T24, after monument, warrior, shrine, worker | T37 / T78 / T93 | 13 turns, **Stonehenge** T34. The settler started T47 is followed at T48 by **Great Library**, and the city that started it didn't found until T78 (likely replaced) | 59 turns, bought T79 |
+| Morocco (tall) | T27, after monument, shrine, warrior, worker | T39 / T63 / T114 | 11 turns: **Stonehenge** T37, library\*, worker\* | 51 turns, bought T50 |
+| Indonesia (wide) | T10 | T22 / T67 / T83 | Never from the book: worker\*, monument\*, shrine\*, then **Great Library** T34 (14 turns). AI settler at T48 | 25 turns, never bought |
+
+(\* = opening-book pick.) Medians: 2nd city T37, 3rd T65, 4th T88. Walks are 2-3 turns, except Songhai (8) and
+Morocco (12).
+
+**Against the readings fixed beforehand:**
+- **`SettlersFirst`: diagnosis right, for settler 1.** Every tall civ started its first settler at T17-T27, behind
+  13-27 turns of monument, shrine, warriors and sometimes the worker. Indonesia (wide) started at T10. With
+  the reordered book, tall civs should start settler 1 at about T8-12. For settler 2 it's only partly right:
+  the book's own steps (worker) are a small part of the wait.
+- **`SettlerOverlap`: diagnosis mostly wrong.** Walks are 2-3 turns. The long holds happen around T34-T48, when
+  **no settler is on the map**, so the reason isn't "one at a time" (it must be growth due, unhappiness, or the
+  book returning nothing). Expect a small effect. Keep it in screening run 2, but don't expect a pass.
+- **The biggest delay wasn't on the list: wonders in the capital.** 6 of 6 B civs started Stonehenge or the Great
+  Library at T34-T48, while the book still had settler steps to do. Settler 2 then waited for the wonder (or was
+  replaced by it), and for 3 of 5 tall civs the book ended at T53 (Quick) with settlers unbuilt. The likely path
+  (`CvCityAI::AI_chooseProduction`): a settler step is held (most likely growth due), the book falls through to
+  its library, and the rule that lets the book's later buildings "give way to wonders" (2o) swaps the library
+  for a wonder. The other possibility is the book returning nothing and the normal choice picking the wonder.
+  Patch 0009's log line tells these apart.
+- **Gold:** B civs saved for a settler 25-59 turns before T80. 3 of 6 never bought (Songhai, Assyria, Indonesia)
+  and the others bought only at T50-T79. Saving locks 150-230 gold for 40-60 turns for at most one settler,
+  usually late. The procedure's threshold (≥ 30 saving turns, no buy) is met by 2 of 6. A fix is reasonable
+  but second to the wonders.
+- **Also seen in a c civ** (c7c bundle): Songhai (c, wide) built its first settler by T18. Its found-city op then
+  started and ended with `LostPath` every two turns from T18 to T34, the settler was killed (`LostCivilian`),
+  and the 2nd city came at T54. An unreachable site re-picked every turn is a settler-operation bug to look at
+  (`CvAIOperation`, settler operations: Economy's).
+
+**What this changes.** Two new flags, both behind `UsesCandidateAI` with hypotheses below, and a request: put
+patch 0009's logging (it only logs) into the screening run 2 build if it isn't too late, so that run's logged
+games show the hold reasons directly.
+
+### SettlersBeforeWonders: no wonder in the capital while the book still has settlers to build (Economy)
+- Hypothesis: B's capitals start Stonehenge or the Great Library at T34-T48 with book settlers pending (6 of 6 B
+  civs in the first logged King pair), and the 2nd-to-3rd city gap is 25-45 turns. While the book is active
+  and still has a settler step to do, the capital doesn't start a world wonder:
+  - the book's later buildings don't give way to wonders;
+  - the normal production choice skips world wonders in the capital.
+
+  Expected: the 3rd city 10-20 turns earlier, at the cost of some early wonders. Wonders count for score, not
+  for strength share.
+- Measure: strength share at T100 (verdict). Mechanism: `City3Turn`, `City4Turn`, and the wonders count at T100.
+- δ: 2 points of strength share.
+- Test: in a screening run with `SettlersFirst` (they're independent), then SPRT gainer at T100 if it looks good.
+- Status: written; coding next.
+
+### BookFinishesSettlers: the opening book runs until its settlers are started (Economy)
+- Hypothesis: the tall book ends at T80 Standard (T53 Quick), and 3 of 5 B tall civs in the first logged pair
+  hadn't started their 3rd book settler by then (Assyria not even its 2nd). After that, settling falls to the
+  normal economic AI, which is slower: 3rd city at T63-T87, 4th at T72-T114. With the flag, while any book
+  settler step is unstarted, the book stays active up to T100 Standard (T67 Quick); after that the turn limit
+  applies as before.
+- Measure: strength share at T100. Mechanism: `City3Turn`, `City4Turn` for tall civs.
+- δ: 2 points of strength share.
+- Test: screening, then SPRT gainer at T100.
+- Status: written; coding next.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
