@@ -1077,7 +1077,9 @@ its own estimate) and then confirmed one by one. Then game theory, one flag per 
 | Flag | Idea | Hypothesis | Measure | δ / test |
 |---|---|---|---|---|
 | `FIX_EASY_TARGET` | D1 + D2: "easy target" works for civs at peace | Opportunists start wars against weak or overstretched neighbours, including a conqueror whose army is away | `WarsDeclared` per civ, `CitiesCaptured`; bully test: wars on the aggressor | No-worse on strength (δ 2); gainer if it shows |
-| `FIX_DIPLO_D3` ... `FIX_DIPLO_D13` | One flag per confirmed bug | Correctness; no strength loss | Strength; per bug its mechanism (D3 war length, D4 wars on city-states, D9 deals, D11 city-state wars on the aggressor) | Screen together at T100, then no-worse each |
+| `FIX_DIPLO_BUGS` (ini name `DiploBugs`) | D3-D8, D12, D13 together (see the patch entry below for why they're grouped) | Correctness; no strength loss | Strength; mechanisms: war length (D3), wars on city-states (D4) | No-worse (δ 2) |
+| `FIX_LUXURY_ASK` (`LuxuryAsk`) | D9 | More luxury swaps between AIs, no strength loss | `Deals` per civ per 10 turns (band 0.5-2) | No-worse |
+| `FIX_CITY_STATE_BUGS` (`CityStateBugs`) | D10 + D11; game-wide (on when any major civ has it) | City-states react one by one to an aggressor; alliances pass to whoever overtakes | Bully pair: city-states at war with the aggressor | Bully test |
 | `FIX_COALITION_STRENGTH` | Judge a SEVERE or CRITICAL warmonger against the coalition, not alone: our strength plus that of civs that are visibly against it (at war with it, denouncing it, or lost a city to it in the last 30 turns), minus its own friends and pact partners | AFRAID gives way to GUARDED/HOSTILE/WAR toward a runaway, only when the coalition could actually win | Bully test: civs at war with the aggressor at the end; turns from first conquest to 2+ at war | Goal row: 2+ within 20 turns; no-worse on strength |
 | `FIX_COALITION_COOP` | Coop war against a SEVERE+ warmonger can be asked of any civ that is against it (not only friends), and the potential-war-target gate uses the coalition strength | More joint wars against the aggressor, none against a peaceful tall civ | Joint-war proposals (new count), coalition speed; the tall civ's wars | Bully and builders tests both |
 | `FIX_COALITION_PACT` | Defensive pacts get a "common threat" term (both rate the same civ SEVERE+), and a third pact is allowed while such a threat exists | Pacts form against the conqueror before it reaches the next victim | `Pacts`, aggressor's cities per war | Bully test |
@@ -1089,6 +1091,90 @@ its own estimate) and then confirmed one by one. Then game theory, one flag per 
 All of these judge by behaviour (warmonger threat, cities taken, deals broken), never by who is human, and leave
 the leader's personality in charge (boldness, warmonger hate, loyalty still weigh as before). The first bully
 pairs (B everywhere) set the starting point for the coalition flags.
+
+### Diplomacy: patches, exploit-check scenarios and answers (Diplomacy session, 2026-11-02)
+
+**Patches** (format-patch files on pack branch `claude/ai-diplomacy`, each based on `claude/ab-c1` `6b8ebde`, applied
+with `git am` and checked to apply cleanly; not compiled here, CI is the first compile):
+
+| File | What | Goes to |
+|---|---|---|
+| `tools/ab/patches/diplomacy/counts/0001-...` | Measurement only: running counts per proposer of joint wars asked and agreed, and World Congress sanctions proposed and passed, each with a "vs the aggressor" variant (target's `GetABTestRole() == AB_ROLE_AGGRESSOR`). 8 columns at the end of the row: `CoopWarAsked`, `CoopWarAskedVsAggressor`, `CoopWarAgreed`, `CoopWarAgreedVsAggressor`, `SanctionsProposed`, `SanctionsProposedVsAggressor`, `SanctionsPassed`, `SanctionsPassedVsAggressor`. Batch `c7c_proposals`. "Asked" counts AI-to-AI and human-to-AI requests (in `RespondToCoopWarRequest`, after its validity check) and AI-to-human requests; "agreed" counts an immediate or "after preparing" yes | `claude/ab-c1` directly (lead's answer). `Summarize-ABTest.ps1` needs the new columns |
+| `tools/ab/patches/diplomacy/fixes/0001-...` | The bug fixes behind four flags: `EasyTarget` (D1, D2), `DiploBugs` (D3-D8, D12, D13), `LuxuryAsk` (D9), `CityStateBugs` (D10, D11). All four are left out of `kCandidateFixBundle`, so a non-test pack and `Fixes = bundle` don't get them until they pass | `ai/diplomacy` |
+| `tools/ab/patches/diplomacy/fixes/0002-...` | War's request: the committed conquest target (`GetNewAIConquestTarget`) becomes a saved `CvDiplomacyAI` member instead of a `static`. A save reload kept no target, so a battle test from a save could pick differently from its game; in real play the static survived into the next game in the same process. Test runs restart Civ every game, so pairs were never affected. **Saves made with earlier builds won't load with it** (one field appended to the save), so merge it before battle-test saves are made, or after they're no longer needed | `ai/diplomacy` (or `claude/ab-c1`, since it's War's code and changes no decision) |
+
+**Why the bug fixes share flags.** Flags are bits of a 32-bit mask (`1 << eFix`), 15 are taken, War's patch adds 3,
+and Economy and Personality will add more. One flag per bug (12) would use most of what's left. So:
+- `EasyTarget` alone: it changes how often AIs start wars, so it needs its own verdict.
+- `LuxuryAsk` alone: it changes trade, measured by deals.
+- `CityStateBugs` alone: it's city-state behaviour, shared by everyone. It has to be game-wide, and only the bully
+  pair (c in one game, none in the other) can measure it.
+- `DiploBugs` for the rest: each is a plain correctness fix with a small effect, like batch 1 in B.
+
+If `DiploBugs` fails its no-worse test, split it to find the culprit. **Merge note:** War's three flags and mine are
+both appended after `FIX_CLOSED_BORDERS`, so the second branch merged into `claude/ab-c1` gets a conflict in the enum,
+`kCandidateFixNames` and the bundle mask. Keep both lists, in either order: saved masks only matter within one build.
+
+**Suggested tests.**
+1. `EasyTarget`, `DiploBugs`, `LuxuryAsk`: one screening run with all three randomised per civ (lead job 4's
+   regression), at T100. Then a no-worse SPRT at T150 on each flag that the screen doesn't flag as harmful. Read
+   `WarsDeclared` for `EasyTarget`, and `Deals` for `LuxuryAsk`.
+2. `CityStateBugs`: in the bully pairs, alongside the coalition flags later.
+
+**Exploit checks: exact scenarios** (lead's request). Each needs a save made in a normal game with the test pack
+installed, a human in slot 0 and King with even rules. Run each on two builds, B and `ai/diplomacy` with the flag
+named, and reload the save before every try.
+
+*Check 1: per-turn payments in a peace deal* (no fix coded yet; `FIX_PEACE_PAYMENTS` planned):
+- **The save:** the human has been at war with one AI neighbour for at least 10 turns, and the AI is winning:
+  war score 25 or more for the AI (the trade screen's peace tooltip shows it). At least one of the human's cities is
+  under siege. The human makes 15+ gold per turn.
+- **Turn 0:** the human offers peace in the trade screen and asks the AI what it wants ("What would make this work?").
+  Record the AI's terms: gold per turn, for how many turns, plus any lump sum. Accept. Record the human's GPT and the
+  AI's treasury.
+- **Wait:** end turns until war can be declared on the AI again (the declare-war button is greyed out until the
+  peace treaty ends). Record that turn. Then declare war on it.
+- **Measure:** how many turns of GPT the AI received, divided by the deal's turns. Also note the AI leader's
+  opinion of the human afterwards (diplomacy screen modifiers).
+- **Verdict:** the exploit is real if the AI received less than half the payments it asked for and its terms were
+  priced for the full deal. Pass with the fix: the terms ask for the payments over the turns the human is bound,
+  or for a lump sum instead.
+
+*Check 2: help-request re-roll* (`DiploBugs`, D13):
+- **The save:** the human has a Declaration of Friendship with an AI that has at least 300 more gold than the
+  human, and hasn't asked it for help in the last 30 turns.
+- **Turn 0:** open the trade screen with the friend, put 50 of its gold on its side, and use "make a request".
+  If it refuses, open the screen again and repeat, up to 10 tries in the same turn.
+- **Measure:** the number of tries until it says yes, and what the reply was after the first refusal.
+- **Verdict:** with B the expected result is a yes within a few tries. Pass with `DiploBugs`: after the first refusal,
+  every later try that turn (and for the next 10 turns) gets "too soon".
+
+*Check 3: a bluffed demand* (no fix coded yet; `FIX_DEMAND_BLUFF` planned):
+- **The saves:** two, both with the human at peace with an AI neighbour that has walls in its border city and at
+  least 3 archers or better. Neither has a friendship or denouncement with the other.
+  - **Bluff save:** 5 warriors or spearmen, no siege, parked on the human's side of the border within 3 tiles of
+    that city.
+  - **Real save:** 4 catapults and 4 swordsmen (or that era's equivalent) parked in the same place.
+- **Turn 0:** demand 100 gold, then reload and demand one of the AI's luxuries.
+- **Measure:** accepted or refused, in each save.
+- **Verdict:** the exploit is real if the AI pays in the bluff save. Pass with the fix: it refuses the bluff and
+  still gives in to the real threat. If it refuses both even on B, bluffing isn't a live exploit and
+  `FIX_DEMAND_BLUFF` can wait.
+
+**Answers to the other requests.**
+- **L3** (Economy: domination progress counts a share of world military might): it's part of the coalition problem.
+  Others read a civ's domination progress in `IsCloseToWorldConquest` (needs 50) and endgame aggression. So a peaceful
+  tall civ with a big defensive army reads as "close to world conquest", and gets targeted for its army rather than
+  its deeds. Goal 2 says judge by behaviour. Plan: with `FIX_COALITION_STRENGTH`, a civ's military share counts only
+  up to twice its share of original capitals held. A civ holding only its own capital (1 of 8) tops out at 25%;
+  one holding 3 tops out at 75%. Coded with the coalition flags, after War's capture fixes. Its effect on the civ's
+  own pursuit (it switches to domination at 50) goes to Personality.
+- **L2** (science progress counts every project and Apollo twice): plausible but unverified. Whether Apollo has its
+  own space-race threshold is in the base game's XML, which isn't in the fork. It only matters past ~80% of techs,
+  which no test game reaches. Noted for phase 2 with the late-game tests.
+- **War's second point** (joint wars, demands and city-state statements declare war without an army in place):
+  agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
+  joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
 ### War session: why attacks fail, ranked against the code (2026-11-02)
 
