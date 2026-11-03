@@ -4,42 +4,42 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "No-flag pairs replay identically, so the long baseline is cancelled. PC 1 is playing War's 3 logged games, then half of screening run 2 (30 flags, build ab-2d949f8). PC 2 is being set up for the other half.",
+   "detail": "Screening run 2 is playing on both PCs (30 flags, 10 pairs each, results in about 3.5 hours). War's 3 logged games: no city changed hands in any of them.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 1,
    "name": "PC runner",
-   "detail": "Logged baseline pair done (identical games); War's 3 logged games running since 01:27.",
+   "detail": "10 pairs of screening run 2 since 02:07 (ab-2d949f8).",
    "state": "running"
   },
   {
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Five flags compiled; waiting for its 3 logged war games.",
-   "state": "waiting"
+   "detail": "Reading its 3 logged games: why no attack took a city.",
+   "state": "running"
   },
   {
    "section": "session",
    "order": 3,
    "name": "Economy",
-   "detail": "Read the first King logs: capitals build wonders before book settlers. Two new flags (0010) in screening run 2; now on a settler path bug.",
+   "detail": "Confirming the settler path bug from the smoke-pair logs; two new flags in screening.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 4,
    "name": "Diplomacy",
-   "detail": "All flags compiled in screening build 2; its own build re-running after a CI timeout fix.",
-   "state": "waiting"
+   "detail": "Its build passed; reading the diplomacy logs from War's games.",
+   "state": "running"
   },
   {
    "section": "session",
    "order": 5,
    "name": "Lead",
-   "detail": "Screening build 2 rebuilt with Economy's flags; CI checkout timeout fixed.",
+   "detail": "Both PCs on screening run 2; waiting for the first pairs.",
    "state": "running"
   },
   {
@@ -95,43 +95,43 @@
    "section": "session",
    "order": 6,
    "name": "PC runner 2",
-   "detail": "Being set up: second Steam account, files from \\\\TREEDESKTOP\\civrunner, calibration. Then 10 pairs of screening run 2.",
-   "state": "next"
+   "detail": "Calibrated (2560x1440); check pair of screening run 2 since 02:12, then 10 pairs.",
+   "state": "running"
   },
   {
    "section": "queue",
    "order": 1,
    "name": "Smoke-test pair",
-   "detail": "Passed: King, Pangaea, the second game replays the first with groups swapped.",
+   "detail": "Passed.",
    "state": "passed"
   },
   {
    "section": "queue",
    "order": 2,
    "name": "Baseline logged pair",
-   "detail": "Done: with no flags, the two games are identical (50% exactly). The 19 more baseline pairs are cancelled.",
+   "detail": "Done: no-flag pairs replay identically, so the long baseline was cancelled.",
    "state": "passed"
   },
   {
    "section": "queue",
    "order": 3,
    "name": "War's 3 logged games",
-   "detail": "Wars with the c7c bundle, logs for War.",
-   "state": "running"
+   "detail": "Done: no city changed hands in any game; logs with War.",
+   "state": "passed"
   },
   {
    "section": "queue",
    "order": 4,
    "name": "Screening run 2 (PC 1 half)",
    "detail": "10 pairs ranking 30 flags at once, build ab-2d949f8.",
-   "state": "next"
+   "state": "running"
   },
   {
    "section": "queue",
    "order": 5,
    "name": "Screening run 2 (PC 2 half)",
-   "detail": "The other 10 pairs, once PC 2 is set up.",
-   "state": "waiting"
+   "detail": "Check pair, then 10 pairs.",
+   "state": "running"
   },
   {
    "section": "queue",
