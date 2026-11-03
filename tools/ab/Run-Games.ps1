@@ -360,6 +360,12 @@ while ($played -lt $MaxGames -or $pairReplay) {
             $archive = Join-Path $MyGames "LogsArchive\$gid"
             New-Item -ItemType Directory -Force -Path $archive | Out-Null
             Copy-Item -Path (Join-Path $MyGames "Logs\*") -Destination $archive -Recurse -Force
+            # the autosaves too (not committed): War's battle tests load them, and Civ keeps only the newest
+            $auto = Join-Path $MyGames "Saves\single\auto"
+            if (Test-Path $auto) {
+                New-Item -ItemType Directory -Force -Path (Join-Path $archive "saves") | Out-Null
+                Copy-Item -Path (Join-Path $auto "*") -Destination (Join-Path $archive "saves") -Force
+            }
             Write-Log "  logs saved: $digest and $archive"
             # the logs the topic sessions read, into the repo (commit them with the results): War's operation, military,
             # diplomacy and tactical logs, Economy's book, production and homeland logs. A file over 20 MB is left
