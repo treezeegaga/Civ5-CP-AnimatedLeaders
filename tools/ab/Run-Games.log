@@ -374,3 +374,12 @@
 2026-11-03 05:00:53    turn 100 after 5 minutes
 2026-11-03 05:04:21  Game ended: turn 150 (04A5FC8104A5FC81F)
 2026-11-03 05:04:21  Runner finished after 20 games
+2026-11-03 06:34:37  PC 1 (BOX): starting paired test of DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits on ab-819be70 (-Fixes list, -MaxGames 20)
+2026-11-03 06:34:38  Starting game 1: first game of a pair; Mode = split; Fixes = DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits; Screen = 
+2026-11-03 06:39:02    main menu never showed
+2026-11-03 06:39:02  Setup failed; retrying
+2026-11-03 06:39:02  Starting game 1: first game of a pair; Mode = split; Fixes = DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits; Screen = 
+2026-11-03 06:43:28    main menu never showed
+2026-11-03 06:43:28  Setup failed; retrying
+2026-11-03 06:43:29  Starting game 1: first game of a pair; Mode = split; Fixes = DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits; Screen = 
+2026-11-03 06:45:02  PC 1 (BOX): runner can't start game 1 of the 5-flag test: 'main menu never showed' twice; the screen shows the Windows lock screen/wallpaper, so Civ can't be clicked. Needs the user to unlock BOX.
