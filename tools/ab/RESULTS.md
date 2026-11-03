@@ -1117,11 +1117,27 @@ If `DiploBugs` fails its no-worse test, split it to find the culprit. **Merge no
 both appended after `FIX_CLOSED_BORDERS`, so the second branch merged into `claude/ab-c1` gets a conflict in the enum,
 `kCandidateFixNames` and the bundle mask. Keep both lists, in either order: saved masks only matter within one build.
 
-**Flag budget (request for the lead).** With these, Diplomacy uses 6 bits (`EasyTarget`, `DiploBugs`, `LuxuryAsk`,
-`CityStateBugs`, `DealExploits`, `CoalitionStrength`). 15 + 6 + War's 3 = 24 of 32. Diplomacy still plans
-`CoalitionCoop`, `CoalitionPact`, `Sanctions` and `DealReputation`, so a widening is needed soon: the masks (`Fixes`,
-`Screen`, `kCandidateFixBundle`, saved in the game) could move to two ints or a 64-bit value. That's the lead's code
-(`CvPlayer`/`CvGame` test options). Until then I'm holding the next coalition flags.
+**Flag budget: solved** (lead, 2026-11-03: 64-bit masks, flags in one table, fork `27437f0`).
+
+**More patches (2026-11-03), on the 64-bit base.**
+- `fixes-64bit/0001-0004` are fixes 0001-0004 converted to the table format, based on `cca50d8` (64-bit masks plus the
+  proposal counts). They apply cleanly; use them if that saves the conversion.
+- `next/0005-0007` go on top of them. Against the lead's own conversion they may conflict only in the
+  `kCandidateFixes` table line: keep every name, each `false`.
+
+| Patch | Flag(s) | What | Hypothesis | Measure / test |
+|---|---|---|---|---|
+| `next/0005` | `CoalitionCoop` | Joint wars against a SEVERE or CRITICAL warmonger can be asked of any civ visibly against it (denounced it, or lost a city to it), not only friends; being wary or afraid of the target no longer stops the ask. The usual desire score still decides | More joint wars against the aggressor, none against a peaceful civ (no conquests = no threat) | `CoopWarAskedVsAggressor`, `CoopWarAgreedVsAggressor`; coalition speed; builders test: no wars on builders from it |
+| `next/0005` | `Sanctions` | The World Congress AI counts the target's warmonger threat whatever its approach (CP: only when worse than GUARDED) | Sanctions proposed and passed against a runaway | `SanctionsProposedVsAggressor`, `SanctionsPassedVsAggressor`; needs games long enough for the Congress |
+| `next/0006` | `CoalitionPact` | Defensive pacts with civs that share a SEVERE+ warmonger threat (denounced it, lost a city to it, or live close to it), friends or not; +40 per shared threat (up to two) in the pact score | Pacts form against the conqueror before its next war; a tall neighbour of a conqueror finds allies | `Pacts`; aggressor's cities per war; the tall civ's pacts |
+| `next/0007` | `DealReputation` | Each civ remembers deals another civ ended by declaring war on it while still owing per-turn payments (saved, recorded whatever the flag). With the flag, that civ's per-turn promises are worth less: nothing after the peace lock in peace deals, otherwise -25% per broken deal (at most -50%) | Breaking a payment deal by war stops paying; honest partners keep full terms, so the deal rate doesn't drop | Exploit check 1 run twice in a row (the second peace should ask for more); `Deals` band; no-worse |
+
+**Save layout:** `0002` adds one saved field and `0007` one saved array, both at the end of `CvDiplomacyAI`'s save.
+Saves made before them won't load after them. Battle-test saves should be made with a build that already has both.
+
+**Coalition flags together.** `CoalitionStrength` takes the fear away. `CoalitionCoop` and `CoalitionPact` give the
+coalition a way to act, and `Sanctions` adds the World Congress. They're separate flags for SPRT, but in the bully test
+they're worth one run all together first ("does any of it move the aggressor's share?"), then one at a time.
 
 **Suggested tests.**
 1. `EasyTarget`, `DiploBugs`, `LuxuryAsk`: one screening run with all three randomised per civ (lead job 4's

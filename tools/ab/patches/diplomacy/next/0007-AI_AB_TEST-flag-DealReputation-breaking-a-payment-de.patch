@@ -1,0 +1,174 @@
+From c6448684a4429f49e34f08812b9cce82132fa2de Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 00:08:48 +0000
+Subject: [PATCH 7/7] AI_AB_TEST: flag DealReputation (breaking a payment deal
+ by war costs trust)
+
+From the Diplomacy audit's exploit checklist: a war cancels every deal and
+nothing remembers who broke what. Now each civ records, per major civ, the
+deals that civ ended by declaring war on it while still owing it per-turn
+gold or resources (m_aiNumDealsBrokenByWar, saved; recorded whatever the
+flag). With the flag, that civ's per-turn promises are worth less: in
+peace deals nothing after the peace lock (DealExploits counts half for
+everyone else), elsewhere -25% per broken deal, at most -50%. Partners
+with a clean record keep full value, so keeping one's word pays.
+
+Saves made with earlier builds won't load with this one (one array
+appended to the save, after 0002's field).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDealAI.cpp      | 13 ++++++--
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 38 ++++++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.h   |  2 ++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  2 +-
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  2 ++
+ 5 files changed, 53 insertions(+), 4 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDealAI.cpp b/CvGameCoreDLL_Expansion2/CvDealAI.cpp
+index 2fbb3dd..10e074d 100644
+--- a/CvGameCoreDLL_Expansion2/CvDealAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDealAI.cpp
+@@ -946,12 +946,19 @@ int CvDealAI::GetDealValue(CvDeal* pDeal) const
+ 			int iDuration = it->m_iDuration;
+ 			// FIX_DEAL_EXPLOITS: in a peace deal the other side is only bound for the peace treaty's turns; after that it can
+ 			// declare war, which cancels the rest of its payments. Count those turns in full and the rest at half.
+-			if (!bFromMe && (it->m_eItemType == TRADE_ITEM_GOLD_PER_TURN || it->m_eItemType == TRADE_ITEM_RESOURCES) &&
+-				GetPlayer()->UsesCandidateAI(FIX_DEAL_EXPLOITS) && pDeal->IsPeaceTreatyTrade(eOtherPlayer))
++			const bool bPerTurnToUs = !bFromMe && (it->m_eItemType == TRADE_ITEM_GOLD_PER_TURN || it->m_eItemType == TRADE_ITEM_RESOURCES);
++			// FIX_DEAL_REPUTATION: deals they ended by declaring war on us while owing us payments
++			const int iBroken = (bPerTurnToUs && GetPlayer()->UsesCandidateAI(FIX_DEAL_REPUTATION)) ? GetPlayer()->GetDiplomacyAI()->GetNumDealsBrokenByWar(eOtherPlayer) : 0;
++			if (bPerTurnToUs && GetPlayer()->UsesCandidateAI(FIX_DEAL_EXPLOITS) && pDeal->IsPeaceTreatyTrade(eOtherPlayer))
+ 			{
+ 				const int iBound = GC.getGame().getGameSpeedInfo().getPeaceDealDuration();
+ 				if (iDuration > iBound)
+-					iDuration = iBound + (iDuration - iBound) / 2;
++					iDuration = iBound + (iBroken > 0 ? 0 : (iDuration - iBound) / 2); // a known deal-breaker: nothing after the lock
++			}
++			else if (iBroken > 0 && iDuration > 0)
++			{
++				// their promises are worth less: -25% per broken deal, at most -50%
++				iDuration = iDuration * max(50, 100 - 25 * iBroken) / 100;
+ 			}
+ 			iItemValue = GetTradeItemValue(it->m_eItemType, bFromMe, eOtherPlayer, it->m_iData1, it->m_iData2, it->m_iData3, it->m_bFlag1, iDuration, false, true);
+ 			it->m_iValue = iItemValue;
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index f131802..fde96af 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -186,6 +186,7 @@ void CvDiplomacyAI::Init(CvPlayer* pPlayer)
+ 
+ 			// War
+ 			m_aiNumWarsDeclaredOnUs[iI] = 0;
++			m_aiNumDealsBrokenByWar[iI] = 0;
+ 			m_aiCivilianKillerValue[iI] = 0;
+ 
+ 			// Peace
+@@ -701,6 +702,7 @@ void CvDiplomacyAI::Serialize(DiplomacyAI& diplomacyAI, Visitor& visitor)
+ 
+ 	// AI_AB_TEST (appended last, so the rest of the layout is unchanged)
+ 	visitor(diplomacyAI.m_eNewAIConquestTarget);
++	visitor(diplomacyAI.m_aiNumDealsBrokenByWar);
+ }
+ 
+ /// Serialization read
+@@ -4922,6 +4924,14 @@ void CvDiplomacyAI::ChangeNumWarsFought(PlayerTypes ePlayer, int iChange)
+ }
+ 
+ /// How many times has ePlayer declared war on us?
++/// AI_AB_TEST: how many deals ePlayer ended by declaring war on us while it still owed us per-turn payments
++int CvDiplomacyAI::GetNumDealsBrokenByWar(PlayerTypes ePlayer) const
++{
++	if (ePlayer < 0 || ePlayer >= MAX_MAJOR_CIVS)
++		return 0;
++	return m_aiNumDealsBrokenByWar[ePlayer];
++}
++
+ int CvDiplomacyAI::GetNumWarsDeclaredOnUs(PlayerTypes ePlayer) const
+ {
+ 	PRECONDITION(ePlayer >= 0 && ePlayer < MAX_MAJOR_CIVS, "Player index out of bounds");
+@@ -33308,6 +33318,34 @@ void CvDiplomacyAI::DoPlayerDeclaredWarOnSomeone(PlayerTypes ePlayer, TeamTypes
+ 
+ 			if (!bDefensivePact)
+ 			{
++				// AI_AB_TEST (FIX_DEAL_REPUTATION reads it): did this war cut short a deal in which they still owed us
++				// per-turn payments? The war has just cancelled the deals (CvTeam::DoDeclareWar), so they're in the history,
++				// ending this turn.
++				if (ePlayer < MAX_MAJOR_CIVS)
++				{
++					const int iTurn = GC.getGame().getGameTurn();
++					CvGameDeals& kDeals = GC.getGame().GetGameDeals();
++					const uint uNumDeals = kDeals.GetNumHistoricDealsWithPlayer(eMyPlayer, ePlayer);
++					for (uint uDeal = 0; uDeal < uNumDeals; uDeal++)
++					{
++						CvDeal* pDeal = kDeals.GetHistoricDealWithPlayer(eMyPlayer, ePlayer, uDeal);
++						if (!pDeal || pDeal->m_iFinalTurn != iTurn)
++							continue;
++						bool bOwedUs = false;
++						for (TradedItemList::iterator itItem = pDeal->m_TradedItems.begin(); itItem != pDeal->m_TradedItems.end(); ++itItem)
++						{
++							if (itItem->m_eFromPlayer == ePlayer && (itItem->m_eItemType == TRADE_ITEM_GOLD_PER_TURN || itItem->m_eItemType == TRADE_ITEM_RESOURCES) &&
++								itItem->m_iDuration > 0 && pDeal->m_iStartTurn + itItem->m_iDuration > iTurn)
++							{
++								bOwedUs = true;
++								break;
++							}
++						}
++						if (bOwedUs && m_aiNumDealsBrokenByWar[ePlayer] < UCHAR_MAX)
++							m_aiNumDealsBrokenByWar[ePlayer]++;
++					}
++				}
++
+ 				bool bBackstabTimer = IsDoFBroken(ePlayer) && GetTurnsSinceDoFBroken(ePlayer) < /*10*/ GD_INT_GET(DOF_BROKEN_BACKSTAB_TIMER);
+ 
+ 				// WAS working with this player
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+index 5acf38a..986c628 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+@@ -404,6 +404,7 @@ public:
+ 	void ChangeNumWarsFought(PlayerTypes ePlayer, int iChange);
+ 
+ 	int GetNumWarsDeclaredOnUs(PlayerTypes ePlayer) const;
++	int GetNumDealsBrokenByWar(PlayerTypes ePlayer) const; // AI_AB_TEST
+ 	void SetNumWarsDeclaredOnUs(PlayerTypes ePlayer, int iValue);
+ 	void ChangeNumWarsDeclaredOnUs(PlayerTypes ePlayer, int iChange);
+ 
+@@ -1979,6 +1980,7 @@ private:
+ 	bool m_abAggressor[MAX_CIV_PLAYERS];
+ 	unsigned char m_aiNumWarsFought[MAX_CIV_PLAYERS];
+ 	unsigned char m_aiNumWarsDeclaredOnUs[MAX_MAJOR_CIVS];
++	unsigned char m_aiNumDealsBrokenByWar[MAX_MAJOR_CIVS]; // AI_AB_TEST: deals they ended by declaring war on us while owing us payments
+ 	unsigned short m_aiCivilianKillerValue[MAX_MAJOR_CIVS];
+ 	unsigned char m_aiNumCitiesCaptured[MAX_PLAYERS];
+ 	char m_aeWarState[MAX_CIV_PLAYERS];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index ef23cb6..a8d1612 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33333,7 +33333,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"GreedyArmyCap", false}, {"GreedyBook", true}, {"GreedyTarget", true}, {"CanWin", true}, {"ClosedBorders", true},
+ 	{"EasyTarget", false}, {"DiploBugs", false}, {"LuxuryAsk", false}, {"CityStateBugs", false},
+ 	{"DealExploits", false}, {"CoalitionStrength", false}, {"CoalitionCoop", false},
+-	{"Sanctions", false}, {"CoalitionPact", false},
++	{"Sanctions", false}, {"CoalitionPact", false}, {"DealReputation", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 44f41ef..b3c5aee 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -173,6 +173,8 @@ enum CandidateFixTypes
+ 	FIX_SANCTIONS,			// Diplomacy: World Congress sanctions weigh the target's warmonger threat whatever our approach to it
+ 	FIX_COALITION_PACT,		// Diplomacy: defensive pacts with civs that share a severe or critical warmonger threat, friends or not,
+ 							// scored higher for each threat shared
++	FIX_DEAL_REPUTATION,	// Diplomacy: a civ that declared war on us while it still owed us payments has its per-turn promises
++							// valued lower (in peace deals nothing after the peace lock)
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+-- 
+2.43.0
+
