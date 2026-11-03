@@ -5,7 +5,12 @@
 ;
 ; Flag names (any case): WidePlans BoxedIn LongWide BoxedInWar TimingAttack SiegeTechs SiegeBook
 ; DeclareTiming GrowthTech AqueductValue GreedyArmyCap GreedyBook GreedyTarget CanWin ClosedBorders
-; Lists: names separated by commas or spaces; "bundle" = every flag but LongWide and GreedyArmyCap,
+; Topic flags, only in their branch's builds until they pass (and off in the bundle):
+;   ab-ai-economy-latest (ai/economy): SettlersFirst SettlerOverlap DiploPolicyValue
+;   ab-ai-war-latest (ai/war): SiegeStay SiegePosture DeclareAtBorder
+; A name the installed build doesn't know goes to AIABTest_errors.txt and is ignored.
+; Lists: names separated by commas or spaces; "bundle" = the c7c ideas (every flag above but LongWide,
+; GreedyArmyCap and the topic flags),
 ; "all", "none", and "-Name" takes a flag out again. Unknown names go to AIABTest_errors.txt next to this file.
 ;
 ; Examples:
@@ -21,3 +26,7 @@
 Fixes = bundle
 Screen =
 Flip = 0
+
+; Difficulty: the game's difficulty (a HandicapInfos type), whatever Civ's setup screen remembers. Builds from
+; fork commit fdad60d on; older builds ignore it. Run-Games.ps1 writes its -ExpectDifficulty here.
+Difficulty = HANDICAP_KING

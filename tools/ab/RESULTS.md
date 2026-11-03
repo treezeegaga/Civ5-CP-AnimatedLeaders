@@ -11,7 +11,7 @@ from `Summarize-ABTest.ps1 -MyGames tools\ab\results -Scoreboard`, which prints 
 | A: CP | | 50% (reference) | not measured | not measured | not measured | not measured | not measured | not measured |
 | B: batch 2p (`24cc575`) | Prince, even rules, random maps, single games | 52.4% ± 0.7 against CP (5) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c4 (`ea22df3`), best C so far | same | 51.6% ± 1.1 against B (6) | not measured | not measured | not measured | not measured | not measured | not measured |
-| c7c (`2e9fad1`), newest C | same | 50.0% ± 1.4 against B (7) | not measured | not measured | not measured | not measured | not measured | not measured |
+| c7c (`2e9fad1`), newest C | same | 49.4% ± 1.1 against B (10) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c7c_roles (`6b8ebde`): the bundle again, with every measure | King, even rules, Pangaea, Strategic Balance, no ruins, pairs | waiting for games | waiting for the bully test | | | | | |
 
 - **The diplomacy, war and timing columns** only exist from build `c7c_roles` on. Older builds can't
@@ -830,7 +830,7 @@ plain aggressive AI, and the real test is games against the friend.
 
   The deals band gets a second look once the first King games show what CP's AIs do.
 
-### c7c after 7 games (PC runner, games 2–7 merged from `claude/sleepy-hopper-x77moh`)
+### c7c after 10 games (PC runner, games 2–10 merged from `claude/sleepy-hopper-x77moh`)
 
 | Game | c strength | No-military | Score c / b |
 |---|---|---|---|
@@ -841,8 +841,16 @@ plain aggressive AI, and the real test is games against the friend.
 | 5 `0252DABA` | 48.7% | 50.8% | 600 / 596 |
 | 6 `025C2A49` | 48.4% | 51.9% | 557 / 648 |
 | 7 `02657620` | 45.1% | 47.5% | 581 / 615 |
+| 8 `026E87CF` | 45.5% | 47.4% | 552 / 622 |
+| 9 `02775318` | 52.0% | 51.0% | 533 / 614 |
+| 10 `028C4E70` | 46.4% | 46.1% | 542 / 645 |
 
-- **Overall:** 50.0% ± 1.4, 3-4, p 50%; no-military 50.5%. The 52.9% of game 1 was luck, as one game always
+- **After 10 games (lead, 2026-11-03):** 49.4% ± 1.1, 4-6, p 70%; no-military 49.8%; score ahead 4-6. SPRT
+  (δ = 2, unpaired, spread 3.62): gainer LLR **−2.47** (fails at −2.94, so about 2 more games like these end
+  it), no-worse +0.20. c7c is stopped here: the bundle's flags get tested one by one on King with pairs, and
+  the c7c_roles smoke pair plays the same bundle again. Its 4th city comes later than B's (T89 against T81),
+  though more c civs get there (85% against 82%); Economy's settler flags aim at exactly that.
+- **After 7 games:** 50.0% ± 1.4, 3-4, p 50%; no-military 50.5%. The 52.9% of game 1 was luck, as one game always
   can be. SPRT (δ = 2, unpaired): gainer LLR −1.00, no-worse +0.74, both still running. The spread is 3.75
   points per game, so a decision needs about 19–30 games.
 - **Reading:** the c7c bundle isn't better than B. Its ideas are now separate flags (lead job 1), and the
@@ -1046,6 +1054,265 @@ every turn they aren't building a part, which is aggressive but deliberate.
 - **For Diplomacy:** L2 (a counting fix) and L3 (a design question) are in Diplomacy's file. Both are under
   Requests.
 
+
+**Lead's decision (2026-11-02): the victory push waits for phase 2.**
+- It belongs to goal 6 ("bring the pressure when the humans don't"), and phase 1 is strength first.
+- Testing it needs games that reach the Renaissance: Standard pace, or saves from later eras, played on
+  for N turns. That's a new test setup, built when phase 2 starts.
+- Until then, Economy's next work, in order:
+  1. the two expansion flags' tests, after the King baseline;
+  2. flags for the remaining confirmed `CvPolicyAI` bugs (P2–P4), each as a no-worse test at T150;
+  3. the greedy-tall alarm together with War, once War has its first capture fixes.
+
+### Diplomacy: audit, map and plan (Diplomacy session, 2026-11-02)
+
+The audit is in [AUDIT.md](AUDIT.md), "Diplomacy audit": 13 confirmed bugs (D1-D13), the exploit checklist with a
+verdict per trick, and the map of what CP has against a conqueror. No code yet.
+
+**Why a conqueror isn't stopped today, in one line:** every AI hates it (warmonger threat reaches CRITICAL) but
+judges the war one against one, so it picks AFRAID, and AFRAID switches off war targets, coop wars, sanctions and
+denouncing. Coop wars and pacts also need an existing friendship, and per-pair peace plus a 16-turn dampener lets the
+conqueror fight one civ at a time. Nothing in it is human-specific.
+
+**Exploits:** the lump-sum-for-per-turn trick is already blocked in ordinary trades (`BlockTemporaryForPermanentTrade`),
+but not in peace deals, where payments outlast the peace lock. Breaking deals by war costs no reputation. The
+help-request re-roll is real. Bluffing works on perceived strength and units at the border. Cities are not cheap in
+peace deals.
+
+**Plan.** Bugs first, each with its own flag so they can be screened together (the regression screen gives each flag
+its own estimate) and then confirmed one by one. Then game theory, one flag per idea:
+
+| Flag | Idea | Hypothesis | Measure | δ / test |
+|---|---|---|---|---|
+| `FIX_EASY_TARGET` | D1 + D2: "easy target" works for civs at peace | Opportunists start wars against weak or overstretched neighbours, including a conqueror whose army is away | `WarsDeclared` per civ, `CitiesCaptured`; bully test: wars on the aggressor | No-worse on strength (δ 2); gainer if it shows |
+| `FIX_DIPLO_BUGS` (ini name `DiploBugs`) | D3-D8, D12, D13 together (see the patch entry below for why they're grouped) | Correctness; no strength loss | Strength; mechanisms: war length (D3), wars on city-states (D4) | No-worse (δ 2) |
+| `FIX_LUXURY_ASK` (`LuxuryAsk`) | D9 | More luxury swaps between AIs, no strength loss | `Deals` per civ per 10 turns (band 0.5-2) | No-worse |
+| `FIX_CITY_STATE_BUGS` (`CityStateBugs`) | D10 + D11; game-wide (on when any major civ has it) | City-states react one by one to an aggressor; alliances pass to whoever overtakes | Bully pair: city-states at war with the aggressor | Bully test |
+| `FIX_COALITION_STRENGTH` | Judge a SEVERE or CRITICAL warmonger against the coalition, not alone: our strength plus that of civs that are visibly against it (at war with it, denouncing it, or lost a city to it in the last 30 turns), minus its own friends and pact partners | AFRAID gives way to GUARDED/HOSTILE/WAR toward a runaway, only when the coalition could actually win | Bully test: civs at war with the aggressor at the end; turns from first conquest to 2+ at war | Goal row: 2+ within 20 turns; no-worse on strength |
+| `FIX_COALITION_COOP` | Coop war against a SEVERE+ warmonger can be asked of any civ that is against it (not only friends), and the potential-war-target gate uses the coalition strength | More joint wars against the aggressor, none against a peaceful tall civ | Joint-war proposals (new count), coalition speed; the tall civ's wars | Bully and builders tests both |
+| `FIX_COALITION_PACT` | Defensive pacts get a "common threat" term (both rate the same civ SEVERE+), and a third pact is allowed while such a threat exists | Pacts form against the conqueror before it reaches the next victim | `Pacts`, aggressor's cities per war | Bully test |
+| `FIX_SANCTIONS` | World Congress counts warmonger threat whatever the approach (today only when worse than GUARDED) | Sanctions proposed and passed against a runaway | Sanction proposals (new count) | Bully test, long games |
+| `FIX_PEACE_PAYMENTS` | Per-turn items in a peace deal are valued over the turns the payer is actually bound (the peace lock), not the full deal | The peace-deal version of lump-sum-for-per-turn stops paying | Scripted check | Exploit check + no-worse |
+| `FIX_DEAL_REPUTATION` | Remember deals the other side cancelled by declaring war while it still owed payments: opinion penalty, and its per-turn promises are discounted by that record. Partners with a clean record get full value | Breaking deals costs trust; honest partners trade more (Cicero's lesson: be the partner others can rely on) | `Deals` per civ per 10 turns stays in the 0.5-2 band; scripted check | No-worse + exploit check |
+| `FIX_DEMAND_BLUFF` | Demands are judged by whether the demander could actually take a city (`CanTakeNearestCity`, from c7c's `FIX_CAN_WIN`), not by perceived strength and units at the border | Bluffs stop paying; real threats still get appeased | Scripted check | Exploit check + no-worse |
+
+All of these judge by behaviour (warmonger threat, cities taken, deals broken), never by who is human, and leave
+the leader's personality in charge (boldness, warmonger hate, loyalty still weigh as before). The first bully
+pairs (B everywhere) set the starting point for the coalition flags.
+
+### Diplomacy: patches, exploit-check scenarios and answers (Diplomacy session, 2026-11-02)
+
+**Patches** (format-patch files on pack branch `claude/ai-diplomacy`, each based on `claude/ab-c1` `6b8ebde`, applied
+with `git am` and checked to apply cleanly; not compiled here, CI is the first compile):
+
+| File | What | Goes to |
+|---|---|---|
+| `tools/ab/patches/diplomacy/counts/0001-...` | Measurement only: running counts per proposer of joint wars asked and agreed, and World Congress sanctions proposed and passed, each with a "vs the aggressor" variant (target's `GetABTestRole() == AB_ROLE_AGGRESSOR`). 8 columns at the end of the row: `CoopWarAsked`, `CoopWarAskedVsAggressor`, `CoopWarAgreed`, `CoopWarAgreedVsAggressor`, `SanctionsProposed`, `SanctionsProposedVsAggressor`, `SanctionsPassed`, `SanctionsPassedVsAggressor`. Batch `c7c_proposals`. "Asked" counts AI-to-AI and human-to-AI requests (in `RespondToCoopWarRequest`, after its validity check) and AI-to-human requests; "agreed" counts an immediate or "after preparing" yes | `claude/ab-c1` directly (lead's answer). `Summarize-ABTest.ps1` needs the new columns |
+| `tools/ab/patches/diplomacy/fixes/0001-...` | The bug fixes behind four flags: `EasyTarget` (D1, D2), `DiploBugs` (D3-D8, D12, D13), `LuxuryAsk` (D9), `CityStateBugs` (D10, D11). All four are left out of `kCandidateFixBundle`, so a non-test pack and `Fixes = bundle` don't get them until they pass | `ai/diplomacy` |
+| `tools/ab/patches/diplomacy/fixes/0002-...` | War's request: the committed conquest target (`GetNewAIConquestTarget`) becomes a saved `CvDiplomacyAI` member instead of a `static`. A save reload kept no target, so a battle test from a save could pick differently from its game; in real play the static survived into the next game in the same process. Test runs restart Civ every game, so pairs were never affected. **Saves made with earlier builds won't load with it** (one field appended to the save), so merge it before battle-test saves are made, or after they're no longer needed | `ai/diplomacy` (or `claude/ab-c1`, since it's War's code and changes no decision) |
+
+**Why the bug fixes share flags.** Flags are bits of a 32-bit mask (`1 << eFix`), 15 are taken, War's patch adds 3,
+and Economy and Personality will add more. One flag per bug (12) would use most of what's left. So:
+- `EasyTarget` alone: it changes how often AIs start wars, so it needs its own verdict.
+- `LuxuryAsk` alone: it changes trade, measured by deals.
+- `CityStateBugs` alone: it's city-state behaviour, shared by everyone. It has to be game-wide, and only the bully
+  pair (c in one game, none in the other) can measure it.
+- `DiploBugs` for the rest: each is a plain correctness fix with a small effect, like batch 1 in B.
+
+If `DiploBugs` fails its no-worse test, split it to find the culprit. **Merge note:** War's three flags and mine are
+both appended after `FIX_CLOSED_BORDERS`, so the second branch merged into `claude/ab-c1` gets a conflict in the enum,
+`kCandidateFixNames` and the bundle mask. Keep both lists, in either order: saved masks only matter within one build.
+
+**Suggested tests.**
+1. `EasyTarget`, `DiploBugs`, `LuxuryAsk`: one screening run with all three randomised per civ (lead job 4's
+   regression), at T100. Then a no-worse SPRT at T150 on each flag that the screen doesn't flag as harmful. Read
+   `WarsDeclared` for `EasyTarget`, and `Deals` for `LuxuryAsk`.
+2. `CityStateBugs`: in the bully pairs, alongside the coalition flags later.
+
+**Exploit checks: exact scenarios** (lead's request). Each needs a save made in a normal game with the test pack
+installed, a human in slot 0 and King with even rules. Run each on two builds, B and `ai/diplomacy` with the flag
+named, and reload the save before every try.
+
+*Check 1: per-turn payments in a peace deal* (no fix coded yet; `FIX_PEACE_PAYMENTS` planned):
+- **The save:** the human has been at war with one AI neighbour for at least 10 turns, and the AI is winning:
+  war score 25 or more for the AI (the trade screen's peace tooltip shows it). At least one of the human's cities is
+  under siege. The human makes 15+ gold per turn.
+- **Turn 0:** the human offers peace in the trade screen and asks the AI what it wants ("What would make this work?").
+  Record the AI's terms: gold per turn, for how many turns, plus any lump sum. Accept. Record the human's GPT and the
+  AI's treasury.
+- **Wait:** end turns until war can be declared on the AI again (the declare-war button is greyed out until the
+  peace treaty ends). Record that turn. Then declare war on it.
+- **Measure:** how many turns of GPT the AI received, divided by the deal's turns. Also note the AI leader's
+  opinion of the human afterwards (diplomacy screen modifiers).
+- **Verdict:** the exploit is real if the AI received less than half the payments it asked for and its terms were
+  priced for the full deal. Pass with the fix: the terms ask for the payments over the turns the human is bound,
+  or for a lump sum instead.
+
+*Check 2: help-request re-roll* (`DiploBugs`, D13):
+- **The save:** the human has a Declaration of Friendship with an AI that has at least 300 more gold than the
+  human, and hasn't asked it for help in the last 30 turns.
+- **Turn 0:** open the trade screen with the friend, put 50 of its gold on its side, and use "make a request".
+  If it refuses, open the screen again and repeat, up to 10 tries in the same turn.
+- **Measure:** the number of tries until it says yes, and what the reply was after the first refusal.
+- **Verdict:** with B the expected result is a yes within a few tries. Pass with `DiploBugs`: after the first refusal,
+  every later try that turn (and for the next 10 turns) gets "too soon".
+
+*Check 3: a bluffed demand* (no fix coded yet; `FIX_DEMAND_BLUFF` planned):
+- **The saves:** two, both with the human at peace with an AI neighbour that has walls in its border city and at
+  least 3 archers or better. Neither has a friendship or denouncement with the other.
+  - **Bluff save:** 5 warriors or spearmen, no siege, parked on the human's side of the border within 3 tiles of
+    that city.
+  - **Real save:** 4 catapults and 4 swordsmen (or that era's equivalent) parked in the same place.
+- **Turn 0:** demand 100 gold, then reload and demand one of the AI's luxuries.
+- **Measure:** accepted or refused, in each save.
+- **Verdict:** the exploit is real if the AI pays in the bluff save. Pass with the fix: it refuses the bluff and
+  still gives in to the real threat. If it refuses both even on B, bluffing isn't a live exploit and
+  `FIX_DEMAND_BLUFF` can wait.
+
+**Answers to the other requests.**
+- **L3** (Economy: domination progress counts a share of world military might): it's part of the coalition problem.
+  Others read a civ's domination progress in `IsCloseToWorldConquest` (needs 50) and endgame aggression. So a peaceful
+  tall civ with a big defensive army reads as "close to world conquest", and gets targeted for its army rather than
+  its deeds. Goal 2 says judge by behaviour. Plan: with `FIX_COALITION_STRENGTH`, a civ's military share counts only
+  up to twice its share of original capitals held. A civ holding only its own capital (1 of 8) tops out at 25%;
+  one holding 3 tops out at 75%. Coded with the coalition flags, after War's capture fixes. Its effect on the civ's
+  own pursuit (it switches to domination at 50) goes to Personality.
+- **L2** (science progress counts every project and Apollo twice): plausible but unverified. Whether Apollo has its
+  own space-race threshold is in the base game's XML, which isn't in the fork. It only matters past ~80% of techs,
+  which no test game reaches. Noted for phase 2 with the late-game tests.
+- **War's second point** (joint wars, demands and city-state statements declare war without an army in place):
+  agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
+  joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
+
+### War session: why attacks fail, ranked against the code (2026-11-02)
+
+The causes in "Why wars almost never take cities", ranked by how much each would explain, each checked in the fork
+(`claude/ab-c1` at `6b8ebde`). Paths are in `CvGameCoreDLL_Expansion2/`. No new logs were read: the only digest in
+`results/` (c7c game 2) predates the "military ops ended" counts, so the ranking is from the code plus the log
+quotes above.
+
+**How an attack works in this code** (needed to read the rest). An attack operation only delivers an army: when its
+centre is within 3 tiles of the target city (`GetDeployRange`), it ends as a success, the army is disbanded, and a
+5-turn tactical focus area is put on the city (`CvAIOperationMilitary::OnSuccess`). From then on the siege is the
+tactical AI's, zone by zone: each zone gets a posture from the dominance ratio (`CvTacticalDominanceZone::SelectPostureSingleZone`)
+and the posture decides whether the city is attacked at all. A sneak attack is the same operation at peace: on
+arrival it tells the diplomacy AI `SetArmyInPlaceForAttack`, and `DoMakeWarOnPlayer` declares the next turn.
+
+| Rank | Cause (diagnosis number) | Confirmed in code | What it would explain |
+|---|---|---|---|
+| 1 | **The army bleeds out (3)** | Yes. `CvUnit::shouldHeal(false)`, the second heal pass (`CvTacticalAI::PlotHealMoves(false)`, after the attacks), sends any unit with **more than 20 damage** that isn't adjacent to an enemy back to heal. Catapults and archers fire from 2 tiles, so they aren't adjacent: one city shot (20–30 damage) and the unit leaves the siege the next time it doesn't fire. Units under 70% HP can't be recruited into a new attack either (`IsUnitSuitableForRecruitment`). Meanwhile the city heals 20 a turn (`CvCity::doTurn`), unless every adjacent tile is blockaded | The Ottomans' 161 → ~65 expected damage a turn in 8 turns: every siege, both groups |
+| 2 | **The tactical AI won't commit (2)** | Yes, two ways. (a) In the **attrition** posture `PlotAttritionAttacks` never attacks a city, not even with ranged units ("don't expose our units for city attacks here"). An enemy zone gets attrition when it's even but the enemy has more melee strength and we have ranged dominance: exactly a siege army of catapults and archers facing a garrison. (b) The zone counts the city's full strength as enemy ranged strength, scaled by its HP; when the enemy is 1.7× ours the posture is withdraw and `ExecuteCaptureCityMoves` logs "enemy dominated zone - won't try to capture". Damaged units count for less, so 1 feeds (b) | Armies standing 2–4 tiles from a city for many turns without firing at it |
+| 3 | **War declared before the army is there (1)** | Partly. The sneak attack does wait for its army, but its "discovered by enemy" shortcut (`CvAIOperationMilitary::CheckTransitionToNextStage`, moving state) counts as arriving when **3 or more of its units are visible to the enemy, wherever the army is**: an enemy scout or border city seeing it in our own land is enough. The army is then disbanded far from the target, its units can't join a new attack for 5 turns (`IsRecentlyDeployedFromOperation`), and the follow-up operation musters at our nearest city. That fits Greece (declared T77, attack formed T85, arrived T101). Other declaration paths (coop wars, demands, city-state statements) don't wait for an army at all; the diplomacy log says which one fired | The 10–25 turn gap between declaring and arriving, and the target's time to build walls and units |
+| 4 | Ranges favour the city early (4) | Structural (CP data), not a bug | Why 1 matters so much: every siege unit takes city fire |
+| 5 | Wrong targets (5) | Mostly a test artefact (c picking c) plus CP's own war logic. The choice is in `CvDiplomacyAI::GetNewAIConquestTarget` (not a War file): request below | Some wasted wars, no failed sieges |
+| 6 | Audit item 26, abort below 2/3 (B) | Fires only while gathering or moving (`CvAIOperation::UnitWasRemoved`; armies never reach the at-target state because they are disbanded on arrival). With the ancient formation (4 required slots) it aborts at 2 units left, as CP would at 1; classical-medieval (5 required) at 3 left, CP at 1. It ends thin armies on the way, which can't take a city anyway. The one digest has 1 `HalfStrength` in 24 aborts | Probably little. Count it before asking for an ablation (request below) |
+| — | (new) `NoTarget` aborts every turn | Unknown. In c7c game 2, five civs abort an operation with `NoTarget` on almost every turn for 10–20 turns in a row (Austria T130–T151). The digest's "ops aborted" line mixes all operation types, so it isn't clear which. An operation created and dropped every turn can tie up units | Unknown: the logs will say |
+
+**Not the cause:** a newly started attack doesn't pull back a just-delivered army: units within 3 tiles of the target
+or deployed in the last 5 turns aren't recruited (`IsUnitSuitableForRecruitment`).
+
+Each fix below gets one flag, **off in the bundle** (so a non-test pack and the c7c bundle stay as they are; turn it on
+with `Fixes =` or `Screen =`). Shared file: the flag names go in `CvPlayer.h` (`CandidateFixTypes`, appended at the
+end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing else in `CvPlayer` changes.
+
+### FIX_SIEGE_STAY: units at a siege don't leave to heal at 20 damage (War)
+- Hypothesis: units within 2 tiles (3 for ranged units) of an enemy city that is already damaged stay at the siege
+  unless they are below a third of their HP or projected to die next turn, instead of leaving at 20 damage. Damage per
+  turn on a besieged city stays above its 20 HP healing for longer, so more sieges end in a capture. Only the heal
+  decision in `CvTacticalAI::PlotHealMoves` changes; the first pass already uses the one-third rule, so in practice
+  this is the second pass (units that didn't attack this turn).
+- Measure: `CitiesCaptured` per game by group (the mechanism); strength share at T150 (the verdict). In logged games,
+  "attempting capture of X ... expected max damage per turn" should fall more slowly over a siege.
+- δ: +2 points of strength share; CitiesCaptured should rise from about 0.2 per game.
+- Build: `ai/war` commit `4917284` (release `ab-ai-war-latest` once CI passes); patch in `patches/war/`
+- Test: SPRT gainer, paired, King/Pangaea/Strategic Balance/no ruins/Quick, T150. It only matters once a group is at
+  war, so screen it with `TimingAttack` on (the bundle) or in the bully test.
+- Status: hypothesis
+- Notes: risk: more units die at the siege. If losses climb without captures, try "stay only while expected damage
+  beats healing".
+
+### FIX_SIEGE_POSTURE: attrition posture also bombards the city (War)
+- Hypothesis: in an attrition zone (an even enemy zone where we have the ranged edge and they have the melee edge), the AI also runs the city attack
+  (`ExecuteCaptureCityMoves`) at the lowest aggression level, so the combat simulation only takes safe shots: ranged
+  units bombard, melee units only go in when it's safe or the city falls. Its other checks stay (not in an
+  enemy-dominated zone; damage minus healing must take the city within 13 turns). Armies stop standing next to cities
+  without firing.
+- Measure: CitiesCaptured by group; strength share at T150. In logged games, more "attempting capture" lines per
+  war-turn and fewer turns from arrival to the first city attack.
+- δ: +2 points of strength share
+- Build: same commit `4917284` (all three flags in one commit, each behind its own flag)
+- Test: SPRT gainer, paired, T150, as above. Best tested together with SIEGE_STAY later (they act on the same
+  sieges), but each first on its own.
+- Status: hypothesis
+- Notes: the withdraw-when-dominated rule (cause 2b) is left alone on purpose: it's the tactical AI's safety
+  valve, and SIEGE_STAY should keep fewer zones from tipping into it.
+
+### FIX_DECLARE_AT_BORDER: a sneak attack declares only once its army reaches the target's border (War)
+- Hypothesis: the "discovered by enemy" shortcut only counts when the army's centre is in or next to the target
+  civ's territory, or within 6 tiles of the target city. Spotted earlier, it keeps marching (at peace nobody can
+  attack it), so war starts with the army at the border instead of at home, and the gap between declaring and
+  arriving shrinks from 10–25 turns to about 1–3.
+- Measure: turns from war declared to the first city attack (logged games, `OperationalAILog.csv` and
+  `PlayerTacticalAILog.csv`); CitiesCaptured; strength share at T150.
+- δ: +1.5 points of strength share (it only touches sneak attacks, so a smaller edge is worth keeping)
+- Build: same commit `4917284` (all three flags in one commit, each behind its own flag)
+- Test: SPRT gainer, paired, T150.
+- Status: hypothesis
+- Notes: check in a logged game first that wars really come from this path: a war line in the diplomacy log right
+  after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
+  matters less and those paths need the same rule (they're in Diplomacy's files).
+
+### War audit: `CvHomelandAI` (2026-11-02)
+
+No `AI_AB_TEST` changes were in this file, so all of this is CP's code. None of it repeats AUDIT.md. Lines are in
+`CvHomelandAI.cpp` on `ai/war`. Same format as AUDIT.md:
+
+| # | Area | Where | Bug | Fix | Status |
+|---|---|---|---|---|---|
+| H1 | Upgrades / gold | `:1880`, `:1950` | **Inverted condition:** the gold saved for unit upgrades is cancelled only when there is no such request, so it is never cancelled. The early `return` when every upgrade is done doesn't cancel either. At war its priority is 500 + flavour × 50 × 100 (up to ~250k), so a stale request goes on blocking lower-priority purchases after its unit has upgraded or died. (`:1974` cancels too, but only to restart it at once.) Same kind of bug as AUDIT 6 | Cancel when the request exists, and before the `return` | confirmed, flag `UpgradeSaveCancel` |
+| H2 | Aircraft | `:5681`, `:5697`, `:7112` | **A healing aircraft never stays in the quietest base:** the loop that sorts bases quietest first `continue`s past the plane's own base instead of stopping, so it rebases to the next base it can reach every turn. The "do we need to move" guard is always true, because every base scores at least 1. Rebasing ends its moves, so it never heals. The combat loop (`:5776`) gets this right with `break` | Stop at its own base; rebase only to a strictly quieter one | confirmed, flag `AirRebaseHeal`. Little effect before planes (not in T150 Quick games) |
+| H3 | Escorts | `:1013`, `:653` | Worker escort targets (aux 123) pass the `< 500` test meant to let only unimportant sentries take a "peek" step, so an escort can step off its worker and end the turn without moving back | Exempt worker targets by type | mismatch confirmed, effect plausible |
+| H4 | Escorts | `:640–654` | Worker escort targets use each worker's position before `PlotWorkerMoves` moves it, so the escort goes to the tile the worker has left | Build them after the worker moves | plausible |
+| H5 | Navy | `:2614–2629` | An unassigned warship outside its territory that hasn't moved for 7 turns is scrapped, or killed when it can't be scrapped (which also gets around VP's no-disbanding-next-to-enemies rule). A ship pinned by enemies never moves and is deleted | Skip while in danger or at war; never `kill` | plausible (naval: not in Pangaea tests) |
+| H6 | Fog cheat | `:2531`, `:4031`, `:5916`, `:5948` | `MOVEFLAG_PRETEND_ALL_REVEALED`: paths home for idle units and civilians use the real terrain of unexplored tiles | Drop the flag for the new AI | confirmed, small |
+
+Checked, not bugs: the garrison strength maths, the sort orders, the safety thresholds, patrol zones, the
+upgrade flavour loop, and the deliberate "peek and return" sentry moves.
+
+### FIX_UPGRADE_SAVE_CANCEL: drop the stale upgrade-gold request (War, bug H1)
+- Hypothesis: with the cancel working, gold saved for an upgrade that's no longer needed goes back to other
+  purchases (buildings, units, settlers). It's a bug fix, so the test is that it does no harm.
+- Measure: strength share at T150; gold spent on purchases (digest) as the mechanism.
+- δ: no-worse test at δ = 2
+- Build: `ai/war` commit `0bc96d3` (on `4917284`); patch `patches/war/0002`
+- Test: SPRT no-worse, paired, T150 (or screen it at T100: it's an economy effect)
+- Status: hypothesis
+
+### FIX_AIR_REBASE_HEAL: healing aircraft stay in the quietest base (War, bug H2)
+- Hypothesis: damaged planes heal instead of rebasing every turn. No effect in T150 Quick games (no planes), so it
+  can't be tested there; it's a correctness fix for real games.
+- Measure: none in the standard test. Check in a late-era save that a damaged bomber heals.
+- δ: none. A no-worse check only once long games or late-era saves exist.
+- Build: same commit as UpgradeSaveCancel
+- Status: hypothesis; waits for a late-game test
+
+### Screening run 1: plan (lead, 2026-11-02)
+
+- **Why:** 19 candidate flags exist, from c1–c7c, Economy and War. At about 3 pairs an hour, an SPRT per flag
+  would take days. One screening run estimates every flag's effect per civ from the same 20 pairs (the paired
+  regression, lead job 4). Each game has every flag on for about half the civs, swapped within each pair.
+- **What's screened:** every idea except `LongWide` and `GreedyArmyCap`, which already failed.
+- **Reading it:** `Summarize-ABTest.ps1 -AtTurn 100` for the economy flags, and the final turn for the war flags
+  (job 8: war shows late).
+  - Flags that only act together with another one are diluted: `DeclareTiming`, `GreedyTarget` and `CanWin`
+    need `TimingAttack`, and `BoxedInWar` needs `BoxedIn` and wide civs. A weak estimate there means
+    "no main effect", not "useless".
+  - Screening only ranks. The top 2–3 flags get single-flag paired SPRTs. A flag that looks harmful is dropped
+    unless its owner has a reason to retest it.
+- **Build:** `claude/ab-screen1` (`db63d22`) is test-only: `claude/ab-c1` with `ai/economy` and `ai/war` merged,
+  every new flag off in the bundle, and its own results file. The flags are numbered 15–17 (Economy) and 18–20
+  (War) in this build only. When a flag passes, it's merged into `claude/ab-c1` on its own.
+
 ## Sessions running (2026-11-02)
 
 | Session | ID | DLL branch | Started with |
@@ -1131,12 +1398,56 @@ exist by T150 on Quick.
 
 ## Requests
 
+**Blocked (lead, 2026-11-03 00:25 UTC): GitHub Actions is disabled on `treezeegaga/Community-Patch-DLL`.** At
+00:16:55 every running build was cancelled mid-compile (runs 70, 71, 73, 74), and a new run is refused with
+"Actions has been disabled for this repository". The owner turns it back on under the fork's Settings → Actions →
+General. Run 75 (`27437f0`, 64-bit masks) finished first and published `ab-27437f0`. Waiting until Actions is
+back:
+- run 76 (`cca50d8`, Diplomacy's proposal counts), re-queued;
+- `claude/ab-screen2` (`6fa752e`), which is `cca50d8` + Economy + Diplomacy (0001–0007) + War, rebased onto the
+  flag table: 39 flags, results in `AIABTest_screen2.csv`;
+- `ai/economy` (`d950f88`), `ai/diplomacy` (`5788c4e`) and `ai/war` (`445009c`), each rebased onto `cca50d8`.
+The PC runner isn't affected: the baseline uses the published `ab-6b8ebde`.
+
+**Difficulty (PC runner, 2026-11-03):** editing `LastDifficulty` in `config.ini` does nothing (Civ rewrites it).
+The runner picked King once on the setup screen; Civ now remembers it. `Run-Games.ps1`'s turn-10 check caught the
+Prince game (`029BA19B`, a few turn-10 rows in `AIABTest_c7c_roles.csv`; the summary ignores games under turn 100).
+Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can't happen silently.
+
 - **For Diplomacy** (from lead job 7): `HumanStrengthPerceptionMod` (`CvDiplomacyAI.cpp` ~11606) inflates
   human military strength by 20% at Prince, 50% at Deity, and only for humans. Decide whether the new AI
   should keep a human-only rule here (goal 2 says threats are judged by behaviour).
 - **For War** (not urgent): `GetNewAIConquestTarget` keeps the committed target in a `static` array
   (`s_aiCommittedTarget`), which isn't saved, so a reloaded game re-picks. Not a multiplayer desync
   (every computer runs the same turns), but it should be game state before anything ships.
+- **Answer to the request above (Diplomacy):** at King the even rules set `HumanStrengthPerceptionMod` to 0, so
+  the 25% is gone. One human-only rule is left in the same function: a human's army is never rated below 100% while
+  it's above the starting rating, whereas an AI's below-average army is rated down to 50% (`CvDiplomacyAI.cpp:11602`).
+  It's small and only makes AIs more careful of humans; the new AI drops it with `FIX_COALITION_STRENGTH`, which
+  rewrites how threats are judged. Also: `HUMAN_USES_AI_MECHANICS = 1` only covers `isHuman(ISHUMAN_MECHANICS)`; the 32
+  `ISHUMAN_HANDICAP` checks in diplomacy follow `HUMAN_USES_AI_HANDICAP` (still 0). They read the human's own King
+  row, which equals the game's, so no other difference remains (AUDIT.md, "Human-only rules").
+- **For the lead (from Diplomacy):** scripted exploit checks, in this order: (1) a human surrenders with GPT in a
+  peace deal, waits out the peace lock and re-declares: how many payments did the AI get? (2) a human friend asks
+  for help repeatedly in one turn (D13); (3) a demand backed only by units parked at the border, from a civ that
+  couldn't take a city. A save per check plus a Lua or FireTuner script is enough.
+- **For the lead (from Diplomacy):** counts the coalition flags need in the results rows: coop (joint) war
+  proposals made and accepted, and World Congress sanction proposals, per civ, with the target. I can write the DLL
+  side if you prefer (they are raised in `CvDiplomacyAI` and `CvLeagueAI`), but the CSV writer is yours.
+- **For the lead (from Diplomacy):** no push access to the DLL here either. DLL changes will come as format-patch
+  files in `tools/ab/patches/diplomacy/` on pack branch `claude/ai-diplomacy`, based on `claude/ab-c1` `6b8ebde`.
+- **Lead's answer to Diplomacy (2026-11-02):**
+  - **Proposal counts:** yes, please write the DLL side. Add entries at the end of `ABTestCountTypes` (CvPlayer.h),
+    columns at the end of the results row in `CvGame::LogABTestResults`, and bump `AI_AB_TEST_BATCH`. Count
+    proposals made and accepted, plus a "vs aggressor" variant when the target's `GetABTestRole()` is
+    `AB_ROLE_AGGRESSOR`. Send it as its own patch, separate from AI changes. The lead reviews it and merges it
+    into `claude/ab-c1` directly, since it only measures.
+  - **Exploit checks:** queued after the King baseline. Each needs a save made on the PC and a script, so first
+    write each check as an exact scenario: the starting position (what the save must contain), the human
+    actions turn by turn, and the pass/fail measure. The PC runner can then make the saves.
+- **For War (from Diplomacy):** a coalition only matters if its members can take cities, so coalition flags are
+  judged on the bully test after War's first capture fixes. Also from the audit: D1 (easy targets never computed
+  for civs at peace) changes how often AIs start wars, so it may interact with `FIX_CAN_WIN` and the timing flags.
 
 - **For the lead, from Economy (expansion pace, step 1 of Economy's first tasks):**
   - **2-3 logged King games.** The cheapest way: the first pair of the King baseline with
@@ -1165,13 +1476,83 @@ exist by T150 on Quick.
 - **For the lead, from Economy:** the victory push is almost never active in T150 Quick games (L1 in the
   victory-push audit), so goal 6 needs a long-game test (Standard pace, or saves from the Industrial era on)
   before any victory-push fix can be judged.
+- **For the lead, from War: the DLL commit.** Done: the three War flags are on `ai/war` as `4917284` (on
+  `claude/ab-c1` at `6b8ebde`; the patch is also in `patches/war/`). The War session now has push access and pushes
+  `ai/war` itself. Not compiled anywhere else first: CI run 41549033176 is the first compile. Please add `SiegeStay`,
+  `SiegePosture`, `DeclareAtBorder` to `AIABTest.ini.example`.
+- **For the lead / PC runner, from War: 3 logged King games before any SPRT on the War flags.** Same setup as the
+  baseline, bundle on (so warmongers attack), logging on, `Fixes` = bundle + `SiegeStay,SiegePosture,DeclareAtBorder`
+  for one game and the bundle alone for two, so both sides of each flag show up. Copy `OperationalAILog.csv`,
+  `MilitaryAILog.csv`, `DiplomacyAI_Messages_Log.csv` (or whichever file has the war declarations) and the
+  `*TacticalAILog*.csv` files of the warmongers to `results/logs_<game>/`, plus the digest. War reads from them:
+  - **how each war was declared:** "Discovered by enemy" versus "Transition to finished stage" just before it, or no
+    operation at all (coop war, demand, city-state statement);
+  - **military ops ended** per civ: is `HalfStrength` (audit item 26) a real share? Under ~20% of military operation
+    ends, no ablation is needed;
+  - **which operation type** ends with `NoTarget` on almost every turn (c7c game 2: Austria T130–T151 and four others);
+  - **heal moves next to a besieged city** and "attempting capture ... expected max damage per turn" over a siege.
+- **For the lead, from War: battle tests from saves.** War fixes act within a 10–20 turn siege, so a test that loads
+  the same mid-war save and plays 15 turns would give an answer in minutes. Wanted: (1) 3–5 saves, each with an AI
+  army 3–6 tiles from an enemy city at the turn war is declared (the c7c logged games have them: China vs the Iroquois
+  T81, the Ottomans vs Siam T64); (2) a runner mode that loads a save with given `Fixes`, plays N turns and writes the
+  besieged city's owner and HP and each side's units lost per turn. Measure: captures out of runs, turns to capture.
+  Does Civ V reseed the combat rolls on load? If not, runs with the same flags will repeat exactly and only the flags
+  vary, which is what we want.
+- **Lead's answers to War (2026-11-02):**
+  - **Pushed:** patch 0001 applied cleanly to `ai/war` = `4917284` (on `6b8ebde`). Its push build publishes
+    `ab-ai-war-latest`. Before pushing, the lead checked that the identifiers it uses exist with the right
+    const-ness (`isProjectedToDieNextTurn`, `m_AllTargets`, `eAggressionLevel`, `getNeighborsUnchecked`). CI is
+    the first compile. `AIABTest.ini.example` now lists the War flags. Put later patches in
+    `tools/ab/patches/war/` (numbered 0002, ...).
+  - **Logged games:** queued as the PC runner's step 3, right after the baseline's logged pair. That's 2 games
+    with the bundle and 1 with the bundle plus your three flags, on `ab-ai-war-latest`, with the log files you
+    listed committed to `results/logs_<GameId>/`.
+  - **Battle tests:** yes, and determinism is on our side. CP's rolls hash the map seed with the turn, unit IDs
+    and plots (`CvGame::randCore`, `CvUnitCombat`), so the same save with the same flags plays out the same way.
+    Each save then gives one run per flag configuration, and variety comes from many saves, not repeats.
+    - The PC runner keeps the autosaves of the logged War games as the first saves.
+    - The runner mode (load a save with given `Fixes`, play N turns, log the besieged city and losses) needs
+      the Load Game screen's click positions, which only the PC runner can calibrate. The lead writes it after
+      the baseline, with the PC runner. Until then, SPRTs on paired games are the test.
+  - **Your two declaration issues** (the `static` committed target; coop wars, demands and city-state statements
+    not waiting for an army) are passed to Diplomacy.
+- **For Diplomacy (or the lead), from War:** two war-declaration issues in `CvDiplomacyAI`, which War doesn't own:
+  1. The committed conquest target (`s_aiCommittedTarget` in `GetNewAIConquestTarget`) is a `static`, not game
+     state. That's the request above "For War", but the file is Diplomacy's.
+  2. Declarations through coop wars (`CvDiplomacyAI.cpp` ~9625), demands (~34524) and city-state statements (~28209)
+     don't wait for an army in place. If the logged games show wars starting that way with no army near, those paths
+     should also go through the sneak-attack operation (`RequestCityAttack` then `IsArmyInPlaceForAttack`).
+- **For War (from War, noted): target choice.** c picking c in the test is an artefact of the split, not a bug, and
+  `CanWin` already checks that a target can be beaten. Nothing to code until the bully test shows the aggressor
+  picking hopeless targets.
 
+- **Lead (2026-11-02):**
+  - Economy's patches 0003–0006 are on `ai/economy` = `ccbb01a`. E1 and the note below are forwarded to War.
+  - `IdeologyPick` and `EspionagePolicyValue` act on ideologies and spies, which rarely exist by T150 on
+    Quick, so they wait for the phase-2 long-game setup.
+  - `PolicyPrereqDepth` acts all game, so it goes into the next screening run; so does `GreedyAlarm`, once War
+    has capture fixes.
+  - War has push access now and pushes `ai/war` itself.
 - **For War, from Economy:** `GreedyAlarm` (patch 0003) reads CP's visible-unit aggressive posture as its
   threat signal. If War builds a better "neighbour is massing an army" signal, tell Economy and the alarm
   will use it. Also E1 (losing wars don't cut building production; a dead loop in
   `CvBuildingProductionAI`): Economy can code it as a flag whenever War wants it tested alongside its fixes.
 
 ## Instructions for the PC runner
+
+**Pinned build (lead, 2026-11-03 00:20 UTC):** the smoke-test pair and the whole King baseline run on
+**`ab-6b8ebde`** (build `c7c_roles`, results in `AIABTest_c7c_roles.csv`), the build the PC runner installed at
+00:09. `ab-c-latest` is about to move to `cca50d8` (64-bit flag masks plus proposal counts, file
+`AIABTest_c7c_proposals.csv`); don't reinstall `ab-c-latest` until the baseline is finished, or its games
+split across two files. Wherever a step below reinstalls the baseline build, use `-Release ab-6b8ebde`.
+
+**The queue, in order** (2026-11-02, updated by the lead at every check-in):
+1. The smoke-test pair (below).
+2. The King baseline's **logged pair** (baseline step 1).
+3. **War's 3 logged games** (below, after the baseline).
+4. The rest of the baseline: 19 pairs, logging off (baseline step 2).
+5. **Screening run 1** (below): every candidate flag at once, 20 pairs. Then the lead queues single-flag
+   SPRTs for the flags it ranks highest.
 
 ### 2026-11-02: smoke test of `c7c_roles` with paired games (1 pair = 2 games)
 
@@ -1230,7 +1611,7 @@ the DLL sets Strategic Balance and no ruins).
    ```
    powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 2 -SaveLogs
    ```
-   Commit the two digests with the CSV and push.
+   Commit the two digests with the CSV and push. **Then do War's 3 logged games (next section) before step 2.**
 2. **Then logging off** (`LoggingEnabled = 0`; it costs about 15% speed), and the other 19 pairs, with group c
    running **no candidate changes**, so every civ plays B:
    ```
@@ -1243,3 +1624,44 @@ the DLL sets Strategic Balance and no ruins).
    powershell -ExecutionPolicy Bypass -File tools\ab\Summarize-ABTest.ps1 -Csv "$env:USERPROFILE\Documents\My Games\Sid Meier's Civilization 5\AIABTest_c7c_roles.csv"
    powershell -ExecutionPolicy Bypass -File tools\ab\Compare-ABTurns.ps1 -Folder "$env:USERPROFILE\Documents\My Games\Sid Meier's Civilization 5"
    ```
+
+### 2026-11-02: War's 3 logged games (between the baseline's logged pair and the rest)
+
+War needs AI logs from real wars before its flags get an SPRT: how each war was declared, how attack operations
+end, and what happens at a siege. These are single games with the c7c bundle on, so c's warmongers attack.
+1. Install War's build:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-ai-war-latest -NoLaunch -NoUpdate
+   ```
+   The printed title must name `4917284` or later. If the release doesn't exist yet, its CI build is still running
+   or failed: skip this section, carry on with the baseline, and report it.
+2. Logging on (`LoggingEnabled = 1`, `AILog = 1`). Two games with the bundle alone, one with War's three flags on top:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Unpaired -Fixes bundle -MaxGames 2 -SaveLogs
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Unpaired -Fixes "bundle, SiegeStay, SiegePosture, DeclareAtBorder" -MaxGames 1 -SaveLogs
+   ```
+3. For each game, copy from `My Games\LogsArchive\<GameId>\` into `tools/ab/results/logs_<GameId>/`:
+   `OperationalAILog.csv`, `MilitaryAILog.csv`, the diplomacy logs (`DiplomacyAI*.csv`), and the tactical logs
+   (`*TacticalAI*.csv`). Leave out any file over 20 MB and list its size in the commit message instead.
+   Also copy the game's autosaves (`Saves\single\auto\`) into `My Games\LogsArchive\<GameId>\saves\`, but
+   don't commit them: they're for battle tests later.
+4. Commit the CSV, digests and logs, push, and **reinstall the baseline build** before baseline step 2:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-6b8ebde -NoLaunch -NoUpdate
+   ```
+
+### After the baseline: screening run 1 (20 pairs = 40 games, about 7 hours)
+
+One run ranks every candidate idea from the same games (lead job 4's screening regression). The build is
+test-only: `claude/ab-screen1` = `claude/ab-c1` + `ai/economy` + `ai/war`, results in `AIABTest_screen1.csv`.
+1. Install it by commit (no "latest" alias for this branch):
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-db63d22 -NoLaunch -NoUpdate
+   ```
+   If that release doesn't exist, its CI build failed or is still running: report it and wait.
+2. Logging off. Group c runs nothing, and each screened flag is on for a random, warmonger-balanced half of the AI
+   civs, swapped in the second game of each pair:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, SiegeStay, SiegePosture, DeclareAtBorder"
+   ```
+3. Commit `AIABTest_screen1.csv` and `Run-Games.log` every 5 pairs or so, and push.

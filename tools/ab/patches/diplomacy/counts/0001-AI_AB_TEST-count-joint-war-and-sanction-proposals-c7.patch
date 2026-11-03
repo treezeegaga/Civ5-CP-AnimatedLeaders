@@ -1,0 +1,183 @@
+From 7698a0ebd491ffab94a5a551bf5c8c3ba2de58d2 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 2 Nov 2026 23:55:04 +0000
+Subject: [PATCH] AI_AB_TEST: count joint-war and sanction proposals
+ (c7c_proposals)
+
+Running counts per proposer, with a variant for proposals against the bully
+test's aggressor: CoopWarAsked, CoopWarAgreed (AI or human asked, the other
+side agreed now or after preparing), SanctionsProposed, SanctionsPassed
+(World Congress embargo on a player). Measurement only; the AI is unchanged.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp   |  5 ++++
+ CvGameCoreDLL_Expansion2/CvGame.cpp          | 26 +++++++++++++++++---
+ CvGameCoreDLL_Expansion2/CvGame.h            |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h          |  8 ++++++
+ CvGameCoreDLL_Expansion2/CvVotingClasses.cpp |  8 ++++++
+ 5 files changed, 44 insertions(+), 4 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index abd9483..6eaffef 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -34364,6 +34364,7 @@ void CvDiplomacyAI::DoSendStatementToPlayer(PlayerTypes ePlayer, DiploStatementT
+ 				szText = GetDiploStringForMessage(DIPLO_MESSAGE_COOP_WAR_REQUEST, ePlayer, strAgainstPlayerKey);
+ 
+ 				CvDiplomacyRequests::SendRequest(GetID(), ePlayer, DIPLO_UI_STATE_DISCUSS_COOP_WAR, szText, LEADERHEAD_ANIM_POSITIVE, eAgainstPlayer);
++				GC.getGame().ChangeABTestCountAgainst(GetID(), eAgainstPlayer, AB_COUNT_COOP_WAR_ASKED, AB_COUNT_COOP_WAR_ASKED_VS_AGGRESSOR);
+ 			}
+ 			// AI resolution
+ 			else
+@@ -40188,6 +40189,7 @@ void CvDiplomacyAI::DoFromUIDiploEvent(PlayerTypes eFromPlayer, FromUIDiploEvent
+ 		else if (iArg1 == 3 || iArg1 == 4)
+ 		{
+ 			ChangeRecentAssistValue(eFromPlayer, 300);
++			GC.getGame().ChangeABTestCountAgainst(GetID(), eTargetPlayer, AB_COUNT_COOP_WAR_AGREED, AB_COUNT_COOP_WAR_AGREED_VS_AGGRESSOR);
+ 
+ 			// Human says he needs to prepare
+ 			if (iArg1 == 3)
+@@ -42965,6 +42967,8 @@ CoopWarStates CvDiplomacyAI::RespondToCoopWarRequest(PlayerTypes eAskingPlayer,
+ 		return COOP_WAR_STATE_REJECTED;
+ 	}
+ 
++	GC.getGame().ChangeABTestCountAgainst(eAskingPlayer, eTargetPlayer, AB_COUNT_COOP_WAR_ASKED, AB_COUNT_COOP_WAR_ASKED_VS_AGGRESSOR);
++
+ 	bool bBold = GetBoldness() > 7 || GetPlayer()->GetPlayerTraits()->IsWarmonger() || (IsCompetingForVictory() && IsGoingForWorldConquest());
+ 	bool bCloseToTarget = GetPlayer()->CanCrossOcean() ? GetPlayer()->GetProximityToPlayer(eTargetPlayer) >= PLAYER_PROXIMITY_CLOSE : GetPlayer()->GetProximityToPlayer(eTargetPlayer) == PLAYER_PROXIMITY_NEIGHBORS;
+ 	bool bGoodAttackTarget = GetPlayer()->GetMilitaryAI()->HavePreferredAttackTarget(eTargetPlayer);
+@@ -43050,6 +43054,7 @@ CoopWarStates CvDiplomacyAI::RespondToCoopWarRequest(PlayerTypes eAskingPlayer,
+ 		// Update approach to WAR
+ 		SetCivApproach(eTargetPlayer, CIV_APPROACH_WAR);
+ 		GET_PLAYER(eAskingPlayer).GetDiplomacyAI()->SetCivApproach(eTargetPlayer, CIV_APPROACH_WAR);
++		GC.getGame().ChangeABTestCountAgainst(eAskingPlayer, eTargetPlayer, AB_COUNT_COOP_WAR_AGREED, AB_COUNT_COOP_WAR_AGREED_VS_AGGRESSOR);
+ 	}
+ 
+ 	return eResponse;
+diff --git a/CvGameCoreDLL_Expansion2/CvGame.cpp b/CvGameCoreDLL_Expansion2/CvGame.cpp
+index 8758456..4fc2965 100644
+--- a/CvGameCoreDLL_Expansion2/CvGame.cpp
++++ b/CvGameCoreDLL_Expansion2/CvGame.cpp
+@@ -417,6 +417,17 @@ void CvGame::ChangeABTestCount(PlayerTypes ePlayer, int eCount, int iChange)
+ 	m_aiABTestCounts[ePlayer * NUM_AB_COUNTS + eCount] += iChange;
+ }
+ 
++/// AI_AB_TEST: count a proposal ePlayer made against eTarget, and again in eVsAggressorCount if eTarget is the bully
++/// test's aggressor
++void CvGame::ChangeABTestCountAgainst(PlayerTypes ePlayer, PlayerTypes eTarget, int eCount, int eVsAggressorCount)
++{
++	if (!MOD_AI_AB_TEST)
++		return;
++	ChangeABTestCount(ePlayer, eCount);
++	if (eTarget >= 0 && eTarget < MAX_MAJOR_CIVS && GET_PLAYER(eTarget).GetABTestRole() == AB_ROLE_AGGRESSOR)
++		ChangeABTestCount(ePlayer, eVsAggressorCount);
++}
++
+ int CvGame::GetABTestCount(PlayerTypes ePlayer, int eCount) const
+ {
+ 	if (ePlayer < 0 || ePlayer >= MAX_MAJOR_CIVS || eCount < 0 || eCount >= NUM_AB_COUNTS ||
+@@ -13154,7 +13165,10 @@ static void ComputeWorldStateLogCounts(WorldStateLogCounts& kCounts)
+ /// WarsOnUs, CitiesCaptured, CitiesLost, Deals, WorkersStolen, WonderChops (running counts, ABTestCountTypes), and
+ /// AtWar, AtWarAggressor, Pacts, Friends, Denouncing, Influential (the state at that turn), and TurnSecs (real seconds
+ /// per turn since the last logged row). The AI is unchanged.
+-static const char* const AI_AB_TEST_BATCH = "c7c_roles";
++/// c7c_proposals: c7c_roles with joint-war and sanction proposals, as running counts per proposer: CoopWarAsked,
++/// CoopWarAskedVsAggressor, CoopWarAgreed, CoopWarAgreedVsAggressor, SanctionsProposed, SanctionsProposedVsAggressor,
++/// SanctionsPassed, SanctionsPassedVsAggressor. The AI is unchanged.
++static const char* const AI_AB_TEST_BATCH = "c7c_proposals";
+ 
+ /// AI_AB_TEST: flag names joined with '+' ("none" if there are none), for a results column
+ static CvString GetABTestFixListText(int iMask)
+@@ -13197,7 +13211,7 @@ void CvGame::LogABTestResults(bool bFinal) const
+ 
+ 	fseek(pFile, 0, SEEK_END);
+ 	if (ftell(pFile) == 0)
+-		fputs("GameId,Turn,Final,Winner,Victory,Player,Civ,Group,Alive,Cities,Population,Score,Techs,Policies,Military,Gold,Land,Wonders,LostCapital,City2Turn,City3Turn,City4Turn,NationalCollege,Book,Warmonger,Flip,Fixes,Screen,Map,MapOptions,Ruins,Barbarians,Pace,Difficulty,WorldSize,StopTurn,Build,Mode,Role,WarsDeclared,WarsOnUs,CitiesCaptured,CitiesLost,Deals,WorkersStolen,WonderChops,AtWar,AtWarAggressor,Pacts,Friends,Denouncing,Influential,TurnSecs\r\n", pFile);
++		fputs("GameId,Turn,Final,Winner,Victory,Player,Civ,Group,Alive,Cities,Population,Score,Techs,Policies,Military,Gold,Land,Wonders,LostCapital,City2Turn,City3Turn,City4Turn,NationalCollege,Book,Warmonger,Flip,Fixes,Screen,Map,MapOptions,Ruins,Barbarians,Pace,Difficulty,WorldSize,StopTurn,Build,Mode,Role,WarsDeclared,WarsOnUs,CitiesCaptured,CitiesLost,Deals,WorkersStolen,WonderChops,AtWar,AtWarAggressor,Pacts,Friends,Denouncing,Influential,TurnSecs,CoopWarAsked,CoopWarAskedVsAggressor,CoopWarAgreed,CoopWarAgreedVsAggressor,SanctionsProposed,SanctionsProposedVsAggressor,SanctionsPassed,SanctionsPassedVsAggressor\r\n", pFile);
+ 
+ 	static const char* const kBookNames[] = { "none", "tall", "wide", "conquest" };
+ 
+@@ -13342,7 +13356,7 @@ void CvGame::LogABTestResults(bool bFinal) const
+ 			if (kPlayer.GetDiplomacyAI()->IsDenouncedPlayer(eOther))
+ 				iDenouncing++;
+ 		}
+-		fprintf(pFile, ",%s,%s,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%.1f\r\n",
++		fprintf(pFile, ",%s,%s,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%.1f,%d,%d,%d,%d,%d,%d,%d,%d\r\n",
+ 			kModeNames[(m_iABTestMode >= 0 && m_iABTestMode <= AB_MODE_BUILDERS) ? m_iABTestMode : 0],
+ 			kRoleNames[(eRole >= AB_ROLE_NONE && eRole <= AB_ROLE_BUILDER) ? eRole : 0],
+ 			GetABTestCount(ePlayer, AB_COUNT_WARS_DECLARED), GetABTestCount(ePlayer, AB_COUNT_WARS_ON_US),
+@@ -13351,7 +13365,11 @@ void CvGame::LogABTestResults(bool bFinal) const
+ 			GetABTestCount(ePlayer, AB_COUNT_WONDER_CHOPS),
+ 			iAtWar, iAtWarAggressor, iPacts, iFriends, iDenouncing,
+ 			kPlayer.isAlive() ? kPlayer.GetCulture()->GetNumCivsInfluentialOn() : 0,
+-			fTurnSecs);
++			fTurnSecs,
++			GetABTestCount(ePlayer, AB_COUNT_COOP_WAR_ASKED), GetABTestCount(ePlayer, AB_COUNT_COOP_WAR_ASKED_VS_AGGRESSOR),
++			GetABTestCount(ePlayer, AB_COUNT_COOP_WAR_AGREED), GetABTestCount(ePlayer, AB_COUNT_COOP_WAR_AGREED_VS_AGGRESSOR),
++			GetABTestCount(ePlayer, AB_COUNT_SANCTIONS_PROPOSED), GetABTestCount(ePlayer, AB_COUNT_SANCTIONS_PROPOSED_VS_AGGRESSOR),
++			GetABTestCount(ePlayer, AB_COUNT_SANCTIONS_PASSED), GetABTestCount(ePlayer, AB_COUNT_SANCTIONS_PASSED_VS_AGGRESSOR));
+ 	}
+ 
+ 	fclose(pFile);
+diff --git a/CvGameCoreDLL_Expansion2/CvGame.h b/CvGameCoreDLL_Expansion2/CvGame.h
+index d31933d..a7313f9 100644
+--- a/CvGameCoreDLL_Expansion2/CvGame.h
++++ b/CvGameCoreDLL_Expansion2/CvGame.h
+@@ -716,6 +716,7 @@ public:
+ 	int GetABTestHeadStartGold() const { return m_iABTestHeadStartGold; }
+ 	void ChangeABTestCount(PlayerTypes ePlayer, int eCount, int iChange = 1);	// ABTestCountTypes
+ 	int GetABTestCount(PlayerTypes ePlayer, int eCount) const;
++	void ChangeABTestCountAgainst(PlayerTypes ePlayer, PlayerTypes eTarget, int eCount, int eVsAggressorCount);	// ABTestCountTypes
+ 	void WriteABTestReplayRecord() const;
+ 	void unitIsMoving() const;
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index b895898..f362e39 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -187,6 +187,14 @@ enum ABTestCountTypes
+ 	AB_COUNT_DEALS,				// deals with another major civ that went into effect
+ 	AB_COUNT_WORKERS_STOLEN,	// banned: civilians it captured from city-states
+ 	AB_COUNT_WONDER_CHOPS,		// banned: forests or jungles chopped into a city building a world wonder
++	AB_COUNT_COOP_WAR_ASKED,				// joint wars it proposed to another major civ
++	AB_COUNT_COOP_WAR_ASKED_VS_AGGRESSOR,	// ... of them against the bully test's aggressor
++	AB_COUNT_COOP_WAR_AGREED,				// joint wars it proposed that the other civ agreed to (now or after preparing)
++	AB_COUNT_COOP_WAR_AGREED_VS_AGGRESSOR,	// ... of them against the aggressor
++	AB_COUNT_SANCTIONS_PROPOSED,				// World Congress sanctions (embargo on a player) it proposed
++	AB_COUNT_SANCTIONS_PROPOSED_VS_AGGRESSOR,	// ... of them against the aggressor
++	AB_COUNT_SANCTIONS_PASSED,				// sanctions it proposed that passed
++	AB_COUNT_SANCTIONS_PASSED_VS_AGGRESSOR,	// ... of them against the aggressor
+ 	NUM_AB_COUNTS
+ };
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp b/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp
+index 686c77f..26aaca9 100644
+--- a/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp
++++ b/CvGameCoreDLL_Expansion2/CvVotingClasses.cpp
+@@ -2630,6 +2630,10 @@ void CvLeague::DoProposeEnact(ResolutionTypes eResolution, PlayerTypes eProposer
+ 	
+ 	CvEnactProposal proposal(GC.getGame().GetGameLeagues()->GenerateResolutionUniqueID(), eResolution, GetID(), eProposer, iChoice);
+ 	m_vEnactProposals.push_back(proposal);
++
++	// AI_AB_TEST: count sanctions proposals
++	if (eProposer != NO_PLAYER && proposal.GetEffects()->bEmbargoPlayer)
++		GC.getGame().ChangeABTestCountAgainst(eProposer, (PlayerTypes)iChoice, AB_COUNT_SANCTIONS_PROPOSED, AB_COUNT_SANCTIONS_PROPOSED_VS_AGGRESSOR);
+ 	GC.GetEngineUserInterface()->setDirty(LeagueScreen_DIRTY_BIT, true);
+ }
+ 
+@@ -8456,6 +8460,10 @@ void CvLeague::DoEnactResolution(CvEnactProposal* pProposal, bool bFromLua)
+ {
+ 	ASSERT(bFromLua || pProposal->IsPassed(GetVotesSpentThisSession()), "Doing a proposal that has not been passed.");
+ 
++	// AI_AB_TEST: count sanctions that passed, for their proposer
++	if (pProposal->GetEffects()->bEmbargoPlayer && pProposal->GetProposalPlayer() != NO_PLAYER)
++		GC.getGame().ChangeABTestCountAgainst(pProposal->GetProposalPlayer(), (PlayerTypes)pProposal->GetProposerDecision()->GetDecision(), AB_COUNT_SANCTIONS_PASSED, AB_COUNT_SANCTIONS_PASSED_VS_AGGRESSOR);
++
+ 	CvActiveResolution resolution(pProposal);
+ 	for (uint i = 0; i < m_vMembers.size(); i++)
+ 	{
+-- 
+2.43.0
+

@@ -199,7 +199,14 @@ and goals, diplomacy changes how decisions are computed from them.
 
 ## Rules
 
-1. **One idea per fix.** Each fix gets its own flag (`FIX_18`, `FIX_OPENING_BOOK`, ...). Never bundle.
+1. **One idea per fix.** Each fix gets its own flag (`FIX_18`, `FIX_OPENING_BOOK`, ...). Never bundle. Adding a
+   flag (from fork commit `27437f0`):
+   - append it to `CandidateFixTypes` in `CvPlayer.h`;
+   - append one line to `kCandidateFixes` in `CvPlayer.cpp`: `{"Name", false}`, the name the ini file and the
+     results use, and `false` because new flags stay out of the bundle until they pass.
+
+   Nothing else changes. Two flags added on different branches only conflict on those two appended lines, and
+   the fix is to keep both.
 2. **Hypothesis before code.** In `RESULTS.md`: what should change, which measure shows it, and the
    smallest gain worth keeping (δ).
 3. **Topic sessions work on their own DLL branch** (`ai/war`, `ai/economy`, `ai/personality`,
@@ -211,6 +218,11 @@ and goals, diplomacy changes how decisions are computed from them.
    computer, so every computer in a multiplayer game computes the same thing (otherwise the game
    desyncs).
 8. **Read `RESULTS.md` at the start of every session** and append to it before ending.
+9. **Scripts run in Windows PowerShell 5.1**, the only PowerShell on the PC. PowerShell 7 (`pwsh`) parses
+   things 5.1 doesn't: no `??`, `?:`, `&&`/`||` or `ForEach-Object -Parallel`, and a 2-D index inside a method
+   call needs parentheses (`[Math]::Abs(($A[$r, $c]))`, not `[Math]::Abs($A[$r, $c])`; the comma reads as an
+   argument separator, which stopped `Run-ABTest.ps1` on 2026-11-03). Check a changed script with
+   `[System.Management.Automation.Language.Parser]::ParseFile` under `powershell.exe`, or ask the PC runner.
 
 ## Testing
 
@@ -423,9 +435,12 @@ runs the same check-in on its own, as the user asked; to stop it, disable that s
      `ab-ai-<topic>-latest` releases passed.
    - Their pack-repo branches: new RESULTS.md entries and requests. Merge them into
      `claude/sleepy-hopper-x77moh` (fast-forward or merge, never dropping anyone's lines).
-   - **Patch relay:** the topic sessions have no push access to the fork. They commit their DLL work as
-     `git format-patch` files under `tools/ab/patches/<topic>/` on their pack-repo branch. The lead applies
-     the new ones to `ai/<topic>` (`git am`), pushes, and tells the session the commit and the build result.
+   - **Patch relay:** sessions without push access to the fork (Economy, Diplomacy; War has had access since
+     2026-11-02 and pushes `ai/war` itself) commit their DLL work as `git format-patch` files under
+     `tools/ab/patches/<topic>/` on their pack-repo branch. The lead applies the new ones to `ai/<topic>`
+     (`git am --keep-cr`), pushes, and tells the session the commit and the build result.
+   - **Flag count:** 64 at most. From fork commit `27437f0` the masks are 64-bit (`ABTestFixMask`). Before it,
+     ints allowed 31, and the topic branches were at 29.
 3. **The PC runner** (`claude/sleepy-hopper-x77moh`): new results CSVs and `Run-Games.log` lines. Run the
    summary and the scoreboard. Check for "REPLAY DIFFERS", "WRONG SETUP", stalls and failed starts.
 4. **Act on it:**

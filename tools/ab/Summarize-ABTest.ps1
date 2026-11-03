@@ -116,8 +116,8 @@ function Get-OLS($X, [double[]]$y) {
     for ($i = 0; $i -lt $k; $i++) { $A[$i, ($k + $i)] = 1.0 }
     for ($c = 0; $c -lt $k; $c++) {
         $piv = $c
-        for ($r = $c + 1; $r -lt $k; $r++) { if ([Math]::Abs($A[$r, $c]) -gt [Math]::Abs($A[$piv, $c])) { $piv = $r } }
-        if ([Math]::Abs($A[$piv, $c]) -lt 1e-9) { return $null }   # a column never varies: can't be estimated
+        for ($r = $c + 1; $r -lt $k; $r++) { if ([Math]::Abs(($A[$r, $c])) -gt [Math]::Abs(($A[$piv, $c]))) { $piv = $r } }
+        if ([Math]::Abs(($A[$piv, $c])) -lt 1e-9) { return $null }   # a column never varies: can't be estimated
         if ($piv -ne $c) { for ($j = 0; $j -lt 2 * $k; $j++) { $tmp = $A[$c, $j]; $A[$c, $j] = $A[$piv, $j]; $A[$piv, $j] = $tmp } }
         $d = $A[$c, $c]
         for ($j = 0; $j -lt 2 * $k; $j++) { $A[$c, $j] /= $d }
@@ -137,7 +137,7 @@ function Get-OLS($X, [double[]]$y) {
     $df = $n - $k
     $s2 = if ($df -gt 0) { $rss / $df } else { [double]::NaN }
     $se = New-Object double[] $k
-    for ($i = 0; $i -lt $k; $i++) { $se[$i] = [Math]::Sqrt([Math]::Max(0.0, $s2 * $A[$i, ($k + $i)])) }
+    for ($i = 0; $i -lt $k; $i++) { $se[$i] = [Math]::Sqrt([Math]::Max(0.0, $s2 * ($A[$i, ($k + $i)]))) }
     return [pscustomobject]@{ Beta = $beta; SE = $se; DF = $df }
 }
 
@@ -260,6 +260,9 @@ function Get-BullyStats {
             AtWar = @($g.Civs | Where-Object { $_.AtWarAggressor -eq "1" }).Count
             CoalitionTurns = $coalition
             TallText = if ($tall) { "{0}/{1}/{2}" -f (& $num $tall "WarsOnUs"), (& $num $tall "Friends"), (& $num $tall "Pacts") } else { "-" }
+            # files from c7c_proposals on: joint wars and sanctions the other civs aimed at the aggressor
+            CoopVsAgg = ($g.Civs | ForEach-Object { & $num $_ "CoopWarAgreedVsAggressor" } | Measure-Object -Sum).Sum
+            SanctionsVsAgg = ($g.Civs | ForEach-Object { & $num $_ "SanctionsProposedVsAggressor" } | Measure-Object -Sum).Sum
         }
     }
 }
@@ -281,12 +284,13 @@ if (-not ($rows[0].PSObject.Properties.Name -contains "Role")) { return }
     if ($bully.Count -gt 0) {
         Write-Output ""
         Write-Output "Bully test: the aggressor against the rest. With c = the defenders, without = all on B (flipped game)."
-        Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,9} {5,9} {6,10} {7,10} {8,-22}" -f "Game", "c?", "Aggressor", "Cities100", "CitiesEnd", "Captured", "AtWarWith", "Coalition", "Tall civ: wars on it/friends/pacts")
+        Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,9} {5,9} {6,10} {7,10} {8,-22} {9}" -f "Game", "c?", "Aggressor", "Cities100", "CitiesEnd", "Captured", "AtWarWith", "Coalition", "Tall civ: wars on it/friends/pacts", "Joint wars/sanctions vs it")
         foreach ($b in $bully) {
             $s100 = if ($b.Share100 -ne $null) { "{0:N1}%" -f $b.Share100 } else { "-" }
             $coal = if ($b.CoalitionTurns -eq $null) { "-" } elseif ($b.CoalitionTurns -lt 0) { "never" } else { "+{0} turns" -f $b.CoalitionTurns }
             $withC = if ($b.Flipped) { "no" } else { "yes" }
-            Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,8:N1}% {5,9} {6,10} {7,10} {8,-22}" -f $b.GameId, $withC, $b.Aggressor, $s100, $b.ShareEnd, $b.Captured, $b.AtWar, $coal, $b.TallText)
+            $prop = if ($rows[0].PSObject.Properties.Name -contains "CoopWarAgreedVsAggressor") { "{0}/{1}" -f $b.CoopVsAgg, $b.SanctionsVsAgg } else { "-" }
+            Write-Output ("  {0,-18} {1,-4} {2,-14} {3,9} {4,8:N1}% {5,9} {6,10} {7,10} {8,-22} {9}" -f $b.GameId, $withC, $b.Aggressor, $s100, $b.ShareEnd, $b.Captured, $b.AtWar, $coal, $b.TallText, $prop)
         }
         # pairs: the aggressor's final share of all cities with c defenders minus without (negative = the candidate held better)
         $diffs = @(foreach ($p in ($bully | Group-Object BaseId | Where-Object { $_.Count -eq 2 })) {
@@ -332,6 +336,16 @@ if (-not ($rows[0].PSObject.Properties.Name -contains "Role")) { return }
         Write-Output ("  {0,-5} {1,8:N2} {2,8:N2} {3,9:N2} {4,9:N1} {5,8:N1} {6,7:N1} {7,11:N1} {8,12} {9,12}" -f $grp, (& $rate "Deals"), (& $rate "WarsDeclared"), (& $rate "CitiesCaptured"), (& $avg "Friends"), (& $avg "Pacts"), (& $avg "Denouncing"), (& $avg "Influential"), (& $sum "WorkersStolen"), (& $sum "WonderChops"))
     }
     Write-Output "  (Deals count each side, so one deal between two civs adds 1 to each. StolenCivil and WonderChops are game totals: the banned behaviours, target 0.)"
+    if ($rows[0].PSObject.Properties.Name -contains "CoopWarAsked") {
+        Write-Output ("  {0,-5} {1,14} {2,15} {3,18} {4,17}" -f "Group", "JointWarAsked", "JointWarAgreed", "SanctionsProposed", "SanctionsPassed")
+        foreach ($grp in "new", "cp") {
+            $cs = @(@($games) + @($roleGames) | ForEach-Object { $g = $_; $_.Civs | Where-Object { $_.Group -eq $grp } | ForEach-Object { [pscustomobject]@{ C = $_; T = [Math]::Max(1, $g.Turn) } } })
+            if ($cs.Count -eq 0) { continue }
+            $rate = { param($col) ($cs | ForEach-Object { 10.0 * (& $num $_.C $col) / $_.T } | Measure-Object -Average).Average }
+            Write-Output ("  {0,-5} {1,14:N2} {2,15:N2} {3,18:N2} {4,17:N2}" -f $grp, (& $rate "CoopWarAsked"), (& $rate "CoopWarAgreed"), (& $rate "SanctionsProposed"), (& $rate "SanctionsPassed"))
+        }
+        Write-Output "  (per civ per 10 turns, counted for the civ that proposed)"
+    }
 }
 
 # ---- Scoreboard row (lead job 11): the milestone measures for one results file ----
