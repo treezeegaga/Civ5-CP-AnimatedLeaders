@@ -2239,6 +2239,18 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### The top five together: PASSED (lead, 2026-11-03 12:40pm ET)
+
+`DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits` in group c against B, on
+`ab-819be70`, PC 2, `AIABTest_top5@TREEDESKTOP.csv`. **5 pairs: c 51.35%, gain +1.35 points; gainer SPRT passed**
+(LLR +3.13 at the +2.94 bound), no-worse passed (+18.9). Pair spread 1.05 (single games 3.82: each paired game is worth
+6.6 unpaired ones). c won 8 of 10 games on strength. Replays matched, no crash.
+
+Note: it passed at the earliest point the rules allow (5 results), just over the bound, and the measured gain is below
+δ. So the five gain together, probably by +1 to +2 points rather than the +3.6 screening suggested (screening flatters
+its top picks). Next: these five become the new C bundle (two are level 2, three level 3; NoForeignMissionaries joins
+by the user's ruling), and single-flag tests show which carry it.
+
 ### The bully siege test: does a stronger aggressor take cities? (lead, 2026-11-03 11:00am ET)
 
 Build `claude/ab-siege` `07805c8` (`ai/war` `5043f05` with SiegeBar, plus the `RoleFixes` key from `claude/ab-c1`), release
