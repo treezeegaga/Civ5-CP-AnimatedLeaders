@@ -961,6 +961,72 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
 - Test: SPRT gainer, paired, T100, `Fixes = SettlerOverlap`.
 - Status: in screening run 1 (test build `claude/ab-screen1`, after the King baseline).
 
+### Expansion pace: how the logged games are read (Economy, fixed before the logs arrive)
+
+**Source.** `digest_<GameId>.txt` from `Run-Games.ps1 -SaveLogs` (run with `-UpToTurn 80` or more), one block
+per major civ. The lines read are:
+- **`builds to T..`**: every production start, `*` = opening-book pick.
+- **`settlers ordered T / found-city ops started T / cities founded T`**.
+- **`settler timeline to T..`**: `settler (book) in <city>`, `settler (AI) in <city>`, `BOUGHT`, `op started`,
+  `FOUNDED`, `op ended: <reason>`.
+- **`saving gold for a settler: N turns (Ta-Tb)`**.
+- **`IDLE SETTLER turns`**.
+- **`ops aborted`** (e.g. `LostCivilian`).
+
+From the results CSV: `City2Turn`-`City4Turn`, `Book`, `Gold`.
+
+**Per settler** (founded cities 2-4 of each civ, first 80 turns), each settler's life is split into five
+stretches. Read with care: "op started" is when the settler exists and has a target, so it stands in for "finished".
+1. **Wait:** from the previous settler's `op started` (or, for the first settler, turn 0) to this settler's
+   start. What the capital built in between is the **book's own steps** (cause 1) or **fall-through**
+   (cause 2: book buildings started while the previous settler was between `op started` and `FOUNDED`).
+2. **Train:** from the start to `op started`, or to `BOUGHT`.
+3. **Idle:** a gap after training with no op (`IDLE SETTLER` turns), i.e. waiting for an escort or a target.
+4. **Walk:** from `op started` to `FOUNDED`.
+5. **Lost:** `op ended: LostCivilian` and a replacement settler.
+
+**Readings for B (the baseline logged pair).** These say whether the diagnosis behind each flag is right,
+before any flag is tested:
+
+| Flag | Diagnosis is right if B shows | Wrong if |
+|---|---|---|
+| `SettlersFirst` | In the capital, the **wait** before book settlers 2 and 3 is mostly book steps (worker, shrine, monument; for tall civs also before settler 1): median ≥ 8 turns per settler | Waits are short (< 4 turns), or filled by non-book picks (wonders, AI units). Then reordering the book changes little |
+| `SettlerOverlap` | At least one **fall-through** per civ in the first 80 turns (a book building started while a settler walked), each pushing the next settler's start ≥ 5 turns past the founding | Walks are 1-2 turns and the next settler starts right after founding |
+
+The other causes, counted the same way, which become new flags only if they're large:
+- **Idle (escorts):** more than 5 idle turns per settler on average.
+- **Lost settlers:** `LostCivilian`.
+- **Interrupted settlers:** a settler start followed by another start in the same city with no `op started`.
+- **Gold.** The question: is saving locking gold away for nothing? It is if a civ shows ≥ 30 saving turns
+  before T80 with no `BOUGHT`. Then spending it elsewhere (a worker, tiles) is the candidate fix. If most
+  civs buy a settler within about 20 saving turns, saving works and stays.
+
+**Readings for the flags (screening run 1, c against b).** `City2Turn`-`City4Turn` per plan: the mechanism
+shows if c's 3rd city comes ≥ 5 turns earlier than b's, and c's fall-throughs drop to about 0 with
+`SettlerOverlap`. The verdict is still strength share at T100.
+
+**Tried on `digest_c7c_game2.txt`** (Prince, old digest without the timeline; 6 civs):
+- **Cause 1 shows.**
+  - Austria (wide): settler 1 started T7 and its op started at T16. Then came the worker, monument and
+    shrine; settler 2 only started at T26 (a 10-turn wait).
+  - Korea (tall): monument, shrine and two warriors came first, so settler 1 only started at T22.
+- **Cause 2 likely shows, not provable.** Austria's monument started at T19, the turn its first settler
+  founded, before the shrine. That fits a settler step held while the settler walked, and the book
+  falling to the next building.
+- **Things the procedure can't settle without one more field:**
+  - Austria's settler started at T34 only founded at T89.
+  - Brazil's settler started at T30 only got an op at T58. In between, a Great Library (Brazil T43,
+    Austria T39) was started somewhere: the settler may have been **replaced by a wonder**, or finished
+    and stood idle.
+  - The old digest's build list doesn't say which city started what, so the capital's queue can't be told
+    from the new cities'.
+- **Korea's 2nd city was delayed by a lost settler.** Its op ran T31-T48, ended `LostCivilian`, and the
+  replacement founded at T61. Escort and safety cost 30 turns there.
+
+**One field needed from `Digest-ABLogs.ps1`** (requested): the **city** on each `builds to` entry, or a separate
+`capital builds` line (every start in the capital, book or not). With it the wait, fall-through and
+interrupted-settler readings are exact. Everything else the procedure uses is already in the digest.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
@@ -1350,7 +1416,8 @@ into `claude/sleepy-hopper-x77moh`. Personality starts in phase 2.
   2. `Fixes = GreedyAlarm`: the alarm alone, for any tall civ.
 
   The bundle flags stay on or off as the lead's baseline decides.
-- Status: on `ai/economy`, CI pending. Goes into a screening run once War has capture fixes (lead). Needs War's view: War owns the threat side (`CvMilitaryAI`). This uses only an
+- Status: on `ai/economy`, CI pending. Goes into a screening run once War has capture fixes (lead). War: keep CP's
+  posture signal for now. Background: War owns the threat side (`CvMilitaryAI`). This uses only an
   existing diplomacy signal and Economy's production files, so it doesn't touch War's code. If War builds a
   better "army massing" signal (muster points, siege units seen), the alarm should switch to it.
 - Notes: posture only sees units near our cities, so an army mustering out of sight isn't seen until it
@@ -1373,11 +1440,14 @@ Fix: `kPlayer.GetDiplomacyAI()->IsPlayerValid(eLoopPlayer)`. Coded as two flags,
     further 50 points per such enemy, so it builds units and walls instead.
   - Measure: cities lost and strength share in games with wars. It only acts in wars that go badly, so it
     can't show much until War's capture fixes make wars bite.
-  - Test: no-worse, T150, ideally queued alongside War's flags.
+  - Test: no-worse, T150, δ = 2 points of strength share; ideally queued alongside War's flags.
+  - Status: on `ai/economy` as `5531a3e` (with 0008). War wants it tested alongside its fixes.
 - **`CultureRivalValue`** (`FIX_CULTURE_RIVAL_VALUE`, E2), patch 0008.
   - Hypothesis: culture yields are valued ×2-×3 when a rival's tourism is rising against us, as CP and B
     intended, so the civ defends culturally a little earlier.
-  - Test: no-worse, T150, low priority. Probably no effect at T150, where tourism is still small.
+  - Measure: strength share at T150 (no-worse); culture per turn and policies at T150 (mechanism).
+  - Test: no-worse, T150, δ = 2 points of strength share, low priority. Probably no effect at T150, where tourism is still small.
+  - Status: on `ai/economy` as `5531a3e`.
 
 ### IdeologyPick, PolicyPrereqDepth, EspionagePolicyValue: the other CvPolicyAI bugs (Economy, audit P2-P4)
 One flag each, all out of the bundle, as patches 0004-0006 (in that order, after 0003). All three are bug fixes
@@ -1534,6 +1604,11 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
   threat signal. If War builds a better "neighbour is massing an army" signal, tell Economy and the alarm
   will use it. Also E1 (losing wars don't cut building production; a dead loop in
   `CvBuildingProductionAI`): Economy can code it as a flag whenever War wants it tested alongside its fixes.
+
+- **For the lead, from Economy (Digest-ABLogs.ps1):** add the city to each `builds to T..` entry (the CHOSEN
+  and OPENING BOOK lines already carry it in field 2), or a `capital builds` line per civ. Without it the
+  expansion-pace procedure can't tell the capital's queue from new cities', which it needs for the wait,
+  fall-through and interrupted-settler readings ("Expansion pace: how the logged games are read").
 
 ## Instructions for the PC runner
 
