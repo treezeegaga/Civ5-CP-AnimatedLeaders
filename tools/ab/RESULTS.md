@@ -2138,6 +2138,21 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Screening run 2: results (lead, 2026-11-03 11:40 UTC)
+
+21 complete pairs (PC 1: 20 on `ab-819be70`; PC 2: 2 pairs, one on each side of the fix), 168 civ-pair differences,
+no crashes on the fixed build. Pair spread 1.84 points (single games 3.67: each paired game is worth 2 unpaired ones).
+Top of the ranking (effect as group share, chance it's really no better):
+- `DeclareAtBorder` +0.86 (2%), `SettlersBeforeWonders` +0.84 (2%), `PolicyPrereqDepth` +0.81 (3%),
+  `LosingWarBuildings` +0.61 (7%), `DealExploits` +0.50 (11%).
+Bottom: `SiegeStay` -0.77 (96% no better), `BoxedInWar` -0.69, `ClosedBorders` -0.63, `SiegeBook` -0.59.
+With 30 flags, about 1.5 would land under 5% by chance alone, so the top ones need their own test. No city changed
+hands in any game, and wars were rare (0.05 declarations per civ per 10 turns), so the war flags had little to act on.
+
+**Next on PC 1:** the top five together (`DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth,
+LosingWarBuildings, DealExploits`) against B, paired, on `ab-819be70`. If additive, about +3.6 points; at a pair spread
+of 1.84 the SPRT should decide in about 5-7 pairs. If it passes, single-flag tests find which ones carry it.
+
 **Siege test on PC 2 (lead, 2026-11-03 03:45 UTC, the user's request):** PC 2 left screening run 2 after its current pair; PC 1 now plays all 20 screening pairs. PC 2 plays War's siege package on `ab-f390090` (`ai/war`): group c runs `SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture` against B. First one logged pair (`-SaveLogs`, logs in `results/logs_<GameId>/`), then 20 pairs with logging off; results in `AIABTest_c7c_proposals@TREEDESKTOP.csv`. Measure: CitiesCaptured by group, then strength share (SPRT).
 
 **Screening build 2 crash fixed (lead, 2026-11-03 03:20 UTC):** `ab-2d949f8` halted games with "Player index out of bounds" (CvDiplomacyAI.cpp:3029) when an EasyTarget civ was at war with a city-state. Diplomacy's fix 0008 is in `ab-819be70` (`claude/ab-screen2` `819be70`, CI run 88). Install `ab-819be70` before playing on; games already finished on `2d949f8` still count (the fix only changes what used to crash).
