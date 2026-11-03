@@ -1370,7 +1370,25 @@ upgrade flavour loop, and the deliberate "peek and return" sentry moves.
 - Build: same commit as UpgradeSaveCancel
 - Status: hypothesis; waits for a late-game test
 
-### Screening run 1: plan (lead, 2026-11-02)
+### Screening run 2: plan (lead, 2026-11-03; replaces run 1, which was never played)
+
+- **Build:** `claude/ab-screen2` (`b756936`, release `ab-b756936`): all 39 flags, rebased onto the 64-bit flag
+  table, compiled together by CI run 77. Results in `AIABTest_screen2.csv`.
+- **Screened (28):** the 13 c7c ideas (all but `LongWide` and `GreedyArmyCap`, which failed); Economy's
+  `SettlersFirst`, `SettlerOverlap`, `DiploPolicyValue`, `PolicyPrereqDepth`, `LosingWarBuildings`,
+  `CultureRivalValue`; War's `SiegeStay`, `SiegePosture`, `DeclareAtBorder`, `UpgradeSaveCancel`; Diplomacy's
+  `EasyTarget`, `DiploBugs`, `LuxuryAsk`, `DealExploits`, `DealReputation`.
+- **Left out, and where they're tested instead:**
+  - `AirRebaseHeal`: no aircraft by turn 150.
+  - `IdeologyPick`, `EspionagePolicyValue`: they act after turn 150 (phase 2, longer games).
+  - `GreedyAlarm`: waits for War's captures.
+  - `CityStateBugs`, `CoalitionStrength`, `CoalitionCoop`, `Sanctions`, `CoalitionPact`: they act against a
+    runaway conqueror, so they go to the bully test, where there is one.
+- **Reading it:** paired regression, 8 civs × 20 pairs = 160 differences for 28 flags. Each flag is on for half the
+  civs, so its effect is estimated from about 80 civ-pairs. Expect only large effects (about ±1 point per civ) to
+  stand out. Screening only ranks: the top flags get single-flag paired SPRTs.
+
+### Screening run 1: plan (lead, 2026-11-02; replaced by run 2)
 
 - **Why:** 19 candidate flags exist, from c1–c7c, Economy and War. At about 3 pairs an hour, an SPRT per flag
   would take days. One screening run estimates every flag's effect per civ from the same 20 pairs (the paired
@@ -1637,7 +1655,7 @@ runner now clicks it anyway; if the game still doesn't start, it sets the game u
 2. The King baseline's **logged pair** (baseline step 1).
 3. **War's 3 logged games** (below, after the baseline).
 4. The rest of the baseline: 19 pairs, logging off (baseline step 2).
-5. **Screening run 1** (below): every candidate flag at once, 20 pairs. Then the lead queues single-flag
+5. **Screening run 2** (below): 28 candidate flags at once, 20 pairs. Then the lead queues single-flag
    SPRTs for the flags it ranks highest.
 
 ### 2026-11-02: smoke test of `c7c_roles` with paired games (1 pair = 2 games)
@@ -1736,18 +1754,21 @@ end, and what happens at a siege. These are single games with the c7c bundle on,
    powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-6b8ebde -NoLaunch -NoUpdate
    ```
 
-### After the baseline: screening run 1 (20 pairs = 40 games, about 7 hours)
+### After the baseline: screening run 2 (20 pairs = 40 games, about 7 hours)
 
-One run ranks every candidate idea from the same games (lead job 4's screening regression). The build is
-test-only: `claude/ab-screen1` = `claude/ab-c1` + `ai/economy` + `ai/war`, results in `AIABTest_screen1.csv`.
-1. Install it by commit (no "latest" alias for this branch):
+Replaces screening run 1 (never played). One run ranks 28 candidate flags from the same games (lead job 4's
+screening regression). The build is test-only: `claude/ab-screen2` (`b756936`) = `claude/ab-c1` (`fdad60d`: 64-bit
+flag table, proposal counts, the `Difficulty` key) + `ai/economy` + `ai/diplomacy` + `ai/war`, 39 flags, every
+flag added after c7c off in the bundle, results in `AIABTest_screen2.csv`. CI run 77 compiled it; release
+`ab-b756936`.
+1. **Pull first** (the `Run-Games.ps1` start fix, `3d761c5`), then install the build by commit:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-db63d22 -NoLaunch -NoUpdate
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-b756936 -NoLaunch -NoUpdate
    ```
-   If that release doesn't exist, its CI build failed or is still running: report it and wait.
 2. Logging off. Group c runs nothing, and each screened flag is on for a random, warmonger-balanced half of the AI
-   civs, swapped in the second game of each pair:
+   civs, swapped in the second game of each pair. This build reads the `Difficulty` key that `Run-Games.ps1`
+   writes, so it plays King whatever the setup screen remembers:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, SiegeStay, SiegePosture, DeclareAtBorder"
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"
    ```
-3. Commit `AIABTest_screen1.csv` and `Run-Games.log` every 5 pairs or so, and push.
+3. Commit `AIABTest_screen2.csv` and `Run-Games.log` every 5 pairs or so, and push.

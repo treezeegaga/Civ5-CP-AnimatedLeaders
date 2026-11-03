@@ -4,7 +4,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Builds are running again: screening build 2 (all 39 flags) and War's flags compile now. The PC runner is playing the smoke-test pair on King.",
+   "detail": "Screening build 2 compiled with all 39 flags. The PC runner is finishing the King smoke-test pair; the baseline comes next.",
    "state": "running"
   },
   {
@@ -39,7 +39,7 @@
    "section": "queue",
    "order": 5,
    "name": "Screening run 2",
-   "detail": "20 pairs ranking all 39 candidate flags at once (its build, run 77, is compiling).",
+   "detail": "20 pairs ranking 28 candidate flags at once (build ab-b756936, compiled).",
    "state": "waiting"
   },
   {
@@ -53,8 +53,8 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Pushed its flags rebased onto the 64-bit table; build (run 78) compiling.",
-   "state": "running"
+   "detail": "Its five flags compiled (run 78); waiting for logged war games.",
+   "state": "waiting"
   },
   {
    "section": "session",
@@ -74,7 +74,7 @@
    "section": "session",
    "order": 5,
    "name": "Lead",
-   "detail": "Screening build 2 (run 77) compiling; then the integration branch and the topic branches move.",
+   "detail": "Integration branch moved to fdad60d; Economy's branch building; Diplomacy's next.",
    "state": "running"
   },
   {
