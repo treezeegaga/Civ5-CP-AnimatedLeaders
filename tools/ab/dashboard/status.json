@@ -4,15 +4,15 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Screening build 2 compiled with all 39 flags. The PC runner is finishing the King smoke-test pair; the baseline comes next.",
+   "detail": "The King smoke-test pair checked out (setup, replay and every new column). Next on PC 1: the King baseline. A second PC runner is being set up for screening run 2.",
    "state": "running"
   },
   {
    "section": "queue",
    "order": 1,
    "name": "Smoke-test pair",
-   "detail": "1 pair on King, Pangaea (build ab-6b8ebde): checks the new columns and that the second game replays the first.",
-   "state": "running"
+   "detail": "Passed: King, Pangaea, the second game replays the first with groups swapped, every new column written.",
+   "state": "passed"
   },
   {
    "section": "queue",
@@ -39,14 +39,14 @@
    "section": "queue",
    "order": 5,
    "name": "Screening run 2",
-   "detail": "20 pairs ranking 28 candidate flags at once (build ab-b756936, compiled).",
+   "detail": "20 pairs ranking 28 flags at once (build ab-b756936), on the second PC once it's set up.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 1,
    "name": "PC runner",
-   "detail": "Smoke-test pair on King since 00:22 UTC.",
+   "detail": "Smoke-test pair passed; the baseline's logged pair is next.",
    "state": "running"
   },
   {
@@ -125,6 +125,13 @@
    "name": "Seconds per AI turn",
    "detail": "≤ 1.25× B's (not measured yet)",
    "state": "open"
+  },
+  {
+   "section": "session",
+   "order": 6,
+   "name": "PC runner 2",
+   "detail": "Being set up on the second PC (Steam offline, copy Community Patch, calibrate), then screening run 2.",
+   "state": "next"
   }
  ]
 }

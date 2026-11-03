@@ -31,7 +31,12 @@ foreach ($f in Get-ChildItem $Results -Filter "AIABTest*.csv") {
     } else { "Prince, old setup" }
     $current = [bool]($d.setup.difficulty -eq "HANDICAP_KING")
     foreach ($t in $d.tests) {
-        [void]$tests.Add([ordered]@{ test = "$build | $($t.config)"; build = $build; config = $t.config; setup = $setup; current = $current
+        # the flags group c ran, short: "13 flags: WidePlans, BoxedIn, BoxedInWar, ..." or "none (every civ on B)"
+        $flags = if ($t.config -match 'c runs ([^;]*)') { $Matches[1].Trim() } else { $t.config }
+        $list = @($flags -split '\+' | Where-Object { $_ })
+        $label = if ($flags -eq "none") { "none (every civ on B)" } elseif ($list.Count -gt 3) { "$($list.Count) flags: " + (($list[0..2]) -join ", ") + ", ..." } else { $list -join ", " }
+        if ($t.config -match 'screened (.+)$' -and $Matches[1] -ne "none") { $label += "; screening $(@($Matches[1] -split '\+').Count) flags" }
+        [void]$tests.Add([ordered]@{ test = "$build | $($t.config)"; build = $build; config = $label; setup = $setup; current = $current
             kind = $t.kind; results = $t.results; share = $t.share; gain = $t.gain; spread = $t.spread
             gainerLLR = $t.gainerLLR; gainerState = $t.gainerState; noWorseLLR = $t.noWorseLLR; noWorseState = $t.noWorseState
             expectedResults = $t.expectedResults; expectedResultsWorst = $t.expectedResultsWorst })
