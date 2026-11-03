@@ -64,6 +64,13 @@ assigned a style (an extension of the bully and builders roles, `Mode = styles`)
 each style's strength share and cities captured or lost against each other style. The goal is met when each style
 clearly beats one and loses to one. The order: attacks that take cities, then `GreedyAlarm`, then the matchup test.
 
+**What greedy trades (the user, 2026-11-03):** a greedy civ that doesn't upgrade its defenders, builds no walls and
+keeps very few units saves unit upkeep, production and upgrade gold for growth, and pays for it in vulnerability. So
+a style flag's worth depends on the opponents: while no attack takes a city, greedy gets its savings for free and
+looks strong in split games. **Style flags (`GreedyArmyCap`, `GreedyAlarm`, defence levels) are judged by the matchup
+test and the bully test, not by the split-game strength SPRT alone**, which can't see the risk. Aggressors should spot
+thin defence (`GreedyTarget`: fewest land units per city).
+
 ### Priorities: competence first, then flavour and fun
 
 The list above is where we're going, not the order we work in. Making the AI merely competent is
