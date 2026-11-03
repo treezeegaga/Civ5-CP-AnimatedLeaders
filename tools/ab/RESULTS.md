@@ -2330,6 +2330,21 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Queue for tonight (lead, 2026-11-03 1:45pm ET)
+
+- **PC 2 (now):** the bug-fix bundle, a no-worse test of the 8 screened level-2 fixes, on `ab-819be70`, results
+  `AIABTest_bugfix8@TREEDESKTOP.csv`. If it passes, all 8 merge.
+- **PC 1 (once unlocked, about 7:50pm ET):** the bully siege test again, on the fixed SiegeArmy. Economy found the
+  waiting armies never asked for their optional slots, so no city built for them; War's fix `1c30fb0` makes cities
+  build them. Build `claude/ab-siege` `095144c` (release `ab-095144c`; results `AIABTest_bullysiege2.csv`). SiegeBar is
+  dropped:
+  ```
+  powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Mode bully -Fixes none -RoleFixes "SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture" -MaxGames 2 -SaveLogs
+  ```
+  then logging off, `-MaxGames 20`. Before starting: Windows set never to lock (Settings, Accounts, Sign-in options).
+- **Then:** single-flag gainer tests of the top-five's level-3 ideas (`DeclareAtBorder`, `SettlersBeforeWonders`,
+  `DealExploits`), and the new C bundle.
+
 ### The top five together: PASSED (lead, 2026-11-03 12:40pm ET)
 
 `DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits` in group c against B, on
