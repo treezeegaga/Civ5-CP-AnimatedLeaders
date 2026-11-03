@@ -1,0 +1,108 @@
+From 1d7dc0092e2528245a6f41cbab1276c7e9dbc249 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Tue, 3 Nov 2026 00:40:27 +0000
+Subject: [PATCH] AI_AB_TEST Economy: log why the opening book holds a settler
+ step (size 1, growth due, one at a time, unhappy, boxed in) and what it picks
+ instead
+
+Logging only, no behaviour change: the expansion-pace reading needs to tell the book's own buildings from a held settler falling through.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 32 +++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 2a8a71a..81797f0 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33818,6 +33818,18 @@ static const OpeningBookStep kOpeningConquestCapital[] = {
+ static const OpeningBookStep kOpeningConquestCity[] = {
+ 	{false, "BUILDINGCLASS_MONUMENT"} };
+ 
++/// AI_AB_TEST (logging only): why the book passed over a settler step in this city, and what it picked instead. The
++/// expansion-pace reading in RESULTS.md uses it to tell the book's own buildings from a held settler falling through.
++static void LogOpeningBookSettlerHeld(CvPlayer& kPlayer, CvCity* pCity, const char* szHeld, const char* szNext)
++{
++	if (!szHeld || !(GC.getLogging() && GC.getAILogging()))
++		return;
++	CvString strOutBuf;
++	strOutBuf.Format("%s, OPENING BOOK - Settler held (%s), size %d, next %s", pCity->getName().GetCString(), szHeld,
++		pCity->getPopulation(), szNext);
++	kPlayer.GetCitySpecializationAI()->LogMsg(strOutBuf);
++}
++
+ /// The next build the opening book wants in this city, if any
+ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int& iData)
+ {
+@@ -33897,6 +33909,7 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 
+ 	// How many of each unit class the steps so far ask for (a step for the 3rd settler means 3 settlers)
+ 	std::map<int, int> unitsWanted;
++	const char* szSettlerHeld = NULL;	// logging only: the first reason a settler step was passed over
+ 	for (int i = 0; i < iNumSteps; i++)
+ 	{
+ 		const OpeningBookStep& kStep = pSteps[i];
+@@ -33922,12 +33935,20 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 			if (pkUnitInfo->GetDefaultUnitAIType() == UNITAI_EXPLORE && GC.getGame().getElapsedGameTurns() > iScoutTurnLimit)
+ 				continue;
+ 			if (bSettler && (pCity->getPopulation() < iMinSettlerPop || IsEmpireUnhappy() || IsBoxedInForSettling()))
++			{
++				if (!szSettlerHeld)
++					szSettlerHeld = pCity->getPopulation() < iMinSettlerPop ? "size 1" : IsEmpireUnhappy() ? "unhappy" : "boxed in";
+ 				continue;
++			}
+ 			// only wait for growth that is imminent: a fast-growing capital always has its next citizen closer than the
+ 			// settler, and waiting for that kept one capital from starting a settler until turn 37
+ 			if (bSettler && pCity->getYieldRateTimes100(YIELD_FOOD) > 0 && pCity->getFoodTurnsLeft() <= 3 &&
+ 				pCity->getFoodTurnsLeft() < pCity->getProductionTurnsLeft(eUnit, 0))
++			{
++				if (!szSettlerHeld)
++					szSettlerHeld = "growth due";
+ 				continue;
++			}
+ 			// One settler at a time: a second one only waits around while the first walks, and with two idle
+ 			// settlers the found-city operation can take the one that can't reach a site and abort every turn
+ 			// Economy candidate (SettlerOverlap): only settlers in training count against it. A settler takes 10+ turns
+@@ -33938,15 +33959,24 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 			{
+ 				if (GetNumUnitsWithUnitAI(UNITAI_SETTLE, true) - GetNumUnitsWithUnitAI(UNITAI_SETTLE, false) > 0 ||
+ 					GetNumUnitsWithUnitAI(UNITAI_SETTLE, false) > 1)
++				{
++					if (!szSettlerHeld)
++						szSettlerHeld = "one at a time";
+ 					continue;
++				}
+ 			}
+ 			else if (bSettler && GetNumUnitsWithUnitAI(UNITAI_SETTLE, true) > 0)
++			{
++				if (!szSettlerHeld)
++					szSettlerHeld = "one at a time";
+ 				continue;
++			}
+ 			if (!pCity->canTrain(eUnit))
+ 				continue;
+ 
+ 			eOrder = ORDER_TRAIN;
+ 			iData = eUnit;
++			LogOpeningBookSettlerHeld(*this, pCity, szSettlerHeld, pkUnitInfo->GetDescription());
+ 			return true;
+ 		}
+ 		else
+@@ -33961,10 +33991,12 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 
+ 			eOrder = ORDER_CONSTRUCT;
+ 			iData = eBuilding;
++			LogOpeningBookSettlerHeld(*this, pCity, szSettlerHeld, GC.getBuildingInfo(eBuilding)->GetDescription());
+ 			return true;
+ 		}
+ 	}
+ 
++	LogOpeningBookSettlerHeld(*this, pCity, szSettlerHeld, "the normal AI choice");
+ 	return false;
+ }
+ 
+-- 
+2.43.0
+
