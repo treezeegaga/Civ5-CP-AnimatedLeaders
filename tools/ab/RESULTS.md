@@ -1243,6 +1243,37 @@ in these logs points to a bug.
 **Before deciding on a religion session:** add `ReligionLog.csv` and `PlayerBeliefReligionLog.csv` to `-SaveLogs`,
 and a faith-stored column to the results CSV, then read one logged pair. That costs no extra games.
 
+### Why warmongers don't build their army (Economy for War, 2026-11-03, read-only)
+
+**Case:** `logs_0714EFCB0714EFCB`, Songhai's `OP_CITY_ATTACK_LAND_SNEAKY` 1713. It started at T80 with 5 of 9 slots
+filled and ended T101 (`DiploOpinionChange`). It logged "SiegeArmy: waiting for more units, expected damage 16 a
+turn, Athens needs 86" and "Found 0 potential units to recruit" every turn.
+- **What Songhai's cities built at T80-T101:** settlers, workers, caravans, a market, a library, Temple of Artemis
+  and **one warrior**.
+- **No unit was ever requested:** in those 21 turns no city's production list held an "Operation unit" or "Army
+  unit" entry (`CityStrategyAIProductionLog.csv`).
+
+**Cause: nothing asks the cities for the missing units.** A city builds for an army through two entries in
+`CvCityStrategyAI::ChooseProduction`:
+1. **Operation unit** (weight 5000 + 250 × offense flavour): from `CvCity::GetUnitForOperation`, which reads the
+   operation's `m_viListOfUnitsWeStillNeedToBuild`. `CvAIOperation::GrabUnitsFromTheReserves` rebuilds that list each
+   recruiting turn with free slots **only if the slot is required** (`m_requiredSlot`).
+2. **Army unit** (750 + 250 × offense): from `CvMilitaryAI::GetUnitTypeForArmy`, which uses
+   `GetOpenSlots(true)`, i.e. **required slots only**.
+
+With its required slots filled, the army has only optional slots free, so neither entry fires. Both channels would win
+easily if asked (5000+ against buildings worth hundreds). But War's `SiegeArmy` wait wants more damage while the
+production side sees nothing missing, so the army waits for units no city is told to build. Outside war, a
+warmonger's normal production has no other push toward units: the war penalty on buildings and the tiny-army rule
+only apply at war (`CvBuildingProductionAI`, B's change keeps peacetime to 1 unit per city).
+
+**For War to decide (the operation code is War's):** while an operation is held by the siege wait (not enough
+expected damage), put its free **optional** slots, or extra siege/ranged slots, into
+`m_viListOfUnitsWeStillNeedToBuild`, so the "Operation unit" entry asks the cities for them. Production needs no
+change for that: the 5000 weight already beats every building. If War prefers the production side, the alternative
+is `GetUnitTypeForArmy` with `GetOpenSlots(false)` for armies waiting on the siege check (`CvMilitaryAI`, also War's).
+Economy can measure it afterwards from the same log (operation-unit entries and military units built during the wait).
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
