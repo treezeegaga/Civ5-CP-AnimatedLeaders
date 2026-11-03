@@ -951,7 +951,7 @@ No logged King game exists yet, so this is from the results files (2p, c4, c7c),
 - δ: +2 points of strength share.
 - Build: same commit (`cbb3380`), flag `SettlerOverlap` (`FIX_SETTLER_OVERLAP`). Not in the bundle.
 - Test: SPRT gainer, paired, T100, `Fixes = SettlerOverlap`.
-- Status: written, not built.
+- Status: in screening run 1 (test build `claude/ab-screen1`, after the King baseline).
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
