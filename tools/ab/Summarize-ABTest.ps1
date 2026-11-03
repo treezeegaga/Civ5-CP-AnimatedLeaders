@@ -116,8 +116,8 @@ function Get-OLS($X, [double[]]$y) {
     for ($i = 0; $i -lt $k; $i++) { $A[$i, ($k + $i)] = 1.0 }
     for ($c = 0; $c -lt $k; $c++) {
         $piv = $c
-        for ($r = $c + 1; $r -lt $k; $r++) { if ([Math]::Abs($A[$r, $c]) -gt [Math]::Abs($A[$piv, $c])) { $piv = $r } }
-        if ([Math]::Abs($A[$piv, $c]) -lt 1e-9) { return $null }   # a column never varies: can't be estimated
+        for ($r = $c + 1; $r -lt $k; $r++) { if ([Math]::Abs(($A[$r, $c])) -gt [Math]::Abs(($A[$piv, $c]))) { $piv = $r } }
+        if ([Math]::Abs(($A[$piv, $c])) -lt 1e-9) { return $null }   # a column never varies: can't be estimated
         if ($piv -ne $c) { for ($j = 0; $j -lt 2 * $k; $j++) { $tmp = $A[$c, $j]; $A[$c, $j] = $A[$piv, $j]; $A[$piv, $j] = $tmp } }
         $d = $A[$c, $c]
         for ($j = 0; $j -lt 2 * $k; $j++) { $A[$c, $j] /= $d }
@@ -137,7 +137,7 @@ function Get-OLS($X, [double[]]$y) {
     $df = $n - $k
     $s2 = if ($df -gt 0) { $rss / $df } else { [double]::NaN }
     $se = New-Object double[] $k
-    for ($i = 0; $i -lt $k; $i++) { $se[$i] = [Math]::Sqrt([Math]::Max(0.0, $s2 * $A[$i, ($k + $i)])) }
+    for ($i = 0; $i -lt $k; $i++) { $se[$i] = [Math]::Sqrt([Math]::Max(0.0, $s2 * ($A[$i, ($k + $i)]))) }
     return [pscustomobject]@{ Beta = $beta; SE = $se; DF = $df }
 }
 
