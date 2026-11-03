@@ -1664,6 +1664,33 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### FIX_WAR_PREP: a civ preparing a war builds its army like a civ at war (War + Economy) (Nov 3, about 1:45pm ET)
+- **Why no units came** (bully pair 0714EFCB, and SiegeArmy's 21-turn wait at 16/86): an attack's build requests are
+  served in `CvCity.cpp` ("Building unit for active operation from City root function"). At peace:
+  - only the muster city builds for it;
+  - the unit is appended after the city's current queue (front of the queue only at war), and it's skipped if it takes
+    7+ turns;
+  - a city that already has any unit queued skips the request.
+
+  So a warmonger preparing a war gets about one unit, late, from one city.
+- **Hypothesis:** while a civ has a land city attack still recruiting against a major (it's preparing a war), its
+  cities serve that attack's requests as they would at war:
+  - at the front of the queue;
+  - from any of its cities within 5 turns' walk of the muster point, not just the muster city;
+  - with the 7-turn limit raised to 10;
+  - siege units (`UNITAI_CITY_BOMBARD`) first for the open slots.
+
+  With SiegeArmy on, the waiting attack then fills up and marches with enough damage instead of being cancelled.
+- **Measure:** bully pairs (the aggressor with the flag + SiegeArmy + ArmyHandoff, against itself without them).
+  - Mechanism: units joining the waiting operation ("Added ... to slot") and turns waited.
+  - Outcome: cities captured and turns to the first capture.
+  - Guard: the aggressor's strength share mustn't drop.
+- **δ:** at least 1 capture per 3 bully pairs (today 0), with strength share no worse.
+- **Owner:** the code is city production (`CvCity` order choice, `CvUnitProductionAI`), so Economy's side. War defines
+  what the army needs: which operation, which slots, siege first. Proposal: War writes it as one flag in the
+  operation-slot path only, if Economy and the lead agree. Otherwise Economy codes it from this spec.
+- **Status:** hypothesis, waiting for the lead and Economy.
+
 ### War: the first bully siege pair, 0714EFCB (aggressor Songhai) (Nov 3, about 1pm ET)
 
 **With the flags, Songhai's attack waited and never marched, and Songhai never declared war.**
@@ -1683,7 +1710,7 @@ in them. Most likely Songhai stayed at peace until T117 and never switched to wa
 replay was at war from T86. That's an inference: the logs don't count units built per civ.
 
 **What it means.**
-- **SiegeBar makes the bar unreachable for an early, weak aggressor,** and SiegeArmy's wait doesn't grow the army
+- **SiegeBar makes the bar unreachable for an early, weak aggressor** (dropped, the user's decision), and SiegeArmy's wait doesn't grow the army
   (16 a turn for 21 turns). Waiting just cancels the war. Don't keep SiegeBar.
 - **SiegeArmy only helps if the wait actually brings units.** Either the waiting army gets real production (siege
   units first), or the wait must be much shorter. As coded, it's a "don't attack" switch for weak civs.
