@@ -215,6 +215,12 @@ foreach ($g in ($rows | Group-Object GameId)) {
         # the same without military: with almost no city changing hands, an army is mostly upkeep, and a civ that
         # builds few units shows its lead here
         NewEconomy = 100.0 * (@(for ($i = 0; $i -lt $StrengthMetrics.Count; $i++) { if ($StrengthMetrics[$i] -ne 'Military') { $shares[$i] } }) | Measure-Object -Average).Average
+        # the same with research spent (summed cost of known techs) in place of the tech count, from builds that log it
+        NewResearch = if ($civs[0].PSObject.Properties.Name -contains "ResearchSpent") {
+            $allR = ($civs | ForEach-Object { [double]$_.ResearchSpent } | Measure-Object -Sum).Sum
+            $rShare = if ($allR -le 0) { 0.5 } else { ($new | ForEach-Object { [double]$_.ResearchSpent } | Measure-Object -Sum).Sum / $allR }
+            100.0 * (@(for ($i = 0; $i -lt $StrengthMetrics.Count; $i++) { if ($StrengthMetrics[$i] -eq 'Techs') { $rShare } else { $shares[$i] } }) | Measure-Object -Average).Average
+        } else { $null }
         Civs      = $civs
         # paired games: the second game of a pair has the first one's GameId plus F
         BaseId    = ($g.Name -replace 'F$', '')
@@ -449,6 +455,8 @@ if ($games.Count -ge 2) {
     Write-Output ("Strength share {0:N1}% +/- {1:N1} (standard error); chance the new group is really no stronger than cp: {2:P0}" -f $mean, $se, $pOne)
 }
 Write-Output ("Strength share without military (techs, population, land, cities): {0:N1}%" -f ($games | Measure-Object NewEconomy -Average).Average)
+$withR = @($games | Where-Object { $null -ne $_.NewResearch })
+if ($withR.Count) { Write-Output ("Strength share with research spent in place of the tech count ({0} games): {1:N1}%" -f $withR.Count, ($withR | Measure-Object NewResearch -Average).Average) }
 $newScoreAhead = @($games | Where-Object { $_.NewScore -gt $_.CpScore }).Count
 $cpScoreAhead = @($games | Where-Object { $_.NewScore -lt $_.CpScore }).Count
 Write-Output ("Games ahead on score: new {0}, cp {1}" -f $newScoreAhead, $cpScoreAhead)
