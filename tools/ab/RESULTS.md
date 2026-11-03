@@ -1164,6 +1164,11 @@ civs never do, so the average effect is small but the tail is large (Germany: 1 
 at T100 (no-worse, δ = 2), plus `City2Turn`-`City4Turn` and the number of civs with ≤ 2 cities at T100
 (mechanism). Test: screening (all three), then no-worse SPRTs. They're bug fixes, kept unless they hurt.
 
+Build: DLL commit `a0d8fcb` (on `ai/economy` rebased onto `9fadf3d`), patch 0011. Files: `CvAIOperation.cpp` (A in
+`CvAIOperationCivilian::Init`, C in `CvAIOperationCivilianFoundCity::VerifyOrAdjustTarget`), `CvPlayer.cpp` (B in
+`GetBestSettlePlot`). Status: coded, not built. `SettlerPathCheck` logs "no path to better site (x:y), keeping (x:y)"
+when it keeps the old target.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
