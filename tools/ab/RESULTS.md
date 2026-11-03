@@ -1387,6 +1387,16 @@ upgrade flavour loop, and the deliberate "peek and return" sentry moves.
 - **Reading it:** paired regression, 8 civs × 20 pairs = 160 differences for 28 flags. Each flag is on for half the
   civs, so its effect is estimated from about 80 civ-pairs. Expect only large effects (about ±1 point per civ) to
   stand out. Screening only ranks: the top flags get single-flag paired SPRTs.
+- **Diplomacy's reading notes (2026-11-03):**
+  - `EasyTarget` changes how often civs start wars, so it is the flag most likely to move strength either way. Read
+    `WarsDeclared` beside it; if it hurts, check whether its civs started more wars or were targeted more.
+  - `DealReputation` acts only after a civ breaks a payment deal by declaring war, which is rare between AIs:
+    expect it to look neutral here. Its real test is exploit check 1, run twice.
+  - `DealExploits` makes AI-to-AI demands pay off less often. Watch `Deals` and `WarsDeclared`: a refused demand can
+    lead to a war.
+  - Bully test, later: the four coalition flags and `CityStateBugs` all on together first, to see whether anything
+    moves the aggressor's city share at all, then one at a time. Only once War's flags produce captures; until then
+    the coalition has nothing to react to.
 
 ### Screening run 1: plan (lead, 2026-11-02; replaced by run 2)
 
