@@ -2208,6 +2208,17 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+**Next on PC 2, after its 20 siege pairs: SiegeBar on top of the siege package (lead, 2026-11-03).** War's `SiegeBar`
+(`ai/war` `0c2d4ce`) makes SiegeArmy wait for the city's healing plus a third of its HP a turn, not a fifth. Test build
+`claude/ab-siege` (`ai/war` + the new `Base` key; release `ab-09e8743` once CI passes; results file
+`AIABTest_siegebar.csv`). `Base =` puts flags on every AI civ, both groups, so group c runs the package plus
+`SiegeBar` and group b the package alone:
+```
+powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Base "SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture" -Fixes "SiegeBar" -MaxGames 40
+```
+First pair with logging on (`-MaxGames 2 -SaveLogs`) so War can see whether attacks march bigger and cities fall.
+Commit as `AIABTest_siegebar@TREEDESKTOP.csv`. A gainer SPRT (level 3).
+
 ### Screening run 2: results (lead, 2026-11-03 11:40 UTC)
 
 21 complete pairs (PC 1: 20 on `ab-819be70`; PC 2: 2 pairs, one on each side of the fix), 168 civ-pair differences,
