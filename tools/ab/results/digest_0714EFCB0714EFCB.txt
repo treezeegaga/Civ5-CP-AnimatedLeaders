@@ -1,0 +1,55 @@
+﻿Game 0714EFCB0714EFCB (AIABTest_bullysiege.csv), last logged turn 150
+b    Siam         tall      cities 4
+  builds to T80 (capital Sukhothai; other cities named): T0 Scout* | T4 Monument* | T10 Shrine* | T16 Warrior* | T21 Settler* | T31 Worker* | T33 Monument* (Si Satchanalai) | T34 Stonehenge | T34 Library* (Si Satchanalai) | T45 Library* | T51 Worker* | T52 Work Boat | T53 Worker* | T54 Work Boat | T55 Work Boat | T57 Work Boat | T60 Settler (Si Satchanalai) | T63 Worker | T67 Settler (Si Satchanalai) | T68 Work Boat | T69 Settler (Si Satchanalai) | T73 Lighthouse | T74 Work Boat (Si Satchanalai) | T79 Work Boat (Muang Saluang) | T80 Work Boat (Muang Saluang) | T80 Spearman
+  settlers ordered T: 21,60,67,69,84,96,147   found-city ops started T: 31,74,88,99,144   cities founded T: 33,79,92,150
+  ops aborted: T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget
+  IDLE SETTLER turns: 3 (first T61)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T21 settler (book) in Sukhothai | T31 op started | T33 FOUNDED | T60 settler (AI) in Si Satchanalai | T67 settler (AI) in Si Satchanalai | T69 settler (AI) in Si Satchanalai | T74 op started | T79 FOUNDED
+  saving gold for a settler: 52 turns (T6-T80)
+b    Songhai      tall      cities 6
+  builds to T80 (capital Gao; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Worker* | T32 Settler* | T43 Stonehenge | T45 Library* | T47 Monument* (Tombouctu) | T48 Library* (Tombouctu) | T52 Worker* | T57 Granary | T58 Granary (Jenne) | T61 Spearman | T64 Water Mill | T67 Archer | T69 Scout | T70 Scout | T71 Water Mill (Tombouctu) | T71 Spearman | T73 Hanging Gardens | T76 Settler (Jenne) | T78 Settler (Jenne) | T80 Settler (Jenne)
+  settlers ordered T: 32,76,78,80,82,84,91,97,101,117   found-city ops started T: 43,55,91,99,104,130,148   cities founded T: 47,58,97,108,108
+  ops aborted: T140 NoTarget
+  IDLE SETTLER turns: 5 (first T54)
+  military ops ended (whole game): Success 3, NoTarget 3, HalfStrength 2, WarStateChange 1, LostPath 1, DiploOpinionChange 1
+  settler timeline to T80: T32 settler (book) in Gao | T43 op started | T47 FOUNDED | T54 BOUGHT in Gao. Cost: 370 | T55 op started | T58 FOUNDED | T76 settler (AI) in Jenne | T78 settler (AI) in Jenne | T80 settler (AI) in Jenne
+  saving gold for a settler: 60 turns (T6-T77)
+c    Byzantium    tall      cities 3
+  builds to T80 (capital Constantinople; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T16 Warrior* | T22 Settler* | T32 Worker* | T35 Monument* (Adrianople) | T36 Great Library | T36 Library* (Adrianople) | T46 Library* | T53 Work Boat | T57 Work Boat | T59 Settler | T65 Granary | T69 Writers' Guild | T72 Work Boat (Adrianople) | T75 Monument (Nicaea) | T76 Shrine (Nicaea) | T76 Archer | T79 Work Boat (Adrianople) | T80 Spearman
+  settlers ordered T: 22,59,89   found-city ops started T: 32,65   cities founded T: 35,75
+  ops aborted: T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  IDLE SETTLER turns: 2 (first T59)
+  military ops ended (whole game): Success 5, NoUnits 2, NoTarget 1
+  settler timeline to T80: T22 settler (book) in Constantinople | T32 op started | T35 FOUNDED | T59 settler (AI) in Constantinople | T65 op started | T75 FOUNDED
+  saving gold for a settler: 54 turns (T6-T80)
+c    Ethiopia     tall      cities 6
+  builds to T80 (capital Addis Ababa; other cities named): T0 Scout* | T4 Stele* | T11 Shrine* | T17 Warrior* | T24 Worker* | T34 Settler* | T48 Granary | T50 Work Boat (Harar) | T51 Work Boat (Harar) | T56 Work Boat | T61 Work Boat (Harar) | T61 Work Boat | T62 Work Boat (Harar) | T62 Worker | T62 Work Boat | T63 Work Boat (Harar) | T63 Work Boat | T64 Stele (Adwa) | T64 Work Boat (Harar) | T64 Work Boat | T65 Worker (Adwa) | T65 Work Boat (Harar) | T65 Work Boat | T69 Warrior | T73 Worker
+  settlers ordered T: 34,104,125,134   found-city ops started T: 48,57,85,114,129,135   cities founded T: 50,64,89,130,147
+  IDLE SETTLER turns: 4 (first T56)
+  settler timeline to T80: T34 settler (book) in Addis Ababa | T48 op started | T50 FOUNDED | T56 BOUGHT in Addis Ababa. Cost: 370 | T57 op started | T64 FOUNDED
+  saving gold for a settler: 53 turns (T11-T80)
+c    Greece       wide      cities 4
+  builds to T80 (capital Athens; other cities named): T0 Scout* | T4 Warrior* | T9 Worker* | T17 Settler* | T27 Shrine* | T29 Monument* | T32 Great Library | T32 Monument* (Sparta) | T41 Granary (Sparta) | T46 Granary | T51 Monument* (Corinth) | T52 Archer (Sparta) | T52 Archer | T57 Writers' Guild | T60 Worker (Sparta) | T64 Market (Corinth) | T67 Worker | T72 Market (Sparta) | T75 Companion Cavalry | T80 Settler
+  settlers ordered T: 17,80,133,135   found-city ops started T: 27,44,86   cities founded T: 32,51,92
+  ops aborted: T38 NoTarget, T39 NoTarget, T40 NoTarget, T41 NoTarget, T42 NoTarget, T43 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget
+  IDLE SETTLER turns: 3 (first T80)
+  military ops ended (whole game): NoTarget 2, WarStateChange 1, Success 1
+  settler timeline to T80: T17 settler (book) in Athens | T27 op started | T32 FOUNDED | T38 op ended: NoTarget | T39 op ended: NoTarget | T40 op ended: NoTarget | T41 op ended: NoTarget | T42 op ended: NoTarget | T43 op ended: NoTarget | T44 op started | T51 FOUNDED | T80 settler (AI) in Athens
+  saving gold for a settler: 23 turns (T11-T79)
+c    Poland       tall      cities 6
+  builds to T80 (capital Warsaw; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Settler* | T38 Worker* | T42 Monument* (Krakow) | T43 Stonehenge | T43 Library* (Krakow) | T45 Settler* | T46 Worker* | T51 Library* | T59 Work Boat | T60 Shrine (Lodz) | T64 Spearman | T65 Settler (Krakow) | T67 Settler (Krakow) | T71 Granary (Lodz) | T71 Settler (Krakow) | T71 Warrior | T74 Warrior | T78 Scout | T80 Scout
+  settlers ordered T: 24,45,65,67,71,91,111,119   found-city ops started T: 38,52,86,97,116   cities founded T: 42,60,89,99,122
+  ops aborted: T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  IDLE SETTLER turns: 6 (first T45)
+  military ops ended (whole game): Success 1
+  settler timeline to T80: T24 settler (book) in Warsaw | T38 op started | T42 FOUNDED | T45 settler (book) in Warsaw | T51 BOUGHT in Warsaw. Cost: 370 | T52 op started | T60 FOUNDED | T65 settler (AI) in Krakow | T67 settler (AI) in Krakow | T71 settler (AI) in Krakow
+  saving gold for a settler: 61 turns (T6-T80)
+c    Rome         tall      cities 5
+  builds to T80 (capital Rome; other cities named): T1 Scout* | T4 Monument* | T8 Warrior* | T13 Shrine* | T17 Settler* | T27 Worker* | T31 Monument* (Antium) | T32 Stonehenge | T34 Library* (Antium) | T46 Settler* | T51 Library* | T53 Shrine (Antium) | T58 Settler | T59 Granary | T60 Granary (Antium) | T65 Worker | T67 Spearman | T69 Temple (Antium) | T71 Temple | T78 Spearman | T79 Warrior (Antium)
+  settlers ordered T: 17,46,58,85,95,106   found-city ops started T: 27,80,90,100,142   cities founded T: 31,88,93,105,151
+  ops aborted: T59 NoTarget, T60 NoTarget, T61 NoTarget, T62 NoTarget, T63 NoTarget, T64 NoTarget, T65 NoTarget, T66 NoTarget, T67 NoTarget, T68 NoTarget, T69 NoTarget, T70 NoTarget, T71 NoTarget, T72 NoTarget, T73 NoTarget, T74 NoTarget, T75 NoTarget, T76 NoTarget, T77 NoTarget, T78 NoTarget, T79 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget
+  IDLE SETTLER turns: 5 (first T46)
+  military ops ended (whole game): NoUnits 16, NoTarget 3, Success 1
+  settler timeline to T80: T17 settler (book) in Rome | T27 op started | T31 FOUNDED | T46 settler (book) in Rome | T58 settler (AI) in Rome | T59 op ended: NoTarget | T60 op ended: NoTarget | T61 op ended: NoTarget | T62 op ended: NoTarget | T63 op ended: NoTarget | T64 op ended: NoTarget | T65 op ended: NoTarget | T66 op ended: NoTarget | T67 op ended: NoTarget | T68 op ended: NoTarget | T69 op ended: NoTarget | T70 op ended: NoTarget | T71 op ended: NoTarget | T72 op ended: NoTarget | T73 op ended: NoTarget | T74 op ended: NoTarget | T75 op ended: NoTarget | T76 op ended: NoTarget | T77 op ended: NoTarget | T78 op ended: NoTarget | T79 op ended: NoTarget | T80 op started
+  saving gold for a settler: 41 turns (T11-T59)
