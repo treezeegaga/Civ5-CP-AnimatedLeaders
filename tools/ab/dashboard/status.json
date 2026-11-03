@@ -4,77 +4,42 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "The King smoke-test pair checked out (setup, replay and every new column). Next on PC 1: the King baseline. A second PC runner is being set up for screening run 2.",
+   "detail": "No-flag pairs replay identically, so the long baseline is cancelled. PC 1 is playing War's 3 logged games, then half of screening run 2 (30 flags, build ab-2d949f8). PC 2 is being set up for the other half.",
    "state": "running"
-  },
-  {
-   "section": "queue",
-   "order": 1,
-   "name": "Smoke-test pair",
-   "detail": "Passed: King, Pangaea, the second game replays the first with groups swapped, every new column written.",
-   "state": "passed"
-  },
-  {
-   "section": "queue",
-   "order": 2,
-   "name": "Baseline: logged pair",
-   "detail": "1 pair, every civ on B, AI logs on, for Economy.",
-   "state": "next"
-  },
-  {
-   "section": "queue",
-   "order": 3,
-   "name": "War's 3 logged games",
-   "detail": "Wars with the c7c bundle on, logs for War.",
-   "state": "waiting"
-  },
-  {
-   "section": "queue",
-   "order": 4,
-   "name": "Baseline: 19 more pairs",
-   "detail": "Every civ on B: measures how much a game swings, for the stopping tests.",
-   "state": "waiting"
-  },
-  {
-   "section": "queue",
-   "order": 5,
-   "name": "Screening run 2",
-   "detail": "20 pairs ranking 28 flags at once (build ab-b756936), on the second PC once it's set up.",
-   "state": "waiting"
   },
   {
    "section": "session",
    "order": 1,
    "name": "PC runner",
-   "detail": "Smoke-test pair passed; the baseline's logged pair is next.",
+   "detail": "Logged baseline pair done (identical games); War's 3 logged games running since 01:27.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Its five flags compiled (run 78); waiting for logged war games.",
+   "detail": "Five flags compiled; waiting for its 3 logged war games.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 3,
    "name": "Economy",
-   "detail": "Wrote its expansion-pace reading procedure and a logging patch (0009); waiting for King logs.",
-   "state": "waiting"
+   "detail": "Read the first King logs: capitals build wonders before book settlers. Two new flags (0010) in screening run 2; now on a settler path bug.",
+   "state": "running"
   },
   {
    "section": "session",
    "order": 4,
    "name": "Diplomacy",
-   "detail": "Coalition, sanction and deal flags (10) written; waiting for builds.",
+   "detail": "All flags compiled in screening build 2; its own build re-running after a CI timeout fix.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 5,
    "name": "Lead",
-   "detail": "Integration branch moved to fdad60d; Economy's branch building; Diplomacy's next.",
+   "detail": "Screening build 2 rebuilt with Economy's flags; CI checkout timeout fixed.",
    "state": "running"
   },
   {
@@ -130,8 +95,50 @@
    "section": "session",
    "order": 6,
    "name": "PC runner 2",
-   "detail": "Being set up on the second PC (Steam offline, copy Community Patch, calibrate), then screening run 2.",
+   "detail": "Being set up: second Steam account, files from \\\\TREEDESKTOP\\civrunner, calibration. Then 10 pairs of screening run 2.",
    "state": "next"
+  },
+  {
+   "section": "queue",
+   "order": 1,
+   "name": "Smoke-test pair",
+   "detail": "Passed: King, Pangaea, the second game replays the first with groups swapped.",
+   "state": "passed"
+  },
+  {
+   "section": "queue",
+   "order": 2,
+   "name": "Baseline logged pair",
+   "detail": "Done: with no flags, the two games are identical (50% exactly). The 19 more baseline pairs are cancelled.",
+   "state": "passed"
+  },
+  {
+   "section": "queue",
+   "order": 3,
+   "name": "War's 3 logged games",
+   "detail": "Wars with the c7c bundle, logs for War.",
+   "state": "running"
+  },
+  {
+   "section": "queue",
+   "order": 4,
+   "name": "Screening run 2 (PC 1 half)",
+   "detail": "10 pairs ranking 30 flags at once, build ab-2d949f8.",
+   "state": "next"
+  },
+  {
+   "section": "queue",
+   "order": 5,
+   "name": "Screening run 2 (PC 2 half)",
+   "detail": "The other 10 pairs, once PC 2 is set up.",
+   "state": "waiting"
+  },
+  {
+   "section": "queue",
+   "order": 6,
+   "name": "Single-flag tests",
+   "detail": "The top-ranked flags from screening, one at a time.",
+   "state": "waiting"
   }
  ]
 }

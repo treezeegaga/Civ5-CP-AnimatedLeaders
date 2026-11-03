@@ -595,28 +595,6 @@
       "current": false
     },
     {
-      "build": "c7c_roles",
-      "gameId": "02A37B0302A37B03",
-      "pair": "02A37B0302A37B03",
-      "flipped": false,
-      "turn": 150,
-      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs WidePlans+BoxedIn+BoxedInWar+TimingAttack+SiegeTechs+SiegeBook+DeclareTiming+GrowthTech+AqueductValue+GreedyBook+GreedyTarget+CanWin+ClosedBorders; screened none",
-      "share": 46.178,
-      "shareNoMilitary": 46.27,
-      "current": true
-    },
-    {
-      "build": "c7c_roles",
-      "gameId": "02A37B0302A37B03F",
-      "pair": "02A37B0302A37B03",
-      "flipped": true,
-      "turn": 150,
-      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs WidePlans+BoxedIn+BoxedInWar+TimingAttack+SiegeTechs+SiegeBook+DeclareTiming+GrowthTech+AqueductValue+GreedyBook+GreedyTarget+CanWin+ClosedBorders; screened none",
-      "share": 42.836,
-      "shareNoMilitary": 45.348,
-      "current": true
-    },
-    {
       "build": "c7c",
       "gameId": "0222211E0222211E",
       "pair": "0222211E0222211E",
@@ -725,6 +703,50 @@
       "share": 46.361,
       "shareNoMilitary": 46.077,
       "current": false
+    },
+    {
+      "build": "c7c_roles",
+      "gameId": "02A37B0302A37B03",
+      "pair": "02A37B0302A37B03",
+      "flipped": false,
+      "turn": 150,
+      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs WidePlans+BoxedIn+BoxedInWar+TimingAttack+SiegeTechs+SiegeBook+DeclareTiming+GrowthTech+AqueductValue+GreedyBook+GreedyTarget+CanWin+ClosedBorders; screened none",
+      "share": 46.178,
+      "shareNoMilitary": 46.27,
+      "current": true
+    },
+    {
+      "build": "c7c_roles",
+      "gameId": "02A37B0302A37B03F",
+      "pair": "02A37B0302A37B03",
+      "flipped": true,
+      "turn": 150,
+      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs WidePlans+BoxedIn+BoxedInWar+TimingAttack+SiegeTechs+SiegeBook+DeclareTiming+GrowthTech+AqueductValue+GreedyBook+GreedyTarget+CanWin+ClosedBorders; screened none",
+      "share": 42.836,
+      "shareNoMilitary": 45.348,
+      "current": true
+    },
+    {
+      "build": "c7c_roles",
+      "gameId": "02C5BBF902C5BBF9",
+      "pair": "02C5BBF902C5BBF9",
+      "flipped": false,
+      "turn": 150,
+      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs none; screened none",
+      "share": 48.984,
+      "shareNoMilitary": 48.829,
+      "current": true
+    },
+    {
+      "build": "c7c_roles",
+      "gameId": "02C5BBF902C5BBF9F",
+      "pair": "02C5BBF902C5BBF9",
+      "flipped": true,
+      "turn": 150,
+      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs none; screened none",
+      "share": 51.016,
+      "shareNoMilitary": 51.171,
+      "current": true
     }
   ]
 }
