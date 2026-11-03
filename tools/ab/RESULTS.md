@@ -1647,6 +1647,52 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
   building, with turn and city (e.g. `held: one at a time 4 (3 to a building: T19 Monument, ...), growth due 2,
   size 1 1`).
 
+## Instructions for PC runner 2 (the second PC, from 2026-11-03)
+
+The second PC plays **screening run 2** while the first PC plays the King baseline: different builds and different
+results files, so the two never mix. Its log is its own (`machines\<COMPUTERNAME>.json`, below), so pushes from
+the two PCs don't touch the same files. Always `git pull --rebase` before pushing.
+
+**One-time setup** (the user does steps 1–2; the runner does the rest):
+1. **Steam:** one Steam account can run a game on only one PC at a time. Either log PC 2's Steam in once with
+   "remember me" and then switch it to **Offline Mode** (Steam menu, Go Offline) before every run, or use a
+   second account that owns Civ V with Gods & Kings and Brave New World. Civ V with both expansions installed,
+   started once so `My Games\Sid Meier's Civilization 5` exists.
+2. **Copy from the first PC** (USB stick or a network share), so both PCs build exactly the same pack:
+   - `My Games\Sid Meier's Civilization 5\MODS\(1) Community Patch\` (the whole folder), to the same place;
+   - the repo's `CPModpack\data\` folder (the Community Patch database snapshot and the baseline text
+     database; git ignores it), into the clone on PC 2.
+3. Clone `treezeegaga/Civ5-CP-AnimatedLeaders`, branch `claude/sleepy-hopper-x77moh`, with push access (sign in to
+   GitHub in Git Credential Manager on the first push).
+4. **Windowed Civ:** in `My Games\...\GraphicsSettingsDX9.ini`, `FullScreen = 0`. On a 3840x2160 screen at 150%
+   scaling (the first PC's), `WindowResX = 1914`, `WindowResY = 2034`; on another screen, the largest window that
+   fits, and calibrate (step 6). In `config.ini`: `LoggingEnabled = 0`. Set the setup screens once: Pangaea,
+   Standard, Quick, King, 8 civs on separate teams (the screening build also forces King itself).
+5. **The machine file** `tools\ab\machines\<COMPUTERNAME>.json` (`$env:COMPUTERNAME`), committed:
+   `{"Log": "Run-Games-<COMPUTERNAME>.log"}`, plus step 6's values on a different screen. With it, the saved
+   screens go to `machines\<COMPUTERNAME>.screens.json`.
+6. **Calibrate.** Install the build (next list, step 1), start Civ by hand and, on each screen, dot-source
+   `tools\ab\CivScreens.ps1` and save it: `Save-CivScreen menu`, `single`, `setup`, `advanced`, and
+   `Save-CivBeginButton` on "Begin Your Journey". On the same 4K screen at 150% that's all. On another screen, first
+   measure from screenshots, in physical pixels, and put in the machine file:
+   - `Positions`: `Continue`, `SinglePlayer`, `SetUpGame`, `AdvancedSetup`, `QuickCombat`, `QuickMovement`,
+     `StartGame`, `BeginJourney`, `Neutral` (an empty band at the top of Civ's window), each `[x, y]`, where Civ
+     first opens its window;
+   - `CivArea` `{X, Y, W, H}` (Civ's window below the title bar), `MenuPanel` and `BeginButton` `[x1, y1, x2, y2]`
+     (the main menu's button panel; the "Begin Your Journey" button's text).
+   Check with `Get-CivScreen` that each screen comes back with its own name at a distance under 2.5.
+7. One game to check: `Run-Games.ps1 -Fixes none -MaxGames 2 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"` (the first pair of the run below).
+   Its log should show "replay matches the first game" and no "WRONG SETUP".
+
+**Then screening run 2**, as in "After the baseline: screening run 2" below, but on PC 2 and starting now:
+1. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-b756936 -NoLaunch -NoUpdate`
+   (the title must name `b756936`).
+2. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"`
+3. Every 5 pairs or so: copy `AIABTest_screen2.csv` to `tools\ab\results\`, commit it with your log,
+   `git pull --rebase`, push.
+
+The first PC then skips screening run 2 and goes on with its own queue below.
+
 ## Instructions for the PC runner
 
 **Pinned build (lead, 2026-11-03 00:20 UTC):** the smoke-test pair and the whole King baseline run on

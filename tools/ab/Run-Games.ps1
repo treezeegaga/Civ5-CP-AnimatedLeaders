@@ -95,6 +95,16 @@ $P = @{
     Neutral       = @(1920, 300)    # black band at the top of the window, nothing to click there
 }
 
+# Another PC (lead, 2026-11-03): tools\ab\machines\<COMPUTERNAME>.json can override the click positions above
+# ("Positions": {"Continue": [x, y], ...}, physical pixels) and the log file ("Log": "Run-Games-pc2.log"), and holds
+# the screen areas CivScreens.ps1 reads. Without the file, everything is as on the first PC.
+$MachineFile = Join-Path $PSScriptRoot "machines\$env:COMPUTERNAME.json"
+if (Test-Path $MachineFile) {
+    $Machine = Get-Content $MachineFile -Raw | ConvertFrom-Json
+    if ($Machine.Positions) { foreach ($pp in $Machine.Positions.PSObject.Properties) { $P[$pp.Name] = @([int]$pp.Value[0], [int]$pp.Value[1]) } }
+    if ($Machine.Log -and -not $PSBoundParameters.ContainsKey('Log')) { $Log = Join-Path $PSScriptRoot $Machine.Log }
+}
+
 $SettingsFile = Join-Path $MyGames "AIABTest.ini"
 $ReplayFile = Join-Path $MyGames "AIABTest_lastgame.ini"
 

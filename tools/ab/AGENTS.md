@@ -682,6 +682,17 @@ branch, and the lead applies them to `ai/<topic>` (see the check-in).
 > the screenshot the runner saves. Never play multiplayer with the test pack installed:
 > `Run-ABTest.ps1 -Restore` first.
 
+### PC runner 2 (local session on the second Windows PC)
+
+> You're PC runner 2 for the Civ V AI optimization project, running on the second Windows PC with
+> Civ V. In this repo (`treezeegaga/Civ5-CP-AnimatedLeaders`, branch `claude/sleepy-hopper-x77moh`),
+> read `tools/ab/AGENTS.md`, `tools/ab/README.md` and "Instructions for PC runner 2" in
+> `tools/ab/RESULTS.md`. Do the one-time setup there (ask the user for the Steam and copy steps), then
+> play the runs it names with `tools\ab\Run-Games.ps1`. Commit your results CSV and your own log
+> (named in your machine file), `git pull --rebase` before every push, and never touch the first PC's
+> files (`Run-Games.log`, its results files). Report stalls with the screenshot the runner saves. Never
+> play multiplayer with the test pack installed: `Run-ABTest.ps1 -Restore` first.
+
 ## Open questions
 
 1. Does difficulty change AI logic beyond handicap bonuses? **Answered (lead job 7, RESULTS.md):
