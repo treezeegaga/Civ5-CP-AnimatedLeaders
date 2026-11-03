@@ -218,6 +218,11 @@ and goals, diplomacy changes how decisions are computed from them.
    computer, so every computer in a multiplayer game computes the same thing (otherwise the game
    desyncs).
 8. **Read `RESULTS.md` at the start of every session** and append to it before ending.
+9. **Scripts run in Windows PowerShell 5.1**, the only PowerShell on the PC. PowerShell 7 (`pwsh`) parses
+   things 5.1 doesn't: no `??`, `?:`, `&&`/`||` or `ForEach-Object -Parallel`, and a 2-D index inside a method
+   call needs parentheses (`[Math]::Abs(($A[$r, $c]))`, not `[Math]::Abs($A[$r, $c])`; the comma reads as an
+   argument separator, which stopped `Run-ABTest.ps1` on 2026-11-03). Check a changed script with
+   `[System.Management.Automation.Language.Parser]::ParseFile` under `powershell.exe`, or ask the PC runner.
 
 ## Testing
 

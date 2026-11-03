@@ -11,7 +11,7 @@ from `Summarize-ABTest.ps1 -MyGames tools\ab\results -Scoreboard`, which prints 
 | A: CP | | 50% (reference) | not measured | not measured | not measured | not measured | not measured | not measured |
 | B: batch 2p (`24cc575`) | Prince, even rules, random maps, single games | 52.4% ± 0.7 against CP (5) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c4 (`ea22df3`), best C so far | same | 51.6% ± 1.1 against B (6) | not measured | not measured | not measured | not measured | not measured | not measured |
-| c7c (`2e9fad1`), newest C | same | 50.0% ± 1.4 against B (7) | not measured | not measured | not measured | not measured | not measured | not measured |
+| c7c (`2e9fad1`), newest C | same | 49.4% ± 1.1 against B (10) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c7c_roles (`6b8ebde`): the bundle again, with every measure | King, even rules, Pangaea, Strategic Balance, no ruins, pairs | waiting for games | waiting for the bully test | | | | | |
 
 - **The diplomacy, war and timing columns** only exist from build `c7c_roles` on. Older builds can't
@@ -830,7 +830,7 @@ plain aggressive AI, and the real test is games against the friend.
 
   The deals band gets a second look once the first King games show what CP's AIs do.
 
-### c7c after 7 games (PC runner, games 2–7 merged from `claude/sleepy-hopper-x77moh`)
+### c7c after 10 games (PC runner, games 2–10 merged from `claude/sleepy-hopper-x77moh`)
 
 | Game | c strength | No-military | Score c / b |
 |---|---|---|---|
@@ -841,8 +841,16 @@ plain aggressive AI, and the real test is games against the friend.
 | 5 `0252DABA` | 48.7% | 50.8% | 600 / 596 |
 | 6 `025C2A49` | 48.4% | 51.9% | 557 / 648 |
 | 7 `02657620` | 45.1% | 47.5% | 581 / 615 |
+| 8 `026E87CF` | 45.5% | 47.4% | 552 / 622 |
+| 9 `02775318` | 52.0% | 51.0% | 533 / 614 |
+| 10 `028C4E70` | 46.4% | 46.1% | 542 / 645 |
 
-- **Overall:** 50.0% ± 1.4, 3-4, p 50%; no-military 50.5%. The 52.9% of game 1 was luck, as one game always
+- **After 10 games (lead, 2026-11-03):** 49.4% ± 1.1, 4-6, p 70%; no-military 49.8%; score ahead 4-6. SPRT
+  (δ = 2, unpaired, spread 3.62): gainer LLR **−2.47** (fails at −2.94, so about 2 more games like these end
+  it), no-worse +0.20. c7c is stopped here: the bundle's flags get tested one by one on King with pairs, and
+  the c7c_roles smoke pair plays the same bundle again. Its 4th city comes later than B's (T89 against T81),
+  though more c civs get there (85% against 82%); Economy's settler flags aim at exactly that.
+- **After 7 games:** 50.0% ± 1.4, 3-4, p 50%; no-military 50.5%. The 52.9% of game 1 was luck, as one game always
   can be. SPRT (δ = 2, unpaired): gainer LLR −1.00, no-worse +0.74, both still running. The spread is 3.75
   points per game, so a decision needs about 19–30 games.
 - **Reading:** the c7c bundle isn't better than B. Its ideas are now separate flags (lead job 1), and the
@@ -1513,6 +1521,12 @@ exist by T150 on Quick.
 
 ## Instructions for the PC runner
 
+**Pinned build (lead, 2026-11-03 00:20 UTC):** the smoke-test pair and the whole King baseline run on
+**`ab-6b8ebde`** (build `c7c_roles`, results in `AIABTest_c7c_roles.csv`), the build the PC runner installed at
+00:09. `ab-c-latest` is about to move to `cca50d8` (64-bit flag masks plus proposal counts, file
+`AIABTest_c7c_proposals.csv`); don't reinstall `ab-c-latest` until the baseline is finished, or its games
+split across two files. Wherever a step below reinstalls the baseline build, use `-Release ab-6b8ebde`.
+
 **The queue, in order** (2026-11-02, updated by the lead at every check-in):
 1. The smoke-test pair (below).
 2. The King baseline's **logged pair** (baseline step 1).
@@ -1614,7 +1628,7 @@ end, and what happens at a siege. These are single games with the c7c bundle on,
    don't commit them: they're for battle tests later.
 4. Commit the CSV, digests and logs, push, and **reinstall the baseline build** before baseline step 2:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-c-latest -NoLaunch -NoUpdate
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-6b8ebde -NoLaunch -NoUpdate
    ```
 
 ### After the baseline: screening run 1 (20 pairs = 40 games, about 7 hours)
