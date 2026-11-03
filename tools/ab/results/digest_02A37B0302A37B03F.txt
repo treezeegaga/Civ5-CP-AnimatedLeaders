@@ -1,0 +1,48 @@
+﻿Game 02A37B0302A37B03F (AIABTest_c7c_roles.csv), last logged turn 150
+b    Assyria      tall      cities 5
+  builds to T80: T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Settler* | T33 Worker* | T38 Monument* | T39 Stonehenge | T39 Royal Library* | T48 Royal Library* | T56 Worker | T61 Work Boat | T65 Water Mill | T68 Archer | T68 Work Boat | T71 Settler | T72 Granary | T77 Scout | T78 Settler
+  settlers ordered T: 24,71,78,90,100,133,134,135,136   found-city ops started T: 33,83,95,106   cities founded T: 38,87,104,121
+  ops aborted: T136 NoTarget
+  IDLE SETTLER turns: 6 (first T71)
+  military ops ended (whole game): Success 1, HalfStrength 1
+  settler timeline to T80: T24 settler (book) in Assur | T33 op started | T38 FOUNDED | T71 settler (AI) in Assur | T78 settler (AI) in Assur
+  saving gold for a settler: 44 turns (T5-T80)
+b    China        tall      cities 6
+  builds to T80: T0 Scout* | T3 Monument* | T7 Warrior* | T12 Shrine* | T17 Worker* | T24 Settler* | T34 Stonehenge | T37 Monument* | T38 Paper Maker* | T47 Settler* | T48 Great Library | T49 Paper Maker* | T55 Work Boat | T59 Granary | T63 Work Boat | T66 Settler | T72 Hanging Gardens | T77 Settler | T78 Monument | T79 Granary | T79 Granary
+  settlers ordered T: 24,47,66,77,101,121,128   found-city ops started T: 34,72,80,81,82,83,84,85,86,87,88,89,113,126   cities founded T: 37,78,93,125,136
+  ops aborted: T80 LostPath, T81 LostPath, T82 LostPath, T83 LostPath, T84 LostPath, T85 LostPath, T86 LostPath, T87 LostPath, T88 LostPath, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  IDLE SETTLER turns: 4 (first T47)
+  military ops ended (whole game): NoUnits 6, Success 3, LostPath 1, HalfStrength 1, DiploOpinionChange 1, NoTarget 1
+  settler timeline to T80: T24 settler (book) in Beijing | T34 op started | T37 FOUNDED | T47 settler (book) in Beijing | T66 settler (AI) in Beijing | T72 op started | T77 settler (AI) in Shanghai | T78 FOUNDED | T79 BOUGHT in Shanghai. Cost: 370 | T80 op ended: LostPath | T80 op started
+  saving gold for a settler: 59 turns (T10-T72)
+b    Morocco      tall      cities 4
+  builds to T80: T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T19 Worker* | T27 Settler* | T37 Stonehenge | T39 Monument* | T40 Library* | T47 Worker* | T48 Settler* | T50 Worker* | T55 Warrior | T58 Work Boat | T59 Scout | T61 Warrior | T63 Monument | T64 Work Boat | T65 Warrior | T67 Lighthouse | T68 Scout | T70 Worker | T76 Spearman | T80 Worker
+  settlers ordered T: 27,48,105,113,119   found-city ops started T: 37,51,109,117,123   cities founded T: 39,63,114,119
+  ops aborted: T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  IDLE SETTLER turns: 5 (first T48)
+  military ops ended (whole game): Success 2, NoTarget 1, TargetAlreadyCaptured 1
+  settler timeline to T80: T27 settler (book) in Marrakech | T37 op started | T39 FOUNDED | T48 settler (book) in Marrakech | T50 BOUGHT in Marrakech. Cost: 370 | T51 op started | T63 FOUNDED
+  saving gold for a settler: 51 turns (T11-T80)
+c    Germany      wide      cities 5
+  builds to T80: T1 Scout* | T4 Warrior* | T8 Worker* | T16 Settler* | T26 Granary | T32 Archer* | T34 Monument* | T35 Archer* | T36 Archer* | T37 Shrine* | T39 Archer* | T41 Catapult* | T45 Granary | T46 Catapult* | T50 Settler* | T55 Spearman* | T56 Catapult* | T56 Spearman* | T58 Work Boat | T59 Spearman* | T60 Monument* | T61 Catapult* | T63 Shrine | T64 Spearman* | T65 Monument* | T67 Temple of Artemis | T69 Worker | T69 Monument | T70 Walls | T73 Terracotta Army | T76 Shrine | T77 Shrine | T77 Scout | T79 Settler
+  settlers ordered T: 16,50,79,94,102   found-city ops started T: 26,55,85,94   cities founded T: 34,60,89,107
+  ops aborted: T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget
+  IDLE SETTLER turns: 4 (first T50)
+  military ops ended (whole game): NoUnits 5, Success 3, WarStateChange 2, NoTarget 2, DiploOpinionChange 2, HalfStrength 1
+  settler timeline to T80: T16 settler (book) in Berlin | T26 op started | T34 FOUNDED | T50 settler (book) in Berlin | T55 op started | T60 FOUNDED | T79 settler (AI) in Hamburg
+  saving gold for a settler: 16 turns (T12-T35)
+c    Indonesia    wide      cities 5
+  builds to T80: T0 Scout* | T4 Warrior* | T10 Settler* | T19 Worker* | T22 Monument* | T25 Shrine* | T30 Monument* | T34 Great Library | T48 Shrine | T49 Worker* | T50 Library* | T55 Worker* | T56 Chariot Archer | T59 Worker* | T64 Scout | T66 Library | T66 Market | T74 Settler
+  settlers ordered T: 10,74,95,108   found-city ops started T: 19,82,83,105,112   cities founded T: 22,88,99,111
+  ops aborted: T120 HalfStrength
+  IDLE SETTLER turns: 3 (first T74)
+  settler timeline to T80: T10 settler (book) in Jakarta | T19 op started | T22 FOUNDED | T74 settler (AI) in Jakarta
+  saving gold for a settler: 27 turns (T5-T80)
+c    Songhai      wide      cities 7
+  builds to T80: T0 Scout* | T4 Warrior* | T8 Settler* | T18 Worker* | T26 Granary | T32 Settler | T39 Water Mill | T46 Shrine | T49 Catapult* | T52 Spearman* | T54 Monument* | T55 Catapult* | T58 Settler* | T59 Spearman* | T59 Settler* | T62 Spearman* | T64 Settler* | T65 Catapult* | T66 Worker | T66 Archer* | T67 Temple of Artemis | T70 Worker | T71 Caravan | T72 Caravan | T73 Settler | T75 Caravan | T77 Water Mill | T77 Settler | T78 Shrine | T79 Swordsman
+  settlers ordered T: 8,32,58,59,64,73,77,81,135   found-city ops started T: 18,19,22,24,26,28,30,32,34,39,65,75,79,84,89   cities founded T: 54,70,78,83,97,105
+  ops aborted: T18 NoTarget, T21 LostPath, T23 LostPath, T25 LostPath, T27 LostPath, T29 LostPath, T31 LostPath, T33 LostPath, T36 LostCivilian, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  IDLE SETTLER turns: 3 (first T58)
+  military ops ended (whole game): Success 2, HalfStrength 1
+  settler timeline to T80: T8 settler (book) in Gao | T18 op started | T18 op ended: NoTarget | T19 op started | T21 op ended: LostPath | T22 op started | T23 op ended: LostPath | T24 op started | T25 op ended: LostPath | T26 op started | T27 op ended: LostPath | T28 op started | T29 op ended: LostPath | T30 op started | T31 op ended: LostPath | T32 settler (AI) in Gao | T32 op started | T33 op ended: LostPath | T34 op started | T36 op ended: LostCivilian | T39 op started | T54 FOUNDED | T58 settler (book) in Gao | T59 settler (book) in Gao | T64 settler (book) in Gao | T65 op started | T70 FOUNDED | T73 settler (AI) in Gao | T75 op started | T77 settler (AI) in Gao | T78 FOUNDED | T79 op started
+  saving gold for a settler: 17 turns (T6-T39)

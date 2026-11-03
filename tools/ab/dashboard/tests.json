@@ -379,6 +379,24 @@
       "expectedResultsWorst": null
     },
     {
+      "test": "c7c_roles | Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs WidePlans+BoxedIn+BoxedInWar+TimingAttack+SiegeTechs+SiegeBook+DeclareTiming+GrowthTech+AqueductValue+GreedyBook+GreedyTarget+CanWin+ClosedBorders; screened none",
+      "build": "c7c_roles",
+      "config": "13 flags: WidePlans, BoxedIn, BoxedInWar, ...",
+      "setup": "King, Pangaea, pairs",
+      "current": true,
+      "kind": "pairs",
+      "results": 1,
+      "share": 44.507,
+      "gain": -5.493,
+      "spread": null,
+      "gainerLLR": null,
+      "gainerState": "needs 2+ results",
+      "noWorseLLR": null,
+      "noWorseState": "needs 2+ results",
+      "expectedResults": null,
+      "expectedResultsWorst": null
+    },
+    {
       "test": "c7c | this file",
       "build": "c7c",
       "config": "this file",

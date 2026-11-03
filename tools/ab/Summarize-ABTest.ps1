@@ -644,7 +644,7 @@ Show-RoleTests
 
 if ($Json) {
     # what the dashboard reads; the same numbers as the report above
-    $r0 = $rows[0]
+    $r0 = if ($games.Count) { $games[0].Civs[0] } else { $rows[0] }   # a counted game's setup, not a stopped one's
     $has = { param($name) $r0.PSObject.Properties.Name -contains $name }
     $out = [ordered]@{
         file = [IO.Path]::GetFileName($Csv)

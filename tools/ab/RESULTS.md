@@ -7,7 +7,7 @@ from `Summarize-ABTest.ps1 -MyGames tools\ab\results -Scoreboard`, which prints 
 
 | Build | Setup | Strength share (games) | Aggressor's share of all cities, end (bully test) | Cities per aggressor war | Coalition: civs at war with it at the end; turns from its first conquest to 2+ | Deals per civ per 10 turns | Banned behaviours per game | Seconds per AI turn |
 |---|---|---|---|---|---|---|---|---|
-| **Goal** (agreed with the players, 2026-11-02) | King, even rules | **≥ 55%** against CP | **≤ 20%** (a fair share with 8 civs is 12.5%) | **≤ 1** | **2+ civs within 20 turns** | **0.5–2** (a lively world without spam; check against the first measurement) | **0** | **≤ 1.25× B's** |
+| **Goal** (agreed with the players, 2026-11-02; strength raised to 60% on 2026-11-03) | King, even rules | **≥ 60%** against CP | **≤ 20%** (a fair share with 8 civs is 12.5%) | **≤ 1** | **2+ civs within 20 turns** | **0.5–2** (a lively world without spam; check against the first measurement) | **0** | **≤ 1.25× B's** |
 | A: CP | | 50% (reference) | not measured | not measured | not measured | not measured | not measured | not measured |
 | B: batch 2p (`24cc575`) | Prince, even rules, random maps, single games | 52.4% ± 0.7 against CP (5) | not measured | not measured | not measured | not measured | not measured | not measured |
 | c4 (`ea22df3`), best C so far | same | 51.6% ± 1.1 against B (6) | not measured | not measured | not measured | not measured | not measured | not measured |
@@ -820,7 +820,7 @@ plain aggressive AI, and the real test is games against the friend.
   no games used that file yet). It's the real seconds per game turn since the last logged row, measured on
   the PC, so it compares builds only on the same PC and setup.
 - **The goal numbers were agreed with the players on 2026-11-02:**
-  - strength ≥ 55% against CP;
+  - strength ≥ 55% against CP (raised to **60%** by the user on 2026-11-03);
   - the aggressor ≤ 20% of all cities at the end;
   - ≤ 1 city per war;
   - 2+ civs at war with it within 20 turns of its first conquest;
@@ -1372,7 +1372,35 @@ upgrade flavour loop, and the deliberate "peek and return" sentry moves.
 - Build: same commit as UpgradeSaveCancel
 - Status: hypothesis; waits for a late-game test
 
-### Screening run 1: plan (lead, 2026-11-02)
+### Screening run 2: plan (lead, 2026-11-03; replaces run 1, which was never played)
+
+- **Build:** `claude/ab-screen2` (`b756936`, release `ab-b756936`): all 39 flags, rebased onto the 64-bit flag
+  table, compiled together by CI run 77. Results in `AIABTest_screen2.csv`.
+- **Screened (28):** the 13 c7c ideas (all but `LongWide` and `GreedyArmyCap`, which failed); Economy's
+  `SettlersFirst`, `SettlerOverlap`, `DiploPolicyValue`, `PolicyPrereqDepth`, `LosingWarBuildings`,
+  `CultureRivalValue`; War's `SiegeStay`, `SiegePosture`, `DeclareAtBorder`, `UpgradeSaveCancel`; Diplomacy's
+  `EasyTarget`, `DiploBugs`, `LuxuryAsk`, `DealExploits`, `DealReputation`.
+- **Left out, and where they're tested instead:**
+  - `AirRebaseHeal`: no aircraft by turn 150.
+  - `IdeologyPick`, `EspionagePolicyValue`: they act after turn 150 (phase 2, longer games).
+  - `GreedyAlarm`: waits for War's captures.
+  - `CityStateBugs`, `CoalitionStrength`, `CoalitionCoop`, `Sanctions`, `CoalitionPact`: they act against a
+    runaway conqueror, so they go to the bully test, where there is one.
+- **Reading it:** paired regression, 8 civs × 20 pairs = 160 differences for 28 flags. Each flag is on for half the
+  civs, so its effect is estimated from about 80 civ-pairs. Expect only large effects (about ±1 point per civ) to
+  stand out. Screening only ranks: the top flags get single-flag paired SPRTs.
+- **Diplomacy's reading notes (2026-11-03):**
+  - `EasyTarget` changes how often civs start wars, so it is the flag most likely to move strength either way. Read
+    `WarsDeclared` beside it; if it hurts, check whether its civs started more wars or were targeted more.
+  - `DealReputation` acts only after a civ breaks a payment deal by declaring war, which is rare between AIs:
+    expect it to look neutral here. Its real test is exploit check 1, run twice.
+  - `DealExploits` makes AI-to-AI demands pay off less often. Watch `Deals` and `WarsDeclared`: a refused demand can
+    lead to a war.
+  - Bully test, later: the four coalition flags and `CityStateBugs` all on together first, to see whether anything
+    moves the aggressor's city share at all, then one at a time. Only once War's flags produce captures; until then
+    the coalition has nothing to react to.
+
+### Screening run 1: plan (lead, 2026-11-02; replaced by run 2)
 
 - **Why:** 19 candidate flags exist, from c1–c7c, Economy and War. At about 3 pairs an hour, an SPRT per flag
   would take days. One screening run estimates every flag's effect per civ from the same 20 pairs (the paired
@@ -1617,6 +1645,59 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
 
 
 
+## Instructions for PC runner 2 (the second PC, from 2026-11-03)
+
+The second PC plays **screening run 2** while the first PC plays the King baseline: different builds and different
+results files, so the two never mix. Its log is its own (`machines\<COMPUTERNAME>.json`, below), so pushes from
+the two PCs don't touch the same files. Always `git pull --rebase` before pushing.
+
+**One-time setup** (the user does steps 1–2; the runner does the rest):
+1. **Steam:** one Steam account can run a game on only one PC at a time, so PC 2 uses the user's **second Steam
+   account** (they have two). It must own Civ V with Gods & Kings and Brave New World; check both expansions show
+   as installed under Civ V's DLC in Steam. Install Civ V and start it once so `My Games\Sid Meier's
+   Civilization 5` exists. (Without a second account: log PC 2 in once with "remember me" and switch it to
+   Offline Mode before every run.) Community Patch comes from the first PC (step 2), not the Workshop, so both
+   PCs have the same version.
+2. **Copy from the first PC** through a shared network folder, so both PCs build exactly the same pack: Community
+   Patch's mod folder and the repo's `CPModpack\data\` (the database snapshot; git ignores it).
+   `tools\ab\Copy-RunnerFiles.ps1` does both ends and checks the copy (file count, size, the DLL's hash):
+   - the user shares a folder on PC 1 (`C:\CivRunner`: right-click, Properties, Sharing, Share, their own account);
+   - **PC runner 1:** `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Export C:\CivRunner`
+     (safe while a game runs);
+   - **PC runner 2**, after the clone (step 3) and starting Civ once:
+     `powershell -ExecutionPolicy Bypass -File tools\ab\Copy-RunnerFiles.ps1 -Import \\<PC 1's name>\CivRunner\civ-runner-files.zip`
+     (Windows asks for PC 1's sign-in the first time). It ends "same as the first PC".
+3. Clone `treezeegaga/Civ5-CP-AnimatedLeaders`, branch `claude/sleepy-hopper-x77moh`, with push access (sign in to
+   GitHub in Git Credential Manager on the first push).
+4. **Windowed Civ:** in `My Games\...\GraphicsSettingsDX9.ini`, `FullScreen = 0`. On a 3840x2160 screen at 150%
+   scaling (the first PC's), `WindowResX = 1914`, `WindowResY = 2034`; on another screen, the largest window that
+   fits, and calibrate (step 6). In `config.ini`: `LoggingEnabled = 0`. Set the setup screens once: Pangaea,
+   Standard, Quick, King, 8 civs on separate teams (the screening build also forces King itself).
+5. **The machine file** `tools\ab\machines\<COMPUTERNAME>.json` (`$env:COMPUTERNAME`), committed:
+   `{"Log": "Run-Games-<COMPUTERNAME>.log"}`, plus step 6's values on a different screen. With it, the saved
+   screens go to `machines\<COMPUTERNAME>.screens.json`.
+6. **Calibrate.** Install the build (next list, step 1), start Civ by hand and, on each screen, dot-source
+   `tools\ab\CivScreens.ps1` and save it: `Save-CivScreen menu`, `single`, `setup`, `advanced`, and
+   `Save-CivBeginButton` on "Begin Your Journey". On the same 4K screen at 150% that's all. On another screen, first
+   measure from screenshots, in physical pixels, and put in the machine file:
+   - `Positions`: `Continue`, `SinglePlayer`, `SetUpGame`, `AdvancedSetup`, `QuickCombat`, `QuickMovement`,
+     `StartGame`, `BeginJourney`, `Neutral` (an empty band at the top of Civ's window), each `[x, y]`, where Civ
+     first opens its window;
+   - `CivArea` `{X, Y, W, H}` (Civ's window below the title bar), `MenuPanel` and `BeginButton` `[x1, y1, x2, y2]`
+     (the main menu's button panel; the "Begin Your Journey" button's text).
+   Check with `Get-CivScreen` that each screen comes back with its own name at a distance under 2.5.
+7. One game to check: `Run-Games.ps1 -Fixes none -MaxGames 2 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"` (the first pair of the run below).
+   Its log should show "replay matches the first game" and no "WRONG SETUP".
+
+**Then screening run 2**, as in "After the baseline: screening run 2" below, but on PC 2 and starting now:
+1. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-b756936 -NoLaunch -NoUpdate`
+   (the title must name `b756936`).
+2. `powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"`
+3. Every 5 pairs or so: copy `AIABTest_screen2.csv` to `tools\ab\results\`, commit it with your log,
+   `git pull --rebase`, push.
+
+The first PC then skips screening run 2 and goes on with its own queue below.
+
 ## Instructions for the PC runner
 
 **Pinned build (lead, 2026-11-03 00:20 UTC):** the smoke-test pair and the whole King baseline run on
@@ -1625,12 +1706,17 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
 `AIABTest_c7c_proposals.csv`); don't reinstall `ab-c-latest` until the baseline is finished, or its games
 split across two files. Wherever a step below reinstalls the baseline build, use `-Release ab-6b8ebde`.
 
+**Pull before the next `Run-Games.ps1` start (lead, 2026-11-03 00:55 UTC):** a failed start used to count as a good
+one (`Write-Log` wrote to the output stream, so "log, then return `$false`" came back true). That's why game 2 of
+the smoke pair sat on "Begin Your Journey" until the user clicked it. Fixed, and when the button isn't recognised the
+runner now clicks it anyway; if the game still doesn't start, it sets the game up again.
+
 **The queue, in order** (2026-11-02, updated by the lead at every check-in):
 1. The smoke-test pair (below).
 2. The King baseline's **logged pair** (baseline step 1).
 3. **War's 3 logged games** (below, after the baseline).
 4. The rest of the baseline: 19 pairs, logging off (baseline step 2).
-5. **Screening run 1** (below): every candidate flag at once, 20 pairs. Then the lead queues single-flag
+5. **Screening run 2** (below): 28 candidate flags at once, 20 pairs. Then the lead queues single-flag
    SPRTs for the flags it ranks highest.
 
 ### 2026-11-02: smoke test of `c7c_roles` with paired games (1 pair = 2 games)
@@ -1729,18 +1815,21 @@ end, and what happens at a siege. These are single games with the c7c bundle on,
    powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-6b8ebde -NoLaunch -NoUpdate
    ```
 
-### After the baseline: screening run 1 (20 pairs = 40 games, about 7 hours)
+### After the baseline: screening run 2 (20 pairs = 40 games, about 7 hours)
 
-One run ranks every candidate idea from the same games (lead job 4's screening regression). The build is
-test-only: `claude/ab-screen1` = `claude/ab-c1` + `ai/economy` + `ai/war`, results in `AIABTest_screen1.csv`.
-1. Install it by commit (no "latest" alias for this branch):
+Replaces screening run 1 (never played). One run ranks 28 candidate flags from the same games (lead job 4's
+screening regression). The build is test-only: `claude/ab-screen2` (`b756936`) = `claude/ab-c1` (`fdad60d`: 64-bit
+flag table, proposal counts, the `Difficulty` key) + `ai/economy` + `ai/diplomacy` + `ai/war`, 39 flags, every
+flag added after c7c off in the bundle, results in `AIABTest_screen2.csv`. CI run 77 compiled it; release
+`ab-b756936`.
+1. **Pull first** (the `Run-Games.ps1` start fix, `3d761c5`), then install the build by commit:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-db63d22 -NoLaunch -NoUpdate
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-ABTest.ps1 -Release ab-b756936 -NoLaunch -NoUpdate
    ```
-   If that release doesn't exist, its CI build failed or is still running: report it and wait.
 2. Logging off. Group c runs nothing, and each screened flag is on for a random, warmonger-balanced half of the AI
-   civs, swapped in the second game of each pair:
+   civs, swapped in the second game of each pair. This build reads the `Difficulty` key that `Run-Games.ps1`
+   writes, so it plays King whatever the setup screen remembers:
    ```
-   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, SiegeStay, SiegePosture, DeclareAtBorder"
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 40 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"
    ```
-3. Commit `AIABTest_screen1.csv` and `Run-Games.log` every 5 pairs or so, and push.
+3. Commit `AIABTest_screen2.csv` and `Run-Games.log` every 5 pairs or so, and push.

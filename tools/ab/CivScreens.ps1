@@ -13,6 +13,7 @@ public class AbDpi { [DllImport("user32.dll")] public static extern bool SetProc
 
 $script:CivScreensFile = Join-Path $PSScriptRoot "CivScreens.json"
 $script:CivArea = @{ X = 963; Y = 106; W = 1914; H = 1990 }   # below the title bar
+$script:MenuPanel = @(1740, 845, 2110, 1372)
 
 function Get-CivScreenSignature {
     $a = $script:CivArea
@@ -30,8 +31,9 @@ function Get-CivScreenSignature {
         $sig.Add([int]($r / $n)); $sig.Add([int]($gg / $n)); $sig.Add([int]($b / $n))
     } }
     # The main menu and the Single Player menu differ only in their button text, so add single pixels on a
-    # fine grid over the menu panel (screen 1740,845 to 2110,1372)
-    for ($y = 845 - $a.Y; $y -lt 1372 - $a.Y; $y += 11) { for ($x = 1740 - $a.X; $x -lt 2110 - $a.X; $x += 9) {
+    # fine grid over the menu panel (screen 1740,845 to 2110,1372 on the first PC)
+    $m = $script:MenuPanel
+    for ($y = $m[1] - $a.Y; $y -lt $m[3] - $a.Y; $y += 11) { for ($x = $m[0] - $a.X; $x -lt $m[2] - $a.X; $x += 9) {
         $c = $bmp.GetPixel($x, $y); $sig.Add([int](($c.R + $c.G + $c.B) / 3))
     } }
     $bmp.Dispose()
@@ -67,6 +69,18 @@ function Get-CivRegionSignature([int]$x1, [int]$y1, [int]$x2, [int]$y2) {
 }
 
 $script:BeginButton = @(1795, 1441, 2015, 1461)
+
+# Another PC (lead, 2026-11-03): tools\ab\machines\<COMPUTERNAME>.json holds that screen's areas (CivArea as
+# {X, Y, W, H}; MenuPanel and BeginButton as [x1, y1, x2, y2]), and its saved screens go to
+# machines\<COMPUTERNAME>.screens.json. Without the file, everything is as on the first PC.
+$script:MachineFile = Join-Path $PSScriptRoot "machines\$env:COMPUTERNAME.json"
+if (Test-Path $script:MachineFile) {
+    $script:CivScreensFile = Join-Path $PSScriptRoot "machines\$env:COMPUTERNAME.screens.json"
+    $mm = Get-Content $script:MachineFile -Raw | ConvertFrom-Json
+    if ($mm.CivArea) { $script:CivArea = @{ X = [int]$mm.CivArea.X; Y = [int]$mm.CivArea.Y; W = [int]$mm.CivArea.W; H = [int]$mm.CivArea.H } }
+    if ($mm.MenuPanel) { $script:MenuPanel = @($mm.MenuPanel | ForEach-Object { [int]$_ }) }
+    if ($mm.BeginButton) { $script:BeginButton = @($mm.BeginButton | ForEach-Object { [int]$_ }) }
+}
 
 function Save-CivBeginButton {
     $all = Get-SavedCivScreens

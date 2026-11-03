@@ -4,15 +4,15 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "The PC runner is playing the smoke-test pair on King. New DLL builds are blocked: GitHub Actions is turned off on the DLL fork.",
-   "state": "blocked"
+   "detail": "The King smoke-test pair checked out (setup, replay and every new column). Next on PC 1: the King baseline. A second PC runner is being set up for screening run 2.",
+   "state": "running"
   },
   {
    "section": "queue",
    "order": 1,
    "name": "Smoke-test pair",
-   "detail": "1 pair on King, Pangaea (build ab-6b8ebde): checks the new columns and that the second game replays the first.",
-   "state": "running"
+   "detail": "Passed: King, Pangaea, the second game replays the first with groups swapped, every new column written.",
+   "state": "passed"
   },
   {
    "section": "queue",
@@ -39,28 +39,28 @@
    "section": "queue",
    "order": 5,
    "name": "Screening run 2",
-   "detail": "20 pairs ranking all 39 candidate flags at once (needs its build: Actions).",
-   "state": "blocked"
+   "detail": "20 pairs ranking 28 flags at once (build ab-b756936), on the second PC once it's set up.",
+   "state": "waiting"
   },
   {
    "section": "session",
    "order": 1,
    "name": "PC runner",
-   "detail": "Smoke-test pair on King since 00:22 UTC.",
+   "detail": "Smoke-test pair passed; the baseline's logged pair is next.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Siege, attack posture and sneak-attack flags written; waiting for builds.",
+   "detail": "Its five flags compiled (run 78); waiting for logged war games.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 3,
    "name": "Economy",
-   "detail": "Settler and policy flags (9) written; waiting for builds.",
+   "detail": "Wrote its expansion-pace reading procedure and a logging patch (0009); waiting for King logs.",
    "state": "waiting"
   },
   {
@@ -74,21 +74,14 @@
    "section": "session",
    "order": 5,
    "name": "Lead",
-   "detail": "Rebased every topic branch onto the 64-bit flag table; screening build 2 ready to compile.",
-   "state": "waiting"
-  },
-  {
-   "section": "blocker",
-   "order": 1,
-   "name": "GitHub Actions off on the DLL fork",
-   "detail": "Since 00:16 UTC no DLL builds. Turn it on: github.com/treezeegaga/Community-Patch-DLL/settings/actions",
-   "state": "blocked"
+   "detail": "Integration branch moved to fdad60d; Economy's branch building; Diplomacy's next.",
+   "state": "running"
   },
   {
    "section": "goal",
    "order": 1,
    "name": "Strength against CP",
-   "detail": "≥ 55% (B: 52.4% on the old setup; no King results yet)",
+   "detail": "≥ 60% (raised from 55% on 2026-11-03; B: 52.4% on the old setup; no King results yet)",
    "state": "open"
   },
   {
@@ -132,6 +125,13 @@
    "name": "Seconds per AI turn",
    "detail": "≤ 1.25× B's (not measured yet)",
    "state": "open"
+  },
+  {
+   "section": "session",
+   "order": 6,
+   "name": "PC runner 2",
+   "detail": "Being set up on the second PC (Steam offline, copy Community Patch, calibrate), then screening run 2.",
+   "state": "next"
   }
  ]
 }
