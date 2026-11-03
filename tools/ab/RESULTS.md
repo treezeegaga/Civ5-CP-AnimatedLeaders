@@ -1659,7 +1659,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Measure: CitiesCaptured by group; logged games: the waiting turns per attack (the same 20-turn cap) and the best
   expected damage at the city. Strength share at T150 (the verdict).
 - δ: +2 points of strength share
-- Build: next `ai/war` commit. Needs SiegeArmy on (it only changes SiegeArmy's bar)
+- Build: `ai/war` commit `0c2d4ce`, patch `patches/war/0005`. Needs SiegeArmy on (it only changes SiegeArmy's bar)
 - Test: siege package + SiegeBar against the siege package, paired, T150.
 - Risk: more attacks hit the 20-turn cap and march anyway, or wars start later. Watch the waiting turns.
 
