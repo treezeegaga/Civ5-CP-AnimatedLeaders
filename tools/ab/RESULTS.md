@@ -1423,6 +1423,101 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: what the 3 logged King games show (2026-11-03)
+
+Games 02DEF5BF and 02EA597F (bundle) and 02F5C9E3 (bundle + SiegeStay, SiegePosture, DeclareAtBorder), build
+`445009c`, logs in `results/logs_<GameId>/`. No city changed hands. The scripts behind the numbers read
+`MilitaryAILog`, `OperationalAILog`, `PlayerTacticalAILog` and `PlayerHomelandAILog`.
+
+**1. No war ever brought enough damage to a city: armies are far too small.** Every capture check the tactical AI
+logged in all three games, per attacking civ, best turn:
+
+| Game | Attacker | Checks: too early / attempted / enemy-dominated | Best expected damage a turn / city HP needed |
+|---|---|---|---|
+| 1 | Poland | 28 / 0 / 70 | 30 / 250 |
+| 1 | Siam | 11 / 2 / 74 | 47 / 200 |
+| 1 | Zulus | 14 / 0 / 83 | 17 / 200 |
+| 2 | Germany (c) | 18 / 3 / 66 | 89 / 200 |
+| 2 | Persia (c) | 6 / 1 / 19 | 64 / 200 |
+| 3 | Babylon | 18 / 0 / 225 | 27 / 200 |
+| 3 | Spain (c) | 22 / 3 / 22 | 52 / 300 |
+| 3 | Shoshone | 14 / 6 / 46 | 36 / 200 |
+| 3 | Sweden (c) | 11 / 2 / 3 | 27 / 300 |
+| 3 | Germany (c) | 24 / 2 / 29 | 50 / 250 |
+
+- **The best siege in three games reached 89 expected damage a turn,** against 200 HP and 20 HP of healing. Most
+  peaked at 20–50, below a quarter of what a capture needs.
+- **The few "attempting capture" lines were hopeless,** and the tactical AI was right to refuse the rest.
+- **The armies sent:** Sweden's attack on Akkad at T110 was 3 warriors, a chariot archer and a composite bowman.
+  Germany's on York at T107 was a pikeman, 2 swordsmen and 2 catapults. The attack formations have 9 slots but march
+  once their 4–5 required slots are filled. Against a walled city (300 HP) that's nowhere near enough.
+- **This is new.** The ranking above put healing and posture first, but those only matter once a siege has the
+  damage to win, and none did.
+
+**2. A delivered army can be sent home: the hand-off from operation to tactical AI.** Germany in game 3:
+- **T111:** the sneak attack is "discovered" with its army 4–6 tiles from York, still inside Berlin's own zone.
+  War is declared at T112.
+- **T112–T117:** the tactical AI never moves the army forward. The homeland AI sends its swordsmen and pikeman to
+  sentry points around Berlin ("Moving Swordsman 1806 to sentry point").
+- **T114:** York's zone, which no longer has the army near it, tips to withdraw.
+- **T118:** a new attack operation recruits the same five units at the Berlin muster point and marches again.
+
+The likely cause is in `CvTacticalAI::PlotReinforcementMoves`: it won't pull a unit out of a zone that "needs it"
+(not friendly-dominated, not withdraw), and Berlin's zone was in counterattack posture. Units that no tactical move
+takes fall through to the homeland AI, which sends them to sentry points. Not yet proved line by line: the new flag
+below logs each time this rule holds a unit back. Germany in game 2 had the same short shape: arrived T76, expected
+damage 12, 20, 40 (one attempt, T80), 20, then 0 from T86.
+
+**3. Most declarations don't come from an army arriving.** Of 14 declarations by major civs, 5 followed a sneak attack
+reaching its target, all at 3–4 tiles. The other 9 had no army arriving: coop wars (Siam and the Zulus on the Maya
+at T108), Sweden, Spain and the Shoshone all declaring on Babylon at T108, the Huns on Poland at T36. These paths
+are in `CvDiplomacyAI` (the request to Diplomacy above stands).
+
+**4. `NoTarget` is mostly found-city operations, not military.** Over the three games, 1,245 operations ended
+`NoTarget`, all `OP_FOUND_CITY`. They're re-created and dropped every turn (Spain T19–T23: a new ID each turn, the
+same target, "Duration" counting up from 20). That's Economy's (request below). The military `NoTarget` endings
+(47) are rapid-response operations ending once the intruder has left, which is harmless.
+
+**5. Other operation endings.**
+- **Sneak attacks ending `NoUnits`, 73 times:** they're created and dropped for lack of units (Sweden in game 2:
+  28 times). Same root as point 1: armies too small.
+- **`HalfStrength` (audit item 26):** 3 city attacks out of about 20, plus 7 rapid responses and 5 pillage
+  operations. That's too few to explain anything, so **no ablation needed.**
+
+**What it means for the War flags in screening run 2.**
+- **`SiegeStay` and `SiegePosture` had almost nothing to act on.** No siege had the damage to win, and in game 3 no
+  c siege was in the attrition posture (Akkad was steamroll, York withdraw or steamroll). Expect close to no
+  effect on captures. If they show anything, it'll be through units lost.
+- **`DeclareAtBorder` had nothing to change:** every sneak attack in the three games was discovered within 6 tiles.
+- **Game 3's 53.6%** is one unpaired game, without a capture.
+
+**The new order of fixes:** army size first (point 1), then the hand-off (point 2), then the siege flags already
+coded, which need a real siege to act on.
+
+### FIX_SIEGE_ARMY: city attacks march only with enough damage to take the city (War)
+- Hypothesis: a land city attack (also the sneak attack) waits for more units, and leaves the gathering stage only
+  when its units' damage a turn against the target city covers the city's HP within 8 turns of fire, after its
+  healing (the same sketch as `CanWin`, but run on the army itself). It stays capped by the formation's 9 slots and
+  the operation's recruiting time limit. So no attack marches while it can't win: fewer, bigger attacks. With
+  `SiegeStay` and `SiegePosture`, a siege that starts strong also stays strong.
+- Measure: `CitiesCaptured` by group (the mechanism; it's 0 now). Logged games: the best "expected max damage per
+  turn" against city HP. Strength share at T150 (the verdict).
+- δ: +2 points of strength share
+- Build: next `ai/war` commit
+- Test: screen with the other War flags, then SPRT gainer, paired, T150.
+- Risk: attacks start later or not at all (the target walls up meanwhile). Watch `NoUnits` endings and the turns
+  from declaration to first attack.
+
+### FIX_ARMY_HANDOFF: a delivered army joins the siege instead of going home (War)
+- Hypothesis: units that left an attack operation in the last 5 turns (`IsRecentlyDeployedFromOperation`) may
+  reinforce the target's zone even from a zone that "needs" them, so they close in on the city instead of falling
+  through to the homeland AI's sentry moves. Logs a line when the rule would have held a unit back.
+- Measure: CitiesCaptured; in logged games, homeland sentry moves by just-deployed units (should be ~0) and turns from
+  arrival to the first city attack.
+- δ: +1.5 points of strength share
+- Build: next `ai/war` commit
+- Test: as above.
+
 ### War audit: `CvHomelandAI` (2026-11-02)
 
 No `AI_AB_TEST` changes were in this file, so all of this is CP's code. None of it repeats AUDIT.md. Lines are in
@@ -1718,6 +1813,10 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
   2. Declarations through coop wars (`CvDiplomacyAI.cpp` ~9625), demands (~34524) and city-state statements (~28209)
      don't wait for an army in place. If the logged games show wars starting that way with no army near, those paths
      should also go through the sneak-attack operation (`RequestCityAttack` then `IsArmyInPlaceForAttack`).
+- **For Economy, from War (logged games 02DEF5BF, 02EA597F, 02F5C9E3):** `OP_FOUND_CITY` ends `NoTarget` about 400 times
+  per game: an operation is created and dropped every turn (Spain in 02F5C9E3, T19–T23: a new ID each turn, "Duration"
+  20, 21, 22...). Probably a settler whose target fails the check in `CvAIOperationCivilianFoundCity` right after it's
+  chosen. It may be costing settler turns, so it's worth a look for expansion pace.
 - **For War (from War, noted): target choice.** c picking c in the test is an artefact of the split, not a bug, and
   `CanWin` already checks that a target can be beaten. Nothing to code until the bully test shows the aggressor
   picking hopeless targets.
