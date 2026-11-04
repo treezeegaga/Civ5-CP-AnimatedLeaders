@@ -270,7 +270,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "C8 decided: no worse than B but no gain (+0.36 points), so war is the lever left. PC 1 plays the bully conquest test (the bully built the biggest army, then lost it without a capture). PC 2 moves to the bully against greedy civs, the easy matchup.",
+   "detail": "Both PCs play the bully with the full conquest package (through SiegeAbort and SiegeFormation) on ab-c78384b since 7:03am ET: PC 2 against greedy civs, PC 1 against normal ones. The PCs sat idle overnight after a build break.",
    "state": "running"
   },
   {
@@ -312,7 +312,7 @@
    "section": "queue",
    "order": 6,
    "name": "Bully conquest test",
-   "detail": "On PC 1: aggressor runs TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff; judged by captures.",
+   "detail": "PC 1: conquest package + SiegeAbort + SiegeFormation against normal civs, 20 games.",
    "state": "running"
   },
   {
@@ -340,22 +340,22 @@
    "section": "queue",
    "order": 10,
    "name": "Bully vs greedy civs",
-   "detail": "PC 2 on ab-c13eb1c once CI passes: the conquest flags on the bully, every other civ greedy. Logged smoke pair first.",
-   "state": "next"
+   "detail": "PC 2: conquest package on the bully, every other civ greedy. Logged pair first.",
+   "state": "running"
   },
   {
    "section": "session",
    "order": 1,
    "name": "PC runner",
-   "detail": "Bully conquest test on ab-8109f67: logged pair first, then 20 games.",
+   "detail": "Bully vs normal civs, 20 games, ab-c78384b, since 7:02am ET.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Reading the conquest pair's logs: why the Celts lost their army (122 to 38 military, 0 captures). SiegeAbort merged.",
-   "state": "running"
+   "detail": "SiegeAbort and SiegeFormation (enough catapults) are in the bully runs.",
+   "state": "waiting"
   },
   {
    "section": "session",
@@ -368,7 +368,7 @@
    "section": "session",
    "order": 4,
    "name": "Diplomacy",
-   "detail": "TradeOpinion flag (trade friendship from running deals, capped) compiled on 72ab43a.",
+   "detail": "StaleWarPeace: a winner that never attacks stops refusing peace (af99bc1).",
    "state": "waiting"
   },
   {
@@ -382,8 +382,8 @@
    "section": "session",
    "order": 6,
    "name": "PC runner 2",
-   "detail": "C8 stopped (decided). Next: bully vs greedy civs on ab-c13eb1c.",
-   "state": "waiting"
+   "detail": "Bully vs greedy civs, logged pair first, ab-c78384b, since 7:03am ET.",
+   "state": "running"
   },
   {
    "section": "session",
