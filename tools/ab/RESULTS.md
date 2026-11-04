@@ -1924,6 +1924,46 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### FIX_TARGET_VULNERABILITY: a warmonger picks the most vulnerable nearby city (War, the user's redesign of GreedyTarget) (Nov 4, about 2:37pm ET)
+**Why.** The user: "fewest land units per city" (GreedyTarget) is a weird way to pick a target. The target should
+be the most vulnerable nearby city, combining three things:
+- what that civ can bring to defend it (its whole army);
+- the city's own defence (walls, city strength, garrison);
+- the distance.
+
+**Hypothesis.** In `GetNewAIConquestTarget`, for warmongers, each candidate civ scores its best city among those
+within 12 plots of our nearest city. The candidate filters (proximity, strength step, one front, CanWin) stay as
+they are; with this flag the score replaces both the weakest-neighbour score and GreedyTarget's units-per-city
+score.
+
+| Term | Formula |
+|---|---|
+| City defence | city strength / 100 × (HP left / max HP), plus half the garrison's combat strength. Walls raise both strength and max HP |
+| Their army | their military might × 100 / ours (100 = equal) |
+| Distance | plots from our nearest city |
+| **Score** | −3 × city defence − army ratio / 2 − 5 × distance |
+
+- Early-game sizes: city defence 15–30 (45–90 points), army ratio 50–150 (25–75), distance 5–12 (25–60).
+- ConquestTraitTargets' bonus (at most +30) still goes on top.
+- **Expected:** targets with weaker cities and smaller armies; fewer wars that end "enemy dominated, won't try to
+  capture"; captures sooner.
+- **Measure:** the logged reason "warmonger timing attack, most vulnerable city X" (with the city named); captures
+  per war; turns from declaring to the first capture.
+- **δ:** CitiesCaptured by the aggressor up; strength share at T150 +1 point.
+- **Flag:** `TargetVulnerability`, off in the bundle. Role: in place of GreedyTarget.
+- **Status:** hypothesis.
+
+### CanWin, CSConquest, BoxedInWar into the bundle (the user's audit, via the lead) (Nov 4, about 2:37pm ET)
+- Set to true in `kCandidateFixes` on `ai/war` (rebased on `claude/ab-c1` `166ebc1`).
+- **Checked safe for city-states and humans** (non-major civs run every bundle flag):
+  - **BoxedInWar** and **CanWin** act only inside `GetNewAIConquestTarget`, which now also returns at once for a
+    non-major civ. Before, it relied on `IsCandidateWarmonger` (majors only) and on the wide opening book (majors
+    only), and returned for humans.
+  - BoxedInWar's other two uses are also majors-only: the approach override sits behind that function's result,
+    and the opening-book production hold behind `IsOpeningBookActive`.
+  - **CSConquest** runs in a major's approach toward a city-state and needs `IsCandidateWarmonger` (majors, not
+    human).
+
 ### War: what the minidump of PC 2's crash shows (0C827C9C, ab-1c3ab74, T78, logging on) (Nov 4, about 2:35pm ET)
 Read with a small minidump parser (no symbols). The dump is 1.1 MB: thread stacks and the module list, no heap.
 - **Where it crashed:** an access violation reading 0xad3188f0, at `CivilizationV.exe+0x3383d`, on the main thread
