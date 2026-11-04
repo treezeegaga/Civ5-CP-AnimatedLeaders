@@ -1968,7 +1968,7 @@ before the attack, and no "b/c bankrupt" gifting of attack units.
 
 **δ:** strength share at T150 +1.5 points; CitiesCaptured up.
 
-**Status:** hypothesis.
+**Status:** hypothesis, coded: `ai/war` `4135121` (CI pending; the commit message's "2:10pm ET" should read 1:55pm ET). Shared code behind this flag only: `CvDiplomacyAI::GetNewAIConquestTarget`, `CvUnitProductionAI::CheckUnitBuildSanity` (peace cap; AggressiveArmy off at peace), `CvBuildingProductionAI` (AggressiveArmy's floor off at peace), `CvPlayer` opening book (the warmonger book's army steps skipped).
 
 ### FIX_DECLARE_WHEN_GATHERED: a sneak attack declares once it's gathered at the border (War) (Nov 4, about 1:48pm ET)
 For cause 1 (late), at the lead's request.
