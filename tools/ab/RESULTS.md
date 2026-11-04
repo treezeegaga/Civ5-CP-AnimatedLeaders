@@ -1522,6 +1522,49 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: why the failed Celtic war ran 35 turns, and flag `StaleWarPeace` (Diplomacy session, 2026-11-04)
+
+From `DiplomacyAI_Peace_Log.csv` and `DiplomacyAI_Log.csv` of bully game `0879B791` (War's "Bully conquest, logged pair").
+
+**It's the winner that kept the war going, not the failed attacker.**
+- **The Celts were willing to make peace** on 10 turns from T116 on, with peace scores of 19-129 against a required
+  17-20.
+- **The Netherlands refused on every turn.** On 17 turns: "no good reason to consider peace" (before the 30-turn mark,
+  or while its approach was WAR). On the rest, a peace score of -3 to -67 against 20.
+- **It rated the Celts PATHETIC, but never attacked them.** War state Calm until T150, no captures.
+
+**Why the winner holds out** (`DoUpdatePeaceTreatyWillingness`, part 8):
+- **The hold-out term.** "They're in danger and we're not": `-5 × their danger × our multiplier`. The multiplier goes
+  up by 1 for each of: they're weaker than average, they're an easy target, we have a preferred attack target in
+  them, they're nearly beaten. Against a beaten neighbour that's up to ×5.
+- **The war-state term.** Calm subtracts another 2 × the multiplier.
+- **The pull toward peace is weaker.** Lack of progress against a neighbour adds only (war turns - 10), so +29 by T150.
+- **The result.** Units parked near the Celtic cities count as leverage every turn, though the Dutch AI never uses
+  them. The diplomacy side waits for a conquest the military side never attempts. It's the same mismatch as the WAR
+  approach held for 20-56 turns without a declaration (earlier entry).
+
+**Flag `StaleWarPeace`**: patch `tools/ab/patches/diplomacy/c13/0001-...`, on `claude/ab-c1` `c13eb1c`, off in the
+bundle, not compiled.
+- **When a war counts as stale:**
+  - at least 20 turns of war;
+  - no city has changed hands between the two civs, in either direction, for 20 turns;
+  - we have no attack operation against them.
+- **What it changes for a stale war:**
+  - staleness alone is reason to consider peace;
+  - the "they're in danger, hold out" term is dropped;
+  - the lack-of-progress penalty counts twice.
+- A winner that presses an attack, or has just taken a city, is unaffected.
+- **Hypothesis:** wars where neither side takes anything end in peace within about 20 turns of the last capture. A
+  losing civ stops bleeding units, and its army is free again.
+- **Measures:**
+  - turns at war per war without a capture in its last 20 turns (from `AtWar` and `CitiesCaptured`);
+  - peace treaties per game;
+  - strength: no-worse;
+  - in the bully test, whether the aggressor's failed wars end sooner;
+  - whether it makes peace more often against coalitions.
+- **The trade-off to watch:** a coalition war against a conqueror can also be stale for a while, and ending it early
+  helps the conqueror. Run the bully test with and without the coalition flags.
+
 ### Diplomacy: why even the aggressor almost never picks WAR (Diplomacy session, 2026-11-04)
 
 The logged bully pair `07614B74` / `07614B74F` (ab-095144c), from `DiplomacyAI_Approach_Log.csv` and
