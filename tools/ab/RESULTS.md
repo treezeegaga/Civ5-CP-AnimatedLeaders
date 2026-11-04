@@ -2279,6 +2279,124 @@ out-growing it, aggressive beats greedy by taking its cities, balanced beats agg
 - **Notes for owners:** the edits are gated blocks in Economy's `CvUnitProductionAI` and `CvBuildingProductionAI` and
   in the shared `CvPlayer.cpp` (`IsCandidateWarmonger`).
 
+### Decision: meta position and flavour archetype are two separate things (the user, 2026-11-03 11:30pm ET)
+- **The three meta archetypes** (greedy, balanced, aggressive) are three points on one spectrum, not three boxes.
+  They are objective, measurable ways of winning, and the mix ebbs and flows into different equilibriums.
+- **Flavour archetypes** are separate: fun, distinctive ways of playing. Examples: the expansionist who never
+  attacks unless someone blocks his expansion, the tourism hoarder, the religious zealot. They can win, but they
+  aren't the meta.
+- **Each flavour archetype sits somewhere on the meta spectrum.**
+
+For the lead: AGENTS.md's archetype table ("How personality and the others fit together") mixes the two (greedy
+tall and early timing attack are meta positions; wide expander and diplomat are flavours). Suggest rewording it
+with this decision, and pointing "A rock-paper-scissors meta" at the spectrum. The spec below is built on it.
+
+### The strategy profile: spec (Personality, 2026-11-03 11:30pm ET)
+For War, Economy and Diplomacy: what each AI is trying to do, and the rules it plays by. They decide how. Nothing
+here is coded yet; the build steps are at the end.
+
+**1. The profile, per AI major civ.** Worked out at game start from game data only (traits, leader personality, CP's
+victory pursuit pick), so every computer gets the same result.
+
+| Part | What it is | Source |
+|---|---|---|
+| Flavour archetype | One of the list in 2, fixed for the game | Unique ability tag, then CP's victory pursuit (3) |
+| Meta position **M** | A number from -100 (greedy) through 0 (balanced) to +100 (aggressive). A home position, and a current position that moves (4) | Archetype range plus personality (Boldness, offence flavour) |
+| Victory weights | Domination, science, culture, diplomacy, adding up to 100 | Archetype, then CP's primary (60%) and secondary (25%) pursuit |
+| Risk appetite | Low, medium or high: how big an edge it wants before a war, how far it lets a rival run | Leader Boldness |
+| Expansion style | Tall (4 cities), medium, wide (settle all it can), conquest (cities taken, not settled) | Archetype, adjusted by the expansion flavour |
+| Hard rules | Never broken whatever the scores say (5) | Everyone, plus per archetype |
+
+**2. Flavour archetypes** (a first list; more come from games and the players):
+
+| Archetype | Plan | Home M (range) | Victory weights | Expansion |
+|---|---|---|---|---|
+| Conqueror | Repeated wars all game; strikes the thinnest neighbour at its army's timing, consolidates, goes again | +70 (+40 to +100) | domination first | conquest |
+| Opportunist | Builds, but joins or starts wars against weakened, isolated or runaway neighbours | +15 (-10 to +40) | its pursuit's | medium |
+| Expansionist | Settles every free spot; never attacks unless a neighbour blocks its expansion (`BoxedInWar`) or a runaway threatens | 0 (-20 to +30) | its pursuit's | wide |
+| Religious zealot | Founds early, spreads its faith everywhere, protects its holy city, rivals whoever converts its cities | 0 (-30 to +30) | culture and its pursuit's | medium |
+| Diplomat | City-state patron, World Congress, the one who organises coalitions; keeps its word | -20 (-50 to +10) | diplomacy first | medium |
+| Tourism hoarder | Wonders, great works, tourism; builds in peace and hates being disturbed | -60 (-90 to -30) | culture first | tall |
+| Scientist | Tall science civ: libraries, universities, the National College early, spaceship | -60 (-90 to -30) | science first | tall |
+
+**3. Who gets which archetype.** A rule, not a hand-made list, so it covers modded civs too:
+1. **The civ's unique ability** (CP's trait tags in `CvPlayerTraits`): Warmonger → Conqueror, Religious → Zealot,
+   Tourism → Tourism hoarder, Nerd or Smaller → Scientist, Diplomat → Diplomat, Expansionist → Expansionist. If a
+   civ has two tags, the primary victory pursuit breaks the tie.
+2. **No tag:** CP's primary victory pursuit for this game (`SelectDefaultVictoryPursuits`; leaders with no fixed
+   pursuit get a random one each game, so generalists vary): domination → Conqueror if offence flavour ≥ 7, else
+   Opportunist; science → Scientist; culture → Tourism hoarder; diplomacy → Diplomat; none → Expansionist if the
+   expansion flavour ≥ 7, else Opportunist.
+3. **Home M** = the archetype's home + 5 × (Boldness − 5) + 5 × (offence flavour − 5), kept inside its range.
+
+Expected picks for some base leaders, to check against the first logged games: Attila, Genghis, Shaka, Askia,
+Montezuma, Oda Nobunaga → Conqueror; Sejong, Nebuchadnezzar → Scientist; Boudicca, Selassie, Theodora → Zealot;
+Pedro → Tourism; Alexander, Ramkhamhaeng → Diplomat; Pocatello, Hiawatha, Gajah Mada → Expansionist. VP's leader groups
+(Conqueror, Coalition, Diplomat, Expansionist in VP's `LeaderFlavorSweeps.sql`) are a cross-check, not the source:
+the pack runs CP.
+
+**4. The meta position moves (adaptation within a game, AGENTS.md goal 7).** Current M = home M plus shifts,
+worked out each turn from what the civ can see:
+- **Threatened** (`GreedyAlarm`'s signal: a visible army near its cities; at war on the defensive; lost a city in
+  the last 20 turns): M rises to at least 0. A greedy civ arms up and walls.
+- **Attack stalled** (at war for 15+ turns without taking a city, its target walled, or 2+ civs at war with it):
+  M falls by 40, at most to 0. The conqueror makes peace or digs in, and re-arms later.
+- **Opportunity** (a close neighbour with visibly fewer than 1 land unit per city, or already losing a war): M
+  rises by 30, up to the archetype's maximum. The opportunist strikes; a scientist doesn't, because its range stops
+  at -30.
+- **Runaway** (a civ with a severe warmonger threat, or near a victory): M rises to at least 0 for everyone, so the
+  coalition has armies.
+- Smoothed: M moves at most 20 a turn, and a shift holds for at least 10 turns, so plans don't flip back and forth.
+  M is saved with the game.
+
+**What M sets** (the style flags are the anchor points; between them the numbers interpolate):
+
+| Setting | M = -100 (greedy) | M = 0 (balanced) | M = +100 (aggressive) |
+|---|---|---|---|
+| Land units per city in peace (floor / ceiling) | 1 / 1 | 2 / 3 | 3 / 4 |
+| Walls and castles | none (until threatened) | first in border cities and the capital | border cities |
+| Unit upgrades | only at war | normal | normal |
+| Growth, science, wonder buildings | ×1.5 | ×1 | ×1 |
+| Conquest plan (timing attack, siege book and techs) | no | no | from M ≥ +50 |
+| War appetite (WAR approach weight) | ×0.5 | ×1 | ×2 |
+
+**5. Hard rules.**
+- **Everyone:** the banned behaviours (no stealing workers from city-states, no chop-rushing wonders); no war on a
+  civ it is receiving or paying per-turn deal items to, unless that civ broke a deal first; no war on its own
+  friend inside the friendship's first 15 turns.
+- **Expansionist:** declares war only on the neighbour blocking its land or on a runaway.
+- **Tourism hoarder, Scientist:** start no wars of their own, except to retake their own city or in a coalition
+  against a runaway.
+- **Diplomat:** never attacks a city-state, never breaks a friendship or a deal, protects city-states it's allied with.
+- **Zealot:** never trades away its holy city in a peace deal; doesn't buy missionaries for a religion it didn't found
+  (already the bundle's `NoForeignMissionaries`).
+- **Conqueror, Opportunist:** no extra rules; their wars still pay CP's warmonger penalties and draw coalitions.
+
+**6. What the other sessions read** (one accessor, `CvPlayer::GetStrategyProfile()`):
+- **War:** M (army size, when to attack, when to stop), risk appetite (the edge it wants: `GetNewAIConquestTarget`'s
+  strength bar), the archetype's war rules.
+- **Economy:** M (production split, walls, upgrades), expansion style (opening book: tall, wide or conquest), victory
+  weights (buildings and techs).
+- **Diplomacy:** the hard rules (which wars are allowed), M and risk (war appetite, how far a rival may run), the
+  Diplomat's coalition role.
+- **Personality** (mine): `CvGrandStrategyAI` priorities from the victory weights.
+
+**7. Build steps** (one flag each, a hypothesis entry before each):
+1. **The profile itself, measurement only (level 1):** computed and logged at game start (the AI log
+   `StrategyProfile.csv`: civ, leader, archetype, home M, weights, risk, rules). **Request to the lead:** results columns
+   `Archetype` and `Meta` (current M at the last logged turn). No decision reads it yet.
+2. **`MetaDial`:** the style flags read M instead of a fixed set. Judged by the matchup test (styles from M) and a
+   no-worse SPRT.
+3. **`MetaAdapt`:** the shifts in 4. Judged by the bully test (does a threatened greedy civ hold?) and the adaptation
+   checks in AGENTS.md.
+4. **`ProfileVictory`:** grand strategy priorities from the victory weights.
+5. **Per-archetype rules**, one flag each (`ExpansionistPeace`, `BuilderPeace`, `DiplomatWord`, `ZealotHolyCity`).
+6. **Personality tests** (AGENTS.md): different (archetypes differ measurably per the results columns), viable (each
+   archetype's strength share is near the average over many games), done well (per-archetype checks).
+
+**Open for the user:** the archetype list and the home positions are first guesses, to tune once the matchup test
+gives the triangle's numbers.
+
 ## Requests
 
 **Blocked (lead, 2026-11-03 00:25 UTC): GitHub Actions is disabled on `treezeegaga/Community-Patch-DLL`.** At
