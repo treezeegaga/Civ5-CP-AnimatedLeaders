@@ -1957,6 +1957,29 @@ positions, set-up moves, or its scoring of attacks against cities.
   purchases; it does, through `CanWithdrawMoneyForPurchase`).
 - **For Science:** timing the siege tech isn't coded here.
 
+**The peace phase prepares (the user's follow-up, via the lead, Nov 4 about 1:58pm ET).** Peace isn't idle: the
+economy prepares and the army stays small, ready to switch to the build-up quickly.
+- **Planned phase:** from turn 25 (Standard) the target is chosen and kept (`GetCommittedConquestTarget`); the window
+  still opens at turn 40.
+
+| Preparation | Owner | Status |
+|---|---|---|
+| Research toward the attack's units: after the opening book, Mathematics and Bronze Working, then Iron Working or Horseback Riding when iron or horses lie in our lands (`CvPlayer::GetTimingBuildupTech`, hooked in `CvTechAI` after the growth tech) | War | coded, `2a4dde1` |
+| Barracks and armory, forge and workshop in the 2–3 cities nearest the target; roads toward the border facing the target; workers and plot purchases to secure iron or horses | Economy | WarEconomy |
+| Gold saved ahead and spent in the window; gold per turn ≥ 0 while the army stands | Economy | WarChest |
+| War policies (Honor) when the leader's profile allows | Personality | to do |
+
+- **Read-only plan for Economy** (`CvMilitaryAI`, `ai/war` `2a4dde1`):
+  - `GetTimingBuildupPhase()`: NONE, PEACE, PLANNED, WINDOW, ATTACK, WAR;
+  - `GetTimingBuildupTarget()`;
+  - `GetTimingBuildupUnitsWanted()`;
+  - `GetTimingBuildupUnitType(bSiege)`;
+  - and `CvDiplomacyAI::GetCommittedConquestTarget()`.
+- **Gold target, agreed with Economy's proposal:** the purchase price of the units still wanted
+  (`GetTimingBuildupUnitsWanted()` × the price of `GetTimingBuildupUnitType`), capped at 15 turns of net income, and
+  at least 2 siege units' price. TimingBuildup's own savings request and window purchases (2 siege units' price,
+  priority 400) are a stand-in until WarChest lands; then they switch off under WarChest so the gold has one owner.
+
 **Expected:** gold above 0 when the war starts. Fewer units at peace (upkeep down), a bigger army in the 15 turns
 before the attack, and no "b/c bankrupt" gifting of attack units.
 
