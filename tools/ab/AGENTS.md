@@ -80,7 +80,7 @@ unpunished. Both kinds are non-violent and greedy:
 - **Greedy tall:** takes Tradition and keeps to 3-4 cities. It spends everything on non-military interests, rushing up
   the tech and social policy trees as fast as possible.
 
-A leader's personality decides which kind it plays (e.g. its expansion flavour against its growth/science flavours).
+Built: `GreedyWide`, `GreedyTall` (`claude/ab-c1` `c5015f1`), in the greedy style set; `GreedyKind` column. A leader's personality decides which kind it plays (e.g. its expansion flavour against its growth/science flavours).
 The greedy role in the trio and matchup tests plays whichever kind its leader is. Judged by matchups like every style
 flag. Expected: wide out-grows tall while nobody attacks; once attacks take cities, aggressors punish wide more.
 

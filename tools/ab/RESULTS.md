@@ -4084,6 +4084,25 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Greedy wide and tall merged (lead, 2026-11-04 5:35pm ET)
+
+Personality's `ai/personality` `cf84181` (CI run 187) is merged into `claude/ab-c1` `c5015f1` (78 flags; the conflict
+was only both sides' new flag lines). It adds:
+- **The kind:** set in the strategy profile (`eGreedyKind`). An expansionist ability means wide; a small-empire or
+  science ability means tall. Otherwise the expansion flavour is weighed against the larger of growth and science.
+- **`GreedyWide`:** Liberty; keeps expanding while not unhappy and there's room; once out of room, food and happiness
+  buildings x2.
+- **`GreedyTall`:** Tradition (GreedyBook to the National College); at most 4 cities; culture buildings x1.5.
+- **Results:** a `GreedyKind` column (wide/tall, every AI major). `Summarize-Trio.ps1` now names the greedy civ's kind
+  per game and tallies how often each kind came out on top.
+- **Trio pick:** when the greedy set lists either flag, the greedy civ is a random non-warmonger, so wide leaders come
+  up too.
+
+**The greedy style set is now** `GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy,
+GreedyAlarm, GreedyAlarmScale, GreedyWide, GreedyTall`. Each kind flag acts only for a leader of that kind. Not tested
+yet: both PCs stay on the attack (`ab-f73177c`, the user's priority). The next trio run uses this build or a later
+one. Diplomacy is asked for the wide kind's trade deals once out of room (`CvGrandStrategyAI::IsGreedyWideOutOfRoom`).
+
 ### Attack first: War's three fixes in one build, both PCs on the attack (lead, 2026-11-04 4:52pm ET)
 
 The user: fixing the attack is the priority. **`claude/ab-c1` = `ai/war` `96f008e` (release `ab-96f008e`, CI run 184).**

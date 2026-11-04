@@ -24,6 +24,7 @@ if ($rows.Count -eq 0) { Write-Output "No trio rows (Mode = trio) in $($files -j
 $ours = @('greedy', 'balanced', 'aggressor')
 $won = 0; $games = 0
 $byStyle = @{ greedy = 0; balanced = 0; aggressor = 0; cp = 0 }
+$byKind = @{}
 foreach ($g in ($rows | Group-Object GameId)) {
     $maxTurn = ($g.Group | ForEach-Object { [int]$_.Turn } | Measure-Object -Maximum).Maximum
     $last = @($g.Group | Where-Object { [int]$_.Turn -eq $maxTurn })
@@ -45,8 +46,18 @@ foreach ($g in ($rows | Group-Object GameId)) {
     $style = if ($ours -contains $winner.Role) { $winner.Role } else { 'cp' }
     $byStyle[$style]++
     if ($style -ne 'cp') { $won++ }
-    "{0}  {1,-22} {2,-9} {3}" -f $g.Name, ($winner.Civ -replace '^CIVILIZATION_', ''), $style, $how
+    # GreedyKind (wide/tall, Personality's column; absent in older files): which kind our greedy civ played
+    $greedyRow = $last | Where-Object { $_.Role -eq 'greedy' } | Select-Object -First 1
+    $kind = if ($greedyRow -and $greedyRow.PSObject.Properties['GreedyKind'] -and $greedyRow.GreedyKind) { $greedyRow.GreedyKind } else { '' }
+    if ($kind) {
+        if (-not $byKind.ContainsKey($kind)) { $byKind[$kind] = @{ games = 0; top = 0 } }
+        $byKind[$kind].games++
+        if ($style -eq 'greedy') { $byKind[$kind].top++ }
+    }
+    $kindNote = if ($kind) { "  (greedy: {0} {1})" -f ($greedyRow.Civ -replace '^CIVILIZATION_', ''), $kind } else { '' }
+    "{0}  {1,-22} {2,-9} {3}{4}" -f $g.Name, ($winner.Civ -replace '^CIVILIZATION_', ''), $style, $how, $kindNote
 }
 ""
 "Games: $games. One of our three on top: $won ({0:N0}%). Goal: 90%; if all six played alike: 50%." -f (100.0 * $won / [math]::Max(1, $games))
 "By style: greedy $($byStyle.greedy), balanced $($byStyle.balanced), aggressive $($byStyle.aggressor), CP $($byStyle.cp)"
+foreach ($k in ($byKind.Keys | Sort-Object)) { "Greedy {0}: {1} games, on top in {2}" -f $k, $byKind[$k].games, $byKind[$k].top }
