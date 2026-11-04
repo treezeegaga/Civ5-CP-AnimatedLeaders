@@ -1924,6 +1924,52 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### FIX_TIMING_BUILDUP: a small army at peace, a fast build-up right before the attack (War, the user's design) (Nov 4, about 1:52pm ET)
+**Why:**
+- The user: a timing attacker doesn't keep a big army all game. It keeps garrisons and escorts, builds up fast
+  just before the attack, and lands it while the army is fresh.
+- Our warmongers do the opposite. The siege book builds 3 catapults, 2 spearmen and 2 archers after the 2nd
+  settler, and AggressiveArmy keeps 3–4 land units per city at peace.
+- So the army waits 30–60 turns paying upkeep. The Huns (0C22F161) were bankrupt by T71 and gifted 37 warriors and
+  then their siege train.
+
+**Hypothesis.** A warmonger with the flag runs three phases; outside them, nothing changes.
+
+| Phase | When | What it does |
+|---|---|---|
+| **Peace** | no war with a major, no window | At most cities + 1 non-siege land combat units (garrisons and one escort; operations +2), siege units up to 3. AggressiveArmy's per-city floor and lift don't apply. Over the cap by more than 2: one extra unit a turn is gifted to a city-state, or disbanded. Siege units are never demobilised. Saves gold ahead (below) |
+| **Build-up window** | the conquest target search finds a target | Up to 15 turns (× game speed). No cap. The recommended land army is raised to cities + 6, which makes CP's production build units. Each turn one siege or attack unit is bought in the city nearest the target, if the gold allows |
+| **Attack** | army ready, or the window runs out | Ready means 2 siege units and cities + 4 other land units. The target search then returns the target and the normal path (WAR approach, sneak attack, DeclareAtBorder or DeclareWhenGathered) follows. With the flag, this replaces DeclareTiming's "2 siege + 4 land before turn 90" gate |
+
+- **Peace again** (no war, no target): back to the peace phase; extras demobilise one a turn.
+- **Gold target:** from turn 30 at peace, a savings request (`PURCHASE_TYPE_UNIT`, priority 400) for the purchase
+  price of 2 siege units at the capital. That's about 2 × 200–250 gold at Standard in the classical era, recomputed
+  each turn. It's spent in the window, and cancelled at war.
+- **Window length:** 15 turns. The window ends at readiness, at the end of the 15 turns, or at war.
+
+**Files and shared code:**
+- `CvMilitaryAI`: phase state, recommended size, purchases, demobilisation.
+- `CvDiplomacyAI::GetNewAIConquestTarget`: the window starts on finding a target; the target is returned on
+  readiness.
+- `CvUnitProductionAI` (Personality's file, behind this flag only): the peace cap. AggressiveArmy's floor applies
+  only in the window.
+- **For Economy:** the gold target above, and no bankruptcy (a negative balance should cancel the window's
+  purchases; it does, through `CanWithdrawMoneyForPurchase`).
+- **For Science:** timing the siege tech isn't coded here.
+
+**Expected:** gold above 0 when the war starts. Fewer units at peace (upkeep down), a bigger army in the 15 turns
+before the attack, and no "b/c bankrupt" gifting of attack units.
+
+**Measure:**
+- "TimingBuildup:" log lines (window start and end, purchases, demobilisation);
+- gold and land units at declaration;
+- gifted units per game;
+- CitiesCaptured and T150 strength share, role against flip.
+
+**δ:** strength share at T150 +1.5 points; CitiesCaptured up.
+
+**Status:** hypothesis.
+
 ### FIX_DECLARE_WHEN_GATHERED: a sneak attack declares once it's gathered at the border (War) (Nov 4, about 1:48pm ET)
 For cause 1 (late), at the lead's request.
 - **Hypothesis:** a sneak attack (at peace, moving) whose centre or any of its units is in or next to the target's
