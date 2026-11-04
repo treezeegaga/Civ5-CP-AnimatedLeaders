@@ -686,3 +686,28 @@ NOTE 12:39PM ET: ab-1c3ab74 is out; STOP created, finishing pair then installing
 2026-11-04 12:49:41  Stop file found; stopping
 2026-11-04 12:49:41  Runner finished after 6 games
 2026-11-04 12:49:59 ET  PC 1 (BOX): bullyabort4 on ab-9e9fc9d, 5 pairs total: 0B721574 Assyria (4/4 cities) 0 captures, 0 city-state captures; game-1 logs kept (wars=1), flip's deleted. Replays match, no dialogs. Stopped for ab-1c3ab74.
+NOTE ET: installed ab-1c3ab74; logging on; starting 16-flag bully run with -SaveLogs (AIABTest_bullyabort5@BOX.csv)
+2026-11-04 12:51:16  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll; OthersBase = 
+2026-11-04 12:59:36    turn 100 after 7 minutes
+2026-11-04 13:04:01  Game ended: turn 150 (0B8A1D730B8A1D73)
+2026-11-04 13:04:08    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0B8A1D730B8A1D73.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0B8A1D730B8A1D73
+2026-11-04 13:04:08    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0B8A1D730B8A1D73
+2026-11-04 13:04:08  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll; OthersBase = 
+2026-11-04 13:05:22    replay matches the first game
+2026-11-04 13:12:05    turn 100 after 7 minutes
+2026-11-04 13:16:10  Game ended: turn 150 (0B8A1D730B8A1D73F)
+2026-11-04 13:16:17    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0B8A1D730B8A1D73F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0B8A1D730B8A1D73F
+2026-11-04 13:16:17    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0B8A1D730B8A1D73F
+2026-11-04 13:16:17  Starting game 3: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll; OthersBase = 
+2026-11-04 13:24:12    turn 100 after 7 minutes
+2026-11-04 13:28:38  Game ended: turn 150 (0BA0FF9F0BA0FF9F)
+2026-11-04 13:28:44    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0BA0FF9F0BA0FF9F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0BA0FF9F0BA0FF9F
+2026-11-04 13:28:44    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0BA0FF9F0BA0FF9F
+2026-11-04 13:28:44  Starting game 4: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll; OthersBase = 
+2026-11-04 13:29:56    replay matches the first game
+2026-11-04 13:37:00    turn 100 after 7 minutes
+2026-11-04 13:41:06  Game ended: turn 150 (0BA0FF9F0BA0FF9FF)
+2026-11-04 13:41:12    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0BA0FF9F0BA0FF9FF.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0BA0FF9F0BA0FF9FF
+2026-11-04 13:41:12    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0BA0FF9F0BA0FF9FF
+2026-11-04 13:41:12  Starting game 5: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll; OthersBase = 
+2026-11-04 13:41:51 ET  PC 1 (BOX): bullyabort5 on ab-1c3ab74 (16 flags), 2 pairs: 0B8A1D73 Aztecs (5/5 cities) and 0BA0FF9F Aztecs (6/6): 0 captures, 0 city-state captures, aggressor declared wars in both first games (logs+digests kept for those two, flips deleted). Replays match, no dialogs. Run continues.
