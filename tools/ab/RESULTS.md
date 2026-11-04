@@ -1945,7 +1945,7 @@ positions, set-up moves, or its scoring of attacks against cities.
 **Fix (TimingBuildup, same flag).** While a timing attacker is in its window or attack phase, its city-attack
 requests may leave up to the requested number of units (3) to be built, as careful requests already can. The
 operation then forms, and its own build requests (the strongest production weight there is) fill the slots;
-SiegeArmy still holds it until it is strong enough, for at most 20 turns.
+SiegeArmy still holds it until it is strong enough, for at most 20 turns. Coded: `ai/war` `f73177c` (CI pending).
 
 ### War: why the trio's aggressor never declares (4 games, ab-9c6f2cd, logging off) (Nov 4, about 4:36pm ET)
 The lead's question: in 4 trio games (6 civs, Standard Pangaea, Quick, T150) the aggressor declared no war.
