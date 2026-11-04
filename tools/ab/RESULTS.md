@@ -1379,6 +1379,28 @@ fast. One flag, `WarEconomy`, separate from `WarChest` (gold). It reads the same
   - No plot purchases toward a resource.
 - Status: both parts coded, not built. 0014-0016 apply cleanly on `ai/war` `250ee9d`.
 
+### The user's flag rulings for Economy (Nov 4, about 2:40pm ET)
+- **`WidePlans` and `SettlerOverlap` go into the bundle** (ruled obviously right). Patch 0017 on `claude/ab-c1` `166ebc1`.
+  Both are read only inside the opening book, which `GetOpeningBook` gives to AI major civs only, so city-states (which
+  run every bundle flag) never reach them.
+- **`SettlersFirst` stays off** (the user disagrees: monument, shrine and worker come first). No more work on it.
+- **`BookFinishesSettlers`:** no ruling, tested as usual.
+
+### GreedyBook redesigned: beeline the National College, then open up (Economy, Nov 4, about 2:40pm ET)
+The user's design. The old `GreedyBook` (c7) ran the tall capital's book on through the aqueduct and university to
+T130 Standard, with Engineering and Education.
+- **New:**
+  - greedy tall capitals use B's tall book (… library, National College), with B's tall research (Pottery, Writing,
+    Philosophy);
+  - the book stays on until the capital has the National College (capped at T130 Standard), instead of B's fixed
+    T80;
+  - then it ends and the normal AI opens up: more cities, buildings and wonders as it sees fit.
+- **Hypothesis:** the National College comes sooner and the civ isn't locked into a long greedy build, so tall civs
+  gain science early and still expand afterwards.
+- **Measure:** strength share at T100 and T150. Mechanism: `NationalCollege` (results column, the turn it's built),
+  cities at T150 for tall civs.
+- **δ:** 2 points, gainer test. The flag keeps its name (`GreedyBook`); it's off in the bundle.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
