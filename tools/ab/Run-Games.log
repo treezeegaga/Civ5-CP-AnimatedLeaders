@@ -806,3 +806,11 @@ NOTE 4:48PM ET: STOP created per lead (4:52pm ET): finishing pair, then ab-96f00
 2026-11-04 16:51:47  Stop file found; stopping
 2026-11-04 16:51:47  Runner finished after 2 games
 2026-11-04 16:52:11 ET  PC 1 (BOX): bullyabort6 on ab-f21a8f6, pair 3: 0C4F5988 Songhai aggressor (7/6 cities) 0 captures, 0 city-state captures; wars=1 in game 1 so its logs+digest kept, flip's deleted. 3 pairs total, no captures. Replays match, no dialogs. Stopped for ab-96f008e.
+NOTE 4:53PM ET: installed ab-96f008e; logged replay of trio game 0C3C8913 (+MarchOn, FocusedWar), logging on, hand-built AIABTest.ini, -NoSettings -Unpaired -MaxGames 1 -SaveLogs
+2026-11-04 16:53:20  Starting game 1: single game; Mode = trio; Fixes = bundle; Screen = ; Base = ; RoleFixes = ; OthersBase = ; GreedyFixes = ; BalancedFixes = ; Civs = 6
+2026-11-04 17:01:16    turn 100 after 7 minutes
+2026-11-04 17:05:19  Game ended: turn 150 (0C3C89130C3C8913)
+2026-11-04 17:05:25    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0C3C89130C3C8913.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0C3C89130C3C8913
+2026-11-04 17:05:25    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0C3C89130C3C8913
+2026-11-04 17:05:25  Runner finished after 1 games
+2026-11-04 17:06:06 ET  PC 1 (BOX): LOGGED TRIO REPLAY of 0C3C8913 on ab-96f008e (+MarchOn, FocusedWar): T10 rows identical to the original, so a faithful replay. The Aztecs (aggressor, p1) did NOT declare war: WarsDeclared 0, CitiesCaptured 0, CityStatesCaptured 0, 7 cities at T150 (military 211). Their preferred attack target was Mogadishu (city-state) from T3 with muster at Tenochtitlan, later Cologne/Bregenz/Ragusa, but no declaration. Germany declared war on the Aztecs at T108. Only 2 Aztec capture-attempt lines in PlayerTacticalAILog, both vs Cologne in the defensive war: T130 'city HP 250 -> 250, 0 of 3 units used, agg 2'; T131 'city HP 250 -> 226, 2 of 4 units used, agg 2'. Logs+digest kept.
