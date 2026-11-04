@@ -2789,6 +2789,22 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Bully vs greedy civs, logged pair: still no captures; the greedy cap leaks (lead, 2026-11-04 8:00am ET)
+
+Pair `0B09BFE1` (`ab-c78384b`, PC 2, `AIABTest_bullygreedy@TREEDESKTOP.csv`, logs `logs_0B09BFE1*`). The aggressor is the
+Mongols, running the 8 conquest flags in the first game only. The others are greedy (`OthersBase`), and Babylon is the
+tall civ. Replay matched.
+- **Aggressor:** biggest army at T100 (military 107, next 79). It declared 1 war between T100 and T150 and was at
+  peace at T150, military 190. **0 captures** in both games. Babylon (tall, not greedy) took 1 city from Poland in the
+  first game.
+- **Greedy civs:** walls work (0 walled cities except one city in each of two civs). **The unit cap leaks:** at T150,
+  `LandUnits`/`Cities` were 13/5, 12/5, 10/4 and 9/4, and military reached 229 (Songhai) and 154 (Aztecs). So
+  they weren't the easy matchup yet.
+- **A free target nobody took:** Japan at T150 had military 5, was at war with 2 civs, and kept its 3 cities.
+- **Asked:** War, the Mongols' war and what SiegeAbort did, and why no one took Japan. Personality, where the
+  extra greedy units come from.
+- The 20-game run goes on (logging off).
+
 ### Overnight: PCs idle 12am–7am, now running; StaleWarPeace merged (lead, 2026-11-04 7:15am ET)
 
 - **Lost night:** `c13eb1c` and `1fc6d0a` failed to compile (VC9 C4701 in the strategy profile). I fixed it in
