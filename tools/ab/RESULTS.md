@@ -2199,15 +2199,19 @@ conquest code can't take cities from these civs, it can't take them at all.
   - the price (bully test): the aggressor's `CitiesCaptured` and city share, `CitiesLost` of the greedy civs.
 - **What to run** (the lead's style key gives the four flags to every civ without a role, in both games of a pair):
   1. One logged smoke pair: no crash, a matching replay, and the columns above show the style.
-  2. **The easy matchup:** bully mode, aggressor on the conquest role flags as in the bully conquest test
-     (`TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff`), every other civ greedy. Compare
+  2. **The easy matchup:** bully mode, aggressor on the conquest role flags as in the bully conquest test, every
+     other civ greedy:
+     `Run-Games.ps1 -Mode bully -Fixes none -OthersBase "GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds" -RoleFixes "TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff"`.
+     The tall role civ is not greedy (OthersBase skips roles). Reference: in bully pair 07614B74 normal CP civs
+     ended T150 with 103-246 military and the aggressor 191. Compare
      captures and the aggressor's city share with the bully conquest test (normal defenders). Expected: several
      captures by T150. If there are still none, the attack side is the blocker, not the defenders.
   3. Later, split games with the four flags as `Fixes` against B: the greedy group's no-military share (it should
      win in peace; strength share counts military, so it may not).
 - **Evidence level:** 3 (new behaviour), but as a style it's judged by the matchup and bully tests, not by the
   split-game SPRT (AGENTS.md, "What greedy trades").
-- **Build:** fork `ai/personality` `8e69e07` (off `claude/ab-c1` `ec2a4c8`); CI publishes `ab-ai-personality-latest`.
+- **Build:** fork `ai/personality` `b9384af` (rebased onto `claude/ab-c1` `1804369`, the OthersBase key; first pushed as
+  `8e69e07` on `ec2a4c8`); CI publishes `ab-ai-personality-latest`.
 - **Status:** coded, CI pending; waiting for the lead's style key.
 - **Notes for owners:** `CvUnitProductionAI` and `CvBuildingProductionAI` are Economy's, `CvHomelandAI` War's,
   `CvUnit.cpp` shared; each change is a gated block at the place named above. Request to Economy: `GreedyAlarm` only
