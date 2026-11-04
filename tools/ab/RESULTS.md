@@ -1404,6 +1404,26 @@ T130 Standard, with Engineering and Education.
   research list are removed; `IsOpeningBookActive` ends the tall book once the capital has the National College.
   Status: coded, not built.
 
+### WondersForVictory: wonders only for the civ's target victory (Economy, Nov 4, about 3:00pm ET; the user's design)
+- **Rule:**
+  - A civ starts a world wonder only if it suits its target victory (`CvDiplomacyAI::GetCurrentVictoryPursuit`:
+    domination, diplomacy, culture or science), or if it's an economy wonder that helps any victory.
+  - A wonder's victory comes from its own flavours (`Building_Flavors`):
+    - science, spaceship → science;
+    - culture, great people → culture;
+    - diplomacy → diplomacy;
+    - offense, defense, military training, city defense, ranged, mobile, naval, air → domination.
+  - It's an economy wonder when growth, production, gold, happiness, infrastructure, expansion and religion together
+    outweigh its strongest victory flavour.
+  - Applied both in the normal production choice (`CvBuildingProductionAI::CheckBuildingBuildSanity`) and in the
+    capital's "best wonder" swap (`CvCityAI`). Wonders a great engineer hurries (`CvHomelandAI`, War's file) aren't
+    covered.
+- **Hypothesis:** less production goes into wonders that don't serve the civ's plan, and more into settlers, units and
+  buildings. This follows the earlier finding that capital wonders delayed expansion in 17 of 19 B civ-games. Strength
+  share should rise a little; wonders count drops.
+- **Measure:** strength share at T150; wonders per civ and `City3Turn` (mechanism).
+- **δ:** 2 points, gainer. Flag `WondersForVictory`, off in the bundle until tested or ruled.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
