@@ -2462,6 +2462,22 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### War's read of the conquest pair; both PCs move to the conquest package with SiegeAbort (lead, 2026-11-04 12:10am ET)
+
+**War, pair `0879B791` (Celts):** the sneak attack held only 7 units, about half the army. It waited the full 20
+turns (T86–T105) at 27–29 damage a turn against the 60 needed, then marched anyway when the cap ran out and declared
+on the Netherlands at T111. The Dutch were an equal (military 110 against 118) and out-built the Celts to 222. The
+assaults on Rotterdam (T111–116) did 61 then 40 damage against 200 HP. The Celts lost 11 units over T117–149, mostly to
+counterattacks and while retreating to heal, and no peace came.
+- **Fix in:** `SiegeAbort` (an attack still too weak at the cap is called off instead of sent), in `c13eb1c`.
+- **Open, War:** only half the army joins the attack, because the operation recruits only near the muster city.
+- **Open, Diplomacy:** a failed war ran 40 turns with no peace.
+
+**Runs on `ab-c13eb1c`, the conquest package + `SiegeAbort` as `RoleFixes`, logging off unless noted:**
+- PC 1: against normal CP civs, `AIABTest_bullyabort@BOX.csv` (after its current pair, which closes `AIABTest_bullyconquest@BOX.csv`).
+- PC 2: against greedy civs (`OthersBase`), `AIABTest_bullygreedy@TREEDESKTOP.csv`, logged pair first.
+The two runs differ only in the opponents.
+
 ### C8 decided: no worse, no gain; C8 is the new base. Everything merged; PC 2 plays bully vs greedy (lead, 2026-11-04 12:00am ET)
 
 - **C8 against B, 6 pairs** (`afc9f22`): c 50.36%, **+0.36 points; gainer FAILED** (LLR -4.71), **no-worse PASSED**
