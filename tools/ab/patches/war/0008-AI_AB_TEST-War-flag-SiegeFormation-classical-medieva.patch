@@ -1,0 +1,166 @@
+From 1fc6d0acab5027bbfe89dff27d876b15f788f5f9 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 04:50:49 +0000
+Subject: [PATCH] AI_AB_TEST War: flag SiegeFormation (classical-medieval land
+ city attacks use the basic attack force: 5 siege/ranged slots, not 2; off in
+ the bundle)
+
+Bully conquest pair 0879B791: the small city attack force has only 2 siege or
+ranged slots (both required); its optional slots are melee. So SiegeArmy's
+extra build requests were Pictish Warriors and Swordsmen, catapults couldn't
+join past 2, and 7 units made 27 damage a turn against a bar of 60.
+GetFormationType() applies the override everywhere CvAIOperation looks up its
+formation (Init, PreconditionsAreMet).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
+---
+ CvGameCoreDLL_Expansion2/CvAIOperation.cpp | 29 +++++++++++++++-------
+ CvGameCoreDLL_Expansion2/CvAIOperation.h   |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  2 +-
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  1 +
+ 4 files changed, 23 insertions(+), 10 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+index 17f4a468a..149d12e85 100644
+--- a/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
++++ b/CvGameCoreDLL_Expansion2/CvAIOperation.cpp
+@@ -1484,6 +1484,17 @@ AIOperationAbortReason CvAIOperationMilitary::VerifyOrAdjustTarget(CvArmyAI*)
+ 	return NO_ABORT_REASON;
+ }
+ 
++/// AI_AB_TEST: the formation this operation's army uses. With flag SiegeFormation a classical-medieval land city attack
++/// uses the basic attack force (5 siege/ranged slots) instead of the small one (2): the extra units SiegeArmy asks for
++/// were melee, which add almost no damage to a city
++MultiunitFormationTypes CvAIOperation::GetFormationType() const
++{
++	MultiunitFormationTypes eFormation = OperationalAIHelpers::GetArmyFormationForOpType(m_eType);
++	if (m_eType == AI_OPERATION_CITY_ATTACK_LAND && eFormation == MUFORMATION_SMALL_CITY_ATTACK_FORCE && GET_PLAYER(m_eOwner).UsesCandidateAI(FIX_SIEGE_FORMATION))
++		eFormation = MUFORMATION_BASIC_CITY_ATTACK_FORCE;
++	return eFormation;
++}
++
+ MultiunitFormationTypes OperationalAIHelpers::GetArmyFormationForOpType(AIOperationTypes eType)
+ {
+ 	switch (eType)
+@@ -1551,7 +1562,7 @@ void CvAIOperationMilitary::Init(CvCity* pTargetCity, CvCity* pMusterCity)
+ 			return;
+ 	}
+ 
+-	CvArmyAI* pArmy = AddArmy(OperationalAIHelpers::GetArmyFormationForOpType(m_eType));
++	CvArmyAI* pArmy = AddArmy(GetFormationType());
+ 	if(!pArmy)
+ 		return;
+ 
+@@ -1933,7 +1944,7 @@ void CvAIOperationCivilian::Init(CvCity* /*pTarget*/, CvCity* /*pMuster*/)
+ 			pMusterPlot = pClosestCity->plot();
+ 	}
+ 
+-	CvArmyAI* pArmy = AddArmy(OperationalAIHelpers::GetArmyFormationForOpType(m_eType));
++	CvArmyAI* pArmy = AddArmy(GetFormationType());
+ 	if(!pArmy)
+ 		return;
+ 
+@@ -2448,7 +2459,7 @@ void CvAIOperationNavalSuperiority::Init(CvCity* pTarget, CvCity* pMuster)
+ 	if (!pMusterPlot || !pTargetPlot)
+ 		return;
+ 
+-	CvArmyAI* pArmy = AddArmy(OperationalAIHelpers::GetArmyFormationForOpType(m_eType));
++	CvArmyAI* pArmy = AddArmy(GetFormationType());
+ 	if(!pArmy)
+ 		return;
+ 
+@@ -2567,7 +2578,7 @@ void CvAIOperationCarrierGroup::Init(CvCity* /*pTarget*/, CvCity* /*pMuster*/)
+ 		}
+ 	}
+ 
+-	CvArmyAI* pArmy = AddArmy(OperationalAIHelpers::GetArmyFormationForOpType(m_eType));
++	CvArmyAI* pArmy = AddArmy(GetFormationType());
+ 	if(!pArmy)
+ 		return;
+ 
+@@ -2736,7 +2747,7 @@ void CvAIOperationCityAttackNaval::Init(CvCity* pTarget, CvCity* pMuster)
+ 		pMusterPlot = MilitaryAIHelpers::GetCoastalWaterNearPlot(pMuster->plot());
+ 	}
+ 
+-	CvArmyAI* pArmy = AddArmy(OperationalAIHelpers::GetArmyFormationForOpType(m_eType));
++	CvArmyAI* pArmy = AddArmy(GetFormationType());
+ 	if(!pArmy)
+ 		return;
+ 
+@@ -2812,7 +2823,7 @@ void CvAIOperationCityAttackCombined::Init(CvCity* pTarget, CvCity* pMuster)
+ 	// Muster just off the coast
+ 	CvPlot *pCoastalMuster = MilitaryAIHelpers::GetCoastalWaterNearPlot(pMuster->plot());
+ 
+-	CvArmyAI* pArmy = AddArmy(OperationalAIHelpers::GetArmyFormationForOpType(m_eType));
++	CvArmyAI* pArmy = AddArmy(GetFormationType());
+ 	if(!pArmy)
+ 		return;
+ 
+@@ -2828,7 +2839,7 @@ void CvAIOperationNukeAttack::Init(CvCity* /*pTarget*/, CvCity* /*pMuster*/)
+ 	CvPlot* pMuster = NULL;
+ 	CvPlot* pTarget = FindBestTarget(&pMuster);
+ 
+-	CvArmyAI* pArmy = AddArmy(OperationalAIHelpers::GetArmyFormationForOpType(m_eType));
++	CvArmyAI* pArmy = AddArmy(GetFormationType());
+ 	if(!pArmy)
+ 		return;
+ 
+@@ -3136,7 +3147,7 @@ bool CvAIOperationCivilian::IsEscorted() const
+ 			return pThisArmy->GetNumSlotsFilled() + pThisArmy->GetOpenSlots(true).size() > 1;
+ 		else
+ 		{
+-			CvMultiUnitFormationInfo* thisFormation = GC.getMultiUnitFormationInfo(OperationalAIHelpers::GetArmyFormationForOpType(m_eType));
++			CvMultiUnitFormationInfo* thisFormation = GC.getMultiUnitFormationInfo(GetFormationType());
+ 			if (thisFormation && thisFormation->getNumFormationSlotEntriesRequired() > 1)
+ 				return true;
+ 		}
+@@ -3697,7 +3708,7 @@ bool CvAIOperation::PreconditionsAreMet(CvPlot* pMusterPlot, CvPlot* pTargetPlot
+ 	//use all slots, not only required slots
+ 	vector<pair<size_t,CvFormationSlotEntry>> freeSlots;
+ 	vector<CvArmyFormationSlot> fakeStatus;
+-	CvMultiUnitFormationInfo* thisFormation = GC.getMultiUnitFormationInfo(OperationalAIHelpers::GetArmyFormationForOpType(m_eType));
++	CvMultiUnitFormationInfo* thisFormation = GC.getMultiUnitFormationInfo(GetFormationType());
+ 	for (size_t i = 0; i < thisFormation->getNumFormationSlotEntries(); i++)
+ 	{
+ 		freeSlots.push_back( make_pair(i, thisFormation->getFormationSlotEntry(i)) );
+diff --git a/CvGameCoreDLL_Expansion2/CvAIOperation.h b/CvGameCoreDLL_Expansion2/CvAIOperation.h
+index faedbc0ed..ce4eb1dbb 100644
+--- a/CvGameCoreDLL_Expansion2/CvAIOperation.h
++++ b/CvGameCoreDLL_Expansion2/CvAIOperation.h
+@@ -207,6 +207,7 @@ public:
+ 	virtual int GrabUnitsFromTheReserves(CvPlot* pMusterPlot, CvPlot* pTargetPlot, CvArmyAI* pArmy = NULL);
+ 	int GetArmyExpectedCityDamage(CvArmyAI* pArmy) const;
+ 	bool IsArmyTooWeakForTarget(CvArmyAI* pArmy, bool bLog = false, bool bIgnoreTimeLimit = false) const;
++	MultiunitFormationTypes GetFormationType() const;
+ 	virtual void UnitWasRemoved(int iArmyID, int iSlotID);
+ 	virtual CvPlot* ComputeTargetPlotForThisTurn(CvArmyAI* pArmy) const;
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 74f95d253..fffe00898 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33355,7 +33355,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"SiegeAbort", false},
+ 	{"GreedyFewUnits", false}, {"GreedyNoWalls", false}, {"GreedyNoUpgrades", false}, {"GreedyBuilds", false},
+ 	{"AggressivePlan", false}, {"AggressiveArmy", false}, {"BalancedArmy", false}, {"BalancedWalls", false},
+-	{"MetaDial", false},
++	{"MetaDial", false}, {"SiegeFormation", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 37c53e195..3fbbc0bb6 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -216,6 +216,7 @@ enum CandidateFixTypes
+ 	FIX_BALANCED_WALLS,		// Personality (balanced style): walls and castles first in border cities and the capital. Off in the bundle
+ 	FIX_META_DIAL,			// Personality: the style settings (army size, walls, upgrades, growth value, conquest plan) follow the strategy
+ 							// profile's meta position, from greedy (-100) to aggressive (+100). Off in the bundle
++	FIX_SIEGE_FORMATION,	// War: classical-medieval land city attacks use the formation with 5 siege/ranged slots (not 2). Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+-- 
+2.43.0
+
