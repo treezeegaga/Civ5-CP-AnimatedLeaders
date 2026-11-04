@@ -1522,6 +1522,64 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: gold gifts to city-states, measured, and a flag proposal `GiftsNeedPatronage` (Diplomacy session, 2026-11-04)
+
+The user's idea: AIs should gift city-states mainly with the Patronage tree, since without it the gifts are poor value.
+
+**Measured** (`DiplomacyAI_MinorCiv_Log.csv`, gifts that went through; "(SAVING)" lines are gold being set aside, not
+gifts):
+
+| Game | Gold gifted by all 8 civs by T150 | Biggest giver |
+|---|---|---|
+| `0879B791` | 3,750 (14 gifts) | Venice 1,500 (city-state trait) |
+| `0879B791F` | 2,500 (8 gifts) | Arabia 1,000 |
+| `0B09BFE1` | 1,250 (5 gifts) | Songhai 500 |
+| `0B09BFE1F` | 1,250 (5 gifts) | Songhai 750 |
+
+- **Gifts are rare and small:** 0-1,500 gold per civ in 150 turns, in 250 and 500 lumps. No unit gifts appear in the
+  logs.
+- **Who had Patronage can't be measured.** The results files only count policies, and no log records the branches.
+  **Request for the lead:** a results column with the policy branches each civ has opened (e.g. `Branches` =
+  `Tradition+Patronage`).
+
+**How CP decides** (`CvDiplomacyAI::DoContactMinorCivs`, ~36200 and ~36695):
+- **Whether to gift this turn:** almost always. Any of these is enough: diplomacy flavour 4 or more (most leaders), a
+  diplomatic or culture victory pursuit, gold already saved for a gift, an active gold quest, or +100 gold a turn.
+  Otherwise a random roll on the diplomacy flavour.
+- **Which city-state:** scored by maritime growth, resources we lack (+80 each), gold and invest quests (+150, +100),
+  victory focus, city-state traits, and proximity.
+- **Whether the gift is worth it:** only when it makes us an ally or overtakes the current ally. That's why the totals
+  are low.
+
+**Is it poor value without Patronage?** Not always.
+- **What an alliance pays:**
+  - the ally bonus (a maritime ally feeds every city);
+  - the city-state's luxuries and strategic resources;
+  - its World Congress votes later.
+- **What it costs:**
+  - influence decays about 1 a turn, so 250-500 gold buys a few dozen turns of alliance;
+  - an AI rival can outbid you.
+- **What Patronage changes:** slower decay and more influence per gift, so the same gold lasts much longer.
+- So without Patronage a gift is a short rental. It's worth it when the alliance brings something specific, and poor
+  value as general goodwill. That's the user's rule plus its exceptions.
+
+**Proposed flag `GiftsNeedPatronage`** (level 3, not coded yet).
+- **The rule:** a civ that hasn't opened Patronage makes no gold gifts to city-states, unless one of these holds:
+  1. **Traits that reward city-states:** a city-state friendship or bonus modifier (Greece, Siam), or Austria's buyout
+     or Venice's (CP trait fields, so the list follows the data, not leader names).
+  2. **Diplomatic victory:** pursuing one while the World Congress is in session (or the United Nations counts).
+  3. **An ally worth keeping or taking:** the city-state is our ally or would become it with this gift, and it gives
+     us a luxury or strategic resource we'd otherwise lack.
+  4. **A quest that pays off:** the city-state's "give gold" or "invest" quest is active for us.
+- **Hypothesis:** less gold wasted on short alliances, spent on buildings and units instead, with no loss of alliances
+  that matter.
+- **Measures:**
+  - gold gifted per civ (from this log; or a `GoldGifted` count, for the lead);
+  - city-state alliances held at T150;
+  - strength share: a no-worse test, since the gold involved is small (about 300 gold per civ per 150 turns).
+- **Expected effect: small,** because the AIs already gift little. If the user rules it obvious, it can go straight
+  into the bundle after a crash check.
+
 ### Diplomacy: flag `WarAppetite`, and bundle flags checked for city-states (Diplomacy session, 2026-11-04)
 
 **City-state check** (the lead's C8 crash note: city-states run every bundle flag).
