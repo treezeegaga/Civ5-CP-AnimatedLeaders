@@ -1924,6 +1924,37 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: failed bully war 0BE6755D, Songhai against Assyria (Nov 4, about 11:45am ET)
+PC 2, greedy opponents, ab-2db51dd, 14-flag role. Aggressor Songhai. It ended with 3 cities and took none. A
+different failure from Nottingham: the army lost the zone, rather than its attacks failing to land.
+- **Target:**
+  - At T50, "CONQUEST: going for Assyria (committed target)". Assyria is a Conqueror and a neighbour, rated
+    military WEAK against Songhai at the time.
+  - ConquestTraitTargets gave Songhai at most pop/2 for it, a small bonus next to the greedy score.
+- **Army:**
+  - Four sneak attacks ended `NoUnits` on the turn they were created (T66–T67). Songhai had 5 units against the
+    basic formation's 6 required slots, the same thing seen in 0AFFA02F.
+  - The fifth held at T68: 2 catapults, an archer, a spearman, 2 warriors. It marched at T71, was "discovered" at
+    T75 (DeclareAtBorder: within 6 tiles of the target), and Songhai declared at T76.
+- **At Nineveh:**
+  - T77 and T79: capture attempts at 38 and 58 expected damage a turn, city at 200.
+  - **From T80 the zone was enemy-dominated** (posture WITHDRAW, "won't try to capture") every turn until T107.
+    Assyria brought its army; China declared on Assyria at T85 and still nothing changed.
+  - Losses: Songhai 1 unit, Assyria 3, over the whole game.
+- **Follow-up:**
+  - The reinforcing attack (T82) never passed SiegeArmy's bar and gave up at T103 (SiegeAbort, as designed).
+  - Peace came at T112. A new target, Babylon, followed at T113, with no war by T150.
+- **Lessons:**
+  1. The target check compares whole-empire strength once and keeps the target with a step of slack. A neighbouring
+     Conqueror with a real army can pass it and then hold the zone.
+  2. A 6-unit ancient army isn't enough against an AI that answers.
+  3. In the first required-slot creation turn, `NoUnits` aborts repeat (the formation is bigger than a small army).
+     Minor, since the next try holds.
+- **No new War flag from this game.** It fits CanWin, which checks only the nearest city. SiegeExposure
+  doesn't apply: the zone was lost before attacks mattered.
+- **Not War's area:** in `OperationalAILog`, Songhai's found-city operations ended NoTarget every turn from T87 to T117
+  (a new operation each turn, "Distance -1"). This is for Economy.
+
 ### War: why capture attempts plan attacks and then don't make them (code check, Nov 4, about 11:27am ET)
 The lead asked for this before the logs arrive. Read in `CvTacticalAI.cpp` on `ai/war` `9e9fc9d`.
 
