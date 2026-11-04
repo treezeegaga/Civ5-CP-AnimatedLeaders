@@ -1924,6 +1924,25 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0D3416E7 (PC 2, bullygreedy9 on ab-f73177c): the build-up happened, the war didn't (Nov 4, about 6:03pm ET)
+From the results file; the logs were deleted (the aggressor declared no war).
+
+| Game | Civ | T60 | T80 | T100 | T150 | Wars | Captures |
+|---|---|---|---|---|---|---|---|
+| Role | China | 4 land units, military 28 | 9 land, military 101 | 13 land, military 138 | 15 land, military 219 | 0 | 0 |
+| Flip | China | 4 land | 5 land | 6 land | 8 land, military 94 | 0 | 0 |
+
+- Gold in the role game: 128 at T60, 8 at T80, 52 at T100.
+- **So TimingBuildup's window now builds** (the window weight `214c6c7` and `f73177c` were in this build). What's
+  missing is the step from army to war.
+- **Possible blocks after the window:**
+  - the strength check and CanWin apply again, with the real army;
+  - the sneak attack forms, but SiegeArmy or the declaration path (DeclareAtBorder, DeclareWhenGathered, MarchOn,
+    then `SetArmyInPlaceForAttack` and the diplomacy AI's declaration) stops;
+  - or the diplomacy AI refuses the declaration (peace treaty, bankruptcy check).
+- **Needs:** a logged game where the aggressor builds up but doesn't declare. Ask the PCs to keep first-game logs
+  even with 0 wars (the lead's plan from eb4129d on).
+
 ### War: two more games on the old ab-f21a8f6 build (0C4F5988 Songhai, 0D0DC744 Zulus); SiegeAbort near the bar (Nov 4, about 5:34pm ET)
 Both ran before MarchOn, FocusedWar, the window fixes, the trio target fix and `f73177c`, so they mostly show causes
 already fixed.
@@ -1951,6 +1970,8 @@ already fixed.
 **Fix (SiegeAbort, a refinement of its own rule):** at the 20-turn mark the attack is called off only if its
 expected damage is below 85% of SiegeArmy's bar. An army that close marches; the tactical AI's 13-turn check still
 decides whether it attacks. Logged "SiegeArmy: close to the bar after 20 turns (x of y), marching".
+
+Coded: `ai/war` `460536b` (built, CI run 197); merged in `claude/ab-c1` `e4d5785`.
 
 ### War: why the Aztecs' gold was low in the 0C3C8913 replay (with Economy) (Nov 4, about 5:25pm ET)
 The lead: a timing attacker must never sit near bankruptcy at peace. The role had TrueGoldRate, WarEconomy and
