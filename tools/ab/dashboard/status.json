@@ -221,7 +221,7 @@
    "section": "goal",
    "order": 2,
    "name": "Aggressor beats the right matchups",
-   "detail": "Against greedy civs (few units, no walls) it takes several cities; against balanced civs it takes ≤ 1 per war. Needs an AI that conquers first (bully conquest test now); defence columns added for reading it (ec2a4c8).",
+   "detail": "Against greedy civs it takes several cities; against balanced ones ≤ 1 per war. First data: the Huns took 2 cities from their weakest neighbour (military 141 vs 69) in 1 of 2 pairs against normal civs.",
    "state": "open"
   },
   {
@@ -270,7 +270,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "No city captured yet in any bully game. War has two more siege fixes (catapults first, storm a weakened city) in build 5220c03; both PCs switch to it after their current pair. PC 2 plays strictly greedy civs, PC 1 normal ones.",
+   "detail": "First captures! In a bully game on PC 1 the Huns, running the conquest flags, took 2 cities from Spain, their weakest neighbour (half their military); the same game without the flags had none, and 4 civs ganged up on the Huns. Both PCs now move to the 12-flag build (5220c03).",
    "state": "running"
   },
   {
