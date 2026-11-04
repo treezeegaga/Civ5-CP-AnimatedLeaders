@@ -1522,6 +1522,39 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: flag `WarAppetite`, and bundle flags checked for city-states (Diplomacy session, 2026-11-04)
+
+**City-state check** (the lead's C8 crash note: city-states run every bundle flag).
+- Diplomacy's bundle flags are `EasyTarget`, `DiploBugs`, `LuxuryAsk` and `DealExploits`. None of their code runs for
+  a city-state as the deciding player:
+  - `CvDiplomacyAI::DoTurn` is only called for major civs (`CvPlayer.cpp` ~10291);
+  - city-states don't trade (`CvDealAI`) or sit in the World Congress as AI voters;
+  - help requests, demands and war-declaration memory are major-to-major.
+- New Diplomacy flags check `isMajorCiv()` as well.
+
+**`WarAppetite`** (pushed to `ai/diplomacy` `916925b`, on `claude/ab-c1` `af99bc1`; off in the bundle, not compiled).
+- **What it does:** Personality's profile sets the war appetite. The WAR approach weight follows the meta position M:
+  x0.5 at -100 (greedy), x1 at 0, x2 at +100 (aggressive), linear between. It applies after the opinion multipliers,
+  so friends still count, just less overwhelmingly for a conqueror. M is the home position until `MetaAdapt` moves it.
+- **Why:** the aggressor stays FRIENDLY to everyone (entry below). `TradeOpinion` removes the trade-made friendship;
+  this one makes aggressive leaders want war more and greedy ones less, as the profile intends.
+- **Hypothesis:** the bully aggressor (an aggressive archetype) declares its first war earlier, and greedy/tall civs
+  start fewer wars.
+- **Measures:** the aggressor's `WarsDeclared` and first-war turn (bully test, together with `TradeOpinion`); wars
+  started by tall civs (builders test); no-worse on strength.
+- **Not done here:** the profile's hard rules.
+  - The archetype rules (`ExpansionistPeace`, `BuilderPeace`, `DiplomatWord`, ...) are Personality's step 5.
+  - The everyone-rule "no war on a civ it's exchanging per-turn deal items with" needs a decision first. AIs nearly
+    always have a luxury swap running with their neighbours, so as written it would forbid most wars and deepen the
+    "nobody fights" problem.
+  - A narrower version keeps the honesty: don't renew deals with a civ we plan to attack, and declare only once our own
+    obligations have run out. That's for the user and Personality to decide.
+- **Decision (user, 2026-11-04): no such rule.** An AI may declare war on a civ it's trading per-turn items with.
+  Breaking a deal by war already costs trust: `DealReputation` discounts the breaker's promises, and with
+  `TradeOpinion` the trade-partner opinion goes with the cancelled deals. **For Personality:** drop the deal clause from
+  the everyone-rules in section 5 of the profile. The friendship clause (no war on a friend in the friendship's first
+  15 turns) is unaffected.
+
 ### Diplomacy: why the failed Celtic war ran 35 turns, and flag `StaleWarPeace` (Diplomacy session, 2026-11-04)
 
 From `DiplomacyAI_Peace_Log.csv` and `DiplomacyAI_Log.csv` of bully game `0879B791` (War's "Bully conquest, logged pair").
@@ -2548,7 +2581,8 @@ worked out each turn from what the civ can see:
 1. **The profile itself, measurement only (level 1):** worked out and logged (AI log `StrategyProfile_Log.csv` at turns
    1, 50, 100, 150: civ, leader, trait tags, pursuits, archetype, home M, weights, risk, expansion). No decision reads
    it. **Coded:** fork `ai/personality` `7afce5c` (`CvGrandStrategyAI::GetStrategyProfile`). CI run 112 failed on MSVC's
-   C4701 (an uninitialised-variable warning this build treats as an error); fixed in `111632b`, CI pending. **Request to
+   C4701 (an uninitialised-variable warning this build treats as an error). The lead fixed it on `claude/ab-c1` `c78384b`
+   (CI run 119 passed); `ai/personality` now follows `claude/ab-c1`. **Request to
    the lead:** results columns `Archetype` and `Meta` (home M now, current M once `MetaAdapt` exists), from
    `GetGrandStrategyAI()->GetStrategyProfile()`; and a logged game to check the picks against the expected ones above.
 2. **`MetaDial`:** the style flags read M instead of a fixed set. Judged by the matchup test (styles from M) and a
@@ -2607,8 +2641,111 @@ Build step 2 of the strategy profile.
      Conquerors, greedy civs paying for it)?
 - **Evidence level:** 3 (new behaviour), but the meta-level effects are judged like the styles (matchups, bully test);
   the SPRT here is the no-worse guard.
-- **Build:** fork `ai/personality` `3b056a9`, with the C4701 fix in `111632b` (the head: every Personality flag).
-- **Status:** coded, CI pending on `111632b`.
+- **Build:** fork `ai/personality` `3b056a9`, merged into `claude/ab-c1` (`c13eb1c`) with the lead's C4701 fix (`c78384b`).
+- **Status:** compiles (CI run 119 on `c78384b` passed). Not tested in games yet.
+
+### Greedy style in bully pair 0B09BFE1: walls hold, the unit cap leaked; where the units came from (Personality, 2026-11-04 7:55am ET)
+Pair `0B09BFE1` (`ab-c78384b`, PC 2, `AIABTest_bullygreedy@TREEDESKTOP.csv`, logs `logs_0B09BFE1*`). The six civs without a
+role ran the four greedy flags in both games. Replay matched, no crash. The lead's summary is in "Bully vs greedy civs,
+logged pair".
+
+**The style, per greedy civ (both games, 12 civ-games), against the two non-greedy role civs in the same games:**
+
+| | Land units per city | Walled cities | City strength per city | Population | Techs | Wonders |
+|---|---|---|---|---|---|---|
+| Greedy, T100 | 1.62 | 0 | 15 | 19.8 | 19.4 | 1.2 |
+| Greedy, T150 | 1.82 | 0.03 per city (2 cities in 12 civ-games) | 21 | 34.7 | 27.2 | 2.8 |
+| Aggressor and tall civ, T150, game 1 | 2.6 and 2.2 | 5 of 5 and 3 of 5 | | | | |
+
+- **Walls, castles, barracks:** work.
+- **The unit cap:** leaked, by two routes. The production log shows only a few land units chosen: Siam built a
+  warrior, a scout and a swordsman (3 land units chosen T1–T150) and owned 8 at T110–T120 in peace.
+  1. **City-state unit gifts, in peace.** Militaristic city-states give each friend a land unit every ~19 turns
+     (faster for allies, and Siam's ability speeds it up), and may gift one on first contact. Nothing checked the
+     cap, and the AI never switches gifts off. In peace Siam held 8 land units on 4 cities (T110–T120) and the
+     Aztecs 7 on 5 (T100–T110), with scouts counted.
+  2. **The siege exemption, at war.** My cap let every city under siege build or buy defenders past it.
+     CvTacticalAI's emergency purchases go through the same sanity check, so a civ at war had no limit: the Aztecs
+     reached 14 land units on 5 cities (cap 10), Songhai 13 on 5.
+  - Units left over from a war stay: the cap stops new units, it doesn't disband old ones (Songhai 10 units on
+    5 cities in peace T110–T120 after its war). Left as is: a greedy human might disband them, but it risks being
+    caught short in the next war.
+  - The `LandUnits` column counts scouts, the cap doesn't (about +1 per civ).
+  - `Military` is military might, not a unit count: the same units score more as they get newer, so 229 for Songhai
+    is 13 units of era-3 strength.
+- **The fix** (fork `ai/personality` `d51e8a6`, on `claude/ab-c1` `dbdfbb3`; same flags, no new flag):
+  1. A greedy AI (`GreedyFewUnits`, or `MetaDial` at -50 or below) switches unit gifts off with every city-state
+     while it is at its cap, and back on below it: the same switch a human has in the city-state screen
+     (`CvGrandStrategyAI::DoGreedyCityStateUnitGifts`, every turn; `CvMinorCivAI::SetUnitSpawningDisabled`). Unit
+     gifts are all it stops.
+  2. A city under siege gets a defender past the cap only if it has no garrison (`CvUnitProductionAI`, the
+     `GreedyFewUnits` block and MetaDial's greedy side).
+- **What to check after it:** greedy civs' `LandUnits` per city ≈ 1 in peace (1.5 with scouts) and ≤ 2 (+2) at
+  war, and whether the bully then takes cities. War's finding (the siege walks home to heal) matters more for
+  captures than the extra greedy units.
+- **Profile check:** the saved logs don't include `StrategyProfile_Log.csv` (it was added on `7afce5c`, and the runner
+  copies a fixed list of logs). **Request to the lead:** add `StrategyProfile_Log.csv` to the logs the runner saves.
+- **Status:** `d51e8a6` compiles (CI passed) and is merged into `claude/ab-c1` (the lead, 8:10am ET). PC 2 plays it as
+  `AIABTest_bullygreedy3@TREEDESKTOP.csv`.
+- **Follow-up, `d379bfe` (8:10am ET, CI pending):** the gift switch covers every style with a cap: `BalancedArmy` at 3 per
+  city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
+  their gifts.
+
+### GreedyWarArmy: at war a greedy civ judges the threat (Personality, 2026-11-04 8:15am ET, revised 9:15am ET)
+- **The user (2026-11-04), in three steps:**
+  1. "maybe it's just for the test, but a greedy civ should build military units if it is at war";
+  2. "enough to defend";
+  3. "a greedy civ who has war declared on them should judge how much threat it is under. If the person at war with
+     them is on the other side of the world or has a very weak army, then maybe they make no change to their plan of
+     not making military units."
+  4. "if they are currently under siege or their neighbour with a large army has declared war, then they should
+     prepare accordingly."
+  5. "a 'large army' is one that is capable or close to capable of taking one of your cities."
+- **Hypothesis:** with `GreedyWarArmy`, a greedy civ keeps its economy through wars that can't hurt it, and builds
+  enough defenders when one can. It holds more cities than strict greedy civs, but fewer than balanced ones, since it
+  starts each real war with about 1 unit per city and no walls. Judged by the matchup test.
+- **The threat** (`CvGrandStrategyAI::GetWarDefenceLandUnitCap`, worked out once per turn; enemies are major civs at war
+  with us). A war is a credible threat when:
+  - one of our cities is under siege, or
+  - **an enemy force in sight could take one of our cities, or nearly.** For each of our cities, that enemy's land
+    combat units we can see within 8 plots go through a siege sketch (`CouldEnemyTakeCity`). It's a defender's version of
+    War's `CanTakeNearestCity` (flag `CanWin`): their ranged units fire, the city heals 20 a turn and shoots the most
+    damaging one, which drops out once it dies, for up to 20 turns. "Close to capable": their damage counts a third
+    extra, and one melee unit is enough to walk in. Only units a human could see: an army out of sight counts once it
+    comes into view, so the greedy civ has fewer turns to prepare. That's part of its price.
+
+  Under a credible threat the civ wants the larger of 2 land units per city and 3/4 of the enemy land units in sight
+  within 5 plots of its cities. Without one (a far enemy, a force that couldn't take a city), the threat is 0.
+- **What the flag does** (`GreedyWarArmy`, `FIX_GREEDY_WAR_ARMY`, `false` in the bundle; 63 of 64 flags), at war with a
+  major civ:
+
+  | | No credible threat | Credible threat |
+  |---|---|---|
+  | Land unit cap | the peace cap (1 per city) | the threat (at least the peace cap) |
+  | Small-army cut on buildings | none, as in peace | until it has the threat's number of land units (not CP's 3 per city) |
+  | CP's at-war cut on non-defensive buildings | none, as in peace | as for any civ at war |
+  | City-state unit gifts | refused at the cap | refused at the cap |
+  | Upgrades | none, as in peace | allowed |
+  | Siege units | none | none |
+  | Walls and castles | none | allowed in border cities and cities under siege (barracks stay off) |
+
+  A city under siege gets a defender past the cap only if it has none.
+- **Knobs:** the sketch's 8-plot radius, +1/3 damage and 1 melee unit for "close to capable"; then 2 per city, or 3/4
+  of the units in sight within 5 plots.
+- **Strict greedy is unchanged:** without `GreedyWarArmy`, a greedy civ at war keeps 2 per city and upgrades. That's
+  the running easy-matchup test (`bullygreedy3`), which checks whether the conquest code can take cities at all.
+  **The greedy style for the matchup test is the four greedy flags plus `GreedyWarArmy`.**
+- **MetaDial changed to match** (not played yet): at war the greedy side (M ≤ -50) follows the same rules, with its
+  peace ceiling as the floor; above it, no war cap.
+- **Measures:** greedy civs at war with a far or weak civ keep `LandUnits` ≈ 1 per city and their growth; at war with a
+  credible neighbour they reach the threat's number within ~10-20 turns, and stop there. Cities lost per war against
+  strict greedy (`bullygreedy3`) and balanced civs.
+- **Run, once the bully takes cities from strict greedy civs:** the same bully run with `-OthersBase "GreedyFewUnits,
+  GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy"`.
+- **Build:** fork `ai/personality` `c1518c4` (on `674c1bd`, `ddf3311`, `cbb291c`, `9017ee3`, `d379bfe`; off `claude/ab-c1` `d51e8a6`).
+- **Status:** coded, CI pending.
+- **For the lead:** 63 of 64 flags. Retiring flags that failed or were replaced (`LongWide`; `GreedyArmyCap`, replaced by
+  `GreedyFewUnits`) will be needed soon.
 
 ## Requests
 
@@ -2859,6 +2996,83 @@ flipped game is the same game: all 120 result rows of pair `02C5BBF9` are identi
 no noise. That's good news for every real test: within a pair, everything that differs comes from the flags
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
+
+### FIRST CAPTURES: the Huns take 2 cities from Spain with the conquest role (lead, 2026-11-04 9:05am ET)
+
+`AIABTest_bullyabort2@BOX.csv` (PC 1, `ab-dbdfbb3`, normal opponents; the role = 8 conquest flags + `SiegeStay` +
+`SiegePosture`), 2 pairs:
+- **Pair `0A92244F`, the Huns as aggressor.** With the role: at war from about T105 with Spain, the weakest neighbour
+  (military 141 against 69). **2 cities captured** (Spain 5 cities to 4, Huns 5 to 6 by T130), military 227 at T150,
+  and 4 civs at war with the Huns by T140 (a coalition). Without the role (the flip): at war all game, 0 captures,
+  4 cities, military 140.
+- **Pair `0A8035D5`, the Huns again:** 0 captures either way.
+
+It's the first city an aggressor running our conquest code has ever taken (11 earlier captures in about 60 games
+were all B's or CP's). And it fits the user's matchup framing: the victim was the weakest-defended neighbour, at
+half the attacker's military. Both PCs move on to the 12-flag role (+ `SiegeFirst`, `SiegeFinish`, `ab-5220c03`).
+
+### SiegeFirst and SiegeFinish merged; three flags retired; both PCs to the 12-flag role (lead, 2026-11-04 8:50am ET)
+
+- **Retired** (`claude/ab-c1` `578d23a`): `LongWide` and `GreedyArmyCap` (both failed; `GreedyFewUnits` replaces the
+  latter) and `SiegeBar` (dropped, the user's decision). Their code is the off branch, CP's behaviour, so play is
+  unchanged for every test that didn't name them. This made room in the 64-bit masks.
+- **`5220c03`:** that + War's `SiegeFirst` (a waiting attack's spare siege slots take only catapults or trebuchets)
+  and `SiegeFinish` (melee assault once a city is at a third of its HP or less), `8c47302` + Personality's
+  `GreedyWarArmy` (`c1518c4`). 62 flags.
+- **Runs**, from each PC's next pair once `ab-5220c03` is out, logging off: the bully's `RoleFixes` are the 12 conquest
+  flags (the 10 + `SiegeFirst`, `SiegeFinish`):
+  - PC 2 against strict greedy civs: `AIABTest_bullygreedy4@TREEDESKTOP.csv`.
+  - PC 1 against normal civs: `AIABTest_bullyabort3@BOX.csv`.
+
+  War asked for "the role + both against the role alone". That needs a key for "the aggressor runs it in both games",
+  which doesn't exist yet. With 0 captures so far, the first question is whether any city falls; the key comes once
+  one does.
+
+### A dead aggressor at T10: pair 0B40B5B7 left out (lead, 2026-11-04 8:35am ET)
+
+`AIABTest_bullygreedy2@TREEDESKTOP.csv`, the only pair on `ab-dbdfbb3` before PC 2 moved to `d51e8a6`: Songhai, the
+aggressor, has `Alive` 0, 0 cities and 0 military from T10 in **both** games. The flipped game runs no role flags, so
+it comes from the map or start, not the conquest flags. It's the first such case in any results file (all files
+checked for a civ dead by T30). Left out of the bully reading. If it happens again, PC 2 keeps the autosaves.
+
+### Greedy unit cap fixed; PC 2 moves to it (lead, 2026-11-04 8:15am ET)
+
+Personality's `d51e8a6` (see "greedy pair 0B09BFE1, where the extra units came from"): greedy civs switch off
+city-state unit gifts while at their cap, and a besieged city gets a defender past the cap only with no garrison.
+Same flags. CI passed (release `ab-d51e8a6`); `claude/ab-c1` fast-forwarded to it. It only acts for greedy civs, so PC 1
+(normal opponents) stays on `ab-dbdfbb3`. PC 2 moves to `ab-d51e8a6` after its first pair on `dbdfbb3`, results
+`AIABTest_bullygreedy3@TREEDESKTOP.csv`, same command. `Run-Games.ps1 -SaveLogs` now also saves `StrategyProfile_Log.csv`
+(Personality's request).
+
+### War: the Mongols' siege walked home to heal; SiegeStay and SiegePosture join the bully runs (lead, 2026-11-04 7:45am ET)
+
+**War, pair `0B09BFE1`:** the Mongols' siege of Tiwanaku reached 117 expected damage a turn and brought it to
+128/200 HP (T107–T112). Then the units the tactical AI didn't use that turn fell through to the homeland AI's heal
+moves, walked home with no deaths, and the city recovered. `SiegeStay` only filtered the tactical heals. War's
+`3247ef4` makes the homeland heals skip units the siege needs too.
+
+**`claude/ab-c1` `dbdfbb3`:** `af99bc1` + War `3247ef4` + Diplomacy `WarAppetite` (`916925b`, CI passed). 62 flags.
+**Both PCs switch at their next pair boundary**, logging off, `RoleFixes` = the 8 conquest flags + `SiegeStay` +
+`SiegePosture`:
+- PC 2: against greedy civs (`OthersBase` = the 4 greedy flags), `AIABTest_bullygreedy2@TREEDESKTOP.csv`.
+- PC 1: against normal civs, `AIABTest_bullyabort2@BOX.csv`.
+`StaleWarPeace` and `WarAppetite` stay out of these runs, so they change only the attack side.
+
+### Bully vs greedy civs, logged pair: still no captures; the greedy cap leaks (lead, 2026-11-04 8:00am ET)
+
+Pair `0B09BFE1` (`ab-c78384b`, PC 2, `AIABTest_bullygreedy@TREEDESKTOP.csv`, logs `logs_0B09BFE1*`). The aggressor is the
+Mongols, running the 8 conquest flags in the first game only. The others are greedy (`OthersBase`), and Babylon is the
+tall civ. Replay matched.
+- **Aggressor:** biggest army at T100 (military 107, next 79). It declared 1 war between T100 and T150 and was at
+  peace at T150, military 190. **0 captures** in both games. Babylon (tall, not greedy) took 1 city from Poland in the
+  first game.
+- **Greedy civs:** walls work (0 walled cities except one city in each of two civs). **The unit cap leaks:** at T150,
+  `LandUnits`/`Cities` were 13/5, 12/5, 10/4 and 9/4, and military reached 229 (Songhai) and 154 (Aztecs). So
+  they weren't the easy matchup yet.
+- **A free target nobody took:** Japan at T150 had military 5, was at war with 2 civs, and kept its 3 cities.
+- **Asked:** War, the Mongols' war and what SiegeAbort did, and why no one took Japan. Personality, where the
+  extra greedy units come from.
+- The 20-game run goes on (logging off).
 
 ### Overnight: PCs idle 12am–7am, now running; StaleWarPeace merged (lead, 2026-11-04 7:15am ET)
 

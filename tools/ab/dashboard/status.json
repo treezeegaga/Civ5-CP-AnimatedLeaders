@@ -221,7 +221,7 @@
    "section": "goal",
    "order": 2,
    "name": "Aggressor beats the right matchups",
-   "detail": "Against greedy civs (few units, no walls) it takes several cities; against balanced civs it takes ≤ 1 per war. Needs an AI that conquers first (bully conquest test now); defence columns added for reading it (ec2a4c8).",
+   "detail": "Against greedy civs it takes several cities; against balanced ones ≤ 1 per war. First data: the Huns took 2 cities from their weakest neighbour (military 141 vs 69) in 1 of 2 pairs against normal civs.",
    "state": "open"
   },
   {
@@ -270,7 +270,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Both PCs play the bully with the full conquest package (through SiegeAbort and SiegeFormation) on ab-c78384b since 7:03am ET: PC 2 against greedy civs, PC 1 against normal ones. The PCs sat idle overnight after a build break.",
+   "detail": "First captures! In a bully game on PC 1 the Huns, running the conquest flags, took 2 cities from Spain, their weakest neighbour (half their military); the same game without the flags had none, and 4 civs ganged up on the Huns. Both PCs now move to the 12-flag build (5220c03).",
    "state": "running"
   },
   {
@@ -355,7 +355,7 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Making attacks take cities. Found why the Celts lost their army (too few catapults, an attack sent too weak) and fixed both; the fixes are in both PCs' runs.",
+   "detail": "Added SiegeFirst (build catapults, not bowmen) and SiegeFinish (storm a city at a third of its HP). Both join the bully runs.",
    "chat": "Civ V AI: War session",
    "state": "waiting"
   },
@@ -363,15 +363,15 @@
    "section": "session",
    "order": 3,
    "name": "Diplomacy",
-   "detail": "Who fights whom, and when wars end. New: winners that never attack stop refusing peace (StaleWarPeace), and war appetite follows the leader's style (WarAppetite, compiling).",
+   "detail": "StaleWarPeace and WarAppetite both compile and are on the integration build (dbdfbb3); they wait until the attack side works.",
    "chat": "Civ V AI: Diplomacy session",
-   "state": "running"
+   "state": "waiting"
   },
   {
    "section": "session",
    "order": 4,
    "name": "Personality",
-   "detail": "The rock-paper-scissors styles: greedy, balanced and aggressive, and each leader's profile. The greedy style is in PC 2's run; balanced, aggressive and MetaDial wait for the matchup test.",
+   "detail": "GreedyWarArmy, from your five points: at war a greedy civ only arms up if an enemy force in sight could take one of its cities. Merged; waits for the matchup test.",
    "chat": "Civ V AI: Personality session",
    "state": "waiting"
   },
@@ -387,7 +387,7 @@
    "section": "session",
    "order": 6,
    "name": "PC runner",
-   "detail": "PC 1 (BOX): the bully with the conquest flags against normal civs, 20 games, on ab-c78384b since 7:02am ET.",
+   "detail": "PC 1 (BOX): bully vs normal civs. After its current pair it switches to ab-dbdfbb3 with SiegeStay and SiegePosture added.",
    "chat": "Civ V AI optimization PC runner",
    "state": "running"
   },
@@ -395,7 +395,7 @@
    "section": "session",
    "order": 7,
    "name": "PC runner 2",
-   "detail": "PC 2 (TREEDESKTOP): the bully with the conquest flags against greedy civs, logged pair first, on ab-c78384b since 7:03am ET.",
+   "detail": "PC 2 (TREEDESKTOP): bully vs greedy civs; logged pair done (0 captures). After its current pair it switches to ab-dbdfbb3 with SiegeStay and SiegePosture added.",
    "chat": "Civ V AI optimization PC runner 2",
    "state": "running"
   },
@@ -557,7 +557,7 @@
    "name": "StaleWarPeace",
    "owner": "Diplomacy",
    "detail": "A war where no city has changed hands for 20 turns and nobody is attacking ends in peace.",
-   "test": "Next: the bully runs, for every civ.",
+   "test": "On the integration build (dbdfbb3); tested once attacks take cities.",
    "state": "next",
    "runs": []
   },
@@ -567,7 +567,7 @@
    "name": "WarAppetite",
    "owner": "Diplomacy",
    "detail": "The urge to go to war follows the leader's style: half for greedy, double for aggressive.",
-   "test": "Next: bully and builders tests, once its build passes.",
+   "test": "On the integration build (dbdfbb3); tested once attacks take cities.",
    "state": "next",
    "runs": []
   },
@@ -658,6 +658,68 @@
    "owner": "Economy",
    "detail": "Settler operations stop retrying sites they can't reach.",
    "test": "Later: a bug-fix (no-worse) test.",
+   "state": "waiting",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 24,
+   "name": "SiegeStay",
+   "owner": "War",
+   "detail": "A siege keeps its units in place to heal, instead of walking home while the city recovers.",
+   "test": "Bully runs on ab-dbdfbb3, both PCs, from their next pair: the aggressor runs it in the first game.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 25,
+   "name": "SiegePosture",
+   "owner": "War",
+   "detail": "Siege units take positions that keep up the damage on the city.",
+   "test": "Bully runs on ab-dbdfbb3, both PCs, from their next pair: the aggressor runs it in the first game.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 26,
+   "name": "SiegeFirst",
+   "owner": "War",
+   "detail": "A waiting attack fills its spare siege slots with catapults, not bowmen.",
+   "test": "Bully runs on ab-5220c03, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 27,
+   "name": "SiegeFinish",
+   "owner": "War",
+   "detail": "Melee units storm a city once it's down to a third of its HP.",
+   "test": "Bully runs on ab-5220c03, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 28,
+   "name": "GreedyWarArmy",
+   "owner": "Personality",
+   "detail": "At war a greedy civ judges the threat: a far or weak enemy changes nothing; a force that could take a city gets defenders and border walls.",
+   "test": "Later: the matchup test.",
    "state": "waiting",
    "runs": []
   }
