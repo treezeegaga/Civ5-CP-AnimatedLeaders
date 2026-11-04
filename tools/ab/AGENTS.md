@@ -329,6 +329,20 @@ proposal counts, the defence columns `WalledCities`/`CityStrength`/`LandUnits` (
   capital starts no world wonder while the opening book still has settlers to start ("two extra cities beat
   Stonehenge"). It stays in C8, whose test against B still covers it.
 
+**The user's flag audit (2026-11-04 3:05pm ET), flags 22–41 of the lead's list:**
+- **Ruled obviously right, into the bundle** (after a city-state safety check by the owner, since non-major civs
+  run every bundle flag): `CanWin`, `CSConquest`, `BoxedInWar` (War); `SettlerOverlap`, `WidePlans` (Economy);
+  `TradeOpinion`, `DealReputation`, `CoalitionStrength`, `CoalitionCoop`, `CoalitionPact` (Diplomacy).
+- **Ruled wrong, stays off:** `SettlersFirst`.
+- **Redesigns:**
+  - `GreedyTarget`: the target is the most vulnerable nearby city (the owner's total army, the city's walls and
+    defence, distance), not the fewest units per city (War).
+  - `GreedyBook`: a tall civ beelines the National College, then opens up (Economy).
+  - `GreedyAlarm`: the reaction scales with greed; a very greedy civ builds an extra archer when it sees an army
+    and walls only once war is declared (Personality).
+- **No ruling, tested as usual:** `ConquestTraitTargets`, `BoxedIn`, `BookFinishesSettlers`, `StaleWarPeace` (the
+  lead explained it), `WarAppetite`, `Sanctions`. Flags 1–21 weren't in the user's reply.
+
 *Level 3, new ideas: full gainer SPRT.*
 - c7c ideas: `WidePlans` (+0.08), `BoxedIn` (+0.34), `BoxedInWar` (-0.69), `TimingAttack` (-0.10), `SiegeTechs`
   (+0.27), `SiegeBook` (-0.59), `DeclareTiming` (-0.11), `GrowthTech` (-0.47), `AqueductValue` (+0.09), `GreedyBook`
