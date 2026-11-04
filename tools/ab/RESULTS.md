@@ -1798,6 +1798,46 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: bully vs greedy pair 0B09BFE1 (Mongols with the full conquest role): close, then the army walked home (Nov 4, about 7:40am ET)
+
+Aggressor Mongolia, with TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, SiegeArmy, ArmyHandoff, SiegeAbort and
+SiegeFormation, in game 1 only. Other civs greedy. No capture in either game. With the flags Mongolia kept its army:
+military 190 at T150 against 124 in the replay, 5 cities in both.
+- **SiegeFormation works:** attacks used the 10-slot formation. But they still held one siege unit each (a catapult
+  or trebuchet) beside 2–3 composite bowmen and swordsmen: 30–40 expected damage a turn against bars of 60–75.
+- **SiegeAbort and SiegeArmy behaved as designed:** attacks waited. One ended on a war-state change, one passed the bar
+  and reached the Inca. The declaration came at T104.
+- **The siege nearly worked.** Tiwanaku, an Inca city: Inca military 32, a greedy civ, 200 HP.
+  - T104: 117 expected damage a turn. The city fell to 168 HP needed at T105, then 128 at T106.
+  - Then the damage dropped to 32 a turn, and the city healed back to 200 by T110.
+  - **No Mongol unit died T104–T119.** The units the tactical AI didn't use fell through to the homeland AI, which sent
+    them home to heal (T107–T112) or to sentry points.
+- **Two gaps in the role.**
+  1. `SiegeStay` wasn't in the role's flags.
+  2. As coded, SiegeStay only filtered the tactical AI's heal moves, not the homeland AI's.
+
+  Fixed (2): `ai/war` `3247ef4` (patch 0009). The homeland heal moves now skip units the tactical AI's
+  `IsUnitNeededAtSiege` says the siege needs (at least a third of HP, near a damaged enemy city). This is SiegeStay
+  itself, which hasn't passed and isn't in the bundle. **Request:** add SiegeStay (and SiegePosture) to the
+  aggressor's RoleFixes for the next bully runs.
+- **Why nobody took Japan** (military 5, 3 cities; at war with Songhai from T67, and with Siam from T128):
+  - **Songhai** (B, no flags) had no army near Kyoto for 80 turns: expected damage 0 from T88 to T143.
+  - **When an attack finally came (T145)** it was the same pattern as at Tiwanaku: 83, then 120 a turn. Kyoto fell to
+    164, then 133 HP needed. Then the damage dropped to 33 a turn and Kyoto healed back to 193 by T151.
+  - **Siam** brought at most 27 a turn.
+
+  So the bleed after two turns of fire isn't a quirk of the flags: B does it too. The fix is the same: SiegeStay
+  (now also covering the homeland heals).
+- **The next fix, in order:**
+  1. Add SiegeStay and SiegePosture to the aggressor's role (`ab-3247ef4`). Expected: the two-turn collapse doesn't
+     happen, and a 120-a-turn siege on a 200 HP city ends in a capture within 3–4 turns.
+  2. If cities still survive at 30–60% HP, melee units aren't finishing: make the capture attempt use the high
+     aggression level once the city is below a third of its HP.
+  3. Then ask for siege units first while an attack waits (one catapult per army today).
+- **Still open:** one siege unit per army. Only the capital's SiegeBook builds catapults, and the extra units SiegeArmy
+  asks for follow the slot types (ranged or bombard), so cities answer with composite bowmen. A later idea: ask for
+  `UNITAI_CITY_BOMBARD` first while an attack waits.
+
 ### FIX_SIEGE_FORMATION: classical–medieval city attacks use a formation with room for siege (War) (Nov 3, about 11:50pm ET)
 - **Why only half the army joined, and the bar wasn't reached** (bully pair 0879B791): distance from the muster point
   wasn't it. The Celts' attack held 7 of its 9 slots; the rest of their military was garrisons, a sentry and scouts.
@@ -2680,6 +2720,12 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
   per game: an operation is created and dropped every turn (Spain in 02F5C9E3, T19–T23: a new ID each turn, "Duration"
   20, 21, 22...). Probably a settler whose target fails the check in `CvAIOperationCivilianFoundCity` right after it's
   chosen. It may be costing settler turns, so it's worth a look for expansion pace.
+- **For the lead, from War (the user agreed, Nov 4 ~7:35am ET): one `ConquestPlan` switch.** `TimingAttack`,
+  `DeclareTiming`, `SiegeBook` and `SiegeTechs` are four parts of one plan (c4's siege timing attack): pick a target,
+  research siege, build the siege army, declare when it exists. None makes sense alone, so single-flag tests of them
+  mean little. Proposal: a `ConquestPlan` flag that turns all four on, for warmonger roles and personalities. The
+  general war fixes stay separate flags, since they help any civ at war: SiegeArmy, SiegeAbort, SiegeFormation and
+  ArmyHandoff. War can write it if you prefer (CvPlayer's flag table is yours).
 - **For War (from War, noted): target choice.** c picking c in the test is an artefact of the split, not a bug, and
   `CanWin` already checks that a target can be beaten. Nothing to code until the bully test shows the aggressor
   picking hopeless targets.
