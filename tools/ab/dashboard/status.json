@@ -221,21 +221,21 @@
    "section": "goal",
    "order": 2,
    "name": "Aggressor's share of all cities (bully test)",
-   "detail": "≤ 20% (not measured yet)",
+   "detail": "≤ 20%. Can't be judged yet: no AI aggressor takes cities (about 11 captures in 60 games), so it passes trivially. Meaningful once an attacker can conquer.",
    "state": "open"
   },
   {
    "section": "goal",
    "order": 3,
    "name": "Cities per aggressor war",
-   "detail": "≤ 1 (not measured yet)",
+   "detail": "≤ 1. Can't be judged yet, for the same reason.",
    "state": "open"
   },
   {
    "section": "goal",
    "order": 4,
    "name": "Coalition against a runaway",
-   "detail": "2+ civs within 20 turns (not measured yet)",
+   "detail": "2+ civs within 20 turns of its first conquest. Can't be judged yet: there are no conquests.",
    "state": "open"
   },
   {
