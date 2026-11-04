@@ -3492,8 +3492,9 @@ logged pair".
 - **What to watch** (once the aggressive set runs): an aggressive civ's `LandUnits` about cities + 1 most of the game,
   rising quickly in the 20 turns before its declaration; its economy in between (population, techs) close to a balanced
   civ's.
-- **Build:** `019c646` (compiles, CI run 162), then `d6c872c` (merge with `ai/war`, CI pending).
-- **Status:** waiting for CI on `d6c872c`.
+- **Build:** `019c646` (compiles, CI run 162), then `d6c872c` (merge with `ai/war`), then `166ebc19a` (merge with War's
+  build fix `fd881bb`; compiles, CI run 168).
+- **Status:** compiles (CI run 168 passed on `166ebc19a`); merged into `claude/ab-c1` by the lead.
 
 ### AggressiveWalls: walls only in threatened border cities (Personality, 2026-11-04 2:10pm ET)
 - **The lead (2026-11-04):** in PC 2's pair `0C63D961` the bully had walls in every city (7 of 7; 8 of 8 in the flip).
@@ -3508,6 +3509,32 @@ logged pair".
   Elsewhere it builds none.
 - **A separate flag** so it can join the bully's role as well as the aggressive style set.
 - **Measure:** the aggressor's `WalledCities` against its border cities at war; its gold per turn.
+- **Status:** compiles (CI run 168 passed on `166ebc19a`, with War's build fix); merged into `claude/ab-c1` by the lead.
+
+### GreedyAlarmScale: the alarm's reaction scales with how greedy the civ is (Personality, 2026-11-04 2:40pm ET)
+- **The user's flag audit (via the lead, 2026-11-04):** GreedyAlarm should depend on the personality. A very greedy civ
+  builds one extra archer when it sees the army, and builds walls only once war is actually declared; a less greedy
+  one reacts sooner and more. Economy wrote GreedyAlarm; the style side is mine, coordinated with Economy's code.
+- **Hypothesis:** GreedyAlarm today gives every alarmed civ the same reaction: walls valued as if at war, archers up to
+  cities + 1, and no army cap at all. For the greedy style that undoes the plan whenever a neighbour's units walk past
+  (posture MEDIUM needs only 3 units outside their land). Scaling it keeps most of the greedy economy for the greediest
+  civs, and lets the less greedy ones keep Economy's full reaction. Expected: greedy civs' gold and science per turn up,
+  cities lost no worse.
+- **How greedy (g, 0 to 100):** 100 with the greedy style flags (`GreedyFewUnits` or `GreedyNoWalls`); with `MetaDial`,
+  minus the meta position on the greedy half (M = -100 gives 100, M = -50 gives 50, M >= 0 gives 0); otherwise 0.
+- **The flag** (`GreedyAlarmScale`, `FIX_GREEDY_ALARM_SCALE`, off in the bundle; needs `GreedyAlarm` on):
+  - **Who is alarmed:** a civ with g > 0 is alarmed whatever its opening book (the greedy style keeps a small army on
+    any book; GreedyAlarm alone looks only at the tall book). g = 0 is GreedyAlarm unchanged.
+  - **Units:** the alarm lifts the army cap by 1 + cities x (100 - g) / 100 land units instead of removing it: the
+    greedy style (g = 100) gets one unit over its peace garrison, and GreedyAlarm's archer bonus makes it an archer;
+    M = -50 gets 1 + half a unit per city. A civ without a cap is unchanged. City-state unit gifts follow the same
+    lifted cap.
+  - **Walls:** g >= 75 builds no walls on the alarm (only once war is declared, under GreedyWarArmy's credible threat);
+    below 75 the greedy wall ban is lifted for walls and castles only (barracks stay off) and GreedyAlarm's wall bonus
+    (border 1000, elsewhere 300) is scaled by (100 - g) / 100.
+- **Measure:** greedy civs' gold and science per turn while alarmed (`GREEDY:` lines in the log), `LandUnits` and
+  `WalledCities` at T150, cities lost and wars declared on them; against `GreedyAlarm` alone, paired.
+- **Build:** fork `ai/personality` `35272f9`.
 - **Status:** coded, CI pending.
 
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
