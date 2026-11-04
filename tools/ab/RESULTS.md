@@ -3147,6 +3147,17 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Use each civ's conquest bonus (the user; lead, 2026-11-04 10:10am ET)
+
+Some civs are rewarded for taking cities (base rules; CP's database to be checked): Assyria (a free tech the owner knew
+per city captured), Songhai (triple gold from captures and pillaged camps), the Huns (raze twice as fast), Mongolia
+(+30% against city-states). Austria and Venice take city-states without war.
+- **War:** flag `ConquestTraitTargets`. With the conquest flags on, a warmonger's target value adds its trait's
+  reward: Assyria favours neighbours with techs it lacks, Songhai rich cities, Mongolia city-states first. Austria
+  and Venice exclude city-states.
+- **Personality:** the conquest-bonus civs on the aggressive side of the profile, Austria and Venice on the
+  city-state side, read from the trait fields rather than a civ list.
+
 ### Does conquest pay? And city-states (lead, 2026-11-04 10:05am ET)
 
 - **The user:** a bully grows by absorbing other civs' cities, so if it conquers nothing it won't grow. So the
