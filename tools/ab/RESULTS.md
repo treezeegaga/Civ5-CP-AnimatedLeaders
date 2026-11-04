@@ -1337,8 +1337,18 @@ the attack. War codes the timing (`TimingBuildup`); Economy pays for it.
     `TimingBuildup`'s phase.
 - **Measure:** civ-games at 0 gold (aggressors); turns from build-up start to the army marching; strength share at T150
   (no-worse) and cities captured in bully games.
-- **δ:** 2 points, no-worse. Status: designed; code after War's hook, as one flag `WarChest` in `CvEconomicAI` (saving
-  and buying) and `CvBuildingProductionAI` (gold weight in deficit).
+- **δ:** 2 points, no-worse.
+- **Build:** patch 0014 on `ai/war` `2a4dde1` (it uses War's accessors). It carries `TrueGoldRate` too, since 0013's flag
+  list doesn't apply on `ai/war`: **0014 replaces 0013** when `ai/war` and `ai/economy` are merged. Flag `WarChest`
+  (`FIX_WAR_CHEST`):
+  - `DoWarChest` in `CvEconomicAI.cpp`, from `DoHurry`;
+  - a +500 bonus for gold-yield buildings in `CvBuildingProductionAI` when the phase is window or later and gold per
+    turn is below 0;
+  - logs "WAR CHEST - Bought ..." in the homeland log.
+
+  Gold target as agreed with War: units still wanted × the unit's price, capped at 15 turns of net income, at least 2
+  siege units. War gates its stand-in saving and buying (`DoTimingBuildup`) on `!UsesCandidateAI(FIX_WAR_CHEST)`.
+  Status: coded, not built. Test it together with `TimingBuildup`, since it only acts for timing attackers.
 
 ### WarEconomy: a planned attack prepares the economy in peace (Economy, Nov 4, about 2:00pm ET; proposal, same hook)
 
