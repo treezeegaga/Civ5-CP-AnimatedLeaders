@@ -3642,6 +3642,20 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Where bully attacks fail: late, small, or not at all (lead, 2026-11-04 1:50pm ET)
+
+- **Tally:** across all bully files, 2 of 39 first games (with the role) have a capture (the Huns in `0A92244F`, the Inca
+  in `0C04B641`). The siege works once an army is at the walls; the attack rarely gets there whole.
+- **War's trace** (its entry "the attack operations in 0C458987 and 0C22F161"), three causes:
+  1. **Late:** at peace the army waits at the border for "discovered" (7 turns in `0C458987`), and the war starts
+     with it strung out over 3–7 tiles; or it sits in recruiting for slots.
+  2. **Small:** SiegeRoll releases 4–6-unit waves one at a time, and barbarians and home defence pull the handed-off
+     units away.
+  3. **Not at all:** bankruptcy. The Huns' warriors and siege units were gifted away for gold (`0C22F161`).
+- **Assigned:** War, causes 1 and 2 as flags; Economy (idle until now), cause 3: why a warmonger building up runs
+  out of gold, and a fix.
+- The watch's first scheduled run (1:13pm ET) succeeded.
+
 ### SiegeExposure and SiegeRoll merged; the Raider archetype; masks widened to 128 flags (lead, 2026-11-04 12:35pm ET)
 
 - **`claude/ab-c1` `1c3ab74`:** War's `SiegeExposure` (in a city attack, a unit that fired is judged at turn end by the
