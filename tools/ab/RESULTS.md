@@ -1924,7 +1924,7 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
-### War: the first logged pair on ab-f21a8f6 (25-flag role), 0CD189D4, Japan (Nov 4, about 3:58pm ET)
+### War: the first logged pair on ab-f21a8f6 (25-flag role), 0CD189D4, Japan (Nov 4, about 3:56pm ET)
 PC 2, greedy opponents. Japan is the aggressor (group b, wide). In the role game it had 7 cities and made no
 capture attempt; in the flip game it took one city.
 
@@ -1957,7 +1957,7 @@ it.
 **The flip game:** Japan took Agaidika. Its capture lines show units moving ("2 of 2", "3 of 3 used") with the city
 at 200 → 200 most turns. That's the flip, without SiegeExposure.
 
-### FIX_FOCUSED_WAR: a timing attacker with a plan doesn't join other civs' wars (War) (Nov 4, about 3:58pm ET)
+### FIX_FOCUSED_WAR: a timing attacker with a plan doesn't join other civs' wars (War) (Nov 4, about 3:56pm ET)
 - **Hypothesis:** a warmonger in the timing-attack plan, with a committed conquest target, treats every other civ
   as an invalid coop-war target (`CvDiplomacyAI::IsValidCoopWarTarget`).
   - It neither asks for nor accepts coop wars against them.
