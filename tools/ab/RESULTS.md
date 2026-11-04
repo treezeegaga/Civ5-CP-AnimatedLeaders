@@ -2666,13 +2666,15 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
-### GreedyWarArmy: at war a greedy civ judges the threat (Personality, 2026-11-04 8:15am ET, revised 8:45am ET)
+### GreedyWarArmy: at war a greedy civ judges the threat (Personality, 2026-11-04 8:15am ET, revised 9:00am ET)
 - **The user (2026-11-04), in three steps:**
   1. "maybe it's just for the test, but a greedy civ should build military units if it is at war";
   2. "enough to defend";
   3. "a greedy civ who has war declared on them should judge how much threat it is under. If the person at war with
      them is on the other side of the world or has a very weak army, then maybe they make no change to their plan of
      not making military units."
+  4. "if they are currently under siege or their neighbour with a large army has declared war, then they should
+     prepare accordingly."
 - **Hypothesis:** with `GreedyWarArmy`, a greedy civ keeps its economy through wars that can't hurt it, and builds
   enough defenders when one can. It holds more cities than strict greedy civs, but fewer than balanced ones, since it
   starts each real war with about 1 unit per city and no walls. Judged by the matchup test.
@@ -2680,10 +2682,12 @@ logged pair".
   with us). It's the larger of:
   - **units at the door:** 3/4 of the enemy land combat units we can see within 5 plots of our cities (only what a
     human could see);
-  - **a credible enemy:** one that is CLOSE or NEIGHBORS and whose army is at least AVERAGE compared to ours. This is
-    CP's diplomacy estimate, roughly what the demographics screen shows a human. It counts as 2 land units per city.
+  - **a credible war: 2 land units per city.** Credible means one of our cities is under siege, or an enemy at war
+    with us is CLOSE or NEIGHBORS and has a large army. A large army is military might at or above the average of the
+    living major civs; the demographics screen shows a human the average and the best. It's not compared with our own
+    army: a greedy civ's army is small, so nearly every enemy would look strong next to it.
 
-  Neither applies (a far or weak enemy, no units in sight): the threat is 0.
+  None applies (a far or weak enemy, no siege, no units in sight): the threat is 0.
 - **What the flag does** (`GreedyWarArmy`, `FIX_GREEDY_WAR_ARMY`, `false` in the bundle; 63 of 64 flags), at war with a
   major civ:
 
@@ -2695,9 +2699,10 @@ logged pair".
   | City-state unit gifts | refused at the cap | refused at the cap |
   | Upgrades | none, as in peace | allowed |
   | Siege units | none | none |
+  | Walls and castles | none | allowed in border cities and cities under siege (barracks stay off) |
 
-  Walls stay off (`GreedyNoWalls`). A city under siege gets a defender past the cap only if it has none.
-- **Knobs:** 3/4 of the units in sight, a 5-plot radius, CLOSE or nearer, AVERAGE army or stronger, 2 per city.
+  A city under siege gets a defender past the cap only if it has none.
+- **Knobs:** 3/4 of the units in sight, a 5-plot radius, CLOSE or nearer, might at least the world average, 2 per city.
 - **Strict greedy is unchanged:** without `GreedyWarArmy`, a greedy civ at war keeps 2 per city and upgrades. That's
   the running easy-matchup test (`bullygreedy3`), which checks whether the conquest code can take cities at all.
   **The greedy style for the matchup test is the four greedy flags plus `GreedyWarArmy`.**
@@ -2708,7 +2713,7 @@ logged pair".
   strict greedy (`bullygreedy3`) and balanced civs.
 - **Run, once the bully takes cities from strict greedy civs:** the same bully run with `-OthersBase "GreedyFewUnits,
   GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy"`.
-- **Build:** fork `ai/personality` `ddf3311` (on `cbb291c`, `9017ee3`, `d379bfe`; off `claude/ab-c1` `d51e8a6`).
+- **Build:** fork `ai/personality` `674c1bd` (on `ddf3311`, `cbb291c`, `9017ee3`, `d379bfe`; off `claude/ab-c1` `d51e8a6`).
 - **Status:** coded, CI pending.
 - **For the lead:** 63 of 64 flags. Retiring flags that failed or were replaced (`LongWide`; `GreedyArmyCap`, replaced by
   `GreedyFewUnits`) will be needed soon.
