@@ -286,7 +286,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "First capture against greedy civs: the Inca, running the conquest flags, took Persepolis at turn 75 and ended with 8 cities against 5 in the same game without the flags. The new capture log shows the siege working once the army is at the walls.",
+   "detail": "2 captures in 39 bully games: the siege works at the walls, but the army arrives late, small or bankrupt. Your timing-attack design (small army at peace, fast build-up, then attack) is now coded with three other fixes; both PCs switch to it (166ebc1). One out-of-memory crash on PC 2 is being checked.",
    "state": "running"
   },
   {
@@ -371,7 +371,7 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Added CSConquest (warmongers take weak city-states) and ConquestTraitTargets (civ bonuses shape targets). The bully's role is now 14 flags.",
+   "detail": "Traced why attacks fail (late, small, bankrupt) and coded TimingBuildup, DeclareWhenGathered, SiegeConcentrate and SiegeKeep.",
    "chat": "Civ V AI: War session",
    "state": "waiting"
   },
@@ -387,7 +387,7 @@
    "section": "session",
    "order": 4,
    "name": "Personality",
-   "detail": "Conquest-bonus civs (Assyria, Songhai, Huns, Mongolia...) are Conquerors; Austria and Venice Diplomats. Style flag sets written for the trio test.",
+   "detail": "Aggressive civs keep a big army only in the build-up and at war (your point), and wall only threatened cities. Profiles check out in the logs.",
    "chat": "Civ V AI: Personality session",
    "state": "waiting"
   },
@@ -395,9 +395,9 @@
    "section": "session",
    "order": 5,
    "name": "Economy",
-   "detail": "Settling, growth and religion. Its settler-route fixes wait for a bug-fix test; idle until then.",
+   "detail": "Working on why a warmonger goes bankrupt (the Huns lost their army to debt) and a war chest saved for the build-up.",
    "chat": "Civ V AI: Economy & victory session",
-   "state": "waiting"
+   "state": "running"
   },
   {
    "section": "session",
@@ -745,8 +745,8 @@
    "name": "CSConquest",
    "owner": "War",
    "detail": "A warmonger goes to war on a weak, nearby city-state with no strong protector. CP's AI almost never attacked city-states.",
-   "test": "Bully runs on ab-2db51dd, both PCs, from their next pair.",
-   "state": "next",
+   "test": "Bully runs on both PCs.",
+   "state": "running",
    "runs": [
     "PC runner",
     "PC runner 2"
@@ -758,8 +758,8 @@
    "name": "ConquestTraitTargets",
    "owner": "War",
    "detail": "A warmonger's civ bonus shapes its targets: Assyria favours civs with techs it lacks, Songhai rich cities, Mongolia city-states.",
-   "test": "Bully runs on ab-2db51dd, both PCs, from their next pair.",
-   "state": "next",
+   "test": "Bully runs on both PCs.",
+   "state": "running",
    "runs": [
     "PC runner",
     "PC runner 2"
@@ -774,6 +774,71 @@
    "test": "In the bundle since ed449fd (no test).",
    "state": "passed",
    "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 32,
+   "name": "TimingBuildup",
+   "owner": "War",
+   "detail": "Your design: a small army at peace while researching and saving for the attack, then a fast 15-turn build-up, the attack, and back to a garrison after peace.",
+   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 33,
+   "name": "DeclareWhenGathered",
+   "owner": "War",
+   "detail": "Declare once the army has gathered at the border, instead of waiting to be spotted.",
+   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 34,
+   "name": "SiegeConcentrate",
+   "owner": "War",
+   "detail": "A follow-up wave waits to join the units near the city, so each push is one army.",
+   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 35,
+   "name": "SiegeKeep",
+   "owner": "War",
+   "detail": "At war, units at a siege aren't pulled off to clear barbarian camps.",
+   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 36,
+   "name": "AggressiveWalls",
+   "owner": "Personality",
+   "detail": "An aggressive civ builds walls only in threatened cities, not everywhere.",
+   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
   }
  ]
 }

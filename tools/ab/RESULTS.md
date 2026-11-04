@@ -2029,6 +2029,117 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### FIX_TIMING_BUILDUP: a small army at peace, a fast build-up right before the attack (War, the user's design) (Nov 4, about 1:52pm ET)
+**Why:**
+- The user: a timing attacker doesn't keep a big army all game. It keeps garrisons and escorts, builds up fast
+  just before the attack, and lands it while the army is fresh.
+- Our warmongers do the opposite. The siege book builds 3 catapults, 2 spearmen and 2 archers after the 2nd
+  settler, and AggressiveArmy keeps 3–4 land units per city at peace.
+- So the army waits 30–60 turns paying upkeep. The Huns (0C22F161) were bankrupt by T71 and gifted 37 warriors and
+  then their siege train.
+
+**Hypothesis.** A warmonger with the flag runs three phases; outside them, nothing changes.
+
+| Phase | When | What it does |
+|---|---|---|
+| **Peace** | no war with a major, no window | At most cities + 1 non-siege land combat units (garrisons and one escort; operations +2), siege units up to 3. AggressiveArmy's per-city floor and lift don't apply. Over the cap by more than 2: one extra unit a turn is gifted to a city-state, or disbanded. Siege units are never demobilised. Saves gold ahead (below) |
+| **Build-up window** | the conquest target search finds a target | Up to 15 turns (× game speed). No cap. The recommended land army is raised to cities + 6, which makes CP's production build units. Each turn one siege or attack unit is bought in the city nearest the target, if the gold allows |
+| **Attack** | army ready, or the window runs out | Ready means 2 siege units and cities + 4 other land units. The target search then returns the target and the normal path (WAR approach, sneak attack, DeclareAtBorder or DeclareWhenGathered) follows. With the flag, this replaces DeclareTiming's "2 siege + 4 land before turn 90" gate |
+
+- **Peace again** (no war, no target): back to the peace phase; extras demobilise one a turn.
+- **Gold target:** from turn 30 at peace, a savings request (`PURCHASE_TYPE_UNIT`, priority 400) for the purchase
+  price of 2 siege units at the capital. That's about 2 × 200–250 gold at Standard in the classical era, recomputed
+  each turn. It's spent in the window, and cancelled at war.
+- **Window length:** 15 turns. The window ends at readiness, at the end of the 15 turns, or at war.
+
+**Files and shared code:**
+- `CvMilitaryAI`: phase state, recommended size, purchases, demobilisation.
+- `CvDiplomacyAI::GetNewAIConquestTarget`: the window starts on finding a target; the target is returned on
+  readiness.
+- `CvUnitProductionAI` (Personality's file, behind this flag only): the peace cap. AggressiveArmy's floor applies
+  only in the window.
+- **For Economy:** the gold target above, and no bankruptcy (a negative balance should cancel the window's
+  purchases; it does, through `CanWithdrawMoneyForPurchase`).
+- **For Science:** timing the siege tech isn't coded here.
+
+**The peace phase prepares (the user's follow-up, via the lead, Nov 4 about 1:58pm ET).** Peace isn't idle: the
+economy prepares and the army stays small, ready to switch to the build-up quickly.
+- **Planned phase:** from turn 25 (Standard) the target is chosen and kept (`GetCommittedConquestTarget`); the window
+  still opens at turn 40.
+
+| Preparation | Owner | Status |
+|---|---|---|
+| Research toward the attack's units: after the opening book, Mathematics and Bronze Working, then Iron Working or Horseback Riding when iron or horses lie in our lands (`CvPlayer::GetTimingBuildupTech`, hooked in `CvTechAI` after the growth tech) | War | coded, `2a4dde1` |
+| Barracks and armory, forge and workshop in the 2–3 cities nearest the target; roads toward the border facing the target; workers and plot purchases to secure iron or horses | Economy | WarEconomy |
+| Gold saved ahead and spent in the window; gold per turn ≥ 0 while the army stands | Economy | WarChest |
+| War policies (Honor) when the leader's profile allows | Personality | to do |
+
+- **Read-only plan for Economy** (`CvMilitaryAI`, `ai/war` `2a4dde1`):
+  - `GetTimingBuildupPhase()`: NONE, PEACE, PLANNED, WINDOW, ATTACK, WAR;
+  - `GetTimingBuildupTarget()`;
+  - `GetTimingBuildupUnitsWanted()`;
+  - `GetTimingBuildupUnitType(bSiege)`;
+  - and `CvDiplomacyAI::GetCommittedConquestTarget()`.
+- **Gold target, agreed with Economy's proposal:** the purchase price of the units still wanted
+  (`GetTimingBuildupUnitsWanted()` × the price of `GetTimingBuildupUnitType`), capped at 15 turns of net income, and
+  at least 2 siege units' price. TimingBuildup's own savings request and window purchases (2 siege units' price,
+  priority 400) are a stand-in until WarChest lands; then they switch off under WarChest so the gold has one owner.
+
+**Expected:** gold above 0 when the war starts. Fewer units at peace (upkeep down), a bigger army in the 15 turns
+before the attack, and no "b/c bankrupt" gifting of attack units.
+
+**Measure:**
+- "TimingBuildup:" log lines (window start and end, purchases, demobilisation);
+- gold and land units at declaration;
+- gifted units per game;
+- CitiesCaptured and T150 strength share, role against flip.
+
+**δ:** strength share at T150 +1.5 points; CitiesCaptured up.
+
+**Status:** hypothesis, coded: `ai/war` `4135121` (CI pending; the commit message's "2:10pm ET" should read 1:55pm ET). Shared code behind this flag only: `CvDiplomacyAI::GetNewAIConquestTarget`, `CvUnitProductionAI::CheckUnitBuildSanity` (peace cap; AggressiveArmy off at peace), `CvBuildingProductionAI` (AggressiveArmy's floor off at peace), `CvPlayer` opening book (the warmonger book's army steps skipped).
+
+### FIX_DECLARE_WHEN_GATHERED: a sneak attack declares once it's gathered at the border (War) (Nov 4, about 1:48pm ET)
+For cause 1 (late), at the lead's request.
+- **Hypothesis:** a sneak attack (at peace, moving) whose centre or any of its units is in or next to the target's
+  territory declares war when either holds:
+  - the army is gathered, every unit within 2 tiles of its centre;
+  - its progress has stalled for 3 turns there, so the stragglers aren't coming.
+
+  At the border the army can't advance, so the stragglers catch up while it waits; that keeps it together on the
+  way. DeclareAtBorder's "discovered" route stays as it is.
+- **Expected:** declaring at the border within 1–3 turns of arriving, instead of the 7-turn wait (Denmark,
+  0C458987, T85–T92), with units 1–3 tiles out instead of 3–7.
+- **Measure:** turns from reaching the border to declaring ("DeclareWhenGathered:" log line), unit distances at
+  the hand-off, first capture attempt turn.
+- **δ:** CitiesCaptured by the aggressor up; strength share at T150 +1 point.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
+
+### FIX_SIEGE_CONCENTRATE: a follow-up wave moves only as one army with the units already at the siege (War) (Nov 4, about 1:48pm ET)
+For cause 2 (small).
+- **Hypothesis:** SiegeRoll's release (an attack mustering within 5 tiles of its target) waits until the army plus
+  our land combat units already within 4 tiles of the target add up to the formation's required slots (6 for the
+  basic formation), instead of 3 army units.
+  - Units back from healing (70% HP) are recruited into the waiting army meanwhile.
+  - Units at the siege stay free for the tactical AI: recruitment skips units within 4 tiles of the target.
+  - Each push is then one army: the follow-up and the units still at the walls.
+  - The 20-turn SiegeAbort still ends a wait that never fills.
+- **Expected:** fewer waves, each with at least 6 units near the walls together. Fewer "too early, 0–27 a turn"
+  lines at the follow-up target.
+- **Measure:** the "SiegeRoll:" line now gives army and nearby counts; capture attempts per follow-up city.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`. Applies only together with SiegeRoll.
+
+### FIX_SIEGE_KEEP: units at the front stay off barbarian camps while at war (War) (Nov 4, about 1:48pm ET)
+For cause 2 (handed-off units pulled away).
+- **Hypothesis:** while at war with a major, a unit isn't sent to clear a barbarian camp in either case:
+  - it left an attack operation in the last 5 turns;
+  - it stands in the tactical zone of a city of a major we're at war with.
+
+  Defence against barbarian units attacking our cities is unchanged; camps can wait.
+- **Expected:** the units handed off at Seoul stay in the Seoul zone. Fewer "Trying to remove barbarian camp" moves
+  by the aggressor during its war.
+- **Measure:** camp moves during the war; units in reach at the first capture attempt.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
+
 ### War: the attack operations in 0C458987 (16-flag role) and 0C22F161 (Nov 4, about 1:23pm ET)
 The lead asked for a trace of when each attack formed, how big it was, where it mustered, and what became of it.
 
@@ -3231,6 +3342,50 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
+### AggressiveArmy: a small army until the build-up window (Personality, 2026-11-04 1:55pm ET)
+- **The user (via the lead, 2026-11-04):** an aggressive player doing a timing attack keeps a small army most of the
+  game, to avoid maintenance, and builds up fast just before attacking. `AggressiveArmy`'s 3-4 land units per city
+  in peace contradicted that. War codes the build-up window (`TimingBuildup`), Economy the gold saved for it.
+- **The change** (fork `ai/personality` `019c646`, on `claude/ab-c1` `7aaee41`; no new flag):
+  - **The window:** `CvPlayer::IsInWarBuildup`. It's open when:
+    1. we are at war with a major civ; or
+    2. our approach to a major civ is WAR (CP's own war preparation, and `TimingAttack`'s committed target); or
+    3. **interim, until War's `TimingBuildup` defines it:** we are a timing attacker (`TimingAttack`) from turn 70
+       (Standard speed), 20 turns before `DeclareTiming`'s fallback declaration at 90. `DeclareTiming` waits for the
+       army before it picks a target, so case 2 alone would never open the window for a timing attack.
+  - **Outside the window**, `AggressiveArmy` keeps about a garrison plus one:
+    - at most cities + 1 land units (operations +2);
+    - B's small-army rule only (1 per city), and no unit-type bonus;
+    - CP's recommended army size isn't lifted;
+    - city-state unit gifts are refused at cities + 1.
+  - **Inside the window:** 3-4 land units per city, attack, siege and ranged units first, as before.
+  - **MetaDial:** its conquest-plan side (M ≥ +50) does the same. 0 < M < +50 is unchanged.
+- **Coordinated with War (2:10pm ET):** War exposed the window (`CvMilitaryAI::GetTimingBuildupPhase`, `ai/war` `2a4dde1`).
+  With `TimingBuildup` on, `IsInWarBuildup` follows its phases: the big army in WINDOW (15 turns from when a target is
+  found) and ATTACK, and at war; garrisons in PEACE and PLANNED. War's peace cap (cities + 1) is the same as
+  `AggressiveArmy`'s. Case 3 (turn 70) only applies without `TimingBuildup`. `ai/personality` merges `ai/war`
+  (`d6c872c`) so it compiles with War's function; the lead merges both together.
+- **What to watch** (once the aggressive set runs): an aggressive civ's `LandUnits` about cities + 1 most of the game,
+  rising quickly in the 20 turns before its declaration; its economy in between (population, techs) close to a balanced
+  civ's.
+- **Build:** `019c646` (compiles, CI run 162), then `d6c872c` (merge with `ai/war`, CI pending).
+- **Status:** waiting for CI on `d6c872c`.
+
+### AggressiveWalls: walls only in threatened border cities (Personality, 2026-11-04 2:10pm ET)
+- **The lead (2026-11-04):** in PC 2's pair `0C63D961` the bully had walls in every city (7 of 7; 8 of 8 in the flip).
+  For the aggressive style, walls belong on threatened border cities; interior walls are upkeep spent on nothing.
+- **The flag** (`AggressiveWalls`, `FIX_AGGRESSIVE_WALLS`, off in the bundle; fork `ai/personality` `48ba2e9`). A
+  non-wonder building that adds city defence or HP only in a city that is:
+  - under siege; or
+  - close to a city of a major civ we're at war with (CP's `IsCloseToCity`); or
+  - close to a city of a neighbour whose army we can see at our border (CP's military posture toward us MEDIUM or
+    worse, the `GreedyAlarm` signal; only units we can see).
+
+  Elsewhere it builds none.
+- **A separate flag** so it can join the bully's role as well as the aggressive style set.
+- **Measure:** the aggressor's `WalledCities` against its border cities at war; its gold per turn.
+- **Status:** coded, CI pending.
+
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
 conquer cities. They are, and the user ruled: "raider is a great flavour archetype. songhai works better as a
@@ -3337,6 +3492,20 @@ the conquest-bonus change `277602f`, so they show the earlier rule).
   only if the leader's offence flavour is 7 or more. Nothing in the test runs reads the profile yet (only MetaDial
   does), so it can wait.
 
+**Update, games on `ab-2db51dd` to `ab-1c3ab74` (2:00pm ET), 9 more logged games:** the conquest-bonus rule and the Raider
+archetype show as designed.
+- **Conquerors with home meta ≥ +50:**
+  - Assyria in all 5 games (+65, +85, +90, +90, +100), despite its science tag;
+  - Songhai twice (+85, +90);
+  - Mongolia twice (+100, +100).
+- **Diplomats:** Austria (-10), Venice (-20).
+- **Raider:** Denmark on `ab-1c3ab74` (+80). On the earlier builds it was a Conqueror (+75 to +95), before the Raider
+  archetype. The Huns weren't in these games.
+- **Generalists vary from game to game, as meant:** Rome came out an Opportunist (+30) in one game and Tourism (-75) in
+  another. The first Opportunist so far.
+- **The same tie as the Shoshone:** America has the warmonger and expansionist tags and came out a Conqueror (+90) twice.
+  The proposed tie-break by offence flavour would cover it too.
+
 ### Conquest bonuses in the strategy profile: which leaders move (Personality, 2026-11-04 10:15am ET)
 The user's task (via the lead): use each civ's conquest bonus. Personality's half: the profile puts conquest-bonus civs
 on the aggressive side, and civs that take city-states without war on the diplomat side. War does target choice
@@ -3388,7 +3557,7 @@ civs, 6 players). Nothing is coded for it; this is the list a test key would giv
 |---|---|---|
 | **Greedy** | `GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy` | 1 land unit per city in peace (disbands down to it), no walls or barracks, no upgrades in peace, growth, science and wonders first. At war it judges the threat: nothing changes unless a city is under siege or an enemy force in sight could take one, and then it builds enough defenders and walls its border cities |
 | **Balanced** | `BalancedArmy, BalancedWalls` | 2-3 land units per city in peace, no cap at war, walls and castles first in border cities and the capital, upgrades as normal; otherwise CP's play, which starts few wars |
-| **Aggressive** | `AggressivePlan, AggressiveArmy` + the conquest role: `TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish` | 3-4 land units per city in peace with siege; the conquest plan (siege techs and book, a timing attack on a weak close neighbour, a siege that holds and finishes), whatever its personality |
+| **Aggressive** | `AggressivePlan, AggressiveArmy` (a small army until the build-up window, then 3-4 per city), `AggressiveWalls` + the conquest role: `TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish` | 3-4 land units per city in peace with siege; the conquest plan (siege techs and book, a timing attack on a weak close neighbour, a siege that holds and finishes), whatever its personality |
 
 **Notes for the trio mode:**
 - **The bundle runs under each set.** "Ours" means the candidate AI, so each style slot runs the bundle (the flags that
@@ -3746,6 +3915,26 @@ flipped game is the same game: all 120 result rows of pair `02C5BBF9` are identi
 no noise. That's good news for every real test: within a pair, everything that differs comes from the flags
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
+
+### The timing-attack build merged; a crash; both PCs to the 21-flag role (lead, 2026-11-04 3:00pm ET)
+
+- **`claude/ab-c1` `166ebc1`** (a fast-forward to Personality's merge of `ai/war` `fd881bb`, CI passed; 69 flags in the
+  128-bit masks). It adds:
+  - War's `TimingBuildup` (the user's design): a small army at peace, the attack's research and gold, a 15-turn
+    build-up once a target is found, then demobilise after peace.
+  - `DeclareWhenGathered`: declare once the army is gathered, not after waiting to be seen.
+  - `SiegeConcentrate`: a follow-up wave joins the units near the city.
+  - `SiegeKeep`: no barbarian-camp detours at war.
+  - Personality's `AggressiveArmy` change (the big army only in the build-up window and at war) and `AggressiveWalls`
+    (walls only in threatened cities).
+  - War's `2a4dde1` broke the build (an undeclared op type); `fd881bb` fixed it.
+- **Crash (PC 2, `ab-1c3ab74`, logging on):** game `0C827C9C` at T78, an access violation with "the 32-bit address space
+  nearly exhausted" (~1.8 GB). Minidump in `results/crash-20261104-0C827C9C`. PC 2's guard now kills Civ at once on a
+  crash window. PC 2 replays the game with logging off: a crash again at T78 means the code, none means logging's
+  memory.
+- **Both PCs**, from their next pair, `ab-166ebc1`, logging on: the role is the 16 flags + `DeclareWhenGathered`,
+  `SiegeConcentrate`, `SiegeKeep`, `TimingBuildup`, `AggressiveWalls`. PC 2 against greedy civs,
+  `AIABTest_bullygreedy8@TREEDESKTOP.csv`; PC 1 against normal civs, `AIABTest_bullyabort6@BOX.csv`.
 
 ### Where bully attacks fail: late, small, or not at all (lead, 2026-11-04 1:50pm ET)
 
