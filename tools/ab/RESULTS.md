@@ -1951,9 +1951,10 @@ score.
   per war; turns from declaring to the first capture.
 - **δ:** CitiesCaptured by the aggressor up; strength share at T150 +1 point.
 - **Flag:** `TargetVulnerability`, off in the bundle. Role: in place of GreedyTarget.
-- **Status:** hypothesis.
+- **Status:** hypothesis, coded: `ai/war` `fd7da75` (CI pending), on `166ebc1`.
 
 ### CanWin, CSConquest, BoxedInWar into the bundle (the user's audit, via the lead) (Nov 4, about 2:37pm ET)
+Coded: `ai/war` `fd7da75` (CI pending).
 - Set to true in `kCandidateFixes` on `ai/war` (rebased on `claude/ab-c1` `166ebc1`).
 - **Checked safe for city-states and humans** (non-major civs run every bundle flag):
   - **BoxedInWar** and **CanWin** act only inside `GetNewAIConquestTarget`, which now also returns at once for a
