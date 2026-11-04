@@ -214,7 +214,7 @@
    "section": "goal",
    "order": 1,
    "name": "Strength against CP",
-   "detail": "≥ 60% (best so far: the top five at 51.35%, +1.35 points over B)",
+   "detail": "≥ 60% (C8, the 12 passed flags: 50.36%, +0.36 points over B in 6 pairs)",
    "state": "open"
   },
   {
@@ -270,7 +270,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "C8 after 5 pairs: +0.60 points over B, no-worse passed, gainer close to failing (-2.49 of -2.94); it decides in 1–3 more pairs on PC 2. PC 1 plays the bully conquest test. Personality coded the greedy style so the bully gets an easy matchup.",
+   "detail": "C8 decided: no worse than B but no gain (+0.36 points), so war is the lever left. PC 1 plays the bully conquest test (the bully built the biggest army, then lost it without a capture). PC 2 moves to the bully against greedy civs, the easy matchup.",
    "state": "running"
   },
   {
@@ -298,8 +298,8 @@
    "section": "queue",
    "order": 4,
    "name": "C8 against B",
-   "detail": "5 pairs: +0.60 points, no-worse passed, gainer -2.49 (fails at -2.94). Running on PC 2.",
-   "state": "running"
+   "detail": "Gainer failed at 6 pairs (+0.36 points); no-worse passed, so C8 stays the base.",
+   "state": "failed"
   },
   {
    "section": "queue",
@@ -333,14 +333,14 @@
    "section": "queue",
    "order": 9,
    "name": "Defence columns build",
-   "detail": "ab-ec2a4c8: WalledCities, CityStrength, LandUnits. Measurement only; installed when the current runs finish.",
+   "detail": "In ab-c13eb1c with every topic branch merged: WalledCities, CityStrength, LandUnits.",
    "state": "next"
   },
   {
    "section": "queue",
    "order": 10,
    "name": "Bully vs greedy civs",
-   "detail": "The easy matchup: the conquest flags on the bully, every other civ greedy (OthersBase). Logged smoke pair first.",
+   "detail": "PC 2 on ab-c13eb1c once CI passes: the conquest flags on the bully, every other civ greedy. Logged smoke pair first.",
    "state": "next"
   },
   {
@@ -354,8 +354,8 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Proposed the bully conquest test: the aggressor runs the six conquest flags.",
-   "state": "waiting"
+   "detail": "Reading the conquest pair's logs: why the Celts lost their army (122 to 38 military, 0 captures). SiegeAbort merged.",
+   "state": "running"
   },
   {
    "section": "session",
@@ -382,8 +382,8 @@
    "section": "session",
    "order": 6,
    "name": "PC runner 2",
-   "detail": "C8 against B: 5 pairs pushed (11:20pm ET), pushing after every pair now.",
-   "state": "running"
+   "detail": "C8 stopped (decided). Next: bully vs greedy civs on ab-c13eb1c.",
+   "state": "waiting"
   },
   {
    "section": "session",

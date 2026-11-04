@@ -2462,6 +2462,23 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### C8 decided: no worse, no gain; C8 is the new base. Everything merged; PC 2 plays bully vs greedy (lead, 2026-11-04 12:00am ET)
+
+- **C8 against B, 6 pairs** (`afc9f22`): c 50.36%, **+0.36 points; gainer FAILED** (LLR -4.71), **no-worse PASSED**
+  (+8.19). C8 stays the integration bundle: every flag in it passed its own test, and together they cost nothing.
+  The top five's +1.35 in 5 pairs was mostly luck. **Lesson:** at T150 the AI's economy is close to what these
+  flags can move. The big lever left is war (cities changing hands), so attack and defence come first now.
+- **`claude/ab-c1` `c13eb1c`:** merges `ai/diplomacy` (`TradeOpinion`), `ai/war` (`SiegeAbort`: an attack still too
+  weak after SiegeArmy's 20 turns is called off) and `ai/personality` (the greedy, balanced and aggressive style
+  flags, the strategy profile log, `MetaDial`). 59 flags, enum and table in the same order, all new ones off in the
+  bundle. Results file `c8d` (with the defence columns).
+- **PC 2 next:** the bully against greedy civs, the easy matchup, on `ab-c13eb1c`. The same conquest package as PC 1's
+  run (no `SiegeAbort`, so the two runs differ only in the opponents), logged smoke pair first. Results
+  `AIABTest_bullygreedy@TREEDESKTOP.csv`.
+  ```
+  powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Mode bully -Fixes none -OthersBase "GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds" -RoleFixes "TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff" -MaxGames 2 -SaveLogs
+  ```
+
 ### Bully conquest, logged pair: the army is built, then lost for nothing (lead, 2026-11-03 11:45pm ET)
 
 Pair `0879B791` (`ab-8109f67`, PC 1, `AIABTest_bullyconquest@BOX.csv`, logs `logs_0879B791*`), aggressor the Celts:
