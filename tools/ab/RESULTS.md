@@ -4098,6 +4098,9 @@ It adds:
 Bully RoleFixes are now the 25 flags plus `MarchOn, FocusedWar`. PC 1 runs a logged replay of trio game 0C3C8913 (the
 Aztecs), then `bullyabort7` (vs normal civs). PC 2 runs `bullygreedy9` (vs greedy civs) after pair 3 of `bullygreedy8`.
 Both log their first pair.
+**Update 5:06pm ET:** `ai/war` `f73177c` (CI run 186) fast-forwarded in, release `ab-f73177c`: TimingBuildup's attack may
+form with up to 3 units still to build (0CEF854E: Mongolia's 302 attack requests failed "for lack of units", since a
+sneak attack on a major allowed 0 missing). Same flags. PC 2 restarted `bullygreedy9` on it; PC 1 runs on it too.
 
 ### Trio quick look: one of ours on top in 3 of 4, but our aggressor never declared war (lead, 2026-11-04 4:36pm ET)
 
