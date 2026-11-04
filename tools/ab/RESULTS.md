@@ -1522,6 +1522,34 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: flag `WarAppetite`, and bundle flags checked for city-states (Diplomacy session, 2026-11-04)
+
+**City-state check** (the lead's C8 crash note: city-states run every bundle flag).
+- Diplomacy's bundle flags are `EasyTarget`, `DiploBugs`, `LuxuryAsk` and `DealExploits`. None of their code runs for
+  a city-state as the deciding player:
+  - `CvDiplomacyAI::DoTurn` is only called for major civs (`CvPlayer.cpp` ~10291);
+  - city-states don't trade (`CvDealAI`) or sit in the World Congress as AI voters;
+  - help requests, demands and war-declaration memory are major-to-major.
+- New Diplomacy flags check `isMajorCiv()` as well.
+
+**`WarAppetite`** (pushed to `ai/diplomacy` `916925b`, on `claude/ab-c1` `af99bc1`; off in the bundle, not compiled).
+- **What it does:** Personality's profile sets the war appetite. The WAR approach weight follows the meta position M:
+  x0.5 at -100 (greedy), x1 at 0, x2 at +100 (aggressive), linear between. It applies after the opinion multipliers,
+  so friends still count, just less overwhelmingly for a conqueror. M is the home position until `MetaAdapt` moves it.
+- **Why:** the aggressor stays FRIENDLY to everyone (entry below). `TradeOpinion` removes the trade-made friendship;
+  this one makes aggressive leaders want war more and greedy ones less, as the profile intends.
+- **Hypothesis:** the bully aggressor (an aggressive archetype) declares its first war earlier, and greedy/tall civs
+  start fewer wars.
+- **Measures:** the aggressor's `WarsDeclared` and first-war turn (bully test, together with `TradeOpinion`); wars
+  started by tall civs (builders test); no-worse on strength.
+- **Not done here:** the profile's hard rules.
+  - The archetype rules (`ExpansionistPeace`, `BuilderPeace`, `DiplomatWord`, ...) are Personality's step 5.
+  - The everyone-rule "no war on a civ it's exchanging per-turn deal items with" needs a decision first. AIs nearly
+    always have a luxury swap running with their neighbours, so as written it would forbid most wars and deepen the
+    "nobody fights" problem.
+  - A narrower version keeps the honesty: don't renew deals with a civ we plan to attack, and declare only once our own
+    obligations have run out. That's for the user and Personality to decide.
+
 ### Diplomacy: why the failed Celtic war ran 35 turns, and flag `StaleWarPeace` (Diplomacy session, 2026-11-04)
 
 From `DiplomacyAI_Peace_Log.csv` and `DiplomacyAI_Log.csv` of bully game `0879B791` (War's "Bully conquest, logged pair").
