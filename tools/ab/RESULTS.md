@@ -1924,7 +1924,9 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   gold) from the logs. Plus Austria's and Venice's city-state wars (should be 0).
 - **δ:** target choice changes in the logs in most pairs, and captures are no fewer. Strength share is a guard, not
   the verdict.
-- **Build:** `ai/war` commit `18386e5` (on `3cbc147`, CSConquest), patch `patches/war/0012`. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
+- **Build:** `ai/war` commit `18386e5` (on `3cbc147`, CSConquest; CSConquest built in CI run 144), patch `patches/war/0012`.
+  18386e5 failed to compile: 65 flags overflow the 64-bit masks. **`ac65314` retires AirRebaseHeal** (off, untestable
+  without aircraft; bug H2 stays documented) to make room, patch 0013. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
   block, `SelectBestApproachTowardsMinorCiv`), Diplomacy's file, behind the flag as the lead asked.
 
 ### War: does a bully ever attack city-states? Hardly ever (FIX_CS_CONQUEST) (Nov 4, about 10:00am ET)
@@ -3263,6 +3265,18 @@ flipped game is the same game: all 120 result rows of pair `02C5BBF9` are identi
 no noise. That's good news for every real test: within a pair, everything that differs comes from the flags
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
+
+### Sieges that look strong but don't hurt: capture-attempt logging (lead, 2026-11-04 11:25am ET)
+
+- **War, on the kept logs:** in `0BC677BF` (greedy opponents) Spain's army had 3 catapults, but at Nottingham its capture
+  attempts (61–73 expected damage a turn, T141–148) left the city at full 200 HP every turn. In `0AFFA02F` (normal
+  opponents) Japan's siege peaked at 29/200. So the expected damage isn't being dealt: the attacks look planned but
+  don't happen, or are rejected.
+- **`claude/ab-c1` `9e9fc9d`** (War, logging only): city HP before and after each capture attempt, and the units used.
+  Play is identical to `2db51dd`, so both PCs switch at their next pair and keep the same results files.
+- **The scheduled check-in** couldn't run in the lead's session (trusted-device limit: every fire since Nov 2 9:42pm ET
+  was denied). It's now a watch that starts a fresh session every 3 hours (from 1:13pm ET): it reads results,
+  refreshes the dashboard, and notifies the user only when something needs them. It can't steer sessions.
 
 ### City-state conquest and conquest bonuses merged; three more flags retired; both PCs to the 14-flag role (lead, 2026-11-04 10:25am ET)
 
