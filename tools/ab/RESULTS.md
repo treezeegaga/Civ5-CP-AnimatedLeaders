@@ -1896,6 +1896,188 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: failed bully wars with the 12-flag role, 0BC677BF and 0AFFA02F (Nov 4, about 11:05am ET)
+
+**0BC677BF** (PC 2, greedy opponents, ab-ed449fd). Aggressor Spain.
+- **The attack:** "CONQUEST: going for England" at T64. The sneak attack at T106 recruited 7 units with **3 catapults**,
+  passed SiegeArmy's bar at once, and Spain declared at T114.
+- **At Nottingham:** 40 expected damage a turn at T114, then about 20 from T115 to T120.
+- **The surprise, T141–T148:** "attempting capture of Nottingham" every turn at 61–73 expected damage a turn, yet the
+  city started every turn at **200 HP**. The capture attempts did nothing lasting: either no attacks were made, or they
+  did no more than the city heals. The logs record expected damage, not what was done.
+  - The tactical simulation ran each turn at high aggression with 6 units ("tactsim around (37:28) with agg 3 ... 834
+    completed").
+  - Spain lost 3 units in the whole war, England none.
+- **SiegeFinish never triggered** (the city never fell below a third of its HP).
+- **SiegeAbort** called off a second attack at T140 ("still too weak after 20 turns").
+
+**0AFFA02F** (PC 1, normal opponents). Aggressor Japan, "CONQUEST: going for The Aztecs" at T48.
+- **The attack waited:** from T57 at 39–42 a turn against bars of 60–70. It marched at T71, arrived at T83 (26 turns
+  after it started) and declared on the Aztecs.
+- **The siege:** best 29/200, no attempt made.
+- **Attacks cancelled at creation:** two sneak attacks ended `NoUnits` the turn they were created (T55, T56). The
+  basic formation (SiegeFormation) has 6 required slots, so a small army misses more of them at creation. Minor:
+  the third try held.
+
+**Next.** The open question is why a 70-a-turn siege did no damage. `ai/war` `9e9fc9d` (built, CI run 150) (patch 0013) adds a log line,
+logging only, after each city capture attempt: "capture attempt on X done: city HP a -> b, n of m units used, agg L".
+The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
+positions, set-up moves, or its scoring of attacks against cities.
+
+### War: the first logged capture, 0C04B641, the Inca take Persepolis (Nov 4, about 12:17pm ET)
+PC 2, greedy opponents, ab-9e9fc9d, 14-flag role. The Inca declared on Persia at T71 and took Persepolis at T75.
+- **The army:** sneak attack 1572 at T67: spearman, 2 warriors, **3 catapults**, a composite bowman. Three earlier
+  tries ended `NoUnits` at creation (T65). It marched at T68, was "discovered" at T70 at distance 2–4, and was
+  handed to the tactical AI.
+- **The capture lines:**
+
+  | Turn | City HP | Units used | Agg |
+  |---|---|---|---|
+  | T72 | 200 → 200 | 4 of 5 | 2 |
+  | T73 | 200 → 102 | 3 of 4 | 2 |
+  | T74 | 122 → 8 | 5 of 6 | 3 |
+  | T75 | 28 → captured | "0 of 5" | 3 |
+
+**(1) T72, units moved but did no damage.** It was the first turn after declaring, with the army 2–4 tiles out.
+- The simulation ran twice: 5 units, then 4 after new enemies came into view (a restart).
+- The units used were moves into range. Catapults can't move and shoot in one turn from that far.
+- From T73 the same units hit the city for 98 and 114. So the chain works at the walls once units are in range.
+- **Logging caveat:** "units used" counts units that newly finished their turn during the attempt. T75's "0 of 5"
+  next to CAPTURED shows it undercounts when units acted earlier in the turn. I'll fix it if it matters.
+
+**(2) Why Pasargadae got nothing.**
+- **T75–76:** "attempting capture of Pasargadae", 0 of 2–3 units used. Only the few free units nearby were in
+  reach; the siege units were still at Persepolis.
+- **T77:** a new attack, `OP_CITY_ATTACK_LAND` 1777, formed against Pasargadae (22:13). Its muster point was
+  Persepolis (19:16), **3 tiles from the target**. It took 5 of the victors: spearman, warrior, composite bowman,
+  2 catapults.
+- **It never left recruiting.** A required front-line slot of the basic formation (SiegeFormation) stayed open for
+  20 turns. No "SiegeArmy: waiting" line appears, because the required-slots check comes first. Catapults later
+  left the army to heal.
+- **Its units were invisible to the tactical AI the whole time.** Army units are taken out of the tactical AI's
+  unit list (`AI_TACTICAL_OPERATION`, CvTacticalAI.cpp line 242). So from T77 the tactical AI counted only the
+  free units: "too early for attacking Pasargadae, expected 22 a turn".
+- **T97:** SiegeAbort ("still too weak after 20 turns"). The war idled and the campaign stopped at one city.
+- The operation didn't end on the capture (1572 had already ended at deploy). The lock came from the new
+  operation formed next to the next city.
+
+**(3) SiegeFirst and SiegeFinish.**
+- **SiegeFinish didn't decide it.** T74's agg 3 is CP's own rule (more than 2 melee units in reach). SiegeFinish
+  needs the city at a third of its HP or less, and 122 of 200 isn't. At T75 (28 left) it could have applied, but
+  agg was already 3.
+- **SiegeFirst didn't act.** The army passed the bar at once, and its optional slot took a composite bowman.
+- **What mattered:** the three catapults came from SiegeFormation's basic formation (5 siege slots). The
+  hand-off came from DeclareAtBorder plus ArmyHandoff.
+
+**Result of the pair:** at T150 the Inca had 8 cities and military 294 with the role, against 5 and 191 in the flip
+game.
+
+### FIX_SIEGE_ROLL: an attack mustering next to its target moves without waiting (War) (Nov 4, about 12:17pm ET)
+- **Hypothesis:** a city attack whose muster point is within 5 tiles of its target, against a civ we're already
+  at war with, leaves recruiting once it has 3 units. It doesn't wait for empty required slots or for SiegeArmy's
+  bar.
+  - **Why the waits don't fit here:** both exist to stop a weak army marching across the map and declaring war.
+    Neither applies next to the front.
+  - **What follows:** the army reaches deploy range in a turn or two. The operation ends and ArmyHandoff gives the
+    units to the tactical AI, which counts them all.
+  - **The tactical AI keeps its own check:** "too early" if 13 turns of damage can't beat the city's healing. A
+    weak army still doesn't throw itself at the walls; it just isn't locked away.
+- **Expected:** after a capture, the next city nearby gets capture attempts within a few turns, with "units used"
+  above 0, and more captures per war.
+- **Measure:**
+  - capture lines per city;
+  - captures per war and CitiesCaptured by the aggressor;
+  - cities and military at T150, role against flip.
+- **δ:** CitiesCaptured by the aggressor +1 per pair on average.
+- **Flag:** `SiegeRoll`, off in the bundle. **This makes 64 flags, the cap**; anything after it needs the wider mask
+  or a retirement. Role: add to the bully aggressor's flags, with SiegeExposure.
+- **Status:** hypothesis, coded: `ai/war` `a8a186c` (CI pending). One block in the recruiting stage of `CvAIOperation::CheckTransitionToNextStage`; log line "SiegeRoll: target N tiles from the muster point, moving with M units".
+
+### War: failed bully war 0BE6755D, Songhai against Assyria (Nov 4, about 11:38am ET)
+PC 2, greedy opponents, ab-2db51dd, 14-flag role. Aggressor Songhai. It ended with 3 cities and took none. A
+different failure from Nottingham: the army lost the zone, rather than its attacks failing to land.
+- **Target:**
+  - At T50, "CONQUEST: going for Assyria (committed target)". Assyria is a Conqueror and a neighbour, rated
+    military WEAK against Songhai at the time.
+  - ConquestTraitTargets gave Songhai at most pop/2 for it, a small bonus next to the greedy score.
+- **Army:**
+  - Four sneak attacks ended `NoUnits` on the turn they were created (T66–T67). Songhai had 5 units against the
+    basic formation's 6 required slots, the same thing seen in 0AFFA02F.
+  - The fifth held at T68: 2 catapults, an archer, a spearman, 2 warriors. It marched at T71, was "discovered" at
+    T75 (DeclareAtBorder: within 6 tiles of the target), and Songhai declared at T76.
+- **At Nineveh:**
+  - T77 and T79: capture attempts at 38 and 58 expected damage a turn, city at 200.
+  - **From T80 the zone was enemy-dominated** (posture WITHDRAW, "won't try to capture") every turn until T107.
+    Assyria brought its army; China declared on Assyria at T85 and still nothing changed.
+  - Losses: Songhai 1 unit, Assyria 3, over the whole game.
+- **Follow-up:**
+  - The reinforcing attack (T82) never passed SiegeArmy's bar and gave up at T103 (SiegeAbort, as designed).
+  - Peace came at T112. A new target, Babylon, followed at T113, with no war by T150.
+- **Lessons:**
+  1. The target check compares whole-empire strength once and keeps the target with a step of slack. A neighbouring
+     Conqueror with a real army can pass it and then hold the zone.
+  2. A 6-unit ancient army isn't enough against an AI that answers.
+  3. In the first required-slot creation turn, `NoUnits` aborts repeat (the formation is bigger than a small army).
+     Minor, since the next try holds.
+- **No new War flag from this game.** It fits CanWin, which checks only the nearest city. SiegeExposure
+  doesn't apply: the zone was lost before attacks mattered.
+- **Not War's area:** in `OperationalAILog`, Songhai's found-city operations ended NoTarget every turn from T87 to T117
+  (a new operation each turn, "Distance -1"). This is for Economy.
+
+### War: why capture attempts plan attacks and then don't make them (code check, Nov 4, about 11:27am ET)
+The lead asked for this before the logs arrive. Read in `CvTacticalAI.cpp` on `ai/war` `9e9fc9d`.
+
+**Ruled out first:**
+- *Units already used:* `ExecuteAttackWithUnits` uses every unit in `m_CurrentMoveUnits`.
+- *Plan never run:* `FindAndExecuteBestUnitAssignments` runs the best finished plan. The Nottingham sims finished
+  plenty of plans (834–1280 a turn).
+- *City out of sight:* `ExecuteSpotterMove` only aborts when the city tile can't be seen. Nottingham was visible.
+
+**The cause: the planner and the final check measure danger differently.**
+- **While planning:** a ranged attack that ends the unit's turn is kept if the unit could "probably" end its turn
+  there (`canProbablyEndTurnAfterAssignment`). That test **divides the danger by the aggression level**:
+  ÷3 at agg 3 (the capture attempts), ÷2 at agg 2.
+- **At the end of each plan:** `addFinishMovesIfAcceptable` scores every unit's end tile again
+  (`ScorePlotForMove`, `EM_FINAL`, then `ScoreCombatUnitTurnEnd`) with the **full danger**. It rejects the tile if
+  either holds:
+  - a ranged or siege unit has danger above its current HP;
+  - for any unit, HP² < 50 × danger (the new AI's 50; CP uses 42).
+
+  If the unit can retreat anywhere, the whole plan is dropped.
+- **The only slack:** one unit below the army's median XP, and only when the AI's offence flavour is above 6 and
+  it has more than 6 units. Otherwise none; Spain had 5–6.
+
+**So at a defended city** (city strike plus 2–3 English units, about 100–250 danger next to the walls):
+- the plans in which catapults and archers shoot the city get built, then thrown out at the finish;
+- the plans that survive are the ones where they didn't shoot: set-up moves, attacks on units, or a melee
+  poke;
+- each turn the army ends where it started, and the city heals.
+
+This fits the logs: plenty of finished plans, 61–73 expected damage a turn (expected damage ignores where the unit
+ends its turn), and 200 HP at the start of every turn. **Siege units are hit hardest:** they have the weakest
+defence, so the most danger, and they can't move after shooting.
+
+**What the new log will show if this is right:** "capture attempt on Nottingham done: city HP 200 -> 200 (or
+about 180–200), 0–2 of 6 units used".
+
+### FIX_SIEGE_EXPOSURE: in a city attack, the end-of-turn check uses the planner's danger (War) (Nov 4, about 11:27am ET)
+- **Hypothesis:** when the simulation's target is an enemy city, a unit that attacked this turn has its end-tile
+  danger divided by the aggression level at the final check, as it already is while planning. Ranged and siege
+  units then shoot the city and stay in range, so the city loses HP faster than it heals, and SiegeFinish's
+  assault gets its chance.
+  - Other simulations and units that only moved are unchanged.
+  - Melee units keep their own checks in `ScoreAttackDamage` (HP limit, turns to kill).
+- **Cost:** more siege units lost to counterattacks and city fire. The danger figure is a worst case (every enemy in
+  reach hits this one unit), so ÷3 is closer to what usually happens than the full figure.
+- **Measure:**
+  - capture-attempt lines: HP before → after, units used;
+  - CitiesCaptured by the bully aggressor;
+  - units lost per war (`KilledInCombat` in the tactical log).
+- **δ:** CitiesCaptured by the aggressor above 0 in most bully pairs; strength share at T150 +1.5 points.
+- **Flag:** `SiegeExposure`, off in the bundle. Count goes 62 → 63, inside 64. Role: add to the bully aggressor's flags.
+- **Status:** hypothesis, coded: `ai/war` `a2ab150` (built, CI run 153). One block in `ScorePlotForCombatUnitMove` (CvTacticalAI.cpp). The next logged war with capture logging (ab-9e9fc9d)
+  confirms or refutes the cause before it's worth a test.
+
 ### FIX_CONQUEST_TRAIT_TARGETS: a warmonger's conquest bonus shapes whom it attacks (War) (Nov 4, about 10:04am ET)
 - **The trait fields** (`CvTraitClasses`, read through `GetPlayerTraits()`). The pack runs CP without Vox Populi,
   so the base game's values apply; VP's SQL changes these traits, but isn't loaded.
@@ -1925,8 +2107,10 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - **δ:** target choice changes in the logs in most pairs, and captures are no fewer. Strength share is a guard, not
   the verdict.
 - **Build:** `ai/war` commit `18386e5` (on `3cbc147`, CSConquest; CSConquest built in CI run 144), patch `patches/war/0012`.
-  18386e5 failed to compile: 65 flags overflow the 64-bit masks. **`ac65314` retires AirRebaseHeal** (off, untestable
-  without aircraft; bug H2 stays documented) to make room, patch 0013. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
+  18386e5 alone failed to compile (65 flags overflow the 64-bit masks). The lead made room instead: `claude/ab-c1`
+  `2db51dd` retires ClosedBorders, GrowthTech and AqueductValue and holds CSConquest and ConquestTraitTargets (62
+  flags, CI passed). War's own retirement of AirRebaseHeal was undone, and `ai/war` matches `2db51dd`. **Rule:**
+  retiring flags is the lead's call; tell the lead when a new flag would pass 64. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
   block, `SelectBestApproachTowardsMinorCiv`), Diplomacy's file, behind the flag as the lead asked.
 
 ### War: does a bully ever attack city-states? Hardly ever (FIX_CS_CONQUEST) (Nov 4, about 10:00am ET)
