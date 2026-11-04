@@ -2789,6 +2789,20 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### War: the Mongols' siege walked home to heal; SiegeStay and SiegePosture join the bully runs (lead, 2026-11-04 7:45am ET)
+
+**War, pair `0B09BFE1`:** the Mongols' siege of Tiwanaku reached 117 expected damage a turn and brought it to
+128/200 HP (T107–T112). Then the units the tactical AI didn't use that turn fell through to the homeland AI's heal
+moves, walked home with no deaths, and the city recovered. `SiegeStay` only filtered the tactical heals. War's
+`3247ef4` makes the homeland heals skip units the siege needs too.
+
+**`claude/ab-c1` `dbdfbb3`:** `af99bc1` + War `3247ef4` + Diplomacy `WarAppetite` (`916925b`, CI passed). 62 flags.
+**Both PCs switch at their next pair boundary**, logging off, `RoleFixes` = the 8 conquest flags + `SiegeStay` +
+`SiegePosture`:
+- PC 2: against greedy civs (`OthersBase` = the 4 greedy flags), `AIABTest_bullygreedy2@TREEDESKTOP.csv`.
+- PC 1: against normal civs, `AIABTest_bullyabort2@BOX.csv`.
+`StaleWarPeace` and `WarAppetite` stay out of these runs, so they change only the attack side.
+
 ### Bully vs greedy civs, logged pair: still no captures; the greedy cap leaks (lead, 2026-11-04 8:00am ET)
 
 Pair `0B09BFE1` (`ab-c78384b`, PC 2, `AIABTest_bullygreedy@TREEDESKTOP.csv`, logs `logs_0B09BFE1*`). The aggressor is the
