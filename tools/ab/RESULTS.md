@@ -2780,6 +2780,49 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
+### Conquest bonuses in the strategy profile: which leaders move (Personality, 2026-11-04 10:15am ET)
+The user's task (via the lead): use each civ's conquest bonus. Personality's half: the profile puts conquest-bonus civs
+on the aggressive side, and civs that take city-states without war on the diplomat side. War does target choice
+(`ConquestTraitTargets`).
+
+**What the profile did before.** It took CP's trait tags (`CvPlayerTraits::IsWarmonger`, `IsNerd`, `IsSmaller`,
+`IsDiplomat` ...). When a civ had two tags, the primary victory pursuit broke the tie, and CP scores that pursuit
+from flavours and tags each game, not from a fixed table. Two gaps:
+- CP's tags overlap. Tech from captured cities sets both the warmonger and the science tag (Assyria). "No annexing"
+  sets the smaller tag (Venice), which the profile read as Scientist.
+- The raze-speed bonus (the Huns) isn't in any of CP's tags.
+
+**The change** (fork `ai/personality` `277602f`, on `claude/ab-c1` `d2390a1`; in `CvGrandStrategyAI::GetStrategyProfile`,
+read from trait fields so mods and other civs work too):
+1. **A conquest bonus makes a civ a Conqueror, before any tag, with home meta position at least +50** (MetaDial's
+   conquest plan). The bonuses: tech from captured cities, plunder gold, raze speed, combat against city-states,
+   production, great works, golden ages or yields from conquest, keeping conquered buildings.
+2. **Taking city-states without war makes it a Diplomat, before the science and smaller tags:** diplomatic marriage,
+   annexing city-states, or a unique unit that can buy a city-state.
+
+**Which leaders move** (base civs; tags worked out from each civ's ability and CP's tag rules, since the base game's
+trait data isn't in either repo; the first logged games' `StrategyProfile_Log.csv` will confirm):
+
+| Civ (leader) | Bonus | CP tags | Before | After |
+|---|---|---|---|---|
+| Assyria (Ashurbanipal) | tech from each captured city | warmonger and science | Conqueror if its pursuit came out domination, **Scientist** if science | **Conqueror**, M ≥ +50 |
+| Songhai (Askia) | triple gold from captures and camps | warmonger | Conqueror, M from +40 | Conqueror, M ≥ +50 |
+| Huns (Attila) | raze twice as fast | none from this bonus | Conqueror only if its pursuit came out domination with offence ≥ 7 (otherwise by its other tags, or Opportunist) | **Conqueror**, M ≥ +50 |
+| Mongolia (Genghis Khan) | +30% against city-states | warmonger | Conqueror, M from +40 | Conqueror, M ≥ +50 |
+| Austria (Maria Theresa) | diplomatic marriage | diplomat | Diplomat | Diplomat (no change) |
+| Venice (Enrico Dandolo) | buys city-states with the Merchant of Venice | smaller (and diplomat from its trade routes) | **Scientist** unless its pursuit came out diplomacy | **Diplomat** |
+
+So the moves are:
+- **Assyria and the Huns** become certain Conquerors.
+- **Venice** becomes a Diplomat.
+- **Songhai, Mongolia** (and Assyria, the Huns) get the +50 floor.
+- **Austria** doesn't change.
+
+**What it affects now:** `StrategyProfile_Log.csv`, and `MetaDial` (merged, not yet in any run). The style flag sets
+don't read the profile.
+
+**Status:** coded; CI pending.
+
 ### The three styles as flag sets, for the trio test (Personality, 2026-11-04 9:20am ET)
 For the lead's trio mode (AGENTS.md, "The trio goal": one greedy, one balanced and one aggressive civ of ours plus 3 CP
 civs, 6 players). Nothing is coded for it; this is the list a test key would give to one slot each.
