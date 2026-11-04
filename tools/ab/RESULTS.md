@@ -3340,7 +3340,13 @@ logged pair".
   Summarize-Trio.
 - **Measure:** in the trio and matchup tests, the greedy civ's cities, population, techs, policies and strength share at
   T150 by `GreedyKind`; wide against tall while nobody attacks.
-- **Status:** coding.
+- **What the greedy set already did for tall, and the gaps:** `GreedyBook` runs the tall book until the capital has
+  the National College; `GreedyBuilds` values food, science and wonders x1.5. Missing were Tradition for every tall
+  kind (the book choice went by tags and flavours, not the kind), the 4-city cap (after the book CP's AI settled on),
+  and the policy side of the rush (culture). `GreedyTall` adds those three.
+- **For the greedy style set:** add `GreedyWide` and `GreedyTall` (each acts only for a leader of its kind).
+- **Build:** fork `ai/personality` `cf84181`.
+- **Status:** coded, CI pending.
 
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
