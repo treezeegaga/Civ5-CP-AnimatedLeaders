@@ -1938,7 +1938,7 @@ For cause 1 (late), at the lead's request.
 - **Measure:** turns from reaching the border to declaring ("DeclareWhenGathered:" log line), unit distances at
   the hand-off, first capture attempt turn.
 - **δ:** CitiesCaptured by the aggressor up; strength share at T150 +1 point.
-- **Status:** hypothesis.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
 
 ### FIX_SIEGE_CONCENTRATE: a follow-up wave moves only as one army with the units already at the siege (War) (Nov 4, about 1:48pm ET)
 For cause 2 (small).
@@ -1952,7 +1952,7 @@ For cause 2 (small).
 - **Expected:** fewer waves, each with at least 6 units near the walls together. Fewer "too early, 0–27 a turn"
   lines at the follow-up target.
 - **Measure:** the "SiegeRoll:" line now gives army and nearby counts; capture attempts per follow-up city.
-- **Status:** hypothesis. Applies only together with SiegeRoll.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`. Applies only together with SiegeRoll.
 
 ### FIX_SIEGE_KEEP: units at the front stay off barbarian camps while at war (War) (Nov 4, about 1:48pm ET)
 For cause 2 (handed-off units pulled away).
@@ -1964,7 +1964,7 @@ For cause 2 (handed-off units pulled away).
 - **Expected:** the units handed off at Seoul stay in the Seoul zone. Fewer "Trying to remove barbarian camp" moves
   by the aggressor during its war.
 - **Measure:** camp moves during the war; units in reach at the first capture attempt.
-- **Status:** hypothesis.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
 
 ### War: the attack operations in 0C458987 (16-flag role) and 0C22F161 (Nov 4, about 1:23pm ET)
 The lead asked for a trace of when each attack formed, how big it was, where it mustered, and what became of it.
