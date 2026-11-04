@@ -1340,6 +1340,25 @@ the attack. War codes the timing (`TimingBuildup`); Economy pays for it.
 - **δ:** 2 points, no-worse. Status: designed; code after War's hook, as one flag `WarChest` in `CvEconomicAI` (saving
   and buying) and `CvBuildingProductionAI` (gold weight in deficit).
 
+### WarEconomy: a planned attack prepares the economy in peace (Economy, Nov 4, about 2:00pm ET; proposal, same hook)
+
+The user's follow-up: while the attack is planned and the civ is still at peace, it gets ready to switch to war
+fast. One flag, `WarEconomy`, separate from `WarChest` (gold). It reads the same War hook (committed target and
+`TimingBuildup`'s "planned" phase).
+- **Production in the cities that will build the army** (the 2-3 cities nearest the target):
+  - production buildings (forge, workshop) and military ones (barracks, armory) get a bonus in
+    `CvBuildingProductionAI`;
+  - other cities keep their normal choices.
+- **Roads toward the target** (`CvBuilderTaskingAI`): a route from the nearest of those cities toward the border
+  facing the target gets route priority, so the army marches in fewer turns.
+- **Strategic resources:** if the attack's main units need iron or horses and the civ has none connected, workers
+  prioritise an owned source, and plot purchases favour one in reach (`CvEconomicAI`, `CvBuilderTaskingAI`).
+- **Hypothesis:** the build-up takes fewer turns and the army arrives sooner, with better units, for little peacetime
+  cost (buildings it would want anyway, a few roads).
+- **Measure:** turns from build-up start to the army marching; cities captured in bully games; strength share at T150
+  (no-worse).
+- **δ:** 2 points, no-worse. Status: designed; code after War's hook.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
