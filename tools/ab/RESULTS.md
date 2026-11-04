@@ -1924,7 +1924,7 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
-### War: two more games on the old ab-f21a8f6 build (0C4F5988 Songhai, 0D0DC744 Zulus); SiegeAbort near the bar (Nov 4, about 5:38pm ET)
+### War: two more games on the old ab-f21a8f6 build (0C4F5988 Songhai, 0D0DC744 Zulus); SiegeAbort near the bar (Nov 4, about 5:34pm ET)
 Both ran before MarchOn, FocusedWar, the window fixes, the trio target fix and `f73177c`, so they mostly show causes
 already fixed.
 
