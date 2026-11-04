@@ -1,0 +1,88 @@
+From 0ed0b9e477714ea76df19399e3adad0914bdf714 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 22:11:18 +0000
+Subject: [PATCH] AI_AB_TEST Economy: LeanBuilders candidate flag (the user's
+ call: at most 2 workers per 3 cities; work boats only for the city's own sea
+ tiles, one in training at a time)
+
+Off in the bundle. The opening book's worker step is unaffected.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  1 +
+ .../CvUnitProductionAI.cpp                    | 19 +++++++++++++++++++
+ 3 files changed, 21 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 8243c5a..5da837f 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33418,6 +33418,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"FocusedWar", false},
+ 	{"GreedyWide", false},
+ 	{"GreedyTall", false},
++	{"LeanBuilders", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 3c955b2..bc32b1b 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -244,6 +244,7 @@ enum CandidateFixTypes
+ 							// as fast as happiness allows, then grows its cities. Off in the bundle
+ 	FIX_GREEDY_TALL,		// Personality (the user's design): a greedy leader of the tall kind plays Tradition, at most 4 cities, and rushes
+ 							// tech and policies (culture buildings valued x1.5). Off in the bundle
++	FIX_LEAN_BUILDERS,		// Economy (the user's call): workers at most 2 per 3 cities; work boats only for this city's own sea tiles, one in training at a time. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+diff --git a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+index e502956..6c29c9e 100644
+--- a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+@@ -1318,6 +1318,18 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 	//Make sure we need naval workers in this city.
+ 	if(pkUnitEntry->GetDefaultUnitAIType() == UNITAI_WORKER_SEA)
+ 	{
++		// AI_AB_TEST candidate (LeanBuilders, the user's call: 9 workers and 7 work boats for 7 cities is too many):
++		// one work boat in training at a time across the civ
++		const bool bLeanBuilders = kPlayer.UsesCandidateAI(FIX_LEAN_BUILDERS);
++		if (bLeanBuilders && !bFree)
++		{
++			int iBoatsInTraining = kPlayer.GetNumUnitsWithUnitAI(UNITAI_WORKER_SEA, true) - kPlayer.GetNumUnitsWithUnitAI(UNITAI_WORKER_SEA, false);
++			if (m_pCity->isProductionUnit() && m_pCity->getProductionUnit() == eUnit)
++				iBoatsInTraining--;
++			if (iBoatsInTraining > 0)
++				return SR_STRATEGY;
++		}
++
+ 		CvTacticalDominanceZone* pZone = kPlayer.GetTacticalAI()->GetTacticalAnalysisMap()->GetZoneByCity(m_pCity,true);
+ 		if (pZone && pZone->GetOverallDominanceFlag() != TACTICAL_DOMINANCE_FRIENDLY)
+ 			return SR_STRATEGY;
+@@ -1377,6 +1389,10 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 			if (!kPlayer.NeedWorkboatToImproveResource(eResource))
+ 				continue;
+ 
++			// LeanBuilders: only sea resources this city can work itself, not everything within 12 turns
++			if (bLeanBuilders && !m_pCity->IsWithinWorkRange(pLoopPlot))
++				continue;
++
+ 			CvResourceInfo* pkResourceInfo = GC.getResourceInfo(eResource);
+ 			if (pkResourceInfo && pkResourceInfo->getResourceUsage() == RESOURCEUSAGE_BONUS)
+ 			{
+@@ -1417,6 +1433,9 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 			return SR_USELESS;
+ 
+ 		int iNumBuilders = kPlayer.GetNumUnitsWithUnitAI(UNITAI_WORKER, true);
++		// AI_AB_TEST candidate (LeanBuilders, the user's call): at most 2 workers per 3 cities (rounded up)
++		if (kPlayer.UsesCandidateAI(FIX_LEAN_BUILDERS) && !bFree && iNumBuilders >= (2 * kPlayer.getNumCities() + 2) / 3)
++			return SR_USELESS;
+ 		int iMissingBuilders = kPlayer.getCitiesNeedingTerrainImprovements() + 1 - iNumBuilders; //one for roads
+ 		int iScale = (iMissingBuilders > 2) ? 3 : 1; //escalate if many are missing
+ 
+-- 
+2.43.0
+

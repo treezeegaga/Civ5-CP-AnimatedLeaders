@@ -1461,6 +1461,17 @@ the Aztecs started 9 workers and 7 work boats in 150 turns, against 13 settlers 
 
 No fix until the build history says which.
 
+**The user's call (Nov 4, about 5:30pm ET): 9 workers and 7 work boats for 7 cities is too many.** New flag `LeanBuilders`
+(patch 0020 on `claude/ab-c1` `c5015f1`, off in the bundle):
+- **Workers:** at most 2 per 3 cities, rounded up (5 for 7 cities), on top of CP's own cap. Bought or free workers
+  and the opening book's worker step are unaffected.
+- **Work boats:** only for sea resources inside this city's own work area (CP counts everything within 12 turns,
+  so several coastal cities count the same resource), and one boat in training at a time across the civ.
+- **Hypothesis:** fewer civilians, more of the production goes to buildings and units, and tiles are still improved
+  in time (a worker improves several tiles).
+- **Measure:** strength share at T150; workers and boats built per city (production log).
+- **δ:** 2 points, no-worse. Status: coded, not built.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
