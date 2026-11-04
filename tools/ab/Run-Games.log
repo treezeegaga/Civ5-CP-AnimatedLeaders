@@ -672,3 +672,17 @@ NOTE ET: installed ab-9e9fc9d (logging-only build); logging on; continuing 14-fl
 2026-11-04 12:25:01    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0B5B70640B5B7064F
 2026-11-04 12:25:01  Starting game 5: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets; OthersBase = 
 2026-11-04 12:25:35 ET  PC 1 (BOX): bullyabort4 on ab-9e9fc9d, 2 pairs: 0B4500E8 Mongols (7/7 cities) and 0B5B7064 Huns (5/5): 0 captures, 0 city-state captures. Logs kept only for 0B4500E8 game 1 (wars=1); 0B5B7064 game 1 declared 0 wars, so its logs deleted. Replays match, no dialogs. Run continues.
+2026-11-04 12:33:00    turn 100 after 7 minutes
+2026-11-04 12:37:05  Game ended: turn 150 (0B7215740B721574)
+2026-11-04 12:37:12    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0B7215740B721574.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0B7215740B721574
+2026-11-04 12:37:12    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0B7215740B721574
+2026-11-04 12:37:12  Starting game 6: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets; OthersBase = 
+2026-11-04 12:38:27    replay matches the first game
+NOTE 12:39PM ET: ab-1c3ab74 is out; STOP created, finishing pair then installing
+2026-11-04 12:45:29    turn 100 after 7 minutes
+2026-11-04 12:49:34  Game ended: turn 150 (0B7215740B721574F)
+2026-11-04 12:49:41    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0B7215740B721574F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0B7215740B721574F
+2026-11-04 12:49:41    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0B7215740B721574F
+2026-11-04 12:49:41  Stop file found; stopping
+2026-11-04 12:49:41  Runner finished after 6 games
+2026-11-04 12:49:59 ET  PC 1 (BOX): bullyabort4 on ab-9e9fc9d, 5 pairs total: 0B721574 Assyria (4/4 cities) 0 captures, 0 city-state captures; game-1 logs kept (wars=1), flip's deleted. Replays match, no dialogs. Stopped for ab-1c3ab74.
