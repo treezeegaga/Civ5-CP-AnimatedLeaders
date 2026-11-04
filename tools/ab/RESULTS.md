@@ -1755,6 +1755,60 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### FIX_SIEGE_FORMATION: classical–medieval city attacks use a formation with room for siege (War) (Nov 4, about 12:30am ET)
+- **Why only half the army joined, and the bar wasn't reached** (bully pair 0879B791): distance from the muster point
+  wasn't it. The Celts' attack held 7 of its 9 slots; the rest of their military was garrisons, a sentry and scouts.
+  The limit is the formation. From the classical era until the Renaissance, land city attacks use
+  `MUFORMATION_SMALL_CITY_ATTACK_FORCE`:
+  - 9 slots, but **only 2 take siege or ranged units**, and both are required;
+  - its optional slots are melee (`UNITAI_ATTACK`/`FAST_ATTACK`), a general and a special unit.
+
+  So the extra units SiegeArmy asks for are melee. The logs show cities asked to build "Operation unit ... Pictish
+  Warrior / Swordsman" (the `1c30fb0` fix working). They add almost no city damage, and catapults can't join past 2:
+  7 units made 27 a turn. `MUFORMATION_BASIC_CITY_ATTACK_FORCE` (10 slots, 6 required) has **5** siege/ranged slots.
+  The ancient one (`EARLY_RUSH`) already has 4.
+- **Hypothesis:** with the flag, a land city attack that would use SMALL uses BASIC instead. The army can then hold
+  up to 5 siege or ranged units, which are what brings city damage. With SiegeArmy, the waiting attack's requests
+  become catapults, and the bar becomes reachable.
+- **Measure:** bully pairs, the conquest role (TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy,
+  ArmyHandoff, SiegeAbort) + SiegeFormation against the same without it.
+  - Mechanism: siege units in the attack and its expected damage when it marches.
+  - Outcome: cities captured, the aggressor's city share, and military at T150 (the guard).
+- **δ:** at least 1 capture per 3 bully pairs; military at T150 no lower.
+- **Build:** `ai/war` commit `1fc6d0a` (on `claude/ab-c1` `c13eb1c`), patch `patches/war/0008`. Only acts on land city attacks; the formation is
+  chosen in `CvAIOperation` (War's file).
+
+### War: bully conquest pair 0879B791 (Celts with the conquest flags): an army thrown away (Nov 3, about 11:45pm ET)
+
+With TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy and ArmyHandoff, the Celts built the biggest army by
+T100 (military 122), declared on the Netherlands at T111, took nothing, and ended at 38. In the replay without the
+flags they ended at 131.
+- **The attack waited the full 20 turns and marched below the bar.** The sneak attack (operation 1989) waited T86–T105
+  at **27–29 expected damage a turn against Rotterdam's bar of 60**. Only 7 units ever joined: 2 Pictish warriors, 3
+  swordsmen, a composite bowman and a catapult, about half the Celtic army. When the 20-turn cap ran out it marched
+  anyway, was discovered at T110 and declared at T111.
+- **At Rotterdam:** "attempting capture" every turn T111–T116, with expected damage falling 61, 55, 44, 54, 40, 40
+  against 200 HP, then "too early".
+- **The losses:** 11 Celtic units killed, all by the Netherlands, spread over T117–T149 (flank attacks, units
+  retreating to heal or to safety, counterattacks). There were no disbands. The Netherlands lost 11 units too.
+- **The victim was balanced, not weak:** Dutch military 110 against the Celts' 118 at the declaration, then 130, 159,
+  168 and 222 by T150 as they out-built the Celts at war. By the user's framing the Celts should struggle here, but not
+  throw away their army.
+- **The cause is in War's own code:** SiegeArmy lets an attack march when the 20 turns run out, even far below the bar.
+
+### FIX_SIEGE_ABORT: an attack still too weak after SiegeArmy's 20 turns is called off, not sent (War)
+- Hypothesis: with SiegeArmy on, an attack that is still below the bar after 20 turns ends ("SiegeArmy: still too weak
+  after 20 turns, giving up"). The WAR approach stays, so a fresh attack forms and must reach the bar before it marches
+  or declares. Wars are declared only with an army that can take its city: fewer, later, winnable wars, and no army
+  thrown at an equal neighbour.
+- Measure: bully pairs (the conquest role flags + SiegeAbort against the same without it). Aggressor's military at
+  T150 (the guard: it mustn't collapse), cities captured, and wars declared (they may fall).
+- δ: the aggressor's military at T150 no lower than without the war (the replay), with captures ≥ today's 0.
+- Build: `ai/war` commit `5bfea3f` (on `claude/ab-c1` `1804369`), patch `patches/war/0007`. Needs SiegeArmy on.
+- Notes: two other levers, not coded.
+  - Only half the Celtic army joined the attack: the operation recruits units near the muster point.
+  - A failed war ran 40 turns with no peace: that's Diplomacy's peace logic.
+
 ### War: why the bully aggressor barely declares (logged pair 07614B74, Songhai) (Nov 3, about 8:30pm ET)
 
 The bully siege test on the fixed SiegeArmy (ab-095144c) gave 0 captures in 12 games, with the aggressor at war with
