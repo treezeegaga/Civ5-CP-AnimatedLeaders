@@ -1924,6 +1924,37 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the 0C3C8913 replay (Aztecs, ab-96f008e + MarchOn, FocusedWar): the window opened, but the units were "too expensive" (Nov 4, about 5:09pm ET)
+- **TimingBuildup worked up to the window:** "T81 window opens for 10 turns against Austria". The trio fix let a
+  target through: Austria, military 82 against the Aztecs' 36.
+- **The window built no army.**
+  - Production T81–T91: Pyramids, workers, a caravansary, a circus, settlers.
+  - **82 units were refused "tooexpensive" in those turns**, including the operation's own Swordsman (weight 10332)
+    and the window's "Army unit" Swordsman (3000).
+  - Gold per turn on the production lines T60–T108 ran −13 to +8, mostly negative.
+  - The refusal is CP's upkeep guard (`CvUnitProductionAI::CheckUnitBuildSanity`): no combat unit when the treasury
+    goes bankrupt in under 9 turns.
+  - The worker (weight 4200, 6702 after sanity) then won.
+- **Then no war:**
+  - From T91 (window over) the target check is strict again, and Austria is far stronger, so no target.
+  - Germany declared on the Aztecs at T108, which closed the window.
+  - The Aztecs' only capture attempts were in that defensive war (Cologne, T130–T131).
+- **The chain:**
+  1. In the peace phase the tiny-army building cut sent production into workers, work boats and settlers (fixed in
+     `f863b01`).
+  2. Their upkeep and the wonders' put the civ in deficit.
+  3. In the window the upkeep guard refused every unit.
+  4. The window ran out with no army, and the stronger target was dropped.
+- **The "preferred attack target Mogadishu" lines are CP's own target list** (MilitaryAILog), not TimingBuildup's;
+  TimingBuildup's target was Austria.
+
+**Fixes:**
+- **War (TimingBuildup, same flag):** while the window is open and units are unaffordable (fewer than 9 turns to
+  bankruptcy at the average unit's upkeep), the window pauses (its turns don't count down), for up to 10 turns per
+  window, and logs "TimingBuildup: window paused, units unaffordable".
+- **For Economy:** WarChest (gold per turn ≥ 0 while planning) and TrueGoldRate belong in the role for any
+  TimingBuildup test. The Aztecs' worker weight (4200 before sanity) is theirs too.
+
 ### War: TimingBuildup's peace phase builds workers and work boats (the user watching 0C3C8913) (Nov 4, about 5:07pm ET)
 The user, watching PC 1's replay: the Aztecs (the role, on ab-f73177c) are "building a million workers and work
 boats". This is from the code, before the build history arrives.
