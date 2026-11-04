@@ -2756,7 +2756,9 @@ counterattacks and while retreating to heal, and no peace came.
 - **Open, War:** only half the army joins the attack, because the operation recruits only near the muster city.
 - **Open, Diplomacy:** a failed war ran 40 turns with no peace.
 
-**Runs on `ab-c13eb1c`, the conquest package + `SiegeAbort` as `RoleFixes`, logging off unless noted:**
+**Runs on `ab-1fc6d0a`** (`c13eb1c` plus War's `SiegeFormation`: classical-medieval city attacks use the formation
+with 5 siege/ranged slots, not 2, since catapults couldn't join past 2), **the conquest package + `SiegeAbort` +
+`SiegeFormation` as `RoleFixes`, logging off unless noted:**
 - PC 1: against normal CP civs, `AIABTest_bullyabort@BOX.csv` (after its current pair, which closes `AIABTest_bullyconquest@BOX.csv`).
 - PC 2: against greedy civs (`OthersBase`), `AIABTest_bullygreedy@TREEDESKTOP.csv`, logged pair first.
 The two runs differ only in the opponents.
