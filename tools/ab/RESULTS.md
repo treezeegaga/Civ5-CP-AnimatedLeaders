@@ -4067,6 +4067,13 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### The crash didn't repeat without logging (lead, 2026-11-04 3:25pm ET)
+
+PC 2 replayed `0C827C9C` (same seeds and civs, `ab-1c3ab74`, the same role) with **logging off: no crash**, through
+T150. So the T78 crash ("32-bit address space nearly exhausted") points to logging's memory, not the code; one run
+only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
+off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
+
 ### The trio test is built (the user's goal; lead, 2026-11-04 3:10pm ET)
 
 The user's point: CP plays mostly balanced, so our greedy civ should usually out-grow it, and the trio goal may be
