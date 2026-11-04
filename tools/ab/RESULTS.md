@@ -1274,6 +1274,49 @@ change for that: the 5000 weight already beats every building. If War prefers th
 is `GetUnitTypeForArmy` with `GetOpenSlots(false)` for armies waiting on the siege check (`CvMilitaryAI`, also War's).
 Economy can measure it afterwards from the same log (operation-unit entries and military units built during the wait).
 
+### Why warmongers go bankrupt (Economy, Nov 4, about 2:30pm ET)
+
+**How often:** across all `AIABTest_bully*.csv`, a civ sits at 0 gold for 3+ snapshots (T30 on) in **10 of 79
+aggressor civ-games (13%)**, against 9 of 474 (2%) for the other civs and 1 of 79 for the tall civ.
+
+**The Huns in `0C22F161`** (from `CityStrategyAIProductionLog.csv`, its `GPT` field, and the results CSV):
+- Gold per turn went negative at T43, reached −18 at T60 and −36 at T80, and sank to −148 by T140. The treasury hit
+  0 by T80 and stayed there. The other majors in the game stayed between −5 and +50 a turn throughout.
+- At T70 the Huns had **10 land units on 3 cities and 10 population**; every other civ had 3-6 (military 79 against
+  20-48). That's the warmonger build (siege book, conquest role) bought on a small economy.
+- While broke they kept building:
+  - walls in four cities (T68-T85);
+  - libraries (T85, T87);
+  - about one operation warrior every two turns. Each was gifted to a city-state a turn later by CP's deficit rule.
+- No gold building, no extra trade route until T108, no peace.
+
+**Why the guards didn't stop it (confirmed in code):**
+- Both upkeep guards, the unit one (`CvUnitProductionAI::CheckUnitBuildSanity`: refuse if bankrupt in under 9 turns)
+  and the building one (`CvBuildingProductionAI`, same test), ask `CvPlayer::getTurnsToBankruptcy`.
+- That uses `getAvgGoldRate`, which `cacheAvgGoldRate` sets to **current net rate + the 10-turn average of
+  `m_GoldChangeForTurnTimes100`**.
+- `CvTreasury::ChangeGoldTimes100` records **only positive changes** there (`if (iChange > 0)`).
+- So the "average rate" is the net rate plus the average one-off income: city-state gold, plunder, scrapping refunds.
+  Losses never count. In a deficit, any one-off income can flip it positive, and `getTurnsToBankruptcy` returns
+  "never": both guards switch off while net gold per turn is −36. In surplus it double-counts income.
+- Walls are exempt from the building guard anyway (`GetExtraCityHitPoints() > 0`).
+
+**Fix, one flag: `TrueGoldRate`** (patch 0013): for flagged civs, `cacheAvgGoldRate` is the net gold rate
+(`calculateGoldRate()`), so `getTurnsToBankruptcy` sees the real deficit. The existing guards then refuse new units
+and maintenance buildings when bankruptcy is under 9 turns away, and penalise them under 17.
+- Hypothesis: aggressors stop running into 0 gold, keep the units they build (no deficit gifting), and reach their
+  war with the army intact.
+- Measure: civ-games at 0 gold for 3+ snapshots (aggressors: 13% now); strength share at T150 (no-worse). Mechanism:
+  units gifted "b/c bankrupt" (`MilitaryAILog.csv`).
+- δ: 2 points, no-worse. It's a bug fix.
+- Also reaches, through `getAvgGoldRate`: 7 places in `CvDiplomacyAI` (deal and war affordability) and 1 in
+  `CvCityStrategyAI`. They all see the true rate too, which is the intent, but it's why this is a flag and not a plain fix.
+- Build: patch 0013 on `7aaee41` (`ai/economy` reset to `claude/ab-c1`), flag `TrueGoldRate` (`FIX_TRUE_GOLD_RATE`).
+  Status: coded, not built.
+- Not in this flag, for later if it isn't enough:
+  - a war-chest rule (a civ preparing a war keeps gold per turn ≥ 0 by favouring markets and trade routes);
+  - walls under the guard.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
