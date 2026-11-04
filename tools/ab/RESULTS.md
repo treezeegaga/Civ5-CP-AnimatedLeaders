@@ -3255,7 +3255,7 @@ logged pair".
     - city-state unit gifts are refused at cities + 1.
   - **Inside the window:** 3-4 land units per city, attack, siege and ranged units first, as before.
   - **MetaDial:** its conquest-plan side (M ≥ +50) does the same. 0 < M < +50 is unchanged.
-- **Coordinated with War (2:15pm ET):** War exposed the window (`CvMilitaryAI::GetTimingBuildupPhase`, `ai/war` `2a4dde1`).
+- **Coordinated with War (2:10pm ET):** War exposed the window (`CvMilitaryAI::GetTimingBuildupPhase`, `ai/war` `2a4dde1`).
   With `TimingBuildup` on, `IsInWarBuildup` follows its phases: the big army in WINDOW (15 turns from when a target is
   found) and ATTACK, and at war; garrisons in PEACE and PLANNED. War's peace cap (cities + 1) is the same as
   `AggressiveArmy`'s. Case 3 (turn 70) only applies without `TimingBuildup`. `ai/personality` merges `ai/war`
@@ -3266,7 +3266,7 @@ logged pair".
 - **Build:** `019c646` (compiles, CI run 162), then `d6c872c` (merge with `ai/war`, CI pending).
 - **Status:** waiting for CI on `d6c872c`.
 
-### AggressiveWalls: walls only in threatened border cities (Personality, 2026-11-04 2:15pm ET)
+### AggressiveWalls: walls only in threatened border cities (Personality, 2026-11-04 2:10pm ET)
 - **The lead (2026-11-04):** in PC 2's pair `0C63D961` the bully had walls in every city (7 of 7; 8 of 8 in the flip).
   For the aggressive style, walls belong on threatened border cities; interior walls are upkeep spent on nothing.
 - **The flag** (`AggressiveWalls`, `FIX_AGGRESSIVE_WALLS`, off in the bundle; fork `ai/personality` `48ba2e9`). A
