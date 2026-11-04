@@ -1522,6 +1522,39 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: flag `WarAppetite`, and bundle flags checked for city-states (Diplomacy session, 2026-11-04)
+
+**City-state check** (the lead's C8 crash note: city-states run every bundle flag).
+- Diplomacy's bundle flags are `EasyTarget`, `DiploBugs`, `LuxuryAsk` and `DealExploits`. None of their code runs for
+  a city-state as the deciding player:
+  - `CvDiplomacyAI::DoTurn` is only called for major civs (`CvPlayer.cpp` ~10291);
+  - city-states don't trade (`CvDealAI`) or sit in the World Congress as AI voters;
+  - help requests, demands and war-declaration memory are major-to-major.
+- New Diplomacy flags check `isMajorCiv()` as well.
+
+**`WarAppetite`** (pushed to `ai/diplomacy` `916925b`, on `claude/ab-c1` `af99bc1`; off in the bundle, not compiled).
+- **What it does:** Personality's profile sets the war appetite. The WAR approach weight follows the meta position M:
+  x0.5 at -100 (greedy), x1 at 0, x2 at +100 (aggressive), linear between. It applies after the opinion multipliers,
+  so friends still count, just less overwhelmingly for a conqueror. M is the home position until `MetaAdapt` moves it.
+- **Why:** the aggressor stays FRIENDLY to everyone (entry below). `TradeOpinion` removes the trade-made friendship;
+  this one makes aggressive leaders want war more and greedy ones less, as the profile intends.
+- **Hypothesis:** the bully aggressor (an aggressive archetype) declares its first war earlier, and greedy/tall civs
+  start fewer wars.
+- **Measures:** the aggressor's `WarsDeclared` and first-war turn (bully test, together with `TradeOpinion`); wars
+  started by tall civs (builders test); no-worse on strength.
+- **Not done here:** the profile's hard rules.
+  - The archetype rules (`ExpansionistPeace`, `BuilderPeace`, `DiplomatWord`, ...) are Personality's step 5.
+  - The everyone-rule "no war on a civ it's exchanging per-turn deal items with" needs a decision first. AIs nearly
+    always have a luxury swap running with their neighbours, so as written it would forbid most wars and deepen the
+    "nobody fights" problem.
+  - A narrower version keeps the honesty: don't renew deals with a civ we plan to attack, and declare only once our own
+    obligations have run out. That's for the user and Personality to decide.
+- **Decision (user, 2026-11-04): no such rule.** An AI may declare war on a civ it's trading per-turn items with.
+  Breaking a deal by war already costs trust: `DealReputation` discounts the breaker's promises, and with
+  `TradeOpinion` the trade-partner opinion goes with the cancelled deals. **For Personality:** drop the deal clause from
+  the everyone-rules in section 5 of the profile. The friendship clause (no war on a friend in the friendship's first
+  15 turns) is unaffected.
+
 ### Diplomacy: why the failed Celtic war ran 35 turns, and flag `StaleWarPeace` (Diplomacy session, 2026-11-04)
 
 From `DiplomacyAI_Peace_Log.csv` and `DiplomacyAI_Log.csv` of bully game `0879B791` (War's "Bully conquest, logged pair").
@@ -1797,6 +1830,46 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - Notes: check in a logged game first that wars really come from this path: a war line in the diplomacy log right
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
+
+### War: bully vs greedy pair 0B09BFE1 (Mongols with the full conquest role): close, then the army walked home (Nov 4, about 7:40am ET)
+
+Aggressor Mongolia, with TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, SiegeArmy, ArmyHandoff, SiegeAbort and
+SiegeFormation, in game 1 only. Other civs greedy. No capture in either game. With the flags Mongolia kept its army:
+military 190 at T150 against 124 in the replay, 5 cities in both.
+- **SiegeFormation works:** attacks used the 10-slot formation. But they still held one siege unit each (a catapult
+  or trebuchet) beside 2–3 composite bowmen and swordsmen: 30–40 expected damage a turn against bars of 60–75.
+- **SiegeAbort and SiegeArmy behaved as designed:** attacks waited. One ended on a war-state change, one passed the bar
+  and reached the Inca. The declaration came at T104.
+- **The siege nearly worked.** Tiwanaku, an Inca city: Inca military 32, a greedy civ, 200 HP.
+  - T104: 117 expected damage a turn. The city fell to 168 HP needed at T105, then 128 at T106.
+  - Then the damage dropped to 32 a turn, and the city healed back to 200 by T110.
+  - **No Mongol unit died T104–T119.** The units the tactical AI didn't use fell through to the homeland AI, which sent
+    them home to heal (T107–T112) or to sentry points.
+- **Two gaps in the role.**
+  1. `SiegeStay` wasn't in the role's flags.
+  2. As coded, SiegeStay only filtered the tactical AI's heal moves, not the homeland AI's.
+
+  Fixed (2): `ai/war` `3247ef4` (patch 0009). The homeland heal moves now skip units the tactical AI's
+  `IsUnitNeededAtSiege` says the siege needs (at least a third of HP, near a damaged enemy city). This is SiegeStay
+  itself, which hasn't passed and isn't in the bundle. **Request:** add SiegeStay (and SiegePosture) to the
+  aggressor's RoleFixes for the next bully runs.
+- **Why nobody took Japan** (military 5, 3 cities; at war with Songhai from T67, and with Siam from T128):
+  - **Songhai** (B, no flags) had no army near Kyoto for 80 turns: expected damage 0 from T88 to T143.
+  - **When an attack finally came (T145)** it was the same pattern as at Tiwanaku: 83, then 120 a turn. Kyoto fell to
+    164, then 133 HP needed. Then the damage dropped to 33 a turn and Kyoto healed back to 193 by T151.
+  - **Siam** brought at most 27 a turn.
+
+  So the bleed after two turns of fire isn't a quirk of the flags: B does it too. The fix is the same: SiegeStay
+  (now also covering the homeland heals).
+- **The next fix, in order:**
+  1. Add SiegeStay and SiegePosture to the aggressor's role (`ab-3247ef4`). Expected: the two-turn collapse doesn't
+     happen, and a 120-a-turn siege on a 200 HP city ends in a capture within 3–4 turns.
+  2. If cities still survive at 30–60% HP, melee units aren't finishing: make the capture attempt use the high
+     aggression level once the city is below a third of its HP.
+  3. Then ask for siege units first while an attack waits (one catapult per army today).
+- **Still open:** one siege unit per army. Only the capital's SiegeBook builds catapults, and the extra units SiegeArmy
+  asks for follow the slot types (ranged or bombard), so cities answer with composite bowmen. A later idea: ask for
+  `UNITAI_CITY_BOMBARD` first while an attack waits.
 
 ### FIX_SIEGE_FORMATION: classical–medieval city attacks use a formation with room for siege (War) (Nov 3, about 11:50pm ET)
 - **Why only half the army joined, and the bar wasn't reached** (bully pair 0879B791): distance from the muster point
@@ -2681,6 +2754,12 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
   per game: an operation is created and dropped every turn (Spain in 02F5C9E3, T19–T23: a new ID each turn, "Duration"
   20, 21, 22...). Probably a settler whose target fails the check in `CvAIOperationCivilianFoundCity` right after it's
   chosen. It may be costing settler turns, so it's worth a look for expansion pace.
+- **For the lead, from War (the user agreed, Nov 4 ~7:35am ET): one `ConquestPlan` switch.** `TimingAttack`,
+  `DeclareTiming`, `SiegeBook` and `SiegeTechs` are four parts of one plan (c4's siege timing attack): pick a target,
+  research siege, build the siege army, declare when it exists. None makes sense alone, so single-flag tests of them
+  mean little. Proposal: a `ConquestPlan` flag that turns all four on, for warmonger roles and personalities. The
+  general war fixes stay separate flags, since they help any civ at war: SiegeArmy, SiegeAbort, SiegeFormation and
+  ArmyHandoff. War can write it if you prefer (CvPlayer's flag table is yours).
 - **For War (from War, noted): target choice.** c picking c in the test is an artefact of the split, not a bug, and
   `CanWin` already checks that a target can be beaten. Nothing to code until the bully test shows the aggressor
   picking hopeless targets.
@@ -2789,6 +2868,36 @@ flipped game is the same game: all 120 result rows of pair `02C5BBF9` are identi
 no noise. That's good news for every real test: within a pair, everything that differs comes from the flags
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
+
+### War: the Mongols' siege walked home to heal; SiegeStay and SiegePosture join the bully runs (lead, 2026-11-04 7:45am ET)
+
+**War, pair `0B09BFE1`:** the Mongols' siege of Tiwanaku reached 117 expected damage a turn and brought it to
+128/200 HP (T107–T112). Then the units the tactical AI didn't use that turn fell through to the homeland AI's heal
+moves, walked home with no deaths, and the city recovered. `SiegeStay` only filtered the tactical heals. War's
+`3247ef4` makes the homeland heals skip units the siege needs too.
+
+**`claude/ab-c1` `dbdfbb3`:** `af99bc1` + War `3247ef4` + Diplomacy `WarAppetite` (`916925b`, CI passed). 62 flags.
+**Both PCs switch at their next pair boundary**, logging off, `RoleFixes` = the 8 conquest flags + `SiegeStay` +
+`SiegePosture`:
+- PC 2: against greedy civs (`OthersBase` = the 4 greedy flags), `AIABTest_bullygreedy2@TREEDESKTOP.csv`.
+- PC 1: against normal civs, `AIABTest_bullyabort2@BOX.csv`.
+`StaleWarPeace` and `WarAppetite` stay out of these runs, so they change only the attack side.
+
+### Bully vs greedy civs, logged pair: still no captures; the greedy cap leaks (lead, 2026-11-04 8:00am ET)
+
+Pair `0B09BFE1` (`ab-c78384b`, PC 2, `AIABTest_bullygreedy@TREEDESKTOP.csv`, logs `logs_0B09BFE1*`). The aggressor is the
+Mongols, running the 8 conquest flags in the first game only. The others are greedy (`OthersBase`), and Babylon is the
+tall civ. Replay matched.
+- **Aggressor:** biggest army at T100 (military 107, next 79). It declared 1 war between T100 and T150 and was at
+  peace at T150, military 190. **0 captures** in both games. Babylon (tall, not greedy) took 1 city from Poland in the
+  first game.
+- **Greedy civs:** walls work (0 walled cities except one city in each of two civs). **The unit cap leaks:** at T150,
+  `LandUnits`/`Cities` were 13/5, 12/5, 10/4 and 9/4, and military reached 229 (Songhai) and 154 (Aztecs). So
+  they weren't the easy matchup yet.
+- **A free target nobody took:** Japan at T150 had military 5, was at war with 2 civs, and kept its 3 cities.
+- **Asked:** War, the Mongols' war and what SiegeAbort did, and why no one took Japan. Personality, where the
+  extra greedy units come from.
+- The 20-game run goes on (logging off).
 
 ### Overnight: PCs idle 12am–7am, now running; StaleWarPeace merged (lead, 2026-11-04 7:15am ET)
 
