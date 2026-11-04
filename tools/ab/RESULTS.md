@@ -4074,6 +4074,9 @@ to an army at its border scales with its greed) is merged once CI passes. **The 
 greedy matchups, and the trio test's greedy slot) is now `GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades,
 GreedyBuilds, GreedyWarArmy, GreedyAlarm, GreedyAlarmScale`. The running easy-matchup runs keep the strict 4-flag set
 (no alarm, no war army), so they stay a test of whether the attack works at all.
+Economy's review (3:05pm ET): no conflict. Everything is gated by greed (0 without the flag), so `GreedyAlarm` alone is
+unchanged. One trade-off, by the user's design: at greed 75 or more the wall bonus is 0, so the greediest civs build no
+walls until war is declared. **Watch in the matchup test:** cities lost by the greediest civs in their first war turns.
 
 ### Everyone's work in one build: bankruptcy fixes, the audit's bundle, TargetVulnerability (lead, 2026-11-04 2:50pm ET)
 
