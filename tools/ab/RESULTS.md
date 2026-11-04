@@ -1924,6 +1924,44 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: why the trio's aggressor never declares (4 games, ab-9c6f2cd, logging off) (Nov 4, about 4:39pm ET)
+The lead's question: in 4 trio games (6 civs, Standard Pangaea, Quick, T150) the aggressor declared no war.
+Aggressors: Greece, Songhai, the Aztecs, America, each with 50 flags. No logs, so this is read from the results
+file and the code.
+
+**Military column, aggressor against the rest:**
+
+| Game | Aggressor | T50 | T80 | T110 | The others at T80–T110 |
+|---|---|---|---|---|---|
+| 0C3C8913 | Aztecs | 31 | 36 | 34 | 37–170 |
+| 0C44C5C5 | America | 25 | 37 | 75 | 23–88 |
+| 0C33FB69 | Songhai | 18 | 55 | 83 | 18–97 |
+| 0C2B2973 | Greece | 18 | 49 | 97 | 28–163 |
+
+- The Aztecs were the weakest civ in their game from T80 to T110 and flat (31 → 36 → 34).
+- **This is TimingBuildup's peace army doing its job** (garrisons plus one), but it breaks the target search.
+
+**The chicken-and-egg (code).** `GetNewAIConquestTarget` keeps a candidate only if two checks pass:
+- **Strength:** its military is POOR or weaker compared with ours (one step of slack once committed).
+- **CanWin** (in the bundle since 2:38pm ET): the siege sketch with the ranged units we own now brings down its
+  nearest city.
+
+With a garrison-sized army almost nobody is POOR next to us, and the sketch has 0–3 ranged units. So no target is
+found, TimingBuildup's window never opens, the army never grows, and no war comes. In the bully games the
+opponents were greedy civs with their own small armies, so targets sometimes passed (Japan, the Zulus, Denmark got
+windows). In the trio, CP's civs build normally.
+
+**Fix (TimingBuildup, the trigger's mechanism; same flag).** Before the army is built (no window yet, or a window
+still running), targets are judged against the army the window will build, not the peace army:
+- the strength check allows one more step (AVERAGE);
+- CanWin is skipped.
+
+Once the army is ready or the window is over, both checks apply as before; if they fail, no war, and after 3
+windows the plan resets.
+
+**Request to the lead:** a logged replay of **0C3C8913** (the Aztecs, the flattest army) on the build with this fix,
+to confirm a window opens and a war follows.
+
 ### War: two more logged wars on ab-f21a8f6 (PC 1, bullyabort6): 0BFDEC4C (Zulus), 0C1455BD (Denmark) (Nov 4, about 4:20pm ET)
 Both used the 25-flag role. No captures.
 
