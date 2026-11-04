@@ -1924,6 +1924,60 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: why capture attempts plan attacks and then don't make them (code check, Nov 4, about 11:27am ET)
+The lead asked for this before the logs arrive. Read in `CvTacticalAI.cpp` on `ai/war` `9e9fc9d`.
+
+**Ruled out first:**
+- *Units already used:* `ExecuteAttackWithUnits` uses every unit in `m_CurrentMoveUnits`.
+- *Plan never run:* `FindAndExecuteBestUnitAssignments` runs the best finished plan. The Nottingham sims finished
+  plenty of plans (834–1280 a turn).
+- *City out of sight:* `ExecuteSpotterMove` only aborts when the city tile can't be seen. Nottingham was visible.
+
+**The cause: the planner and the final check measure danger differently.**
+- **While planning:** a ranged attack that ends the unit's turn is kept if the unit could "probably" end its turn
+  there (`canProbablyEndTurnAfterAssignment`). That test **divides the danger by the aggression level**:
+  ÷3 at agg 3 (the capture attempts), ÷2 at agg 2.
+- **At the end of each plan:** `addFinishMovesIfAcceptable` scores every unit's end tile again
+  (`ScorePlotForMove`, `EM_FINAL`, then `ScoreCombatUnitTurnEnd`) with the **full danger**. It rejects the tile if
+  either holds:
+  - a ranged or siege unit has danger above its current HP;
+  - for any unit, HP² < 50 × danger (the new AI's 50; CP uses 42).
+
+  If the unit can retreat anywhere, the whole plan is dropped.
+- **The only slack:** one unit below the army's median XP, and only when the AI's offence flavour is above 6 and
+  it has more than 6 units. Otherwise none; Spain had 5–6.
+
+**So at a defended city** (city strike plus 2–3 English units, about 100–250 danger next to the walls):
+- the plans in which catapults and archers shoot the city get built, then thrown out at the finish;
+- the plans that survive are the ones where they didn't shoot: set-up moves, attacks on units, or a melee
+  poke;
+- each turn the army ends where it started, and the city heals.
+
+This fits the logs: plenty of finished plans, 61–73 expected damage a turn (expected damage ignores where the unit
+ends its turn), and 200 HP at the start of every turn. **Siege units are hit hardest:** they have the weakest
+defence, so the most danger, and they can't move after shooting.
+
+**What the new log will show if this is right:** "capture attempt on Nottingham done: city HP 200 -> 200 (or
+about 180–200), 0–2 of 6 units used".
+
+### FIX_SIEGE_EXPOSURE: in a city attack, the end-of-turn check uses the planner's danger (War) (Nov 4, about 11:27am ET)
+- **Hypothesis:** when the simulation's target is an enemy city, a unit that attacked this turn has its end-tile
+  danger divided by the aggression level at the final check, as it already is while planning. Ranged and siege
+  units then shoot the city and stay in range, so the city loses HP faster than it heals, and SiegeFinish's
+  assault gets its chance.
+  - Other simulations and units that only moved are unchanged.
+  - Melee units keep their own checks in `ScoreAttackDamage` (HP limit, turns to kill).
+- **Cost:** more siege units lost to counterattacks and city fire. The danger figure is a worst case (every enemy in
+  reach hits this one unit), so ÷3 is closer to what usually happens than the full figure.
+- **Measure:**
+  - capture-attempt lines: HP before → after, units used;
+  - CitiesCaptured by the bully aggressor;
+  - units lost per war (`KilledInCombat` in the tactical log).
+- **δ:** CitiesCaptured by the aggressor above 0 in most bully pairs; strength share at T150 +1.5 points.
+- **Flag:** `SiegeExposure`, off in the bundle. Count goes 62 → 63, inside 64. Role: add to the bully aggressor's flags.
+- **Status:** hypothesis. The code goes on `ai/war` next. The next logged war with capture logging (ab-9e9fc9d)
+  confirms or refutes the cause before it's worth a test.
+
 ### FIX_CONQUEST_TRAIT_TARGETS: a warmonger's conquest bonus shapes whom it attacks (War) (Nov 4, about 10:04am ET)
 - **The trait fields** (`CvTraitClasses`, read through `GetPlayerTraits()`). The pack runs CP without Vox Populi,
   so the base game's values apply; VP's SQL changes these traits, but isn't loaded.
