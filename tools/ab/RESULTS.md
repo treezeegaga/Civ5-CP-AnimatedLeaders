@@ -1522,6 +1522,46 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: `StaleWarPeace` reworked to the user's rule, and into the bundle (Diplomacy session, 2026-11-04 2:55pm ET)
+
+**The rule, as the user put it:** "Hold out while the enemy is in danger" is the wrong question. The real question is
+whether we're interested in conquering their cities. If we want to counterattack and take their cities, going on
+with the war makes sense. If we don't intend to attack them, accept the peace.
+
+**Done:** `ai/diplomacy` `f1e913c`, in the bundle (the user ruled it obviously right).
+- **The question,** asked at war by `IsStaleWar`: do we intend to take their cities? Yes if any of these holds:
+  - we have an attack operation against them;
+  - they're our committed conquest target (TimingAttack and TimingBuildup's target);
+  - our approach is WAR and the military AI has a preferred attack target among their cities.
+- **If not:**
+  - that alone is reason to consider peace;
+  - the "they're in danger, hold out" term is dropped;
+  - the peace score is raised to at least the peace threshold (20), so a fair peace is offered or accepted. The treaty
+    terms still follow war score, as in CP.
+- **No time condition any more:** the 20-turn stale wait from the first version is gone.
+- **If yes:** CP's logic, unchanged.
+- **City-state safe:** the helper checks that both players are major civs, and peace willingness is only computed in
+  major civs' diplomacy turns.
+- **The coalition risk from the first version still applies.** A coalition member with no attack of its own makes
+  peace with the conqueror, so the bully test should watch whether coalitions now dissolve early. If they do, the
+  next step is to count "an ally of ours is attacking them" as intent.
+
+### Diplomacy: five flags join the bundle on the user's ruling (Diplomacy session, 2026-11-04 2:45pm ET)
+
+**The ruling (user):** `TradeOpinion`, `DealReputation`, `CoalitionStrength`, `CoalitionCoop` and `CoalitionPact` are
+obviously right. They go into the bundle with no test. `Sanctions` and `WarAppetite` stay off, to be tested.
+
+**Done:** `ai/diplomacy` `1efdf86`, on `claude/ab-c1` `166ebc1`. The five are `true` in `kCandidateFixes`.
+
+**City-state check** (non-major civs run every bundle flag):
+- Every caller of the five is already limited to major civs: the diplomacy turn (`CvPlayer.cpp` ~10291), first
+  contact (`CvTeam.cpp` ~4145), and deals and defensive pacts, which are between majors only.
+- Each flag's own entry point now also checks `isMajorCiv()`, so none depends on its callers:
+  - `GetRecentTradeScore` (`TradeOpinion`);
+  - the coalition block in `DoUpdatePlayerStrengthEstimates` (`CoalitionStrength`);
+  - `IsVisiblyAgainstWarmonger` (`CoalitionCoop`, `CoalitionPact`);
+  - the broken-deal discount in `GetDealValue` (`DealReputation`, both players).
+
 ### Diplomacy: gold gifts to city-states, measured, and a flag proposal `GiftsNeedPatronage` (Diplomacy session, 2026-11-04)
 
 The user's idea: AIs should gift city-states mainly with the Patronage tree, since without it the gifts are poor value.
