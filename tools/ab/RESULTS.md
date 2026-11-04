@@ -1831,6 +1831,46 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: the first captures (bully pair 0A92244F, ab-dbdfbb3) (Nov 4, about 9:06am ET)
+
+PC 1, normal opponents. The role was the 8 conquest flags + SiegeStay (now covering the homeland heals, `3247ef4`) +
+SiegePosture, without SiegeFirst and SiegeFinish.
+- **With the role,** the Huns (military 141 against Spain's 69 at T100) declared on Spain around T105 and **captured 2
+  cities**: `CitiesCaptured` 1 by T120, 2 by T130. Spain's `CitiesLost` matches.
+  - City counts moved by only one (Huns 5 → 6, Spain 5 → 4), so one captured city was probably razed or lost again.
+  - Huns' military grew to 236 by T130. By T140, 4 civs were at war with them: the coalition goal, firing.
+- **Without the role (the replay):** 0 captures, and the Huns' military was 140 at T150.
+- **The other Huns pair (0A8035D5):** 0 captures either way.
+
+This is the first time any candidate code has taken a city (see "City captures"). It's 2 pairs, logging was off, so
+the mechanism isn't confirmed. **Request:** a logged replay of 0A92244F (first game), so the logs show which flags
+did the work: the waiting attack, the siege's damage per turn, whether units stayed, and how the city fell.
+
+### FIX_SIEGE_FIRST: a waiting attack's siege slots wait for siege units (War) (Nov 4, about 8:45am ET)
+- **Why armies hold one catapult:** the basic attack formation (SiegeFormation) has 5 siege/ranged slots, and its two
+  optional ones already ask for `UNITAI_CITY_BOMBARD` first. But each of those slots also takes `UNITAI_RANGED` as its
+  second choice. So existing composite bowmen fill them from the reserves before any catapult is asked for.
+  Mongol armies in 0B09BFE1: 1 catapult or trebuchet, 2–3 composite bowmen.
+- **Hypothesis:** while SiegeArmy holds an attack as too weak, a slot whose first choice is a siege unit takes only a
+  real siege unit. It stays open otherwise, so a city is asked to build a catapult or trebuchet. This applies only if
+  the civ can train a siege unit at all. Siege units do 2–3× a composite bowman's damage to a city, so the waiting
+  army reaches the bar sooner and brings more damage when it marches.
+- **Measure:** bully pairs, the 10-flag role + SiegeFirst against the role alone. Siege units per marching army,
+  expected damage when it marches, captures. The guard: the aggressor's military at T150.
+- **δ:** at least 1 capture per 3 bully pairs more than the role alone.
+- **Build:** `ai/war` commit `8c47302` (built: CI run 136) (on `claude/ab-c1` `d51e8a6`), patch `patches/war/0010`. Only with SiegeArmy on; optional slots only, from the operation's second turn.
+
+### FIX_SIEGE_FINISH: melee units go in once a city is below a third of its HP (War) (Nov 4, about 8:45am ET)
+- **Why:** in 0B09BFE1, both Tiwanaku and Kyoto came down to about 130/200 HP and were never assaulted to the end.
+  With 2 or fewer melee units in reach, the capture attempt runs at medium aggression, which rejects a melee attack
+  that costs more HP than it deals.
+- **Hypothesis:** when the city's remaining HP is a third of its maximum or less, the capture attempt runs at high
+  aggression, so melee units attack and take it. The combat simulation's suicide check still applies (no attack that
+  leaves a unit under 3 HP).
+- **Measure:** the same bully pairs. Captures, and the turns from a city's first hit to its capture.
+- **δ:** as SiegeFirst.
+- **Build:** `ai/war` commit `8c47302` (built: CI run 136), patch `patches/war/0010` (CvTacticalAI::ExecuteCaptureCityMoves).
+
 ### War: bully vs greedy pair 0B09BFE1 (Mongols with the full conquest role): close, then the army walked home (Nov 4, about 7:40am ET)
 
 Aggressor Mongolia, with TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, SiegeArmy, ArmyHandoff, SiegeAbort and
