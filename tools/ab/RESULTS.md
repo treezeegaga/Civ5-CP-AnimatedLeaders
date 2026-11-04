@@ -1924,6 +1924,55 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the first logged pair on ab-f21a8f6 (25-flag role), 0CD189D4, Japan (Nov 4, about 3:58pm ET)
+PC 2, greedy opponents. Japan is the aggressor (group b, wide). In the role game it had 7 cities and made no
+capture attempt; in the flip game it took one city.
+
+**What TimingBuildup did (role game).**
+- **T100:** "window opens for 10 turns against The Shoshone". The window is 15 turns × Quick speed's 67%.
+  TargetVulnerability's pick was Yerevan, 5 tiles from the muster point at Kagoshima (48:33). So the distance was
+  fine, not 12.
+- **T105–T109:** Japan's diplomacy log shows **CWS** (a coop war, soon) against **Denmark**. Japan had agreed to
+  join another civ's war; the coop-war request came in during the window.
+- **T110:** Japan declared on Denmark (the coop war starting), and the window closed ("at war").
+  - Denmark's cities (Aarhus 66:20, Kaupang 71:12, Copenhagen) are 15–25 tiles from Japan's core, and every one
+    read "enemy dominated" (22–23 turns each).
+  - All 24 attack requests on Aarhus and Kaupang failed: "not possible for lack of units".
+  - The sneak attacks on Yerevan, the window's real target, were created at T110, T129 and T131. Each ended the
+    next turn with "War goal changed, probably another war is more important" (DiploOpinionChange).
+- **T133:** the window reopened against the Shoshone.
+
+So the army was built for a war 5 tiles away, and a coop war 20 tiles away took its place, with nothing to show for
+it.
+
+**The five questions for this game:**
+
+| Question | Answer |
+|---|---|
+| Arrived together? | No attack reached a target (no DeclareWhenGathered, SiegeConcentrate or MarchOn lines) |
+| Big enough? | The build-up worked: military 67 → 141 → 192 |
+| Kept the damage on? | No capture attempt |
+| SiegeFinish, SiegeRoll? | Never reached |
+
+**The flip game:** Japan took Agaidika. Its capture lines show units moving ("2 of 2", "3 of 3 used") with the city
+at 200 → 200 most turns. That's the flip, without SiegeExposure.
+
+### FIX_FOCUSED_WAR: a timing attacker with a plan doesn't join other civs' wars (War) (Nov 4, about 3:58pm ET)
+- **Hypothesis:** a warmonger in the timing-attack plan, with a committed conquest target, treats every other civ
+  as an invalid coop-war target (`CvDiplomacyAI::IsValidCoopWarTarget`).
+  - It neither asks for nor accepts coop wars against them.
+  - A coop war it already agreed to but hasn't started is cancelled by CP's own "invalid target" path, which has
+    no broken-promise penalty.
+  - Coop wars against its own target are still fine.
+- **Expected:** the war comes against the target, after the build-up, with the army 5–6 tiles away instead of 20.
+  No more 0CD189D4-style wars where the build-up went to a war nobody planned.
+- **Measure:**
+  - the war's target against the TimingBuildup target (log);
+  - CWS/CW states in the diplomacy log;
+  - capture attempts and CitiesCaptured.
+- **Flag:** `FocusedWar`, off in the bundle. Role: add to the bully aggressor's flags.
+- **Status:** hypothesis.
+
 ### War: four more failed bully wars on ab-1c3ab74 (16-flag role), and the common cause (Nov 4, about 3:21pm ET)
 PC 1 (bullyabort5), four games: 0B8A1D73, 0BA0FF9F, 0BB7D3CA, 0BCE16F7. All four had SiegeExposure and SiegeRoll;
 none had DeclareWhenGathered or TimingBuildup. No captures.
