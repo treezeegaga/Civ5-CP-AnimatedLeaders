@@ -1755,7 +1755,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
-### FIX_SIEGE_FORMATION: classical–medieval city attacks use a formation with room for siege (War) (Nov 4, about 12:30am ET)
+### FIX_SIEGE_FORMATION: classical–medieval city attacks use a formation with room for siege (War) (Nov 3, about 11:50pm ET)
 - **Why only half the army joined, and the bar wasn't reached** (bully pair 0879B791): distance from the muster point
   wasn't it. The Celts' attack held 7 of its 9 slots; the rest of their military was garrisons, a sentry and scouts.
   The limit is the formation. From the classical era until the Renaissance, land city attacks use
