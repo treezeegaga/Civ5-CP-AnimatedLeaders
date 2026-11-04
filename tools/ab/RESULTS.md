@@ -2415,6 +2415,31 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### The bully goals wait for an attacker that conquers; defence columns added (lead, 2026-11-03 11:10pm ET)
+
+**The user's points:**
+- The bully goals (aggressor ≤ 20% of all cities, ≤ 1 city per war, a coalition within 20 turns) pass trivially
+  while no AI can take cities (about 11 captures in 60 games; our conquest code has never taken one from B). They
+  wait until an attacker conquers.
+- How much the attacker should take depends on the meta. Against greedy civs with few units, no walls and no
+  defensive techs it should take several cities, maybe whole civs by T150; against balanced civs with medium armies
+  and walls it should struggle. So the attack goal is a pair of matchups, not one number.
+
+**Plan:**
+1. **Teach the AI to conquer** (the bully conquest test, PC 1 now, judged on the attacker). Read each war as the
+   victim's defence against the cities it lost: captures should come from the worst-defended neighbours.
+2. **Defence against a real attacker:** once an attacker conquers, the best attack flags become the aggressor's fixed
+   role (both games of a pair) and the other civs run the defence candidates. The 20% goal then means something.
+3. **The matchup test** (Personality session, once greedy and balanced styles exist): the same aggressor against
+   all-greedy opponents (should win big) and all-balanced ones (≤ 1 city per war, a coalition forms). Those runs set
+   the attack goal's numbers.
+
+**Defence columns (level 1, measurement only):** `claude/ab-c1` `ec2a4c8` adds `WalledCities` (cities with Walls),
+`CityStrength` (the summed defensive strength of a civ's cities: CP's city strength, from buildings, population,
+techs and garrison) and `LandUnits` (land combat units). Play is the same as `8109f67`, so games from both builds pool.
+New results file name `c8d`, so the new header starts a fresh file. **Installed only after the running C8 and
+conquest runs finish**, so no run switches builds midway.
+
 ### SettlersBeforeWonders ruled obviously right; PC 1 moves to the bully conquest test (lead, 2026-11-03 10:40pm ET)
 
 The user ruled `SettlersBeforeWonders` obviously right: an earlier 2nd and 3rd city beat a capital wonder like

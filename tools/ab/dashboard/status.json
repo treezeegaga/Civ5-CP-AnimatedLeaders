@@ -220,41 +220,48 @@
   {
    "section": "goal",
    "order": 2,
+   "name": "Aggressor beats the right matchups",
+   "detail": "Against greedy civs (few units, no walls) it takes several cities; against balanced civs it takes ≤ 1 per war. Needs an AI that conquers first (bully conquest test now); defence columns added for reading it (ec2a4c8).",
+   "state": "open"
+  },
+  {
+   "section": "goal",
+   "order": 3,
    "name": "Aggressor's share of all cities (bully test)",
    "detail": "≤ 20%. Can't be judged yet: no AI aggressor takes cities (about 11 captures in 60 games), so it passes trivially. Meaningful once an attacker can conquer.",
    "state": "open"
   },
   {
    "section": "goal",
-   "order": 3,
+   "order": 4,
    "name": "Cities per aggressor war",
    "detail": "≤ 1. Can't be judged yet, for the same reason.",
    "state": "open"
   },
   {
    "section": "goal",
-   "order": 4,
+   "order": 5,
    "name": "Coalition against a runaway",
    "detail": "2+ civs within 20 turns of its first conquest. Can't be judged yet: there are no conquests.",
    "state": "open"
   },
   {
    "section": "goal",
-   "order": 5,
+   "order": 6,
    "name": "Deals per civ per 10 turns",
    "detail": "0.5 to 2 (not measured yet)",
    "state": "open"
   },
   {
    "section": "goal",
-   "order": 6,
+   "order": 7,
    "name": "Banned behaviours",
    "detail": "0 per game (not measured yet)",
    "state": "open"
   },
   {
    "section": "goal",
-   "order": 7,
+   "order": 8,
    "name": "Seconds per AI turn",
    "detail": "≤ 1.25× B's (not measured yet)",
    "state": "open"
@@ -321,6 +328,13 @@
    "name": "DealExploits alone",
    "detail": "Single-flag test.",
    "state": "waiting"
+  },
+  {
+   "section": "queue",
+   "order": 9,
+   "name": "Defence columns build",
+   "detail": "ab-ec2a4c8: WalledCities, CityStrength, LandUnits. Measurement only; installed when the current runs finish.",
+   "state": "next"
   },
   {
    "section": "session",

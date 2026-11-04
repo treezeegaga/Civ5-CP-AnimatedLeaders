@@ -90,7 +90,10 @@ at the top of RESULTS.md):
 - clearly ahead of CP's AI: **strength share ≥ 60%** against CP, at King with even rules (raised from 55% by the
   user, 2026-11-03)
 - the bully test: the aggressor no longer rolls everyone over: **≤ 20% of all cities** at the end, **≤ 1 city
-  per war**, and **2+ civs at war with it within 20 turns** of its first conquest
+  per war**, and **2+ civs at war with it within 20 turns** of its first conquest. These need an attacker that
+  conquers first (the user, 2026-11-03): while no AI takes cities they pass trivially. The attack side is judged by
+  matchups (the user): against greedy civs with few units and no walls the aggressor should take several cities,
+  against balanced ones it should struggle. RESULTS.md, "The bully goals wait for an attacker that conquers".
 - a lively world without spam: **0.5–2 deals per civ per 10 turns**
 - **0 banned behaviours**, and AI turns **no more than 25% slower** than B's
 - most tricks on the exploit checklist no longer work
@@ -278,7 +281,7 @@ The user can also rule a change obviously right: it then merges on code review a
 act in a 150-turn split game.
 
 *Level 1* (not flags; ungated, merged as they come): the `Difficulty` key, the `ResearchSpent`/`Faith` columns, the
-proposal counts, Economy's 0009 hold logging, Diplomacy's `IsEndgameAggressiveTo` guard (0008).
+proposal counts, the defence columns `WalledCities`/`CityStrength`/`LandUnits` (`ec2a4c8`), Economy's 0009 hold logging, Diplomacy's `IsEndgameAggressiveTo` guard (0008).
 
 *Level 2, bug fixes: one no-worse bundle test, then merge.*
 - Screened: `PolicyPrereqDepth` (+0.81), `LosingWarBuildings` (+0.61), `DiploBugs` (+0.42), `UpgradeSaveCancel`
