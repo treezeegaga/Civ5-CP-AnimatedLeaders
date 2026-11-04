@@ -1810,7 +1810,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - **Measure:** bully pairs, the 10-flag role + SiegeFirst against the role alone. Siege units per marching army,
   expected damage when it marches, captures. The guard: the aggressor's military at T150.
 - **δ:** at least 1 capture per 3 bully pairs more than the role alone.
-- **Build:** next `ai/war` commit. Only with SiegeArmy on.
+- **Build:** `ai/war` commit `8c47302` (on `claude/ab-c1` `d51e8a6`), patch `patches/war/0010`. Only with SiegeArmy on; optional slots only, from the operation's second turn.
 
 ### FIX_SIEGE_FINISH: melee units go in once a city is below a third of its HP (War) (Nov 4, about 8:45am ET)
 - **Why:** in 0B09BFE1, both Tiwanaku and Kyoto came down to about 130/200 HP and were never assaulted to the end.
@@ -1821,7 +1821,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   leaves a unit under 3 HP).
 - **Measure:** the same bully pairs. Captures, and the turns from a city's first hit to its capture.
 - **δ:** as SiegeFirst.
-- **Build:** next `ai/war` commit (CvTacticalAI::ExecuteCaptureCityMoves).
+- **Build:** `ai/war` commit `8c47302`, patch `patches/war/0010` (CvTacticalAI::ExecuteCaptureCityMoves).
 
 ### War: bully vs greedy pair 0B09BFE1 (Mongols with the full conquest role): close, then the army walked home (Nov 4, about 7:40am ET)
 
