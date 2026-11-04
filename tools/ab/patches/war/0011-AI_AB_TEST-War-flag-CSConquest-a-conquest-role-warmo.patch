@@ -1,0 +1,100 @@
+From 3cbc147124da31f95f4f889599329ab23a48f12c Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 15:01:31 +0000
+Subject: [PATCH] AI_AB_TEST War: flag CSConquest (a conquest-role warmonger
+ goes to war on a weak, nearby, unguarded city-state; off in the bundle)
+
+Approach logs: bully aggressors chose CONQUEST towards a city-state once in
+959 updates (Mongols), never for the Celts or Huns; GetNewAIConquestTarget
+only looks at majors. In CvDiplomacyAI::SelectBestApproachTowardsMinorCiv,
+for IsCandidateWarmonger(TimingAttack) civs at peace with every major: WAR
+becomes the top approach for a city-state that is close or a neighbour, no
+better than STRENGTH_POOR against us, has no ally or an ally we fight, no
+protecting major stronger than average against us, no recent peace, and an
+attack target. DoUpdateMinorCivApproaches still picks one war target, nearest
+first, so the usual sneak attack (SiegeArmy etc.) carries it out.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 38 ++++++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  1 +
+ 3 files changed, 40 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index df68ee654..c9b471346 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -25448,6 +25448,44 @@ void CvDiplomacyAI::SelectBestApproachTowardsMinorCiv(PlayerTypes ePlayer)
+ 		vApproachScores[CIV_APPROACH_HOSTILE] *= 2;
+ 	}
+ 
++	////////////////////////////////////
++	// AI_AB_TEST (candidate, flag CSConquest): a warmonger in the conquest role takes weak, nearby city-states that no one
++	// it fears is guarding. CP's own weights almost never choose war on a city-state (a test bully picked CONQUEST once in
++	// 959 city-state updates), and GetNewAIConquestTarget only looks at major civs.
++	////////////////////////////////////
++	if (GetPlayer()->UsesCandidateAI(FIX_CS_CONQUEST) && GetPlayer()->IsCandidateWarmonger(FIX_TIMING_ATTACK) && !GetPlayer()->IsAtWarAnyMajor() &&
++		GetPlayer()->GetProximityToPlayer(ePlayer) >= PLAYER_PROXIMITY_CLOSE &&
++		GET_TEAM(GetTeam()).canDeclareWar(eTeam, eMyPlayer) && GetPlayer()->GetMilitaryAI()->HavePossibleAttackTarget(ePlayer) &&
++		(int)GetMilitaryStrengthComparedToUs(ePlayer) <= (int)STRENGTH_POOR)
++	{
++		PlayerTypes eCSAlly = GET_PLAYER(ePlayer).GetMinorCivAI()->GetAlly();
++		bool bOk = eCSAlly == NO_PLAYER || IsAtWar(eCSAlly);
++
++		// no recent peace with it
++		int iPeaceTurn = GET_TEAM(GetTeam()).GetTurnMadePeaceTreatyWithTeam(eTeam);
++		if (iPeaceTurn > -1 && GC.getGame().getElapsedGameTurns() - iPeaceTurn < GC.getGame().getHandicapInfo().getPeaceTreatyDampenerTurns())
++			bOk = false;
++
++		// no protector we'd rather not fight: a major that pledged to protect it and is stronger than average against us
++		for (int iMajor = 0; bOk && iMajor < MAX_MAJOR_CIVS; iMajor++)
++		{
++			PlayerTypes eMajor = (PlayerTypes)iMajor;
++			if (eMajor == eMyPlayer || !GET_PLAYER(eMajor).isAlive() || IsAtWar(eMajor))
++				continue;
++			if (GET_PLAYER(ePlayer).GetMinorCivAI()->IsProtectedByMajor(eMajor) && (int)GetMilitaryStrengthComparedToUs(eMajor) > (int)STRENGTH_AVERAGE)
++				bOk = false;
++		}
++
++		if (bOk)
++		{
++			int iHighest = 0;
++			for (int iApproachLoop = 0; iApproachLoop < NUM_CIV_APPROACHES; iApproachLoop++)
++				iHighest = max(iHighest, vApproachScores[iApproachLoop]);
++			vApproachScores[CIV_APPROACH_WAR] = iHighest + 1000;
++			bPotentialWarTarget = true;
++		}
++	}
++
+ 	// Negative approach weights - cap at zero!
+ 	bool bAllZero = true;
+ 	for (int iApproachLoop = 0; iApproachLoop < NUM_CIV_APPROACHES; iApproachLoop++)
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index e3194c7b3..8aa8df15d 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33363,6 +33363,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"SiegeFirst", false}, {"SiegeFinish", false},
+ 	{"GreedyWarArmy", false},
+ 	{"GiftsNeedPatronage", true},
++	{"CSConquest", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 811150cfc..445bd2469 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -225,6 +225,7 @@ enum CandidateFixTypes
+ 	FIX_GIFTS_NEED_PATRONAGE,// Diplomacy (user's rule): no gold gifts to city-states without Patronage, except city-state traits,
+ 							// a diplomatic victory with the World Congress in session, an ally supplying a resource we'd lack, and
+ 							// an active gold or invest quest. In the bundle (the user ruled it obvious)
++	FIX_CS_CONQUEST,		// War: a warmonger in the conquest role goes to war on a weak, nearby, unguarded city-state. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+-- 
+2.43.0
+

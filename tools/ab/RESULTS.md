@@ -1936,7 +1936,7 @@ aggressor's cities and military at T150, and the civs at war with it.
 
 **δ:** at least 1 city-state captured per 2 bully pairs, with the aggressor's military no lower.
 
-**Build:** next `ai/war` commit. The code is in `CvDiplomacyAI::SelectBestApproachTowardsMinorCiv` (Diplomacy's file),
+**Build:** `ai/war` commit `3cbc147` (on `claude/ab-c1` `d2390a1`), patch `patches/war/0011`. The code is in `CvDiplomacyAI::SelectBestApproachTowardsMinorCiv` (Diplomacy's file),
 as a narrow override like TimingAttack's; the lead asked for it on `ai/war`.
 
 ### War: the first captures (bully pair 0A92244F, ab-dbdfbb3) (Nov 4, about 9:06am ET)
