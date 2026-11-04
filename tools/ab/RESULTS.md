@@ -4040,6 +4040,28 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Everyone's work in one build: bankruptcy fixes, the audit's bundle, TargetVulnerability (lead, 2026-11-04 2:50pm ET)
+
+**`claude/ab-c1` `f21a8f6`:** 73 flags, 24 in the bundle.
+- Economy's patches 0013–0018, applied by the lead to `ai/economy` (Economy can't push to the DLL repo):
+  - `TrueGoldRate`: bankruptcy checks use the net gold rate. CP added only positive changes, so a civ at -36 a turn
+    read as never bankrupt until its army was gifted away.
+  - `WarChest`: a timing attacker saves for its build-up, buys it, and keeps gold per turn non-negative.
+  - `WarEconomy`: production and military buildings near the target; iron and horses weigh more for workers.
+  - The `GreedyBook` redesign (beeline the National College, then open up).
+  - `WidePlans` and `SettlerOverlap` into the bundle.
+  - 0013 and 0014 both added `TrueGoldRate`; the doubled entry was dropped.
+- War's `fd7da75`: `CanWin`, `CSConquest` and `BoxedInWar` into the bundle; `TargetVulnerability` (the user's redesign
+  of `GreedyTarget`: the most vulnerable revealed city within 12 plots, by its defence, its owner's army against
+  ours, and distance).
+- Diplomacy's `1efdf86` and `f1e913c`: the five audit flags and `StaleWarPeace` (reworked to the user's rule) into the
+  bundle, each with an `isMajorCiv()` guard at its entry point.
+- **The merges duplicated table lines** (the bundle changes conflicted line by line), so `kCandidateFixes` was rebuilt
+  from the enum: one line per flag, in the bundle if any branch put it there.
+- **Both PCs skip `ab-166ebc1` and go to `ab-f21a8f6`.** The role is the 21 flags + `TrueGoldRate`, `WarChest`,
+  `WarEconomy`, `TargetVulnerability`. PC 2 against greedy civs (`bullygreedy8`), after its crash replay; PC 1 against
+  normal civs (`bullyabort6`).
+
 ### The timing-attack build merged; a crash; both PCs to the 21-flag role (lead, 2026-11-04 3:00pm ET)
 
 - **`claude/ab-c1` `166ebc1`** (a fast-forward to Personality's merge of `ai/war` `fd881bb`, CI passed; 69 flags in the
