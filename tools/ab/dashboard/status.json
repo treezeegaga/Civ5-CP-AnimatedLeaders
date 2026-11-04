@@ -231,7 +231,7 @@
    "order": 3,
    "name": "Attack: an aggressor takes cities",
    "target": "Against greedy civs (few units, no walls) several cities by T150; against balanced civs at most 1 per war",
-   "detail": "First capture: the Huns took 2 cities from Spain, their weakest neighbour (military 141 against 69), in 1 of 3 valid pairs against normal civs. Against greedy civs, 0 so far, but their unit cap still leaks (some keep ~2 per city), so they aren't yet the easy target. The current focus.",
+   "detail": "Two capture games so far: the Huns took 2 cities from Spain (normal civs), and the Inca took Persepolis from Persia (greedy civs, T75; 8 cities against 5 without the flags). Most bully games still end with no capture. The current focus.",
    "state": "focus now"
   },
   {
@@ -286,7 +286,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Still one capture so far (the Huns, 2 cities). War found CP's AI almost never attacks city-states and added CSConquest; with ConquestTraitTargets, each civ's conquest bonus now shapes its targets. Both PCs switch to that build (2db51dd) with logging on, so the next capture comes with logs.",
+   "detail": "First capture against greedy civs: the Inca, running the conquest flags, took Persepolis at turn 75 and ended with 8 cities against 5 in the same game without the flags. The new capture log shows the siege working once the army is at the walls.",
    "state": "running"
   },
   {

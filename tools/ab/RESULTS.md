@@ -3266,6 +3266,20 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### FIRST CAPTURE against greedy civs, with the capture log: the Inca take Persepolis (lead, 2026-11-04 12:20pm ET)
+
+`AIABTest_bullygreedy6@TREEDESKTOP.csv`, pair `0C04B641` (PC 2, `ab-9e9fc9d`, the 14-flag role, greedy opponents with the
+disband fix), logs of both games kept.
+- **With the role**, the Inca (aggressor) were the strongest at T100 (military 80, next 54) and captured Persepolis
+  from Persia at **T75**. The capture log (`*TacticalAI*`, War's `9e9fc9d`), on Persepolis: T72 200 -> 200 (4 of 5 units
+  moved, no damage), T73 200 -> 102, T74 122 -> 8 (high aggression), T75 **CAPTURED**. Two attempts on Pasargadae
+  (T75–76, 200 -> 200, no units used) came to nothing.
+- **Conquest paid:** at T150, 8 cities and military 294 with the role, against 5 cities and 191 without (the flip, where
+  the Inca declared 2 wars and captured nothing).
+- So the chain works when the army is next to the city: two turns of fire and an assault at high aggression. What
+  still fails is reaching that point. The first turn moves without attacking, and attacks on a second city don't
+  start.
+
 ### Sieges that look strong but don't hurt: capture-attempt logging (lead, 2026-11-04 11:25am ET)
 
 - **War, on the kept logs:** in `0BC677BF` (greedy opponents) Spain's army had 3 catapults, but at Nottingham its capture
