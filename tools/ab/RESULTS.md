@@ -4084,6 +4084,21 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Attack first: War's three fixes in one build, both PCs on the attack (lead, 2026-11-04 4:52pm ET)
+
+The user: fixing the attack is the priority. **`claude/ab-c1` = `ai/war` `96f008e` (release `ab-96f008e`, CI run 184).**
+It adds:
+- `MarchOn`: a sneak attack that declares keeps marching as an army to the walls, instead of breaking up.
+- `FocusedWar`, extended in `214c6c7`: a timing attacker with a committed target asks for and accepts no coop wars
+  elsewhere and starts no second war by CP's own approach.
+- `TimingBuildup` (`214c6c7`): its window gives real production weight to land and siege units.
+- `TimingBuildup` (`96f008e`, the trio cause): until the army is built, targets are judged against the army the window
+  will build, not the garrison army. Before this, no rival passed the strength and CanWin checks, so no window opened.
+
+Bully RoleFixes are now the 25 flags plus `MarchOn, FocusedWar`. PC 1 runs a logged replay of trio game 0C3C8913 (the
+Aztecs), then `bullyabort7` (vs normal civs). PC 2 runs `bullygreedy9` (vs greedy civs) after pair 3 of `bullygreedy8`.
+Both log their first pair.
+
 ### Trio quick look: one of ours on top in 3 of 4, but our aggressor never declared war (lead, 2026-11-04 4:36pm ET)
 
 PC 1, `ab-9c6f2cd`, 4 games of 6 civs to T150, logging off, no crashes (`AIABTest_trio@BOX.csv`, `2d5f0ef`).
