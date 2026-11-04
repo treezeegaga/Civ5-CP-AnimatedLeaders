@@ -456,3 +456,5 @@
 2026-11-03 20:49:50  Game ended: stalled at turn 80 (07F9919D07F9919D); responding True; screenshot C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\stall-20261103-204947.png
 2026-11-03 20:49:50  Starting game 2: second game of the pair (Flip = 1); Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
 2026-11-03 20:50:33 ET  PC 1 (BOX): CRASH DIALOG in game 1 (07F9919D) of the SettlersBeforeWonders test on ab-0cd5a5c, turn 80: Assertion 'ePlayer < MAX_MAJOR_CIVS', CvCultureClasses.cpp line 3670, 'Invalid player index' ('the game will now crash'). Screenshot tools/ab/stall-20261103-204947.png. Runner moved on to the flip game (game 2); the first game's rows (T10-T80 only) are not a result.
+2026-11-03 20:51:12    replay matches the first game
+2026-11-03 20:54:29 ET  PC 1 (BOX): SettlersBeforeWonders run stopped at the lead's request (ab-0cd5a5c crash, CultureRivalValue, CvCultureClasses.cpp:3670); no game on 0cd5a5c finished cleanly, so none are kept; waiting for ab-8109f67
