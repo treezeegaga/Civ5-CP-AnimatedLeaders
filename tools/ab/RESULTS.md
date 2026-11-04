@@ -1924,7 +1924,7 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
-### War: why the trio's aggressor never declares (4 games, ab-9c6f2cd, logging off) (Nov 4, about 4:39pm ET)
+### War: why the trio's aggressor never declares (4 games, ab-9c6f2cd, logging off) (Nov 4, about 4:36pm ET)
 The lead's question: in 4 trio games (6 civs, Standard Pangaea, Quick, T150) the aggressor declared no war.
 Aggressors: Greece, Songhai, the Aztecs, America, each with 50 flags. No logs, so this is read from the results
 file and the code.
