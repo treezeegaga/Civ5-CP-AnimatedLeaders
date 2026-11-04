@@ -1924,6 +1924,34 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: two more games on the old ab-f21a8f6 build (0C4F5988 Songhai, 0D0DC744 Zulus); SiegeAbort near the bar (Nov 4, about 5:38pm ET)
+Both ran before MarchOn, FocusedWar, the window fixes, the trio target fix and `f73177c`, so they mostly show causes
+already fixed.
+
+**0D0DC744, the Zulus.**
+- Windows: against Russia at T43 (ended "no war 3 windows"), then against Brazil at T75.
+- **147 attack requests, all "lack of units"**, and no attack operation formed. That's the 0-missing rule, fixed by
+  `f73177c`.
+- Brazil and Russia declared on the Zulus at T82: a defensive war, with Novgorod and Rio "enemy dominated" 25–30
+  times each and Moscow "too early" 11 times.
+
+**0C4F5988, Songhai.**
+- **T67:** window against Assyria. **T73:** "CONQUEST: going for Assyria", a sneak attack with **7 units**, target
+  Zanzibar, 4 tiles from the muster point.
+- **SiegeArmy held it 20 turns:** "expected damage 39 → 57 → 49 a turn; Zanzibar needs 60 (70 with walls)". Then
+  SiegeAbort at T93.
+- Later attacks:
+  - six sneak attacks ended NoUnits at creation (T106–T107), on the old 0-missing rule;
+  - one recruited 19 turns and ended by a diplomacy change;
+  - one marched at T135.
+- No capture attempt.
+- **New:** an army at 57 of 60 a turn waited 20 turns and was thrown away. At 57 a turn against a 250 HP city healing
+  20, the city falls in about 7 turns; the tactical AI's own check allows 13.
+
+**Fix (SiegeAbort, a refinement of its own rule):** at the 20-turn mark the attack is called off only if its
+expected damage is below 85% of SiegeArmy's bar. An army that close marches; the tactical AI's 13-turn check still
+decides whether it attacks. Logged "SiegeArmy: close to the bar after 20 turns (x of y), marching".
+
 ### War: why the Aztecs' gold was low in the 0C3C8913 replay (with Economy) (Nov 4, about 5:25pm ET)
 The lead: a timing attacker must never sit near bankruptcy at peace. The role had TrueGoldRate, WarEconomy and
 WarChest on.
