@@ -1896,6 +1896,49 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: does a bully ever attack city-states? Hardly ever (FIX_CS_CONQUEST) (Nov 4, about 10:00am ET)
+
+**Evidence.**
+- **Declarations:** across all logged games so far, 1 declaration out of about 80 was against a city-state
+  (Songhai on Buenos Aires).
+- **Approaches** (approach log, rows "--- <city-state>"):
+
+  | Aggressor (game) | Chosen approach to city-states, row counts | Best "Conquest" score |
+  |---|---|---|
+  | Mongols (0B09BFE1) | IGNORE 744, PROTECTIVE 214, CONQUEST 1 (T86, Vatican City, a Soft target; back to IGNORE the next turn) | 1,200 |
+  | Celts (0879B791) | PROTECTIVE 553, IGNORE 330 | 37 |
+  | Huns (0A92244F replay) | IGNORE 347, PROTECTIVE 17 | 375 |
+
+**Why.**
+- **The conquest role can't pick a city-state:** `GetNewAIConquestTarget` only loops over major civs.
+- **CP's own city-state war** (`CvDiplomacyAI::SelectBestApproachTowardsMinorCiv`, then `DoUpdateMinorCivApproaches`
+  picks one war target, nearest first) needs the WAR score to beat IGNORE and PROTECTIVE, and about a dozen rules set
+  it to 0. Among them: no attack target; not a "good" war target; an ally we aren't at war with; a recent peace
+  treaty; a friend's ally or protectorate.
+- So warmongers in CP almost never take city-states, and our flags don't change that.
+
+**Hypothesis (FIX_CS_CONQUEST).**
+- A warmonger in the conquest role (`IsCandidateWarmonger(TimingAttack)`) that isn't at war with any major sets WAR
+  towards a city-state when all of these hold:
+  - it's close or a neighbour;
+  - it has no ally, or its ally is a civ we're already at war with;
+  - no major civ stronger than average compared with us protects it (pledge);
+  - its military is no better than "poor" compared with ours;
+  - we can declare war, have an attack target there, and made no recent peace with it.
+- The existing machinery does the rest: one city-state war at a time, nearest first, through the same sneak attack,
+  so SiegeArmy, SiegeAbort and DeclareAtBorder apply.
+
+**Costs, by design:** CP adds warmonger score for taking a city-state, and its protectors' opinion drops. That's goal 2
+working: a bully that eats city-states should draw a coalition.
+
+**Measure:** bully pairs, the role + CSConquest against the role. `CityStatesCaptured` (the new column), the
+aggressor's cities and military at T150, and the civs at war with it.
+
+**δ:** at least 1 city-state captured per 2 bully pairs, with the aggressor's military no lower.
+
+**Build:** next `ai/war` commit. The code is in `CvDiplomacyAI::SelectBestApproachTowardsMinorCiv` (Diplomacy's file),
+as a narrow override like TimingAttack's; the lead asked for it on `ai/war`.
+
 ### War: the first captures (bully pair 0A92244F, ab-dbdfbb3) (Nov 4, about 9:06am ET)
 
 PC 1, normal opponents. The role was the 8 conquest flags + SiegeStay (now covering the homeland heals, `3247ef4`) +
