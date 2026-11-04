@@ -557,3 +557,16 @@
 2026-11-04 14:31:19    logs for the sessions: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\logs_0C827C9C0C827C9C
 2026-11-04 14:31:19  Starting game 6: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll; OthersBase = GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds
 2026-11-04 14:40:00  CRASH in game 5 (0C827C9C0C827C9C, pair 3, ab-1c3ab74, logging on): 'Game Crash' dialog, access violation 0xC0000005 at turn 78, '32-bit address space nearly exhausted'; dialog sat open 30 minutes until the runner's stall kill. Pair 3 dropped, runner restarted
+2026-11-04 14:31:59  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll; OthersBase = GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds
+2026-11-04 14:42:37    turn 100 after 9 minutes
+2026-11-04 14:48:22  Game ended: turn 150 (0CA57EBC0CA57EBC)
+2026-11-04 14:48:35    logs saved: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\digest_0CA57EBC0CA57EBC.txt and C:\Users\itstr\OneDrive\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0CA57EBC0CA57EBC
+2026-11-04 14:48:35    logs for the sessions: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\logs_0CA57EBC0CA57EBC
+2026-11-04 14:48:35  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll; OthersBase = GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds
+2026-11-04 14:50:05    replay matches the first game
+2026-11-04 14:58:48    turn 100 after 9 minutes
+2026-11-04 15:04:53  Game ended: turn 150 (0CA57EBC0CA57EBCF)
+2026-11-04 15:05:07    logs saved: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\digest_0CA57EBC0CA57EBCF.txt and C:\Users\itstr\OneDrive\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0CA57EBC0CA57EBCF
+2026-11-04 15:05:07    logs for the sessions: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\logs_0CA57EBC0CA57EBCF
+2026-11-04 15:05:07  Stop file found; stopping
+2026-11-04 15:05:07  Runner finished after 2 games
