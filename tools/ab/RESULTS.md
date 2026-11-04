@@ -1925,8 +1925,10 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
 - **δ:** target choice changes in the logs in most pairs, and captures are no fewer. Strength share is a guard, not
   the verdict.
 - **Build:** `ai/war` commit `18386e5` (on `3cbc147`, CSConquest; CSConquest built in CI run 144), patch `patches/war/0012`.
-  18386e5 failed to compile: 65 flags overflow the 64-bit masks. **`ac65314` retires AirRebaseHeal** (off, untestable
-  without aircraft; bug H2 stays documented) to make room, patch 0013. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
+  18386e5 alone failed to compile (65 flags overflow the 64-bit masks). The lead made room instead: `claude/ab-c1`
+  `2db51dd` retires ClosedBorders, GrowthTech and AqueductValue and holds CSConquest and ConquestTraitTargets (62
+  flags, CI passed). War's own retirement of AirRebaseHeal was undone, and `ai/war` matches `2db51dd`. **Rule:**
+  retiring flags is the lead's call; tell the lead when a new flag would pass 64. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
   block, `SelectBestApproachTowardsMinorCiv`), Diplomacy's file, behind the flag as the lead asked.
 
 ### War: does a bully ever attack city-states? Hardly ever (FIX_CS_CONQUEST) (Nov 4, about 10:00am ET)
