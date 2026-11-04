@@ -620,3 +620,30 @@ NOTE 10:35AM ET: ab-2db51dd is out; STOP created, finishing pair then installing
 2026-11-04 10:44:56  Stop file found; stopping
 2026-11-04 10:44:56  Runner finished after 4 games
 2026-11-04 10:45:09 ET  PC 1 (BOX): bullyabort3 on ab-5220c03, 3 pairs total: 0AFFA02F Japan 0 captures (4 and 5 cities); aggressor declared 1 war in game 1, so its logs+digest are kept (flip's deleted). Replays match, no dialogs. Stopped for ab-2db51dd.
+NOTE ET: installed ab-2db51dd; logging on; starting bully run with CSConquest, ConquestTraitTargets, -SaveLogs (AIABTest_bullyabort4@BOX.csv)
+2026-11-04 10:46:01  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets; OthersBase = 
+2026-11-04 10:53:57    turn 100 after 7 minutes
+2026-11-04 10:58:00  Game ended: turn 150 (0B176B650B176B65)
+2026-11-04 10:58:07    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0B176B650B176B65.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0B176B650B176B65
+2026-11-04 10:58:07    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0B176B650B176B65
+2026-11-04 10:58:07  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets; OthersBase = 
+2026-11-04 10:59:22    replay matches the first game
+2026-11-04 11:06:03    turn 100 after 7 minutes
+2026-11-04 11:10:06  Game ended: turn 150 (0B176B650B176B65F)
+2026-11-04 11:10:12    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0B176B650B176B65F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0B176B650B176B65F
+2026-11-04 11:10:12    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0B176B650B176B65F
+2026-11-04 11:10:12  Starting game 3: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets; OthersBase = 
+2026-11-04 11:18:08    turn 100 after 7 minutes
+NOTE 11:20AM ET: ab-9e9fc9d is out; STOP created, finishing pair then installing
+2026-11-04 11:22:12  Game ended: turn 150 (0B2D929A0B2D929A)
+2026-11-04 11:22:19    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0B2D929A0B2D929A.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0B2D929A0B2D929A
+2026-11-04 11:22:19    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0B2D929A0B2D929A
+2026-11-04 11:22:19  Starting game 4: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets; OthersBase = 
+2026-11-04 11:23:33    replay matches the first game
+2026-11-04 11:30:15    turn 100 after 7 minutes
+2026-11-04 11:34:18  Game ended: turn 150 (0B2D929A0B2D929AF)
+2026-11-04 11:34:25    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0B2D929A0B2D929AF.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0B2D929A0B2D929AF
+2026-11-04 11:34:25    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0B2D929A0B2D929AF
+2026-11-04 11:34:25  Stop file found; stopping
+2026-11-04 11:34:25  Runner finished after 4 games
+2026-11-04 11:34:44 ET  PC 1 (BOX): bullyabort4 on ab-2db51dd (14 flags), 2 pairs: 0B176B65 Denmark (5/4 cities) and 0B2D929A Mongols (4/4) - 0 city captures, 0 city-state captures in all four games; aggressor declared wars in both first games (1 and 2), so those two games' logs+digests kept, flips deleted. Replays match, no dialogs. Stopped for ab-9e9fc9d.

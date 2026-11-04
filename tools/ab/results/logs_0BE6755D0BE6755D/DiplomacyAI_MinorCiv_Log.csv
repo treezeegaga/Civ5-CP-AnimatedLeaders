@@ -1,0 +1,1701 @@
+012, Kabul, England, RECEIVED_UNIT_GIFT, Warrior
+021, Buenos Aires, China, RECEIVED_UNIT_GIFT, Warrior
+021, Yerevan, Venice, RECEIVED_UNIT_GIFT, Warrior
+021, Mombasa, Assyria, RECEIVED_UNIT_GIFT, Warrior
+022, Kabul, Brazil, RECEIVED_UNIT_GIFT, Warrior
+024, Ife, India, RECEIVED_UNIT_GIFT, Warrior
+025, India, Kyzyl, SENT OUT QUEST, Type, 6
+025, India, Kyzyl, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_KYZYL
+025, Songhai, Kyzyl, SENT OUT QUEST, Type, 3
+025, Songhai, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+026, Kabul, England, RECEIVED_UNIT_GIFT, Warrior
+026, Venice, Yerevan, SENT OUT QUEST, Type, 1
+026, Venice, Yerevan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+027, China, Buenos Aires, SENT OUT QUEST, Type, 3
+027, China, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+027, Venice, Ife, SENT OUT QUEST, Type, 1
+027, Venice, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+027, India, Ife, SENT OUT QUEST, Type, 1
+027, India, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+027, Brazil, Singapore, SENT OUT QUEST, Type, 1
+027, Brazil, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+028, Babylon, Kabul, era change yield update
+028, Babylon, Belgrade, era change yield update
+028, Babylon, Bogota, era change yield update
+028, Babylon, Sofia, era change yield update
+028, Babylon, Buenos Aires, era change yield update
+028, Babylon, Valletta, era change yield update
+028, Babylon, Bucharest, era change yield update
+028, Babylon, Yerevan, era change yield update
+028, Babylon, Ife, era change yield update
+028, Babylon, Singapore, era change yield update
+028, Babylon, Kyzyl, era change yield update
+028, Babylon, Kuala Lumpur, era change yield update
+028, Babylon, Budapest, era change yield update
+028, Babylon, Wellington, era change yield update
+028, Babylon, Mombasa, era change yield update
+028, Babylon, Panama City, era change yield update
+028, Brazil, Kabul, SENT OUT QUEST, Type, 2
+028, Brazil, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+028, Brazil, Belgrade, SENT OUT QUEST, Type, 3
+028, Brazil, Belgrade, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+028, Venice, Kyzyl, SENT OUT QUEST, Type, 3
+028, Venice, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+029, Babylon, Buenos Aires, SENT OUT QUEST, Type, 7
+029, Babylon, Buenos Aires, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+029, India, Ife, SENT OUT QUEST, Type, 7
+029, India, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+030, Babylon, Buenos Aires, gained friend
+030, Babylon, Buenos Aires, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BUENOS_AIRES
+030, Assyria, Buenos Aires, SENT OUT QUEST, Type, 1
+030, Assyria, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+030, Babylon, Buenos Aires, SENT OUT QUEST, Type, 1
+030, Babylon, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 40 to 40, MINOR_CIV_BUENOS_AIRES
+030, China, Buenos Aires, SENT OUT QUEST, Type, 1
+030, China, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+030, Songhai, Buenos Aires, SENT OUT QUEST, Type, 1
+030, Songhai, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+030, Venice, Ife, SENT OUT QUEST, Type, 3
+030, Venice, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+030, Venice, Kyzyl, SENT OUT QUEST, Type, 1
+030, Venice, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+030, India, Kyzyl, SENT OUT QUEST, Type, 1
+030, India, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+030, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
+030, Songhai, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+030, Venice, Budapest, SENT OUT QUEST, Type, 1
+030, Venice, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+030, China, Budapest, SENT OUT QUEST, Type, 1
+030, China, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+030, Babylon, Mombasa, SENT OUT QUEST, Type, 3
+030, Babylon, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+031, Assyria, Mombasa, Gold Gift: 500, Friendship: 0 to 0, Conquest, MINOR_CIV_MOMBASA, (SAVING) 
+031, Assyria, Buenos Aires, SENT OUT QUEST, Type, 3
+031, Assyria, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+031, Venice, Yerevan, SENT OUT QUEST, Type, 3
+031, Venice, Yerevan, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+031, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 1
+031, Babylon, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+031, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 1
+031, Songhai, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+031, Brazil, Wellington, SENT OUT QUEST, Type, 13
+031, Brazil, Wellington, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+031, Songhai, Wellington, SENT OUT QUEST, Type, 13
+031, Songhai, Wellington, RECEIVED QUEST, Invest, Friendship: -3 to -3, MINOR_CIV_WELLINGTON
+032, Songhai, Buenos Aires, SENT OUT QUEST, Type, 3
+032, Songhai, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+032, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 3
+032, Babylon, Kuala Lumpur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+032, Assyria, Mombasa, SENT OUT QUEST, Type, 2
+032, Assyria, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 2 to 2, MINOR_CIV_MOMBASA
+033, Ife, Venice, RECEIVED_UNIT_GIFT, Warrior
+033, Assyria, Mombasa, SENT OUT QUEST, Type, 1
+033, Assyria, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 4 to 4, MINOR_CIV_MOMBASA
+033, Babylon, Mombasa, SENT OUT QUEST, Type, 1
+033, Babylon, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+033, China, Mombasa, SENT OUT QUEST, Type, 1
+033, China, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+034, Songhai, Kabul, era change yield update
+034, Songhai, Belgrade, era change yield update
+034, Songhai, Bogota, era change yield update
+034, Songhai, Sofia, era change yield update
+034, Songhai, Buenos Aires, era change yield update
+034, Songhai, Valletta, era change yield update
+034, Songhai, Bucharest, era change yield update
+034, Songhai, Yerevan, era change yield update
+034, Songhai, Ife, era change yield update
+034, Songhai, Singapore, era change yield update
+034, Songhai, Kyzyl, era change yield update
+034, Songhai, Kuala Lumpur, era change yield update
+034, Songhai, Budapest, era change yield update
+034, Songhai, Wellington, era change yield update
+034, Songhai, Mombasa, era change yield update
+034, Songhai, Panama City, era change yield update
+034, Songhai, Buenos Aires, SENT OUT QUEST, Type, 1
+034, Songhai, Buenos Aires, SENT OUT QUEST, Type, 3
+034, Songhai, Kyzyl, SENT OUT QUEST, Type, 3
+034, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
+034, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 1
+034, Songhai, Wellington, SENT OUT QUEST, Type, 13
+034, Brazil, Kabul, SENT OUT QUEST, Type, 1
+034, Brazil, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+034, England, Kabul, SENT OUT QUEST, Type, 1
+034, England, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+034, England, Kabul, SENT OUT QUEST, Type, 2
+034, England, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+035, Kabul, England, RECEIVED_UNIT_GIFT, Warrior
+035, Brazil, Belgrade, SENT OUT QUEST, Type, 1
+035, Brazil, Belgrade, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+035, Babylon, Bogota, SENT OUT QUEST, Type, 1
+035, Babylon, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+035, Venice, Budapest, SENT OUT QUEST, Type, 3
+035, Venice, Budapest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+036, China, Yerevan, SENT OUT QUEST, Type, 1
+036, China, Yerevan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+036, Songhai, Kabul, SENT OUT QUEST, Type, 1
+036, Songhai, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+037, Venice, Kabul, era change yield update
+037, Venice, Belgrade, era change yield update
+037, Venice, Bogota, era change yield update
+037, Venice, Sofia, era change yield update
+037, Venice, Buenos Aires, era change yield update
+037, Venice, Valletta, era change yield update
+037, Venice, Bucharest, era change yield update
+037, Venice, Yerevan, era change yield update
+037, Venice, Ife, era change yield update
+037, Venice, Singapore, era change yield update
+037, Venice, Kyzyl, era change yield update
+037, Venice, Kuala Lumpur, era change yield update
+037, Venice, Budapest, era change yield update
+037, Venice, Wellington, era change yield update
+037, Venice, Mombasa, era change yield update
+037, Venice, Panama City, era change yield update
+037, Venice, Yerevan, SENT OUT QUEST, Type, 1
+037, Venice, Yerevan, SENT OUT QUEST, Type, 3
+037, Venice, Ife, SENT OUT QUEST, Type, 1
+037, Venice, Ife, SENT OUT QUEST, Type, 3
+037, Venice, Kyzyl, SENT OUT QUEST, Type, 3
+037, Venice, Kyzyl, SENT OUT QUEST, Type, 1
+037, Venice, Budapest, SENT OUT QUEST, Type, 1
+037, Venice, Budapest, SENT OUT QUEST, Type, 3
+037, China, Buenos Aires, SENT OUT QUEST, Type, 3
+037, China, Buenos Aires, SENT OUT QUEST, Type, 1
+037, China, Mombasa, SENT OUT QUEST, Type, 1
+037, Songhai, Buenos Aires, Gold Gift: 500, Friendship: 0 to 0, Conquest, MINOR_CIV_BUENOS_AIRES, (SAVING) 
+037, Songhai, Buenos Aires, SENT OUT QUEST, Type, 1
+037, Songhai, Buenos Aires, SENT OUT QUEST, Type, 3
+037, Songhai, Kyzyl, SENT OUT QUEST, Type, 3
+037, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
+037, England, Bogota, SENT OUT QUEST, Type, 1
+037, England, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+037, Babylon, Sofia, SENT OUT QUEST, Type, 1
+037, Babylon, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+037, Buenos Aires, China, RECEIVED_UNIT_GIFT, Warrior
+037, Babylon, Buenos Aires, lost friend
+037, Assyria, Valletta, SENT OUT QUEST, Type, 1
+037, Assyria, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+037, China, Valletta, SENT OUT QUEST, Type, 1
+037, China, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+037, Ife, India, RECEIVED_UNIT_GIFT, Warrior
+037, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 17
+037, Songhai, Kuala Lumpur, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+037, Brazil, Wellington, SENT OUT QUEST, Type, 2
+037, Brazil, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+039, Assyria, Kyzyl, SENT OUT QUEST, Type, 1
+039, Assyria, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+039, Brazil, Kabul, Gold Gift: 500, Friendship: 0 to 0, Culture, MINOR_CIV_KABUL, (SAVING) 
+039, Brazil, Kabul, SENT OUT QUEST, Type, 2
+039, Brazil, Kabul, SENT OUT QUEST, Type, 1
+039, Brazil, Singapore, SENT OUT QUEST, Type, 1
+039, Songhai, Singapore, SENT OUT QUEST, Type, 1
+039, Songhai, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+039, Singapore, Brazil, RECEIVED_UNIT_GIFT, Warrior
+040, India, Kabul, era change yield update
+040, India, Belgrade, era change yield update
+040, India, Bogota, era change yield update
+040, India, Sofia, era change yield update
+040, India, Buenos Aires, era change yield update
+040, India, Valletta, era change yield update
+040, India, Bucharest, era change yield update
+040, India, Yerevan, era change yield update
+040, India, Ife, era change yield update
+040, India, Singapore, era change yield update
+040, India, Kyzyl, era change yield update
+040, India, Kuala Lumpur, era change yield update
+040, India, Budapest, era change yield update
+040, India, Wellington, era change yield update
+040, India, Mombasa, era change yield update
+040, India, Panama City, era change yield update
+040, India, Ife, SENT OUT QUEST, Type, 1
+040, India, Ife, SENT OUT QUEST, Type, 7
+040, India, Kyzyl, SENT OUT QUEST, Type, 6
+040, India, Kyzyl, SENT OUT QUEST, Type, 1
+040, Assyria, Kabul, era change yield update
+040, Assyria, Belgrade, era change yield update
+040, Assyria, Bogota, era change yield update
+040, Assyria, Sofia, era change yield update
+040, Assyria, Buenos Aires, era change yield update
+040, Assyria, Valletta, era change yield update
+040, Assyria, Bucharest, era change yield update
+040, Assyria, Yerevan, era change yield update
+040, Assyria, Ife, era change yield update
+040, Assyria, Singapore, era change yield update
+040, Assyria, Kyzyl, era change yield update
+040, Assyria, Kuala Lumpur, era change yield update
+040, Assyria, Budapest, era change yield update
+040, Assyria, Wellington, era change yield update
+040, Assyria, Mombasa, era change yield update
+040, Assyria, Panama City, era change yield update
+040, Assyria, Buenos Aires, SENT OUT QUEST, Type, 1
+040, Assyria, Buenos Aires, SENT OUT QUEST, Type, 3
+040, Assyria, Valletta, SENT OUT QUEST, Type, 1
+040, Assyria, Kyzyl, SENT OUT QUEST, Type, 1
+040, Assyria, Mombasa, SENT OUT QUEST, Type, 2
+040, Assyria, Mombasa, SENT OUT QUEST, Type, 1
+040, China, Kabul, era change yield update
+040, China, Belgrade, era change yield update
+040, China, Bogota, era change yield update
+040, China, Sofia, era change yield update
+040, China, Buenos Aires, era change yield update
+040, China, Valletta, era change yield update
+040, China, Bucharest, era change yield update
+040, China, Yerevan, era change yield update
+040, China, Ife, era change yield update
+040, China, Singapore, era change yield update
+040, China, Kyzyl, era change yield update
+040, China, Kuala Lumpur, era change yield update
+040, China, Budapest, era change yield update
+040, China, Wellington, era change yield update
+040, China, Mombasa, era change yield update
+040, China, Panama City, era change yield update
+040, China, Buenos Aires, SENT OUT QUEST, Type, 3
+040, China, Buenos Aires, SENT OUT QUEST, Type, 1
+040, China, Valletta, SENT OUT QUEST, Type, 1
+040, China, Yerevan, SENT OUT QUEST, Type, 1
+040, China, Budapest, SENT OUT QUEST, Type, 1
+040, China, Mombasa, SENT OUT QUEST, Type, 1
+040, Brazil, Singapore, SENT OUT QUEST, Type, 6
+040, Brazil, Singapore, RECEIVED QUEST, Find Player, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+041, Assyria, Ife, SENT OUT QUEST, Type, 1
+041, Assyria, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+041, Babylon, Buenos Aires, Gold Gift: 500, Friendship: 25 to 25, Spaceship, MINOR_CIV_BUENOS_AIRES, (SAVING) , Passing Songhai
+041, Babylon, Buenos Aires, SENT OUT QUEST, Type, 1
+041, Songhai, Wellington, SENT OUT QUEST, Type, 2
+041, Songhai, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+041, Assyria, Mombasa, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+041, Babylon, Mombasa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+041, China, Mombasa, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+042, Brazil, Kabul, SENT OUT QUEST, Type, 6
+042, Brazil, Kabul, RECEIVED QUEST, Find Player, Friendship: 5 to 5, MINOR_CIV_KABUL
+042, Babylon, Sofia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+042, Venice, Kyzyl, SENT OUT QUEST, Type, 2
+042, Venice, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KYZYL
+043, Babylon, Mombasa, SENT OUT QUEST, Type, 2
+043, Babylon, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+044, Brazil, Kabul, era change yield update
+044, Brazil, Belgrade, era change yield update
+044, Brazil, Bogota, era change yield update
+044, Brazil, Sofia, era change yield update
+044, Brazil, Buenos Aires, era change yield update
+044, Brazil, Valletta, era change yield update
+044, Brazil, Bucharest, era change yield update
+044, Brazil, Yerevan, era change yield update
+044, Brazil, Ife, era change yield update
+044, Brazil, Singapore, era change yield update
+044, Brazil, Kyzyl, era change yield update
+044, Brazil, Kuala Lumpur, era change yield update
+044, Brazil, Budapest, era change yield update
+044, Brazil, Wellington, era change yield update
+044, Brazil, Mombasa, era change yield update
+044, Brazil, Panama City, era change yield update
+044, Brazil, Kabul, SENT OUT QUEST, Type, 2
+044, Brazil, Kabul, SENT OUT QUEST, Type, 1
+044, Brazil, Kabul, SENT OUT QUEST, Type, 6
+044, Brazil, Belgrade, SENT OUT QUEST, Type, 3
+044, Brazil, Belgrade, SENT OUT QUEST, Type, 1
+044, Brazil, Singapore, SENT OUT QUEST, Type, 1
+044, Brazil, Singapore, SENT OUT QUEST, Type, 6
+044, Brazil, Wellington, SENT OUT QUEST, Type, 13
+044, Brazil, Wellington, SENT OUT QUEST, Type, 2
+045, China, Bogota, SENT OUT QUEST, Type, 1
+045, China, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+045, India, Panama City, SENT OUT QUEST, Type, 1
+045, India, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+046, India, Yerevan, SENT OUT QUEST, Type, 1
+046, India, Yerevan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+046, China, Mombasa, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_MOMBASA, (SAVING) 
+046, China, Bogota, SENT OUT QUEST, Type, 1
+046, Brazil, Belgrade, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+046, India, Ife, SENT OUT QUEST, Type, 6
+046, India, Ife, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_IFE
+046, Babylon, Kuala Lumpur, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+048, Brazil, Kabul, gained friend
+048, Brazil, Kabul, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_KABUL
+048, India, Ife, gained friend
+048, India, Ife, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_IFE
+048, Brazil, Singapore, gained friend
+048, Brazil, Singapore, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_SINGAPORE
+048, India, Kyzyl, gained friend
+048, India, Kyzyl, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_KYZYL
+049, Venice, Kyzyl, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_KYZYL, (SAVING) 
+049, India, Kyzyl, Gold Gift: 250, Friendship: 35 to 35, Culture, MINOR_CIV_KYZYL, (SAVING) , Boost! , Passing Songhai
+049, Venice, Yerevan, SENT OUT QUEST, Type, 1
+049, Venice, Yerevan, SENT OUT QUEST, Type, 3
+049, Venice, Kyzyl, SENT OUT QUEST, Type, 3
+049, Venice, Kyzyl, SENT OUT QUEST, Type, 1
+049, Venice, Kyzyl, SENT OUT QUEST, Type, 2
+049, Venice, Budapest, SENT OUT QUEST, Type, 1
+049, Venice, Budapest, SENT OUT QUEST, Type, 3
+049, India, Kyzyl, SENT OUT QUEST, Type, 1
+049, Babylon, Belgrade, SENT OUT QUEST, Type, 1
+049, Babylon, Belgrade, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+049, England, Kabul, era change yield update
+049, England, Belgrade, era change yield update
+049, England, Bogota, era change yield update
+049, England, Sofia, era change yield update
+049, England, Buenos Aires, era change yield update
+049, England, Valletta, era change yield update
+049, England, Bucharest, era change yield update
+049, England, Yerevan, era change yield update
+049, England, Ife, era change yield update
+049, England, Singapore, era change yield update
+049, England, Kyzyl, era change yield update
+049, England, Kuala Lumpur, era change yield update
+049, England, Budapest, era change yield update
+049, England, Wellington, era change yield update
+049, England, Mombasa, era change yield update
+049, England, Panama City, era change yield update
+049, England, Kabul, SENT OUT QUEST, Type, 1
+049, England, Kabul, SENT OUT QUEST, Type, 2
+049, England, Bogota, SENT OUT QUEST, Type, 1
+049, Brazil, Belgrade, SENT OUT QUEST, Type, 2
+049, Brazil, Belgrade, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+049, Assyria, Buenos Aires, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+049, China, Buenos Aires, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+049, Venice, Yerevan, cancelled, Construct Wonder, Friendship: 1 to 1, MINOR_CIV_YEREVAN
+049, Venice, Ife, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+049, Venice, Ife, SENT OUT QUEST, Type, 4
+049, Venice, Ife, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_IFE
+049, Venice, Kyzyl, cancelled, Construct Wonder, Friendship: 1 to 1, MINOR_CIV_KYZYL
+049, Venice, Budapest, cancelled, Construct Wonder, Friendship: 1 to 1, MINOR_CIV_BUDAPEST
+049, Babylon, Mombasa, gained friend
+049, Babylon, Mombasa, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+050, Babylon, Mombasa, SENT OUT QUEST, Type, 2
+050, Songhai, Buenos Aires, SENT OUT QUEST, Type, 1
+050, Songhai, Buenos Aires, SENT OUT QUEST, Type, 3
+050, Songhai, Kyzyl, SENT OUT QUEST, Type, 3
+050, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
+050, Songhai, Belgrade, SENT OUT QUEST, Type, 1
+050, Songhai, Belgrade, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+050, Songhai, Kabul, SENT OUT QUEST, Type, 3
+050, Songhai, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+050, China, Budapest, SENT OUT QUEST, Type, 2
+050, China, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+051, Brazil, Kabul, gained ally
+051, Brazil, Kabul, Gold Gift: 250, Friendship: 37 to 62, Culture, MINOR_CIV_KABUL, Boost! 
+051, Brazil, Singapore, Gold Gift: 250, Friendship: 37 to 37, Culture, MINOR_CIV_SINGAPORE, (SAVING) , Boost! 
+051, Babylon, Buenos Aires, SENT OUT QUEST, Type, 4
+051, Babylon, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 8 to 8, MINOR_CIV_BUENOS_AIRES
+051, China, Valletta, SENT OUT QUEST, Type, 2
+051, China, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+051, India, Bucharest, SENT OUT QUEST, Type, 1
+051, India, Bucharest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+051, Brazil, Wellington, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+051, Brazil, Wellington, gained friend
+051, Brazil, Wellington, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_WELLINGTON
+051, Songhai, Wellington, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+052, Venice, Panama City, SENT OUT QUEST, Type, 1
+052, Venice, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+052, Venice, Yerevan, cancelled, Kill Camp, Friendship: 4 to 4, MINOR_CIV_YEREVAN
+052, India, Yerevan, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+052, China, Yerevan, cancelled, Kill Camp, Friendship: -9 to -9, MINOR_CIV_YEREVAN
+052, China, Budapest, SENT OUT QUEST, Type, 1
+052, China, Budapest, SENT OUT QUEST, Type, 2
+052, Brazil, Kabul, lost ally
+052, India, Ife, lost friend
+052, India, Kyzyl, lost friend
+052, Venice, Budapest, SENT OUT QUEST, Type, 3
+052, Venice, Budapest, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUDAPEST
+053, Venice, Panama City, SENT OUT QUEST, Type, 1
+053, Assyria, Buenos Aires, SENT OUT QUEST, Type, 7
+053, Assyria, Buenos Aires, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+053, China, Buenos Aires, SENT OUT QUEST, Type, 3
+053, China, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+053, Kyzyl, Venice, RECEIVED_UNIT_GIFT, Warrior
+053, India, Kyzyl, SENT OUT QUEST, Type, 2
+053, India, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 27 to 27, MINOR_CIV_KYZYL
+053, Songhai, Kyzyl, SENT OUT QUEST, Type, 17
+053, Songhai, Kyzyl, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KYZYL
+054, China, Panama City, SENT OUT QUEST, Type, 1
+054, China, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+054, Songhai, Buenos Aires, SENT OUT QUEST, Type, 17
+054, Songhai, Buenos Aires, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+055, England, Kuala Lumpur, SENT OUT QUEST, Type, 1
+055, England, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+055, Brazil, Singapore, lost friend
+055, Brazil, Singapore, SENT OUT QUEST, Type, 2
+055, Brazil, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 29 to 29, MINOR_CIV_SINGAPORE
+055, Budapest, Venice, RECEIVED_UNIT_GIFT, Warrior
+055, China, Mombasa, SENT OUT QUEST, Type, 3
+055, China, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+056, England, Buenos Aires, SENT OUT QUEST, Type, 1
+056, England, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+056, Kyzyl, Venice, RECEIVED_UNIT_GIFT, Warrior
+056, Assyria, Kyzyl, SENT OUT QUEST, Type, 3
+056, Assyria, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+056, Babylon, Mombasa, lost friend
+057, Venice, Ife, SENT OUT QUEST, Type, 1
+057, Venice, Ife, SENT OUT QUEST, Type, 4
+058, Assyria, Valletta, SENT OUT QUEST, Type, 3
+058, Assyria, Valletta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+058, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 2
+058, Songhai, Kuala Lumpur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+058, Brazil, Wellington, lost friend
+059, Babylon, Sofia, SENT OUT QUEST, Type, 7
+059, Babylon, Sofia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SOFIA
+060, England, Kabul, SENT OUT QUEST, Type, 7
+060, England, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+060, China, Budapest, gained friend
+060, China, Budapest, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_BUDAPEST
+060, Assyria, Mombasa, SENT OUT QUEST, Type, 7
+060, Assyria, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+061, India, Panama City, SENT OUT QUEST, Type, 17
+061, India, Panama City, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+062, Brazil, Belgrade, SENT OUT QUEST, Type, 7
+062, Brazil, Belgrade, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+062, Songhai, Kuala Lumpur, gained friend
+062, Songhai, Kuala Lumpur, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_KUALA_LUMPUR
+063, England, Kabul, gained friend
+063, England, Kabul, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_KABUL
+063, Babylon, Kuala Lumpur, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+063, England, Kuala Lumpur, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+063, Brazil, Wellington, SENT OUT QUEST, Type, 17
+063, Brazil, Wellington, RECEIVED QUEST, Trade Route, Friendship: 22 to 22, MINOR_CIV_WELLINGTON
+064, China, Bucharest, SENT OUT QUEST, Type, 1
+064, China, Bucharest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+064, England, Kabul, SENT OUT QUEST, Type, 2
+064, England, Kabul, SENT OUT QUEST, Type, 7
+064, Brazil, Kabul, cancelled, Kill Camp, Friendship: 41 to 41, MINOR_CIV_KABUL
+064, Songhai, Kabul, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+064, Babylon, Buenos Aires, SENT OUT QUEST, Type, 3
+064, Babylon, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+064, Assyria, Ife, SENT OUT QUEST, Type, 7
+064, Assyria, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+064, Songhai, Singapore, SENT OUT QUEST, Type, 7
+064, Songhai, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+065, Songhai, Belgrade, SENT OUT QUEST, Type, 7
+065, Songhai, Belgrade, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+065, China, Valletta, SENT OUT QUEST, Type, 3
+065, China, Valletta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+065, Babylon, Mombasa, SENT OUT QUEST, Type, 3
+065, Babylon, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 16 to 16, MINOR_CIV_MOMBASA
+066, Assyria, Buenos Aires, SENT OUT QUEST, Type, 1
+066, Assyria, Buenos Aires, SENT OUT QUEST, Type, 7
+066, China, Bogota, SENT OUT QUEST, Type, 3
+066, China, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+066, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 2
+066, Babylon, Kuala Lumpur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+066, Venice, Budapest, SENT OUT QUEST, Type, 7
+066, Venice, Budapest, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_BUDAPEST
+066, Songhai, Wellington, SENT OUT QUEST, Type, 7
+066, Songhai, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+067, China, Buenos Aires, SENT OUT QUEST, Type, 17
+067, China, Buenos Aires, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+068, England, Valletta, SENT OUT QUEST, Type, 1
+068, England, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+068, Venice, Kyzyl, SENT OUT QUEST, Type, 16
+068, Venice, Kyzyl, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_KYZYL
+069, Songhai, Buenos Aires, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+069, Assyria, Valletta, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+069, Venice, Ife, SENT OUT QUEST, Type, 2
+069, Venice, Ife, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_IFE
+069, Songhai, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+069, China, Mombasa, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+070, India, Ife, SENT OUT QUEST, Type, 2
+070, India, Ife, RECEIVED QUEST, Connect Resource, Friendship: 2 to 2, MINOR_CIV_IFE
+071, Songhai, Kuala Lumpur, lost friend
+071, China, Budapest, lost friend
+072, Brazil, Kabul, lost friend
+072, Songhai, Kabul, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+072, Babylon, Bogota, SENT OUT QUEST, Type, 3
+072, Babylon, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+072, India, Bucharest, SENT OUT QUEST, Type, 2
+072, India, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+073, England, Kabul, Gold Gift: 250, Friendship: 36 to 36, Culture, MINOR_CIV_KABUL, (SAVING) , Boost! , Passing Brazil
+073, Babylon, Belgrade, SENT OUT QUEST, Type, 16
+073, Babylon, Belgrade, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+073, Babylon, Sofia, SENT OUT QUEST, Type, 1
+073, Babylon, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+073, China, Sofia, SENT OUT QUEST, Type, 1
+073, China, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_SOFIA
+073, Assyria, Buenos Aires, SENT OUT QUEST, Type, 17
+073, Assyria, Buenos Aires, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+074, Venice, Kabul, era change yield update
+074, Venice, Belgrade, era change yield update
+074, Venice, Bogota, era change yield update
+074, Venice, Sofia, era change yield update
+074, Venice, Buenos Aires, era change yield update
+074, Venice, Valletta, era change yield update
+074, Venice, Bucharest, era change yield update
+074, Venice, Ife, era change yield update
+074, Venice, Singapore, era change yield update
+074, Venice, Kyzyl, era change yield update
+074, Venice, Kuala Lumpur, era change yield update
+074, Venice, Budapest, era change yield update
+074, Venice, Wellington, era change yield update
+074, Venice, Mombasa, era change yield update
+074, Venice, Panama City, era change yield update
+074, Venice, Ife, SENT OUT QUEST, Type, 1
+074, Venice, Ife, SENT OUT QUEST, Type, 4
+074, Venice, Ife, SENT OUT QUEST, Type, 2
+074, Venice, Kyzyl, SENT OUT QUEST, Type, 1
+074, Venice, Kyzyl, SENT OUT QUEST, Type, 2
+074, Venice, Kyzyl, SENT OUT QUEST, Type, 16
+074, Venice, Budapest, SENT OUT QUEST, Type, 1
+074, Venice, Budapest, SENT OUT QUEST, Type, 3
+074, Venice, Budapest, SENT OUT QUEST, Type, 7
+074, Venice, Panama City, SENT OUT QUEST, Type, 1
+074, Songhai, Kabul, SENT OUT QUEST, Type, 7
+074, Songhai, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+074, China, Mombasa, SENT OUT QUEST, Type, 2
+074, China, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+075, Songhai, Buenos Aires, SENT OUT QUEST, Type, 1
+075, Songhai, Buenos Aires, SENT OUT QUEST, Type, 17
+075, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
+075, Songhai, Kyzyl, SENT OUT QUEST, Type, 17
+075, Brazil, Kabul, SENT OUT QUEST, Type, 3
+075, Brazil, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 24 to 24, MINOR_CIV_KABUL
+075, Babylon, Sofia, SENT OUT QUEST, Type, 2
+075, Babylon, Sofia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SOFIA
+075, India, Bucharest, gained friend
+075, India, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+075, China, Budapest, SENT OUT QUEST, Type, 14
+075, China, Budapest, RECEIVED QUEST, Bully City-State, Friendship: 22 to 22, MINOR_CIV_BUDAPEST
+076, Assyria, Bucharest, SENT OUT QUEST, Type, 1
+076, Assyria, Bucharest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+076, China, Valletta, SENT OUT QUEST, Type, 1
+076, China, Valletta, SENT OUT QUEST, Type, 2
+076, China, Valletta, SENT OUT QUEST, Type, 3
+076, China, Sofia, SENT OUT QUEST, Type, 7
+076, China, Sofia, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SOFIA
+076, Assyria, Valletta, SENT OUT QUEST, Type, 2
+076, Assyria, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+076, Venice, Budapest, gained friend
+076, Venice, Budapest, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_BUDAPEST
+076, China, Budapest, cancelled, Bully City-State, Friendship: 21 to 21, MINOR_CIV_BUDAPEST
+076, Assyria, Mombasa, SENT OUT QUEST, Type, 1
+076, Assyria, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+076, Babylon, Mombasa, SENT OUT QUEST, Type, 1
+076, Babylon, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+076, China, Mombasa, SENT OUT QUEST, Type, 1
+076, China, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+076, England, Mombasa, SENT OUT QUEST, Type, 1
+076, England, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+077, Babylon, Kabul, era change yield update
+077, Babylon, Belgrade, era change yield update
+077, Babylon, Bogota, era change yield update
+077, Babylon, Sofia, era change yield update
+077, Babylon, Buenos Aires, era change yield update
+077, Babylon, Valletta, era change yield update
+077, Babylon, Bucharest, era change yield update
+077, Babylon, Ife, era change yield update
+077, Babylon, Singapore, era change yield update
+077, Babylon, Kyzyl, era change yield update
+077, Babylon, Kuala Lumpur, era change yield update
+077, Babylon, Budapest, era change yield update
+077, Babylon, Wellington, era change yield update
+077, Babylon, Mombasa, era change yield update
+077, Babylon, Panama City, era change yield update
+077, Babylon, Belgrade, SENT OUT QUEST, Type, 1
+077, Babylon, Belgrade, SENT OUT QUEST, Type, 16
+077, Babylon, Bogota, SENT OUT QUEST, Type, 1
+077, Babylon, Bogota, SENT OUT QUEST, Type, 3
+077, Babylon, Sofia, SENT OUT QUEST, Type, 7
+077, Babylon, Sofia, SENT OUT QUEST, Type, 1
+077, Babylon, Sofia, SENT OUT QUEST, Type, 2
+077, Babylon, Buenos Aires, SENT OUT QUEST, Type, 1
+077, Babylon, Buenos Aires, SENT OUT QUEST, Type, 4
+077, Babylon, Buenos Aires, SENT OUT QUEST, Type, 3
+077, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 2
+077, Babylon, Mombasa, SENT OUT QUEST, Type, 2
+077, Babylon, Mombasa, SENT OUT QUEST, Type, 3
+077, Babylon, Mombasa, SENT OUT QUEST, Type, 1
+077, England, Sofia, SENT OUT QUEST, Type, 1
+077, England, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+077, England, Kabul, lost friend
+077, England, Buenos Aires, SENT OUT QUEST, Type, 4
+077, England, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+077, China, Panama City, SENT OUT QUEST, Type, 2
+077, China, Panama City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+078, England, Sofia, SENT OUT QUEST, Type, 1
+078, India, Kyzyl, gained friend
+078, India, Kyzyl, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_KYZYL
+079, Assyria, Sofia, SENT OUT QUEST, Type, 1
+079, Assyria, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+079, India, Kyzyl, SENT OUT QUEST, Type, 7
+079, India, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 43 to 43, MINOR_CIV_KYZYL
+079, Venice, Panama City, SENT OUT QUEST, Type, 3
+079, Venice, Panama City, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_PANAMA_CITY
+080, Assyria, Sofia, SENT OUT QUEST, Type, 1
+080, Assyria, Bogota, SENT OUT QUEST, Type, 1
+080, Assyria, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+080, India, Bucharest, lost friend
+080, Brazil, Singapore, SENT OUT QUEST, Type, 17
+080, Brazil, Singapore, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+080, Assyria, Kyzyl, SENT OUT QUEST, Type, 7
+080, Assyria, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+080, England, Kuala Lumpur, SENT OUT QUEST, Type, 4
+080, England, Kuala Lumpur, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+081, England, Bogota, SENT OUT QUEST, Type, 7
+081, England, Bogota, RECEIVED QUEST, Find Natural Wonder, Friendship: -3 to -3, MINOR_CIV_BOGOTA
+081, Assyria, Buenos Aires, gained friend
+081, Assyria, Buenos Aires, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_BUENOS_AIRES
+081, Assyria, Ife, gained friend
+081, Assyria, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_IFE
+081, Assyria, Kyzyl, gained friend
+081, Assyria, Kyzyl, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KYZYL
+081, Venice, Kyzyl, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KYZYL
+081, India, Kyzyl, cancelled, Kill Camp, Friendship: 40 to 40, MINOR_CIV_KYZYL
+081, Assyria, Kyzyl, cancelled, Kill Camp, Friendship: 40 to 40, MINOR_CIV_KYZYL
+081, Songhai, Kyzyl, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KYZYL
+081, Assyria, Mombasa, gained friend
+081, Assyria, Mombasa, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_MOMBASA
+081, Assyria, Panama City, SENT OUT QUEST, Type, 1
+081, Assyria, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+082, Venice, Budapest, gained ally
+082, Venice, Budapest, Gold Gift: 250, Friendship: 37 to 62, Diplomacy, MINOR_CIV_BUDAPEST, Boost! , Passing China
+082, Venice, Ife, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_IFE, (SAVING) 
+082, Assyria, Kyzyl, SENT OUT QUEST, Type, 3
+082, Venice, Valletta, SENT OUT QUEST, Type, 1
+082, Venice, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+083, Venice, Budapest, Gold Gift: 250, Friendship: 61 to 86, Diplomacy, MINOR_CIV_BUDAPEST, Boost! , Passing China
+083, Venice, Ife, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_IFE, (SAVING) 
+083, Venice, Valletta, SENT OUT QUEST, Type, 1
+084, Assyria, Kyzyl, gained ally
+084, Songhai, Kyzyl, SENT OUT QUEST, Type, 17
+084, Songhai, Kyzyl, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_KYZYL
+084, Assyria, Kyzyl, Gold Gift: 250, Friendship: 37 to 62, Conquest, MINOR_CIV_KYZYL, Boost! , Passing Songhai
+084, Assyria, Sofia, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_SOFIA, (SAVING) 
+084, China, Budapest, SENT OUT QUEST, Type, 1
+084, China, Ife, SENT OUT QUEST, Type, 1
+084, China, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+084, Songhai, Singapore, SENT OUT QUEST, Type, 2
+084, Songhai, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+085, Babylon, Bogota, SENT OUT QUEST, Type, 16
+085, Babylon, Bogota, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+085, Assyria, Ife, SENT OUT QUEST, Type, 7
+085, Assyria, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 34 to 34, MINOR_CIV_IFE
+085, Assyria, Kyzyl, lost ally
+086, India, Budapest, SENT OUT QUEST, Type, 1
+086, India, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+086, England, Singapore, SENT OUT QUEST, Type, 1
+086, England, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+086, China, Sofia, gained friend
+086, China, Sofia, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SOFIA
+086, Assyria, Ife, gained ally
+086, China, Ife, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_IFE
+086, Assyria, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 32 to 72, MINOR_CIV_IFE
+086, China, Kuala Lumpur, SENT OUT QUEST, Type, 17
+086, China, Kuala Lumpur, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_KUALA_LUMPUR
+086, Brazil, Wellington, SENT OUT QUEST, Type, 4
+086, Brazil, Wellington, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+087, India, Kyzyl, Gold Gift: 250, Friendship: 33 to 58, Culture, MINOR_CIV_KYZYL, Boost! , Passing China
+087, Assyria, Ife, SENT OUT QUEST, Type, 1
+087, Babylon, Bogota, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+087, Babylon, Buenos Aires, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+087, India, Valletta, SENT OUT QUEST, Type, 1
+087, India, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+087, India, Panama City, SENT OUT QUEST, Type, 7
+087, India, Panama City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+088, Brazil, Kabul, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KABUL
+088, China, Bogota, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+088, China, Buenos Aires, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+088, Songhai, Buenos Aires, SENT OUT QUEST, Type, 4
+088, Songhai, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+088, China, Valletta, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+088, Assyria, Kyzyl, cancelled, Construct Wonder, Friendship: 54 to 54, MINOR_CIV_KYZYL
+088, Songhai, Kyzyl, SENT OUT QUEST, Type, 14
+088, Songhai, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: -7 to -7, MINOR_CIV_KYZYL
+089, Babylon, Buenos Aires, gained friend
+089, Babylon, Buenos Aires, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_BUENOS_AIRES
+089, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 1
+089, Babylon, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+089, China, Kuala Lumpur, SENT OUT QUEST, Type, 1
+089, China, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 1 to 1, MINOR_CIV_KUALA_LUMPUR
+089, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 1
+089, Songhai, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+089, England, Kuala Lumpur, SENT OUT QUEST, Type, 1
+089, England, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+090, Brazil, Wellington, SENT OUT QUEST, Type, 1
+090, Brazil, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+090, Songhai, Wellington, SENT OUT QUEST, Type, 1
+090, Songhai, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+091, Brazil, Kabul, era change yield update
+091, Brazil, Belgrade, era change yield update
+091, Brazil, Bogota, era change yield update
+091, Brazil, Sofia, era change yield update
+091, Brazil, Buenos Aires, era change yield update
+091, Brazil, Valletta, era change yield update
+091, Brazil, Bucharest, era change yield update
+091, Brazil, Ife, era change yield update
+091, Brazil, Singapore, era change yield update
+091, Brazil, Kyzyl, era change yield update
+091, Brazil, Kuala Lumpur, era change yield update
+091, Brazil, Budapest, era change yield update
+091, Brazil, Wellington, era change yield update
+091, Brazil, Mombasa, era change yield update
+091, Brazil, Panama City, era change yield update
+091, Brazil, Kabul, SENT OUT QUEST, Type, 2
+091, Brazil, Belgrade, SENT OUT QUEST, Type, 1
+091, Brazil, Belgrade, SENT OUT QUEST, Type, 2
+091, Brazil, Belgrade, SENT OUT QUEST, Type, 7
+091, Brazil, Singapore, SENT OUT QUEST, Type, 1
+091, Brazil, Singapore, SENT OUT QUEST, Type, 2
+091, Brazil, Singapore, SENT OUT QUEST, Type, 17
+091, Brazil, Wellington, SENT OUT QUEST, Type, 17
+091, Brazil, Wellington, SENT OUT QUEST, Type, 4
+091, Brazil, Wellington, SENT OUT QUEST, Type, 1
+091, Babylon, Belgrade, SENT OUT QUEST, Type, 4
+091, Babylon, Belgrade, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+091, England, Valletta, SENT OUT QUEST, Type, 4
+091, England, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+092, Songhai, Belgrade, SENT OUT QUEST, Type, 14
+092, Songhai, Belgrade, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+092, Assyria, Buenos Aires, lost friend
+092, China, Bucharest, SENT OUT QUEST, Type, 2
+092, China, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+092, Assyria, Mombasa, lost friend
+093, Assyria, Valletta, gained friend
+093, Assyria, Valletta, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_VALLETTA
+093, India, Bucharest, SENT OUT QUEST, Type, 4
+093, India, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+093, Venice, Budapest, cancelled, Kill Camp, Friendship: 69 to 69, MINOR_CIV_BUDAPEST
+093, India, Budapest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+093, China, Budapest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+093, Assyria, Mombasa, gained friend
+093, Assyria, Mombasa, gained ally
+093, China, Mombasa, SENT OUT QUEST, Type, 2
+093, China, Mombasa, SENT OUT QUEST, Type, 1
+093, China, Mombasa, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_MOMBASA
+093, China, Mombasa, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_MOMBASA
+093, Assyria, Mombasa, FINISHED QUEST, Kill Camp, Friendship: 27 to 77, MINOR_CIV_MOMBASA
+093, Venice, Panama City, gained friend
+093, Venice, Panama City, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_PANAMA_CITY
+094, Babylon, Mombasa, SENT OUT QUEST, Type, 2
+094, Babylon, Mombasa, SENT OUT QUEST, Type, 3
+094, Babylon, Mombasa, SENT OUT QUEST, Type, 1
+094, Songhai, Kabul, SENT OUT QUEST, Type, 4
+094, Songhai, Kabul, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KABUL
+094, England, Bogota, SENT OUT QUEST, Type, 14
+094, England, Bogota, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+094, Venice, Valletta, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+094, India, Valletta, cancelled, Kill Camp, Friendship: -1 to -1, MINOR_CIV_VALLETTA
+094, China, Valletta, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+094, England, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+094, Babylon, Mombasa, cancelled, Kill Camp, Friendship: 3 to 3, MINOR_CIV_MOMBASA
+094, England, Mombasa, cancelled, Kill Camp, Friendship: -3 to -3, MINOR_CIV_MOMBASA
+095, Venice, Valletta, SENT OUT QUEST, Type, 4
+095, Venice, Valletta, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+095, Assyria, Ife, lost ally
+096, Assyria, Buenos Aires, SENT OUT QUEST, Type, 2
+096, Assyria, Buenos Aires, RECEIVED QUEST, Connect Resource, Friendship: 22 to 22, MINOR_CIV_BUENOS_AIRES
+096, England, Mombasa, SENT OUT QUEST, Type, 14
+096, England, Mombasa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+097, Assyria, Ife, SENT OUT QUEST, Type, 1
+097, China, Sofia, lost friend
+097, China, Budapest, SENT OUT QUEST, Type, 2
+097, China, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+097, Mombasa, England, RECEIVED_UNIT_GIFT, Chariot Archer
+098, Assyria, Valletta, SENT OUT QUEST, Type, 4
+098, Assyria, Valletta, RECEIVED QUEST, Great Person, Friendship: 42 to 42, MINOR_CIV_VALLETTA
+098, Babylon, Mombasa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+099, India, Bucharest, gained friend
+099, India, Bucharest, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+099, England, Sofia, SENT OUT QUEST, Type, 7
+099, England, Sofia, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SOFIA
+099, Babylon, Buenos Aires, lost friend
+099, China, Bucharest, gained friend
+099, China, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+099, India, Kyzyl, SENT OUT QUEST, Type, 4
+099, India, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 38 to 38, MINOR_CIV_KYZYL
+100, Babylon, Wellington, SENT OUT QUEST, Type, 1
+100, Babylon, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+100, Brazil, Kabul, SENT OUT QUEST, Type, 13
+100, Brazil, Kabul, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_KABUL
+100, Songhai, Kabul, SENT OUT QUEST, Type, 13
+100, Songhai, Kabul, RECEIVED QUEST, Invest, Friendship: -4 to -4, MINOR_CIV_KABUL
+100, England, Kabul, SENT OUT QUEST, Type, 13
+100, England, Kabul, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_KABUL
+100, India, Bucharest, cancelled, Kill Camp, Friendship: 35 to 35, MINOR_CIV_BUCHAREST
+100, Assyria, Bucharest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+100, China, Bucharest, cancelled, Kill Camp, Friendship: 37 to 37, MINOR_CIV_BUCHAREST
+100, Budapest, Assyria, RECEIVED_UNIT_GIFT, Archer
+100, Venice, Budapest, lost ally
+100, Mombasa, England, RECEIVED_UNIT_GIFT, Warrior
+100, Venice, Panama City, cancelled, Kill Camp, Friendship: 34 to 34, MINOR_CIV_PANAMA_CITY
+100, India, Panama City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+100, Assyria, Panama City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+100, China, Panama City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+101, Venice, Panama City, Gold Gift: 250, Friendship: 34 to 59, Diplomacy, MINOR_CIV_PANAMA_CITY, Boost! 
+101, Venice, Ife, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_IFE, (SAVING) 
+101, Babylon, Wellington, SENT OUT QUEST, Type, 1
+101, China, Kabul, era change yield update
+101, China, Belgrade, era change yield update
+101, China, Bogota, era change yield update
+101, China, Sofia, era change yield update
+101, China, Buenos Aires, era change yield update
+101, China, Valletta, era change yield update
+101, China, Bucharest, era change yield update
+101, China, Ife, era change yield update
+101, China, Singapore, era change yield update
+101, China, Kyzyl, era change yield update
+101, China, Kuala Lumpur, era change yield update
+101, China, Budapest, era change yield update
+101, China, Wellington, era change yield update
+101, China, Mombasa, era change yield update
+101, China, Panama City, era change yield update
+101, China, Bogota, SENT OUT QUEST, Type, 1
+101, China, Sofia, SENT OUT QUEST, Type, 1
+101, China, Buenos Aires, SENT OUT QUEST, Type, 1
+101, China, Buenos Aires, SENT OUT QUEST, Type, 17
+101, China, Valletta, SENT OUT QUEST, Type, 2
+101, China, Kuala Lumpur, SENT OUT QUEST, Type, 17
+101, China, Kuala Lumpur, SENT OUT QUEST, Type, 1
+101, China, Budapest, SENT OUT QUEST, Type, 2
+101, China, Panama City, SENT OUT QUEST, Type, 2
+101, Brazil, Wellington, gained friend
+101, Brazil, Wellington, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_WELLINGTON
+101, Valletta, Assyria, RECEIVED_UNIT_GIFT, Scout
+101, Assyria, Ife, SENT OUT QUEST, Type, 7
+101, Assyria, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 50 to 50, MINOR_CIV_IFE
+101, England, Singapore, SENT OUT QUEST, Type, 4
+101, England, Singapore, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+101, England, Kuala Lumpur, SENT OUT QUEST, Type, 14
+101, England, Kuala Lumpur, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+101, China, Panama City, SENT OUT QUEST, Type, 14
+101, China, Panama City, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+102, England, Singapore, SENT OUT QUEST, Type, 1
+102, England, Singapore, SENT OUT QUEST, Type, 4
+102, China, Bogota, SENT OUT QUEST, Type, 14
+102, China, Bogota, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+102, Assyria, Kyzyl, SENT OUT QUEST, Type, 4
+102, Assyria, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 33 to 33, MINOR_CIV_KYZYL
+102, Songhai, Kyzyl, SENT OUT QUEST, Type, 2
+102, Songhai, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KYZYL
+103, Sofia, Assyria, RECEIVED_UNIT_GIFT, Siege Tower
+103, India, Valletta, SENT OUT QUEST, Type, 2
+103, India, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+103, India, Bucharest, lost friend
+103, Venice, Budapest, SENT OUT QUEST, Type, 2
+103, Venice, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 54 to 54, MINOR_CIV_BUDAPEST
+103, Venice, Panama City, SENT OUT QUEST, Type, 2
+103, Venice, Panama City, RECEIVED QUEST, Connect Resource, Friendship: 55 to 55, MINOR_CIV_PANAMA_CITY
+104, England, Singapore, gained friend
+104, England, Singapore, FINISHED QUEST, Great Person, Friendship: 2 to 42, MINOR_CIV_SINGAPORE
+104, China, Sofia, SENT OUT QUEST, Type, 4
+104, China, Sofia, RECEIVED QUEST, Great Person, Friendship: 18 to 18, MINOR_CIV_SOFIA
+104, England, Buenos Aires, SENT OUT QUEST, Type, 6
+104, England, Buenos Aires, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+104, China, Bucharest, lost friend
+104, Assyria, Mombasa, SENT OUT QUEST, Type, 16
+104, Assyria, Mombasa, RECEIVED QUEST, Spread Religion, Friendship: 60 to 60, MINOR_CIV_MOMBASA
+105, India, Kabul, era change yield update
+105, India, Belgrade, era change yield update
+105, India, Bogota, era change yield update
+105, India, Sofia, era change yield update
+105, India, Buenos Aires, era change yield update
+105, India, Valletta, era change yield update
+105, India, Bucharest, era change yield update
+105, India, Ife, era change yield update
+105, India, Singapore, era change yield update
+105, India, Kyzyl, era change yield update
+105, India, Kuala Lumpur, era change yield update
+105, India, Budapest, era change yield update
+105, India, Wellington, era change yield update
+105, India, Mombasa, era change yield update
+105, India, Panama City, era change yield update
+105, India, Valletta, SENT OUT QUEST, Type, 2
+105, India, Ife, SENT OUT QUEST, Type, 1
+105, India, Ife, SENT OUT QUEST, Type, 7
+105, India, Ife, SENT OUT QUEST, Type, 2
+105, India, Kyzyl, SENT OUT QUEST, Type, 7
+105, India, Kyzyl, SENT OUT QUEST, Type, 4
+105, India, Panama City, SENT OUT QUEST, Type, 17
+105, India, Panama City, SENT OUT QUEST, Type, 7
+105, England, Buenos Aires, gained friend
+105, England, Buenos Aires, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_BUENOS_AIRES
+105, Valletta, Assyria, RECEIVED_UNIT_GIFT, Catapult
+105, Assyria, Bucharest, SENT OUT QUEST, Type, 14
+105, Assyria, Bucharest, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+105, Songhai, Ife, SENT OUT QUEST, Type, 4
+105, Songhai, Ife, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_IFE
+105, India, Kyzyl, lost friend
+105, Assyria, Kyzyl, lost friend
+105, Assyria, Mombasa, lost ally
+106, India, Ife, SENT OUT QUEST, Type, 1
+106, India, Ife, SENT OUT QUEST, Type, 7
+106, India, Ife, SENT OUT QUEST, Type, 2
+106, Brazil, Kabul, SENT OUT QUEST, Type, 7
+106, Brazil, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_KABUL
+106, China, Bogota, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+106, China, Buenos Aires, SENT OUT QUEST, Type, 2
+106, China, Buenos Aires, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+106, China, Mombasa, SENT OUT QUEST, Type, 7
+106, China, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 1 to 1, MINOR_CIV_MOMBASA
+106, Assyria, Panama City, SENT OUT QUEST, Type, 4
+106, Assyria, Panama City, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+107, India, Kyzyl, Gold Gift: 500, Friendship: 28 to 28, Culture, MINOR_CIV_KYZYL, (SAVING) , Passing China
+107, India, Bucharest, gained friend
+107, Songhai, Kabul, era change yield update
+107, Songhai, Belgrade, era change yield update
+107, Songhai, Bogota, era change yield update
+107, Songhai, Sofia, era change yield update
+107, Songhai, Buenos Aires, era change yield update
+107, Songhai, Valletta, era change yield update
+107, Songhai, Bucharest, era change yield update
+107, Songhai, Ife, era change yield update
+107, Songhai, Singapore, era change yield update
+107, Songhai, Kyzyl, era change yield update
+107, Songhai, Kuala Lumpur, era change yield update
+107, Songhai, Budapest, era change yield update
+107, Songhai, Wellington, era change yield update
+107, Songhai, Mombasa, era change yield update
+107, Songhai, Panama City, era change yield update
+107, Songhai, Kabul, SENT OUT QUEST, Type, 7
+107, Songhai, Kabul, SENT OUT QUEST, Type, 4
+107, Songhai, Kabul, SENT OUT QUEST, Type, 13
+107, Songhai, Belgrade, SENT OUT QUEST, Type, 1
+107, Songhai, Belgrade, SENT OUT QUEST, Type, 7
+107, Songhai, Belgrade, SENT OUT QUEST, Type, 14
+107, Songhai, Buenos Aires, SENT OUT QUEST, Type, 1
+107, Songhai, Buenos Aires, SENT OUT QUEST, Type, 17
+107, Songhai, Buenos Aires, SENT OUT QUEST, Type, 4
+107, Songhai, Ife, SENT OUT QUEST, Type, 4
+107, Songhai, Singapore, SENT OUT QUEST, Type, 1
+107, Songhai, Singapore, SENT OUT QUEST, Type, 7
+107, Songhai, Singapore, SENT OUT QUEST, Type, 2
+107, Songhai, Kyzyl, SENT OUT QUEST, Type, 14
+107, Songhai, Kyzyl, SENT OUT QUEST, Type, 2
+107, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 17
+107, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 2
+107, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 1
+107, Songhai, Wellington, SENT OUT QUEST, Type, 2
+107, Songhai, Wellington, SENT OUT QUEST, Type, 7
+107, Songhai, Wellington, SENT OUT QUEST, Type, 1
+107, England, Kabul, era change yield update
+107, England, Belgrade, era change yield update
+107, England, Bogota, era change yield update
+107, England, Sofia, era change yield update
+107, England, Buenos Aires, era change yield update
+107, England, Valletta, era change yield update
+107, England, Bucharest, era change yield update
+107, England, Ife, era change yield update
+107, England, Singapore, era change yield update
+107, England, Kyzyl, era change yield update
+107, England, Kuala Lumpur, era change yield update
+107, England, Budapest, era change yield update
+107, England, Wellington, era change yield update
+107, England, Mombasa, era change yield update
+107, England, Panama City, era change yield update
+107, England, Kabul, SENT OUT QUEST, Type, 2
+107, England, Kabul, SENT OUT QUEST, Type, 7
+107, England, Kabul, SENT OUT QUEST, Type, 13
+107, England, Bogota, SENT OUT QUEST, Type, 1
+107, England, Bogota, SENT OUT QUEST, Type, 7
+107, England, Bogota, SENT OUT QUEST, Type, 14
+107, England, Sofia, SENT OUT QUEST, Type, 1
+107, England, Sofia, SENT OUT QUEST, Type, 7
+107, England, Buenos Aires, SENT OUT QUEST, Type, 1
+107, England, Buenos Aires, SENT OUT QUEST, Type, 4
+107, England, Valletta, SENT OUT QUEST, Type, 4
+107, England, Singapore, SENT OUT QUEST, Type, 1
+107, England, Kuala Lumpur, SENT OUT QUEST, Type, 4
+107, England, Kuala Lumpur, SENT OUT QUEST, Type, 1
+107, England, Kuala Lumpur, SENT OUT QUEST, Type, 14
+107, England, Mombasa, SENT OUT QUEST, Type, 14
+107, Brazil, Bogota, SENT OUT QUEST, Type, 1
+107, Brazil, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+107, Assyria, Sofia, SENT OUT QUEST, Type, 16
+107, Assyria, Sofia, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_SOFIA
+107, Assyria, Ife, gained ally
+107, Songhai, Ife, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_IFE
+107, Assyria, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 41 to 81, MINOR_CIV_IFE
+108, Venice, Valletta, gained friend
+108, Venice, Valletta, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_VALLETTA
+108, Assyria, Ife, SENT OUT QUEST, Type, 1
+108, England, Singapore, gained ally
+108, England, Singapore, Gold Gift: 250, Friendship: 37 to 62, Spaceship, MINOR_CIV_SINGAPORE, Boost! , Passing Brazil
+108, England, Kabul, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_KABUL, (SAVING) 
+108, India, Bucharest, lost friend
+108, India, Ife, gained friend
+108, India, Ife, FINISHED QUEST, Kill Camp, Friendship: 4 to 54, MINOR_CIV_IFE
+108, Songhai, Kyzyl, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+108, China, Kyzyl, SENT OUT QUEST, Type, 7
+108, China, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_KYZYL
+108, Songhai, Mombasa, SENT OUT QUEST, Type, 4
+108, Songhai, Mombasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+109, Brazil, Singapore, SENT OUT QUEST, Type, 1
+109, Brazil, Singapore, SENT OUT QUEST, Type, 2
+109, Brazil, Singapore, SENT OUT QUEST, Type, 17
+109, England, Buenos Aires, lost friend
+109, China, Buenos Aires, gained friend
+109, China, Buenos Aires, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_BUENOS_AIRES
+109, India, Bucharest, SENT OUT QUEST, Type, 3
+109, India, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 27 to 27, MINOR_CIV_BUCHAREST
+109, Venice, Ife, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_IFE
+109, Assyria, Ife, cancelled, Kill Camp, Friendship: 78 to 78, MINOR_CIV_IFE
+109, England, Singapore, lost ally
+109, China, Kuala Lumpur, gained friend
+109, China, Kuala Lumpur, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_KUALA_LUMPUR
+109, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 4
+109, Babylon, Kuala Lumpur, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+110, Brazil, Kabul, gained friend
+110, Brazil, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_KABUL
+110, Brazil, Belgrade, gained friend
+110, Brazil, Belgrade, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BELGRADE
+110, Assyria, Buenos Aires, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+110, Babylon, Buenos Aires, cancelled, Kill Camp, Friendship: 12 to 12, MINOR_CIV_BUENOS_AIRES
+110, Songhai, Buenos Aires, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+110, England, Buenos Aires, cancelled, Kill Camp, Friendship: 27 to 27, MINOR_CIV_BUENOS_AIRES
+110, Babylon, Kuala Lumpur, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+110, Songhai, Kuala Lumpur, cancelled, Kill Camp, Friendship: -1 to -1, MINOR_CIV_KUALA_LUMPUR
+110, England, Kuala Lumpur, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+111, Assyria, Kabul, era change yield update
+111, Assyria, Belgrade, era change yield update
+111, Assyria, Bogota, era change yield update
+111, Assyria, Sofia, era change yield update
+111, Assyria, Buenos Aires, era change yield update
+111, Assyria, Valletta, era change yield update
+111, Assyria, Bucharest, era change yield update
+111, Assyria, Ife, era change yield update
+111, Assyria, Singapore, era change yield update
+111, Assyria, Kyzyl, era change yield update
+111, Assyria, Kuala Lumpur, era change yield update
+111, Assyria, Budapest, era change yield update
+111, Assyria, Wellington, era change yield update
+111, Assyria, Mombasa, era change yield update
+111, Assyria, Panama City, era change yield update
+111, Assyria, Bogota, SENT OUT QUEST, Type, 1
+111, Assyria, Sofia, SENT OUT QUEST, Type, 1
+111, Assyria, Sofia, SENT OUT QUEST, Type, 16
+111, Assyria, Buenos Aires, SENT OUT QUEST, Type, 17
+111, Assyria, Buenos Aires, SENT OUT QUEST, Type, 2
+111, Assyria, Valletta, SENT OUT QUEST, Type, 2
+111, Assyria, Valletta, SENT OUT QUEST, Type, 4
+111, Assyria, Bucharest, SENT OUT QUEST, Type, 14
+111, Assyria, Kyzyl, SENT OUT QUEST, Type, 4
+111, Assyria, Mombasa, SENT OUT QUEST, Type, 2
+111, Assyria, Mombasa, SENT OUT QUEST, Type, 16
+111, Assyria, Panama City, SENT OUT QUEST, Type, 4
+111, Brazil, Sofia, SENT OUT QUEST, Type, 1
+111, Brazil, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+111, China, Valletta, SENT OUT QUEST, Type, 14
+111, China, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+111, India, Budapest, SENT OUT QUEST, Type, 4
+111, India, Budapest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+111, Brazil, Wellington, lost friend
+112, Venice, Kyzyl, gained friend
+112, Venice, Kyzyl, Gold Gift: 500, Friendship: 5 to 55, Diplomacy, MINOR_CIV_KYZYL
+112, Venice, Ife, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_IFE, (SAVING) 
+112, Brazil, Wellington, SENT OUT QUEST, Type, 17
+112, Brazil, Wellington, SENT OUT QUEST, Type, 1
+112, Songhai, Belgrade, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+113, Assyria, Valletta, SENT OUT QUEST, Type, 2
+113, Assyria, Valletta, SENT OUT QUEST, Type, 4
+113, England, Valletta, SENT OUT QUEST, Type, 7
+113, England, Valletta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+113, Songhai, Kuala Lumpur, gained friend
+113, Songhai, Kuala Lumpur, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KUALA_LUMPUR
+114, India, Kyzyl, gained friend
+114, India, Kyzyl, FINISHED QUEST, Great Person, Friendship: 17 to 57, MINOR_CIV_KYZYL
+114, India, Budapest, gained friend
+114, India, Budapest, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUDAPEST
+114, Songhai, Buenos Aires, SENT OUT QUEST, Type, 17
+114, Songhai, Buenos Aires, SENT OUT QUEST, Type, 4
+114, England, Bogota, cancelled, Bully City-State, Friendship: -3 to -3, MINOR_CIV_BOGOTA
+114, Babylon, Buenos Aires, SENT OUT QUEST, Type, 3
+114, Babylon, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 6 to 6, MINOR_CIV_BUENOS_AIRES
+114, Assyria, Valletta, lost friend
+114, Brazil, Singapore, gained friend
+114, Brazil, Singapore, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+114, Venice, Kyzyl, gained ally
+114, Venice, Kyzyl, FINISHED QUEST, Connect Resource, Friendship: 50 to 90, MINOR_CIV_KYZYL
+114, Venice, Panama City, gained ally
+114, Venice, Panama City, FINISHED QUEST, Connect Resource, Friendship: 40 to 80, MINOR_CIV_PANAMA_CITY
+115, Venice, Budapest, cancelled, Find Natural Wonder, Friendship: 41 to 41, MINOR_CIV_BUDAPEST
+115, Venice, Budapest, cancelled, Connect Resource, Friendship: 41 to 41, MINOR_CIV_BUDAPEST
+115, China, Budapest, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+115, Venice, Budapest, lost friend
+115, India, Budapest, lost friend
+115, China, Kyzyl, SENT OUT QUEST, Type, 7
+115, Brazil, Singapore, SENT OUT QUEST, Type, 1
+115, Brazil, Singapore, SENT OUT QUEST, Type, 17
+115, China, Valletta, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+115, Venice, Ife, gained friend
+115, Venice, Ife, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_IFE
+115, Brazil, Wellington, SENT OUT QUEST, Type, 4
+115, Brazil, Wellington, RECEIVED QUEST, Great Person, Friendship: 22 to 22, MINOR_CIV_WELLINGTON
+116, Babylon, Bogota, SENT OUT QUEST, Type, 7
+116, Babylon, Bogota, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+116, India, Sofia, SENT OUT QUEST, Type, 1
+116, India, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+116, England, Mombasa, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+117, Brazil, Belgrade, lost friend
+117, Assyria, Ife, lost ally
+117, India, Ife, gained ally
+117, India, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 41 to 81, MINOR_CIV_IFE
+117, Venice, Kyzyl, FINISHED QUEST, Spread Religion, Friendship: 86 to 126, MINOR_CIV_KYZYL
+117, India, Kyzyl, FINISHED QUEST, Find Natural Wonder, Friendship: 51 to 91, MINOR_CIV_KYZYL
+117, India, Panama City, gained friend
+117, India, Panama City, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
+118, Venice, Valletta, Gold Gift: 250, Friendship: 30 to 50, Diplomacy, MINOR_CIV_VALLETTA, Boost! , Passing China
+118, Venice, Bucharest, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_BUCHAREST, (SAVING) 
+118, Assyria, Kabul, SENT OUT QUEST, Type, 13
+118, Assyria, Kabul, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+118, China, Sofia, SENT OUT QUEST, Type, 7
+118, China, Sofia, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SOFIA
+118, China, Valletta, gained friend
+118, China, Valletta, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_VALLETTA
+118, China, Ife, SENT OUT QUEST, Type, 16
+118, China, Ife, RECEIVED QUEST, Spread Religion, Friendship: 1 to 1, MINOR_CIV_IFE
+118, Kyzyl, Venice, RECEIVED_UNIT_GIFT, Warrior
+118, Songhai, Kuala Lumpur, lost friend
+119, Assyria, Singapore, SENT OUT QUEST, Type, 1
+119, Assyria, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+119, Babylon, Wellington, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+119, Brazil, Wellington, cancelled, Kill Camp, Friendship: 16 to 16, MINOR_CIV_WELLINGTON
+119, Songhai, Wellington, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+119, Panama City, Venice, RECEIVED_UNIT_GIFT, Warrior
+120, Brazil, Kabul, FINISHED QUEST, Invest, Friendship: 30 to 30, MINOR_CIV_KABUL
+120, England, Kabul, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_KABUL
+120, Assyria, Kabul, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+120, Songhai, Kabul, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+120, Babylon, Belgrade, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+120, Brazil, Belgrade, cancelled, Kill Camp, Friendship: 25 to 25, MINOR_CIV_BELGRADE
+120, Songhai, Belgrade, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+120, Assyria, Bogota, SENT OUT QUEST, Type, 16
+120, Assyria, Bogota, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+120, China, Bogota, SENT OUT QUEST, Type, 17
+120, China, Bogota, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+120, Valletta, Venice, RECEIVED_UNIT_GIFT, Composite Bowman
+120, Venice, Kyzyl, SENT OUT QUEST, Type, 13
+120, Venice, Kyzyl, RECEIVED QUEST, Invest, Friendship: 128 to 128, MINOR_CIV_KYZYL
+120, India, Kyzyl, SENT OUT QUEST, Type, 13
+120, India, Kyzyl, RECEIVED QUEST, Invest, Friendship: 87 to 87, MINOR_CIV_KYZYL
+120, Assyria, Kyzyl, SENT OUT QUEST, Type, 13
+120, Assyria, Kyzyl, RECEIVED QUEST, Invest, Friendship: 6 to 6, MINOR_CIV_KYZYL
+120, China, Kyzyl, SENT OUT QUEST, Type, 13
+120, China, Kyzyl, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KYZYL
+120, Songhai, Kyzyl, SENT OUT QUEST, Type, 13
+120, Songhai, Kyzyl, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KYZYL
+120, Songhai, Kyzyl, SENT OUT QUEST, Type, 4
+120, Songhai, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+120, China, Mombasa, SENT OUT QUEST, Type, 17
+120, China, Mombasa, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+120, Venice, Panama City, SENT OUT QUEST, Type, 2
+120, Venice, Panama City, RECEIVED QUEST, Connect Resource, Friendship: 78 to 78, MINOR_CIV_PANAMA_CITY
+121, China, Kyzyl, SENT OUT QUEST, Type, 7
+121, China, Kyzyl, SENT OUT QUEST, Type, 13
+121, Brazil, Kabul, lost friend
+121, Assyria, Sofia, SENT OUT QUEST, Type, 17
+121, Assyria, Sofia, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SOFIA
+121, Brazil, Singapore, lost friend
+121, Kyzyl, Venice, RECEIVED_UNIT_GIFT, Swordsman
+121, China, Kuala Lumpur, lost friend
+121, England, Kuala Lumpur, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+121, Babylon, Mombasa, SENT OUT QUEST, Type, 4
+121, Babylon, Mombasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+121, China, Panama City, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+122, Babylon, Kyzyl, SENT OUT QUEST, Type, 13
+122, Babylon, Kyzyl, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KYZYL
+122, Assyria, Valletta, gained friend
+122, Assyria, Valletta, FINISHED QUEST, Great Person, Friendship: 18 to 58, MINOR_CIV_VALLETTA
+122, Assyria, Kyzyl, gained friend
+122, Assyria, Kyzyl, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_KYZYL
+122, Venice, Valletta, SENT OUT QUEST, Type, 2
+122, Venice, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 47 to 47, MINOR_CIV_VALLETTA
+122, Panama City, Venice, RECEIVED_UNIT_GIFT, Swordsman
+123, Venice, Ife, Gold Gift: 250, Friendship: 34 to 54, Diplomacy, MINOR_CIV_IFE, Boost! , Passing China
+123, Venice, Mombasa, Gold Gift: 500, Friendship: 1 to 1, Diplomacy, MINOR_CIV_MOMBASA, (SAVING) 
+123, England, Sofia, SENT OUT QUEST, Type, 17
+123, England, Sofia, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SOFIA
+123, Valletta, Venice, RECEIVED_UNIT_GIFT, Swordsman
+123, India, Valletta, gained friend
+123, India, Valletta, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+124, Assyria, Panama City, gained friend
+124, Assyria, Panama City, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
+124, Brazil, Wellington, gained friend
+124, Brazil, Wellington, FINISHED QUEST, Great Person, Friendship: 10 to 50, MINOR_CIV_WELLINGTON
+124, Kyzyl, Venice, RECEIVED_UNIT_GIFT, Swordsman
+124, Babylon, Wellington, SENT OUT QUEST, Type, 7
+124, Babylon, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+124, England, Mombasa, SENT OUT QUEST, Type, 2
+124, England, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+124, India, Panama City, lost friend
+125, Babylon, Kabul, era change yield update
+125, Babylon, Belgrade, era change yield update
+125, Babylon, Bogota, era change yield update
+125, Babylon, Sofia, era change yield update
+125, Babylon, Buenos Aires, era change yield update
+125, Babylon, Valletta, era change yield update
+125, Babylon, Bucharest, era change yield update
+125, Babylon, Ife, era change yield update
+125, Babylon, Singapore, era change yield update
+125, Babylon, Kyzyl, era change yield update
+125, Babylon, Kuala Lumpur, era change yield update
+125, Babylon, Wellington, era change yield update
+125, Babylon, Mombasa, era change yield update
+125, Babylon, Panama City, era change yield update
+125, Babylon, Belgrade, SENT OUT QUEST, Type, 16
+125, Babylon, Belgrade, SENT OUT QUEST, Type, 4
+125, Babylon, Bogota, SENT OUT QUEST, Type, 1
+125, Babylon, Bogota, SENT OUT QUEST, Type, 16
+125, Babylon, Bogota, SENT OUT QUEST, Type, 7
+125, Babylon, Sofia, SENT OUT QUEST, Type, 7
+125, Babylon, Sofia, SENT OUT QUEST, Type, 1
+125, Babylon, Sofia, SENT OUT QUEST, Type, 2
+125, Babylon, Buenos Aires, SENT OUT QUEST, Type, 3
+125, Babylon, Kyzyl, SENT OUT QUEST, Type, 13
+125, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 2
+125, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 4
+125, Babylon, Wellington, SENT OUT QUEST, Type, 7
+125, Babylon, Mombasa, SENT OUT QUEST, Type, 2
+125, Babylon, Mombasa, SENT OUT QUEST, Type, 4
+125, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 2
+125, Babylon, Kuala Lumpur, SENT OUT QUEST, Type, 4
+125, Assyria, Bucharest, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+125, Assyria, Mombasa, lost friend
+125, England, Mombasa, gained friend
+125, England, Mombasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+126, China, Sofia, gained friend
+126, China, Sofia, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_SOFIA
+126, England, Kabul, gained friend
+126, England, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_KABUL
+126, England, Bogota, gained friend
+126, England, Bogota, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+126, England, Sofia, gained friend
+126, England, Sofia, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SOFIA
+126, China, Buenos Aires, lost friend
+126, England, Valletta, gained friend
+126, England, Valletta, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+126, Singapore, England, RECEIVED_UNIT_GIFT, Horseman
+127, Babylon, Belgrade, gained friend
+127, Babylon, Belgrade, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BELGRADE
+127, Brazil, Kabul, SENT OUT QUEST, Type, 7
+127, Brazil, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 19 to 19, MINOR_CIV_KABUL
+127, India, Bucharest, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+127, India, Mombasa, SENT OUT QUEST, Type, 7
+127, India, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+128, Venice, Kyzyl, SENT OUT QUEST, Type, 3
+128, Venice, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 129 to 129, MINOR_CIV_KYZYL
+129, China, Valletta, lost friend
+129, Venice, Valletta, SENT OUT QUEST, Type, 10
+129, Venice, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 42 to 42, MINOR_CIV_VALLETTA
+129, India, Valletta, SENT OUT QUEST, Type, 10
+129, India, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 31 to 31, MINOR_CIV_VALLETTA
+129, Assyria, Valletta, SENT OUT QUEST, Type, 10
+129, Assyria, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 46 to 46, MINOR_CIV_VALLETTA
+129, Babylon, Valletta, SENT OUT QUEST, Type, 10
+129, Babylon, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+129, China, Valletta, SENT OUT QUEST, Type, 10
+129, China, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 28 to 28, MINOR_CIV_VALLETTA
+129, England, Valletta, SENT OUT QUEST, Type, 10
+129, England, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 35 to 35, MINOR_CIV_VALLETTA
+129, Assyria, Ife, SENT OUT QUEST, Type, 16
+129, Assyria, Ife, RECEIVED QUEST, Spread Religion, Friendship: 48 to 48, MINOR_CIV_IFE
+129, England, Singapore, SENT OUT QUEST, Type, 7
+129, England, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 34 to 34, MINOR_CIV_SINGAPORE
+129, Babylon, Mombasa, gained friend
+129, Babylon, Mombasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+129, Venice, Panama City, SENT OUT QUEST, Type, 11
+129, Venice, Panama City, RECEIVED QUEST, Contest Faith, Friendship: 73 to 73, MINOR_CIV_PANAMA_CITY
+129, India, Panama City, SENT OUT QUEST, Type, 11
+129, India, Panama City, RECEIVED QUEST, Contest Faith, Friendship: 22 to 22, MINOR_CIV_PANAMA_CITY
+129, Assyria, Panama City, SENT OUT QUEST, Type, 11
+129, Assyria, Panama City, RECEIVED QUEST, Contest Faith, Friendship: 31 to 31, MINOR_CIV_PANAMA_CITY
+129, China, Panama City, SENT OUT QUEST, Type, 11
+129, China, Panama City, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+130, Assyria, Buenos Aires, SENT OUT QUEST, Type, 17
+130, Assyria, Buenos Aires, SENT OUT QUEST, Type, 2
+130, Brazil, Belgrade, SENT OUT QUEST, Type, 14
+130, Brazil, Belgrade, RECEIVED QUEST, Bully City-State, Friendship: 10 to 10, MINOR_CIV_BELGRADE
+130, China, Buenos Aires, gained friend
+130, India, Valletta, lost friend
+130, Venice, Ife, SENT OUT QUEST, Type, 7
+130, Venice, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 44 to 44, MINOR_CIV_IFE
+130, Assyria, Kyzyl, SENT OUT QUEST, Type, 4
+130, Assyria, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 31 to 31, MINOR_CIV_KYZYL
+130, China, Kuala Lumpur, SENT OUT QUEST, Type, 3
+130, China, Kuala Lumpur, RECEIVED QUEST, Construct Wonder, Friendship: 8 to 8, MINOR_CIV_KUALA_LUMPUR
+130, Songhai, Mombasa, SENT OUT QUEST, Type, 7
+130, Songhai, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+130, Assyria, Panama City, lost friend
+131, England, Bogota, lost friend
+131, India, Valletta, SENT OUT QUEST, Type, 2
+131, India, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 28 to 28, MINOR_CIV_VALLETTA
+131, Venice, Mombasa, SENT OUT QUEST, Type, 11
+131, Venice, Mombasa, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+131, India, Mombasa, SENT OUT QUEST, Type, 11
+131, India, Mombasa, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+131, Assyria, Mombasa, SENT OUT QUEST, Type, 11
+131, Assyria, Mombasa, RECEIVED QUEST, Contest Faith, Friendship: 20 to 20, MINOR_CIV_MOMBASA
+131, Babylon, Mombasa, SENT OUT QUEST, Type, 11
+131, Babylon, Mombasa, RECEIVED QUEST, Contest Faith, Friendship: 37 to 37, MINOR_CIV_MOMBASA
+131, China, Mombasa, SENT OUT QUEST, Type, 11
+131, China, Mombasa, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+131, Brazil, Mombasa, SENT OUT QUEST, Type, 11
+131, Brazil, Mombasa, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+131, Songhai, Mombasa, SENT OUT QUEST, Type, 11
+131, Songhai, Mombasa, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+131, England, Mombasa, SENT OUT QUEST, Type, 11
+131, England, Mombasa, RECEIVED QUEST, Contest Faith, Friendship: 31 to 31, MINOR_CIV_MOMBASA
+132, Venice, Mombasa, gained friend
+132, Venice, Mombasa, Gold Gift: 500, Friendship: 5 to 50, Diplomacy, MINOR_CIV_MOMBASA
+132, Venice, Buenos Aires, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_BUENOS_AIRES, (SAVING) 
+132, Venice, Kabul, era change yield update
+132, Venice, Belgrade, era change yield update
+132, Venice, Bogota, era change yield update
+132, Venice, Sofia, era change yield update
+132, Venice, Buenos Aires, era change yield update
+132, Venice, Valletta, era change yield update
+132, Venice, Bucharest, era change yield update
+132, Venice, Ife, era change yield update
+132, Venice, Singapore, era change yield update
+132, Venice, Kyzyl, era change yield update
+132, Venice, Kuala Lumpur, era change yield update
+132, Venice, Wellington, era change yield update
+132, Venice, Mombasa, era change yield update
+132, Venice, Panama City, era change yield update
+132, Venice, Valletta, SENT OUT QUEST, Type, 2
+132, Venice, Valletta, SENT OUT QUEST, Type, 10
+132, Venice, Ife, SENT OUT QUEST, Type, 4
+132, Venice, Ife, SENT OUT QUEST, Type, 7
+132, Venice, Kyzyl, SENT OUT QUEST, Type, 13
+132, Venice, Kyzyl, SENT OUT QUEST, Type, 3
+132, Venice, Mombasa, SENT OUT QUEST, Type, 11
+132, Venice, Panama City, SENT OUT QUEST, Type, 2
+132, Venice, Panama City, SENT OUT QUEST, Type, 11
+132, Babylon, Belgrade, Gold Gift: 250, Friendship: 32 to 52, Spaceship, MINOR_CIV_BELGRADE, Boost! , Passing Brazil
+132, Babylon, Wellington, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_WELLINGTON, (SAVING) 
+132, Babylon, Belgrade, SENT OUT QUEST, Type, 16
+132, Assyria, Kabul, SENT OUT QUEST, Type, 4
+132, Assyria, Kabul, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KABUL
+132, India, Sofia, SENT OUT QUEST, Type, 2
+132, India, Sofia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SOFIA
+132, Brazil, Sofia, SENT OUT QUEST, Type, 7
+132, Brazil, Sofia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SOFIA
+132, India, Ife, lost ally
+132, India, Ife, SENT OUT QUEST, Type, 4
+132, India, Ife, RECEIVED QUEST, Great Person, Friendship: 58 to 58, MINOR_CIV_IFE
+132, China, Ife, SENT OUT QUEST, Type, 3
+132, China, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_IFE
+132, England, Singapore, lost friend
+132, Assyria, Kyzyl, lost friend
+132, England, Mombasa, lost friend
+132, Assyria, Panama City, SENT OUT QUEST, Type, 16
+132, Assyria, Panama City, RECEIVED QUEST, Spread Religion, Friendship: 26 to 26, MINOR_CIV_PANAMA_CITY
+133, Brazil, Bogota, SENT OUT QUEST, Type, 2
+133, Brazil, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+133, England, Buenos Aires, SENT OUT QUEST, Type, 7
+133, England, Buenos Aires, RECEIVED QUEST, Find Natural Wonder, Friendship: -3 to -3, MINOR_CIV_BUENOS_AIRES
+133, England, Valletta, lost friend
+133, Brazil, Singapore, SENT OUT QUEST, Type, 7
+133, Brazil, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 11 to 11, MINOR_CIV_SINGAPORE
+133, Brazil, Mombasa, SENT OUT QUEST, Type, 2
+133, Brazil, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+134, Venice, Valletta, Gold Gift: 250, Friendship: 37 to 57, Diplomacy, MINOR_CIV_VALLETTA, Boost! , Passing England
+134, Venice, Buenos Aires, Gold Gift: 500, Friendship: 2 to 2, Diplomacy, MINOR_CIV_BUENOS_AIRES, (SAVING) 
+134, Babylon, Kuala Lumpur, gained friend
+134, Babylon, Kuala Lumpur, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_KUALA_LUMPUR
+134, Babylon, Mombasa, gained ally
+134, Brazil, Mombasa, cancelled, Contest Faith, Friendship: -60 to -60, MINOR_CIV_MOMBASA
+134, Brazil, Mombasa, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_MOMBASA
+134, Babylon, Mombasa, FINISHED QUEST, Great Person, Friendship: 34 to 74, MINOR_CIV_MOMBASA
+134, Venice, Sofia, SENT OUT QUEST, Type, 1
+134, Venice, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+134, Songhai, Ife, SENT OUT QUEST, Type, 7
+134, Songhai, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+135, Babylon, Mombasa, SENT OUT QUEST, Type, 11
+135, Songhai, Belgrade, SENT OUT QUEST, Type, 14
+135, Songhai, Belgrade, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+135, Babylon, Bogota, gained friend
+135, Babylon, Bogota, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+135, Babylon, Sofia, gained friend
+135, Babylon, Sofia, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SOFIA
+135, China, Valletta, SENT OUT QUEST, Type, 16
+135, China, Valletta, RECEIVED QUEST, Spread Religion, Friendship: 19 to 19, MINOR_CIV_VALLETTA
+135, Venice, Ife, gained ally
+135, Venice, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 39 to 79, MINOR_CIV_IFE
+135, Babylon, Wellington, gained friend
+135, Babylon, Wellington, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_WELLINGTON
+136, Venice, Bogota, SENT OUT QUEST, Type, 1
+136, Venice, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+136, China, Sofia, lost friend
+136, China, Kyzyl, SENT OUT QUEST, Type, 3
+136, China, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KYZYL
+137, Venice, Panama City, Gold Gift: 250, Friendship: 65 to 85, Diplomacy, MINOR_CIV_PANAMA_CITY, Boost! , Passing Assyria
+137, Venice, Buenos Aires, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_BUENOS_AIRES, (SAVING) 
+137, Venice, Ife, lost ally
+137, India, Ife, gained ally
+137, India, Ife, FINISHED QUEST, Great Person, Friendship: 52 to 92, MINOR_CIV_IFE
+137, Babylon, Panama City, SENT OUT QUEST, Type, 11
+137, Babylon, Panama City, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+137, England, Kabul, Gold Gift: 250, Friendship: 30 to 50, Conquest, MINOR_CIV_KABUL, Boost! , Passing Brazil
+137, England, Sofia, Gold Gift: 250, Friendship: 30 to 30, Conquest, MINOR_CIV_SOFIA, (SAVING) , Boost! , Passing China
+137, England, Sofia, lost friend
+137, Brazil, Wellington, lost friend
+137, India, Panama City, SENT OUT QUEST, Type, 2
+137, India, Panama City, RECEIVED QUEST, Connect Resource, Friendship: 10 to 10, MINOR_CIV_PANAMA_CITY
+138, Brazil, Kyzyl, SENT OUT QUEST, Type, 13
+138, Brazil, Kyzyl, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KYZYL
+138, China, Bucharest, SENT OUT QUEST, Type, 3
+138, China, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+138, India, Kyzyl, SENT OUT QUEST, Type, 3
+138, India, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 60 to 60, MINOR_CIV_KYZYL
+138, Venice, Panama City, SENT OUT QUEST, Type, 4
+138, Venice, Panama City, RECEIVED QUEST, Great Person, Friendship: 83 to 83, MINOR_CIV_PANAMA_CITY
+139, England, Kyzyl, SENT OUT QUEST, Type, 13
+139, England, Kyzyl, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KYZYL
+139, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 14
+139, Songhai, Kuala Lumpur, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+140, Songhai, Kabul, gained friend
+140, Songhai, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+140, Songhai, Belgrade, gained friend
+140, Songhai, Belgrade, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BELGRADE
+140, Babylon, Bogota, lost friend
+140, Assyria, Buenos Aires, gained friend
+140, Assyria, Buenos Aires, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUENOS_AIRES
+140, Venice, Valletta, gained ally
+140, Assyria, Valletta, lost friend
+140, Songhai, Ife, gained friend
+140, Songhai, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_IFE
+140, Songhai, Singapore, gained friend
+140, Songhai, Singapore, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+140, Assyria, Singapore, SENT OUT QUEST, Type, 16
+140, Assyria, Singapore, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+140, Venice, Kyzyl, FINISHED QUEST, Invest, Friendship: 115 to 115, MINOR_CIV_KYZYL
+140, India, Kyzyl, FINISHED QUEST, Invest, Friendship: 57 to 57, MINOR_CIV_KYZYL
+140, Assyria, Kyzyl, FINISHED QUEST, Invest, Friendship: 17 to 17, MINOR_CIV_KYZYL
+140, China, Kyzyl, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_KYZYL
+140, Babylon, Kyzyl, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KYZYL
+140, Brazil, Kyzyl, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KYZYL
+140, Songhai, Kyzyl, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KYZYL
+140, England, Kyzyl, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KYZYL
+140, Babylon, Kuala Lumpur, lost friend
+140, Songhai, Wellington, gained friend
+140, Songhai, Wellington, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_WELLINGTON
+140, Mombasa, Assyria, RECEIVED_UNIT_GIFT, Swordsman
+140, Mombasa, China, RECEIVED_UNIT_GIFT, Spearman
+140, Assyria, Mombasa, gained friend
+140, Assyria, Mombasa, FINISHED QUEST, Connect Resource, Friendship: 12 to 52, MINOR_CIV_MOMBASA
+140, Songhai, Mombasa, gained friend
+140, Songhai, Mombasa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+141, Venice, Mombasa, Gold Gift: 250, Friendship: 36 to 56, Culture, MINOR_CIV_MOMBASA, Boost! , Passing England
+141, Venice, Buenos Aires, Gold Gift: 500, Friendship: 1 to 1, Culture, MINOR_CIV_BUENOS_AIRES, (SAVING) 
+141, Assyria, Valletta, SENT OUT QUEST, Type, 2
+141, Assyria, Valletta, SENT OUT QUEST, Type, 10
+141, China, Valletta, SENT OUT QUEST, Type, 10
+141, China, Valletta, SENT OUT QUEST, Type, 16
+141, India, Buenos Aires, SENT OUT QUEST, Type, 3
+141, India, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+141, Assyria, Valletta, SENT OUT QUEST, Type, 16
+141, Assyria, Valletta, RECEIVED QUEST, Spread Religion, Friendship: 17 to 17, MINOR_CIV_VALLETTA
+141, Kyzyl, China, RECEIVED_UNIT_GIFT, Catapult
+141, Panama City, Assyria, RECEIVED_UNIT_GIFT, Swordsman
+142, Assyria, Buenos Aires, SENT OUT QUEST, Type, 17
+142, Babylon, Belgrade, SENT OUT QUEST, Type, 16
+142, China, Kabul, era change yield update
+142, China, Belgrade, era change yield update
+142, China, Bogota, era change yield update
+142, China, Sofia, era change yield update
+142, China, Buenos Aires, era change yield update
+142, China, Valletta, era change yield update
+142, China, Bucharest, era change yield update
+142, China, Ife, era change yield update
+142, China, Singapore, era change yield update
+142, China, Kyzyl, era change yield update
+142, China, Kuala Lumpur, era change yield update
+142, China, Wellington, era change yield update
+142, China, Mombasa, era change yield update
+142, China, Panama City, era change yield update
+142, China, Bogota, SENT OUT QUEST, Type, 1
+142, China, Bogota, SENT OUT QUEST, Type, 17
+142, China, Sofia, SENT OUT QUEST, Type, 1
+142, China, Sofia, SENT OUT QUEST, Type, 7
+142, China, Buenos Aires, SENT OUT QUEST, Type, 17
+142, China, Buenos Aires, SENT OUT QUEST, Type, 2
+142, China, Valletta, SENT OUT QUEST, Type, 10
+142, China, Valletta, SENT OUT QUEST, Type, 16
+142, China, Bucharest, SENT OUT QUEST, Type, 3
+142, China, Ife, SENT OUT QUEST, Type, 16
+142, China, Ife, SENT OUT QUEST, Type, 3
+142, China, Kyzyl, SENT OUT QUEST, Type, 7
+142, China, Kyzyl, SENT OUT QUEST, Type, 3
+142, China, Kuala Lumpur, SENT OUT QUEST, Type, 17
+142, China, Kuala Lumpur, SENT OUT QUEST, Type, 3
+142, China, Mombasa, SENT OUT QUEST, Type, 7
+142, China, Mombasa, SENT OUT QUEST, Type, 17
+142, China, Mombasa, SENT OUT QUEST, Type, 11
+142, China, Panama City, SENT OUT QUEST, Type, 2
+142, China, Panama City, SENT OUT QUEST, Type, 11
+142, Songhai, Sofia, SENT OUT QUEST, Type, 1
+142, Songhai, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+142, Babylon, Belgrade, SENT OUT QUEST, Type, 17
+142, Babylon, Belgrade, RECEIVED QUEST, Trade Route, Friendship: 36 to 36, MINOR_CIV_BELGRADE
+142, Babylon, Sofia, lost friend
+142, Babylon, Buenos Aires, SENT OUT QUEST, Type, 16
+142, Babylon, Buenos Aires, RECEIVED QUEST, Spread Religion, Friendship: 4 to 4, MINOR_CIV_BUENOS_AIRES
+142, Ife, China, RECEIVED_UNIT_GIFT, Warrior
+142, Kyzyl, Assyria, RECEIVED_UNIT_GIFT, Swordsman
+142, Venice, Kyzyl, SENT OUT QUEST, Type, 4
+142, Venice, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 113 to 113, MINOR_CIV_KYZYL
+142, Babylon, Mombasa, SENT OUT QUEST, Type, 16
+142, Babylon, Mombasa, RECEIVED QUEST, Spread Religion, Friendship: 60 to 60, MINOR_CIV_MOMBASA
+142, Venice, Panama City, FINISHED QUEST, Connect Resource, Friendship: 74 to 114, MINOR_CIV_PANAMA_CITY
+142, China, Panama City, SENT OUT QUEST, Type, 7
+142, China, Panama City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+143, Songhai, Bogota, SENT OUT QUEST, Type, 1
+143, Songhai, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+143, England, Buenos Aires, gained friend
+143, England, Buenos Aires, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUENOS_AIRES
+143, England, Valletta, gained friend
+143, England, Valletta, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_VALLETTA
+143, England, Kuala Lumpur, gained friend
+143, England, Kuala Lumpur, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KUALA_LUMPUR
+143, Valletta, Assyria, RECEIVED_UNIT_GIFT, Swordsman
+143, Venice, Bucharest, SENT OUT QUEST, Type, 13
+143, Venice, Bucharest, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BUCHAREST
+143, India, Bucharest, SENT OUT QUEST, Type, 13
+143, India, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+143, Assyria, Bucharest, SENT OUT QUEST, Type, 13
+143, Assyria, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+143, Babylon, Bucharest, SENT OUT QUEST, Type, 13
+143, Babylon, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+143, China, Bucharest, SENT OUT QUEST, Type, 13
+143, China, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+143, Assyria, Kyzyl, SENT OUT QUEST, Type, 14
+143, Assyria, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: 17 to 17, MINOR_CIV_KYZYL
+143, Mombasa, China, RECEIVED_UNIT_GIFT, Trebuchet
+143, Babylon, Mombasa, lost ally
+144, Venice, Valletta, Gold Gift: 250, Friendship: 66 to 86, Culture, MINOR_CIV_VALLETTA, Boost! , Passing England
+144, Venice, Bucharest, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_BUCHAREST, (SAVING) 
+144, Assyria, Belgrade, SENT OUT QUEST, Type, 14
+144, Assyria, Belgrade, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+144, Babylon, Valletta, SENT OUT QUEST, Type, 4
+144, Babylon, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+144, Venice, Bucharest, SENT OUT QUEST, Type, 4
+144, Venice, Bucharest, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BUCHAREST
+144, Brazil, Wellington, SENT OUT QUEST, Type, 16
+144, Brazil, Wellington, RECEIVED QUEST, Spread Religion, Friendship: 19 to 19, MINOR_CIV_WELLINGTON
+145, Babylon, Belgrade, gained ally
+145, Brazil, Belgrade, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_BELGRADE
+145, Brazil, Belgrade, cancelled, Bully City-State, Friendship: -60 to -60, MINOR_CIV_BELGRADE
+145, Babylon, Belgrade, FINISHED QUEST, Trade Route, Friendship: 31 to 71, MINOR_CIV_BELGRADE
+145, England, Bogota, SENT OUT QUEST, Type, 17
+145, England, Bogota, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+145, Venice, Buenos Aires, SENT OUT QUEST, Type, 13
+145, Venice, Buenos Aires, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+145, India, Buenos Aires, SENT OUT QUEST, Type, 13
+145, India, Buenos Aires, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+145, Assyria, Buenos Aires, SENT OUT QUEST, Type, 13
+145, Assyria, Buenos Aires, RECEIVED QUEST, Invest, Friendship: 32 to 32, MINOR_CIV_BUENOS_AIRES
+145, Babylon, Buenos Aires, SENT OUT QUEST, Type, 13
+145, Babylon, Buenos Aires, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BUENOS_AIRES
+145, China, Buenos Aires, SENT OUT QUEST, Type, 13
+145, China, Buenos Aires, RECEIVED QUEST, Invest, Friendship: 41 to 41, MINOR_CIV_BUENOS_AIRES
+145, Brazil, Buenos Aires, SENT OUT QUEST, Type, 13
+145, Brazil, Buenos Aires, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+145, Songhai, Buenos Aires, SENT OUT QUEST, Type, 13
+145, Songhai, Buenos Aires, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+145, England, Buenos Aires, SENT OUT QUEST, Type, 13
+145, England, Buenos Aires, RECEIVED QUEST, Invest, Friendship: 35 to 35, MINOR_CIV_BUENOS_AIRES
+145, Venice, Valletta, SENT OUT QUEST, Type, 4
+145, Venice, Valletta, RECEIVED QUEST, Great Person, Friendship: 84 to 84, MINOR_CIV_VALLETTA
+145, Assyria, Bucharest, SENT OUT QUEST, Type, 4
+145, Assyria, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+146, Babylon, Belgrade, SENT OUT QUEST, Type, 16
+146, China, Sofia, SENT OUT QUEST, Type, 3
+146, China, Sofia, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SOFIA
+146, Babylon, Wellington, lost friend
+146, Venice, Mombasa, SENT OUT QUEST, Type, 2
+146, Venice, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 47 to 47, MINOR_CIV_MOMBASA
+146, England, Mombasa, SENT OUT QUEST, Type, 4
+146, England, Mombasa, RECEIVED QUEST, Great Person, Friendship: 8 to 8, MINOR_CIV_MOMBASA
+147, Venice, Valletta, FINISHED QUEST, Great Person, Friendship: 83 to 123, MINOR_CIV_VALLETTA
+147, Songhai, Kabul, lost friend
+147, Songhai, Belgrade, lost friend
+147, India, Sofia, SENT OUT QUEST, Type, 4
+147, India, Sofia, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SOFIA
+147, Assyria, Buenos Aires, lost friend
+147, India, Valletta, SENT OUT QUEST, Type, 4
+147, India, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+147, India, Bucharest, SENT OUT QUEST, Type, 4
+147, India, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+147, Songhai, Ife, lost friend
+147, Songhai, Singapore, lost friend
+147, England, Kuala Lumpur, lost friend
+147, Songhai, Wellington, lost friend
+147, Songhai, Mombasa, lost friend
+147, India, Mombasa, gained friend
+147, India, Mombasa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+148, England, Kabul, Gold Gift: 250, Friendship: 33 to 53, Spaceship, MINOR_CIV_KABUL, Boost! , Passing Songhai
+148, England, Valletta, SENT OUT QUEST, Type, 14
+148, England, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 36 to 36, MINOR_CIV_VALLETTA
+148, Venice, Ife, SENT OUT QUEST, Type, 11
+148, Venice, Ife, RECEIVED QUEST, Contest Faith, Friendship: 59 to 59, MINOR_CIV_IFE
+148, India, Ife, SENT OUT QUEST, Type, 11
+148, India, Ife, RECEIVED QUEST, Contest Faith, Friendship: 69 to 69, MINOR_CIV_IFE
+148, Assyria, Ife, SENT OUT QUEST, Type, 11
+148, Assyria, Ife, RECEIVED QUEST, Contest Faith, Friendship: 40 to 40, MINOR_CIV_IFE
+148, Babylon, Ife, SENT OUT QUEST, Type, 11
+148, Babylon, Ife, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+148, China, Ife, SENT OUT QUEST, Type, 11
+148, China, Ife, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_IFE
+148, Songhai, Ife, SENT OUT QUEST, Type, 11
+148, Songhai, Ife, RECEIVED QUEST, Contest Faith, Friendship: 28 to 28, MINOR_CIV_IFE
+148, Venice, Ife, SENT OUT QUEST, Type, 2
+148, Venice, Ife, RECEIVED QUEST, Connect Resource, Friendship: 59 to 59, MINOR_CIV_IFE
+148, England, Singapore, SENT OUT QUEST, Type, 2
+148, England, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+148, Assyria, Wellington, SENT OUT QUEST, Type, 1
+148, Assyria, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+148, Babylon, Wellington, SENT OUT QUEST, Type, 1
+148, Babylon, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 25 to 25, MINOR_CIV_WELLINGTON
+148, Brazil, Wellington, SENT OUT QUEST, Type, 1
+148, Brazil, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 13 to 13, MINOR_CIV_WELLINGTON
+148, Songhai, Wellington, SENT OUT QUEST, Type, 1
+148, Songhai, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 28 to 28, MINOR_CIV_WELLINGTON
+149, Venice, Buenos Aires, gained friend
+149, Venice, Buenos Aires, gained ally
+149, Venice, Buenos Aires, Gold Gift: 500, Friendship: 5 to 70, Culture, MINOR_CIV_BUENOS_AIRES
+149, Venice, Bucharest, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_BUCHAREST, (SAVING) 
+149, England, Ife, SENT OUT QUEST, Type, 11
+149, England, Ife, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+149, England, Buenos Aires, lost friend
+149, Venice, Valletta, FINISHED QUEST, Contest Culture, Friendship: 120 to 160, MINOR_CIV_VALLETTA
+149, India, Valletta, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+149, Assyria, Valletta, cancelled, Contest Culture, Friendship: 10 to 10, MINOR_CIV_VALLETTA
+149, Babylon, Valletta, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+149, China, Valletta, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+149, England, Valletta, cancelled, Contest Culture, Friendship: 34 to 34, MINOR_CIV_VALLETTA
+149, China, Valletta, SENT OUT QUEST, Type, 2
+149, China, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+149, China, Bucharest, gained friend
+149, China, Bucharest, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+149, China, Ife, gained friend
+149, China, Ife, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_IFE
+149, Venice, Panama City, FINISHED QUEST, Contest Faith, Friendship: 106 to 146, MINOR_CIV_PANAMA_CITY
+149, India, Panama City, cancelled, Contest Faith, Friendship: 12 to 12, MINOR_CIV_PANAMA_CITY
+149, Assyria, Panama City, cancelled, Contest Faith, Friendship: 1 to 1, MINOR_CIV_PANAMA_CITY
+149, Babylon, Panama City, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+149, China, Panama City, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+150, Venice, Panama City, FINISHED QUEST, Great Person, Friendship: 146 to 186, MINOR_CIV_PANAMA_CITY
+150, India, Kabul, era change yield update
+150, India, Belgrade, era change yield update
+150, India, Bogota, era change yield update
+150, India, Sofia, era change yield update
+150, India, Buenos Aires, era change yield update
+150, India, Valletta, era change yield update
+150, India, Bucharest, era change yield update
+150, India, Ife, era change yield update
+150, India, Singapore, era change yield update
+150, India, Kyzyl, era change yield update
+150, India, Kuala Lumpur, era change yield update
+150, India, Wellington, era change yield update
+150, India, Mombasa, era change yield update
+150, India, Panama City, era change yield update
+150, India, Sofia, SENT OUT QUEST, Type, 1
+150, India, Sofia, SENT OUT QUEST, Type, 2
+150, India, Sofia, SENT OUT QUEST, Type, 4
+150, India, Buenos Aires, SENT OUT QUEST, Type, 3
+150, India, Buenos Aires, SENT OUT QUEST, Type, 13
+150, India, Valletta, SENT OUT QUEST, Type, 2
+150, India, Valletta, SENT OUT QUEST, Type, 4
+150, India, Bucharest, SENT OUT QUEST, Type, 13
+150, India, Bucharest, SENT OUT QUEST, Type, 4
+150, India, Ife, SENT OUT QUEST, Type, 2
+150, India, Ife, SENT OUT QUEST, Type, 11
+150, India, Kyzyl, SENT OUT QUEST, Type, 3
+150, India, Mombasa, SENT OUT QUEST, Type, 11
+150, India, Panama City, SENT OUT QUEST, Type, 17
+150, India, Panama City, SENT OUT QUEST, Type, 2
