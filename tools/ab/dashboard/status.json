@@ -213,14 +213,22 @@
   {
    "section": "goal",
    "order": 1,
+   "name": "Trio: one of our three styles wins",
+   "target": "In a 6-player game with our greedy, balanced and aggressive civs and 3 CP civs, one of ours wins ≥ 90% of full games (the user's aim: every game)",
+   "detail": "Not built yet. It needs a 6-civ test mode (3 style slots, 3 CP slots) and working attacks first. At T150 the stand-in: one of our three holds the top strength spot. The baseline, if all six played alike, is 50%.",
+   "state": "waits"
+  },
+  {
+   "section": "goal",
+   "order": 2,
    "name": "Strength against CP",
-   "target": "≥ 60% strength share against CP's AI",
+   "target": "≥ 60% strength share against CP's AI (a milestone; strength is now the guard and quick test for each change)",
    "detail": "50.4% (C8, the 12 flags that passed, 6 pairs on PC 2). Economy and diplomacy fixes moved it only about half a point by T150; the big lever left is war, cities changing hands.",
    "state": "not met"
   },
   {
    "section": "goal",
-   "order": 2,
+   "order": 3,
    "name": "Attack: an aggressor takes cities",
    "target": "Against greedy civs (few units, no walls) several cities by T150; against balanced civs at most 1 per war",
    "detail": "First capture: the Huns took 2 cities from Spain, their weakest neighbour (military 141 against 69), in 1 of 3 valid pairs against normal civs. Against greedy civs, 0 so far, but their unit cap still leaks (some keep ~2 per city), so they aren't yet the easy target. The current focus.",
@@ -228,7 +236,7 @@
   },
   {
    "section": "goal",
-   "order": 3,
+   "order": 4,
    "name": "Matchup triangle",
    "target": "Greedy beats balanced, aggressive beats greedy, balanced beats aggressive; no style wins overall",
    "detail": "The three styles are coded (Personality). The matchup test waits until attacks reliably take cities.",
@@ -236,7 +244,7 @@
   },
   {
    "section": "goal",
-   "order": 4,
+   "order": 5,
    "name": "Defence: the bully doesn't roll everyone over",
    "target": "The aggressor holds ≤ 20% of all cities at the end, and takes ≤ 1 city per war against balanced civs",
    "detail": "Can't be judged until attacks work: with almost no captures it passes trivially. The Huns' game: 6 of 37 cities (16%).",
@@ -244,7 +252,7 @@
   },
   {
    "section": "goal",
-   "order": 5,
+   "order": 6,
    "name": "Coalition against a runaway",
    "target": "2+ civs at war with the aggressor within 20 turns of its first conquest",
    "detail": "One case so far: the Huns' first capture came about T120, and 4 civs were at war with them by T140.",
@@ -252,7 +260,7 @@
   },
   {
    "section": "goal",
-   "order": 6,
+   "order": 7,
    "name": "A lively world, no deal spam",
    "target": "0.5–2 deals per civ per 10 turns",
    "detail": "About 3 per civ per 10 turns, for B and C8 alike (12 C8 games; each deal counts once per side), so above the band. Diplomacy hasn't worked on deal frequency yet.",
@@ -260,7 +268,7 @@
   },
   {
    "section": "goal",
-   "order": 7,
+   "order": 8,
    "name": "Banned behaviours",
    "target": "0 per game (workers stolen in peace, wonder chops)",
    "detail": "Wonder chops about 1 per game in both B and C8 (12 C8 games); 1 stolen worker by B, 0 by C8. Not worked on yet.",
@@ -268,7 +276,7 @@
   },
   {
    "section": "goal",
-   "order": 8,
+   "order": 9,
    "name": "AI turn speed",
    "target": "AI turns ≤ 1.25× B's",
    "detail": "C8 games average 5.6 s per AI turn. In split games both groups share one turn, so this needs an all-C run against an all-B run; not run yet.",
