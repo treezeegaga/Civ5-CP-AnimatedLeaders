@@ -2462,6 +2462,16 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Bully conquest, logged pair: the army is built, then lost for nothing (lead, 2026-11-03 11:45pm ET)
+
+Pair `0879B791` (`ab-8109f67`, PC 1, `AIABTest_bullyconquest@BOX.csv`, logs `logs_0879B791*`), aggressor the Celts:
+- **With the conquest flags:** at T100 the biggest army in the game (military 122, next 99). One war declared between
+  T100 and T150. At T150: military 38, 4 cities, **0 captured**, 9.0% strength share.
+- **Without them (flip):** military 131 at T150, 4 cities, 10.9%.
+
+So the flags make the army, then waste it. War is asked to read the logs: target, army against defence, how the
+units died. The 20-game run goes on meanwhile (logging off).
+
 ### C8 against B, first 5 pairs: no worse, gain small (lead, 2026-11-03 11:35pm ET)
 
 `AIABTest_c8@TREEDESKTOP.csv`, `ab-8109f67`, PC 2, 5 pairs (10 games), no crash, replays matched: **c 50.60%, gain +0.60
