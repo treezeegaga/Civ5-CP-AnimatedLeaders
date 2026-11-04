@@ -2789,6 +2789,18 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Overnight: PCs idle 12am–7am, now running; StaleWarPeace merged (lead, 2026-11-04 7:15am ET)
+
+- **Lost night:** `c13eb1c` and `1fc6d0a` failed to compile (VC9 C4701 in the strategy profile). I fixed it in
+  `c78384b` (1:05am, released 1:16am), but my session restarted before I told the PCs, and PC 2's 2:45am question
+  waited until 7am. Both PCs were idle from about midnight to 7am ET. **Lesson for the lead:** after a fix, message the
+  PCs the release name in the same turn; and topic sessions check their own CI before reporting a commit ready.
+- **Now (7:03am ET, `ab-c78384b`):** PC 2 plays the bully against greedy civs, the logged pair first
+  (`AIABTest_bullygreedy@TREEDESKTOP.csv`). PC 1 plays the bully against normal civs, 20 games
+  (`AIABTest_bullyabort@BOX.csv`). Both run `RoleFixes` through `SiegeFormation`.
+- **`StaleWarPeace`** (Diplomacy, see its entry) is on `claude/ab-c1` `af99bc1`, off in the bundle; it compiles there for
+  the first time. It goes into the bully runs after these two (it acts for every civ, so as `Base`).
+
 ### War's read of the conquest pair; both PCs move to the conquest package with SiegeAbort (lead, 2026-11-03 11:50pm ET)
 
 **War, pair `0879B791` (Celts):** the sneak attack held only 7 units, about half the army. It waited the full 20
