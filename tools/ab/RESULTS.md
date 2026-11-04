@@ -3306,7 +3306,7 @@ logged pair".
 - **Measure:** greedy civs' gold and science per turn while alarmed (`GREEDY:` lines in the log), `LandUnits` and
   `WalledCities` at T150, cities lost and wars declared on them; against `GreedyAlarm` alone, paired.
 - **Build:** fork `ai/personality` `35272f9`.
-- **Status:** coded, CI pending.
+- **Status:** compiles (CI run 175 passed on `35272f9`, 2026-11-04 3:00pm ET); ready to merge.
 
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
