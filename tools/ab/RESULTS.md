@@ -2666,6 +2666,33 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
+### Greedy cap, second leak: units kept after a war and after escorts (Personality, 2026-11-04 9:00am ET)
+Pair `0B58EE0F` (`ab-d51e8a6`, `AIABTest_bullygreedy3@TREEDESKTOP.csv`, logging off, rows every 10 turns). The lead saw
+about 2 land units per city in peace (Assyria 11 on 5 at T100; flipped game Assyria 16 on 7, Indonesia 14 on 6 at
+T150). The per-turn rows (land units/cities, w = at war):
+- **War leftovers, the main route:**
+  - Assyria (game 1): 4/6w at T80–T90, 5/11 in peace at T100;
+  - Assyria (flipped): 7/14w and 7/15w at T130–T140, 7/16 in peace at T150;
+  - Indonesia (flipped): 6/12w at T110, 6/14 in peace at T150.
+
+  At war the cap is 2 per city plus 2 for operations. City-state gifts are taken up to it, and a city under siege
+  with no garrison may still get a defender. The units stayed after peace, since the cap stops new units but disbands
+  nothing.
+- **Escorts, the small drift in peace:** the flipped game's Inca was never at war and held 10 on 6 cities. That's
+  about 2 scouts (`LandUnits` counts them, the cap doesn't) plus 8 others: the cap plus the 2 allowed for settler
+  escorts, which stay once the operation ends.
+- **Ruled out:** production, purchases and city-state gifts all go through the cap (`d51e8a6`); upgrades replace
+  units without adding any; ruins are off.
+- **Fix** (`ai/personality` `b4213b4`, on `claude/ab-c1` `5220c03`; no new flag, it's part of `GreedyFewUnits` and
+  MetaDial's greedy side): `CvGrandStrategyAI::DoGreedyDisbandToCap`. In peace, a civ above its peace cap lets one
+  land unit go each turn, once three things hold: no war with a major, 10 turns since its last peace treaty (a war
+  may start again), and GreedyAlarm quiet. It picks the weakest unit that isn't a scout, isn't in an army, and
+  preferably isn't in a city. Like CP's own scrapping, it gifts the unit to a city-state if one would take it,
+  otherwise scraps it. Logged (`GREEDY:` in the homeland log) in logged games.
+- **Expected:** greedy civs at peace back to about 1 land unit per city within a few turns after the 10-turn wait;
+  `LandUnits` ≈ cities + scouts (about +2).
+- **Status:** coded, CI pending.
+
 ### GreedyWarArmy: at war a greedy civ judges the threat (Personality, 2026-11-04 8:15am ET, revised 9:15am ET)
 - **The user (2026-11-04), in three steps:**
   1. "maybe it's just for the test, but a greedy civ should build military units if it is at war";
