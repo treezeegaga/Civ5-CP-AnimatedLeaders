@@ -2679,6 +2679,7 @@ victory pursuit pick), so every computer gets the same result.
 | Diplomat | City-state patron, World Congress, the one who organises coalitions; keeps its word | -20 (-50 to +10) | diplomacy first | medium |
 | Tourism hoarder | Wonders, great works, tourism; builds in peace and hates being disturbed | -60 (-90 to -30) | culture first | tall |
 | Scientist | Tall science civ: libraries, universities, the National College early, spaceship | -60 (-90 to -30) | science first | tall |
+| Raider (added 2026-11-04, the user) | Wars for loot: pillages, plunders and razes, sells or burns what it takes rather than holding it, then peace for tribute | +60 (+40 to +80) | domination 40, the rest even | medium |
 
 **3. Who gets which archetype.** A rule, not a hand-made list, so it covers modded civs too:
 1. **The civ's unique ability** (CP's trait tags in `CvPlayerTraits`): Warmonger → Conqueror, Religious → Zealot,
@@ -2855,6 +2856,40 @@ logged pair".
 - **Follow-up, `d379bfe` (8:10am ET; compiles, merged in `5220c03`):** the gift switch covers every style with a cap: `BalancedArmy` at 3 per
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
+
+### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:45am ET)
+The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
+conquer cities. They are, and the user ruled: "raider is a great flavour archetype. songhai works better as a
+conqueror."
+
+- **The Raider:** aggressive (home meta +60, range +40 to +80), wars for loot rather than land. It pillages
+  improvements, plunders trade routes, and razes or gives back cities rather than holding them, then makes peace for
+  tribute. Victory weights domination 40, the rest 20 each; medium expansion. Added to the spec's archetype table.
+- **Who is a Raider** (trait data, so mods and other civs work too):
+  - faster razing (the Huns);
+  - plundering trade routes without a war;
+  - a free promotion that rewards pillage or attacking cities: free pillage moves, healing or strength from pillage,
+    plunder from city attacks (Denmark's Viking promotion).
+- **The order in `GetStrategyProfile`:**
+  1. a conquest bonus that pays off by holding cities (Conqueror);
+  2. then raiding (Raider);
+  3. then city-state takeover (Diplomat);
+  4. then CP's tags.
+
+  Raze speed moves from the conquest bonus to the raider signal.
+- **Who moves:**
+  - **the Huns:** Conqueror (+100 in `0A92244F`) to Raider (+40 to +80);
+  - **Denmark:** Conqueror (+90 in `0AFFA02F`, from CP's warmonger tag) to Raider;
+  - **Songhai:** stays a Conqueror (its plunder gold comes from taking cities). Assyria and Mongolia stay Conquerors.
+
+  To confirm in logged games on this build.
+- **What it changes now:** `StrategyProfile_Log.csv`, and `MetaDial`, where a Raider at +50 or more gets the conquest
+  plan. Nothing in the running tests reads either.
+- **What a Raider needs from War (request, later; the lead's hold applies):** a raid mode for its wars. That means
+  pillage and trade-route plunder as goals, razing captured cities it can't hold, and peace once the loot is taken. It
+  also needs its own measures, since it fails a "cities captured" test while doing its job: tiles pillaged, gold
+  plundered, cities razed, and the victim's economy.
+- **Build:** fork `ai/personality` `0672835` (on `claude/ab-c1` `9e9fc9d`). **Status:** coded, CI pending.
 
 ### Strategy profile picks in the first logged games (Personality, 2026-11-04 11:30am ET)
 `StrategyProfile_Log.csv` from `logs_0A92244F`, `logs_0AFFA02F`, `logs_0BC677BF` (24 civs; played on `ab-ed449fd`, before
