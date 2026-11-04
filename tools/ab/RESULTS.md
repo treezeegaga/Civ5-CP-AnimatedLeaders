@@ -3259,6 +3259,20 @@ the conquest-bonus change `277602f`, so they show the earlier rule).
   only if the leader's offence flavour is 7 or more. Nothing in the test runs reads the profile yet (only MetaDial
   does), so it can wait.
 
+**Update, games on `ab-2db51dd` to `ab-1c3ab74` (2:00pm ET), 9 more logged games:** the conquest-bonus rule and the Raider
+archetype show as designed.
+- **Conquerors with home meta ≥ +50:**
+  - Assyria in all 5 games (+65, +85, +90, +90, +100), despite its science tag;
+  - Songhai twice (+85, +90);
+  - Mongolia twice (+100, +100).
+- **Diplomats:** Austria (-10), Venice (-20).
+- **Raider:** Denmark on `ab-1c3ab74` (+80). On the earlier builds it was a Conqueror (+75 to +95), before the Raider
+  archetype. The Huns weren't in these games.
+- **Generalists vary from game to game, as meant:** Rome came out an Opportunist (+30) in one game and Tourism (-75) in
+  another. The first Opportunist so far.
+- **The same tie as the Shoshone:** America has the warmonger and expansionist tags and came out a Conqueror (+90) twice.
+  The proposed tie-break by offence flavour would cover it too.
+
 ### Conquest bonuses in the strategy profile: which leaders move (Personality, 2026-11-04 10:15am ET)
 The user's task (via the lead): use each civ's conquest bonus. Personality's half: the profile puts conquest-bonus civs
 on the aggressive side, and civs that take city-states without war on the diplomat side. War does target choice
