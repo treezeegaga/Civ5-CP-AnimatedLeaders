@@ -2660,7 +2660,36 @@ logged pair".
   captures than the extra greedy units.
 - **Profile check:** the saved logs don't include `StrategyProfile_Log.csv` (it was added on `7afce5c`, and the runner
   copies a fixed list of logs). **Request to the lead:** add `StrategyProfile_Log.csv` to the logs the runner saves.
-- **Status:** `d51e8a6` pushed 7:50am ET, CI pending. Not ready until its CI run passes.
+- **Status:** `d51e8a6` compiles (CI passed) and is merged into `claude/ab-c1` (the lead, 8:10am ET). PC 2 plays it as
+  `AIABTest_bullygreedy3@TREEDESKTOP.csv`.
+- **Follow-up, `d379bfe` (8:10am ET, CI pending):** the gift switch covers every style with a cap: `BalancedArmy` at 3 per
+  city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
+  their gifts.
+
+### GreedyWarArmy: a greedy civ arms up once a war comes (Personality, 2026-11-04 8:15am ET)
+- **The user (2026-11-04):** "maybe it's just for the test, but a greedy civ should build military units if it is at
+  war." A good greedy player saves on the army in peace and arms up when war comes. Its price is what it lacks when the
+  war starts: few units, no walls, old units that cost gold to upgrade, and the turns it takes to build an army.
+- **Hypothesis:** with `GreedyWarArmy`, greedy civs at war build armies like other civs. They lose fewer cities than
+  strict greedy civs, but still more than balanced civs, since they start the war with about 1 unit per city and no
+  walls. The triangle still needs the aggressor to win against them, so this is judged by the matchup test.
+- **The flag** (`GreedyWarArmy`, `FIX_GREEDY_WAR_ARMY`, `false` in the bundle; 63 of 64 flags). At war with a major civ:
+  `GreedyFewUnits`' cap lifts, the small-army cut on buildings applies again (CP's at-war rule: 3 units per city), and
+  city-state unit gifts are taken. In peace nothing changes. Walls stay off (`GreedyNoWalls`); upgrades are already
+  allowed at war (`GreedyNoUpgrades`).
+- **Why a separate flag:** the running easy-matchup test (`bullygreedy3`) checks whether the conquest code can take
+  cities at all, against deliberately weak civs. It keeps the strict version. **The greedy style for the matchup test is
+  then the four greedy flags plus `GreedyWarArmy`.**
+- **MetaDial changed to match** (not played yet, so no running test changes): no land unit cap at war at any position
+  (was 2 per city on the greedy side), the small-army cut applies at war, and the gift switch is off at war.
+- **Measures:** at war, greedy civs' `LandUnits` per city rising toward other civs' within ~10-20 turns; cities lost per
+  war against strict greedy (`bullygreedy3`) and balanced civs.
+- **Run, once the bully takes cities from strict greedy civs:** the same bully run with `-OthersBase "GreedyFewUnits,
+  GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy"`.
+- **Build:** fork `ai/personality` `9017ee3` (on `d379bfe`, off `claude/ab-c1` `d51e8a6`).
+- **Status:** coded, CI pending.
+- **For the lead:** with this flag the masks hold 63 of 64 flags. Room for one more, so retiring flags that failed
+  (`LongWide`, `GreedyArmyCap`) or are superseded (`GreedyArmyCap` by `GreedyFewUnits`) will be needed soon.
 
 ## Requests
 
