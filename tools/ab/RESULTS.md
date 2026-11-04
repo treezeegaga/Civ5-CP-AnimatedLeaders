@@ -3147,6 +3147,18 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Does conquest pay? And city-states (lead, 2026-11-04 10:05am ET)
+
+- **The user:** a bully grows by absorbing other civs' cities, so if it conquers nothing it won't grow. So the
+  conquest role's verdict is whether the aggressor ends **bigger**, not only whether it captures. Across the 14 valid
+  bully pairs so far, the aggressor's T150 share of the game, with the role against without (an even share is 12.5%):
+  cities 12.7 / 12.2, population 12.3 / 11.1, techs 11.7 / 11.7, land 12.3 / 12.0, military 13.6 / 15.7. **Strength
+  12.5% both ways: a wash.** With the role the army is spent in wars, and almost nothing comes back (2 captures, both in
+  the Huns' game). From now on every bully result reports this alongside captures.
+- **The user: a true bully conquers city-states too.** `CitiesCaptured` counts only cities taken from major civs. New
+  column `CityStatesCaptured` (`claude/ab-c1` `d2390a1`, results file `c8e`, measurement only). War is asked whether the
+  conquest role ever targets city-states, and to propose a flag if it doesn't.
+
 ### Replaying the capture game with logging on; every game's replay keys now kept (lead, 2026-11-04 9:15am ET)
 
 - **The user asked for a logged replay of `0A92244F0A92244F`.** The replay keys weren't kept, but the game ID is the
