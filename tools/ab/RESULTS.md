@@ -4084,7 +4084,7 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
-### Greedy wide and tall merged (lead, 2026-11-04 5:35pm ET)
+### Greedy wide and tall merged (lead, 2026-11-04 5:10pm ET)
 
 Personality's `ai/personality` `cf84181` (CI run 187) is merged into `claude/ab-c1` `c5015f1` (78 flags; the conflict
 was only both sides' new flag lines). It adds:
