@@ -3126,7 +3126,7 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
-### AggressiveArmy: a small army until the build-up window (Personality, 2026-11-04 2:00pm ET)
+### AggressiveArmy: a small army until the build-up window (Personality, 2026-11-04 1:55pm ET)
 - **The user (via the lead, 2026-11-04):** an aggressive player doing a timing attack keeps a small army most of the
   game, to avoid maintenance, and builds up fast just before attacking. `AggressiveArmy`'s 3-4 land units per city
   in peace contradicted that. War codes the build-up window (`TimingBuildup`), Economy the gold saved for it.
