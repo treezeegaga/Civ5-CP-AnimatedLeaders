@@ -1924,6 +1924,29 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: why the Aztecs' gold was low in the 0C3C8913 replay (with Economy) (Nov 4, about 5:29pm ET)
+The lead: a timing attacker must never sit near bankruptcy at peace. The role had TrueGoldRate, WarEconomy and
+WarChest on.
+
+**1. WarChest never saved.**
+- It saves only in PLANNED and WINDOW. The Aztecs had no PLANNED phase: their first target came at T81, already
+  past turn 40, so the window opened at once.
+- Before that the phase was PEACE, in which `DoWarChest` cancels the savings request. TimingBuildup's own stand-in
+  saving (from T30, peace included) is switched off under WarChest.
+- So nothing was saved from T30 to T81.
+- **Proposed to Economy:** save in PEACE too, from turn 30, at least 2 siege units' price.
+
+**2. The deficit was the economy's, from early on.**
+- Gold per turn on the production lines: 0 at T0, −2 at T40, −4 at T50, −10 at T80, then −8 to −13 through T108.
+- The new choices T1–T80 were 7 settlers, 3 caravans, 3 Floating Gardens, 2 wonders, workers and work boats, and
+  almost no military (2 scouts, 1 Jaguar).
+- So the cause is expansion, building and wonder upkeep without matching gold income, not army upkeep.
+- WarChest's +500 for gold buildings applies only from the window on.
+- Economy owns these weights; sent to Economy at 5:28pm ET.
+
+**3. War's part:** `f863b01` and `69c9587`. The pause treats the symptom, as the lead notes; the cause is items 1
+and 2.
+
 ### War: the 0C3C8913 replay (Aztecs, ab-96f008e + MarchOn, FocusedWar): the window opened, but the units were "too expensive" (Nov 4, about 5:09pm ET)
 - **TimingBuildup worked up to the window:** "T81 window opens for 10 turns against Austria". The trio fix let a
   target through: Austria, military 82 against the Aztecs' 36.
