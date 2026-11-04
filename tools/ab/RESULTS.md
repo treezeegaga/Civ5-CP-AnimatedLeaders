@@ -1781,7 +1781,7 @@ flags they ended at 131.
 - Measure: bully pairs (the conquest role flags + SiegeAbort against the same without it). Aggressor's military at
   T150 (the guard: it mustn't collapse), cities captured, and wars declared (they may fall).
 - δ: the aggressor's military at T150 no lower than without the war (the replay), with captures ≥ today's 0.
-- Build: next `ai/war` commit. Needs SiegeArmy on.
+- Build: `ai/war` commit `5bfea3f` (on `claude/ab-c1` `1804369`), patch `patches/war/0007`. Needs SiegeArmy on.
 - Notes: two other levers, not coded.
   - Only half the Celtic army joined the attack: the operation recruits units near the muster point.
   - A failed war ran 40 turns with no peace: that's Diplomacy's peace logic.
