@@ -1,0 +1,116 @@
+From e7ef43aafdc7135e7b6c40276ad3f01f4587096e Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 01:25:20 +0000
+Subject: [PATCH] AI_AB_TEST: flag TradeOpinion (trade-partner opinion from
+ deals running now)
+
+The user's model: a civ that gets a resource from another values that
+relationship by what a war would cost it. With the flag, the "we are trade
+partners" opinion comes from the deals running now in which the other civ
+supplies us: -5 per luxury, -3 per strategic resource, -2 for open
+borders, -1 per 5 gold per turn, capped at -20. It goes when a deal
+expires (or a war cancels it) and comes back when the deal is renewed.
+
+CP instead kept a memory of recent trade value that decays 2 a turn and
+reached -40 from frequent luxury swaps. That alone passes the Favorable
+threshold (-30), which multiplies FRIENDLY and divides WAR in approach
+selection, and leads to friendships that rule war out. In the logged bully
+pair 07614B74 the aggressor stayed FRIENDLY to everyone for 140 turns this
+way. The -20 cap keeps trade alone below Favorable.
+
+Off in the bundle until tested (bully and builders tests).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 47 ++++++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  2 +
+ 3 files changed, 50 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index d22d770..ed055bc 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -47235,6 +47235,53 @@ int CvDiplomacyAI::GetRecentTradeScore(PlayerTypes ePlayer) const
+ {
+ 	int iOpinionWeight = 0;
+ 
++	// FIX_TRADE_OPINION (the user's model): a trade partner is worth what a war with them would cost us, so the opinion
++	// comes from the deals running now in which they supply us, not from a decaying memory of past deals. It goes when
++	// a deal expires (or a war cancels it) and comes back when it's renewed. Capped below the Favorable threshold (-30),
++	// so trade alone can't make a neighbour a friend. CP's version reached -40 from frequent luxury swaps, enough to
++	// make everyone Favorable, which multiplied FRIENDLY, divided WAR and led to friendships that rule war out.
++	if (GetPlayer()->UsesCandidateAI(FIX_TRADE_OPINION))
++	{
++		if (ePlayer < 0 || ePlayer >= MAX_MAJOR_CIVS)
++			return 0;
++		CvGameDeals& kDeals = GC.getGame().GetGameDeals();
++		const uint uNumDeals = kDeals.GetNumCurrentDealsWithPlayer(GetID(), ePlayer);
++		int iGoldPerTurn = 0;
++		for (uint uDeal = 0; uDeal < uNumDeals; uDeal++)
++		{
++			CvDeal* pDeal = kDeals.GetCurrentDealWithPlayer(GetID(), ePlayer, uDeal);
++			if (!pDeal)
++				continue;
++			for (TradedItemList::iterator it = pDeal->m_TradedItems.begin(); it != pDeal->m_TradedItems.end(); ++it)
++			{
++				if (it->m_eFromPlayer != ePlayer || it->m_iDuration <= 0)
++					continue;
++				switch (it->m_eItemType)
++				{
++				case TRADE_ITEM_RESOURCES:
++				{
++					const CvResourceInfo* pkResource = GC.getResourceInfo((ResourceTypes)it->m_iData1);
++					if (pkResource && pkResource->getResourceUsage() == RESOURCEUSAGE_LUXURY)
++						iOpinionWeight -= 5;
++					else if (pkResource && pkResource->getResourceUsage() == RESOURCEUSAGE_STRATEGIC)
++						iOpinionWeight -= 3;
++					break;
++				}
++				case TRADE_ITEM_OPEN_BORDERS:
++					iOpinionWeight -= 2;
++					break;
++				case TRADE_ITEM_GOLD_PER_TURN:
++					iGoldPerTurn += it->m_iData1;
++					break;
++				default:
++					break;
++				}
++			}
++		}
++		iOpinionWeight -= iGoldPerTurn / 5;
++		return max(iOpinionWeight, -20);
++	}
++
+ 	if (GetRecentTradeValue(ePlayer) > 0)
+ 	{
+ 		int iCurrentValuePercent = (GetRecentTradeValue(ePlayer) * 100) / max(GetMaxRecentTradeValue(), 1);
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index d4c28bf..ea1876f 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33351,6 +33351,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"SiegeStay", false}, {"SiegePosture", false}, {"DeclareAtBorder", true},
+ 	{"UpgradeSaveCancel", true}, {"AirRebaseHeal", false},
+ 	{"SiegeArmy", false}, {"ArmyHandoff", false}, {"SiegeBar", false},
++	{"TradeOpinion", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 3834c37..c2acf99 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -199,6 +199,8 @@ enum CandidateFixTypes
+ 	FIX_SIEGE_ARMY,			// War: a land city attack keeps recruiting until it can take its city (up to 20 turns). Off in the bundle
+ 	FIX_ARMY_HANDOFF,		// War: units just delivered by an attack may reinforce its target from any zone. Off in the bundle
+ 	FIX_SIEGE_BAR,			// War: SiegeArmy waits for healing + a third of the city's HP a turn (not a fifth). Off in the bundle
++	FIX_TRADE_OPINION,		// Diplomacy: the trade-partner opinion comes from deals running now in which they supply us (what a war
++							// would cost us), gone when they expire, back when renewed, capped below Favorable. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+-- 
+2.43.0
+

@@ -1522,6 +1522,66 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: why even the aggressor almost never picks WAR (Diplomacy session, 2026-11-04)
+
+The logged bully pair `07614B74` / `07614B74F` (ab-095144c), from `DiplomacyAI_Approach_Log.csv` and
+`DiplomacyAI_Approach_Deltas_Log.csv`. Songhai, the aggressor, runs B.
+
+**What the logs show.**
+- **Songhai was FRIENDLY to every civ for most of the game:** 521 of 610 pair-turns.
+- **Toward its neighbour Portugal,** the FRIENDLY score went from 107,599 at T79 to 330,163 at T126, against
+  WAR at 4,977 and 1,314. Portugal became a friend (FRIEND by T101, ALLY by T126), which zeroes WAR outright.
+- **Toward its other neighbour Arabia,** FRIENDLY led until T107 (HOSTILE), and WAR only won at T151.
+- **No fear and no warmonger threat:** AFRAID 0 turns, threat NONE throughout. The warmonger and AFRAID
+  mechanisms don't come into it.
+- **Peace treaties don't explain it** either: there were no wars to make peace from.
+
+**Why: trade makes everyone friends, and a friendly opinion multiplies FRIENDLY and divides WAR.**
+1. **Trade alone makes a neighbour liked.**
+   - Every accepted deal adds to "recent trade value". Its opinion bonus maxes at -40 (`OPINION_WEIGHT_TRADE_MAX`;
+     `DEAL_VALUE_PER_OPINION_WEIGHT` 5, decay 2 a turn).
+   - That alone passes the favorable threshold (-30).
+   - Songhai made 40 deals in 150 turns, and every civ made 2-3 deals per 10 turns, mostly luxury swaps. So
+     neighbours stay "Favorable" whatever else happens.
+2. **Opinion is applied as a percentage to the scores** (`SelectBestApproachTowardsMajorCiv`, around line 20930).
+   With a favorable opinion, FRIENDLY is multiplied by (100 + FriendlyMod + |opinion|)% and WAR is divided by
+   (100 - WarMod + |opinion|)%. At opinion -50 that's roughly a 2-3x swing each way, before any war logic runs.
+3. **Friendly leads to a Declaration of Friendship, and a friendship zeroes WAR** (and HOSTILE, AFRAID) at that
+   step. So a neighbour that trades with you becomes untouchable.
+4. **The scores are smoothed:** 30% of the new value each turn (`APPROACH_SHIFT_PERCENT`). A WAR spike has to last
+   several turns to win, and FRIENDLY at 100,000+ needs a large, steady shift.
+5. **The war-target filters never get a say:** they only act once the approach is WAR. Toward Arabia, where it
+   finally was (T151), the game ended.
+
+**What this means.**
+- The AI's war appetite is crowded out by the trade economy. The more AIs trade, the less they fight.
+- `LuxuryAsk` (in the c8 bundle) adds luxury swaps, so it pushes the same way. Its no-worse test on strength
+  wouldn't show this.
+- **This is personality territory** (how much trade should buy friendship, per leader), so it's a request
+  rather than a Diplomacy fix.
+
+**Coded (user's model, 2026-11-04): flag `TradeOpinion`**, patch `tools/ab/patches/diplomacy/c8/0001-...`, on `claude/ab-c1`
+`9f77273`, off in the bundle, not compiled yet.
+- **The user's model:** a civ that gets a luxury from another values that relationship by what a war would cost it.
+  So the trade-partner opinion should come from the deals running now in which the other civ supplies us. It goes
+  when they expire (or a war cancels them) and comes back when they're renewed.
+- **Weights:** -5 per luxury, -3 per strategic resource, -2 for open borders, -1 per 5 gold per turn. Capped at -20,
+  so trade alone stays below Favorable (-30). CP's decaying memory of past deals reached -40.
+- **Hypothesis:** aggressive leaders pick WAR toward neighbours they merely trade with, while a neighbour that
+  supplies several luxuries still costs something to attack.
+- **Measures:** the aggressor's `WarsDeclared` and the turn of its first war (bully test); the friendship count; the
+  builders' wars (builders test); `Deals` per civ, which should stay in the band since the trades themselves don't
+  change.
+
+**Other possible fixes**, not coded:
+- **Trade opinion by personality:** scale the recent-trade opinion by the leader's boldness and meanness. A warmonger
+  doesn't love you for selling it silk; a diplomat does.
+- **Trade opinion below the threshold:** cap trade's share of the opinion so that trade alone can't make a neighbour
+  "Favorable" (half of -40, i.e. -20).
+- **Expected effect:** more WAR approaches from aggressive leaders toward neighbours they merely trade with, measured
+  as the aggressor's `WarsDeclared` in the bully test. Check the builders test too: tall civs that trade a lot would
+  lose some of that protection, which may be right ("attack a builder who leaves itself weak").
+
 ### Diplomacy: the screening-build-2 crash (Diplomacy session, 2026-11-03)
 
 **What happened.** Screening build 2 (`2d949f8`) halted with CP's assert "Player index out of bounds" in
