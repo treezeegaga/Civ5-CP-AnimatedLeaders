@@ -1816,7 +1816,7 @@ military 190 at T150 against 124 in the replay, 5 cities in both.
   1. `SiegeStay` wasn't in the role's flags.
   2. As coded, SiegeStay only filtered the tactical AI's heal moves, not the homeland AI's.
 
-  Fixed (2): `ai/war` `3247ef4` (patch 0009). The homeland heal moves now skip units the tactical AI's
+  Fixed (2): `ai/war` `3247ef4` (patch 0009; built, CI run 125). The homeland heal moves now skip units the tactical AI's
   `IsUnitNeededAtSiege` says the siege needs (at least a third of HP, near a damaged enemy city). This is SiegeStay
   itself, which hasn't passed and isn't in the bundle. **Request:** add SiegeStay (and SiegePosture) to the
   aggressor's RoleFixes for the next bully runs.
