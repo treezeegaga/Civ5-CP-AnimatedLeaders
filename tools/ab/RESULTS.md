@@ -4084,6 +4084,26 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Why the Aztecs never attacked: broke at peace, and workers won the build queue (lead, 2026-11-04 5:31pm ET)
+
+War and Economy, from replay 0C3C8913 (`logs_0C3C89130C3C8913`):
+- **Workers and work boats** (the user, watching live: "a million workers and work boats"): in TimingBuildup's peace
+  phase the unit cap refused land units, while CP's building AI cut every building by 75% at 1 military unit per city.
+  So workers and work boats won the cities' choice. Fixed by `f863b01`: the peace phase skips the cut, as greedy civs do.
+- **Broke at peace:** GPT 0 at T0, -4 at T50, -10 at T80, then -8 to -13 to T108. The cause was the upkeep of
+  expansion, buildings and wonders with no gold income, not the army: 7 settlers, 3 caravans, 3 Floating Gardens and
+  2 wonders by T80. WarChest saves only in PLANNED/WINDOW, and the Aztecs went straight from PEACE to the window at T81,
+  so nothing was saved.
+- **So the window starved:** 82 units were refused as "too expensive" (CP's upkeep guard: no combat unit under 9 turns
+  to bankruptcy), and it ran out with no army. Stop-gap `69c9587`: the window's clock pauses while units are
+  unaffordable.
+- **Next, Economy:** WarChest saves in PEACE from T30 (at least 2 siege units' price), and a timing attacker keeps
+  GPT >= 0 at peace (gold buildings and tiles first, hold off on maintenance-heavy builds).
+
+**`claude/ab-c1` `eb4129d`:** ai/war `69c9587`, Economy's `WondersForVictory` and `LeanBuilders` (patches 0019/0020),
+and Diplomacy's `GreedyWideDeals`. 81 flags, 24 in the bundle; the new flags are off. The PCs switch after their first
+logged pair on `ab-f73177c`.
+
 ### Greedy wide and tall merged (lead, 2026-11-04 5:10pm ET)
 
 Personality's `ai/personality` `cf84181` (CI run 187) is merged into `claude/ab-c1` `c5015f1` (78 flags; the conflict
