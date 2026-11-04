@@ -2027,7 +2027,7 @@ game.
 - **δ:** CitiesCaptured by the aggressor +1 per pair on average.
 - **Flag:** `SiegeRoll`, off in the bundle. **This makes 64 flags, the cap**; anything after it needs the wider mask
   or a retirement. Role: add to the bully aggressor's flags, with SiegeExposure.
-- **Status:** hypothesis, coded: `ai/war` `a8a186c` (CI pending). One block in the recruiting stage of `CvAIOperation::CheckTransitionToNextStage`; log line "SiegeRoll: target N tiles from the muster point, moving with M units".
+- **Status:** hypothesis, coded: `ai/war` `a8a186c` (built, CI run 155; merged in `claude/ab-c1` `1c3ab74`, built, run 158). One block in the recruiting stage of `CvAIOperation::CheckTransitionToNextStage`; log line "SiegeRoll: target N tiles from the muster point, moving with M units".
 
 ### War: failed bully war 0BE6755D, Songhai against Assyria (Nov 4, about 11:38am ET)
 PC 2, greedy opponents, ab-2db51dd, 14-flag role. Aggressor Songhai. It ended with 3 cities and took none. A
