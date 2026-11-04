@@ -2857,7 +2857,7 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
-### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:45am ET)
+### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
 conquer cities. They are, and the user ruled: "raider is a great flavour archetype. songhai works better as a
 conqueror."
