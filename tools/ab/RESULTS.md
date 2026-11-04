@@ -1367,7 +1367,13 @@ fast. One flag, `WarEconomy`, separate from `WarChest` (gold). It reads the same
   cost (buildings it would want anyway, a few roads).
 - **Measure:** turns from build-up start to the army marching; cities captured in bully games; strength share at T150
   (no-worse).
-- **δ:** 2 points, no-worse. Status: designed; code after War's hook.
+- **δ:** 2 points, no-worse.
+- **Build:** patch 0015, on 0014. **Part 1 only (buildings):**
+  - flag `WarEconomy` (`FIX_WAR_ECONOMY`): +400 for buildings with a production modifier or land-unit experience;
+  - for the cities within 3 tiles of our nearest city's distance to the target's nearest city;
+  - in War's "planned" and "window" phases (`CvBuildingProductionAI`).
+
+  Roads and iron/horses (`CvBuilderTaskingAI`, plot purchases) are part 2, not coded yet. Status: coded, not built.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
