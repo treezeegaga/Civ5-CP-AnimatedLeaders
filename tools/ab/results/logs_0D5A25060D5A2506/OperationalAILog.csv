@@ -1,0 +1,1679 @@
+010, Carthage, OP_FOUND_CITY, 1079, found target for settler, score 112626 (q50)
+010, Carthage, OP_FOUND_CITY, 1079, Skip recruiting, start with movement stage
+010, Carthage, OP_FOUND_CITY, 1079, Found 0 potential units to recruit for operation 1079 at (25:34) with target at (28:38)
+010, Carthage, OP_FOUND_CITY, 1079, Started Army 1080; Units Recruited 1; Max Formation Size 2; Moving To Target
+010, Carthage, OP_FOUND_CITY, 1079, PRE Moving To Target with Army 1080; center (25:34); target (28:38); Progress 0 percent
+010, Carthage, OP_FOUND_CITY, 1079, POST Moving To Target with Army 1080; center (25:35); target (28:38); Progress 17 percent
+011, Carthage, OP_FOUND_CITY, 1079, PRE Moving To Target with Army 1080; center (25:35); target (28:38); Progress 17 percent
+011, Carthage, OP_FOUND_CITY, 1079, POST Moving To Target with Army 1080; center (27:36); target (28:38); Progress 50 percent
+012, Carthage, OP_FOUND_CITY, 1079, PRE Moving To Target with Army 1080; center (27:36); target (28:38); Progress 50 percent
+012, Carthage, OP_FOUND_CITY, 1079, Transition to target stage
+012, Carthage, OP_FOUND_CITY, 1079, POST At Target
+013, Carthage, OP_FOUND_CITY, 1079, PRE At Target
+013, Carthage, OP_FOUND_CITY, 1079, City founded (Utique) at (28:38), plot value 118600, q50
+013, Carthage, OP_FOUND_CITY, 1079, Transition to finished stage
+013, Carthage, OP_FOUND_CITY, 1079, Ended: Success; Distance 6; Duration 3
+026, America, OP_FOUND_CITY, 1149, found target for settler, score 120298 (q50)
+026, America, OP_FOUND_CITY, 1149, Skip recruiting, start with movement stage
+026, America, OP_FOUND_CITY, 1149, Found 1 potential units to recruit for operation 1149 at (56:36) with target at (57:31)
+026, America, OP_FOUND_CITY, 1149, Added Warrior 1078 to slot 1 in army 1150. ETA at (56:36) is 0 
+026, America, OP_FOUND_CITY, 1149, Started Army 1150; Units Recruited 2; Max Formation Size 2; Moving To Target
+026, America, OP_FOUND_CITY, 1149, PRE Moving To Target with Army 1150; center (56:36); target (57:31); Progress 0 percent
+026, America, OP_FOUND_CITY, 1149, POST Moving To Target with Army 1150; center (57:34); target (57:31); Progress 34 percent
+027, Arabia, OP_FOUND_CITY, 1160, found target for settler, score 95374 (q50)
+027, Arabia, OP_FOUND_CITY, 1160, Skip recruiting, start with movement stage
+027, Arabia, OP_FOUND_CITY, 1160, Found 1 potential units to recruit for operation 1160 at (37:14) with target at (36:10)
+027, Arabia, OP_FOUND_CITY, 1160, Added Warrior 1119 to slot 1 in army 1161. ETA at (37:14) is 0 
+027, Arabia, OP_FOUND_CITY, 1160, Started Army 1161; Units Recruited 2; Max Formation Size 2; Moving To Target
+027, Arabia, OP_FOUND_CITY, 1160, PRE Moving To Target with Army 1161; center (37:14); target (36:10); Progress 0 percent
+027, Arabia, OP_FOUND_CITY, 1160, POST Moving To Target with Army 1161; center (36:12); target (36:10); Progress 40 percent
+027, America, OP_FOUND_CITY, 1149, PRE Moving To Target with Army 1150; center (57:34); target (57:31); Progress 34 percent
+027, America, OP_FOUND_CITY, 1149, POST Moving To Target with Army 1150; center (58:32); target (57:31); Progress 100 percent
+028, Arabia, OP_FOUND_CITY, 1160, PRE Moving To Target with Army 1161; center (36:12); target (36:10); Progress 40 percent
+028, Arabia, OP_FOUND_CITY, 1160, Transition to target stage
+028, Arabia, OP_FOUND_CITY, 1160, POST At Target
+028, America, OP_FOUND_CITY, 1149, PRE Moving To Target with Army 1150; center (58:32); target (57:31); Progress 100 percent
+028, America, OP_FOUND_CITY, 1149, Transition to target stage
+028, America, OP_FOUND_CITY, 1149, City founded (New York) at (57:31), plot value 120298, q50
+028, America, OP_FOUND_CITY, 1149, Transition to finished stage
+028, America, OP_FOUND_CITY, 1149, POST Completed
+029, Arabia, OP_FOUND_CITY, 1160, PRE At Target
+029, Arabia, OP_FOUND_CITY, 1160, City founded (Medina) at (36:10), plot value 93476, q48
+029, Arabia, OP_FOUND_CITY, 1160, Transition to finished stage
+029, Arabia, OP_FOUND_CITY, 1160, Ended: Success; Distance 5; Duration 2
+029, America, OP_FOUND_CITY, 1149, Ended: Success; Distance 6; Duration 3
+030, Poland, OP_FOUND_CITY, 1176, found target for settler, score 138814 (q50)
+030, Poland, OP_FOUND_CITY, 1176, Skip recruiting, start with movement stage
+030, Poland, OP_FOUND_CITY, 1176, Found 0 potential units to recruit for operation 1176 at (37:39) with target at (33:42)
+030, Poland, OP_FOUND_CITY, 1176, Started Army 1177; Units Recruited 1; Max Formation Size 2; Moving To Target
+030, Poland, OP_FOUND_CITY, 1176, PRE Moving To Target with Army 1177; center (37:39); target (33:42); Progress 0 percent
+030, Poland, OP_FOUND_CITY, 1176, POST Moving To Target with Army 1177; center (35:39); target (33:42); Progress 29 percent
+031, Poland, OP_FOUND_CITY, 1176, PRE Moving To Target with Army 1177; center (35:39); target (33:42); Progress 29 percent
+031, Poland, OP_FOUND_CITY, 1176, POST Moving To Target with Army 1177; center (34:40); target (33:42); Progress 58 percent
+032, India, OP_FOUND_CITY, 1185, found target for settler, score 113708 (q50)
+032, India, OP_FOUND_CITY, 1185, Initial stage is recruiting
+032, India, OP_FOUND_CITY, 1185, Found 0 potential units to recruit for operation 1185 at (27:18) with target at (24:22)
+032, India, OP_FOUND_CITY, 1185, Started Army 1186; Units Recruited 1; Max Formation Size 2; Recruiting Units
+032, India, OP_FOUND_CITY, 1185, PRE Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA -1; Open; 
+032, India, OP_FOUND_CITY, 1185, Found 0 potential units to recruit for operation 1185 at (27:18) with target at (24:22)
+032, India, OP_FOUND_CITY, 1185, POST Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+032, Poland, OP_FOUND_CITY, 1176, PRE Moving To Target with Army 1177; center (34:40); target (33:42); Progress 58 percent
+032, Poland, OP_FOUND_CITY, 1176, Transition to target stage
+032, Poland, OP_FOUND_CITY, 1176, POST At Target
+032, The_Iroquois, OP_FOUND_CITY, 1188, found target for settler, score 118748 (q50)
+032, The_Iroquois, OP_FOUND_CITY, 1188, Initial stage is recruiting
+032, The_Iroquois, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (69:41) with target at (66:37)
+032, The_Iroquois, OP_FOUND_CITY, 1188, Started Army 1189; Units Recruited 1; Max Formation Size 2; Recruiting Units
+032, The_Iroquois, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1187 at (69:41) - ETA -1; Open; 
+032, The_Iroquois, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (69:41) with target at (66:37)
+032, The_Iroquois, OP_FOUND_CITY, 1188, POST Recruiting Units for army 1189; Settler 1187 at (69:41) - ETA 0; Open; 
+033, India, OP_FOUND_CITY, 1185, PRE Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+033, India, OP_FOUND_CITY, 1185, Found 0 potential units to recruit for operation 1185 at (27:18) with target at (24:22)
+033, India, OP_FOUND_CITY, 1185, POST Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+033, Poland, OP_FOUND_CITY, 1176, PRE At Target
+033, Poland, OP_FOUND_CITY, 1176, City founded (Krakow) at (33:42), plot value 138814, q50
+033, Poland, OP_FOUND_CITY, 1176, Transition to finished stage
+033, Poland, OP_FOUND_CITY, 1176, Ended: Success; Distance 7; Duration 3
+033, The_Iroquois, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1187 at (69:41) - ETA 0; Open; 
+033, The_Iroquois, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (69:41) with target at (66:37)
+033, The_Iroquois, OP_FOUND_CITY, 1188, POST Recruiting Units for army 1189; Settler 1187 at (69:41) - ETA 0; Open; 
+034, India, OP_FOUND_CITY, 1185, PRE Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+034, India, OP_FOUND_CITY, 1185, Found 0 potential units to recruit for operation 1185 at (27:18) with target at (24:22)
+034, India, OP_FOUND_CITY, 1185, POST Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+034, The_Iroquois, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1187 at (69:41) - ETA 0; Open; 
+034, The_Iroquois, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (69:41) with target at (66:37)
+034, The_Iroquois, OP_FOUND_CITY, 1188, POST Recruiting Units for army 1189; Settler 1187 at (69:41) - ETA 0; Open; 
+035, India, OP_FOUND_CITY, 1185, PRE Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+035, India, OP_FOUND_CITY, 1185, Found 0 potential units to recruit for operation 1185 at (27:18) with target at (24:22)
+035, India, OP_FOUND_CITY, 1185, POST Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+035, The_Iroquois, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1187 at (69:41) - ETA 0; Open; 
+035, The_Iroquois, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (69:41) with target at (66:37)
+035, The_Iroquois, OP_FOUND_CITY, 1188, POST Recruiting Units for army 1189; Settler 1187 at (69:41) - ETA 0; Open; 
+036, India, OP_FOUND_CITY, 1185, PRE Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+036, India, OP_FOUND_CITY, 1185, Found 0 potential units to recruit for operation 1185 at (27:18) with target at (24:22)
+036, India, OP_FOUND_CITY, 1185, POST Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+036, The_Iroquois, OP_FOUND_CITY, 1188, Added Warrior 1214 to slot 1 in army 1189. ETA at (69:41) is 0 
+036, The_Iroquois, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1187 at (69:41) - ETA 0; Warrior 1214 at (70:40) - ETA 0; 
+036, The_Iroquois, OP_FOUND_CITY, 1188, Added Warrior 1006 to slot 1 in army 1189. ETA at (69:41) is 0 
+036, The_Iroquois, OP_FOUND_CITY, 1188, Transition to gathering stage
+036, The_Iroquois, OP_FOUND_CITY, 1188, Transition to movement stage
+036, The_Iroquois, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (69:41); target (66:37); Progress 0 percent
+037, India, OP_FOUND_CITY, 1185, PRE Recruiting Units for army 1186; Settler 1184 at (27:18) - ETA 0; Open; 
+037, India, OP_FOUND_CITY, 1185, Found 1 potential units to recruit for operation 1185 at (27:18) with target at (24:22)
+037, India, OP_FOUND_CITY, 1185, Added Warrior 1223 to slot 1 in army 1186. ETA at (27:18) is 0 
+037, India, OP_FOUND_CITY, 1185, Added Warrior 1002 to slot 1 in army 1186. ETA at (27:18) is 0 
+037, India, OP_FOUND_CITY, 1185, Transition to gathering stage
+037, India, OP_FOUND_CITY, 1185, Transition to movement stage
+037, India, OP_FOUND_CITY, 1185, POST Moving To Target with Army 1186; center (27:18); target (24:22); Progress 0 percent
+037, The_Iroquois, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (69:41); target (66:37); Progress 0 percent
+037, The_Iroquois, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (68:41); target (66:37); Progress 17 percent
+038, India, OP_FOUND_CITY, 1185, PRE Moving To Target with Army 1186; center (27:18); target (24:22); Progress 0 percent
+038, India, OP_FOUND_CITY, 1185, POST Moving To Target with Army 1186; center (26:20); target (24:22); Progress 34 percent
+038, The_Iroquois, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (68:41); target (66:37); Progress 17 percent
+038, The_Iroquois, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (68:39); target (66:37); Progress 34 percent
+039, India, OP_FOUND_CITY, 1185, PRE Moving To Target with Army 1186; center (26:20); target (24:22); Progress 34 percent
+039, India, OP_FOUND_CITY, 1185, POST Moving To Target with Army 1186; center (25:22); target (24:22); Progress 100 percent
+039, The_Iroquois, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (68:39); target (66:37); Progress 34 percent
+039, The_Iroquois, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (67:37); target (66:37); Progress 100 percent
+040, India, OP_FOUND_CITY, 1185, PRE Moving To Target with Army 1186; center (25:22); target (24:22); Progress 100 percent
+040, India, OP_FOUND_CITY, 1185, Transition to target stage
+040, India, OP_FOUND_CITY, 1185, City founded (Mumbai) at (24:22), plot value 114633, q50
+040, India, OP_FOUND_CITY, 1185, Transition to finished stage
+040, India, OP_FOUND_CITY, 1185, POST Completed
+040, The_Iroquois, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (67:37); target (66:37); Progress 100 percent
+040, The_Iroquois, OP_FOUND_CITY, 1188, Transition to target stage
+040, The_Iroquois, OP_FOUND_CITY, 1188, City founded (Osininka) at (66:37), plot value 118748, q50
+040, The_Iroquois, OP_FOUND_CITY, 1188, Transition to finished stage
+040, The_Iroquois, OP_FOUND_CITY, 1188, POST Completed
+040, China, OP_FOUND_CITY, 1242, found target for settler, score 128787 (q50)
+040, China, OP_FOUND_CITY, 1242, Initial stage is recruiting
+040, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (50:23)
+040, China, OP_FOUND_CITY, 1242, Started Army 1243; Units Recruited 1; Max Formation Size 2; Recruiting Units
+040, China, OP_FOUND_CITY, 1242, PRE Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA -1; Open; 
+040, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (50:23)
+040, China, OP_FOUND_CITY, 1242, POST Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+041, India, OP_FOUND_CITY, 1185, Ended: Success; Distance 6; Duration 9
+041, The_Iroquois, OP_FOUND_CITY, 1188, Ended: Success; Distance 6; Duration 9
+041, China, OP_FOUND_CITY, 1242, PRE Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+041, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (50:23)
+041, China, OP_FOUND_CITY, 1242, POST Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+042, Germany, OP_FOUND_CITY, 1261, found target for settler, score 157870 (q50)
+042, Germany, OP_FOUND_CITY, 1261, Skip recruiting, start with movement stage
+042, Germany, OP_FOUND_CITY, 1261, Found 0 potential units to recruit for operation 1261 at (45:16) with target at (50:20)
+042, Germany, OP_FOUND_CITY, 1261, Started Army 1262; Units Recruited 1; Max Formation Size 2; Moving To Target
+042, Germany, OP_FOUND_CITY, 1261, PRE Moving To Target with Army 1262; center (45:16); target (50:20); Progress 0 percent
+042, Germany, OP_FOUND_CITY, 1261, POST Moving To Target with Army 1262; center (46:18); target (50:20); Progress 25 percent
+042, China, OP_FOUND_CITY, 1242, PRE Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+042, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (50:23)
+042, China, OP_FOUND_CITY, 1242, POST Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+042, America, OP_FOUND_CITY, 1264, found target for settler, score 109726 (q50)
+042, America, OP_FOUND_CITY, 1264, Skip recruiting, start with movement stage
+042, America, OP_FOUND_CITY, 1264, Found 1 potential units to recruit for operation 1264 at (56:36) with target at (53:32)
+042, America, OP_FOUND_CITY, 1264, Added Warrior 1078 to slot 1 in army 1265. ETA at (56:36) is 1 
+042, America, OP_FOUND_CITY, 1264, Started Army 1265; Units Recruited 2; Max Formation Size 2; Moving To Target
+042, America, OP_FOUND_CITY, 1264, PRE Moving To Target with Army 1265; center (56:36); target (53:32); Progress 0 percent
+042, America, OP_FOUND_CITY, 1264, POST Moving To Target with Army 1265; center (56:34); target (53:32); Progress 17 percent
+043, Germany, OP_FOUND_CITY, 1261, PRE Moving To Target with Army 1262; center (46:18); target (50:20); Progress 25 percent
+043, Germany, OP_FOUND_CITY, 1261, POST Moving To Target with Army 1262; center (47:19); target (50:20); Progress 50 percent
+043, China, OP_FOUND_CITY, 1242, PRE Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+043, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (50:23)
+043, China, OP_FOUND_CITY, 1242, POST Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+043, America, OP_FOUND_CITY, 1264, PRE Moving To Target with Army 1265; center (56:34); target (53:32); Progress 17 percent
+043, America, OP_FOUND_CITY, 1264, POST Moving To Target with Army 1265; center (55:32); target (53:32); Progress 50 percent
+044, Germany, OP_FOUND_CITY, 1261, no path to city site (50:20)
+044, Germany, OP_FOUND_CITY, 1261, PRE Moving To Target with Army 1262; center (47:19); target (50:20); Progress 50 percent
+044, Germany, OP_FOUND_CITY, 1261, no path to city site (50:20)
+044, Germany, OP_FOUND_CITY, 1261, no path to city site (50:20)
+044, Germany, OP_FOUND_CITY, 1261, POST Moving To Target with Army 1262; center (48:21); target (50:20); Progress 63 percent
+044, China, OP_FOUND_CITY, 1242, PRE Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+044, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (50:23)
+044, China, OP_FOUND_CITY, 1242, POST Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+044, America, OP_FOUND_CITY, 1264, PRE Moving To Target with Army 1265; center (55:32); target (53:32); Progress 50 percent
+044, America, OP_FOUND_CITY, 1264, Transition to target stage
+044, America, OP_FOUND_CITY, 1264, POST At Target
+045, Germany, OP_FOUND_CITY, 1261, no path to city site (50:20)
+045, Germany, OP_FOUND_CITY, 1261, PRE Moving To Target with Army 1262; center (48:21); target (50:20); Progress 63 percent
+045, Germany, OP_FOUND_CITY, 1261, no path to city site (50:20)
+045, Germany, OP_FOUND_CITY, 1261, no path to city site (50:20)
+045, Germany, OP_FOUND_CITY, 1261, POST Moving To Target with Army 1262; center (49:22); target (50:20); Progress 63 percent
+045, China, OP_FOUND_CITY, 1242, PRE Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+045, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (50:23)
+045, China, OP_FOUND_CITY, 1242, POST Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+045, America, OP_FOUND_CITY, 1264, PRE At Target
+045, America, OP_FOUND_CITY, 1264, City founded (Boston) at (53:32), plot value 106688, q50
+045, America, OP_FOUND_CITY, 1264, Transition to finished stage
+045, America, OP_FOUND_CITY, 1264, Ended: Success; Distance 6; Duration 3
+046, Germany, OP_FOUND_CITY, 1261, PRE Moving To Target with Army 1262; center (49:22); target (50:20); Progress 63 percent
+046, Germany, OP_FOUND_CITY, 1261, POST Moving To Target with Army 1262; center (49:21); target (50:20); Progress 100 percent
+046, China, OP_FOUND_CITY, 1305, found target for settler, score 117585 (q50)
+046, China, OP_FOUND_CITY, 1305, Skip recruiting, start with movement stage
+046, China, OP_FOUND_CITY, 1305, Found 0 potential units to recruit for operation 1305 at (56:24) with target at (54:28)
+046, China, OP_FOUND_CITY, 1305, Started Army 1306; Units Recruited 1; Max Formation Size 2; Moving To Target
+046, China, OP_FOUND_CITY, 1242, PRE Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+046, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (50:23)
+046, China, OP_FOUND_CITY, 1242, POST Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+046, China, OP_FOUND_CITY, 1305, PRE Moving To Target with Army 1306; center (56:24); target (54:28); Progress 0 percent
+046, China, OP_FOUND_CITY, 1305, POST Moving To Target with Army 1306; center (55:25); target (54:28); Progress 20 percent
+047, Germany, OP_FOUND_CITY, 1261, PRE Moving To Target with Army 1262; center (49:21); target (50:20); Progress 100 percent
+047, Germany, OP_FOUND_CITY, 1261, Transition to target stage
+047, Germany, OP_FOUND_CITY, 1261, POST At Target
+047, China, OP_FOUND_CITY, 1242, PRE Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+047, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (50:23)
+047, China, OP_FOUND_CITY, 1242, POST Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+047, China, OP_FOUND_CITY, 1305, PRE Moving To Target with Army 1306; center (55:25); target (54:28); Progress 20 percent
+047, China, OP_FOUND_CITY, 1305, POST Moving To Target with Army 1306; center (55:26); target (54:28); Progress 40 percent
+048, Germany, OP_FOUND_CITY, 1261, PRE At Target
+048, Germany, OP_FOUND_CITY, 1261, City founded (Hamburg) at (50:20), plot value 126915, q50
+048, Germany, OP_FOUND_CITY, 1261, Transition to finished stage
+048, Germany, OP_FOUND_CITY, 1261, Ended: Success; Distance 8; Duration 6
+048, China, OP_FOUND_CITY, 1242, cannot found city at (50:23)
+048, China, OP_FOUND_CITY, 1242, found better target for settler, old score -1 (q-50), new score 87650 (q38)
+048, China, OP_FOUND_CITY, 1242, setting new target (51:24)
+048, China, OP_FOUND_CITY, 1242, PRE Recruiting Units for army 1243; Settler 1241 at (56:24) - ETA 0; Open; 
+048, China, OP_FOUND_CITY, 1242, Found 0 potential units to recruit for operation 1242 at (56:24) with target at (51:24)
+048, China, OP_FOUND_CITY, 1242, No escort yet and the trip looks safe, going alone
+048, China, OP_FOUND_CITY, 1242, Transition to gathering stage
+048, China, OP_FOUND_CITY, 1242, Transition to movement stage
+048, China, OP_FOUND_CITY, 1242, POST Moving To Target with Army 1243; center (56:24); target (51:24); Progress 0 percent
+048, China, OP_FOUND_CITY, 1305, PRE Moving To Target with Army 1306; center (55:26); target (54:28); Progress 40 percent
+048, China, OP_FOUND_CITY, 1305, POST Moving To Target with Army 1306; center (54:27); target (54:28); Progress 100 percent
+049, China, OP_FOUND_CITY, 1242, PRE Moving To Target with Army 1243; center (56:24); target (51:24); Progress 0 percent
+049, China, OP_FOUND_CITY, 1242, POST Moving To Target with Army 1243; center (55:24); target (51:24); Progress 17 percent
+049, China, OP_FOUND_CITY, 1305, PRE Moving To Target with Army 1306; center (54:27); target (54:28); Progress 100 percent
+049, China, OP_FOUND_CITY, 1305, Transition to target stage
+049, China, OP_FOUND_CITY, 1305, POST At Target
+050, China, OP_FOUND_CITY, 1242, PRE Moving To Target with Army 1243; center (55:24); target (51:24); Progress 17 percent
+050, China, OP_FOUND_CITY, 1242, POST Moving To Target with Army 1243; center (53:25); target (51:24); Progress 34 percent
+050, China, OP_FOUND_CITY, 1305, PRE At Target
+050, China, OP_FOUND_CITY, 1305, City founded (Shanghai) at (54:28), plot value 117585, q50
+050, China, OP_FOUND_CITY, 1305, Transition to finished stage
+050, China, OP_FOUND_CITY, 1305, Ended: Success; Distance 5; Duration 4
+051, Poland, OP_FOUND_CITY, 1356, found target for settler, score 74888 (q18)
+051, Poland, OP_FOUND_CITY, 1356, Skip recruiting, start with movement stage
+051, Poland, OP_FOUND_CITY, 1356, Found 0 potential units to recruit for operation 1356 at (37:39) with target at (42:38)
+051, Poland, OP_FOUND_CITY, 1356, Started Army 1357; Units Recruited 1; Max Formation Size 2; Moving To Target
+051, Poland, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (37:39); target (42:38); Progress 0 percent
+051, Poland, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (39:40); target (42:38); Progress 25 percent
+051, China, OP_FOUND_CITY, 1242, PRE Moving To Target with Army 1243; center (53:25); target (51:24); Progress 34 percent
+051, China, OP_FOUND_CITY, 1242, POST Moving To Target with Army 1243; center (52:25); target (51:24); Progress 50 percent
+052, Poland, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (39:40); target (42:38); Progress 25 percent
+052, Poland, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (40:41); target (42:38); Progress 50 percent
+052, China, OP_FOUND_CITY, 1242, PRE Moving To Target with Army 1243; center (52:25); target (51:24); Progress 50 percent
+052, China, OP_FOUND_CITY, 1242, Transition to target stage
+052, China, OP_FOUND_CITY, 1242, POST At Target
+053, Poland, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (40:41); target (42:38); Progress 50 percent
+053, Poland, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (41:40); target (42:38); Progress 63 percent
+053, China, OP_FOUND_CITY, 1242, PRE At Target
+053, China, OP_FOUND_CITY, 1242, City founded (Guangzhou) at (51:24), plot value 75191, q19
+053, China, OP_FOUND_CITY, 1242, Transition to finished stage
+053, China, OP_FOUND_CITY, 1242, Ended: Success; Distance 6; Duration 13
+054, Poland, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (41:40); target (42:38); Progress 63 percent
+054, Poland, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (41:39); target (42:38); Progress 100 percent
+055, Poland, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (41:39); target (42:38); Progress 100 percent
+055, Poland, OP_FOUND_CITY, 1356, Transition to target stage
+055, Poland, OP_FOUND_CITY, 1356, POST At Target
+056, Poland, OP_FOUND_CITY, 1356, PRE At Target
+056, Poland, OP_FOUND_CITY, 1356, City founded (Lodz) at (42:38), plot value 77369, q22
+056, Poland, OP_FOUND_CITY, 1356, Transition to finished stage
+056, Poland, OP_FOUND_CITY, 1356, Ended: Success; Distance 8; Duration 5
+058, Germany, OP_FOUND_CITY, 1456, Ended: NoTarget; Distance -1; Duration 59
+059, Arabia, OP_FOUND_CITY, 1470, found target for settler, score 89160 (q41)
+059, Arabia, OP_FOUND_CITY, 1470, Initial stage is recruiting
+059, Arabia, OP_FOUND_CITY, 1470, Found 0 potential units to recruit for operation 1470 at (37:14) with target at (35:19)
+059, Arabia, OP_FOUND_CITY, 1470, Started Army 1471; Units Recruited 1; Max Formation Size 2; Recruiting Units
+059, Arabia, OP_FOUND_CITY, 1470, PRE Recruiting Units for army 1471; Settler 1469 at (37:14) - ETA -1; Open; 
+059, Arabia, OP_FOUND_CITY, 1470, Found 0 potential units to recruit for operation 1470 at (37:14) with target at (35:19)
+059, Arabia, OP_FOUND_CITY, 1470, POST Recruiting Units for army 1471; Settler 1469 at (37:14) - ETA 0; Open; 
+059, Germany, OP_FOUND_CITY, 1474, Ended: NoTarget; Distance -1; Duration 60
+060, Arabia, OP_FOUND_CITY, 1470, PRE Recruiting Units for army 1471; Settler 1469 at (37:14) - ETA 0; Open; 
+060, Arabia, OP_FOUND_CITY, 1470, Found 0 potential units to recruit for operation 1470 at (37:14) with target at (35:19)
+060, Arabia, OP_FOUND_CITY, 1470, POST Recruiting Units for army 1471; Settler 1469 at (37:14) - ETA 0; Open; 
+060, Germany, OP_FOUND_CITY, 1495, Ended: NoTarget; Distance -1; Duration 61
+061, Arabia, OP_FOUND_CITY, 1470, found better target for settler, old score 55432 (q-13), new score 63419 (q0)
+061, Arabia, OP_FOUND_CITY, 1470, setting new target (35:18)
+061, Arabia, OP_FOUND_CITY, 1470, PRE Recruiting Units for army 1471; Settler 1469 at (37:14) - ETA 0; Open; 
+061, Arabia, OP_FOUND_CITY, 1470, Found 0 potential units to recruit for operation 1470 at (37:14) with target at (35:18)
+061, Arabia, OP_FOUND_CITY, 1470, POST Recruiting Units for army 1471; Settler 1469 at (37:14) - ETA 0; Open; 
+061, Germany, OP_FOUND_CITY, 1513, Ended: NoTarget; Distance -1; Duration 62
+062, Arabia, OP_FOUND_CITY, 1470, PRE Recruiting Units for army 1471; Settler 1469 at (37:14) - ETA 0; Open; 
+062, Arabia, OP_FOUND_CITY, 1470, Found 0 potential units to recruit for operation 1470 at (37:14) with target at (35:18)
+062, Arabia, OP_FOUND_CITY, 1470, No escort yet and the trip looks safe, going alone
+062, Arabia, OP_FOUND_CITY, 1470, Transition to gathering stage
+062, Arabia, OP_FOUND_CITY, 1470, Transition to movement stage
+062, Arabia, OP_FOUND_CITY, 1470, POST Moving To Target with Army 1471; center (37:14); target (35:18); Progress 0 percent
+062, Germany, OP_FOUND_CITY, 1528, Ended: NoTarget; Distance -1; Duration 63
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Initial stage is recruiting
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 4 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Added Warrior 1016 to slot 0 in army 1533. ETA at (57:31) is 0 
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Added Warrior 1078 to slot 1 in army 1533. ETA at (57:31) is 0 
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Added Archer 1418 to slot 3 in army 1533. ETA at (57:31) is 1 
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Added Archer 1504 to slot 4 in army 1533. ETA at (57:31) is 0 
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Started Army 1533; Units Recruited 4; Max Formation Size 10; Recruiting Units
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (53:32) - ETA 0; Warrior 1078 at (57:31) - ETA 0; Open; Archer 1418 at (56:36) - ETA 1; Archer 1504 at (58:34) - ETA 0; Open; Open; Open; Open; Open; 
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 0 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+062, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (55:31) - ETA 0; Warrior 1078 at (57:31) - ETA 0; Open; Archer 1418 at (56:35) - ETA 1; Archer 1504 at (58:32) - ETA 0; Open; Open; Open; Open; Open; 
+063, Poland, OP_FOUND_CITY, 1535, found target for settler, score 79335 (q25)
+063, Poland, OP_FOUND_CITY, 1535, Skip recruiting, start with movement stage
+063, Poland, OP_FOUND_CITY, 1535, Found 1 potential units to recruit for operation 1535 at (37:39) with target at (39:33)
+063, Poland, OP_FOUND_CITY, 1535, Added Warrior 1259 to slot 1 in army 1536. ETA at (37:39) is 2 
+063, Poland, OP_FOUND_CITY, 1535, Started Army 1536; Units Recruited 2; Max Formation Size 2; Moving To Target
+063, Poland, OP_FOUND_CITY, 1535, PRE Moving To Target with Army 1536; center (37:39); target (39:33); Progress 0 percent
+063, Poland, OP_FOUND_CITY, 1535, POST Moving To Target with Army 1536; center (35:39); target (39:33); Progress 0 percent
+063, Arabia, OP_FOUND_CITY, 1470, PRE Moving To Target with Army 1471; center (37:14); target (35:18); Progress 0 percent
+063, Arabia, OP_FOUND_CITY, 1470, POST Moving To Target with Army 1471; center (38:14); target (35:18); Progress -20 percent
+063, Germany, OP_FOUND_CITY, 1541, Ended: NoTarget; Distance -1; Duration 64
+063, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (55:31) - ETA 0; Warrior 1078 at (57:31) - ETA 0; Open; Archer 1418 at (56:35) - ETA 1; Archer 1504 at (58:32) - ETA 0; Open; Open; Open; Open; Open; 
+063, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 0 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+063, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (55:31) - ETA 0; Warrior 1078 at (57:31) - ETA 0; Open; Archer 1418 at (56:34) - ETA 1; Archer 1504 at (58:31) - ETA 0; Open; Open; Open; Open; Open; 
+064, Poland, OP_FOUND_CITY, 1535, PRE Moving To Target with Army 1536; center (35:39); target (39:33); Progress 0 percent
+064, Poland, OP_FOUND_CITY, 1535, POST Moving To Target with Army 1536; center (35:38); target (39:33); Progress 12 percent
+064, Arabia, OP_FOUND_CITY, 1470, PRE Moving To Target with Army 1471; center (38:14); target (35:18); Progress -20 percent
+064, Arabia, OP_FOUND_CITY, 1470, POST Moving To Target with Army 1471; center (36:15); target (35:18); Progress 20 percent
+064, Germany, OP_FOUND_CITY, 1553, Ended: NoTarget; Distance -1; Duration 65
+064, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (55:31) - ETA 0; Warrior 1078 at (57:31) - ETA 0; Open; Archer 1418 at (56:34) - ETA 1; Archer 1504 at (58:31) - ETA 0; Open; Open; Open; Open; Open; 
+064, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 0 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+064, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (56:31) - ETA 0; Warrior 1078 at (58:31) - ETA 0; Open; Archer 1418 at (57:32) - ETA 0; Archer 1504 at (57:31) - ETA 0; Open; Open; Open; Open; Open; 
+065, Poland, OP_FOUND_CITY, 1535, PRE Moving To Target with Army 1536; center (35:38); target (39:33); Progress 12 percent
+065, Poland, OP_FOUND_CITY, 1535, POST Moving To Target with Army 1536; center (34:37); target (39:33); Progress 12 percent
+065, Arabia, OP_FOUND_CITY, 1470, PRE Moving To Target with Army 1471; center (36:15); target (35:18); Progress 20 percent
+065, Arabia, OP_FOUND_CITY, 1470, POST Moving To Target with Army 1471; center (36:16); target (35:18); Progress 40 percent
+065, Germany, OP_FOUND_CITY, 1565, Ended: NoTarget; Distance -1; Duration 66
+065, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (56:31) - ETA 0; Warrior 1078 at (58:31) - ETA 0; Open; Archer 1418 at (57:32) - ETA 0; Archer 1504 at (57:31) - ETA 0; Open; Open; Open; Open; Open; 
+065, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 0 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+065, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (57:30) - ETA 0; Warrior 1078 at (58:31) - ETA 0; Open; Archer 1418 at (57:31) - ETA 0; Archer 1504 at (57:32) - ETA 0; Open; Open; Open; Open; Open; 
+066, Poland, OP_FOUND_CITY, 1535, PRE Moving To Target with Army 1536; center (34:37); target (39:33); Progress 12 percent
+066, Poland, OP_FOUND_CITY, 1535, POST Moving To Target with Army 1536; center (35:35); target (39:33); Progress 34 percent
+066, The_Iroquois, OP_FOUND_CITY, 1579, found target for settler, score 85000 (q34)
+066, The_Iroquois, OP_FOUND_CITY, 1579, Skip recruiting, start with movement stage
+066, The_Iroquois, OP_FOUND_CITY, 1579, Found 1 potential units to recruit for operation 1579 at (69:41) with target at (65:43)
+066, The_Iroquois, OP_FOUND_CITY, 1579, Added Warrior 1291 to slot 1 in army 1580. ETA at (69:41) is 0 
+066, The_Iroquois, OP_FOUND_CITY, 1579, Started Army 1580; Units Recruited 2; Max Formation Size 2; Moving To Target
+066, The_Iroquois, OP_FOUND_CITY, 1579, PRE Moving To Target with Army 1580; center (69:41); target (65:43); Progress 0 percent
+066, The_Iroquois, OP_FOUND_CITY, 1579, POST Moving To Target with Army 1580; center (68:41); target (65:43); Progress 17 percent
+066, Arabia, OP_FOUND_CITY, 1470, PRE Moving To Target with Army 1471; center (36:16); target (35:18); Progress 40 percent
+066, Arabia, OP_FOUND_CITY, 1470, Transition to target stage
+066, Arabia, OP_FOUND_CITY, 1470, POST At Target
+066, Germany, OP_FOUND_CITY, 1583, Ended: NoTarget; Distance -1; Duration 67
+066, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (57:30) - ETA 0; Warrior 1078 at (58:31) - ETA 0; Open; Archer 1418 at (57:31) - ETA 0; Archer 1504 at (57:32) - ETA 0; Open; Open; Open; Open; Open; 
+066, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 0 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+066, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (56:31) - ETA 0; Warrior 1078 at (58:31) - ETA 0; Open; Archer 1418 at (57:32) - ETA 0; Archer 1504 at (57:31) - ETA 0; Open; Open; Open; Open; Open; 
+067, India, OP_FOUND_CITY, 1594, found target for settler, score 72052 (q14)
+067, India, OP_FOUND_CITY, 1594, Initial stage is recruiting
+067, India, OP_FOUND_CITY, 1594, Found 1 potential units to recruit for operation 1594 at (27:18) with target at (33:18)
+067, India, OP_FOUND_CITY, 1594, Added Warrior 1002 to slot 1 in army 1595. ETA at (27:18) is 1 
+067, India, OP_FOUND_CITY, 1594, Transition to gathering stage
+067, India, OP_FOUND_CITY, 1594, Started Army 1595; Units Recruited 2; Max Formation Size 2; Gathering Forces
+067, India, OP_FOUND_CITY, 1594, PRE Gathering Forces for army 1595; center (27:18); variance (2.25:4.00); free slots 0
+067, India, OP_FOUND_CITY, 1594, Transition to movement stage
+067, India, OP_FOUND_CITY, 1594, POST Moving To Target with Army 1595; center (25:21); target (33:18); Progress -42 percent
+067, Poland, OP_FOUND_CITY, 1535, PRE Moving To Target with Army 1536; center (35:35); target (39:33); Progress 34 percent
+067, Poland, OP_FOUND_CITY, 1535, POST Moving To Target with Army 1536; center (36:34); target (39:33); Progress 45 percent
+067, The_Iroquois, OP_FOUND_CITY, 1579, PRE Moving To Target with Army 1580; center (68:41); target (65:43); Progress 17 percent
+067, The_Iroquois, OP_FOUND_CITY, 1579, POST Moving To Target with Army 1580; center (67:42); target (65:43); Progress 50 percent
+067, Arabia, OP_FOUND_CITY, 1470, PRE At Target
+067, Arabia, OP_FOUND_CITY, 1470, City founded (Damascus) at (35:18), plot value 64507, q2
+067, Arabia, OP_FOUND_CITY, 1470, Transition to finished stage
+067, Arabia, OP_FOUND_CITY, 1470, Ended: Success; Distance 5; Duration 8
+067, Germany, OP_FOUND_CITY, 1600, found target for settler, score 60519 (q-5)
+067, Germany, OP_FOUND_CITY, 1600, Initial stage is recruiting
+067, Germany, OP_FOUND_CITY, 1600, Found 1 potential units to recruit for operation 1600 at (45:16) with target at (52:15)
+067, Germany, OP_FOUND_CITY, 1600, Added Warrior 1371 to slot 1 in army 1601. ETA at (45:16) is 0 
+067, Germany, OP_FOUND_CITY, 1600, Transition to gathering stage
+067, Germany, OP_FOUND_CITY, 1600, Transition to movement stage
+067, Germany, OP_FOUND_CITY, 1600, Started Army 1601; Units Recruited 2; Max Formation Size 2; Moving To Target
+067, Germany, OP_FOUND_CITY, 1600, PRE Moving To Target with Army 1601; center (45:16); target (52:15); Progress 0 percent
+067, Germany, OP_FOUND_CITY, 1600, POST Moving To Target with Army 1601; center (47:15); target (52:15); Progress 34 percent
+067, Carthage, OP_FOUND_CITY, 1603, found target for settler, score 91158 (q44)
+067, Carthage, OP_FOUND_CITY, 1603, Skip recruiting, start with movement stage
+067, Carthage, OP_FOUND_CITY, 1603, Found 1 potential units to recruit for operation 1603 at (25:34) with target at (21:31)
+067, Carthage, OP_FOUND_CITY, 1603, Added Warrior 1097 to slot 1 in army 1604. ETA at (25:34) is 0 
+067, Carthage, OP_FOUND_CITY, 1603, Started Army 1604; Units Recruited 2; Max Formation Size 2; Moving To Target
+067, Carthage, OP_FOUND_CITY, 1603, PRE Moving To Target with Army 1604; center (25:34); target (21:31); Progress 0 percent
+067, Carthage, OP_FOUND_CITY, 1603, POST Moving To Target with Army 1604; center (24:33); target (21:31); Progress 17 percent
+067, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (56:31) - ETA 0; Warrior 1078 at (58:31) - ETA 0; Open; Archer 1418 at (57:32) - ETA 0; Archer 1504 at (57:31) - ETA 0; Open; Open; Open; Open; Open; 
+067, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 0 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+067, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (57:30) - ETA 0; Warrior 1078 at (58:31) - ETA 0; Open; Archer 1418 at (57:31) - ETA 0; Archer 1504 at (57:32) - ETA 0; Open; Open; Open; Open; Open; 
+068, India, OP_FOUND_CITY, 1594, cannot found city at (33:18)
+068, India, OP_FOUND_CITY, 1594, found better target for settler, old score -1 (q-50), new score 69583 (q10)
+068, India, OP_FOUND_CITY, 1594, setting new target (23:27)
+068, India, OP_FOUND_CITY, 1594, PRE Moving To Target with Army 1595; center (25:21); target (23:27); Progress 30 percent
+068, India, OP_FOUND_CITY, 1594, POST Moving To Target with Army 1595; center (26:20); target (23:27); Progress 20 percent
+068, Poland, OP_FOUND_CITY, 1535, PRE Moving To Target with Army 1536; center (36:34); target (39:33); Progress 45 percent
+068, Poland, OP_FOUND_CITY, 1535, POST Moving To Target with Army 1536; center (37:33); target (39:33); Progress 67 percent
+068, The_Iroquois, OP_FOUND_CITY, 1579, PRE Moving To Target with Army 1580; center (67:42); target (65:43); Progress 50 percent
+068, The_Iroquois, OP_FOUND_CITY, 1579, POST Moving To Target with Army 1580; center (66:42); target (65:43); Progress 100 percent
+068, Germany, OP_FOUND_CITY, 1600, PRE Moving To Target with Army 1601; center (47:15); target (52:15); Progress 34 percent
+068, Germany, OP_FOUND_CITY, 1600, POST Moving To Target with Army 1601; center (49:14); target (52:15); Progress 45 percent
+068, Carthage, OP_FOUND_CITY, 1603, PRE Moving To Target with Army 1604; center (24:33); target (21:31); Progress 17 percent
+068, Carthage, OP_FOUND_CITY, 1603, POST Moving To Target with Army 1604; center (23:31); target (21:31); Progress 50 percent
+068, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (57:30) - ETA 0; Warrior 1078 at (58:31) - ETA 0; Open; Archer 1418 at (57:31) - ETA 0; Archer 1504 at (57:32) - ETA 0; Open; Open; Open; Open; Open; 
+068, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 0 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+068, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (56:31) - ETA 0; Open; Open; Archer 1418 at (57:32) - ETA 0; Archer 1504 at (57:31) - ETA 0; Open; Open; Open; Open; Open; 
+069, India, OP_FOUND_CITY, 1594, PRE Moving To Target with Army 1595; center (26:20); target (23:27); Progress 20 percent
+069, India, OP_FOUND_CITY, 1594, POST Moving To Target with Army 1595; center (25:22); target (23:27); Progress 40 percent
+069, Poland, OP_FOUND_CITY, 1535, PRE Moving To Target with Army 1536; center (37:33); target (39:33); Progress 67 percent
+069, Poland, OP_FOUND_CITY, 1535, Transition to target stage
+069, Poland, OP_FOUND_CITY, 1535, POST At Target
+069, The_Iroquois, OP_FOUND_CITY, 1579, PRE Moving To Target with Army 1580; center (66:42); target (65:43); Progress 100 percent
+069, The_Iroquois, OP_FOUND_CITY, 1579, Transition to target stage
+069, The_Iroquois, OP_FOUND_CITY, 1579, POST At Target
+069, Arabia, OP_FOUND_CITY, 1630, found target for settler, score 68346 (q8)
+069, Arabia, OP_FOUND_CITY, 1630, Initial stage is recruiting
+069, Arabia, OP_FOUND_CITY, 1630, Found 1 potential units to recruit for operation 1630 at (37:14) with target at (41:8)
+069, Arabia, OP_FOUND_CITY, 1630, Added Warrior 1119 to slot 1 in army 1631. ETA at (37:14) is 0 
+069, Arabia, OP_FOUND_CITY, 1630, Transition to gathering stage
+069, Arabia, OP_FOUND_CITY, 1630, Started Army 1631; Units Recruited 2; Max Formation Size 2; Gathering Forces
+069, Arabia, OP_FOUND_CITY, 1630, PRE Gathering Forces for army 1631; center (36:10); variance (0.25:4.00); free slots 0
+069, Arabia, OP_FOUND_CITY, 1630, Transition to movement stage
+069, Arabia, OP_FOUND_CITY, 1630, POST Moving To Target with Army 1631; center (37:14); target (41:8); Progress 0 percent
+069, Germany, OP_FOUND_CITY, 1600, PRE Moving To Target with Army 1601; center (49:14); target (52:15); Progress 45 percent
+069, Germany, OP_FOUND_CITY, 1600, POST Moving To Target with Army 1601; center (50:15); target (52:15); Progress 67 percent
+069, Carthage, OP_FOUND_CITY, 1603, PRE Moving To Target with Army 1604; center (23:31); target (21:31); Progress 50 percent
+069, Carthage, OP_FOUND_CITY, 1603, Transition to target stage
+069, Carthage, OP_FOUND_CITY, 1603, POST At Target
+069, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (56:31) - ETA 0; Open; Open; Archer 1418 at (57:32) - ETA 0; Archer 1504 at (57:31) - ETA 0; Open; Open; Open; Open; Open; 
+069, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 0 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+069, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (57:30) - ETA 0; Open; Open; Archer 1418 at (57:31) - ETA 0; Archer 1504 at (57:32) - ETA 0; Open; Open; Open; Open; Open; 
+070, India, OP_FOUND_CITY, 1594, PRE Moving To Target with Army 1595; center (25:22); target (23:27); Progress 40 percent
+070, India, OP_FOUND_CITY, 1594, POST Moving To Target with Army 1595; center (23:23); target (23:27); Progress 50 percent
+070, Poland, OP_FOUND_CITY, 1535, PRE At Target
+070, Poland, OP_FOUND_CITY, 1535, City founded (Wroclaw) at (39:33), plot value 79335, q25
+070, Poland, OP_FOUND_CITY, 1535, Transition to finished stage
+070, Poland, OP_FOUND_CITY, 1535, Ended: Success; Distance 9; Duration 7
+070, The_Iroquois, OP_FOUND_CITY, 1579, PRE At Target
+070, The_Iroquois, OP_FOUND_CITY, 1579, City founded (Grand River) at (65:43), plot value 85000, q34
+070, The_Iroquois, OP_FOUND_CITY, 1579, Transition to finished stage
+070, The_Iroquois, OP_FOUND_CITY, 1579, Ended: Success; Distance 6; Duration 4
+070, Arabia, OP_FOUND_CITY, 1630, PRE Moving To Target with Army 1631; center (37:14); target (41:8); Progress 0 percent
+070, Arabia, OP_FOUND_CITY, 1630, POST Moving To Target with Army 1631; center (37:13); target (41:8); Progress 13 percent
+070, Germany, OP_FOUND_CITY, 1600, PRE Moving To Target with Army 1601; center (50:15); target (52:15); Progress 67 percent
+070, Germany, OP_FOUND_CITY, 1600, Transition to target stage
+070, Germany, OP_FOUND_CITY, 1600, POST At Target
+070, Carthage, OP_FOUND_CITY, 1603, PRE At Target
+070, Carthage, OP_FOUND_CITY, 1603, City founded (Hippo Regius) at (21:31), plot value 98596, q50
+070, Carthage, OP_FOUND_CITY, 1603, Transition to finished stage
+070, Carthage, OP_FOUND_CITY, 1603, Ended: Success; Distance 6; Duration 3
+070, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (57:30) - ETA 0; Open; Open; Archer 1418 at (57:31) - ETA 0; Archer 1504 at (57:32) - ETA 0; Open; Open; Open; Open; Open; 
+070, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 0 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+070, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (58:30) - ETA 0; Open; Open; Archer 1418 at (58:31) - ETA 0; Archer 1504 at (57:31) - ETA 0; Open; Open; Open; Open; Open; 
+071, India, OP_FOUND_CITY, 1594, PRE Moving To Target with Army 1595; center (23:23); target (23:27); Progress 50 percent
+071, India, OP_FOUND_CITY, 1594, POST Moving To Target with Army 1595; center (24:24); target (23:27); Progress 60 percent
+071, Arabia, OP_FOUND_CITY, 1630, PRE Moving To Target with Army 1631; center (37:13); target (41:8); Progress 13 percent
+071, Arabia, OP_FOUND_CITY, 1630, POST Moving To Target with Army 1631; center (38:12); target (41:8); Progress 25 percent
+071, Germany, OP_FOUND_CITY, 1600, PRE At Target
+071, Germany, OP_FOUND_CITY, 1600, City founded (Munich) at (52:15), plot value 109995, q50
+071, Germany, OP_FOUND_CITY, 1600, Transition to finished stage
+071, Germany, OP_FOUND_CITY, 1600, Ended: Success; Distance 9; Duration 4
+071, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, PRE Recruiting Units for army 1533; Warrior 1016 at (58:30) - ETA 0; Open; Open; Archer 1418 at (58:31) - ETA 0; Archer 1504 at (57:31) - ETA 0; Open; Open; Open; Open; Open; 
+071, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Found 1 potential units to recruit for operation 1532 at (57:31) with target at (56:24)
+071, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Added Warrior 1667 to slot 1 in army 1533. ETA at (57:31) is 0 
+071, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, POST Recruiting Units for army 1533; Warrior 1016 at (57:31) - ETA 0; Warrior 1667 at (56:31) - ETA 0; Open; Archer 1418 at (58:31) - ETA 0; Archer 1504 at (57:32) - ETA 0; Open; Open; Open; Open; Open; 
+072, India, OP_FOUND_CITY, 1594, PRE Moving To Target with Army 1595; center (24:24); target (23:27); Progress 60 percent
+072, India, OP_FOUND_CITY, 1594, POST Moving To Target with Army 1595; center (23:25); target (23:27); Progress 70 percent
+072, Arabia, OP_FOUND_CITY, 1630, PRE Moving To Target with Army 1631; center (38:12); target (41:8); Progress 25 percent
+072, Arabia, OP_FOUND_CITY, 1630, POST Moving To Target with Army 1631; center (39:10); target (41:8); Progress 50 percent
+072, China, OP_FOUND_CITY, 1680, found target for settler, score 171995 (q50)
+072, China, OP_FOUND_CITY, 1680, Initial stage is recruiting
+072, China, OP_FOUND_CITY, 1680, Found 0 potential units to recruit for operation 1680 at (56:24) with target at (46:23)
+072, China, OP_FOUND_CITY, 1680, Started Army 1681; Units Recruited 1; Max Formation Size 2; Recruiting Units
+072, China, OP_FOUND_CITY, 1680, PRE Recruiting Units for army 1681; Settler 1679 at (56:24) - ETA -1; Open; 
+072, China, OP_FOUND_CITY, 1680, Found 0 potential units to recruit for operation 1680 at (56:24) with target at (46:23)
+072, China, OP_FOUND_CITY, 1680, POST Recruiting Units for army 1681; Settler 1679 at (56:24) - ETA 0; Open; 
+072, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, War goal changed, probably another war is more important
+072, America, OP_CITY_ATTACK_LAND_SNEAKY, 1532, Ended: DiploOpinionChange; Distance 8; Duration 10
+073, India, OP_FOUND_CITY, 1594, PRE Moving To Target with Army 1595; center (23:25); target (23:27); Progress 70 percent
+073, India, OP_FOUND_CITY, 1594, cannot found city at (23:27)
+073, India, OP_FOUND_CITY, 1594, no path to city site (23:27)
+073, India, OP_FOUND_CITY, 1594, found better target for settler, old score 58670 (q-8), new score 63434 (q0)
+073, India, OP_FOUND_CITY, 1594, setting new target (24:27)
+073, India, OP_FOUND_CITY, 1594, POST Moving To Target with Army 1595; center (23:26); target (24:27); Progress 70 percent
+073, Arabia, OP_FOUND_CITY, 1630, PRE Moving To Target with Army 1631; center (39:10); target (41:8); Progress 50 percent
+073, Arabia, OP_FOUND_CITY, 1630, POST Moving To Target with Army 1631; center (40:9); target (41:8); Progress 100 percent
+073, China, OP_FOUND_CITY, 1680, PRE Recruiting Units for army 1681; Settler 1679 at (56:24) - ETA 0; Open; 
+073, China, OP_FOUND_CITY, 1680, Found 1 potential units to recruit for operation 1680 at (56:24) with target at (46:23)
+073, China, OP_FOUND_CITY, 1680, Added Warrior 1458 to slot 1 in army 1681. ETA at (56:24) is 0 
+073, China, OP_FOUND_CITY, 1680, Transition to gathering stage
+073, China, OP_FOUND_CITY, 1680, POST Gathering Forces for army 1681; center (53:24); variance (0.00:0.00); free slots 0
+074, India, OP_FOUND_CITY, 1594, PRE Moving To Target with Army 1595; center (23:26); target (24:27); Progress 70 percent
+074, India, OP_FOUND_CITY, 1594, POST Moving To Target with Army 1595; center (24:26); target (24:27); Progress 100 percent
+074, Arabia, OP_FOUND_CITY, 1630, PRE Moving To Target with Army 1631; center (40:9); target (41:8); Progress 100 percent
+074, Arabia, OP_FOUND_CITY, 1630, Transition to target stage
+074, Arabia, OP_FOUND_CITY, 1630, City founded (Baghdad) at (41:8), plot value 68346, q8
+074, Arabia, OP_FOUND_CITY, 1630, Transition to finished stage
+074, Arabia, OP_FOUND_CITY, 1630, POST Completed
+074, China, OP_FOUND_CITY, 1680, PRE Gathering Forces for army 1681; center (53:24); variance (0.00:0.00); free slots 0
+074, China, OP_FOUND_CITY, 1680, Transition to movement stage
+074, China, OP_FOUND_CITY, 1680, POST Moving To Target with Army 1681; center (50:23); target (46:23); Progress 0 percent
+075, India, OP_FOUND_CITY, 1594, PRE Moving To Target with Army 1595; center (24:26); target (24:27); Progress 100 percent
+075, India, OP_FOUND_CITY, 1594, Transition to target stage
+075, India, OP_FOUND_CITY, 1594, POST At Target
+075, Arabia, OP_FOUND_CITY, 1630, Ended: Success; Distance 8; Duration 6
+075, China, OP_FOUND_CITY, 1680, PRE Moving To Target with Army 1681; center (50:23); target (46:23); Progress 0 percent
+075, China, OP_FOUND_CITY, 1680, POST Moving To Target with Army 1681; center (49:23); target (46:23); Progress 20 percent
+076, India, OP_FOUND_CITY, 1594, PRE At Target
+076, India, OP_FOUND_CITY, 1594, City founded (Vijayanagara) at (24:27), plot value 54587, q-14
+076, India, OP_FOUND_CITY, 1594, Transition to finished stage
+076, India, OP_FOUND_CITY, 1594, Ended: Success; Distance 10; Duration 9
+076, China, OP_FOUND_CITY, 1680, PRE Moving To Target with Army 1681; center (49:23); target (46:23); Progress 20 percent
+076, China, OP_FOUND_CITY, 1680, POST Moving To Target with Army 1681; center (48:23); target (46:23); Progress 40 percent
+077, Carthage, OP_FOUND_CITY, 1814, found target for settler, score 122741 (q50)
+077, Carthage, OP_FOUND_CITY, 1814, Initial stage is recruiting
+077, Carthage, OP_FOUND_CITY, 1814, Found 1 potential units to recruit for operation 1814 at (25:34) with target at (30:33)
+077, Carthage, OP_FOUND_CITY, 1814, Added Warrior 1097 to slot 1 in army 1815. ETA at (25:34) is 0 
+077, Carthage, OP_FOUND_CITY, 1814, Transition to gathering stage
+077, Carthage, OP_FOUND_CITY, 1814, Transition to movement stage
+077, Carthage, OP_FOUND_CITY, 1814, Started Army 1815; Units Recruited 2; Max Formation Size 2; Moving To Target
+077, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (25:34); target (30:33); Progress 0 percent
+077, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (25:35); target (30:33); Progress 13 percent
+077, China, OP_FOUND_CITY, 1680, PRE Moving To Target with Army 1681; center (48:23); target (46:23); Progress 40 percent
+077, China, OP_FOUND_CITY, 1680, Transition to target stage
+077, China, OP_FOUND_CITY, 1680, POST At Target
+078, The_Iroquois, OP_FOUND_CITY, 1827, found target for settler, score 83330 (q32)
+078, The_Iroquois, OP_FOUND_CITY, 1827, Initial stage is recruiting
+078, The_Iroquois, OP_FOUND_CITY, 1827, Found 0 potential units to recruit for operation 1827 at (69:41) with target at (62:35)
+078, The_Iroquois, OP_FOUND_CITY, 1827, Started Army 1828; Units Recruited 1; Max Formation Size 2; Recruiting Units
+078, The_Iroquois, OP_FOUND_CITY, 1827, PRE Recruiting Units for army 1828; Settler 1826 at (69:41) - ETA -1; Open; 
+078, The_Iroquois, OP_FOUND_CITY, 1827, Found 0 potential units to recruit for operation 1827 at (69:41) with target at (62:35)
+078, The_Iroquois, OP_FOUND_CITY, 1827, POST Recruiting Units for army 1828; Settler 1826 at (69:41) - ETA 0; Open; 
+078, Germany, OP_FOUND_CITY, 1830, found target for settler, score 105379 (q50)
+078, Germany, OP_FOUND_CITY, 1830, Initial stage is recruiting
+078, Germany, OP_FOUND_CITY, 1830, Found 1 potential units to recruit for operation 1830 at (45:16) with target at (44:11)
+078, Germany, OP_FOUND_CITY, 1830, Added Spearman 1812 to slot 1 in army 1831. ETA at (45:16) is 0 
+078, Germany, OP_FOUND_CITY, 1830, Transition to gathering stage
+078, Germany, OP_FOUND_CITY, 1830, Started Army 1831; Units Recruited 2; Max Formation Size 2; Gathering Forces
+078, Germany, OP_FOUND_CITY, 1830, PRE Gathering Forces for army 1831; center (48:17); variance (2.25:0.25); free slots 0
+078, Germany, OP_FOUND_CITY, 1830, Transition to movement stage
+078, Germany, OP_FOUND_CITY, 1830, POST Moving To Target with Army 1831; center (45:16); target (44:11); Progress 0 percent
+078, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (25:35); target (30:33); Progress 13 percent
+078, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (27:36); target (30:33); Progress 25 percent
+078, China, OP_FOUND_CITY, 1680, PRE At Target
+078, China, OP_FOUND_CITY, 1680, City founded (Nanjing) at (46:23), plot value 171995, q50
+078, China, OP_FOUND_CITY, 1680, Transition to finished stage
+078, China, OP_FOUND_CITY, 1680, Ended: Success; Distance 5; Duration 6
+079, The_Iroquois, OP_FOUND_CITY, 1827, PRE Recruiting Units for army 1828; Settler 1826 at (69:41) - ETA 0; Open; 
+079, The_Iroquois, OP_FOUND_CITY, 1827, Found 0 potential units to recruit for operation 1827 at (69:41) with target at (62:35)
+079, The_Iroquois, OP_FOUND_CITY, 1827, POST Recruiting Units for army 1828; Settler 1826 at (69:41) - ETA 0; Open; 
+079, Germany, OP_FOUND_CITY, 1830, PRE Moving To Target with Army 1831; center (45:16); target (44:11); Progress 0 percent
+079, Germany, OP_FOUND_CITY, 1830, POST Moving To Target with Army 1831; center (45:14); target (44:11); Progress 34 percent
+079, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (27:36); target (30:33); Progress 25 percent
+079, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (28:37); target (30:33); Progress 38 percent
+080, The_Iroquois, OP_FOUND_CITY, 1827, PRE Recruiting Units for army 1828; Settler 1826 at (69:41) - ETA 0; Open; 
+080, The_Iroquois, OP_FOUND_CITY, 1827, Found 0 potential units to recruit for operation 1827 at (69:41) with target at (62:35)
+080, The_Iroquois, OP_FOUND_CITY, 1827, POST Recruiting Units for army 1828; Settler 1826 at (69:41) - ETA 0; Open; 
+080, Germany, OP_FOUND_CITY, 1830, PRE Moving To Target with Army 1831; center (45:14); target (44:11); Progress 34 percent
+080, Germany, OP_FOUND_CITY, 1830, POST Moving To Target with Army 1831; center (45:12); target (44:11); Progress 100 percent
+080, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (28:37); target (30:33); Progress 38 percent
+080, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (29:36); target (30:33); Progress 50 percent
+081, The_Iroquois, OP_FOUND_CITY, 1827, PRE Recruiting Units for army 1828; Settler 1826 at (69:41) - ETA 0; Open; 
+081, The_Iroquois, OP_FOUND_CITY, 1827, Found 1 potential units to recruit for operation 1827 at (69:41) with target at (62:35)
+081, The_Iroquois, OP_FOUND_CITY, 1827, Added Mohawk Warrior 1866 to slot 1 in army 1828. ETA at (69:41) is 0 
+081, The_Iroquois, OP_FOUND_CITY, 1827, Added Archer 1751 to slot 1 in army 1828. ETA at (69:41) is 0 
+081, The_Iroquois, OP_FOUND_CITY, 1827, Transition to gathering stage
+081, The_Iroquois, OP_FOUND_CITY, 1827, Transition to movement stage
+081, The_Iroquois, OP_FOUND_CITY, 1827, POST Moving To Target with Army 1828; center (69:41); target (62:35); Progress 0 percent
+081, Germany, OP_FOUND_CITY, 1830, PRE Moving To Target with Army 1831; center (45:12); target (44:11); Progress 100 percent
+081, Germany, OP_FOUND_CITY, 1830, Transition to target stage
+081, Germany, OP_FOUND_CITY, 1830, City founded (Cologne) at (44:11), plot value 103271, q50
+081, Germany, OP_FOUND_CITY, 1830, Transition to finished stage
+081, Germany, OP_FOUND_CITY, 1830, POST Completed
+081, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (29:36); target (30:33); Progress 50 percent
+081, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (29:37); target (30:33); Progress 38 percent
+082, The_Iroquois, OP_FOUND_CITY, 1827, PRE Moving To Target with Army 1828; center (69:41); target (62:35); Progress 0 percent
+082, The_Iroquois, OP_FOUND_CITY, 1827, POST Moving To Target with Army 1828; center (68:41); target (62:35); Progress 10 percent
+082, Germany, OP_FOUND_CITY, 1830, Ended: Success; Distance 6; Duration 4
+082, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (29:37); target (30:33); Progress 38 percent
+082, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (30:37); target (30:33); Progress 38 percent
+082, China, OP_FOUND_CITY, 1887, found target for settler, score 100562 (q50)
+082, China, OP_FOUND_CITY, 1887, Skip recruiting, start with movement stage
+082, China, OP_FOUND_CITY, 1887, Found 0 potential units to recruit for operation 1887 at (56:24) with target at (59:27)
+082, China, OP_FOUND_CITY, 1887, Started Army 1888; Units Recruited 1; Max Formation Size 2; Moving To Target
+082, China, OP_FOUND_CITY, 1887, PRE Moving To Target with Army 1888; center (56:24); target (59:27); Progress 0 percent
+082, China, OP_FOUND_CITY, 1887, POST Moving To Target with Army 1888; center (58:24); target (59:27); Progress 34 percent
+082, America, OP_FOUND_CITY, 1889, found target for settler, score 98261 (q50)
+082, America, OP_FOUND_CITY, 1889, Initial stage is recruiting
+082, America, OP_FOUND_CITY, 1889, Found 1 potential units to recruit for operation 1889 at (56:36) with target at (60:37)
+082, America, OP_FOUND_CITY, 1889, Added Warrior 1016 to slot 1 in army 1890. ETA at (56:36) is 1 
+082, America, OP_FOUND_CITY, 1889, Transition to gathering stage
+082, America, OP_FOUND_CITY, 1889, Started Army 1890; Units Recruited 2; Max Formation Size 2; Gathering Forces
+082, America, OP_FOUND_CITY, 1889, PRE Gathering Forces for army 1890; center (56:36); variance (0.25:6.25); free slots 0
+082, America, OP_FOUND_CITY, 1889, Added Warrior 1667 to slot 1 in army 1890. ETA at (56:36) is 0 
+082, America, OP_FOUND_CITY, 1889, Transition to movement stage
+082, America, OP_FOUND_CITY, 1889, POST Moving To Target with Army 1890; center (57:34); target (60:37); Progress 0 percent
+083, The_Iroquois, OP_FOUND_CITY, 1827, PRE Moving To Target with Army 1828; center (68:41); target (62:35); Progress 10 percent
+083, The_Iroquois, OP_FOUND_CITY, 1827, POST Moving To Target with Army 1828; center (66:37); target (62:35); Progress 46 percent
+083, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (30:37); target (30:33); Progress 38 percent
+083, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (32:38); target (30:33); Progress 25 percent
+083, China, OP_FOUND_CITY, 1887, PRE Moving To Target with Army 1888; center (58:24); target (59:27); Progress 34 percent
+083, China, OP_FOUND_CITY, 1887, POST Moving To Target with Army 1888; center (59:25); target (59:27); Progress 50 percent
+083, America, OP_FOUND_CITY, 1889, PRE Moving To Target with Army 1890; center (57:34); target (60:37); Progress 0 percent
+083, America, OP_FOUND_CITY, 1889, POST Moving To Target with Army 1890; center (57:35); target (60:37); Progress 17 percent
+084, The_Iroquois, OP_FOUND_CITY, 1827, PRE Moving To Target with Army 1828; center (66:37); target (62:35); Progress 46 percent
+084, The_Iroquois, OP_FOUND_CITY, 1827, POST Moving To Target with Army 1828; center (65:36); target (62:35); Progress 64 percent
+084, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (32:38); target (30:33); Progress 25 percent
+084, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (33:37); target (30:33); Progress 13 percent
+084, China, OP_FOUND_CITY, 1887, PRE Moving To Target with Army 1888; center (59:25); target (59:27); Progress 50 percent
+084, China, OP_FOUND_CITY, 1887, Transition to target stage
+084, China, OP_FOUND_CITY, 1887, POST At Target
+084, America, OP_FOUND_CITY, 1889, PRE Moving To Target with Army 1890; center (57:35); target (60:37); Progress 17 percent
+084, America, OP_FOUND_CITY, 1889, POST Moving To Target with Army 1890; center (59:36); target (60:37); Progress 50 percent
+085, The_Iroquois, OP_FOUND_CITY, 1827, PRE Moving To Target with Army 1828; center (65:36); target (62:35); Progress 64 percent
+085, The_Iroquois, OP_FOUND_CITY, 1827, POST Moving To Target with Army 1828; center (63:35); target (62:35); Progress 100 percent
+085, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (33:37); target (30:33); Progress 13 percent
+085, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (33:36); target (30:33); Progress 25 percent
+085, China, OP_FOUND_CITY, 1887, PRE At Target
+085, China, OP_FOUND_CITY, 1887, City founded (Xian) at (59:27), plot value 100562, q50
+085, China, OP_FOUND_CITY, 1887, Transition to finished stage
+085, China, OP_FOUND_CITY, 1887, Ended: Success; Distance 6; Duration 3
+085, America, OP_FOUND_CITY, 1889, PRE Moving To Target with Army 1890; center (59:36); target (60:37); Progress 50 percent
+085, America, OP_FOUND_CITY, 1889, Transition to target stage
+085, America, OP_FOUND_CITY, 1889, POST At Target
+086, The_Iroquois, OP_FOUND_CITY, 1827, PRE Moving To Target with Army 1828; center (63:35); target (62:35); Progress 100 percent
+086, The_Iroquois, OP_FOUND_CITY, 1827, Transition to target stage
+086, The_Iroquois, OP_FOUND_CITY, 1827, POST At Target
+086, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (33:36); target (30:33); Progress 25 percent
+086, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (32:35); target (30:33); Progress 38 percent
+086, America, OP_FOUND_CITY, 1889, PRE At Target
+086, America, OP_FOUND_CITY, 1889, City founded (Philadelphia) at (60:37), plot value 78609, q24
+086, America, OP_FOUND_CITY, 1889, Transition to finished stage
+086, America, OP_FOUND_CITY, 1889, Ended: Success; Distance 6; Duration 4
+087, The_Iroquois, OP_FOUND_CITY, 1971, found target for settler, score 58645 (q-8)
+087, The_Iroquois, OP_FOUND_CITY, 1971, Initial stage is recruiting
+087, The_Iroquois, OP_FOUND_CITY, 1971, Found 1 potential units to recruit for operation 1971 at (69:41) with target at (63:40)
+087, The_Iroquois, OP_FOUND_CITY, 1971, Added Mohawk Warrior 1912 to slot 1 in army 1972. ETA at (69:41) is 0 
+087, The_Iroquois, OP_FOUND_CITY, 1971, Transition to gathering stage
+087, The_Iroquois, OP_FOUND_CITY, 1971, Started Army 1972; Units Recruited 2; Max Formation Size 2; Gathering Forces
+087, The_Iroquois, OP_FOUND_CITY, 1827, cannot found city at (62:35)
+087, The_Iroquois, OP_FOUND_CITY, 1827, found no suitable target in area 5
+087, The_Iroquois, OP_FOUND_CITY, 1827, Ended: NoTarget; Distance 11; Duration 9
+087, The_Iroquois, OP_FOUND_CITY, 1971, PRE Gathering Forces for army 1972; center (69:41); variance (2.25:4.00); free slots 0
+087, The_Iroquois, OP_FOUND_CITY, 1971, Transition to movement stage
+087, The_Iroquois, OP_FOUND_CITY, 1971, POST Moving To Target with Army 1972; center (69:41); target (63:40); Progress 0 percent
+087, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (32:35); target (30:33); Progress 38 percent
+087, Carthage, OP_FOUND_CITY, 1814, POST Moving To Target with Army 1815; center (32:34); target (30:33); Progress 38 percent
+088, Poland, OP_FOUND_CITY, 1989, found target for settler, score 84486 (q33)
+088, Poland, OP_FOUND_CITY, 1989, Skip recruiting, start with movement stage
+088, Poland, OP_FOUND_CITY, 1989, Found 0 potential units to recruit for operation 1989 at (37:39) with target at (33:35)
+088, Poland, OP_FOUND_CITY, 1989, Started Army 1990; Units Recruited 1; Max Formation Size 2; Moving To Target
+088, Poland, OP_FOUND_CITY, 1989, PRE Moving To Target with Army 1990; center (37:39); target (33:35); Progress 0 percent
+088, Poland, OP_FOUND_CITY, 1989, POST Moving To Target with Army 1990; center (36:37); target (33:35); Progress 38 percent
+088, The_Iroquois, OP_FOUND_CITY, 1991, Ended: NoTarget; Distance -1; Duration 89
+088, The_Iroquois, OP_FOUND_CITY, 1971, PRE Moving To Target with Army 1972; center (69:41); target (63:40); Progress 0 percent
+088, The_Iroquois, OP_FOUND_CITY, 1971, POST Moving To Target with Army 1972; center (68:41); target (63:40); Progress 12 percent
+088, Carthage, OP_FOUND_CITY, 1814, PRE Moving To Target with Army 1815; center (32:34); target (30:33); Progress 38 percent
+088, Carthage, OP_FOUND_CITY, 1814, Transition to target stage
+088, Carthage, OP_FOUND_CITY, 1814, POST At Target
+088, America, OP_FOUND_CITY, 2002, found target for settler, score 75349 (q19)
+088, America, OP_FOUND_CITY, 2002, Skip recruiting, start with movement stage
+088, America, OP_FOUND_CITY, 2002, Found 1 potential units to recruit for operation 2002 at (57:31) with target at (56:41)
+088, America, OP_FOUND_CITY, 2002, Added Warrior 1016 to slot 1 in army 2003. ETA at (53:32) is 0 
+088, America, OP_FOUND_CITY, 2002, Started Army 2003; Units Recruited 2; Max Formation Size 2; Moving To Target
+088, America, OP_FOUND_CITY, 2002, PRE Moving To Target with Army 2003; center (53:32); target (56:41); Progress 9 percent
+088, America, OP_FOUND_CITY, 2002, POST Moving To Target with Army 2003; center (56:32); target (56:41); Progress 17 percent
+089, Poland, OP_FOUND_CITY, 1989, PRE Moving To Target with Army 1990; center (36:37); target (33:35); Progress 38 percent
+089, Poland, OP_FOUND_CITY, 1989, POST Moving To Target with Army 1990; center (35:37); target (33:35); Progress 50 percent
+089, The_Iroquois, OP_FOUND_CITY, 2007, Ended: NoTarget; Distance -1; Duration 90
+089, The_Iroquois, OP_FOUND_CITY, 1971, PRE Moving To Target with Army 1972; center (68:41); target (63:40); Progress 12 percent
+089, The_Iroquois, OP_FOUND_CITY, 1971, POST Moving To Target with Army 1972; center (65:43); target (63:40); Progress 45 percent
+089, Carthage, OP_FOUND_CITY, 1814, PRE At Target
+089, Carthage, OP_FOUND_CITY, 1814, City founded (Gades) at (30:33), plot value 120825, q50
+089, Carthage, OP_FOUND_CITY, 1814, Transition to finished stage
+089, Carthage, OP_FOUND_CITY, 1814, Ended: Success; Distance 8; Duration 12
+089, America, OP_FOUND_CITY, 2002, PRE Moving To Target with Army 2003; center (56:32); target (56:41); Progress 17 percent
+089, America, OP_FOUND_CITY, 2002, POST Moving To Target with Army 2003; center (55:34); target (56:41); Progress 34 percent
+090, Poland, OP_FOUND_CITY, 1989, PRE Moving To Target with Army 1990; center (35:37); target (33:35); Progress 50 percent
+090, Poland, OP_FOUND_CITY, 1989, POST Moving To Target with Army 1990; center (34:35); target (33:35); Progress 100 percent
+090, The_Iroquois, OP_FOUND_CITY, 2030, Ended: NoTarget; Distance -1; Duration 91
+090, The_Iroquois, OP_FOUND_CITY, 2031, Ended: NoTarget; Distance -1; Duration 91
+090, The_Iroquois, OP_FOUND_CITY, 1971, PRE Moving To Target with Army 1972; center (65:43); target (63:40); Progress 45 percent
+090, The_Iroquois, OP_FOUND_CITY, 1971, POST Moving To Target with Army 1972; center (64:41); target (63:40); Progress 67 percent
+090, Carthage, OP_RAPID_RESPONSE, 2035, Initial stage is recruiting
+090, Carthage, OP_RAPID_RESPONSE, 2035, Found 1 potential units to recruit for operation 2035 at (30:33) with target at (30:33)
+090, Carthage, OP_RAPID_RESPONSE, 2035, Added Warrior 1847 to slot 0 in army 2036. ETA at (30:33) is 4 
+090, Carthage, OP_RAPID_RESPONSE, 2035, Started Army 2036; Units Recruited 1; Max Formation Size 4; Recruiting Units
+090, Carthage, OP_RAPID_RESPONSE, 2035, Added Spearman 2037 to slot 1 in army 2036. ETA at (30:33) is 0 
+090, Carthage, OP_RAPID_RESPONSE, 2035, Transition to gathering stage
+090, Carthage, OP_RAPID_RESPONSE, 2035, PRE Gathering Forces for army 2036; center (30:34); variance (6.25:0.00); free slots 2
+090, Carthage, OP_RAPID_RESPONSE, 2035, POST Gathering Forces for army 2036; center (30:34); variance (6.25:0.25); free slots 2
+090, America, OP_FOUND_CITY, 2002, PRE Moving To Target with Army 2003; center (55:34); target (56:41); Progress 34 percent
+090, America, OP_FOUND_CITY, 2002, POST Moving To Target with Army 2003; center (56:36); target (56:41); Progress 50 percent
+091, Poland, OP_FOUND_CITY, 1989, PRE Moving To Target with Army 1990; center (34:35); target (33:35); Progress 100 percent
+091, Poland, OP_FOUND_CITY, 1989, Transition to target stage
+091, Poland, OP_FOUND_CITY, 1989, POST At Target
+091, The_Iroquois, OP_FOUND_CITY, 2046, Ended: NoTarget; Distance -1; Duration 92
+091, The_Iroquois, OP_FOUND_CITY, 2047, Ended: NoTarget; Distance -1; Duration 92
+091, The_Iroquois, OP_FOUND_CITY, 1971, PRE Moving To Target with Army 1972; center (64:41); target (63:40); Progress 67 percent
+091, The_Iroquois, OP_FOUND_CITY, 1971, POST Moving To Target with Army 1972; center (64:40); target (63:40); Progress 100 percent
+091, Carthage, OP_RAPID_RESPONSE, 2035, PRE Gathering Forces for army 2036; center (30:34); variance (6.25:0.25); free slots 2
+091, Carthage, OP_RAPID_RESPONSE, 2035, Transition to movement stage
+091, Carthage, OP_RAPID_RESPONSE, 2035, POST Moving To Target with Army 2036; center (29:33); target (30:33); Progress 100 percent
+091, America, OP_FOUND_CITY, 2002, PRE Moving To Target with Army 2003; center (56:36); target (56:41); Progress 50 percent
+091, America, OP_FOUND_CITY, 2002, POST Moving To Target with Army 2003; center (57:38); target (56:41); Progress 67 percent
+092, Poland, OP_FOUND_CITY, 1989, PRE At Target
+092, Poland, OP_FOUND_CITY, 1989, City founded (Poznan) at (33:35), plot value 84286, q33
+092, Poland, OP_FOUND_CITY, 1989, Transition to finished stage
+092, Poland, OP_FOUND_CITY, 1989, Ended: Success; Distance 8; Duration 4
+092, The_Iroquois, OP_FOUND_CITY, 2071, found target for settler, score 53185 (q-16)
+092, The_Iroquois, OP_FOUND_CITY, 2071, Skip recruiting, start with movement stage
+092, The_Iroquois, OP_FOUND_CITY, 2071, Found 0 potential units to recruit for operation 2071 at (66:37) with target at (63:35)
+092, The_Iroquois, OP_FOUND_CITY, 2071, Started Army 2072; Units Recruited 1; Max Formation Size 2; Moving To Target
+092, The_Iroquois, OP_FOUND_CITY, 2073, Ended: NoTarget; Distance -1; Duration 93
+092, The_Iroquois, OP_FOUND_CITY, 1971, cannot found city at (63:40)
+092, The_Iroquois, OP_FOUND_CITY, 1971, no path to city site (63:40)
+092, The_Iroquois, OP_FOUND_CITY, 1971, found better target for settler, old score 65463 (q3), new score 57161 (q-10)
+092, The_Iroquois, OP_FOUND_CITY, 1971, setting new target (61:42)
+092, The_Iroquois, OP_FOUND_CITY, 1971, PRE Moving To Target with Army 1972; center (64:40); target (61:42); Progress 55 percent
+092, The_Iroquois, OP_FOUND_CITY, 1971, POST Moving To Target with Army 1972; center (63:41); target (61:42); Progress 64 percent
+092, The_Iroquois, OP_FOUND_CITY, 2071, PRE Moving To Target with Army 2072; center (66:37); target (63:35); Progress 0 percent
+092, The_Iroquois, OP_FOUND_CITY, 2071, POST Moving To Target with Army 2072; center (65:36); target (63:35); Progress 40 percent
+092, Carthage, OP_RAPID_RESPONSE, 2035, Ended: NoTarget; Distance 2; Duration 2
+092, America, OP_FOUND_CITY, 2088, found target for settler, score 84083 (q33)
+092, America, OP_FOUND_CITY, 2088, Initial stage is recruiting
+092, America, OP_FOUND_CITY, 2088, Found 0 potential units to recruit for operation 2088 at (57:31) with target at (61:42)
+092, America, OP_FOUND_CITY, 2088, Started Army 2089; Units Recruited 1; Max Formation Size 2; Recruiting Units
+092, America, OP_FOUND_CITY, 2002, PRE Moving To Target with Army 2003; center (57:38); target (56:41); Progress 67 percent
+092, America, OP_FOUND_CITY, 2002, POST Moving To Target with Army 2003; center (56:40); target (56:41); Progress 100 percent
+092, America, OP_FOUND_CITY, 2088, PRE Recruiting Units for army 2089; Settler 2087 at (57:31) - ETA -1; Open; 
+092, America, OP_FOUND_CITY, 2088, Found 0 potential units to recruit for operation 2088 at (57:31) with target at (61:42)
+092, America, OP_FOUND_CITY, 2088, POST Recruiting Units for army 2089; Settler 2087 at (57:31) - ETA 0; Open; 
+093, The_Iroquois, OP_FOUND_CITY, 2097, Ended: NoTarget; Distance -1; Duration 94
+093, The_Iroquois, OP_FOUND_CITY, 2071, no valid city site target found (no escort)!
+093, The_Iroquois, OP_FOUND_CITY, 2071, Ended: NoTarget; Distance 5; Duration 1
+093, The_Iroquois, OP_FOUND_CITY, 1971, PRE Moving To Target with Army 1972; center (63:41); target (61:42); Progress 64 percent
+093, The_Iroquois, OP_FOUND_CITY, 1971, POST Moving To Target with Army 1972; center (62:41); target (61:42); Progress 73 percent
+093, Germany, OP_FOUND_CITY, 2104, found target for settler, score 59160 (q-7)
+093, Germany, OP_FOUND_CITY, 2104, Initial stage is recruiting
+093, Germany, OP_FOUND_CITY, 2104, Found 0 potential units to recruit for operation 2104 at (45:16) with target at (42:18)
+093, Germany, OP_FOUND_CITY, 2104, Started Army 2105; Units Recruited 1; Max Formation Size 2; Recruiting Units
+093, Germany, OP_FOUND_CITY, 2104, PRE Recruiting Units for army 2105; Settler 2103 at (45:16) - ETA -1; Open; 
+093, Germany, OP_FOUND_CITY, 2104, Found 0 potential units to recruit for operation 2104 at (45:16) with target at (42:18)
+093, Germany, OP_FOUND_CITY, 2104, POST Recruiting Units for army 2105; Settler 2103 at (45:16) - ETA 0; Open; 
+093, America, OP_FOUND_CITY, 2002, PRE Moving To Target with Army 2003; center (56:40); target (56:41); Progress 100 percent
+093, America, OP_FOUND_CITY, 2002, Transition to target stage
+093, America, OP_FOUND_CITY, 2002, City founded (Atlanta) at (56:41), plot value 75349, q19
+093, America, OP_FOUND_CITY, 2002, Transition to finished stage
+093, America, OP_FOUND_CITY, 2002, POST Completed
+093, America, OP_FOUND_CITY, 2088, PRE Recruiting Units for army 2089; Settler 2087 at (57:31) - ETA 0; Open; 
+093, America, OP_FOUND_CITY, 2088, Found 0 potential units to recruit for operation 2088 at (57:31) with target at (61:42)
+093, America, OP_FOUND_CITY, 2088, POST Recruiting Units for army 2089; Settler 2087 at (57:31) - ETA 0; Open; 
+094, China, OP_RAPID_RESPONSE, 2130, Initial stage is recruiting
+094, China, OP_RAPID_RESPONSE, 2130, Found 2 potential units to recruit for operation 2130 at (59:27) with target at (59:27)
+094, China, OP_RAPID_RESPONSE, 2130, Added Swordsman 2132 to slot 0 in army 2131. ETA at (59:27) is 2 
+094, China, OP_RAPID_RESPONSE, 2130, Added Warrior 1458 to slot 1 in army 2131. ETA at (59:27) is 3 
+094, China, OP_RAPID_RESPONSE, 2130, Transition to gathering stage
+094, China, OP_RAPID_RESPONSE, 2130, Started Army 2131; Units Recruited 2; Max Formation Size 4; Gathering Forces
+094, The_Iroquois, OP_FOUND_CITY, 2144, Ended: NoTarget; Distance -1; Duration 95
+094, The_Iroquois, OP_FOUND_CITY, 2145, Ended: NoTarget; Distance -1; Duration 95
+094, The_Iroquois, OP_FOUND_CITY, 1971, PRE Moving To Target with Army 1972; center (62:41); target (61:42); Progress 73 percent
+094, The_Iroquois, OP_FOUND_CITY, 1971, Transition to target stage
+094, The_Iroquois, OP_FOUND_CITY, 1971, POST At Target
+094, Arabia, OP_FOUND_CITY, 2147, Ended: NoTarget; Distance -1; Duration 95
+094, Germany, OP_FOUND_CITY, 2104, PRE Recruiting Units for army 2105; Settler 2103 at (45:16) - ETA 0; Open; 
+094, Germany, OP_FOUND_CITY, 2104, Found 0 potential units to recruit for operation 2104 at (45:16) with target at (42:18)
+094, Germany, OP_FOUND_CITY, 2104, POST Recruiting Units for army 2105; Settler 2103 at (45:16) - ETA 0; Open; 
+094, China, OP_RAPID_RESPONSE, 2130, Ended: NoTarget; Distance 1; Duration 0
+094, America, OP_FOUND_CITY, 2002, Ended: Success; Distance 12; Duration 6
+094, America, OP_FOUND_CITY, 2088, PRE Recruiting Units for army 2089; Settler 2087 at (57:31) - ETA 0; Open; 
+094, America, OP_FOUND_CITY, 2088, Found 0 potential units to recruit for operation 2088 at (57:31) with target at (61:42)
+094, America, OP_FOUND_CITY, 2088, POST Recruiting Units for army 2089; Settler 2087 at (57:31) - ETA 0; Open; 
+095, The_Iroquois, OP_FOUND_CITY, 2164, Ended: NoTarget; Distance -1; Duration 96
+095, The_Iroquois, OP_FOUND_CITY, 2165, Ended: NoTarget; Distance -1; Duration 96
+095, The_Iroquois, OP_FOUND_CITY, 1971, PRE At Target
+095, The_Iroquois, OP_FOUND_CITY, 1971, City founded (Akwesasme) at (61:42), plot value 60090, q-5
+095, The_Iroquois, OP_FOUND_CITY, 1971, Transition to finished stage
+095, The_Iroquois, OP_FOUND_CITY, 1971, Ended: Success; Distance 11; Duration 8
+095, Arabia, OP_FOUND_CITY, 2167, Ended: NoTarget; Distance -1; Duration 96
+095, Germany, OP_FOUND_CITY, 2104, PRE Recruiting Units for army 2105; Settler 2103 at (45:16) - ETA 0; Open; 
+095, Germany, OP_FOUND_CITY, 2104, Found 0 potential units to recruit for operation 2104 at (45:16) with target at (42:18)
+095, Germany, OP_FOUND_CITY, 2104, POST Recruiting Units for army 2105; Settler 2103 at (45:16) - ETA 0; Open; 
+095, Carthage, OP_FOUND_CITY, 2173, found target for settler, score 101152 (q50)
+095, Carthage, OP_FOUND_CITY, 2173, Initial stage is recruiting
+095, Carthage, OP_FOUND_CITY, 2173, Found 1 potential units to recruit for operation 2173 at (28:38) with target at (30:28)
+095, Carthage, OP_FOUND_CITY, 2173, Added Spearman 2037 to slot 1 in army 2174. ETA at (28:38) is 1 
+095, Carthage, OP_FOUND_CITY, 2173, Transition to gathering stage
+095, Carthage, OP_FOUND_CITY, 2173, Started Army 2174; Units Recruited 2; Max Formation Size 2; Gathering Forces
+095, Carthage, OP_FOUND_CITY, 2173, PRE Gathering Forces for army 2174; center (30:34); variance (1.00:4.00); free slots 0
+095, Carthage, OP_FOUND_CITY, 2173, Added Warrior 1847 to slot 1 in army 2174. ETA at (28:38) is 0 
+095, Carthage, OP_FOUND_CITY, 2173, Transition to movement stage
+095, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (28:38); target (30:28); Progress 0 percent
+095, China, OP_CITY_ATTACK_LAND, 2175, Initial stage is recruiting
+095, China, OP_CITY_ATTACK_LAND, 2175, Found 4 potential units to recruit for operation 2175 at (54:28) with target at (57:31)
+095, China, OP_CITY_ATTACK_LAND, 2175, Added Swordsman 2132 to slot 0 in army 2176. ETA at (54:28) is 0 
+095, China, OP_CITY_ATTACK_LAND, 2175, Added Warrior 1458 to slot 1 in army 2176. ETA at (54:28) is 2 
+095, China, OP_CITY_ATTACK_LAND, 2175, Added Archer 1499 to slot 3 in army 2176. ETA at (54:28) is 0 
+095, China, OP_CITY_ATTACK_LAND, 2175, Added Balamber (Great General) 2082 to slot 7 in army 2176. ETA at (54:28) is 1 
+095, China, OP_CITY_ATTACK_LAND, 2175, Started Army 2176; Units Recruited 4; Max Formation Size 9; Recruiting Units
+095, China, OP_CITY_ATTACK_LAND, 2175, PRE Recruiting Units for army 2176; Swordsman 2132 at (54:28) - ETA 0; Warrior 1458 at (46:23) - ETA 2; Open; Archer 1499 at (56:24) - ETA 0; Open; Open; Open; Balamber (Great General) 2082 at (59:27) - ETA 1; Open; 
+095, China, OP_CITY_ATTACK_LAND, 2175, Found 0 potential units to recruit for operation 2175 at (54:28) with target at (57:31)
+095, China, OP_CITY_ATTACK_LAND, 2175, POST Recruiting Units for army 2176; Swordsman 2132 at (53:29) - ETA 0; Warrior 1458 at (50:23) - ETA 2; Open; Archer 1499 at (53:27) - ETA 0; Open; Open; Open; Balamber (Great General) 2082 at (59:27) - ETA 1; Open; 
+095, America, OP_FOUND_CITY, 2088, cannot found city at (61:42)
+095, America, OP_FOUND_CITY, 2088, no path to city site (61:42)
+095, America, OP_FOUND_CITY, 2088, found no suitable target in area 5
+095, America, OP_FOUND_CITY, 2088, Ended: NoTarget; Distance 13; Duration 3
+096, India, OP_FOUND_CITY, 2185, Ended: NoTarget; Distance -1; Duration 97
+096, The_Iroquois, OP_FOUND_CITY, 2189, Ended: NoTarget; Distance -1; Duration 97
+096, The_Iroquois, OP_FOUND_CITY, 2190, Ended: NoTarget; Distance -1; Duration 97
+096, Arabia, OP_FOUND_CITY, 2191, Ended: NoTarget; Distance -1; Duration 97
+096, Germany, OP_FOUND_CITY, 2104, PRE Recruiting Units for army 2105; Settler 2103 at (45:16) - ETA 0; Open; 
+096, Germany, OP_FOUND_CITY, 2104, Found 0 potential units to recruit for operation 2104 at (45:16) with target at (42:18)
+096, Germany, OP_FOUND_CITY, 2104, POST Recruiting Units for army 2105; Settler 2103 at (45:16) - ETA 0; Open; 
+096, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (28:38); target (30:28); Progress 0 percent
+096, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (28:37); target (30:28); Progress 10 percent
+096, China, OP_CITY_ATTACK_LAND, 2175, PRE Recruiting Units for army 2176; Swordsman 2132 at (53:29) - ETA 0; Warrior 1458 at (50:23) - ETA 2; Open; Archer 1499 at (53:27) - ETA 0; Open; Open; Open; Balamber (Great General) 2082 at (59:27) - ETA 1; Open; 
+096, China, OP_CITY_ATTACK_LAND, 2175, Found 0 potential units to recruit for operation 2175 at (54:28) with target at (57:31)
+096, China, OP_CITY_ATTACK_LAND, 2175, POST Recruiting Units for army 2176; Swordsman 2132 at (54:30) - ETA 0; Open; Open; Archer 1499 at (54:28) - ETA 0; Open; Open; Open; Balamber (Great General) 2082 at (59:27) - ETA 1; Open; 
+096, America, OP_FOUND_CITY, 2199, Ended: NoTarget; Distance -1; Duration 97
+097, India, OP_FOUND_CITY, 2209, Ended: NoTarget; Distance -1; Duration 98
+097, The_Iroquois, OP_FOUND_CITY, 2213, Ended: NoTarget; Distance -1; Duration 98
+097, The_Iroquois, OP_FOUND_CITY, 2214, Ended: NoTarget; Distance -1; Duration 98
+097, Arabia, OP_FOUND_CITY, 2215, Ended: NoTarget; Distance -1; Duration 98
+097, Germany, OP_FOUND_CITY, 2104, PRE Recruiting Units for army 2105; Settler 2103 at (45:16) - ETA 0; Open; 
+097, Germany, OP_FOUND_CITY, 2104, Found 1 potential units to recruit for operation 2104 at (45:16) with target at (42:18)
+097, Germany, OP_FOUND_CITY, 2104, Added Swordsman 2171 to slot 1 in army 2105. ETA at (45:16) is 0 
+097, Germany, OP_FOUND_CITY, 2104, Transition to gathering stage
+097, Germany, OP_FOUND_CITY, 2104, POST Gathering Forces for army 2105; center (45:16); variance (0.00:0.00); free slots 0
+097, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (28:37); target (30:28); Progress 10 percent
+097, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (29:36); target (30:28); Progress 19 percent
+097, China, OP_RAPID_RESPONSE, 2218, Initial stage is recruiting
+097, China, OP_RAPID_RESPONSE, 2218, Found 1 potential units to recruit for operation 2218 at (59:27) with target at (57:31)
+097, China, OP_RAPID_RESPONSE, 2218, Added Swordsman 2198 to slot 0 in army 2219. ETA at (59:27) is 1 
+097, China, OP_RAPID_RESPONSE, 2218, Started Army 2219; Units Recruited 1; Max Formation Size 4; Recruiting Units
+097, China, OP_CITY_ATTACK_LAND, 2175, PRE Recruiting Units for army 2176; Swordsman 2132 at (54:30) - ETA 0; Open; Open; Archer 1499 at (54:28) - ETA 0; Open; Open; Open; Balamber (Great General) 2082 at (59:27) - ETA 1; Open; 
+097, China, OP_CITY_ATTACK_LAND, 2175, Found 0 potential units to recruit for operation 2175 at (54:28) with target at (57:31)
+097, China, OP_CITY_ATTACK_LAND, 2175, Contact with enemy!
+097, China, OP_CITY_ATTACK_LAND, 2175, POST Recruiting Units for army 2176; Swordsman 2132 at (54:30) - ETA 0; Open; Open; Archer 1499 at (54:28) - ETA 0; Open; Open; Open; Balamber (Great General) 2082 at (59:27) - ETA 1; Open; 
+097, China, OP_RAPID_RESPONSE, 2218, PRE Recruiting Units for army 2219; Swordsman 2198 at (51:24) - ETA 1; Open; Open; Open; 
+097, China, OP_RAPID_RESPONSE, 2218, Found 0 potential units to recruit for operation 2218 at (59:27) with target at (57:31)
+097, China, OP_RAPID_RESPONSE, 2218, POST Recruiting Units for army 2219; Swordsman 2198 at (53:24) - ETA 1; Open; Open; Open; 
+097, America, OP_FOUND_CITY, 2221, Ended: NoTarget; Distance -1; Duration 98
+098, India, OP_FOUND_CITY, 2229, Ended: NoTarget; Distance -1; Duration 99
+098, The_Iroquois, OP_FOUND_CITY, 2234, Ended: NoTarget; Distance -1; Duration 99
+098, The_Iroquois, OP_FOUND_CITY, 2235, Ended: NoTarget; Distance -1; Duration 99
+098, Arabia, OP_FOUND_CITY, 2236, Ended: NoTarget; Distance -1; Duration 99
+098, Germany, OP_FOUND_CITY, 2104, PRE Gathering Forces for army 2105; center (45:16); variance (0.00:0.00); free slots 0
+098, Germany, OP_FOUND_CITY, 2104, found better target for settler, old score 59160 (q-7), new score 107765 (q50)
+098, Germany, OP_FOUND_CITY, 2104, setting new target (39:19)
+098, Germany, OP_FOUND_CITY, 2104, Transition to movement stage
+098, Germany, OP_FOUND_CITY, 2104, POST Moving To Target with Army 2105; center (43:17); target (39:19); Progress 0 percent
+098, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (29:36); target (30:28); Progress 19 percent
+098, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (30:36); target (30:28); Progress 19 percent
+098, China, OP_RAPID_RESPONSE, 2240, Initial stage is recruiting
+098, China, OP_RAPID_RESPONSE, 2240, Found 1 potential units to recruit for operation 2240 at (59:27) with target at (57:31)
+098, China, OP_RAPID_RESPONSE, 2240, Added Swordsman 1959 to slot 0 in army 2241. ETA at (59:27) is 3 
+098, China, OP_RAPID_RESPONSE, 2240, Started Army 2241; Units Recruited 1; Max Formation Size 4; Recruiting Units
+098, China, OP_CITY_ATTACK_LAND, 2175, PRE Recruiting Units for army 2176; Swordsman 2132 at (54:30) - ETA 0; Open; Open; Archer 1499 at (54:28) - ETA 0; Open; Open; Open; Balamber (Great General) 2082 at (59:27) - ETA 1; Open; 
+098, China, OP_CITY_ATTACK_LAND, 2175, Found 0 potential units to recruit for operation 2175 at (54:28) with target at (57:31)
+098, China, OP_CITY_ATTACK_LAND, 2175, Contact with enemy!
+098, China, OP_CITY_ATTACK_LAND, 2175, POST Recruiting Units for army 2176; Swordsman 2132 at (54:30) - ETA 0; Open; Open; Open; Open; Open; Open; Balamber (Great General) 2082 at (59:27) - ETA 1; Open; 
+098, China, OP_RAPID_RESPONSE, 2218, PRE Recruiting Units for army 2219; Swordsman 2198 at (53:24) - ETA 1; Open; Open; Open; 
+098, China, OP_RAPID_RESPONSE, 2218, Found 0 potential units to recruit for operation 2218 at (59:27) with target at (57:31)
+098, China, OP_RAPID_RESPONSE, 2218, POST Recruiting Units for army 2219; Swordsman 2198 at (55:24) - ETA 1; Open; Open; Open; 
+098, China, OP_RAPID_RESPONSE, 2240, PRE Recruiting Units for army 2241; Swordsman 1959 at (46:24) - ETA 3; Open; Open; Open; 
+098, China, OP_RAPID_RESPONSE, 2240, Found 0 potential units to recruit for operation 2240 at (59:27) with target at (57:31)
+098, China, OP_RAPID_RESPONSE, 2240, POST Recruiting Units for army 2241; Swordsman 1959 at (47:23) - ETA 3; Open; Open; Open; 
+098, America, OP_FOUND_CITY, 2244, Ended: NoTarget; Distance -1; Duration 99
+099, India, OP_FOUND_CITY, 2254, Ended: NoTarget; Distance -1; Duration 100
+099, The_Iroquois, OP_FOUND_CITY, 2258, Ended: NoTarget; Distance -1; Duration 100
+099, The_Iroquois, OP_FOUND_CITY, 2259, Ended: NoTarget; Distance -1; Duration 100
+099, Arabia, OP_FOUND_CITY, 2260, Ended: NoTarget; Distance -1; Duration 100
+099, Germany, OP_FOUND_CITY, 2104, PRE Moving To Target with Army 2105; center (43:17); target (39:19); Progress 0 percent
+099, Germany, OP_FOUND_CITY, 2104, POST Moving To Target with Army 2105; center (42:15); target (39:19); Progress 19 percent
+099, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (30:36); target (30:28); Progress 19 percent
+099, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (30:34); target (30:28); Progress 37 percent
+099, China, OP_FOUND_CITY, 2267, Ended: NoTarget; Distance -1; Duration 100
+099, China, OP_CITY_ATTACK_LAND, 2175, PRE Recruiting Units for army 2176; Swordsman 2132 at (54:30) - ETA 0; Open; Open; Open; Open; Open; Open; Balamber (Great General) 2082 at (59:27) - ETA 1; Open; 
+099, China, OP_CITY_ATTACK_LAND, 2175, Found 0 potential units to recruit for operation 2175 at (54:28) with target at (57:31)
+099, China, OP_CITY_ATTACK_LAND, 2175, Contact with enemy!
+099, China, OP_CITY_ATTACK_LAND, 2175, POST Recruiting Units for army 2176; Swordsman 2132 at (54:30) - ETA 0; Open; Open; Open; Open; Open; Open; Balamber (Great General) 2082 at (57:25) - ETA 1; Open; 
+099, China, OP_RAPID_RESPONSE, 2218, PRE Recruiting Units for army 2219; Swordsman 2198 at (55:24) - ETA 1; Open; Open; Open; 
+099, China, OP_RAPID_RESPONSE, 2218, Found 0 potential units to recruit for operation 2218 at (59:27) with target at (57:31)
+099, China, OP_RAPID_RESPONSE, 2218, POST Recruiting Units for army 2219; Swordsman 2198 at (57:24) - ETA 0; Open; Open; Open; 
+099, China, OP_RAPID_RESPONSE, 2240, PRE Recruiting Units for army 2241; Swordsman 1959 at (47:23) - ETA 3; Open; Open; Open; 
+099, China, OP_RAPID_RESPONSE, 2240, Found 0 potential units to recruit for operation 2240 at (59:27) with target at (57:31)
+099, China, OP_RAPID_RESPONSE, 2240, POST Recruiting Units for army 2241; Swordsman 1959 at (49:23) - ETA 2; Open; Open; Open; 
+099, America, OP_FOUND_CITY, 2268, Ended: NoTarget; Distance -1; Duration 100
+100, India, OP_FOUND_CITY, 2278, Ended: NoTarget; Distance -1; Duration 101
+100, India, OP_RAPID_RESPONSE, 2279, Initial stage is recruiting
+100, India, OP_RAPID_RESPONSE, 2279, Found 1 potential units to recruit for operation 2279 at (24:22) with target at (24:22)
+100, India, OP_RAPID_RESPONSE, 2279, Added Warrior 1002 to slot 0 in army 2280. ETA at (24:22) is 2 
+100, India, OP_RAPID_RESPONSE, 2279, Started Army 2280; Units Recruited 1; Max Formation Size 4; Recruiting Units
+100, India, OP_RAPID_RESPONSE, 2279, PRE Recruiting Units for army 2280; Warrior 1002 at (24:27) - ETA 2; Open; Open; Open; 
+100, India, OP_RAPID_RESPONSE, 2279, Found 0 potential units to recruit for operation 2279 at (24:22) with target at (24:22)
+100, India, OP_RAPID_RESPONSE, 2279, POST Recruiting Units for army 2280; Warrior 1002 at (25:26) - ETA 2; Open; Open; Open; 
+100, The_Iroquois, OP_FOUND_CITY, 2286, Ended: NoTarget; Distance -1; Duration 101
+100, The_Iroquois, OP_FOUND_CITY, 2287, Ended: NoTarget; Distance -1; Duration 101
+100, Arabia, OP_FOUND_CITY, 2288, Ended: NoTarget; Distance -1; Duration 101
+100, Germany, OP_FOUND_CITY, 2104, PRE Moving To Target with Army 2105; center (42:15); target (39:19); Progress 19 percent
+100, Germany, OP_FOUND_CITY, 2104, POST Moving To Target with Army 2105; center (41:14); target (39:19); Progress 37 percent
+100, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (30:34); target (30:28); Progress 37 percent
+100, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (30:32); target (30:28); Progress 55 percent
+100, China, OP_FOUND_CITY, 2292, Ended: NoTarget; Distance -1; Duration 101
+100, China, OP_RAPID_RESPONSE, 2218, Ended: NoTarget; Distance 6; Duration 3
+100, China, OP_RAPID_RESPONSE, 2240, Ended: NoTarget; Distance 6; Duration 2
+100, China, OP_CITY_ATTACK_LAND, 2175, PRE Recruiting Units for army 2176; Swordsman 2132 at (54:30) - ETA 0; Open; Open; Open; Open; Open; Open; Balamber (Great General) 2082 at (57:25) - ETA 1; Open; 
+100, China, OP_CITY_ATTACK_LAND, 2175, Found 4 potential units to recruit for operation 2175 at (54:28) with target at (57:31)
+100, China, OP_CITY_ATTACK_LAND, 2175, Added Swordsman 2198 to slot 1 in army 2176. ETA at (54:28) is 0 
+100, China, OP_CITY_ATTACK_LAND, 2175, Added Swordsman 2293 to slot 2 in army 2176. ETA at (54:28) is 0 
+100, China, OP_CITY_ATTACK_LAND, 2175, Added Composite Bowman 2243 to slot 3 in army 2176. ETA at (54:28) is 0 
+100, China, OP_CITY_ATTACK_LAND, 2175, Added Swordsman 1959 to slot 5 in army 2176. ETA at (54:28) is 1 
+100, China, OP_CITY_ATTACK_LAND, 2175, Transition to gathering stage
+100, China, OP_CITY_ATTACK_LAND, 2175, POST Gathering Forces for army 2176; center (55:26); variance (1.81:3.81); free slots 3
+100, America, OP_FOUND_CITY, 2294, Ended: NoTarget; Distance -1; Duration 101
+101, India, OP_FOUND_CITY, 2300, Ended: NoTarget; Distance -1; Duration 102
+101, India, OP_RAPID_RESPONSE, 2279, PRE Recruiting Units for army 2280; Warrior 1002 at (25:26) - ETA 2; Open; Open; Open; 
+101, India, OP_RAPID_RESPONSE, 2279, Found 0 potential units to recruit for operation 2279 at (24:22) with target at (24:22)
+101, India, OP_RAPID_RESPONSE, 2279, POST Recruiting Units for army 2280; Warrior 1002 at (24:25) - ETA 1; Open; Open; Open; 
+101, The_Iroquois, OP_FOUND_CITY, 2306, Ended: NoTarget; Distance -1; Duration 102
+101, The_Iroquois, OP_FOUND_CITY, 2307, Ended: NoTarget; Distance -1; Duration 102
+101, Arabia, OP_FOUND_CITY, 2309, Ended: NoTarget; Distance -1; Duration 102
+101, Germany, OP_FOUND_CITY, 2104, PRE Moving To Target with Army 2105; center (41:14); target (39:19); Progress 37 percent
+101, Germany, OP_FOUND_CITY, 2104, POST Moving To Target with Army 2105; center (39:15); target (39:19); Progress 55 percent
+101, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (30:32); target (30:28); Progress 55 percent
+101, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (29:32); target (30:28); Progress 55 percent
+101, China, OP_FOUND_CITY, 2312, Ended: NoTarget; Distance -1; Duration 102
+101, China, OP_CITY_ATTACK_LAND, 2175, PRE Gathering Forces for army 2176; center (55:26); variance (1.81:3.81); free slots 3
+101, China, OP_CITY_ATTACK_LAND, 2175, Transition to movement stage
+101, China, OP_CITY_ATTACK_LAND, 2175, POST Moving To Target with Army 2176; center (54:28); target (57:31); Progress 0 percent
+101, America, OP_FOUND_CITY, 2314, Ended: NoTarget; Distance -1; Duration 102
+102, India, OP_FOUND_CITY, 2326, Ended: NoTarget; Distance -1; Duration 103
+102, India, OP_RAPID_RESPONSE, 2279, Ended: NoTarget; Distance 1; Duration 2
+102, The_Iroquois, OP_FOUND_CITY, 2331, Ended: NoTarget; Distance -1; Duration 103
+102, The_Iroquois, OP_FOUND_CITY, 2332, Ended: NoTarget; Distance -1; Duration 103
+102, Arabia, OP_FOUND_CITY, 2333, Ended: NoTarget; Distance -1; Duration 103
+102, Germany, OP_FOUND_CITY, 2104, PRE Moving To Target with Army 2105; center (39:15); target (39:19); Progress 55 percent
+102, Germany, OP_FOUND_CITY, 2104, POST Moving To Target with Army 2105; center (39:17); target (39:19); Progress 73 percent
+102, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (29:32); target (30:28); Progress 55 percent
+102, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (30:32); target (30:28); Progress 55 percent
+102, China, OP_FOUND_CITY, 2337, Ended: NoTarget; Distance -1; Duration 103
+102, China, OP_CITY_ATTACK_LAND, 2175, PRE Moving To Target with Army 2176; center (54:28); target (57:31); Progress 0 percent
+102, China, OP_CITY_ATTACK_LAND, 2175, Contact with enemy!
+102, China, OP_CITY_ATTACK_LAND, 2175, POST Moving To Target with Army 2176; center (54:28); target (57:31); Progress 0 percent
+102, America, OP_FOUND_CITY, 2340, Ended: NoTarget; Distance -1; Duration 103
+103, India, OP_FOUND_CITY, 2351, Ended: NoTarget; Distance -1; Duration 104
+103, The_Iroquois, OP_FOUND_CITY, 2357, Ended: NoTarget; Distance -1; Duration 104
+103, The_Iroquois, OP_FOUND_CITY, 2358, Ended: NoTarget; Distance -1; Duration 104
+103, Arabia, OP_FOUND_CITY, 2360, Ended: NoTarget; Distance -1; Duration 104
+103, Germany, OP_FOUND_CITY, 2104, PRE Moving To Target with Army 2105; center (39:17); target (39:19); Progress 73 percent
+103, Germany, OP_FOUND_CITY, 2104, POST Moving To Target with Army 2105; center (39:18); target (39:19); Progress 100 percent
+103, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (30:32); target (30:28); Progress 55 percent
+103, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (29:31); target (30:28); Progress 64 percent
+103, China, OP_FOUND_CITY, 2367, Ended: NoTarget; Distance -1; Duration 104
+103, China, OP_CITY_ATTACK_LAND, 2175, PRE Moving To Target with Army 2176; center (54:28); target (57:31); Progress 0 percent
+103, China, OP_CITY_ATTACK_LAND, 2175, Contact with enemy!
+103, China, OP_CITY_ATTACK_LAND, 2175, POST Moving To Target with Army 2176; center (54:28); target (57:31); Progress 0 percent
+103, America, OP_FOUND_CITY, 2370, Ended: NoTarget; Distance -1; Duration 104
+103, America, OP_RAPID_RESPONSE, 2371, Initial stage is recruiting
+103, America, OP_RAPID_RESPONSE, 2371, Found 1 potential units to recruit for operation 2371 at (53:32) with target at (53:32)
+103, America, OP_RAPID_RESPONSE, 2371, Added Swordsman 2063 to slot 0 in army 2372. ETA at (53:32) is 3 
+103, America, OP_RAPID_RESPONSE, 2371, Started Army 2372; Units Recruited 1; Max Formation Size 4; Recruiting Units
+103, America, OP_RAPID_RESPONSE, 2371, PRE Recruiting Units for army 2372; Swordsman 2063 at (60:37) - ETA 3; Open; Open; Open; 
+103, America, OP_RAPID_RESPONSE, 2371, Found 0 potential units to recruit for operation 2371 at (53:32) with target at (53:32)
+103, America, OP_RAPID_RESPONSE, 2371, POST Recruiting Units for army 2372; Swordsman 2063 at (59:37) - ETA 3; Open; Open; Open; 
+104, India, OP_FOUND_CITY, 2383, Ended: NoTarget; Distance -1; Duration 105
+104, The_Iroquois, OP_FOUND_CITY, 2388, Ended: NoTarget; Distance -1; Duration 105
+104, The_Iroquois, OP_FOUND_CITY, 2389, Ended: NoTarget; Distance -1; Duration 105
+104, Arabia, OP_FOUND_CITY, 2390, Ended: NoTarget; Distance -1; Duration 105
+104, Germany, OP_FOUND_CITY, 2104, PRE Moving To Target with Army 2105; center (39:18); target (39:19); Progress 100 percent
+104, Germany, OP_FOUND_CITY, 2104, Transition to target stage
+104, Germany, OP_FOUND_CITY, 2104, POST At Target
+104, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (29:31); target (30:28); Progress 64 percent
+104, Carthage, OP_FOUND_CITY, 2173, POST Moving To Target with Army 2174; center (28:29); target (30:28); Progress 73 percent
+104, China, OP_FOUND_CITY, 2395, Ended: NoTarget; Distance -1; Duration 105
+104, China, OP_CITY_ATTACK_LAND, 2175, PRE Moving To Target with Army 2176; center (54:28); target (57:31); Progress 0 percent
+104, China, OP_CITY_ATTACK_LAND, 2175, Contact with enemy!
+104, China, OP_CITY_ATTACK_LAND, 2175, Transition to finished stage; unit distance near 3; far 5
+104, China, OP_CITY_ATTACK_LAND, 2175, POST Completed
+104, America, OP_FOUND_CITY, 2399, Ended: NoTarget; Distance -1; Duration 105
+104, America, OP_RAPID_RESPONSE, 2371, PRE Recruiting Units for army 2372; Swordsman 2063 at (59:37) - ETA 3; Open; Open; Open; 
+104, America, OP_RAPID_RESPONSE, 2371, Found 0 potential units to recruit for operation 2371 at (53:32) with target at (53:32)
+104, America, OP_RAPID_RESPONSE, 2371, POST Recruiting Units for army 2372; Swordsman 2063 at (59:36) - ETA 2; Open; Open; Open; 
+105, India, OP_FOUND_CITY, 2405, Ended: NoTarget; Distance -1; Duration 106
+105, The_Iroquois, OP_FOUND_CITY, 2411, Ended: NoTarget; Distance -1; Duration 106
+105, The_Iroquois, OP_FOUND_CITY, 2412, Ended: NoTarget; Distance -1; Duration 106
+105, Arabia, OP_FOUND_CITY, 2414, Ended: NoTarget; Distance -1; Duration 106
+105, Germany, OP_FOUND_CITY, 2104, PRE At Target
+105, Germany, OP_FOUND_CITY, 2104, City founded (Frankfurt) at (39:19), plot value 107765, q50
+105, Germany, OP_FOUND_CITY, 2104, Transition to finished stage
+105, Germany, OP_FOUND_CITY, 2104, Ended: Success; Distance 11; Duration 12
+105, Carthage, OP_FOUND_CITY, 2173, PRE Moving To Target with Army 2174; center (28:29); target (30:28); Progress 73 percent
+105, Carthage, OP_FOUND_CITY, 2173, Transition to target stage
+105, Carthage, OP_FOUND_CITY, 2173, POST At Target
+105, China, OP_CITY_ATTACK_LAND, 2175, Ended: Success; Distance 7; Duration 10
+105, America, OP_FOUND_CITY, 2422, Ended: NoTarget; Distance -1; Duration 106
+105, America, OP_RAPID_RESPONSE, 2371, Ended: NoTarget; Distance 1; Duration 2
+106, India, OP_FOUND_CITY, 2431, Ended: NoTarget; Distance -1; Duration 107
+106, The_Iroquois, OP_FOUND_CITY, 2436, Ended: NoTarget; Distance -1; Duration 107
+106, The_Iroquois, OP_FOUND_CITY, 2437, Ended: NoTarget; Distance -1; Duration 107
+106, Arabia, OP_FOUND_CITY, 2438, Ended: NoTarget; Distance -1; Duration 107
+106, Germany, OP_FOUND_CITY, 2443, Ended: NoTarget; Distance -1; Duration 107
+106, Carthage, OP_FOUND_CITY, 2173, PRE At Target
+106, Carthage, OP_FOUND_CITY, 2173, City founded (Saguntum) at (30:28), plot value 101152, q50
+106, Carthage, OP_FOUND_CITY, 2173, Transition to finished stage
+106, Carthage, OP_FOUND_CITY, 2173, Ended: Success; Distance 11; Duration 11
+106, China, OP_RAPID_RESPONSE, 2445, Initial stage is recruiting
+106, China, OP_RAPID_RESPONSE, 2445, Found 1 potential units to recruit for operation 2445 at (59:27) with target at (57:31)
+106, China, OP_RAPID_RESPONSE, 2445, Added Swordsman 2398 to slot 0 in army 2446. ETA at (59:27) is 2 
+106, China, OP_RAPID_RESPONSE, 2445, Started Army 2446; Units Recruited 1; Max Formation Size 4; Recruiting Units
+106, China, OP_RAPID_RESPONSE, 2445, PRE Recruiting Units for army 2446; Swordsman 2398 at (47:23) - ETA 2; Open; Open; Open; 
+106, China, OP_RAPID_RESPONSE, 2445, Found 0 potential units to recruit for operation 2445 at (59:27) with target at (57:31)
+106, China, OP_RAPID_RESPONSE, 2445, POST Recruiting Units for army 2446; Swordsman 2398 at (49:23) - ETA 2; Open; Open; Open; 
+106, America, OP_FOUND_CITY, 2453, Ended: NoTarget; Distance -1; Duration 107
+106, America, OP_RAPID_RESPONSE, 2454, Initial stage is recruiting
+106, America, OP_RAPID_RESPONSE, 2454, Found 1 potential units to recruit for operation 2454 at (57:31) with target at (57:31)
+106, America, OP_RAPID_RESPONSE, 2454, Added Swordsman 2063 to slot 0 in army 2455. ETA at (57:31) is 1 
+106, America, OP_RAPID_RESPONSE, 2454, Started Army 2455; Units Recruited 1; Max Formation Size 4; Recruiting Units
+106, America, OP_RAPID_RESPONSE, 2454, PRE Recruiting Units for army 2455; Swordsman 2063 at (57:36) - ETA 1; Open; Open; Open; 
+106, America, OP_RAPID_RESPONSE, 2454, Found 0 potential units to recruit for operation 2454 at (57:31) with target at (57:31)
+106, America, OP_RAPID_RESPONSE, 2454, POST Recruiting Units for army 2455; Swordsman 2063 at (56:35) - ETA 1; Open; Open; Open; 
+107, India, OP_FOUND_CITY, 2470, Ended: NoTarget; Distance -1; Duration 108
+107, The_Iroquois, OP_FOUND_CITY, 2475, Ended: NoTarget; Distance -1; Duration 108
+107, The_Iroquois, OP_FOUND_CITY, 2476, Ended: NoTarget; Distance -1; Duration 108
+107, Arabia, OP_FOUND_CITY, 2477, Ended: NoTarget; Distance -1; Duration 108
+107, Germany, OP_FOUND_CITY, 2480, Ended: NoTarget; Distance -1; Duration 108
+107, China, OP_RAPID_RESPONSE, 2445, PRE Recruiting Units for army 2446; Swordsman 2398 at (49:23) - ETA 2; Open; Open; Open; 
+107, China, OP_RAPID_RESPONSE, 2445, Found 0 potential units to recruit for operation 2445 at (59:27) with target at (57:31)
+107, China, OP_RAPID_RESPONSE, 2445, Removing Swordsman 2398 from army 2446 because no progress to checkpoint (59:27). ETA 2; prev 2; prev 2
+107, China, OP_RAPID_RESPONSE, 2445, Ended: LostPath; Distance 6; Duration 1
+107, America, OP_FOUND_CITY, 2493, Ended: NoTarget; Distance -1; Duration 108
+107, America, OP_RAPID_RESPONSE, 2454, PRE Recruiting Units for army 2455; Swordsman 2063 at (56:35) - ETA 1; Open; Open; Open; 
+107, America, OP_RAPID_RESPONSE, 2454, Found 0 potential units to recruit for operation 2454 at (57:31) with target at (57:31)
+107, America, OP_RAPID_RESPONSE, 2454, POST Recruiting Units for army 2455; Swordsman 2063 at (56:34) - ETA 1; Open; Open; Open; 
+108, India, OP_FOUND_CITY, 2502, Ended: NoTarget; Distance -1; Duration 109
+108, The_Iroquois, OP_FOUND_CITY, 2508, Ended: NoTarget; Distance -1; Duration 109
+108, The_Iroquois, OP_FOUND_CITY, 2509, Ended: NoTarget; Distance -1; Duration 109
+108, Arabia, OP_FOUND_CITY, 2511, Ended: NoTarget; Distance -1; Duration 109
+108, Germany, OP_FOUND_CITY, 2514, Ended: NoTarget; Distance -1; Duration 109
+108, China, OP_RAPID_RESPONSE, 2516, Initial stage is recruiting
+108, China, OP_RAPID_RESPONSE, 2516, Found 1 potential units to recruit for operation 2516 at (54:28) with target at (53:32)
+108, China, OP_RAPID_RESPONSE, 2516, Added Swordsman 2398 to slot 0 in army 2517. ETA at (54:28) is 0 
+108, China, OP_RAPID_RESPONSE, 2516, Started Army 2517; Units Recruited 1; Max Formation Size 4; Recruiting Units
+108, China, OP_RAPID_RESPONSE, 2516, PRE Recruiting Units for army 2517; Swordsman 2398 at (53:24) - ETA 0; Open; Open; Open; 
+108, China, OP_RAPID_RESPONSE, 2516, Found 0 potential units to recruit for operation 2516 at (54:28) with target at (53:32)
+108, China, OP_RAPID_RESPONSE, 2516, POST Recruiting Units for army 2517; Swordsman 2398 at (55:25) - ETA 0; Open; Open; Open; 
+108, America, OP_FOUND_CITY, 2523, Ended: NoTarget; Distance -1; Duration 109
+108, America, OP_RAPID_RESPONSE, 2524, Initial stage is recruiting
+108, America, OP_RAPID_RESPONSE, 2524, Found 2 potential units to recruit for operation 2524 at (53:32) with target at (54:28)
+108, America, OP_RAPID_RESPONSE, 2524, Added Spearman 2324 to slot 0 in army 2525. ETA at (53:32) is 0 
+108, America, OP_RAPID_RESPONSE, 2524, Added Spearman 2347 to slot 1 in army 2525. ETA at (53:32) is 0 
+108, America, OP_RAPID_RESPONSE, 2524, Transition to gathering stage
+108, America, OP_RAPID_RESPONSE, 2524, Transition to movement stage
+108, America, OP_RAPID_RESPONSE, 2524, Started Army 2525; Units Recruited 2; Max Formation Size 4; Moving To Target
+108, America, OP_RAPID_RESPONSE, 2454, Ended: NoTarget; Distance 1; Duration 2
+108, America, OP_RAPID_RESPONSE, 2524, PRE Moving To Target with Army 2525; center (57:31); target (54:28); Progress 0 percent
+108, America, OP_RAPID_RESPONSE, 2524, POST Moving To Target with Army 2525; center (54:32); target (54:28); Progress 29 percent
+109, India, OP_FOUND_CITY, 2533, Ended: NoTarget; Distance -1; Duration 110
+109, The_Iroquois, OP_FOUND_CITY, 2538, Ended: NoTarget; Distance -1; Duration 110
+109, The_Iroquois, OP_FOUND_CITY, 2539, Ended: NoTarget; Distance -1; Duration 110
+109, Arabia, OP_FOUND_CITY, 2540, Ended: NoTarget; Distance -1; Duration 110
+109, Germany, OP_FOUND_CITY, 2543, Ended: NoTarget; Distance -1; Duration 110
+109, China, OP_RAPID_RESPONSE, 2516, PRE Recruiting Units for army 2517; Swordsman 2398 at (55:25) - ETA 0; Open; Open; Open; 
+109, China, OP_RAPID_RESPONSE, 2516, Found 0 potential units to recruit for operation 2516 at (54:28) with target at (53:32)
+109, China, OP_RAPID_RESPONSE, 2516, POST Recruiting Units for army 2517; Swordsman 2398 at (53:29) - ETA 0; Open; Open; Open; 
+109, America, OP_FOUND_CITY, 2551, Ended: NoTarget; Distance -1; Duration 110
+109, America, OP_RAPID_RESPONSE, 2524, PRE Moving To Target with Army 2525; center (54:32); target (54:28); Progress 29 percent
+109, America, OP_RAPID_RESPONSE, 2524, Transition to finished stage; unit distance near 3; far 4
+109, America, OP_RAPID_RESPONSE, 2524, POST Completed
+110, India, OP_FOUND_CITY, 2562, Ended: NoTarget; Distance -1; Duration 111
+110, The_Iroquois, OP_FOUND_CITY, 2567, Ended: NoTarget; Distance -1; Duration 111
+110, The_Iroquois, OP_FOUND_CITY, 2568, Ended: NoTarget; Distance -1; Duration 111
+110, Arabia, OP_FOUND_CITY, 2571, Ended: NoTarget; Distance -1; Duration 111
+110, Germany, OP_FOUND_CITY, 2575, Ended: NoTarget; Distance -1; Duration 111
+110, China, OP_FOUND_CITY, 2577, Ended: NoTarget; Distance -1; Duration 111
+110, China, OP_RAPID_RESPONSE, 2516, PRE Recruiting Units for army 2517; Swordsman 2398 at (53:29) - ETA 0; Open; Open; Open; 
+110, China, OP_RAPID_RESPONSE, 2516, Found 0 potential units to recruit for operation 2516 at (54:28) with target at (53:32)
+110, China, OP_RAPID_RESPONSE, 2516, POST Recruiting Units for army 2517; Swordsman 2398 at (53:29) - ETA 0; Open; Open; Open; 
+110, America, OP_FOUND_CITY, 2584, Ended: NoTarget; Distance -1; Duration 111
+110, America, OP_RAPID_RESPONSE, 2524, Ended: Success; Distance 7; Duration 2
+111, India, OP_FOUND_CITY, 2592, Ended: NoTarget; Distance -1; Duration 112
+111, The_Iroquois, OP_FOUND_CITY, 2596, Ended: NoTarget; Distance -1; Duration 112
+111, The_Iroquois, OP_FOUND_CITY, 2597, Ended: NoTarget; Distance -1; Duration 112
+111, Arabia, OP_FOUND_CITY, 2598, Ended: NoTarget; Distance -1; Duration 112
+111, Germany, OP_FOUND_CITY, 2602, Ended: NoTarget; Distance -1; Duration 112
+111, China, OP_FOUND_CITY, 2605, Ended: NoTarget; Distance -1; Duration 112
+111, China, OP_RAPID_RESPONSE, 2516, Ended: NoTarget; Distance 6; Duration 3
+111, America, OP_FOUND_CITY, 2611, Ended: NoTarget; Distance -1; Duration 112
+112, India, OP_FOUND_CITY, 2624, Ended: NoTarget; Distance -1; Duration 113
+112, The_Iroquois, OP_FOUND_CITY, 2628, Ended: NoTarget; Distance -1; Duration 113
+112, The_Iroquois, OP_FOUND_CITY, 2629, Ended: NoTarget; Distance -1; Duration 113
+112, Arabia, OP_FOUND_CITY, 2631, Ended: NoTarget; Distance -1; Duration 113
+112, Germany, OP_FOUND_CITY, 2634, Ended: NoTarget; Distance -1; Duration 113
+112, China, OP_FOUND_CITY, 2635, Ended: NoTarget; Distance -1; Duration 113
+112, America, OP_FOUND_CITY, 2642, Ended: NoTarget; Distance -1; Duration 113
+113, India, OP_FOUND_CITY, 2650, Ended: NoTarget; Distance -1; Duration 114
+113, The_Iroquois, OP_FOUND_CITY, 2655, Ended: NoTarget; Distance -1; Duration 114
+113, The_Iroquois, OP_FOUND_CITY, 2656, Ended: NoTarget; Distance -1; Duration 114
+113, Arabia, OP_FOUND_CITY, 2657, Ended: NoTarget; Distance -1; Duration 114
+113, Germany, OP_FOUND_CITY, 2660, Ended: NoTarget; Distance -1; Duration 114
+113, China, OP_FOUND_CITY, 2664, Ended: NoTarget; Distance -1; Duration 114
+113, America, OP_FOUND_CITY, 2671, Ended: NoTarget; Distance -1; Duration 114
+114, India, OP_FOUND_CITY, 2679, Ended: NoTarget; Distance -1; Duration 115
+114, The_Iroquois, OP_FOUND_CITY, 2683, Ended: NoTarget; Distance -1; Duration 115
+114, The_Iroquois, OP_FOUND_CITY, 2684, Ended: NoTarget; Distance -1; Duration 115
+114, Arabia, OP_FOUND_CITY, 2685, Ended: NoTarget; Distance -1; Duration 115
+114, Germany, OP_FOUND_CITY, 2688, Ended: NoTarget; Distance -1; Duration 115
+114, Carthage, OP_FOUND_CITY, 2689, found target for settler, score 126252 (q50)
+114, Carthage, OP_FOUND_CITY, 2689, Initial stage is recruiting
+114, Carthage, OP_FOUND_CITY, 2689, Found 3 potential units to recruit for operation 2689 at (25:34) with target at (18:40)
+114, Carthage, OP_FOUND_CITY, 2689, Added Spearman 2037 to slot 1 in army 2690. ETA at (25:34) is 0 
+114, Carthage, OP_FOUND_CITY, 2689, Transition to gathering stage
+114, Carthage, OP_FOUND_CITY, 2689, Transition to movement stage
+114, Carthage, OP_FOUND_CITY, 2689, Started Army 2690; Units Recruited 2; Max Formation Size 2; Moving To Target
+114, Carthage, OP_FOUND_CITY, 2689, PRE Moving To Target with Army 2690; center (25:34); target (18:40); Progress 100 percent
+114, Carthage, OP_FOUND_CITY, 2689, POST Moving To Target with Army 2690; center (24:34); target (18:40); Progress 100 percent
+114, China, OP_FOUND_CITY, 2691, Ended: NoTarget; Distance -1; Duration 115
+114, America, OP_FOUND_CITY, 2697, Ended: NoTarget; Distance -1; Duration 115
+115, India, OP_FOUND_CITY, 2705, Ended: NoTarget; Distance -1; Duration 116
+115, The_Iroquois, OP_FOUND_CITY, 2711, Ended: NoTarget; Distance -1; Duration 116
+115, The_Iroquois, OP_FOUND_CITY, 2712, Ended: NoTarget; Distance -1; Duration 116
+115, Arabia, OP_FOUND_CITY, 2713, Ended: NoTarget; Distance -1; Duration 116
+115, Germany, OP_FOUND_CITY, 2716, Ended: NoTarget; Distance -1; Duration 116
+115, Carthage, OP_FOUND_CITY, 2689, PRE Moving To Target with Army 2690; center (24:34); target (18:40); Progress 100 percent
+115, Carthage, OP_FOUND_CITY, 2689, POST Moving To Target with Army 2690; center (23:34); target (18:40); Progress 100 percent
+115, America, OP_FOUND_CITY, 2726, Ended: NoTarget; Distance -1; Duration 116
+116, India, OP_FOUND_CITY, 2734, Ended: NoTarget; Distance -1; Duration 117
+116, The_Iroquois, OP_FOUND_CITY, 2738, Ended: NoTarget; Distance -1; Duration 117
+116, The_Iroquois, OP_FOUND_CITY, 2739, Ended: NoTarget; Distance -1; Duration 117
+116, Arabia, OP_FOUND_CITY, 2740, Ended: NoTarget; Distance -1; Duration 117
+116, Germany, OP_FOUND_CITY, 2743, Ended: NoTarget; Distance -1; Duration 117
+116, Germany, OP_RAPID_RESPONSE, 2744, Initial stage is recruiting
+116, Germany, OP_RAPID_RESPONSE, 2744, Found 1 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+116, Germany, OP_RAPID_RESPONSE, 2744, Added Swordsman 2171 to slot 0 in army 2745. ETA at (52:15) is 8 
+116, Germany, OP_RAPID_RESPONSE, 2744, Started Army 2745; Units Recruited 1; Max Formation Size 4; Recruiting Units
+116, Germany, OP_RAPID_RESPONSE, 2744, PRE Recruiting Units for army 2745; Swordsman 2171 at (39:19) - ETA 8; Open; Open; Open; 
+116, Germany, OP_RAPID_RESPONSE, 2744, Found 0 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+116, Germany, OP_RAPID_RESPONSE, 2744, POST Recruiting Units for army 2745; Swordsman 2171 at (39:18) - ETA 8; Open; Open; Open; 
+116, Carthage, OP_FOUND_CITY, 2689, PRE Moving To Target with Army 2690; center (23:34); target (18:40); Progress 100 percent
+116, Carthage, OP_FOUND_CITY, 2689, POST Moving To Target with Army 2690; center (21:35); target (18:40); Progress 100 percent
+116, America, OP_FOUND_CITY, 2755, Ended: NoTarget; Distance -1; Duration 117
+116, America, OP_CITY_ATTACK_LAND, 2756, Initial stage is recruiting
+116, America, OP_CITY_ATTACK_LAND, 2756, Found 4 potential units to recruit for operation 2756 at (57:31) with target at (59:27)
+116, America, OP_CITY_ATTACK_LAND, 2756, Added Swordsman 2063 to slot 0 in army 2757. ETA at (57:31) is 0 
+116, America, OP_CITY_ATTACK_LAND, 2756, Added Trebuchet 2733 to slot 3 in army 2757. ETA at (57:31) is 0 
+116, America, OP_CITY_ATTACK_LAND, 2756, Added Catapult 1861 to slot 4 in army 2757. ETA at (57:31) is 0 
+116, America, OP_CITY_ATTACK_LAND, 2756, Added Chariot Archer 2095 to slot 5 in army 2757. ETA at (57:31) is 1 
+116, America, OP_CITY_ATTACK_LAND, 2756, SiegeConcentrate: 4 in the army, 1 at the siege, 6 wanted, waiting
+116, America, OP_CITY_ATTACK_LAND, 2756, Started Army 2757; Units Recruited 4; Max Formation Size 10; Recruiting Units
+116, America, OP_CITY_ATTACK_LAND, 2756, PRE Recruiting Units for army 2757; Swordsman 2063 at (53:32) - ETA 0; Open; Open; Trebuchet 2733 at (56:31) - ETA 0; Catapult 1861 at (57:31) - ETA 0; Chariot Archer 2095 at (60:37) - ETA 1; Open; Open; Open; Open; 
+116, America, OP_CITY_ATTACK_LAND, 2756, Found 0 potential units to recruit for operation 2756 at (57:31) with target at (59:27)
+116, America, OP_CITY_ATTACK_LAND, 2756, SiegeConcentrate: 4 in the army, 1 at the siege, 6 wanted, waiting
+116, America, OP_CITY_ATTACK_LAND, 2756, POST Recruiting Units for army 2757; Swordsman 2063 at (55:31) - ETA 0; Open; Open; Trebuchet 2733 at (57:32) - ETA 0; Catapult 1861 at (57:31) - ETA 0; Chariot Archer 2095 at (58:34) - ETA 1; Open; Open; Open; Open; 
+117, India, OP_FOUND_CITY, 2762, Ended: NoTarget; Distance -1; Duration 118
+117, The_Iroquois, OP_FOUND_CITY, 2767, Ended: NoTarget; Distance -1; Duration 118
+117, The_Iroquois, OP_FOUND_CITY, 2768, Ended: NoTarget; Distance -1; Duration 118
+117, Arabia, OP_FOUND_CITY, 2769, Ended: NoTarget; Distance -1; Duration 118
+117, Germany, OP_FOUND_CITY, 2774, Ended: NoTarget; Distance -1; Duration 118
+117, Germany, OP_RAPID_RESPONSE, 2744, PRE Recruiting Units for army 2745; Swordsman 2171 at (39:18) - ETA 8; Open; Open; Open; 
+117, Germany, OP_RAPID_RESPONSE, 2744, Found 0 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+117, Germany, OP_RAPID_RESPONSE, 2744, POST Recruiting Units for army 2745; Swordsman 2171 at (39:16) - ETA 7; Open; Open; Open; 
+117, Carthage, OP_FOUND_CITY, 2689, PRE Moving To Target with Army 2690; center (21:35); target (18:40); Progress 100 percent
+117, Carthage, OP_FOUND_CITY, 2689, POST Moving To Target with Army 2690; center (20:36); target (18:40); Progress 100 percent
+117, America, OP_FOUND_CITY, 2781, Ended: NoTarget; Distance -1; Duration 118
+117, America, OP_CITY_ATTACK_LAND, 2756, PRE Recruiting Units for army 2757; Swordsman 2063 at (55:31) - ETA 0; Open; Open; Trebuchet 2733 at (57:32) - ETA 0; Catapult 1861 at (57:31) - ETA 0; Chariot Archer 2095 at (58:34) - ETA 1; Open; Open; Open; Open; 
+117, America, OP_CITY_ATTACK_LAND, 2756, Found 1 potential units to recruit for operation 2756 at (57:31) with target at (59:27)
+117, America, OP_CITY_ATTACK_LAND, 2756, Added Spearman 2347 to slot 1 in army 2757. ETA at (57:31) is 0 
+117, America, OP_CITY_ATTACK_LAND, 2756, SiegeConcentrate: 5 in the army, 1 at the siege, 6 wanted
+117, America, OP_CITY_ATTACK_LAND, 2756, SiegeRoll: target 4 tiles from the muster point, moving with 5 units
+117, America, OP_CITY_ATTACK_LAND, 2756, Transition to gathering stage
+117, America, OP_CITY_ATTACK_LAND, 2756, POST Gathering Forces for army 2757; center (57:31); variance (1.04:0.40); free slots 5
+118, India, OP_FOUND_CITY, 2783, Ended: NoTarget; Distance -1; Duration 119
+118, The_Iroquois, OP_FOUND_CITY, 2788, Ended: NoTarget; Distance -1; Duration 119
+118, The_Iroquois, OP_FOUND_CITY, 2789, Ended: NoTarget; Distance -1; Duration 119
+118, Arabia, OP_FOUND_CITY, 2790, Ended: NoTarget; Distance -1; Duration 119
+118, Germany, OP_FOUND_CITY, 2793, Ended: NoTarget; Distance -1; Duration 119
+118, Germany, OP_RAPID_RESPONSE, 2744, PRE Recruiting Units for army 2745; Swordsman 2171 at (39:16) - ETA 7; Open; Open; Open; 
+118, Germany, OP_RAPID_RESPONSE, 2744, Found 0 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+118, Germany, OP_RAPID_RESPONSE, 2744, POST Recruiting Units for army 2745; Swordsman 2171 at (39:15) - ETA 6; Open; Open; Open; 
+118, Carthage, OP_FOUND_CITY, 2689, PRE Moving To Target with Army 2690; center (20:36); target (18:40); Progress 100 percent
+118, Carthage, OP_FOUND_CITY, 2689, POST Moving To Target with Army 2690; center (20:36); target (18:40); Progress 100 percent
+118, America, OP_FOUND_CITY, 2801, Ended: NoTarget; Distance -1; Duration 119
+118, America, OP_CITY_ATTACK_LAND, 2756, PRE Gathering Forces for army 2757; center (57:31); variance (1.04:0.40); free slots 5
+118, America, OP_CITY_ATTACK_LAND, 2756, POST Gathering Forces for army 2757; center (55:31); variance (2.16:1.84); free slots 5
+119, India, OP_FOUND_CITY, 2805, Ended: NoTarget; Distance -1; Duration 120
+119, The_Iroquois, OP_FOUND_CITY, 2809, Ended: NoTarget; Distance -1; Duration 120
+119, The_Iroquois, OP_FOUND_CITY, 2810, Ended: NoTarget; Distance -1; Duration 120
+119, Arabia, OP_FOUND_CITY, 2811, Ended: NoTarget; Distance -1; Duration 120
+119, Germany, OP_FOUND_CITY, 2815, Ended: NoTarget; Distance -1; Duration 120
+119, Germany, OP_RAPID_RESPONSE, 2744, PRE Recruiting Units for army 2745; Swordsman 2171 at (39:15) - ETA 6; Open; Open; Open; 
+119, Germany, OP_RAPID_RESPONSE, 2744, Found 0 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+119, Germany, OP_RAPID_RESPONSE, 2744, POST Recruiting Units for army 2745; Swordsman 2171 at (41:14) - ETA 5; Open; Open; Open; 
+119, Carthage, OP_FOUND_CITY, 2689, PRE Moving To Target with Army 2690; center (20:36); target (18:40); Progress 100 percent
+119, Carthage, OP_FOUND_CITY, 2689, POST Moving To Target with Army 2690; center (19:38); target (18:40); Progress 100 percent
+119, America, OP_FOUND_CITY, 2823, Ended: NoTarget; Distance -1; Duration 120
+119, America, OP_CITY_ATTACK_LAND, 2756, PRE Gathering Forces for army 2757; center (55:31); variance (2.16:1.84); free slots 5
+119, America, OP_CITY_ATTACK_LAND, 2756, Transition to movement stage
+119, America, OP_CITY_ATTACK_LAND, 2756, POST Moving To Target with Army 2757; center (57:29); target (59:27); Progress 0 percent
+120, India, OP_FOUND_CITY, 2827, Ended: NoTarget; Distance -1; Duration 121
+120, The_Iroquois, OP_FOUND_CITY, 2830, Ended: NoTarget; Distance -1; Duration 121
+120, The_Iroquois, OP_FOUND_CITY, 2831, Ended: NoTarget; Distance -1; Duration 121
+120, Arabia, OP_FOUND_CITY, 2833, Ended: NoTarget; Distance -1; Duration 121
+120, Germany, OP_FOUND_CITY, 2837, Ended: NoTarget; Distance -1; Duration 121
+120, Germany, OP_RAPID_RESPONSE, 2744, PRE Recruiting Units for army 2745; Swordsman 2171 at (41:14) - ETA 5; Open; Open; Open; 
+120, Germany, OP_RAPID_RESPONSE, 2744, Found 0 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+120, Germany, OP_RAPID_RESPONSE, 2744, POST Recruiting Units for army 2745; Swordsman 2171 at (42:14) - ETA 4; Open; Open; Open; 
+120, Carthage, OP_FOUND_CITY, 2689, PRE Moving To Target with Army 2690; center (19:38); target (18:40); Progress 100 percent
+120, Carthage, OP_FOUND_CITY, 2689, Transition to target stage
+120, Carthage, OP_FOUND_CITY, 2689, POST At Target
+120, America, OP_FOUND_CITY, 2847, Ended: NoTarget; Distance -1; Duration 121
+120, America, OP_CITY_ATTACK_LAND, 2756, PRE Moving To Target with Army 2757; center (57:29); target (59:27); Progress 0 percent
+120, America, OP_CITY_ATTACK_LAND, 2756, Transition to finished stage; unit distance near 3; far 4
+120, America, OP_CITY_ATTACK_LAND, 2756, POST Completed
+121, India, OP_FOUND_CITY, 2850, Ended: NoTarget; Distance -1; Duration 122
+121, Poland, OP_FOUND_CITY, 2852, Ended: NoTarget; Distance -1; Duration 122
+121, The_Iroquois, OP_FOUND_CITY, 2855, Ended: NoTarget; Distance -1; Duration 122
+121, The_Iroquois, OP_FOUND_CITY, 2856, Ended: NoTarget; Distance -1; Duration 122
+121, Arabia, OP_FOUND_CITY, 2857, Ended: NoTarget; Distance -1; Duration 122
+121, Germany, OP_FOUND_CITY, 2860, Ended: NoTarget; Distance -1; Duration 122
+121, Germany, OP_RAPID_RESPONSE, 2744, PRE Recruiting Units for army 2745; Swordsman 2171 at (42:14) - ETA 4; Open; Open; Open; 
+121, Germany, OP_RAPID_RESPONSE, 2744, Found 0 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+121, Germany, OP_RAPID_RESPONSE, 2744, POST Recruiting Units for army 2745; Swordsman 2171 at (43:14) - ETA 3; Open; Open; Open; 
+121, Carthage, OP_FOUND_CITY, 2689, PRE At Target
+121, Carthage, OP_FOUND_CITY, 2689, City founded (Carthago Nova) at (18:40), plot value 127626, q50
+121, Carthage, OP_FOUND_CITY, 2689, Transition to finished stage
+121, Carthage, OP_FOUND_CITY, 2689, Ended: Success; Distance -1; Duration 7
+121, America, OP_FOUND_CITY, 2867, Ended: NoTarget; Distance -1; Duration 122
+121, America, OP_CITY_ATTACK_LAND, 2756, Ended: Success; Distance 4; Duration 5
+122, India, OP_FOUND_CITY, 2869, Ended: NoTarget; Distance -1; Duration 123
+122, Poland, OP_FOUND_CITY, 2872, Ended: NoTarget; Distance -1; Duration 123
+122, The_Iroquois, OP_FOUND_CITY, 2876, Ended: NoTarget; Distance -1; Duration 123
+122, The_Iroquois, OP_FOUND_CITY, 2877, Ended: NoTarget; Distance -1; Duration 123
+122, Arabia, OP_FOUND_CITY, 2878, Ended: NoTarget; Distance -1; Duration 123
+122, Germany, OP_FOUND_CITY, 2881, Ended: NoTarget; Distance -1; Duration 123
+122, Germany, OP_RAPID_RESPONSE, 2744, PRE Recruiting Units for army 2745; Swordsman 2171 at (43:14) - ETA 3; Open; Open; Open; 
+122, Germany, OP_RAPID_RESPONSE, 2744, Found 0 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+122, Germany, OP_RAPID_RESPONSE, 2744, POST Recruiting Units for army 2745; Swordsman 2171 at (43:15) - ETA 3; Open; Open; Open; 
+122, America, OP_FOUND_CITY, 2888, Ended: NoTarget; Distance -1; Duration 123
+123, India, OP_FOUND_CITY, 2894, Ended: NoTarget; Distance -1; Duration 124
+123, Poland, OP_FOUND_CITY, 2895, Ended: NoTarget; Distance -1; Duration 124
+123, The_Iroquois, OP_FOUND_CITY, 2899, Ended: NoTarget; Distance -1; Duration 124
+123, The_Iroquois, OP_FOUND_CITY, 2900, Ended: NoTarget; Distance -1; Duration 124
+123, Arabia, OP_FOUND_CITY, 2901, Ended: NoTarget; Distance -1; Duration 124
+123, Germany, OP_FOUND_CITY, 2906, Ended: NoTarget; Distance -1; Duration 124
+123, Germany, OP_RAPID_RESPONSE, 2744, PRE Recruiting Units for army 2745; Swordsman 2171 at (43:15) - ETA 3; Open; Open; Open; 
+123, Germany, OP_RAPID_RESPONSE, 2744, Found 0 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+123, Germany, OP_RAPID_RESPONSE, 2744, POST Recruiting Units for army 2745; Swordsman 2171 at (44:15) - ETA 2; Open; Open; Open; 
+123, America, OP_FOUND_CITY, 2913, Ended: NoTarget; Distance -1; Duration 124
+123, America, OP_RAPID_RESPONSE, 2914, Initial stage is recruiting
+123, America, OP_RAPID_RESPONSE, 2914, Found 1 potential units to recruit for operation 2914 at (53:32) with target at (54:28)
+123, America, OP_RAPID_RESPONSE, 2914, Added Spearman 2324 to slot 0 in army 2915. ETA at (53:32) is 0 
+123, America, OP_RAPID_RESPONSE, 2914, Started Army 2915; Units Recruited 1; Max Formation Size 4; Recruiting Units
+123, America, OP_RAPID_RESPONSE, 2914, PRE Recruiting Units for army 2915; Spearman 2324 at (57:31) - ETA 0; Open; Open; Open; 
+123, America, OP_RAPID_RESPONSE, 2914, Found 0 potential units to recruit for operation 2914 at (53:32) with target at (54:28)
+123, America, OP_RAPID_RESPONSE, 2914, POST Recruiting Units for army 2915; Spearman 2324 at (54:31) - ETA 0; Open; Open; Open; 
+124, India, OP_FOUND_CITY, 2924, Ended: NoTarget; Distance -1; Duration 125
+124, Poland, OP_FOUND_CITY, 2925, Ended: NoTarget; Distance -1; Duration 125
+124, The_Iroquois, OP_FOUND_CITY, 2930, Ended: NoTarget; Distance -1; Duration 125
+124, The_Iroquois, OP_FOUND_CITY, 2931, Ended: NoTarget; Distance -1; Duration 125
+124, Arabia, OP_FOUND_CITY, 2932, Ended: NoTarget; Distance -1; Duration 125
+124, Germany, OP_FOUND_CITY, 2936, Ended: NoTarget; Distance -1; Duration 125
+124, Germany, OP_RAPID_RESPONSE, 2744, PRE Recruiting Units for army 2745; Swordsman 2171 at (44:15) - ETA 2; Open; Open; Open; 
+124, Germany, OP_RAPID_RESPONSE, 2744, Found 1 potential units to recruit for operation 2744 at (52:15) with target at (52:15)
+124, Germany, OP_RAPID_RESPONSE, 2744, Added Pikeman 2937 to slot 1 in army 2745. ETA at (52:15) is 1 
+124, Germany, OP_RAPID_RESPONSE, 2744, Transition to gathering stage
+124, Germany, OP_RAPID_RESPONSE, 2744, POST Gathering Forces for army 2745; center (50:19); variance (2.25:2.25); free slots 2
+124, America, OP_FOUND_CITY, 2946, Ended: NoTarget; Distance -1; Duration 125
+124, America, OP_RAPID_RESPONSE, 2914, Ended: NoTarget; Distance 5; Duration 1
+125, India, OP_FOUND_CITY, 2953, Ended: NoTarget; Distance -1; Duration 126
+125, Poland, OP_FOUND_CITY, 2954, Ended: NoTarget; Distance -1; Duration 126
+125, The_Iroquois, OP_FOUND_CITY, 2959, Ended: NoTarget; Distance -1; Duration 126
+125, The_Iroquois, OP_FOUND_CITY, 2960, Ended: NoTarget; Distance -1; Duration 126
+125, Arabia, OP_FOUND_CITY, 2961, Ended: NoTarget; Distance -1; Duration 126
+125, Germany, OP_FOUND_CITY, 2968, Ended: NoTarget; Distance -1; Duration 126
+125, Germany, OP_RAPID_RESPONSE, 2744, PRE Gathering Forces for army 2745; center (50:19); variance (2.25:2.25); free slots 2
+125, Germany, OP_RAPID_RESPONSE, 2744, POST Gathering Forces for army 2745; center (50:16); variance (0.00:4.00); free slots 2
+125, America, OP_FOUND_CITY, 2982, Ended: NoTarget; Distance -1; Duration 126
+126, India, OP_FOUND_CITY, 2987, Ended: NoTarget; Distance -1; Duration 127
+126, Poland, OP_FOUND_CITY, 2988, Ended: NoTarget; Distance -1; Duration 127
+126, The_Iroquois, OP_FOUND_CITY, 2992, Ended: NoTarget; Distance -1; Duration 127
+126, The_Iroquois, OP_FOUND_CITY, 2993, Ended: NoTarget; Distance -1; Duration 127
+126, Arabia, OP_FOUND_CITY, 2994, Ended: NoTarget; Distance -1; Duration 127
+126, Germany, OP_FOUND_CITY, 2998, Ended: NoTarget; Distance -1; Duration 127
+126, Germany, OP_RAPID_RESPONSE, 2744, PRE Gathering Forces for army 2745; center (50:16); variance (0.00:4.00); free slots 2
+126, Germany, OP_RAPID_RESPONSE, 2744, POST Gathering Forces for army 2745; center (51:16); variance (0.25:4.00); free slots 2
+126, America, OP_FOUND_CITY, 3007, Ended: NoTarget; Distance -1; Duration 127
+127, India, OP_FOUND_CITY, 3081, Ended: NoTarget; Distance -1; Duration 128
+127, Poland, OP_FOUND_CITY, 3083, Ended: NoTarget; Distance -1; Duration 128
+127, The_Iroquois, OP_FOUND_CITY, 3087, Ended: NoTarget; Distance -1; Duration 128
+127, The_Iroquois, OP_FOUND_CITY, 3088, Ended: NoTarget; Distance -1; Duration 128
+127, Arabia, OP_FOUND_CITY, 3089, Ended: NoTarget; Distance -1; Duration 128
+127, Germany, OP_FOUND_CITY, 3094, Ended: NoTarget; Distance -1; Duration 128
+127, Germany, OP_RAPID_RESPONSE, 2744, PRE Gathering Forces for army 2745; center (51:16); variance (0.25:4.00); free slots 2
+127, Germany, OP_RAPID_RESPONSE, 2744, POST Gathering Forces for army 2745; center (50:20); variance (0.25:6.25); free slots 2
+127, America, OP_FOUND_CITY, 3102, Ended: NoTarget; Distance -1; Duration 128
+128, India, OP_FOUND_CITY, 3120, Ended: NoTarget; Distance -1; Duration 129
+128, Poland, OP_FOUND_CITY, 3121, Ended: NoTarget; Distance -1; Duration 129
+128, The_Iroquois, OP_FOUND_CITY, 3125, Ended: NoTarget; Distance -1; Duration 129
+128, The_Iroquois, OP_FOUND_CITY, 3126, Ended: NoTarget; Distance -1; Duration 129
+128, Arabia, OP_FOUND_CITY, 3127, Ended: NoTarget; Distance -1; Duration 129
+128, Germany, OP_FOUND_CITY, 3131, Ended: NoTarget; Distance -1; Duration 129
+128, Germany, OP_RAPID_RESPONSE, 2744, PRE Gathering Forces for army 2745; center (50:20); variance (0.25:6.25); free slots 2
+128, Germany, OP_RAPID_RESPONSE, 2744, POST Gathering Forces for army 2745; center (51:16); variance (0.25:4.00); free slots 2
+128, America, OP_FOUND_CITY, 3139, Ended: NoTarget; Distance -1; Duration 129
+129, India, OP_FOUND_CITY, 3149, Ended: NoTarget; Distance -1; Duration 130
+129, Poland, OP_FOUND_CITY, 3150, Ended: NoTarget; Distance -1; Duration 130
+129, The_Iroquois, OP_FOUND_CITY, 3154, Ended: NoTarget; Distance -1; Duration 130
+129, The_Iroquois, OP_FOUND_CITY, 3155, Ended: NoTarget; Distance -1; Duration 130
+129, Arabia, OP_FOUND_CITY, 3156, Ended: NoTarget; Distance -1; Duration 130
+129, Germany, OP_FOUND_CITY, 3159, Ended: NoTarget; Distance -1; Duration 130
+129, Germany, OP_RAPID_RESPONSE, 2744, PRE Gathering Forces for army 2745; center (51:16); variance (0.25:4.00); free slots 2
+129, Germany, OP_RAPID_RESPONSE, 2744, POST Gathering Forces for army 2745; center (50:20); variance (0.25:6.25); free slots 2
+129, America, OP_FOUND_CITY, 3168, Ended: NoTarget; Distance -1; Duration 130
+130, India, OP_FOUND_CITY, 3180, Ended: NoTarget; Distance -1; Duration 131
+130, Poland, OP_FOUND_CITY, 3182, Ended: NoTarget; Distance -1; Duration 131
+130, The_Iroquois, OP_FOUND_CITY, 3186, Ended: NoTarget; Distance -1; Duration 131
+130, The_Iroquois, OP_FOUND_CITY, 3187, Ended: NoTarget; Distance -1; Duration 131
+130, Arabia, OP_FOUND_CITY, 3188, Ended: NoTarget; Distance -1; Duration 131
+130, Germany, OP_FOUND_CITY, 3192, Ended: NoTarget; Distance -1; Duration 131
+130, Germany, OP_RAPID_RESPONSE, 2744, PRE Gathering Forces for army 2745; center (50:20); variance (0.25:6.25); free slots 2
+130, Germany, OP_RAPID_RESPONSE, 2744, POST Gathering Forces for army 2745; center (51:16); variance (0.25:4.00); free slots 2
+130, America, OP_FOUND_CITY, 3203, Ended: NoTarget; Distance -1; Duration 131
+130, America, OP_RAPID_RESPONSE, 3204, Initial stage is recruiting
+130, America, OP_RAPID_RESPONSE, 3204, Found 2 potential units to recruit for operation 3204 at (57:31) with target at (59:27)
+130, America, OP_RAPID_RESPONSE, 3204, Added Longswordsman 3108 to slot 0 in army 3205. ETA at (57:31) is 1 
+130, America, OP_RAPID_RESPONSE, 3204, Added Swordsman 1625 to slot 1 in army 3205. ETA at (57:31) is 0 
+130, America, OP_RAPID_RESPONSE, 3204, Transition to gathering stage
+130, America, OP_RAPID_RESPONSE, 3204, Started Army 3205; Units Recruited 2; Max Formation Size 4; Gathering Forces
+130, America, OP_RAPID_RESPONSE, 3204, PRE Gathering Forces for army 3205; center (56:41); variance (0.00:6.25); free slots 2
+130, America, OP_RAPID_RESPONSE, 3204, Transition to movement stage
+130, America, OP_RAPID_RESPONSE, 3204, POST Moving To Target with Army 3205; center (56:37); target (59:27); Progress 0 percent
+131, India, OP_FOUND_CITY, 3216, Ended: NoTarget; Distance -1; Duration 132
+131, Poland, OP_FOUND_CITY, 3218, Ended: NoTarget; Distance -1; Duration 132
+131, The_Iroquois, OP_FOUND_CITY, 3222, Ended: NoTarget; Distance -1; Duration 132
+131, The_Iroquois, OP_FOUND_CITY, 3223, Ended: NoTarget; Distance -1; Duration 132
+131, Arabia, OP_FOUND_CITY, 3225, Ended: NoTarget; Distance -1; Duration 132
+131, Germany, OP_FOUND_CITY, 3228, Ended: NoTarget; Distance -1; Duration 132
+131, Germany, OP_RAPID_RESPONSE, 2744, PRE Gathering Forces for army 2745; center (51:16); variance (0.25:4.00); free slots 2
+131, Germany, OP_RAPID_RESPONSE, 2744, POST Gathering Forces for army 2745; center (50:20); variance (0.25:6.25); free slots 2
+131, China, OP_RAPID_RESPONSE, 3229, Initial stage is recruiting
+131, China, OP_RAPID_RESPONSE, 3229, Found 1 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+131, China, OP_RAPID_RESPONSE, 3229, Added Longswordsman 2979 to slot 0 in army 3230. ETA at (59:27) is 0 
+131, China, OP_RAPID_RESPONSE, 3229, Started Army 3230; Units Recruited 1; Max Formation Size 4; Recruiting Units
+131, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (54:24) - ETA 0; Open; Open; Open; 
+131, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+131, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (56:24) - ETA 0; Open; Open; Open; 
+131, America, OP_FOUND_CITY, 3241, Ended: NoTarget; Distance -1; Duration 132
+131, America, OP_RAPID_RESPONSE, 3204, PRE Moving To Target with Army 3205; center (56:37); target (59:27); Progress 0 percent
+131, America, OP_RAPID_RESPONSE, 3204, POST Moving To Target with Army 3205; center (56:35); target (59:27); Progress 17 percent
+132, India, OP_FOUND_CITY, 3249, Ended: NoTarget; Distance -1; Duration 133
+132, Poland, OP_FOUND_CITY, 3250, Ended: NoTarget; Distance -1; Duration 133
+132, The_Iroquois, OP_FOUND_CITY, 3254, Ended: NoTarget; Distance -1; Duration 133
+132, The_Iroquois, OP_FOUND_CITY, 3255, Ended: NoTarget; Distance -1; Duration 133
+132, Arabia, OP_FOUND_CITY, 3256, Ended: NoTarget; Distance -1; Duration 133
+132, Germany, OP_FOUND_CITY, 3260, Ended: NoTarget; Distance -1; Duration 133
+132, Germany, OP_RAPID_RESPONSE, 2744, PRE Gathering Forces for army 2745; center (50:20); variance (0.25:6.25); free slots 2
+132, Germany, OP_RAPID_RESPONSE, 2744, Contact with enemy!
+132, Germany, OP_RAPID_RESPONSE, 2744, POST Gathering Forces for army 2745; center (51:14); variance (1.00:4.00); free slots 2
+132, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (56:24) - ETA 0; Open; Open; Open; 
+132, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+132, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (56:27) - ETA 0; Open; Open; Open; 
+132, America, OP_FOUND_CITY, 3270, Ended: NoTarget; Distance -1; Duration 133
+132, America, OP_RAPID_RESPONSE, 3204, PRE Moving To Target with Army 3205; center (56:35); target (59:27); Progress 17 percent
+132, America, OP_RAPID_RESPONSE, 3204, POST Moving To Target with Army 3205; center (56:36); target (59:27); Progress 9 percent
+133, India, OP_FOUND_CITY, 3276, Ended: NoTarget; Distance -1; Duration 134
+133, Poland, OP_FOUND_CITY, 3278, Ended: NoTarget; Distance -1; Duration 134
+133, The_Iroquois, OP_FOUND_CITY, 3282, Ended: NoTarget; Distance -1; Duration 134
+133, The_Iroquois, OP_FOUND_CITY, 3283, Ended: NoTarget; Distance -1; Duration 134
+133, Arabia, OP_FOUND_CITY, 3284, Ended: NoTarget; Distance -1; Duration 134
+133, Germany, OP_FOUND_CITY, 3288, Ended: NoTarget; Distance -1; Duration 134
+133, Germany, OP_RAPID_RESPONSE, 2744, PRE Gathering Forces for army 2745; center (51:14); variance (1.00:4.00); free slots 2
+133, Germany, OP_RAPID_RESPONSE, 2744, Transition to movement stage
+133, Germany, OP_RAPID_RESPONSE, 2744, POST Moving To Target with Army 2745; center (51:14); target (52:15); Progress 0 percent
+133, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (56:27) - ETA 0; Open; Open; Open; 
+133, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+133, China, OP_RAPID_RESPONSE, 3229, Contact with enemy!
+133, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (56:27) - ETA 0; Open; Open; Open; 
+133, America, OP_FOUND_CITY, 3297, Ended: NoTarget; Distance -1; Duration 134
+133, America, OP_RAPID_RESPONSE, 3204, PRE Moving To Target with Army 3205; center (56:36); target (59:27); Progress 9 percent
+133, America, OP_RAPID_RESPONSE, 3204, Ended: HalfStrength; Distance 12; Duration 3
+134, India, OP_FOUND_CITY, 3306, Ended: NoTarget; Distance -1; Duration 135
+134, Poland, OP_FOUND_CITY, 3309, Ended: NoTarget; Distance -1; Duration 135
+134, The_Iroquois, OP_FOUND_CITY, 3313, Ended: NoTarget; Distance -1; Duration 135
+134, The_Iroquois, OP_FOUND_CITY, 3314, Ended: NoTarget; Distance -1; Duration 135
+134, Arabia, OP_FOUND_CITY, 3315, Ended: NoTarget; Distance -1; Duration 135
+134, Germany, OP_FOUND_CITY, 3318, Ended: NoTarget; Distance -1; Duration 135
+134, Germany, OP_RAPID_RESPONSE, 2744, PRE Moving To Target with Army 2745; center (51:14); target (52:15); Progress 0 percent
+134, Germany, OP_RAPID_RESPONSE, 2744, Transition to finished stage; unit distance near 1; far 3
+134, Germany, OP_RAPID_RESPONSE, 2744, POST Completed
+134, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (56:27) - ETA 0; Open; Open; Open; 
+134, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+134, China, OP_RAPID_RESPONSE, 3229, Contact with enemy!
+134, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (56:27) - ETA 0; Open; Open; Open; 
+134, America, OP_FOUND_CITY, 3327, Ended: NoTarget; Distance -1; Duration 135
+134, America, OP_RAPID_RESPONSE, 3328, Initial stage is recruiting
+134, America, OP_RAPID_RESPONSE, 3328, Found 1 potential units to recruit for operation 3328 at (57:31) with target at (56:24)
+134, America, OP_RAPID_RESPONSE, 3328, Added Minuteman 3300 to slot 0 in army 3329. ETA at (57:31) is 0 
+134, America, OP_RAPID_RESPONSE, 3328, Started Army 3329; Units Recruited 1; Max Formation Size 4; Recruiting Units
+134, America, OP_RAPID_RESPONSE, 3328, PRE Recruiting Units for army 3329; Minuteman 3300 at (57:31) - ETA 0; Open; Open; Open; 
+134, America, OP_RAPID_RESPONSE, 3328, Found 0 potential units to recruit for operation 3328 at (57:31) with target at (56:24)
+134, America, OP_RAPID_RESPONSE, 3328, POST Recruiting Units for army 3329; Minuteman 3300 at (56:28) - ETA 0; Open; Open; Open; 
+135, India, OP_FOUND_CITY, 3338, Ended: NoTarget; Distance -1; Duration 136
+135, Poland, OP_FOUND_CITY, 3341, Ended: NoTarget; Distance -1; Duration 136
+135, The_Iroquois, OP_FOUND_CITY, 3346, Ended: NoTarget; Distance -1; Duration 136
+135, The_Iroquois, OP_FOUND_CITY, 3347, Ended: NoTarget; Distance -1; Duration 136
+135, Arabia, OP_FOUND_CITY, 3348, Ended: NoTarget; Distance -1; Duration 136
+135, Germany, OP_FOUND_CITY, 3351, Ended: NoTarget; Distance -1; Duration 136
+135, Germany, OP_RAPID_RESPONSE, 2744, Ended: Success; Distance 3; Duration 19
+135, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (56:27) - ETA 0; Open; Open; Open; 
+135, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+135, China, OP_RAPID_RESPONSE, 3229, Contact with enemy!
+135, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (56:27) - ETA 0; Open; Open; Open; 
+135, America, OP_FOUND_CITY, 3360, Ended: NoTarget; Distance -1; Duration 136
+135, America, OP_RAPID_RESPONSE, 3328, PRE Recruiting Units for army 3329; Minuteman 3300 at (56:28) - ETA 0; Open; Open; Open; 
+135, America, OP_RAPID_RESPONSE, 3328, Found 0 potential units to recruit for operation 3328 at (57:31) with target at (56:24)
+135, America, OP_RAPID_RESPONSE, 3328, POST Recruiting Units for army 3329; Minuteman 3300 at (56:28) - ETA 0; Open; Open; Open; 
+136, India, OP_FOUND_CITY, 3366, Ended: NoTarget; Distance -1; Duration 137
+136, Poland, OP_FOUND_CITY, 3369, Ended: NoTarget; Distance -1; Duration 137
+136, The_Iroquois, OP_FOUND_CITY, 3373, Ended: NoTarget; Distance -1; Duration 137
+136, The_Iroquois, OP_FOUND_CITY, 3374, Ended: NoTarget; Distance -1; Duration 137
+136, Arabia, OP_FOUND_CITY, 3375, Ended: NoTarget; Distance -1; Duration 137
+136, Germany, OP_FOUND_CITY, 3378, Ended: NoTarget; Distance -1; Duration 137
+136, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (56:27) - ETA 0; Open; Open; Open; 
+136, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+136, China, OP_RAPID_RESPONSE, 3229, Contact with enemy!
+136, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (57:28) - ETA 0; Open; Open; Open; 
+136, America, OP_FOUND_CITY, 3384, Ended: NoTarget; Distance -1; Duration 137
+136, America, OP_RAPID_RESPONSE, 3328, PRE Recruiting Units for army 3329; Minuteman 3300 at (56:28) - ETA 0; Open; Open; Open; 
+136, America, OP_RAPID_RESPONSE, 3328, Found 0 potential units to recruit for operation 3328 at (57:31) with target at (56:24)
+136, America, OP_RAPID_RESPONSE, 3328, Contact with enemy!
+136, America, OP_RAPID_RESPONSE, 3328, POST Recruiting Units for army 3329; Minuteman 3300 at (56:28) - ETA 0; Open; Open; Open; 
+137, India, OP_FOUND_CITY, 3387, Ended: NoTarget; Distance -1; Duration 138
+137, Poland, OP_FOUND_CITY, 3389, Ended: NoTarget; Distance -1; Duration 138
+137, The_Iroquois, OP_FOUND_CITY, 3393, Ended: NoTarget; Distance -1; Duration 138
+137, The_Iroquois, OP_FOUND_CITY, 3394, Ended: NoTarget; Distance -1; Duration 138
+137, Arabia, OP_FOUND_CITY, 3395, Ended: NoTarget; Distance -1; Duration 138
+137, Germany, OP_FOUND_CITY, 3399, Ended: NoTarget; Distance -1; Duration 138
+137, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (57:28) - ETA 0; Open; Open; Open; 
+137, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+137, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (58:28) - ETA 0; Open; Open; Open; 
+137, America, OP_FOUND_CITY, 3408, Ended: NoTarget; Distance -1; Duration 138
+137, America, OP_RAPID_RESPONSE, 3328, PRE Recruiting Units for army 3329; Minuteman 3300 at (56:28) - ETA 0; Open; Open; Open; 
+137, America, OP_RAPID_RESPONSE, 3328, Found 0 potential units to recruit for operation 3328 at (57:31) with target at (56:24)
+137, America, OP_RAPID_RESPONSE, 3328, POST Recruiting Units for army 3329; Minuteman 3300 at (57:28) - ETA -1; Open; Open; Open; 
+138, India, OP_FOUND_CITY, 3412, Ended: NoTarget; Distance -1; Duration 139
+138, Poland, OP_FOUND_CITY, 3414, Ended: NoTarget; Distance -1; Duration 139
+138, The_Iroquois, OP_FOUND_CITY, 3419, Ended: NoTarget; Distance -1; Duration 139
+138, The_Iroquois, OP_FOUND_CITY, 3420, Ended: NoTarget; Distance -1; Duration 139
+138, Arabia, OP_FOUND_CITY, 3421, Ended: NoTarget; Distance -1; Duration 139
+138, Germany, OP_FOUND_CITY, 3424, Ended: NoTarget; Distance -1; Duration 139
+138, China, OP_FOUND_CITY, 3428, Ended: NoTarget; Distance -1; Duration 139
+138, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (58:28) - ETA 0; Open; Open; Open; 
+138, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+138, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (58:28) - ETA 0; Open; Open; Open; 
+138, America, OP_FOUND_CITY, 3436, Ended: NoTarget; Distance -1; Duration 139
+138, America, OP_RAPID_RESPONSE, 3328, PRE Recruiting Units for army 3329; Minuteman 3300 at (57:28) - ETA -1; Open; Open; Open; 
+138, America, OP_RAPID_RESPONSE, 3328, Found 0 potential units to recruit for operation 3328 at (57:28) with target at (56:24)
+138, America, OP_RAPID_RESPONSE, 3328, Contact with enemy!
+138, America, OP_RAPID_RESPONSE, 3328, POST Recruiting Units for army 3329; Minuteman 3300 at (57:28) - ETA 0; Open; Open; Open; 
+139, India, OP_FOUND_CITY, 3440, Ended: NoTarget; Distance -1; Duration 140
+139, Poland, OP_FOUND_CITY, 3441, Ended: NoTarget; Distance -1; Duration 140
+139, The_Iroquois, OP_FOUND_CITY, 3445, Ended: NoTarget; Distance -1; Duration 140
+139, The_Iroquois, OP_FOUND_CITY, 3446, Ended: NoTarget; Distance -1; Duration 140
+139, Arabia, OP_FOUND_CITY, 3447, Ended: NoTarget; Distance -1; Duration 140
+139, Germany, OP_FOUND_CITY, 3450, Ended: NoTarget; Distance -1; Duration 140
+139, China, OP_FOUND_CITY, 3451, Ended: NoTarget; Distance -1; Duration 140
+139, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (58:28) - ETA 0; Open; Open; Open; 
+139, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+139, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (58:28) - ETA 0; Open; Open; Open; 
+139, America, OP_FOUND_CITY, 3460, Ended: NoTarget; Distance -1; Duration 140
+139, America, OP_RAPID_RESPONSE, 3328, PRE Recruiting Units for army 3329; Minuteman 3300 at (57:28) - ETA 0; Open; Open; Open; 
+139, America, OP_RAPID_RESPONSE, 3328, Found 0 potential units to recruit for operation 3328 at (57:28) with target at (56:24)
+139, America, OP_RAPID_RESPONSE, 3328, Contact with enemy!
+139, America, OP_RAPID_RESPONSE, 3328, POST Recruiting Units for army 3329; Minuteman 3300 at (57:28) - ETA 0; Open; Open; Open; 
+140, India, OP_FOUND_CITY, 3463, Ended: NoTarget; Distance -1; Duration 141
+140, Poland, OP_FOUND_CITY, 3467, Ended: NoTarget; Distance -1; Duration 141
+140, The_Iroquois, OP_FOUND_CITY, 3471, Ended: NoTarget; Distance -1; Duration 141
+140, The_Iroquois, OP_FOUND_CITY, 3472, Ended: NoTarget; Distance -1; Duration 141
+140, Arabia, OP_FOUND_CITY, 3474, Ended: NoTarget; Distance -1; Duration 141
+140, Germany, OP_FOUND_CITY, 3478, Ended: NoTarget; Distance -1; Duration 141
+140, China, OP_FOUND_CITY, 3481, Ended: NoTarget; Distance -1; Duration 141
+140, China, OP_RAPID_RESPONSE, 3229, PRE Recruiting Units for army 3230; Longswordsman 2979 at (58:28) - ETA 0; Open; Open; Open; 
+140, China, OP_RAPID_RESPONSE, 3229, Found 0 potential units to recruit for operation 3229 at (59:27) with target at (57:31)
+140, China, OP_RAPID_RESPONSE, 3229, Contact with enemy!
+140, China, OP_RAPID_RESPONSE, 3229, POST Recruiting Units for army 3230; Longswordsman 2979 at (59:26) - ETA 0; Open; Open; Open; 
+140, America, OP_FOUND_CITY, 3491, Ended: NoTarget; Distance -1; Duration 141
+140, America, OP_RAPID_RESPONSE, 3492, Initial stage is recruiting
+140, America, OP_RAPID_RESPONSE, 3492, Found 1 potential units to recruit for operation 3492 at (57:31) with target at (59:27)
+140, America, OP_RAPID_RESPONSE, 3492, Added Swordsman 2063 to slot 0 in army 3493. ETA at (57:31) is 0 
+140, America, OP_RAPID_RESPONSE, 3492, Started Army 3493; Units Recruited 1; Max Formation Size 4; Recruiting Units
+140, America, OP_RAPID_RESPONSE, 3328, PRE Recruiting Units for army 3329; Minuteman 3300 at (57:28) - ETA 0; Open; Open; Open; 
+140, America, OP_RAPID_RESPONSE, 3328, Found 0 potential units to recruit for operation 3328 at (57:28) with target at (56:24)
+140, America, OP_RAPID_RESPONSE, 3328, POST Recruiting Units for army 3329; Minuteman 3300 at (57:28) - ETA 0; Open; Open; Open; 
+140, America, OP_RAPID_RESPONSE, 3492, PRE Recruiting Units for army 3493; Swordsman 2063 at (53:32) - ETA 0; Open; Open; Open; 
+140, America, OP_RAPID_RESPONSE, 3492, Found 0 potential units to recruit for operation 3492 at (57:31) with target at (59:27)
+140, America, OP_RAPID_RESPONSE, 3492, POST Recruiting Units for army 3493; Swordsman 2063 at (54:31) - ETA 0; Open; Open; Open; 
+141, India, OP_FOUND_CITY, 3497, Ended: NoTarget; Distance -1; Duration 142
+141, Poland, OP_FOUND_CITY, 3499, Ended: NoTarget; Distance -1; Duration 142
+141, The_Iroquois, OP_FOUND_CITY, 3505, Ended: NoTarget; Distance -1; Duration 142
+141, The_Iroquois, OP_FOUND_CITY, 3506, Ended: NoTarget; Distance -1; Duration 142
+141, Arabia, OP_FOUND_CITY, 3507, Ended: NoTarget; Distance -1; Duration 142
+141, Germany, OP_FOUND_CITY, 3510, Ended: NoTarget; Distance -1; Duration 142
+141, China, OP_FOUND_CITY, 3511, Ended: NoTarget; Distance -1; Duration 142
+141, China, OP_RAPID_RESPONSE, 3229, Ended: WarStateChange; Distance 6; Duration 10
+141, America, OP_FOUND_CITY, 3515, Ended: NoTarget; Distance -1; Duration 142
+141, America, OP_RAPID_RESPONSE, 3328, Ended: WarStateChange; Distance 5; Duration 7
+141, America, OP_RAPID_RESPONSE, 3492, Ended: WarStateChange; Distance 6; Duration 1
+142, India, OP_FOUND_CITY, 3518, Ended: NoTarget; Distance -1; Duration 143
+142, Poland, OP_FOUND_CITY, 3520, Ended: NoTarget; Distance -1; Duration 143
+142, The_Iroquois, OP_FOUND_CITY, 3522, Ended: NoTarget; Distance -1; Duration 143
+142, The_Iroquois, OP_FOUND_CITY, 3523, Ended: NoTarget; Distance -1; Duration 143
+142, Arabia, OP_FOUND_CITY, 3525, Ended: NoTarget; Distance -1; Duration 143
+142, Germany, OP_FOUND_CITY, 3528, Ended: NoTarget; Distance -1; Duration 143
+142, China, OP_FOUND_CITY, 3534, Ended: NoTarget; Distance -1; Duration 143
+142, America, OP_FOUND_CITY, 3536, Ended: NoTarget; Distance -1; Duration 143
+143, India, OP_FOUND_CITY, 3540, Ended: NoTarget; Distance -1; Duration 144
+143, Poland, OP_FOUND_CITY, 3542, Ended: NoTarget; Distance -1; Duration 144
+143, The_Iroquois, OP_FOUND_CITY, 3543, Ended: NoTarget; Distance -1; Duration 144
+143, The_Iroquois, OP_FOUND_CITY, 3544, Ended: NoTarget; Distance -1; Duration 144
+143, Arabia, OP_FOUND_CITY, 3548, Ended: NoTarget; Distance -1; Duration 144
+143, Germany, OP_FOUND_CITY, 3551, Ended: NoTarget; Distance -1; Duration 144
+143, Carthage, OP_FOUND_CITY, 3553, found target for settler, score 121131 (q50)
+143, Carthage, OP_FOUND_CITY, 3553, Initial stage is recruiting
+143, Carthage, OP_FOUND_CITY, 3553, Found 1 potential units to recruit for operation 3553 at (28:38) with target at (13:39)
+143, Carthage, OP_FOUND_CITY, 3553, Added Swordsman 3479 to slot 1 in army 3554. ETA at (28:38) is 3 
+143, Carthage, OP_FOUND_CITY, 3553, Transition to gathering stage
+143, Carthage, OP_FOUND_CITY, 3553, Started Army 3554; Units Recruited 2; Max Formation Size 2; Gathering Forces
+143, Carthage, OP_FOUND_CITY, 3553, PRE Gathering Forces for army 3554; center (28:38); variance (4.00:20.25); free slots 0
+143, Carthage, OP_FOUND_CITY, 3553, POST Gathering Forces for army 3554; center (28:38); variance (4.00:12.25); free slots 0
+143, China, OP_FOUND_CITY, 3557, Ended: NoTarget; Distance -1; Duration 144
+143, America, OP_FOUND_CITY, 3559, Ended: NoTarget; Distance -1; Duration 144
+144, Germany, OP_RAPID_RESPONSE, 3562, Initial stage is recruiting
+144, Germany, OP_RAPID_RESPONSE, 3562, Found 2 potential units to recruit for operation 3562 at (50:20) with target at (50:20)
+144, Germany, OP_RAPID_RESPONSE, 3562, Added Pikeman 2937 to slot 0 in army 3563. ETA at (50:20) is 1 
+144, Germany, OP_RAPID_RESPONSE, 3562, Added Swordsman 2171 to slot 1 in army 3563. ETA at (50:20) is 0 
+144, Germany, OP_RAPID_RESPONSE, 3562, Transition to gathering stage
+144, Germany, OP_RAPID_RESPONSE, 3562, Started Army 3563; Units Recruited 2; Max Formation Size 4; Gathering Forces
+144, India, OP_FOUND_CITY, 3567, Ended: NoTarget; Distance -1; Duration 145
+144, Poland, OP_FOUND_CITY, 3570, Ended: NoTarget; Distance -1; Duration 145
+144, The_Iroquois, OP_FOUND_CITY, 3574, Ended: NoTarget; Distance -1; Duration 145
+144, The_Iroquois, OP_FOUND_CITY, 3575, Ended: NoTarget; Distance -1; Duration 145
+144, Arabia, OP_FOUND_CITY, 3576, Ended: NoTarget; Distance -1; Duration 145
+144, Germany, OP_FOUND_CITY, 3577, Ended: NoTarget; Distance -1; Duration 145
+144, Germany, OP_RAPID_RESPONSE, 3562, Ended: NoTarget; Distance 1; Duration 0
+144, Carthage, OP_FOUND_CITY, 3553, PRE Gathering Forces for army 3554; center (28:38); variance (4.00:12.25); free slots 0
+144, Carthage, OP_FOUND_CITY, 3553, POST Gathering Forces for army 3554; center (28:38); variance (2.25:6.25); free slots 0
+144, China, OP_FOUND_CITY, 3583, found target for settler, score 56338 (q-11)
+144, China, OP_FOUND_CITY, 3583, Initial stage is recruiting
+144, China, OP_FOUND_CITY, 3583, Found 1 potential units to recruit for operation 3583 at (51:24) with target at (61:33)
+144, China, OP_FOUND_CITY, 3583, Added Spearman 2670 to slot 1 in army 3584. ETA at (51:24) is 0 
+144, China, OP_FOUND_CITY, 3583, Transition to gathering stage
+144, China, OP_FOUND_CITY, 3583, Transition to movement stage
+144, China, OP_FOUND_CITY, 3583, Started Army 3584; Units Recruited 2; Max Formation Size 2; Moving To Target
+144, China, OP_FOUND_CITY, 3583, PRE Moving To Target with Army 3584; center (52:24); target (61:33); Progress 100 percent
+144, China, OP_FOUND_CITY, 3583, POST Moving To Target with Army 3584; center (55:26); target (61:33); Progress 100 percent
+144, America, OP_FOUND_CITY, 3590, Ended: NoTarget; Distance -1; Duration 145
+145, India, OP_FOUND_CITY, 3594, Ended: NoTarget; Distance -1; Duration 146
+145, Poland, OP_FOUND_CITY, 3596, Ended: NoTarget; Distance -1; Duration 146
+145, The_Iroquois, OP_FOUND_CITY, 3599, Ended: NoTarget; Distance -1; Duration 146
+145, The_Iroquois, OP_FOUND_CITY, 3600, Ended: NoTarget; Distance -1; Duration 146
+145, Arabia, OP_FOUND_CITY, 3602, Ended: NoTarget; Distance -1; Duration 146
+145, Germany, OP_FOUND_CITY, 3605, Ended: NoTarget; Distance -1; Duration 146
+145, Carthage, OP_FOUND_CITY, 3553, PRE Gathering Forces for army 3554; center (28:38); variance (2.25:6.25); free slots 0
+145, Carthage, OP_FOUND_CITY, 3553, Transition to movement stage
+145, Carthage, OP_FOUND_CITY, 3553, POST Moving To Target with Army 3554; center (28:38); target (13:39); Progress 100 percent
+145, China, OP_FOUND_CITY, 3583, PRE Moving To Target with Army 3584; center (55:26); target (61:33); Progress 100 percent
+145, China, OP_FOUND_CITY, 3583, POST Moving To Target with Army 3584; center (54:30); target (61:33); Progress 100 percent
+145, America, OP_FOUND_CITY, 3617, Ended: NoTarget; Distance -1; Duration 146
+146, India, OP_FOUND_CITY, 3624, Ended: NoTarget; Distance -1; Duration 147
+146, Poland, OP_FOUND_CITY, 3625, Ended: NoTarget; Distance -1; Duration 147
+146, The_Iroquois, OP_FOUND_CITY, 3629, Ended: NoTarget; Distance -1; Duration 147
+146, The_Iroquois, OP_FOUND_CITY, 3630, Ended: NoTarget; Distance -1; Duration 147
+146, Arabia, OP_FOUND_CITY, 3632, Ended: NoTarget; Distance -1; Duration 147
+146, Germany, OP_FOUND_CITY, 3633, Ended: NoTarget; Distance -1; Duration 147
+146, Carthage, OP_FOUND_CITY, 3553, PRE Moving To Target with Army 3554; center (28:38); target (13:39); Progress 100 percent
+146, Carthage, OP_FOUND_CITY, 3553, POST Moving To Target with Army 3554; center (25:35); target (13:39); Progress 100 percent
+146, China, OP_FOUND_CITY, 3583, PRE Moving To Target with Army 3584; center (53:29); target (61:33); Progress 100 percent
+146, China, OP_FOUND_CITY, 3583, POST Moving To Target with Army 3584; center (58:27); target (61:33); Progress 100 percent
+146, America, OP_FOUND_CITY, 3645, Ended: NoTarget; Distance -1; Duration 147
+147, India, OP_FOUND_CITY, 3717, Ended: NoTarget; Distance -1; Duration 148
+147, Poland, OP_FOUND_CITY, 3718, Ended: NoTarget; Distance -1; Duration 148
+147, The_Iroquois, OP_FOUND_CITY, 3723, Ended: NoTarget; Distance -1; Duration 148
+147, The_Iroquois, OP_FOUND_CITY, 3724, Ended: NoTarget; Distance -1; Duration 148
+147, Arabia, OP_FOUND_CITY, 3726, Ended: NoTarget; Distance -1; Duration 148
+147, Germany, OP_FOUND_CITY, 3727, Ended: NoTarget; Distance -1; Duration 148
+147, Carthage, OP_FOUND_CITY, 3553, PRE Moving To Target with Army 3554; center (25:35); target (13:39); Progress 100 percent
+147, Carthage, OP_FOUND_CITY, 3553, POST Moving To Target with Army 3554; center (24:35); target (13:39); Progress 100 percent
+147, China, OP_FOUND_CITY, 3583, PRE Moving To Target with Army 3584; center (58:27); target (61:33); Progress 100 percent
+147, China, OP_FOUND_CITY, 3583, POST Moving To Target with Army 3584; center (60:25); target (61:33); Progress 100 percent
+147, America, OP_FOUND_CITY, 3738, Ended: NoTarget; Distance -1; Duration 148
+148, India, OP_FOUND_CITY, 3753, Ended: NoTarget; Distance -1; Duration 149
+148, Poland, OP_FOUND_CITY, 3754, Ended: NoTarget; Distance -1; Duration 149
+148, The_Iroquois, OP_FOUND_CITY, 3758, Ended: NoTarget; Distance -1; Duration 149
+148, The_Iroquois, OP_FOUND_CITY, 3759, Ended: NoTarget; Distance -1; Duration 149
+148, Arabia, OP_FOUND_CITY, 3761, Ended: NoTarget; Distance -1; Duration 149
+148, Germany, OP_FOUND_CITY, 3762, Ended: NoTarget; Distance -1; Duration 149
+148, Carthage, OP_FOUND_CITY, 3553, PRE Moving To Target with Army 3554; center (24:35); target (13:39); Progress 100 percent
+148, Carthage, OP_FOUND_CITY, 3553, POST Moving To Target with Army 3554; center (22:34); target (13:39); Progress 100 percent
+148, China, OP_FOUND_CITY, 3583, PRE Moving To Target with Army 3584; center (60:25); target (61:33); Progress 100 percent
+148, China, OP_FOUND_CITY, 3583, POST Moving To Target with Army 3584; center (61:25); target (61:33); Progress 100 percent
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Initial stage is recruiting
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Found 6 potential units to recruit for operation 3774 at (60:37) with target at (66:37)
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Added Minuteman 3300 to slot 0 in army 3775. ETA at (60:37) is 0 
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Added Minuteman 3620 to slot 1 in army 3775. ETA at (60:37) is 1 
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Added Swordsman 2063 to slot 2 in army 3775. ETA at (60:37) is 1 
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Added Chariot Archer 3646 to slot 3 in army 3775. ETA at (60:37) is 0 
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Added Chariot Archer 3739 to slot 4 in army 3775. ETA at (60:37) is 0 
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Added Mikhail Kutuzov (Great General) 3407 to slot 8 in army 3775. ETA at (60:37) is 1 
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Started Army 3775; Units Recruited 6; Max Formation Size 10; Recruiting Units
+148, America, OP_FOUND_CITY, 3777, Ended: NoTarget; Distance -1; Duration 149
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, PRE Recruiting Units for army 3775; Minuteman 3300 at (56:36) - ETA 0; Minuteman 3620 at (57:31) - ETA 1; Swordsman 2063 at (53:32) - ETA 1; Open; Chariot Archer 3739 at (56:41) - ETA 0; Open; Open; Open; Mikhail Kutuzov (Great General) 3407 at (57:31) - ETA 1; Open; 
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Found 1 potential units to recruit for operation 3774 at (60:37) with target at (66:37)
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Added Composite Bowman 3778 to slot 3 in army 3775. ETA at (60:37) is 0 
+148, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, POST Recruiting Units for army 3775; Minuteman 3300 at (56:36) - ETA 0; Minuteman 3620 at (56:35) - ETA 1; Swordsman 2063 at (55:35) - ETA 1; Composite Bowman 3778 at (56:37) - ETA 0; Chariot Archer 3739 at (57:37) - ETA 0; Open; Open; Open; Mikhail Kutuzov (Great General) 3407 at (56:34) - ETA 1; Open; 
+149, India, OP_FOUND_CITY, 3783, Ended: NoTarget; Distance -1; Duration 150
+149, Poland, OP_FOUND_CITY, 3784, Ended: NoTarget; Distance -1; Duration 150
+149, The_Iroquois, OP_FOUND_CITY, 3788, Ended: NoTarget; Distance -1; Duration 150
+149, The_Iroquois, OP_FOUND_CITY, 3789, Ended: NoTarget; Distance -1; Duration 150
+149, Arabia, OP_FOUND_CITY, 3791, Ended: NoTarget; Distance -1; Duration 150
+149, Germany, OP_FOUND_CITY, 3792, Ended: NoTarget; Distance -1; Duration 150
+149, Germany, OP_RAPID_RESPONSE, 3793, Initial stage is recruiting
+149, Germany, OP_RAPID_RESPONSE, 3793, Found 1 potential units to recruit for operation 3793 at (50:20) with target at (51:24)
+149, Germany, OP_RAPID_RESPONSE, 3793, Added Pikeman 2937 to slot 0 in army 3794. ETA at (50:20) is 1 
+149, Germany, OP_RAPID_RESPONSE, 3793, Started Army 3794; Units Recruited 1; Max Formation Size 4; Recruiting Units
+149, Germany, OP_RAPID_RESPONSE, 3793, PRE Recruiting Units for army 3794; Pikeman 2937 at (44:11) - ETA 1; Open; Open; Open; 
+149, Germany, OP_RAPID_RESPONSE, 3793, Found 1 potential units to recruit for operation 3793 at (50:20) with target at (51:24)
+149, Germany, OP_RAPID_RESPONSE, 3793, Added Pikeman 3795 to slot 1 in army 3794. ETA at (50:20) is 1 
+149, Germany, OP_RAPID_RESPONSE, 3793, Transition to gathering stage
+149, Germany, OP_RAPID_RESPONSE, 3793, POST Gathering Forces for army 3794; center (45:15); variance (0.00:0.25); free slots 2
+149, Carthage, OP_FOUND_CITY, 3553, PRE Moving To Target with Army 3554; center (22:34); target (13:39); Progress 100 percent
+149, Carthage, OP_FOUND_CITY, 3553, POST Moving To Target with Army 3554; center (18:35); target (13:39); Progress 100 percent
+149, China, OP_RAPID_RESPONSE, 3797, Initial stage is recruiting
+149, China, OP_RAPID_RESPONSE, 3797, Found 1 potential units to recruit for operation 3797 at (51:24) with target at (50:20)
+149, China, OP_RAPID_RESPONSE, 3797, Added Musketman 3799 to slot 0 in army 3798. ETA at (51:24) is 1 
+149, China, OP_RAPID_RESPONSE, 3797, Started Army 3798; Units Recruited 1; Max Formation Size 4; Recruiting Units
+149, China, OP_FOUND_CITY, 3583, PRE Moving To Target with Army 3584; center (61:25); target (61:33); Progress 100 percent
+149, China, OP_FOUND_CITY, 3583, POST Moving To Target with Army 3584; center (63:26); target (61:33); Progress 100 percent
+149, China, OP_RAPID_RESPONSE, 3797, PRE Recruiting Units for army 3798; Musketman 3799 at (54:27) - ETA 1; Open; Open; Open; 
+149, China, OP_RAPID_RESPONSE, 3797, Found 0 potential units to recruit for operation 3797 at (51:24) with target at (50:20)
+149, China, OP_RAPID_RESPONSE, 3797, POST Recruiting Units for army 3798; Musketman 3799 at (54:27) - ETA 1; Open; Open; Open; 
+149, America, OP_FOUND_CITY, 3809, Ended: NoTarget; Distance -1; Duration 150
+149, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, PRE Recruiting Units for army 3775; Minuteman 3300 at (56:36) - ETA 0; Minuteman 3620 at (56:35) - ETA 1; Swordsman 2063 at (55:35) - ETA 1; Composite Bowman 3778 at (56:37) - ETA 0; Chariot Archer 3739 at (57:37) - ETA 0; Open; Open; Open; Mikhail Kutuzov (Great General) 3407 at (56:34) - ETA 1; Open; 
+149, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Found 0 potential units to recruit for operation 3774 at (60:37) with target at (66:37)
+149, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, POST Recruiting Units for army 3775; Minuteman 3300 at (59:37) - ETA 0; Minuteman 3620 at (57:35) - ETA 1; Swordsman 2063 at (58:36) - ETA 0; Composite Bowman 3778 at (58:37) - ETA 0; Chariot Archer 3739 at (57:37) - ETA 0; Open; Open; Open; Mikhail Kutuzov (Great General) 3407 at (56:37) - ETA 1; Open; 
+150, India, OP_FOUND_CITY, 3822, Ended: NoTarget; Distance -1; Duration 151
+150, Poland, OP_FOUND_CITY, 3824, Ended: NoTarget; Distance -1; Duration 151
+150, The_Iroquois, OP_FOUND_CITY, 3828, Ended: NoTarget; Distance -1; Duration 151
+150, The_Iroquois, OP_FOUND_CITY, 3829, Ended: NoTarget; Distance -1; Duration 151
+150, Arabia, OP_FOUND_CITY, 3830, Ended: NoTarget; Distance -1; Duration 151
+150, Germany, OP_FOUND_CITY, 3831, Ended: NoTarget; Distance -1; Duration 151
+150, Germany, OP_RAPID_RESPONSE, 3793, PRE Gathering Forces for army 3794; center (45:15); variance (0.00:0.25); free slots 2
+150, Germany, OP_RAPID_RESPONSE, 3793, Transition to movement stage
+150, Germany, OP_RAPID_RESPONSE, 3793, POST Moving To Target with Army 3794; center (46:14); target (51:24); Progress 0 percent
+150, Carthage, OP_FOUND_CITY, 3553, PRE Moving To Target with Army 3554; center (18:35); target (13:39); Progress 100 percent
+150, Carthage, OP_FOUND_CITY, 3553, POST Moving To Target with Army 3554; center (16:39); target (13:39); Progress -300 percent
+150, China, OP_FOUND_CITY, 3583, PRE Moving To Target with Army 3584; center (63:26); target (61:33); Progress 100 percent
+150, China, OP_FOUND_CITY, 3583, POST Moving To Target with Army 3584; center (62:27); target (61:33); Progress 100 percent
+150, China, OP_RAPID_RESPONSE, 3797, PRE Recruiting Units for army 3798; Musketman 3799 at (54:27) - ETA 1; Open; Open; Open; 
+150, China, OP_RAPID_RESPONSE, 3797, Found 0 potential units to recruit for operation 3797 at (51:24) with target at (50:20)
+150, China, OP_RAPID_RESPONSE, 3797, POST Recruiting Units for army 3798; Musketman 3799 at (55:24) - ETA 0; Open; Open; Open; 
+150, America, OP_FOUND_CITY, 3843, Ended: NoTarget; Distance -1; Duration 151
+150, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, PRE Recruiting Units for army 3775; Minuteman 3300 at (59:37) - ETA 0; Minuteman 3620 at (57:35) - ETA 1; Swordsman 2063 at (58:36) - ETA 0; Composite Bowman 3778 at (58:37) - ETA 0; Chariot Archer 3739 at (57:37) - ETA 0; Open; Open; Open; Mikhail Kutuzov (Great General) 3407 at (56:37) - ETA 1; Open; 
+150, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Found 0 potential units to recruit for operation 3774 at (60:37) with target at (66:37)
+150, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, POST Recruiting Units for army 3775; Minuteman 3300 at (61:36) - ETA 0; Minuteman 3620 at (58:37) - ETA 0; Swordsman 2063 at (60:36) - ETA 0; Composite Bowman 3778 at (60:37) - ETA 0; Open; Open; Open; Open; Mikhail Kutuzov (Great General) 3407 at (59:37) - ETA 0; Open; 
+151, India, OP_FOUND_CITY, 3852, Ended: NoTarget; Distance -1; Duration 152
+151, Poland, OP_FOUND_CITY, 3853, Ended: NoTarget; Distance -1; Duration 152
+151, The_Iroquois, OP_FOUND_CITY, 3857, Ended: NoTarget; Distance -1; Duration 152
+151, The_Iroquois, OP_FOUND_CITY, 3858, Ended: NoTarget; Distance -1; Duration 152
+151, Arabia, OP_FOUND_CITY, 3859, Ended: NoTarget; Distance -1; Duration 152
+151, Germany, OP_FOUND_CITY, 3860, Ended: NoTarget; Distance -1; Duration 152
+151, Germany, OP_RAPID_RESPONSE, 3793, PRE Moving To Target with Army 3794; center (46:14); target (51:24); Progress 0 percent
+151, Germany, OP_RAPID_RESPONSE, 3793, POST Moving To Target with Army 3794; center (48:16); target (51:24); Progress 25 percent
+151, Carthage, OP_FOUND_CITY, 3553, PRE Moving To Target with Army 3554; center (16:39); target (13:39); Progress -300 percent
+151, Carthage, OP_FOUND_CITY, 3553, POST Moving To Target with Army 3554; center (14:39); target (13:39); Progress 100 percent
+151, China, OP_FOUND_CITY, 3583, PRE Moving To Target with Army 3584; center (62:27); target (61:33); Progress 100 percent
+151, China, OP_RAPID_RESPONSE, 3797, PRE Recruiting Units for army 3798; Musketman 3799 at (55:24) - ETA 0; Open; Open; Open; 
+151, China, OP_RAPID_RESPONSE, 3797, Found 0 potential units to recruit for operation 3797 at (51:24) with target at (50:20)
+151, China, OP_RAPID_RESPONSE, 3797, POST Recruiting Units for army 3798; Musketman 3799 at (51:24) - ETA 0; Open; Open; Open; 
+151, China, OP_FOUND_CITY, 3583, Ended: LostPath; Distance -1; Duration 7
+151, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, War goal changed, probably another war is more important
+151, America, OP_FOUND_CITY, 3873, Ended: NoTarget; Distance -1; Duration 152
+151, America, OP_CITY_ATTACK_LAND_SNEAKY, 3774, Ended: DiploOpinionChange; Distance 8; Duration 3
+152, India, OP_FOUND_CITY, 3884, Ended: NoTarget; Distance -1; Duration 153
+152, Poland, OP_FOUND_CITY, 3885, Ended: NoTarget; Distance -1; Duration 153
+152, The_Iroquois, OP_FOUND_CITY, 3889, Ended: NoTarget; Distance -1; Duration 153
+152, The_Iroquois, OP_FOUND_CITY, 3890, Ended: NoTarget; Distance -1; Duration 153
+152, Arabia, OP_FOUND_CITY, 3891, Ended: NoTarget; Distance -1; Duration 153
+152, Germany, OP_FOUND_CITY, 3895, Ended: NoTarget; Distance -1; Duration 153
+152, Germany, OP_RAPID_RESPONSE, 3793, Ended: NoTarget; Distance 12; Duration 3
+152, Carthage, OP_FOUND_CITY, 3553, PRE Moving To Target with Army 3554; center (14:39); target (13:39); Progress 100 percent
+152, Carthage, OP_FOUND_CITY, 3553, Transition to target stage
+152, Carthage, OP_FOUND_CITY, 3553, City founded (Panormus) at (13:39), plot value 121131, q50
+152, Carthage, OP_FOUND_CITY, 3553, Transition to finished stage
+152, Carthage, OP_FOUND_CITY, 3553, POST Completed
