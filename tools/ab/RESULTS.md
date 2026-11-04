@@ -1975,7 +1975,7 @@ about 180–200), 0–2 of 6 units used".
   - units lost per war (`KilledInCombat` in the tactical log).
 - **δ:** CitiesCaptured by the aggressor above 0 in most bully pairs; strength share at T150 +1.5 points.
 - **Flag:** `SiegeExposure`, off in the bundle. Count goes 62 → 63, inside 64. Role: add to the bully aggressor's flags.
-- **Status:** hypothesis. The code goes on `ai/war` next. The next logged war with capture logging (ab-9e9fc9d)
+- **Status:** hypothesis, coded: `ai/war` `a2ab150` (CI run 153). One block in `ScorePlotForCombatUnitMove` (CvTacticalAI.cpp). The next logged war with capture logging (ab-9e9fc9d)
   confirms or refutes the cause before it's worth a test.
 
 ### FIX_CONQUEST_TRAIT_TARGETS: a warmonger's conquest bonus shapes whom it attacks (War) (Nov 4, about 10:04am ET)
