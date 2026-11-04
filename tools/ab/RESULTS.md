@@ -2660,7 +2660,67 @@ logged pair".
   captures than the extra greedy units.
 - **Profile check:** the saved logs don't include `StrategyProfile_Log.csv` (it was added on `7afce5c`, and the runner
   copies a fixed list of logs). **Request to the lead:** add `StrategyProfile_Log.csv` to the logs the runner saves.
-- **Status:** `d51e8a6` pushed 7:50am ET, CI pending. Not ready until its CI run passes.
+- **Status:** `d51e8a6` compiles (CI passed) and is merged into `claude/ab-c1` (the lead, 8:10am ET). PC 2 plays it as
+  `AIABTest_bullygreedy3@TREEDESKTOP.csv`.
+- **Follow-up, `d379bfe` (8:10am ET, CI pending):** the gift switch covers every style with a cap: `BalancedArmy` at 3 per
+  city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
+  their gifts.
+
+### GreedyWarArmy: at war a greedy civ judges the threat (Personality, 2026-11-04 8:15am ET, revised 9:15am ET)
+- **The user (2026-11-04), in three steps:**
+  1. "maybe it's just for the test, but a greedy civ should build military units if it is at war";
+  2. "enough to defend";
+  3. "a greedy civ who has war declared on them should judge how much threat it is under. If the person at war with
+     them is on the other side of the world or has a very weak army, then maybe they make no change to their plan of
+     not making military units."
+  4. "if they are currently under siege or their neighbour with a large army has declared war, then they should
+     prepare accordingly."
+  5. "a 'large army' is one that is capable or close to capable of taking one of your cities."
+- **Hypothesis:** with `GreedyWarArmy`, a greedy civ keeps its economy through wars that can't hurt it, and builds
+  enough defenders when one can. It holds more cities than strict greedy civs, but fewer than balanced ones, since it
+  starts each real war with about 1 unit per city and no walls. Judged by the matchup test.
+- **The threat** (`CvGrandStrategyAI::GetWarDefenceLandUnitCap`, worked out once per turn; enemies are major civs at war
+  with us). A war is a credible threat when:
+  - one of our cities is under siege, or
+  - **an enemy force in sight could take one of our cities, or nearly.** For each of our cities, that enemy's land
+    combat units we can see within 8 plots go through a siege sketch (`CouldEnemyTakeCity`). It's a defender's version of
+    War's `CanTakeNearestCity` (flag `CanWin`): their ranged units fire, the city heals 20 a turn and shoots the most
+    damaging one, which drops out once it dies, for up to 20 turns. "Close to capable": their damage counts a third
+    extra, and one melee unit is enough to walk in. Only units a human could see: an army out of sight counts once it
+    comes into view, so the greedy civ has fewer turns to prepare. That's part of its price.
+
+  Under a credible threat the civ wants the larger of 2 land units per city and 3/4 of the enemy land units in sight
+  within 5 plots of its cities. Without one (a far enemy, a force that couldn't take a city), the threat is 0.
+- **What the flag does** (`GreedyWarArmy`, `FIX_GREEDY_WAR_ARMY`, `false` in the bundle; 63 of 64 flags), at war with a
+  major civ:
+
+  | | No credible threat | Credible threat |
+  |---|---|---|
+  | Land unit cap | the peace cap (1 per city) | the threat (at least the peace cap) |
+  | Small-army cut on buildings | none, as in peace | until it has the threat's number of land units (not CP's 3 per city) |
+  | CP's at-war cut on non-defensive buildings | none, as in peace | as for any civ at war |
+  | City-state unit gifts | refused at the cap | refused at the cap |
+  | Upgrades | none, as in peace | allowed |
+  | Siege units | none | none |
+  | Walls and castles | none | allowed in border cities and cities under siege (barracks stay off) |
+
+  A city under siege gets a defender past the cap only if it has none.
+- **Knobs:** the sketch's 8-plot radius, +1/3 damage and 1 melee unit for "close to capable"; then 2 per city, or 3/4
+  of the units in sight within 5 plots.
+- **Strict greedy is unchanged:** without `GreedyWarArmy`, a greedy civ at war keeps 2 per city and upgrades. That's
+  the running easy-matchup test (`bullygreedy3`), which checks whether the conquest code can take cities at all.
+  **The greedy style for the matchup test is the four greedy flags plus `GreedyWarArmy`.**
+- **MetaDial changed to match** (not played yet): at war the greedy side (M ≤ -50) follows the same rules, with its
+  peace ceiling as the floor; above it, no war cap.
+- **Measures:** greedy civs at war with a far or weak civ keep `LandUnits` ≈ 1 per city and their growth; at war with a
+  credible neighbour they reach the threat's number within ~10-20 turns, and stop there. Cities lost per war against
+  strict greedy (`bullygreedy3`) and balanced civs.
+- **Run, once the bully takes cities from strict greedy civs:** the same bully run with `-OthersBase "GreedyFewUnits,
+  GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy"`.
+- **Build:** fork `ai/personality` `c1518c4` (on `674c1bd`, `ddf3311`, `cbb291c`, `9017ee3`, `d379bfe`; off `claude/ab-c1` `d51e8a6`).
+- **Status:** coded, CI pending.
+- **For the lead:** 63 of 64 flags. Retiring flags that failed or were replaced (`LongWide`; `GreedyArmyCap`, replaced by
+  `GreedyFewUnits`) will be needed soon.
 
 ## Requests
 
