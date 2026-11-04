@@ -1,0 +1,138 @@
+From 1ededef9aedc6dee925b7cb0b80c01d57e425641 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 04:50:42 +0000
+Subject: [PATCH] AI_AB_TEST: flag StaleWarPeace (end wars that are going
+ nowhere)
+
+Bully pair 0879B791: the Celts declared on the Netherlands at T111, their
+siege failed by T116 (11 units lost), and the war ran to T150. The beaten
+Celts were willing to make peace from T116 on (peace score up to 129); the
+Netherlands refused every turn (-11 to -67): CP's "they're in danger and
+we're not, hold out" term, multiplied up to 5x against a PATHETIC enemy,
+outweighed the progress penalty. But the Netherlands never attacked
+(war state Calm, no captures), so the leverage it held out for never
+turned into anything.
+
+With the flag, a war is stale after 20+ turns with no city changing hands
+in either direction for 20 turns and no attack operation of ours against
+them. Then: staleness is reason enough to consider peace, the hold-out
+term for their danger is dropped, and the lack-of-progress penalty counts
+twice. A winner that presses its attack is unaffected.
+
+Off in the bundle until tested.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj1hm6um5X9SZaXQCRZ
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 34 +++++++++++++++++++++-
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.h   |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  2 ++
+ 4 files changed, 37 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index ed055bc..f8329d9 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -26208,6 +26208,13 @@ void CvDiplomacyAI::DoUpdatePeaceTreatyWillingness(bool bMyTurn)
+ 		// Okay, so no automatic peace. But should we consider peace at all?
+ 		bool bConsiderPeace = !bFailedAnyVassalagePrereq || bAllWarsArePhony || bAnySeriousDangerUs || bInTerribleShape || bWarWeary || bAnyNonHostileApproach || bAnyBadWarState || iWarDuration >= 30;
+ 
++		// FIX_STALE_WAR_PEACE: a stale war with any member of their team is reason enough
++		for (size_t i=0; i<vEnemyTeamMembers.size() && !bConsiderPeace; i++)
++		{
++			if (GET_PLAYER(vEnemyTeamMembers[i]).isAlive() && IsStaleWar(vEnemyTeamMembers[i], iWarDuration))
++				bConsiderPeace = true;
++		}
++
+ 		// Not worth making peace with. Proceed.
+ 		if (!bConsiderPeace)
+ 		{
+@@ -26280,6 +26287,11 @@ void CvDiplomacyAI::DoUpdatePeaceTreatyWillingness(bool bMyTurn)
+ 				iPeaceScore += iWarScore / 5;
+ 			}
+ 
++			// FIX_STALE_WAR_PEACE: no city changed hands for 20 turns and no attack under way
++			const bool bStaleWar = IsStaleWar(ePlayer, iWarDuration);
++			if (bStaleWar)
++				iPeaceScore += max(0, iDurationPenalty); // lack of progress counts twice (again below)
++
+ 			// Lack of progress in war increases desire for peace (moreso if far away).
+ 			if (iWarDuration > iTooLongWarThreshold)
+ 			{
+@@ -26370,7 +26382,11 @@ void CvDiplomacyAI::DoUpdatePeaceTreatyWillingness(bool bMyTurn)
+ 			bool bSeriousDangerThem = TheirSeriousDangerFinder->second;
+ 
+ 			// They're in danger and we're not? Let's hold out longer!
+-			if (iOurDanger == 0 && iTheirDanger > 0)
++			// (FIX_STALE_WAR_PEACE: not in a stale war: a threat we never act on isn't leverage)
++			if (bStaleWar && iOurDanger == 0)
++			{
++			}
++			else if (iOurDanger == 0 && iTheirDanger > 0)
+ 			{
+ 				if (iWarDuration < 20 || iOurMultiplier > 2 || bSeriousDangerThem)
+ 				{
+@@ -32565,6 +32581,22 @@ bool CvDiplomacyAI::IsOpenBordersExchangeAcceptable(PlayerTypes ePlayer)
+ /////////////////////////////////////////////////////////
+ 
+ /// Is this war not worth caring about?
++/// AI_AB_TEST FIX_STALE_WAR_PEACE: a war going nowhere. 20+ turns of war, no city changed hands between us in either
++/// direction for 20 turns, and we have no attack under way against them. Holding out for concessions only pays if we
++/// press; a winner that doesn't attack (bully pair 0879B791: the Netherlands, Calm for 35 turns, refusing every peace
++/// the beaten Celts offered) just keeps both sides at war.
++bool CvDiplomacyAI::IsStaleWar(PlayerTypes ePlayer, int iWarDuration) const
++{
++	if (!GetPlayer()->UsesCandidateAI(FIX_STALE_WAR_PEACE) || ePlayer < 0 || ePlayer >= MAX_MAJOR_CIVS || !IsAtWar(ePlayer))
++		return false;
++	const int iStaleTurns = 20;
++	if (iWarDuration < iStaleTurns)
++		return false;
++	if (GetPlayer()->GetNumTurnsSinceCityCapture(ePlayer) < iStaleTurns || GET_PLAYER(ePlayer).GetNumTurnsSinceCityCapture(GetID()) < iStaleTurns)
++		return false;
++	return !m_pPlayer->HasAnyOffensiveOperationsAgainstPlayer(ePlayer);
++}
++
+ bool CvDiplomacyAI::IsPhonyWar(PlayerTypes ePlayer, bool bIgnoreCurrentApproach /* = false */) const
+ {
+ 	if (!IsAtWar(ePlayer))
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+index 986c628..74914c6 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.h
+@@ -1397,6 +1397,7 @@ public:
+ 	/////////////////////////////////////////////////////////
+ 
+ 	bool IsPhonyWar(PlayerTypes ePlayer, bool bIgnoreCurrentApproach = false) const;
++	bool IsStaleWar(PlayerTypes ePlayer, int iWarDuration) const; // AI_AB_TEST FIX_STALE_WAR_PEACE
+ 	bool IsWantsToConquer(PlayerTypes ePlayer) const;
+ 	bool IsPotentialMilitaryTargetOrThreat(PlayerTypes ePlayer, bool bFromApproachSelection) const;
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 74f95d2..9965e0a 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33356,6 +33356,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"GreedyFewUnits", false}, {"GreedyNoWalls", false}, {"GreedyNoUpgrades", false}, {"GreedyBuilds", false},
+ 	{"AggressivePlan", false}, {"AggressiveArmy", false}, {"BalancedArmy", false}, {"BalancedWalls", false},
+ 	{"MetaDial", false},
++	{"StaleWarPeace", false},
+ };
+ // one line per flag, and room in the 64-bit masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 37c53e1..34bfffb 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -216,6 +216,8 @@ enum CandidateFixTypes
+ 	FIX_BALANCED_WALLS,		// Personality (balanced style): walls and castles first in border cities and the capital. Off in the bundle
+ 	FIX_META_DIAL,			// Personality: the style settings (army size, walls, upgrades, growth value, conquest plan) follow the strategy
+ 							// profile's meta position, from greedy (-100) to aggressive (+100). Off in the bundle
++	FIX_STALE_WAR_PEACE,	// Diplomacy: a war with no city changing hands for 20 turns and no attack under way is stale: reason to
++							// consider peace, no "they're in danger, hold out" term, progress penalty doubled. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: a set of candidate flags, bit i = CandidateFixTypes i
+-- 
+2.43.0
+

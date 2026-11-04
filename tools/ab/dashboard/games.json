@@ -1376,6 +1376,28 @@
       "current": true
     },
     {
+      "build": "c8",
+      "gameId": "095FC598095FC598",
+      "pair": "095FC598095FC598",
+      "flipped": false,
+      "turn": 150,
+      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs DiploPolicyValue+PolicyPrereqDepth+LosingWarBuildings+CultureRivalValue+SettlersBeforeWonders+NoForeignMissionaries+EasyTarget+DiploBugs+LuxuryAsk+DealExploits+DeclareAtBorder+UpgradeSaveCancel; screened none",
+      "share": 51.441,
+      "shareNoMilitary": 52.512,
+      "current": true
+    },
+    {
+      "build": "c8",
+      "gameId": "095FC598095FC598F",
+      "pair": "095FC598095FC598",
+      "flipped": true,
+      "turn": 150,
+      "config": "Pangaea 1=2;2=2;3=2;4=2;5=5 GAMESPEED_QUICK HANDICAP_KING stop T150; c runs DiploPolicyValue+PolicyPrereqDepth+LosingWarBuildings+CultureRivalValue+SettlersBeforeWonders+NoForeignMissionaries+EasyTarget+DiploBugs+LuxuryAsk+DealExploits+DeclareAtBorder+UpgradeSaveCancel; screened none",
+      "share": 46.84,
+      "shareNoMilitary": 46.903,
+      "current": true
+    },
+    {
       "build": "declare",
       "gameId": "07C40F1C07C40F1C",
       "pair": "07C40F1C07C40F1C",
