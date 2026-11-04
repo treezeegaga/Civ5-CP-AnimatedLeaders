@@ -4067,6 +4067,25 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### The trio test is built (the user's goal; lead, 2026-11-04 3:10pm ET)
+
+The user's point: CP plays mostly balanced, so our greedy civ should usually out-grow it, and the trio goal may be
+easier than estimated. Now testable.
+- **DLL (`claude/ab-c1` `9c6f2cd`):** `Mode = trio`. Our aggressive civ (the most warlike personality, `RoleFixes =`), our
+  greedy civ (the most science/culture-minded of the rest, `GreedyFixes =`) and our balanced civ (a random other,
+  `BalancedFixes =`) run the new AI plus `Fixes =`; every other civ runs CP's AI (`UsesNewAI` is false for it).
+  `Civs = N` closes the AI slots past the Nth before the players are set up, so a 6-civ game doesn't depend on the
+  setup screen. Roles `greedy` and `balanced` in the results' Role column. Single games: a flipped replay would be the
+  same game.
+- **`Run-Games.ps1`:** `-Mode trio`, `-Civs`, `-GreedyFixes`, `-BalancedFixes`.
+- **`Summarize-Trio.ps1`:** per game, the civ on top (the winner if the game ended, else the top strength at the last
+  turn), whether it's one of our three, and the tally by style. The goal is 90%; if all six played alike, 50%.
+- **First run (PC 1, after 2 pairs of the attack test on `ab-f21a8f6`), at T150, logging off:**
+  ```
+  powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Mode trio -Civs 6 -ExpectCivs 6 -Unpaired -Fixes bundle -RoleFixes "<the 25 conquest flags>, AggressivePlan, AggressiveArmy" -GreedyFixes "GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy, GreedyAlarm, GreedyAlarmScale" -BalancedFixes "BalancedArmy, BalancedWalls" -MaxGames 20
+  ```
+  Results `AIABTest_trio@BOX.csv`. The first game is a smoke test: 6 civs, roles set, no crash at start.
+
 ### Greedy style set grows; GreedyAlarmScale pending (lead, 2026-11-04 2:46pm ET)
 
 Personality's `GreedyAlarmScale` (`ai/personality` `35272f9`, CI pending; the user's audit: a greedy civ's reaction
