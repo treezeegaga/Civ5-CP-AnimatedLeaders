@@ -1652,6 +1652,23 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: flag `GreedyWideDeals` (Diplomacy session, 2026-11-04 5:25pm ET)
+
+Personality's request, for the user's "greedy wide" design. Pushed as `ai/diplomacy` `f1deaa1`, on `claude/ab-c1`
+`c5015f1`; off in the bundle.
+- **When it acts:** for a civ with `GreedyWide` once `IsGreedyWideOutOfRoom()` is true, while the civ grows
+  vertically.
+- **What it does:**
+  - luxury trade, open-borders and research-agreement offers come twice as often (cooldowns 10/12/10 turns instead of
+    20/25/20);
+  - it wants research agreements with any major civ it's at peace with, doesn't distrust and is at least neutral
+    toward (the deal AI still checks it can afford one);
+  - it wants open borders with any major civ it's at least neutral toward, after CP's vetoes (denouncements, an army
+    in place to attack).
+- **Major civs only:** the helper `IsGreedyWideDealSeeker` checks `isMajorCiv`.
+- **Measures:** deals and research agreements made by greedy wide civs after they run out of room; strength share of
+  the greedy wide kind (Personality's matchup test).
+
 ### Diplomacy: `StaleWarPeace` reworked to the user's rule, and into the bundle (Diplomacy session, 2026-11-04 2:55pm ET)
 
 **The rule, as the user put it:** "Hold out while the enemy is in danger" is the wrong question. The real question is
