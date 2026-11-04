@@ -1967,6 +1967,8 @@ not reached. SiegeRoll fired once, late.
    exists when the window ends, and the sneak attack's 0-missing request can form. This is a fix of the window's
    mechanism under the same flag.
 
+Coded: `ai/war` `214c6c7` (CI pending).
+
 ### War: the first logged pair on ab-f21a8f6 (25-flag role), 0CD189D4, Japan (Nov 4, about 3:56pm ET)
 PC 2, greedy opponents. Japan is the aggressor (group b, wide). In the role game it had 7 cities and made no
 capture attempt; in the flip game it took one city.
