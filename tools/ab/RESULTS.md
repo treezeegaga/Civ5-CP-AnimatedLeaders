@@ -1970,7 +1970,7 @@ declares when "discovered by enemy" or, with DeclareWhenGathered, at the border.
   - CitiesCaptured.
 - **δ:** CitiesCaptured by the aggressor up (any pair with a capture would be a change from 0 in 10 pairs).
 - **Flag:** `MarchOn`, off in the bundle. Role: add to the bully aggressor's flags.
-- **Status:** hypothesis.
+- **Status:** hypothesis, coded: `ai/war` `d7fc39e` (CI pending), on `claude/ab-c1` `9c6f2cd`. Also: at peace, if the war hasn't come after 5 turns of waiting, the attack ends as before.
 
 ### FIX_TARGET_VULNERABILITY: a warmonger picks the most vulnerable nearby city (War, the user's redesign of GreedyTarget) (Nov 4, about 2:37pm ET)
 **Why.** The user: "fewest land units per city" (GreedyTarget) is a weird way to pick a target. The target should
