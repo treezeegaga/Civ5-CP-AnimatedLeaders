@@ -1523,18 +1523,70 @@ Saving can't fix a negative income. The fix is income, before the window.
 arrivals, the two +32 jumps), and the guard would let units through into a real deficit. CP's deficit rule would
 then disband them.
 
-### WarGold: a warmonger short of gold researches Currency and builds Markets (Economy, patch 0021)
-- **Change** (new flag `WarGold`, off in the bundle; for candidate warmongers, i.e. what `IsCandidateWarmonger` covers):
-  - While its net gold per turn is below its number of cities + 2, after the opening book and before War's
-    TimingBuildup techs, it researches toward Currency.
-  - In the same state, at peace or with the attack only planned (not in the window), gold buildings (Market,
-    Mint, ...) get +500 production weight, the same bonus WarChest gives in the window.
-- **Hypothesis:** the aggressor reaches its window with positive income and some gold. The army can be built (no
-  "tooexpensive" refusals) and WarChest has something to save. In 0C3C8913 that means Markets around T60 instead of
-  T116.
-- **Measure:** strength share at T150 (no-worse, δ 2). Mechanism, from logs: the aggressor's turn of Currency, its
-  first Market, gold at the window's start (homeland log), and "tooexpensive" refusals in the window (production log).
-- **Status:** coded, patch 0021 on `claude/ab-c1` (`ai/economy` `0cb85ae`), not built.
+**Where the gold went, T50-T100 (the lead's question: is it the workers?).** The logs have no gold breakdown, so
+unit upkeep is worked out from CP's formula (`CvTreasury::CalculateUnitCost`). On Quick (the window ran 10 turns,
+so train percent 67, estimated end turn 330), at King for an AI, each paid unit costs about:
+
+| Turn | Gold per unit per turn |
+|---|---|
+| T50 | 0.9 |
+| T70 | 1.15 |
+| T90 | 1.4 |
+
+That's 0.5 gold, times 1 + 8 × game progress, times the AI's 80%. Every unit counts the same: a worker costs what a
+spearman costs.
+
+Around T90 the Aztecs had about:
+- 6-7 workers (chosen at T0, T79, T84, T85 and twice at T86);
+- 5-6 land military, scouts included (the lead's results CSV);
+- 3-4 caravans;
+- a settler on the way.
+
+So the **workers were about 40% of their units, roughly 8-10 gold a turn at T90**. That's about the whole deficit
+War read from the production log (-8 to -13). Two caveats: units the handicap makes free come off the total, not
+off one kind; and if caravans pay no upkeep, the workers' share is higher.
+
+Buildings with upkeep at T90, about 10-12 gold:
+- Monuments, Shrines and a Granary;
+- 3 Floating Gardens, a Lighthouse, a Stable;
+- Caravansaries (2 by T90, 4 by T94), a Circus;
+- no Market.
+
+The roads the workers built cost upkeep too (70 road plans in the homeland log).
+
+**So yes, LeanBuilders is more than a tidy-up for an aggressor.** At 2 workers per 3 cities, 5 cities would have
+had 4 workers: about 3-4 gold a turn back at T90. Suggest adding `LeanBuilders` to the bully RoleFixes with WarGold.
+
+**Other drains:**
+- No purchases until the window: no "Bought" lines, and the settler savings never reached 370.
+- From T125 the treasury rises about 20 a turn and drops every 2-4 turns (53→5, 65→30, 64→14, 68→6, 48→2). That's
+  after the window, at war; probably upgrades ("Need gold for Swordsman upgrade", priority 10500) and tile purchases.
+- WarChest: none; it never saved.
+
+### WarGold: a warmonger short of gold keeps its income up (Economy, patch 0021)
+- **Change** (new flag `WarGold`, off in the bundle). It applies to a candidate warmonger (`IsCandidateWarmonger`)
+  not at war with a major, whose net gold per turn is below its number of cities + 2, outside the window and attack
+  phases:
+  - after the opening book, it researches toward Currency, before War's TimingBuildup techs;
+  - gold buildings (Market, Mint, ...) get +500 production weight, the bonus WarChest gives in the window;
+  - while net gold is negative (the lead's ruling: a timing attacker at peace keeps its income at 0 or more):
+    - no world wonder;
+    - no building with upkeep, unless it makes gold, defends (city hit points), or readies the army (production or
+      experience: forge, workshop, barracks);
+    - caravans and cargo ships get +300.
+- **WarChest, extended** (the lead and War): it now saves at peace too, from turn 30 (Standard), at least 2 siege
+  units' price. Before, it saved only once a target was committed, and the Aztecs went from peace straight into the
+  window. Buying still happens only in the window.
+- **Hypothesis:** the aggressor reaches its window with positive income and gold in hand. The army can be built
+  (no "tooexpensive" refusals), and WarChest has saved something to buy with. In 0C3C8913 that means Markets around
+  T60 instead of T116.
+- **Measure:** strength share at T150 (no-worse, δ 2). Mechanism, from logs:
+  - the aggressor's first Market (production log);
+  - gold at the window's start (homeland log);
+  - "tooexpensive" refusals in the window;
+  - "WAR CHEST - Bought" lines.
+- **Status:** coded, patch 0021 on `claude/ab-c1` `eb4129d` (82 flags). It replaces the first 0021 (on `0cb85ae`,
+  Currency and gold buildings only). Not built.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
