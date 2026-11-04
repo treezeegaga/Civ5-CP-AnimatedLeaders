@@ -1924,7 +1924,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   gold) from the logs. Plus Austria's and Venice's city-state wars (should be 0).
 - **δ:** target choice changes in the logs in most pairs, and captures are no fewer. Strength share is a guard, not
   the verdict.
-- **Build:** next `ai/war` commit. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
+- **Build:** `ai/war` commit `18386e5` (on `3cbc147`, CSConquest), patch `patches/war/0012`. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
   block, `SelectBestApproachTowardsMinorCiv`), Diplomacy's file, behind the flag as the lead asked.
 
 ### War: does a bully ever attack city-states? Hardly ever (FIX_CS_CONQUEST) (Nov 4, about 10:00am ET)
