@@ -1560,7 +1560,20 @@ The logged bully pair `07614B74` / `07614B74F` (ab-095144c), from `DiplomacyAI_A
 - **This is personality territory** (how much trade should buy friendship, per leader), so it's a request
   rather than a Diplomacy fix.
 
-**Possible fixes**, one flag each. Coding waits for the go-ahead.
+**Coded (user's model, 2026-11-04): flag `TradeOpinion`**, patch `tools/ab/patches/diplomacy/c8/0001-...`, on `claude/ab-c1`
+`9f77273`, off in the bundle, not compiled yet.
+- **The user's model:** a civ that gets a luxury from another values that relationship by what a war would cost it.
+  So the trade-partner opinion should come from the deals running now in which the other civ supplies us. It goes
+  when they expire (or a war cancels them) and comes back when they're renewed.
+- **Weights:** -5 per luxury, -3 per strategic resource, -2 for open borders, -1 per 5 gold per turn. Capped at -20,
+  so trade alone stays below Favorable (-30). CP's decaying memory of past deals reached -40.
+- **Hypothesis:** aggressive leaders pick WAR toward neighbours they merely trade with, while a neighbour that
+  supplies several luxuries still costs something to attack.
+- **Measures:** the aggressor's `WarsDeclared` and the turn of its first war (bully test); the friendship count; the
+  builders' wars (builders test); `Deals` per civ, which should stay in the band since the trades themselves don't
+  change.
+
+**Other possible fixes**, not coded:
 - **Trade opinion by personality:** scale the recent-trade opinion by the leader's boldness and meanness. A warmonger
   doesn't love you for selling it silk; a diplomat does.
 - **Trade opinion below the threshold:** cap trade's share of the opinion so that trade alone can't make a neighbour
