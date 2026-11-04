@@ -2016,7 +2016,7 @@ at 200 → 200 most turns. That's the flip, without SiegeExposure.
   - CWS/CW states in the diplomacy log;
   - capture attempts and CitiesCaptured.
 - **Flag:** `FocusedWar`, off in the bundle. Role: add to the bully aggressor's flags.
-- **Status:** hypothesis, coded: `ai/war` `40de507` (CI pending), on `d7fc39e` (MarchOn).
+- **Status:** hypothesis, coded: `ai/war` `40de507` (built, CI run 182), on `d7fc39e` (MarchOn).
 
 ### War: four more failed bully wars on ab-1c3ab74 (16-flag role), and the common cause (Nov 4, about 3:21pm ET)
 PC 1 (bullyabort5), four games: 0B8A1D73, 0BA0FF9F, 0BB7D3CA, 0BCE16F7. All four had SiegeExposure and SiegeRoll;
