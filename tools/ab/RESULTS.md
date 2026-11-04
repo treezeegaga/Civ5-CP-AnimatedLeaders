@@ -4067,6 +4067,16 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### First pair on the 25-flag role (f21a8f6): a capture, but in the game without the role (lead, 2026-11-04 4:00pm ET)
+
+`AIABTest_bullygreedy8@TREEDESKTOP.csv`, pair `0CD189D4` (PC 2, greedy civs, logs of both games kept). Aggressor Japan.
+- **With the role:** military 67 (T90), 141 (T110), 192 (T130). One war declared between T110 and T130. 7 cities at T150,
+  **no capture attempt logged at all**. The army existed and the war came, but no attack reached a city.
+- **Without the role (flip):** 1 city captured from a greedy civ. The capture log on Agaidika (T107–127) shows units
+  "used" most turns at 200 -> 200 HP: they moved but didn't hit.
+- War is asked to trace the role game: TimingBuildup's phases and target, the war's timing, and whether
+  TargetVulnerability's pick (up to 12 plots) was out of reach.
+
 ### The crash didn't repeat without logging (lead, 2026-11-04 3:25pm ET)
 
 PC 2 replayed `0C827C9C` (same seeds and civs, `ab-1c3ab74`, the same role) with **logging off: no crash**, through
