@@ -1831,6 +1831,21 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: the first captures (bully pair 0A92244F, ab-dbdfbb3) (Nov 4, about 9:06am ET)
+
+PC 1, normal opponents. The role was the 8 conquest flags + SiegeStay (now covering the homeland heals, `3247ef4`) +
+SiegePosture, without SiegeFirst and SiegeFinish.
+- **With the role,** the Huns (military 141 against Spain's 69 at T100) declared on Spain around T105 and **captured 2
+  cities**: `CitiesCaptured` 1 by T120, 2 by T130. Spain's `CitiesLost` matches.
+  - City counts moved by only one (Huns 5 → 6, Spain 5 → 4), so one captured city was probably razed or lost again.
+  - Huns' military grew to 236 by T130. By T140, 4 civs were at war with them: the coalition goal, firing.
+- **Without the role (the replay):** 0 captures, and the Huns' military was 140 at T150.
+- **The other Huns pair (0A8035D5):** 0 captures either way.
+
+This is the first time any candidate code has taken a city (see "City captures"). It's 2 pairs, logging was off, so
+the mechanism isn't confirmed. **Request:** a logged replay of 0A92244F (first game), so the logs show which flags
+did the work: the waiting attack, the siege's damage per turn, whether units stayed, and how the city fell.
+
 ### FIX_SIEGE_FIRST: a waiting attack's siege slots wait for siege units (War) (Nov 4, about 8:45am ET)
 - **Why armies hold one catapult:** the basic attack formation (SiegeFormation) has 5 siege/ranged slots, and its two
   optional ones already ask for `UNITAI_CITY_BOMBARD` first. But each of those slots also takes `UNITAI_RANGED` as its
