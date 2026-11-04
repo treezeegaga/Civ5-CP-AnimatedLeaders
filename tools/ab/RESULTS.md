@@ -1907,6 +1907,15 @@ SiegePosture, without SiegeFirst and SiegeFinish.
 - **Without the role (the replay):** 0 captures, and the Huns' military was 140 at T150.
 - **The other Huns pair (0A8035D5):** 0 captures either way.
 
+- **The logged replay (logs_0A92244F0A92244F) diverged from T10** (the city-states came out different) and was cut at
+  T110, so it shows only how the war began, not the captures (those came T110–T130):
+  - T54: "CONQUEST: going for Spain (warmonger timing attack, committed target)".
+  - T75: a 6-unit sneak attack formed, already past SiegeArmy's bar.
+  - It was discovered at its target's border at T81 (3 tiles, as DeclareAtBorder allows); the Huns declared at T82.
+  - A second attack arrived at T98.
+  - Sieges up to T110 were weak: Seville faced 66, then 25–42 a turn, against 200, so nothing fell before the cut.
+  So TimingAttack, SiegeArmy and DeclareAtBorder all fired as designed. How the city fell needs the next capture,
+  which now comes with logs (PC 1 keeps the logs of any game with a capture).
 This is the first time any candidate code has taken a city (see "City captures"). It's 2 pairs, logging was off, so
 the mechanism isn't confirmed. **Request:** a logged replay of 0A92244F (first game), so the logs show which flags
 did the work: the waiting attack, the siege's damage per turn, whether units stayed, and how the city fell.
