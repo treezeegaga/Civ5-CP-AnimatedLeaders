@@ -2218,6 +2218,67 @@ conquest code can't take cities from these civs, it can't take them at all.
   watches for tall-book civs (`GetGreedyAlarmThreat`); for the style it should also fire for civs running
   `GreedyFewUnits`, so "greedy + alarm" works for any book.
 
+### Balanced and aggressive styles: four flags (Personality, 2026-11-03 11:20pm ET)
+The other two corners of the triangle (AGENTS.md, "A rock-paper-scissors meta"). Greedy beats balanced by
+out-growing it, aggressive beats greedy by taking its cities, balanced beats aggressive by holding.
+
+- **Hypothesis:**
+  - **Balanced** civs keep a medium army (2-3 land units per city in peace), wall their border cities early, and
+    otherwise play CP's normal game (CP's war appetite is low, so they rarely start wars). Against an attacker they
+    lose ≤ 1 city per war, and the attacker's army is wasted.
+  - **Aggressive** civs build a big army (3-4 per city) with siege, and play the conquest plan (timing attack on the
+    thinnest neighbour) whatever their personality. Against greedy civs they take cities; against balanced civs
+    they stall and fall behind economically.
+- **The flags** (all `false` in the bundle, AI major civs only, each check also tests `isMajorCiv()`):
+
+  | Flag | Change | Knobs | Code |
+  |---|---|---|---|
+  | `AggressivePlan` (`FIX_AGGRESSIVE_PLAN`) | Counts as a warmonger for the candidate conquest flags: `TimingAttack`, `DeclareTiming`, `SiegeBook`, `SiegeTechs` (all gated by `IsCandidateWarmonger`). It does nothing alone: run it with those flags. `IsABTestWarmonger` (split, screening, roles, `Warmonger` column) still reads the personality | none | `CvPlayer::IsCandidateWarmonger` |
+  | `AggressiveArmy` (`FIX_AGGRESSIVE_ARMY`) | Army floor and ceiling in peace. Below the floor, buildings are cut 75% (CP's own rule, which B relaxed to 1 per city), and attack, siege, fast-attack and ranged units get +300. The ceiling lifts CP's recommended land army size, within supply | **floor 3, ceiling 4** land units per city | `CvUnitProductionAI::CheckUnitBuildSanity`, `CvBuildingProductionAI::CheckBuildingBuildSanity` (war section) |
+  | `BalancedArmy` (`FIX_BALANCED_ARMY`) | The same for a medium army. Below the floor, defence, counter and ranged units get +300. Above 3 per city in peace no more land units (operations +2), so the rest goes into the economy | **floor 2, cap 3** per city in peace; no cap at war | same |
+  | `BalancedWalls` (`FIX_BALANCED_WALLS`) | Walls, castles and anything else that adds city defence or HP get a flat +800 in border cities and the capital: built as soon as the tech allows | **+800**; border cities (`isBorderCity`) and the capital | `CvBuildingProductionAI::CheckBuildingBuildSanity` (top) |
+
+  Upgrades: balanced and aggressive keep CP's (only greedy skips them). Not coded on purpose, to add only if the
+  matchups show the need:
+  - a "peaceful" flag for balanced civs (no wars started except against a warmonger), if balanced civs attack greedy
+    ones and break "greedy beats balanced";
+  - an aggressive flag that keeps neighbours from becoming friends, if the logs show `CONQUEST: going for X` but no
+    declaration (Diplomacy found trade friendships crowd out WAR).
+- **The style sets** (what the lead's keys should list):
+  - greedy: `GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds`;
+  - balanced: `BalancedArmy, BalancedWalls`;
+  - aggressive: `AggressivePlan, AggressiveArmy, TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, GreedyTarget`.
+- **Measures:**
+  - the style is on: `LandUnits` per city ≈ 2-3 (balanced) and ≥ 3 (aggressive) at peace; `WalledCities` close to the
+    number of border cities (balanced); `CONQUEST:` lines and `WarsDeclared` from aggressive civs that aren't
+    personality warmongers;
+  - the matchups: cities captured and lost, the attacker's city share, and strength share per style pair.
+- **What to run:**
+  1. **The hard matchup**, next to the greedy one:
+     `Run-Games.ps1 -Mode bully -Fixes none -OthersBase "BalancedArmy, BalancedWalls" -RoleFixes "TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff"`.
+     Expected: far fewer captures than against greedy civs, ≤ 1 city per war. The two runs together set the attack
+     goal's numbers (lead's plan, step 3).
+  2. **One logged smoke pair of the aggressive set** as OthersBase in bully mode: no crash, a matching replay, and
+     `CONQUEST:` lines and ≥ 3 land units per city from civs that aren't personality warmongers.
+  3. **The 3x3 table needs every style at once**, which OthersBase can't do (one set for all). **Request to the
+     lead: `Mode = styles`** (AGENTS.md: "an extension of the bully and builders roles"):
+     - each AI civ gets one of the three sets, about a third each (3/3/2 with 8 civs), dealt from the map seed, not
+       from personality (leaders are random anyway, and this separates the style from the leader);
+     - a `Rotate` key (0, 1, 2) shifts every slot's style by one, so each seed played three times gives every slot
+       every style and cancels start-position luck, as the pair's flip does for two groups;
+     - a `Style` column in the results file.
+
+     Summarize then fills the 3x3 table: each style's strength share and cities captured from and lost to each other
+     style. Once the triangle shows, the style is chosen by personality (the strategy profile, my next job).
+- **Evidence level:** 3, judged by the matchups and the bully test, not by the split-game SPRT (as for greedy).
+- **Build:** fork `ai/personality` `81b6634` (on the greedy commit `b9384af`, off `claude/ab-c1` `1804369`).
+- **Status:** coded, CI pending.
+- **For the lead, fair play:** `GreedyTarget` scores a target by its real land units per city
+  (`getNumMilitaryLandUnits`), not the units the attacker can see. That's a fog cheat by rule 6 (fair play). It's
+  c7's flag, so the owner should switch it to visible units before it becomes part of a style.
+- **Notes for owners:** the edits are gated blocks in Economy's `CvUnitProductionAI` and `CvBuildingProductionAI` and
+  in the shared `CvPlayer.cpp` (`IsCandidateWarmonger`).
+
 ## Requests
 
 **Blocked (lead, 2026-11-03 00:25 UTC): GitHub Actions is disabled on `treezeegaga/Community-Patch-DLL`.** At
