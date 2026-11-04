@@ -1924,6 +1924,48 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### FIX_DECLARE_WHEN_GATHERED: a sneak attack declares once it's gathered at the border (War) (Nov 4, about 1:48pm ET)
+For cause 1 (late), at the lead's request.
+- **Hypothesis:** a sneak attack (at peace, moving) whose centre or any of its units is in or next to the target's
+  territory declares war when either holds:
+  - the army is gathered, every unit within 2 tiles of its centre;
+  - its progress has stalled for 3 turns there, so the stragglers aren't coming.
+
+  At the border the army can't advance, so the stragglers catch up while it waits; that keeps it together on the
+  way. DeclareAtBorder's "discovered" route stays as it is.
+- **Expected:** declaring at the border within 1–3 turns of arriving, instead of the 7-turn wait (Denmark,
+  0C458987, T85–T92), with units 1–3 tiles out instead of 3–7.
+- **Measure:** turns from reaching the border to declaring ("DeclareWhenGathered:" log line), unit distances at
+  the hand-off, first capture attempt turn.
+- **δ:** CitiesCaptured by the aggressor up; strength share at T150 +1 point.
+- **Status:** hypothesis.
+
+### FIX_SIEGE_CONCENTRATE: a follow-up wave moves only as one army with the units already at the siege (War) (Nov 4, about 1:48pm ET)
+For cause 2 (small).
+- **Hypothesis:** SiegeRoll's release (an attack mustering within 5 tiles of its target) waits until the army plus
+  our land combat units already within 4 tiles of the target add up to the formation's required slots (6 for the
+  basic formation), instead of 3 army units.
+  - Units back from healing (70% HP) are recruited into the waiting army meanwhile.
+  - Units at the siege stay free for the tactical AI: recruitment skips units within 4 tiles of the target.
+  - Each push is then one army: the follow-up and the units still at the walls.
+  - The 20-turn SiegeAbort still ends a wait that never fills.
+- **Expected:** fewer waves, each with at least 6 units near the walls together. Fewer "too early, 0–27 a turn"
+  lines at the follow-up target.
+- **Measure:** the "SiegeRoll:" line now gives army and nearby counts; capture attempts per follow-up city.
+- **Status:** hypothesis. Applies only together with SiegeRoll.
+
+### FIX_SIEGE_KEEP: units at the front stay off barbarian camps while at war (War) (Nov 4, about 1:48pm ET)
+For cause 2 (handed-off units pulled away).
+- **Hypothesis:** while at war with a major, a unit isn't sent to clear a barbarian camp in either case:
+  - it left an attack operation in the last 5 turns;
+  - it stands in the tactical zone of a city of a major we're at war with.
+
+  Defence against barbarian units attacking our cities is unchanged; camps can wait.
+- **Expected:** the units handed off at Seoul stay in the Seoul zone. Fewer "Trying to remove barbarian camp" moves
+  by the aggressor during its war.
+- **Measure:** camp moves during the war; units in reach at the first capture attempt.
+- **Status:** hypothesis.
+
 ### War: the attack operations in 0C458987 (16-flag role) and 0C22F161 (Nov 4, about 1:23pm ET)
 The lead asked for a trace of when each attack formed, how big it was, where it mustered, and what became of it.
 
