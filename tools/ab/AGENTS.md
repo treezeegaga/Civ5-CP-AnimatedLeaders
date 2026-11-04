@@ -85,6 +85,13 @@ never optional (no cheating, banned behaviours, multiplayer-safe).
 two-turtle game. Strength becomes a guard: phase 2 changes must pass a no-worse test so they don't
 give back what phase 1 gained.
 
+**Full games to a winner (the user, 2026-11-04), once the AI is competent:** attacks take cities, the early game is
+fixed, and the matchup table cycles. Then games run to a victory (no `StopTurn`), so each game has a winner. They
+answer what T150 can't: does a leader close out a win, do the others gang up on it, do the victory pursuits and
+the late game work? They're slow, a few hours a game with late-game AI turns, and a win is one result per game, so a
+win-rate stopping test needs a few hundred games (50% to 60% at 5% errors is about 260). So full games are for
+checks and a running win table, and the change-by-change verdicts stay on T150 strength share.
+
 **"Competent" means** (numbers agreed with the players on 2026-11-02; they're the goal row of the scoreboard
 at the top of RESULTS.md):
 - clearly ahead of CP's AI: **strength share ≥ 60%** against CP, at King with even rules (raised from 55% by the

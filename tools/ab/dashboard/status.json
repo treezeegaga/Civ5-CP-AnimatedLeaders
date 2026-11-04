@@ -346,51 +346,320 @@
   {
    "section": "session",
    "order": 1,
-   "name": "PC runner",
-   "detail": "Bully vs normal civs, 20 games, ab-c78384b, since 7:02am ET.",
+   "name": "Lead",
+   "detail": "Runs the tests, reads results, merges the sessions' work into one build, and keeps this page current. Watching both bully runs.",
+   "chat": "Civ V AI optimization experiment lead",
    "state": "running"
   },
   {
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "SiegeAbort and SiegeFormation (enough catapults) are in the bully runs.",
+   "detail": "Making attacks take cities. Found why the Celts lost their army (too few catapults, an attack sent too weak) and fixed both; the fixes are in both PCs' runs.",
+   "chat": "Civ V AI: War session",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 3,
-   "name": "Economy",
-   "detail": "Settler fixes (0011) and NoForeignMissionaries on ai/economy.",
-   "state": "waiting"
+   "name": "Diplomacy",
+   "detail": "Who fights whom, and when wars end. New: winners that never attack stop refusing peace (StaleWarPeace), and war appetite follows the leader's style (WarAppetite, compiling).",
+   "chat": "Civ V AI: Diplomacy session",
+   "state": "running"
   },
   {
    "section": "session",
    "order": 4,
-   "name": "Diplomacy",
-   "detail": "StaleWarPeace: a winner that never attacks stops refusing peace (af99bc1).",
+   "name": "Personality",
+   "detail": "The rock-paper-scissors styles: greedy, balanced and aggressive, and each leader's profile. The greedy style is in PC 2's run; balanced, aggressive and MetaDial wait for the matchup test.",
+   "chat": "Civ V AI: Personality session",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 5,
-   "name": "Lead",
-   "detail": "Fixed the C8 city-state crash (8109f67); reading results every 5 pairs.",
-   "state": "running"
+   "name": "Economy",
+   "detail": "Settling, growth and religion. Its settler-route fixes wait for a bug-fix test; idle until then.",
+   "chat": "Civ V AI: Economy & victory session",
+   "state": "waiting"
   },
   {
    "section": "session",
    "order": 6,
-   "name": "PC runner 2",
-   "detail": "Bully vs greedy civs, logged pair first, ab-c78384b, since 7:03am ET.",
+   "name": "PC runner",
+   "detail": "PC 1 (BOX): the bully with the conquest flags against normal civs, 20 games, on ab-c78384b since 7:02am ET.",
+   "chat": "Civ V AI optimization PC runner",
    "state": "running"
   },
   {
    "section": "session",
    "order": 7,
-   "name": "Personality",
-   "detail": "Greedy style coded (GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds on ai/personality b9384af); balanced and aggressive next.",
+   "name": "PC runner 2",
+   "detail": "PC 2 (TREEDESKTOP): the bully with the conquest flags against greedy civs, logged pair first, on ab-c78384b since 7:03am ET.",
+   "chat": "Civ V AI optimization PC runner 2",
    "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 1,
+   "name": "SiegeArmy",
+   "owner": "War",
+   "detail": "A city attack keeps recruiting until it's strong enough to take its city (up to 20 turns).",
+   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
+   "state": "running",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 2,
+   "name": "SiegeAbort",
+   "owner": "War",
+   "detail": "An attack still too weak after those 20 turns is called off instead of sent to die.",
+   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
+   "state": "running",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 3,
+   "name": "SiegeFormation",
+   "owner": "War",
+   "detail": "Early city attacks get 5 slots for catapults and archers, not 2.",
+   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
+   "state": "running",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 4,
+   "name": "ArmyHandoff",
+   "owner": "War",
+   "detail": "Units an attack delivered can join the siege from anywhere nearby.",
+   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
+   "state": "running",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 5,
+   "name": "TimingAttack",
+   "owner": "War",
+   "detail": "A warmonger plans its attack for when its army peaks.",
+   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
+   "state": "running",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 6,
+   "name": "DeclareTiming",
+   "owner": "War",
+   "detail": "A warmonger declares war when its attack is ready, not before.",
+   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
+   "state": "running",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 7,
+   "name": "SiegeBook",
+   "owner": "War",
+   "detail": "A warmonger's opening builds toward a siege army.",
+   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
+   "state": "running",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 8,
+   "name": "SiegeTechs",
+   "owner": "War",
+   "detail": "A warmonger researches siege units early.",
+   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
+   "state": "running",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 9,
+   "name": "GreedyFewUnits",
+   "owner": "Personality",
+   "detail": "Greedy civs keep 1 land unit per city at peace, 2 at war.",
+   "test": "Bully vs greedy civs, PC 2: every civ except the aggressor and the tall civ runs it.",
+   "state": "running",
+   "runs": [
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 10,
+   "name": "GreedyNoWalls",
+   "owner": "Personality",
+   "detail": "Greedy civs build no walls, castles or other defence buildings.",
+   "test": "Bully vs greedy civs, PC 2: every civ except the aggressor and the tall civ runs it.",
+   "state": "running",
+   "runs": [
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 11,
+   "name": "GreedyNoUpgrades",
+   "owner": "Personality",
+   "detail": "Greedy civs don't upgrade units unless at war.",
+   "test": "Bully vs greedy civs, PC 2: every civ except the aggressor and the tall civ runs it.",
+   "state": "running",
+   "runs": [
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 12,
+   "name": "GreedyBuilds",
+   "owner": "Personality",
+   "detail": "Greedy civs value growth, science and wonders 50% more.",
+   "test": "Bully vs greedy civs, PC 2: every civ except the aggressor and the tall civ runs it.",
+   "state": "running",
+   "runs": [
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 13,
+   "name": "StaleWarPeace",
+   "owner": "Diplomacy",
+   "detail": "A war where no city has changed hands for 20 turns and nobody is attacking ends in peace.",
+   "test": "Next: the bully runs, for every civ.",
+   "state": "next",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 14,
+   "name": "WarAppetite",
+   "owner": "Diplomacy",
+   "detail": "The urge to go to war follows the leader's style: half for greedy, double for aggressive.",
+   "test": "Next: bully and builders tests, once its build passes.",
+   "state": "next",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 15,
+   "name": "TradeOpinion",
+   "owner": "Diplomacy",
+   "detail": "Trade friendship counts only deals running now, and can't make a friend on its own.",
+   "test": "Next: bully and builders tests.",
+   "state": "next",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 16,
+   "name": "BalancedArmy",
+   "owner": "Personality",
+   "detail": "Balanced civs keep 2–3 land units per city at peace, defenders first.",
+   "test": "Later: the matchup test.",
+   "state": "waiting",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 17,
+   "name": "BalancedWalls",
+   "owner": "Personality",
+   "detail": "Balanced civs build walls and castles first in border cities and the capital.",
+   "test": "Later: the matchup test.",
+   "state": "waiting",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 18,
+   "name": "AggressivePlan",
+   "owner": "Personality",
+   "detail": "The civ plays the warmonger plan whatever its personality.",
+   "test": "Later: the matchup test.",
+   "state": "waiting",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 19,
+   "name": "AggressiveArmy",
+   "owner": "Personality",
+   "detail": "Aggressive civs keep 3–4 land units per city, attackers first.",
+   "test": "Later: the matchup test.",
+   "state": "waiting",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 20,
+   "name": "MetaDial",
+   "owner": "Personality",
+   "detail": "Each leader's army size, walls and war plan follow its personality, from greedy to aggressive.",
+   "test": "Later: once the three styles are tested.",
+   "state": "waiting",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 21,
+   "name": "SettlerEscortSafe",
+   "owner": "Economy",
+   "detail": "A settler's escort isn't dropped next to danger.",
+   "test": "Later: a bug-fix (no-worse) test.",
+   "state": "waiting",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 22,
+   "name": "SettlerSitePathFlags",
+   "owner": "Economy",
+   "detail": "Settlers check a site's path with the right movement rules.",
+   "test": "Later: a bug-fix (no-worse) test.",
+   "state": "waiting",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 23,
+   "name": "SettlerPathCheck",
+   "owner": "Economy",
+   "detail": "Settler operations stop retrying sites they can't reach.",
+   "test": "Later: a bug-fix (no-worse) test.",
+   "state": "waiting",
+   "runs": []
   }
  ]
 }
