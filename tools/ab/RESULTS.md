@@ -1924,7 +1924,7 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
-### War: why the Aztecs' gold was low in the 0C3C8913 replay (with Economy) (Nov 4, about 5:29pm ET)
+### War: why the Aztecs' gold was low in the 0C3C8913 replay (with Economy) (Nov 4, about 5:25pm ET)
 The lead: a timing attacker must never sit near bankruptcy at peace. The role had TrueGoldRate, WarEconomy and
 WarChest on.
 
@@ -1942,7 +1942,7 @@ WarChest on.
   almost no military (2 scouts, 1 Jaguar).
 - So the cause is expansion, building and wonder upkeep without matching gold income, not army upkeep.
 - WarChest's +500 for gold buildings applies only from the window on.
-- Economy owns these weights; sent to Economy at 5:28pm ET.
+- Economy owns these weights; sent to Economy at 5:25pm ET.
 
 **3. War's part:** `f863b01` and `69c9587`. The pause treats the symptom, as the lead notes; the cause is items 1
 and 2.
