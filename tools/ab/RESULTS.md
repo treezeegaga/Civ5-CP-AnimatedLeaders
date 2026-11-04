@@ -1359,8 +1359,6 @@ fast. One flag, `WarEconomy`, separate from `WarChest` (gold). It reads the same
   - production buildings (forge, workshop) and military ones (barracks, armory) get a bonus in
     `CvBuildingProductionAI`;
   - other cities keep their normal choices.
-- **Roads toward the target** (`CvBuilderTaskingAI`): a route from the nearest of those cities toward the border
-  facing the target gets route priority, so the army marches in fewer turns.
 - **Strategic resources:** if the attack's main units need iron or horses and the civ has none connected, workers
   prioritise an owned source, and plot purchases favour one in reach (`CvEconomicAI`, `CvBuilderTaskingAI`).
 - **Hypothesis:** the build-up takes fewer turns and the army arrives sooner, with better units, for little peacetime
@@ -1374,12 +1372,11 @@ fast. One flag, `WarEconomy`, separate from `WarChest` (gold). It reads the same
   - in War's "planned" and "window" phases (`CvBuildingProductionAI`).
 
 - **Part 2, patch 0016 (on 0015), same flag:**
-  - **Road:** `CvBuilderTaskingAI::ConnectTowardWarTarget`, from `UpdateRoutePlots`. A strategic road from our city
-    nearest the target's nearest city to our own land tile (within 5) closest to it; value is twice the movement
-    bonus.
-  - **Iron and horses:** `GetResourceWeight` multiplies the improvement value by 4 while the civ has none of that
-    resource.
-  - Both only in the "planned" and "window" phases. Plot purchases toward a resource aren't included.
+  - **Iron and horses:** `CvBuilderTaskingAI::GetResourceWeight` multiplies the improvement value by 4 while the civ
+    has none of that resource, in the "planned" and "window" phases.
+  - **No road toward the target:** dropped on the user's call. Road upkeep is about 1 gold a tile per turn, on the
+    civs most prone to bankruptcy.
+  - No plot purchases toward a resource.
 - Status: both parts coded, not built. 0014-0016 apply cleanly on `ai/war` `250ee9d`.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)

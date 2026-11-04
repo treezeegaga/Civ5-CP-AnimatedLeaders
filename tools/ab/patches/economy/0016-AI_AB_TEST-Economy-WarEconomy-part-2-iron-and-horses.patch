@@ -1,0 +1,55 @@
+From a1beb2bd6b6be07ebdf4a206d0eeda708fe4ea5e Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 19:03:07 +0000
+Subject: [PATCH] AI_AB_TEST Economy: WarEconomy part 2 (iron and horses weigh
+ 4x for workers while the civ has none)
+
+Same flag as part 1, off in the bundle; only while TimingBuildup's attack is planned or in its window. No road toward the target (dropped: road upkeep on a civ prone to bankruptcy).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.cpp | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.cpp b/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.cpp
+index 1cb8772..ba8d27a 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.cpp
+@@ -16,6 +16,7 @@
+ #include "CvCityConnections.h"
+ #include "CvEconomicAI.h"
+ #include "CvDiplomacyAI.h"
++#include "CvMilitaryAI.h"
+ #include "CvGameCoreEnumSerialization.h" //toString(const YieldTypes& v)
+ #include "CvTypes.h"
+ 
+@@ -1703,6 +1704,7 @@ void CvBuilderTaskingAI::UpdateRoutePlots(void)
+ 				}
+ 			}
+ 		}
++
+ 	}
+ }
+ 
+@@ -3198,6 +3200,17 @@ int CvBuilderTaskingAI::GetResourceWeight(ResourceTypes eResource, int iQuantity
+ 		// measure quantity
+ 		int iValue = (iQuantity + 1) * 250;
+ 
++		// AI_AB_TEST candidate (WarEconomy): a timing attack being prepared needs iron or horses it doesn't have yet
++		if (m_pPlayer->UsesCandidateAI(FIX_WAR_ECONOMY) && m_pPlayer->getNumResourceTotal(eResource) == 0)
++		{
++			static const ResourceTypes eIron = (ResourceTypes)GC.getInfoTypeForString("RESOURCE_IRON", true);
++			static const ResourceTypes eHorse = (ResourceTypes)GC.getInfoTypeForString("RESOURCE_HORSE", true);
++			const CvMilitaryAI::TimingBuildupPhase ePhase = m_pPlayer->GetMilitaryAI()->GetTimingBuildupPhase();
++			if ((eResource == eIron || eResource == eHorse) &&
++				(ePhase == CvMilitaryAI::TIMING_BUILDUP_PLANNED || ePhase == CvMilitaryAI::TIMING_BUILDUP_WINDOW))
++				iValue *= 4;
++		}
++
+ 		// big bonus for late game resources
+ 		TechTypes eRevealTech = (TechTypes)pkResource->getTechReveal();
+ 		if (eRevealTech != NO_TECH)
+-- 
+2.43.0
+
