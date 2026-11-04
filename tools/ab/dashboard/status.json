@@ -391,6 +391,166 @@
    "name": "Personality",
    "detail": "Greedy style coded (GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds on ai/personality b9384af); balanced and aggressive next.",
    "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 1,
+   "name": "SiegeArmy",
+   "detail": "War: a city attack keeps recruiting until it can take its city (up to 20 turns).",
+   "test": "Bully runs on both PCs (ab-c78384b): the aggressor runs it in the first game of each pair. PC 1 against normal civs, PC 2 against greedy civs.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 2,
+   "name": "SiegeAbort",
+   "detail": "War: an attack still too weak after those 20 turns is called off instead of sent (the Celts lost their army this way).",
+   "test": "Bully runs on both PCs (ab-c78384b): the aggressor runs it in the first game of each pair. PC 1 against normal civs, PC 2 against greedy civs.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 3,
+   "name": "SiegeFormation",
+   "detail": "War: classical-medieval city attacks get 5 siege/ranged slots, not 2, so catapults can join.",
+   "test": "Bully runs on both PCs (ab-c78384b): the aggressor runs it in the first game of each pair. PC 1 against normal civs, PC 2 against greedy civs.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 4,
+   "name": "ArmyHandoff",
+   "detail": "War: units an attack has delivered may reinforce its target from anywhere.",
+   "test": "Bully runs on both PCs (ab-c78384b): the aggressor runs it in the first game of each pair. PC 1 against normal civs, PC 2 against greedy civs.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 5,
+   "name": "TimingAttack",
+   "detail": "War: a warmonger plans its attack for when its army peaks.",
+   "test": "Bully runs on both PCs (ab-c78384b): the aggressor runs it in the first game of each pair. PC 1 against normal civs, PC 2 against greedy civs.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 6,
+   "name": "DeclareTiming",
+   "detail": "War: a warmonger declares when its attack is ready.",
+   "test": "Bully runs on both PCs (ab-c78384b): the aggressor runs it in the first game of each pair. PC 1 against normal civs, PC 2 against greedy civs.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 7,
+   "name": "SiegeBook",
+   "detail": "War: a warmonger's opening builds toward a siege army.",
+   "test": "Bully runs on both PCs (ab-c78384b): the aggressor runs it in the first game of each pair. PC 1 against normal civs, PC 2 against greedy civs.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 8,
+   "name": "SiegeTechs",
+   "detail": "War: a warmonger researches siege units early.",
+   "test": "Bully runs on both PCs (ab-c78384b): the aggressor runs it in the first game of each pair. PC 1 against normal civs, PC 2 against greedy civs.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 9,
+   "name": "GreedyFewUnits",
+   "detail": "Personality: at most 1 land unit per city at peace, 2 at war.",
+   "test": "Bully vs greedy civs (PC 2): every civ except the aggressor and the tall civ runs it, in both games.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 10,
+   "name": "GreedyNoWalls",
+   "detail": "Personality: no walls, castles or other defence buildings.",
+   "test": "Bully vs greedy civs (PC 2): every civ except the aggressor and the tall civ runs it, in both games.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 11,
+   "name": "GreedyNoUpgrades",
+   "detail": "Personality: no unit upgrades unless at war.",
+   "test": "Bully vs greedy civs (PC 2): every civ except the aggressor and the tall civ runs it, in both games.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 12,
+   "name": "GreedyBuilds",
+   "detail": "Personality: growth, science and wonders valued 50% higher.",
+   "test": "Bully vs greedy civs (PC 2): every civ except the aggressor and the tall civ runs it, in both games.",
+   "state": "running"
+  },
+  {
+   "section": "testflag",
+   "order": 13,
+   "name": "StaleWarPeace",
+   "detail": "Diplomacy: a war with no city changing hands for 20 turns and no attack under way ends in peace.",
+   "test": "Next: the bully runs, for every civ (Base).",
+   "state": "next"
+  },
+  {
+   "section": "testflag",
+   "order": 14,
+   "name": "WarAppetite",
+   "detail": "Diplomacy: the urge to go to war follows the leader's style (half for greedy, double for aggressive).",
+   "test": "Next: the bully and builders tests, once its build passes.",
+   "state": "next"
+  },
+  {
+   "section": "testflag",
+   "order": 15,
+   "name": "TradeOpinion",
+   "detail": "Diplomacy: trade friendship counts only deals running now, capped below Favorable.",
+   "test": "Next: the bully and builders tests.",
+   "state": "next"
+  },
+  {
+   "section": "testflag",
+   "order": 16,
+   "name": "BalancedArmy",
+   "detail": "Personality: 2–3 land units per city at peace, defenders first.",
+   "test": "Later: the matchup test (balanced civs).",
+   "state": "waiting"
+  },
+  {
+   "section": "testflag",
+   "order": 17,
+   "name": "BalancedWalls",
+   "detail": "Personality: walls and castles first in border cities and the capital.",
+   "test": "Later: the matchup test (balanced civs).",
+   "state": "waiting"
+  },
+  {
+   "section": "testflag",
+   "order": 18,
+   "name": "AggressivePlan",
+   "detail": "Personality: the civ plays the warmonger plan whatever its personality.",
+   "test": "Later: the matchup test (aggressive civs).",
+   "state": "waiting"
+  },
+  {
+   "section": "testflag",
+   "order": 19,
+   "name": "AggressiveArmy",
+   "detail": "Personality: 3–4 land units per city at peace, attackers first.",
+   "test": "Later: the matchup test (aggressive civs).",
+   "state": "waiting"
+  },
+  {
+   "section": "testflag",
+   "order": 20,
+   "name": "MetaDial",
+   "detail": "Personality: each leader's style settings follow its personality, from greedy to aggressive.",
+   "test": "Later: once the three styles are tested.",
+   "state": "waiting"
   }
  ]
 }
