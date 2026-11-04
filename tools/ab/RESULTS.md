@@ -2212,7 +2212,8 @@ conquest code can't take cities from these civs, it can't take them at all.
   split-game SPRT (AGENTS.md, "What greedy trades").
 - **Build:** fork `ai/personality` `b9384af` (rebased onto `claude/ab-c1` `1804369`, the OthersBase key; first pushed as
   `8e69e07` on `ec2a4c8`); CI publishes `ab-ai-personality-latest`.
-- **Status:** coded, CI pending; waiting for the lead's style key.
+- **Status:** compiles (CI run 109 on `8e69e07` passed, 11:28pm ET; the same code rebased as `b9384af`). Ready for the
+  OthersBase runs.
 - **Notes for owners:** `CvUnitProductionAI` and `CvBuildingProductionAI` are Economy's, `CvHomelandAI` War's,
   `CvUnit.cpp` shared; each change is a gated block at the place named above. Request to Economy: `GreedyAlarm` only
   watches for tall-book civs (`GetGreedyAlarmThreat`); for the style it should also fire for civs running
