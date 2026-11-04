@@ -3282,7 +3282,7 @@ logged pair".
 - **Measure:** the aggressor's `WalledCities` against its border cities at war; its gold per turn.
 - **Status:** compiles (CI run 168 passed on `166ebc19a`, with War's build fix); merged into `claude/ab-c1` by the lead.
 
-### GreedyAlarmScale: the alarm's reaction scales with how greedy the civ is (Personality, 2026-11-04 2:50pm ET)
+### GreedyAlarmScale: the alarm's reaction scales with how greedy the civ is (Personality, 2026-11-04 2:40pm ET)
 - **The user's flag audit (via the lead, 2026-11-04):** GreedyAlarm should depend on the personality. A very greedy civ
   builds one extra archer when it sees the army, and builds walls only once war is actually declared; a less greedy
   one reacts sooner and more. Economy wrote GreedyAlarm; the style side is mine, coordinated with Economy's code.
@@ -3305,7 +3305,8 @@ logged pair".
     (border 1000, elsewhere 300) is scaled by (100 - g) / 100.
 - **Measure:** greedy civs' gold and science per turn while alarmed (`GREEDY:` lines in the log), `LandUnits` and
   `WalledCities` at T150, cities lost and wars declared on them; against `GreedyAlarm` alone, paired.
-- **Status:** coding.
+- **Build:** fork `ai/personality` `35272f9`.
+- **Status:** coded, CI pending.
 
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
