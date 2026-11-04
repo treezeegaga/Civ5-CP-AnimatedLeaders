@@ -2863,6 +2863,7 @@ victory pursuit pick), so every computer gets the same result.
 | Diplomat | City-state patron, World Congress, the one who organises coalitions; keeps its word | -20 (-50 to +10) | diplomacy first | medium |
 | Tourism hoarder | Wonders, great works, tourism; builds in peace and hates being disturbed | -60 (-90 to -30) | culture first | tall |
 | Scientist | Tall science civ: libraries, universities, the National College early, spaceship | -60 (-90 to -30) | science first | tall |
+| Raider (added 2026-11-04, the user) | Wars for loot: pillages, plunders and razes, sells or burns what it takes rather than holding it, then peace for tribute | +60 (+40 to +80) | domination 40, the rest even | medium |
 
 **3. Who gets which archetype.** A rule, not a hand-made list, so it covers modded civs too:
 1. **The civ's unique ability** (CP's trait tags in `CvPlayerTraits`): Warmonger → Conqueror, Religious → Zealot,
@@ -3040,6 +3041,112 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
+### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
+The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
+conquer cities. They are, and the user ruled: "raider is a great flavour archetype. songhai works better as a
+conqueror."
+
+- **The Raider:** aggressive (home meta +60, range +40 to +80), wars for loot rather than land. It pillages
+  improvements, plunders trade routes, and razes or gives back cities rather than holding them, then makes peace for
+  tribute. Victory weights domination 40, the rest 20 each; medium expansion. Added to the spec's archetype table.
+- **Who is a Raider** (trait data, so mods and other civs work too):
+  - faster razing (the Huns);
+  - plundering trade routes without a war;
+  - a free promotion that rewards pillage or attacking cities: free pillage moves, healing or strength from pillage,
+    plunder from city attacks (Denmark's Viking promotion).
+- **The order in `GetStrategyProfile`:**
+  1. a conquest bonus that pays off by holding cities (Conqueror);
+  2. then raiding (Raider);
+  3. then city-state takeover (Diplomat);
+  4. then CP's tags.
+
+  Raze speed moves from the conquest bonus to the raider signal.
+- **Who moves:**
+  - **the Huns:** Conqueror (+100 in `0A92244F`) to Raider (+40 to +80);
+  - **Denmark:** Conqueror (+90 in `0AFFA02F`, from CP's warmonger tag) to Raider;
+  - **Songhai:** stays a Conqueror (its plunder gold comes from taking cities). Assyria and Mongolia stay Conquerors.
+
+  To confirm in logged games on this build.
+- **What it changes now:** `StrategyProfile_Log.csv`, and `MetaDial`, where a Raider at +50 or more gets the conquest
+  plan. Nothing in the running tests reads either.
+- **Which cities a Raider keeps (the user, 2026-11-04 11:30am ET):** "a raider would only keep a city if it is a very
+  valuable location and they think they can hold it without much trouble". Proposed rule, a stricter version of CP's
+  own keep-or-raze rule (`CvPlayerAI::AI_conquerCity`: keep at 80% of the median city's value, or with wonders, a holy
+  city, or the only city on a landmass). A Raider keeps a captured city only if both hold:
+  1. **very valuable:** economic value at least about 1.5× the median city's (`getEconomicValue`), or a world wonder or
+     a holy city;
+  2. **holdable without much trouble:** within about 8 plots of one of its own cities, and no enemy force it can see
+     could retake it (the defender's siege sketch `CouldEnemyTakeCity`, from the Raider's side).
+
+  Otherwise it razes the city, or liberates it if it was already trying to. Original capitals can't be razed, so it
+  keeps them as puppets; they're good to trade back in a peace deal (Diplomacy). Not coded: it's a new flag in a
+  shared file, with 2 flag slots left. Waiting for the user's call, now or together with War's raid mode.
+- **Sack or raze (the user, 2026-11-04 11:35am ET: "look into when a raider should sack vs raze").** The mechanics:
+  - **Capture gold is automatic:** 20 + 10 per citizen plus a random part, cut back if the old owner only just took
+    the city, times the plunder modifier. Whatever the raider does next, the loot is already taken.
+  - **Razing:** the city loses 1 citizen a turn (more with a raze-speed bonus: 2 for the Huns), so it takes as many
+    turns as the city has citizens. A razing city is annexed and counts against the raider's happiness, and it can
+    be retaken mid-raze (the old owner gets a smaller city). Original capitals can't be razed.
+  - **Selling back:** cities can be traded in peace deals, so a captured city can be held as a puppet and returned for
+    gold, per-turn payments or peace.
+
+  So "sack" means take the loot and give the city back for a ransom; "raze" means take the loot and destroy the city.
+  **Proposed rule, after a capture:**
+
+  | Situation | A raider should |
+  |---|---|
+  | very valuable and holdable (above) | keep it |
+  | can't be razed (an original capital), or worth a lot to its owner (wonders, holy city, big population) but not worth holding | sack: puppet it, return it in the peace deal for gold, per-turn payments or peace |
+  | small enough to burn before an enemy force in sight could retake it (citizens / raze speed ≤ turns until it could fall) | raze: denies the rival the city for good |
+  | big, not holdable, and the owner won't pay | raze anyway: each turn still costs them a citizen |
+
+  The inputs:
+  - razing time: citizens ÷ raze speed, so the Huns raze far more often;
+  - retake time: `CouldEnemyTakeCity` from the raider's side;
+  - ransom: what the old owner would pay, from Diplomacy's deal valuation (`CvDealAI`, `TRADE_ITEM_CITIES`).
+
+  A raider done with its war leans toward sacking (the city doubles as a peace offer). One facing a long-term rival
+  leans toward razing.
+  **Who does what:**
+  - Personality: the keep, sack or raze choice (`CvPlayerAI::AI_conquerCity`, shared file);
+  - Diplomacy: asking a ransom for the city in the peace deal;
+  - War: the raid goals.
+
+  **Not coded.** The keep rule above and this choice would be one flag ("what a Raider does with a captured city").
+- **What a Raider needs from War (request, later; the lead's hold applies):** a raid mode for its wars. That means
+  pillage and trade-route plunder as goals, razing captured cities it can't hold, and peace once the loot is taken. It
+  also needs its own measures, since it fails a "cities captured" test while doing its job: tiles pillaged, gold
+  plundered, cities razed, and the victim's economy.
+- **Build:** fork `ai/personality` `0672835` (on `claude/ab-c1` `9e9fc9d`). **Status:** compiles (CI run 154 passed, 11:48am
+  ET); ready to merge.
+
+### Strategy profile picks in the first logged games (Personality, 2026-11-04 11:30am ET)
+`StrategyProfile_Log.csv` from `logs_0A92244F`, `logs_0AFFA02F`, `logs_0BC677BF` (24 civs; played on `ab-ed449fd`, before
+the conquest-bonus change `277602f`, so they show the earlier rule).
+
+| Archetype | Civs (home meta) |
+|---|---|
+| Conqueror | Huns +100 (no CP tag: domination pursuit and offence), Japan +100, Aztecs +95 and +100, Denmark +90, Germany +70, England +65, Shoshone +60 |
+| Opportunist | none |
+| Expansionist | Spain +10 and +15, Inca +10 and -5 |
+| Zealot | Byzantium +5 |
+| Diplomat | Venice -40 (pursuit diplomacy), Morocco -30, Netherlands -30, Arabia -35, Russia -35 (no tag: pursuit diplomacy), Portugal -20 |
+| Tourism | Sweden -40, France -35 |
+| Scientist | Maya -65, India -75, Babylon -55 |
+
+- **As expected:** the Huns are Conquerors and Venice is a Diplomat, here by their pursuits. Assyria, Songhai,
+  Mongolia and Austria weren't in these games; the conquest-bonus rule shows in games on `2db51dd` or later.
+- **The meta spread is wide, as meant:** Conquerors from +60 to +100, the builders from -20 to -75, Expansionists and
+  the Zealot near 0. Boldness and offence push most Conquerors to the top of their range.
+- **No Opportunists:** the archetype only comes from a domination pursuit with offence below 7, or no pursuit and
+  low expansion. It may be too narrow. To watch over more games.
+- **One questionable pick: the Shoshone as Conquerors (+60).** They have both the warmonger and the expansionist tag.
+  Their pursuit (science) matched neither, and the tie-break fell back to the fixed order, warmonger first. The
+  Shoshone are a classic expansionist civ. **Proposed fix (not coded; the lead asked to hold new work until attacks
+  take cities):** when the pursuit doesn't break a tie between the warmonger tag and another, take the warmonger tag
+  only if the leader's offence flavour is 7 or more. Nothing in the test runs reads the profile yet (only MetaDial
+  does), so it can wait.
+
 ### Conquest bonuses in the strategy profile: which leaders move (Personality, 2026-11-04 10:15am ET)
 The user's task (via the lead): use each civ's conquest bonus. Personality's half: the profile puts conquest-bonus civs
 on the aggressive side, and civs that take city-states without war on the diplomat side. War does target choice
@@ -3081,7 +3188,7 @@ So the moves are:
 **What it affects now:** `StrategyProfile_Log.csv`, and `MetaDial` (merged, not yet in any run). The style flag sets
 don't read the profile.
 
-**Status:** coded; CI pending.
+**Status:** compiles (CI run 145 on `277602f` passed, 10:15am ET). Ready for the lead to merge.
 
 ### The three styles as flag sets, for the trio test (Personality, 2026-11-04 9:20am ET)
 For the lead's trio mode (AGENTS.md, "The trio goal": one greedy, one balanced and one aggressive civ of ours plus 3 CP
