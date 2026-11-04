@@ -2400,6 +2400,53 @@ worked out each turn from what the civ can see:
 **Open for the user:** the archetype list and the home positions are first guesses, to tune once the matchup test
 gives the triangle's numbers.
 
+### MetaDial: the style settings follow the meta position (Personality, 2026-11-03 11:45pm ET)
+Build step 2 of the strategy profile.
+- **Hypothesis:** with each AI's army size, walls, upgrades and building priorities set by its meta position
+  (the profile's home position), leaders play measurably different styles: Scientists and Tourism hoarders greedy,
+  Conquerors aggressive, the rest in between. Strength stays no worse than B, since the settings are the style
+  flags' fixed points and the line between them.
+- **The dial** (flag `MetaDial`, `FIX_META_DIAL`, `false` in the bundle, AI major civs only; a style flag that is on
+  takes precedence):
+
+  | Setting | M = -100 | M = -50 | M = 0 | M = +50 | M = +100 |
+  |---|---|---|---|---|---|
+  | Land units per city in peace: floor / ceiling | 1 / 1 | 1.5 / 2 | 2 / 3 | 2.5 / 3.5 | 3 / 4 |
+  | Land units per city at war: cap | 2 | 2 | none | none | none |
+  | Walls, castles, barracks | none | none | +800 in border cities and capital (from 0 at M = -50) | +800 | +800 |
+  | Upgrades in peace | no | no | yes | yes | yes |
+  | Small-army cut on buildings (75% below the floor) | off | off | on | on | on |
+  | Growth, science, wonder value | +50% | +25% | +0% | +0% | +0% |
+  | Unit types first below the floor | none | none | defenders, ranged | attack, siege, ranged (from +25) | same |
+  | Conquest plan (counts as a warmonger) | no | no | no | yes | yes |
+
+  The conquest plan only acts where the conquest flags also run: list `TimingAttack, DeclareTiming, SiegeBook,
+  SiegeTechs` (and `SiegeArmy, ArmyHandoff`) with `MetaDial`.
+- **Not in the dial yet:** war appetite (the WAR approach weight, spec section 4). It's a separate idea in Diplomacy's
+  scoring, so it gets its own flag (`MetaWarAppetite`) once the dial shows the styles work.
+- **Where M comes from:** `CvGrandStrategyAI::GetMetaPosition()`, the profile's home position worked out once per turn
+  (not saved; the profile is a pure function of game data). `MetaAdapt` will move it later.
+- **Code:** `CvPlayer` (`UsesMetaDial`, `GetMetaDialPosition`, `IsMetaDialGreedy`, `GetMetaDialLandUnitsPerCityTimes10`;
+  `IsCandidateWarmonger`), `CvUnitProductionAI::CheckUnitBuildSanity`, `CvBuildingProductionAI::CheckBuildingBuildSanity`
+  (walls, small-army cut, growth value), `CvUnit::CanUpgradeRightNow`, `CvHomelandAI::PlotUpgradeMoves`: the same gated
+  places as the style flags.
+- **Measures:**
+  - the dial works: `LandUnits` per city and `WalledCities` follow M (needs the `Meta` and `Archetype` columns
+    requested in the spec; until then, `StrategyProfile_Log.csv` in logged games gives each civ's M);
+  - strength share at T150: no worse than B;
+  - personality tests: per archetype, wars declared, cities, techs, wonders and army size differ.
+- **What to run:**
+  1. A logged smoke pair (`-Fixes "MetaDial"`, split mode): no crash, a matching replay, `StrategyProfile_Log.csv`
+     present, and land units per city matching each c civ's M.
+  2. A no-worse SPRT at T150, paired: `-Fixes "MetaDial"` against B.
+  3. With the conquest flags (`-Fixes "MetaDial, TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy,
+     ArmyHandoff"`) once attacks take cities: does the meta mix by personality give a living map (wars from
+     Conquerors, greedy civs paying for it)?
+- **Evidence level:** 3 (new behaviour), but the meta-level effects are judged like the styles (matchups, bully test);
+  the SPRT here is the no-worse guard.
+- **Build:** fork `ai/personality` `3b056a9` (on the profile step 1, `7afce5c`).
+- **Status:** coded, CI pending.
+
 ## Requests
 
 **Blocked (lead, 2026-11-03 00:25 UTC): GitHub Actions is disabled on `treezeegaga/Community-Patch-DLL`.** At
