@@ -1924,6 +1924,24 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: what the minidump of PC 2's crash shows (0C827C9C, ab-1c3ab74, T78, logging on) (Nov 4, about 2:37pm ET)
+Read with a small minidump parser (no symbols). The dump is 1.1 MB: thread stacks and the module list, no heap.
+- **Where it crashed:** an access violation reading 0xad3188f0, at `CivilizationV.exe+0x3383d`, on the main thread
+  (26496), inside Lua. The stack is `lua51_Win32.dll` frames called from the exe's UI Lua host
+  (`CivilizationV.exe+0x49e0xx`). No frame of our DLL is near the top.
+- **The main thread's stack holds 13 values inside `CvGameCore_Expansion2.dll`**, around RVA 0xacc5xx–0xacc9xx and
+  0x716b20. They may be stale; mapping them needs the PDB of the 1c3ab74 MSVC Release build, a CI artifact I can't
+  download from here. No other thread touches our DLL.
+- **Memory:** crashes.log reports 1.81 GB committed below 2 GB, and the largest free block below 2 GB is 752 KB.
+  The other crash in the log (11/02, a deliberate assert stop) had the same 1.81 GB, with a 1 MB largest block.
+  - So the low address space is nearly full by T78. The most likely story is an allocation in the UI's Lua failing
+    and a garbage pointer being read afterwards. That makes it an out-of-memory crash in the exe, not a bug in our
+    code path.
+  - What filled the memory can't be read from this dump (no heap).
+- **Next:** the replay with logging off is the right test. If it passes T78, logging is the suspect; the tactical
+  simulation's storage is the other candidate (CP issue #13254, address-space exhaustion, noted in
+  `FindBestUnitAssignments`). With the PDB, the 13 stack values could be mapped to functions.
+
 ### FIX_TIMING_BUILDUP: a small army at peace, a fast build-up right before the attack (War, the user's design) (Nov 4, about 1:52pm ET)
 **Why:**
 - The user: a timing attacker doesn't keep a big army all game. It keeps garrisons and escorts, builds up fast
