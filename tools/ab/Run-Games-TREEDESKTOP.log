@@ -570,3 +570,20 @@
 2026-11-04 15:05:07    logs for the sessions: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\logs_0CA57EBC0CA57EBCF
 2026-11-04 15:05:07  Stop file found; stopping
 2026-11-04 15:05:07  Runner finished after 2 games
+2026-11-04 15:12:00  Crash replay of 0C827C9C0C827C9C on ab-1c3ab74, logging OFF, StopTurn 80, hand-written AIABTest.ini (-NoSettings -Unpaired)
+2026-11-04 15:05:41  Starting game 1: single game; Mode = bully; Fixes = bundle; Screen = ; Base = ; RoleFixes = ; OthersBase = 
+2026-11-04 15:13:57    turn 100 after 7 minutes
+2026-11-04 15:18:00  Game ended: turn 150 (0C827C9C0C827C9C)
+2026-11-04 15:18:00  Runner finished after 1 games
+2026-11-04 15:20:04  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll, DeclareWhenGathered, SiegeConcentrate, SiegeKeep, TimingBuildup, AggressiveWalls, TrueGoldRate, WarChest, WarEconomy, TargetVulnerability; OthersBase = GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds
+2026-11-04 15:30:40    turn 100 after 9 minutes
+2026-11-04 15:36:24  Game ended: turn 150 (0CD189D40CD189D4)
+2026-11-04 15:36:37    logs saved: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\digest_0CD189D40CD189D4.txt and C:\Users\itstr\OneDrive\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0CD189D40CD189D4
+2026-11-04 15:36:37    logs for the sessions: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\logs_0CD189D40CD189D4
+2026-11-04 15:36:37  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll, DeclareWhenGathered, SiegeConcentrate, SiegeKeep, TimingBuildup, AggressiveWalls, TrueGoldRate, WarChest, WarEconomy, TargetVulnerability; OthersBase = GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds
+2026-11-04 15:38:12    replay matches the first game
+2026-11-04 15:47:13    turn 100 after 9 minutes
+2026-11-04 15:52:37  Game ended: turn 150 (0CD189D40CD189D4F)
+2026-11-04 15:52:49    logs saved: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\digest_0CD189D40CD189D4F.txt and C:\Users\itstr\OneDrive\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0CD189D40CD189D4F
+2026-11-04 15:52:49    logs for the sessions: C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\results\logs_0CD189D40CD189D4F
+2026-11-04 15:52:49  Starting game 3: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll, DeclareWhenGathered, SiegeConcentrate, SiegeKeep, TimingBuildup, AggressiveWalls, TrueGoldRate, WarChest, WarEconomy, TargetVulnerability; OthersBase = GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds
