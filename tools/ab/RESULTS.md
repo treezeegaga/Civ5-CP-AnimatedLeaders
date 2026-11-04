@@ -1896,6 +1896,80 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### FIX_CONQUEST_TRAIT_TARGETS: a warmonger's conquest bonus shapes whom it attacks (War) (Nov 4, about 10:04am ET)
+- **The trait fields** (`CvTraitClasses`, read through `GetPlayerTraits()`). The pack runs CP without Vox Populi,
+  so the base game's values apply; VP's SQL changes these traits, but isn't loaded.
+
+  | Civ | Base-game bonus | Field |
+  |---|---|---|
+  | Assyria | a tech the owner knew, per city captured | `IsTechFromCityConquer()` |
+  | Songhai | triple gold from capturing cities and camps | `GetPlunderModifier()` (200) |
+  | Huns | raze twice as fast | `GetRazeSpeedModifier()`. No bearing on target choice; left out |
+  | Mongolia | +30% combat against city-states | `GetCityStateCombatModifier()` |
+  | Austria | takes city-states by marriage | `IsAbleToAnnexCityStates()` / `IsDiplomaticMarriage()` |
+  | Venice | buys city-states with its merchant (a unit ability, `IsCanBuyCityState`) | `IsNoAnnexing()`, which only Venice has in the base game, used as its marker |
+
+- **Hypothesis:** with the flag (and the conquest role's target choice), each trait shapes the targets:
+  - **Assyria:** +5 to a major target's score per tech the target knows and Assyria lacks, capped at +30 (c4's
+    target scores run about 10–70).
+  - **Songhai:** + half the target's total population, capped at +30 (plunder grows with city size).
+  - **Mongolia:** CSConquest accepts city-states up to "average" strength against it, not just "poor".
+  - **Austria and Venice:** never choose war against a city-state (WAR set to 0 in the city-state approach), since
+    they take them peacefully.
+
+  Each conqueror picks wars whose spoils it's built to collect: stronger civs in the late game, a game that feels
+  different with each leader (goal 5).
+- **Measure:** bully pairs where the aggressor is one of these civs, the role + flag against the role. Who it
+  targets ("CONQUEST: going for X"), captures, `CityStatesCaptured`, and the trait's payoff (Assyria's techs, Songhai's
+  gold) from the logs. Plus Austria's and Venice's city-state wars (should be 0).
+- **δ:** target choice changes in the logs in most pairs, and captures are no fewer. Strength share is a guard, not
+  the verdict.
+- **Build:** `ai/war` commit `18386e5` (on `3cbc147`, CSConquest), patch `patches/war/0012`. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
+  block, `SelectBestApproachTowardsMinorCiv`), Diplomacy's file, behind the flag as the lead asked.
+
+### War: does a bully ever attack city-states? Hardly ever (FIX_CS_CONQUEST) (Nov 4, about 10:00am ET)
+
+**Evidence.**
+- **Declarations:** across all logged games so far, 1 declaration out of about 80 was against a city-state
+  (Songhai on Buenos Aires).
+- **Approaches** (approach log, rows "--- <city-state>"):
+
+  | Aggressor (game) | Chosen approach to city-states, row counts | Best "Conquest" score |
+  |---|---|---|
+  | Mongols (0B09BFE1) | IGNORE 744, PROTECTIVE 214, CONQUEST 1 (T86, Vatican City, a Soft target; back to IGNORE the next turn) | 1,200 |
+  | Celts (0879B791) | PROTECTIVE 553, IGNORE 330 | 37 |
+  | Huns (0A92244F replay) | IGNORE 347, PROTECTIVE 17 | 375 |
+
+**Why.**
+- **The conquest role can't pick a city-state:** `GetNewAIConquestTarget` only loops over major civs.
+- **CP's own city-state war** (`CvDiplomacyAI::SelectBestApproachTowardsMinorCiv`, then `DoUpdateMinorCivApproaches`
+  picks one war target, nearest first) needs the WAR score to beat IGNORE and PROTECTIVE, and about a dozen rules set
+  it to 0. Among them: no attack target; not a "good" war target; an ally we aren't at war with; a recent peace
+  treaty; a friend's ally or protectorate.
+- So warmongers in CP almost never take city-states, and our flags don't change that.
+
+**Hypothesis (FIX_CS_CONQUEST).**
+- A warmonger in the conquest role (`IsCandidateWarmonger(TimingAttack)`) that isn't at war with any major sets WAR
+  towards a city-state when all of these hold:
+  - it's close or a neighbour;
+  - it has no ally, or its ally is a civ we're already at war with;
+  - no major civ stronger than average compared with us protects it (pledge);
+  - its military is no better than "poor" compared with ours;
+  - we can declare war, have an attack target there, and made no recent peace with it.
+- The existing machinery does the rest: one city-state war at a time, nearest first, through the same sneak attack,
+  so SiegeArmy, SiegeAbort and DeclareAtBorder apply.
+
+**Costs, by design:** CP adds warmonger score for taking a city-state, and its protectors' opinion drops. That's goal 2
+working: a bully that eats city-states should draw a coalition.
+
+**Measure:** bully pairs, the role + CSConquest against the role. `CityStatesCaptured` (the new column), the
+aggressor's cities and military at T150, and the civs at war with it.
+
+**δ:** at least 1 city-state captured per 2 bully pairs, with the aggressor's military no lower.
+
+**Build:** `ai/war` commit `3cbc147` (on `claude/ab-c1` `d2390a1`), patch `patches/war/0011`. The code is in `CvDiplomacyAI::SelectBestApproachTowardsMinorCiv` (Diplomacy's file),
+as a narrow override like TimingAttack's; the lead asked for it on `ai/war`.
+
 ### War: the first captures (bully pair 0A92244F, ab-dbdfbb3) (Nov 4, about 9:06am ET)
 
 PC 1, normal opponents. The role was the 8 conquest flags + SiegeStay (now covering the homeland heals, `3247ef4`) +
@@ -2779,6 +2853,49 @@ logged pair".
 - **Follow-up, `d379bfe` (8:10am ET; compiles, merged in `5220c03`):** the gift switch covers every style with a cap: `BalancedArmy` at 3 per
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
+
+### Conquest bonuses in the strategy profile: which leaders move (Personality, 2026-11-04 10:15am ET)
+The user's task (via the lead): use each civ's conquest bonus. Personality's half: the profile puts conquest-bonus civs
+on the aggressive side, and civs that take city-states without war on the diplomat side. War does target choice
+(`ConquestTraitTargets`).
+
+**What the profile did before.** It took CP's trait tags (`CvPlayerTraits::IsWarmonger`, `IsNerd`, `IsSmaller`,
+`IsDiplomat` ...). When a civ had two tags, the primary victory pursuit broke the tie, and CP scores that pursuit
+from flavours and tags each game, not from a fixed table. Two gaps:
+- CP's tags overlap. Tech from captured cities sets both the warmonger and the science tag (Assyria). "No annexing"
+  sets the smaller tag (Venice), which the profile read as Scientist.
+- The raze-speed bonus (the Huns) isn't in any of CP's tags.
+
+**The change** (fork `ai/personality` `277602f`, on `claude/ab-c1` `d2390a1`; in `CvGrandStrategyAI::GetStrategyProfile`,
+read from trait fields so mods and other civs work too):
+1. **A conquest bonus makes a civ a Conqueror, before any tag, with home meta position at least +50** (MetaDial's
+   conquest plan). The bonuses: tech from captured cities, plunder gold, raze speed, combat against city-states,
+   production, great works, golden ages or yields from conquest, keeping conquered buildings.
+2. **Taking city-states without war makes it a Diplomat, before the science and smaller tags:** diplomatic marriage,
+   annexing city-states, or a unique unit that can buy a city-state.
+
+**Which leaders move** (base civs; tags worked out from each civ's ability and CP's tag rules, since the base game's
+trait data isn't in either repo; the first logged games' `StrategyProfile_Log.csv` will confirm):
+
+| Civ (leader) | Bonus | CP tags | Before | After |
+|---|---|---|---|---|
+| Assyria (Ashurbanipal) | tech from each captured city | warmonger and science | Conqueror if its pursuit came out domination, **Scientist** if science | **Conqueror**, M ≥ +50 |
+| Songhai (Askia) | triple gold from captures and camps | warmonger | Conqueror, M from +40 | Conqueror, M ≥ +50 |
+| Huns (Attila) | raze twice as fast | none from this bonus | Conqueror only if its pursuit came out domination with offence ≥ 7 (otherwise by its other tags, or Opportunist) | **Conqueror**, M ≥ +50 |
+| Mongolia (Genghis Khan) | +30% against city-states | warmonger | Conqueror, M from +40 | Conqueror, M ≥ +50 |
+| Austria (Maria Theresa) | diplomatic marriage | diplomat | Diplomat | Diplomat (no change) |
+| Venice (Enrico Dandolo) | buys city-states with the Merchant of Venice | smaller (and diplomat from its trade routes) | **Scientist** unless its pursuit came out diplomacy | **Diplomat** |
+
+So the moves are:
+- **Assyria and the Huns** become certain Conquerors.
+- **Venice** becomes a Diplomat.
+- **Songhai, Mongolia** (and Assyria, the Huns) get the +50 floor.
+- **Austria** doesn't change.
+
+**What it affects now:** `StrategyProfile_Log.csv`, and `MetaDial` (merged, not yet in any run). The style flag sets
+don't read the profile.
+
+**Status:** coded; CI pending.
 
 ### The three styles as flag sets, for the trio test (Personality, 2026-11-04 9:20am ET)
 For the lead's trio mode (AGENTS.md, "The trio goal": one greedy, one balanced and one aggressive civ of ours plus 3 CP
