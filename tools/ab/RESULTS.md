@@ -2767,7 +2767,7 @@ logged pair".
   copies a fixed list of logs). **Request to the lead:** add `StrategyProfile_Log.csv` to the logs the runner saves.
 - **Status:** `d51e8a6` compiles (CI passed) and is merged into `claude/ab-c1` (the lead, 8:10am ET). PC 2 plays it as
   `AIABTest_bullygreedy3@TREEDESKTOP.csv`.
-- **Follow-up, `d379bfe` (8:10am ET, CI pending):** the gift switch covers every style with a cap: `BalancedArmy` at 3 per
+- **Follow-up, `d379bfe` (8:10am ET; compiles, merged in `5220c03`):** the gift switch covers every style with a cap: `BalancedArmy` at 3 per
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
@@ -2798,8 +2798,8 @@ civs, 6 players). Nothing is coded for it; this is the list a test key would giv
   civ. The AI can't know which civs are "ours" (rule 6, fair play), and the cycle is the point: greedy out-grows
   balanced, aggressive punishes greedy, balanced holds against aggressive.
 - **Status of each set:**
-  - greedy: the strict four are in the bully runs; `GreedyWarArmy` is untested, and the disband fix (`b4213b4`) is
-    waiting for CI;
+  - greedy: the strict four are in the bully runs; `GreedyWarArmy` is merged but untested; the disband fix (`b4213b4`)
+    compiles (CI run 140) and waits for the lead's merge;
   - balanced: untested;
   - aggressive: the conquest role took its first cities on 2026-11-04. `AggressivePlan` and `AggressiveArmy` are
     untested, and only matter for a civ that isn't a personality warmonger.
@@ -2829,7 +2829,7 @@ T150). The per-turn rows (land units/cities, w = at war):
   otherwise scraps it. Logged (`GREEDY:` in the homeland log) in logged games.
 - **Expected:** greedy civs at peace back to about 1 land unit per city within a few turns after the 10-turn wait;
   `LandUnits` ≈ cities + scouts (about +2).
-- **Status:** coded, CI pending.
+- **Status:** compiles (CI run 140 on `b4213b4` passed, 9:16am ET). Ready for the lead to merge.
 
 ### GreedyWarArmy: at war a greedy civ judges the threat (Personality, 2026-11-04 8:15am ET, revised 9:15am ET)
 - **The user (2026-11-04), in three steps:**
@@ -2883,7 +2883,8 @@ T150). The per-turn rows (land units/cities, w = at war):
 - **Run, once the bully takes cities from strict greedy civs:** the same bully run with `-OthersBase "GreedyFewUnits,
   GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy"`.
 - **Build:** fork `ai/personality` `c1518c4` (on `674c1bd`, `ddf3311`, `cbb291c`, `9017ee3`, `d379bfe`; off `claude/ab-c1` `d51e8a6`).
-- **Status:** coded, CI pending.
+- **Status:** compiles (CI run 138 on `5220c03` passed, 9:05am ET); merged into `claude/ab-c1` `5220c03`. Waits for the
+  matchup test.
 - **For the lead:** 63 of 64 flags. Retiring flags that failed or were replaced (`LongWide`; `GreedyArmyCap`, replaced by
   `GreedyFewUnits`) will be needed soon.
 
