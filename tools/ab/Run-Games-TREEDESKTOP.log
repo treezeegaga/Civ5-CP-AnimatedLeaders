@@ -361,3 +361,9 @@
 2026-11-03 20:06:28  Game ended: turn 150 (08A4840808A48408)
 2026-11-03 20:06:29  Starting game 18: second game of the pair (Flip = 1); Mode = split; Fixes = DeclareAtBorder; Screen = ; Base = ; RoleFixes = 
 2026-11-03 20:08:02    replay matches the first game
+2026-11-03 20:15:00  Stopped by hand at the lead's request (DeclareAtBorder decided); pair 9 (08A48408...) dropped unfinished, runner and Civ killed
+2026-11-03 20:15:23  Starting game 1: first game of a pair; Mode = split; Fixes = bundle; Screen = ; Base = ; RoleFixes = 
+2026-11-03 20:51:31  Game ended: stalled at turn 70 (08B98ABC08B98ABC); responding True; screenshot C:\Users\itstr\OneDrive\Documents\Civ5-CP-AnimatedLeaders\repo\tools\ab\stall-20261103-205127.png
+2026-11-03 20:51:31  Starting game 2: second game of the pair (Flip = 1); Mode = split; Fixes = bundle; Screen = ; Base = ; RoleFixes = 
+2026-11-03 20:53:07    replay matches the first game
+2026-11-03 20:54:00  Stopped by hand at the lead's request: Error dialog CvCultureClasses.cpp:3670 (ePlayer < MAX_MAJOR_CIVS) in game 08B98ABC08B98ABC on ab-0cd5a5c; pair dropped, Civ killed, waiting for ab-8109f67
