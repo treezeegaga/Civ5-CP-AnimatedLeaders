@@ -1798,7 +1798,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
-### War: bully vs greedy pair 0B09BFE1 (Mongols with the full conquest role): close, then the army walked home (Nov 4, about 7:50am ET)
+### War: bully vs greedy pair 0B09BFE1 (Mongols with the full conquest role): close, then the army walked home (Nov 4, about 7:40am ET)
 
 Aggressor Mongolia, with TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, SiegeArmy, ArmyHandoff, SiegeAbort and
 SiegeFormation, in game 1 only. Other civs greedy. No capture in either game. With the flags Mongolia kept its army:
