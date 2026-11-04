@@ -2885,7 +2885,7 @@ conqueror."
   To confirm in logged games on this build.
 - **What it changes now:** `StrategyProfile_Log.csv`, and `MetaDial`, where a Raider at +50 or more gets the conquest
   plan. Nothing in the running tests reads either.
-- **Which cities a Raider keeps (the user, 2026-11-04 11:40am ET):** "a raider would only keep a city if it is a very
+- **Which cities a Raider keeps (the user, 2026-11-04 11:30am ET):** "a raider would only keep a city if it is a very
   valuable location and they think they can hold it without much trouble". Proposed rule, a stricter version of CP's
   own keep-or-raze rule (`CvPlayerAI::AI_conquerCity`: keep at 80% of the median city's value, or with wonders, a holy
   city, or the only city on a landmass). A Raider keeps a captured city only if both hold:
@@ -2897,7 +2897,7 @@ conqueror."
   Otherwise it razes the city, or liberates it if it was already trying to. Original capitals can't be razed, so it
   keeps them as puppets; they're good to trade back in a peace deal (Diplomacy). Not coded: it's a new flag in a
   shared file, with 2 flag slots left. Waiting for the user's call, now or together with War's raid mode.
-- **Sack or raze (the user, 2026-11-04 11:50am ET: "look into when a raider should sack vs raze").** The mechanics:
+- **Sack or raze (the user, 2026-11-04 11:35am ET: "look into when a raider should sack vs raze").** The mechanics:
   - **Capture gold is automatic:** 20 + 10 per citizen plus a random part, cut back if the old owner only just took
     the city, times the plunder modifier. Whatever the raider does next, the loot is already taken.
   - **Razing:** the city loses 1 citizen a turn (more with a raze-speed bonus: 2 for the Huns), so it takes as many
