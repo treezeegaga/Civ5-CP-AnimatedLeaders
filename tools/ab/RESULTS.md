@@ -1317,6 +1317,29 @@ and maintenance buildings when bankruptcy is under 9 turns away, and penalise th
   - a war-chest rule (a civ preparing a war keeps gold per turn ≥ 0 by favouring markets and trade routes);
   - walls under the guard.
 
+### WarChest: a warmonger saves for its build-up and pays for its army (Economy, Nov 4, about 2:00pm ET; proposal, waiting on War's hook)
+
+The user's model: a timing attacker keeps a small, cheap army most of the game, saves, and builds up fast just before
+the attack. War codes the timing (`TimingBuildup`); Economy pays for it.
+- **Hypothesis:**
+  - While a warmonger has a planned attack and isn't at war, it puts gold aside (like the settler savings in
+    `CvEconomicAI::DoHurry`) up to a target. With 2+ turns' notice, buying part of the build-up lets the army form
+    in a few turns instead of 20-30.
+  - When the build-up starts, it buys the attack's missing operation units with that chest.
+  - While the army stands (build-up or war), gold per turn is kept ≥ 0: gold buildings and trade routes get more
+    weight while the deficit lasts, and `TrueGoldRate`'s upkeep guards block units it can't pay for.
+  - Expected: fewer bankrupt aggressors (13% now) and attack armies that form in a few turns.
+- **Gold target, to agree with War:** the purchase cost of the build-up's units (about N × the gold price of the
+  attack's main unit), capped at 15-20 turns of income so it can't freeze the economy.
+- **The hook needed from War:**
+  - something Economy can read: is a build-up planned or active, against whom, and how many units it needs;
+  - for example a const accessor on the committed conquest target (today the private `m_eNewAIConquestTarget`), plus
+    `TimingBuildup`'s phase.
+- **Measure:** civ-games at 0 gold (aggressors); turns from build-up start to the army marching; strength share at T150
+  (no-worse) and cities captured in bully games.
+- **δ:** 2 points, no-worse. Status: designed; code after War's hook, as one flag `WarChest` in `CvEconomicAI` (saving
+  and buying) and `CvBuildingProductionAI` (gold weight in deficit).
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
