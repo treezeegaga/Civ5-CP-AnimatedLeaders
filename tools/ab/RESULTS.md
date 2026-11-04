@@ -1962,6 +1962,8 @@ windows the plan resets.
 **Request to the lead:** a logged replay of **0C3C8913** (the Aztecs, the flattest army) on the build with this fix,
 to confirm a window opens and a war follows.
 
+Coded: `ai/war` `96f008e` (built, CI run 184).
+
 ### War: two more logged wars on ab-f21a8f6 (PC 1, bullyabort6): 0BFDEC4C (Zulus), 0C1455BD (Denmark) (Nov 4, about 4:20pm ET)
 Both used the 25-flag role. No captures.
 
@@ -2005,7 +2007,7 @@ not reached. SiegeRoll fired once, late.
    exists when the window ends, and the sneak attack's 0-missing request can form. This is a fix of the window's
    mechanism under the same flag.
 
-Coded: `ai/war` `214c6c7` (CI pending).
+Coded: `ai/war` `214c6c7` (built, CI run 183).
 
 ### War: the first logged pair on ab-f21a8f6 (25-flag role), 0CD189D4, Japan (Nov 4, about 3:56pm ET)
 PC 2, greedy opponents. Japan is the aggressor (group b, wide). In the role game it had 7 cities and made no
