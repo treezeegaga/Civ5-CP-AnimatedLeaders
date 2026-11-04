@@ -1274,6 +1274,136 @@ change for that: the 5000 weight already beats every building. If War prefers th
 is `GetUnitTypeForArmy` with `GetOpenSlots(false)` for armies waiting on the siege check (`CvMilitaryAI`, also War's).
 Economy can measure it afterwards from the same log (operation-unit entries and military units built during the wait).
 
+### Why warmongers go bankrupt (Economy, Nov 4, about 2:30pm ET)
+
+**How often:** across all `AIABTest_bully*.csv`, a civ sits at 0 gold for 3+ snapshots (T30 on) in **10 of 79
+aggressor civ-games (13%)**, against 9 of 474 (2%) for the other civs and 1 of 79 for the tall civ.
+
+**The Huns in `0C22F161`** (from `CityStrategyAIProductionLog.csv`, its `GPT` field, and the results CSV):
+- Gold per turn went negative at T43, reached −18 at T60 and −36 at T80, and sank to −148 by T140. The treasury hit
+  0 by T80 and stayed there. The other majors in the game stayed between −5 and +50 a turn throughout.
+- At T70 the Huns had **10 land units on 3 cities and 10 population**; every other civ had 3-6 (military 79 against
+  20-48). That's the warmonger build (siege book, conquest role) bought on a small economy.
+- While broke they kept building:
+  - walls in four cities (T68-T85);
+  - libraries (T85, T87);
+  - about one operation warrior every two turns. Each was gifted to a city-state a turn later by CP's deficit rule.
+- No gold building, no extra trade route until T108, no peace.
+
+**Why the guards didn't stop it (confirmed in code):**
+- Both upkeep guards, the unit one (`CvUnitProductionAI::CheckUnitBuildSanity`: refuse if bankrupt in under 9 turns)
+  and the building one (`CvBuildingProductionAI`, same test), ask `CvPlayer::getTurnsToBankruptcy`.
+- That uses `getAvgGoldRate`, which `cacheAvgGoldRate` sets to **current net rate + the 10-turn average of
+  `m_GoldChangeForTurnTimes100`**.
+- `CvTreasury::ChangeGoldTimes100` records **only positive changes** there (`if (iChange > 0)`).
+- So the "average rate" is the net rate plus the average one-off income: city-state gold, plunder, scrapping refunds.
+  Losses never count. In a deficit, any one-off income can flip it positive, and `getTurnsToBankruptcy` returns
+  "never": both guards switch off while net gold per turn is −36. In surplus it double-counts income.
+- Walls are exempt from the building guard anyway (`GetExtraCityHitPoints() > 0`).
+
+**Fix, one flag: `TrueGoldRate`** (patch 0013): for flagged civs, `cacheAvgGoldRate` is the net gold rate
+(`calculateGoldRate()`), so `getTurnsToBankruptcy` sees the real deficit. The existing guards then refuse new units
+and maintenance buildings when bankruptcy is under 9 turns away, and penalise them under 17.
+- Hypothesis: aggressors stop running into 0 gold, keep the units they build (no deficit gifting), and reach their
+  war with the army intact.
+- Measure: civ-games at 0 gold for 3+ snapshots (aggressors: 13% now); strength share at T150 (no-worse). Mechanism:
+  units gifted "b/c bankrupt" (`MilitaryAILog.csv`).
+- δ: 2 points, no-worse. It's a bug fix.
+- Also reaches, through `getAvgGoldRate`: 7 places in `CvDiplomacyAI` (deal and war affordability) and 1 in
+  `CvCityStrategyAI`. They all see the true rate too, which is the intent, but it's why this is a flag and not a plain fix.
+- Build: patch 0013 on `7aaee41` (`ai/economy` reset to `claude/ab-c1`), flag `TrueGoldRate` (`FIX_TRUE_GOLD_RATE`).
+  Status: coded, not built.
+- Not in this flag, for later if it isn't enough:
+  - a war-chest rule (a civ preparing a war keeps gold per turn ≥ 0 by favouring markets and trade routes);
+  - walls under the guard.
+
+### WarChest: a warmonger saves for its build-up and pays for its army (Economy, Nov 4, about 2:00pm ET; proposal, waiting on War's hook)
+
+The user's model: a timing attacker keeps a small, cheap army most of the game, saves, and builds up fast just before
+the attack. War codes the timing (`TimingBuildup`); Economy pays for it.
+- **Hypothesis:**
+  - While a warmonger has a planned attack and isn't at war, it puts gold aside (like the settler savings in
+    `CvEconomicAI::DoHurry`) up to a target. With 2+ turns' notice, buying part of the build-up lets the army form
+    in a few turns instead of 20-30.
+  - When the build-up starts, it buys the attack's missing operation units with that chest.
+  - While the army stands (build-up or war), gold per turn is kept ≥ 0: gold buildings and trade routes get more
+    weight while the deficit lasts, and `TrueGoldRate`'s upkeep guards block units it can't pay for.
+  - Expected: fewer bankrupt aggressors (13% now) and attack armies that form in a few turns.
+- **Gold target, to agree with War:** the purchase cost of the build-up's units (about N × the gold price of the
+  attack's main unit), capped at 15-20 turns of income so it can't freeze the economy.
+- **The hook needed from War:**
+  - something Economy can read: is a build-up planned or active, against whom, and how many units it needs;
+  - for example a const accessor on the committed conquest target (today the private `m_eNewAIConquestTarget`), plus
+    `TimingBuildup`'s phase.
+- **Measure:** civ-games at 0 gold (aggressors); turns from build-up start to the army marching; strength share at T150
+  (no-worse) and cities captured in bully games.
+- **δ:** 2 points, no-worse.
+- **Build:** patch 0014 on `ai/war` `2a4dde1` (it uses War's accessors). It carries `TrueGoldRate` too, since 0013's flag
+  list doesn't apply on `ai/war`: **0014 replaces 0013** when `ai/war` and `ai/economy` are merged. Flag `WarChest`
+  (`FIX_WAR_CHEST`):
+  - `DoWarChest` in `CvEconomicAI.cpp`, from `DoHurry`;
+  - a +500 bonus for gold-yield buildings in `CvBuildingProductionAI` when the phase is window or later and gold per
+    turn is below 0;
+  - logs "WAR CHEST - Bought ..." in the homeland log.
+
+  Gold target as agreed with War: units still wanted × the unit's price, capped at 15 turns of net income, at least 2
+  siege units. War gates its stand-in saving and buying (`DoTimingBuildup`) on `!UsesCandidateAI(FIX_WAR_CHEST)`.
+  Status: coded, not built. Test it together with `TimingBuildup`, since it only acts for timing attackers.
+
+### WarEconomy: a planned attack prepares the economy in peace (Economy, Nov 4, about 2:00pm ET; proposal, same hook)
+
+The user's follow-up: while the attack is planned and the civ is still at peace, it gets ready to switch to war
+fast. One flag, `WarEconomy`, separate from `WarChest` (gold). It reads the same War hook (committed target and
+`TimingBuildup`'s "planned" phase).
+- **Production in the cities that will build the army** (the 2-3 cities nearest the target):
+  - production buildings (forge, workshop) and military ones (barracks, armory) get a bonus in
+    `CvBuildingProductionAI`;
+  - other cities keep their normal choices.
+- **Strategic resources:** if the attack's main units need iron or horses and the civ has none connected, workers
+  prioritise an owned source, and plot purchases favour one in reach (`CvEconomicAI`, `CvBuilderTaskingAI`).
+- **Hypothesis:** the build-up takes fewer turns and the army arrives sooner, with better units, for little peacetime
+  cost (buildings it would want anyway, a few roads).
+- **Measure:** turns from build-up start to the army marching; cities captured in bully games; strength share at T150
+  (no-worse).
+- **δ:** 2 points, no-worse.
+- **Build:** patch 0015, on 0014. **Part 1 only (buildings):**
+  - flag `WarEconomy` (`FIX_WAR_ECONOMY`): +400 for buildings with a production modifier or land-unit experience;
+  - for the cities within 3 tiles of our nearest city's distance to the target's nearest city;
+  - in War's "planned" and "window" phases (`CvBuildingProductionAI`).
+
+- **Part 2, patch 0016 (on 0015), same flag:**
+  - **Iron and horses:** `CvBuilderTaskingAI::GetResourceWeight` multiplies the improvement value by 4 while the civ
+    has none of that resource, in the "planned" and "window" phases.
+  - **No road toward the target:** dropped on the user's call. Road upkeep is about 1 gold a tile per turn, on the
+    civs most prone to bankruptcy.
+  - No plot purchases toward a resource.
+- Status: both parts coded, not built. 0014-0016 apply cleanly on `ai/war` `250ee9d`.
+
+### The user's flag rulings for Economy (Nov 4, about 2:40pm ET)
+- **`WidePlans` and `SettlerOverlap` go into the bundle** (ruled obviously right). Patch 0017 on `claude/ab-c1` `166ebc1`.
+  Both are read only inside the opening book, which `GetOpeningBook` gives to AI major civs only, so city-states (which
+  run every bundle flag) never reach them.
+- **`SettlersFirst` stays off** (the user disagrees: monument, shrine and worker come first). No more work on it.
+- **`BookFinishesSettlers`:** no ruling, tested as usual.
+
+### GreedyBook redesigned: beeline the National College, then open up (Economy, Nov 4, about 2:40pm ET)
+The user's design. The old `GreedyBook` (c7) ran the tall capital's book on through the aqueduct and university to
+T130 Standard, with Engineering and Education.
+- **New:**
+  - greedy tall capitals use B's tall book (… library, National College), with B's tall research (Pottery, Writing,
+    Philosophy);
+  - the book stays on until the capital has the National College (capped at T130 Standard), instead of B's fixed
+    T80;
+  - then it ends and the normal AI opens up: more cities, buildings and wonders as it sees fit.
+- **Hypothesis:** the National College comes sooner and the civ isn't locked into a long greedy build, so tall civs
+  gain science early and still expand afterwards.
+- **Measure:** strength share at T100 and T150. Mechanism: `NationalCollege` (results column, the turn it's built),
+  cities at T150 for tall civs.
+- **δ:** 2 points, gainer test. The flag keeps its name (`GreedyBook`); it's off in the bundle.
+- **Build:** patch 0018 on 0017 (`claude/ab-c1` `166ebc1`). The greedy book arrays and the Engineering/Education
+  research list are removed; `IsOpeningBookActive` ends the tall book once the capital has the National College.
+  Status: coded, not built.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute

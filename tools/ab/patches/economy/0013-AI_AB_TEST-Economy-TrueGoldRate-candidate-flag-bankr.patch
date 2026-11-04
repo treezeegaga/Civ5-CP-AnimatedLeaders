@@ -1,0 +1,58 @@
+From a1720b00f22f39a0ec74b989b7390ab8eaec02a4 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 18:50:55 +0000
+Subject: [PATCH] AI_AB_TEST Economy: TrueGoldRate candidate flag (bankruptcy
+ checks use the net gold rate; CP adds the average of positive income only)
+
+Off in the bundle. Found from the Huns' bankruptcy in bully game 0C22F161.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 10 ++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h   |  1 +
+ 2 files changed, 11 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index e4899bb..173d417 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -17423,6 +17423,15 @@ int CvPlayer::getAvgGoldRate() const
+ 
+ void CvPlayer::cacheAvgGoldRate()
+ {
++	// AI_AB_TEST candidate (TrueGoldRate): CP adds the 10-turn average of m_GoldChangeForTurnTimes100 to the net rate, but
++	// that history only records positive changes (CvTreasury::ChangeGoldTimes100), so one-off income flips a deficit
++	// positive and getTurnsToBankruptcy says "never": the unit and building upkeep guards switched off while a bully-test
++	// aggressor ran -36 gold a turn at 0 gold, and CP's deficit rule then gifted its army away.
++	if (UsesCandidateAI(FIX_TRUE_GOLD_RATE))
++	{
++		m_iCachedGoldRate = calculateGoldRate();
++		return;
++	}
+ 	m_iCachedGoldRate = calculateGoldRate() + GetTreasury()->AverageIncome100(/*10*/ GD_INT_GET(HISTORY_NUM_TURNS_TO_AVERAGE))/100;
+ }
+ 
+@@ -33367,6 +33376,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"ConquestTraitTargets", false},
+ 	{"SiegeExposure", false},
+ 	{"SiegeRoll", false},
++	{"TrueGoldRate", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index aa58136..24388be 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -226,6 +226,7 @@ enum CandidateFixTypes
+ 	FIX_CONQUEST_TRAIT_TARGETS,// War: a warmonger's conquest bonus shapes its targets (Assyria, Songhai, Mongolia; Austria and Venice skip city-states). Off in the bundle
+ 	FIX_SIEGE_EXPOSURE,		// War: in a city attack, a unit that attacked is judged at turn end by the planner's danger (/ aggression level). Off in the bundle
+ 	FIX_SIEGE_ROLL,			// War: a city attack mustering within 5 tiles of its target (already at war) moves with 3+ units, no wait for slots or the bar. Off in the bundle
++	FIX_TRUE_GOLD_RATE,		// Economy: the gold rate used for bankruptcy checks is the net rate (CP adds the average of positive income only). Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+-- 
+2.43.0
+

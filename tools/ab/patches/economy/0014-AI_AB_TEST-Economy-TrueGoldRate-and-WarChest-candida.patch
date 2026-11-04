@@ -1,0 +1,150 @@
+From 665ec50244f3a9feb155f80c4c1dcd07f55c1f0b Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 18:59:01 +0000
+Subject: [PATCH] AI_AB_TEST Economy: TrueGoldRate and WarChest candidate
+ flags, on War's TimingBuildup (ai/war 2a4dde1)
+
+TrueGoldRate: bankruptcy checks use the net gold rate (CP adds the average of positive income only), same as patch 0013 but on ai/war's flag list. WarChest: a timing attacker saves gold while its attack is planned (the agreed target: units still wanted x unit price, capped at 15 turns of net income, at least 2 siege units), buys one missing unit a turn in the window, and favours gold buildings while its army stands and gold per turn is negative. Both off in the bundle. War gates its own stand-in saving and buying on FIX_WAR_CHEST.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuildingProductionAI.cpp                |  7 +++
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp     | 55 +++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 11 ++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  2 +
+ 4 files changed, 75 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index 23b2393..cb83777 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -222,6 +222,13 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 		}
+ 	}
+ 
++	// AI_AB_TEST candidate (WarChest): while a timing attacker's army stands (window, marching, war) and gold per turn is
++	// negative, buildings that make gold come first, so the army can be paid for instead of gifted away
++	if (kPlayer.UsesCandidateAI(FIX_WAR_CHEST) && kPlayer.GetTreasury()->CalculateBaseNetGold() < 0 &&
++		kPlayer.GetMilitaryAI()->GetTimingBuildupPhase() >= CvMilitaryAI::TIMING_BUILDUP_WINDOW &&
++		(pkBuildingInfo->GetYieldChange(YIELD_GOLD) > 0 || pkBuildingInfo->GetYieldModifier(YIELD_GOLD) > 0))
++		iBonus += 500;
++
+ 	// AI_AB_TEST candidate (SettlersBeforeWonders): no world wonder in the capital while the opening book still has
+ 	// settlers to start (in the first logged King games every B capital started one at T34-T48 and settler 2 waited)
+ 	if (isWorldWonderClass(kBuildingClassInfo) && m_pCity->isCapital() && kPlayer.UsesCandidateAI(FIX_SETTLERS_BEFORE_WONDERS) &&
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index d1b5db2..c9d594b 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3144,10 +3144,65 @@ static void BuyExpansionSettler(CvPlayer* pPlayer)
+ 	}
+ }
+ 
++/// AI_AB_TEST candidate (WarChest): a timing attacker (War's TimingBuildup) saves gold while its attack is planned and
++/// buys the missing units once the 15-turn window opens, so the build-up is bought rather than run into bankruptcy
++/// (13% of bully-test aggressors sat at 0 gold, and CP's deficit rule gifted their armies away). Target, agreed with
++/// War: the price of the units still wanted, capped at 15 turns of net income, at least 2 siege units' price.
++static void DoWarChest(CvPlayer* pPlayer)
++{
++	if (!pPlayer->UsesCandidateAI(FIX_WAR_CHEST) || pPlayer->isHuman() || !pPlayer->isMajorCiv())
++		return;
++
++	CvMilitaryAI* pMilitary = pPlayer->GetMilitaryAI();
++	CvEconomicAI* pEconomic = pPlayer->GetEconomicAI();
++	const CvMilitaryAI::TimingBuildupPhase ePhase = pMilitary->GetTimingBuildupPhase();
++	const bool bSaving = (ePhase == CvMilitaryAI::TIMING_BUILDUP_PLANNED || ePhase == CvMilitaryAI::TIMING_BUILDUP_WINDOW);
++	CvCity* pCapital = pPlayer->getCapitalCity();
++	if (!bSaving || !pCapital)
++	{
++		pEconomic->CancelSaveForPurchase(PURCHASE_TYPE_UNIT);
++		return;
++	}
++
++	const int iWanted = max(0, pMilitary->GetTimingBuildupUnitsWanted());
++	UnitTypes eSiege = pMilitary->GetTimingBuildupUnitType(true);
++	UnitTypes eAttack = pMilitary->GetTimingBuildupUnitType(false);
++	int iSiegeCost = (eSiege != NO_UNIT) ? pCapital->GetPurchaseCost(eSiege) : 0;
++	int iUnitCost = (eAttack != NO_UNIT) ? pCapital->GetPurchaseCost(eAttack) : iSiegeCost;
++	int iTarget = iWanted * iUnitCost;
++	const int iNet = pPlayer->GetTreasury()->CalculateBaseNetGold();
++	iTarget = min(iTarget, 15 * max(0, iNet));
++	iTarget = max(iTarget, 2 * iSiegeCost);
++	if (iTarget > 0)
++		pEconomic->StartSaveForPurchase(PURCHASE_TYPE_UNIT, iTarget, 400);
++
++	// in the window: buy one missing unit a turn in the city nearest the target
++	if (ePhase != CvMilitaryAI::TIMING_BUILDUP_WINDOW || iWanted <= 0)
++		return;
++	PlayerTypes eTarget = pMilitary->GetTimingBuildupTarget();
++	CvCity* pTheirCity = (eTarget != NO_PLAYER) ? pPlayer->GetClosestCityToUsByPlots(eTarget) : NULL;
++	CvCity* pBuyCity = pTheirCity ? pPlayer->GetClosestCityByPathLength(pTheirCity->plot()) : pCapital;
++	if (!pBuyCity || pBuyCity->IsPuppet())
++		return;
++	const bool bNeedSiege = pPlayer->GetNumUnitsWithUnitAI(UNITAI_CITY_BOMBARD, false, true) < 2;
++	UnitTypes eType = bNeedSiege ? eSiege : eAttack;
++	if (eType == NO_UNIT || !pBuyCity->IsCanPurchase(/*bTestPurchaseCost*/ true, /*bTestTrainable*/ true, eType, NO_BUILDING, NO_PROJECT, YIELD_GOLD))
++		return;
++	const int iCost = pBuyCity->GetPurchaseCost(eType);
++	if (!pEconomic->CanWithdrawMoneyForPurchase(PURCHASE_TYPE_UNIT, iCost, 400))
++		return;
++	CvUnit* pUnit = pBuyCity->PurchaseUnit(eType, YIELD_GOLD);
++	if (pUnit && GC.getLogging() && GC.getAILogging())
++		pPlayer->GetHomelandAI()->LogHomelandMessage(CvString::format("WAR CHEST - Bought %s in %s for %d gold",
++			pUnit->getUnitInfo().GetDescription(), pBuyCity->getName().c_str(), iCost));
++}
++
+ void CvEconomicAI::DoHurry()
+ {
+ 	int iLoop = 0;
+ 
++	DoWarChest(m_pPlayer);
++
+ 	if (m_pPlayer->UsesNewAI())
+ 	{
+ 		BuyExpansionSettler(m_pPlayer);
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 58edc9c..047b4ca 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -17423,6 +17423,15 @@ int CvPlayer::getAvgGoldRate() const
+ 
+ void CvPlayer::cacheAvgGoldRate()
+ {
++	// AI_AB_TEST candidate (TrueGoldRate): CP adds the 10-turn average of m_GoldChangeForTurnTimes100 to the net rate, but
++	// that history only records positive changes (CvTreasury::ChangeGoldTimes100), so one-off income flips a deficit
++	// positive and getTurnsToBankruptcy says "never": the unit and building upkeep guards switched off while a bully-test
++	// aggressor ran -36 gold a turn at 0 gold, and CP's deficit rule then gifted its army away.
++	if (UsesCandidateAI(FIX_TRUE_GOLD_RATE))
++	{
++		m_iCachedGoldRate = calculateGoldRate();
++		return;
++	}
+ 	m_iCachedGoldRate = calculateGoldRate() + GetTreasury()->AverageIncome100(/*10*/ GD_INT_GET(HISTORY_NUM_TURNS_TO_AVERAGE))/100;
+ }
+ 
+@@ -33369,6 +33378,8 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"SiegeRoll", false},
+ 	{"DeclareWhenGathered", false}, {"SiegeConcentrate", false}, {"SiegeKeep", false},
+ 	{"TimingBuildup", false},
++	{"TrueGoldRate", false},
++	{"WarChest", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 2d8d625..17d7efb 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -230,6 +230,8 @@ enum CandidateFixTypes
+ 	FIX_SIEGE_CONCENTRATE,	// War: SiegeRoll's wave moves only when it plus our units at the siege fill the formation's required slots. Off in the bundle
+ 	FIX_SIEGE_KEEP,			// War: at war with a major, units fresh from an attack or in an enemy city's zone don't go after barbarian camps. Off in the bundle
+ 	FIX_TIMING_BUILDUP,		// War (the user's design): a warmonger keeps garrisons at peace, builds up for 15 turns once it has a target, then attacks. Off in the bundle
++	FIX_TRUE_GOLD_RATE,		// Economy: the gold rate used for bankruptcy checks is the net rate (CP adds the average of positive income only). Off in the bundle
++	FIX_WAR_CHEST,			// Economy: a timing attacker saves for its build-up, buys it, and keeps gold per turn >= 0 while the army stands. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+-- 
+2.43.0
+

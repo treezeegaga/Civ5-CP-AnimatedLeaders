@@ -1,0 +1,77 @@
+From 53245ef9bee7855adca85d18ae1c1ee176c91bf7 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 18:59:49 +0000
+Subject: [PATCH] AI_AB_TEST Economy: WarEconomy candidate flag (while a timing
+ attack is planned, the cities nearest the target favour production and
+ military buildings)
+
+Part 1 of the user's war-economy design: buildings. Roads toward the target and securing iron or horses are left for a second flag step. Off in the bundle; based on patch 0014 (ai/war 2a4dde1).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuildingProductionAI.cpp                | 22 +++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  1 +
+ 3 files changed, 24 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index cb83777..5947b1f 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -229,6 +229,28 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 		(pkBuildingInfo->GetYieldChange(YIELD_GOLD) > 0 || pkBuildingInfo->GetYieldModifier(YIELD_GOLD) > 0))
+ 		iBonus += 500;
+ 
++	// AI_AB_TEST candidate (WarEconomy, the user's design): while a timing attack is planned or building up, the cities
++	// nearest the target (within 3 tiles of our nearest city's distance) get ready to switch to war fast: buildings that
++	// raise production or give units experience (forge, workshop, barracks, armory) come first
++	if (kPlayer.UsesCandidateAI(FIX_WAR_ECONOMY) && (pkBuildingInfo->GetYieldModifier(YIELD_PRODUCTION) > 0 || pkBuildingInfo->GetFreeExperience() > 0 ||
++		pkBuildingInfo->GetDomainFreeExperience(DOMAIN_LAND) > 0))
++	{
++		const CvMilitaryAI::TimingBuildupPhase eWarPhase = kPlayer.GetMilitaryAI()->GetTimingBuildupPhase();
++		PlayerTypes eWarTarget = kPlayer.GetMilitaryAI()->GetTimingBuildupTarget();
++		CvCity* pTheirCity = (eWarTarget != NO_PLAYER && (eWarPhase == CvMilitaryAI::TIMING_BUILDUP_PLANNED || eWarPhase == CvMilitaryAI::TIMING_BUILDUP_WINDOW)) ?
++			kPlayer.GetClosestCityToUsByPlots(eWarTarget) : NULL;
++		if (pTheirCity)
++		{
++			int iOurDistance = plotDistance(*m_pCity->plot(), *pTheirCity->plot());
++			int iNearest = iOurDistance;
++			int iCityLoop = 0;
++			for (CvCity* pLoopCity = kPlayer.firstCity(&iCityLoop); pLoopCity != NULL; pLoopCity = kPlayer.nextCity(&iCityLoop))
++				iNearest = min(iNearest, plotDistance(*pLoopCity->plot(), *pTheirCity->plot()));
++			if (iOurDistance <= iNearest + 3)
++				iBonus += 400;
++		}
++	}
++
+ 	// AI_AB_TEST candidate (SettlersBeforeWonders): no world wonder in the capital while the opening book still has
+ 	// settlers to start (in the first logged King games every B capital started one at T34-T48 and settler 2 waited)
+ 	if (isWorldWonderClass(kBuildingClassInfo) && m_pCity->isCapital() && kPlayer.UsesCandidateAI(FIX_SETTLERS_BEFORE_WONDERS) &&
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 047b4ca..79f5051 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33379,6 +33379,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"DeclareWhenGathered", false}, {"SiegeConcentrate", false}, {"SiegeKeep", false},
+ 	{"TimingBuildup", false},
+ 	{"TrueGoldRate", false},
++	{"WarEconomy", false},
+ 	{"WarChest", false},
+ };
+ // one line per flag, and room in the masks
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 17d7efb..8d57af7 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -231,6 +231,7 @@ enum CandidateFixTypes
+ 	FIX_SIEGE_KEEP,			// War: at war with a major, units fresh from an attack or in an enemy city's zone don't go after barbarian camps. Off in the bundle
+ 	FIX_TIMING_BUILDUP,		// War (the user's design): a warmonger keeps garrisons at peace, builds up for 15 turns once it has a target, then attacks. Off in the bundle
+ 	FIX_TRUE_GOLD_RATE,		// Economy: the gold rate used for bankruptcy checks is the net rate (CP adds the average of positive income only). Off in the bundle
++	FIX_WAR_ECONOMY,		// Economy: while a timing attack is planned, the cities nearest the target favour production and military buildings. Off in the bundle
+ 	FIX_WAR_CHEST,			// Economy: a timing attacker saves for its build-up, buys it, and keeps gold per turn >= 0 while the army stands. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+-- 
+2.43.0
+
