@@ -4084,6 +4084,25 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### WarGold: the aggressor's gold, fixed at the root (lead, 2026-11-04 5:53pm ET)
+
+Economy's patch 0021 (`ai/economy` `43fd583`) and War's `460536b` are in `claude/ab-c1` `e4d5785` (82 flags; CI
+building).
+- **Cause (Economy):** the warmonger's forced research (the opening book, then TimingBuildup's techs) skipped Currency.
+  The Aztecs got their Market at T103; our other civs had theirs at T55-T59.
+- **`WarGold`** (new, off unless named): applies to a warmonger at peace with the majors whose net gold is below
+  cities + 2, outside the window and attack phases.
+  - Research goes toward Currency right after the opening book.
+  - Gold buildings get +500.
+  - While net gold is negative: no world wonders, and no upkeep buildings unless they make gold, defend, or ready the
+    army. Caravans and cargo ships get +300.
+- **`WarChest`:** now also saves at peace, from T30, at least 2 siege units' price.
+- **`460536b` (War):** SiegeAbort spares an attack that is close to SiegeArmy's strength bar.
+
+**Next attack runs:** RoleFixes = the 25 flags + `MarchOn, FocusedWar, WarGold`, on `ab-e4d5785`. This follows one
+logged pair per PC on `ab-eb4129d` (`bullygreedy10`, `bullyabort8`). The first game's logs are now always kept, war or
+no war.
+
 ### Why the Aztecs never attacked: broke at peace, and workers won the build queue (lead, 2026-11-04 5:31pm ET)
 
 War and Economy, from replay 0C3C8913 (`logs_0C3C89130C3C8913`):
