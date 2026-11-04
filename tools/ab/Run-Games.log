@@ -490,3 +490,17 @@
 2026-11-03 22:26:15  Starting game 9: first game of a pair; Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
 2026-11-03 22:32:57    turn 100 after 5 minutes
 2026-11-03 22:34:21 ET  PC 1 (BOX): SettlersBeforeWonders stopped at the lead's request after 4 pairs on ab-8109f67 (games 1-8 clean, replays match); unfinished game 9 (08722B41) dropped; rows in AIABTest_sbw.csv. Next: bully conquest test, logging on
+2026-11-03 22:34:24 ET  PC 1 (BOX): bully conquest test on ab-8109f67, logging on, pair 1 (-MaxGames 2 -SaveLogs, RoleFixes TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff)
+2026-11-03 22:34:30  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff
+2026-11-03 22:42:26    turn 100 after 7 minutes
+2026-11-03 22:47:11  Game ended: turn 150 (0879B7910879B791)
+2026-11-03 22:47:18    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0879B7910879B791.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0879B7910879B791
+2026-11-03 22:47:18    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0879B7910879B791
+2026-11-03 22:47:18  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff
+2026-11-03 22:48:33    replay matches the first game
+2026-11-03 22:55:16    turn 100 after 7 minutes
+2026-11-03 22:59:41  Game ended: turn 150 (0879B7910879B791F)
+2026-11-03 22:59:47    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0879B7910879B791F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0879B7910879B791F
+2026-11-03 22:59:47    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0879B7910879B791F
+2026-11-03 22:59:47  Runner finished after 2 games
+2026-11-03 23:00:19 ET  PC 1 (BOX): bully conquest logging pair done on ab-8109f67 (0879B791, replay matches; Celts aggressor, 0 captured / 0 lost both games, 4 cities, strength 9.0% / 10.9%); logging off, starting -MaxGames 20 without -SaveLogs
