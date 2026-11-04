@@ -3346,7 +3346,10 @@ logged pair".
   and the policy side of the rush (culture). `GreedyTall` adds those three.
 - **For the greedy style set:** add `GreedyWide` and `GreedyTall` (each acts only for a leader of its kind).
 - **Build:** fork `ai/personality` `cf84181`.
-- **Status:** compiles (CI run 187 passed on `cf84181`, 2026-11-04 5:08pm ET); ready to merge.
+- **Status:** compiles (CI run 187 passed on `cf84181`); merged into `claude/ab-c1` (`c5015f1`) by the lead, 5:10pm ET.
+  In the greedy style set; Summarize-Trio reports `GreedyKind` and how often each kind comes out on top. The wide
+  kind's out-of-room trade deals: asked of Diplomacy by the lead, behind Diplomacy's own flag. Next trio run uses
+  this build.
 
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
