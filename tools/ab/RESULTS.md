@@ -1579,6 +1579,13 @@ gifts):
   - strength share: a no-worse test, since the gold involved is small (about 300 gold per civ per 150 turns).
 - **Expected effect: small,** because the AIs already gift little. If the user rules it obvious, it can go straight
   into the bundle after a crash check.
+- **Decision (user, 2026-11-04): obvious, straight to the bundle.** Coded and pushed: `ai/diplomacy` `d635f51`, flag
+  `GiftsNeedPatronage`, **in the bundle** (`true`), not compiled yet.
+  - **The Patronage check:** `IsPolicyBranchUnlocked(POLICY_BRANCH_PATRONAGE)`.
+  - **The trait exception:** reads CP's trait fields (city-state friendship or bonus modifier), so it covers whichever
+    leaders have them in the data.
+  - **Crash check:** gifts are decided only in major civs' diplomacy turns (`DoContactMinorCivs`), and the helper
+    returns early for non-majors, so city-states running the bundle can't reach it.
 
 ### Diplomacy: flag `WarAppetite`, and bundle flags checked for city-states (Diplomacy session, 2026-11-04)
 
