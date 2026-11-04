@@ -1798,7 +1798,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
-### FIX_SIEGE_FORMATION: classical–medieval city attacks use a formation with room for siege (War) (Nov 4, about 12:30am ET)
+### FIX_SIEGE_FORMATION: classical–medieval city attacks use a formation with room for siege (War) (Nov 3, about 11:50pm ET)
 - **Why only half the army joined, and the bar wasn't reached** (bully pair 0879B791): distance from the muster point
   wasn't it. The Celts' attack held 7 of its 9 slots; the rest of their military was garrisons, a sentry and scouts.
   The limit is the formation. From the classical era until the Renaissance, land city attacks use
@@ -1818,7 +1818,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   - Mechanism: siege units in the attack and its expected damage when it marches.
   - Outcome: cities captured, the aggressor's city share, and military at T150 (the guard).
 - **δ:** at least 1 capture per 3 bully pairs; military at T150 no lower.
-- **Build:** `ai/war` commit `1fc6d0a` (on `claude/ab-c1` `c13eb1c`), patch `patches/war/0008`. Only acts on land city attacks; the formation is
+- **Build:** `ai/war` commit `1fc6d0a` (on `claude/ab-c1` `c13eb1c`), patch `patches/war/0008`. Compiles: CI run 116, clang debug and release and MSVC debug passed; MSVC release was still running after 15 minutes at 12:10am ET, possibly the known hang. Only acts on land city attacks; the formation is
   chosen in `CvAIOperation` (War's file).
 
 ### War: bully conquest pair 0879B791 (Celts with the conquest flags): an army thrown away (Nov 3, about 11:45pm ET)
@@ -1847,7 +1847,7 @@ flags they ended at 131.
 - Measure: bully pairs (the conquest role flags + SiegeAbort against the same without it). Aggressor's military at
   T150 (the guard: it mustn't collapse), cities captured, and wars declared (they may fall).
 - δ: the aggressor's military at T150 no lower than without the war (the replay), with captures ≥ today's 0.
-- Build: `ai/war` commit `5bfea3f` (on `claude/ab-c1` `1804369`), patch `patches/war/0007`. Needs SiegeArmy on.
+- Build: `ai/war` commit `5bfea3f` (built: CI run 113) (on `claude/ab-c1` `1804369`), patch `patches/war/0007`. Needs SiegeArmy on.
 - Notes: two other levers, not coded.
   - Only half the Celtic army joined the attack: the operation recruits units near the muster point.
   - A failed war ran 40 turns with no peace: that's Diplomacy's peace logic.
