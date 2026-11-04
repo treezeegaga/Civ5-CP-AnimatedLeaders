@@ -1924,6 +1924,65 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### FIX_TARGET_VULNERABILITY: a warmonger picks the most vulnerable nearby city (War, the user's redesign of GreedyTarget) (Nov 4, about 2:37pm ET)
+**Why.** The user: "fewest land units per city" (GreedyTarget) is a weird way to pick a target. The target should
+be the most vulnerable nearby city, combining three things:
+- what that civ can bring to defend it (its whole army);
+- the city's own defence (walls, city strength, garrison);
+- the distance.
+
+**Hypothesis.** In `GetNewAIConquestTarget`, for warmongers, each candidate civ scores its best city among those
+within 12 plots of our nearest city. The candidate filters (proximity, strength step, one front, CanWin) stay as
+they are; with this flag the score replaces both the weakest-neighbour score and GreedyTarget's units-per-city
+score.
+
+| Term | Formula |
+|---|---|
+| City defence | city strength / 100 × (HP left / max HP), plus half the garrison's combat strength. Walls raise both strength and max HP |
+| Their army | their military might × 100 / ours (100 = equal) |
+| Distance | plots from our nearest city |
+| **Score** | −3 × city defence − army ratio / 2 − 5 × distance |
+
+- Early-game sizes: city defence 15–30 (45–90 points), army ratio 50–150 (25–75), distance 5–12 (25–60).
+- ConquestTraitTargets' bonus (at most +30) still goes on top.
+- **Expected:** targets with weaker cities and smaller armies; fewer wars that end "enemy dominated, won't try to
+  capture"; captures sooner.
+- **Measure:** the logged reason "warmonger timing attack, most vulnerable city X" (with the city named); captures
+  per war; turns from declaring to the first capture.
+- **δ:** CitiesCaptured by the aggressor up; strength share at T150 +1 point.
+- **Flag:** `TargetVulnerability`, off in the bundle. Role: in place of GreedyTarget.
+- **Status:** hypothesis, coded: `ai/war` `fd7da75` (CI pending), on `166ebc1`.
+
+### CanWin, CSConquest, BoxedInWar into the bundle (the user's audit, via the lead) (Nov 4, about 2:37pm ET)
+Coded: `ai/war` `fd7da75` (CI pending).
+- Set to true in `kCandidateFixes` on `ai/war` (rebased on `claude/ab-c1` `166ebc1`).
+- **Checked safe for city-states and humans** (non-major civs run every bundle flag):
+  - **BoxedInWar** and **CanWin** act only inside `GetNewAIConquestTarget`, which now also returns at once for a
+    non-major civ. Before, it relied on `IsCandidateWarmonger` (majors only) and on the wide opening book (majors
+    only), and returned for humans.
+  - BoxedInWar's other two uses are also majors-only: the approach override sits behind that function's result,
+    and the opening-book production hold behind `IsOpeningBookActive`.
+  - **CSConquest** runs in a major's approach toward a city-state and needs `IsCandidateWarmonger` (majors, not
+    human).
+
+### War: what the minidump of PC 2's crash shows (0C827C9C, ab-1c3ab74, T78, logging on) (Nov 4, about 2:35pm ET)
+Read with a small minidump parser (no symbols). The dump is 1.1 MB: thread stacks and the module list, no heap.
+- **Where it crashed:** an access violation reading 0xad3188f0, at `CivilizationV.exe+0x3383d`, on the main thread
+  (26496), inside Lua. The stack is `lua51_Win32.dll` frames called from the exe's UI Lua host
+  (`CivilizationV.exe+0x49e0xx`). No frame of our DLL is near the top.
+- **The main thread's stack holds 13 values inside `CvGameCore_Expansion2.dll`**, around RVA 0xacc5xx–0xacc9xx and
+  0x716b20. They may be stale; mapping them needs the PDB of the 1c3ab74 MSVC Release build, a CI artifact I can't
+  download from here. No other thread touches our DLL.
+- **Memory:** crashes.log reports 1.81 GB committed below 2 GB, and the largest free block below 2 GB is 752 KB.
+  The other crash in the log (11/02, a deliberate assert stop) had the same 1.81 GB, with a 1 MB largest block.
+  - So the low address space is nearly full by T78. The most likely story is an allocation in the UI's Lua failing
+    and a garbage pointer being read afterwards. That makes it an out-of-memory crash in the exe, not a bug in our
+    code path.
+  - What filled the memory can't be read from this dump (no heap).
+- **Next:** the replay with logging off is the right test. If it passes T78, logging is the suspect; the tactical
+  simulation's storage is the other candidate (CP issue #13254, address-space exhaustion, noted in
+  `FindBestUnitAssignments`). With the PDB, the 13 stack values could be mapped to functions.
+
 ### FIX_TIMING_BUILDUP: a small army at peace, a fast build-up right before the attack (War, the user's design) (Nov 4, about 1:52pm ET)
 **Why:**
 - The user: a timing attacker doesn't keep a big army all game. It keeps garrisons and escorts, builds up fast
@@ -1991,7 +2050,7 @@ before the attack, and no "b/c bankrupt" gifting of attack units.
 
 **δ:** strength share at T150 +1.5 points; CitiesCaptured up.
 
-**Status:** hypothesis, coded: `ai/war` `4135121` (CI pending; the commit message's "2:10pm ET" should read 1:55pm ET). Shared code behind this flag only: `CvDiplomacyAI::GetNewAIConquestTarget`, `CvUnitProductionAI::CheckUnitBuildSanity` (peace cap; AggressiveArmy off at peace), `CvBuildingProductionAI` (AggressiveArmy's floor off at peace), `CvPlayer` opening book (the warmonger book's army steps skipped).
+**Status:** hypothesis, coded: `ai/war` `4135121` (built at `fd881bb`, CI run 167; merged in `claude/ab-c1` `166ebc1`; the commit message's "2:10pm ET" should read 1:55pm ET). Shared code behind this flag only: `CvDiplomacyAI::GetNewAIConquestTarget`, `CvUnitProductionAI::CheckUnitBuildSanity` (peace cap; AggressiveArmy off at peace), `CvBuildingProductionAI` (AggressiveArmy's floor off at peace), `CvPlayer` opening book (the warmonger book's army steps skipped).
 
 ### FIX_DECLARE_WHEN_GATHERED: a sneak attack declares once it's gathered at the border (War) (Nov 4, about 1:48pm ET)
 For cause 1 (late), at the lead's request.
@@ -2007,7 +2066,7 @@ For cause 1 (late), at the lead's request.
 - **Measure:** turns from reaching the border to declaring ("DeclareWhenGathered:" log line), unit distances at
   the hand-off, first capture attempt turn.
 - **δ:** CitiesCaptured by the aggressor up; strength share at T150 +1 point.
-- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (build fixed in `fd881bb`, built, CI run 167; merged in `claude/ab-c1` `166ebc1`).
 
 ### FIX_SIEGE_CONCENTRATE: a follow-up wave moves only as one army with the units already at the siege (War) (Nov 4, about 1:48pm ET)
 For cause 2 (small).
@@ -2021,7 +2080,7 @@ For cause 2 (small).
 - **Expected:** fewer waves, each with at least 6 units near the walls together. Fewer "too early, 0–27 a turn"
   lines at the follow-up target.
 - **Measure:** the "SiegeRoll:" line now gives army and nearby counts; capture attempts per follow-up city.
-- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`. Applies only together with SiegeRoll.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (build fixed in `fd881bb`, built, CI run 167; merged in `claude/ab-c1` `166ebc1`). Applies only together with SiegeRoll.
 
 ### FIX_SIEGE_KEEP: units at the front stay off barbarian camps while at war (War) (Nov 4, about 1:48pm ET)
 For cause 2 (handed-off units pulled away).
@@ -2033,7 +2092,7 @@ For cause 2 (handed-off units pulled away).
 - **Expected:** the units handed off at Seoul stay in the Seoul zone. Fewer "Trying to remove barbarian camp" moves
   by the aggressor during its war.
 - **Measure:** camp moves during the war; units in reach at the first capture attempt.
-- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (build fixed in `fd881bb`, built, CI run 167; merged in `claude/ab-c1` `166ebc1`).
 
 ### War: the attack operations in 0C458987 (16-flag role) and 0C22F161 (Nov 4, about 1:23pm ET)
 The lead asked for a trace of when each attack formed, how big it was, where it mustered, and what became of it.
