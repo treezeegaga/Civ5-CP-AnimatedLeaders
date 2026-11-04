@@ -286,7 +286,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "First captures! In a bully game on PC 1 the Huns, running the conquest flags, took 2 cities from Spain, their weakest neighbour (half their military); the same game without the flags had none, and 4 civs ganged up on the Huns. Both PCs now move to the 12-flag build (5220c03).",
+   "detail": "Still one capture so far (the Huns, 2 cities). War found CP's AI almost never attacks city-states and added CSConquest; with ConquestTraitTargets, each civ's conquest bonus now shapes its targets. Both PCs switch to that build (2db51dd) with logging on, so the next capture comes with logs.",
    "state": "running"
   },
   {
@@ -371,7 +371,7 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Added SiegeFirst (build catapults, not bowmen) and SiegeFinish (storm a city at a third of its HP). Both join the bully runs.",
+   "detail": "Added CSConquest (warmongers take weak city-states) and ConquestTraitTargets (civ bonuses shape targets). The bully's role is now 14 flags.",
    "chat": "Civ V AI: War session",
    "state": "waiting"
   },
@@ -379,7 +379,7 @@
    "section": "session",
    "order": 3,
    "name": "Diplomacy",
-   "detail": "StaleWarPeace and WarAppetite both compile and are on the integration build (dbdfbb3); they wait until the attack side works.",
+   "detail": "GiftsNeedPatronage done (you ruled it obvious; in the bundle). StaleWarPeace and WarAppetite wait for attacks to work.",
    "chat": "Civ V AI: Diplomacy session",
    "state": "waiting"
   },
@@ -387,7 +387,7 @@
    "section": "session",
    "order": 4,
    "name": "Personality",
-   "detail": "GreedyWarArmy, from your five points: at war a greedy civ only arms up if an enemy force in sight could take one of its cities. Merged; waits for the matchup test.",
+   "detail": "Conquest-bonus civs (Assyria, Songhai, Huns, Mongolia...) are Conquerors; Austria and Venice Diplomats. Style flag sets written for the trio test.",
    "chat": "Civ V AI: Personality session",
    "state": "waiting"
   },
@@ -709,8 +709,8 @@
    "name": "SiegeFirst",
    "owner": "War",
    "detail": "A waiting attack fills its spare siege slots with catapults, not bowmen.",
-   "test": "Bully runs on ab-5220c03, both PCs, from their next pair.",
-   "state": "next",
+   "test": "Bully runs on both PCs (12-flag role).",
+   "state": "running",
    "runs": [
     "PC runner",
     "PC runner 2"
@@ -722,8 +722,8 @@
    "name": "SiegeFinish",
    "owner": "War",
    "detail": "Melee units storm a city once it's down to a third of its HP.",
-   "test": "Bully runs on ab-5220c03, both PCs, from their next pair.",
-   "state": "next",
+   "test": "Bully runs on both PCs (12-flag role).",
+   "state": "running",
    "runs": [
     "PC runner",
     "PC runner 2"
@@ -737,6 +737,42 @@
    "detail": "At war a greedy civ judges the threat: a far or weak enemy changes nothing; a force that could take a city gets defenders and border walls.",
    "test": "Later: the matchup test.",
    "state": "waiting",
+   "runs": []
+  },
+  {
+   "section": "testflag",
+   "order": 29,
+   "name": "CSConquest",
+   "owner": "War",
+   "detail": "A warmonger goes to war on a weak, nearby city-state with no strong protector. CP's AI almost never attacked city-states.",
+   "test": "Bully runs on ab-2db51dd, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 30,
+   "name": "ConquestTraitTargets",
+   "owner": "War",
+   "detail": "A warmonger's civ bonus shapes its targets: Assyria favours civs with techs it lacks, Songhai rich cities, Mongolia city-states.",
+   "test": "Bully runs on ab-2db51dd, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 31,
+   "name": "GiftsNeedPatronage",
+   "owner": "Diplomacy",
+   "detail": "No gold gifts to city-states without Patronage, except city-state civs, a diplomatic victory, a resource at stake, or a quest. You ruled it obvious: in the bundle.",
+   "test": "In the bundle since ed449fd (no test).",
+   "state": "passed",
    "runs": []
   }
  ]

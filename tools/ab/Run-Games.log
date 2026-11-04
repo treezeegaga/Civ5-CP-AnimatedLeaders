@@ -581,3 +581,42 @@ NOTE 9:21AM ET: replay job for 0A92244F: logging ON, hand-written AIABTest.ini, 
 2026-11-04 09:30:46  Game ended: never started
 2026-11-04 09:30:46  Starting game 1: single game; Mode = bully; Fixes = bundle; Screen = ; Base = ; RoleFixes = ; OthersBase = 
 2026-11-04 09:33:12 ET  PC 1 (BOX): REPLAY of 0A92244F is NOT faithful and was cut short. T10 rows differ from the original (Venice score 35 vs 34; 69 of 88 rows differ by T110), so the city-states differ (replay picked Ragusa, Panama City, Vancouver, La Venta, Ormus, Ur... see results/replay/0A92244F-replay-attempt.ini). The runner also treated the repeat GameId as 'never started' and killed Civ at T110 (before the original's first capture at T120); it was then stopped. Logs through T110 saved. Logging off again.
+NOTE ET: installed ab-5220c03; c8d csv moved aside to AIABTest_c8d.dbdfbb3-done.csv; logging off; starting bully run with SiegeFirst, SiegeFinish (AIABTest_bullyabort3@BOX.csv)
+2026-11-04 09:34:48  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish; OthersBase = 
+NOTE 9:36AM ET: STOP created per lead (9:40am ET): finishing the pair in progress, then restarting the same ab-5220c03 run with logging on and -SaveLogs
+2026-11-04 09:41:24    turn 100 after 5 minutes
+2026-11-04 09:45:07  Game ended: turn 150 (0AD63ACB0AD63ACB)
+2026-11-04 09:45:07  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish; OthersBase = 
+2026-11-04 09:46:24    replay matches the first game
+2026-11-04 09:51:44    turn 100 after 5 minutes
+2026-11-04 09:55:08  Game ended: turn 150 (0AD63ACB0AD63ACBF)
+2026-11-04 09:55:08  Stop file found; stopping
+2026-11-04 09:55:08  Runner finished after 2 games
+2026-11-04 09:55:22 ET  PC 1 (BOX): bullyabort3 on ab-5220c03, 1 pair: 0AD63ACB Mongols 0 captured/0 lost both games (8 cities each), replay matches, no dialogs. Restarting same run with logging ON and -SaveLogs per lead.
+2026-11-04 09:55:25  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish; OthersBase = 
+2026-11-04 10:03:21    turn 100 after 7 minutes
+2026-11-04 10:07:45  Game ended: turn 150 (0AE91B560AE91B56)
+2026-11-04 10:07:52    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0AE91B560AE91B56.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0AE91B560AE91B56
+2026-11-04 10:07:52    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0AE91B560AE91B56
+2026-11-04 10:07:52  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish; OthersBase = 
+2026-11-04 10:09:08    replay matches the first game
+2026-11-04 10:15:50    turn 100 after 7 minutes
+2026-11-04 10:19:53  Game ended: turn 150 (0AE91B560AE91B56F)
+2026-11-04 10:20:00    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0AE91B560AE91B56F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0AE91B560AE91B56F
+2026-11-04 10:20:00    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0AE91B560AE91B56F
+2026-11-04 10:20:00  Starting game 3: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish; OthersBase = 
+2026-11-04 10:20:10 ET  PC 1 (BOX): bullyabort3 on ab-5220c03, 2 pairs: 0AD63ACB Mongols 0 captures (8 cities both); 0AE91B56 Mongols 0 captured (3 and 4 cities; lost 1 city in the flip). Replays match, no dialogs. 0AE91B56 logs deleted (no capture), run continues with logging.
+2026-11-04 10:27:58    turn 100 after 7 minutes
+2026-11-04 10:32:42  Game ended: turn 150 (0AFFA02F0AFFA02F)
+2026-11-04 10:32:49    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0AFFA02F0AFFA02F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0AFFA02F0AFFA02F
+2026-11-04 10:32:49    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0AFFA02F0AFFA02F
+2026-11-04 10:32:49  Starting game 4: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish; OthersBase = 
+2026-11-04 10:34:04    replay matches the first game
+NOTE 10:35AM ET: ab-2db51dd is out; STOP created, finishing pair then installing
+2026-11-04 10:40:45    turn 100 after 7 minutes
+2026-11-04 10:44:50  Game ended: turn 150 (0AFFA02F0AFFA02FF)
+2026-11-04 10:44:56    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0AFFA02F0AFFA02FF.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0AFFA02F0AFFA02FF
+2026-11-04 10:44:56    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0AFFA02F0AFFA02FF
+2026-11-04 10:44:56  Stop file found; stopping
+2026-11-04 10:44:56  Runner finished after 4 games
+2026-11-04 10:45:09 ET  PC 1 (BOX): bullyabort3 on ab-5220c03, 3 pairs total: 0AFFA02F Japan 0 captures (4 and 5 cities); aggressor declared 1 war in game 1, so its logs+digest are kept (flip's deleted). Replays match, no dialogs. Stopped for ab-2db51dd.

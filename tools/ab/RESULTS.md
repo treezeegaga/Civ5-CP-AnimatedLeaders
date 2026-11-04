@@ -2854,9 +2854,52 @@ logged pair".
   copies a fixed list of logs). **Request to the lead:** add `StrategyProfile_Log.csv` to the logs the runner saves.
 - **Status:** `d51e8a6` compiles (CI passed) and is merged into `claude/ab-c1` (the lead, 8:10am ET). PC 2 plays it as
   `AIABTest_bullygreedy3@TREEDESKTOP.csv`.
-- **Follow-up, `d379bfe` (8:10am ET, CI pending):** the gift switch covers every style with a cap: `BalancedArmy` at 3 per
+- **Follow-up, `d379bfe` (8:10am ET; compiles, merged in `5220c03`):** the gift switch covers every style with a cap: `BalancedArmy` at 3 per
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
+
+### Conquest bonuses in the strategy profile: which leaders move (Personality, 2026-11-04 10:15am ET)
+The user's task (via the lead): use each civ's conquest bonus. Personality's half: the profile puts conquest-bonus civs
+on the aggressive side, and civs that take city-states without war on the diplomat side. War does target choice
+(`ConquestTraitTargets`).
+
+**What the profile did before.** It took CP's trait tags (`CvPlayerTraits::IsWarmonger`, `IsNerd`, `IsSmaller`,
+`IsDiplomat` ...). When a civ had two tags, the primary victory pursuit broke the tie, and CP scores that pursuit
+from flavours and tags each game, not from a fixed table. Two gaps:
+- CP's tags overlap. Tech from captured cities sets both the warmonger and the science tag (Assyria). "No annexing"
+  sets the smaller tag (Venice), which the profile read as Scientist.
+- The raze-speed bonus (the Huns) isn't in any of CP's tags.
+
+**The change** (fork `ai/personality` `277602f`, on `claude/ab-c1` `d2390a1`; in `CvGrandStrategyAI::GetStrategyProfile`,
+read from trait fields so mods and other civs work too):
+1. **A conquest bonus makes a civ a Conqueror, before any tag, with home meta position at least +50** (MetaDial's
+   conquest plan). The bonuses: tech from captured cities, plunder gold, raze speed, combat against city-states,
+   production, great works, golden ages or yields from conquest, keeping conquered buildings.
+2. **Taking city-states without war makes it a Diplomat, before the science and smaller tags:** diplomatic marriage,
+   annexing city-states, or a unique unit that can buy a city-state.
+
+**Which leaders move** (base civs; tags worked out from each civ's ability and CP's tag rules, since the base game's
+trait data isn't in either repo; the first logged games' `StrategyProfile_Log.csv` will confirm):
+
+| Civ (leader) | Bonus | CP tags | Before | After |
+|---|---|---|---|---|
+| Assyria (Ashurbanipal) | tech from each captured city | warmonger and science | Conqueror if its pursuit came out domination, **Scientist** if science | **Conqueror**, M ≥ +50 |
+| Songhai (Askia) | triple gold from captures and camps | warmonger | Conqueror, M from +40 | Conqueror, M ≥ +50 |
+| Huns (Attila) | raze twice as fast | none from this bonus | Conqueror only if its pursuit came out domination with offence ≥ 7 (otherwise by its other tags, or Opportunist) | **Conqueror**, M ≥ +50 |
+| Mongolia (Genghis Khan) | +30% against city-states | warmonger | Conqueror, M from +40 | Conqueror, M ≥ +50 |
+| Austria (Maria Theresa) | diplomatic marriage | diplomat | Diplomat | Diplomat (no change) |
+| Venice (Enrico Dandolo) | buys city-states with the Merchant of Venice | smaller (and diplomat from its trade routes) | **Scientist** unless its pursuit came out diplomacy | **Diplomat** |
+
+So the moves are:
+- **Assyria and the Huns** become certain Conquerors.
+- **Venice** becomes a Diplomat.
+- **Songhai, Mongolia** (and Assyria, the Huns) get the +50 floor.
+- **Austria** doesn't change.
+
+**What it affects now:** `StrategyProfile_Log.csv`, and `MetaDial` (merged, not yet in any run). The style flag sets
+don't read the profile.
+
+**Status:** coded; CI pending.
 
 ### The three styles as flag sets, for the trio test (Personality, 2026-11-04 9:20am ET)
 For the lead's trio mode (AGENTS.md, "The trio goal": one greedy, one balanced and one aggressive civ of ours plus 3 CP
@@ -2885,8 +2928,8 @@ civs, 6 players). Nothing is coded for it; this is the list a test key would giv
   civ. The AI can't know which civs are "ours" (rule 6, fair play), and the cycle is the point: greedy out-grows
   balanced, aggressive punishes greedy, balanced holds against aggressive.
 - **Status of each set:**
-  - greedy: the strict four are in the bully runs; `GreedyWarArmy` is untested, and the disband fix (`b4213b4`) is
-    waiting for CI;
+  - greedy: the strict four are in the bully runs; `GreedyWarArmy` is merged but untested; the disband fix (`b4213b4`)
+    compiles (CI run 140) and waits for the lead's merge;
   - balanced: untested;
   - aggressive: the conquest role took its first cities on 2026-11-04. `AggressivePlan` and `AggressiveArmy` are
     untested, and only matter for a civ that isn't a personality warmonger.
@@ -2916,7 +2959,7 @@ T150). The per-turn rows (land units/cities, w = at war):
   otherwise scraps it. Logged (`GREEDY:` in the homeland log) in logged games.
 - **Expected:** greedy civs at peace back to about 1 land unit per city within a few turns after the 10-turn wait;
   `LandUnits` ≈ cities + scouts (about +2).
-- **Status:** coded, CI pending.
+- **Status:** compiles (CI run 140 on `b4213b4` passed, 9:16am ET). Ready for the lead to merge.
 
 ### GreedyWarArmy: at war a greedy civ judges the threat (Personality, 2026-11-04 8:15am ET, revised 9:15am ET)
 - **The user (2026-11-04), in three steps:**
@@ -2970,7 +3013,8 @@ T150). The per-turn rows (land units/cities, w = at war):
 - **Run, once the bully takes cities from strict greedy civs:** the same bully run with `-OthersBase "GreedyFewUnits,
   GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy"`.
 - **Build:** fork `ai/personality` `c1518c4` (on `674c1bd`, `ddf3311`, `cbb291c`, `9017ee3`, `d379bfe`; off `claude/ab-c1` `d51e8a6`).
-- **Status:** coded, CI pending.
+- **Status:** compiles (CI run 138 on `5220c03` passed, 9:05am ET); merged into `claude/ab-c1` `5220c03`. Waits for the
+  matchup test.
 - **For the lead:** 63 of 64 flags. Retiring flags that failed or were replaced (`LongWide`; `GreedyArmyCap`, replaced by
   `GreedyFewUnits`) will be needed soon.
 
@@ -3223,6 +3267,45 @@ flipped game is the same game: all 120 result rows of pair `02C5BBF9` are identi
 no noise. That's good news for every real test: within a pair, everything that differs comes from the flags
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
+
+### City-state conquest and conquest bonuses merged; three more flags retired; both PCs to the 14-flag role (lead, 2026-11-04 10:25am ET)
+
+- **War found** that CP's own weights almost never choose war on a city-state: a test bully picked it once in 959
+  city-state updates, and the conquest target search looks only at major civs. New flags on `ai/war`: `CSConquest` (a
+  warmonger in the conquest role goes to war on a weak, nearby city-state with no ally, or only an enemy as ally, and
+  no strong protector) and `ConquestTraitTargets` (its civ's conquest bonus shapes its targets). Personality's
+  `277602f` puts conquest-bonus civs among the Conquerors, and the civs that take city-states without war among the
+  Diplomats.
+- **Retired** (`2db51dd`): `ClosedBorders` (dropped), `GrowthTech` (-0.47) and `AqueductValue` (+0.09), all c7c ideas
+  with no gain. 62 flags. **The 64-flag mask is tight;** a wider mask is lead work to do soon.
+- **Both PCs**, from their next pair once `ab-2db51dd` is out, logging on, `-SaveLogs` (logs kept only for capture games
+  and their partners). The role is the 12 flags + `CSConquest` + `ConquestTraitTargets`:
+  - PC 2 against greedy civs: `AIABTest_bullygreedy6@TREEDESKTOP.csv`.
+  - PC 1 against normal civs: `AIABTest_bullyabort4@BOX.csv`.
+- **Before the switch:** `bullyabort3` (PC 1, 12-flag role, `5220c03`), 2 pairs, 0 captures.
+
+### Use each civ's conquest bonus (the user; lead, 2026-11-04 10:10am ET)
+
+Some civs are rewarded for taking cities (base rules; CP's database to be checked): Assyria (a free tech the owner knew
+per city captured), Songhai (triple gold from captures and pillaged camps), the Huns (raze twice as fast), Mongolia
+(+30% against city-states). Austria and Venice take city-states without war.
+- **War:** flag `ConquestTraitTargets`. With the conquest flags on, a warmonger's target value adds its trait's
+  reward: Assyria favours neighbours with techs it lacks, Songhai rich cities, Mongolia city-states first. Austria
+  and Venice exclude city-states.
+- **Personality:** the conquest-bonus civs on the aggressive side of the profile, Austria and Venice on the
+  city-state side, read from the trait fields rather than a civ list.
+
+### Does conquest pay? And city-states (lead, 2026-11-04 10:05am ET)
+
+- **The user:** a bully grows by absorbing other civs' cities, so if it conquers nothing it won't grow. So the
+  conquest role's verdict is whether the aggressor ends **bigger**, not only whether it captures. Across the 14 valid
+  bully pairs so far, the aggressor's T150 share of the game, with the role against without (an even share is 12.5%):
+  cities 12.7 / 12.2, population 12.3 / 11.1, techs 11.7 / 11.7, land 12.3 / 12.0, military 13.6 / 15.7. **Strength
+  12.5% both ways: a wash.** With the role the army is spent in wars, and almost nothing comes back (2 captures, both in
+  the Huns' game). From now on every bully result reports this alongside captures.
+- **The user: a true bully conquers city-states too.** `CitiesCaptured` counts only cities taken from major civs. New
+  column `CityStatesCaptured` (`claude/ab-c1` `d2390a1`, results file `c8e`, measurement only). War is asked whether the
+  conquest role ever targets city-states, and to propose a flag if it doesn't.
 
 ### Replaying the capture game with logging on; every game's replay keys now kept (lead, 2026-11-04 9:15am ET)
 
