@@ -1924,7 +1924,7 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
-### War: failed bully war 0BE6755D, Songhai against Assyria (Nov 4, about 11:45am ET)
+### War: failed bully war 0BE6755D, Songhai against Assyria (Nov 4, about 11:38am ET)
 PC 2, greedy opponents, ab-2db51dd, 14-flag role. Aggressor Songhai. It ended with 3 cities and took none. A
 different failure from Nottingham: the army lost the zone, rather than its attacks failing to land.
 - **Target:**
