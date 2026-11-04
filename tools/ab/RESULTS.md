@@ -1820,6 +1820,20 @@ military 190 at T150 against 124 in the replay, 5 cities in both.
   `IsUnitNeededAtSiege` says the siege needs (at least a third of HP, near a damaged enemy city). This is SiegeStay
   itself, which hasn't passed and isn't in the bundle. **Request:** add SiegeStay (and SiegePosture) to the
   aggressor's RoleFixes for the next bully runs.
+- **Why nobody took Japan** (military 5, 3 cities; at war with Songhai from T67, and with Siam from T128):
+  - **Songhai** (B, no flags) had no army near Kyoto for 80 turns: expected damage 0 from T88 to T143.
+  - **When an attack finally came (T145)** it was the same pattern as at Tiwanaku: 83, then 120 a turn. Kyoto fell to
+    164, then 133 HP needed. Then the damage dropped to 33 a turn and Kyoto healed back to 193 by T151.
+  - **Siam** brought at most 27 a turn.
+
+  So the bleed after two turns of fire isn't a quirk of the flags: B does it too. The fix is the same: SiegeStay
+  (now also covering the homeland heals).
+- **The next fix, in order:**
+  1. Add SiegeStay and SiegePosture to the aggressor's role (`ab-3247ef4`). Expected: the two-turn collapse doesn't
+     happen, and a 120-a-turn siege on a 200 HP city ends in a capture within 3–4 turns.
+  2. If cities still survive at 30–60% HP, melee units aren't finishing: make the capture attempt use the high
+     aggression level once the city is below a third of its HP.
+  3. Then ask for siege units first while an attack waits (one catapult per army today).
 - **Still open:** one siege unit per army. Only the capital's SiegeBook builds catapults, and the extra units SiegeArmy
   asks for follow the slot types (ranged or bombard), so cities answer with composite bowmen. A later idea: ask for
   `UNITAI_CITY_BOMBARD` first while an attack waits.
