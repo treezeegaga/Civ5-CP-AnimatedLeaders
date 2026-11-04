@@ -1896,6 +1896,37 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### FIX_CONQUEST_TRAIT_TARGETS: a warmonger's conquest bonus shapes whom it attacks (War) (Nov 4, about 10:04am ET)
+- **The trait fields** (`CvTraitClasses`, read through `GetPlayerTraits()`). The pack runs CP without Vox Populi,
+  so the base game's values apply; VP's SQL changes these traits, but isn't loaded.
+
+  | Civ | Base-game bonus | Field |
+  |---|---|---|
+  | Assyria | a tech the owner knew, per city captured | `IsTechFromCityConquer()` |
+  | Songhai | triple gold from capturing cities and camps | `GetPlunderModifier()` (200) |
+  | Huns | raze twice as fast | `GetRazeSpeedModifier()`. No bearing on target choice; left out |
+  | Mongolia | +30% combat against city-states | `GetCityStateCombatModifier()` |
+  | Austria | takes city-states by marriage | `IsAbleToAnnexCityStates()` / `IsDiplomaticMarriage()` |
+  | Venice | buys city-states with its merchant (a unit ability, `IsCanBuyCityState`) | `IsNoAnnexing()`, which only Venice has in the base game, used as its marker |
+
+- **Hypothesis:** with the flag (and the conquest role's target choice), each trait shapes the targets:
+  - **Assyria:** +5 to a major target's score per tech the target knows and Assyria lacks, capped at +30 (c4's
+    target scores run about 10–70).
+  - **Songhai:** + half the target's total population, capped at +30 (plunder grows with city size).
+  - **Mongolia:** CSConquest accepts city-states up to "average" strength against it, not just "poor".
+  - **Austria and Venice:** never choose war against a city-state (WAR set to 0 in the city-state approach), since
+    they take them peacefully.
+
+  Each conqueror picks wars whose spoils it's built to collect: stronger civs in the late game, a game that feels
+  different with each leader (goal 5).
+- **Measure:** bully pairs where the aggressor is one of these civs, the role + flag against the role. Who it
+  targets ("CONQUEST: going for X"), captures, `CityStatesCaptured`, and the trait's payoff (Assyria's techs, Songhai's
+  gold) from the logs. Plus Austria's and Venice's city-state wars (should be 0).
+- **δ:** target choice changes in the logs in most pairs, and captures are no fewer. Strength share is a guard, not
+  the verdict.
+- **Build:** next `ai/war` commit. All three places are in `CvDiplomacyAI` (`GetNewAIConquestTarget`, the CSConquest
+  block, `SelectBestApproachTowardsMinorCiv`), Diplomacy's file, behind the flag as the lead asked.
+
 ### War: does a bully ever attack city-states? Hardly ever (FIX_CS_CONQUEST) (Nov 4, about 10:00am ET)
 
 **Evidence.**
