@@ -750,8 +750,15 @@ branch, and the lead applies them to `ai/<topic>` (see the check-in).
 > triangle is too strong or too weak, you fix it by tuning the styles' numbers (unit counts, defence
 > levels, aggression thresholds). War, Economy and Diplomacy own the mechanics: attacks that take
 > cities, `GreedyAlarm`, target choice. Ask them, through the lead, when a side fails for lack of a
-> mechanic. Start when the bully test shows attacks can take cities; until then the lead holds the
-> meta.
+> mechanic.
+>
+> **Started early (the user, 2026-11-03 11:15pm ET).** Every civ in the bully games is a normal CP AI with a real
+> army (the weakest still has over half the bully's military), so the bully only ever meets the hard matchup.
+> **First job: the greedy style as flags**, so the bully gets its easy matchup and we can see whether the conquest
+> code works at all: few military units, no walls or castles, no defensive upgrades, the production into growth,
+> science and wonders. Write the hypothesis and the knobs in RESULTS.md first, then code it on `ai/personality`.
+> The lead adds the test key that gives a style to every civ without a role, in both games of a pair. Balanced
+> and aggressive next, then the strategy profile above.
 
 ### Diplomacy
 
