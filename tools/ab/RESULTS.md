@@ -2706,6 +2706,66 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
+### The three styles as flag sets, for the trio test (Personality, 2026-11-04 9:20am ET)
+For the lead's trio mode (AGENTS.md, "The trio goal": one greedy, one balanced and one aggressive civ of ours plus 3 CP
+civs, 6 players). Nothing is coded for it; this is the list a test key would give to one slot each.
+
+| Style | Flags | What it plays |
+|---|---|---|
+| **Greedy** | `GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy` | 1 land unit per city in peace (disbands down to it), no walls or barracks, no upgrades in peace, growth, science and wonders first. At war it judges the threat: nothing changes unless a city is under siege or an enemy force in sight could take one, and then it builds enough defenders and walls its border cities |
+| **Balanced** | `BalancedArmy, BalancedWalls` | 2-3 land units per city in peace, no cap at war, walls and castles first in border cities and the capital, upgrades as normal; otherwise CP's play, which starts few wars |
+| **Aggressive** | `AggressivePlan, AggressiveArmy` + the conquest role: `TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish` | 3-4 land units per city in peace with siege; the conquest plan (siege techs and book, a timing attack on a weak close neighbour, a siege that holds and finishes), whatever its personality |
+
+**Notes for the trio mode:**
+- **The bundle runs under each set.** "Ours" means the candidate AI, so each style slot runs the bundle (the flags that
+  passed) plus its style set, like group c today.
+- **What "CP" means for the opponents:** stock CP (rung A) needs a build with `kABTestVersusBase = false`; with
+  `claude/ab-c1` as built, every civ runs B underneath. For the lead to decide.
+- **Style slots don't list `MetaDial` or `WarAppetite`.** Those read the strategy profile's meta position, so they're for
+  the later test where the style comes from the leader's personality. A style flag takes precedence over the dial,
+  but walls and growth value would mix.
+- **`GreedyTarget` is left out of the aggressive set** until it uses only the units the attacker can see (today it
+  reads the target's real unit count: a fog cheat). Without it, `TimingAttack` picks the weakest close neighbour by
+  CP's strength estimate.
+- **`GreedyAlarm` (Economy) is left out of the greedy set.** `GreedyWarArmy` does its job at war, and the alarm only
+  covers tall-book civs. A peace-time alarm for any greedy civ could join later if the matchups ask for it.
+- **Our three may fight each other.** The aggressive civ picks the weakest close neighbour, which can be our greedy
+  civ. The AI can't know which civs are "ours" (rule 6, fair play), and the cycle is the point: greedy out-grows
+  balanced, aggressive punishes greedy, balanced holds against aggressive.
+- **Status of each set:**
+  - greedy: the strict four are in the bully runs; `GreedyWarArmy` is untested, and the disband fix (`b4213b4`) is
+    waiting for CI;
+  - balanced: untested;
+  - aggressive: the conquest role took its first cities on 2026-11-04. `AggressivePlan` and `AggressiveArmy` are
+    untested, and only matter for a civ that isn't a personality warmonger.
+
+### Greedy cap, second leak: units kept after a war and after escorts (Personality, 2026-11-04 9:00am ET)
+Pair `0B58EE0F` (`ab-d51e8a6`, `AIABTest_bullygreedy3@TREEDESKTOP.csv`, logging off, rows every 10 turns). The lead saw
+about 2 land units per city in peace (Assyria 11 on 5 at T100; flipped game Assyria 16 on 7, Indonesia 14 on 6 at
+T150). The per-turn rows (land units/cities, w = at war):
+- **War leftovers, the main route:**
+  - Assyria (game 1): 4/6w at T80–T90, 5/11 in peace at T100;
+  - Assyria (flipped): 7/14w and 7/15w at T130–T140, 7/16 in peace at T150;
+  - Indonesia (flipped): 6/12w at T110, 6/14 in peace at T150.
+
+  At war the cap is 2 per city plus 2 for operations. City-state gifts are taken up to it, and a city under siege
+  with no garrison may still get a defender. The units stayed after peace, since the cap stops new units but disbands
+  nothing.
+- **Escorts, the small drift in peace:** the flipped game's Inca was never at war and held 10 on 6 cities. That's
+  about 2 scouts (`LandUnits` counts them, the cap doesn't) plus 8 others: the cap plus the 2 allowed for settler
+  escorts, which stay once the operation ends.
+- **Ruled out:** production, purchases and city-state gifts all go through the cap (`d51e8a6`); upgrades replace
+  units without adding any; ruins are off.
+- **Fix** (`ai/personality` `b4213b4`, on `claude/ab-c1` `5220c03`; no new flag, it's part of `GreedyFewUnits` and
+  MetaDial's greedy side): `CvGrandStrategyAI::DoGreedyDisbandToCap`. In peace, a civ above its peace cap lets one
+  land unit go each turn, once three things hold: no war with a major, 10 turns since its last peace treaty (a war
+  may start again), and GreedyAlarm quiet. It picks the weakest unit that isn't a scout, isn't in an army, and
+  preferably isn't in a city. Like CP's own scrapping, it gifts the unit to a city-state if one would take it,
+  otherwise scraps it. Logged (`GREEDY:` in the homeland log) in logged games.
+- **Expected:** greedy civs at peace back to about 1 land unit per city within a few turns after the 10-turn wait;
+  `LandUnits` ≈ cities + scouts (about +2).
+- **Status:** coded, CI pending.
+
 ### GreedyWarArmy: at war a greedy civ judges the threat (Personality, 2026-11-04 8:15am ET, revised 9:15am ET)
 - **The user (2026-11-04), in three steps:**
   1. "maybe it's just for the test, but a greedy civ should build military units if it is at war";
