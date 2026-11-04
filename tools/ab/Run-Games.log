@@ -528,3 +528,17 @@
 2026-11-04 00:02:14  Stop file found; stopping
 2026-11-04 00:02:14  Runner finished after 6 games
 2026-11-04 00:02:27 ET  PC 1 (BOX): bully conquest on ab-8109f67 stopped by STOP after 3 pairs (6 games, all replays match, no dialogs); waiting for ab-1fc6d0a
+NOTE 7:02AM ET: installed ab-c78384b (1fc6d0a + compile fix); logging off; starting bully run, 20 games, RoleFixes through SiegeFormation
+2026-11-04 07:02:58  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation; OthersBase = 
+NOTE 7:45AM ET: the runner died at 7:03 because my log monitor (tail -F) locked Run-Games.log; game 0A4B3BF0 ran unsupervised to turn 330 and was killed, discarded. Restarting run without a log lock.
+2026-11-04 07:39:14  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation; OthersBase = 
+NOTE 7:44AM ET: STOP created per lead (7:45am ET plan): finishing current pair, then waiting for ab-dbdfbb3
+2026-11-04 07:45:55    turn 100 after 5 minutes
+2026-11-04 07:49:18  Game ended: turn 150 (0A6C7BB20A6C7BB2)
+2026-11-04 07:49:18  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation; OthersBase = 
+2026-11-04 07:50:30    replay matches the first game
+2026-11-04 07:55:51    turn 100 after 5 minutes
+2026-11-04 07:59:15  Game ended: turn 150 (0A6C7BB20A6C7BB2F)
+2026-11-04 07:59:15  Stop file found; stopping
+2026-11-04 07:59:15  Runner finished after 2 games
+2026-11-04 07:59:38 ET  PC 1 (BOX): 1 pair on ab-c78384b (bullyabort): 0A6C7BB2 England aggressor, 0 captured/0 lost in both games (5 and 4 cities), replay matches, no dialogs. Stopped for ab-dbdfbb3.
