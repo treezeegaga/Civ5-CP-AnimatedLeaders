@@ -1775,7 +1775,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   - Mechanism: siege units in the attack and its expected damage when it marches.
   - Outcome: cities captured, the aggressor's city share, and military at T150 (the guard).
 - **δ:** at least 1 capture per 3 bully pairs; military at T150 no lower.
-- **Build:** `ai/war` commit `1fc6d0a` (on `claude/ab-c1` `c13eb1c`), patch `patches/war/0008`. Only acts on land city attacks; the formation is
+- **Build:** `ai/war` commit `1fc6d0a` (on `claude/ab-c1` `c13eb1c`), patch `patches/war/0008`. Compiles: CI run 116, clang debug and release and MSVC debug passed; MSVC release was still running after 15 minutes at 12:10am ET, possibly the known hang. Only acts on land city attacks; the formation is
   chosen in `CvAIOperation` (War's file).
 
 ### War: bully conquest pair 0879B791 (Celts with the conquest flags): an army thrown away (Nov 3, about 11:45pm ET)
