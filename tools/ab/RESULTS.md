@@ -3126,6 +3126,33 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
+### AggressiveArmy: a small army until the build-up window (Personality, 2026-11-04 2:00pm ET)
+- **The user (via the lead, 2026-11-04):** an aggressive player doing a timing attack keeps a small army most of the
+  game, to avoid maintenance, and builds up fast just before attacking. `AggressiveArmy`'s 3-4 land units per city
+  in peace contradicted that. War codes the build-up window (`TimingBuildup`), Economy the gold saved for it.
+- **The change** (fork `ai/personality` `019c646`, on `claude/ab-c1` `7aaee41`; no new flag):
+  - **The window:** `CvPlayer::IsInWarBuildup`. It's open when:
+    1. we are at war with a major civ; or
+    2. our approach to a major civ is WAR (CP's own war preparation, and `TimingAttack`'s committed target); or
+    3. **interim, until War's `TimingBuildup` defines it:** we are a timing attacker (`TimingAttack`) from turn 70
+       (Standard speed), 20 turns before `DeclareTiming`'s fallback declaration at 90. `DeclareTiming` waits for the
+       army before it picks a target, so case 2 alone would never open the window for a timing attack.
+  - **Outside the window**, `AggressiveArmy` keeps about a garrison plus one:
+    - at most cities + 1 land units (operations +2);
+    - B's small-army rule only (1 per city), and no unit-type bonus;
+    - CP's recommended army size isn't lifted;
+    - city-state unit gifts are refused at cities + 1.
+  - **Inside the window:** 3-4 land units per city, attack, siege and ranged units first, as before.
+  - **MetaDial:** its conquest-plan side (M ≥ +50) does the same. 0 < M < +50 is unchanged.
+- **Request to War (coordination):** when `TimingBuildup` lands, please expose its window as one function, e.g.
+  `CvPlayer::IsInTimingBuildup()` or a `CvDiplomacyAI` getter. Say when it opens: how many turns before the strike,
+  and on what signal (the planned target, the unit timing, the gold Economy saves). I'll replace case 3 with it, so the
+  production side and War's plan open the same window. Until then, case 3's turn 70 is a stand-in.
+- **What to watch** (once the aggressive set runs): an aggressive civ's `LandUnits` about cities + 1 most of the game,
+  rising quickly in the 20 turns before its declaration; its economy in between (population, techs) close to a balanced
+  civ's.
+- **Status:** coded, CI pending.
+
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
 conquer cities. They are, and the user ruled: "raider is a great flavour archetype. songhai works better as a
@@ -3283,7 +3310,7 @@ civs, 6 players). Nothing is coded for it; this is the list a test key would giv
 |---|---|---|
 | **Greedy** | `GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy` | 1 land unit per city in peace (disbands down to it), no walls or barracks, no upgrades in peace, growth, science and wonders first. At war it judges the threat: nothing changes unless a city is under siege or an enemy force in sight could take one, and then it builds enough defenders and walls its border cities |
 | **Balanced** | `BalancedArmy, BalancedWalls` | 2-3 land units per city in peace, no cap at war, walls and castles first in border cities and the capital, upgrades as normal; otherwise CP's play, which starts few wars |
-| **Aggressive** | `AggressivePlan, AggressiveArmy` + the conquest role: `TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish` | 3-4 land units per city in peace with siege; the conquest plan (siege techs and book, a timing attack on a weak close neighbour, a siege that holds and finishes), whatever its personality |
+| **Aggressive** | `AggressivePlan, AggressiveArmy` (a small army until the build-up window, then 3-4 per city) + the conquest role: `TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish` | 3-4 land units per city in peace with siege; the conquest plan (siege techs and book, a timing attack on a weak close neighbour, a siege that holds and finishes), whatever its personality |
 
 **Notes for the trio mode:**
 - **The bundle runs under each set.** "Ours" means the candidate AI, so each style slot runs the bundle (the flags that
