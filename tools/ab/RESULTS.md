@@ -3144,6 +3144,11 @@ first. B's seconds per turn come from the logged pair (logging costs about 15%).
   seeds, the 8 civs and their leaders, and the same role, on `ab-dbdfbb3`, logging on (`-NoSettings -Unpaired
   -MaxGames 1 -SaveLogs`). The city-states weren't recorded, so the T10 rows are checked against the original's
   before it goes on. Results `AIABTest_bullyreplay@BOX.csv` + logs.
+  **Outcome (9:33am ET): not faithful.** T10 already differed (Venice score 35 against 34), because the replay picked
+  other city-states, and the runner cut it at T110. The Huns were at war with Spain by T100 there too (military 84
+  against 44), but there were no captures by T110. Its logs show only the start of that war. **From now on PC 1's bully
+  run keeps logging on** (`-SaveLogs`, about 15% slower) and commits the logs of games with a capture and their
+  partner game only.
 - **`Run-Games.ps1`:** after every game, `AIABTest_lastgame.ini` (seeds, civs, leaders, city-states) is copied to
   `results\replay\<GameId>.ini`. Commit that folder with the results, and any game can be replayed exactly.
 
