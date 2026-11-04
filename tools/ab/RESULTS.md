@@ -1924,6 +1924,42 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: failed bully war 0C22F161, the Huns, bankrupt (Nov 4, about 12:55pm ET)
+PC 2, greedy opponents, ab-9e9fc9d, 14-flag role. The Huns declared on France at T105. The game logged one
+capture attempt (Paris, T105, 200 → 200, 0 of 2 units used) and took no city. **The cause is upstream of the siege:
+the Huns were bankrupt from T71, and CP's bankruptcy rule gave the army away.**
+- **The attack (sneak attack 1638):**
+  - It formed at T72 at Pontianak (58:31), 4 tiles from the target (54:31). It had a battering ram, 3 catapults,
+    an archer, and **all three required front-line slots open**.
+  - It stayed in recruiting for **30 turns** (T72–T102), "Found 0 potential units" every turn. No "SiegeArmy:
+    waiting" line appears; the required slots fail first.
+- **Why the slots never filled:**
+  - From T82 Pontianak, Attila's Court and Ahmedabad built a warrior for the operation every 2 turns
+    ("Operation unit, Warrior").
+  - **Each was gifted to a city-state a turn or two later**, "Gifting Warrior ... b/c bankrupt" (MilitaryAILog).
+    That's 37 warriors gifted over the game; treasury 0, and the production log's GPT ran from −36 at T80 to
+    −130 at T130.
+  - The rule is `CvMilitaryAI::DisbandObsoleteUnits`. In deficit it gifts or scraps the cheapest "obsolete" unit not
+    in an army (`FindUnitToScrap`). A warrior whose upgrade needs iron the civ lacks counts as obsolete, so every new
+    warrior was first in line.
+- **The war:**
+  - Two warriors finally joined at T101–T102. The army marched at T103, was "discovered" at T104 (distance 3–5),
+    and the Huns declared at T105.
+  - The one capture attempt ran no simulation: `ExecuteSpotterMove` gives up when the city tile isn't visible.
+  - **After the hand-off (no units in armies) the same rule gave away the siege train mid-war:** an archer
+    (T106), both catapults (T107, T108), the battering ram (T110). CP only skips this rule at war when all wars
+    are being lost.
+  - From T106: "too early for attacking Paris, expected 0".
+- **Upstream of War:** a warmonger at war while bankrupt. `GetNewAIConquestTarget` checks `IsWarWouldBankruptUs`,
+  but the Huns were already at 0 gold. This is for Economy (and the lead).
+- **Proposed War fix (needs a flag slot; masks are full, so the lead's call):** `KeepSiegeTrain`, in
+  `CvMilitaryAI::FindUnitToScrap`. While the civ has a city attack recruiting or is at war with a major, units that
+  can fill an open slot of a recruiting city attack, and siege units, aren't gifted or scrapped for deficit. If
+  nothing else qualifies, nothing is scrapped that turn; the deficit then hits buildings and science, as in CP
+  when no unit qualifies.
+- **SiegeRoll wouldn't have helped:** it needs a war already declared, and the slots were empty for lack of units,
+  not a long march.
+
 ### War: the first logged capture, 0C04B641, the Inca take Persepolis (Nov 4, about 12:17pm ET)
 PC 2, greedy opponents, ab-9e9fc9d, 14-flag role. The Inca declared on Persia at T71 and took Persepolis at T75.
 - **The army:** sneak attack 1572 at T67: spearman, 2 warriors, **3 catapults**, a composite bowman. Three earlier
