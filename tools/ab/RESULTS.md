@@ -2912,6 +2912,13 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### A dead aggressor at T10: pair 0B40B5B7 left out (lead, 2026-11-04 8:35am ET)
+
+`AIABTest_bullygreedy2@TREEDESKTOP.csv`, the only pair on `ab-dbdfbb3` before PC 2 moved to `d51e8a6`: Songhai, the
+aggressor, has `Alive` 0, 0 cities and 0 military from T10 in **both** games. The flipped game runs no role flags, so
+it comes from the map or start, not the conquest flags. It's the first such case in any results file (all files
+checked for a civ dead by T30). Left out of the bully reading. If it happens again, PC 2 keeps the autosaves.
+
 ### Greedy unit cap fixed; PC 2 moves to it (lead, 2026-11-04 8:15am ET)
 
 Personality's `d51e8a6` (see "greedy pair 0B09BFE1, where the extra units came from"): greedy civs switch off
