@@ -4,42 +4,49 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "The top five screening flags passed together (+1.35 points, 5 pairs). PC 2 now tests 8 bug fixes together (no-worse). The siege package fails in split and bully games so far; War and Economy fixed why waiting armies never grew, and PC 1 retests it tonight.",
+   "detail": "C8 (the 12 flags that passed) against B on PC 2, and SettlersBeforeWonders alone on PC 1, both on ab-8109f67 since 9:05pm ET. The first C8 try crashed on city-states (CultureRivalValue); fixed.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 1,
    "name": "PC runner",
-   "detail": "Screen locked since 6:47am ET; back tonight for the bully siege test on ab-095144c.",
-   "state": "blocked"
+   "detail": "SettlersBeforeWonders alone, 20 games, on ab-8109f67 since 9:05pm ET.",
+   "state": "running"
   },
   {
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Fixed SiegeArmy so cities build for waiting attacks (1c30fb0); SiegeBar dropped.",
+   "detail": "Proposed the bully conquest test: the aggressor runs the six conquest flags.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 3,
    "name": "Economy",
-   "detail": "Found the waiting-army bug; missionary and settler fixes on ai/economy.",
+   "detail": "Settler fixes (0011) and NoForeignMissionaries on ai/economy.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 4,
    "name": "Diplomacy",
-   "detail": "DealExploits passed in the top five.",
+   "detail": "TradeOpinion flag (trade friendship from running deals, capped) compiled on 72ab43a.",
    "state": "waiting"
   },
   {
    "section": "session",
    "order": 5,
    "name": "Lead",
-   "detail": "Added the Base and RoleFixes keys; queued tonight's tests.",
+   "detail": "Fixed the C8 city-state crash (8109f67); reading results every 5 pairs.",
+   "state": "running"
+  },
+  {
+   "section": "session",
+   "order": 6,
+   "name": "PC runner 2",
+   "detail": "C8 against B, 20 games, on ab-8109f67 since 9:07pm ET.",
    "state": "running"
   },
   {
@@ -92,13 +99,6 @@
    "state": "open"
   },
   {
-   "section": "session",
-   "order": 6,
-   "name": "PC runner 2",
-   "detail": "Bug-fix bundle, no-worse test, on ab-819be70 since 1:36pm ET.",
-   "state": "running"
-  },
-  {
    "section": "queue",
    "order": 1,
    "name": "Top-five test",
@@ -108,29 +108,50 @@
   {
    "section": "queue",
    "order": 2,
-   "name": "Siege package, split games",
-   "detail": "No gain (no wars to act on).",
-   "state": "failed"
+   "name": "Bug-fix bundle",
+   "detail": "Passed the no-worse test.",
+   "state": "passed"
   },
   {
    "section": "queue",
    "order": 3,
-   "name": "Bug-fix bundle",
-   "detail": "8 fixes together, no-worse test, on PC 2.",
-   "state": "running"
+   "name": "Bully siege test",
+   "detail": "0 captures in 6–7 pairs: the aggressor never went to war.",
+   "state": "failed"
   },
   {
    "section": "queue",
    "order": 4,
-   "name": "Bully siege test, fixed SiegeArmy",
-   "detail": "Aggressor with the package against itself without, on PC 1 tonight.",
-   "state": "next"
+   "name": "C8 against B",
+   "detail": "The 12 passed flags together, on PC 2.",
+   "state": "running"
   },
   {
    "section": "queue",
    "order": 5,
-   "name": "Single-flag tests",
-   "detail": "DeclareAtBorder, SettlersBeforeWonders, DealExploits one at a time.",
+   "name": "SettlersBeforeWonders alone",
+   "detail": "Single-flag test, on PC 1.",
+   "state": "running"
+  },
+  {
+   "section": "queue",
+   "order": 6,
+   "name": "Bully conquest test",
+   "detail": "Aggressor runs TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff; judged by captures.",
+   "state": "next"
+  },
+  {
+   "section": "queue",
+   "order": 7,
+   "name": "TradeOpinion",
+   "detail": "No-worse on strength, and more wars.",
+   "state": "waiting"
+  },
+  {
+   "section": "queue",
+   "order": 8,
+   "name": "DealExploits alone",
+   "detail": "Single-flag test.",
    "state": "waiting"
   }
  ]
