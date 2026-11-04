@@ -120,11 +120,10 @@ with Personality's style flags), once attacks work and the styles hold.
 at the top of RESULTS.md):
 - clearly ahead of CP's AI: **strength share ≥ 60%** against CP, at King with even rules (raised from 55% by the
   user, 2026-11-03)
-- the bully test: the aggressor no longer rolls everyone over: **≤ 20% of all cities** at the end, **≤ 1 city
-  per war**, and **2+ civs at war with it within 20 turns** of its first conquest. These need an attacker that
-  conquers first (the user, 2026-11-03): while no AI takes cities they pass trivially. The attack side is judged by
-  matchups (the user): against greedy civs with few units and no walls the aggressor should take several cities,
-  against balanced ones it should struggle. RESULTS.md, "The bully goals wait for an attacker that conquers".
+- ~~the bully test: the aggressor no longer rolls everyone over (≤ 20% of all cities, ≤ 1 city per war)~~ **removed by
+  the user (2026-11-04 2:55pm ET): "if we achieve the other things that will follow naturally".** The bully test stays as a tool: an aggressor role for testing the attack code
+  and the matchups. The attack is judged by matchups (the user): against greedy civs with few units and no walls the
+  aggressor should take several cities, against balanced ones it should struggle.
 - a lively world without spam: **0.5–2 deals per civ per 10 turns**
 - **0 banned behaviours**, and AI turns **no more than 25% slower** than B's
 - most tricks on the exploit checklist no longer work

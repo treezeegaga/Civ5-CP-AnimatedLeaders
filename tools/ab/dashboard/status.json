@@ -245,14 +245,6 @@
   {
    "section": "goal",
    "order": 5,
-   "name": "Defence: the bully doesn't roll everyone over",
-   "target": "The aggressor holds ≤ 20% of all cities at the end, and takes ≤ 1 city per war against balanced civs",
-   "detail": "Can't be judged until attacks work: with almost no captures it passes trivially. The Huns' game: 6 of 37 cities (16%).",
-   "state": "waits"
-  },
-  {
-   "section": "goal",
-   "order": 6,
    "name": "Coalition against a runaway",
    "target": "2+ civs at war with the aggressor within 20 turns of its first conquest",
    "detail": "One case so far: the Huns' first capture came about T120, and 4 civs were at war with them by T140.",
@@ -260,7 +252,7 @@
   },
   {
    "section": "goal",
-   "order": 7,
+   "order": 6,
    "name": "A lively world, no deal spam",
    "target": "0.5–2 deals per civ per 10 turns",
    "detail": "About 3 per civ per 10 turns, for B and C8 alike (12 C8 games; each deal counts once per side), so above the band. Diplomacy hasn't worked on deal frequency yet.",
@@ -268,7 +260,7 @@
   },
   {
    "section": "goal",
-   "order": 8,
+   "order": 7,
    "name": "Banned behaviours",
    "target": "0 per game (workers stolen in peace, wonder chops)",
    "detail": "Wonder chops about 1 per game in both B and C8 (12 C8 games); 1 stolen worker by B, 0 by C8. Not worked on yet.",
@@ -276,7 +268,7 @@
   },
   {
    "section": "goal",
-   "order": 9,
+   "order": 8,
    "name": "AI turn speed",
    "target": "AI turns ≤ 1.25× B's",
    "detail": "C8 games average 5.6 s per AI turn. In split games both groups share one turn, so this needs an all-C run against an all-B run; not run yet.",
