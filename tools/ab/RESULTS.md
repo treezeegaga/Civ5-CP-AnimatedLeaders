@@ -2462,7 +2462,7 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
-### War's read of the conquest pair; both PCs move to the conquest package with SiegeAbort (lead, 2026-11-04 12:10am ET)
+### War's read of the conquest pair; both PCs move to the conquest package with SiegeAbort (lead, 2026-11-03 11:50pm ET)
 
 **War, pair `0879B791` (Celts):** the sneak attack held only 7 units, about half the army. It waited the full 20
 turns (T86–T105) at 27–29 damage a turn against the 60 needed, then marched anyway when the cap ran out and declared
@@ -2478,7 +2478,7 @@ counterattacks and while retreating to heal, and no peace came.
 - PC 2: against greedy civs (`OthersBase`), `AIABTest_bullygreedy@TREEDESKTOP.csv`, logged pair first.
 The two runs differ only in the opponents.
 
-### C8 decided: no worse, no gain; C8 is the new base. Everything merged; PC 2 plays bully vs greedy (lead, 2026-11-04 12:00am ET)
+### C8 decided: no worse, no gain; C8 is the new base. Everything merged; PC 2 plays bully vs greedy (lead, 2026-11-03 11:45pm ET)
 
 - **C8 against B, 6 pairs** (`afc9f22`): c 50.36%, **+0.36 points; gainer FAILED** (LLR -4.71), **no-worse PASSED**
   (+8.19). C8 stays the integration bundle: every flag in it passed its own test, and together they cost nothing.
@@ -2495,7 +2495,7 @@ The two runs differ only in the opponents.
   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Mode bully -Fixes none -OthersBase "GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds" -RoleFixes "TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff" -MaxGames 2 -SaveLogs
   ```
 
-### Bully conquest, logged pair: the army is built, then lost for nothing (lead, 2026-11-03 11:45pm ET)
+### Bully conquest, logged pair: the army is built, then lost for nothing (lead, 2026-11-03 11:40pm ET)
 
 Pair `0879B791` (`ab-8109f67`, PC 1, `AIABTest_bullyconquest@BOX.csv`, logs `logs_0879B791*`), aggressor the Celts:
 - **With the conquest flags:** at T100 the biggest army in the game (military 122, next 99). One war declared between
