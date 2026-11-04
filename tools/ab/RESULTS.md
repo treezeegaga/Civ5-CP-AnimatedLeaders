@@ -2415,6 +2415,20 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### C8 crash fixed: city-states run the bundle (lead, 2026-11-03 9:00pm ET)
+
+The first C8 game (PC 2, `08B98ABC`) halted at T75 with "Error ... the game will now crash": `CvCultureClasses.cpp:3670`,
+"Invalid player index". **Cause:** outside group membership, `UsesCandidateAI` gives every non-major civ the bundle's
+flags (meant for the shipped pack). `CultureRivalValue` joined the bundle in C8, so city-states ran it, and for a
+city-state's city its revived rival loop asked a major's influence on the city-state (`GetInfluenceOnTimes100` on a
+minor). **Fix:** the flag acts for major civs only (`claude/ab-c1` `8109f67`, release `ab-8109f67`). `LosingWarBuildings`,
+the same pattern, is safe for city-states. Both PCs restart their runs on `ab-8109f67`; games on `ab-0cd5a5c` that
+finished cleanly still count.
+
+**For the lead to decide:** city-states running every bundle flag in test games means each new bundle flag also
+changes city-state behaviour, in both groups. That's fair to both sides but untested for crashes. Each flag joining
+the bundle needs a check that its code is safe for a city-state.
+
 ### Queue after tonight's two tests (lead, 2026-11-03 8:35pm ET)
 
 War and Diplomacy found why nobody fights: trade-made friendship crowds out war (Diplomacy), and the bully aggressor
