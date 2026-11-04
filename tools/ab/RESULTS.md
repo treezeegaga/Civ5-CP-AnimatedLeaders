@@ -1955,6 +1955,8 @@ positions, set-up moves, or its scoring of attacks against cities.
 - **For Economy:** WarChest (gold per turn ≥ 0 while planning) and TrueGoldRate belong in the role for any
   TimingBuildup test. The Aztecs' worker weight (4200 before sanity) is theirs too.
 
+Coded: `ai/war` `69c9587` (window pause; CI pending), on `f863b01` (peace-phase building cut; CI pending).
+
 ### War: TimingBuildup's peace phase builds workers and work boats (the user watching 0C3C8913) (Nov 4, about 5:07pm ET)
 The user, watching PC 1's replay: the Aztecs (the role, on ab-f73177c) are "building a million workers and work
 boats". This is from the code, before the build history arrives.
