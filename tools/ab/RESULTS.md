@@ -3266,6 +3266,19 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### SiegeExposure and SiegeRoll merged; the Raider archetype; masks widened to 128 flags (lead, 2026-11-04 12:35pm ET)
+
+- **`claude/ab-c1` `1c3ab74`:** War's `SiegeExposure` (in a city attack, a unit that fired is judged at turn end by the
+  planner's danger, so siege units keep shooting instead of pulling back) and `SiegeRoll` (an attack mustering within
+  5 tiles of its target, already at war, moves with 3+ units: after a capture the army goes on to the next city).
+  Plus Personality's Raider archetype (the Huns and Denmark; Songhai stays a Conqueror, the user's decision). That's
+  exactly 64 flags.
+- **`7aaee41`:** the flag masks are 128 bits wide (`ABTestFixMask` is a two-word struct in `CustomMods.h`). Play is
+  unchanged; test-pack saves only.
+- **Both PCs**, from their next pair once `ab-1c3ab74` is out, logging on: the role is the 14 flags + `SiegeExposure` +
+  `SiegeRoll`. PC 2 against greedy civs, `AIABTest_bullygreedy7@TREEDESKTOP.csv`; PC 1 against normal civs,
+  `AIABTest_bullyabort5@BOX.csv`.
+
 ### FIRST CAPTURE against greedy civs, with the capture log: the Inca take Persepolis (lead, 2026-11-04 12:20pm ET)
 
 `AIABTest_bullygreedy6@TREEDESKTOP.csv`, pair `0C04B641` (PC 2, `ab-9e9fc9d`, the 14-flag role, greedy opponents with the
