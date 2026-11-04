@@ -1,0 +1,59 @@
+From 3247ef4ee760bc01bd266e1e2fe288495eccc483 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 12:40:34 +0000
+Subject: [PATCH] AI_AB_TEST War: SiegeStay also covers the homeland AI's heal
+ moves
+
+Bully-vs-greedy pair 0B09BFE1: the Mongols' siege of Tiwanaku reached 117
+expected damage a turn and brought the city to 128 of 200 HP, then the units
+the tactical AI didn't use fell through to CvHomelandAI::PlotHealMoves, walked
+home to heal (T107-T112, no deaths) and the city recovered. SiegeStay only
+filtered the tactical heal moves; now the homeland heal moves skip units the
+tactical AI's IsUnitNeededAtSiege says the siege needs (made public).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
+---
+ CvGameCoreDLL_Expansion2/CvHomelandAI.cpp | 5 +++++
+ CvGameCoreDLL_Expansion2/CvTacticalAI.h   | 2 +-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp b/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
+index 982b0e153..9cdd81ece 100644
+--- a/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
+@@ -888,6 +888,11 @@ void CvHomelandAI::PlotHealMoves(bool bConservative)
+ 			if (bConservative && pUnit->AI_getUnitAIType() == UNITAI_EXPLORE)
+ 				continue;
+ 
++			//AI_AB_TEST (candidate, flag SiegeStay): units the tactical AI didn't use this turn fall through to here, and a test
++			//siege lost its army this way (117 expected damage a turn, then units walked home to heal and the city recovered)
++			if (m_pPlayer->UsesCandidateAI(FIX_SIEGE_STAY) && m_pPlayer->GetTacticalAI()->IsUnitNeededAtSiege(pUnit))
++				continue;
++
+ 			int iDamageThreshold = 25;
+ 			if (pUnit->AI_getUnitAIType() == UNITAI_EXPLORE_SEA && pUnit->ActualHealRate(pUnit->plot(), false) == 0)
+ 				iDamageThreshold = pUnit->GetMaxHitPoints() - 50;
+diff --git a/CvGameCoreDLL_Expansion2/CvTacticalAI.h b/CvGameCoreDLL_Expansion2/CvTacticalAI.h
+index acbd5e4c5..66d5f2493 100644
+--- a/CvGameCoreDLL_Expansion2/CvTacticalAI.h
++++ b/CvGameCoreDLL_Expansion2/CvTacticalAI.h
+@@ -365,6 +365,7 @@ public:
+ 
+ 	// Other people want to know this too
+ 	const vector<CvTacticalTarget>& GetTacticalTargets() const { return m_AllTargets; }
++	bool IsUnitNeededAtSiege(const CvUnit* pUnit) const; //AI_AB_TEST flag SiegeStay, also used by the homeland AI
+ 	CvTacticalAnalysisMap* GetTacticalAnalysisMap() { return &m_tacticalMap; }
+ 
+ 	// Operational AI support functions
+@@ -397,7 +398,6 @@ private:
+ 	void PlotCivilianAttackMoves();
+ 	void ExecuteCivilianAttackMoves(AITacticalTargetType eTargetType);
+ 	void PlotHealMoves(bool bFirstPass);
+-	bool IsUnitNeededAtSiege(const CvUnit* pUnit) const;
+ 	void PlotBarbarianAttacks();
+ 	void PlotBarbarianCampDefense();
+ 	void PlotBarbarianRoaming();
+-- 
+2.43.0
+

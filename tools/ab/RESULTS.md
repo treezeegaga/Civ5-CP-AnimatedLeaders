@@ -1798,6 +1798,32 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: bully vs greedy pair 0B09BFE1 (Mongols with the full conquest role): close, then the army walked home (Nov 4, about 7:50am ET)
+
+Aggressor Mongolia, with TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, SiegeArmy, ArmyHandoff, SiegeAbort and
+SiegeFormation, in game 1 only. Other civs greedy. No capture in either game. With the flags Mongolia kept its army:
+military 190 at T150 against 124 in the replay, 5 cities in both.
+- **SiegeFormation works:** attacks used the 10-slot formation. But they still held one siege unit each (a catapult
+  or trebuchet) beside 2–3 composite bowmen and swordsmen: 30–40 expected damage a turn against bars of 60–75.
+- **SiegeAbort and SiegeArmy behaved as designed:** attacks waited. One ended on a war-state change, one passed the bar
+  and reached the Inca. The declaration came at T104.
+- **The siege nearly worked.** Tiwanaku, an Inca city: Inca military 32, a greedy civ, 200 HP.
+  - T104: 117 expected damage a turn. The city fell to 168 HP needed at T105, then 128 at T106.
+  - Then the damage dropped to 32 a turn, and the city healed back to 200 by T110.
+  - **No Mongol unit died T104–T119.** The units the tactical AI didn't use fell through to the homeland AI, which sent
+    them home to heal (T107–T112) or to sentry points.
+- **Two gaps in the role.**
+  1. `SiegeStay` wasn't in the role's flags.
+  2. As coded, SiegeStay only filtered the tactical AI's heal moves, not the homeland AI's.
+
+  Fixed (2): `ai/war` `3247ef4` (patch 0009). The homeland heal moves now skip units the tactical AI's
+  `IsUnitNeededAtSiege` says the siege needs (at least a third of HP, near a damaged enemy city). This is SiegeStay
+  itself, which hasn't passed and isn't in the bundle. **Request:** add SiegeStay (and SiegePosture) to the
+  aggressor's RoleFixes for the next bully runs.
+- **Still open:** one siege unit per army. Only the capital's SiegeBook builds catapults, and the extra units SiegeArmy
+  asks for follow the slot types (ranged or bombard), so cities answer with composite bowmen. A later idea: ask for
+  `UNITAI_CITY_BOMBARD` first while an attack waits.
+
 ### FIX_SIEGE_FORMATION: classical–medieval city attacks use a formation with room for siege (War) (Nov 3, about 11:50pm ET)
 - **Why only half the army joined, and the bar wasn't reached** (bully pair 0879B791): distance from the muster point
   wasn't it. The Celts' attack held 7 of its 9 slots; the rest of their military was garrisons, a sentry and scouts.
