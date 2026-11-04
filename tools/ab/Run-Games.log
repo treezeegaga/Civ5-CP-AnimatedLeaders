@@ -843,3 +843,17 @@ NOTE 5:47PM ET: STOP created per lead (5:44pm ET): finishing pair 2 of bullyabor
 2026-11-04 18:02:04  Stop file found; stopping
 2026-11-04 18:02:04  Runner finished after 4 games
 2026-11-04 18:02:31 ET  PC 1 (BOX): bullyabort7 on ab-f73177c (25 flags + MarchOn, FocusedWar), 2 pairs: 0C751A63 Celts (4/4 cities, 1 war declared in game 1) and 0C902E79 Huns (5/5 cities, 1 war each, lost 1 city in game 1): 0 captures, 0 city-state captures. Game-1 logs+digests kept, flips deleted. Replays match, no dialogs. Stopped for ab-eb4129d.
+NOTE 6:03PM ET: installed ab-eb4129d; logging on; starting bullyabort8, pair 1 only (-MaxGames 2), then ab-e4d5785 per lead
+2026-11-04 18:03:39  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll, DeclareWhenGathered, SiegeConcentrate, SiegeKeep, TimingBuildup, AggressiveWalls, TrueGoldRate, WarChest, WarEconomy, TargetVulnerability, MarchOn, FocusedWar; OthersBase = ; GreedyFixes = ; BalancedFixes = ; Civs = 0
+2026-11-04 18:11:35    turn 100 after 7 minutes
+2026-11-04 18:16:18  Game ended: turn 150 (0CA81AA00CA81AA0)
+2026-11-04 18:16:25    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0CA81AA00CA81AA0.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0CA81AA00CA81AA0
+2026-11-04 18:16:25    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0CA81AA00CA81AA0
+2026-11-04 18:16:25  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll, DeclareWhenGathered, SiegeConcentrate, SiegeKeep, TimingBuildup, AggressiveWalls, TrueGoldRate, WarChest, WarEconomy, TargetVulnerability, MarchOn, FocusedWar; OthersBase = ; GreedyFixes = ; BalancedFixes = ; Civs = 0
+2026-11-04 18:17:40    replay matches the first game
+2026-11-04 18:24:20    turn 100 after 7 minutes
+2026-11-04 18:29:04  Game ended: turn 150 (0CA81AA00CA81AA0F)
+2026-11-04 18:29:11    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0CA81AA00CA81AA0F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0CA81AA00CA81AA0F
+2026-11-04 18:29:11    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0CA81AA00CA81AA0F
+2026-11-04 18:29:11  Runner finished after 2 games
+2026-11-04 18:29:29 ET  PC 1 (BOX): bullyabort8 on ab-eb4129d, pair 1: 0CA81AA0 Shoshone aggressor (7/5 cities, 1 war declared in each game) 0 captures, 0 city-state captures. Game-1 logs+digest kept (new rule), flip's deleted. Replay matches, no dialogs. Next: ab-e4d5785 / bullyabort9.

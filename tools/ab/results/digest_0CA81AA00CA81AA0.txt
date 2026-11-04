@@ -1,0 +1,49 @@
+﻿Game 0CA81AA00CA81AA0 (AIABTest_c8e.csv), last logged turn 150
+b    Venice       tall      cities 1
+  builds to T80 (capital Venice; other cities named): T1 Scout* | T4 Monument* | T8 Warrior* | T13 Shrine* | T17 Worker* | T25 Stonehenge | T48 Library* | T58 Work Boat | T63 Work Boat | T67 Great Lighthouse | T75 Temple | T80 Writers' Guild
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T025 Venice size 2 next Library
+  military ops ended (whole game): NoTarget 2, LostPath 1, LostCivilian 1
+c    Brazil       tall      cities 4
+  builds to T80 (capital Rio de Janeiro; other cities named): T1 Scout* | T5 Monument* | T12 Shrine* | T18 Warrior* | T25 Settler* | T37 Worker* | T40 Monument* (Sao Paulo) | T41 Library* (Sao Paulo) | T41 Settler* | T44 Worker* | T45 Settler* | T46 Worker* | T50 Library* | T62 Settler | T63 Settler | T64 Settler | T65 Settler | T66 Settler | T67 Warrior | T67 Settler | T68 Warrior | T69 Warrior | T70 Warrior | T72 Monument (Salvador) | T73 Shrine (Salvador) | T73 Settler | T74 Granary (Sao Paulo) | T74 Settler | T75 Settler | T76 Settler
+  settlers ordered T: 25,41,45,62,63,64,65,66,67,73,74,75,76,85,86,87,88,89,90,92   found-city ops started T: 37,67,83   cities founded T: 40,72,89
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T050 Rio de Janeiro size 4 next Library
+  IDLE SETTLER turns: 5 (first T41)
+  military ops ended (whole game): Success 1
+  settler timeline to T80: T25 settler (book) in Rio de Janeiro | T37 op started | T40 FOUNDED | T41 settler (book) in Rio de Janeiro | T45 settler (book) in Rio de Janeiro | T62 settler (AI) in Rio de Janeiro | T63 settler (AI) in Rio de Janeiro | T64 settler (AI) in Rio de Janeiro | T65 settler (AI) in Rio de Janeiro | T66 settler (AI) in Rio de Janeiro | T67 op started | T67 settler (AI) in Rio de Janeiro | T72 FOUNDED | T73 settler (AI) in Rio de Janeiro | T74 settler (AI) in Rio de Janeiro | T75 settler (AI) in Rio de Janeiro | T76 settler (AI) in Rio de Janeiro
+  saving gold for a settler: 55 turns (T7-T67)
+c    Byzantium    tall      cities 5
+  builds to T80 (capital Constantinople; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T16 Warrior* | T21 Settler* | T31 Worker* | T33 Monument* (Adrianople) | T34 Stonehenge | T34 Library* (Adrianople) | T49 Settler* | T55 Worker | T58 Work Boat (Adrianople) | T58 Settler | T59 Monument (Nicaea) | T60 Work Boat (Nicaea) | T65 Worker | T68 Shrine (Adrianople) | T70 Writers' Guild | T71 Shrine (Antioch) | T75 Worker | T76 Settler (Adrianople)
+  settlers ordered T: 21,49,58,76,102   found-city ops started T: 31,55,65,94,110   cities founded T: 33,59,71,97
+  ops aborted: T111 NoTarget
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T034 Constantinople size 3 next Library
+  IDLE SETTLER turns: 7 (first T49)
+  military ops ended (whole game): NoTarget 3, WarStateChange 2, Success 2, DiploOpinionChange 1
+  settler timeline to T80: T21 settler (book) in Constantinople | T31 op started | T33 FOUNDED | T49 settler (book) in Constantinople | T55 op started | T58 settler (AI) in Constantinople | T59 FOUNDED | T65 op started | T71 FOUNDED | T76 settler (AI) in Adrianople
+  saving gold for a settler: 59 turns (T6-T80)
+c    Ethiopia     tall      cities 6
+  builds to T80 (capital Addis Ababa; other cities named): T0 Scout* | T4 Stele* | T11 Shrine* | T16 Warrior* | T22 Settler* | T34 Worker* | T37 Stele* (Harar) | T38 Library* (Harar) | T38 Settler* | T48 Worker* | T53 Library* | T54 Shrine (Harar) | T55 Stele (Adwa) | T56 Granary (Adwa) | T60 Spearman | T61 Work Boat (Lalibela) | T61 Warrior (Harar) | T62 Work Boat (Lalibela) | T66 Archer | T67 Granary (Harar) | T70 Scout | T73 Worker (Adwa) | T73 Worker | T77 Temple (Harar) | T78 Settler (Lalibela) | T79 Granary
+  settlers ordered T: 22,38,78,99,100,109   found-city ops started T: 34,48,51,94,102,134,136,146   cities founded T: 37,55,61,100,106
+  ops aborted: T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  IDLE SETTLER turns: 5 (first T38)
+  military ops ended (whole game): NoTarget 3, Success 1, HalfStrength 1
+  settler timeline to T80: T22 settler (book) in Addis Ababa | T34 op started | T37 FOUNDED | T38 settler (book) in Addis Ababa | T48 op started | T51 op started | T55 FOUNDED | T61 FOUNDED | T78 settler (AI) in Lalibela
+  saving gold for a settler: 47 turns (T6-T79)
+c    Greece       tall      cities 4
+  builds to T80 (capital Athens; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Settler* | T35 Warrior | T42 Worker* | T44 Monument* (Sparta) | T45 Library* | T45 Library* (Sparta) | T56 Worker | T57 Settler | T58 Worker | T59 Scout | T60 Granary (Sparta) | T60 Worker | T61 Settler | T62 Worker | T64 Settler | T65 Worker | T66 Worker | T67 Warrior | T67 Shrine (Sparta) | T72 Worker | T73 Worker (Sparta) | T73 Archer | T78 Caravan | T80 Shrine (Corinth)
+  settlers ordered T: 24,57,61,64,87,110   found-city ops started T: 35,68,101,123   cities founded T: 44,80,125
+  ops aborted: T121 LostCivilian, T122 NoTarget
+  book SETTLER HELD to T80: 1 (unhappy 1)   built instead: Library 1   first: T045 Athens size 5 next Library
+  IDLE SETTLER turns: 3 (first T57)
+  military ops ended (whole game): LostPath 3, NoTarget 3, Success 2, WarStateChange 1
+  settler timeline to T80: T24 settler (book) in Athens | T35 op started | T44 FOUNDED | T57 settler (AI) in Athens | T61 settler (AI) in Athens | T64 settler (AI) in Athens | T67 BOUGHT in Athens. Cost: 370 | T68 op started | T80 FOUNDED
+  saving gold for a settler: 44 turns (T6-T66)
+c    Portugal     wide      cities 6
+  builds to T80 (capital Lisbon; other cities named): T0 Scout* | T3 Warrior* | T7 Settler* | T16 Worker* | T19 Monument* (Porto) | T24 Shrine* | T28 Monument* | T32 Great Library | T33 Granary (Porto) | T44 Settler* | T45 Settler | T46 Settler | T46 Archer (Porto) | T48 Shrine (Porto) | T50 Granary | T53 Monument* (Braga) | T53 Water Mill (Porto) | T54 Warrior | T56 Archer (Porto) | T57 Settler* | T60 Library (Porto) | T61 Granary (Braga) | T61 Market | T63 Monument* (Coimbra) | T65 Scout | T66 Archer (Porto) | T66 Worker | T68 Market (Porto) | T69 Shrine (Braga) | T70 Writers' Guild | T71 Monument (Funchal) | T74 Worker (Porto) | T76 Warrior (Braga) | T76 Chariot Archer | T77 Granary (Coimbra) | T78 Temple (Porto) | T79 Temple | T80 Shrine (Funchal) | T80 Scout (Braga)
+  settlers ordered T: 7,44,45,46,57,81,122   found-city ops started T: 16,50,58,61,87   cities founded T: 19,53,63,71,93
+  ops aborted: T128 NoTarget, T129 NoTarget
+  book SETTLER HELD to T80: 9 (one at a time 4, unhappy 4, growth due 1)   built instead: the normal AI choice 7, Monument 1, Library 1   first: T028 Lisbon size 3 next Monument | T032 Lisbon size 3 next Library | T045 Lisbon size 3 next the normal AI choice
+  IDLE SETTLER turns: 6 (first T44)
+  military ops ended (whole game): Success 8, NoTarget 6, LostPath 3, HalfStrength 2
+  settler timeline to T80: T7 settler (book) in Lisbon | T16 op started | T19 FOUNDED | T44 settler (book) in Lisbon | T45 settler (AI) in Lisbon | T46 settler (AI) in Lisbon | T50 op started | T53 FOUNDED | T57 settler (book) in Lisbon | T58 op started | T61 op started | T63 FOUNDED | T71 FOUNDED
+  saving gold for a settler: 16 turns (T6-T80)
