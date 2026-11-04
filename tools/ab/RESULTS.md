@@ -2302,7 +2302,7 @@ victory pursuit pick), so every computer gets the same result.
 |---|---|---|
 | Flavour archetype | One of the list in 2, fixed for the game | Unique ability tag, then CP's victory pursuit (3) |
 | Meta position **M** | A number from -100 (greedy) through 0 (balanced) to +100 (aggressive). A home position, and a current position that moves (4) | Archetype range plus personality (Boldness, offence flavour) |
-| Victory weights | Domination, science, culture, diplomacy, adding up to 100 | Archetype, then CP's primary (60%) and secondary (25%) pursuit |
+| Victory weights | Domination, science, culture, diplomacy, adding up to 100 | 40% the archetype's weights, 40% CP's primary pursuit, 20% the secondary (or the primary if there's none) |
 | Risk appetite | Low, medium or high: how big an edge it wants before a war, how far it lets a rival run | Leader Boldness |
 | Expansion style | Tall (4 cities), medium, wide (settle all it can), conquest (cities taken, not settled) | Archetype, adjusted by the expansion flavour |
 | Hard rules | Never broken whatever the scores say (5) | Everyone, plus per archetype |
@@ -2372,7 +2372,7 @@ worked out each turn from what the civ can see:
   (already the bundle's `NoForeignMissionaries`).
 - **Conqueror, Opportunist:** no extra rules; their wars still pay CP's warmonger penalties and draw coalitions.
 
-**6. What the other sessions read** (one accessor, `CvPlayer::GetStrategyProfile()`):
+**6. What the other sessions read** (one accessor, `GetGrandStrategyAI()->GetStrategyProfile()`):
 - **War:** M (army size, when to attack, when to stop), risk appetite (the edge it wants: `GetNewAIConquestTarget`'s
   strength bar), the archetype's war rules.
 - **Economy:** M (production split, walls, upgrades), expansion style (opening book: tall, wide or conquest), victory
@@ -2382,9 +2382,11 @@ worked out each turn from what the civ can see:
 - **Personality** (mine): `CvGrandStrategyAI` priorities from the victory weights.
 
 **7. Build steps** (one flag each, a hypothesis entry before each):
-1. **The profile itself, measurement only (level 1):** computed and logged at game start (the AI log
-   `StrategyProfile.csv`: civ, leader, archetype, home M, weights, risk, rules). **Request to the lead:** results columns
-   `Archetype` and `Meta` (current M at the last logged turn). No decision reads it yet.
+1. **The profile itself, measurement only (level 1):** worked out and logged (AI log `StrategyProfile_Log.csv` at turns
+   1, 50, 100, 150: civ, leader, trait tags, pursuits, archetype, home M, weights, risk, expansion). No decision reads
+   it. **Coded:** fork `ai/personality` `7afce5c` (`CvGrandStrategyAI::GetStrategyProfile`), CI pending. **Request to
+   the lead:** results columns `Archetype` and `Meta` (home M now, current M once `MetaAdapt` exists), from
+   `GetGrandStrategyAI()->GetStrategyProfile()`; and a logged game to check the picks against the expected ones above.
 2. **`MetaDial`:** the style flags read M instead of a fixed set. Judged by the matchup test (styles from M) and a
    no-worse SPRT.
 3. **`MetaAdapt`:** the shifts in 4. Judged by the bully test (does a threatened greedy civ hold?) and the adaptation
