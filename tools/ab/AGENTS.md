@@ -340,8 +340,12 @@ proposal counts, the defence columns `WalledCities`/`CityStrength`/`LandUnits` (
   - `GreedyBook`: a tall civ beelines the National College, then opens up (Economy).
   - `GreedyAlarm`: the reaction scales with greed; a very greedy civ builds an extra archer when it sees an army
     and walls only once war is declared (Personality).
-- **No ruling, tested as usual:** `ConquestTraitTargets`, `BoxedIn`, `BookFinishesSettlers`, `StaleWarPeace` (the
-  lead explained it), `WarAppetite`, `Sanctions`. Flags 1–21 weren't in the user's reply.
+- **`StaleWarPeace` reshaped (the user):** "hold out while the enemy is in danger" is the wrong question. The question
+  is whether we're interested in conquering their cities. If we mean to attack (an attack operation, a committed
+  conquest target, a war plan), fight on; if not, accept peace, with no waiting period. Ruled obviously right once
+  reworked (Diplomacy).
+- **No ruling, tested as usual:** `ConquestTraitTargets`, `BoxedIn`, `BookFinishesSettlers`, `WarAppetite`,
+  `Sanctions`. Flags 1–21 weren't in the user's reply.
 
 *Level 3, new ideas: full gainer SPRT.*
 - c7c ideas: `WidePlans` (+0.08), `BoxedIn` (+0.34), `BoxedInWar` (-0.69), `TimingAttack` (-0.10), `SiegeTechs`
