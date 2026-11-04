@@ -1924,7 +1924,7 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
-### War: TimingBuildup's peace phase builds workers and work boats (the user watching 0C3C8913) (Nov 4, about 5:09pm ET)
+### War: TimingBuildup's peace phase builds workers and work boats (the user watching 0C3C8913) (Nov 4, about 5:07pm ET)
 The user, watching PC 1's replay: the Aztecs (the role, on ab-f73177c) are "building a million workers and work
 boats". This is from the code, before the build history arrives.
 
