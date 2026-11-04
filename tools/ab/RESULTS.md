@@ -1431,6 +1431,36 @@ T130 Standard, with Engineering and Education.
 
   Status: coded, not built.
 
+### The Aztecs' "million workers and work boats" (Economy, Nov 4, about 5:20pm ET; first look, waiting for the build history)
+
+From the lead: in the live trio replay (`0C3C8913`, `ab-f73177c`) the aggressive Aztecs seemed to build endless
+workers and work boats.
+
+**My flags don't raise the worker or work-boat weight:**
+- `WarEconomy` changes which tile a worker improves (iron and horses ×4), not whether a worker is built.
+- `WarChest` saves and spends gold. It buys only siege and attack units.
+- `TrueGoldRate` makes the upkeep check honest. Its only route to more civilians is indirect: near bankruptcy it
+  refuses combat units, so a peace-capped civ is left choosing between civilians and buildings.
+
+**Caps (CP's, `CvUnitProductionAI::CheckUnitBuildSanity`):**
+- **Workers:** stop at the city strategy "enough tile improvers"; the bonus scales with
+  `cities needing improvements + 1 − workers`.
+- **Work boats:** counted per unimproved sea resource within 12 turns of the city, minus boats nearby or in
+  production. Each boat is used up when it improves its resource.
+- The work-boat bonus is large (`1000 × boats needed × (city size + era)`), so any boat that counts as needed beats
+  buildings easily, but it isn't unbounded.
+
+**The earlier logged runs of this seed don't show a flood.** In `logs_0C3C89130C3C8913` (same flags, mine included)
+the Aztecs started 9 workers and 7 work boats in 150 turns, against 13 settlers and 8 caravans. The cities went
+1 → 7, `WorkersStolen` 0, and no worker or boat was bought with gold.
+
+**Next:** read `results/builds_0C3C8913_aztec.txt` from the live replay (`f73177c`), when PC 1 pushes it.
+- If it shows many more boats than sea resources, the likely place is the boat count: several coastal cities can
+  each count the same resource within 12 turns.
+- If it shows workers past the cap, the "enough tile improvers" strategy isn't switching on.
+
+No fix until the build history says which.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
