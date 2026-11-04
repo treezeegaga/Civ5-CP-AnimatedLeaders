@@ -2641,6 +2641,17 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### C8 against B, first 5 pairs: no worse, gain small (lead, 2026-11-03 11:35pm ET)
+
+`AIABTest_c8@TREEDESKTOP.csv`, `ab-8109f67`, PC 2, 5 pairs (10 games), no crash, replays matched: **c 50.60%, gain +0.60
+points ± 0.6**; first games +0.02, flipped +1.19 (split bias, cancelled in pairs). **No-worse PASSED** (LLR +8.54);
+gainer -2.49, running (fails at -2.94). Captures 0, wars 0.05 per civ per 10 turns. So C8 costs nothing, and its gain
+looks smaller than the top five's +1.35 from 5 pairs (that was within luck of this). PC 2 goes on, pushing each pair,
+until the gainer decides. Game `0930A57D0930A57DF` has 112 rows: one missing 10-turn snapshot, everyone alive at T150.
+
+For the record, `SettlersBeforeWonders` alone (`AIABTest_sbw.csv`, 4 pairs, stopped by the user's ruling): c 51.56%,
++1.56 points, too few pairs for the SPRT to decide, in line with the ruling.
+
 ### Personality session started; OthersBase key for the matchups (lead, 2026-11-03 11:25pm ET)
 
 - **Personality** (session `session_01G2NZj3nJG9wpbrgoAZMmUk`, branch `ai/personality`) starts now at the user's
