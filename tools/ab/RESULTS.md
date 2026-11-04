@@ -2556,7 +2556,8 @@ worked out each turn from what the civ can see:
 1. **The profile itself, measurement only (level 1):** worked out and logged (AI log `StrategyProfile_Log.csv` at turns
    1, 50, 100, 150: civ, leader, trait tags, pursuits, archetype, home M, weights, risk, expansion). No decision reads
    it. **Coded:** fork `ai/personality` `7afce5c` (`CvGrandStrategyAI::GetStrategyProfile`). CI run 112 failed on MSVC's
-   C4701 (an uninitialised-variable warning this build treats as an error); fixed in `111632b`, CI pending. **Request to
+   C4701 (an uninitialised-variable warning this build treats as an error). The lead fixed it on `claude/ab-c1` `c78384b`
+   (CI run 119 passed); `ai/personality` now follows `claude/ab-c1`. **Request to
    the lead:** results columns `Archetype` and `Meta` (home M now, current M once `MetaAdapt` exists), from
    `GetGrandStrategyAI()->GetStrategyProfile()`; and a logged game to check the picks against the expected ones above.
 2. **`MetaDial`:** the style flags read M instead of a fixed set. Judged by the matchup test (styles from M) and a
@@ -2615,8 +2616,8 @@ Build step 2 of the strategy profile.
      Conquerors, greedy civs paying for it)?
 - **Evidence level:** 3 (new behaviour), but the meta-level effects are judged like the styles (matchups, bully test);
   the SPRT here is the no-worse guard.
-- **Build:** fork `ai/personality` `3b056a9`, with the C4701 fix in `111632b` (the head: every Personality flag).
-- **Status:** coded, CI pending on `111632b`.
+- **Build:** fork `ai/personality` `3b056a9`, merged into `claude/ab-c1` (`c13eb1c`) with the lead's C4701 fix (`c78384b`).
+- **Status:** compiles (CI run 119 on `c78384b` passed). Not tested in games yet.
 
 ## Requests
 
