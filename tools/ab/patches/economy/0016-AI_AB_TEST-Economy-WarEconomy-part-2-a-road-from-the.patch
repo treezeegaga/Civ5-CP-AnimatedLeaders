@@ -1,0 +1,141 @@
+From 11221678b87c29ba83f2858fda2f16b514d39c3c Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 19:03:07 +0000
+Subject: [PATCH] AI_AB_TEST Economy: WarEconomy part 2 (a road from the city
+ nearest the target to our border facing it; iron and horses weigh 4x for
+ workers while the civ has none)
+
+Same flag as part 1, off in the bundle; only while TimingBuildup's attack is planned or in its window. Plot purchases are not included.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuilderTaskingAI.cpp                    | 78 +++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.h |  1 +
+ 2 files changed, 79 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.cpp b/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.cpp
+index 1cb8772..0c32628 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.cpp
+@@ -16,6 +16,7 @@
+ #include "CvCityConnections.h"
+ #include "CvEconomicAI.h"
+ #include "CvDiplomacyAI.h"
++#include "CvMilitaryAI.h"
+ #include "CvGameCoreEnumSerialization.h" //toString(const YieldTypes& v)
+ #include "CvTypes.h"
+ 
+@@ -925,6 +926,70 @@ void CvBuilderTaskingAI::ShortcutConnectionHelper(CvCity* pCity1, CvCity* pCity2
+ 	AddRoutePlots(pCity1->plot(), pCity2->plot(), eRoute, iValue, path, PURPOSE_SHORTCUT, bUseRivers);
+ }
+ 
++/// AI_AB_TEST candidate (WarEconomy, the user's design): while a timing attack is planned or building up, plan a road from
++/// our city nearest the target to our own border tile closest to it, so the army marches out faster
++void CvBuilderTaskingAI::ConnectTowardWarTarget(BuildTypes eBuild, RouteTypes eRoute)
++{
++	if (!m_pPlayer->UsesCandidateAI(FIX_WAR_ECONOMY))
++		return;
++	const CvMilitaryAI::TimingBuildupPhase ePhase = m_pPlayer->GetMilitaryAI()->GetTimingBuildupPhase();
++	if (ePhase != CvMilitaryAI::TIMING_BUILDUP_PLANNED && ePhase != CvMilitaryAI::TIMING_BUILDUP_WINDOW)
++		return;
++	PlayerTypes eTarget = m_pPlayer->GetMilitaryAI()->GetTimingBuildupTarget();
++	CvCity* pTheirCity = (eTarget != NO_PLAYER) ? m_pPlayer->GetClosestCityToUsByPlots(eTarget) : NULL;
++	if (!pTheirCity)
++		return;
++
++	// our city nearest their city
++	CvCity* pOrigin = NULL;
++	int iBest = INT_MAX;
++	int iLoop = 0;
++	for (CvCity* pLoopCity = m_pPlayer->firstCity(&iLoop); pLoopCity != NULL; pLoopCity = m_pPlayer->nextCity(&iLoop))
++	{
++		int iDist = plotDistance(*pLoopCity->plot(), *pTheirCity->plot());
++		if (iDist < iBest)
++		{
++			iBest = iDist;
++			pOrigin = pLoopCity;
++		}
++	}
++	if (!pOrigin || pOrigin->IsRazing())
++		return;
++
++	// our own land tile, within 5 of that city, closest to theirs
++	CvPlot* pBorder = NULL;
++	iBest = plotDistance(*pOrigin->plot(), *pTheirCity->plot());
++	for (int i = 1; i < RING5_PLOTS; i++)
++	{
++		CvPlot* pLoopPlot = iterateRingPlots(pOrigin->plot(), i);
++		if (!pLoopPlot || pLoopPlot->isWater() || pLoopPlot->isImpassable() || pLoopPlot->getOwner() != m_pPlayer->GetID())
++			continue;
++		int iDist = plotDistance(*pLoopPlot, *pTheirCity->plot());
++		if (iDist < iBest)
++		{
++			iBest = iDist;
++			pBorder = pLoopPlot;
++		}
++	}
++	if (!pBorder)
++		return;
++
++	SPathFinderUserData data(m_pPlayer->GetID(), PT_BUILD_ROUTE, eBuild, eRoute, PURPOSE_STRATEGIC, false);
++	data.iMaxTurns = plotDistance(*pOrigin->plot(), *pBorder) * 2;
++	SPath path = GC.GetStepFinder().GetPath(pOrigin->getX(), pOrigin->getY(), pBorder->getX(), pBorder->getY(), data);
++	if (!path)
++		return;
++
++	int iNumRoadsNeededToBuild = 0;
++	int iMovementBonus = 0;
++	int iDummy1 = 0;
++	int iDummy2 = 0;
++	GetPathValues(path, eRoute, iDummy1, iDummy2, iMovementBonus, iNumRoadsNeededToBuild);
++	int iValue = iMovementBonus * 2 - iNumRoadsNeededToBuild * 10;
++	if (iValue > 0)
++		AddRoutePlots(pOrigin->plot(), pBorder, eRoute, iValue, path, PURPOSE_STRATEGIC, false);
++}
++
+ void CvBuilderTaskingAI::ConnectPointsForStrategy(CvCity* pOriginCity, CvPlot* pTargetPlot, BuildTypes eBuild, RouteTypes eRoute)
+ {
+ 	// don't connect cities from different owners
+@@ -1703,6 +1768,8 @@ void CvBuilderTaskingAI::UpdateRoutePlots(void)
+ 				}
+ 			}
+ 		}
++
++		ConnectTowardWarTarget(eBuild, eRoute);
+ 	}
+ }
+ 
+@@ -3198,6 +3265,17 @@ int CvBuilderTaskingAI::GetResourceWeight(ResourceTypes eResource, int iQuantity
+ 		// measure quantity
+ 		int iValue = (iQuantity + 1) * 250;
+ 
++		// AI_AB_TEST candidate (WarEconomy): a timing attack being prepared needs iron or horses it doesn't have yet
++		if (m_pPlayer->UsesCandidateAI(FIX_WAR_ECONOMY) && m_pPlayer->getNumResourceTotal(eResource) == 0)
++		{
++			static const ResourceTypes eIron = (ResourceTypes)GC.getInfoTypeForString("RESOURCE_IRON", true);
++			static const ResourceTypes eHorse = (ResourceTypes)GC.getInfoTypeForString("RESOURCE_HORSE", true);
++			const CvMilitaryAI::TimingBuildupPhase ePhase = m_pPlayer->GetMilitaryAI()->GetTimingBuildupPhase();
++			if ((eResource == eIron || eResource == eHorse) &&
++				(ePhase == CvMilitaryAI::TIMING_BUILDUP_PLANNED || ePhase == CvMilitaryAI::TIMING_BUILDUP_WINDOW))
++				iValue *= 4;
++		}
++
+ 		// big bonus for late game resources
+ 		TechTypes eRevealTech = (TechTypes)pkResource->getTechReveal();
+ 		if (eRevealTech != NO_TECH)
+diff --git a/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.h b/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.h
+index 0264c3a..21cd3f3 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.h
++++ b/CvGameCoreDLL_Expansion2/CvBuilderTaskingAI.h
+@@ -226,6 +226,7 @@ protected:
+ 	void ConnectCitiesToCapital(CvCity* pPlayerCapital, CvCity* pTargetCity, BuildTypes eBuild, RouteTypes eRoute);
+ 	void ConnectCitiesForShortcuts(CvCity* pCity1, CvCity* pCity2, BuildTypes eBuild, RouteTypes eRoute);
+ 	void ConnectCitiesForScenario(CvCity* pCity1, CvCity* pCity2, BuildTypes eBuild, RouteTypes eRoute);
++	void ConnectTowardWarTarget(BuildTypes eBuild, RouteTypes eRoute); // AI_AB_TEST candidate (WarEconomy)
+ 	void ConnectPointsForStrategy(CvCity* pOriginCity, CvPlot* pTargetPlot, BuildTypes eBuild, RouteTypes eRoute);
+ 	void ConnectForeignCitiesForYields(CvCity* pOwnedCity, CvCity* pForeignCity, BuildTypes eBuild, RouteTypes eRoute);
+ 
+-- 
+2.43.0
+

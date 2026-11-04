@@ -1373,7 +1373,14 @@ fast. One flag, `WarEconomy`, separate from `WarChest` (gold). It reads the same
   - for the cities within 3 tiles of our nearest city's distance to the target's nearest city;
   - in War's "planned" and "window" phases (`CvBuildingProductionAI`).
 
-  Roads and iron/horses (`CvBuilderTaskingAI`, plot purchases) are part 2, not coded yet. Status: coded, not built.
+- **Part 2, patch 0016 (on 0015), same flag:**
+  - **Road:** `CvBuilderTaskingAI::ConnectTowardWarTarget`, from `UpdateRoutePlots`. A strategic road from our city
+    nearest the target's nearest city to our own land tile (within 5) closest to it; value is twice the movement
+    bonus.
+  - **Iron and horses:** `GetResourceWeight` multiplies the improvement value by 4 while the civ has none of that
+    resource.
+  - Both only in the "planned" and "window" phases. Plot purchases toward a resource aren't included.
+- Status: both parts coded, not built. 0014-0016 apply cleanly on `ai/war` `250ee9d`.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
