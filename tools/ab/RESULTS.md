@@ -1924,6 +1924,49 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: two more logged wars on ab-f21a8f6 (PC 1, bullyabort6): 0BFDEC4C (Zulus), 0C1455BD (Denmark) (Nov 4, about 4:20pm ET)
+Both used the 25-flag role. No captures.
+
+**0BFDEC4C, the Zulus.**
+- **T59:** "window opens for 10 turns against Venice". **T60:** the Zulus declared on **Korea**: CP's own WAR
+  approach (WAR_FRIENDLY in the diplomacy log), not a coop war and not the committed target. The window closed
+  after 1 turn.
+- **T86–T94:** a second window against Venice; war on Venice at T94.
+- **T126–T135:** a third window, then war on Korea again at T135.
+- At the walls:
+  - no capture attempt all game;
+  - Seoul "too early" 19 times; Busan, Pyongyang, Daegu, Jeonju and Venice "enemy dominated" 12–23 times each;
+  - one SiegeRoll wave at T146 (SiegeConcentrate: 6 in the army, 1 at the siege, 6 wanted), handed over at 2–5
+    tiles too late.
+- **The cause:** a war on the wrong civ, the same as 0CD189D4, but through CP's approach rather than a coop war.
+
+**0C1455BD, Denmark.**
+- **Windows:** against Venice at T53 and T85, and against Ethiopia at T117. The first two ended "no war 3 windows
+  after the build-up".
+- **What the windows built:** 2 archers and 2 warriors between T50 and T100, against 10 workers, 6 caravans, 3
+  markets and 3 caravansaries. No unit was bought.
+- **Every attack request failed:** 177 of them, all "not possible for lack of units". From T145 six operations
+  ended NoUnits the turn they were created ("Units Recruited 3").
+- **Why:**
+  - a sneak attack on a major civ is requested with 0 missing units allowed (`RequestCityAttack(…, 3, bCareful)`,
+    with bCareful false when not at war), so the whole army has to exist first;
+  - the window only raised the recommended army size, which doesn't win production against buildings;
+  - the peace cap kept the army small;
+  - so the war never formed.
+
+**The five questions (both games):** no army reached a city. Arrived together, big enough, damage, SiegeFinish:
+not reached. SiegeRoll fired once, late.
+
+**Fixes:**
+1. **FocusedWar extended** (same idea: fight only the planned war). With a committed target, the WAR approach to
+   any other major we're not at war with is set to 0, so CP's own approach can't start a second war. Coop wars were
+   already covered.
+2. **TimingBuildup's window builds.** While the window is open and the army isn't ready, land combat units get
+   +3000 production weight (siege units +4000 while fewer than 2). That's about what a unit wanted by an attack
+   operation gets (8000 in the logs), against 100–500 for a plain unit and 1000s for buildings. The army then
+   exists when the window ends, and the sneak attack's 0-missing request can form. This is a fix of the window's
+   mechanism under the same flag.
+
 ### War: the first logged pair on ab-f21a8f6 (25-flag role), 0CD189D4, Japan (Nov 4, about 3:56pm ET)
 PC 2, greedy opponents. Japan is the aggressor (group b, wide). In the role game it had 7 cities and made no
 capture attempt; in the flip game it took one city.
