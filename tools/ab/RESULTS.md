@@ -2895,7 +2895,7 @@ So the moves are:
 **What it affects now:** `StrategyProfile_Log.csv`, and `MetaDial` (merged, not yet in any run). The style flag sets
 don't read the profile.
 
-**Status:** coded; CI pending.
+**Status:** compiles (CI run 145 on `277602f` passed, 10:15am ET). Ready for the lead to merge.
 
 ### The three styles as flag sets, for the trio test (Personality, 2026-11-04 9:20am ET)
 For the lead's trio mode (AGENTS.md, "The trio goal": one greedy, one balanced and one aggressive civ of ours plus 3 CP
