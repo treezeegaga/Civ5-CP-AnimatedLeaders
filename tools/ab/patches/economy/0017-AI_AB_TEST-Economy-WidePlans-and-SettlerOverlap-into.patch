@@ -1,0 +1,48 @@
+From c59c889c693432966cdc736084f2972b843525b9 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 19:36:15 +0000
+Subject: [PATCH] AI_AB_TEST Economy: WidePlans and SettlerOverlap into the
+ bundle (the user's ruling)
+
+Both are read only inside the opening book, which GetOpeningBook gives to AI major civs only, so city-states (which run every bundle flag) never reach them.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 4 ++--
+ CvGameCoreDLL_Expansion2/CvPlayer.h   | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index dcec0c7..fad116d 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33331,10 +33331,10 @@ struct CandidateFixInfo
+ 	bool bInBundle;
+ };
+ static const CandidateFixInfo kCandidateFixes[] = {
+-	{"WidePlans", false}, {"BoxedIn", false}, {"BoxedInWar", false}, {"TimingAttack", false},
++	{"WidePlans", true}, {"BoxedIn", false}, {"BoxedInWar", false}, {"TimingAttack", false},
+ 	{"SiegeTechs", false}, {"SiegeBook", false}, {"DeclareTiming", false},
+ 	 {"GreedyBook", false}, {"GreedyTarget", false}, {"CanWin", false},
+-	{"SettlersFirst", false}, {"SettlerOverlap", false},
++	{"SettlersFirst", false}, {"SettlerOverlap", true},
+ 	{"DiploPolicyValue", true},
+ 	{"GreedyAlarm", false},
+ 	{"IdeologyPick", false},
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 97d72c6..06f5e80 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -155,7 +155,7 @@ enum CandidateFixTypes
+ 	FIX_GREEDY_TARGET,		// c7: warmongers pick the neighbour with the fewest land units per city; off: the weakest (c4)
+ 	FIX_CAN_WIN,			// c7c: war only if the siege sketch says the army brings down the nearest city
+ 	FIX_SETTLERS_FIRST,		// Economy: the capital's opening-book settlers come before its monument, shrine and worker. Not in the bundle
+-	FIX_SETTLER_OVERLAP,	// Economy: the next book settler may start training while the last one walks to its site. Not in the bundle
++	FIX_SETTLER_OVERLAP,	// Economy: the next book settler may start training while the last one walks to its site. In the bundle (user's ruling)
+ 	FIX_DIPLO_POLICY_VALUE,	// Economy (CvPolicyAI audit P1): diplomacy-flavoured policies lose their value only when hostile to a city-state. Not in the bundle
+ 	FIX_GREEDY_ALARM,		// Economy (c8): a tall civ that sees a neighbour's army near its cities builds walls and ranged units (and lifts
+ 							// GreedyArmyCap). Not in the bundle
+-- 
+2.43.0
+

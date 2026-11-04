@@ -1,0 +1,129 @@
+From 2f8dda244413645b1aaa519e4f47e65565f586c4 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 19:37:22 +0000
+Subject: [PATCH] AI_AB_TEST Economy: GreedyBook redesigned (the user's):
+ beeline the National College, then the book ends and the AI opens up
+
+Greedy tall capitals use B's tall book and research; the book stays active until the capital has the National College (up to T130 Standard) instead of running on through the aqueduct and university. Off in the bundle.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 45 +++++++--------------------
+ CvGameCoreDLL_Expansion2/CvPlayer.h   |  2 +-
+ 2 files changed, 12 insertions(+), 35 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index fad116d..54d4d58 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33862,8 +33862,17 @@ bool CvPlayer::IsOpeningBookActive() const
+ 	// Candidate: wide civs keep settling longer. In test games they led CP by a city at turn 60 on Quick, then expanded
+ 	// no faster than CP once the book ended (turn 67), so the lead never grew.
+ 	int iWideLimit = false /*retired flag LongWide*/ ? 130 : 100;
+-	// c7: a candidate tall civ's book runs on through the National College, aqueduct and university
+-	int iTallLimit = UsesCandidateAI(FIX_GREEDY_BOOK) ? 130 : 80;
++	// GreedyBook (the user's redesign): a tall civ's book runs until its capital has the National College (to turn 130
++	// Standard at most), then ends so the normal AI opens up; B's tall book ends at turn 80 whatever it has built
++	int iTallLimit = 80;
++	if (eBook == OPENING_BOOK_TALL && UsesCandidateAI(FIX_GREEDY_BOOK))
++	{
++		static const BuildingClassTypes eCollege = (BuildingClassTypes)GC.getInfoTypeForString("BUILDINGCLASS_NATIONAL_COLLEGE", true);
++		const CvCity* pCapital = getCapitalCity();
++		if (eCollege != NO_BUILDINGCLASS && pCapital && pCapital->GetCityBuildings()->HasBuildingClass(eCollege))
++			return false;
++		iTallLimit = 130;
++	}
+ 	int iTurnLimit = (eBook == OPENING_BOOK_WIDE) ? iWideLimit : (eBook == OPENING_BOOK_CONQUEST) ? 70 : iTallLimit;
+ 	iTurnLimit = iTurnLimit * GC.getGame().getGameSpeedInfo().getTrainPercent() / 100;
+ 	if (GC.getGame().getElapsedGameTurns() <= iTurnLimit)
+@@ -33895,13 +33904,6 @@ static const OpeningBookStep kOpeningTallCapital[] = {
+ 	{true, "UNITCLASS_SCOUT"}, {false, "BUILDINGCLASS_MONUMENT"}, {false, "BUILDINGCLASS_SHRINE"}, {true, "UNITCLASS_WARRIOR"},
+ 	{true, "UNITCLASS_WARRIOR"}, {true, "UNITCLASS_SETTLER"}, {true, "UNITCLASS_WORKER"}, {true, "UNITCLASS_SETTLER"}, {true, "UNITCLASS_SETTLER"},
+ 	{false, "BUILDINGCLASS_LIBRARY"}, {false, "BUILDINGCLASS_NATIONAL_COLLEGE"} };
+-// c7, candidate tall civs play greedy (USER: "library -> national college -> aqueducts -> university"): no
+-// change to the start (its two warriors escort the settlers), then the capital goes on to growth and science
+-static const OpeningBookStep kOpeningTallCapitalGreedy[] = {
+-	{true, "UNITCLASS_SCOUT"}, {false, "BUILDINGCLASS_MONUMENT"}, {false, "BUILDINGCLASS_SHRINE"}, {true, "UNITCLASS_WARRIOR"},
+-	{true, "UNITCLASS_WARRIOR"}, {true, "UNITCLASS_SETTLER"}, {true, "UNITCLASS_WORKER"}, {true, "UNITCLASS_SETTLER"}, {true, "UNITCLASS_SETTLER"},
+-	{false, "BUILDINGCLASS_LIBRARY"}, {false, "BUILDINGCLASS_NATIONAL_COLLEGE"}, {false, "BUILDINGCLASS_AQUEDUCT"},
+-	{false, "BUILDINGCLASS_UNIVERSITY"} };
+ // Economy candidate (SettlersFirst): the same steps with the settlers ahead of the monument, shrine and worker. In B
+ // the 2nd city came at T35-45 on Quick for tall civs and the 3rd at T55-75 for both plans, against T33-40 for a good
+ // human's 4th: each settler waited behind 15-25 turns of buildings (a monument or shrine is 8-10 turns, a worker 8)
+@@ -33909,11 +33911,6 @@ static const OpeningBookStep kOpeningTallCapitalSF[] = {
+ 	{true, "UNITCLASS_SCOUT"}, {true, "UNITCLASS_WARRIOR"}, {true, "UNITCLASS_WARRIOR"}, {true, "UNITCLASS_SETTLER"},
+ 	{false, "BUILDINGCLASS_MONUMENT"}, {true, "UNITCLASS_SETTLER"}, {false, "BUILDINGCLASS_SHRINE"}, {true, "UNITCLASS_WORKER"},
+ 	{true, "UNITCLASS_SETTLER"}, {false, "BUILDINGCLASS_LIBRARY"}, {false, "BUILDINGCLASS_NATIONAL_COLLEGE"} };
+-static const OpeningBookStep kOpeningTallCapitalGreedySF[] = {
+-	{true, "UNITCLASS_SCOUT"}, {true, "UNITCLASS_WARRIOR"}, {true, "UNITCLASS_WARRIOR"}, {true, "UNITCLASS_SETTLER"},
+-	{false, "BUILDINGCLASS_MONUMENT"}, {true, "UNITCLASS_SETTLER"}, {false, "BUILDINGCLASS_SHRINE"}, {true, "UNITCLASS_WORKER"},
+-	{true, "UNITCLASS_SETTLER"}, {false, "BUILDINGCLASS_LIBRARY"}, {false, "BUILDINGCLASS_NATIONAL_COLLEGE"},
+-	{false, "BUILDINGCLASS_AQUEDUCT"}, {false, "BUILDINGCLASS_UNIVERSITY"} };
+ static const OpeningBookStep kOpeningTallCity[] = {
+ 	{false, "BUILDINGCLASS_MONUMENT"}, {false, "BUILDINGCLASS_LIBRARY"} };
+ static const OpeningBookStep kOpeningWideCapital[] = {
+@@ -33968,12 +33965,6 @@ static const OpeningBookStep* GetOpeningBookCapitalSteps(const CvPlayer& kPlayer
+ 	const bool bSF = kPlayer.UsesCandidateAI(FIX_SETTLERS_FIRST);
+ 	if (eBook == OPENING_BOOK_TALL)
+ 	{
+-		if (kPlayer.UsesCandidateAI(FIX_GREEDY_BOOK))
+-		{
+-			if (bSF)
+-				AB_BOOK_STEPS(kOpeningTallCapitalGreedySF)
+-			AB_BOOK_STEPS(kOpeningTallCapitalGreedy)
+-		}
+ 		if (bSF)
+ 			AB_BOOK_STEPS(kOpeningTallCapitalSF)
+ 		AB_BOOK_STEPS(kOpeningTallCapital)
+@@ -34069,13 +34060,6 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 	else switch (eBook)
+ 	{
+ 	case OPENING_BOOK_TALL:
+-		if (bCapital && UsesCandidateAI(FIX_GREEDY_BOOK))
+-		{
+-			bool bSF = UsesCandidateAI(FIX_SETTLERS_FIRST);
+-			pSteps = bSF ? kOpeningTallCapitalGreedySF : kOpeningTallCapitalGreedy;
+-			iNumSteps = bSF ? (int)(sizeof(kOpeningTallCapitalGreedySF) / sizeof(OpeningBookStep)) : (int)(sizeof(kOpeningTallCapitalGreedy) / sizeof(OpeningBookStep));
+-			break;
+-		}
+ 		if (bCapital && UsesCandidateAI(FIX_SETTLERS_FIRST))
+ 		{
+ 			pSteps = kOpeningTallCapitalSF;
+@@ -34320,8 +34304,6 @@ TechTypes CvPlayer::GetOpeningBookTech() const
+ 	static const char* const kTall[] = { "TECH_POTTERY", "TECH_WRITING", "TECH_PHILOSOPHY" };
+ 	static const char* const kWide[] = { "TECH_POTTERY", "TECH_MINING", "TECH_WRITING", "TECH_CURRENCY" };
+ 	static const char* const kConquest[] = { "TECH_ARCHERY", "TECH_BRONZE_WORKING", "TECH_WRITING", "TECH_CONSTRUCTION" };
+-	// c7, candidate tall civs: the techs for the greedy capital's library, college, aqueduct and university
+-	static const char* const kTallGreedy[] = { "TECH_POTTERY", "TECH_WRITING", "TECH_PHILOSOPHY", "TECH_ENGINEERING", "TECH_EDUCATION" };
+ 	// candidate warmongers: catapults (Mathematics needs only The Wheel) and the spearman class (hoplite, ram...)
+ 	static const char* const kWarmonger[] = { "TECH_POTTERY", "TECH_THE_WHEEL", "TECH_MATHEMATICS", "TECH_BRONZE_WORKING", "TECH_ARCHERY", "TECH_WRITING" };
+ 
+@@ -34333,11 +34315,6 @@ TechTypes CvPlayer::GetOpeningBookTech() const
+ 		pTechs = kWarmonger;
+ 		iNumTechs = (int)(sizeof(kWarmonger) / sizeof(kWarmonger[0]));
+ 	}
+-	else if (eBook == OPENING_BOOK_TALL && UsesCandidateAI(FIX_GREEDY_BOOK))
+-	{
+-		pTechs = kTallGreedy;
+-		iNumTechs = (int)(sizeof(kTallGreedy) / sizeof(kTallGreedy[0]));
+-	}
+ 	else if (eBook == OPENING_BOOK_WIDE)
+ 	{
+ 		pTechs = kWide;
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 06f5e80..7efd812 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -151,7 +151,7 @@ enum CandidateFixTypes
+ 	FIX_SIEGE_BOOK,			// c4/c5: the warmonger capital builds 3 catapults, 2 spearmen and 2 archers after its 2nd settler
+ 	FIX_DECLARE_TIMING,		// c4/c5: a warmonger declares once it has 2 siege units and 4 other land units (fallback T90
+ 							// Standard); off: from turn 45 Standard, as in c3
+-	FIX_GREEDY_BOOK,		// c7: the tall capital book goes on to the aqueduct and university, to turn 130 (Standard)
++	FIX_GREEDY_BOOK,		// the user's redesign: the tall book runs until the capital has the National College (to T130 Standard), then ends
+ 	FIX_GREEDY_TARGET,		// c7: warmongers pick the neighbour with the fewest land units per city; off: the weakest (c4)
+ 	FIX_CAN_WIN,			// c7c: war only if the siege sketch says the army brings down the nearest city
+ 	FIX_SETTLERS_FIRST,		// Economy: the capital's opening-book settlers come before its monument, shrine and worker. Not in the bundle
+-- 
+2.43.0
+

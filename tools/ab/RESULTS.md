@@ -1400,6 +1400,9 @@ T130 Standard, with Engineering and Education.
 - **Measure:** strength share at T100 and T150. Mechanism: `NationalCollege` (results column, the turn it's built),
   cities at T150 for tall civs.
 - **δ:** 2 points, gainer test. The flag keeps its name (`GreedyBook`); it's off in the bundle.
+- **Build:** patch 0018 on 0017 (`claude/ab-c1` `166ebc1`). The greedy book arrays and the Engineering/Education
+  research list are removed; `IsOpeningBookActive` ends the tall book once the capital has the National College.
+  Status: coded, not built.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
