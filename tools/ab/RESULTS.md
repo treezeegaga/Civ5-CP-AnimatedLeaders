@@ -1695,6 +1695,31 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: why the bully aggressor barely declares (logged pair 07614B74, Songhai) (Nov 3, about 8:30pm ET)
+
+The bully siege test on the fixed SiegeArmy (ab-095144c) gave 0 captures in 12 games, with the aggressor at war with
+0–1 civs (the lead's summary). The logged pair, aggressor Songhai:
+- **It was friendly to its neighbour for 60 turns.** Songhai's approach to Arabia was FRIENDLY from T30 to T90. Its
+  WAR score there was large (7,000–16,000) and Arabia was a fair target (Average, then Favorable), but FRIENDLY
+  scored 2–4× higher: 30,000 at T40, 51,000 at T60, 61,000 at T80. That held even though its opinion of Arabia was
+  −55, a dislike.
+- **AFRAID was about 0 the whole time,** so Diplomacy's "afraid of the warmonger" explanation doesn't fit this game.
+  What pushes FRIENDLY so high isn't in the logs (they give totals only). It's in `CvDiplomacyAI`'s approach
+  scoring: for Diplomacy.
+- **Its one war wasn't its own.** It declared on Arabia at T94, the same turn as Portugal (a joint war), and its
+  approach flipped to HOSTILE at about T95 (WAR 71,000, target Soft).
+- **The main point for the test:** the aggressor ran only the siege flags. `TimingAttack`, `DeclareTiming`,
+  `SiegeBook` and `SiegeTechs` (c3/c4, the code that forces a warmonger into a war at its army's timing) were off.
+  There are no `CONQUEST:` lines in its logs, and those flags are off in C8 too: they failed the strength-share test.
+  **So the bully aggressor is CP's normal AI with an aggressive personality, which plays friendly early.** That isn't
+  the friend's role.
+
+**Proposal.** In the bully test, give the aggressor the conquest flags as its role: `TimingAttack`, `DeclareTiming`,
+`SiegeBook`, `SiegeTechs`, plus SiegeArmy and ArmyHandoff (RoleFixes). Compare with the aggressor without them.
+- Strength share is the wrong verdict for those flags: a conqueror's job in the bully test is to attack, and the test
+  measures whether the others hold.
+- If it still doesn't fight, the FRIENDLY weight is Diplomacy's to find.
+
 ### FIX_WAR_PREP: a civ preparing a war builds its army like a civ at war (War + Economy) (Nov 3, about 1:45pm ET)
 - **Why no units came** (bully pair 0714EFCB, and SiegeArmy's 21-turn wait at 16/86): an attack's build requests are
   served in `CvCity.cpp` ("Building unit for active operation from City root function"). At peace:
