@@ -1522,6 +1522,22 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: five flags join the bundle on the user's ruling (Diplomacy session, 2026-11-04 2:45pm ET)
+
+**The ruling (user):** `TradeOpinion`, `DealReputation`, `CoalitionStrength`, `CoalitionCoop` and `CoalitionPact` are
+obviously right. They go into the bundle with no test. `Sanctions` and `WarAppetite` stay off, to be tested.
+
+**Done:** `ai/diplomacy` `1efdf86`, on `claude/ab-c1` `166ebc1`. The five are `true` in `kCandidateFixes`.
+
+**City-state check** (non-major civs run every bundle flag):
+- Every caller of the five is already limited to major civs: the diplomacy turn (`CvPlayer.cpp` ~10291), first
+  contact (`CvTeam.cpp` ~4145), and deals and defensive pacts, which are between majors only.
+- Each flag's own entry point now also checks `isMajorCiv()`, so none depends on its callers:
+  - `GetRecentTradeScore` (`TradeOpinion`);
+  - the coalition block in `DoUpdatePlayerStrengthEstimates` (`CoalitionStrength`);
+  - `IsVisiblyAgainstWarmonger` (`CoalitionCoop`, `CoalitionPact`);
+  - the broken-deal discount in `GetDealValue` (`DealReputation`, both players).
+
 ### Diplomacy: gold gifts to city-states, measured, and a flag proposal `GiftsNeedPatronage` (Diplomacy session, 2026-11-04)
 
 The user's idea: AIs should gift city-states mainly with the Patronage tree, since without it the gifts are poor value.
