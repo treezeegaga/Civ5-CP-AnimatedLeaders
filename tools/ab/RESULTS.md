@@ -3264,6 +3264,22 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### City-state conquest and conquest bonuses merged; three more flags retired; both PCs to the 14-flag role (lead, 2026-11-04 10:25am ET)
+
+- **War found** that CP's own weights almost never choose war on a city-state: a test bully picked it once in 959
+  city-state updates, and the conquest target search looks only at major civs. New flags on `ai/war`: `CSConquest` (a
+  warmonger in the conquest role goes to war on a weak, nearby city-state with no ally, or only an enemy as ally, and
+  no strong protector) and `ConquestTraitTargets` (its civ's conquest bonus shapes its targets). Personality's
+  `277602f` puts conquest-bonus civs among the Conquerors, and the civs that take city-states without war among the
+  Diplomats.
+- **Retired** (`2db51dd`): `ClosedBorders` (dropped), `GrowthTech` (-0.47) and `AqueductValue` (+0.09), all c7c ideas
+  with no gain. 62 flags. **The 64-flag mask is tight;** a wider mask is lead work to do soon.
+- **Both PCs**, from their next pair once `ab-2db51dd` is out, logging on, `-SaveLogs` (logs kept only for capture games
+  and their partners). The role is the 12 flags + `CSConquest` + `ConquestTraitTargets`:
+  - PC 2 against greedy civs: `AIABTest_bullygreedy6@TREEDESKTOP.csv`.
+  - PC 1 against normal civs: `AIABTest_bullyabort4@BOX.csv`.
+- **Before the switch:** `bullyabort3` (PC 1, 12-flag role, `5220c03`), 2 pairs, 0 captures.
+
 ### Use each civ's conquest bonus (the user; lead, 2026-11-04 10:10am ET)
 
 Some civs are rewarded for taking cities (base rules; CP's database to be checked): Assyria (a free tech the owner knew
