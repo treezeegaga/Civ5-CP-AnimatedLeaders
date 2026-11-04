@@ -1798,6 +1798,31 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### FIX_SIEGE_FIRST: a waiting attack's siege slots wait for siege units (War) (Nov 4, about 8:45am ET)
+- **Why armies hold one catapult:** the basic attack formation (SiegeFormation) has 5 siege/ranged slots, and its two
+  optional ones already ask for `UNITAI_CITY_BOMBARD` first. But each of those slots also takes `UNITAI_RANGED` as its
+  second choice. So existing composite bowmen fill them from the reserves before any catapult is asked for.
+  Mongol armies in 0B09BFE1: 1 catapult or trebuchet, 2–3 composite bowmen.
+- **Hypothesis:** while SiegeArmy holds an attack as too weak, a slot whose first choice is a siege unit takes only a
+  real siege unit. It stays open otherwise, so a city is asked to build a catapult or trebuchet. This applies only if
+  the civ can train a siege unit at all. Siege units do 2–3× a composite bowman's damage to a city, so the waiting
+  army reaches the bar sooner and brings more damage when it marches.
+- **Measure:** bully pairs, the 10-flag role + SiegeFirst against the role alone. Siege units per marching army,
+  expected damage when it marches, captures. The guard: the aggressor's military at T150.
+- **δ:** at least 1 capture per 3 bully pairs more than the role alone.
+- **Build:** next `ai/war` commit. Only with SiegeArmy on.
+
+### FIX_SIEGE_FINISH: melee units go in once a city is below a third of its HP (War) (Nov 4, about 8:45am ET)
+- **Why:** in 0B09BFE1, both Tiwanaku and Kyoto came down to about 130/200 HP and were never assaulted to the end.
+  With 2 or fewer melee units in reach, the capture attempt runs at medium aggression, which rejects a melee attack
+  that costs more HP than it deals.
+- **Hypothesis:** when the city's remaining HP is a third of its maximum or less, the capture attempt runs at high
+  aggression, so melee units attack and take it. The combat simulation's suicide check still applies (no attack that
+  leaves a unit under 3 HP).
+- **Measure:** the same bully pairs. Captures, and the turns from a city's first hit to its capture.
+- **δ:** as SiegeFirst.
+- **Build:** next `ai/war` commit (CvTacticalAI::ExecuteCaptureCityMoves).
+
 ### War: bully vs greedy pair 0B09BFE1 (Mongols with the full conquest role): close, then the army walked home (Nov 4, about 7:40am ET)
 
 Aggressor Mongolia, with TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, SiegeArmy, ArmyHandoff, SiegeAbort and
