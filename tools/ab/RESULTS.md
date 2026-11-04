@@ -1978,7 +1978,7 @@ and 2.
 - **For Economy:** WarChest (gold per turn ≥ 0 while planning) and TrueGoldRate belong in the role for any
   TimingBuildup test. The Aztecs' worker weight (4200 before sanity) is theirs too.
 
-Coded: `ai/war` `69c9587` (window pause; CI pending), on `f863b01` (peace-phase building cut; CI pending).
+Coded: `ai/war` `69c9587` (window pause; built, CI run 191), on `f863b01` (peace-phase building cut; built, CI run 189); merged in `claude/ab-c1` `eb4129d`.
 
 ### War: TimingBuildup's peace phase builds workers and work boats (the user watching 0C3C8913) (Nov 4, about 5:07pm ET)
 The user, watching PC 1's replay: the Aztecs (the role, on ab-f73177c) are "building a million workers and work
@@ -2002,6 +2002,8 @@ the cut and AggressiveArmy's 3-per-city floor still push units, with TimingBuild
 
 **To confirm** with the build history (results/builds_0C3C8913_aztec.txt): workers and work boats chosen while at
 peace with no window, and buildings losing.
+
+Coded: `ai/war` `f863b01` (built, CI run 189); merged in `claude/ab-c1` `eb4129d`. The replay's production log (on 96f008e) shows the pattern: up to T80 the new choices were mostly settlers, caravans, workers and work boats.
 
 ### War: 0CEF854E (PC 2, ab-f21a8f6, 25-flag role), Mongolia: windows without a war; sneak attacks need every unit up front (Nov 4, about 4:49pm ET)
 - **The windows:**
