@@ -1849,7 +1849,7 @@ military 190 at T150 against 124 in the replay, 5 cities in both.
   1. `SiegeStay` wasn't in the role's flags.
   2. As coded, SiegeStay only filtered the tactical AI's heal moves, not the homeland AI's.
 
-  Fixed (2): `ai/war` `3247ef4` (patch 0009). The homeland heal moves now skip units the tactical AI's
+  Fixed (2): `ai/war` `3247ef4` (patch 0009; built, CI run 125). The homeland heal moves now skip units the tactical AI's
   `IsUnitNeededAtSiege` says the siege needs (at least a third of HP, near a damaged enemy city). This is SiegeStay
   itself, which hasn't passed and isn't in the bundle. **Request:** add SiegeStay (and SiegePosture) to the
   aggressor's RoleFixes for the next bully runs.
@@ -2618,6 +2618,49 @@ Build step 2 of the strategy profile.
   the SPRT here is the no-worse guard.
 - **Build:** fork `ai/personality` `3b056a9`, merged into `claude/ab-c1` (`c13eb1c`) with the lead's C4701 fix (`c78384b`).
 - **Status:** compiles (CI run 119 on `c78384b` passed). Not tested in games yet.
+
+### Greedy style in bully pair 0B09BFE1: walls hold, the unit cap leaked; where the units came from (Personality, 2026-11-04 7:55am ET)
+Pair `0B09BFE1` (`ab-c78384b`, PC 2, `AIABTest_bullygreedy@TREEDESKTOP.csv`, logs `logs_0B09BFE1*`). The six civs without a
+role ran the four greedy flags in both games. Replay matched, no crash. The lead's summary is in "Bully vs greedy civs,
+logged pair".
+
+**The style, per greedy civ (both games, 12 civ-games), against the two non-greedy role civs in the same games:**
+
+| | Land units per city | Walled cities | City strength per city | Population | Techs | Wonders |
+|---|---|---|---|---|---|---|
+| Greedy, T100 | 1.62 | 0 | 15 | 19.8 | 19.4 | 1.2 |
+| Greedy, T150 | 1.82 | 0.03 per city (2 cities in 12 civ-games) | 21 | 34.7 | 27.2 | 2.8 |
+| Aggressor and tall civ, T150, game 1 | 2.6 and 2.2 | 5 of 5 and 3 of 5 | | | | |
+
+- **Walls, castles, barracks:** work.
+- **The unit cap:** leaked, by two routes. The production log shows only a few land units chosen: Siam built a
+  warrior, a scout and a swordsman (3 land units chosen T1–T150) and owned 8 at T110–T120 in peace.
+  1. **City-state unit gifts, in peace.** Militaristic city-states give each friend a land unit every ~19 turns
+     (faster for allies, and Siam's ability speeds it up), and may gift one on first contact. Nothing checked the
+     cap, and the AI never switches gifts off. In peace Siam held 8 land units on 4 cities (T110–T120) and the
+     Aztecs 7 on 5 (T100–T110), with scouts counted.
+  2. **The siege exemption, at war.** My cap let every city under siege build or buy defenders past it.
+     CvTacticalAI's emergency purchases go through the same sanity check, so a civ at war had no limit: the Aztecs
+     reached 14 land units on 5 cities (cap 10), Songhai 13 on 5.
+  - Units left over from a war stay: the cap stops new units, it doesn't disband old ones (Songhai 10 units on
+    5 cities in peace T110–T120 after its war). Left as is: a greedy human might disband them, but it risks being
+    caught short in the next war.
+  - The `LandUnits` column counts scouts, the cap doesn't (about +1 per civ).
+  - `Military` is military might, not a unit count: the same units score more as they get newer, so 229 for Songhai
+    is 13 units of era-3 strength.
+- **The fix** (fork `ai/personality` `d51e8a6`, on `claude/ab-c1` `dbdfbb3`; same flags, no new flag):
+  1. A greedy AI (`GreedyFewUnits`, or `MetaDial` at -50 or below) switches unit gifts off with every city-state
+     while it is at its cap, and back on below it: the same switch a human has in the city-state screen
+     (`CvGrandStrategyAI::DoGreedyCityStateUnitGifts`, every turn; `CvMinorCivAI::SetUnitSpawningDisabled`). Unit
+     gifts are all it stops.
+  2. A city under siege gets a defender past the cap only if it has no garrison (`CvUnitProductionAI`, the
+     `GreedyFewUnits` block and MetaDial's greedy side).
+- **What to check after it:** greedy civs' `LandUnits` per city ≈ 1 in peace (1.5 with scouts) and ≤ 2 (+2) at
+  war, and whether the bully then takes cities. War's finding (the siege walks home to heal) matters more for
+  captures than the extra greedy units.
+- **Profile check:** the saved logs don't include `StrategyProfile_Log.csv` (it was added on `7afce5c`, and the runner
+  copies a fixed list of logs). **Request to the lead:** add `StrategyProfile_Log.csv` to the logs the runner saves.
+- **Status:** `d51e8a6` pushed 7:50am ET, CI pending. Not ready until its CI run passes.
 
 ## Requests
 
