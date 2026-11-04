@@ -1924,6 +1924,29 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: TimingBuildup's peace phase builds workers and work boats (the user watching 0C3C8913) (Nov 4, about 5:09pm ET)
+The user, watching PC 1's replay: the Aztecs (the role, on ab-f73177c) are "building a million workers and work
+boats". This is from the code, before the build history arrives.
+
+**The likely mechanism** (`CvBuildingProductionAI`, the "tiny army" cut):
+- **At peace every building's value is cut by 75%** while `getNumMilitaryUnits() × 10 <= cities × 10`, i.e. at most
+  1 military unit per city (the new AI's peace number; AggressiveArmy's too outside the window).
+- **TimingBuildup's peace cap** keeps land combat units at cities + 1 (plus up to 3 siege units). Scouts and ships
+  are few, so the army sits at or just over the line, and the cut applies whenever it's at or under it.
+- **Land units are refused** (`SR_STRATEGY`) by the cap.
+- So workers and work boats, which are neither capped nor cut, win the city's choice.
+
+Greedy civs already skip this cut for the same reason ("a small army is the greedy style's plan, and the unit cap
+blocks the units this penalty asks for").
+
+**Fix (TimingBuildup, same flag):** in the peace phase (no war with a major, no window or attack under way, planned
+or not) the tiny-army cut doesn't apply. The small army is the plan, so buildings keep their value. In the window
+the cut and AggressiveArmy's 3-per-city floor still push units, with TimingBuildup's +3000. The check is
+`CvMilitaryAI::IsTimingBuildupPeace()`, in Personality's file behind this flag only.
+
+**To confirm** with the build history (results/builds_0C3C8913_aztec.txt): workers and work boats chosen while at
+peace with no window, and buildings losing.
+
 ### War: 0CEF854E (PC 2, ab-f21a8f6, 25-flag role), Mongolia: windows without a war; sneak attacks need every unit up front (Nov 4, about 4:49pm ET)
 - **The windows:**
   - T71 against Rome and T103 against Sweden: each ended "no war 3 windows after the build-up".
