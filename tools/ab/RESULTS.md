@@ -2856,6 +2856,33 @@ logged pair".
   city in peace, MetaDial at its peace ceiling up to position 0. `AggressiveArmy` and MetaDial's aggressive side keep
   their gifts.
 
+### Strategy profile picks in the first logged games (Personality, 2026-11-04 11:30am ET)
+`StrategyProfile_Log.csv` from `logs_0A92244F`, `logs_0AFFA02F`, `logs_0BC677BF` (24 civs; played on `ab-ed449fd`, before
+the conquest-bonus change `277602f`, so they show the earlier rule).
+
+| Archetype | Civs (home meta) |
+|---|---|
+| Conqueror | Huns +100 (no CP tag: domination pursuit and offence), Japan +100, Aztecs +95 and +100, Denmark +90, Germany +70, England +65, Shoshone +60 |
+| Opportunist | none |
+| Expansionist | Spain +10 and +15, Inca +10 and -5 |
+| Zealot | Byzantium +5 |
+| Diplomat | Venice -40 (pursuit diplomacy), Morocco -30, Netherlands -30, Arabia -35, Russia -35 (no tag: pursuit diplomacy), Portugal -20 |
+| Tourism | Sweden -40, France -35 |
+| Scientist | Maya -65, India -75, Babylon -55 |
+
+- **As expected:** the Huns are Conquerors and Venice is a Diplomat, here by their pursuits. Assyria, Songhai,
+  Mongolia and Austria weren't in these games; the conquest-bonus rule shows in games on `2db51dd` or later.
+- **The meta spread is wide, as meant:** Conquerors from +60 to +100, the builders from -20 to -75, Expansionists and
+  the Zealot near 0. Boldness and offence push most Conquerors to the top of their range.
+- **No Opportunists:** the archetype only comes from a domination pursuit with offence below 7, or no pursuit and
+  low expansion. It may be too narrow. To watch over more games.
+- **One questionable pick: the Shoshone as Conquerors (+60).** They have both the warmonger and the expansionist tag.
+  Their pursuit (science) matched neither, and the tie-break fell back to the fixed order, warmonger first. The
+  Shoshone are a classic expansionist civ. **Proposed fix (not coded; the lead asked to hold new work until attacks
+  take cities):** when the pursuit doesn't break a tie between the warmonger tag and another, take the warmonger tag
+  only if the leader's offence flavour is 7 or more. Nothing in the test runs reads the profile yet (only MetaDial
+  does), so it can wait.
+
 ### Conquest bonuses in the strategy profile: which leaders move (Personality, 2026-11-04 10:15am ET)
 The user's task (via the lead): use each civ's conquest bonus. Personality's half: the profile puts conquest-bonus civs
 on the aggressive side, and civs that take city-states without war on the diplomat side. War does target choice
