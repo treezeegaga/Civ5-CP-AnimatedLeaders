@@ -2999,6 +2999,30 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Replaying the capture game with logging on; every game's replay keys now kept (lead, 2026-11-04 9:15am ET)
+
+- **The user asked for a logged replay of `0A92244F0A92244F`.** The replay keys weren't kept, but the game ID is the
+  two seeds in hex (map seed `0A92244F`, sync seed `0A92244F` = 177349711). PC 1 writes `AIABTest.ini` by hand with the
+  seeds, the 8 civs and their leaders, and the same role, on `ab-dbdfbb3`, logging on (`-NoSettings -Unpaired
+  -MaxGames 1 -SaveLogs`). The city-states weren't recorded, so the T10 rows are checked against the original's
+  before it goes on. Results `AIABTest_bullyreplay@BOX.csv` + logs.
+- **`Run-Games.ps1`:** after every game, `AIABTest_lastgame.ini` (seeds, civs, leaders, city-states) is copied to
+  `results\replay\<GameId>.ini`. Commit that folder with the results, and any game can be replayed exactly.
+
+### FIRST CAPTURES: the Huns take 2 cities from Spain with the conquest role (lead, 2026-11-04 9:05am ET)
+
+`AIABTest_bullyabort2@BOX.csv` (PC 1, `ab-dbdfbb3`, normal opponents; the role = 8 conquest flags + `SiegeStay` +
+`SiegePosture`), 2 pairs:
+- **Pair `0A92244F`, the Huns as aggressor.** With the role: at war from about T105 with Spain, the weakest neighbour
+  (military 141 against 69). **2 cities captured** (Spain 5 cities to 4, Huns 5 to 6 by T130), military 227 at T150,
+  and 4 civs at war with the Huns by T140 (a coalition). Without the role (the flip): at war all game, 0 captures,
+  4 cities, military 140.
+- **Pair `0A8035D5`, the Huns again:** 0 captures either way.
+
+It's the first city an aggressor running our conquest code has ever taken (11 earlier captures in about 60 games
+were all B's or CP's). And it fits the user's matchup framing: the victim was the weakest-defended neighbour, at
+half the attacker's military. Both PCs move on to the 12-flag role (+ `SiegeFirst`, `SiegeFinish`, `ab-5220c03`).
+
 ### SiegeFirst and SiegeFinish merged; three flags retired; both PCs to the 12-flag role (lead, 2026-11-04 8:50am ET)
 
 - **Retired** (`claude/ab-c1` `578d23a`): `LongWide` and `GreedyArmyCap` (both failed; `GreedyFewUnits` replaces the

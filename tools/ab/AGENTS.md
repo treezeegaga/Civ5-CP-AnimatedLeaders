@@ -92,6 +92,30 @@ the late game work? They're slow, a few hours a game with late-game AI turns, an
 win-rate stopping test needs a few hundred games (50% to 60% at 5% errors is about 260). So full games are for
 checks and a running win table, and the change-by-change verdicts stay on T150 strength share.
 
+**How the goal has grown (the user, 2026-11-04).** The original targets (beat CP's AI on strength, survive a bully)
+still stand, but the aim is now **a competent AI that plays like a real opponent**:
+1. **Different styles, each played well:** greedy, balanced and aggressive, in a rock-paper-scissors cycle, so no
+   style is best overall.
+2. **Judged by matchups, not one number:** an attacker should take cities from greedy civs and struggle against
+   balanced ones; a defender is judged against an attacker that can actually conquer.
+3. **Reacts like a good player:** prepares only for threats it can see (a force that could take a city, not a war
+   declared from across the world), makes peace when a war goes nowhere, and lets the others gang up on a runaway.
+4. **Plays fair:** no cheats, and only the information a human would have.
+5. **Sensible strategy, not just stronger strategy**, with the user's rulings as the guide: settlers before
+   wonders, no missionaries for another civ's religion, city-state gifts mainly with Patronage, no rule against
+   attacking a trade partner.
+6. **Then full games with winners** (above).
+
+Strength share stays as the guard and the quick test for each change, and 60% against CP stays a milestone; it's no
+longer the whole definition of good.
+
+**The trio goal (the user, 2026-11-04):** put our three styles (one greedy, one balanced, one aggressive) into a
+6-player game with 3 CP civs. One of our three should win. The user's aim is 100% of games. The working target is
+**≥ 90% of full games won by one of our three**, against 50% if all six played alike. A test can never prove 100%,
+and a lucky CP start will take the odd game even from a much stronger AI. At T150 the proxy is that one of our
+three holds the top strength spot. It needs a test mode with 6 civs: 3 style slots and 3 CP slots (lead tooling,
+with Personality's style flags), once attacks work and the styles hold.
+
 **"Competent" means** (numbers agreed with the players on 2026-11-02; they're the goal row of the scoreboard
 at the top of RESULTS.md):
 - clearly ahead of CP's AI: **strength share ≥ 60%** against CP, at King with even rules (raised from 55% by the
