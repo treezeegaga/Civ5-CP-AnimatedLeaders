@@ -1896,6 +1896,34 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### War: failed bully wars with the 12-flag role, 0BC677BF and 0AFFA02F (Nov 4, about 11:05am ET)
+
+**0BC677BF** (PC 2, greedy opponents, ab-ed449fd). Aggressor Spain.
+- **The attack:** "CONQUEST: going for England" at T64. The sneak attack at T106 recruited 7 units with **3 catapults**,
+  passed SiegeArmy's bar at once, and Spain declared at T114.
+- **At Nottingham:** 40 expected damage a turn at T114, then about 20 from T115 to T120.
+- **The surprise, T141–T148:** "attempting capture of Nottingham" every turn at 61–73 expected damage a turn, yet the
+  city started every turn at **200 HP**. The capture attempts did nothing lasting: either no attacks were made, or they
+  did no more than the city heals. The logs record expected damage, not what was done.
+  - The tactical simulation ran each turn at high aggression with 6 units ("tactsim around (37:28) with agg 3 ... 834
+    completed").
+  - Spain lost 3 units in the whole war, England none.
+- **SiegeFinish never triggered** (the city never fell below a third of its HP).
+- **SiegeAbort** called off a second attack at T140 ("still too weak after 20 turns").
+
+**0AFFA02F** (PC 1, normal opponents). Aggressor Japan, "CONQUEST: going for The Aztecs" at T48.
+- **The attack waited:** from T57 at 39–42 a turn against bars of 60–70. It marched at T71, arrived at T83 (26 turns
+  after it started) and declared on the Aztecs.
+- **The siege:** best 29/200, no attempt made.
+- **Attacks cancelled at creation:** two sneak attacks ended `NoUnits` the turn they were created (T55, T56). The
+  basic formation (SiegeFormation) has 6 required slots, so a small army misses more of them at creation. Minor:
+  the third try held.
+
+**Next.** The open question is why a 70-a-turn siege did no damage. `ai/war` `9e9fc9d` (patch 0013) adds a log line,
+logging only, after each city capture attempt: "capture attempt on X done: city HP a -> b, n of m units used, agg L".
+The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
+positions, set-up moves, or its scoring of attacks against cities.
+
 ### FIX_CONQUEST_TRAIT_TARGETS: a warmonger's conquest bonus shapes whom it attacks (War) (Nov 4, about 10:04am ET)
 - **The trait fields** (`CvTraitClasses`, read through `GetPlayerTraits()`). The pack runs CP without Vox Populi,
   so the base game's values apply; VP's SQL changes these traits, but isn't loaded.

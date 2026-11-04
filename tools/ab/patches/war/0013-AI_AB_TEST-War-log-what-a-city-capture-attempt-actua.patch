@@ -1,0 +1,60 @@
+From 9e9fc9d7a4ded625b7c732ea29736f9822b90cae Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 16:05:15 +0000
+Subject: [PATCH] AI_AB_TEST War: log what a city capture attempt actually did
+ (logging only)
+
+After ExecuteAttackWithUnits in ExecuteCaptureCityMoves: city HP before and
+after, how many of the units in reach were used, the aggression level, and
+CAPTURED. Bully pair 0BC677BF: Spain logged 61-73 expected damage a turn on
+Nottingham for 8 turns while the city never lost HP; this tells whether the
+attacks happen at all. No behaviour change; the city name is saved first
+because a capture replaces the city object.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZizcmgfGkXsgJcVcF7h
+---
+ CvGameCoreDLL_Expansion2/CvTacticalAI.cpp | 26 +++++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp b/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
+index a79bcdaf5..eed7cf90e 100644
+--- a/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvTacticalAI.cpp
+@@ -981,7 +981,33 @@ void CvTacticalAI::ExecuteCaptureCityMoves(eAggressionLevel eMaxAggLvl)
+ 				//cities to about 130 of 200 and never went in, and the city healed back)
+ 				if (m_pPlayer->UsesCandidateAI(FIX_SIEGE_FINISH) && eMaxAggLvl == AL_HIGH && iMeleeCount > 0 && iRequiredDamage * 3 <= pCity->GetMaxHitPoints())
+ 					eAggLvl = AL_HIGH;
++				//AI_AB_TEST (logging only): what the attack actually did, next to what was expected (a test siege logged 70
++				//expected damage a turn for 8 turns while the city never lost HP)
++				int iHPBefore = pCity->GetMaxHitPoints() - pCity->getDamage();
++				CvString strCityName = pCity->getNameNoSpace(); //pCity may be gone after a capture
++				int iMovedBefore = 0;
++				for (unsigned int iU = 0; iU < m_CurrentMoveUnits.size(); iU++)
++				{
++					CvUnit* pU = m_pPlayer->getUnit(m_CurrentMoveUnits[iU].GetID());
++					if (pU && pU->TurnProcessed())
++						iMovedBefore++;
++				}
+ 				ExecuteAttackWithUnits(pPlot, eAggLvl);
++				if (GC.getLogging() && GC.getAILogging())
++				{
++					int iUsed = -iMovedBefore;
++					for (unsigned int iU = 0; iU < m_CurrentMoveUnits.size(); iU++)
++					{
++						CvUnit* pU = m_pPlayer->getUnit(m_CurrentMoveUnits[iU].GetID());
++						if (pU && pU->TurnProcessed())
++							iUsed++;
++					}
++					CvCity* pCityAfter = pPlot->getPlotCity();
++					int iHPAfter = pCityAfter ? pCityAfter->GetMaxHitPoints() - pCityAfter->getDamage() : 0;
++					LogTacticalMessage(CvString::format("Zone %d, capture attempt on %s done: city HP %d -> %d, %d of %d units used, agg %d%s",
++						pZone ? pZone->GetZoneID() : -1, strCityName.c_str(), iHPBefore, iHPAfter, iUsed, (int)m_CurrentMoveUnits.size(), (int)eAggLvl,
++						pPlot->getOwner() == m_pPlayer->GetID() ? ", CAPTURED" : ""));
++				}
+ 
+ 				// Did it work?  If so, don't need a temporary dominance zone if had one here
+ 				if (pPlot->getOwner() == m_pPlayer->GetID())
+-- 
+2.43.0
+
