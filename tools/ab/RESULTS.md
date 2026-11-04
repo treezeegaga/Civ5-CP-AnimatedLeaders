@@ -4067,14 +4067,14 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
-### Greedy style set grows; GreedyAlarmScale pending (lead, 2026-11-04 3:00pm ET)
+### Greedy style set grows; GreedyAlarmScale pending (lead, 2026-11-04 2:46pm ET)
 
 Personality's `GreedyAlarmScale` (`ai/personality` `35272f9`, CI pending; the user's audit: a greedy civ's reaction
 to an army at its border scales with its greed) is merged once CI passes. **The greedy style set** (OthersBase in
 greedy matchups, and the trio test's greedy slot) is now `GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades,
 GreedyBuilds, GreedyWarArmy, GreedyAlarm, GreedyAlarmScale`. The running easy-matchup runs keep the strict 4-flag set
 (no alarm, no war army), so they stay a test of whether the attack works at all.
-Economy's review (3:05pm ET): no conflict. Everything is gated by greed (0 without the flag), so `GreedyAlarm` alone is
+Economy's review (2:47pm ET): no conflict. Everything is gated by greed (0 without the flag), so `GreedyAlarm` alone is
 unchanged. One trade-off, by the user's design: at greed 75 or more the wall bonus is 0, so the greediest civs build no
 walls until war is declared. **Watch in the matchup test:** cities lost by the greediest civs in their first war turns.
 
@@ -4100,7 +4100,7 @@ walls until war is declared. **Watch in the matchup test:** cities lost by the g
   `WarEconomy`, `TargetVulnerability`. PC 2 against greedy civs (`bullygreedy8`), after its crash replay; PC 1 against
   normal civs (`bullyabort6`).
 
-### The timing-attack build merged; a crash; both PCs to the 21-flag role (lead, 2026-11-04 3:00pm ET)
+### The timing-attack build merged; a crash; both PCs to the 21-flag role (lead, 2026-11-04 2:35pm ET)
 
 - **`claude/ab-c1` `166ebc1`** (a fast-forward to Personality's merge of `ai/war` `fd881bb`, CI passed; 69 flags in the
   128-bit masks). It adds:

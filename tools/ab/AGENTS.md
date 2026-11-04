@@ -329,7 +329,7 @@ proposal counts, the defence columns `WalledCities`/`CityStrength`/`LandUnits` (
   capital starts no world wonder while the opening book still has settlers to start ("two extra cities beat
   Stonehenge"). It stays in C8, whose test against B still covers it.
 
-**The user's flag audit (2026-11-04 3:05pm ET), flags 22–41 of the lead's list:**
+**The user's flag audit (2026-11-04 2:40pm ET), flags 22–41 of the lead's list:**
 - **Ruled obviously right, into the bundle** (after a city-state safety check by the owner, since non-major civs
   run every bundle flag): `CanWin`, `CSConquest`, `BoxedInWar` (War); `SettlerOverlap`, `WidePlans` (Economy);
   `TradeOpinion`, `DealReputation`, `CoalitionStrength`, `CoalitionCoop`, `CoalitionPact` (Diplomacy).

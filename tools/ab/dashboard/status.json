@@ -231,7 +231,7 @@
    "order": 3,
    "name": "Attack: an aggressor takes cities",
    "target": "Against greedy civs (few units, no walls) several cities by T150; against balanced civs at most 1 per war",
-   "detail": "Two capture games so far: the Huns took 2 cities from Spain (normal civs), and the Inca took Persepolis from Persia (greedy civs, T75; 8 cities against 5 without the flags). Most bully games still end with no capture. The current focus.",
+   "detail": "2 captures in 42 bully games: the Huns took 2 cities from Spain (normal civs) and the Inca took Persepolis (greedy civs; 8 cities against 5 without the flags). War's trace: the siege works at the walls, but the army arrives late, small or bankrupt; fixes for all three are in build f21a8f6.",
    "state": "focus now"
   },
   {
@@ -286,7 +286,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "2 captures in 39 bully games: the siege works at the walls, but the army arrives late, small or bankrupt. Your timing-attack design (small army at peace, fast build-up, then attack) is now coded with three other fixes; both PCs switch to it (166ebc1). One out-of-memory crash on PC 2 is being checked.",
+   "detail": "2 captures in 42 bully games so far. The causes are found (armies arrive late, small or bankrupt) and every session's fix is now in one build, f21a8f6: your timing-attack design, the bankruptcy fixes, smarter targets, and the 11 flags you ruled obvious. Both PCs switch to it next.",
    "state": "running"
   },
   {
@@ -363,7 +363,7 @@
    "section": "session",
    "order": 1,
    "name": "Lead",
-   "detail": "Runs the tests, reads results, merges the sessions' work into one build, and keeps this page current. Watching both bully runs.",
+   "detail": "Merged everyone's work into build f21a8f6 (73 flags, 24 in the bundle) and widened the flag limit to 128.",
    "chat": "Civ V AI optimization experiment lead",
    "state": "running"
   },
@@ -371,7 +371,7 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Traced why attacks fail (late, small, bankrupt) and coded TimingBuildup, DeclareWhenGathered, SiegeConcentrate and SiegeKeep.",
+   "detail": "Coded your timing attack (TimingBuildup), DeclareWhenGathered, SiegeConcentrate, SiegeKeep, and TargetVulnerability (your GreedyTarget redesign). CanWin, CSConquest and BoxedInWar went into the bundle.",
    "chat": "Civ V AI: War session",
    "state": "waiting"
   },
@@ -379,7 +379,7 @@
    "section": "session",
    "order": 3,
    "name": "Diplomacy",
-   "detail": "GiftsNeedPatronage done (you ruled it obvious; in the bundle). StaleWarPeace and WarAppetite wait for attacks to work.",
+   "detail": "StaleWarPeace reworked to your rule (fight on only if you mean to take their cities) and in the bundle, with TradeOpinion, DealReputation and the three coalition flags.",
    "chat": "Civ V AI: Diplomacy session",
    "state": "waiting"
   },
@@ -387,23 +387,23 @@
    "section": "session",
    "order": 4,
    "name": "Personality",
-   "detail": "Aggressive civs keep a big army only in the build-up and at war (your point), and wall only threatened cities. Profiles check out in the logs.",
+   "detail": "Aggressive civs: big army only in the build-up and at war, walls only in threatened cities. GreedyAlarmScale (greedier civs react later) is compiling.",
    "chat": "Civ V AI: Personality session",
-   "state": "waiting"
+   "state": "running"
   },
   {
    "section": "session",
    "order": 5,
    "name": "Economy",
-   "detail": "Working on why a warmonger goes bankrupt (the Huns lost their army to debt) and a war chest saved for the build-up.",
+   "detail": "Found the bankruptcy cause (CP's check counted only income, not costs) and fixed it: TrueGoldRate, WarChest, WarEconomy. GreedyBook redesigned (National College first); SettlerOverlap and WidePlans in the bundle.",
    "chat": "Civ V AI: Economy & victory session",
-   "state": "running"
+   "state": "waiting"
   },
   {
    "section": "session",
    "order": 6,
    "name": "PC runner",
-   "detail": "PC 1 (BOX): bully vs normal civs. After its current pair it switches to ab-dbdfbb3 with SiegeStay and SiegePosture added.",
+   "detail": "PC 1 (BOX): bully vs normal civs; switches to the 25-flag role on build f21a8f6 next.",
    "chat": "Civ V AI optimization PC runner",
    "state": "running"
   },
@@ -411,7 +411,7 @@
    "section": "session",
    "order": 7,
    "name": "PC runner 2",
-   "detail": "PC 2 (TREEDESKTOP): bully vs greedy civs; logged pair done (0 captures). After its current pair it switches to ab-dbdfbb3 with SiegeStay and SiegePosture added.",
+   "detail": "PC 2 (TREEDESKTOP): replaying the crashed game with logging off (code or memory?), then the 25-flag role on f21a8f6 against greedy civs.",
    "chat": "Civ V AI optimization PC runner 2",
    "state": "running"
   },
@@ -572,9 +572,9 @@
    "order": 13,
    "name": "StaleWarPeace",
    "owner": "Diplomacy",
-   "detail": "A war where no city has changed hands for 20 turns and nobody is attacking ends in peace.",
-   "test": "On the integration build (dbdfbb3); tested once attacks take cities.",
-   "state": "next",
+   "detail": "Your rule: at war, fight on only if you mean to take their cities; otherwise accept a fair peace.",
+   "test": "You ruled it obvious: in the bundle since f21a8f6 (no test).",
+   "state": "passed",
    "runs": []
   },
   {
@@ -593,8 +593,8 @@
    "name": "TradeOpinion",
    "owner": "Diplomacy",
    "detail": "Trade friendship counts only deals running now, and can't make a friend on its own.",
-   "test": "Next: bully and builders tests.",
-   "state": "next",
+   "test": "You ruled it obvious: in the bundle since f21a8f6 (no test).",
+   "state": "passed",
    "runs": []
   },
   {
@@ -745,8 +745,8 @@
    "name": "CSConquest",
    "owner": "War",
    "detail": "A warmonger goes to war on a weak, nearby city-state with no strong protector. CP's AI almost never attacked city-states.",
-   "test": "Bully runs on both PCs.",
-   "state": "running",
+   "test": "You ruled it obvious: in the bundle since f21a8f6 (no test).",
+   "state": "passed",
    "runs": [
     "PC runner",
     "PC runner 2"
@@ -781,7 +781,7 @@
    "name": "TimingBuildup",
    "owner": "War",
    "detail": "Your design: a small army at peace while researching and saving for the attack, then a fast 15-turn build-up, the attack, and back to a garrison after peace.",
-   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "test": "Bully runs on f21a8f6, both PCs, next.",
    "state": "next",
    "runs": [
     "PC runner",
@@ -794,7 +794,7 @@
    "name": "DeclareWhenGathered",
    "owner": "War",
    "detail": "Declare once the army has gathered at the border, instead of waiting to be spotted.",
-   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "test": "Bully runs on f21a8f6, both PCs, next.",
    "state": "next",
    "runs": [
     "PC runner",
@@ -807,7 +807,7 @@
    "name": "SiegeConcentrate",
    "owner": "War",
    "detail": "A follow-up wave waits to join the units near the city, so each push is one army.",
-   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "test": "Bully runs on f21a8f6, both PCs, next.",
    "state": "next",
    "runs": [
     "PC runner",
@@ -820,7 +820,7 @@
    "name": "SiegeKeep",
    "owner": "War",
    "detail": "At war, units at a siege aren't pulled off to clear barbarian camps.",
-   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "test": "Bully runs on f21a8f6, both PCs, next.",
    "state": "next",
    "runs": [
     "PC runner",
@@ -833,7 +833,59 @@
    "name": "AggressiveWalls",
    "owner": "Personality",
    "detail": "An aggressive civ builds walls only in threatened cities, not everywhere.",
-   "test": "Bully runs on ab-166ebc1, both PCs, from their next pair.",
+   "test": "Bully runs on f21a8f6, both PCs, next.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 37,
+   "name": "TrueGoldRate",
+   "owner": "Economy",
+   "detail": "Bankruptcy is judged on real income minus costs; CP counted only income, so a civ losing gold every turn looked safe until its army was given away.",
+   "test": "Bully runs on f21a8f6, both PCs, next.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 38,
+   "name": "WarChest",
+   "owner": "Economy",
+   "detail": "A warmonger saves gold for its build-up, buys the army with it, and keeps its income above zero.",
+   "test": "Bully runs on f21a8f6, both PCs, next.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 39,
+   "name": "WarEconomy",
+   "owner": "Economy",
+   "detail": "While a timing attack is planned, cities near the target favour production and military buildings; workers go for iron and horses.",
+   "test": "Bully runs on f21a8f6, both PCs, next.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 40,
+   "name": "TargetVulnerability",
+   "owner": "War",
+   "detail": "Your GreedyTarget redesign: attack the most vulnerable city in reach, by its defence, its owner's army against ours, and distance.",
+   "test": "Bully runs on f21a8f6, both PCs, next.",
    "state": "next",
    "runs": [
     "PC runner",
