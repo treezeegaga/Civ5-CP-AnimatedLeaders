@@ -2912,6 +2912,15 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Greedy unit cap fixed; PC 2 moves to it (lead, 2026-11-04 8:15am ET)
+
+Personality's `d51e8a6` (see "greedy pair 0B09BFE1, where the extra units came from"): greedy civs switch off
+city-state unit gifts while at their cap, and a besieged city gets a defender past the cap only with no garrison.
+Same flags. CI passed (release `ab-d51e8a6`); `claude/ab-c1` fast-forwarded to it. It only acts for greedy civs, so PC 1
+(normal opponents) stays on `ab-dbdfbb3`. PC 2 moves to `ab-d51e8a6` after its first pair on `dbdfbb3`, results
+`AIABTest_bullygreedy3@TREEDESKTOP.csv`, same command. `Run-Games.ps1 -SaveLogs` now also saves `StrategyProfile_Log.csv`
+(Personality's request).
+
 ### War: the Mongols' siege walked home to heal; SiegeStay and SiegePosture join the bully runs (lead, 2026-11-04 7:45am ET)
 
 **War, pair `0B09BFE1`:** the Mongols' siege of Tiwanaku reached 117 expected damage a turn and brought it to
