@@ -4067,6 +4067,14 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Greedy style set grows; GreedyAlarmScale pending (lead, 2026-11-04 3:00pm ET)
+
+Personality's `GreedyAlarmScale` (`ai/personality` `35272f9`, CI pending; the user's audit: a greedy civ's reaction
+to an army at its border scales with its greed) is merged once CI passes. **The greedy style set** (OthersBase in
+greedy matchups, and the trio test's greedy slot) is now `GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades,
+GreedyBuilds, GreedyWarArmy, GreedyAlarm, GreedyAlarmScale`. The running easy-matchup runs keep the strict 4-flag set
+(no alarm, no war army), so they stay a test of whether the attack works at all.
+
 ### Everyone's work in one build: bankruptcy fixes, the audit's bundle, TargetVulnerability (lead, 2026-11-04 2:50pm ET)
 
 **`claude/ab-c1` `f21a8f6`:** 73 flags, 24 in the bundle.
