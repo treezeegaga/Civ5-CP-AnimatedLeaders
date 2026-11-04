@@ -1549,6 +1549,11 @@ named, and reload the save before every try.
     "nobody fights" problem.
   - A narrower version keeps the honesty: don't renew deals with a civ we plan to attack, and declare only once our own
     obligations have run out. That's for the user and Personality to decide.
+- **Decision (user, 2026-11-04): no such rule.** An AI may declare war on a civ it's trading per-turn items with.
+  Breaking a deal by war already costs trust: `DealReputation` discounts the breaker's promises, and with
+  `TradeOpinion` the trade-partner opinion goes with the cancelled deals. **For Personality:** drop the deal clause from
+  the everyone-rules in section 5 of the profile. The friendship clause (no war on a friend in the friendship's first
+  15 turns) is unaffected.
 
 ### Diplomacy: why the failed Celtic war ran 35 turns, and flag `StaleWarPeace` (Diplomacy session, 2026-11-04)
 
