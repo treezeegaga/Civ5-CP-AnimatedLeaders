@@ -1924,6 +1924,29 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0CEF854E (PC 2, ab-f21a8f6, 25-flag role), Mongolia: windows without a war; sneak attacks need every unit up front (Nov 4, about 4:49pm ET)
+- **The windows:**
+  - T71 against Rome and T103 against Sweden: each ended "no war 3 windows after the build-up".
+  - T134: "peace, 13 land units over a cap of 6, letting Warrior go".
+  - T135: a third window, against Sweden; war only at T149.
+- **Attack requests:** 302 in the game, all "not possible for lack of units" (Stockholm, Bogota, Helsinki and
+  others).
+- **Operations that formed:**
+  - one at T91, 3 units, which waited out SiegeArmy's 20 turns and gave up;
+  - one at T146, which marched at T147.
+- No capture attempt.
+- **Two causes:**
+  - The window's production weight came after this build (`214c6c7`), so the windows built little.
+  - **A sneak attack on a major civ is requested with 0 missing units allowed.** `RequestCityAttack(..., 3,
+    bCareful)` passes 0 when not careful, and CP sets careful only when other dangerous wars are on. So the attack
+    forms only if every required slot of the formation is already filled by a free unit, and garrisons in exposed
+    cities don't count.
+
+**Fix (TimingBuildup, same flag).** While a timing attacker is in its window or attack phase, its city-attack
+requests may leave up to the requested number of units (3) to be built, as careful requests already can. The
+operation then forms, and its own build requests (the strongest production weight there is) fill the slots;
+SiegeArmy still holds it until it is strong enough, for at most 20 turns.
+
 ### War: why the trio's aggressor never declares (4 games, ab-9c6f2cd, logging off) (Nov 4, about 4:36pm ET)
 The lead's question: in 4 trio games (6 civs, Standard Pangaea, Quick, T150) the aggressor declared no war.
 Aggressors: Greece, Songhai, the Aztecs, America, each with 50 flags. No logs, so this is read from the results
