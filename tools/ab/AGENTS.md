@@ -71,6 +71,19 @@ looks strong in split games. **Style flags (`GreedyArmyCap`, `GreedyAlarm`, defe
 test and the bully test, not by the split-game strength SPRT alone**, which can't see the risk. Aggressors should spot
 thin defence (`GreedyTarget`: fewest land units per city).
 
+**Greedy comes in two kinds, tall and wide (the user, 2026-11-04 4:45pm ET; Personality owns it).** The trio quick
+look showed the top civ usually had the most cities. Tall isn't the best answer to civs that never attack: wide is. A
+good aggressor punishes a wide civ more easily, but where none is around, a wide civ can expand for a long time
+unpunished. Both kinds are non-violent and greedy:
+- **Greedy wide:** takes Liberty and expands across the map as fast as happiness and growth allow, without regard for
+  defence. Once it runs out of room, it grows its cities vertically and makes trade deals.
+- **Greedy tall:** takes Tradition and keeps to 3-4 cities. It spends everything on non-military interests, rushing up
+  the tech and social policy trees as fast as possible.
+
+A leader's personality decides which kind it plays (e.g. its expansion flavour against its growth/science flavours).
+The greedy role in the trio and matchup tests plays whichever kind its leader is. Judged by matchups like every style
+flag. Expected: wide out-grows tall while nobody attacks; once attacks take cities, aggressors punish wide more.
+
 ### Priorities: competence first, then flavour and fun
 
 The list above is where we're going, not the order we work in. Making the AI merely competent is

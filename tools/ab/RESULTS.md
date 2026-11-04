@@ -4111,6 +4111,45 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Attack first: War's three fixes in one build, both PCs on the attack (lead, 2026-11-04 4:52pm ET)
+
+The user: fixing the attack is the priority. **`claude/ab-c1` = `ai/war` `96f008e` (release `ab-96f008e`, CI run 184).**
+It adds:
+- `MarchOn`: a sneak attack that declares keeps marching as an army to the walls, instead of breaking up.
+- `FocusedWar`, extended in `214c6c7`: a timing attacker with a committed target asks for and accepts no coop wars
+  elsewhere and starts no second war by CP's own approach.
+- `TimingBuildup` (`214c6c7`): its window gives real production weight to land and siege units.
+- `TimingBuildup` (`96f008e`, the trio cause): until the army is built, targets are judged against the army the window
+  will build, not the garrison army. Before this, no rival passed the strength and CanWin checks, so no window opened.
+
+Bully RoleFixes are now the 25 flags plus `MarchOn, FocusedWar`. PC 1 runs a logged replay of trio game 0C3C8913 (the
+Aztecs), then `bullyabort7` (vs normal civs). PC 2 runs `bullygreedy9` (vs greedy civs) after pair 3 of `bullygreedy8`.
+Both log their first pair.
+**Update 5:06pm ET:** `ai/war` `f73177c` (CI run 186) fast-forwarded in, release `ab-f73177c`: TimingBuildup's attack may
+form with up to 3 units still to build (0CEF854E: Mongolia's 302 attack requests failed "for lack of units", since a
+sneak attack on a major allowed 0 missing). Same flags. PC 2 restarted `bullygreedy9` on it; PC 1 runs on it too.
+
+### Trio quick look: one of ours on top in 3 of 4, but our aggressor never declared war (lead, 2026-11-04 4:36pm ET)
+
+PC 1, `ab-9c6f2cd`, 4 games of 6 civs to T150, logging off, no crashes (`AIABTest_trio@BOX.csv`, `2d5f0ef`).
+
+| Game | Top (strength share) | Ours: aggressor / greedy / balanced | Our three's total share |
+|---|---|---|---|
+| 0C2B2973 | Greece, aggressor (20.2%) | Greece 20.2 (1st) / Egypt 16.9 (4th) / Inca 14.6 (5th) | 51.7% |
+| 0C33FB69 | France, balanced (20.6%) | Songhai 17.7 (3rd) / Egypt 19.3 (2nd) / France 20.6 (1st) | 57.6% |
+| 0C3C8913 | Austria, balanced (25.2%) | Aztec 14.5 (5th) / Portugal 13.3 (6th) / Austria 25.2 (1st) | 53.0% |
+| 0C44C5C5 | Sweden, CP (21.4%) | America 18.7 (2nd) / Ethiopia 18.0 (3rd) / Songhai 15.6 (4th) | 52.3% |
+
+- **On top: 3 of 4 (75%)** against the 90% goal and the 50% you'd get if all six played alike. By style: balanced 2,
+  aggressive 1, greedy 0, CP 1. Four games is a first look, not a measure.
+- **Our three held more than half the strength in every game** (mean 53.7%; 50% would be a draw).
+- **Greedy was never on top** (2nd, 3rd, 4th, 6th), even though CP plays mostly balanced.
+- **The aggressor declared no wars in any of the 4 games, and nobody captured a city.** Its RoleFixes include
+  `AggressivePlan, AggressiveArmy` and the 25 conquest flags. In a 6-civ game with no flipped partner, the timing attack
+  never fired. Greece came out on top by growing, not by conquest. This is the same failure as the bully tests (the
+  army rarely gets there), but here the attacker never even started. **For War:** why no declaration in trio games
+  (target choice with 5 rivals? the build-up never reaching its trigger?).
+
 ### The trio test is built (the user's goal; lead, 2026-11-04 3:10pm ET)
 
 The user's point: CP plays mostly balanced, so our greedy civ should usually out-grow it, and the trio goal may be
