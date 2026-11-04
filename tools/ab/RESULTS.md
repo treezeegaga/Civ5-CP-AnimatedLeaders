@@ -4084,6 +4084,27 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Trio quick look: one of ours on top in 3 of 4, but our aggressor never declared war (lead, 2026-11-04 4:36pm ET)
+
+PC 1, `ab-9c6f2cd`, 4 games of 6 civs to T150, logging off, no crashes (`AIABTest_trio@BOX.csv`, `2d5f0ef`).
+
+| Game | Top (strength share) | Ours: aggressor / greedy / balanced | Our three's total share |
+|---|---|---|---|
+| 0C2B2973 | Greece, aggressor (20.2%) | Greece 20.2 (1st) / Egypt 16.9 (4th) / Inca 14.6 (5th) | 51.7% |
+| 0C33FB69 | France, balanced (20.6%) | Songhai 17.7 (3rd) / Egypt 19.3 (2nd) / France 20.6 (1st) | 57.6% |
+| 0C3C8913 | Austria, balanced (25.2%) | Aztec 14.5 (5th) / Portugal 13.3 (6th) / Austria 25.2 (1st) | 53.0% |
+| 0C44C5C5 | Sweden, CP (21.4%) | America 18.7 (2nd) / Ethiopia 18.0 (3rd) / Songhai 15.6 (4th) | 52.3% |
+
+- **On top: 3 of 4 (75%)** against the 90% goal and the 50% you'd get if all six played alike. By style: balanced 2,
+  aggressive 1, greedy 0, CP 1. Four games is a first look, not a measure.
+- **Our three held more than half the strength in every game** (mean 53.7%; 50% would be a draw).
+- **Greedy was never on top** (2nd, 3rd, 4th, 6th), even though CP plays mostly balanced.
+- **The aggressor declared no wars in any of the 4 games, and nobody captured a city.** Its RoleFixes include
+  `AggressivePlan, AggressiveArmy` and the 25 conquest flags. In a 6-civ game with no flipped partner, the timing attack
+  never fired. Greece came out on top by growing, not by conquest. This is the same failure as the bully tests (the
+  army rarely gets there), but here the attacker never even started. **For War:** why no declaration in trio games
+  (target choice with 5 rivals? the build-up never reaching its trigger?).
+
 ### The trio test is built (the user's goal; lead, 2026-11-04 3:10pm ET)
 
 The user's point: CP plays mostly balanced, so our greedy civ should usually out-grow it, and the trio goal may be
