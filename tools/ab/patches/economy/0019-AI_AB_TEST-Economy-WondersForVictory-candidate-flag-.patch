@@ -1,0 +1,150 @@
+From 704b8f32c68b6de5a93cef8df0622bfcfbe04e8b Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 21:32:00 +0000
+Subject: [PATCH] AI_AB_TEST Economy: WondersForVictory candidate flag (the
+ user's design: a world wonder only if it suits the civ's target victory, or
+ is an economy wonder)
+
+A wonder's leaning comes from its flavours; economy wonders (growth, production, gold, happiness, infrastructure, expansion, religion outweighing the victory flavours) stay open to every civ. Applied in CheckBuildingBuildSanity and in CvCityAI's desired-wonder paths. Off in the bundle.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuildingProductionAI.cpp                |  4 ++
+ CvGameCoreDLL_Expansion2/CvCityAI.cpp         |  4 ++
+ CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp | 52 +++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvCityStrategyAI.h   |  2 +
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  1 +
+ 6 files changed, 64 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index b2492d9..c0d4d5a 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -281,6 +281,10 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 		kPlayer.IsOpeningBookActive() && kPlayer.HasUnstartedBookSettlers())
+ 		return SR_STRATEGY;
+ 
++	// AI_AB_TEST candidate (WondersForVictory): only wonders that suit our target victory, or help any
++	if (!CityStrategyAIHelpers::IsWonderForOurVictory(kPlayer, eBuilding))
++		return SR_STRATEGY;
++
+ 	if (isNationalWonderClass(kBuildingClassInfo) || isWorldWonderClass(kBuildingClassInfo))
+ 	{
+ 		if (isWorldWonderClass(kBuildingClassInfo))
+diff --git a/CvGameCoreDLL_Expansion2/CvCityAI.cpp b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+index 172fd6e..5cee433 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+@@ -130,6 +130,10 @@ void CvCityAI::AI_chooseProduction(bool bInterruptWonders, bool bInterruptBuildi
+ 		kOwner.GetCitySpecializationAI()->SetSpecializationsDirty(SPECIALIZATION_UPDATE_WONDER_BUILT_BY_RIVAL);
+ 	}
+ 
++	// AI_AB_TEST candidate (WondersForVictory): the city's desired wonder must suit our target victory, or help any
++	if (eNextWonder != NO_BUILDING && !CityStrategyAIHelpers::IsWonderForOurVictory(kOwner, eNextWonder))
++		eNextWonder = NO_BUILDING;
++
+ 	if (!bAlreadyBuildingWonder && bInterruptWonders && eNextWonder != NO_BUILDING)
+ 	{		
+ 		CvBuildingEntry* pkBuilding = GC.getBuildingInfo(eNextWonder);
+diff --git a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp
+index b516b77..501d77b 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp
+@@ -5620,3 +5620,55 @@ PlayerTypes CityStrategyAIHelpers::GetGreedyAlarmThreat(const CvPlayer& kPlayer)
+ 	}
+ 	return eWorst;
+ }
++
++/// AI_AB_TEST candidate (WondersForVictory, the user's design): a world wonder is started only if it suits the civ's
++/// target victory (its current victory pursuit) or is an economy wonder that helps any victory. The wonder's leaning
++/// comes from its own flavours: science/spaceship, culture/great people, diplomacy, military. It counts as an economy
++/// wonder when its growth, production, gold, happiness, infrastructure, expansion and religion flavours together
++/// outweigh its strongest victory flavour. Always true without the flag and for anything that isn't a world wonder.
++bool CityStrategyAIHelpers::IsWonderForOurVictory(const CvPlayer& kPlayer, BuildingTypes eBuilding)
++{
++	if (!kPlayer.UsesCandidateAI(FIX_WONDERS_FOR_VICTORY) || !kPlayer.isMajorCiv() || kPlayer.isHuman())
++		return true;
++	CvBuildingEntry* pkBuildingInfo = GC.getBuildingInfo(eBuilding);
++	if (!pkBuildingInfo || !::isWorldWonderClass(pkBuildingInfo->GetBuildingClassInfo()))
++		return true;
++
++	int iScience = 0, iCulture = 0, iDiplo = 0, iConquest = 0, iEconomy = 0;
++	for (int iFlavor = 0; iFlavor < GC.getNumFlavorTypes(); iFlavor++)
++	{
++		int iValue = pkBuildingInfo->GetFlavorValue(iFlavor);
++		if (iValue <= 0)
++			continue;
++		const CvString& strFlavor = GC.getFlavorTypes((FlavorTypes)iFlavor);
++		if (strFlavor == "FLAVOR_SCIENCE" || strFlavor == "FLAVOR_SPACESHIP")
++			iScience += iValue;
++		else if (strFlavor == "FLAVOR_CULTURE" || strFlavor == "FLAVOR_GREAT_PEOPLE")
++			iCulture += iValue;
++		else if (strFlavor == "FLAVOR_DIPLOMACY")
++			iDiplo += iValue;
++		else if (strFlavor == "FLAVOR_OFFENSE" || strFlavor == "FLAVOR_DEFENSE" || strFlavor == "FLAVOR_MILITARY_TRAINING" ||
++			strFlavor == "FLAVOR_CITY_DEFENSE" || strFlavor == "FLAVOR_RANGED" || strFlavor == "FLAVOR_MOBILE" ||
++			strFlavor == "FLAVOR_NAVAL" || strFlavor == "FLAVOR_AIR")
++			iConquest += iValue;
++		else if (strFlavor == "FLAVOR_GROWTH" || strFlavor == "FLAVOR_PRODUCTION" || strFlavor == "FLAVOR_GOLD" ||
++			strFlavor == "FLAVOR_HAPPINESS" || strFlavor == "FLAVOR_INFRASTRUCTURE" || strFlavor == "FLAVOR_EXPANSION" ||
++			strFlavor == "FLAVOR_RELIGION")
++			iEconomy += iValue;
++	}
++	int iBestVictory = max(max(iScience, iCulture), max(iDiplo, iConquest));
++	if (iBestVictory <= 0 || iEconomy >= iBestVictory)
++		return true; // an economy wonder (or no leaning): good for any plan
++
++	int iOurs = 0;
++	switch (kPlayer.GetDiplomacyAI()->GetCurrentVictoryPursuit())
++	{
++	case VICTORY_PURSUIT_SCIENCE:    iOurs = iScience; break;
++	case VICTORY_PURSUIT_CULTURE:    iOurs = iCulture; break;
++	case VICTORY_PURSUIT_DIPLOMACY:  iOurs = iDiplo; break;
++	case VICTORY_PURSUIT_DOMINATION: iOurs = iConquest; break;
++	default:                         return true;
++	}
++	return iOurs >= iBestVictory;
++}
++
+diff --git a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.h b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.h
+index 1a56027..ed7ee3d 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.h
++++ b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.h
+@@ -257,6 +257,8 @@ namespace CityStrategyAIHelpers
+ int ReweightByTurnsLeft(int iOriginalWeight, int iTurnsLeft);
+ // AI_AB_TEST candidate (GreedyAlarm): the major civ whose visible army near our cities alarms a tall civ, or NO_PLAYER
+ PlayerTypes GetGreedyAlarmThreat(const CvPlayer& kPlayer);
++// AI_AB_TEST candidate (WondersForVictory): may this player start this world wonder?
++bool IsWonderForOurVictory(const CvPlayer& kPlayer, BuildingTypes eBuilding);
+ int GetWeightThresholdModifier(AICityStrategyTypes eStrategy, CvCity* pCity);
+ 
+ // The following functions check triggers to see if a particular CityStrategy should be adopted/continued
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 2de53db..9accaed 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33382,6 +33382,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"TrueGoldRate", false},
+ 	{"WarEconomy", false},
+ 	{"WarChest", false},
++	{"WondersForVictory", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index ad8d4ca..9610712 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -235,6 +235,7 @@ enum CandidateFixTypes
+ 	FIX_TRUE_GOLD_RATE,		// Economy: the gold rate used for bankruptcy checks is the net rate (CP adds the average of positive income only). Off in the bundle
+ 	FIX_WAR_ECONOMY,		// Economy: while a timing attack is planned, the cities nearest the target favour production and military buildings. Off in the bundle
+ 	FIX_WAR_CHEST,			// Economy: a timing attacker saves for its build-up, buys it, and keeps gold per turn >= 0 while the army stands. Off in the bundle
++	FIX_WONDERS_FOR_VICTORY,	// Economy (the user's design): a world wonder only if it suits the civ's target victory, or helps any. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+-- 
+2.43.0
+

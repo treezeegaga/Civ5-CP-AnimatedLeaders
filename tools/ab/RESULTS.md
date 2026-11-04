@@ -1423,6 +1423,13 @@ T130 Standard, with Engineering and Education.
   share should rise a little; wonders count drops.
 - **Measure:** strength share at T150; wonders per civ and `City3Turn` (mechanism).
 - **δ:** 2 points, gainer. Flag `WondersForVictory`, off in the bundle until tested or ruled.
+- **Build:** patch 0019 on `ai/economy` `aa3dc1c`.
+  - `CityStrategyAIHelpers::IsWonderForOurVictory` (`CvCityStrategyAI.cpp`), used in
+    `CvBuildingProductionAI::CheckBuildingBuildSanity` (refuses the wonder);
+  - in `CvCityAI::AI_chooseProduction`, which drops a misaligned desired wonder before the great-engineer and book-swap
+    paths.
+
+  Status: coded, not built.
 
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
