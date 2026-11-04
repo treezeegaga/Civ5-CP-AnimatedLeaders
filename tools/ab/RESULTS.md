@@ -1924,6 +1924,32 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: four logged games on ab-f73177c and ab-eb4129d: wars come now; armies are small; MarchOn handed over too early (Nov 4, about 6:36pm ET)
+
+| Game | Build | Aggressor | Windows | War | At the walls |
+|---|---|---|---|---|---|
+| 0C751A63 | f73177c | Celts | T26 against the Iroquois (Quick: the window opens at turn 26) | **On the target at T47**, before any attack had formed | First attack at T72: a SiegeRoll wave of 5 units (SiegeConcentrate held it 4 turns, from 4 in the army). Capture attempts T80–T81 on Osininka, 200 → 190 and 200 → 189, all 3–4 units used. Later sneak attacks sat at 32–48 a turn against bars of 70–75 and were aborted |
+| 0C902E79 | f73177c | Huns | T26 and T58 against Germany | **On the target at T72**, via MarchOn ("declaring, the army marches on; near 3, far 7") | **T73: "MarchOn: stalled near the target at war, handing over", near 3, far 8**, on the war's first turn. One capture attempt (Hamburg, 0 of 1 units used); every German city "enemy dominated" 38–78 times |
+| 0CA81AA0 | eb4129d | Shoshone | T61 and T93 against Portugal | War on Ethiopia at T120 | — |
+| 0D5A2506 | eb4129d | America | T34 and T66 against China | China declared on America at T94 | — |
+
+- In the Shoshone game the T93 window **paused 9 turns** ("units unaffordable"); America's T66 window paused 9 too.
+  Both were short of gold: WarChest-in-peace and WarGold come only in e4d5785.
+
+**Findings:**
+1. **Wars on the target come now** (Celts, Huns). The trio fix, FocusedWar and `f73177c` work.
+2. **The armies are small:** 3–5 units with 37–50 expected damage a turn. Cities lose about 10 HP a turn and every
+   zone reads "enemy dominated". The Celts declared at T47 on Quick with no attack formed. The Huns' sneak attack
+   recruited 3 units in 16 turns.
+3. **Bug: MarchOn's at-war stall rule fired on the first turn of the war.** It counted the turns the army spent
+   waiting at the border at peace. **Fixed in `6578838`:** it now needs 3 turns at war.
+
+**Next (proposal, not coded):** the declaration should wait for the army. Readiness (2 siege units and cities + 4
+others) is checked only at the window's end. The Celts' war at T47 came from the committed target's WAR approach,
+before any army or operation. Suggest: under TimingBuildup, the WAR approach (+1000) toward the target applies only
+from readiness, or once the window is over with the army ready. This is the lead's call on scope, and Economy's gold
+fixes in e4d5785 need to be in first.
+
 ### War: 0D3416E7 (PC 2, bullygreedy9 on ab-f73177c): the build-up happened, the war didn't (Nov 4, about 6:03pm ET)
 From the results file; the logs were deleted (the aggressor declared no war).
 
