@@ -2897,6 +2897,38 @@ conqueror."
   Otherwise it razes the city, or liberates it if it was already trying to. Original capitals can't be razed, so it
   keeps them as puppets; they're good to trade back in a peace deal (Diplomacy). Not coded: it's a new flag in a
   shared file, with 2 flag slots left. Waiting for the user's call, now or together with War's raid mode.
+- **Sack or raze (the user, 2026-11-04 11:50am ET: "look into when a raider should sack vs raze").** The mechanics:
+  - **Capture gold is automatic:** 20 + 10 per citizen plus a random part, cut back if the old owner only just took
+    the city, times the plunder modifier. Whatever the raider does next, the loot is already taken.
+  - **Razing:** the city loses 1 citizen a turn (more with a raze-speed bonus: 2 for the Huns), so it takes as many
+    turns as the city has citizens. A razing city is annexed and counts against the raider's happiness, and it can
+    be retaken mid-raze (the old owner gets a smaller city). Original capitals can't be razed.
+  - **Selling back:** cities can be traded in peace deals, so a captured city can be held as a puppet and returned for
+    gold, per-turn payments or peace.
+
+  So "sack" means take the loot and give the city back for a ransom; "raze" means take the loot and destroy the city.
+  **Proposed rule, after a capture:**
+
+  | Situation | A raider should |
+  |---|---|
+  | very valuable and holdable (above) | keep it |
+  | can't be razed (an original capital), or worth a lot to its owner (wonders, holy city, big population) but not worth holding | sack: puppet it, return it in the peace deal for gold, per-turn payments or peace |
+  | small enough to burn before an enemy force in sight could retake it (citizens / raze speed ≤ turns until it could fall) | raze: denies the rival the city for good |
+  | big, not holdable, and the owner won't pay | raze anyway: each turn still costs them a citizen |
+
+  The inputs:
+  - razing time: citizens ÷ raze speed, so the Huns raze far more often;
+  - retake time: `CouldEnemyTakeCity` from the raider's side;
+  - ransom: what the old owner would pay, from Diplomacy's deal valuation (`CvDealAI`, `TRADE_ITEM_CITIES`).
+
+  A raider done with its war leans toward sacking (the city doubles as a peace offer). One facing a long-term rival
+  leans toward razing.
+  **Who does what:**
+  - Personality: the keep, sack or raze choice (`CvPlayerAI::AI_conquerCity`, shared file);
+  - Diplomacy: asking a ransom for the city in the peace deal;
+  - War: the raid goals.
+
+  **Not coded.** The keep rule above and this choice would be one flag ("what a Raider does with a captured city").
 - **What a Raider needs from War (request, later; the lead's hold applies):** a raid mode for its wars. That means
   pillage and trade-route plunder as goals, razing captured cities it can't hold, and peace once the loot is taken. It
   also needs its own measures, since it fails a "cities captured" test while doing its job: tiles pillaged, gold
