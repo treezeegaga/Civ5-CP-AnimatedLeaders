@@ -1,0 +1,32 @@
+001, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 3/2, Expansionist, home meta -5, weights dom 10 sci 50 cul 30 dip 10, risk medium, expansion wide
+001, Assyria, LEADER_ASHURBANIPAL, tags WN, pursuits 0/3, Conqueror, home meta 90, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest
+001, France, LEADER_NAPOLEON, tags TS, pursuits 1/0, Tourism, home meta -30, weights dom 22 sci 6 cul 28 dip 44, risk high, expansion tall
+001, Carthage, LEADER_DIDO, tags , pursuits 1/0, Diplomat, home meta -15, weights dom 24 sci 6 cul 6 dip 64, risk medium, expansion medium
+001, Mongolia, LEADER_GENGHIS_KHAN, tags W, pursuits 0/2, Conqueror, home meta 90, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest
+001, Babylon, LEADER_NEBUCHADNEZZAR, tags NS, pursuits 3/1, Scientist, home meta -65, weights dom 2 sci 68 cul 4 dip 26, risk medium, expansion tall
+001, Egypt, LEADER_RAMESSES, tags TS, pursuits 2/1, Tourism, home meta -65, weights dom 2 sci 6 cul 68 dip 24, risk medium, expansion tall
+001, Songhai, LEADER_ASKIA, tags W, pursuits 0/1, Conqueror, home meta 90, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest
+050, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 3/2, Expansionist, home meta -5, weights dom 10 sci 50 cul 30 dip 10, risk medium, expansion wide
+050, Assyria, LEADER_ASHURBANIPAL, tags WRN, pursuits 0/3, Conqueror, home meta 90, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest
+050, France, LEADER_NAPOLEON, tags RTS, pursuits 1/0, Zealot, home meta 30, weights dom 26 sci 6 cul 20 dip 48, risk high, expansion medium
+050, Carthage, LEADER_DIDO, tags R, pursuits 1/0, Zealot, home meta 5, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium
+050, Mongolia, LEADER_GENGHIS_KHAN, tags W, pursuits 0/2, Conqueror, home meta 90, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest
+050, Babylon, LEADER_NEBUCHADNEZZAR, tags RNS, pursuits 3/1, Scientist, home meta -65, weights dom 2 sci 68 cul 4 dip 26, risk medium, expansion tall
+050, Egypt, LEADER_RAMESSES, tags RTS, pursuits 2/1, Tourism, home meta -65, weights dom 2 sci 6 cul 68 dip 24, risk medium, expansion tall
+050, Songhai, LEADER_ASKIA, tags WR, pursuits 0/1, Conqueror, home meta 90, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest
+100, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 3/2, Zealot, home meta -5, weights dom 6 sci 46 cul 40 dip 8, risk medium, expansion medium
+100, Assyria, LEADER_ASHURBANIPAL, tags WRN, pursuits 0/3, Conqueror, home meta 90, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest
+100, France, LEADER_NAPOLEON, tags RTS, pursuits 1/0, Zealot, home meta 30, weights dom 26 sci 6 cul 20 dip 48, risk high, expansion medium
+100, Carthage, LEADER_DIDO, tags R, pursuits 1/0, Zealot, home meta 5, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium
+100, Mongolia, LEADER_GENGHIS_KHAN, tags WR, pursuits 0/2, Conqueror, home meta 90, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest
+100, Babylon, LEADER_NEBUCHADNEZZAR, tags RNS, pursuits 3/1, Scientist, home meta -65, weights dom 2 sci 68 cul 4 dip 26, risk medium, expansion tall
+100, Egypt, LEADER_RAMESSES, tags RTS, pursuits 2/1, Tourism, home meta -65, weights dom 2 sci 6 cul 68 dip 24, risk medium, expansion tall
+100, Songhai, LEADER_ASKIA, tags WR, pursuits 0/1, Conqueror, home meta 90, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest
+150, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 3/2, Zealot, home meta -5, weights dom 6 sci 46 cul 40 dip 8, risk medium, expansion medium
+150, Assyria, LEADER_ASHURBANIPAL, tags WRN, pursuits 0/3, Conqueror, home meta 90, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest
+150, France, LEADER_NAPOLEON, tags RTS, pursuits 1/0, Zealot, home meta 30, weights dom 26 sci 6 cul 20 dip 48, risk high, expansion medium
+150, Carthage, LEADER_DIDO, tags R, pursuits 1/0, Zealot, home meta 5, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium
+150, Mongolia, LEADER_GENGHIS_KHAN, tags WR, pursuits 0/2, Conqueror, home meta 90, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest
+150, Babylon, LEADER_NEBUCHADNEZZAR, tags RNS, pursuits 3/1, Scientist, home meta -65, weights dom 2 sci 68 cul 4 dip 26, risk medium, expansion tall
+150, Egypt, LEADER_RAMESSES, tags RTS, pursuits 2/1, Tourism, home meta -65, weights dom 2 sci 6 cul 68 dip 24, risk medium, expansion tall
+150, Songhai, LEADER_ASKIA, tags WR, pursuits 0/1, Conqueror, home meta 90, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest
