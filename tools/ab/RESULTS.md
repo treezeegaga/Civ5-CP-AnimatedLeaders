@@ -3306,7 +3306,10 @@ logged pair".
 - **Measure:** greedy civs' gold and science per turn while alarmed (`GREEDY:` lines in the log), `LandUnits` and
   `WalledCities` at T150, cities lost and wars declared on them; against `GreedyAlarm` alone, paired.
 - **Build:** fork `ai/personality` `35272f9`.
-- **Status:** compiles (CI run 175 passed on `35272f9`, 2026-11-04 3:00pm ET); ready to merge.
+- **Watch** (Economy's review, via the lead): greed 75 and up builds no walls before war, so in the matchup test look at
+  the greediest civs' city losses in the first turns of a war.
+- **Status:** compiles (CI run 175 passed on `35272f9`, 2026-11-04 3:00pm ET); merged into `claude/ab-c1` (`b06d504`) by
+  the lead. In the greedy style set.
 
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
