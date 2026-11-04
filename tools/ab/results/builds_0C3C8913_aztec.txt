@@ -1,0 +1,149 @@
+﻿Aztecs (aggressor p1) in trio replay 0C3C8913, ab-96f008e (+MarchOn, FocusedWar). Source: CityStrategyAIProductionLog.csv 'CHOSEN' lines (what each city started to build, with its turn estimate).
+The log records choices, not completions: a started item can be switched before it finishes. Improved tiles are not in the logs (BuilderAILog is off). Final Aztec stats T150 in the results CSV: 7 cities, military 211, wars declared 0.
+
+Counts of items chosen, cumulative by turn:
+Item                 T50  T100  T150
+Settler                4    10    13
+Worker                 1     7     9
+Work Boat              0     4     7
+Caravan                1     4     8
+Scout                  0     2     4
+Jaguar                 1     1     1
+Horseman               0     0     5
+Spearman               0     0     1
+Swordsman              0     1     1
+Pikeman                0     0     7
+Longswordsman          0     0     1
+Composite Bowman       0     0     6
+Catapult               0     0     5
+Trireme                0     0     3
+ALL MILITARY           1     4    34
+Buildings              1    15    48
+Wonders                1     3     5
+
+Every item chosen, by turn (Turn City Kind Item):
+T000 Tenochtitlan Civilian: Worker
+T040 Teotihuacan Building: Shrine
+T040 Tenochtitlan Civilian: Settler
+T042 Tenochtitlan Civilian: Settler
+T043 Tenochtitlan MilitaryMelee: Jaguar
+T047 Tenochtitlan Civilian: Settler
+T048 Tlatelolco Wonder: Temple of Artemis
+T048 Tenochtitlan Civilian: Settler
+T050 Teotihuacan Civilian: Caravan
+T052 Teotihuacan Civilian: Work Boat
+T057 Teotihuacan Civilian: Work Boat
+T057 Tenochtitlan Civilian: Caravan
+T061 Tenochtitlan Civilian: Caravan
+T065 Teotihuacan Building: Floating Gardens
+T066 Tenochtitlan Building: Granary
+T069 Tenochtitlan Civilian: Settler
+T071 Texcoco Wonder: Colossus
+T071 Tenochtitlan Civilian: Settler
+T074 Tenochtitlan Building: Floating Gardens
+T074 Tenochtitlan Civilian: Settler
+T077 Tlatelolco Building: Floating Gardens
+T078 Tenochtitlan MilitaryMelee: Scout
+T079 Teotihuacan Building: Lighthouse
+T079 Tenochtitlan Civilian: Worker
+T079 Tenochtitlan MilitaryMelee: Scout
+T080 Tenochtitlan Building: Stable
+T082 Tlaxcala Building: Monument
+T083 Tenochtitlan Wonder: Pyramids
+T084 Tenochtitlan Civilian: Worker
+T085 Tenochtitlan Civilian: Worker
+T086 Tlatelolco Civilian: Worker
+T086 Teotihuacan Civilian: Worker
+T086 Tenochtitlan Building: Caravansary
+T090 Tlaxcala Civilian: Settler
+T090 Tenochtitlan Building: Circus
+T091 Tlaxcala Civilian: Settler
+T092 Teotihuacan Civilian: Caravan
+T093 Texcoco Building: Caravansary
+T093 Calixtlahuaca Civilian: Work Boat
+T093 Tenochtitlan Civilian: Worker
+T093 Tlatelolco Building: Caravansary
+T094 Calixtlahuaca Civilian: Work Boat
+T094 Tlaxcala Building: Caravansary
+T095 Tenochtitlan Building: Colosseum
+T096 Teotihuacan Building: Library
+T099 Tenochtitlan Civilian: Settler
+T100 Teotihuacan MilitaryMelee: Swordsman
+T102 Tlatelolco Building: Monument
+T102 Tenochtitlan MilitaryRanged: Catapult
+T103 Tenochtitlan MilitaryRanged: Catapult
+T104 Tlatelolco Building: Library
+T104 Calixtlahuaca Building: Monument
+T104 Tenochtitlan MilitaryRanged: Catapult
+T104 Teotihuacan Building: Barracks
+T105 Tenochtitlan MilitaryMelee: Scout
+T105 Tenochtitlan MilitaryRanged: Catapult
+T106 Tenochtitlan MilitaryMelee: Scout
+T107 Tlatelolco Wonder: Writers' Guild
+T107 Tenochtitlan MilitaryMelee: Horseman
+T108 Tlaxcala Building: Workshop
+T108 Teotihuacan MilitaryMelee: Trireme
+T109 Tenochtitlan MilitaryMelee: Horseman
+T109 Tlaxcala MilitaryMelee: Spearman
+T109 Texcoco Building: Shrine
+T111 Teotihuacan MilitaryRanged: Composite Bowman
+T111 Tlaxcala MilitaryMelee: Pikeman
+T111 Tenochtitlan MilitaryMelee: Horseman
+T111 Tenochtitlan MilitaryMelee: Pikeman
+T112 Calixtlahuaca Building: Shrine
+T112 Tlatelolco Building: Shrine
+T114 Tlatelolco Building: Barracks
+T114 Teotihuacan Civilian: Worker
+T114 Tenochtitlan MilitaryMelee: Horseman
+T116 Tlaxcala Building: Walls
+T116 Tenochtitlan Building: Market
+T117 Calixtlahuaca Building: Circus
+T117 Tlatelolco Civilian: Caravan
+T118 Calixtlahuaca Building: Market
+T118 Teotihuacan Building: Market
+T119 Texcoco Building: Market
+T119 Tenochtitlan Civilian: Caravan
+T120 Tenochtitlan Civilian: Caravan
+T121 Tlatelolco Civilian: Caravan
+T122 Tlatelolco Building: Market
+T122 Teotihuacan Civilian: Settler
+T122 Tenochtitlan Building: Mint
+T123 Teotihuacan Building: Circus
+T124 Tlaxcala Civilian: Settler
+T125 Tlaxcala MilitaryMelee: Pikeman
+T125 Teotihuacan Civilian: Work Boat
+T126 Tenochtitlan MilitaryMelee: Horseman
+T127 Calixtlahuaca Civilian: Work Boat
+T127 Tlaxcala MilitaryRanged: Catapult
+T127 Teotihuacan Civilian: Work Boat
+T128 Tlatelolco Building: Granary
+T128 Teotihuacan Building: Colosseum
+T128 Tenochtitlan Building: Barracks
+T131 Tlatelolco Building: Colosseum
+T131 Tenochtitlan Building: Aqueduct
+T132 Teotihuacan MilitaryRanged: Composite Bowman
+T134 Texcoco Building: Monument
+T135 Teotihuacan MilitaryRanged: Composite Bowman
+T135 Calixtlahuaca Building: Library
+T135 Tenochtitlan MilitaryMelee: Knight
+T135 Teotihuacan MilitaryRanged: Composite Bowman
+T136 Tlaxcala MilitaryMelee: Pikeman
+T136 Tlatelolco MilitaryMelee: Longswordsman
+T137 Tlaxcala MilitaryMelee: Pikeman
+T138 Teotihuacan Wonder: Artists' Guild
+T139 Xochicalco Building: Monument
+T139 Texcoco Building: Library
+T140 Tlatelolco MilitaryRanged: Composite Bowman
+T140 Tenochtitlan Building: Amphitheater
+T141 Tlatelolco MilitaryRanged: Composite Bowman
+T143 Calixtlahuaca Building: Circus
+T143 Tenochtitlan Civilian: Worker
+T144 Tlaxcala Building: Shrine
+T144 Tlatelolco Building: Amphitheater
+T144 Teotihuacan MilitaryMelee: Trireme
+T145 Xochicalco Building: Shrine
+T145 Teotihuacan Building: Workshop
+T146 Tenochtitlan MilitaryMelee: Pikeman
+T148 Tlaxcala MilitaryMelee: Pikeman
+T148 Tlatelolco Civilian: Settler
+T149 Calixtlahuaca MilitaryMelee: Trireme
