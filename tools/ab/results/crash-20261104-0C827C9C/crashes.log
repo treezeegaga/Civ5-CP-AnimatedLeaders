@@ -1,0 +1,94 @@
+--Crash details--
+Exception: 0xc000001d (Illegal Instruction)
+Crash class: Deliberate stop: a failed ASSERT/PRECONDITION ended the game (see CvAssert.log for the failed check)
+Location (in file): CvGameCore_Expansion2.dll+0x0072697b
+Location (live memory): 0x5c98757b+0x0072757b
+Time: 21:20:31 02/11/2026
+Minidump: CvMiniDump_20261102_212031_Tag_2d949f8_Release.dmp
+OS Info: Windows
+Memory markers
+minAddress / maxAddress / maxMemory(k)
+0x00010000 / 0xFFFEFFFF / 4194176
+committed(k) / reserved(k) / free(k)
+Sub2G: 1808748 / 262616 / 25724
+Total: 2051276 / 314880 / 1828020
+Largest free block: base / size(k)
+Sub2G: 0x28910000 / 1024
+Total: 0x90000000 / 1787712
+DLL-Version: No-Tag 2d949f8 Clean
+Configuration: RELEASE
+Installation directory and .exe: C:\Program Files (x86)\Steam\steamapps\common\Sid Meier's Civilization V\CivilizationV.exe
+
+Stack (return-address candidates, module+RVA, innermost first):
+  CvGameCore_Expansion2.dll+0x007a8ce8
+  CvGameCore_Expansion2.dll+0x007cb86d
+  CvGameCore_Expansion2.dll+0x007e53b7
+  CvGameCore_Expansion2.dll+0x007f8e46
+  CvGameCore_Expansion2.dll+0x00654cf3
+  CvGameCore_Expansion2.dll+0x00818f44
+  CvGameCore_Expansion2.dll+0x00565bce
+  CivilizationV.exe+0x0025ef1c
+  ntdll.dll+0x000924e6
+  ntdll.dll+0x0003db49
+  ntdll.dll+0x00040737
+  CvGameCore_Expansion2.dll+0x00150986
+  CvGameCore_Expansion2.dll+0x00905a2a
+  CvGameCore_Expansion2.dll+0x00628610
+  CvGameCore_Expansion2.dll+0x006288ad
+  ntdll.dll+0x00040737
+  CvGameCore_Expansion2.dll+0x004f13c1
+  ntdll.dll+0x00093b5e
+  ntdll.dll+0x00040ee2
+  CvGameCore_Expansion2.dll+0x007b131c
+  CvGameCore_Expansion2.dll+0x005fec6d
+  CvGameCore_Expansion2.dll+0x007c2481
+  CvGameCore_Expansion2.dll+0x007c292a
+  ntdll.dll+0x0003d0fa
+
+--Crash details--
+Exception: 0xc0000005 (Access Violation)
+Crash class: Access violation: read of 0xad3188f0
+Location (in file): CivilizationV.exe+0x00032c3d
+Location (live memory): 0x0040383d+0x0003383d
+Time: 14:01:39 04/11/2026
+Minidump: CvMiniDump_20261104_140139_Tag_1c3ab74_Release.dmp
+OS Info: Windows
+Memory markers
+minAddress / maxAddress / maxMemory(k)
+0x00010000 / 0xFFFEFFFF / 4194176
+committed(k) / reserved(k) / free(k)
+Sub2G: 1807644 / 264008 / 25436
+Total: 2007452 / 338700 / 1848024
+Largest free block: base / size(k)
+Sub2G: 0x00314000 / 752
+Total: 0x8EB70000 / 1812608
+DLL-Version: No-Tag 1c3ab74 Clean
+Configuration: RELEASE
+Installation directory and .exe: C:\Program Files (x86)\Steam\steamapps\common\Sid Meier's Civilization V\CivilizationV.exe
+
+Stack (return-address candidates, module+RVA, innermost first):
+  CivilizationV.exe+0x002d9471
+  lua51_Win32.dll+0x0001b10c
+  lua51_Win32.dll+0x0001b10c
+  lua51_Win32.dll+0x0001d389
+  lua51_Win32.dll+0x0001d389
+  lua51_Win32.dll+0x0001b10c
+  lua51_Win32.dll+0x0001b10c
+  lua51_Win32.dll+0x0001b10c
+  lua51_Win32.dll+0x0001d389
+  MSVCR90.dll+0x00084bdc
+  lua51_Win32.dll+0x00001b70
+  lua51_Win32.dll+0x0000153f
+  CivilizationV.exe+0x0049e097
+  lua51_Win32.dll+0x0000168d
+  CivilizationV.exe+0x0049e2ff
+  CivilizationV.exe+0x0049e316
+  CivilizationV.exe+0x003a54c4
+  lua51_Win32.dll+0x0000a9a7
+  lua51_Win32.dll+0x0001f203
+  ntdll.dll+0x00067a4e
+  ntdll.dll+0x00067a92
+  d3d9.dll+0x0004c401
+  ntdll.dll+0x00040ee2
+  ntdll.dll+0x00040ee2
+
