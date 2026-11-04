@@ -1,0 +1,50 @@
+﻿Game 07614B7407614B74F (AIABTest_bullysiege2.csv), last logged turn 150
+b    Arabia       wide      cities 4
+  builds to T80 (capital Mecca; other cities named): T0 Scout* | T4 Warrior* | T9 Settler* | T21 Worker* | T25 Monument* (Medina) | T26 Shrine* | T31 Monument* | T33 Great Library | T38 Water Mill (Medina) | T50 Worker | T51 Worker | T51 Scout | T55 Granary | T59 Settler (Medina) | T62 Water Mill | T67 Archer | T67 Monument* (Damascus) | T69 Catapult | T70 Granary (Medina) | T72 Worker | T73 Granary (Damascus) | T76 Writers' Guild | T78 Settler (Medina)
+  settlers ordered T: 9,59,78,100   found-city ops started T: 21,50,70,100,110   cities founded T: 25,67,81
+  ops aborted: T88 NoTarget, T89 NoTarget, T90 NoTarget, T91 NoTarget, T92 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T105 NoTarget, T105 NoTarget, T106 NoTarget, T106 NoTarget, T107 NoTarget, T107 NoTarget, T108 NoTarget, T108 NoTarget, T109 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T112 NoTarget, T113 NoTarget, T113 NoTarget, T114 NoTarget, T114 NoTarget, T115 NoTarget, T115 NoTarget, T116 NoTarget, T116 NoTarget, T117 NoTarget, T117 NoTarget, T118 NoTarget, T118 NoTarget, T119 NoTarget, T119 NoTarget, T120 NoTarget, T120 NoTarget, T121 NoTarget, T121 NoTarget, T122 NoTarget, T122 NoTarget, T123 NoTarget, T123 NoTarget, T124 NoTarget, T124 NoTarget, T125 NoTarget, T125 NoTarget, T126 NoTarget, T126 NoTarget, T127 NoTarget, T127 NoTarget, T128 NoTarget, T128 NoTarget, T129 NoTarget, T129 NoTarget, T130 NoTarget, T130 NoTarget, T131 NoTarget, T131 NoTarget, T132 NoTarget, T132 NoTarget, T133 NoTarget, T133 NoTarget, T134 NoTarget, T134 NoTarget, T135 NoTarget, T135 NoTarget, T136 NoTarget, T136 NoTarget, T137 NoTarget, T137 NoTarget, T138 NoTarget, T138 NoTarget, T139 NoTarget, T139 NoTarget, T140 NoTarget, T140 NoTarget, T141 NoTarget, T141 NoTarget, T142 NoTarget, T142 NoTarget, T143 NoTarget, T143 NoTarget, T144 NoTarget, T144 NoTarget, T145 NoTarget, T145 NoTarget, T146 NoTarget, T146 NoTarget, T147 NoTarget, T147 NoTarget, T148 NoTarget, T148 NoTarget, T149 NoTarget, T149 NoTarget, T150 NoTarget, T150 NoTarget, T151 NoTarget, T151 NoTarget, T152 NoTarget, T152 NoTarget
+  IDLE SETTLER turns: 2 (first T68)
+  military ops ended (whole game): Success 2, WarStateChange 1
+  settler timeline to T80: T9 settler (book) in Mecca | T21 op started | T25 FOUNDED | T50 op started | T59 settler (AI) in Medina | T67 FOUNDED | T70 op started | T78 settler (AI) in Medina
+  saving gold for a settler: 29 turns (T6-T70)
+b    Carthage     tall      cities 6
+  builds to T80 (capital Carthage; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T19 Settler* | T31 Granary | T39 Worker* | T40 Monument* (Utique) | T41 Settler* | T41 Library* (Utique) | T49 Worker* | T53 Monument* (Hippo Regius) | T54 Granary (Hippo Regius) | T55 Warrior | T55 Worker | T56 Warrior | T57 Warrior | T58 Worker | T58 Warrior | T59 Temple | T61 Work Boat (Utique) | T66 Worker | T69 Work Boat (Utique) | T70 Settler | T76 Warrior | T78 Settler | T80 Lighthouse (Utique) | T80 Work Boat (Utique)
+  settlers ordered T: 19,41,70,78,89,111   found-city ops started T: 31,49,76,84,94   cities founded T: 40,53,82,89,103
+  ops aborted: T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  IDLE SETTLER turns: 5 (first T41)
+  settler timeline to T80: T19 settler (book) in Carthage | T31 op started | T40 FOUNDED | T41 settler (book) in Carthage | T49 op started | T53 FOUNDED | T70 settler (AI) in Carthage | T76 op started | T78 settler (AI) in Carthage
+  saving gold for a settler: 40 turns (T11-T70)
+b    Egypt        tall      cities 6
+  builds to T80 (capital Thebes; other cities named): T0 Scout* | T3 Monument* | T7 Warrior* | T12 Shrine* | T18 Settler* | T29 Granary | T36 Worker* | T37 Monument* (Memphis) | T38 Library* (Memphis) | T38 Great Library | T51 Library* | T58 Worker | T63 Granary (Memphis) | T64 Settler | T72 Worker | T78 Scout (Memphis) | T79 Monument (Heliopolis) | T80 Granary (Heliopolis) | T80 Settler
+  settlers ordered T: 18,64,80,91,128,130,143   found-city ops started T: 29,72,88,100,136,153   cities founded T: 37,79,101,112,139
+  ops aborted: T87 NoTarget
+  IDLE SETTLER turns: 5 (first T64)
+  military ops ended (whole game): NoTarget 2, Success 1
+  settler timeline to T80: T18 settler (book) in Thebes | T29 op started | T37 FOUNDED | T64 settler (AI) in Thebes | T72 op started | T79 FOUNDED | T80 settler (AI) in Thebes
+  saving gold for a settler: 23 turns (T11-T80)
+b    Morocco      tall      cities 4
+  builds to T80 (capital Marrakech; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T18 Settler* | T27 Warrior | T29 Shrine (Rabat) | T30 Warrior | T31 Worker* | T36 Stonehenge | T45 Settler* | T45 Library* (Rabat) | T46 Library* | T50 Monument* (Fes) | T51 Library* (Fes) | T52 Warrior | T53 Spearman | T56 Temple | T64 Worker | T66 Scout (Rabat) | T68 Oracle | T71 Temple (Rabat) | T80 Settler (Fes)
+  settlers ordered T: 18,45,80,82,83,86,90,107   found-city ops started T: 27,47,104   cities founded T: 29,50,109
+  ops aborted: T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  IDLE SETTLER turns: 4 (first T45)
+  military ops ended (whole game): NoTarget 4
+  settler timeline to T80: T18 settler (book) in Marrakech | T27 op started | T29 FOUNDED | T45 settler (book) in Marrakech | T46 BOUGHT in Marrakech. Cost: 370 | T47 op started | T50 FOUNDED | T80 settler (AI) in Fes
+  saving gold for a settler: 35 turns (T5-T80)
+b    Portugal     tall      cities 4
+  builds to T80 (capital Lisbon; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T19 Worker* | T30 Settler* | T39 Stonehenge | T42 Monument* (Porto) | T43 Library* (Porto) | T45 Library* | T51 Work Boat | T55 Work Boat | T59 Settler | T66 Granary | T71 Granary (Braga) | T72 Trireme | T75 Worker (Porto) | T76 Settler
+  settlers ordered T: 30,59,76,96,108   found-city ops started T: 39,66,84,88,106,128   cities founded T: 42,71,94
+  ops aborted: T82 NoTarget, T83 NoTarget, T84 LostPath, T85 NoTarget, T86 NoTarget, T87 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T116 NoTarget, T117 NoTarget, T117 NoTarget, T118 NoTarget, T118 NoTarget, T119 NoTarget, T119 NoTarget, T120 NoTarget, T120 NoTarget, T121 NoTarget, T121 NoTarget, T122 NoTarget, T122 NoTarget, T123 NoTarget, T123 NoTarget, T124 NoTarget, T124 NoTarget, T125 NoTarget, T125 NoTarget, T126 NoTarget, T126 NoTarget, T127 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T129 NoTarget, T130 NoTarget, T130 NoTarget, T131 NoTarget, T131 NoTarget, T132 NoTarget, T132 NoTarget, T133 NoTarget, T133 NoTarget, T134 NoTarget, T134 NoTarget, T140 NoTarget, T140 NoTarget, T141 NoTarget, T141 NoTarget, T142 NoTarget, T142 NoTarget, T143 NoTarget, T143 NoTarget, T144 NoTarget, T144 NoTarget, T145 NoTarget, T145 NoTarget, T146 NoTarget, T146 NoTarget, T147 NoTarget, T147 NoTarget, T148 NoTarget, T148 NoTarget, T149 NoTarget, T149 NoTarget, T151 NoTarget, T151 NoTarget, T152 NoTarget, T152 NoTarget, T153 NoTarget, T153 NoTarget
+  IDLE SETTLER turns: 3 (first T59)
+  military ops ended (whole game): LostPath 6, WarStateChange 1, NoUnits 1
+  settler timeline to T80: T30 settler (book) in Lisbon | T39 op started | T42 FOUNDED | T59 settler (AI) in Lisbon | T66 op started | T71 FOUNDED | T76 settler (AI) in Lisbon
+  saving gold for a settler: 45 turns (T11-T80)
+b    Songhai      tall      cities 5
+  builds to T80 (capital Gao; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T17 Settler* | T27 Worker* | T29 Monument* (Tombouctu) | T30 Stonehenge | T30 Library* (Tombouctu) | T46 Great Library | T51 Library* | T55 Shrine (Tombouctu) | T55 Worker | T56 Worker | T57 Settler | T63 Scout | T65 Monument (Jenne) | T65 Water Mill | T66 Shrine (Jenne) | T68 Worker | T70 Granary (Tombouctu) | T72 Hanging Gardens
+  settlers ordered T: 17,57,81,82,92,93   found-city ops started T: 27,63,85,95   cities founded T: 29,65,96,110
+  IDLE SETTLER turns: 2 (first T57)
+  settler timeline to T80: T17 settler (book) in Gao | T27 op started | T29 FOUNDED | T57 settler (AI) in Gao | T63 op started | T65 FOUNDED
+  saving gold for a settler: 52 turns (T6-T80)
+b    Venice       tall      cities 3
+  builds to T80 (capital Venice; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Worker* | T35 Stonehenge | T45 Library* | T52 National College* | T57 Lighthouse (Buenos Aires) | T57 Worker (Buenos Aires) | T63 Caravan (Buenos Aires) | T64 Caravan | T67 Caravan (Buenos Aires) | T68 Caravan | T73 Caravan (Buenos Aires) | T73 Caravan | T78 Cargo Ship (Buenos Aires) | T78 Caravan
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  military ops ended (whole game): HalfStrength 2, Success 2, NoTarget 1

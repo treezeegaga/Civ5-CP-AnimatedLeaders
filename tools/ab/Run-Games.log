@@ -383,3 +383,71 @@
 2026-11-03 06:43:28  Setup failed; retrying
 2026-11-03 06:43:29  Starting game 1: first game of a pair; Mode = split; Fixes = DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits; Screen = 
 2026-11-03 06:45:02  PC 1 (BOX): runner can't start game 1 of the 5-flag test: 'main menu never showed' twice; the screen shows the Windows lock screen/wallpaper, so Civ can't be clicked. Needs the user to unlock BOX.
+2026-11-03 06:47:55    main menu never showed
+2026-11-03 06:47:55  Setup failed; retrying
+2026-11-03 06:47:55  Three failed starts in a row; giving up
+2026-11-03 06:47:55  Runner finished after 0 games
+2026-11-03 17:28:10 ET  PC 1 (BOX): build ab-095144c installed, logging on; starting bully siege test (-MaxGames 2 -SaveLogs, RoleFixes SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture)
+2026-11-03 17:28:11  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 17:36:09    turn 100 after 7 minutes
+2026-11-03 17:40:12  Game ended: turn 150 (07614B7407614B74)
+2026-11-03 17:40:22    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_07614B7407614B74.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\07614B7407614B74
+2026-11-03 17:40:22    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_07614B7407614B74
+2026-11-03 17:40:22  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 17:41:37    replay matches the first game
+2026-11-03 17:48:17    turn 100 after 7 minutes
+2026-11-03 17:52:21  Game ended: turn 150 (07614B7407614B74F)
+2026-11-03 17:52:29    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_07614B7407614B74F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\07614B7407614B74F
+2026-11-03 17:52:29    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_07614B7407614B74F
+2026-11-03 17:52:29  Runner finished after 2 games
+2026-11-03 17:53:30 ET  PC 1 (BOX): bully siege logging pair done on ab-095144c (07614B74, replay matches; Songhai aggressor, 0 captured / 0 lost, 5 cities, strength 13.5% both games); logging off, starting -MaxGames 20
+2026-11-03 17:53:43  Starting game 1: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 17:59:55    turn 100 after 5 minutes
+2026-11-03 18:03:19  Game ended: turn 150 (0778A4F20778A4F2)
+2026-11-03 18:03:19  Starting game 2: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 18:04:32    replay matches the first game
+2026-11-03 18:09:53    turn 100 after 5 minutes
+2026-11-03 18:12:57  Game ended: turn 150 (0778A4F20778A4F2F)
+2026-11-03 18:12:57  Starting game 3: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 18:19:30    turn 100 after 5 minutes
+2026-11-03 18:22:53  Game ended: turn 150 (078A3F5C078A3F5C)
+2026-11-03 18:22:53  Starting game 4: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 18:24:07    replay matches the first game
+2026-11-03 18:29:28    turn 100 after 5 minutes
+2026-11-03 18:32:52  Game ended: turn 150 (078A3F5C078A3F5CF)
+2026-11-03 18:32:52  Starting game 5: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 18:39:27    turn 100 after 5 minutes
+2026-11-03 18:43:11  Game ended: turn 150 (079C7E72079C7E72)
+2026-11-03 18:43:11  Starting game 6: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 18:44:25    replay matches the first game
+2026-11-03 18:49:46    turn 100 after 5 minutes
+2026-11-03 18:53:30  Game ended: turn 150 (079C7E72079C7E72F)
+2026-11-03 18:53:30  Starting game 7: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 19:00:04    turn 100 after 5 minutes
+2026-11-03 19:03:28  Game ended: turn 150 (07AF5F6E07AF5F6E)
+2026-11-03 19:03:28  Starting game 8: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 19:04:40    replay matches the first game
+2026-11-03 19:10:02    turn 100 after 5 minutes
+2026-11-03 19:13:26  Game ended: turn 150 (07AF5F6E07AF5F6EF)
+2026-11-03 19:13:26  Starting game 9: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 19:20:02    turn 100 after 5 minutes
+2026-11-03 19:23:26  Game ended: turn 150 (07C1A42407C1A424)
+2026-11-03 19:23:27  Starting game 10: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 19:24:38    replay matches the first game
+2026-11-03 19:30:01    turn 100 after 5 minutes
+2026-11-03 19:33:25  Game ended: turn 150 (07C1A42407C1A424F)
+2026-11-03 19:33:25  Starting game 11: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 19:33:57  Runner finished after 0 games
+2026-11-03 19:40:23    turn 100 after 6 minutes
+2026-11-03 19:44:07  Game ended: turn 150 (07D3EC4407D3EC44)
+2026-11-03 19:44:07  Starting game 12: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 19:45:24    replay matches the first game
+2026-11-03 19:51:07    turn 100 after 6 minutes
+2026-11-03 19:54:52  Game ended: turn 150 (07D3EC4407D3EC44F)
+2026-11-03 19:54:52  Starting game 13: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 20:01:27    turn 100 after 5 minutes
+2026-11-03 20:04:52  Game ended: turn 150 (07E78F3C07E78F3C)
+2026-11-03 20:04:52  Starting game 14: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture
+2026-11-03 20:06:03    replay matches the first game
+2026-11-03 20:11:26    turn 100 after 5 minutes
+2026-11-03 20:13:41 ET  PC 1 (BOX): bully siege stopped at the lead's request after 7 pairs; the partial pair 07E78F3C (game 15-16) dropped from the CSV; STOP not left in place

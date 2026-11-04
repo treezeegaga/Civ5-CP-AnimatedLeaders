@@ -1243,6 +1243,37 @@ in these logs points to a bug.
 **Before deciding on a religion session:** add `ReligionLog.csv` and `PlayerBeliefReligionLog.csv` to `-SaveLogs`,
 and a faith-stored column to the results CSV, then read one logged pair. That costs no extra games.
 
+### Why warmongers don't build their army (Economy for War, 2026-11-03, read-only)
+
+**Case:** `logs_0714EFCB0714EFCB`, Songhai's `OP_CITY_ATTACK_LAND_SNEAKY` 1713. It started at T80 with 5 of 9 slots
+filled and ended T101 (`DiploOpinionChange`). It logged "SiegeArmy: waiting for more units, expected damage 16 a
+turn, Athens needs 86" and "Found 0 potential units to recruit" every turn.
+- **What Songhai's cities built at T80-T101:** settlers, workers, caravans, a market, a library, Temple of Artemis
+  and **one warrior**.
+- **No unit was ever requested:** in those 21 turns no city's production list held an "Operation unit" or "Army
+  unit" entry (`CityStrategyAIProductionLog.csv`).
+
+**Cause: nothing asks the cities for the missing units.** A city builds for an army through two entries in
+`CvCityStrategyAI::ChooseProduction`:
+1. **Operation unit** (weight 5000 + 250 × offense flavour): from `CvCity::GetUnitForOperation`, which reads the
+   operation's `m_viListOfUnitsWeStillNeedToBuild`. `CvAIOperation::GrabUnitsFromTheReserves` rebuilds that list each
+   recruiting turn with free slots **only if the slot is required** (`m_requiredSlot`).
+2. **Army unit** (750 + 250 × offense): from `CvMilitaryAI::GetUnitTypeForArmy`, which uses
+   `GetOpenSlots(true)`, i.e. **required slots only**.
+
+With its required slots filled, the army has only optional slots free, so neither entry fires. Both channels would win
+easily if asked (5000+ against buildings worth hundreds). But War's `SiegeArmy` wait wants more damage while the
+production side sees nothing missing, so the army waits for units no city is told to build. Outside war, a
+warmonger's normal production has no other push toward units: the war penalty on buildings and the tiny-army rule
+only apply at war (`CvBuildingProductionAI`, B's change keeps peacetime to 1 unit per city).
+
+**For War to decide (the operation code is War's):** while an operation is held by the siege wait (not enough
+expected damage), put its free **optional** slots, or extra siege/ranged slots, into
+`m_viListOfUnitsWeStillNeedToBuild`, so the "Operation unit" entry asks the cities for them. Production needs no
+change for that: the 5000 weight already beats every building. If War prefers the production side, the alternative
+is `GetUnitTypeForArmy` with `GetOpenSlots(false)` for armies waiting on the siege check (`CvMilitaryAI`, also War's).
+Economy can measure it afterwards from the same log (operation-unit entries and military units built during the wait).
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
@@ -2298,6 +2329,59 @@ flipped game is the same game: all 120 result rows of pair `02C5BBF9` are identi
 no noise. That's good news for every real test: within a pair, everything that differs comes from the flags
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
+
+### Evening results: DeclareAtBorder does nothing alone; the bully aggressor barely fights (lead, 2026-11-03 8:15pm ET)
+
+- **`DeclareAtBorder` alone** (`ab-819be70`, PC 2, `AIABTest_declare@TREEDESKTOP.csv`, 7 pairs; pair `080C740E` left out
+  after a mountain-city dialog stall): c 50.04%, gain +0.04, **gainer failed**, no-worse passed. Pair spread 0.09: the two
+  games of a pair are almost identical, so the flag almost never acts. Its screening rank (+0.86) was luck. It stays in
+  C8 (harmless: no-worse passed) but contributes nothing.
+- **Bully siege on the fixed SiegeArmy** (`ab-095144c`, PC 1, `AIABTest_bullysiege2.csv`, 6 pairs): **0 captures in all
+  12 games**; the aggressor's share of cities with the package minus without +0.5 ± 0.4; aggressors (Songhai, Inca,
+  Denmark, Japan) at war with 0-1 civs in most games. Stopped.
+- **The blocker is war itself:** even the most aggressive personality starts few wars by T150 at King. War and
+  Diplomacy are asked why (approach scoring, AFRAID, war-target filters, peace lengths). No war flag can show
+  anything until civs fight.
+- **Mountain-city dialog:** CP looks up `IMPROVEMENT_MOUNTAIN_CITY` (Vox Populi only) when a city is founded on a
+  mountain; with CP alone that raised an assertion dialog that stalled an unattended game. Fixed for play-neutral
+  builds from `claude/ab-c1` `0cd5a5c`.
+- **Now:** PC 2 plays C8 (`ab-0cd5a5c`, `-Fixes bundle`) against B; PC 1 plays `SettlersBeforeWonders` alone on the same
+  build (`AIABTest_sbw.csv`).
+
+### C8: the new C bundle (lead, 2026-11-03 5:05pm ET)
+
+`claude/ab-c1` is now `9f77273`: all three topic branches merged (`ai/economy` `63c7b7b`, `ai/diplomacy` `6e83115`, `ai/war`
+`1c30fb0`; 48 flags, enum and table match, no doubled code), results file `AIABTest_c8.csv`. **The bundle is the 12 flags
+that passed:** `DeclareAtBorder, SettlersBeforeWonders, PolicyPrereqDepth, LosingWarBuildings, DealExploits` (top five,
+gainer passed), `DiploBugs, UpgradeSaveCancel, LuxuryAsk, DiploPolicyValue, EasyTarget, CultureRivalValue` (bug-fix
+bundle, no-worse passed) and `NoForeignMissionaries` (the user's ruling). The 13 c7c ideas leave the bundle: they never
+passed. Everything else stays off. `ab-c-latest` becomes C8 once CI passes.
+
+Test: C8 (`-Fixes bundle`) against B, paired, gainer SPRT, on whichever PC is free. Expected about +1.5 points (the top
+five's +1.35 plus whatever the extra fixes add). Topic branches now rebase onto `9f77273`.
+
+### Bug-fix bundle: PASSED the no-worse test (lead, 2026-11-03 3:50pm ET)
+
+The 8 screened level-2 fixes together in group c (`PolicyPrereqDepth, LosingWarBuildings, DiploBugs, UpgradeSaveCancel,
+LuxuryAsk, DiploPolicyValue, EasyTarget, CultureRivalValue`) against B, `ab-819be70`, PC 2,
+`AIABTest_bugfix8@TREEDESKTOP.csv`. **5 pairs: c 50.21%, gain +0.21 points; no-worse SPRT passed** (LLR +4.22), gainer
+failed (-3.49), as expected for bug fixes. Replays matched, no crash. By the level-2 rule all 8 merge into the C bundle.
+Next on PC 2: `DeclareAtBorder` alone (gainer SPRT), `AIABTest_declare@TREEDESKTOP.csv`.
+
+### Queue for tonight (lead, 2026-11-03 1:45pm ET)
+
+- **PC 2 (now):** the bug-fix bundle, a no-worse test of the 8 screened level-2 fixes, on `ab-819be70`, results
+  `AIABTest_bugfix8@TREEDESKTOP.csv`. If it passes, all 8 merge.
+- **PC 1 (once unlocked, about 7:50pm ET):** the bully siege test again, on the fixed SiegeArmy. Economy found the
+  waiting armies never asked for their optional slots, so no city built for them; War's fix `1c30fb0` makes cities
+  build them. Build `claude/ab-siege` `095144c` (release `ab-095144c`; results `AIABTest_bullysiege2.csv`). SiegeBar is
+  dropped:
+  ```
+  powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Mode bully -Fixes none -RoleFixes "SiegeArmy, ArmyHandoff, SiegeStay, SiegePosture" -MaxGames 2 -SaveLogs
+  ```
+  then logging off, `-MaxGames 20`. Before starting: Windows set never to lock (Settings, Accounts, Sign-in options).
+- **Then:** single-flag gainer tests of the top-five's level-3 ideas (`DeclareAtBorder`, `SettlersBeforeWonders`,
+  `DealExploits`), and the new C bundle.
 
 ### The top five together: PASSED (lead, 2026-11-03 12:40pm ET)
 
