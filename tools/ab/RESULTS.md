@@ -1924,6 +1924,91 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the attack operations in 0C458987 (16-flag role) and 0C22F161 (Nov 4, about 1:23pm ET)
+The lead asked for a trace of when each attack formed, how big it was, where it mustered, and what became of it.
+
+**0C458987: the aggressor is Denmark, not Rome.**
+- The roles are group b: Denmark (wide, the bully) and Korea (tall). Rome is a c civ; it and the Inca declared on
+  India at T139 with no attack operation of their own (Rome logged none all game). So Rome's capture attempts on
+  Mumbai are not the bully's war.
+
+**Denmark against Korea (Seoul, 62:25, 250 HP with walls):**
+
+| Operation | Formed | Muster | Units | What became of it |
+|---|---|---|---|---|
+| 1585, sneak attack | T69 | (57:31), 7 tiles out | 6: swordsman, spearman, warrior, 2 catapults, archer | Below the bar for 2 turns (40/60), then gathered. Marched at T77, **stalled at (60:28) T85–T92** (38%, "No progress"), discovered at T92 with units 3–7 tiles out. Declared T93 |
+| 2125 | T99 | (60:29), 4 tiles out | 4 | SiegeRoll; ended HalfStrength at T101 |
+| 2201 | T103 | (60:29) | 5 | SiegeRoll; deployed T107 |
+| 2432 | T115 | (60:29) | 5 | SiegeRoll; deployed T120 |
+| 2710 | T127 | (60:29) | 6 | SiegeRoll; deployed T129 |
+
+- **At peace the army couldn't go further than the border.** DeclareAtBorder then waited 7 turns for "discovered by
+  enemy". War came at T93 with the army strung out over 3–7 tiles.
+- **No capture attempt at Seoul all war.**
+  - T93–T107: the zone was STEAMROLL or EXPLOIT_FLANKS, yet no "attempting capture" or "too early" lines appear.
+    No units were in striking distance.
+  - The tactical simulations in those turns ran with 1–3 units near Denmark's own cities (54:32), (53:31), against
+    barbarians: 7 "remove barbarian camp" moves, and 46 barbarian deaths in T93–T129.
+  - Later: "too early, expected 0–27 a turn" at T108, T121, T125–T130. Busan "enemy dominated" every turn.
+- **SiegeRoll works as coded but rolls small waves.** It released 4–6 units every 4–12 turns from the same muster
+  point, and each wave reached the walls alone. It cures the 20-turn lock of 0C04B641; here it replaced one big
+  push with a drip.
+
+**0C22F161 (the Huns):** traced in the entry below.
+- One attack, formed at T72, 4 tiles out, siege units only.
+- 30 turns in recruiting, because every warrior built for it was gifted away for bankruptcy.
+- Declared at T105; the siege units were gifted at T106–T110.
+
+**The pattern: late, small, or not at all. The causes differ:**
+1. **Late:** the army waits at the border (sneak attack at peace) for "discovered", or waits in recruiting for slots
+   (0C22F161, 0C04B641).
+2. **Small:** after the first wave, SiegeRoll sends 4–6-unit waves one at a time (0C458987). Barbarians and home
+   defence draw the hand-off units away.
+3. **Not at all:** bankruptcy gifts the army (0C22F161).
+
+**Proposals (each needs a flag slot; the lead's call):**
+- **DeclareWhenStalled:** a sneak attack that makes no progress for 2 turns while next to the target's territory
+  declares then, instead of waiting to be seen.
+- **SiegeRoll concentration:** after a failed or idle wave, the next one gathers at least as many units as the
+  first army (instead of 3).
+- **KeepSiegeTrain** (from 0C22F161).
+
+### War: failed bully war 0C22F161, the Huns, bankrupt (Nov 4, about 12:55pm ET)
+PC 2, greedy opponents, ab-9e9fc9d, 14-flag role. The Huns declared on France at T105. The game logged one
+capture attempt (Paris, T105, 200 → 200, 0 of 2 units used) and took no city. **The cause is upstream of the siege:
+the Huns were bankrupt from T71, and CP's bankruptcy rule gave the army away.**
+- **The attack (sneak attack 1638):**
+  - It formed at T72 at Pontianak (58:31), 4 tiles from the target (54:31). It had a battering ram, 3 catapults,
+    an archer, and **all three required front-line slots open**.
+  - It stayed in recruiting for **30 turns** (T72–T102), "Found 0 potential units" every turn. No "SiegeArmy:
+    waiting" line appears; the required slots fail first.
+- **Why the slots never filled:**
+  - From T82 Pontianak, Attila's Court and Ahmedabad built a warrior for the operation every 2 turns
+    ("Operation unit, Warrior").
+  - **Each was gifted to a city-state a turn or two later**, "Gifting Warrior ... b/c bankrupt" (MilitaryAILog).
+    That's 37 warriors gifted over the game; treasury 0, and the production log's GPT ran from −36 at T80 to
+    −130 at T130.
+  - The rule is `CvMilitaryAI::DisbandObsoleteUnits`. In deficit it gifts or scraps the cheapest "obsolete" unit not
+    in an army (`FindUnitToScrap`). A warrior whose upgrade needs iron the civ lacks counts as obsolete, so every new
+    warrior was first in line.
+- **The war:**
+  - Two warriors finally joined at T101–T102. The army marched at T103, was "discovered" at T104 (distance 3–5),
+    and the Huns declared at T105.
+  - The one capture attempt ran no simulation: `ExecuteSpotterMove` gives up when the city tile isn't visible.
+  - **After the hand-off (no units in armies) the same rule gave away the siege train mid-war:** an archer
+    (T106), both catapults (T107, T108), the battering ram (T110). CP only skips this rule at war when all wars
+    are being lost.
+  - From T106: "too early for attacking Paris, expected 0".
+- **Upstream of War:** a warmonger at war while bankrupt. `GetNewAIConquestTarget` checks `IsWarWouldBankruptUs`,
+  but the Huns were already at 0 gold. This is for Economy (and the lead).
+- **Proposed War fix (needs a flag slot; masks are full, so the lead's call):** `KeepSiegeTrain`, in
+  `CvMilitaryAI::FindUnitToScrap`. While the civ has a city attack recruiting or is at war with a major, units that
+  can fill an open slot of a recruiting city attack, and siege units, aren't gifted or scrapped for deficit. If
+  nothing else qualifies, nothing is scrapped that turn; the deficit then hits buildings and science, as in CP
+  when no unit qualifies.
+- **SiegeRoll wouldn't have helped:** it needs a war already declared, and the slots were empty for lack of units,
+  not a long march.
+
 ### War: the first logged capture, 0C04B641, the Inca take Persepolis (Nov 4, about 12:17pm ET)
 PC 2, greedy opponents, ab-9e9fc9d, 14-flag role. The Inca declared on Persia at T71 and took Persepolis at T75.
 - **The army:** sneak attack 1572 at T67: spearman, 2 warriors, **3 catapults**, a composite bowman. Three earlier
@@ -1991,7 +2076,7 @@ game.
 - **δ:** CitiesCaptured by the aggressor +1 per pair on average.
 - **Flag:** `SiegeRoll`, off in the bundle. **This makes 64 flags, the cap**; anything after it needs the wider mask
   or a retirement. Role: add to the bully aggressor's flags, with SiegeExposure.
-- **Status:** hypothesis, coded: `ai/war` `a8a186c` (CI pending). One block in the recruiting stage of `CvAIOperation::CheckTransitionToNextStage`; log line "SiegeRoll: target N tiles from the muster point, moving with M units".
+- **Status:** hypothesis, coded: `ai/war` `a8a186c` (built, CI run 155; merged in `claude/ab-c1` `1c3ab74`, built, run 158). One block in the recruiting stage of `CvAIOperation::CheckTransitionToNextStage`; log line "SiegeRoll: target N tiles from the muster point, moving with M units".
 
 ### War: failed bully war 0BE6755D, Songhai against Assyria (Nov 4, about 11:38am ET)
 PC 2, greedy opponents, ab-2db51dd, 14-flag role. Aggressor Songhai. It ended with 3 cities and took none. A
