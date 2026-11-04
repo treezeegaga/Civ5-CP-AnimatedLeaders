@@ -2003,7 +2003,7 @@ the cut and AggressiveArmy's 3-per-city floor still push units, with TimingBuild
 **To confirm** with the build history (results/builds_0C3C8913_aztec.txt): workers and work boats chosen while at
 peace with no window, and buildings losing.
 
-Coded: `ai/war` `f863b01` (built, CI run 189); merged in `claude/ab-c1` `eb4129d`. The replay's production log (on 96f008e) shows the pattern: up to T80 the new choices were mostly settlers, caravans, workers and work boats.
+Coded: `ai/war` `f863b01` (built, CI run 189); merged in `claude/ab-c1` `eb4129d`. The replay's production log (on 96f008e) shows the pattern: up to T80 the new choices were mostly settlers, caravans, workers and work boats. PC 1's build history (results/builds_0C3C8913_aztec.txt) confirms it. By T100 the Aztecs had chosen 10 settlers, 7 workers, 4 work boats, 4 caravans, 15 buildings and 3 wonders against **4 military units in all**. Military only came after Germany's war (34 by T150). The settlers are the expansion book's and Economy's; the workers and work boats fit the building cut with the unit cap.
 
 ### War: 0CEF854E (PC 2, ab-f21a8f6, 25-flag role), Mongolia: windows without a war; sneak attacks need every unit up front (Nov 4, about 4:49pm ET)
 - **The windows:**
