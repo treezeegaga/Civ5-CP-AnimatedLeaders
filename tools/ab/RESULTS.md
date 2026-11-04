@@ -2933,7 +2933,8 @@ conqueror."
   pillage and trade-route plunder as goals, razing captured cities it can't hold, and peace once the loot is taken. It
   also needs its own measures, since it fails a "cities captured" test while doing its job: tiles pillaged, gold
   plundered, cities razed, and the victim's economy.
-- **Build:** fork `ai/personality` `0672835` (on `claude/ab-c1` `9e9fc9d`). **Status:** coded, CI pending.
+- **Build:** fork `ai/personality` `0672835` (on `claude/ab-c1` `9e9fc9d`). **Status:** compiles (CI run 154 passed, 11:48am
+  ET); ready to merge.
 
 ### Strategy profile picks in the first logged games (Personality, 2026-11-04 11:30am ET)
 `StrategyProfile_Log.csv` from `logs_0A92244F`, `logs_0AFFA02F`, `logs_0BC677BF` (24 civs; played on `ab-ed449fd`, before
