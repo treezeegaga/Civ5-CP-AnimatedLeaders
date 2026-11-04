@@ -1472,6 +1472,70 @@ No fix until the build history says which.
 - **Measure:** strength share at T150; workers and boats built per city (production log).
 - **δ:** 2 points, no-worse. Status: coded, not built.
 
+### Why the Aztecs were broke during their window (Economy, for the lead and War, Nov 4, 5:30pm ET)
+
+The lead's question: in replay 0C3C8913 (`f73177c`, bully RoleFixes with `TrueGoldRate, WarChest, WarEconomy`), the
+Aztecs' TimingBuildup window against Austria (opened T81, closed T109) had 82 unit choices refused as "tooexpensive"
+(CP's upkeep guard: no combat unit while under 9 turns to bankruptcy). Why was an aggressor with about 4 units broke?
+
+**The gold over time.** There's no treasury log, but two homeland-log lines print the treasury every turn ("EXPANSION
+SETTLER - Saving: X", "Need gold for ... upgrade, GOLD: Available = X"):
+
+| Turns | Gold | Net per turn |
+|---|---|---|
+| T6-T30 (1 city) | 45 → 160 | +1 to +3 (two jumps of +32) |
+| T64-T73 | 54 → 31 | -3 to -5 |
+| T82-T86 (window opens T81) | 37 → 0 | about -9 |
+| T86-T95 | 0 | negative, held at 0 |
+| T96-T102 | 3 → 46 | +4 to +11 (caravan routes from T88) |
+| T119-T124 | 0 | |
+| T125-T150 | sawtooth 0-68 | about +20, spent every few turns |
+
+All the refusals fall on turns when gold was at or near 0 (T83-T94, T116-T124). Buildings were refused too, from
+T40 on (Granary, Floating Gardens, Barracks, Library). **The guard was right:** with `TrueGoldRate` on, the rate it
+reads is the real net income, and that was below one unit's upkeep. The Aztec economy was too weak all game.
+
+**The cause: no Currency until T103.** The Market and Mint were first offered at T103. Our other civs in this game
+had the Market at T55 (Austria), T58 (Portugal) and T59 (Siam). The warmonger's research is forced, step by step:
+- the opening book: Pottery, The Wheel, Mathematics, Bronze Working, Archery, Writing;
+- then War's TimingBuildup techs: Mathematics, Bronze Working, Iron Working, Horseback Riding.
+
+Neither list has Currency, so the Aztecs had no gold building for 100 turns.
+
+What they built instead, while losing gold:
+- Stable (T80), four Caravansaries (T86-T94), Circus (T90), Colosseum (T95): one gold upkeep each.
+- Five workers (T79-T93): units, so upkeep.
+
+Markets started only at T116-T122, 13 turns after Currency. In the window, unit weights come first (the Market
+fell from 6209 before the strategy pass to 513-900 after it).
+
+**WarChest saved nothing:**
+- It saves only once a target is committed (the PLANNED phase). No target passed the checks before T81, and that
+  same turn opened the window, so there were no planned turns.
+- In the window, its target is capped at 15 turns of net income, which was negative. That leaves the floor of 2
+  catapults' price, and the treasury was empty.
+- It bought nothing (no "WAR CHEST - Bought" lines).
+- Its +500 for gold buildings in the window had nothing to act on: no Market yet.
+
+Saving can't fix a negative income. The fix is income, before the window.
+
+**`TrueGoldRate`:** it did its job. Without it, CP adds the 10-turn average of positive gold changes (caravan
+arrivals, the two +32 jumps), and the guard would let units through into a real deficit. CP's deficit rule would
+then disband them.
+
+### WarGold: a warmonger short of gold researches Currency and builds Markets (Economy, patch 0021)
+- **Change** (new flag `WarGold`, off in the bundle; for candidate warmongers, i.e. what `IsCandidateWarmonger` covers):
+  - While its net gold per turn is below its number of cities + 2, after the opening book and before War's
+    TimingBuildup techs, it researches toward Currency.
+  - In the same state, at peace or with the attack only planned (not in the window), gold buildings (Market,
+    Mint, ...) get +500 production weight, the same bonus WarChest gives in the window.
+- **Hypothesis:** the aggressor reaches its window with positive income and some gold. The army can be built (no
+  "tooexpensive" refusals) and WarChest has something to save. In 0C3C8913 that means Markets around T60 instead of
+  T116.
+- **Measure:** strength share at T150 (no-worse, δ 2). Mechanism, from logs: the aggressor's turn of Currency, its
+  first Market, gold at the window's start (homeland log), and "tooexpensive" refusals in the window (production log).
+- **Status:** coded, patch 0021 on `claude/ab-c1` (`ai/economy` `0cb85ae`), not built.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute

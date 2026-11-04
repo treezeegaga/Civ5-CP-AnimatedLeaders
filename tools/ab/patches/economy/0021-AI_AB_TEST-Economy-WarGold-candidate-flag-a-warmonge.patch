@@ -1,0 +1,122 @@
+From dc863270b3862897a26c52c404899c2abf111569 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Wed, 4 Nov 2026 22:30:08 +0000
+Subject: [PATCH] AI_AB_TEST Economy: WarGold candidate flag (a warmonger short
+ of gold researches Currency and builds gold buildings before its window)
+
+Replay 0C3C8913: the warmonger's forced research (opening book, then
+TimingBuildup's techs) has no Currency, so the Aztecs got their Market at
+T103 (our other civs T55-T59). They sat at 0 gold through their window and
+CP's upkeep guard refused 82 units. While net gold per turn is below
+cities + 2 and no war with a major is under way, after the opening book:
+research toward Currency (before TimingBuildup's techs), and +500 for gold
+buildings outside the window. Off in the bundle. Written 5:35pm ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuildingProductionAI.cpp                |  9 +++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 20 +++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  3 +++
+ CvGameCoreDLL_Expansion2/CvTechAI.cpp         |  6 ++++++
+ 4 files changed, 38 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index 64de2a7..b55dc61 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -258,6 +258,15 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 		(pkBuildingInfo->GetYieldChange(YIELD_GOLD) > 0 || pkBuildingInfo->GetYieldModifier(YIELD_GOLD) > 0))
+ 		iBonus += 500;
+ 
++	// AI_AB_TEST candidate (WarGold): a warmonger short of gold builds its gold buildings before the window opens (in the
++	// window, WarChest's bonus above takes over), so the army it will build can be paid for
++	if (kPlayer.IsWarGoldShort() && (pkBuildingInfo->GetYieldChange(YIELD_GOLD) > 0 || pkBuildingInfo->GetYieldModifier(YIELD_GOLD) > 0))
++	{
++		const CvMilitaryAI::TimingBuildupPhase eGoldPhase = kPlayer.GetMilitaryAI()->GetTimingBuildupPhase();
++		if (eGoldPhase != CvMilitaryAI::TIMING_BUILDUP_WINDOW && eGoldPhase != CvMilitaryAI::TIMING_BUILDUP_ATTACK)
++			iBonus += 500;
++	}
++
+ 	// AI_AB_TEST candidate (WarEconomy, the user's design): while a timing attack is planned or building up, the cities
+ 	// nearest the target (within 3 tiles of our nearest city's distance) get ready to switch to war fast: buildings that
+ 	// raise production or give units experience (forge, workshop, barracks, armory) come first
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index f84b8ab..9a27945 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33420,6 +33420,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"GreedyTall", false},
+ 	{"WondersForVictory", false},
+ 	{"LeanBuilders", false},
++	{"WarGold", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+@@ -34418,6 +34419,25 @@ TechTypes CvPlayer::GetCandidateGrowthTech() const
+ 	return GetOpeningBookTechStep(*this, (TechTypes)GC.getInfoTypeForString("TECH_ENGINEERING", true), 0);
+ }
+ 
++/// AI_AB_TEST candidate (WarGold, Economy): a warmonger whose net gold per turn is below its cities + 2, at peace with
++/// the majors. Its forced research (the opening book, then TimingBuildup's techs) has no Currency: in replay 0C3C8913
++/// the Aztecs got their Market at T103 (our other civs T55-T59), were at 0 gold through their window, and CP's upkeep
++/// guard refused 82 units.
++bool CvPlayer::IsWarGoldShort() const
++{
++	if (!MOD_AI_AB_TEST || !IsCandidateWarmonger(FIX_WAR_GOLD) || IsAtWarAnyMajor())
++		return false;
++	return GetTreasury()->CalculateBaseNetGold() < getNumCities() + 2;
++}
++
++/// AI_AB_TEST candidate (WarGold, Economy): after the opening book, a warmonger short of gold researches toward Currency
++TechTypes CvPlayer::GetWarGoldTech() const
++{
++	if (IsOpeningBookActive() || !IsWarGoldShort())
++		return NO_TECH;
++	return GetOpeningBookTechStep(*this, (TechTypes)GC.getInfoTypeForString("TECH_CURRENCY", true), 0);
++}
++
+ /// AI_AB_TEST (candidate, flag TimingBuildup, War): while a timing attack is planned (or before it), after the opening book,
+ /// research toward the attack's units: catapults (Mathematics), the spearman line (Bronze Working), and Iron Working or
+ /// Horseback Riding when iron or horses lie in our lands (resources the army can then use). Each only once.
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index b7b4fbd..f6377b9 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -246,6 +246,7 @@ enum CandidateFixTypes
+ 							// tech and policies (culture buildings valued x1.5). Off in the bundle
+ 	FIX_WONDERS_FOR_VICTORY,	// Economy (the user's design): a world wonder only if it suits the civ's target victory, or helps any. Off in the bundle
+ 	FIX_LEAN_BUILDERS,		// Economy (the user's call): workers at most 2 per 3 cities; work boats only for this city's own sea tiles, one in training at a time. Off in the bundle
++	FIX_WAR_GOLD,			// Economy: a warmonger short of gold researches Currency and builds gold buildings before its window. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+@@ -1843,6 +1844,8 @@ public:
+ 	TechTypes GetOpeningBookTech() const;
+ 	TechTypes GetCandidateGrowthTech() const;
+ 	TechTypes GetTimingBuildupTech() const; // AI_AB_TEST War, flag TimingBuildup
++	TechTypes GetWarGoldTech() const; // AI_AB_TEST Economy, flag WarGold
++	bool IsWarGoldShort() const; // AI_AB_TEST Economy, flag WarGold
+ 	PolicyBranchTypes GetOpeningBookPolicyBranch() const;
+ 
+ 	bool IsVassalOfSomeone() const;
+diff --git a/CvGameCoreDLL_Expansion2/CvTechAI.cpp b/CvGameCoreDLL_Expansion2/CvTechAI.cpp
+index 9efa7fb..bcbbc69 100644
+--- a/CvGameCoreDLL_Expansion2/CvTechAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvTechAI.cpp
+@@ -177,6 +177,12 @@ TechTypes CvTechAI::ChooseNextTech(CvPlayer *pPlayer, bool bFreeTech)
+ 			LogResearchChoice(eBookTech);
+ 			return eBookTech;
+ 		}
++		eBookTech = pPlayer->GetWarGoldTech(); // AI_AB_TEST Economy, flag WarGold: Currency first when short of gold
++		if (eBookTech != NO_TECH)
++		{
++			LogResearchChoice(eBookTech);
++			return eBookTech;
++		}
+ 		eBookTech = pPlayer->GetTimingBuildupTech(); // AI_AB_TEST War, flag TimingBuildup
+ 		if (eBookTech != NO_TECH)
+ 		{
+-- 
+2.43.0
+
