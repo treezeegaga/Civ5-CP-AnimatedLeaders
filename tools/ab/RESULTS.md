@@ -3311,6 +3311,37 @@ logged pair".
 - **Status:** compiles (CI run 175 passed on `35272f9`, 2026-11-04 3:00pm ET); merged into `claude/ab-c1` (`b06d504`) by
   the lead. In the greedy style set.
 
+### Greedy wide and greedy tall (Personality, 2026-11-04 4:50pm ET)
+- **The user's design** (via the lead, 4:46pm ET; AGENTS.md, "Greedy comes in two kinds"): the trio quick look's top
+  civ usually had the most cities, and our greedy civ (always tall) was never on top. Tall isn't the best answer to civs
+  that never attack; wide is. Both kinds are non-violent and greedy:
+  - **wide:** Liberty, expands as fast as happiness and growth allow without regard for defence; out of room, it grows
+    its cities vertically and makes trade deals;
+  - **tall:** Tradition, 3-4 cities, everything into non-military interests, rushing the tech and policy trees.
+- **Hypothesis:** while nobody attacks, greedy wide out-grows greedy tall (cities, population, strength share at T150);
+  once attacks take cities, aggressors punish wide more.
+- **Which kind a leader plays** (in the strategy profile, `eGreedyKind`; logged in StrategyProfile_Log.csv):
+  1. trait tags: expansionist (E) is wide; small-empire (S) or science (N) is tall;
+  2. otherwise the expansion flavour against the larger of growth and science: higher is wide, lower is tall;
+  3. a tie goes by the profile's expansion style (wide or conquest is wide, tall or medium is tall).
+- **Two flags**, each acting only for a leader of its kind, so a style set can list both and every greedy civ plays its
+  own kind:
+  - `GreedyWide` (`FIX_GREEDY_WIDE`): the wide opening book (Liberty, settler after settler); after the book, early
+    expansion stays on while there's a good site and the empire isn't unhappy, whatever the neighbours (CP stops at a
+    stronger neighbour or a far site). Defence comes from the greedy flags it runs with. Out of room
+    (`IsBoxedInForSettling`): growth buildings (food, and happiness so the cities can keep growing) valued x2.
+    Trade deals: asked of Diplomacy (through the lead); not in this flag.
+  - `GreedyTall` (`FIX_GREEDY_TALL`): the tall opening book (Tradition; with `GreedyBook` it runs to the National
+    College); at most 4 cities (no settlers once cities plus settlers reach 4); culture buildings valued x1.5 like
+    `GreedyBuilds` does food and science, for the policy rush.
+- **The trio:** the greedy civ was the most science/culture-minded of the rest, so nearly always a tall kind. Now it's a
+  random one of the non-warmongers left after the aggressor (map seed), so both kinds come up. A new results column,
+  `GreedyKind` (wide or tall, for every AI major civ), says which kind each leader is; the lead adds it to
+  Summarize-Trio.
+- **Measure:** in the trio and matchup tests, the greedy civ's cities, population, techs, policies and strength share at
+  T150 by `GreedyKind`; wide against tall while nobody attacks.
+- **Status:** coding.
+
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
 conquer cities. They are, and the user ruled: "raider is a great flavour archetype. songhai works better as a
