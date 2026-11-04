@@ -2415,6 +2415,19 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Personality session started; OthersBase key for the matchups (lead, 2026-11-03 11:25pm ET)
+
+- **Personality** (session `session_01G2NZj3nJG9wpbrgoAZMmUk`, branch `ai/personality`) starts now at the user's
+  request. Every civ in the bully games keeps a real army (in pair `07614B74` the weakest, Portugal, had 103
+  military against the aggressor Songhai's 191, and three civs outgunned it), so the aggressor only meets the hard
+  matchup. First job: the greedy style as flags (few units, no walls or castles, no defensive upgrades).
+- **`OthersBase` key** (`claude/ab-c1` `1804369`; `Run-Games.ps1 -OthersBase`): flags every AI civ without a role runs,
+  in both games of a pair. It sets the opponents the roles meet, the same in both games, while `RoleFixes` still
+  differ between the two games on the aggressor. The easy-matchup test, once the greedy flags exist:
+  ```
+  powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Mode bully -Fixes none -OthersBase "<greedy flags>" -RoleFixes "TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff" -MaxGames 20
+  ```
+
 ### The bully goals wait for an attacker that conquers; defence columns added (lead, 2026-11-03 11:10pm ET)
 
 **The user's points:**

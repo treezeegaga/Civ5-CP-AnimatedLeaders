@@ -38,6 +38,7 @@ param(
     [string]$Screen = "",             # AIABTest.ini Screen = (flags each on for a random half of the AI civs)
     [string]$Base = "",               # AIABTest.ini Base = (flags every AI civ runs, both groups; builds from fork c463e56 on)
     [string]$RoleFixes = "",          # AIABTest.ini RoleFixes = (bully test: flags the aggressor runs in the first game of a pair only)
+    [string]$OthersBase = "",         # AIABTest.ini OthersBase = (bully/builders: flags every civ without a role runs, both games; builds from 1804369)
     [switch]$Unpaired,                # single games instead of pairs
     [switch]$NoSettings,              # leave AIABTest.ini alone (builds before c7c_flags, or a hand-written file)
     [int]$Ruins = 0,                  # AIABTest.ini Ruins = (0 = no ancient ruins)
@@ -113,7 +114,7 @@ $ReplayFile = Join-Path $MyGames "AIABTest_lastgame.ini"
 # AIABTest.ini for the next game: the flags, and for the second game of a pair the first game's replay keys and Flip = 1
 function Write-Settings([string[]]$replay) {
     if ($NoSettings) { return }
-    $lines = @("; written by Run-Games.ps1", "[ABTest]", "Fixes = $Fixes", "Screen = $Screen", "Base = $Base", "RoleFixes = $RoleFixes", "StopTurn = $StopTurn",
+    $lines = @("; written by Run-Games.ps1", "[ABTest]", "Fixes = $Fixes", "Screen = $Screen", "Base = $Base", "RoleFixes = $RoleFixes", "OthersBase = $OthersBase", "StopTurn = $StopTurn",
         "Ruins = $Ruins", "MapOption5 = $Resources", "Mode = $Mode", "HeadStartProduction = $HeadStartProduction",
         "HeadStartGold = $HeadStartGold", "Difficulty = $ExpectDifficulty")
     if ($replay) { $lines += "Flip = 1"; $lines += $replay } else { $lines += "Flip = 0" }
@@ -335,7 +336,7 @@ while ($played -lt $MaxGames -or $pairReplay) {
         Write-Settings $pairReplay
         if ($wasFirstOfPair) { Remove-Item $ReplayFile -ErrorAction SilentlyContinue }
         $what = if ($pairReplay) { "second game of the pair (Flip = 1)" } elseif ($wasFirstOfPair) { "first game of a pair" } else { "single game" }
-        Write-Log "Starting game $($played + 1): $what; Mode = $Mode; Fixes = $Fixes; Screen = $Screen; Base = $Base; RoleFixes = $RoleFixes"
+        Write-Log "Starting game $($played + 1): $what; Mode = $Mode; Fixes = $Fixes; Screen = $Screen; Base = $Base; RoleFixes = $RoleFixes; OthersBase = $OthersBase"
         if (-not (Start-TestGame)) { Write-Log "Setup failed; retrying"; $failures++; if ($failures -ge 3) { Write-Log "Three failed starts in a row; giving up"; break }; continue }
 
         $replay = Read-Replay
