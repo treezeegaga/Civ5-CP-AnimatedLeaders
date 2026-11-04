@@ -3811,6 +3811,26 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### The timing-attack build merged; a crash; both PCs to the 21-flag role (lead, 2026-11-04 3:00pm ET)
+
+- **`claude/ab-c1` `166ebc1`** (a fast-forward to Personality's merge of `ai/war` `fd881bb`, CI passed; 69 flags in the
+  128-bit masks). It adds:
+  - War's `TimingBuildup` (the user's design): a small army at peace, the attack's research and gold, a 15-turn
+    build-up once a target is found, then demobilise after peace.
+  - `DeclareWhenGathered`: declare once the army is gathered, not after waiting to be seen.
+  - `SiegeConcentrate`: a follow-up wave joins the units near the city.
+  - `SiegeKeep`: no barbarian-camp detours at war.
+  - Personality's `AggressiveArmy` change (the big army only in the build-up window and at war) and `AggressiveWalls`
+    (walls only in threatened cities).
+  - War's `2a4dde1` broke the build (an undeclared op type); `fd881bb` fixed it.
+- **Crash (PC 2, `ab-1c3ab74`, logging on):** game `0C827C9C` at T78, an access violation with "the 32-bit address space
+  nearly exhausted" (~1.8 GB). Minidump in `results/crash-20261104-0C827C9C`. PC 2's guard now kills Civ at once on a
+  crash window. PC 2 replays the game with logging off: a crash again at T78 means the code, none means logging's
+  memory.
+- **Both PCs**, from their next pair, `ab-166ebc1`, logging on: the role is the 16 flags + `DeclareWhenGathered`,
+  `SiegeConcentrate`, `SiegeKeep`, `TimingBuildup`, `AggressiveWalls`. PC 2 against greedy civs,
+  `AIABTest_bullygreedy8@TREEDESKTOP.csv`; PC 1 against normal civs, `AIABTest_bullyabort6@BOX.csv`.
+
 ### Where bully attacks fail: late, small, or not at all (lead, 2026-11-04 1:50pm ET)
 
 - **Tally:** across all bully files, 2 of 39 first games (with the role) have a capture (the Huns in `0A92244F`, the Inca
