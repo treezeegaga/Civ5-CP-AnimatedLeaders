@@ -1924,6 +1924,75 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the first logged capture, 0C04B641, the Inca take Persepolis (Nov 4, about 12:17pm ET)
+PC 2, greedy opponents, ab-9e9fc9d, 14-flag role. The Inca declared on Persia at T71 and took Persepolis at T75.
+- **The army:** sneak attack 1572 at T67: spearman, 2 warriors, **3 catapults**, a composite bowman. Three earlier
+  tries ended `NoUnits` at creation (T65). It marched at T68, was "discovered" at T70 at distance 2–4, and was
+  handed to the tactical AI.
+- **The capture lines:**
+
+  | Turn | City HP | Units used | Agg |
+  |---|---|---|---|
+  | T72 | 200 → 200 | 4 of 5 | 2 |
+  | T73 | 200 → 102 | 3 of 4 | 2 |
+  | T74 | 122 → 8 | 5 of 6 | 3 |
+  | T75 | 28 → captured | "0 of 5" | 3 |
+
+**(1) T72, units moved but did no damage.** It was the first turn after declaring, with the army 2–4 tiles out.
+- The simulation ran twice: 5 units, then 4 after new enemies came into view (a restart).
+- The units used were moves into range. Catapults can't move and shoot in one turn from that far.
+- From T73 the same units hit the city for 98 and 114. So the chain works at the walls once units are in range.
+- **Logging caveat:** "units used" counts units that newly finished their turn during the attempt. T75's "0 of 5"
+  next to CAPTURED shows it undercounts when units acted earlier in the turn. I'll fix it if it matters.
+
+**(2) Why Pasargadae got nothing.**
+- **T75–76:** "attempting capture of Pasargadae", 0 of 2–3 units used. Only the few free units nearby were in
+  reach; the siege units were still at Persepolis.
+- **T77:** a new attack, `OP_CITY_ATTACK_LAND` 1777, formed against Pasargadae (22:13). Its muster point was
+  Persepolis (19:16), **3 tiles from the target**. It took 5 of the victors: spearman, warrior, composite bowman,
+  2 catapults.
+- **It never left recruiting.** A required front-line slot of the basic formation (SiegeFormation) stayed open for
+  20 turns. No "SiegeArmy: waiting" line appears, because the required-slots check comes first. Catapults later
+  left the army to heal.
+- **Its units were invisible to the tactical AI the whole time.** Army units are taken out of the tactical AI's
+  unit list (`AI_TACTICAL_OPERATION`, CvTacticalAI.cpp line 242). So from T77 the tactical AI counted only the
+  free units: "too early for attacking Pasargadae, expected 22 a turn".
+- **T97:** SiegeAbort ("still too weak after 20 turns"). The war idled and the campaign stopped at one city.
+- The operation didn't end on the capture (1572 had already ended at deploy). The lock came from the new
+  operation formed next to the next city.
+
+**(3) SiegeFirst and SiegeFinish.**
+- **SiegeFinish didn't decide it.** T74's agg 3 is CP's own rule (more than 2 melee units in reach). SiegeFinish
+  needs the city at a third of its HP or less, and 122 of 200 isn't. At T75 (28 left) it could have applied, but
+  agg was already 3.
+- **SiegeFirst didn't act.** The army passed the bar at once, and its optional slot took a composite bowman.
+- **What mattered:** the three catapults came from SiegeFormation's basic formation (5 siege slots). The
+  hand-off came from DeclareAtBorder plus ArmyHandoff.
+
+**Result of the pair:** at T150 the Inca had 8 cities and military 294 with the role, against 5 and 191 in the flip
+game.
+
+### FIX_SIEGE_ROLL: an attack mustering next to its target moves without waiting (War) (Nov 4, about 12:17pm ET)
+- **Hypothesis:** a city attack whose muster point is within 5 tiles of its target, against a civ we're already
+  at war with, leaves recruiting once it has 3 units. It doesn't wait for empty required slots or for SiegeArmy's
+  bar.
+  - **Why the waits don't fit here:** both exist to stop a weak army marching across the map and declaring war.
+    Neither applies next to the front.
+  - **What follows:** the army reaches deploy range in a turn or two. The operation ends and ArmyHandoff gives the
+    units to the tactical AI, which counts them all.
+  - **The tactical AI keeps its own check:** "too early" if 13 turns of damage can't beat the city's healing. A
+    weak army still doesn't throw itself at the walls; it just isn't locked away.
+- **Expected:** after a capture, the next city nearby gets capture attempts within a few turns, with "units used"
+  above 0, and more captures per war.
+- **Measure:**
+  - capture lines per city;
+  - captures per war and CitiesCaptured by the aggressor;
+  - cities and military at T150, role against flip.
+- **δ:** CitiesCaptured by the aggressor +1 per pair on average.
+- **Flag:** `SiegeRoll`, off in the bundle. **This makes 64 flags, the cap**; anything after it needs the wider mask
+  or a retirement. Role: add to the bully aggressor's flags, with SiegeExposure.
+- **Status:** hypothesis. Code next, on `ai/war`.
+
 ### War: failed bully war 0BE6755D, Songhai against Assyria (Nov 4, about 11:38am ET)
 PC 2, greedy opponents, ab-2db51dd, 14-flag role. Aggressor Songhai. It ended with 3 cities and took none. A
 different failure from Nottingham: the army lost the zone, rather than its attacks failing to land.
