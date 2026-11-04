@@ -3255,13 +3255,30 @@ logged pair".
     - city-state unit gifts are refused at cities + 1.
   - **Inside the window:** 3-4 land units per city, attack, siege and ranged units first, as before.
   - **MetaDial:** its conquest-plan side (M ≥ +50) does the same. 0 < M < +50 is unchanged.
-- **Request to War (coordination):** when `TimingBuildup` lands, please expose its window as one function, e.g.
-  `CvPlayer::IsInTimingBuildup()` or a `CvDiplomacyAI` getter. Say when it opens: how many turns before the strike,
-  and on what signal (the planned target, the unit timing, the gold Economy saves). I'll replace case 3 with it, so the
-  production side and War's plan open the same window. Until then, case 3's turn 70 is a stand-in.
+- **Coordinated with War (2:10pm ET):** War exposed the window (`CvMilitaryAI::GetTimingBuildupPhase`, `ai/war` `2a4dde1`).
+  With `TimingBuildup` on, `IsInWarBuildup` follows its phases: the big army in WINDOW (15 turns from when a target is
+  found) and ATTACK, and at war; garrisons in PEACE and PLANNED. War's peace cap (cities + 1) is the same as
+  `AggressiveArmy`'s. Case 3 (turn 70) only applies without `TimingBuildup`. `ai/personality` merges `ai/war`
+  (`d6c872c`) so it compiles with War's function; the lead merges both together.
 - **What to watch** (once the aggressive set runs): an aggressive civ's `LandUnits` about cities + 1 most of the game,
   rising quickly in the 20 turns before its declaration; its economy in between (population, techs) close to a balanced
   civ's.
+- **Build:** `019c646` (compiles, CI run 162), then `d6c872c` (merge with `ai/war`, CI pending).
+- **Status:** waiting for CI on `d6c872c`.
+
+### AggressiveWalls: walls only in threatened border cities (Personality, 2026-11-04 2:10pm ET)
+- **The lead (2026-11-04):** in PC 2's pair `0C63D961` the bully had walls in every city (7 of 7; 8 of 8 in the flip).
+  For the aggressive style, walls belong on threatened border cities; interior walls are upkeep spent on nothing.
+- **The flag** (`AggressiveWalls`, `FIX_AGGRESSIVE_WALLS`, off in the bundle; fork `ai/personality` `48ba2e9`). A
+  non-wonder building that adds city defence or HP only in a city that is:
+  - under siege; or
+  - close to a city of a major civ we're at war with (CP's `IsCloseToCity`); or
+  - close to a city of a neighbour whose army we can see at our border (CP's military posture toward us MEDIUM or
+    worse, the `GreedyAlarm` signal; only units we can see).
+
+  Elsewhere it builds none.
+- **A separate flag** so it can join the bully's role as well as the aggressive style set.
+- **Measure:** the aggressor's `WalledCities` against its border cities at war; its gold per turn.
 - **Status:** coded, CI pending.
 
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
@@ -3435,7 +3452,7 @@ civs, 6 players). Nothing is coded for it; this is the list a test key would giv
 |---|---|---|
 | **Greedy** | `GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds, GreedyWarArmy` | 1 land unit per city in peace (disbands down to it), no walls or barracks, no upgrades in peace, growth, science and wonders first. At war it judges the threat: nothing changes unless a city is under siege or an enemy force in sight could take one, and then it builds enough defenders and walls its border cities |
 | **Balanced** | `BalancedArmy, BalancedWalls` | 2-3 land units per city in peace, no cap at war, walls and castles first in border cities and the capital, upgrades as normal; otherwise CP's play, which starts few wars |
-| **Aggressive** | `AggressivePlan, AggressiveArmy` (a small army until the build-up window, then 3-4 per city) + the conquest role: `TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish` | 3-4 land units per city in peace with siege; the conquest plan (siege techs and book, a timing attack on a weak close neighbour, a siege that holds and finishes), whatever its personality |
+| **Aggressive** | `AggressivePlan, AggressiveArmy` (a small army until the build-up window, then 3-4 per city), `AggressiveWalls` + the conquest role: `TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish` | 3-4 land units per city in peace with siege; the conquest plan (siege techs and book, a timing attack on a weak close neighbour, a siege that holds and finishes), whatever its personality |
 
 **Notes for the trio mode:**
 - **The bundle runs under each set.** "Ours" means the candidate AI, so each style slot runs the bundle (the flags that
