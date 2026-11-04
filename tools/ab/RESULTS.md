@@ -2330,6 +2330,24 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Evening results: DeclareAtBorder does nothing alone; the bully aggressor barely fights (lead, 2026-11-03 8:15pm ET)
+
+- **`DeclareAtBorder` alone** (`ab-819be70`, PC 2, `AIABTest_declare@TREEDESKTOP.csv`, 7 pairs; pair `080C740E` left out
+  after a mountain-city dialog stall): c 50.04%, gain +0.04, **gainer failed**, no-worse passed. Pair spread 0.09: the two
+  games of a pair are almost identical, so the flag almost never acts. Its screening rank (+0.86) was luck. It stays in
+  C8 (harmless: no-worse passed) but contributes nothing.
+- **Bully siege on the fixed SiegeArmy** (`ab-095144c`, PC 1, `AIABTest_bullysiege2.csv`, 6 pairs): **0 captures in all
+  12 games**; the aggressor's share of cities with the package minus without +0.5 ± 0.4; aggressors (Songhai, Inca,
+  Denmark, Japan) at war with 0-1 civs in most games. Stopped.
+- **The blocker is war itself:** even the most aggressive personality starts few wars by T150 at King. War and
+  Diplomacy are asked why (approach scoring, AFRAID, war-target filters, peace lengths). No war flag can show
+  anything until civs fight.
+- **Mountain-city dialog:** CP looks up `IMPROVEMENT_MOUNTAIN_CITY` (Vox Populi only) when a city is founded on a
+  mountain; with CP alone that raised an assertion dialog that stalled an unattended game. Fixed for play-neutral
+  builds from `claude/ab-c1` `0cd5a5c`.
+- **Now:** PC 2 plays C8 (`ab-0cd5a5c`, `-Fixes bundle`) against B; PC 1 plays `SettlersBeforeWonders` alone on the same
+  build (`AIABTest_sbw.csv`).
+
 ### C8: the new C bundle (lead, 2026-11-03 5:05pm ET)
 
 `claude/ab-c1` is now `9f77273`: all three topic branches merged (`ai/economy` `63c7b7b`, `ai/diplomacy` `6e83115`, `ai/war`
