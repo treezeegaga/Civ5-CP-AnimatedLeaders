@@ -2050,7 +2050,7 @@ before the attack, and no "b/c bankrupt" gifting of attack units.
 
 **δ:** strength share at T150 +1.5 points; CitiesCaptured up.
 
-**Status:** hypothesis, coded: `ai/war` `4135121` (CI pending; the commit message's "2:10pm ET" should read 1:55pm ET). Shared code behind this flag only: `CvDiplomacyAI::GetNewAIConquestTarget`, `CvUnitProductionAI::CheckUnitBuildSanity` (peace cap; AggressiveArmy off at peace), `CvBuildingProductionAI` (AggressiveArmy's floor off at peace), `CvPlayer` opening book (the warmonger book's army steps skipped).
+**Status:** hypothesis, coded: `ai/war` `4135121` (built at `fd881bb`, CI run 167; merged in `claude/ab-c1` `166ebc1`; the commit message's "2:10pm ET" should read 1:55pm ET). Shared code behind this flag only: `CvDiplomacyAI::GetNewAIConquestTarget`, `CvUnitProductionAI::CheckUnitBuildSanity` (peace cap; AggressiveArmy off at peace), `CvBuildingProductionAI` (AggressiveArmy's floor off at peace), `CvPlayer` opening book (the warmonger book's army steps skipped).
 
 ### FIX_DECLARE_WHEN_GATHERED: a sneak attack declares once it's gathered at the border (War) (Nov 4, about 1:48pm ET)
 For cause 1 (late), at the lead's request.
@@ -2066,7 +2066,7 @@ For cause 1 (late), at the lead's request.
 - **Measure:** turns from reaching the border to declaring ("DeclareWhenGathered:" log line), unit distances at
   the hand-off, first capture attempt turn.
 - **δ:** CitiesCaptured by the aggressor up; strength share at T150 +1 point.
-- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (build fixed in `fd881bb`, built, CI run 167; merged in `claude/ab-c1` `166ebc1`).
 
 ### FIX_SIEGE_CONCENTRATE: a follow-up wave moves only as one army with the units already at the siege (War) (Nov 4, about 1:48pm ET)
 For cause 2 (small).
@@ -2080,7 +2080,7 @@ For cause 2 (small).
 - **Expected:** fewer waves, each with at least 6 units near the walls together. Fewer "too early, 0–27 a turn"
   lines at the follow-up target.
 - **Measure:** the "SiegeRoll:" line now gives army and nearby counts; capture attempts per follow-up city.
-- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`. Applies only together with SiegeRoll.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (build fixed in `fd881bb`, built, CI run 167; merged in `claude/ab-c1` `166ebc1`). Applies only together with SiegeRoll.
 
 ### FIX_SIEGE_KEEP: units at the front stay off barbarian camps while at war (War) (Nov 4, about 1:48pm ET)
 For cause 2 (handed-off units pulled away).
@@ -2092,7 +2092,7 @@ For cause 2 (handed-off units pulled away).
 - **Expected:** the units handed off at Seoul stay in the Seoul zone. Fewer "Trying to remove barbarian camp" moves
   by the aggressor during its war.
 - **Measure:** camp moves during the war; units in reach at the first capture attempt.
-- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (build fixed in `fd881bb`, built, CI run 167; merged in `claude/ab-c1` `166ebc1`).
 
 ### War: the attack operations in 0C458987 (16-flag role) and 0C22F161 (Nov 4, about 1:23pm ET)
 The lead asked for a trace of when each attack formed, how big it was, where it mustered, and what became of it.
