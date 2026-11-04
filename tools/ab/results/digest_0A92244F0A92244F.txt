@@ -1,0 +1,36 @@
+﻿Game 0A92244F0A92244F (AIABTest_c8d.csv), last logged turn 110
+b    Venice       tall      cities 2
+  builds to T80 (capital Venice; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T17 Worker* | T23 Library* | T30 Granary | T36 Stonehenge | T47 National College* | T51 Lighthouse (La Venta) | T51 Monument* (La Venta) | T56 Walls (La Venta) | T59 Caravan | T60 Shrine (La Venta) | T62 Cargo Ship (La Venta) | T65 Mausoleum of Halicarnassus | T69 Worker (La Venta) | T73 Temple (La Venta) | T73 Writers' Guild | T77 Hagia Sophia | T79 Barracks (La Venta)
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  military ops ended (whole game): LostPath 12, NoTarget 7, TooDangerous 1, Success 1
+c    Arabia       tall      cities 4
+  builds to T80 (capital Mecca; other cities named): T1 Scout* | T5 Monument* | T10 Shrine* | T15 Warrior* | T20 Settler* | T34 Worker* | T37 Monument* (Medina) | T38 Library* (Medina) | T38 Settler* | T48 Worker* | T49 Settler* | T50 Worker* | T51 Settler* | T52 Worker* | T53 Settler* | T54 Worker | T55 Settler | T56 Worker | T57 Worker | T57 Settler | T58 Granary | T62 Shrine (Damascus) | T64 Worker (Medina) | T65 Worker (Medina) | T65 Spearman | T66 Worker (Medina) | T66 Spearman | T67 Worker (Medina) | T67 Spearman | T68 Worker (Medina) | T68 Spearman | T69 Worker (Medina) | T69 Spearman | T70 Worker (Medina) | T70 Spearman | T71 Worker (Medina) | T71 Spearman | T72 Shrine (Medina) | T72 Worker | T72 Spearman | T74 Warrior | T76 Temple (Damascus) | T78 Temple | T79 Worker (Medina)
+  settlers ordered T: 20,38,49,51,53,55,57,90,91,112   found-city ops started T: 34,57,97   cities founded T: 37,62,105
+  IDLE SETTLER turns: 4 (first T38)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T20 settler (book) in Mecca | T34 op started | T37 FOUNDED | T38 settler (book) in Mecca | T49 settler (book) in Mecca | T51 settler (book) in Mecca | T53 settler (book) in Mecca | T55 settler (AI) in Mecca | T57 op started | T57 settler (AI) in Mecca | T62 FOUNDED
+  saving gold for a settler: 36 turns (T12-T57)
+c    Germany      tall      cities 7
+  builds to T80 (capital Berlin; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T18 Settler* | T30 Worker* | T32 Monument* (Hamburg) | T33 Library* (Hamburg) | T33 Settler* | T44 Worker* | T49 Monument* (Munich) | T49 Library* | T50 Library* (Munich) | T55 Granary | T59 Archer | T60 Archer | T62 Settler | T65 Granary (Munich) | T67 Granary (Hamburg) | T67 Spearman | T70 Worker | T73 Settler | T75 Granary (Cologne) | T78 Scout (Munich) | T78 Worker | T80 Writers' Guild (Hamburg)
+  settlers ordered T: 18,33,62,73,81,82,92,111   found-city ops started T: 30,44,67,78,86,97   cities founded T: 32,49,75,90,92,104
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T049 Berlin size 2 next Library
+  IDLE SETTLER turns: 6 (first T34)
+  military ops ended (whole game): Success 1
+  settler timeline to T80: T18 settler (book) in Berlin | T30 op started | T32 FOUNDED | T33 settler (book) in Berlin | T44 op started | T49 FOUNDED | T62 settler (AI) in Berlin | T67 op started | T73 settler (AI) in Berlin | T75 FOUNDED | T78 op started
+  saving gold for a settler: 53 turns (T11-T78)
+c    Morocco      tall      cities 3
+  builds to T80 (capital Marrakech; other cities named): T1 Scout* | T5 Monument* | T10 Shrine* | T14 Warrior* | T19 Settler* | T31 Warrior | T35 Granary | T42 Worker* | T48 Settler* | T55 Temple | T62 Library | T67 Oracle | T72 Lighthouse (Rabat) | T78 Settler | T79 Settler
+  settlers ordered T: 19,48,78,79,99,112,113   found-city ops started T: 31,55,82,105   cities founded T: 72,102
+  ops aborted: T44 LostCivilian
+  IDLE SETTLER turns: 2 (first T78)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T19 settler (book) in Marrakech | T31 op started | T44 op ended: LostCivilian | T48 settler (book) in Marrakech | T55 op started | T72 FOUNDED | T78 settler (AI) in Marrakech | T79 settler (AI) in Marrakech
+  saving gold for a settler: 34 turns (T12-T75)
+c    Spain        wide      cities 6
+  builds to T80 (capital Madrid; other cities named): T0 Scout* | T4 Warrior* | T9 Settler* | T19 Worker* | T23 Monument* (Barcelona) | T25 Shrine* | T29 Monument* | T32 Granary (Barcelona) | T32 Settler* | T39 Warrior | T42 Great Library | T45 Shrine (Barcelona) | T47 Water Mill (Barcelona) | T50 Library* | T50 Monument* (Seville) | T54 Catapult (Barcelona) | T54 Settler* | T58 Worker (Barcelona) | T61 Shrine (Seville) | T62 Library (Barcelona) | T62 Work Boat | T66 Market (Barcelona) | T66 Market | T68 Library (Seville) | T71 Barracks (Barcelona) | T74 Lighthouse | T75 Settler (Barcelona) | T77 Granary (Seville) | T79 Granary (Cordoba) | T79 Great Lighthouse
+  settlers ordered T: 9,32,54,75,112,113   found-city ops started T: 19,39,62,81,82   cities founded T: 23,50,79,90,94
+  book SETTLER HELD to T80: 5 (unhappy 3, one at a time 2)   built instead: the normal AI choice 2, Library 2, Monument 1   first: T029 Madrid size 3 next Monument | T042 Madrid size 3 next Library | T050 Madrid size 3 next Library
+  IDLE SETTLER turns: 4 (first T32)
+  military ops ended (whole game): LostPath 1
+  settler timeline to T80: T9 settler (book) in Madrid | T19 op started | T23 FOUNDED | T32 settler (book) in Madrid | T39 op started | T50 FOUNDED | T54 settler (book) in Madrid | T62 op started | T75 settler (AI) in Barcelona | T79 FOUNDED
+  saving gold for a settler: 32 turns (T5-T80)

@@ -576,3 +576,8 @@ NOTE 9:01AM ET: ab-5220c03 is out; STOP created, finishing pair 4 then installin
 2026-11-04 09:20:55  Stop file found; stopping
 2026-11-04 09:20:55  Runner finished after 8 games
 2026-11-04 09:21:07 ET  PC 1 (BOX): bullyabort2 on ab-dbdfbb3, 4 pairs (8 games), all replays match, no dialogs/stalls. Captures: only 0A92244F game 1 (Huns, 2 cities); the other 7 games 0. Stopped; next the replay job for 0A92244F with logging, then ab-5220c03.
+NOTE 9:21AM ET: replay job for 0A92244F: logging ON, hand-written AIABTest.ini, ab-dbdfbb3, -NoSettings -Unpaired -MaxGames 1 -SaveLogs
+2026-11-04 09:21:25  Starting game 1: single game; Mode = bully; Fixes = bundle; Screen = ; Base = ; RoleFixes = ; OthersBase = 
+2026-11-04 09:30:46  Game ended: never started
+2026-11-04 09:30:46  Starting game 1: single game; Mode = bully; Fixes = bundle; Screen = ; Base = ; RoleFixes = ; OthersBase = 
+2026-11-04 09:33:12 ET  PC 1 (BOX): REPLAY of 0A92244F is NOT faithful and was cut short. T10 rows differ from the original (Venice score 35 vs 34; 69 of 88 rows differ by T110), so the city-states differ (replay picked Ragusa, Panama City, Vancouver, La Venta, Ormus, Ur... see results/replay/0A92244F-replay-attempt.ini). The runner also treated the repeat GameId as 'never started' and killed Civ at T110 (before the original's first capture at T120); it was then stopped. Logs through T110 saved. Logging off again.

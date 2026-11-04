@@ -1,0 +1,1506 @@
+019, Spain, OP_FOUND_CITY, 1114, found target for settler, score 78252 (q45)
+019, Spain, OP_FOUND_CITY, 1114, Skip recruiting, start with movement stage
+019, Spain, OP_FOUND_CITY, 1114, Found 1 potential units to recruit for operation 1114 at (63:39) with target at (61:36)
+019, Spain, OP_FOUND_CITY, 1114, Added Warrior 1076 to slot 1 in army 1115. ETA at (63:39) is 0 
+019, Spain, OP_FOUND_CITY, 1114, Started Army 1115; Units Recruited 2; Max Formation Size 2; Moving To Target
+019, Spain, OP_FOUND_CITY, 1114, PRE Moving To Target with Army 1115; center (63:39); target (61:36); Progress 0 percent
+019, Spain, OP_FOUND_CITY, 1114, POST Moving To Target with Army 1115; center (63:38); target (61:36); Progress 20 percent
+020, Spain, OP_FOUND_CITY, 1114, PRE Moving To Target with Army 1115; center (63:38); target (61:36); Progress 20 percent
+020, Spain, OP_FOUND_CITY, 1114, POST Moving To Target with Army 1115; center (62:37); target (61:36); Progress 40 percent
+021, Spain, OP_FOUND_CITY, 1114, PRE Moving To Target with Army 1115; center (62:37); target (61:36); Progress 40 percent
+021, Spain, OP_FOUND_CITY, 1114, POST Moving To Target with Army 1115; center (61:37); target (61:36); Progress 100 percent
+022, Spain, OP_FOUND_CITY, 1114, PRE Moving To Target with Army 1115; center (61:37); target (61:36); Progress 100 percent
+022, Spain, OP_FOUND_CITY, 1114, Transition to target stage
+022, Spain, OP_FOUND_CITY, 1114, POST At Target
+023, Spain, OP_FOUND_CITY, 1114, PRE At Target
+023, Spain, OP_FOUND_CITY, 1114, City founded (Barcelona) at (61:36), plot value 77488, q44
+023, Spain, OP_FOUND_CITY, 1114, Transition to finished stage
+023, Spain, OP_FOUND_CITY, 1114, Ended: Success; Distance 5; Duration 4
+029, The_Huns, OP_FOUND_CITY, 1153, found target for settler, score 152629 (q50)
+029, The_Huns, OP_FOUND_CITY, 1153, Initial stage is recruiting
+029, The_Huns, OP_FOUND_CITY, 1153, Found 0 potential units to recruit for operation 1153 at (51:35) with target at (52:40)
+029, The_Huns, OP_FOUND_CITY, 1153, Started Army 1154; Units Recruited 1; Max Formation Size 2; Recruiting Units
+029, The_Huns, OP_FOUND_CITY, 1153, PRE Recruiting Units for army 1154; Settler 1152 at (51:35) - ETA -1; Open; 
+029, The_Huns, OP_FOUND_CITY, 1153, Found 0 potential units to recruit for operation 1153 at (51:35) with target at (52:40)
+029, The_Huns, OP_FOUND_CITY, 1153, POST Recruiting Units for army 1154; Settler 1152 at (51:35) - ETA 0; Open; 
+030, Germany, OP_FOUND_CITY, 1161, found target for settler, score 124340 (q50)
+030, Germany, OP_FOUND_CITY, 1161, Skip recruiting, start with movement stage
+030, Germany, OP_FOUND_CITY, 1161, Found 1 potential units to recruit for operation 1161 at (52:21) with target at (49:18)
+030, Germany, OP_FOUND_CITY, 1161, Added Warrior 1106 to slot 1 in army 1162. ETA at (52:21) is 0 
+030, Germany, OP_FOUND_CITY, 1161, Started Army 1162; Units Recruited 2; Max Formation Size 2; Moving To Target
+030, Germany, OP_FOUND_CITY, 1161, PRE Moving To Target with Army 1162; center (52:21); target (49:18); Progress 0 percent
+030, Germany, OP_FOUND_CITY, 1161, POST Moving To Target with Army 1162; center (51:19); target (49:18); Progress 34 percent
+030, The_Huns, OP_FOUND_CITY, 1153, Added Warrior 1163 to slot 1 in army 1154. ETA at (51:35) is 0 
+030, The_Huns, OP_FOUND_CITY, 1153, Transition to gathering stage
+030, The_Huns, OP_FOUND_CITY, 1153, found better target for settler, old score 131530 (q50), new score 152431 (q50)
+030, The_Huns, OP_FOUND_CITY, 1153, setting new target (50:30)
+030, The_Huns, OP_FOUND_CITY, 1153, PRE Gathering Forces for army 1154; center (52:36); variance (0.25:0.25); free slots 0
+030, The_Huns, OP_FOUND_CITY, 1153, Added Warrior 1077 to slot 1 in army 1154. ETA at (51:35) is 0 
+030, The_Huns, OP_FOUND_CITY, 1153, Transition to movement stage
+030, The_Huns, OP_FOUND_CITY, 1153, POST Moving To Target with Army 1154; center (52:36); target (50:30); Progress -16 percent
+030, The_Netherlands, OP_FOUND_CITY, 1165, found target for settler, score 151346 (q50)
+030, The_Netherlands, OP_FOUND_CITY, 1165, Skip recruiting, start with movement stage
+030, The_Netherlands, OP_FOUND_CITY, 1165, Found 0 potential units to recruit for operation 1165 at (43:16) with target at (42:20)
+030, The_Netherlands, OP_FOUND_CITY, 1165, Started Army 1166; Units Recruited 1; Max Formation Size 2; Moving To Target
+030, The_Netherlands, OP_FOUND_CITY, 1165, PRE Moving To Target with Army 1166; center (43:16); target (42:20); Progress 0 percent
+030, The_Netherlands, OP_FOUND_CITY, 1165, POST Moving To Target with Army 1166; center (42:18); target (42:20); Progress 40 percent
+031, Germany, OP_FOUND_CITY, 1161, PRE Moving To Target with Army 1162; center (51:19); target (49:18); Progress 34 percent
+031, Germany, OP_FOUND_CITY, 1161, POST Moving To Target with Army 1162; center (50:18); target (49:18); Progress 100 percent
+031, The_Huns, OP_FOUND_CITY, 1153, PRE Moving To Target with Army 1154; center (52:36); target (50:30); Progress -16 percent
+031, The_Huns, OP_FOUND_CITY, 1153, POST Moving To Target with Army 1154; center (52:34); target (50:30); Progress 17 percent
+031, Morocco, OP_FOUND_CITY, 1172, found target for settler, score 137618 (q50)
+031, Morocco, OP_FOUND_CITY, 1172, Initial stage is recruiting
+031, Morocco, OP_FOUND_CITY, 1172, Found 0 potential units to recruit for operation 1172 at (34:38) with target at (37:35)
+031, Morocco, OP_FOUND_CITY, 1172, Started Army 1173; Units Recruited 1; Max Formation Size 2; Recruiting Units
+031, Morocco, OP_FOUND_CITY, 1172, PRE Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA -1; Open; 
+031, Morocco, OP_FOUND_CITY, 1172, Found 0 potential units to recruit for operation 1172 at (34:38) with target at (37:35)
+031, Morocco, OP_FOUND_CITY, 1172, POST Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+031, The_Netherlands, OP_FOUND_CITY, 1165, PRE Moving To Target with Army 1166; center (42:18); target (42:20); Progress 40 percent
+031, The_Netherlands, OP_FOUND_CITY, 1165, Transition to target stage
+031, The_Netherlands, OP_FOUND_CITY, 1165, POST At Target
+032, Germany, OP_FOUND_CITY, 1161, PRE Moving To Target with Army 1162; center (50:18); target (49:18); Progress 100 percent
+032, Germany, OP_FOUND_CITY, 1161, Transition to target stage
+032, Germany, OP_FOUND_CITY, 1161, City founded (Hamburg) at (49:18), plot value 124340, q50
+032, Germany, OP_FOUND_CITY, 1161, Transition to finished stage
+032, Germany, OP_FOUND_CITY, 1161, POST Completed
+032, The_Huns, OP_FOUND_CITY, 1153, PRE Moving To Target with Army 1154; center (52:34); target (50:30); Progress 17 percent
+032, The_Huns, OP_FOUND_CITY, 1153, POST Moving To Target with Army 1154; center (51:32); target (50:30); Progress 50 percent
+032, Morocco, OP_FOUND_CITY, 1172, PRE Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+032, Morocco, OP_FOUND_CITY, 1172, Found 0 potential units to recruit for operation 1172 at (34:38) with target at (37:35)
+032, Morocco, OP_FOUND_CITY, 1172, POST Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+032, The_Netherlands, OP_FOUND_CITY, 1165, PRE At Target
+032, The_Netherlands, OP_FOUND_CITY, 1165, City founded (Rotterdam) at (42:20), plot value 151346, q50
+032, The_Netherlands, OP_FOUND_CITY, 1165, Transition to finished stage
+032, The_Netherlands, OP_FOUND_CITY, 1165, Ended: Success; Distance 5; Duration 2
+033, Germany, OP_FOUND_CITY, 1161, Ended: Success; Distance 6; Duration 3
+033, The_Huns, OP_FOUND_CITY, 1153, PRE Moving To Target with Army 1154; center (51:32); target (50:30); Progress 50 percent
+033, The_Huns, OP_FOUND_CITY, 1153, Transition to target stage
+033, The_Huns, OP_FOUND_CITY, 1153, POST At Target
+033, Morocco, OP_FOUND_CITY, 1172, PRE Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+033, Morocco, OP_FOUND_CITY, 1172, Found 0 potential units to recruit for operation 1172 at (34:38) with target at (37:35)
+033, Morocco, OP_FOUND_CITY, 1172, POST Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+034, The_Huns, OP_FOUND_CITY, 1153, PRE At Target
+034, The_Huns, OP_FOUND_CITY, 1153, City founded (Algiers) at (50:30), plot value 152431, q50
+034, The_Huns, OP_FOUND_CITY, 1153, Transition to finished stage
+034, The_Huns, OP_FOUND_CITY, 1153, Ended: Success; Distance 6; Duration 5
+034, Morocco, OP_FOUND_CITY, 1172, PRE Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+034, Morocco, OP_FOUND_CITY, 1172, Found 0 potential units to recruit for operation 1172 at (34:38) with target at (37:35)
+034, Morocco, OP_FOUND_CITY, 1172, POST Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+034, Arabia, OP_FOUND_CITY, 1186, found target for settler, score 85202 (q50)
+034, Arabia, OP_FOUND_CITY, 1186, Skip recruiting, start with movement stage
+034, Arabia, OP_FOUND_CITY, 1186, Found 1 potential units to recruit for operation 1186 at (63:23) with target at (62:27)
+034, Arabia, OP_FOUND_CITY, 1186, Added Warrior 1118 to slot 1 in army 1187. ETA at (63:23) is 0 
+034, Arabia, OP_FOUND_CITY, 1186, Started Army 1187; Units Recruited 2; Max Formation Size 2; Moving To Target
+034, Arabia, OP_FOUND_CITY, 1186, PRE Moving To Target with Army 1187; center (63:23); target (62:27); Progress 0 percent
+034, Arabia, OP_FOUND_CITY, 1186, POST Moving To Target with Army 1187; center (62:25); target (62:27); Progress 40 percent
+035, Morocco, OP_FOUND_CITY, 1172, PRE Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+035, Morocco, OP_FOUND_CITY, 1172, Found 0 potential units to recruit for operation 1172 at (34:38) with target at (37:35)
+035, Morocco, OP_FOUND_CITY, 1172, POST Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+035, Arabia, OP_FOUND_CITY, 1186, PRE Moving To Target with Army 1187; center (62:25); target (62:27); Progress 40 percent
+035, Arabia, OP_FOUND_CITY, 1186, POST Moving To Target with Army 1187; center (62:26); target (62:27); Progress 100 percent
+036, Morocco, OP_FOUND_CITY, 1172, PRE Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+036, Morocco, OP_FOUND_CITY, 1172, Found 0 potential units to recruit for operation 1172 at (34:38) with target at (37:35)
+036, Morocco, OP_FOUND_CITY, 1172, POST Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+036, Arabia, OP_FOUND_CITY, 1186, PRE Moving To Target with Army 1187; center (62:26); target (62:27); Progress 100 percent
+036, Arabia, OP_FOUND_CITY, 1186, Transition to target stage
+036, Arabia, OP_FOUND_CITY, 1186, POST At Target
+037, Morocco, OP_FOUND_CITY, 1172, PRE Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+037, Morocco, OP_FOUND_CITY, 1172, Found 0 potential units to recruit for operation 1172 at (34:38) with target at (37:35)
+037, Morocco, OP_FOUND_CITY, 1172, POST Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+037, Arabia, OP_FOUND_CITY, 1186, PRE At Target
+037, Arabia, OP_FOUND_CITY, 1186, City founded (Medina) at (62:27), plot value 67348, q25
+037, Arabia, OP_FOUND_CITY, 1186, Transition to finished stage
+037, Arabia, OP_FOUND_CITY, 1186, Ended: Success; Distance 5; Duration 3
+038, Morocco, OP_FOUND_CITY, 1172, PRE Recruiting Units for army 1173; Settler 1171 at (34:38) - ETA 0; Open; 
+038, Morocco, OP_FOUND_CITY, 1172, Found 0 potential units to recruit for operation 1172 at (34:38) with target at (37:35)
+038, Morocco, OP_FOUND_CITY, 1172, No escort yet and the trip looks safe, going alone
+038, Morocco, OP_FOUND_CITY, 1172, Transition to gathering stage
+038, Morocco, OP_FOUND_CITY, 1172, Transition to movement stage
+038, Morocco, OP_FOUND_CITY, 1172, POST Moving To Target with Army 1173; center (34:38); target (37:35); Progress 0 percent
+039, Spain, OP_FOUND_CITY, 1211, found target for settler, score 109154 (q50)
+039, Spain, OP_FOUND_CITY, 1211, Initial stage is recruiting
+039, Spain, OP_FOUND_CITY, 1211, Found 0 potential units to recruit for operation 1211 at (63:39) with target at (56:35)
+039, Spain, OP_FOUND_CITY, 1211, Started Army 1212; Units Recruited 1; Max Formation Size 2; Recruiting Units
+039, Spain, OP_FOUND_CITY, 1211, PRE Recruiting Units for army 1212; Settler 1210 at (63:39) - ETA -1; Open; 
+039, Spain, OP_FOUND_CITY, 1211, Found 0 potential units to recruit for operation 1211 at (63:39) with target at (56:35)
+039, Spain, OP_FOUND_CITY, 1211, POST Recruiting Units for army 1212; Settler 1210 at (63:39) - ETA 0; Open; 
+039, Morocco, OP_FOUND_CITY, 1172, PRE Moving To Target with Army 1173; center (34:38); target (37:35); Progress 0 percent
+039, Morocco, OP_FOUND_CITY, 1172, POST Moving To Target with Army 1173; center (35:38); target (37:35); Progress 17 percent
+040, Spain, OP_FOUND_CITY, 1211, PRE Recruiting Units for army 1212; Settler 1210 at (63:39) - ETA 0; Open; 
+040, Spain, OP_FOUND_CITY, 1211, Found 0 potential units to recruit for operation 1211 at (63:39) with target at (56:35)
+040, Spain, OP_FOUND_CITY, 1211, POST Recruiting Units for army 1212; Settler 1210 at (63:39) - ETA 0; Open; 
+040, Morocco, OP_FOUND_CITY, 1172, PRE Moving To Target with Army 1173; center (35:38); target (37:35); Progress 17 percent
+040, Morocco, OP_FOUND_CITY, 1172, POST Moving To Target with Army 1173; center (35:37); target (37:35); Progress 34 percent
+041, Spain, OP_FOUND_CITY, 1211, PRE Recruiting Units for army 1212; Settler 1210 at (63:39) - ETA 0; Open; 
+041, Spain, OP_FOUND_CITY, 1211, Found 1 potential units to recruit for operation 1211 at (63:39) with target at (56:35)
+041, Spain, OP_FOUND_CITY, 1211, Added Warrior 1076 to slot 1 in army 1212. ETA at (63:39) is 1 
+041, Spain, OP_FOUND_CITY, 1211, Added Archer 1149 to slot 1 in army 1212. ETA at (63:39) is 0 
+041, Spain, OP_FOUND_CITY, 1211, Transition to gathering stage
+041, Spain, OP_FOUND_CITY, 1211, Transition to movement stage
+041, Spain, OP_FOUND_CITY, 1211, POST Moving To Target with Army 1212; center (63:39); target (56:35); Progress 0 percent
+041, Morocco, OP_FOUND_CITY, 1172, PRE Moving To Target with Army 1173; center (35:37); target (37:35); Progress 34 percent
+041, Morocco, OP_FOUND_CITY, 1172, POST Moving To Target with Army 1173; center (36:37); target (37:35); Progress 50 percent
+042, Spain, OP_FOUND_CITY, 1211, PRE Moving To Target with Army 1212; center (63:39); target (56:35); Progress 0 percent
+042, Spain, OP_FOUND_CITY, 1211, POST Moving To Target with Army 1212; center (63:37); target (56:35); Progress 10 percent
+042, Morocco, OP_FOUND_CITY, 1172, no path to city site (37:35)
+042, Morocco, OP_FOUND_CITY, 1172, PRE Moving To Target with Army 1173; center (36:37); target (37:35); Progress 50 percent
+042, Morocco, OP_FOUND_CITY, 1172, no path to city site (37:35)
+042, Morocco, OP_FOUND_CITY, 1172, no path to city site (37:35)
+042, Morocco, OP_FOUND_CITY, 1172, POST Moving To Target with Army 1173; center (37:36); target (37:35); Progress 100 percent
+043, Spain, OP_FOUND_CITY, 1211, PRE Moving To Target with Army 1212; center (63:37); target (56:35); Progress 10 percent
+043, Spain, OP_FOUND_CITY, 1211, POST Moving To Target with Army 1212; center (62:37); target (56:35); Progress 20 percent
+043, Morocco, OP_FOUND_CITY, 1172, PRE Moving To Target with Army 1173; center (37:36); target (37:35); Progress 100 percent
+043, Morocco, OP_FOUND_CITY, 1172, Transition to target stage
+043, Morocco, OP_FOUND_CITY, 1172, POST At Target
+044, Spain, OP_FOUND_CITY, 1211, PRE Moving To Target with Army 1212; center (62:37); target (56:35); Progress 20 percent
+044, Spain, OP_FOUND_CITY, 1211, POST Moving To Target with Army 1212; center (61:37); target (56:35); Progress 30 percent
+044, Germany, OP_FOUND_CITY, 1252, found target for settler, score 122182 (q50)
+044, Germany, OP_FOUND_CITY, 1252, Initial stage is recruiting
+044, Germany, OP_FOUND_CITY, 1252, Found 1 potential units to recruit for operation 1252 at (52:21) with target at (57:19)
+044, Germany, OP_FOUND_CITY, 1252, Added Warrior 1106 to slot 1 in army 1253. ETA at (52:21) is 1 
+044, Germany, OP_FOUND_CITY, 1252, Transition to gathering stage
+044, Germany, OP_FOUND_CITY, 1252, Started Army 1253; Units Recruited 2; Max Formation Size 2; Gathering Forces
+044, Germany, OP_FOUND_CITY, 1252, PRE Gathering Forces for army 1253; center (52:21); variance (2.25:2.25); free slots 0
+044, Germany, OP_FOUND_CITY, 1252, Transition to movement stage
+044, Germany, OP_FOUND_CITY, 1252, POST Moving To Target with Army 1253; center (50:19); target (57:19); Progress -28 percent
+044, Morocco, OP_FOUND_CITY, 1172, Ended: LostCivilian; Distance 6; Duration 13
+045, Spain, OP_FOUND_CITY, 1211, PRE Moving To Target with Army 1212; center (61:37); target (56:35); Progress 30 percent
+045, Spain, OP_FOUND_CITY, 1211, POST Moving To Target with Army 1212; center (61:36); target (56:35); Progress 40 percent
+045, Germany, OP_FOUND_CITY, 1252, PRE Moving To Target with Army 1253; center (50:19); target (57:19); Progress -28 percent
+045, Germany, OP_FOUND_CITY, 1252, POST Moving To Target with Army 1253; center (52:19); target (57:19); Progress 15 percent
+046, Spain, OP_FOUND_CITY, 1211, PRE Moving To Target with Army 1212; center (61:36); target (56:35); Progress 40 percent
+046, Spain, OP_FOUND_CITY, 1211, POST Moving To Target with Army 1212; center (60:35); target (56:35); Progress 50 percent
+046, Germany, OP_FOUND_CITY, 1252, PRE Moving To Target with Army 1253; center (52:19); target (57:19); Progress 15 percent
+046, Germany, OP_FOUND_CITY, 1252, POST Moving To Target with Army 1253; center (53:19); target (57:19); Progress 29 percent
+046, Venice, OP_MERCHANT, 1266, Skip recruiting, start with movement stage
+046, Venice, OP_MERCHANT, 1266, Found 0 potential units to recruit for operation 1266 at (44:40) with target at (38:42)
+046, Venice, OP_MERCHANT, 1266, Started Army 1267; Units Recruited 1; Max Formation Size 2; Moving To Target
+046, Venice, OP_MERCHANT, 1266, PRE Moving To Target with Army 1267; center (44:40); target (38:42); Progress 0 percent
+046, Venice, OP_MERCHANT, 1266, POST Moving To Target with Army 1267; center (43:41); target (38:42); Progress 0 percent
+047, Spain, OP_FOUND_CITY, 1211, PRE Moving To Target with Army 1212; center (60:35); target (56:35); Progress 50 percent
+047, Spain, OP_FOUND_CITY, 1211, POST Moving To Target with Army 1212; center (59:35); target (56:35); Progress 60 percent
+047, Germany, OP_FOUND_CITY, 1252, PRE Moving To Target with Army 1253; center (53:19); target (57:19); Progress 29 percent
+047, Germany, OP_FOUND_CITY, 1252, POST Moving To Target with Army 1253; center (54:19); target (57:19); Progress 43 percent
+047, Venice, OP_MERCHANT, 1266, PRE Moving To Target with Army 1267; center (43:41); target (38:42); Progress 0 percent
+047, Venice, OP_MERCHANT, 1266, Transition to target stage
+047, Venice, OP_MERCHANT, 1266, POST At Target
+048, Spain, OP_FOUND_CITY, 1211, PRE Moving To Target with Army 1212; center (59:35); target (56:35); Progress 60 percent
+048, Spain, OP_FOUND_CITY, 1211, POST Moving To Target with Army 1212; center (58:35); target (56:35); Progress 70 percent
+048, Germany, OP_FOUND_CITY, 1252, PRE Moving To Target with Army 1253; center (54:19); target (57:19); Progress 43 percent
+048, Germany, OP_FOUND_CITY, 1252, POST Moving To Target with Army 1253; center (56:19); target (57:19); Progress 100 percent
+048, Venice, OP_MERCHANT, 1266, Ended: TooDangerous; Distance 8; Duration 2
+049, Spain, OP_FOUND_CITY, 1211, PRE Moving To Target with Army 1212; center (58:35); target (56:35); Progress 70 percent
+049, Spain, OP_FOUND_CITY, 1211, POST Moving To Target with Army 1212; center (58:34); target (56:35); Progress 70 percent
+049, Germany, OP_FOUND_CITY, 1252, PRE Moving To Target with Army 1253; center (56:19); target (57:19); Progress 100 percent
+049, Germany, OP_FOUND_CITY, 1252, Transition to target stage
+049, Germany, OP_FOUND_CITY, 1252, City founded (Munich) at (57:19), plot value 129990, q50
+049, Germany, OP_FOUND_CITY, 1252, Transition to finished stage
+049, Germany, OP_FOUND_CITY, 1252, POST Completed
+049, Venice, OP_MERCHANT, 1294, Skip recruiting, start with movement stage
+049, Venice, OP_MERCHANT, 1294, Found 0 potential units to recruit for operation 1294 at (40:43) with target at (38:42)
+049, Venice, OP_MERCHANT, 1294, Started Army 1295; Units Recruited 1; Max Formation Size 2; Moving To Target
+049, Venice, OP_MERCHANT, 1294, PRE Moving To Target with Army 1295; center (40:43); target (38:42); Progress 0 percent
+049, Venice, OP_MERCHANT, 1294, POST Moving To Target with Army 1295; center (38:44); target (38:42); Progress 25 percent
+050, Spain, OP_FOUND_CITY, 1211, cannot found city at (56:35)
+050, Spain, OP_FOUND_CITY, 1211, no path to city site (56:35)
+050, Spain, OP_FOUND_CITY, 1211, found better target for settler, old score 109223 (q50), new score 105196 (q50)
+050, Spain, OP_FOUND_CITY, 1211, setting new target (57:34)
+050, Spain, OP_FOUND_CITY, 1211, PRE Moving To Target with Army 1212; center (58:34); target (57:34); Progress 100 percent
+050, Spain, OP_FOUND_CITY, 1211, Transition to target stage
+050, Spain, OP_FOUND_CITY, 1211, City founded (Seville) at (57:34), plot value 105196, q50
+050, Spain, OP_FOUND_CITY, 1211, Transition to finished stage
+050, Spain, OP_FOUND_CITY, 1211, POST Completed
+050, Germany, OP_FOUND_CITY, 1252, Ended: Success; Distance 7; Duration 6
+050, Venice, OP_MERCHANT, 1294, PRE Moving To Target with Army 1295; center (38:44); target (38:42); Progress 25 percent
+050, Venice, OP_MERCHANT, 1294, Transition to target stage
+050, Venice, OP_MERCHANT, 1294, POST At Target
+051, Spain, OP_FOUND_CITY, 1211, Ended: Success; Distance 10; Duration 12
+051, Venice, OP_MERCHANT, 1294, PRE At Target
+051, Venice, OP_MERCHANT, 1294, Great Merchant buying city-state at (38:43)
+051, Venice, OP_MERCHANT, 1294, Transition to finished stage
+051, Venice, OP_MERCHANT, 1294, Ended: Success; Distance 4; Duration 2
+052, The_Netherlands, OP_FOUND_CITY, 1322, found target for settler, score 72515 (q35)
+052, The_Netherlands, OP_FOUND_CITY, 1322, Skip recruiting, start with movement stage
+052, The_Netherlands, OP_FOUND_CITY, 1322, Found 1 potential units to recruit for operation 1322 at (43:16) with target at (39:22)
+052, The_Netherlands, OP_FOUND_CITY, 1322, Added Warrior 1012 to slot 1 in army 1323. ETA at (43:16) is 0 
+052, The_Netherlands, OP_FOUND_CITY, 1322, Started Army 1323; Units Recruited 2; Max Formation Size 2; Moving To Target
+052, The_Netherlands, OP_FOUND_CITY, 1322, PRE Moving To Target with Army 1323; center (43:16); target (39:22); Progress 0 percent
+052, The_Netherlands, OP_FOUND_CITY, 1322, POST Moving To Target with Army 1323; center (41:17); target (39:22); Progress 25 percent
+053, The_Netherlands, OP_FOUND_CITY, 1322, PRE Moving To Target with Army 1323; center (41:17); target (39:22); Progress 25 percent
+053, The_Netherlands, OP_FOUND_CITY, 1322, POST Moving To Target with Army 1323; center (40:19); target (39:22); Progress 50 percent
+054, The_Netherlands, OP_FOUND_CITY, 1322, PRE Moving To Target with Army 1323; center (40:19); target (39:22); Progress 50 percent
+054, The_Netherlands, OP_FOUND_CITY, 1322, POST Moving To Target with Army 1323; center (39:21); target (39:22); Progress 100 percent
+055, Morocco, OP_FOUND_CITY, 1340, found target for settler, score 120328 (q50)
+055, Morocco, OP_FOUND_CITY, 1340, Initial stage is recruiting
+055, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+055, Morocco, OP_FOUND_CITY, 1340, Started Army 1341; Units Recruited 1; Max Formation Size 2; Recruiting Units
+055, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA -1; Open; 
+055, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+055, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+055, The_Netherlands, OP_FOUND_CITY, 1322, PRE Moving To Target with Army 1323; center (39:21); target (39:22); Progress 100 percent
+055, The_Netherlands, OP_FOUND_CITY, 1322, Transition to target stage
+055, The_Netherlands, OP_FOUND_CITY, 1322, City founded (Utrecht) at (39:22), plot value 72567, q35
+055, The_Netherlands, OP_FOUND_CITY, 1322, Transition to finished stage
+055, The_Netherlands, OP_FOUND_CITY, 1322, POST Completed
+056, The_Maya, OP_FOUND_CITY, 1348, found target for settler, score 141228 (q50)
+056, The_Maya, OP_FOUND_CITY, 1348, Initial stage is recruiting
+056, The_Maya, OP_FOUND_CITY, 1348, Found 1 potential units to recruit for operation 1348 at (41:25) with target at (40:30)
+056, The_Maya, OP_FOUND_CITY, 1348, Added Warrior 1135 to slot 1 in army 1349. ETA at (41:25) is 0 
+056, The_Maya, OP_FOUND_CITY, 1348, Transition to gathering stage
+056, The_Maya, OP_FOUND_CITY, 1348, Transition to movement stage
+056, The_Maya, OP_FOUND_CITY, 1348, Started Army 1349; Units Recruited 2; Max Formation Size 2; Moving To Target
+056, The_Maya, OP_FOUND_CITY, 1348, PRE Moving To Target with Army 1349; center (41:25); target (40:30); Progress 0 percent
+056, The_Maya, OP_FOUND_CITY, 1348, POST Moving To Target with Army 1349; center (41:26); target (40:30); Progress 17 percent
+056, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+056, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+056, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+056, The_Netherlands, OP_FOUND_CITY, 1322, Ended: Success; Distance 8; Duration 4
+057, The_Maya, OP_FOUND_CITY, 1348, PRE Moving To Target with Army 1349; center (41:26); target (40:30); Progress 17 percent
+057, The_Maya, OP_FOUND_CITY, 1348, POST Moving To Target with Army 1349; center (39:27); target (40:30); Progress 34 percent
+057, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+057, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+057, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+057, Arabia, OP_FOUND_CITY, 1361, found target for settler, score 55405 (q3)
+057, Arabia, OP_FOUND_CITY, 1361, Initial stage is recruiting
+057, Arabia, OP_FOUND_CITY, 1361, Found 1 potential units to recruit for operation 1361 at (63:23) with target at (63:16)
+057, Arabia, OP_FOUND_CITY, 1361, Added Warrior 1016 to slot 1 in army 1362. ETA at (63:23) is 0 
+057, Arabia, OP_FOUND_CITY, 1361, Transition to gathering stage
+057, Arabia, OP_FOUND_CITY, 1361, Transition to movement stage
+057, Arabia, OP_FOUND_CITY, 1361, Started Army 1362; Units Recruited 2; Max Formation Size 2; Moving To Target
+057, Arabia, OP_FOUND_CITY, 1361, PRE Moving To Target with Army 1362; center (63:23); target (63:16); Progress 0 percent
+057, Arabia, OP_FOUND_CITY, 1361, POST Moving To Target with Army 1362; center (63:22); target (63:16); Progress 13 percent
+058, The_Maya, OP_FOUND_CITY, 1348, PRE Moving To Target with Army 1349; center (39:27); target (40:30); Progress 34 percent
+058, The_Maya, OP_FOUND_CITY, 1348, POST Moving To Target with Army 1349; center (39:29); target (40:30); Progress 100 percent
+058, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+058, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+058, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+058, Arabia, OP_FOUND_CITY, 1361, PRE Moving To Target with Army 1362; center (63:22); target (63:16); Progress 13 percent
+058, Arabia, OP_FOUND_CITY, 1361, POST Moving To Target with Army 1362; center (62:21); target (63:16); Progress 25 percent
+059, The_Maya, OP_FOUND_CITY, 1348, PRE Moving To Target with Army 1349; center (39:29); target (40:30); Progress 100 percent
+059, The_Maya, OP_FOUND_CITY, 1348, Transition to target stage
+059, The_Maya, OP_FOUND_CITY, 1348, POST At Target
+059, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+059, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+059, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+059, Arabia, OP_FOUND_CITY, 1361, PRE Moving To Target with Army 1362; center (62:21); target (63:16); Progress 25 percent
+059, Arabia, OP_FOUND_CITY, 1361, POST Moving To Target with Army 1362; center (62:19); target (63:16); Progress 50 percent
+060, The_Maya, OP_FOUND_CITY, 1348, PRE At Target
+060, The_Maya, OP_FOUND_CITY, 1348, City founded (Tikal) at (40:30), plot value 140024, q50
+060, The_Maya, OP_FOUND_CITY, 1348, Transition to finished stage
+060, The_Maya, OP_FOUND_CITY, 1348, Ended: Success; Distance 6; Duration 4
+060, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+060, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+060, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+060, Arabia, OP_FOUND_CITY, 1361, PRE Moving To Target with Army 1362; center (62:19); target (63:16); Progress 50 percent
+060, Arabia, OP_FOUND_CITY, 1361, POST Moving To Target with Army 1362; center (62:18); target (63:16); Progress 63 percent
+061, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+061, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+061, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+061, Venice, OP_RAPID_RESPONSE, 1391, Initial stage is recruiting
+061, Venice, OP_RAPID_RESPONSE, 1391, Found 5 potential units to recruit for operation 1391 at (38:42) with target at (34:38)
+061, Venice, OP_RAPID_RESPONSE, 1391, Added Warrior 1307 to slot 0 in army 1392. ETA at (38:42) is 0 
+061, Venice, OP_RAPID_RESPONSE, 1391, Added Warrior 1313 to slot 1 in army 1392. ETA at (38:42) is 0 
+061, Venice, OP_RAPID_RESPONSE, 1391, Added Warrior 1310 to slot 2 in army 1392. ETA at (38:42) is 0 
+061, Venice, OP_RAPID_RESPONSE, 1391, Added Warrior 1311 to slot 3 in army 1392. ETA at (38:42) is 0 
+061, Venice, OP_RAPID_RESPONSE, 1391, Transition to gathering stage
+061, Venice, OP_RAPID_RESPONSE, 1391, Transition to movement stage
+061, Venice, OP_RAPID_RESPONSE, 1391, Started Army 1392; Units Recruited 4; Max Formation Size 4; Moving To Target
+061, Venice, OP_RAPID_RESPONSE, 1391, PRE Moving To Target with Army 1392; center (37:41); target (34:38); Progress 100 percent
+061, Venice, OP_RAPID_RESPONSE, 1391, Ended: LostPath; Distance -1; Duration 0
+061, Arabia, OP_FOUND_CITY, 1361, PRE Moving To Target with Army 1362; center (62:18); target (63:16); Progress 63 percent
+061, Arabia, OP_FOUND_CITY, 1361, Transition to target stage
+061, Arabia, OP_FOUND_CITY, 1361, POST At Target
+062, Spain, OP_FOUND_CITY, 1401, found target for settler, score 128320 (q50)
+062, Spain, OP_FOUND_CITY, 1401, Initial stage is recruiting
+062, Spain, OP_FOUND_CITY, 1401, Found 1 potential units to recruit for operation 1401 at (63:39) with target at (54:39)
+062, Spain, OP_FOUND_CITY, 1401, Added Warrior 1076 to slot 1 in army 1402. ETA at (63:39) is 2 
+062, Spain, OP_FOUND_CITY, 1401, Transition to gathering stage
+062, Spain, OP_FOUND_CITY, 1401, Started Army 1402; Units Recruited 2; Max Formation Size 2; Gathering Forces
+062, Spain, OP_FOUND_CITY, 1401, PRE Gathering Forces for army 1402; center (63:39); variance (2.25:6.25); free slots 0
+062, Spain, OP_FOUND_CITY, 1401, POST Gathering Forces for army 1402; center (62:41); variance (2.25:12.25); free slots 0
+062, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+062, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+062, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+062, Arabia, OP_FOUND_CITY, 1361, PRE At Target
+062, Arabia, OP_FOUND_CITY, 1361, City founded (Damascus) at (63:16), plot value 70665, q31
+062, Arabia, OP_FOUND_CITY, 1361, Transition to finished stage
+062, Arabia, OP_FOUND_CITY, 1361, Ended: Success; Distance 8; Duration 5
+063, Spain, OP_FOUND_CITY, 1401, PRE Gathering Forces for army 1402; center (62:41); variance (2.25:12.25); free slots 0
+063, Spain, OP_FOUND_CITY, 1401, POST Gathering Forces for army 1402; center (59:35); variance (2.25:9.00); free slots 0
+063, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+063, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+063, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+063, Venice, OP_RAPID_RESPONSE, 1413, Initial stage is recruiting
+063, Venice, OP_RAPID_RESPONSE, 1413, Found 2 potential units to recruit for operation 1413 at (44:40) with target at (44:40)
+063, Venice, OP_RAPID_RESPONSE, 1413, Added Warrior 1313 to slot 0 in army 1414. ETA at (44:40) is 0 
+063, Venice, OP_RAPID_RESPONSE, 1413, Added Warrior 1307 to slot 1 in army 1414. ETA at (44:40) is 2 
+063, Venice, OP_RAPID_RESPONSE, 1413, Transition to gathering stage
+063, Venice, OP_RAPID_RESPONSE, 1413, Transition to movement stage
+063, Venice, OP_RAPID_RESPONSE, 1413, Started Army 1414; Units Recruited 2; Max Formation Size 4; Moving To Target
+063, Venice, OP_RAPID_RESPONSE, 1413, Ended: NoTarget; Distance 8; Duration 0
+064, Spain, OP_FOUND_CITY, 1401, PRE Gathering Forces for army 1402; center (59:35); variance (2.25:16.00); free slots 0
+064, Spain, OP_FOUND_CITY, 1401, POST Gathering Forces for army 1402; center (62:41); variance (1.00:6.25); free slots 0
+064, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+064, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+064, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+065, Spain, OP_FOUND_CITY, 1401, PRE Gathering Forces for army 1402; center (62:41); variance (1.00:6.25); free slots 0
+065, Spain, OP_FOUND_CITY, 1401, POST Gathering Forces for army 1402; center (61:37); variance (0.25:4.00); free slots 0
+065, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+065, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+065, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+066, Spain, OP_FOUND_CITY, 1401, PRE Gathering Forces for army 1402; center (61:37); variance (0.25:4.00); free slots 0
+066, Spain, OP_FOUND_CITY, 1401, Transition to movement stage
+066, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (62:41); target (54:39); Progress 0 percent
+066, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+066, Morocco, OP_FOUND_CITY, 1340, Found 0 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+066, Morocco, OP_FOUND_CITY, 1340, POST Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+066, Venice, OP_RAPID_RESPONSE, 1436, Initial stage is recruiting
+066, Venice, OP_RAPID_RESPONSE, 1436, Found 3 potential units to recruit for operation 1436 at (38:42) with target at (34:38)
+066, Venice, OP_RAPID_RESPONSE, 1436, Added Warrior 1307 to slot 0 in army 1437. ETA at (38:42) is 0 
+066, Venice, OP_RAPID_RESPONSE, 1436, Added Warrior 1014 to slot 1 in army 1437. ETA at (38:42) is 2 
+066, Venice, OP_RAPID_RESPONSE, 1436, Added Warrior 1313 to slot 2 in army 1437. ETA at (38:42) is 2 
+066, Venice, OP_RAPID_RESPONSE, 1436, Transition to gathering stage
+066, Venice, OP_RAPID_RESPONSE, 1436, Started Army 1437; Units Recruited 3; Max Formation Size 4; Gathering Forces
+066, Venice, OP_RAPID_RESPONSE, 1436, PRE Gathering Forces for army 1437; center (44:40); variance (8.00:1.56); free slots 1
+066, Venice, OP_RAPID_RESPONSE, 1436, POST Gathering Forces for army 1437; center (43:38); variance (6.89:2.67); free slots 1
+067, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (62:41); target (54:39); Progress 0 percent
+067, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (61:39); target (54:39); Progress -12 percent
+067, Germany, OP_FOUND_CITY, 1447, found target for settler, score 84871 (q50)
+067, Germany, OP_FOUND_CITY, 1447, Initial stage is recruiting
+067, Germany, OP_FOUND_CITY, 1447, Found 1 potential units to recruit for operation 1447 at (52:21) with target at (58:15)
+067, Germany, OP_FOUND_CITY, 1447, Started Army 1448; Units Recruited 1; Max Formation Size 2; Recruiting Units
+067, Germany, OP_FOUND_CITY, 1447, PRE Recruiting Units for army 1448; Settler 1446 at (52:21) - ETA -1; Open; 
+067, Germany, OP_FOUND_CITY, 1447, Found 1 potential units to recruit for operation 1447 at (52:21) with target at (58:15)
+067, Germany, OP_FOUND_CITY, 1447, POST Recruiting Units for army 1448; Settler 1446 at (52:21) - ETA 0; Open; 
+067, Morocco, OP_FOUND_CITY, 1340, PRE Recruiting Units for army 1341; Settler 1339 at (34:38) - ETA 0; Open; 
+067, Morocco, OP_FOUND_CITY, 1340, Found 1 potential units to recruit for operation 1340 at (34:38) with target at (29:38)
+067, Morocco, OP_FOUND_CITY, 1340, Added Warrior 1010 to slot 1 in army 1341. ETA at (34:38) is 1 
+067, Morocco, OP_FOUND_CITY, 1340, Added Warrior 1117 to slot 1 in army 1341. ETA at (34:38) is 0 
+067, Morocco, OP_FOUND_CITY, 1340, Transition to gathering stage
+067, Morocco, OP_FOUND_CITY, 1340, Transition to movement stage
+067, Morocco, OP_FOUND_CITY, 1340, POST Moving To Target with Army 1341; center (34:38); target (29:38); Progress 0 percent
+067, Venice, OP_RAPID_RESPONSE, 1436, Ended: NoTarget; Distance -1; Duration 1
+068, The_Maya, OP_FOUND_CITY, 1462, Ended: NoTarget; Distance -1; Duration 69
+068, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (61:39); target (54:39); Progress -12 percent
+068, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (62:41); target (54:39); Progress 0 percent
+068, Germany, OP_FOUND_CITY, 1447, PRE Recruiting Units for army 1448; Settler 1446 at (52:21) - ETA 0; Open; 
+068, Germany, OP_FOUND_CITY, 1447, Found 1 potential units to recruit for operation 1447 at (52:21) with target at (58:15)
+068, Germany, OP_FOUND_CITY, 1447, POST Recruiting Units for army 1448; Settler 1446 at (52:21) - ETA 0; Open; 
+068, Morocco, OP_FOUND_CITY, 1340, PRE Moving To Target with Army 1341; center (34:38); target (29:38); Progress 0 percent
+068, Morocco, OP_FOUND_CITY, 1340, POST Moving To Target with Army 1341; center (33:38); target (29:38); Progress 29 percent
+069, The_Maya, OP_FOUND_CITY, 1466, Ended: NoTarget; Distance -1; Duration 70
+069, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (62:41); target (54:39); Progress 0 percent
+069, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (62:43); target (54:39); Progress 13 percent
+069, Germany, OP_FOUND_CITY, 1447, PRE Recruiting Units for army 1448; Settler 1446 at (52:21) - ETA 0; Open; 
+069, Germany, OP_FOUND_CITY, 1447, Found 2 potential units to recruit for operation 1447 at (52:21) with target at (58:15)
+069, Germany, OP_FOUND_CITY, 1447, Added Warrior 1106 to slot 1 in army 1448. ETA at (52:21) is 0 
+069, Germany, OP_FOUND_CITY, 1447, Added Archer 1404 to slot 1 in army 1448. ETA at (52:21) is 0 
+069, Germany, OP_FOUND_CITY, 1447, Transition to gathering stage
+069, Germany, OP_FOUND_CITY, 1447, Transition to movement stage
+069, Germany, OP_FOUND_CITY, 1447, POST Moving To Target with Army 1448; center (52:21); target (58:15); Progress 0 percent
+069, Morocco, OP_FOUND_CITY, 1340, PRE Moving To Target with Army 1341; center (33:38); target (29:38); Progress 29 percent
+069, Morocco, OP_FOUND_CITY, 1340, POST Moving To Target with Army 1341; center (31:38); target (29:38); Progress 58 percent
+070, The_Maya, OP_FOUND_CITY, 1472, Ended: NoTarget; Distance -1; Duration 71
+070, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (62:43); target (54:39); Progress 13 percent
+070, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (61:45); target (54:39); Progress 25 percent
+070, Germany, OP_FOUND_CITY, 1447, PRE Moving To Target with Army 1448; center (53:20); target (58:15); Progress 10 percent
+070, Germany, OP_FOUND_CITY, 1447, POST Moving To Target with Army 1448; center (53:20); target (58:15); Progress 10 percent
+070, Morocco, OP_FOUND_CITY, 1340, PRE Moving To Target with Army 1341; center (31:38); target (29:38); Progress 58 percent
+070, Morocco, OP_FOUND_CITY, 1340, POST Moving To Target with Army 1341; center (30:38); target (29:38); Progress 100 percent
+071, The_Maya, OP_FOUND_CITY, 1482, Ended: NoTarget; Distance -1; Duration 72
+071, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (61:45); target (54:39); Progress 25 percent
+071, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (60:46); target (54:39); Progress 38 percent
+071, Germany, OP_FOUND_CITY, 1447, PRE Moving To Target with Army 1448; center (53:20); target (58:15); Progress 10 percent
+071, Germany, OP_FOUND_CITY, 1447, POST Moving To Target with Army 1448; center (54:18); target (58:15); Progress 30 percent
+071, Morocco, OP_FOUND_CITY, 1340, PRE Moving To Target with Army 1341; center (30:38); target (29:38); Progress 100 percent
+071, Morocco, OP_FOUND_CITY, 1340, Transition to target stage
+071, Morocco, OP_FOUND_CITY, 1340, POST At Target
+071, Venice, OP_RAPID_RESPONSE, 1485, Initial stage is recruiting
+071, Venice, OP_RAPID_RESPONSE, 1485, Found 8 potential units to recruit for operation 1485 at (38:42) with target at (34:38)
+071, Venice, OP_RAPID_RESPONSE, 1485, Added Warrior 1103 to slot 0 in army 1486. ETA at (38:42) is 0 
+071, Venice, OP_RAPID_RESPONSE, 1485, Added Warrior 1307 to slot 1 in army 1486. ETA at (38:42) is 0 
+071, Venice, OP_RAPID_RESPONSE, 1485, Added Warrior 1310 to slot 2 in army 1486. ETA at (38:42) is 0 
+071, Venice, OP_RAPID_RESPONSE, 1485, Added Warrior 1308 to slot 3 in army 1486. ETA at (38:42) is 0 
+071, Venice, OP_RAPID_RESPONSE, 1485, Transition to gathering stage
+071, Venice, OP_RAPID_RESPONSE, 1485, Transition to movement stage
+071, Venice, OP_RAPID_RESPONSE, 1485, Started Army 1486; Units Recruited 4; Max Formation Size 4; Moving To Target
+071, Venice, OP_RAPID_RESPONSE, 1485, PRE Moving To Target with Army 1486; center (38:42); target (34:38); Progress 100 percent
+071, Venice, OP_RAPID_RESPONSE, 1485, Ended: LostPath; Distance -1; Duration 0
+072, The_Maya, OP_FOUND_CITY, 1489, Ended: NoTarget; Distance -1; Duration 73
+072, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (60:46); target (54:39); Progress 38 percent
+072, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (58:45); target (54:39); Progress 50 percent
+072, Germany, OP_FOUND_CITY, 1447, PRE Moving To Target with Army 1448; center (54:18); target (58:15); Progress 30 percent
+072, Germany, OP_FOUND_CITY, 1447, POST Moving To Target with Army 1448; center (56:18); target (58:15); Progress 50 percent
+072, Morocco, OP_FOUND_CITY, 1340, PRE At Target
+072, Morocco, OP_FOUND_CITY, 1340, City founded (Rabat) at (29:38), plot value 98684, q50
+072, Morocco, OP_FOUND_CITY, 1340, Transition to finished stage
+072, Morocco, OP_FOUND_CITY, 1340, Ended: Success; Distance 7; Duration 17
+072, Venice, OP_RAPID_RESPONSE, 1493, Initial stage is recruiting
+072, Venice, OP_RAPID_RESPONSE, 1493, Found 8 potential units to recruit for operation 1493 at (38:42) with target at (34:38)
+072, Venice, OP_RAPID_RESPONSE, 1493, Added Warrior 1103 to slot 0 in army 1494. ETA at (38:42) is 0 
+072, Venice, OP_RAPID_RESPONSE, 1493, Added Warrior 1307 to slot 1 in army 1494. ETA at (38:42) is 0 
+072, Venice, OP_RAPID_RESPONSE, 1493, Added Warrior 1310 to slot 2 in army 1494. ETA at (38:42) is 0 
+072, Venice, OP_RAPID_RESPONSE, 1493, Added Warrior 1308 to slot 3 in army 1494. ETA at (38:42) is 0 
+072, Venice, OP_RAPID_RESPONSE, 1493, Transition to gathering stage
+072, Venice, OP_RAPID_RESPONSE, 1493, Transition to movement stage
+072, Venice, OP_RAPID_RESPONSE, 1493, Started Army 1494; Units Recruited 4; Max Formation Size 4; Moving To Target
+072, Venice, OP_RAPID_RESPONSE, 1493, PRE Moving To Target with Army 1494; center (39:41); target (34:38); Progress 100 percent
+072, Venice, OP_RAPID_RESPONSE, 1493, Ended: LostPath; Distance -1; Duration 0
+073, The_Maya, OP_FOUND_CITY, 1496, Ended: NoTarget; Distance -1; Duration 74
+073, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (58:45); target (54:39); Progress 50 percent
+073, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (57:45); target (54:39); Progress 57 percent
+073, Germany, OP_FOUND_CITY, 1447, PRE Moving To Target with Army 1448; center (56:18); target (58:15); Progress 50 percent
+073, Germany, OP_FOUND_CITY, 1447, POST Moving To Target with Army 1448; center (57:16); target (58:15); Progress 70 percent
+073, Venice, OP_RAPID_RESPONSE, 1499, Initial stage is recruiting
+073, Venice, OP_RAPID_RESPONSE, 1499, Found 9 potential units to recruit for operation 1499 at (38:42) with target at (34:38)
+073, Venice, OP_RAPID_RESPONSE, 1499, Added Warrior 1307 to slot 0 in army 1500. ETA at (38:42) is 0 
+073, Venice, OP_RAPID_RESPONSE, 1499, Added Warrior 1310 to slot 1 in army 1500. ETA at (38:42) is 0 
+073, Venice, OP_RAPID_RESPONSE, 1499, Added Warrior 1308 to slot 2 in army 1500. ETA at (38:42) is 0 
+073, Venice, OP_RAPID_RESPONSE, 1499, Added Warrior 1103 to slot 3 in army 1500. ETA at (38:42) is 0 
+073, Venice, OP_RAPID_RESPONSE, 1499, Transition to gathering stage
+073, Venice, OP_RAPID_RESPONSE, 1499, Transition to movement stage
+073, Venice, OP_RAPID_RESPONSE, 1499, Started Army 1500; Units Recruited 4; Max Formation Size 4; Moving To Target
+073, Venice, OP_RAPID_RESPONSE, 1499, PRE Moving To Target with Army 1500; center (38:42); target (34:38); Progress 100 percent
+073, Venice, OP_RAPID_RESPONSE, 1499, Ended: LostPath; Distance -1; Duration 0
+074, The_Maya, OP_FOUND_CITY, 1503, found target for settler, score 55815 (q4)
+074, The_Maya, OP_FOUND_CITY, 1503, Initial stage is recruiting
+074, The_Maya, OP_FOUND_CITY, 1503, Found 1 potential units to recruit for operation 1503 at (41:25) with target at (40:35)
+074, The_Maya, OP_FOUND_CITY, 1503, Added Warrior 1135 to slot 1 in army 1504. ETA at (41:25) is 0 
+074, The_Maya, OP_FOUND_CITY, 1503, Transition to gathering stage
+074, The_Maya, OP_FOUND_CITY, 1503, Transition to movement stage
+074, The_Maya, OP_FOUND_CITY, 1503, Started Army 1504; Units Recruited 2; Max Formation Size 2; Moving To Target
+074, The_Maya, OP_FOUND_CITY, 1503, PRE Moving To Target with Army 1504; center (41:25); target (40:35); Progress 0 percent
+074, The_Maya, OP_FOUND_CITY, 1503, POST Moving To Target with Army 1504; center (41:27); target (40:35); Progress 19 percent
+074, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (57:45); target (54:39); Progress 57 percent
+074, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (56:44); target (54:39); Progress 63 percent
+074, Germany, OP_FOUND_CITY, 1447, PRE Moving To Target with Army 1448; center (57:16); target (58:15); Progress 70 percent
+074, Germany, OP_FOUND_CITY, 1447, Transition to target stage
+074, Germany, OP_FOUND_CITY, 1447, POST At Target
+074, Venice, OP_RAPID_RESPONSE, 1508, Initial stage is recruiting
+074, Venice, OP_RAPID_RESPONSE, 1508, Found 8 potential units to recruit for operation 1508 at (38:42) with target at (34:38)
+074, Venice, OP_RAPID_RESPONSE, 1508, Added Warrior 1308 to slot 0 in army 1509. ETA at (38:42) is 0 
+074, Venice, OP_RAPID_RESPONSE, 1508, Added Warrior 1307 to slot 1 in army 1509. ETA at (38:42) is 0 
+074, Venice, OP_RAPID_RESPONSE, 1508, Added Warrior 1310 to slot 2 in army 1509. ETA at (38:42) is 0 
+074, Venice, OP_RAPID_RESPONSE, 1508, Added Warrior 1314 to slot 3 in army 1509. ETA at (38:42) is 0 
+074, Venice, OP_RAPID_RESPONSE, 1508, Transition to gathering stage
+074, Venice, OP_RAPID_RESPONSE, 1508, Transition to movement stage
+074, Venice, OP_RAPID_RESPONSE, 1508, Started Army 1509; Units Recruited 4; Max Formation Size 4; Moving To Target
+074, Venice, OP_RAPID_RESPONSE, 1508, PRE Moving To Target with Army 1509; center (39:41); target (34:38); Progress 100 percent
+074, Venice, OP_RAPID_RESPONSE, 1508, Ended: LostPath; Distance -1; Duration 0
+075, The_Maya, OP_FOUND_CITY, 1503, PRE Moving To Target with Army 1504; center (41:27); target (40:35); Progress 19 percent
+075, The_Maya, OP_FOUND_CITY, 1503, POST Moving To Target with Army 1504; center (40:29); target (40:35); Progress 37 percent
+075, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (56:44); target (54:39); Progress 63 percent
+075, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (55:42); target (54:39); Progress 75 percent
+075, Germany, OP_FOUND_CITY, 1447, PRE At Target
+075, Germany, OP_FOUND_CITY, 1447, City founded (Cologne) at (58:15), plot value 84871, q50
+075, Germany, OP_FOUND_CITY, 1447, Transition to finished stage
+075, Germany, OP_FOUND_CITY, 1447, Ended: Success; Distance 10; Duration 8
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Initial stage is recruiting
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Found 6 potential units to recruit for operation 1512 at (50:30) with target at (57:34)
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Added Warrior 1008 to slot 0 in army 1513. ETA at (50:30) is 0 
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Added Warrior 1163 to slot 1 in army 1513. ETA at (50:30) is 1 
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Added Warrior 1077 to slot 2 in army 1513. ETA at (50:30) is 3 
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Added Catapult 1321 to slot 3 in army 1513. ETA at (50:30) is 0 
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Added Catapult 1265 to slot 4 in army 1513. ETA at (50:30) is 2 
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Added Battering Ram 1358 to slot 5 in army 1513. ETA at (50:30) is 7 
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Transition to gathering stage
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Started Army 1513; Units Recruited 6; Max Formation Size 10; Gathering Forces
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, PRE Gathering Forces for army 1513; center (52:38); variance (0.56:34.25); free slots 4
+075, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, POST Gathering Forces for army 1513; center (51:36); variance (0.89:21.89); free slots 4
+076, The_Maya, OP_FOUND_CITY, 1503, PRE Moving To Target with Army 1504; center (40:29); target (40:35); Progress 37 percent
+076, The_Maya, OP_FOUND_CITY, 1503, POST Moving To Target with Army 1504; center (40:31); target (40:35); Progress 55 percent
+076, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (55:42); target (54:39); Progress 75 percent
+076, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (55:41); target (54:39); Progress 82 percent
+076, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, PRE Gathering Forces for army 1513; center (51:36); variance (0.89:21.89); free slots 4
+076, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Removing Warrior 1077 from army 1513 because no progress to checkpoint (50:30). ETA 3; prev 3; prev 3
+076, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, POST Gathering Forces for army 1513; center (50:35); variance (0.40:23.44); free slots 5
+076, The_Netherlands, OP_FOUND_CITY, 1552, found target for settler, score 73276 (q36)
+076, The_Netherlands, OP_FOUND_CITY, 1552, Skip recruiting, start with movement stage
+076, The_Netherlands, OP_FOUND_CITY, 1552, Found 3 potential units to recruit for operation 1552 at (43:16) with target at (47:14)
+076, The_Netherlands, OP_FOUND_CITY, 1552, Added Warrior 1419 to slot 1 in army 1553. ETA at (43:16) is 0 
+076, The_Netherlands, OP_FOUND_CITY, 1552, Started Army 1553; Units Recruited 2; Max Formation Size 2; Moving To Target
+076, The_Netherlands, OP_FOUND_CITY, 1552, PRE Moving To Target with Army 1553; center (43:16); target (47:14); Progress 0 percent
+076, The_Netherlands, OP_FOUND_CITY, 1552, POST Moving To Target with Army 1553; center (43:15); target (47:14); Progress 17 percent
+077, The_Maya, OP_FOUND_CITY, 1503, PRE Moving To Target with Army 1504; center (40:31); target (40:35); Progress 55 percent
+077, The_Maya, OP_FOUND_CITY, 1503, POST Moving To Target with Army 1504; center (41:32); target (40:35); Progress 64 percent
+077, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (55:41); target (54:39); Progress 82 percent
+077, Spain, OP_FOUND_CITY, 1401, POST Moving To Target with Army 1402; center (55:40); target (54:39); Progress 100 percent
+077, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, PRE Gathering Forces for army 1513; center (50:35); variance (0.40:23.44); free slots 5
+077, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, POST Gathering Forces for army 1513; center (49:33); variance (1.36:25.20); free slots 5
+077, The_Netherlands, OP_FOUND_CITY, 1552, PRE Moving To Target with Army 1553; center (43:15); target (47:14); Progress 17 percent
+077, The_Netherlands, OP_FOUND_CITY, 1552, POST Moving To Target with Army 1553; center (44:15); target (47:14); Progress 34 percent
+077, Venice, OP_RAPID_RESPONSE, 1568, Initial stage is recruiting
+077, Venice, OP_RAPID_RESPONSE, 1568, Found 2 potential units to recruit for operation 1568 at (44:40) with target at (44:40)
+077, Venice, OP_RAPID_RESPONSE, 1568, Added Warrior 1308 to slot 0 in army 1569. ETA at (44:40) is 1 
+077, Venice, OP_RAPID_RESPONSE, 1568, Added Warrior 1307 to slot 1 in army 1569. ETA at (44:40) is 2 
+077, Venice, OP_RAPID_RESPONSE, 1568, Transition to gathering stage
+077, Venice, OP_RAPID_RESPONSE, 1568, Transition to movement stage
+077, Venice, OP_RAPID_RESPONSE, 1568, Started Army 1569; Units Recruited 2; Max Formation Size 4; Moving To Target
+077, Venice, OP_RAPID_RESPONSE, 1568, PRE Moving To Target with Army 1569; center (39:42); target (44:40); Progress 0 percent
+077, Venice, OP_RAPID_RESPONSE, 1568, POST Moving To Target with Army 1569; center (40:42); target (44:40); Progress 15 percent
+078, The_Maya, OP_FOUND_CITY, 1503, PRE Moving To Target with Army 1504; center (41:32); target (40:35); Progress 64 percent
+078, The_Maya, OP_FOUND_CITY, 1503, POST Moving To Target with Army 1504; center (40:33); target (40:35); Progress 73 percent
+078, Spain, OP_FOUND_CITY, 1401, PRE Moving To Target with Army 1402; center (55:40); target (54:39); Progress 100 percent
+078, Spain, OP_FOUND_CITY, 1401, Transition to target stage
+078, Spain, OP_FOUND_CITY, 1401, POST At Target
+078, Germany, OP_FOUND_CITY, 1574, found target for settler, score 83743 (q50)
+078, Germany, OP_FOUND_CITY, 1574, Skip recruiting, start with movement stage
+078, Germany, OP_FOUND_CITY, 1574, Found 1 potential units to recruit for operation 1574 at (52:21) with target at (48:14)
+078, Germany, OP_FOUND_CITY, 1574, Added Warrior 1006 to slot 1 in army 1575. ETA at (52:21) is 1 
+078, Germany, OP_FOUND_CITY, 1574, Started Army 1575; Units Recruited 2; Max Formation Size 2; Moving To Target
+078, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (52:21); target (48:14); Progress 0 percent
+078, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (51:19); target (48:14); Progress 23 percent
+078, The_Huns, OP_FOUND_CITY, 1578, found target for settler, score 147246 (q50)
+078, The_Huns, OP_FOUND_CITY, 1578, Initial stage is recruiting
+078, The_Huns, OP_FOUND_CITY, 1578, Found 0 potential units to recruit for operation 1578 at (50:30) with target at (54:39)
+078, The_Huns, OP_FOUND_CITY, 1578, Started Army 1579; Units Recruited 1; Max Formation Size 2; Recruiting Units
+078, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, PRE Gathering Forces for army 1513; center (49:33); variance (1.36:25.20); free slots 5
+078, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Removing Battering Ram 1358 from army 1513 because no progress to checkpoint (50:30). ETA 6; prev 6; prev 6
+078, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Transition to movement stage
+078, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, POST Moving To Target with Army 1513; center (50:32); target (57:34); Progress 0 percent
+078, The_Huns, OP_FOUND_CITY, 1578, PRE Recruiting Units for army 1579; Settler 1577 at (50:30) - ETA -1; Open; 
+078, The_Huns, OP_FOUND_CITY, 1578, Found 0 potential units to recruit for operation 1578 at (50:30) with target at (54:39)
+078, The_Huns, OP_FOUND_CITY, 1578, POST Recruiting Units for army 1579; Settler 1577 at (50:30) - ETA 0; Open; 
+078, The_Netherlands, OP_FOUND_CITY, 1552, PRE Moving To Target with Army 1553; center (44:15); target (47:14); Progress 34 percent
+078, The_Netherlands, OP_FOUND_CITY, 1552, POST Moving To Target with Army 1553; center (45:14); target (47:14); Progress 50 percent
+078, Venice, OP_RAPID_RESPONSE, 1568, PRE Moving To Target with Army 1569; center (40:42); target (44:40); Progress 15 percent
+078, Venice, OP_RAPID_RESPONSE, 1568, POST Moving To Target with Army 1569; center (40:41); target (44:40); Progress 29 percent
+079, The_Maya, OP_FOUND_CITY, 1503, cannot found city at (40:35)
+079, The_Maya, OP_FOUND_CITY, 1503, no path to city site (40:35)
+079, The_Maya, OP_FOUND_CITY, 1503, found better target for settler, old score 97463 (q50), new score 105026 (q50)
+079, The_Maya, OP_FOUND_CITY, 1503, setting new target (39:35)
+079, The_Maya, OP_FOUND_CITY, 1503, PRE Moving To Target with Army 1504; center (40:33); target (39:35); Progress 73 percent
+079, The_Maya, OP_FOUND_CITY, 1503, POST Moving To Target with Army 1504; center (40:34); target (39:35); Progress 100 percent
+079, Spain, OP_FOUND_CITY, 1401, PRE At Target
+079, Spain, OP_FOUND_CITY, 1401, City founded (Cordoba) at (54:39), plot value 103231, q50
+079, Spain, OP_FOUND_CITY, 1401, Transition to finished stage
+079, Spain, OP_FOUND_CITY, 1401, Ended: Success; Distance 16; Duration 17
+079, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (51:19); target (48:14); Progress 23 percent
+079, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (50:18); target (48:14); Progress 45 percent
+079, The_Huns, OP_FOUND_CITY, 1578, cannot found city at (54:39)
+079, The_Huns, OP_FOUND_CITY, 1578, no path to city site (54:39)
+079, The_Huns, OP_FOUND_CITY, 1578, found better target for settler, old score -1 (q-50), new score 107563 (q50)
+079, The_Huns, OP_FOUND_CITY, 1578, setting new target (51:41)
+079, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, PRE Moving To Target with Army 1513; center (50:32); target (57:34); Progress 0 percent
+079, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, POST Moving To Target with Army 1513; center (51:33); target (57:34); Progress 23 percent
+079, The_Huns, OP_FOUND_CITY, 1578, PRE Recruiting Units for army 1579; Settler 1577 at (50:30) - ETA 0; Open; 
+079, The_Huns, OP_FOUND_CITY, 1578, Found 1 potential units to recruit for operation 1578 at (50:30) with target at (51:41)
+079, The_Huns, OP_FOUND_CITY, 1578, Added Warrior 1077 to slot 1 in army 1579. ETA at (50:30) is 1 
+079, The_Huns, OP_FOUND_CITY, 1578, Transition to gathering stage
+079, The_Huns, OP_FOUND_CITY, 1578, POST Gathering Forces for army 1579; center (51:34); variance (0.25:4.00); free slots 0
+079, The_Netherlands, OP_FOUND_CITY, 1552, PRE Moving To Target with Army 1553; center (45:14); target (47:14); Progress 50 percent
+079, The_Netherlands, OP_FOUND_CITY, 1552, POST Moving To Target with Army 1553; center (46:14); target (47:14); Progress 100 percent
+079, Venice, OP_RAPID_RESPONSE, 1594, Initial stage is recruiting
+079, Venice, OP_RAPID_RESPONSE, 1594, Found 1 potential units to recruit for operation 1594 at (38:42) with target at (34:38)
+079, Venice, OP_RAPID_RESPONSE, 1594, Added Swordsman 1584 to slot 0 in army 1595. ETA at (38:42) is 2 
+079, Venice, OP_RAPID_RESPONSE, 1594, Started Army 1595; Units Recruited 1; Max Formation Size 4; Recruiting Units
+079, Venice, OP_RAPID_RESPONSE, 1568, Ended: NoTarget; Distance 7; Duration 2
+079, Venice, OP_RAPID_RESPONSE, 1594, PRE Recruiting Units for army 1595; Swordsman 1584 at (44:40) - ETA 2; Open; Open; Open; 
+079, Venice, OP_RAPID_RESPONSE, 1594, Found 2 potential units to recruit for operation 1594 at (38:42) with target at (34:38)
+079, Venice, OP_RAPID_RESPONSE, 1594, Added Warrior 1308 to slot 1 in army 1595. ETA at (38:42) is 0 
+079, Venice, OP_RAPID_RESPONSE, 1594, Added Warrior 1307 to slot 2 in army 1595. ETA at (38:42) is 0 
+079, Venice, OP_RAPID_RESPONSE, 1594, Transition to gathering stage
+079, Venice, OP_RAPID_RESPONSE, 1594, POST Gathering Forces for army 1595; center (41:41); variance (1.56:1.56); free slots 1
+080, The_Maya, OP_FOUND_CITY, 1503, PRE Moving To Target with Army 1504; center (40:34); target (39:35); Progress 100 percent
+080, The_Maya, OP_FOUND_CITY, 1503, Transition to target stage
+080, The_Maya, OP_FOUND_CITY, 1503, City founded (Chichen Itza) at (39:35), plot value 112298, q50
+080, The_Maya, OP_FOUND_CITY, 1503, Transition to finished stage
+080, The_Maya, OP_FOUND_CITY, 1503, POST Completed
+080, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (50:18); target (48:14); Progress 45 percent
+080, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (48:17); target (48:14); Progress 56 percent
+080, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, PRE Moving To Target with Army 1513; center (51:33); target (57:34); Progress 23 percent
+080, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, POST Moving To Target with Army 1513; center (52:33); target (57:34); Progress 34 percent
+080, The_Huns, OP_FOUND_CITY, 1578, PRE Gathering Forces for army 1579; center (51:34); variance (0.25:4.00); free slots 0
+080, The_Huns, OP_FOUND_CITY, 1578, Transition to movement stage
+080, The_Huns, OP_FOUND_CITY, 1578, POST Moving To Target with Army 1579; center (50:32); target (51:41); Progress 17 percent
+080, The_Netherlands, OP_FOUND_CITY, 1552, PRE Moving To Target with Army 1553; center (46:14); target (47:14); Progress 100 percent
+080, The_Netherlands, OP_FOUND_CITY, 1552, Transition to target stage
+080, The_Netherlands, OP_FOUND_CITY, 1552, POST At Target
+080, Venice, OP_RAPID_RESPONSE, 1603, Initial stage is recruiting
+080, Venice, OP_RAPID_RESPONSE, 1603, Found 1 potential units to recruit for operation 1603 at (38:42) with target at (34:38)
+080, Venice, OP_RAPID_RESPONSE, 1603, Added Warrior 1312 to slot 0 in army 1604. ETA at (38:42) is 3 
+080, Venice, OP_RAPID_RESPONSE, 1603, Started Army 1604; Units Recruited 1; Max Formation Size 4; Recruiting Units
+080, Venice, OP_RAPID_RESPONSE, 1594, PRE Gathering Forces for army 1595; center (41:41); variance (1.56:1.56); free slots 1
+080, Venice, OP_RAPID_RESPONSE, 1594, Transition to movement stage
+080, Venice, OP_RAPID_RESPONSE, 1594, POST Moving To Target with Army 1595; center (40:40); target (34:38); Progress 100 percent
+080, Venice, OP_RAPID_RESPONSE, 1603, PRE Recruiting Units for army 1604; Warrior 1312 at (45:39) - ETA 3; Open; Open; Open; 
+080, Venice, OP_RAPID_RESPONSE, 1603, Found 0 potential units to recruit for operation 1603 at (38:42) with target at (34:38)
+080, Venice, OP_RAPID_RESPONSE, 1603, POST Recruiting Units for army 1604; Warrior 1312 at (45:40) - ETA 3; Open; Open; Open; 
+081, The_Maya, OP_FOUND_CITY, 1503, Ended: Success; Distance 11; Duration 7
+081, Spain, OP_FOUND_CITY, 1609, found target for settler, score 118596 (q50)
+081, Spain, OP_FOUND_CITY, 1609, Initial stage is recruiting
+081, Spain, OP_FOUND_CITY, 1609, Found 1 potential units to recruit for operation 1609 at (61:36) with target at (53:44)
+081, Spain, OP_FOUND_CITY, 1609, Added Warrior 1235 to slot 1 in army 1610. ETA at (61:36) is 0 
+081, Spain, OP_FOUND_CITY, 1609, Transition to gathering stage
+081, Spain, OP_FOUND_CITY, 1609, Transition to movement stage
+081, Spain, OP_FOUND_CITY, 1609, Started Army 1610; Units Recruited 2; Max Formation Size 2; Moving To Target
+081, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (61:36); target (53:44); Progress 0 percent
+081, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (60:35); target (53:44); Progress 6 percent
+081, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (48:17); target (48:14); Progress 56 percent
+081, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (47:15); target (48:14); Progress 100 percent
+081, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, PRE Moving To Target with Army 1513; center (52:33); target (57:34); Progress 34 percent
+081, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Discovered by enemy
+081, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, Transition to finished stage; unit distance near 3; far 5
+081, The_Huns, OP_CITY_ATTACK_LAND_SNEAKY, 1512, POST Completed
+081, The_Huns, OP_FOUND_CITY, 1578, PRE Moving To Target with Army 1579; center (50:32); target (51:41); Progress 17 percent
+081, The_Huns, OP_FOUND_CITY, 1578, POST Moving To Target with Army 1579; center (49:32); target (51:41); Progress 17 percent
+081, The_Netherlands, OP_FOUND_CITY, 1552, PRE At Target
+081, The_Netherlands, OP_FOUND_CITY, 1552, City founded (Groningen) at (47:14), plot value 71468, q33
+081, The_Netherlands, OP_FOUND_CITY, 1552, Transition to finished stage
+081, The_Netherlands, OP_FOUND_CITY, 1552, Ended: Success; Distance 6; Duration 5
+081, Venice, OP_RAPID_RESPONSE, 1620, Initial stage is recruiting
+081, Venice, OP_RAPID_RESPONSE, 1620, Found 1 potential units to recruit for operation 1620 at (38:42) with target at (34:38)
+081, Venice, OP_RAPID_RESPONSE, 1620, Added Warrior 1311 to slot 0 in army 1621. ETA at (38:42) is 2 
+081, Venice, OP_RAPID_RESPONSE, 1620, Started Army 1621; Units Recruited 1; Max Formation Size 4; Recruiting Units
+081, Venice, OP_RAPID_RESPONSE, 1594, PRE Moving To Target with Army 1595; center (40:40); target (34:38); Progress 100 percent
+081, Venice, OP_RAPID_RESPONSE, 1603, PRE Recruiting Units for army 1604; Warrior 1312 at (45:40) - ETA 3; Open; Open; Open; 
+081, Venice, OP_RAPID_RESPONSE, 1603, Found 3 potential units to recruit for operation 1603 at (38:42) with target at (34:38)
+081, Venice, OP_RAPID_RESPONSE, 1603, Added Warrior 1308 to slot 1 in army 1604. ETA at (38:42) is 0 
+081, Venice, OP_RAPID_RESPONSE, 1603, Added Swordsman 1584 to slot 2 in army 1604. ETA at (38:42) is 1 
+081, Venice, OP_RAPID_RESPONSE, 1603, Added Warrior 1307 to slot 3 in army 1604. ETA at (38:42) is 0 
+081, Venice, OP_RAPID_RESPONSE, 1603, Removing Warrior 1312 from army 1604 because no progress to checkpoint (38:42). ETA 3; prev 3; prev 3
+081, Venice, OP_RAPID_RESPONSE, 1603, Transition to gathering stage
+081, Venice, OP_RAPID_RESPONSE, 1603, POST Gathering Forces for army 1604; center (39:41); variance (1.56:0.22); free slots 1
+081, Venice, OP_RAPID_RESPONSE, 1620, PRE Recruiting Units for army 1621; Warrior 1311 at (41:37) - ETA 2; Open; Open; Open; 
+081, Venice, OP_RAPID_RESPONSE, 1620, Found 1 potential units to recruit for operation 1620 at (38:42) with target at (34:38)
+081, Venice, OP_RAPID_RESPONSE, 1620, Added Warrior 1312 to slot 1 in army 1621. ETA at (38:42) is 3 
+081, Venice, OP_RAPID_RESPONSE, 1620, Transition to gathering stage
+081, Venice, OP_RAPID_RESPONSE, 1620, POST Gathering Forces for army 1621; center (44:40); variance (2.25:1.00); free slots 2
+081, Venice, OP_RAPID_RESPONSE, 1594, Ended: LostPath; Distance -1; Duration 2
+082, Spain, OP_FOUND_CITY, 1625, found target for settler, score 129397 (q50)
+082, Spain, OP_FOUND_CITY, 1625, Initial stage is recruiting
+082, Spain, OP_FOUND_CITY, 1625, Found 0 potential units to recruit for operation 1625 at (63:39) with target at (49:41)
+082, Spain, OP_FOUND_CITY, 1625, Started Army 1626; Units Recruited 1; Max Formation Size 2; Recruiting Units
+082, Spain, OP_FOUND_CITY, 1625, Added Spearman 1627 to slot 1 in army 1626. ETA at (63:39) is 0 
+082, Spain, OP_FOUND_CITY, 1625, Transition to gathering stage
+082, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (60:35); target (53:44); Progress 6 percent
+082, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (60:34); target (53:44); Progress 6 percent
+082, Spain, OP_FOUND_CITY, 1625, PRE Gathering Forces for army 1626; center (63:39); variance (0.25:0.00); free slots 0
+082, Spain, OP_FOUND_CITY, 1625, Transition to movement stage
+082, Spain, OP_FOUND_CITY, 1625, POST Moving To Target with Army 1626; center (62:41); target (49:41); Progress 0 percent
+082, Germany, OP_FOUND_CITY, 1574, cannot found city at (48:14)
+082, Germany, OP_FOUND_CITY, 1574, no path to city site (48:14)
+082, Germany, OP_FOUND_CITY, 1574, found better target for settler, old score -1 (q-50), new score 76402 (q42)
+082, Germany, OP_FOUND_CITY, 1574, setting new target (59:24)
+082, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (48:16); target (59:24); Progress -77 percent
+082, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (49:17); target (59:24); Progress -55 percent
+082, The_Huns, OP_FOUND_CITY, 1578, found better target for settler, old score 99092 (q50), new score 94493 (q50)
+082, The_Huns, OP_FOUND_CITY, 1578, setting new target (49:41)
+082, The_Huns, OP_CITY_ATTACK_LAND, 1512, Ended: Success; Distance 9; Duration 7
+082, The_Huns, OP_FOUND_CITY, 1578, PRE Moving To Target with Army 1579; center (49:32); target (49:41); Progress 17 percent
+082, The_Huns, OP_FOUND_CITY, 1578, POST Moving To Target with Army 1579; center (50:34); target (49:41); Progress 34 percent
+082, Morocco, OP_FOUND_CITY, 1636, found target for settler, score 110126 (q50)
+082, Morocco, OP_FOUND_CITY, 1636, Initial stage is recruiting
+082, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (34:33)
+082, Morocco, OP_FOUND_CITY, 1636, Started Army 1637; Units Recruited 1; Max Formation Size 2; Recruiting Units
+082, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA -1; Open; 
+082, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (34:33)
+082, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+082, Venice, OP_RAPID_RESPONSE, 1641, Initial stage is recruiting
+082, Venice, OP_RAPID_RESPONSE, 1641, Found 1 potential units to recruit for operation 1641 at (38:42) with target at (34:38)
+082, Venice, OP_RAPID_RESPONSE, 1641, Added Warrior 1124 to slot 0 in army 1642. ETA at (38:42) is 1 
+082, Venice, OP_RAPID_RESPONSE, 1641, Started Army 1642; Units Recruited 1; Max Formation Size 4; Recruiting Units
+082, Venice, OP_RAPID_RESPONSE, 1603, PRE Gathering Forces for army 1604; center (39:41); variance (1.56:0.22); free slots 1
+082, Venice, OP_RAPID_RESPONSE, 1603, Transition to movement stage
+082, Venice, OP_RAPID_RESPONSE, 1603, POST Moving To Target with Army 1604; center (40:40); target (34:38); Progress 100 percent
+082, Venice, OP_RAPID_RESPONSE, 1620, PRE Gathering Forces for army 1621; center (44:40); variance (2.25:1.00); free slots 2
+082, Venice, OP_RAPID_RESPONSE, 1620, Transition to movement stage
+082, Venice, OP_RAPID_RESPONSE, 1620, POST Moving To Target with Army 1621; center (41:39); target (34:38); Progress 100 percent
+082, Venice, OP_RAPID_RESPONSE, 1641, PRE Recruiting Units for army 1642; Warrior 1124 at (40:38) - ETA 1; Open; Open; Open; 
+082, Venice, OP_RAPID_RESPONSE, 1641, Found 0 potential units to recruit for operation 1641 at (38:42) with target at (34:38)
+082, Venice, OP_RAPID_RESPONSE, 1641, POST Recruiting Units for army 1642; Warrior 1124 at (39:39) - ETA 1; Open; Open; Open; 
+083, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (60:34); target (53:44); Progress 6 percent
+083, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (60:35); target (53:44); Progress 6 percent
+083, Spain, OP_FOUND_CITY, 1625, PRE Moving To Target with Army 1626; center (62:41); target (49:41); Progress 0 percent
+083, Spain, OP_FOUND_CITY, 1625, POST Moving To Target with Army 1626; center (62:41); target (49:41); Progress 0 percent
+083, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (49:17); target (59:24); Progress -55 percent
+083, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (50:17); target (59:24); Progress -44 percent
+083, The_Huns, OP_FOUND_CITY, 1578, PRE Moving To Target with Army 1579; center (50:34); target (49:41); Progress 25 percent
+083, The_Huns, OP_FOUND_CITY, 1578, POST Moving To Target with Army 1579; center (51:35); target (49:41); Progress 42 percent
+083, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+083, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (34:33)
+083, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+083, Venice, OP_RAPID_RESPONSE, 1658, Initial stage is recruiting
+083, Venice, OP_RAPID_RESPONSE, 1658, Found 1 potential units to recruit for operation 1658 at (38:42) with target at (34:38)
+083, Venice, OP_RAPID_RESPONSE, 1658, Added Warrior 1314 to slot 0 in army 1659. ETA at (38:42) is 2 
+083, Venice, OP_RAPID_RESPONSE, 1658, Started Army 1659; Units Recruited 1; Max Formation Size 4; Recruiting Units
+083, Venice, OP_RAPID_RESPONSE, 1603, PRE Moving To Target with Army 1604; center (40:40); target (34:38); Progress 100 percent
+083, Venice, OP_RAPID_RESPONSE, 1620, PRE Moving To Target with Army 1621; center (41:39); target (34:38); Progress 100 percent
+083, Venice, OP_RAPID_RESPONSE, 1641, PRE Recruiting Units for army 1642; Warrior 1124 at (39:39) - ETA 1; Open; Open; Open; 
+083, Venice, OP_RAPID_RESPONSE, 1641, Found 5 potential units to recruit for operation 1641 at (38:42) with target at (34:38)
+083, Venice, OP_RAPID_RESPONSE, 1641, Added Swordsman 1584 to slot 1 in army 1642. ETA at (38:42) is 0 
+083, Venice, OP_RAPID_RESPONSE, 1641, Added Warrior 1308 to slot 2 in army 1642. ETA at (38:42) is 0 
+083, Venice, OP_RAPID_RESPONSE, 1641, Added Warrior 1307 to slot 3 in army 1642. ETA at (38:42) is 0 
+083, Venice, OP_RAPID_RESPONSE, 1641, Transition to gathering stage
+083, Venice, OP_RAPID_RESPONSE, 1641, POST Gathering Forces for army 1642; center (39:41); variance (0.25:1.50); free slots 0
+083, Venice, OP_RAPID_RESPONSE, 1658, PRE Recruiting Units for army 1659; Warrior 1314 at (42:37) - ETA 2; Open; Open; Open; 
+083, Venice, OP_RAPID_RESPONSE, 1658, Found 2 potential units to recruit for operation 1658 at (38:42) with target at (34:38)
+083, Venice, OP_RAPID_RESPONSE, 1658, Added Warrior 1312 to slot 1 in army 1659. ETA at (38:42) is 1 
+083, Venice, OP_RAPID_RESPONSE, 1658, Added Warrior 1311 to slot 2 in army 1659. ETA at (38:42) is 1 
+083, Venice, OP_RAPID_RESPONSE, 1658, Transition to gathering stage
+083, Venice, OP_RAPID_RESPONSE, 1658, POST Gathering Forces for army 1659; center (40:41); variance (0.89:0.89); free slots 1
+083, Venice, OP_RAPID_RESPONSE, 1603, Ended: LostPath; Distance -1; Duration 3
+083, Venice, OP_RAPID_RESPONSE, 1620, Ended: LostPath; Distance -1; Duration 2
+084, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (60:35); target (53:44); Progress 6 percent
+084, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (61:37); target (53:44); Progress -17 percent
+084, Spain, OP_FOUND_CITY, 1625, PRE Moving To Target with Army 1626; center (62:41); target (49:41); Progress 0 percent
+084, Spain, OP_FOUND_CITY, 1625, POST Moving To Target with Army 1626; center (62:43); target (49:41); Progress 10 percent
+084, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (50:17); target (59:24); Progress -44 percent
+084, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (51:19); target (59:24); Progress -22 percent
+084, The_Huns, OP_FOUND_CITY, 1578, PRE Moving To Target with Army 1579; center (51:35); target (49:41); Progress 42 percent
+084, The_Huns, OP_FOUND_CITY, 1578, POST Moving To Target with Army 1579; center (51:38); target (49:41); Progress 67 percent
+084, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+084, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (34:33)
+084, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+084, Venice, OP_RAPID_RESPONSE, 1641, PRE Gathering Forces for army 1642; center (39:41); variance (0.25:1.50); free slots 0
+084, Venice, OP_RAPID_RESPONSE, 1641, Transition to movement stage
+084, Venice, OP_RAPID_RESPONSE, 1641, POST Moving To Target with Army 1642; center (38:42); target (34:38); Progress 100 percent
+084, Venice, OP_RAPID_RESPONSE, 1658, PRE Gathering Forces for army 1659; center (40:41); variance (0.89:0.89); free slots 1
+084, Venice, OP_RAPID_RESPONSE, 1658, Transition to movement stage
+084, Venice, OP_RAPID_RESPONSE, 1658, POST Moving To Target with Army 1659; center (39:41); target (34:38); Progress 100 percent
+085, The_Maya, OP_FOUND_CITY, 1675, found target for settler, score 92196 (q50)
+085, The_Maya, OP_FOUND_CITY, 1675, Initial stage is recruiting
+085, The_Maya, OP_FOUND_CITY, 1675, Found 1 potential units to recruit for operation 1675 at (39:35) with target at (35:33)
+085, The_Maya, OP_FOUND_CITY, 1675, Added Swordsman 1607 to slot 1 in army 1676. ETA at (39:35) is 0 
+085, The_Maya, OP_FOUND_CITY, 1675, Transition to gathering stage
+085, The_Maya, OP_FOUND_CITY, 1675, Transition to movement stage
+085, The_Maya, OP_FOUND_CITY, 1675, Started Army 1676; Units Recruited 2; Max Formation Size 2; Moving To Target
+085, The_Maya, OP_FOUND_CITY, 1675, PRE Moving To Target with Army 1676; center (38:33); target (35:33); Progress 34 percent
+085, The_Maya, OP_FOUND_CITY, 1675, POST Moving To Target with Army 1676; center (39:34); target (35:33); Progress 17 percent
+085, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (61:37); target (53:44); Progress -17 percent
+085, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (61:38); target (53:44); Progress -5 percent
+085, Spain, OP_FOUND_CITY, 1625, PRE Moving To Target with Army 1626; center (62:43); target (49:41); Progress 10 percent
+085, Spain, OP_FOUND_CITY, 1625, POST Moving To Target with Army 1626; center (61:45); target (49:41); Progress 20 percent
+085, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (51:19); target (59:24); Progress -22 percent
+085, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (52:21); target (59:24); Progress 0 percent
+085, The_Huns, OP_FOUND_CITY, 1578, PRE Moving To Target with Army 1579; center (51:38); target (49:41); Progress 67 percent
+085, The_Huns, OP_FOUND_CITY, 1578, POST Moving To Target with Army 1579; center (50:40); target (49:41); Progress 100 percent
+085, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+085, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (34:33)
+085, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+085, Venice, OP_RAPID_RESPONSE, 1641, PRE Moving To Target with Army 1642; center (38:42); target (34:38); Progress 100 percent
+085, Venice, OP_RAPID_RESPONSE, 1658, PRE Moving To Target with Army 1659; center (39:41); target (34:38); Progress 100 percent
+085, Venice, OP_RAPID_RESPONSE, 1641, Ended: LostPath; Distance -1; Duration 3
+085, Venice, OP_RAPID_RESPONSE, 1658, Ended: LostPath; Distance -1; Duration 2
+086, The_Maya, OP_FOUND_CITY, 1675, PRE Moving To Target with Army 1676; center (39:34); target (35:33); Progress 17 percent
+086, The_Maya, OP_FOUND_CITY, 1675, POST Moving To Target with Army 1676; center (37:33); target (35:33); Progress 50 percent
+086, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (61:38); target (53:44); Progress -5 percent
+086, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (61:39); target (53:44); Progress 0 percent
+086, Spain, OP_FOUND_CITY, 1625, PRE Moving To Target with Army 1626; center (61:45); target (49:41); Progress 20 percent
+086, Spain, OP_FOUND_CITY, 1625, POST Moving To Target with Army 1626; center (60:46); target (49:41); Progress 30 percent
+086, Germany, OP_FOUND_CITY, 1698, found target for settler, score 60282 (q12)
+086, Germany, OP_FOUND_CITY, 1698, Skip recruiting, start with movement stage
+086, Germany, OP_FOUND_CITY, 1698, Found 1 potential units to recruit for operation 1698 at (52:21) with target at (55:24)
+086, Germany, OP_FOUND_CITY, 1698, Added Swordsman 1651 to slot 1 in army 1699. ETA at (52:21) is 1 
+086, Germany, OP_FOUND_CITY, 1698, Started Army 1699; Units Recruited 2; Max Formation Size 2; Moving To Target
+086, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (52:21); target (59:24); Progress 0 percent
+086, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (54:22); target (59:24); Progress 23 percent
+086, Germany, OP_FOUND_CITY, 1698, PRE Moving To Target with Army 1699; center (52:21); target (55:24); Progress 0 percent
+086, Germany, OP_FOUND_CITY, 1698, POST Moving To Target with Army 1699; center (55:18); target (55:24); Progress -40 percent
+086, The_Huns, OP_FOUND_CITY, 1578, PRE Moving To Target with Army 1579; center (50:40); target (49:41); Progress 100 percent
+086, The_Huns, OP_FOUND_CITY, 1578, Transition to target stage
+086, The_Huns, OP_FOUND_CITY, 1578, POST At Target
+086, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+086, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (34:33)
+086, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+086, Venice, OP_RAPID_RESPONSE, 1704, Initial stage is recruiting
+086, Venice, OP_RAPID_RESPONSE, 1704, Found 7 potential units to recruit for operation 1704 at (38:42) with target at (34:38)
+086, Venice, OP_RAPID_RESPONSE, 1704, Added Swordsman 1584 to slot 0 in army 1705. ETA at (38:42) is 0 
+086, Venice, OP_RAPID_RESPONSE, 1704, Added Warrior 1308 to slot 1 in army 1705. ETA at (38:42) is 0 
+086, Venice, OP_RAPID_RESPONSE, 1704, Added Warrior 1014 to slot 2 in army 1705. ETA at (38:42) is 1 
+086, Venice, OP_RAPID_RESPONSE, 1704, Added Warrior 1312 to slot 3 in army 1705. ETA at (38:42) is 1 
+086, Venice, OP_RAPID_RESPONSE, 1704, Transition to gathering stage
+086, Venice, OP_RAPID_RESPONSE, 1704, Started Army 1705; Units Recruited 4; Max Formation Size 4; Gathering Forces
+086, Venice, OP_RAPID_RESPONSE, 1704, PRE Gathering Forces for army 1705; center (38:42); variance (6.50:2.50); free slots 0
+086, Venice, OP_RAPID_RESPONSE, 1704, POST Gathering Forces for army 1705; center (38:42); variance (4.25:1.25); free slots 0
+086, Venice, OP_RAPID_RESPONSE, 1704, Added Swordsman 1707 to slot 1 in army 1705. ETA at (38:42) is 0 
+087, The_Maya, OP_FOUND_CITY, 1675, PRE Moving To Target with Army 1676; center (37:33); target (35:33); Progress 50 percent
+087, The_Maya, OP_FOUND_CITY, 1675, Transition to target stage
+087, The_Maya, OP_FOUND_CITY, 1675, POST At Target
+087, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (61:39); target (53:44); Progress 0 percent
+087, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (62:41); target (53:44); Progress 12 percent
+087, Spain, OP_FOUND_CITY, 1625, PRE Moving To Target with Army 1626; center (60:46); target (49:41); Progress 30 percent
+087, Spain, OP_FOUND_CITY, 1625, POST Moving To Target with Army 1626; center (58:45); target (49:41); Progress 40 percent
+087, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (54:22); target (59:24); Progress 23 percent
+087, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (55:24); target (59:24); Progress 45 percent
+087, Germany, OP_FOUND_CITY, 1698, PRE Moving To Target with Army 1699; center (55:18); target (55:24); Progress -40 percent
+087, Germany, OP_FOUND_CITY, 1698, POST Moving To Target with Army 1699; center (55:20); target (55:24); Progress 0 percent
+087, The_Huns, OP_FOUND_CITY, 1578, PRE At Target
+087, The_Huns, OP_FOUND_CITY, 1578, City founded (Fquih Ben Salah) at (49:41), plot value 72392, q34
+087, The_Huns, OP_FOUND_CITY, 1578, Transition to finished stage
+087, The_Huns, OP_FOUND_CITY, 1578, Ended: Success; Distance 12; Duration 9
+087, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+087, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (34:33)
+087, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+087, Venice, OP_RAPID_RESPONSE, 1721, Initial stage is recruiting
+087, Venice, OP_RAPID_RESPONSE, 1721, Found 4 potential units to recruit for operation 1721 at (38:42) with target at (34:38)
+087, Venice, OP_RAPID_RESPONSE, 1721, Added Swordsman 1708 to slot 0 in army 1722. ETA at (38:42) is 1 
+087, Venice, OP_RAPID_RESPONSE, 1721, Added Warrior 1124 to slot 1 in army 1722. ETA at (38:42) is 1 
+087, Venice, OP_RAPID_RESPONSE, 1721, Added Warrior 1307 to slot 2 in army 1722. ETA at (38:42) is 0 
+087, Venice, OP_RAPID_RESPONSE, 1721, Added Warrior 1311 to slot 3 in army 1722. ETA at (38:42) is 1 
+087, Venice, OP_RAPID_RESPONSE, 1721, Transition to gathering stage
+087, Venice, OP_RAPID_RESPONSE, 1721, Transition to movement stage
+087, Venice, OP_RAPID_RESPONSE, 1721, Started Army 1722; Units Recruited 4; Max Formation Size 4; Moving To Target
+087, Venice, OP_RAPID_RESPONSE, 1704, PRE Gathering Forces for army 1705; center (38:42); variance (4.25:1.25); free slots 0
+087, Venice, OP_RAPID_RESPONSE, 1704, Transition to movement stage
+087, Venice, OP_RAPID_RESPONSE, 1704, POST Moving To Target with Army 1705; center (38:42); target (34:38); Progress 100 percent
+087, Venice, OP_RAPID_RESPONSE, 1721, PRE Moving To Target with Army 1722; center (40:39); target (34:38); Progress 100 percent
+087, Venice, OP_RAPID_RESPONSE, 1721, Ended: LostPath; Distance -1; Duration 0
+088, The_Maya, OP_FOUND_CITY, 1675, PRE At Target
+088, The_Maya, OP_FOUND_CITY, 1675, City founded (Uxmal) at (35:33), plot value 90769, q50
+088, The_Maya, OP_FOUND_CITY, 1675, Transition to finished stage
+088, The_Maya, OP_FOUND_CITY, 1675, Ended: Success; Distance 6; Duration 3
+088, Spain, OP_FOUND_CITY, 1609, found better target for settler, old score 115080 (q50), new score 125400 (q50)
+088, Spain, OP_FOUND_CITY, 1609, setting new target (54:44)
+088, Spain, OP_FOUND_CITY, 1625, cannot found city at (49:41)
+088, Spain, OP_FOUND_CITY, 1625, no path to city site (49:41)
+088, Spain, OP_FOUND_CITY, 1625, found better target for settler, old score -1 (q-50), new score 52453 (q-3)
+088, Spain, OP_FOUND_CITY, 1625, setting new target (57:42)
+088, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (62:41); target (54:44); Progress 18 percent
+088, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (62:43); target (54:44); Progress 30 percent
+088, Spain, OP_FOUND_CITY, 1625, PRE Moving To Target with Army 1626; center (58:45); target (57:42); Progress 67 percent
+088, Spain, OP_FOUND_CITY, 1625, POST Moving To Target with Army 1626; center (57:43); target (57:42); Progress 100 percent
+088, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (55:24); target (59:24); Progress 45 percent
+088, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (56:24); target (59:24); Progress 56 percent
+088, Germany, OP_FOUND_CITY, 1698, PRE Moving To Target with Army 1699; center (55:20); target (55:24); Progress 0 percent
+088, Germany, OP_FOUND_CITY, 1698, POST Moving To Target with Army 1699; center (54:22); target (55:24); Progress 40 percent
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, Initial stage is recruiting
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, Found 4 potential units to recruit for operation 1732 at (50:30) with target at (57:34)
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, Added Warrior 1008 to slot 0 in army 1733. ETA at (50:30) is 0 
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, Added Battering Ram 1358 to slot 3 in army 1733. ETA at (50:30) is 1 
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, Added Catapult 1265 to slot 4 in army 1733. ETA at (50:30) is 0 
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, Added Catapult 1321 to slot 5 in army 1733. ETA at (50:30) is 1 
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, Started Army 1733; Units Recruited 4; Max Formation Size 10; Recruiting Units
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Recruiting Units for army 1733; Warrior 1008 at (51:31) - ETA 0; Open; Open; Battering Ram 1358 at (51:35) - ETA 1; Catapult 1265 at (52:32) - ETA 0; Catapult 1321 at (53:32) - ETA 1; Open; Open; Open; Open; 
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, Found 0 potential units to recruit for operation 1732 at (50:30) with target at (57:34)
+088, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Recruiting Units for army 1733; Warrior 1008 at (51:31) - ETA 0; Open; Open; Battering Ram 1358 at (51:34) - ETA 1; Catapult 1265 at (51:32) - ETA 0; Catapult 1321 at (52:32) - ETA 1; Open; Open; Open; Open; 
+088, Morocco, OP_FOUND_CITY, 1636, cannot found city at (34:33)
+088, Morocco, OP_FOUND_CITY, 1636, no path to city site (34:33)
+088, Morocco, OP_FOUND_CITY, 1636, found better target for settler, old score -1 (q-50), new score 106884 (q50)
+088, Morocco, OP_FOUND_CITY, 1636, setting new target (30:33)
+088, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+088, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+088, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+088, Venice, OP_RAPID_RESPONSE, 1737, Initial stage is recruiting
+088, Venice, OP_RAPID_RESPONSE, 1737, Found 5 potential units to recruit for operation 1737 at (38:42) with target at (34:38)
+088, Venice, OP_RAPID_RESPONSE, 1737, Added Warrior 1103 to slot 0 in army 1738. ETA at (38:42) is 0 
+088, Venice, OP_RAPID_RESPONSE, 1737, Added Swordsman 1708 to slot 1 in army 1738. ETA at (38:42) is 2 
+088, Venice, OP_RAPID_RESPONSE, 1737, Added Warrior 1307 to slot 2 in army 1738. ETA at (38:42) is 0 
+088, Venice, OP_RAPID_RESPONSE, 1737, Added Warrior 1311 to slot 3 in army 1738. ETA at (38:42) is 1 
+088, Venice, OP_RAPID_RESPONSE, 1737, Transition to gathering stage
+088, Venice, OP_RAPID_RESPONSE, 1737, Started Army 1738; Units Recruited 4; Max Formation Size 4; Gathering Forces
+088, Venice, OP_RAPID_RESPONSE, 1704, PRE Moving To Target with Army 1705; center (38:42); target (34:38); Progress 100 percent
+088, Venice, OP_RAPID_RESPONSE, 1737, PRE Gathering Forces for army 1738; center (40:39); variance (8.75:6.19); free slots 0
+088, Venice, OP_RAPID_RESPONSE, 1737, POST Gathering Forces for army 1738; center (39:41); variance (6.69:3.25); free slots 0
+088, Venice, OP_RAPID_RESPONSE, 1704, Ended: LostPath; Distance -1; Duration 2
+089, Spain, OP_FOUND_CITY, 1625, cannot found city at (57:42)
+089, Spain, OP_FOUND_CITY, 1625, no path to city site (57:42)
+089, Spain, OP_FOUND_CITY, 1625, found better target for settler, old score 52453 (q-3), new score 47821 (q-11)
+089, Spain, OP_FOUND_CITY, 1625, setting new target (58:42)
+089, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (62:43); target (54:44); Progress 30 percent
+089, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (61:45); target (54:44); Progress 42 percent
+089, Spain, OP_FOUND_CITY, 1625, PRE Moving To Target with Army 1626; center (57:43); target (58:42); Progress 100 percent
+089, Spain, OP_FOUND_CITY, 1625, Transition to target stage
+089, Spain, OP_FOUND_CITY, 1625, POST At Target
+089, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (56:24); target (59:24); Progress 56 percent
+089, Germany, OP_FOUND_CITY, 1574, POST Moving To Target with Army 1575; center (57:24); target (59:24); Progress 67 percent
+089, Germany, OP_FOUND_CITY, 1698, PRE Moving To Target with Army 1699; center (54:22); target (55:24); Progress 40 percent
+089, Germany, OP_FOUND_CITY, 1698, Transition to target stage
+089, Germany, OP_FOUND_CITY, 1698, POST At Target
+089, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Recruiting Units for army 1733; Warrior 1008 at (51:31) - ETA 0; Open; Open; Battering Ram 1358 at (51:34) - ETA 1; Catapult 1265 at (51:32) - ETA 0; Catapult 1321 at (52:32) - ETA 1; Open; Open; Open; Open; 
+089, The_Huns, OP_CITY_ATTACK_LAND, 1732, Found 1 potential units to recruit for operation 1732 at (50:30) with target at (57:34)
+089, The_Huns, OP_CITY_ATTACK_LAND, 1732, Added Warrior 1750 to slot 1 in army 1733. ETA at (50:30) is 1 
+089, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Recruiting Units for army 1733; Warrior 1008 at (51:31) - ETA -1; Warrior 1750 at (51:34) - ETA -1; Open; Battering Ram 1358 at (50:33) - ETA -1; Catapult 1265 at (50:30) - ETA -1; Catapult 1321 at (50:31) - ETA -1; Open; Open; Open; Open; 
+089, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+089, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+089, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+089, Venice, OP_RAPID_RESPONSE, 1752, Initial stage is recruiting
+089, Venice, OP_RAPID_RESPONSE, 1752, Found 4 potential units to recruit for operation 1752 at (38:42) with target at (34:38)
+089, Venice, OP_RAPID_RESPONSE, 1752, Added Swordsman 1707 to slot 0 in army 1753. ETA at (38:42) is 0 
+089, Venice, OP_RAPID_RESPONSE, 1752, Added Warrior 1014 to slot 1 in army 1753. ETA at (38:42) is 1 
+089, Venice, OP_RAPID_RESPONSE, 1752, Added Warrior 1312 to slot 2 in army 1753. ETA at (38:42) is 1 
+089, Venice, OP_RAPID_RESPONSE, 1752, Added Warrior 1124 to slot 3 in army 1753. ETA at (38:42) is 2 
+089, Venice, OP_RAPID_RESPONSE, 1752, Transition to gathering stage
+089, Venice, OP_RAPID_RESPONSE, 1752, Started Army 1753; Units Recruited 4; Max Formation Size 4; Gathering Forces
+089, Venice, OP_RAPID_RESPONSE, 1737, PRE Gathering Forces for army 1738; center (39:41); variance (6.69:3.25); free slots 0
+089, Venice, OP_RAPID_RESPONSE, 1737, Transition to movement stage
+089, Venice, OP_RAPID_RESPONSE, 1737, POST Moving To Target with Army 1738; center (40:42); target (34:38); Progress 100 percent
+089, Venice, OP_RAPID_RESPONSE, 1752, PRE Gathering Forces for army 1753; center (42:39); variance (4.75:2.19); free slots 0
+089, Venice, OP_RAPID_RESPONSE, 1752, Transition to movement stage
+089, Venice, OP_RAPID_RESPONSE, 1752, POST Moving To Target with Army 1753; center (40:39); target (34:38); Progress 100 percent
+090, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (61:45); target (54:44); Progress 42 percent
+090, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (60:46); target (54:44); Progress 53 percent
+090, Spain, OP_FOUND_CITY, 1625, PRE At Target
+090, Spain, OP_FOUND_CITY, 1625, City founded (Toledo) at (58:42), plot value 47581, q-12
+090, Spain, OP_FOUND_CITY, 1625, Transition to finished stage
+090, Spain, OP_FOUND_CITY, 1625, Ended: Success; Distance 12; Duration 8
+090, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (57:24); target (59:24); Progress 67 percent
+090, Germany, OP_FOUND_CITY, 1574, Transition to target stage
+090, Germany, OP_FOUND_CITY, 1574, POST At Target
+090, Germany, OP_FOUND_CITY, 1698, PRE At Target
+090, Germany, OP_FOUND_CITY, 1698, City founded (Frankfurt) at (55:24), plot value 59923, q11
+090, Germany, OP_FOUND_CITY, 1698, Transition to finished stage
+090, Germany, OP_FOUND_CITY, 1698, Ended: Success; Distance 5; Duration 4
+090, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Recruiting Units for army 1733; Warrior 1008 at (51:31) - ETA -1; Warrior 1750 at (51:34) - ETA -1; Open; Battering Ram 1358 at (50:33) - ETA -1; Catapult 1265 at (50:30) - ETA -1; Catapult 1321 at (50:31) - ETA -1; Open; Open; Open; Open; 
+090, The_Huns, OP_CITY_ATTACK_LAND, 1732, Found 0 potential units to recruit for operation 1732 at (50:33) with target at (57:34)
+090, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Recruiting Units for army 1733; Warrior 1008 at (51:31) - ETA 0; Warrior 1750 at (51:34) - ETA 0; Open; Battering Ram 1358 at (50:33) - ETA 0; Catapult 1265 at (51:32) - ETA 0; Catapult 1321 at (50:32) - ETA 0; Open; Open; Open; Open; 
+090, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+090, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+090, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+090, Venice, OP_RAPID_RESPONSE, 1737, Ended: NoTarget; Distance -1; Duration 2
+090, Venice, OP_RAPID_RESPONSE, 1752, Ended: NoTarget; Distance -1; Duration 1
+091, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (60:46); target (54:44); Progress 53 percent
+091, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (58:46); target (54:44); Progress 65 percent
+091, Germany, OP_FOUND_CITY, 1574, found better target for settler, old score 50262 (q-7), new score 57769 (q7)
+091, Germany, OP_FOUND_CITY, 1574, setting new target (60:24)
+091, Germany, OP_FOUND_CITY, 1574, PRE Moving To Target with Army 1575; center (59:24); target (60:24); Progress 100 percent
+091, Germany, OP_FOUND_CITY, 1574, Transition to target stage
+091, Germany, OP_FOUND_CITY, 1574, POST At Target
+091, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Recruiting Units for army 1733; Warrior 1008 at (51:31) - ETA 0; Warrior 1750 at (51:34) - ETA 0; Open; Battering Ram 1358 at (50:33) - ETA 0; Catapult 1265 at (51:32) - ETA 0; Catapult 1321 at (50:32) - ETA 0; Open; Open; Open; Open; 
+091, The_Huns, OP_CITY_ATTACK_LAND, 1732, Found 0 potential units to recruit for operation 1732 at (50:33) with target at (57:34)
+091, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Recruiting Units for army 1733; Warrior 1008 at (51:32) - ETA 0; Open; Open; Battering Ram 1358 at (50:33) - ETA 0; Catapult 1265 at (51:33) - ETA 0; Catapult 1321 at (50:32) - ETA 0; Open; Open; Open; Open; 
+091, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+091, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+091, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+092, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (58:46); target (54:44); Progress 65 percent
+092, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (56:45); target (54:44); Progress 77 percent
+092, Germany, OP_FOUND_CITY, 1574, PRE At Target
+092, Germany, OP_FOUND_CITY, 1574, City founded (Essen) at (60:24), plot value 57769, q7
+092, Germany, OP_FOUND_CITY, 1574, Transition to finished stage
+092, Germany, OP_FOUND_CITY, 1574, Ended: Success; Distance 10; Duration 14
+092, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Recruiting Units for army 1733; Warrior 1008 at (51:32) - ETA 0; Open; Open; Battering Ram 1358 at (50:33) - ETA 0; Catapult 1265 at (51:33) - ETA 0; Catapult 1321 at (50:32) - ETA 0; Open; Open; Open; Open; 
+092, The_Huns, OP_CITY_ATTACK_LAND, 1732, Found 3 potential units to recruit for operation 1732 at (50:33) with target at (57:34)
+092, The_Huns, OP_CITY_ATTACK_LAND, 1732, Added Swordsman 1778 to slot 1 in army 1733. ETA at (50:33) is 0 
+092, The_Huns, OP_CITY_ATTACK_LAND, 1732, Added Swordsman 1796 to slot 2 in army 1733. ETA at (50:33) is 0 
+092, The_Huns, OP_CITY_ATTACK_LAND, 1732, Transition to gathering stage
+092, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Gathering Forces for army 1733; center (50:33); variance (0.56:0.89); free slots 4
+092, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+092, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+092, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+092, The_Netherlands, OP_FOUND_CITY, 1801, found target for settler, score 103248 (q50)
+092, The_Netherlands, OP_FOUND_CITY, 1801, Initial stage is recruiting
+092, The_Netherlands, OP_FOUND_CITY, 1801, Found 4 potential units to recruit for operation 1801 at (43:16) with target at (36:26)
+092, The_Netherlands, OP_FOUND_CITY, 1801, Added Swordsman 1582 to slot 1 in army 1802. ETA at (43:16) is 0 
+092, The_Netherlands, OP_FOUND_CITY, 1801, Transition to gathering stage
+092, The_Netherlands, OP_FOUND_CITY, 1801, Started Army 1802; Units Recruited 2; Max Formation Size 2; Gathering Forces
+092, The_Netherlands, OP_FOUND_CITY, 1801, PRE Gathering Forces for army 1802; center (42:20); variance (0.25:4.00); free slots 0
+092, The_Netherlands, OP_FOUND_CITY, 1801, Transition to movement stage
+092, The_Netherlands, OP_FOUND_CITY, 1801, POST Moving To Target with Army 1802; center (43:16); target (36:26); Progress 0 percent
+093, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (56:45); target (54:44); Progress 77 percent
+093, Spain, OP_FOUND_CITY, 1609, POST Moving To Target with Army 1610; center (55:44); target (54:44); Progress 100 percent
+093, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Gathering Forces for army 1733; center (50:33); variance (0.56:0.89); free slots 4
+093, The_Huns, OP_CITY_ATTACK_LAND, 1732, Transition to movement stage
+093, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Moving To Target with Army 1733; center (50:33); target (57:34); Progress 0 percent
+093, Morocco, OP_RAPID_RESPONSE, 1817, Initial stage is recruiting
+093, Morocco, OP_RAPID_RESPONSE, 1817, Found 1 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+093, Morocco, OP_RAPID_RESPONSE, 1817, Added Warrior 1117 to slot 0 in army 1818. ETA at (34:38) is 1 
+093, Morocco, OP_RAPID_RESPONSE, 1817, Started Army 1818; Units Recruited 1; Max Formation Size 4; Recruiting Units
+093, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+093, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+093, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+093, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (29:38) - ETA 1; Open; Open; Open; 
+093, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+093, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (29:37) - ETA 1; Open; Open; Open; 
+093, The_Netherlands, OP_FOUND_CITY, 1801, PRE Moving To Target with Army 1802; center (43:16); target (36:26); Progress 0 percent
+093, The_Netherlands, OP_FOUND_CITY, 1801, POST Moving To Target with Army 1802; center (42:18); target (36:26); Progress 15 percent
+094, Spain, OP_FOUND_CITY, 1609, PRE Moving To Target with Army 1610; center (55:44); target (54:44); Progress 100 percent
+094, Spain, OP_FOUND_CITY, 1609, Transition to target stage
+094, Spain, OP_FOUND_CITY, 1609, City founded (Santiago) at (54:44), plot value 104535, q50
+094, Spain, OP_FOUND_CITY, 1609, Transition to finished stage
+094, Spain, OP_FOUND_CITY, 1609, POST Completed
+094, The_Huns, OP_FOUND_CITY, 1830, found target for settler, score 62947 (q17)
+094, The_Huns, OP_FOUND_CITY, 1830, Initial stage is recruiting
+094, The_Huns, OP_FOUND_CITY, 1830, Found 1 potential units to recruit for operation 1830 at (51:35) with target at (50:25)
+094, The_Huns, OP_FOUND_CITY, 1830, Added Swordsman 1797 to slot 1 in army 1831. ETA at (51:35) is 1 
+094, The_Huns, OP_FOUND_CITY, 1830, Transition to gathering stage
+094, The_Huns, OP_FOUND_CITY, 1830, Started Army 1831; Units Recruited 2; Max Formation Size 2; Gathering Forces
+094, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Moving To Target with Army 1733; center (50:33); target (57:34); Progress 0 percent
+094, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Moving To Target with Army 1733; center (51:33); target (57:34); Progress 13 percent
+094, The_Huns, OP_FOUND_CITY, 1830, PRE Gathering Forces for army 1831; center (51:35); variance (0.25:6.25); free slots 0
+094, The_Huns, OP_FOUND_CITY, 1830, POST Gathering Forces for army 1831; center (49:28); variance (1.00:9.00); free slots 0
+094, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+094, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+094, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+094, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (29:37) - ETA 1; Open; Open; Open; 
+094, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+094, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (30:37) - ETA 1; Open; Open; Open; 
+094, The_Netherlands, OP_FOUND_CITY, 1801, PRE Moving To Target with Army 1802; center (42:18); target (36:26); Progress 15 percent
+094, The_Netherlands, OP_FOUND_CITY, 1801, POST Moving To Target with Army 1802; center (40:19); target (36:26); Progress 29 percent
+095, The_Maya, OP_FOUND_CITY, 1839, found target for settler, score 71177 (q32)
+095, The_Maya, OP_FOUND_CITY, 1839, Initial stage is recruiting
+095, The_Maya, OP_FOUND_CITY, 1839, Found 1 potential units to recruit for operation 1839 at (40:30) with target at (31:32)
+095, The_Maya, OP_FOUND_CITY, 1839, Added Swordsman 1757 to slot 1 in army 1840. ETA at (40:30) is 2 
+095, The_Maya, OP_FOUND_CITY, 1839, Transition to gathering stage
+095, The_Maya, OP_FOUND_CITY, 1839, Started Army 1840; Units Recruited 2; Max Formation Size 2; Gathering Forces
+095, The_Maya, OP_FOUND_CITY, 1839, PRE Gathering Forces for army 1840; center (35:33); variance (6.25:2.25); free slots 0
+095, The_Maya, OP_FOUND_CITY, 1839, Added Atlatlist 1725 to slot 1 in army 1840. ETA at (40:30) is 0 
+095, The_Maya, OP_FOUND_CITY, 1839, Transition to movement stage
+095, The_Maya, OP_FOUND_CITY, 1839, POST Moving To Target with Army 1840; center (40:30); target (31:32); Progress 0 percent
+095, Spain, OP_FOUND_CITY, 1609, Ended: Success; Distance 17; Duration 14
+095, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Moving To Target with Army 1733; center (51:33); target (57:34); Progress 13 percent
+095, The_Huns, OP_CITY_ATTACK_LAND, 1732, Contact with enemy!
+095, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Moving To Target with Army 1733; center (53:34); target (57:34); Progress 25 percent
+095, The_Huns, OP_FOUND_CITY, 1830, PRE Gathering Forces for army 1831; center (49:28); variance (1.00:9.00); free slots 0
+095, The_Huns, OP_FOUND_CITY, 1830, POST Gathering Forces for army 1831; center (50:30); variance (0.25:4.00); free slots 0
+095, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+095, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+095, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+095, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (30:37) - ETA 1; Open; Open; Open; 
+095, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+095, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (32:38) - ETA 0; Open; Open; Open; 
+095, The_Netherlands, OP_FOUND_CITY, 1801, PRE Moving To Target with Army 1802; center (40:19); target (36:26); Progress 29 percent
+095, The_Netherlands, OP_FOUND_CITY, 1801, POST Moving To Target with Army 1802; center (39:21); target (36:26); Progress 43 percent
+096, The_Maya, OP_FOUND_CITY, 1839, PRE Moving To Target with Army 1840; center (40:30); target (31:32); Progress 0 percent
+096, The_Maya, OP_FOUND_CITY, 1839, POST Moving To Target with Army 1840; center (39:30); target (31:32); Progress 9 percent
+096, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Moving To Target with Army 1733; center (53:34); target (57:34); Progress 25 percent
+096, The_Huns, OP_CITY_ATTACK_LAND, 1732, Contact with enemy!
+096, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Moving To Target with Army 1733; center (53:34); target (57:34); Progress 25 percent
+096, The_Huns, OP_FOUND_CITY, 1830, PRE Gathering Forces for army 1831; center (50:30); variance (0.00:1.00); free slots 0
+096, The_Huns, OP_FOUND_CITY, 1830, Transition to movement stage
+096, The_Huns, OP_FOUND_CITY, 1830, POST Moving To Target with Army 1831; center (51:32); target (50:25); Progress 20 percent
+096, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+096, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+096, Morocco, OP_FOUND_CITY, 1636, POST Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+096, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (32:38) - ETA 0; Open; Open; Open; 
+096, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+096, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+096, The_Netherlands, OP_FOUND_CITY, 1801, PRE Moving To Target with Army 1802; center (39:21); target (36:26); Progress 43 percent
+096, The_Netherlands, OP_FOUND_CITY, 1801, POST Moving To Target with Army 1802; center (38:22); target (36:26); Progress 58 percent
+097, The_Maya, OP_FOUND_CITY, 1839, PRE Moving To Target with Army 1840; center (39:30); target (31:32); Progress 9 percent
+097, The_Maya, OP_FOUND_CITY, 1839, POST Moving To Target with Army 1840; center (38:31); target (31:32); Progress 17 percent
+097, Germany, OP_FOUND_CITY, 1873, found target for settler, score 86669 (q50)
+097, Germany, OP_FOUND_CITY, 1873, Initial stage is recruiting
+097, Germany, OP_FOUND_CITY, 1873, Found 2 potential units to recruit for operation 1873 at (57:19) with target at (62:10)
+097, Germany, OP_FOUND_CITY, 1873, Added Swordsman 1651 to slot 1 in army 1874. ETA at (57:19) is 1 
+097, Germany, OP_FOUND_CITY, 1873, Transition to gathering stage
+097, Germany, OP_FOUND_CITY, 1873, Started Army 1874; Units Recruited 2; Max Formation Size 2; Gathering Forces
+097, Germany, OP_FOUND_CITY, 1873, PRE Gathering Forces for army 1874; center (55:24); variance (1.00:6.25); free slots 0
+097, Germany, OP_FOUND_CITY, 1873, Added Archer 1404 to slot 1 in army 1874. ETA at (57:19) is 0 
+097, Germany, OP_FOUND_CITY, 1873, Transition to movement stage
+097, Germany, OP_FOUND_CITY, 1873, POST Moving To Target with Army 1874; center (57:19); target (62:10); Progress 0 percent
+097, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Moving To Target with Army 1733; center (53:34); target (57:34); Progress 25 percent
+097, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Moving To Target with Army 1733; center (54:34); target (57:34); Progress 38 percent
+097, The_Huns, OP_FOUND_CITY, 1830, PRE Moving To Target with Army 1831; center (51:32); target (50:25); Progress 20 percent
+097, The_Huns, OP_FOUND_CITY, 1830, POST Moving To Target with Army 1831; center (50:32); target (50:25); Progress 20 percent
+097, Morocco, OP_FOUND_CITY, 1636, PRE Recruiting Units for army 1637; Settler 1635 at (34:38) - ETA 0; Open; 
+097, Morocco, OP_FOUND_CITY, 1636, Found 0 potential units to recruit for operation 1636 at (34:38) with target at (30:33)
+097, Morocco, OP_FOUND_CITY, 1636, No escort yet and the trip looks safe, going alone
+097, Morocco, OP_FOUND_CITY, 1636, Transition to gathering stage
+097, Morocco, OP_FOUND_CITY, 1636, Transition to movement stage
+097, Morocco, OP_FOUND_CITY, 1636, POST Moving To Target with Army 1637; center (34:38); target (30:33); Progress 0 percent
+097, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+097, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+097, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+097, The_Netherlands, OP_FOUND_CITY, 1801, PRE Moving To Target with Army 1802; center (38:22); target (36:26); Progress 58 percent
+097, The_Netherlands, OP_FOUND_CITY, 1801, POST Moving To Target with Army 1802; center (36:23); target (36:26); Progress 72 percent
+097, Arabia, OP_FOUND_CITY, 1877, found target for settler, score 87245 (q50)
+097, Arabia, OP_FOUND_CITY, 1877, Initial stage is recruiting
+097, Arabia, OP_FOUND_CITY, 1877, Found 2 potential units to recruit for operation 1877 at (63:23) with target at (64:11)
+097, Arabia, OP_FOUND_CITY, 1877, Added Spearman 1495 to slot 1 in army 1878. ETA at (63:23) is 0 
+097, Arabia, OP_FOUND_CITY, 1877, Transition to gathering stage
+097, Arabia, OP_FOUND_CITY, 1877, Transition to movement stage
+097, Arabia, OP_FOUND_CITY, 1877, Started Army 1878; Units Recruited 2; Max Formation Size 2; Moving To Target
+097, Arabia, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (63:23); target (64:11); Progress 0 percent
+097, Arabia, OP_FOUND_CITY, 1877, POST Moving To Target with Army 1878; center (62:22); target (64:11); Progress 8 percent
+098, The_Maya, OP_FOUND_CITY, 1839, PRE Moving To Target with Army 1840; center (38:31); target (31:32); Progress 25 percent
+098, The_Maya, OP_FOUND_CITY, 1839, POST Moving To Target with Army 1840; center (38:32); target (31:32); Progress 17 percent
+098, Germany, OP_FOUND_CITY, 1873, PRE Moving To Target with Army 1874; center (57:19); target (62:10); Progress 0 percent
+098, Germany, OP_FOUND_CITY, 1873, POST Moving To Target with Army 1874; center (57:19); target (62:10); Progress 0 percent
+098, The_Huns, OP_CITY_ATTACK_LAND, 1732, PRE Moving To Target with Army 1733; center (54:34); target (57:34); Progress 38 percent
+098, The_Huns, OP_CITY_ATTACK_LAND, 1732, Transition to finished stage; unit distance near 2; far 5
+098, The_Huns, OP_CITY_ATTACK_LAND, 1732, POST Completed
+098, The_Huns, OP_FOUND_CITY, 1830, PRE Moving To Target with Army 1831; center (50:32); target (50:25); Progress 20 percent
+098, The_Huns, OP_FOUND_CITY, 1830, POST Moving To Target with Army 1831; center (51:30); target (50:25); Progress 40 percent
+098, Morocco, OP_FOUND_CITY, 1636, PRE Moving To Target with Army 1637; center (34:38); target (30:33); Progress 0 percent
+098, Morocco, OP_FOUND_CITY, 1636, POST Moving To Target with Army 1637; center (33:38); target (30:33); Progress 0 percent
+098, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+098, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+098, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+098, The_Netherlands, OP_FOUND_CITY, 1801, PRE Moving To Target with Army 1802; center (36:23); target (36:26); Progress 72 percent
+098, The_Netherlands, OP_FOUND_CITY, 1801, POST Moving To Target with Army 1802; center (36:24); target (36:26); Progress 79 percent
+098, Arabia, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (62:22); target (64:11); Progress 8 percent
+098, Arabia, OP_FOUND_CITY, 1877, POST Moving To Target with Army 1878; center (61:20); target (64:11); Progress 16 percent
+099, The_Maya, OP_FOUND_CITY, 1839, PRE Moving To Target with Army 1840; center (38:32); target (31:32); Progress 17 percent
+099, The_Maya, OP_FOUND_CITY, 1839, POST Moving To Target with Army 1840; center (36:33); target (31:32); Progress 34 percent
+099, Germany, OP_FOUND_CITY, 1873, cannot found city at (62:10)
+099, Germany, OP_FOUND_CITY, 1873, no path to city site (62:10)
+099, Germany, OP_FOUND_CITY, 1873, found better target for settler, old score 86669 (q50), new score 65165 (q21)
+099, Germany, OP_FOUND_CITY, 1873, setting new target (61:11)
+099, Germany, OP_FOUND_CITY, 1873, PRE Moving To Target with Army 1874; center (57:19); target (61:11); Progress 0 percent
+099, Germany, OP_FOUND_CITY, 1873, POST Moving To Target with Army 1874; center (58:17); target (61:11); Progress 23 percent
+099, The_Huns, OP_CITY_ATTACK_LAND, 1732, Ended: Success; Distance 8; Duration 11
+099, The_Huns, OP_FOUND_CITY, 1830, PRE Moving To Target with Army 1831; center (51:30); target (50:25); Progress 40 percent
+099, The_Huns, OP_FOUND_CITY, 1830, POST Moving To Target with Army 1831; center (52:28); target (50:25); Progress 60 percent
+099, Morocco, OP_FOUND_CITY, 1636, PRE Moving To Target with Army 1637; center (33:38); target (30:33); Progress 0 percent
+099, Morocco, OP_FOUND_CITY, 1636, POST Moving To Target with Army 1637; center (31:37); target (30:33); Progress 29 percent
+099, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+099, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+099, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+099, The_Netherlands, OP_FOUND_CITY, 1801, PRE Moving To Target with Army 1802; center (36:24); target (36:26); Progress 79 percent
+099, The_Netherlands, OP_FOUND_CITY, 1801, POST Moving To Target with Army 1802; center (35:25); target (36:26); Progress 100 percent
+099, Arabia, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (61:20); target (64:11); Progress 16 percent
+099, Arabia, OP_FOUND_CITY, 1877, POST Moving To Target with Army 1878; center (61:18); target (64:11); Progress 31 percent
+100, The_Maya, OP_FOUND_CITY, 1839, PRE Moving To Target with Army 1840; center (36:33); target (31:32); Progress 34 percent
+100, The_Maya, OP_FOUND_CITY, 1839, POST Moving To Target with Army 1840; center (35:32); target (31:32); Progress 50 percent
+100, Germany, OP_FOUND_CITY, 1873, PRE Moving To Target with Army 1874; center (58:17); target (61:11); Progress 23 percent
+100, Germany, OP_FOUND_CITY, 1873, POST Moving To Target with Army 1874; center (58:15); target (61:11); Progress 34 percent
+100, The_Huns, OP_FOUND_CITY, 1830, PRE Moving To Target with Army 1831; center (52:28); target (50:25); Progress 60 percent
+100, The_Huns, OP_FOUND_CITY, 1830, POST Moving To Target with Army 1831; center (51:26); target (50:25); Progress 100 percent
+100, Morocco, OP_FOUND_CITY, 1636, PRE Moving To Target with Army 1637; center (31:37); target (30:33); Progress 29 percent
+100, Morocco, OP_FOUND_CITY, 1636, POST Moving To Target with Army 1637; center (30:35); target (30:33); Progress 58 percent
+100, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+100, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+100, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+100, The_Netherlands, OP_FOUND_CITY, 1801, PRE Moving To Target with Army 1802; center (35:25); target (36:26); Progress 100 percent
+100, The_Netherlands, OP_FOUND_CITY, 1801, Transition to target stage
+100, The_Netherlands, OP_FOUND_CITY, 1801, POST At Target
+100, Arabia, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (61:18); target (64:11); Progress 31 percent
+100, Arabia, OP_FOUND_CITY, 1877, POST Moving To Target with Army 1878; center (62:16); target (64:11); Progress 47 percent
+101, The_Maya, OP_FOUND_CITY, 1839, PRE Moving To Target with Army 1840; center (35:32); target (31:32); Progress 50 percent
+101, The_Maya, OP_FOUND_CITY, 1839, POST Moving To Target with Army 1840; center (33:32); target (31:32); Progress 67 percent
+101, Spain, OP_RAPID_RESPONSE, 1929, Initial stage is recruiting
+101, Spain, OP_RAPID_RESPONSE, 1929, Found 1 potential units to recruit for operation 1929 at (57:34) with target at (57:34)
+101, Spain, OP_RAPID_RESPONSE, 1929, Added Spearman 1627 to slot 0 in army 1930. ETA at (57:34) is 6 
+101, Spain, OP_RAPID_RESPONSE, 1929, Started Army 1930; Units Recruited 1; Max Formation Size 4; Recruiting Units
+101, Spain, OP_RAPID_RESPONSE, 1929, PRE Recruiting Units for army 1930; Spearman 1627 at (56:41) - ETA 6; Open; Open; Open; 
+101, Spain, OP_RAPID_RESPONSE, 1929, Found 0 potential units to recruit for operation 1929 at (57:34) with target at (57:34)
+101, Spain, OP_RAPID_RESPONSE, 1929, POST Recruiting Units for army 1930; Spearman 1627 at (55:40) - ETA 6; Open; Open; Open; 
+101, Germany, OP_FOUND_CITY, 1873, PRE Moving To Target with Army 1874; center (58:15); target (61:11); Progress 34 percent
+101, Germany, OP_FOUND_CITY, 1873, POST Moving To Target with Army 1874; center (59:13); target (61:11); Progress 56 percent
+101, The_Huns, OP_FOUND_CITY, 1830, PRE Moving To Target with Army 1831; center (51:26); target (50:25); Progress 100 percent
+101, The_Huns, OP_FOUND_CITY, 1830, Transition to target stage
+101, The_Huns, OP_FOUND_CITY, 1830, POST At Target
+101, Morocco, OP_FOUND_CITY, 1636, PRE Moving To Target with Army 1637; center (30:35); target (30:33); Progress 58 percent
+101, Morocco, OP_FOUND_CITY, 1636, Transition to target stage
+101, Morocco, OP_FOUND_CITY, 1636, POST At Target
+101, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+101, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+101, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+101, The_Netherlands, OP_FOUND_CITY, 1945, Ended: NoTarget; Distance -1; Duration 102
+101, The_Netherlands, OP_FOUND_CITY, 1801, PRE At Target
+101, The_Netherlands, OP_FOUND_CITY, 1801, City founded (Breda) at (36:26), plot value 102510, q50
+101, The_Netherlands, OP_FOUND_CITY, 1801, Transition to finished stage
+101, The_Netherlands, OP_FOUND_CITY, 1801, Ended: Success; Distance 14; Duration 9
+101, Venice, OP_RAPID_RESPONSE, 1947, Initial stage is recruiting
+101, Venice, OP_RAPID_RESPONSE, 1947, Found 9 potential units to recruit for operation 1947 at (38:42) with target at (34:38)
+101, Venice, OP_RAPID_RESPONSE, 1947, Added Swordsman 1707 to slot 0 in army 1948. ETA at (38:42) is 0 
+101, Venice, OP_RAPID_RESPONSE, 1947, Added Swordsman 1768 to slot 1 in army 1948. ETA at (38:42) is 2 
+101, Venice, OP_RAPID_RESPONSE, 1947, Added Warrior 1014 to slot 2 in army 1948. ETA at (38:42) is 0 
+101, Venice, OP_RAPID_RESPONSE, 1947, Added Warrior 1103 to slot 3 in army 1948. ETA at (38:42) is 1 
+101, Venice, OP_RAPID_RESPONSE, 1947, Transition to gathering stage
+101, Venice, OP_RAPID_RESPONSE, 1947, Started Army 1948; Units Recruited 4; Max Formation Size 4; Gathering Forces
+101, Venice, OP_RAPID_RESPONSE, 1947, PRE Gathering Forces for army 1948; center (40:39); variance (5.69:1.19); free slots 0
+101, Venice, OP_RAPID_RESPONSE, 1947, POST Gathering Forces for army 1948; center (42:41); variance (4.25:0.50); free slots 0
+101, Arabia, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (62:16); target (64:11); Progress 47 percent
+101, Arabia, OP_FOUND_CITY, 1877, POST Moving To Target with Army 1878; center (62:14); target (64:11); Progress 62 percent
+102, The_Maya, OP_FOUND_CITY, 1839, PRE Moving To Target with Army 1840; center (33:32); target (31:32); Progress 67 percent
+102, The_Maya, OP_FOUND_CITY, 1839, POST Moving To Target with Army 1840; center (31:31); target (31:32); Progress 100 percent
+102, Spain, OP_RAPID_RESPONSE, 1929, PRE Recruiting Units for army 1930; Spearman 1627 at (55:40) - ETA 6; Open; Open; Open; 
+102, Spain, OP_RAPID_RESPONSE, 1929, Found 0 potential units to recruit for operation 1929 at (57:34) with target at (57:34)
+102, Spain, OP_RAPID_RESPONSE, 1929, POST Recruiting Units for army 1930; Spearman 1627 at (54:40) - ETA 5; Open; Open; Open; 
+102, Germany, OP_FOUND_CITY, 1873, found better target for settler, old score 65165 (q21), new score 86669 (q50)
+102, Germany, OP_FOUND_CITY, 1873, setting new target (62:10)
+102, Germany, OP_FOUND_CITY, 1873, PRE Moving To Target with Army 1874; center (59:13); target (62:10); Progress 50 percent
+102, Germany, OP_FOUND_CITY, 1873, POST Moving To Target with Army 1874; center (59:11); target (62:10); Progress 50 percent
+102, The_Huns, OP_FOUND_CITY, 1962, found target for settler, score 53715 (q0)
+102, The_Huns, OP_FOUND_CITY, 1962, Initial stage is recruiting
+102, The_Huns, OP_FOUND_CITY, 1962, Found 0 potential units to recruit for operation 1962 at (51:35) with target at (46:28)
+102, The_Huns, OP_FOUND_CITY, 1962, Started Army 1963; Units Recruited 1; Max Formation Size 2; Recruiting Units
+102, The_Huns, OP_FOUND_CITY, 1830, PRE At Target
+102, The_Huns, OP_FOUND_CITY, 1830, City founded (Iztapam) at (50:25), plot value 57009, q6
+102, The_Huns, OP_FOUND_CITY, 1830, Transition to finished stage
+102, The_Huns, OP_FOUND_CITY, 1962, PRE Recruiting Units for army 1963; Settler 1961 at (51:35) - ETA -1; Open; 
+102, The_Huns, OP_FOUND_CITY, 1962, Found 0 potential units to recruit for operation 1962 at (51:35) with target at (46:28)
+102, The_Huns, OP_FOUND_CITY, 1962, POST Recruiting Units for army 1963; Settler 1961 at (51:35) - ETA 0; Open; 
+102, The_Huns, OP_FOUND_CITY, 1830, Ended: Success; Distance 10; Duration 8
+102, Morocco, OP_FOUND_CITY, 1636, PRE At Target
+102, Morocco, OP_FOUND_CITY, 1636, City founded (Fes) at (30:33), plot value 75487, q40
+102, Morocco, OP_FOUND_CITY, 1636, Transition to finished stage
+102, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+102, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+102, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+102, Morocco, OP_FOUND_CITY, 1636, Ended: Success; Distance 7; Duration 20
+102, The_Netherlands, OP_FOUND_CITY, 1968, Ended: NoTarget; Distance -1; Duration 103
+102, Venice, OP_RAPID_RESPONSE, 1973, Initial stage is recruiting
+102, Venice, OP_RAPID_RESPONSE, 1973, Found 5 potential units to recruit for operation 1973 at (38:42) with target at (34:38)
+102, Venice, OP_RAPID_RESPONSE, 1973, Added Swordsman 1708 to slot 0 in army 1974. ETA at (38:42) is 2 
+102, Venice, OP_RAPID_RESPONSE, 1973, Added Warrior 1310 to slot 1 in army 1974. ETA at (38:42) is 0 
+102, Venice, OP_RAPID_RESPONSE, 1973, Added Warrior 1311 to slot 2 in army 1974. ETA at (38:42) is 0 
+102, Venice, OP_RAPID_RESPONSE, 1973, Added Swordsman 1584 to slot 3 in army 1974. ETA at (38:42) is 3 
+102, Venice, OP_RAPID_RESPONSE, 1973, Transition to gathering stage
+102, Venice, OP_RAPID_RESPONSE, 1973, Started Army 1974; Units Recruited 4; Max Formation Size 4; Gathering Forces
+102, Venice, OP_RAPID_RESPONSE, 1947, PRE Gathering Forces for army 1948; center (42:41); variance (4.25:0.50); free slots 0
+102, Venice, OP_RAPID_RESPONSE, 1947, Transition to movement stage
+102, Venice, OP_RAPID_RESPONSE, 1947, POST Moving To Target with Army 1948; center (40:41); target (34:38); Progress 100 percent
+102, Venice, OP_RAPID_RESPONSE, 1973, PRE Gathering Forces for army 1974; center (40:39); variance (8.19:2.69); free slots 0
+102, Venice, OP_RAPID_RESPONSE, 1973, POST Gathering Forces for army 1974; center (43:40); variance (4.25:1.69); free slots 0
+102, Arabia, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (62:14); target (64:11); Progress 62 percent
+102, Arabia, OP_FOUND_CITY, 1877, POST Moving To Target with Army 1878; center (63:12); target (64:11); Progress 77 percent
+103, The_Maya, OP_FOUND_CITY, 1839, cannot found city at (31:32)
+103, The_Maya, OP_FOUND_CITY, 1839, no path to city site (31:32)
+103, The_Maya, OP_FOUND_CITY, 1839, found no suitable target in area 8
+103, The_Maya, OP_FOUND_CITY, 1839, Ended: NoTarget; Distance 12; Duration 8
+103, Spain, OP_RAPID_RESPONSE, 1929, PRE Recruiting Units for army 1930; Spearman 1627 at (54:40) - ETA 5; Open; Open; Open; 
+103, Spain, OP_RAPID_RESPONSE, 1929, Found 0 potential units to recruit for operation 1929 at (57:34) with target at (57:34)
+103, Spain, OP_RAPID_RESPONSE, 1929, POST Recruiting Units for army 1930; Spearman 1627 at (53:39) - ETA 5; Open; Open; Open; 
+103, Germany, OP_FOUND_CITY, 1873, PRE Moving To Target with Army 1874; center (59:11); target (62:10); Progress 50 percent
+103, Germany, OP_FOUND_CITY, 1873, POST Moving To Target with Army 1874; center (61:10); target (62:10); Progress 100 percent
+103, The_Huns, OP_FOUND_CITY, 1962, no valid city site target found (with escort)!
+103, The_Huns, OP_FOUND_CITY, 1962, Ended: NoTarget; Distance 10; Duration 1
+103, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+103, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+103, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+103, The_Netherlands, OP_FOUND_CITY, 1992, Ended: NoTarget; Distance -1; Duration 104
+103, Venice, OP_RAPID_RESPONSE, 1947, Ended: NoTarget; Distance -1; Duration 2
+103, Venice, OP_RAPID_RESPONSE, 1973, Ended: NoTarget; Distance -1; Duration 1
+103, Arabia, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (63:12); target (64:11); Progress 77 percent
+103, Arabia, OP_FOUND_CITY, 1877, Transition to target stage
+103, Arabia, OP_FOUND_CITY, 1877, POST At Target
+104, The_Maya, OP_FOUND_CITY, 1998, Ended: NoTarget; Distance -1; Duration 105
+104, Spain, OP_RAPID_RESPONSE, 1929, PRE Recruiting Units for army 1930; Spearman 1627 at (53:39) - ETA 5; Open; Open; Open; 
+104, Spain, OP_RAPID_RESPONSE, 1929, Found 0 potential units to recruit for operation 1929 at (57:34) with target at (57:34)
+104, Spain, OP_RAPID_RESPONSE, 1929, POST Recruiting Units for army 1930; Spearman 1627 at (52:39) - ETA 4; Open; Open; Open; 
+104, Germany, OP_FOUND_CITY, 1873, PRE Moving To Target with Army 1874; center (61:10); target (62:10); Progress 100 percent
+104, Germany, OP_FOUND_CITY, 1873, Transition to target stage
+104, Germany, OP_FOUND_CITY, 1873, City founded (Dortmund) at (62:10), plot value 86669, q50
+104, Germany, OP_FOUND_CITY, 1873, Transition to finished stage
+104, Germany, OP_FOUND_CITY, 1873, POST Completed
+104, The_Huns, OP_FOUND_CITY, 2007, Ended: NoTarget; Distance -1; Duration 105
+104, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+104, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+104, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+104, The_Netherlands, OP_FOUND_CITY, 2013, Ended: NoTarget; Distance -1; Duration 105
+104, Arabia, OP_FOUND_CITY, 1877, cannot found city at (64:11)
+104, Arabia, OP_FOUND_CITY, 1877, found better target for settler, old score -1 (q-50), new score 81135 (q50)
+104, Arabia, OP_FOUND_CITY, 1877, setting new target (65:12)
+104, Arabia, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (64:11); target (65:12); Progress 100 percent
+104, Arabia, OP_FOUND_CITY, 1877, Transition to target stage
+104, Arabia, OP_FOUND_CITY, 1877, POST At Target
+105, The_Maya, OP_FOUND_CITY, 2023, Ended: NoTarget; Distance -1; Duration 106
+105, Spain, OP_RAPID_RESPONSE, 1929, PRE Recruiting Units for army 1930; Spearman 1627 at (52:39) - ETA 4; Open; Open; Open; 
+105, Spain, OP_RAPID_RESPONSE, 1929, Found 0 potential units to recruit for operation 1929 at (57:34) with target at (57:34)
+105, Spain, OP_RAPID_RESPONSE, 1929, POST Recruiting Units for army 1930; Spearman 1627 at (52:39) - ETA 4; Open; Open; Open; 
+105, Germany, OP_FOUND_CITY, 1873, Ended: Success; Distance 10; Duration 8
+105, The_Huns, OP_FOUND_CITY, 2031, Ended: NoTarget; Distance -1; Duration 106
+105, Morocco, OP_FOUND_CITY, 2037, found target for settler, score 107397 (q50)
+105, Morocco, OP_FOUND_CITY, 2037, Initial stage is recruiting
+105, Morocco, OP_FOUND_CITY, 2037, Found 0 potential units to recruit for operation 2037 at (34:38) with target at (30:25)
+105, Morocco, OP_FOUND_CITY, 2037, Started Army 2038; Units Recruited 1; Max Formation Size 2; Recruiting Units
+105, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+105, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+105, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+105, Morocco, OP_FOUND_CITY, 2037, PRE Recruiting Units for army 2038; Settler 2036 at (34:38) - ETA -1; Open; 
+105, Morocco, OP_FOUND_CITY, 2037, Found 0 potential units to recruit for operation 2037 at (34:38) with target at (30:25)
+105, Morocco, OP_FOUND_CITY, 2037, POST Recruiting Units for army 2038; Settler 2036 at (34:38) - ETA 0; Open; 
+105, The_Netherlands, OP_FOUND_CITY, 2039, Ended: NoTarget; Distance -1; Duration 106
+105, Arabia, OP_FOUND_CITY, 1877, PRE At Target
+105, Arabia, OP_FOUND_CITY, 1877, City founded (Baghdad) at (65:12), plot value 81135, q50
+105, Arabia, OP_FOUND_CITY, 1877, Transition to finished stage
+105, Arabia, OP_FOUND_CITY, 1877, Ended: Success; Distance 13; Duration 8
+106, The_Maya, OP_FOUND_CITY, 2047, Ended: NoTarget; Distance -1; Duration 107
+106, Spain, OP_RAPID_RESPONSE, 1929, PRE Recruiting Units for army 1930; Spearman 1627 at (52:39) - ETA 4; Open; Open; Open; 
+106, Spain, OP_RAPID_RESPONSE, 1929, Found 0 potential units to recruit for operation 1929 at (57:34) with target at (57:34)
+106, Spain, OP_RAPID_RESPONSE, 1929, Removing Spearman 1627 from army 1930 because no progress to checkpoint (57:34). ETA 4; prev 4; prev 4
+106, Spain, OP_RAPID_RESPONSE, 1929, Ended: LostPath; Distance 1; Duration 5
+106, The_Huns, OP_FOUND_CITY, 2055, Ended: NoTarget; Distance -1; Duration 107
+106, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+106, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+106, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+106, Morocco, OP_FOUND_CITY, 2037, PRE Recruiting Units for army 2038; Settler 2036 at (34:38) - ETA 0; Open; 
+106, Morocco, OP_FOUND_CITY, 2037, Found 0 potential units to recruit for operation 2037 at (34:38) with target at (30:25)
+106, Morocco, OP_FOUND_CITY, 2037, POST Recruiting Units for army 2038; Settler 2036 at (34:38) - ETA 0; Open; 
+106, The_Netherlands, OP_FOUND_CITY, 2060, Ended: NoTarget; Distance -1; Duration 107
+107, The_Maya, OP_FOUND_CITY, 2071, Ended: NoTarget; Distance -1; Duration 108
+107, The_Huns, OP_FOUND_CITY, 2080, Ended: NoTarget; Distance -1; Duration 108
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, Initial stage is recruiting
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 4 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, Added Swordsman 1796 to slot 0 in army 2082. ETA at (49:41) is 0 
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, Added Swordsman 1778 to slot 1 in army 2082. ETA at (49:41) is 3 
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, Added Catapult 1321 to slot 3 in army 2082. ETA at (49:41) is 0 
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, Added Catapult 1265 to slot 4 in army 2082. ETA at (49:41) is 2 
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, Started Army 2082; Units Recruited 4; Max Formation Size 10; Recruiting Units
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, PRE Recruiting Units for army 2082; Swordsman 1796 at (51:35) - ETA 0; Swordsman 1778 at (50:30) - ETA 3; Open; Catapult 1321 at (51:38) - ETA 0; Catapult 1265 at (54:34) - ETA 2; Open; Open; Open; Open; Open; 
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 0 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+107, The_Huns, OP_CITY_ATTACK_LAND, 2081, POST Recruiting Units for army 2082; Swordsman 1796 at (51:37) - ETA 0; Swordsman 1778 at (51:32) - ETA 3; Open; Catapult 1321 at (50:39) - ETA 0; Catapult 1265 at (53:34) - ETA 2; Open; Open; Open; Open; Open; 
+107, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+107, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+107, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+107, Morocco, OP_FOUND_CITY, 2037, PRE Recruiting Units for army 2038; Settler 2036 at (34:38) - ETA 0; Open; 
+107, Morocco, OP_FOUND_CITY, 2037, Found 0 potential units to recruit for operation 2037 at (34:38) with target at (30:25)
+107, Morocco, OP_FOUND_CITY, 2037, POST Recruiting Units for army 2038; Settler 2036 at (34:38) - ETA 0; Open; 
+107, The_Netherlands, OP_FOUND_CITY, 2085, Ended: NoTarget; Distance -1; Duration 108
+108, The_Maya, OP_FOUND_CITY, 2093, Ended: NoTarget; Distance -1; Duration 109
+108, The_Huns, OP_FOUND_CITY, 2100, Ended: NoTarget; Distance -1; Duration 109
+108, The_Huns, OP_RAPID_RESPONSE, 2101, Initial stage is recruiting
+108, The_Huns, OP_RAPID_RESPONSE, 2101, Found 1 potential units to recruit for operation 2101 at (51:35) with target at (54:39)
+108, The_Huns, OP_RAPID_RESPONSE, 2101, Added Swordsman 1797 to slot 0 in army 2102. ETA at (51:35) is 4 
+108, The_Huns, OP_RAPID_RESPONSE, 2101, Started Army 2102; Units Recruited 1; Max Formation Size 4; Recruiting Units
+108, The_Huns, OP_CITY_ATTACK_LAND, 2081, PRE Recruiting Units for army 2082; Swordsman 1796 at (51:37) - ETA 0; Swordsman 1778 at (51:32) - ETA 3; Open; Catapult 1321 at (50:39) - ETA 0; Catapult 1265 at (53:34) - ETA 2; Open; Open; Open; Open; Open; 
+108, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 0 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+108, The_Huns, OP_CITY_ATTACK_LAND, 2081, Removing Catapult 1265 from army 2082 because no progress to checkpoint (49:41). ETA 2; prev 2; prev 2
+108, The_Huns, OP_CITY_ATTACK_LAND, 2081, POST Recruiting Units for army 2082; Swordsman 1796 at (52:38) - ETA 0; Swordsman 1778 at (51:34) - ETA 2; Open; Catapult 1321 at (50:40) - ETA 0; Open; Open; Open; Open; Open; Open; 
+108, The_Huns, OP_RAPID_RESPONSE, 2101, PRE Recruiting Units for army 2102; Swordsman 1797 at (50:25) - ETA 4; Open; Open; Open; 
+108, The_Huns, OP_RAPID_RESPONSE, 2101, Found 0 potential units to recruit for operation 2101 at (51:35) with target at (54:39)
+108, The_Huns, OP_RAPID_RESPONSE, 2101, POST Recruiting Units for army 2102; Swordsman 1797 at (50:26) - ETA 4; Open; Open; Open; 
+108, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+108, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+108, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+108, Morocco, OP_FOUND_CITY, 2037, PRE Recruiting Units for army 2038; Settler 2036 at (34:38) - ETA 0; Open; 
+108, Morocco, OP_FOUND_CITY, 2037, Found 0 potential units to recruit for operation 2037 at (34:38) with target at (30:25)
+108, Morocco, OP_FOUND_CITY, 2037, POST Recruiting Units for army 2038; Settler 2036 at (34:38) - ETA 0; Open; 
+108, The_Netherlands, OP_FOUND_CITY, 2105, Ended: NoTarget; Distance -1; Duration 109
+108, Arabia, OP_RAPID_RESPONSE, 2110, Initial stage is recruiting
+108, Arabia, OP_RAPID_RESPONSE, 2110, Found 1 potential units to recruit for operation 2110 at (65:12) with target at (65:12)
+108, Arabia, OP_RAPID_RESPONSE, 2110, Added Warrior 1016 to slot 0 in army 2111. ETA at (65:12) is 1 
+108, Arabia, OP_RAPID_RESPONSE, 2110, Started Army 2111; Units Recruited 1; Max Formation Size 4; Recruiting Units
+108, Arabia, OP_RAPID_RESPONSE, 2110, PRE Recruiting Units for army 2111; Warrior 1016 at (63:16) - ETA 1; Open; Open; Open; 
+108, Arabia, OP_RAPID_RESPONSE, 2110, Found 0 potential units to recruit for operation 2110 at (65:12) with target at (65:12)
+108, Arabia, OP_RAPID_RESPONSE, 2110, POST Recruiting Units for army 2111; Warrior 1016 at (64:16) - ETA 1; Open; Open; Open; 
+109, The_Maya, OP_FOUND_CITY, 2116, Ended: NoTarget; Distance -1; Duration 110
+109, The_Huns, OP_FOUND_CITY, 2122, Ended: NoTarget; Distance -1; Duration 110
+109, The_Huns, OP_CITY_ATTACK_LAND, 2081, PRE Recruiting Units for army 2082; Swordsman 1796 at (52:38) - ETA 0; Swordsman 1778 at (51:34) - ETA 2; Open; Catapult 1321 at (50:40) - ETA 0; Open; Open; Open; Open; Open; Open; 
+109, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 1 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+109, The_Huns, OP_CITY_ATTACK_LAND, 2081, Added Catapult 1265 to slot 4 in army 2082. ETA at (49:41) is 2 
+109, The_Huns, OP_CITY_ATTACK_LAND, 2081, POST Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 0; Swordsman 1778 at (51:35) - ETA 1; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (52:35) - ETA 2; Open; Open; Open; Open; Open; 
+109, The_Huns, OP_RAPID_RESPONSE, 2101, PRE Recruiting Units for army 2102; Swordsman 1797 at (50:26) - ETA 4; Open; Open; Open; 
+109, The_Huns, OP_RAPID_RESPONSE, 2101, Found 0 potential units to recruit for operation 2101 at (51:35) with target at (54:39)
+109, The_Huns, OP_RAPID_RESPONSE, 2101, POST Recruiting Units for army 2102; Swordsman 1797 at (50:27) - ETA 3; Open; Open; Open; 
+109, Morocco, OP_RAPID_RESPONSE, 1817, PRE Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+109, Morocco, OP_RAPID_RESPONSE, 1817, Found 0 potential units to recruit for operation 1817 at (34:38) with target at (34:38)
+109, Morocco, OP_RAPID_RESPONSE, 1817, POST Recruiting Units for army 1818; Warrior 1117 at (33:38) - ETA 0; Open; Open; Open; 
+109, Morocco, OP_FOUND_CITY, 2037, PRE Recruiting Units for army 2038; Settler 2036 at (34:38) - ETA 0; Open; 
+109, Morocco, OP_FOUND_CITY, 2037, Found 1 potential units to recruit for operation 2037 at (34:38) with target at (30:25)
+109, Morocco, OP_FOUND_CITY, 2037, Added Warrior 1010 to slot 1 in army 2038. ETA at (34:38) is 0 
+109, Morocco, OP_FOUND_CITY, 2037, Transition to gathering stage
+109, Morocco, OP_FOUND_CITY, 2037, POST Gathering Forces for army 2038; center (34:37); variance (0.25:0.25); free slots 0
+109, The_Netherlands, OP_FOUND_CITY, 2125, Ended: NoTarget; Distance -1; Duration 110
+109, Arabia, OP_RAPID_RESPONSE, 2110, PRE Recruiting Units for army 2111; Warrior 1016 at (64:16) - ETA 1; Open; Open; Open; 
+109, Arabia, OP_RAPID_RESPONSE, 2110, Found 0 potential units to recruit for operation 2110 at (65:12) with target at (65:12)
+109, Arabia, OP_RAPID_RESPONSE, 2110, POST Recruiting Units for army 2111; Warrior 1016 at (64:14) - ETA 0; Open; Open; Open; 
+110, The_Maya, OP_FOUND_CITY, 2144, Ended: NoTarget; Distance -1; Duration 111
+110, The_Huns, OP_FOUND_CITY, 2159, Ended: NoTarget; Distance -1; Duration 111
+110, The_Huns, OP_CITY_ATTACK_LAND, 2081, PRE Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 0; Swordsman 1778 at (51:35) - ETA 1; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (52:35) - ETA 2; Open; Open; Open; Open; Open; 
+110, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 0 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+110, The_Huns, OP_CITY_ATTACK_LAND, 2081, Contact with enemy!
+110, The_Huns, OP_CITY_ATTACK_LAND, 2081, POST Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (53:37) - ETA 0; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (51:35) - ETA 1; Open; Open; Open; Open; Open; 
+110, The_Huns, OP_RAPID_RESPONSE, 2101, PRE Recruiting Units for army 2102; Swordsman 1797 at (50:27) - ETA 3; Open; Open; Open; 
+110, The_Huns, OP_RAPID_RESPONSE, 2101, Found 0 potential units to recruit for operation 2101 at (51:35) with target at (54:39)
+110, The_Huns, OP_RAPID_RESPONSE, 2101, POST Recruiting Units for army 2102; Swordsman 1797 at (51:28) - ETA 2; Open; Open; Open; 
+110, Morocco, OP_RAPID_RESPONSE, 1817, Ended: NoTarget; Distance 1; Duration 17
+110, Morocco, OP_FOUND_CITY, 2037, PRE Gathering Forces for army 2038; center (34:37); variance (0.25:0.25); free slots 0
+110, Morocco, OP_FOUND_CITY, 2037, Added Warrior 1117 to slot 1 in army 2038. ETA at (33:38) is 0 
+110, Morocco, OP_FOUND_CITY, 2037, Transition to movement stage
+110, Morocco, OP_FOUND_CITY, 2037, POST Moving To Target with Army 2038; center (33:36); target (30:25); Progress 14 percent
+110, The_Netherlands, OP_FOUND_CITY, 2161, found target for settler, score 101780 (q50)
+110, The_Netherlands, OP_FOUND_CITY, 2161, Initial stage is recruiting
+110, The_Netherlands, OP_FOUND_CITY, 2161, Found 0 potential units to recruit for operation 2161 at (42:20) with target at (30:25)
+110, The_Netherlands, OP_FOUND_CITY, 2161, Started Army 2162; Units Recruited 1; Max Formation Size 2; Recruiting Units
+110, The_Netherlands, OP_FOUND_CITY, 2161, PRE Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA -1; Open; 
+110, The_Netherlands, OP_FOUND_CITY, 2161, Found 0 potential units to recruit for operation 2161 at (42:20) with target at (30:25)
+110, The_Netherlands, OP_FOUND_CITY, 2161, POST Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA 0; Open; 
+110, Arabia, OP_RAPID_RESPONSE, 2110, PRE Recruiting Units for army 2111; Warrior 1016 at (64:14) - ETA 0; Open; Open; Open; 
+110, Arabia, OP_RAPID_RESPONSE, 2110, Found 0 potential units to recruit for operation 2110 at (65:12) with target at (65:12)
+110, Arabia, OP_RAPID_RESPONSE, 2110, POST Recruiting Units for army 2111; Warrior 1016 at (65:14) - ETA 0; Open; Open; Open; 
+111, The_Maya, OP_FOUND_CITY, 2170, Ended: NoTarget; Distance -1; Duration 112
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Initial stage is recruiting
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Found 7 potential units to recruit for operation 2176 at (55:24) with target at (50:30)
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Added Swordsman 2151 to slot 0 in army 2177. ETA at (55:24) is 0 
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Added Warrior 2155 to slot 1 in army 2177. ETA at (55:24) is 1 
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Added Horseman 2152 to slot 2 in army 2177. ETA at (55:24) is 0 
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Added Archer 2156 to slot 3 in army 2177. ETA at (55:24) is 1 
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Added Composite Bowman 2153 to slot 4 in army 2177. ETA at (55:24) is 2 
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Added Swordsman 1922 to slot 5 in army 2177. ETA at (55:24) is 2 
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Added Warrior 1938 to slot 6 in army 2177. ETA at (55:24) is 1 
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Transition to gathering stage
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Started Army 2177; Units Recruited 7; Max Formation Size 9; Gathering Forces
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, PRE Gathering Forces for army 2177; center (53:20); variance (5.35:9.10); free slots 2
+111, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, POST Gathering Forces for army 2177; center (54:22); variance (2.53:3.67); free slots 2
+111, The_Huns, OP_FOUND_CITY, 2178, Ended: NoTarget; Distance -1; Duration 112
+111, The_Huns, OP_CITY_ATTACK_LAND, 2081, PRE Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (53:37) - ETA 0; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (51:35) - ETA 1; Open; Open; Open; Open; Open; 
+111, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 0 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+111, The_Huns, OP_CITY_ATTACK_LAND, 2081, POST Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (53:38) - ETA 1; Open; Catapult 1321 at (50:42) - ETA 0; Catapult 1265 at (51:35) - ETA 0; Open; Open; Open; Open; Open; 
+111, The_Huns, OP_RAPID_RESPONSE, 2101, PRE Recruiting Units for army 2102; Swordsman 1797 at (51:28) - ETA 2; Open; Open; Open; 
+111, The_Huns, OP_RAPID_RESPONSE, 2101, Found 0 potential units to recruit for operation 2101 at (51:35) with target at (54:39)
+111, The_Huns, OP_RAPID_RESPONSE, 2101, POST Recruiting Units for army 2102; Swordsman 1797 at (51:29) - ETA 2; Open; Open; Open; 
+111, Morocco, OP_FOUND_CITY, 2037, PRE Moving To Target with Army 2038; center (33:36); target (30:25); Progress 14 percent
+111, Morocco, OP_FOUND_CITY, 2037, POST Moving To Target with Army 2038; center (33:34); target (30:25); Progress 20 percent
+111, The_Netherlands, OP_FOUND_CITY, 2161, PRE Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA 0; Open; 
+111, The_Netherlands, OP_FOUND_CITY, 2161, Found 0 potential units to recruit for operation 2161 at (42:20) with target at (30:25)
+111, The_Netherlands, OP_FOUND_CITY, 2161, POST Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA 0; Open; 
+111, Arabia, OP_RAPID_RESPONSE, 2110, PRE Recruiting Units for army 2111; Warrior 1016 at (65:14) - ETA 0; Open; Open; Open; 
+111, Arabia, OP_RAPID_RESPONSE, 2110, Found 0 potential units to recruit for operation 2110 at (65:12) with target at (65:12)
+111, Arabia, OP_RAPID_RESPONSE, 2110, POST Recruiting Units for army 2111; Warrior 1016 at (66:12) - ETA 0; Open; Open; Open; 
+112, The_Maya, OP_FOUND_CITY, 2192, Ended: NoTarget; Distance -1; Duration 113
+112, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, PRE Gathering Forces for army 2177; center (54:22); variance (2.53:3.67); free slots 2
+112, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Transition to movement stage
+112, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, POST Moving To Target with Army 2177; center (54:23); target (50:30); Progress 0 percent
+112, The_Huns, OP_FOUND_CITY, 2200, Ended: NoTarget; Distance -1; Duration 113
+112, The_Huns, OP_CITY_ATTACK_LAND, 2081, PRE Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (53:38) - ETA 1; Open; Catapult 1321 at (50:42) - ETA 0; Catapult 1265 at (51:35) - ETA 0; Open; Open; Open; Open; Open; 
+112, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 1 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+112, The_Huns, OP_CITY_ATTACK_LAND, 2081, Added Battering Ram 1358 to slot 5 in army 2082. ETA at (49:41) is 4 
+112, The_Huns, OP_CITY_ATTACK_LAND, 2081, POST Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (53:38) - ETA 1; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (51:35) - ETA 0; Battering Ram 1358 at (51:28) - ETA 4; Open; Open; Open; Open; 
+112, The_Huns, OP_RAPID_RESPONSE, 2101, PRE Recruiting Units for army 2102; Swordsman 1797 at (51:29) - ETA 2; Open; Open; Open; 
+112, The_Huns, OP_RAPID_RESPONSE, 2101, Found 0 potential units to recruit for operation 2101 at (51:35) with target at (54:39)
+112, The_Huns, OP_RAPID_RESPONSE, 2101, POST Recruiting Units for army 2102; Swordsman 1797 at (52:30) - ETA 1; Open; Open; Open; 
+112, Morocco, OP_FOUND_CITY, 2037, PRE Moving To Target with Army 2038; center (33:34); target (30:25); Progress 20 percent
+112, Morocco, OP_FOUND_CITY, 2037, POST Moving To Target with Army 2038; center (31:33); target (30:25); Progress 34 percent
+112, The_Netherlands, OP_FOUND_CITY, 2161, PRE Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA 0; Open; 
+112, The_Netherlands, OP_FOUND_CITY, 2161, Found 0 potential units to recruit for operation 2161 at (42:20) with target at (30:25)
+112, The_Netherlands, OP_FOUND_CITY, 2161, POST Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA 0; Open; 
+112, Arabia, OP_RAPID_RESPONSE, 2110, Ended: NoTarget; Distance 1; Duration 4
+113, The_Maya, OP_FOUND_CITY, 2220, Ended: NoTarget; Distance -1; Duration 114
+113, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, PRE Moving To Target with Army 2177; center (54:23); target (50:30); Progress 0 percent
+113, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, POST Moving To Target with Army 2177; center (54:24); target (50:30); Progress 20 percent
+113, The_Huns, OP_FOUND_CITY, 2232, Ended: NoTarget; Distance -1; Duration 114
+113, The_Huns, OP_CITY_ATTACK_LAND, 2081, PRE Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (53:38) - ETA 1; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (51:35) - ETA 0; Battering Ram 1358 at (51:28) - ETA 4; Open; Open; Open; Open; 
+113, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 0 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+113, The_Huns, OP_CITY_ATTACK_LAND, 2081, Contact with enemy!
+113, The_Huns, OP_CITY_ATTACK_LAND, 2081, POST Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (52:39) - ETA 1; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (51:35) - ETA 0; Battering Ram 1358 at (50:30) - ETA 3; Open; Open; Open; Open; 
+113, The_Huns, OP_RAPID_RESPONSE, 2101, PRE Recruiting Units for army 2102; Swordsman 1797 at (52:30) - ETA 1; Open; Open; Open; 
+113, The_Huns, OP_RAPID_RESPONSE, 2101, Found 0 potential units to recruit for operation 2101 at (51:35) with target at (54:39)
+113, The_Huns, OP_RAPID_RESPONSE, 2101, POST Recruiting Units for army 2102; Swordsman 1797 at (51:31) - ETA 1; Open; Open; Open; 
+113, Morocco, OP_FOUND_CITY, 2037, PRE Moving To Target with Army 2038; center (31:33); target (30:25); Progress 34 percent
+113, Morocco, OP_FOUND_CITY, 2037, POST Moving To Target with Army 2038; center (30:32); target (30:25); Progress 47 percent
+113, The_Netherlands, OP_FOUND_CITY, 2161, PRE Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA 0; Open; 
+113, The_Netherlands, OP_FOUND_CITY, 2161, Found 0 potential units to recruit for operation 2161 at (42:20) with target at (30:25)
+113, The_Netherlands, OP_FOUND_CITY, 2161, POST Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA 0; Open; 
+114, The_Maya, OP_FOUND_CITY, 2249, Ended: NoTarget; Distance -1; Duration 115
+114, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, PRE Moving To Target with Army 2177; center (54:24); target (50:30); Progress 20 percent
+114, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Discovered by enemy
+114, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Transition to finished stage; unit distance near 5; far 8
+114, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, POST Completed
+114, The_Huns, OP_FOUND_CITY, 2259, Ended: NoTarget; Distance -1; Duration 115
+114, The_Huns, OP_CITY_ATTACK_LAND, 2081, PRE Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (52:39) - ETA 1; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (51:35) - ETA 0; Battering Ram 1358 at (50:30) - ETA 3; Open; Open; Open; Open; 
+114, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 0 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+114, The_Huns, OP_CITY_ATTACK_LAND, 2081, Contact with enemy!
+114, The_Huns, OP_CITY_ATTACK_LAND, 2081, POST Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (51:40) - ETA 0; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (51:35) - ETA 0; Battering Ram 1358 at (52:34) - ETA 2; Open; Open; Open; Open; 
+114, The_Huns, OP_RAPID_RESPONSE, 2101, PRE Recruiting Units for army 2102; Swordsman 1797 at (51:31) - ETA 1; Open; Open; Open; 
+114, The_Huns, OP_RAPID_RESPONSE, 2101, Found 0 potential units to recruit for operation 2101 at (51:35) with target at (54:39)
+114, The_Huns, OP_RAPID_RESPONSE, 2101, POST Recruiting Units for army 2102; Swordsman 1797 at (51:34) - ETA 0; Open; Open; Open; 
+114, Morocco, OP_FOUND_CITY, 2037, PRE Moving To Target with Army 2038; center (30:32); target (30:25); Progress 47 percent
+114, Morocco, OP_FOUND_CITY, 2037, POST Moving To Target with Army 2038; center (29:30); target (30:25); Progress 60 percent
+114, The_Netherlands, OP_FOUND_CITY, 2161, PRE Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA 0; Open; 
+114, The_Netherlands, OP_FOUND_CITY, 2161, Found 0 potential units to recruit for operation 2161 at (42:20) with target at (30:25)
+114, The_Netherlands, OP_FOUND_CITY, 2161, POST Recruiting Units for army 2162; Settler 1944 at (42:20) - ETA 0; Open; 
+115, The_Maya, OP_FOUND_CITY, 2272, Ended: NoTarget; Distance -1; Duration 116
+115, Germany, OP_RAPID_RESPONSE, 2276, Initial stage is recruiting
+115, Germany, OP_RAPID_RESPONSE, 2276, Found 1 potential units to recruit for operation 2276 at (62:10) with target at (62:10)
+115, Germany, OP_RAPID_RESPONSE, 2276, Added Swordsman 1651 to slot 0 in army 2277. ETA at (62:10) is 5 
+115, Germany, OP_RAPID_RESPONSE, 2276, Started Army 2277; Units Recruited 1; Max Formation Size 4; Recruiting Units
+115, Germany, OP_CITY_ATTACK_LAND_SNEAKY, 2176, Ended: Success; Distance 10; Duration 4
+115, Germany, OP_RAPID_RESPONSE, 2276, PRE Recruiting Units for army 2277; Swordsman 1651 at (55:24) - ETA 5; Open; Open; Open; 
+115, Germany, OP_RAPID_RESPONSE, 2276, Found 0 potential units to recruit for operation 2276 at (62:10) with target at (62:10)
+115, Germany, OP_RAPID_RESPONSE, 2276, POST Recruiting Units for army 2277; Swordsman 1651 at (55:22) - ETA 5; Open; Open; Open; 
+115, The_Huns, OP_FOUND_CITY, 2281, Ended: NoTarget; Distance -1; Duration 116
+115, The_Huns, OP_CITY_ATTACK_LAND, 2081, PRE Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (51:40) - ETA 0; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (51:35) - ETA 0; Battering Ram 1358 at (52:34) - ETA 2; Open; Open; Open; Open; 
+115, The_Huns, OP_CITY_ATTACK_LAND, 2081, Found 0 potential units to recruit for operation 2081 at (49:41) with target at (54:39)
+115, The_Huns, OP_CITY_ATTACK_LAND, 2081, Contact with enemy!
+115, The_Huns, OP_CITY_ATTACK_LAND, 2081, POST Recruiting Units for army 2082; Swordsman 1796 at (53:39) - ETA 1; Swordsman 1778 at (51:40) - ETA 0; Open; Catapult 1321 at (49:41) - ETA 0; Catapult 1265 at (52:36) - ETA 0; Battering Ram 1358 at (51:35) - ETA 1; Open; Open; Open; Open; 
+115, The_Huns, OP_RAPID_RESPONSE, 2101, PRE Recruiting Units for army 2102; Swordsman 1797 at (51:34) - ETA 0; Open; Open; Open; 
+115, The_Huns, OP_RAPID_RESPONSE, 2101, Found 0 potential units to recruit for operation 2101 at (51:35) with target at (54:39)
+115, The_Huns, OP_RAPID_RESPONSE, 2101, POST Recruiting Units for army 2102; Swordsman 1797 at (51:34) - ETA 0; Open; Open; Open; 
+115, Morocco, OP_FOUND_CITY, 2037, PRE Moving To Target with Army 2038; center (29:30); target (30:25); Progress 60 percent
+115, Morocco, OP_FOUND_CITY, 2037, POST Moving To Target with Army 2038; center (29:28); target (30:25); Progress 74 percent
+115, The_Netherlands, OP_FOUND_CITY, 2161, cannot found city at (30:25)
+115, The_Netherlands, OP_FOUND_CITY, 2161, found no suitable target in area 41
+115, The_Netherlands, OP_FOUND_CITY, 2161, Ended: NoTarget; Distance 15; Duration 5
