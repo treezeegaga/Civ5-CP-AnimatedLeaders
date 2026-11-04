@@ -153,6 +153,216 @@
    "name": "DealExploits alone",
    "detail": "Single-flag test.",
    "state": "waiting"
+  },
+  {
+   "section": "flag",
+   "order": 1,
+   "name": "DeclareAtBorder",
+   "detail": "Passed with the top five, but alone it did nothing (gain +0.04, gainer failed): its rank was luck.",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 2,
+   "name": "SettlersBeforeWonders",
+   "detail": "In C8; its own gainer test is running on PC 1.",
+   "state": "testing"
+  },
+  {
+   "section": "flag",
+   "order": 3,
+   "name": "PolicyPrereqDepth",
+   "detail": "Passed with the top five and the bug-fix bundle.",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 4,
+   "name": "LosingWarBuildings",
+   "detail": "Passed with the top five and the bug-fix bundle.",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 5,
+   "name": "DealExploits",
+   "detail": "Passed with the top five; its own test is queued.",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 6,
+   "name": "DiploBugs",
+   "detail": "Bug fix: passed the no-worse test.",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 7,
+   "name": "UpgradeSaveCancel",
+   "detail": "Bug fix: passed the no-worse test.",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 8,
+   "name": "LuxuryAsk",
+   "detail": "Bug fix: passed the no-worse test.",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 9,
+   "name": "DiploPolicyValue",
+   "detail": "Bug fix: passed the no-worse test.",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 10,
+   "name": "EasyTarget",
+   "detail": "Bug fix: passed the no-worse test.",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 11,
+   "name": "CultureRivalValue",
+   "detail": "Bug fix: passed the no-worse test (city-state crash fixed in 8109f67).",
+   "state": "in C8"
+  },
+  {
+   "section": "flag",
+   "order": 12,
+   "name": "TimingAttack",
+   "detail": "In the bully conquest test: civs barely fight, so a screen can't judge it.",
+   "state": "waits for wars"
+  },
+  {
+   "section": "flag",
+   "order": 13,
+   "name": "DeclareTiming",
+   "detail": "In the bully conquest test.",
+   "state": "waits for wars"
+  },
+  {
+   "section": "flag",
+   "order": 14,
+   "name": "SiegeBook",
+   "detail": "In the bully conquest test; its weak screen rank is from games with almost no wars.",
+   "state": "waits for wars"
+  },
+  {
+   "section": "flag",
+   "order": 15,
+   "name": "SiegeTechs",
+   "detail": "In the bully conquest test.",
+   "state": "waits for wars"
+  },
+  {
+   "section": "flag",
+   "order": 16,
+   "name": "SiegeStay",
+   "detail": "No captures in the bully siege test; nothing to act on until sieges can win.",
+   "state": "waits for wars"
+  },
+  {
+   "section": "flag",
+   "order": 17,
+   "name": "SiegePosture",
+   "detail": "No captures in the bully siege test; nothing to act on until sieges can win.",
+   "state": "waits for wars"
+  },
+  {
+   "section": "flag",
+   "order": 18,
+   "name": "GreedyTarget",
+   "detail": "Only acts with TimingAttack.",
+   "state": "waits for wars"
+  },
+  {
+   "section": "flag",
+   "order": 19,
+   "name": "CanWin",
+   "detail": "Only acts with TimingAttack.",
+   "state": "waits for wars"
+  },
+  {
+   "section": "flag",
+   "order": 20,
+   "name": "BoxedInWar",
+   "detail": "Only acts with BoxedIn on boxed-in wide civs; screened −0.69.",
+   "state": "waits for wars"
+  },
+  {
+   "section": "flag",
+   "order": 21,
+   "name": "ClosedBorders",
+   "detail": "Looked harmful in screening (−0.63, 94% chance no better).",
+   "state": "dropped"
+  },
+  {
+   "section": "flag",
+   "order": 22,
+   "name": "SettlerOverlap",
+   "detail": "Screened +0.38, not significant; could get its own test later.",
+   "state": "off"
+  },
+  {
+   "section": "flag",
+   "order": 23,
+   "name": "BoxedIn",
+   "detail": "Screened +0.34, not significant; left C with the c7c ideas, could get its own test later.",
+   "state": "off"
+  },
+  {
+   "section": "flag",
+   "order": 24,
+   "name": "BookFinishesSettlers",
+   "detail": "No sign of a gain (+0.14).",
+   "state": "off"
+  },
+  {
+   "section": "flag",
+   "order": 25,
+   "name": "AqueductValue",
+   "detail": "No sign of a gain (+0.09); left C with the c7c ideas.",
+   "state": "off"
+  },
+  {
+   "section": "flag",
+   "order": 26,
+   "name": "WidePlans",
+   "detail": "No sign of a gain (+0.08); left C with the c7c ideas.",
+   "state": "off"
+  },
+  {
+   "section": "flag",
+   "order": 27,
+   "name": "DealReputation",
+   "detail": "No sign of a gain (+0.01).",
+   "state": "off"
+  },
+  {
+   "section": "flag",
+   "order": 28,
+   "name": "GreedyBook",
+   "detail": "No sign of a gain (−0.02); left C with the c7c ideas.",
+   "state": "off"
+  },
+  {
+   "section": "flag",
+   "order": 29,
+   "name": "SettlersFirst",
+   "detail": "No sign of a gain (−0.20).",
+   "state": "off"
+  },
+  {
+   "section": "flag",
+   "order": 30,
+   "name": "GrowthTech",
+   "detail": "No sign of a gain (−0.47); left C with the c7c ideas.",
+   "state": "off"
   }
  ]
 }
