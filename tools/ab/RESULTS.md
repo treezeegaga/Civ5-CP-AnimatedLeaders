@@ -1755,6 +1755,29 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   after "Discovered by enemy" in the operations log. If most wars come from coop wars or demands instead, this fix
   matters less and those paths need the same rule (they're in Diplomacy's files).
 
+### FIX_SIEGE_FORMATION: classical–medieval city attacks use a formation with room for siege (War) (Nov 4, about 12:30am ET)
+- **Why only half the army joined, and the bar wasn't reached** (bully pair 0879B791): distance from the muster point
+  wasn't it. The Celts' attack held 7 of its 9 slots; the rest of their military was garrisons, a sentry and scouts.
+  The limit is the formation. From the classical era until the Renaissance, land city attacks use
+  `MUFORMATION_SMALL_CITY_ATTACK_FORCE`:
+  - 9 slots, but **only 2 take siege or ranged units**, and both are required;
+  - its optional slots are melee (`UNITAI_ATTACK`/`FAST_ATTACK`), a general and a special unit.
+
+  So the extra units SiegeArmy asks for are melee. The logs show cities asked to build "Operation unit ... Pictish
+  Warrior / Swordsman" (the `1c30fb0` fix working). They add almost no city damage, and catapults can't join past 2:
+  7 units made 27 a turn. `MUFORMATION_BASIC_CITY_ATTACK_FORCE` (10 slots, 6 required) has **5** siege/ranged slots.
+  The ancient one (`EARLY_RUSH`) already has 4.
+- **Hypothesis:** with the flag, a land city attack that would use SMALL uses BASIC instead. The army can then hold
+  up to 5 siege or ranged units, which are what brings city damage. With SiegeArmy, the waiting attack's requests
+  become catapults, and the bar becomes reachable.
+- **Measure:** bully pairs, the conquest role (TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy,
+  ArmyHandoff, SiegeAbort) + SiegeFormation against the same without it.
+  - Mechanism: siege units in the attack and its expected damage when it marches.
+  - Outcome: cities captured, the aggressor's city share, and military at T150 (the guard).
+- **δ:** at least 1 capture per 3 bully pairs; military at T150 no lower.
+- **Build:** next `ai/war` commit (on `claude/ab-c1` `c13eb1c`). Only acts on land city attacks; the formation is
+  chosen in `CvAIOperation` (War's file).
+
 ### War: bully conquest pair 0879B791 (Celts with the conquest flags): an army thrown away (Nov 3, about 11:45pm ET)
 
 With TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy and ArmyHandoff, the Celts built the biggest army by
