@@ -2407,6 +2407,12 @@ Next test build: the DLL forces the difficulty from `AIABTest.ini`, so this can'
   per game: an operation is created and dropped every turn (Spain in 02F5C9E3, T19–T23: a new ID each turn, "Duration"
   20, 21, 22...). Probably a settler whose target fails the check in `CvAIOperationCivilianFoundCity` right after it's
   chosen. It may be costing settler turns, so it's worth a look for expansion pace.
+- **For the lead, from War (the user agreed, Nov 4 ~12:20am ET): one `ConquestPlan` switch.** `TimingAttack`,
+  `DeclareTiming`, `SiegeBook` and `SiegeTechs` are four parts of one plan (c4's siege timing attack): pick a target,
+  research siege, build the siege army, declare when it exists. None makes sense alone, so single-flag tests of them
+  mean little. Proposal: a `ConquestPlan` flag that turns all four on, for warmonger roles and personalities. The
+  general war fixes stay separate flags, since they help any civ at war: SiegeArmy, SiegeAbort, SiegeFormation and
+  ArmyHandoff. War can write it if you prefer (CvPlayer's flag table is yours).
 - **For War (from War, noted): target choice.** c picking c in the test is an artefact of the split, not a bug, and
   `CanWin` already checks that a target can be beaten. Nothing to code until the bully test shows the aggressor
   picking hopeless targets.
