@@ -1924,6 +1924,55 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the attack operations in 0C458987 (16-flag role) and 0C22F161 (Nov 4, about 1:23pm ET)
+The lead asked for a trace of when each attack formed, how big it was, where it mustered, and what became of it.
+
+**0C458987: the aggressor is Denmark, not Rome.**
+- The roles are group b: Denmark (wide, the bully) and Korea (tall). Rome is a c civ; it and the Inca declared on
+  India at T139 with no attack operation of their own (Rome logged none all game). So Rome's capture attempts on
+  Mumbai are not the bully's war.
+
+**Denmark against Korea (Seoul, 62:25, 250 HP with walls):**
+
+| Operation | Formed | Muster | Units | What became of it |
+|---|---|---|---|---|
+| 1585, sneak attack | T69 | (57:31), 7 tiles out | 6: swordsman, spearman, warrior, 2 catapults, archer | Below the bar for 2 turns (40/60), then gathered. Marched at T77, **stalled at (60:28) T85–T92** (38%, "No progress"), discovered at T92 with units 3–7 tiles out. Declared T93 |
+| 2125 | T99 | (60:29), 4 tiles out | 4 | SiegeRoll; ended HalfStrength at T101 |
+| 2201 | T103 | (60:29) | 5 | SiegeRoll; deployed T107 |
+| 2432 | T115 | (60:29) | 5 | SiegeRoll; deployed T120 |
+| 2710 | T127 | (60:29) | 6 | SiegeRoll; deployed T129 |
+
+- **At peace the army couldn't go further than the border.** DeclareAtBorder then waited 7 turns for "discovered by
+  enemy". War came at T93 with the army strung out over 3–7 tiles.
+- **No capture attempt at Seoul all war.**
+  - T93–T107: the zone was STEAMROLL or EXPLOIT_FLANKS, yet no "attempting capture" or "too early" lines appear.
+    No units were in striking distance.
+  - The tactical simulations in those turns ran with 1–3 units near Denmark's own cities (54:32), (53:31), against
+    barbarians: 7 "remove barbarian camp" moves, and 46 barbarian deaths in T93–T129.
+  - Later: "too early, expected 0–27 a turn" at T108, T121, T125–T130. Busan "enemy dominated" every turn.
+- **SiegeRoll works as coded but rolls small waves.** It released 4–6 units every 4–12 turns from the same muster
+  point, and each wave reached the walls alone. It cures the 20-turn lock of 0C04B641; here it replaced one big
+  push with a drip.
+
+**0C22F161 (the Huns):** traced in the entry below.
+- One attack, formed at T72, 4 tiles out, siege units only.
+- 30 turns in recruiting, because every warrior built for it was gifted away for bankruptcy.
+- Declared at T105; the siege units were gifted at T106–T110.
+
+**The pattern: late, small, or not at all. The causes differ:**
+1. **Late:** the army waits at the border (sneak attack at peace) for "discovered", or waits in recruiting for slots
+   (0C22F161, 0C04B641).
+2. **Small:** after the first wave, SiegeRoll sends 4–6-unit waves one at a time (0C458987). Barbarians and home
+   defence draw the hand-off units away.
+3. **Not at all:** bankruptcy gifts the army (0C22F161).
+
+**Proposals (each needs a flag slot; the lead's call):**
+- **DeclareWhenStalled:** a sneak attack that makes no progress for 2 turns while next to the target's territory
+  declares then, instead of waiting to be seen.
+- **SiegeRoll concentration:** after a failed or idle wave, the next one gathers at least as many units as the
+  first army (instead of 3).
+- **KeepSiegeTrain** (from 0C22F161).
+
 ### War: failed bully war 0C22F161, the Huns, bankrupt (Nov 4, about 12:55pm ET)
 PC 2, greedy opponents, ab-9e9fc9d, 14-flag role. The Huns declared on France at T105. The game logged one
 capture attempt (Paris, T105, 200 → 200, 0 of 2 units used) and took no city. **The cause is upstream of the siege:
