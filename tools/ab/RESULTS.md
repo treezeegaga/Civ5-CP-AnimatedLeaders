@@ -1924,6 +1924,54 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: four more failed bully wars on ab-1c3ab74 (16-flag role), and the common cause (Nov 4, about 3:21pm ET)
+PC 1 (bullyabort5), four games: 0B8A1D73, 0BA0FF9F, 0BB7D3CA, 0BCE16F7. All four had SiegeExposure and SiegeRoll;
+none had DeclareWhenGathered or TimingBuildup. No captures.
+
+| Game | Aggressor | Attacks | At the walls |
+|---|---|---|---|
+| 0B8A1D73 | Aztecs vs Poland | One sneak attack (T79, 4 units) recruited 41 turns; war came at T106 anyway; SiegeAbort at T119 | No capture attempt; every Polish city "enemy dominated" |
+| 0BA0FF9F | Aztecs vs Ottomans, then Netherlands | 1664 marched 20 turns and ended HalfStrength; SiegeRoll wave 2392 (5 units) | Rotterdam: 200 → 170 once (2 of 3 units used), then 1–2 units in reach and 0 used; 25 "too early" |
+| 0BB7D3CA | Mongolia vs Songhai, then Iroquois | Three attacks: two hit SiegeAbort after 20 turns with 4–5 units, one ended by a diplomacy change | None; "enemy dominated" everywhere |
+| 0BCE16F7 | Assyria vs France | Sneak attack 1761 with 7 units, **discovered at T96 with units 5–7 tiles out**, ended. SiegeRoll wave at T120 ended HalfStrength | Troyes: 1–2 units in reach (expected 36–97 a turn), city never hit |
+
+**The common cause.** A sneak attack ends the moment it declares, and the army is disbanded where it stands. It
+declares when "discovered by enemy" or, with DeclareWhenGathered, at the border.
+
+| Game | Unit distances at the hand-off |
+|---|---|
+| Assyria | 5–7 |
+| Denmark (0C458987) | 3–7 |
+| the Huns (0C22F161) | 3–5 |
+| the Inca (0C04B641, the one capture) | 2–4 |
+
+- The tactical AI then walks the units in one by one. The first to arrive meet the garrison and the city's fire
+  alone ("1 unit in reach"), and the zone reads "enemy dominated" before the rest get there.
+- The rest are pulled to other zones, or held by ArmyHandoff's "just deployed" rule.
+- **DeclareWhenGathered makes this worse:** the border is 3–5 tiles short of the city.
+
+### FIX_MARCH_ON: a sneak attack declares, then keeps marching as an army to the walls (War) (Nov 4, about 3:21pm ET)
+- **Hypothesis:** when a sneak attack is ready to declare without being in place, it tells the diplomacy AI to
+  declare but doesn't end. "Ready without being in place" means discovered, or DeclareWhenGathered at the border;
+  in place means the centre within 3 of the target and every unit within 6.
+  - It stays in the moving stage, so the army keeps moving as one.
+  - At war, the usual check ends it once it is in place, and the tactical AI takes over with the army together at
+    the walls.
+  - **Safety:** at war, an attack whose progress has stalled for 3 turns within 6 tiles of the target is handed
+    over as it is. Other aborts are unchanged.
+- **Expected:**
+  - unit distances at the hand-off of 1–4 instead of 3–7;
+  - the first capture attempt with most of the army in reach ("n of m units used" with m ≥ 4);
+  - fewer "enemy dominated" zones at the target in the first turns of the war.
+- **Measure:**
+  - "MarchOn:" log lines;
+  - "Transition to finished stage; unit distance near/far";
+  - capture-attempt lines;
+  - CitiesCaptured.
+- **δ:** CitiesCaptured by the aggressor up (any pair with a capture would be a change from 0 in 10 pairs).
+- **Flag:** `MarchOn`, off in the bundle. Role: add to the bully aggressor's flags.
+- **Status:** hypothesis.
+
 ### FIX_TARGET_VULNERABILITY: a warmonger picks the most vulnerable nearby city (War, the user's redesign of GreedyTarget) (Nov 4, about 2:37pm ET)
 **Why.** The user: "fewest land units per city" (GreedyTarget) is a weird way to pick a target. The target should
 be the most vulnerable nearby city, combining three things:
