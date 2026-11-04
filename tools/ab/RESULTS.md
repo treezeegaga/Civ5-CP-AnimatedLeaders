@@ -2972,6 +2972,23 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### SiegeFirst and SiegeFinish merged; three flags retired; both PCs to the 12-flag role (lead, 2026-11-04 8:50am ET)
+
+- **Retired** (`claude/ab-c1` `578d23a`): `LongWide` and `GreedyArmyCap` (both failed; `GreedyFewUnits` replaces the
+  latter) and `SiegeBar` (dropped, the user's decision). Their code is the off branch, CP's behaviour, so play is
+  unchanged for every test that didn't name them. This made room in the 64-bit masks.
+- **`5220c03`:** that + War's `SiegeFirst` (a waiting attack's spare siege slots take only catapults or trebuchets)
+  and `SiegeFinish` (melee assault once a city is at a third of its HP or less), `8c47302` + Personality's
+  `GreedyWarArmy` (`c1518c4`). 62 flags.
+- **Runs**, from each PC's next pair once `ab-5220c03` is out, logging off: the bully's `RoleFixes` are the 12 conquest
+  flags (the 10 + `SiegeFirst`, `SiegeFinish`):
+  - PC 2 against strict greedy civs: `AIABTest_bullygreedy4@TREEDESKTOP.csv`.
+  - PC 1 against normal civs: `AIABTest_bullyabort3@BOX.csv`.
+
+  War asked for "the role + both against the role alone". That needs a key for "the aggressor runs it in both games",
+  which doesn't exist yet. With 0 captures so far, the first question is whether any city falls; the key comes once
+  one does.
+
 ### A dead aggressor at T10: pair 0B40B5B7 left out (lead, 2026-11-04 8:35am ET)
 
 `AIABTest_bullygreedy2@TREEDESKTOP.csv`, the only pair on `ab-dbdfbb3` before PC 2 moved to `d51e8a6`: Songhai, the

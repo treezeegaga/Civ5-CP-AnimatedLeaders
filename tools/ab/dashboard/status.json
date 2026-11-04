@@ -270,7 +270,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Still no captures, but close: the Mongols brought a city to 128/200 HP, then their units walked home to heal. War fixed that (SiegeStay now covers it). Both PCs switch to the fixed build (ab-dbdfbb3) at their next pair; PC 2 against greedy civs, PC 1 against normal ones.",
+   "detail": "No city captured yet in any bully game. War has two more siege fixes (catapults first, storm a weakened city) in build 5220c03; both PCs switch to it after their current pair. PC 2 plays strictly greedy civs, PC 1 normal ones.",
    "state": "running"
   },
   {
@@ -355,9 +355,9 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Found the latest siege failure: the units walked home to heal at 128/200 HP. SiegeStay now holds them; it and SiegePosture join both bully runs.",
+   "detail": "Added SiegeFirst (build catapults, not bowmen) and SiegeFinish (storm a city at a third of its HP). Both join the bully runs.",
    "chat": "Civ V AI: War session",
-   "state": "running"
+   "state": "waiting"
   },
   {
    "section": "session",
@@ -371,9 +371,9 @@
    "section": "session",
    "order": 4,
    "name": "Personality",
-   "detail": "Fixing the greedy unit cap: greedy civs reached 12–13 land units in 5 cities (should be 1 per city at peace). Walls work.",
+   "detail": "GreedyWarArmy, from your five points: at war a greedy civ only arms up if an enemy force in sight could take one of its cities. Merged; waits for the matchup test.",
    "chat": "Civ V AI: Personality session",
-   "state": "running"
+   "state": "waiting"
   },
   {
    "section": "session",
@@ -686,6 +686,42 @@
     "PC runner",
     "PC runner 2"
    ]
+  },
+  {
+   "section": "testflag",
+   "order": 26,
+   "name": "SiegeFirst",
+   "owner": "War",
+   "detail": "A waiting attack fills its spare siege slots with catapults, not bowmen.",
+   "test": "Bully runs on ab-5220c03, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 27,
+   "name": "SiegeFinish",
+   "owner": "War",
+   "detail": "Melee units storm a city once it's down to a third of its HP.",
+   "test": "Bully runs on ab-5220c03, both PCs, from their next pair.",
+   "state": "next",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 28,
+   "name": "GreedyWarArmy",
+   "owner": "Personality",
+   "detail": "At war a greedy civ judges the threat: a far or weak enemy changes nothing; a force that could take a city gets defenders and border walls.",
+   "test": "Later: the matchup test.",
+   "state": "waiting",
+   "runs": []
   }
  ]
 }
