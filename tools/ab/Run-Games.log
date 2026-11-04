@@ -458,3 +458,35 @@
 2026-11-03 20:50:33 ET  PC 1 (BOX): CRASH DIALOG in game 1 (07F9919D) of the SettlersBeforeWonders test on ab-0cd5a5c, turn 80: Assertion 'ePlayer < MAX_MAJOR_CIVS', CvCultureClasses.cpp line 3670, 'Invalid player index' ('the game will now crash'). Screenshot tools/ab/stall-20261103-204947.png. Runner moved on to the flip game (game 2); the first game's rows (T10-T80 only) are not a result.
 2026-11-03 20:51:12    replay matches the first game
 2026-11-03 20:54:29 ET  PC 1 (BOX): SettlersBeforeWonders run stopped at the lead's request (ab-0cd5a5c crash, CultureRivalValue, CvCultureClasses.cpp:3670); no game on 0cd5a5c finished cleanly, so none are kept; waiting for ab-8109f67
+2026-11-03 21:05:35 ET  PC 1 (BOX): ab-8109f67 installed, logging off; restarting SettlersBeforeWonders (-MaxGames 20)
+2026-11-03 21:05:36  Starting game 1: first game of a pair; Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
+2026-11-03 21:12:14    turn 100 after 5 minutes
+2026-11-03 21:15:37  Game ended: turn 150 (0828559508285595)
+2026-11-03 21:15:37  Starting game 2: second game of the pair (Flip = 1); Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
+2026-11-03 21:16:51    replay matches the first game
+2026-11-03 21:22:31    turn 100 after 6 minutes
+2026-11-03 21:25:55  Game ended: turn 150 (0828559508285595F)
+2026-11-03 21:25:55  Starting game 3: first game of a pair; Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
+2026-11-03 21:32:31    turn 100 after 5 minutes
+2026-11-03 21:35:54  Game ended: turn 150 (083AE739083AE739)
+2026-11-03 21:35:54  Starting game 4: second game of the pair (Flip = 1); Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
+2026-11-03 21:37:11    replay matches the first game
+2026-11-03 21:42:32    turn 100 after 5 minutes
+2026-11-03 21:45:56  Game ended: turn 150 (083AE739083AE739F)
+2026-11-03 21:45:56  Starting game 5: first game of a pair; Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
+2026-11-03 21:52:32    turn 100 after 5 minutes
+2026-11-03 21:56:16  Game ended: turn 150 (084D3D2E084D3D2E)
+2026-11-03 21:56:16  Starting game 6: second game of the pair (Flip = 1); Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
+2026-11-03 21:57:33    replay matches the first game
+2026-11-03 22:02:54    turn 100 after 5 minutes
+2026-11-03 22:06:38  Game ended: turn 150 (084D3D2E084D3D2EF)
+2026-11-03 22:06:38  Starting game 7: first game of a pair; Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
+2026-11-03 22:13:12    turn 100 after 5 minutes
+2026-11-03 22:16:36  Game ended: turn 150 (0860312308603123)
+2026-11-03 22:16:36  Starting game 8: second game of the pair (Flip = 1); Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
+2026-11-03 22:17:49    replay matches the first game
+2026-11-03 22:23:11    turn 100 after 5 minutes
+2026-11-03 22:26:15  Game ended: turn 150 (0860312308603123F)
+2026-11-03 22:26:15  Starting game 9: first game of a pair; Mode = split; Fixes = SettlersBeforeWonders; Screen = ; Base = ; RoleFixes = 
+2026-11-03 22:32:57    turn 100 after 5 minutes
+2026-11-03 22:34:21 ET  PC 1 (BOX): SettlersBeforeWonders stopped at the lead's request after 4 pairs on ab-8109f67 (games 1-8 clean, replays match); unfinished game 9 (08722B41) dropped; rows in AIABTest_sbw.csv. Next: bully conquest test, logging on
