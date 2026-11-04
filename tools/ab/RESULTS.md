@@ -3346,7 +3346,7 @@ logged pair".
   and the policy side of the rush (culture). `GreedyTall` adds those three.
 - **For the greedy style set:** add `GreedyWide` and `GreedyTall` (each acts only for a leader of its kind).
 - **Build:** fork `ai/personality` `cf84181`.
-- **Status:** coded, CI pending.
+- **Status:** compiles (CI run 187 passed on `cf84181`, 2026-11-04 5:08pm ET); ready to merge.
 
 ### Decision: Raider is a flavour archetype; Songhai stays a Conqueror (the user, 2026-11-04 11:30am ET)
 The user asked whether some civs are rewarded for pillaging and sacking: "raiders" that are aggressive but needn't
