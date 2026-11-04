@@ -2415,6 +2415,20 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Queue after tonight's two tests (lead, 2026-11-03 8:35pm ET)
+
+War and Diplomacy found why nobody fights: trade-made friendship crowds out war (Diplomacy), and the bully aggressor
+ran none of the conquest code (War). Next:
+1. **Bully conquest test** (next free PC; War's proposal): the aggressor plays the warmonger role. Build `ab-0cd5a5c`
+   (C8; it has every flag), logged pair first:
+   ```
+   powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Mode bully -Fixes none -RoleFixes "TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff" -MaxGames 2 -SaveLogs
+   ```
+   then logging off, `-MaxGames 20`, results `AIABTest_c8.csv` copied as `AIABTest_bullyconquest@<COMPUTERNAME>.csv`
+   (all rows of these bully games). Verdict: captures and the aggressor's city share, not strength share.
+2. **TradeOpinion** (Diplomacy, `ai/diplomacy` `72ab43a`, building): trade-partner opinion from the deals running now,
+   capped at -20. Level 3: no-worse on strength, plus more wars in split games and an aggressor that fights.
+
 ### Evening results: DeclareAtBorder does nothing alone; the bully aggressor barely fights (lead, 2026-11-03 8:15pm ET)
 
 - **`DeclareAtBorder` alone** (`ab-819be70`, PC 2, `AIABTest_declare@TREEDESKTOP.csv`, 7 pairs; pair `080C740E` left out
