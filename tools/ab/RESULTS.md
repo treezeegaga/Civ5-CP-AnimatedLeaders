@@ -2885,6 +2885,18 @@ conqueror."
   To confirm in logged games on this build.
 - **What it changes now:** `StrategyProfile_Log.csv`, and `MetaDial`, where a Raider at +50 or more gets the conquest
   plan. Nothing in the running tests reads either.
+- **Which cities a Raider keeps (the user, 2026-11-04 11:40am ET):** "a raider would only keep a city if it is a very
+  valuable location and they think they can hold it without much trouble". Proposed rule, a stricter version of CP's
+  own keep-or-raze rule (`CvPlayerAI::AI_conquerCity`: keep at 80% of the median city's value, or with wonders, a holy
+  city, or the only city on a landmass). A Raider keeps a captured city only if both hold:
+  1. **very valuable:** economic value at least about 1.5× the median city's (`getEconomicValue`), or a world wonder or
+     a holy city;
+  2. **holdable without much trouble:** within about 8 plots of one of its own cities, and no enemy force it can see
+     could retake it (the defender's siege sketch `CouldEnemyTakeCity`, from the Raider's side).
+
+  Otherwise it razes the city, or liberates it if it was already trying to. Original capitals can't be razed, so it
+  keeps them as puppets; they're good to trade back in a peace deal (Diplomacy). Not coded: it's a new flag in a
+  shared file, with 2 flag slots left. Waiting for the user's call, now or together with War's raid mode.
 - **What a Raider needs from War (request, later; the lead's hold applies):** a raid mode for its wars. That means
   pillage and trade-route plunder as goals, razing captured cities it can't hold, and peace once the loot is taken. It
   also needs its own measures, since it fails a "cities captured" test while doing its job: tiles pillaged, gold
