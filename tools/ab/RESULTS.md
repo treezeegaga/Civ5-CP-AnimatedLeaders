@@ -2415,6 +2415,14 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### SettlersBeforeWonders ruled obviously right; PC 1 moves to the bully conquest test (lead, 2026-11-03 10:40pm ET)
+
+The user ruled `SettlersBeforeWonders` obviously right: an earlier 2nd and 3rd city beat a capital wonder like
+Stonehenge, so it needs no single-flag test. It stays in C8, and C8 against B (PC 2) still catches it if the code
+does harm. PC 1 stops its SBW run (finished games are kept as `AIABTest_sbw.csv` for the record, not judged) and starts
+the **bully conquest test** on the same build `ab-8109f67`: logged pair first, then 20 games, results
+`AIABTest_bullyconquest@<COMPUTERNAME>.csv`. Command and verdict as in "Queue after tonight's two tests" below.
+
 ### C8 crash fixed: city-states run the bundle (lead, 2026-11-03 9:00pm ET)
 
 The first C8 game (PC 2, `08B98ABC`) halted at T75 with "Error ... the game will now crash": `CvCultureClasses.cpp:3670`,

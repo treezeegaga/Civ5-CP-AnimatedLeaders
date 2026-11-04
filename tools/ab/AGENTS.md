@@ -291,13 +291,16 @@ proposal counts, Economy's 0009 hold logging, Diplomacy's `IsEndgameAggressiveTo
 - **Ruled obviously right by the user (2026-11-03), no test:** `NoForeignMissionaries`, a civ without its own religion
   no longer buys missionaries (they spread a rival's religion with its faith). Merges on code review and a clean
   smoke pair. A founder still buys missionaries for its own religion.
+- **Ruled obviously right by the user (2026-11-03 10:40pm ET), no single-flag test:** `SettlersBeforeWonders`, the
+  capital starts no world wonder while the opening book still has settlers to start ("two extra cities beat
+  Stonehenge"). It stays in C8, whose test against B still covers it.
 
 *Level 3, new ideas: full gainer SPRT.*
 - c7c ideas: `WidePlans` (+0.08), `BoxedIn` (+0.34), `BoxedInWar` (-0.69), `TimingAttack` (-0.10), `SiegeTechs`
   (+0.27), `SiegeBook` (-0.59), `DeclareTiming` (-0.11), `GrowthTech` (-0.47), `AqueductValue` (+0.09), `GreedyBook`
   (-0.02), `GreedyTarget` (-0.12), `CanWin` (-0.45), `ClosedBorders` (-0.63). `LongWide` and `GreedyArmyCap` already
   failed.
-- Economy: `SettlersBeforeWonders` (+0.84), `SettlerOverlap` (+0.38), `BookFinishesSettlers` (+0.14),
+- Economy: `SettlersBeforeWonders` (+0.84; ruled obviously right, see above), `SettlerOverlap` (+0.38), `BookFinishesSettlers` (+0.14),
   `SettlersFirst` (-0.20), `GreedyAlarm` (not screened: waits for captures).
 - War: `DeclareAtBorder` (+0.86), `SiegePosture` (-0.18), `SiegeStay` (-0.77), `SiegeArmy` and `ArmyHandoff` (on PC 2,
   on the fixed build `ab-a86d57b`).
