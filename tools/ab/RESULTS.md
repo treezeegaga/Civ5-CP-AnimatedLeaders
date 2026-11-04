@@ -1919,7 +1919,7 @@ end) and `CvPlayer.cpp` (`kCandidateFixNames`, `kCandidateFixBundle`); nothing e
   basic formation (SiegeFormation) has 6 required slots, so a small army misses more of them at creation. Minor:
   the third try held.
 
-**Next.** The open question is why a 70-a-turn siege did no damage. `ai/war` `9e9fc9d` (patch 0013) adds a log line,
+**Next.** The open question is why a 70-a-turn siege did no damage. `ai/war` `9e9fc9d` (built, CI run 150) (patch 0013) adds a log line,
 logging only, after each city capture attempt: "capture attempt on X done: city HP a -> b, n of m units used, agg L".
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
@@ -2006,7 +2006,7 @@ about 180–200), 0–2 of 6 units used".
   - units lost per war (`KilledInCombat` in the tactical log).
 - **δ:** CitiesCaptured by the aggressor above 0 in most bully pairs; strength share at T150 +1.5 points.
 - **Flag:** `SiegeExposure`, off in the bundle. Count goes 62 → 63, inside 64. Role: add to the bully aggressor's flags.
-- **Status:** hypothesis, coded: `ai/war` `a2ab150` (CI run 153). One block in `ScorePlotForCombatUnitMove` (CvTacticalAI.cpp). The next logged war with capture logging (ab-9e9fc9d)
+- **Status:** hypothesis, coded: `ai/war` `a2ab150` (built, CI run 153). One block in `ScorePlotForCombatUnitMove` (CvTacticalAI.cpp). The next logged war with capture logging (ab-9e9fc9d)
   confirms or refutes the cause before it's worth a test.
 
 ### FIX_CONQUEST_TRAIT_TARGETS: a warmonger's conquest bonus shapes whom it attacks (War) (Nov 4, about 10:04am ET)
