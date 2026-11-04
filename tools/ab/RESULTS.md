@@ -1924,6 +1924,117 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### FIX_TIMING_BUILDUP: a small army at peace, a fast build-up right before the attack (War, the user's design) (Nov 4, about 1:52pm ET)
+**Why:**
+- The user: a timing attacker doesn't keep a big army all game. It keeps garrisons and escorts, builds up fast
+  just before the attack, and lands it while the army is fresh.
+- Our warmongers do the opposite. The siege book builds 3 catapults, 2 spearmen and 2 archers after the 2nd
+  settler, and AggressiveArmy keeps 3–4 land units per city at peace.
+- So the army waits 30–60 turns paying upkeep. The Huns (0C22F161) were bankrupt by T71 and gifted 37 warriors and
+  then their siege train.
+
+**Hypothesis.** A warmonger with the flag runs three phases; outside them, nothing changes.
+
+| Phase | When | What it does |
+|---|---|---|
+| **Peace** | no war with a major, no window | At most cities + 1 non-siege land combat units (garrisons and one escort; operations +2), siege units up to 3. AggressiveArmy's per-city floor and lift don't apply. Over the cap by more than 2: one extra unit a turn is gifted to a city-state, or disbanded. Siege units are never demobilised. Saves gold ahead (below) |
+| **Build-up window** | the conquest target search finds a target | Up to 15 turns (× game speed). No cap. The recommended land army is raised to cities + 6, which makes CP's production build units. Each turn one siege or attack unit is bought in the city nearest the target, if the gold allows |
+| **Attack** | army ready, or the window runs out | Ready means 2 siege units and cities + 4 other land units. The target search then returns the target and the normal path (WAR approach, sneak attack, DeclareAtBorder or DeclareWhenGathered) follows. With the flag, this replaces DeclareTiming's "2 siege + 4 land before turn 90" gate |
+
+- **Peace again** (no war, no target): back to the peace phase; extras demobilise one a turn.
+- **Gold target:** from turn 30 at peace, a savings request (`PURCHASE_TYPE_UNIT`, priority 400) for the purchase
+  price of 2 siege units at the capital. That's about 2 × 200–250 gold at Standard in the classical era, recomputed
+  each turn. It's spent in the window, and cancelled at war.
+- **Window length:** 15 turns. The window ends at readiness, at the end of the 15 turns, or at war.
+
+**Files and shared code:**
+- `CvMilitaryAI`: phase state, recommended size, purchases, demobilisation.
+- `CvDiplomacyAI::GetNewAIConquestTarget`: the window starts on finding a target; the target is returned on
+  readiness.
+- `CvUnitProductionAI` (Personality's file, behind this flag only): the peace cap. AggressiveArmy's floor applies
+  only in the window.
+- **For Economy:** the gold target above, and no bankruptcy (a negative balance should cancel the window's
+  purchases; it does, through `CanWithdrawMoneyForPurchase`).
+- **For Science:** timing the siege tech isn't coded here.
+
+**The peace phase prepares (the user's follow-up, via the lead, Nov 4 about 1:58pm ET).** Peace isn't idle: the
+economy prepares and the army stays small, ready to switch to the build-up quickly.
+- **Planned phase:** from turn 25 (Standard) the target is chosen and kept (`GetCommittedConquestTarget`); the window
+  still opens at turn 40.
+
+| Preparation | Owner | Status |
+|---|---|---|
+| Research toward the attack's units: after the opening book, Mathematics and Bronze Working, then Iron Working or Horseback Riding when iron or horses lie in our lands (`CvPlayer::GetTimingBuildupTech`, hooked in `CvTechAI` after the growth tech) | War | coded, `2a4dde1` |
+| Barracks and armory, forge and workshop in the 2–3 cities nearest the target; roads toward the border facing the target; workers and plot purchases to secure iron or horses | Economy | WarEconomy |
+| Gold saved ahead and spent in the window; gold per turn ≥ 0 while the army stands | Economy | WarChest |
+| War policies (Honor) when the leader's profile allows | Personality | to do |
+
+- **Read-only plan for Economy** (`CvMilitaryAI`, `ai/war` `2a4dde1`):
+  - `GetTimingBuildupPhase()`: NONE, PEACE, PLANNED, WINDOW, ATTACK, WAR;
+  - `GetTimingBuildupTarget()`;
+  - `GetTimingBuildupUnitsWanted()`;
+  - `GetTimingBuildupUnitType(bSiege)`;
+  - and `CvDiplomacyAI::GetCommittedConquestTarget()`.
+- **Gold target, agreed with Economy's proposal:** the purchase price of the units still wanted
+  (`GetTimingBuildupUnitsWanted()` × the price of `GetTimingBuildupUnitType`), capped at 15 turns of net income, and
+  at least 2 siege units' price. TimingBuildup's own savings request and window purchases (2 siege units' price,
+  priority 400) are a stand-in until WarChest lands; then they switch off under WarChest so the gold has one owner.
+
+**Expected:** gold above 0 when the war starts. Fewer units at peace (upkeep down), a bigger army in the 15 turns
+before the attack, and no "b/c bankrupt" gifting of attack units.
+
+**Measure:**
+- "TimingBuildup:" log lines (window start and end, purchases, demobilisation);
+- gold and land units at declaration;
+- gifted units per game;
+- CitiesCaptured and T150 strength share, role against flip.
+
+**δ:** strength share at T150 +1.5 points; CitiesCaptured up.
+
+**Status:** hypothesis, coded: `ai/war` `4135121` (CI pending; the commit message's "2:10pm ET" should read 1:55pm ET). Shared code behind this flag only: `CvDiplomacyAI::GetNewAIConquestTarget`, `CvUnitProductionAI::CheckUnitBuildSanity` (peace cap; AggressiveArmy off at peace), `CvBuildingProductionAI` (AggressiveArmy's floor off at peace), `CvPlayer` opening book (the warmonger book's army steps skipped).
+
+### FIX_DECLARE_WHEN_GATHERED: a sneak attack declares once it's gathered at the border (War) (Nov 4, about 1:48pm ET)
+For cause 1 (late), at the lead's request.
+- **Hypothesis:** a sneak attack (at peace, moving) whose centre or any of its units is in or next to the target's
+  territory declares war when either holds:
+  - the army is gathered, every unit within 2 tiles of its centre;
+  - its progress has stalled for 3 turns there, so the stragglers aren't coming.
+
+  At the border the army can't advance, so the stragglers catch up while it waits; that keeps it together on the
+  way. DeclareAtBorder's "discovered" route stays as it is.
+- **Expected:** declaring at the border within 1–3 turns of arriving, instead of the 7-turn wait (Denmark,
+  0C458987, T85–T92), with units 1–3 tiles out instead of 3–7.
+- **Measure:** turns from reaching the border to declaring ("DeclareWhenGathered:" log line), unit distances at
+  the hand-off, first capture attempt turn.
+- **δ:** CitiesCaptured by the aggressor up; strength share at T150 +1 point.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
+
+### FIX_SIEGE_CONCENTRATE: a follow-up wave moves only as one army with the units already at the siege (War) (Nov 4, about 1:48pm ET)
+For cause 2 (small).
+- **Hypothesis:** SiegeRoll's release (an attack mustering within 5 tiles of its target) waits until the army plus
+  our land combat units already within 4 tiles of the target add up to the formation's required slots (6 for the
+  basic formation), instead of 3 army units.
+  - Units back from healing (70% HP) are recruited into the waiting army meanwhile.
+  - Units at the siege stay free for the tactical AI: recruitment skips units within 4 tiles of the target.
+  - Each push is then one army: the follow-up and the units still at the walls.
+  - The 20-turn SiegeAbort still ends a wait that never fills.
+- **Expected:** fewer waves, each with at least 6 units near the walls together. Fewer "too early, 0–27 a turn"
+  lines at the follow-up target.
+- **Measure:** the "SiegeRoll:" line now gives army and nearby counts; capture attempts per follow-up city.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`. Applies only together with SiegeRoll.
+
+### FIX_SIEGE_KEEP: units at the front stay off barbarian camps while at war (War) (Nov 4, about 1:48pm ET)
+For cause 2 (handed-off units pulled away).
+- **Hypothesis:** while at war with a major, a unit isn't sent to clear a barbarian camp in either case:
+  - it left an attack operation in the last 5 turns;
+  - it stands in the tactical zone of a city of a major we're at war with.
+
+  Defence against barbarian units attacking our cities is unchanged; camps can wait.
+- **Expected:** the units handed off at Seoul stay in the Seoul zone. Fewer "Trying to remove barbarian camp" moves
+  by the aggressor during its war.
+- **Measure:** camp moves during the war; units in reach at the first capture attempt.
+- **Status:** hypothesis, coded: `ai/war` `d25445a` (CI pending), on `claude/ab-c1` `7aaee41`.
+
 ### War: the attack operations in 0C458987 (16-flag role) and 0C22F161 (Nov 4, about 1:23pm ET)
 The lead asked for a trace of when each attack formed, how big it was, where it mustered, and what became of it.
 
