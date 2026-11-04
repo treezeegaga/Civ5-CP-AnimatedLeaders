@@ -559,3 +559,20 @@ NOTE 8:00AM ET: installed ab-dbdfbb3; logging off; starting bully run with Siege
 2026-11-04 08:41:04  Game ended: turn 150 (0A92244F0A92244FF)
 2026-11-04 08:41:04  Starting game 5: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture; OthersBase = 
 2026-11-04 08:41:40 ET  PC 1 (BOX): bullyabort2 on ab-dbdfbb3, 2 pairs done: 0A8035D5 Huns 0 captured (3 cities both games); 0A92244F Huns captured 2 cities in game 1 (6 cities), 0 in flip (4 cities). No dialogs/stalls. Run continues.
+2026-11-04 08:47:48    turn 100 after 5 minutes
+2026-11-04 08:51:32  Game ended: turn 150 (0AA51C330AA51C33)
+2026-11-04 08:51:33  Starting game 6: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture; OthersBase = 
+2026-11-04 08:52:44    replay matches the first game
+2026-11-04 08:58:06    turn 100 after 5 minutes
+2026-11-04 09:01:11  Game ended: turn 150 (0AA51C330AA51C33F)
+2026-11-04 09:01:11  Starting game 7: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture; OthersBase = 
+NOTE 9:01AM ET: ab-5220c03 is out; STOP created, finishing pair 4 then installing
+2026-11-04 09:07:48    turn 100 after 5 minutes
+2026-11-04 09:11:13  Game ended: turn 150 (0AB771A60AB771A6)
+2026-11-04 09:11:13  Starting game 8: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture; OthersBase = 
+2026-11-04 09:12:28    replay matches the first game
+2026-11-04 09:17:50    turn 100 after 5 minutes
+2026-11-04 09:20:55  Game ended: turn 150 (0AB771A60AB771A6F)
+2026-11-04 09:20:55  Stop file found; stopping
+2026-11-04 09:20:55  Runner finished after 8 games
+2026-11-04 09:21:07 ET  PC 1 (BOX): bullyabort2 on ab-dbdfbb3, 4 pairs (8 games), all replays match, no dialogs/stalls. Captures: only 0A92244F game 1 (Huns, 2 cities); the other 7 games 0. Stopped; next the replay job for 0A92244F with logging, then ab-5220c03.
