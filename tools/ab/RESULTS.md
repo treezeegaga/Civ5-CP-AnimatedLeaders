@@ -2972,6 +2972,16 @@ no noise. That's good news for every real test: within a pair, everything that d
 tested and what they set off. The SPRT measures its own spread from its pairs as it goes, so no baseline is needed
 first. B's seconds per turn come from the logged pair (logging costs about 15%).
 
+### Replaying the capture game with logging on; every game's replay keys now kept (lead, 2026-11-04 9:15am ET)
+
+- **The user asked for a logged replay of `0A92244F0A92244F`.** The replay keys weren't kept, but the game ID is the
+  two seeds in hex (map seed `0A92244F`, sync seed `0A92244F` = 177349711). PC 1 writes `AIABTest.ini` by hand with the
+  seeds, the 8 civs and their leaders, and the same role, on `ab-dbdfbb3`, logging on (`-NoSettings -Unpaired
+  -MaxGames 1 -SaveLogs`). The city-states weren't recorded, so the T10 rows are checked against the original's
+  before it goes on. Results `AIABTest_bullyreplay@BOX.csv` + logs.
+- **`Run-Games.ps1`:** after every game, `AIABTest_lastgame.ini` (seeds, civs, leaders, city-states) is copied to
+  `results\replay\<GameId>.ini`. Commit that folder with the results, and any game can be replayed exactly.
+
 ### FIRST CAPTURES: the Huns take 2 cities from Spain with the conquest role (lead, 2026-11-04 9:05am ET)
 
 `AIABTest_bullyabort2@BOX.csv` (PC 1, `ab-dbdfbb3`, normal opponents; the role = 8 conquest flags + `SiegeStay` +

@@ -354,6 +354,12 @@ while ($played -lt $MaxGames -or $pairReplay) {
     $status = Wait-TestGame $known
     Stop-Civ
     Write-Log "Game ended: $status"
+    # keep every game's replay keys (seeds, civs, leaders, city-states), so any game can be replayed later with logging on
+    if ($status -match '\(([0-9A-F]{16}F?)\)' -and (Test-Path $ReplayFile)) {
+        $replayDir = Join-Path $PSScriptRoot "results\replay"
+        New-Item -ItemType Directory -Force -Path $replayDir | Out-Null
+        Copy-Item $ReplayFile (Join-Path $replayDir "$($Matches[1]).ini") -Force
+    }
     if ($SaveLogs -and $status -match '\(([0-9A-F]{16}F?)\)') {
         # keep this game's AI logs before the next game overwrites them
         $gid = $Matches[1]
