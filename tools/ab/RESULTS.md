@@ -2095,6 +2095,7 @@ upgrade flavour loop, and the deliberate "peek and return" sentry moves.
 | War | `session_01G2NZizcmgfGkXsgJcVcF7h` | `ai/war` | AGENTS.md "War: first tasks" |
 | Economy & victory | `session_01G2NZj2nf4FeZTEHWjvnhhA` | `ai/economy` | AGENTS.md "Economy & victory: first tasks" |
 | Diplomacy | `session_01G2NZj1hm6um5X9SZaXQCRZ` | `ai/diplomacy` | AGENTS.md "Diplomacy: first tasks" (audit only for now) |
+| Personality | `session_01G2NZj3nJG9wpbrgoAZMmUk` | `ai/personality` | AGENTS.md "Personality", started early (2026-11-03): the greedy style first |
 | PC runner | the local session on the Windows PC | none | the smoke-test pair, then the King baseline |
 
 The topic sessions push their RESULTS.md entries to their own branch of this repo, and the lead merges them
@@ -2170,6 +2171,52 @@ judged by **no-worse** tests at T150 (δ = 2 points of strength share), lowest p
 Status: on `ai/economy` as `ccbb01a`. Lead's plan: `PolicyPrereqDepth` goes into the next screening run;
 `IdeologyPick` and `EspionagePolicyValue` wait for phase 2's long-game setup, since ideologies and spies rarely
 exist by T150 on Quick.
+
+### Greedy style: four flags (Personality, 2026-11-03 11:10pm ET)
+Why now: every civ in the bully games is a normal CP AI with a real army, so the bully only ever meets the hard
+matchup ("The bully goals wait for an attacker that conquers"). The greedy style gives it the easy one: if the
+conquest code can't take cities from these civs, it can't take them at all.
+
+- **Hypothesis:** civs with the four flags keep about one land unit per city, have no walls, castles or barracks,
+  keep their obsolete units, and put the production and gold into growth, science and wonders. In peace they
+  out-grow the others (more population, techs, wonders); against an attacker that conquers they lose cities.
+- **The four flags** (one idea each, all `false` in the bundle, AI major civs only: `UsesCandidateAI` gives
+  city-states the bundle, which has none of them, and each check also tests `isMajorCiv()`):
+
+  | Flag | Change | Knobs | Code |
+  |---|---|---|---|
+  | `GreedyFewUnits` (`FIX_GREEDY_FEW_UNITS`) | Cap on land combat units, any opening book (`GreedyArmyCap` is tall-book and peace only). No 75% "tiny army" cut on buildings, which would only push production into processes since the cap blocks the units | **1 per city at peace, 2 at war** with a major civ; **+2 for operations** (settler escorts); a city under siege may still build defenders | `CvUnitProductionAI::CheckUnitBuildSanity`, `CvBuildingProductionAI::CheckBuildingBuildSanity` (war section) |
+  | `GreedyNoWalls` (`FIX_GREEDY_NO_WALLS`) | No building that adds city defence, city HP or unit XP (walls, castles, barracks, armory...), wonders excepted | always, war included | `CvBuildingProductionAI::CheckBuildingBuildSanity` (top) |
+  | `GreedyNoUpgrades` (`FIX_GREEDY_NO_UPGRADES`) | No unit upgrades and no gold saved for them | **only at war** with a major civ | `CvUnit::CanUpgradeRightNow` (AI only; every AI upgrade path asks it), `CvHomelandAI::PlotUpgradeMoves` |
+  | `GreedyBuilds` (`FIX_GREEDY_BUILDS`) | World wonders and buildings with food, food kept on growth, or science (flat, per pop, or %) valued more | **x1.5** | `CvBuildingProductionAI::CheckBuildingBuildSanity` (end) |
+
+  `GreedyAlarm` (Economy), when it's on and fires, lifts `GreedyFewUnits` and `GreedyNoWalls`, so greed plus alarm can
+  be tested later. Personality flavours are left alone on purpose: they also pick the c/b split, the bully roles and
+  the opening book (`IsABTestWarmongerCiv`, `GetABTestRoleOfSlot`), so changing them would move civs between roles.
+- **Measures** (per civ, c8d columns, greedy civs against the same slots without the style):
+  - the style is on: `LandUnits` ≈ `Cities` (≤ 2× at war), `WalledCities` = 0, `CityStrength` and `Military` lower;
+  - the payoff: `Population`, `Techs`, `ResearchSpent`, `Wonders` higher; the no-military share above 50%;
+  - the price (bully test): the aggressor's `CitiesCaptured` and city share, `CitiesLost` of the greedy civs.
+- **What to run** (the lead's style key gives the four flags to every civ without a role, in both games of a pair):
+  1. One logged smoke pair: no crash, a matching replay, and the columns above show the style.
+  2. **The easy matchup:** bully mode, aggressor on the conquest role flags as in the bully conquest test, every
+     other civ greedy:
+     `Run-Games.ps1 -Mode bully -Fixes none -OthersBase "GreedyFewUnits, GreedyNoWalls, GreedyNoUpgrades, GreedyBuilds" -RoleFixes "TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff"`.
+     The tall role civ is not greedy (OthersBase skips roles). Reference: in bully pair 07614B74 normal CP civs
+     ended T150 with 103-246 military and the aggressor 191. Compare
+     captures and the aggressor's city share with the bully conquest test (normal defenders). Expected: several
+     captures by T150. If there are still none, the attack side is the blocker, not the defenders.
+  3. Later, split games with the four flags as `Fixes` against B: the greedy group's no-military share (it should
+     win in peace; strength share counts military, so it may not).
+- **Evidence level:** 3 (new behaviour), but as a style it's judged by the matchup and bully tests, not by the
+  split-game SPRT (AGENTS.md, "What greedy trades").
+- **Build:** fork `ai/personality` `b9384af` (rebased onto `claude/ab-c1` `1804369`, the OthersBase key; first pushed as
+  `8e69e07` on `ec2a4c8`); CI publishes `ab-ai-personality-latest`.
+- **Status:** coded, CI pending; waiting for the lead's style key.
+- **Notes for owners:** `CvUnitProductionAI` and `CvBuildingProductionAI` are Economy's, `CvHomelandAI` War's,
+  `CvUnit.cpp` shared; each change is a gated block at the place named above. Request to Economy: `GreedyAlarm` only
+  watches for tall-book civs (`GetGreedyAlarmThreat`); for the style it should also fire for civs running
+  `GreedyFewUnits`, so "greedy + alarm" works for any book.
 
 ## Requests
 
