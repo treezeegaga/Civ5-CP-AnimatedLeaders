@@ -4084,7 +4084,7 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
-### Attack runs on WarGold: the aggressor declares now, still no captures (lead, 2026-11-04 7:40pm ET)
+### Attack runs on WarGold: the aggressor declares now, still no captures (lead, 2026-11-04 7:34pm ET)
 
 Aggressor wars declared and cities it captured, by build, first game (RoleFixes) / flipped game (none):
 
