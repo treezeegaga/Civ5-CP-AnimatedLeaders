@@ -1669,6 +1669,11 @@ civs are only allowed to hurry two production items: settlers and siege weapons.
 - **Measure:** strength share at T150 (no-worse, δ 2); siege units bought; window turns paused for gold (War's
   "window paused" lines); and the blocked-in-a-threatened-city lines, plus any of those cities lost within 5 turns.
 - **Status:** coded, patch 0023 on `ai/economy` `6aa6386`, not built.
+- **In the bundle, untested (the user, via the lead, Nov 5, about 10:30am ET):** "I don't even want to test it, I
+  just never want to see a civ hurry a warrior again." Patch 0024 sets `WarmongerHurry` and `NoObsoleteHurry` true.
+  `NoObsoleteHurry` now also blocks every Warrior and its unique replacements (`UNITCLASS_WARRIOR`: Jaguar, Maori
+  Warrior...), Bronze Working or not, for every major AI. It moved into the same gold-purchase check, so it covers
+  every purchase path. `SettlerSaveRealistic` and `PeaceHurry` stay off and get tested.
 
 ### Backburner: a warmonger's tech-lead opening (Economy, the user's idea, Nov 5)
 Not coded. Pick it up only if we see our warmongers losing fights for lack of a tech edge.
