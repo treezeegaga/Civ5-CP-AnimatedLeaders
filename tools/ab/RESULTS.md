@@ -1924,6 +1924,27 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: TargetHold, second part: the held target stays a war plan in DoUpdateWarTargets (the lead's read of 0E42C140, 10:46pm ET) (Nov 4, about 10:51pm ET)
+**The lead:** in 0E42C140 (ab-7bb7885, TargetHold on) Mongolia's sneak attacks on Denmark still ended DiploOpinionChange
+(T111, twice at T140), so TargetHold doesn't cover that. Also: window vs Egypt at T56 (paused 10 turns, units
+unaffordable), "no war 3 windows after the build-up" at T97, a new window vs Denmark at T98. These lines are in the
+military log, which I missed in my entry above.
+
+**Cause.** The approach log is written in approach selection, where Denmark's approach is WAR every turn T76–T150.
+DoUpdateWarTargets runs after it and resets the approach of anyone it doesn't keep as a war target ("make sure we don't
+have the WAR approach if we're not planning war"). That reset is what cancels the sneak attack ("War goal changed").
+The conquest target is kept as a war plan only when GetNewAIConquestTarget returns it. With TimingBuildup that is
+NO_PLAYER on purpose while a window runs and the army isn't ready (T98 onward here), even with an attack on the
+target already gathering (2145 from T94). Denmark then has to pass CP's filters (conflict limit: 10 in the first two
+eras; war sanity; the approach value), and one failing turn resets it. TargetHold only covered GetNewAIConquestTarget's
+own checks.
+
+**Change (TargetHold, second part; shared: CvDiplomacyAI::DoUpdateWarTargets):** the committed target
+(m_eNewAIConquestTarget, set even while a window runs) counts as a war plan while an offensive operation against it
+is under way, as the returned target already does. A war still needs the army in place: SiegeArmy's peace bar and the
+window keep a weak army from declaring. Logs "CONQUEST: holding X as a war plan, attack under way" once a turn when this
+is what keeps it. TargetHold is in the role on ab-7bb7885, so its results so far are the first part alone.
+
 ### War: 0E42C140, the first game on ab-7bb7885 (PC 2, bullygreedy12): Mongolia never declared; armies of 3 held at peace (Nov 4, about 10:49pm ET)
 - **Target:** "CONQUEST: going for Denmark" at T76. No TimingBuildup window line for Mongolia in this game.
 - **Attacks on Copenhagen (47:31):** 1785 (T77, 3 units), 2145 (T94, 3), 3191 (T124, 3) and 3441 (T132, 3).
