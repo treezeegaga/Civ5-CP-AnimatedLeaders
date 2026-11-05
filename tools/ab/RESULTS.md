@@ -1924,6 +1924,33 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0D9AF4AA (PC 2, ab-e4d5785 + WarGold), Assyria: the army reached Hamburg with the zone in our favour, and the tactical AI sent it home (Nov 4, about 7:39pm ET)
+- **Plan:** TimingBuildup window T26 against Germany; "CONQUEST: going for Germany" at T36; war at T102.
+- **Attack 1819** (target Hamburg, 27:23): 2 Spearmen, a Swordsman, 3 Siege Towers and an Archer.
+  - SiegeArmy held it at 51 of 60 at T99; war at T102; moving at T103.
+  - **T106:** "Transition to finished stage; near 2, far 5". The army was handed to the tactical AI 2–5 tiles out.
+- **T105–T110:** Hamburg's zone posture was **P_STEAMROLL** (we dominate), yet no "attempting capture",
+  "too early" or "capture attempt" line for Hamburg.
+- **T107–T112 in the homeland log:**
+  - the Swordsman: "Moving Swordsman 2009 to garrison" (34:28);
+  - the Spearmen: to garrison (24:30) and to a sentry point;
+  - the Siege Towers and a Spearman: "Explored to target" at 37:28 and 38:26, east, away from Hamburg.
+- **T112:** Hamburg's zone turned enemy dominated (P_WITHDRAW); the Archer was killed withdrawing at T115.
+
+**Cause.** In a friendly-dominated zone the tactical AI only attacks the city with units within striking distance
+this turn (ExecuteCaptureCityMoves → FindUnitsWithinStrikingDistance; when none can strike it skips the city without
+a log line). Moving units closer is PlotReinforcementMoves' job, which returns at once when the zone is dominated in
+both overall and ranged strength ("we do not need further reinforcement") unless we have no melee at all. So an army
+handed over 2–5 tiles out at a city we dominate gets no tactical move, and the homeland AI takes it home. This
+fits the "enemy dominated" counts in the other games too: the zone tips the other way after the army leaves.
+
+**Hypothesis (flag SiegeClose, War, CvTacticalAI::PlotReinforcementMoves):** at an enemy major's city we're at war with
+(land zone), friendly dominance doesn't end the reinforcement step. Units in reach are positioned around the city
+(PositionUnitsAroundTarget), so the next turn's capture step finds them within striking distance. If friendly melee is
+0, still melee only, as now. Expect: "attempting capture" lines after a handover at a STEAMROLL zone, units staying at
+the target instead of garrison or explore moves, and captures in the bully games. Risk: units pulled from friendly
+zones at home while a war is on; the existing check already keeps units in zones that need them.
+
 ### War: 0CC09E9A (America) and 0CD7657A (Huns), PC 1 on ab-e4d5785: wars on the target, early handovers, enemy-dominated zones, no captures (Nov 4, about 7:35pm ET)
 - **0CC09E9A, America.**
   - Windows: T62 against the Shoshone (closed at war, T99) and T138 against the Inca.
