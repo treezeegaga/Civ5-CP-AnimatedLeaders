@@ -4084,6 +4084,19 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### The 850e142 block ends early; BigArmy starts now (the user, 2026-11-05 10:59am ET)
+
+WindowUntilReady (ab-850e142): bullyabort12 had 7+ pairs and bullygreedy14 had 6. With RoleFixes, 1 capture in 13
+games: the Aztecs, against the tall civ France. The funnel for the first games:
+- attacked first: 2
+- never in reach: 4
+- refused only: 1
+- attempts without a capture: 4
+- captured: 1
+The user: "our current tests seem like they are failing a lot". The block has told us what it can, so both PCs switch
+after their current pair to the BigArmy block on ab-1750459 (bullyabort13, bullygreedy15, 20 games each, frozen):
+RoleFixes + WindowUntilReady + BigArmy.
+
 ### Planned: a BigArmy diagnostic block (the user, 2026-11-05 8:20am ET)
 
 The user: "a warmonger with 7 super greedy civs, a fox in the henhouse, and they still can't capture cities". The
