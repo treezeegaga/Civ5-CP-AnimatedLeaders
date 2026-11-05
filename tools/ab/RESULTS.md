@@ -1599,20 +1599,22 @@ against the code on `claude/ab-c1` `87836d4`.
   needed). So the gold almost never catches up before production finishes: 6 settlers bought in 112 games.
 - The saving only lapses when `GetWantedExpansionSettler` fails for a turn (unhappy, net gold below 0, book or
   expansion strategy over). Then the normal hurry loop spends the pot: 214 times, 40,190 gold.
-- **Decision:** take fix 1 (new flag `SettlerSaveCheck`). Fix 2 goes in a different form (`PeaceHurry`, below): with
-  fix 1 the saving stretches become rare and short, and the dumped gold went mostly on combat units.
+- **Decision:** take fix 1 (the lead's name, `SettlerSaveRealistic`). Fix 2 goes in a different form (`PeaceHurry`, below).
 
-**2. Warriors bought, then upgraded: partly already handled by CP.**
-- CP's sanity check already refuses to train or hurry a unit whose upgrade the civ can train anywhere
-  (`GetUnitClassTrainingAllowedAnywhere`, in `CheckUnitBuildSanity`, which `ChooseHurry` calls). So "never hurry a
-  unit whose upgrade the civ can already build" is in place.
-- The 104 Warriors (median T40) were bought before Bronze Working. Upgrading one later for 55 is normal play.
-- The waste is buying a Warrior at peace for 140 at all: it adds upkeep (about 1 gold a turn by T50) and doesn't
-  grow the economy. `PeaceHurry` covers it.
+**2. Warriors bought, then upgraded: confirmed.**
+- A first reading (10:20am ET) said CP's sanity check already covers this. **That was wrong.** The check
+  (`GetUnitClassTrainingAllowedAnywhere`, in `CheckUnitBuildSanity`) only covers unit classes that a building
+  unlocks, not those a tech unlocks, so in CP it's normally empty. A Warrior stays buildable and buyable after
+  Bronze Working until its obsolete tech.
+- **Decision:** take the lead's `NoObsoleteHurry` (hurry only; stopping the production AI from training such units
+  would be a separate flag).
+- Buying Warriors at peace at all is the other half: `PeaceHurry`, in place of the lead's optional
+  `LapsedSaveNoDump`. With `SettlerSaveRealistic` the saving stretches become rare and short, so there's little pot
+  left to dump, and the dumps were mostly combat units.
 
 **3. Stale upgrade savings:** for War, after C8 (`UpgradeSaveCancel`), as Diplomacy says.
 
-### SettlerSaveCheck: save for a settler only when the gold can get there (Economy, patch 0022)
+### SettlerSaveRealistic: save for a settler only when the gold can get there (Economy, patch 0022)
 - **Change** (new flag, off in the bundle): B saves for a settler purchase only if gold now + net income × the turns
   the city needs to finish the settler reaches the price. Otherwise the hurry loop runs as normal. If the gold is
   there anyway, the purchase still happens.
@@ -1622,7 +1624,14 @@ against the code on `claude/ab-c1` `87836d4`.
   drop from a median 50 to a few), and gold spent by T100 (homeland log).
 - **Also freed:** the same saving test gates tile purchases and city-state gifts (`CvDiplomacyAI`), so those run
   more often too. Gifts are limited by `GiftsNeedPatronage` in the bundle.
-- **Status:** coded, patch 0022 on `claude/ab-c1` `87836d4` (with PeaceHurry), not built.
+- **Status:** coded, patch 0022 on `claude/ab-c1` `87836d4` (with NoObsoleteHurry and PeaceHurry), not built.
+
+### NoObsoleteHurry: no gold for a unit whose upgrade the civ can train (Economy, patch 0022)
+- **Change** (new flag, off in the bundle; the lead's): the hurry loop skips a unit if the civ can train the unit it
+  upgrades to (a Warrior once Spearmen are buildable). Production is unchanged.
+- **Hypothesis:** no 140-gold Warriors followed by 55-gold upgrades. The gold buys the better unit or a building.
+- **Measure:** strength share at T150 (no-worse, δ 2). Mechanism: hurried units whose upgrade was trainable (should be
+  0), from the homeland log's "Buying unit" lines against the civ's techs.
 
 ### PeaceHurry: no gold for combat units at peace (Economy, patch 0022)
 - **Change** (new flag, off in the bundle): the hurry loop doesn't buy a combat unit when the civ is at peace with
@@ -1631,7 +1640,7 @@ against the code on `claude/ab-c1` `87836d4`.
 - **Hypothesis:** fewer Warriors and Archers bought at peace, less upkeep, and more buildings bought.
 - **Measure:** strength share at T150 (no-worse, δ 2). Mechanism: combat units bought at peace (should be 0) and
   buildings bought (homeland "Buying" lines).
-- **Status:** coded, patch 0022 on `claude/ab-c1` `87836d4` (with SettlerSaveCheck), not built.
+- **Status:** coded, patch 0022 on `claude/ab-c1` `87836d4` (with SettlerSaveRealistic and NoObsoleteHurry), not built.
 
 ### Backburner: a warmonger's tech-lead opening (Economy, the user's idea, Nov 5)
 Not coded. Pick it up only if we see our warmongers losing fights for lack of a tech edge.
