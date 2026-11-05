@@ -4084,7 +4084,7 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
-### Next block: WindowUntilReady on ab-850e142; PC 2's disk filled up (lead, 2026-11-05 4:18am ET)
+### Next block: WindowUntilReady on ab-850e142; PC 2's disk filled up (lead, 2026-11-05 7:17am ET; my session was down 4:15–7:15am)
 
 **War's read of the whole f6d1e84 block** (10 first games, compared with e4d5785's 14). On the right track:
 - NoUnits endings are gone (SecondWave), and DiploOpinionChange endings fell from 2.3 to 0.3 a game (TargetHold).
