@@ -1924,6 +1924,22 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0E42C140, the first game on ab-7bb7885 (PC 2, bullygreedy12): Mongolia never declared; armies of 3 held at peace (Nov 4, about 10:49pm ET)
+- **Target:** "CONQUEST: going for Denmark" at T76. No TimingBuildup window line for Mongolia in this game.
+- **Attacks on Copenhagen (47:31):** 1785 (T77, 3 units), 2145 (T94, 3), 3191 (T124, 3) and 3441 (T132, 3).
+  - SiegeArmy held them at peace: "expected damage 26 a turn, Copenhagen needs 60"; 1785 timed out at 20 turns (T97).
+  - 2145, 3191 and 3441 ended "War goal changed" / DiploOpinionChange (T111, T140), with the approach toward Denmark
+    WAR throughout. So this isn't the target flip TargetHold covers: another war goal took over (the city-state below),
+    and no "CONQUEST: holding" line appears.
+- **Attacks on Zurich (31:37, a city-state):** 2708 (T112, 6 units; SiegeArmy timeout at T132) and 3653 (T141, 7 units,
+  28–32 of 75).
+- **No war on a major, so no SiegeClose, SiegeDominated or zone-strength lines.**
+
+**Read.** The peace bar did its job (no war with 3 units), but the army never grew: four attacks on the target recruited
+3 units each in 75 turns, and the biggest armies (6–7) went to a city-state. One game; the next ones decide whether
+this is the new pattern. If it is, the question is the army size in the peace phase (no TimingBuildup window here) and
+city-state attacks taking the units, not the siege.
+
 ### War: SecondWave, a new attack at war may start with up to 3 units still to come (Nov 4, about 10:26pm ET)
 **Seen in 6 games on ab-e4d5785:** after the first attack is used up, new attacks on the target end NoUnits the turn
 they start:
@@ -1945,7 +1961,7 @@ requests fill them, and SiegeArmy's at-war bar (`b7db863`) and SiegeRoll decide 
 lines at war, and second attacks reaching a city the first one damaged. Risk: up to 3 units in recruiting are hidden
 from the tactical AI while they wait, for at most SiegeArmy's 20 turns.
 
-Coded: `ai/war` `96332cc83` (CI pending), after the lead's merge of `e2397128f`.
+Coded: `ai/war` `96332cc83` (built, CI run 210), after the lead's merge of `e2397128f`.
 
 ### War: 0D5ECB7F (Ottomans), 0E192EC1 (Germany), 0D47DC20 (Aztecs) on ab-e4d5785: real sieges, each worn out about 20 HP short a turn (Nov 4, about 9:54pm ET)
 - **Germany vs Heliopolis (0E192EC1):**
