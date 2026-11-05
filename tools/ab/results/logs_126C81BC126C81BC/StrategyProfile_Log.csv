@@ -1,0 +1,28 @@
+001, Rome, LEADER_AUGUSTUS, tags , pursuits 1/0, Diplomat, home meta -20, weights dom 24 sci 6 cul 6 dip 64, risk medium, expansion medium, greedy tall
+001, Brazil, LEADER_PEDRO, tags T, pursuits 2/3, Tourism, home meta -75, weights dom 2 sci 26 cul 68 dip 4, risk low, expansion tall, greedy tall
+001, Germany, LEADER_BISMARCK, tags W, pursuits 1/0, Conqueror, home meta 65, weights dom 48 sci 4 cul 4 dip 44, risk medium, expansion conquest, greedy tall
+001, Persia, LEADER_DARIUS, tags W, pursuits 2/0, Conqueror, home meta 50, weights dom 48 sci 4 cul 44 dip 4, risk medium, expansion conquest, greedy tall
+001, Assyria, LEADER_ASHURBANIPAL, tags WN, pursuits 0/3, Conqueror, home meta 80, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy tall
+001, Egypt, LEADER_RAMESSES, tags TS, pursuits 2/1, Tourism, home meta -60, weights dom 2 sci 6 cul 68 dip 24, risk medium, expansion tall, greedy tall
+001, The Maya, LEADER_PACAL, tags , pursuits 3/0, Scientist, home meta -70, weights dom 22 sci 68 cul 4 dip 6, risk medium, expansion tall, greedy tall
+001, Russia, LEADER_CATHERINE, tags , pursuits 1/0, Diplomat, home meta -30, weights dom 24 sci 6 cul 6 dip 64, risk medium, expansion wide, greedy wide
+050, Rome, LEADER_AUGUSTUS, tags R, pursuits 1/0, Zealot, home meta 0, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium, greedy tall
+050, Brazil, LEADER_PEDRO, tags RT, pursuits 2/3, Tourism, home meta -75, weights dom 2 sci 26 cul 68 dip 4, risk low, expansion tall, greedy tall
+050, Germany, LEADER_BISMARCK, tags WR, pursuits 1/0, Conqueror, home meta 65, weights dom 48 sci 4 cul 4 dip 44, risk medium, expansion conquest, greedy tall
+050, Persia, LEADER_DARIUS, tags WR, pursuits 2/0, Conqueror, home meta 50, weights dom 48 sci 4 cul 44 dip 4, risk medium, expansion conquest, greedy tall
+050, Assyria, LEADER_ASHURBANIPAL, tags WN, pursuits 0/3, Conqueror, home meta 80, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy tall
+050, Egypt, LEADER_RAMESSES, tags RTS, pursuits 2/1, Tourism, home meta -60, weights dom 2 sci 6 cul 68 dip 24, risk medium, expansion tall, greedy tall
+050, The Maya, LEADER_PACAL, tags R, pursuits 3/0, Zealot, home meta -10, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion medium, greedy tall
+050, Russia, LEADER_CATHERINE, tags R, pursuits 1/0, Zealot, home meta -10, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion wide, greedy wide
+100, Rome, LEADER_AUGUSTUS, tags R, pursuits 1/0, Zealot, home meta 0, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium, greedy tall
+100, Brazil, LEADER_PEDRO, tags RT, pursuits 2/3, Tourism, home meta -75, weights dom 2 sci 26 cul 68 dip 4, risk low, expansion tall, greedy tall
+100, Germany, LEADER_BISMARCK, tags WR, pursuits 1/0, Conqueror, home meta 65, weights dom 48 sci 4 cul 4 dip 44, risk medium, expansion conquest, greedy tall
+100, Persia, LEADER_DARIUS, tags WR, pursuits 2/0, Conqueror, home meta 50, weights dom 48 sci 4 cul 44 dip 4, risk medium, expansion conquest, greedy tall
+100, Assyria, LEADER_ASHURBANIPAL, tags WRN, pursuits 0/3, Conqueror, home meta 80, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy tall
+100, Egypt, LEADER_RAMESSES, tags RTS, pursuits 2/1, Tourism, home meta -60, weights dom 2 sci 6 cul 68 dip 24, risk medium, expansion tall, greedy tall
+100, The Maya, LEADER_PACAL, tags RN, pursuits 3/0, Scientist, home meta -70, weights dom 22 sci 68 cul 4 dip 6, risk medium, expansion tall, greedy tall
+100, Russia, LEADER_CATHERINE, tags R, pursuits 1/0, Zealot, home meta -10, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion wide, greedy wide
+150, Rome, LEADER_AUGUSTUS, tags R, pursuits 1/0, Zealot, home meta 0, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium, greedy tall
+150, Brazil, LEADER_PEDRO, tags RT, pursuits 2/3, Tourism, home meta -75, weights dom 2 sci 26 cul 68 dip 4, risk low, expansion tall, greedy tall
+150, Germany, LEADER_BISMARCK, tags WR, pursuits 1/0, Conqueror, home meta 65, weights dom 48 sci 4 cul 4 dip 44, risk medium, expansion conquest, greedy tall
+150, Persia, LEADER_DARIUS, tags WR, pursuits 2/0, Conqueror, home meta 50, weights dom 48 sci 4 cul 44 dip 4, risk medium, expansion conquest, greedy tall

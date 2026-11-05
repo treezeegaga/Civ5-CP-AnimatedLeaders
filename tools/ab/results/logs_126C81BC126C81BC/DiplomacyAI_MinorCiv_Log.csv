@@ -1,0 +1,2344 @@
+013, Samarkand, Rome, RECEIVED_UNIT_GIFT, Warrior
+015, Vilnius, Persia, RECEIVED_UNIT_GIFT, Warrior
+016, Antananarivo, Russia, RECEIVED_UNIT_GIFT, Warrior
+021, Samarkand, Rome, RECEIVED_UNIT_GIFT, Warrior
+021, Genoa, Germany, RECEIVED_UNIT_GIFT, Warrior
+022, Samarkand, The Maya, RECEIVED_UNIT_GIFT, Warrior
+022, Vilnius, Persia, RECEIVED_UNIT_GIFT, Warrior
+023, Vilnius, Brazil, RECEIVED_UNIT_GIFT, Warrior
+025, Rome, Samarkand, SENT OUT QUEST, Type, 13
+025, Rome, Samarkand, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+025, Egypt, Samarkand, SENT OUT QUEST, Type, 13
+025, Egypt, Samarkand, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+025, The Maya, Samarkand, SENT OUT QUEST, Type, 13
+025, The Maya, Samarkand, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+025, The Maya, Samarkand, SENT OUT QUEST, Type, 2
+025, The Maya, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+025, Persia, Mombasa, SENT OUT QUEST, Type, 2
+025, Persia, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+025, Brazil, Vilnius, SENT OUT QUEST, Type, 7
+025, Brazil, Vilnius, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+026, Rome, Samarkand, SENT OUT QUEST, Type, 2
+026, Rome, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+026, Antananarivo, Russia, RECEIVED_UNIT_GIFT, Warrior
+026, Russia, Antananarivo, SENT OUT QUEST, Type, 1
+026, Russia, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 3 to 3, MINOR_CIV_ANTANANARIVO
+026, Egypt, Hanoi, SENT OUT QUEST, Type, 2
+026, Egypt, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+026, Persia, Monaco, SENT OUT QUEST, Type, 1
+026, Persia, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+026, Brazil, Vilnius, SENT OUT QUEST, Type, 11
+026, Brazil, Vilnius, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+026, Germany, Vilnius, SENT OUT QUEST, Type, 11
+026, Germany, Vilnius, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+026, Persia, Vilnius, SENT OUT QUEST, Type, 11
+026, Persia, Vilnius, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+026, The Maya, Vilnius, SENT OUT QUEST, Type, 11
+026, The Maya, Vilnius, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+027, Assyria, Vilnius, SENT OUT QUEST, Type, 11
+027, Assyria, Vilnius, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+027, Egypt, Samarkand, SENT OUT QUEST, Type, 2
+027, Egypt, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+027, Rome, Cape Town, SENT OUT QUEST, Type, 2
+027, Rome, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+027, The Maya, Zurich, SENT OUT QUEST, Type, 1
+027, The Maya, Zurich, RECEIVED QUEST, Kill Camp, Friendship: -7 to -7, MINOR_CIV_ZURICH
+028, Egypt, Zurich, SENT OUT QUEST, Type, 1
+028, Egypt, Zurich, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZURICH
+028, Germany, Budapest, SENT OUT QUEST, Type, 7
+028, Germany, Budapest, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+028, The Maya, Vilnius, SENT OUT QUEST, Type, 2
+028, The Maya, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+029, Brazil, Vilnius, gained friend
+029, Brazil, Vilnius, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+029, Persia, Vilnius, SENT OUT QUEST, Type, 2
+029, Persia, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+030, Egypt, Ragusa, SENT OUT QUEST, Type, 2
+030, Egypt, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+030, Russia, Antananarivo, SENT OUT QUEST, Type, 6
+030, Russia, Antananarivo, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+030, Germany, Genoa, SENT OUT QUEST, Type, 1
+030, Germany, Genoa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENOA
+030, Persia, Genoa, SENT OUT QUEST, Type, 1
+030, Persia, Genoa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENOA
+030, Germany, Genoa, SENT OUT QUEST, Type, 2
+030, Germany, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENOA
+031, Russia, Antananarivo, gained friend
+031, Russia, Antananarivo, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_ANTANANARIVO
+031, Brazil, Bratislava, SENT OUT QUEST, Type, 1
+031, Brazil, Bratislava, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+032, Germany, Budapest, SENT OUT QUEST, Type, 7
+032, Germany, Genoa, SENT OUT QUEST, Type, 1
+032, Germany, Genoa, SENT OUT QUEST, Type, 2
+032, Brazil, Ragusa, SENT OUT QUEST, Type, 2
+032, Brazil, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+032, Brazil, Budapest, SENT OUT QUEST, Type, 1
+032, Brazil, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+032, Germany, Budapest, SENT OUT QUEST, Type, 1
+032, Germany, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 1 to 1, MINOR_CIV_BUDAPEST
+032, Persia, Budapest, SENT OUT QUEST, Type, 1
+032, Persia, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+032, Assyria, Hanoi, SENT OUT QUEST, Type, 13
+032, Assyria, Hanoi, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HANOI
+032, Egypt, Hanoi, SENT OUT QUEST, Type, 13
+032, Egypt, Hanoi, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HANOI
+032, Russia, Hanoi, SENT OUT QUEST, Type, 13
+032, Russia, Hanoi, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HANOI
+032, The Maya, Zurich, SENT OUT QUEST, Type, 2
+032, The Maya, Zurich, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZURICH
+032, Assyria, Mombasa, SENT OUT QUEST, Type, 2
+032, Assyria, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+033, The Maya, Cape Town, SENT OUT QUEST, Type, 2
+033, The Maya, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+034, Brazil, Ragusa, SENT OUT QUEST, Type, 2
+034, Brazil, Ragusa, SENT OUT QUEST, Type, 10
+034, Brazil, Ragusa, RECEIVED QUEST, Contest Culture, Friendship: 1 to 1, MINOR_CIV_RAGUSA
+034, Egypt, Ragusa, SENT OUT QUEST, Type, 10
+034, Egypt, Ragusa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+034, The Maya, Ragusa, SENT OUT QUEST, Type, 10
+034, The Maya, Ragusa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+034, Russia, Milan, SENT OUT QUEST, Type, 1
+034, Russia, Milan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MILAN
+034, Russia, Milan, SENT OUT QUEST, Type, 2
+034, Russia, Milan, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MILAN
+034, Germany, Mombasa, SENT OUT QUEST, Type, 13
+034, Germany, Mombasa, RECEIVED QUEST, Invest, Friendship: 4 to 4, MINOR_CIV_MOMBASA
+034, Persia, Mombasa, SENT OUT QUEST, Type, 13
+034, Persia, Mombasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+034, Assyria, Mombasa, SENT OUT QUEST, Type, 13
+034, Assyria, Mombasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+034, Russia, Mombasa, SENT OUT QUEST, Type, 13
+034, Russia, Mombasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+034, Germany, Mombasa, SENT OUT QUEST, Type, 6
+034, Germany, Mombasa, RECEIVED QUEST, Find Player, Friendship: 4 to 4, MINOR_CIV_MOMBASA
+034, Russia, Mombasa, SENT OUT QUEST, Type, 2
+034, Russia, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+034, Brazil, Vilnius, lost friend
+035, Rome, Ragusa, SENT OUT QUEST, Type, 10
+035, Rome, Ragusa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+035, Brazil, Ragusa, Gold Gift: 500, Friendship: 1 to 1, Culture, MINOR_CIV_RAGUSA, (SAVING) 
+035, The Maya, Samarkand, era change yield update
+035, The Maya, Ragusa, era change yield update
+035, The Maya, Budapest, era change yield update
+035, The Maya, Antananarivo, era change yield update
+035, The Maya, Cape Town, era change yield update
+035, The Maya, Quebec City, era change yield update
+035, The Maya, Hanoi, era change yield update
+035, The Maya, Milan, era change yield update
+035, The Maya, Zurich, era change yield update
+035, The Maya, Vancouver, era change yield update
+035, The Maya, Monaco, era change yield update
+035, The Maya, Kyiv, era change yield update
+035, The Maya, Mombasa, era change yield update
+035, The Maya, Vilnius, era change yield update
+035, The Maya, Bratislava, era change yield update
+035, The Maya, Genoa, era change yield update
+035, The Maya, Samarkand, SENT OUT QUEST, Type, 13
+035, The Maya, Samarkand, SENT OUT QUEST, Type, 2
+035, The Maya, Ragusa, SENT OUT QUEST, Type, 10
+035, The Maya, Cape Town, SENT OUT QUEST, Type, 2
+035, The Maya, Zurich, SENT OUT QUEST, Type, 1
+035, The Maya, Zurich, SENT OUT QUEST, Type, 2
+035, The Maya, Vilnius, SENT OUT QUEST, Type, 11
+035, The Maya, Vilnius, SENT OUT QUEST, Type, 2
+035, Russia, Antananarivo, lost friend
+035, Persia, Monaco, SENT OUT QUEST, Type, 3
+035, Persia, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+036, Germany, Hanoi, SENT OUT QUEST, Type, 13
+036, Germany, Hanoi, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HANOI
+036, The Maya, Ragusa, SENT OUT QUEST, Type, 7
+036, The Maya, Ragusa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+036, Brazil, Budapest, SENT OUT QUEST, Type, 6
+036, Brazil, Budapest, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+036, Assyria, Hanoi, SENT OUT QUEST, Type, 2
+036, Assyria, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+036, Germany, Vilnius, SENT OUT QUEST, Type, 6
+036, Germany, Vilnius, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+037, Germany, Samarkand, era change yield update
+037, Germany, Ragusa, era change yield update
+037, Germany, Budapest, era change yield update
+037, Germany, Antananarivo, era change yield update
+037, Germany, Cape Town, era change yield update
+037, Germany, Quebec City, era change yield update
+037, Germany, Hanoi, era change yield update
+037, Germany, Milan, era change yield update
+037, Germany, Zurich, era change yield update
+037, Germany, Vancouver, era change yield update
+037, Germany, Monaco, era change yield update
+037, Germany, Kyiv, era change yield update
+037, Germany, Mombasa, era change yield update
+037, Germany, Vilnius, era change yield update
+037, Germany, Bratislava, era change yield update
+037, Germany, Genoa, era change yield update
+037, Germany, Budapest, SENT OUT QUEST, Type, 7
+037, Germany, Budapest, SENT OUT QUEST, Type, 1
+037, Germany, Hanoi, SENT OUT QUEST, Type, 13
+037, Germany, Mombasa, SENT OUT QUEST, Type, 13
+037, Germany, Mombasa, SENT OUT QUEST, Type, 6
+037, Germany, Vilnius, SENT OUT QUEST, Type, 11
+037, Germany, Vilnius, SENT OUT QUEST, Type, 6
+037, Germany, Genoa, SENT OUT QUEST, Type, 1
+037, Germany, Genoa, SENT OUT QUEST, Type, 2
+037, Assyria, Samarkand, era change yield update
+037, Assyria, Ragusa, era change yield update
+037, Assyria, Budapest, era change yield update
+037, Assyria, Antananarivo, era change yield update
+037, Assyria, Cape Town, era change yield update
+037, Assyria, Quebec City, era change yield update
+037, Assyria, Hanoi, era change yield update
+037, Assyria, Milan, era change yield update
+037, Assyria, Zurich, era change yield update
+037, Assyria, Vancouver, era change yield update
+037, Assyria, Monaco, era change yield update
+037, Assyria, Kyiv, era change yield update
+037, Assyria, Mombasa, era change yield update
+037, Assyria, Vilnius, era change yield update
+037, Assyria, Bratislava, era change yield update
+037, Assyria, Genoa, era change yield update
+037, Assyria, Hanoi, SENT OUT QUEST, Type, 13
+037, Assyria, Hanoi, SENT OUT QUEST, Type, 2
+037, Assyria, Mombasa, SENT OUT QUEST, Type, 2
+037, Assyria, Mombasa, SENT OUT QUEST, Type, 13
+037, Assyria, Vilnius, SENT OUT QUEST, Type, 11
+037, Persia, Budapest, SENT OUT QUEST, Type, 3
+037, Persia, Budapest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+037, Rome, Cape Town, SENT OUT QUEST, Type, 10
+037, Rome, Cape Town, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+037, Assyria, Cape Town, SENT OUT QUEST, Type, 10
+037, Assyria, Cape Town, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+037, Egypt, Cape Town, SENT OUT QUEST, Type, 10
+037, Egypt, Cape Town, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+037, The Maya, Cape Town, SENT OUT QUEST, Type, 10
+037, The Maya, Cape Town, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+037, Egypt, Cape Town, SENT OUT QUEST, Type, 6
+037, Egypt, Cape Town, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+038, Brazil, Samarkand, era change yield update
+038, Brazil, Ragusa, era change yield update
+038, Brazil, Budapest, era change yield update
+038, Brazil, Antananarivo, era change yield update
+038, Brazil, Cape Town, era change yield update
+038, Brazil, Quebec City, era change yield update
+038, Brazil, Hanoi, era change yield update
+038, Brazil, Milan, era change yield update
+038, Brazil, Zurich, era change yield update
+038, Brazil, Vancouver, era change yield update
+038, Brazil, Monaco, era change yield update
+038, Brazil, Kyiv, era change yield update
+038, Brazil, Mombasa, era change yield update
+038, Brazil, Vilnius, era change yield update
+038, Brazil, Bratislava, era change yield update
+038, Brazil, Genoa, era change yield update
+038, Brazil, Ragusa, SENT OUT QUEST, Type, 2
+038, Brazil, Ragusa, SENT OUT QUEST, Type, 10
+038, Brazil, Budapest, SENT OUT QUEST, Type, 1
+038, Brazil, Budapest, SENT OUT QUEST, Type, 6
+038, Brazil, Vilnius, SENT OUT QUEST, Type, 11
+038, Brazil, Bratislava, SENT OUT QUEST, Type, 1
+038, Assyria, Budapest, SENT OUT QUEST, Type, 1
+038, Assyria, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+039, Rome, Samarkand, era change yield update
+039, Rome, Ragusa, era change yield update
+039, Rome, Budapest, era change yield update
+039, Rome, Antananarivo, era change yield update
+039, Rome, Cape Town, era change yield update
+039, Rome, Quebec City, era change yield update
+039, Rome, Hanoi, era change yield update
+039, Rome, Milan, era change yield update
+039, Rome, Zurich, era change yield update
+039, Rome, Vancouver, era change yield update
+039, Rome, Monaco, era change yield update
+039, Rome, Kyiv, era change yield update
+039, Rome, Mombasa, era change yield update
+039, Rome, Vilnius, era change yield update
+039, Rome, Bratislava, era change yield update
+039, Rome, Genoa, era change yield update
+039, Rome, Samarkand, SENT OUT QUEST, Type, 13
+039, Rome, Samarkand, SENT OUT QUEST, Type, 2
+039, Rome, Ragusa, SENT OUT QUEST, Type, 10
+039, Rome, Cape Town, SENT OUT QUEST, Type, 2
+039, Rome, Cape Town, SENT OUT QUEST, Type, 10
+039, Assyria, Monaco, SENT OUT QUEST, Type, 1
+039, Assyria, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+039, Egypt, Samarkand, era change yield update
+039, Egypt, Ragusa, era change yield update
+039, Egypt, Budapest, era change yield update
+039, Egypt, Antananarivo, era change yield update
+039, Egypt, Cape Town, era change yield update
+039, Egypt, Quebec City, era change yield update
+039, Egypt, Hanoi, era change yield update
+039, Egypt, Milan, era change yield update
+039, Egypt, Zurich, era change yield update
+039, Egypt, Vancouver, era change yield update
+039, Egypt, Monaco, era change yield update
+039, Egypt, Kyiv, era change yield update
+039, Egypt, Mombasa, era change yield update
+039, Egypt, Vilnius, era change yield update
+039, Egypt, Bratislava, era change yield update
+039, Egypt, Genoa, era change yield update
+039, Egypt, Samarkand, SENT OUT QUEST, Type, 13
+039, Egypt, Samarkand, SENT OUT QUEST, Type, 2
+039, Egypt, Ragusa, SENT OUT QUEST, Type, 2
+039, Egypt, Ragusa, SENT OUT QUEST, Type, 10
+039, Egypt, Cape Town, SENT OUT QUEST, Type, 10
+039, Egypt, Cape Town, SENT OUT QUEST, Type, 6
+039, Egypt, Hanoi, SENT OUT QUEST, Type, 2
+039, Egypt, Hanoi, SENT OUT QUEST, Type, 13
+039, Egypt, Zurich, SENT OUT QUEST, Type, 1
+040, Rome, Samarkand, SENT OUT QUEST, Type, 13
+040, Rome, Samarkand, SENT OUT QUEST, Type, 2
+040, Rome, Ragusa, SENT OUT QUEST, Type, 10
+040, Rome, Cape Town, SENT OUT QUEST, Type, 2
+040, Rome, Cape Town, SENT OUT QUEST, Type, 10
+040, Assyria, Genoa, SENT OUT QUEST, Type, 1
+040, Assyria, Genoa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENOA
+040, The Maya, Ragusa, Gold Gift: 500, Friendship: 0 to 0, Spaceship, MINOR_CIV_RAGUSA, (SAVING) 
+040, The Maya, Ragusa, SENT OUT QUEST, Type, 10
+040, The Maya, Ragusa, SENT OUT QUEST, Type, 7
+040, Persia, Kyiv, SENT OUT QUEST, Type, 1
+040, Persia, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+041, Rome, Vilnius, SENT OUT QUEST, Type, 11
+041, Rome, Vilnius, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+041, Samarkand, The Maya, RECEIVED_UNIT_GIFT, Warrior
+041, Antananarivo, Russia, RECEIVED_UNIT_GIFT, Warrior
+042, Persia, Samarkand, era change yield update
+042, Persia, Ragusa, era change yield update
+042, Persia, Budapest, era change yield update
+042, Persia, Antananarivo, era change yield update
+042, Persia, Cape Town, era change yield update
+042, Persia, Quebec City, era change yield update
+042, Persia, Hanoi, era change yield update
+042, Persia, Milan, era change yield update
+042, Persia, Zurich, era change yield update
+042, Persia, Vancouver, era change yield update
+042, Persia, Monaco, era change yield update
+042, Persia, Kyiv, era change yield update
+042, Persia, Mombasa, era change yield update
+042, Persia, Vilnius, era change yield update
+042, Persia, Bratislava, era change yield update
+042, Persia, Genoa, era change yield update
+042, Persia, Budapest, SENT OUT QUEST, Type, 1
+042, Persia, Budapest, SENT OUT QUEST, Type, 3
+042, Persia, Monaco, SENT OUT QUEST, Type, 1
+042, Persia, Monaco, SENT OUT QUEST, Type, 3
+042, Persia, Kyiv, SENT OUT QUEST, Type, 1
+042, Persia, Mombasa, SENT OUT QUEST, Type, 2
+042, Persia, Mombasa, SENT OUT QUEST, Type, 13
+042, Persia, Vilnius, SENT OUT QUEST, Type, 11
+042, Persia, Vilnius, SENT OUT QUEST, Type, 2
+042, Persia, Genoa, SENT OUT QUEST, Type, 1
+042, Russia, Samarkand, era change yield update
+042, Russia, Ragusa, era change yield update
+042, Russia, Budapest, era change yield update
+042, Russia, Antananarivo, era change yield update
+042, Russia, Cape Town, era change yield update
+042, Russia, Quebec City, era change yield update
+042, Russia, Hanoi, era change yield update
+042, Russia, Milan, era change yield update
+042, Russia, Zurich, era change yield update
+042, Russia, Vancouver, era change yield update
+042, Russia, Monaco, era change yield update
+042, Russia, Kyiv, era change yield update
+042, Russia, Mombasa, era change yield update
+042, Russia, Vilnius, era change yield update
+042, Russia, Bratislava, era change yield update
+042, Russia, Genoa, era change yield update
+042, Russia, Antananarivo, SENT OUT QUEST, Type, 1
+042, Russia, Hanoi, SENT OUT QUEST, Type, 13
+042, Russia, Milan, SENT OUT QUEST, Type, 1
+042, Russia, Milan, SENT OUT QUEST, Type, 2
+042, Russia, Mombasa, SENT OUT QUEST, Type, 13
+042, Russia, Mombasa, SENT OUT QUEST, Type, 2
+042, Brazil, Bratislava, cancelled, Kill Camp, Friendship: -9 to -9, MINOR_CIV_BRATISLAVA
+042, Germany, Genoa, gained friend
+042, Germany, Genoa, gained ally
+042, Germany, Genoa, FINISHED QUEST, Kill Camp, Friendship: 16 to 66, MINOR_CIV_GENOA
+043, Egypt, Samarkand, SENT OUT QUEST, Type, 7
+043, Egypt, Samarkand, RECEIVED QUEST, Find Natural Wonder, Friendship: -3 to -3, MINOR_CIV_SAMARKAND
+043, Russia, Milan, gained friend
+043, Russia, Milan, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_MILAN
+043, Persia, Genoa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENOA
+043, Assyria, Genoa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENOA
+044, Russia, Antananarivo, SENT OUT QUEST, Type, 1
+044, Russia, Milan, SENT OUT QUEST, Type, 2
+044, Russia, Mombasa, SENT OUT QUEST, Type, 13
+044, Russia, Mombasa, SENT OUT QUEST, Type, 2
+044, Rome, Samarkand, SENT OUT QUEST, Type, 3
+044, Rome, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+045, The Maya, Mombasa, SENT OUT QUEST, Type, 13
+045, The Maya, Mombasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+045, Rome, Samarkand, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+045, The Maya, Samarkand, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+045, Egypt, Samarkand, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+045, The Maya, Samarkand, SENT OUT QUEST, Type, 16
+045, The Maya, Samarkand, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+045, Brazil, Antananarivo, SENT OUT QUEST, Type, 1
+045, Brazil, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+045, Egypt, Cape Town, gained friend
+045, Egypt, Cape Town, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_CAPE_TOWN
+045, Germany, Mombasa, gained friend
+045, Germany, Mombasa, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_MOMBASA
+045, Persia, Mombasa, SENT OUT QUEST, Type, 6
+045, Persia, Mombasa, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+045, Germany, Vilnius, gained friend
+045, Germany, Vilnius, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_VILNIUS
+045, Genoa, Germany, RECEIVED_UNIT_GIFT, Brute
+046, Germany, Vilnius, SENT OUT QUEST, Type, 11
+046, Egypt, Cape Town, Gold Gift: 250, Friendship: 35 to 35, Culture, MINOR_CIV_CAPE_TOWN, (SAVING) , Boost! , Passing Rome
+046, Egypt, Cape Town, SENT OUT QUEST, Type, 10
+046, Samarkand, Rome, RECEIVED_UNIT_GIFT, Warrior
+046, The Maya, Ragusa, gained friend
+046, The Maya, Ragusa, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_RAGUSA
+046, Germany, Budapest, SENT OUT QUEST, Type, 3
+046, Germany, Budapest, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUDAPEST
+046, Rome, Cape Town, SENT OUT QUEST, Type, 7
+046, Rome, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+046, Russia, Quebec City, SENT OUT QUEST, Type, 1
+046, Russia, Quebec City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+046, The Maya, Vilnius, gained friend
+046, The Maya, Vilnius, FINISHED QUEST, Contest Faith, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+046, Rome, Vilnius, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+046, Brazil, Vilnius, cancelled, Contest Faith, Friendship: 2 to 2, MINOR_CIV_VILNIUS
+046, Germany, Vilnius, cancelled, Contest Faith, Friendship: 32 to 32, MINOR_CIV_VILNIUS
+046, Persia, Vilnius, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+046, Assyria, Vilnius, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+047, Egypt, Budapest, SENT OUT QUEST, Type, 1
+047, Egypt, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+047, Brazil, Ragusa, SENT OUT QUEST, Type, 17
+047, Brazil, Ragusa, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_RAGUSA
+047, The Maya, Kyiv, SENT OUT QUEST, Type, 1
+047, The Maya, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+048, Germany, Mombasa, gained ally
+048, Germany, Mombasa, Gold Gift: 250, Friendship: 35 to 75, Conquest, MINOR_CIV_MOMBASA, Boost! , Passing Russia
+048, Germany, Vilnius, Gold Gift: 250, Friendship: 30 to 30, Conquest, MINOR_CIV_VILNIUS, (SAVING) , Boost! 
+048, Egypt, Hanoi, SENT OUT QUEST, Type, 7
+048, Egypt, Hanoi, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+048, Assyria, Mombasa, SENT OUT QUEST, Type, 6
+048, Assyria, Mombasa, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+048, Germany, Vilnius, lost friend
+048, Germany, Genoa, FINISHED QUEST, Connect Resource, Friendship: 62 to 102, MINOR_CIV_GENOA
+049, Russia, Antananarivo, Gold Gift: 500, Friendship: 14 to 14, Culture, MINOR_CIV_ANTANANARIVO, (SAVING) 
+049, Egypt, Cape Town, lost friend
+049, The Maya, Cape Town, SENT OUT QUEST, Type, 16
+049, The Maya, Cape Town, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+049, Assyria, Hanoi, gained friend
+049, Assyria, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HANOI
+049, Germany, Vilnius, SENT OUT QUEST, Type, 2
+049, Germany, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 26 to 26, MINOR_CIV_VILNIUS
+050, Brazil, Mombasa, SENT OUT QUEST, Type, 13
+050, Brazil, Mombasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+050, Brazil, Budapest, gained friend
+050, Brazil, Budapest, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_BUDAPEST
+050, Persia, Mombasa, gained friend
+050, Persia, Mombasa, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_MOMBASA
+050, Assyria, Mombasa, gained friend
+050, Assyria, Mombasa, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_MOMBASA
+051, Germany, Hanoi, SENT OUT QUEST, Type, 3
+051, Germany, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+051, The Maya, Zurich, SENT OUT QUEST, Type, 16
+051, The Maya, Zurich, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_ZURICH
+051, The Maya, Vilnius, lost friend
+051, Assyria, Vilnius, SENT OUT QUEST, Type, 2
+051, Assyria, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+052, Assyria, Hanoi, FINISHED QUEST, Invest, Friendship: 35 to 35, MINOR_CIV_HANOI
+052, Germany, Hanoi, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HANOI
+052, Egypt, Hanoi, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HANOI
+052, Russia, Hanoi, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HANOI
+052, Russia, Hanoi, SENT OUT QUEST, Type, 3
+052, Russia, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+052, Russia, Milan, lost friend
+052, Persia, Genoa, SENT OUT QUEST, Type, 2
+052, Persia, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 2 to 2, MINOR_CIV_GENOA
+053, Persia, Vilnius, Gold Gift: 500, Friendship: 0 to 0, Culture, MINOR_CIV_VILNIUS, (SAVING) 
+053, Persia, Vilnius, SENT OUT QUEST, Type, 2
+053, Persia, Antananarivo, SENT OUT QUEST, Type, 1
+053, Persia, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+053, Persia, Mombasa, lost friend
+053, Assyria, Mombasa, lost friend
+054, Persia, Antananarivo, SENT OUT QUEST, Type, 1
+054, Egypt, Samarkand, gained friend
+054, Egypt, Samarkand, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+054, Brazil, Ragusa, gained friend
+054, Brazil, Ragusa, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_RAGUSA
+054, Rome, Ragusa, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+054, Egypt, Ragusa, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+054, The Maya, Ragusa, cancelled, Contest Culture, Friendship: 33 to 33, MINOR_CIV_RAGUSA
+054, Brazil, Budapest, lost friend
+054, Egypt, Hanoi, gained friend
+054, Egypt, Hanoi, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_HANOI
+054, Germany, Mombasa, lost ally
+054, Germany, Mombasa, FINISHED QUEST, Invest, Friendship: 59 to 59, MINOR_CIV_MOMBASA
+054, Persia, Mombasa, FINISHED QUEST, Invest, Friendship: 26 to 26, MINOR_CIV_MOMBASA
+054, Assyria, Mombasa, FINISHED QUEST, Invest, Friendship: 26 to 26, MINOR_CIV_MOMBASA
+054, Russia, Mombasa, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+054, Brazil, Mombasa, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+054, The Maya, Mombasa, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+055, Assyria, Quebec City, SENT OUT QUEST, Type, 1
+055, Assyria, Quebec City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+055, Egypt, Hanoi, SENT OUT QUEST, Type, 2
+055, Persia, Budapest, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+055, Egypt, Cape Town, SENT OUT QUEST, Type, 3
+055, Egypt, Cape Town, RECEIVED QUEST, Construct Wonder, Friendship: 20 to 20, MINOR_CIV_CAPE_TOWN
+055, Egypt, Zurich, SENT OUT QUEST, Type, 2
+055, Egypt, Zurich, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZURICH
+055, Persia, Monaco, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+055, Assyria, Genoa, SENT OUT QUEST, Type, 2
+055, Assyria, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENOA
+056, The Maya, Ragusa, Gold Gift: 250, Friendship: 31 to 56, Diplomacy, MINOR_CIV_RAGUSA, Boost! 
+056, Rome, Ragusa, SENT OUT QUEST, Type, 7
+056, Rome, Ragusa, RECEIVED QUEST, Find Natural Wonder, Friendship: -2 to -2, MINOR_CIV_RAGUSA
+056, The Maya, Ragusa, SENT OUT QUEST, Type, 16
+056, The Maya, Ragusa, RECEIVED QUEST, Spread Religion, Friendship: 55 to 55, MINOR_CIV_RAGUSA
+056, Persia, Budapest, SENT OUT QUEST, Type, 7
+056, Persia, Budapest, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+056, Assyria, Hanoi, lost friend
+056, The Maya, Vilnius, SENT OUT QUEST, Type, 3
+056, The Maya, Vilnius, RECEIVED QUEST, Construct Wonder, Friendship: 17 to 17, MINOR_CIV_VILNIUS
+056, Brazil, Bratislava, SENT OUT QUEST, Type, 7
+056, Brazil, Bratislava, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+057, Germany, Quebec City, SENT OUT QUEST, Type, 1
+057, Germany, Quebec City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+057, Assyria, Cape Town, gained friend
+057, Assyria, Cape Town, FINISHED QUEST, Contest Culture, Friendship: -6 to 33, MINOR_CIV_CAPE_TOWN
+057, Rome, Cape Town, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+057, Egypt, Cape Town, cancelled, Contest Culture, Friendship: 17 to 17, MINOR_CIV_CAPE_TOWN
+057, The Maya, Cape Town, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+058, Russia, Quebec City, SENT OUT QUEST, Type, 1
+058, The Maya, Samarkand, gained friend
+058, The Maya, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+058, Egypt, Ragusa, SENT OUT QUEST, Type, 4
+058, Egypt, Ragusa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+058, Russia, Antananarivo, SENT OUT QUEST, Type, 2
+058, Russia, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+059, Persia, Vilnius, SENT OUT QUEST, Type, 17
+059, Persia, Vilnius, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+059, Germany, Genoa, SENT OUT QUEST, Type, 17
+059, Germany, Genoa, RECEIVED QUEST, Trade Route, Friendship: 86 to 86, MINOR_CIV_GENOA
+060, Assyria, Cape Town, lost friend
+060, Brazil, Vilnius, SENT OUT QUEST, Type, 2
+060, Brazil, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: -4 to -4, MINOR_CIV_VILNIUS
+061, Assyria, Hanoi, Gold Gift: 500, Friendship: 23 to 23, Conquest, MINOR_CIV_HANOI, (SAVING) 
+061, Egypt, Ragusa, SENT OUT QUEST, Type, 2
+061, Egypt, Ragusa, SENT OUT QUEST, Type, 4
+061, Egypt, Samarkand, lost friend
+061, Assyria, Budapest, SENT OUT QUEST, Type, 3
+061, Assyria, Budapest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+061, Assyria, Cape Town, SENT OUT QUEST, Type, 2
+061, Assyria, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 22 to 22, MINOR_CIV_CAPE_TOWN
+061, Egypt, Hanoi, lost friend
+061, Persia, Monaco, SENT OUT QUEST, Type, 3
+061, Persia, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+062, Rome, Zurich, SENT OUT QUEST, Type, 1
+062, Rome, Zurich, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZURICH
+062, Assyria, Hanoi, SENT OUT QUEST, Type, 2
+062, Assyria, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 20 to 20, MINOR_CIV_HANOI
+062, Germany, Vilnius, SENT OUT QUEST, Type, 3
+062, Germany, Vilnius, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+063, Rome, Zurich, SENT OUT QUEST, Type, 1
+063, Brazil, Budapest, SENT OUT QUEST, Type, 2
+063, Brazil, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 15 to 15, MINOR_CIV_BUDAPEST
+063, Russia, Mombasa, SENT OUT QUEST, Type, 17
+063, Russia, Mombasa, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+064, Russia, Quebec City, SENT OUT QUEST, Type, 3
+064, Russia, Quebec City, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_QUEBEC_CITY
+064, The Maya, Zurich, gained friend
+064, The Maya, Zurich, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ZURICH
+064, Persia, Kyiv, SENT OUT QUEST, Type, 7
+064, Persia, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+064, The Maya, Mombasa, SENT OUT QUEST, Type, 2
+064, The Maya, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+065, Rome, Antananarivo, SENT OUT QUEST, Type, 1
+065, Rome, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+065, The Maya, Samarkand, lost friend
+065, Brazil, Ragusa, lost friend
+065, Brazil, Ragusa, gained friend
+065, Brazil, Ragusa, gained ally
+065, Brazil, Ragusa, FINISHED QUEST, Connect Resource, Friendship: 28 to 68, MINOR_CIV_RAGUSA
+065, Brazil, Budapest, gained friend
+065, Brazil, Budapest, FINISHED QUEST, Connect Resource, Friendship: 12 to 52, MINOR_CIV_BUDAPEST
+066, Brazil, Antananarivo, SENT OUT QUEST, Type, 2
+066, Brazil, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+066, Assyria, Monaco, SENT OUT QUEST, Type, 2
+066, Assyria, Monaco, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MONACO
+066, Brazil, Bratislava, gained friend
+066, Brazil, Bratislava, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BRATISLAVA
+066, Persia, Genoa, SENT OUT QUEST, Type, 3
+066, Persia, Genoa, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_GENOA
+067, Germany, Hanoi, SENT OUT QUEST, Type, 7
+067, Germany, Hanoi, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+067, Russia, Hanoi, SENT OUT QUEST, Type, 2
+067, Russia, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+068, Brazil, Samarkand, SENT OUT QUEST, Type, 2
+068, Brazil, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+068, Egypt, Budapest, SENT OUT QUEST, Type, 16
+068, Egypt, Budapest, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+068, Germany, Mombasa, lost friend
+068, Assyria, Vilnius, gained friend
+068, Assyria, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+068, Rome, Vilnius, SENT OUT QUEST, Type, 2
+068, Rome, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+069, Assyria, Quebec City, SENT OUT QUEST, Type, 1
+069, Russia, Hanoi, SENT OUT QUEST, Type, 3
+069, Russia, Hanoi, SENT OUT QUEST, Type, 2
+070, Rome, Zurich, Gold Gift: 500, Friendship: 1 to 1, Conquest, MINOR_CIV_ZURICH, (SAVING) 
+070, Ragusa, Rome, RECEIVED_UNIT_GIFT, Warrior
+071, Brazil, Ragusa, lost ally
+071, Egypt, Cape Town, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+071, Egypt, Cape Town, SENT OUT QUEST, Type, 4
+071, Egypt, Cape Town, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+071, Russia, Quebec City, gained friend
+071, Russia, Quebec City, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_QUEBEC_CITY
+071, The Maya, Zurich, lost friend
+071, Egypt, Zurich, SENT OUT QUEST, Type, 4
+071, Egypt, Zurich, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ZURICH
+071, The Maya, Kyiv, SENT OUT QUEST, Type, 14
+071, The Maya, Kyiv, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KIEV
+072, Zurich, The Maya, RECEIVED_UNIT_GIFT, Warrior
+072, The Maya, Zurich, gained friend
+072, Brazil, Bratislava, SENT OUT QUEST, Type, 14
+072, Brazil, Bratislava, RECEIVED QUEST, Bully City-State, Friendship: 31 to 31, MINOR_CIV_BRATISLAVA
+072, Persia, Bratislava, SENT OUT QUEST, Type, 3
+072, Persia, Bratislava, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+073, Germany, Genoa, Gold Gift: 250, Friendship: 66 to 91, Conquest, MINOR_CIV_GENOA, Boost! , Passing Persia
+073, Germany, Vilnius, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_VILNIUS, (SAVING) 
+073, Egypt, Antananarivo, SENT OUT QUEST, Type, 1
+073, Egypt, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+073, The Maya, Samarkand, era change yield update
+073, The Maya, Ragusa, era change yield update
+073, The Maya, Budapest, era change yield update
+073, The Maya, Antananarivo, era change yield update
+073, The Maya, Cape Town, era change yield update
+073, The Maya, Quebec City, era change yield update
+073, The Maya, Hanoi, era change yield update
+073, The Maya, Milan, era change yield update
+073, The Maya, Zurich, era change yield update
+073, The Maya, Vancouver, era change yield update
+073, The Maya, Monaco, era change yield update
+073, The Maya, Kyiv, era change yield update
+073, The Maya, Mombasa, era change yield update
+073, The Maya, Vilnius, era change yield update
+073, The Maya, Bratislava, era change yield update
+073, The Maya, Genoa, era change yield update
+073, The Maya, Samarkand, SENT OUT QUEST, Type, 16
+073, The Maya, Ragusa, SENT OUT QUEST, Type, 16
+073, The Maya, Cape Town, SENT OUT QUEST, Type, 2
+073, The Maya, Cape Town, SENT OUT QUEST, Type, 16
+073, The Maya, Zurich, SENT OUT QUEST, Type, 1
+073, The Maya, Zurich, SENT OUT QUEST, Type, 16
+073, The Maya, Kyiv, SENT OUT QUEST, Type, 1
+073, The Maya, Kyiv, SENT OUT QUEST, Type, 14
+073, The Maya, Mombasa, SENT OUT QUEST, Type, 2
+073, The Maya, Vilnius, SENT OUT QUEST, Type, 2
+073, The Maya, Vilnius, SENT OUT QUEST, Type, 3
+073, The Maya, Ragusa, lost friend
+073, Assyria, Vilnius, lost friend
+073, Assyria, Vilnius, SENT OUT QUEST, Type, 3
+073, Assyria, Vilnius, RECEIVED QUEST, Construct Wonder, Friendship: 28 to 28, MINOR_CIV_VILNIUS
+073, Brazil, Bratislava, lost friend
+074, The Maya, Samarkand, SENT OUT QUEST, Type, 2
+074, The Maya, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 16 to 16, MINOR_CIV_SAMARKAND
+074, Germany, Vancouver, SENT OUT QUEST, Type, 2
+074, Germany, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+075, Persia, Budapest, SENT OUT QUEST, Type, 2
+075, Persia, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+075, Egypt, Hanoi, SENT OUT QUEST, Type, 4
+075, Egypt, Hanoi, RECEIVED QUEST, Great Person, Friendship: 8 to 8, MINOR_CIV_HANOI
+075, The Maya, Zurich, lost friend
+075, Germany, Vilnius, gained friend
+075, Germany, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_VILNIUS
+075, Egypt, Genoa, SENT OUT QUEST, Type, 2
+075, Egypt, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENOA
+076, Egypt, Cape Town, SENT OUT QUEST, Type, 4
+076, Egypt, Hanoi, SENT OUT QUEST, Type, 2
+076, Egypt, Hanoi, SENT OUT QUEST, Type, 4
+076, Rome, Samarkand, SENT OUT QUEST, Type, 10
+076, Rome, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 3 to 3, MINOR_CIV_SAMARKAND
+076, Brazil, Samarkand, SENT OUT QUEST, Type, 10
+076, Brazil, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+076, Egypt, Samarkand, SENT OUT QUEST, Type, 10
+076, Egypt, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 7 to 7, MINOR_CIV_SAMARKAND
+076, The Maya, Samarkand, SENT OUT QUEST, Type, 10
+076, The Maya, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 13 to 13, MINOR_CIV_SAMARKAND
+076, Genoa, Egypt, RECEIVED_UNIT_GIFT, Warrior
+077, Ragusa, Egypt, RECEIVED_UNIT_GIFT, Warrior
+077, The Maya, Ragusa, SENT OUT QUEST, Type, 3
+077, The Maya, Ragusa, RECEIVED QUEST, Construct Wonder, Friendship: 23 to 23, MINOR_CIV_RAGUSA
+077, Assyria, Quebec City, SENT OUT QUEST, Type, 7
+077, Assyria, Quebec City, RECEIVED QUEST, Find Natural Wonder, Friendship: 3 to 3, MINOR_CIV_QUEBEC_CITY
+077, Rome, Milan, SENT OUT QUEST, Type, 10
+077, Rome, Milan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+077, Egypt, Milan, SENT OUT QUEST, Type, 10
+077, Egypt, Milan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+077, Russia, Milan, SENT OUT QUEST, Type, 10
+077, Russia, Milan, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_MILAN
+077, Russia, Vilnius, SENT OUT QUEST, Type, 16
+077, Russia, Vilnius, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+077, Brazil, Bratislava, SENT OUT QUEST, Type, 1
+077, Brazil, Bratislava, RECEIVED QUEST, Kill Camp, Friendship: 23 to 23, MINOR_CIV_BRATISLAVA
+077, Persia, Bratislava, SENT OUT QUEST, Type, 1
+077, Persia, Bratislava, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+078, Egypt, Samarkand, SENT OUT QUEST, Type, 3
+078, Egypt, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 4 to 4, MINOR_CIV_SAMARKAND
+078, Russia, Milan, SENT OUT QUEST, Type, 4
+078, Russia, Milan, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_MILAN
+078, Germany, Mombasa, SENT OUT QUEST, Type, 7
+078, Germany, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 6 to 6, MINOR_CIV_MOMBASA
+079, Persia, Antananarivo, gained friend
+079, Persia, Antananarivo, gained ally
+079, Persia, Antananarivo, Gold Gift: 500, Friendship: 5 to 60, Spaceship, MINOR_CIV_ANTANANARIVO
+079, Persia, Vilnius, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_VILNIUS, (SAVING) 
+079, Assyria, Vilnius, SENT OUT QUEST, Type, 3
+079, Russia, Quebec City, Gold Gift: 250, Friendship: 34 to 59, Culture, MINOR_CIV_QUEBEC_CITY, Boost! , Passing Assyria
+079, Russia, Vilnius, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_VILNIUS, (SAVING) 
+079, Persia, Antananarivo, lost ally
+079, Persia, Antananarivo, SENT OUT QUEST, Type, 14
+079, Persia, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 58 to 58, MINOR_CIV_ANTANANARIVO
+079, Russia, Antananarivo, SENT OUT QUEST, Type, 17
+079, Russia, Antananarivo, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+079, Germany, Hanoi, SENT OUT QUEST, Type, 1
+079, Germany, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+079, Assyria, Hanoi, SENT OUT QUEST, Type, 1
+079, Assyria, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HANOI
+079, Egypt, Hanoi, SENT OUT QUEST, Type, 1
+079, Egypt, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 2 to 2, MINOR_CIV_HANOI
+079, Russia, Hanoi, SENT OUT QUEST, Type, 1
+079, Russia, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HANOI
+079, Persia, Monaco, SENT OUT QUEST, Type, 7
+079, Persia, Monaco, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+079, Brazil, Mombasa, SENT OUT QUEST, Type, 7
+079, Brazil, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+079, Assyria, Genoa, SENT OUT QUEST, Type, 7
+079, Assyria, Genoa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_GENOA
+080, Germany, Quebec City, SENT OUT QUEST, Type, 14
+080, Germany, Quebec City, RECEIVED QUEST, Bully City-State, Friendship: -1 to -1, MINOR_CIV_QUEBEC_CITY
+080, Assyria, Mombasa, SENT OUT QUEST, Type, 4
+080, Assyria, Mombasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+080, The Maya, Mombasa, SENT OUT QUEST, Type, 14
+080, The Maya, Mombasa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+080, Egypt, Vilnius, SENT OUT QUEST, Type, 7
+080, Egypt, Vilnius, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+080, Genoa, Assyria, RECEIVED_UNIT_GIFT, Warrior
+080, Germany, Genoa, SENT OUT QUEST, Type, 10
+080, Germany, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 79 to 79, MINOR_CIV_GENOA
+080, Persia, Genoa, SENT OUT QUEST, Type, 10
+080, Persia, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_GENOA
+080, Assyria, Genoa, SENT OUT QUEST, Type, 10
+080, Assyria, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 3 to 3, MINOR_CIV_GENOA
+080, Egypt, Genoa, SENT OUT QUEST, Type, 10
+080, Egypt, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_GENOA
+081, The Maya, Ragusa, Gold Gift: 500, Friendship: 19 to 19, Diplomacy, MINOR_CIV_RAGUSA, (SAVING) , Passing Egypt
+081, Brazil, Budapest, lost friend
+081, Egypt, Budapest, SENT OUT QUEST, Type, 2
+081, Egypt, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+081, Hanoi, Assyria, RECEIVED_UNIT_GIFT, Warrior
+081, Rome, Mombasa, SENT OUT QUEST, Type, 1
+081, Rome, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+081, Brazil, Mombasa, SENT OUT QUEST, Type, 1
+081, Brazil, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+081, Germany, Mombasa, SENT OUT QUEST, Type, 1
+081, Germany, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+081, Persia, Mombasa, SENT OUT QUEST, Type, 1
+081, Persia, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+081, Assyria, Mombasa, SENT OUT QUEST, Type, 1
+081, Assyria, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+081, Egypt, Mombasa, SENT OUT QUEST, Type, 1
+081, Egypt, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+081, The Maya, Mombasa, SENT OUT QUEST, Type, 1
+081, The Maya, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+081, Russia, Mombasa, SENT OUT QUEST, Type, 1
+081, Russia, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+081, Germany, Genoa, SENT OUT QUEST, Type, 2
+081, Germany, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 78 to 78, MINOR_CIV_GENOA
+082, Brazil, Samarkand, era change yield update
+082, Brazil, Ragusa, era change yield update
+082, Brazil, Budapest, era change yield update
+082, Brazil, Antananarivo, era change yield update
+082, Brazil, Cape Town, era change yield update
+082, Brazil, Quebec City, era change yield update
+082, Brazil, Hanoi, era change yield update
+082, Brazil, Milan, era change yield update
+082, Brazil, Zurich, era change yield update
+082, Brazil, Vancouver, era change yield update
+082, Brazil, Monaco, era change yield update
+082, Brazil, Kyiv, era change yield update
+082, Brazil, Mombasa, era change yield update
+082, Brazil, Vilnius, era change yield update
+082, Brazil, Bratislava, era change yield update
+082, Brazil, Genoa, era change yield update
+082, Brazil, Samarkand, SENT OUT QUEST, Type, 2
+082, Brazil, Samarkand, SENT OUT QUEST, Type, 10
+082, Brazil, Ragusa, SENT OUT QUEST, Type, 17
+082, Brazil, Budapest, SENT OUT QUEST, Type, 1
+082, Brazil, Antananarivo, SENT OUT QUEST, Type, 1
+082, Brazil, Antananarivo, SENT OUT QUEST, Type, 2
+082, Brazil, Mombasa, SENT OUT QUEST, Type, 7
+082, Brazil, Mombasa, SENT OUT QUEST, Type, 1
+082, Brazil, Vilnius, SENT OUT QUEST, Type, 2
+082, Brazil, Bratislava, SENT OUT QUEST, Type, 14
+082, Brazil, Bratislava, SENT OUT QUEST, Type, 1
+082, Germany, Vilnius, lost friend
+083, Ragusa, Brazil, RECEIVED_UNIT_GIFT, Warrior
+083, Persia, Ragusa, SENT OUT QUEST, Type, 7
+083, Persia, Ragusa, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_RAGUSA
+084, Brazil, Genoa, SENT OUT QUEST, Type, 10
+084, Brazil, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_GENOA
+084, Rome, Ragusa, SENT OUT QUEST, Type, 2
+084, Rome, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_RAGUSA
+084, Assyria, Budapest, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+084, Russia, Quebec City, SENT OUT QUEST, Type, 16
+084, Russia, Quebec City, RECEIVED QUEST, Spread Religion, Friendship: 50 to 50, MINOR_CIV_QUEBEC_CITY
+085, Brazil, Budapest, SENT OUT QUEST, Type, 14
+085, Brazil, Budapest, RECEIVED QUEST, Bully City-State, Friendship: 22 to 22, MINOR_CIV_BUDAPEST
+085, Egypt, Cape Town, SENT OUT QUEST, Type, 16
+085, Egypt, Cape Town, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+086, Rome, Milan, SENT OUT QUEST, Type, 3
+086, Rome, Milan, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MILAN
+087, Rome, Budapest, SENT OUT QUEST, Type, 1
+087, Rome, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+087, Rome, Ragusa, SENT OUT QUEST, Type, 1
+087, Rome, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RAGUSA
+087, Brazil, Ragusa, SENT OUT QUEST, Type, 1
+087, Brazil, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 40 to 40, MINOR_CIV_RAGUSA
+087, Persia, Ragusa, SENT OUT QUEST, Type, 1
+087, Persia, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RAGUSA
+087, Assyria, Ragusa, SENT OUT QUEST, Type, 1
+087, Assyria, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: -12 to -12, MINOR_CIV_RAGUSA
+087, Egypt, Ragusa, SENT OUT QUEST, Type, 1
+087, Egypt, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RAGUSA
+087, The Maya, Ragusa, SENT OUT QUEST, Type, 1
+087, The Maya, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 8 to 8, MINOR_CIV_RAGUSA
+087, Assyria, Budapest, SENT OUT QUEST, Type, 2
+087, Assyria, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+087, Assyria, Cape Town, SENT OUT QUEST, Type, 7
+087, Assyria, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: -1 to -1, MINOR_CIV_CAPE_TOWN
+088, Rome, Genoa, SENT OUT QUEST, Type, 10
+088, Rome, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_GENOA
+088, Brazil, Ragusa, SENT OUT QUEST, Type, 7
+088, Brazil, Ragusa, RECEIVED QUEST, Find Natural Wonder, Friendship: 39 to 39, MINOR_CIV_RAGUSA
+088, Brazil, Antananarivo, SENT OUT QUEST, Type, 14
+088, Brazil, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+088, Brazil, Monaco, SENT OUT QUEST, Type, 1
+088, Brazil, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+088, Persia, Kyiv, SENT OUT QUEST, Type, 3
+088, Persia, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+089, Samarkand, Rome, RECEIVED_UNIT_GIFT, Spearman
+089, Rome, Zurich, SENT OUT QUEST, Type, 17
+089, Rome, Zurich, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_ZURICH
+089, Persia, Mombasa, SENT OUT QUEST, Type, 0
+089, Persia, Mombasa, RECEIVED QUEST, Route, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+089, Egypt, Mombasa, SENT OUT QUEST, Type, 4
+089, Egypt, Mombasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+089, Genoa, Persia, RECEIVED_UNIT_GIFT, Warrior
+090, Germany, Budapest, gained friend
+090, Germany, Budapest, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_BUDAPEST
+090, Antananarivo, Persia, RECEIVED_UNIT_GIFT, Warrior
+090, Germany, Hanoi, gained friend
+090, Germany, Hanoi, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_HANOI
+090, Assyria, Hanoi, SENT OUT QUEST, Type, 3
+090, Assyria, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_HANOI
+090, Germany, Mombasa, gained friend
+090, Germany, Mombasa, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_MOMBASA
+091, Rome, Monaco, SENT OUT QUEST, Type, 1
+091, Rome, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+091, Germany, Bratislava, SENT OUT QUEST, Type, 1
+091, Germany, Bratislava, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+091, The Maya, Ragusa, gained friend
+091, The Maya, Ragusa, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_RAGUSA
+091, The Maya, Zurich, SENT OUT QUEST, Type, 2
+091, The Maya, Zurich, RECEIVED QUEST, Connect Resource, Friendship: 4 to 4, MINOR_CIV_ZURICH
+091, The Maya, Kyiv, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KIEV
+092, Brazil, Kyiv, SENT OUT QUEST, Type, 1
+092, Brazil, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+092, Germany, Bratislava, SENT OUT QUEST, Type, 1
+092, Egypt, Samarkand, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+092, Brazil, Ragusa, gained ally
+092, Brazil, Ragusa, FINISHED QUEST, Find Natural Wonder, Friendship: 33 to 73, MINOR_CIV_RAGUSA
+092, Rome, Ragusa, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RAGUSA
+092, Brazil, Ragusa, cancelled, Kill Camp, Friendship: 73 to 73, MINOR_CIV_RAGUSA
+092, Persia, Ragusa, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RAGUSA
+092, Assyria, Ragusa, cancelled, Kill Camp, Friendship: -22 to -22, MINOR_CIV_RAGUSA
+092, Egypt, Ragusa, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RAGUSA
+092, Egypt, Antananarivo, SENT OUT QUEST, Type, 16
+092, Egypt, Antananarivo, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+092, Russia, Hanoi, gained friend
+092, Russia, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_HANOI
+092, Germany, Hanoi, cancelled, Construct Wonder, Friendship: 37 to 37, MINOR_CIV_HANOI
+092, Persia, Monaco, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+092, Assyria, Monaco, SENT OUT QUEST, Type, 3
+092, Assyria, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+092, Brazil, Mombasa, gained friend
+092, Brazil, Mombasa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+092, Germany, Vilnius, cancelled, Construct Wonder, Friendship: 7 to 7, MINOR_CIV_VILNIUS
+092, Assyria, Vilnius, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+092, Brazil, Bratislava, cancelled, Bully City-State, Friendship: 1 to 1, MINOR_CIV_BRATISLAVA
+092, Persia, Bratislava, SENT OUT QUEST, Type, 2
+092, Persia, Bratislava, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+092, Assyria, Genoa, gained friend
+092, Assyria, Genoa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_GENOA
+093, Rome, Antananarivo, SENT OUT QUEST, Type, 7
+093, Rome, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+093, Rome, Cape Town, SENT OUT QUEST, Type, 1
+093, Rome, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+093, Assyria, Cape Town, SENT OUT QUEST, Type, 1
+093, Assyria, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+093, Egypt, Cape Town, SENT OUT QUEST, Type, 1
+093, Egypt, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+093, The Maya, Cape Town, SENT OUT QUEST, Type, 1
+093, The Maya, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+093, Russia, Cape Town, SENT OUT QUEST, Type, 1
+093, Russia, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+093, Rome, Vilnius, SENT OUT QUEST, Type, 10
+093, Rome, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+093, Brazil, Vilnius, SENT OUT QUEST, Type, 10
+093, Brazil, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+093, Germany, Vilnius, SENT OUT QUEST, Type, 10
+093, Germany, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+093, Persia, Vilnius, SENT OUT QUEST, Type, 10
+093, Persia, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+093, Assyria, Vilnius, SENT OUT QUEST, Type, 10
+093, Assyria, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+093, Egypt, Vilnius, SENT OUT QUEST, Type, 10
+093, Egypt, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+093, The Maya, Vilnius, SENT OUT QUEST, Type, 10
+093, The Maya, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+093, Russia, Vilnius, SENT OUT QUEST, Type, 10
+093, Russia, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+093, Russia, Vilnius, SENT OUT QUEST, Type, 4
+093, Russia, Vilnius, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+093, Brazil, Bratislava, SENT OUT QUEST, Type, 7
+093, Brazil, Bratislava, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+094, Russia, Quebec City, gained ally
+094, Russia, Quebec City, Gold Gift: 250, Friendship: 37 to 62, Culture, MINOR_CIV_QUEBEC_CITY, Boost! , Passing Assyria
+094, Russia, Antananarivo, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_ANTANANARIVO, (SAVING) 
+094, Russia, Samarkand, era change yield update
+094, Russia, Ragusa, era change yield update
+094, Russia, Budapest, era change yield update
+094, Russia, Antananarivo, era change yield update
+094, Russia, Cape Town, era change yield update
+094, Russia, Quebec City, era change yield update
+094, Russia, Hanoi, era change yield update
+094, Russia, Milan, era change yield update
+094, Russia, Zurich, era change yield update
+094, Russia, Vancouver, era change yield update
+094, Russia, Monaco, era change yield update
+094, Russia, Kyiv, era change yield update
+094, Russia, Mombasa, era change yield update
+094, Russia, Vilnius, era change yield update
+094, Russia, Bratislava, era change yield update
+094, Russia, Genoa, era change yield update
+094, Russia, Antananarivo, SENT OUT QUEST, Type, 1
+094, Russia, Antananarivo, SENT OUT QUEST, Type, 2
+094, Russia, Antananarivo, SENT OUT QUEST, Type, 17
+094, Russia, Cape Town, SENT OUT QUEST, Type, 1
+094, Russia, Quebec City, SENT OUT QUEST, Type, 1
+094, Russia, Quebec City, SENT OUT QUEST, Type, 16
+094, Russia, Hanoi, SENT OUT QUEST, Type, 3
+094, Russia, Hanoi, SENT OUT QUEST, Type, 1
+094, Russia, Milan, SENT OUT QUEST, Type, 2
+094, Russia, Milan, SENT OUT QUEST, Type, 10
+094, Russia, Milan, SENT OUT QUEST, Type, 4
+094, Russia, Mombasa, SENT OUT QUEST, Type, 2
+094, Russia, Mombasa, SENT OUT QUEST, Type, 17
+094, Russia, Mombasa, SENT OUT QUEST, Type, 1
+094, Russia, Vilnius, SENT OUT QUEST, Type, 16
+094, Russia, Vilnius, SENT OUT QUEST, Type, 10
+094, Russia, Vilnius, SENT OUT QUEST, Type, 4
+094, Persia, Antananarivo, SENT OUT QUEST, Type, 2
+094, Persia, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 41 to 41, MINOR_CIV_ANTANANARIVO
+094, Rome, Vancouver, SENT OUT QUEST, Type, 13
+094, Rome, Vancouver, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+094, Germany, Vancouver, SENT OUT QUEST, Type, 13
+094, Germany, Vancouver, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+094, Germany, Genoa, lost ally
+095, Rome, Samarkand, era change yield update
+095, Rome, Ragusa, era change yield update
+095, Rome, Budapest, era change yield update
+095, Rome, Antananarivo, era change yield update
+095, Rome, Cape Town, era change yield update
+095, Rome, Quebec City, era change yield update
+095, Rome, Hanoi, era change yield update
+095, Rome, Milan, era change yield update
+095, Rome, Zurich, era change yield update
+095, Rome, Vancouver, era change yield update
+095, Rome, Monaco, era change yield update
+095, Rome, Kyiv, era change yield update
+095, Rome, Mombasa, era change yield update
+095, Rome, Vilnius, era change yield update
+095, Rome, Bratislava, era change yield update
+095, Rome, Genoa, era change yield update
+095, Rome, Samarkand, SENT OUT QUEST, Type, 2
+095, Rome, Samarkand, SENT OUT QUEST, Type, 3
+095, Rome, Samarkand, SENT OUT QUEST, Type, 10
+095, Rome, Ragusa, SENT OUT QUEST, Type, 7
+095, Rome, Ragusa, SENT OUT QUEST, Type, 2
+095, Rome, Budapest, SENT OUT QUEST, Type, 1
+095, Rome, Antananarivo, SENT OUT QUEST, Type, 1
+095, Rome, Antananarivo, SENT OUT QUEST, Type, 7
+095, Rome, Cape Town, SENT OUT QUEST, Type, 2
+095, Rome, Cape Town, SENT OUT QUEST, Type, 7
+095, Rome, Cape Town, SENT OUT QUEST, Type, 1
+095, Rome, Milan, SENT OUT QUEST, Type, 10
+095, Rome, Milan, SENT OUT QUEST, Type, 3
+095, Rome, Zurich, SENT OUT QUEST, Type, 1
+095, Rome, Zurich, SENT OUT QUEST, Type, 17
+095, Rome, Vancouver, SENT OUT QUEST, Type, 13
+095, Rome, Monaco, SENT OUT QUEST, Type, 1
+095, Rome, Mombasa, SENT OUT QUEST, Type, 1
+095, Rome, Vilnius, SENT OUT QUEST, Type, 2
+095, Rome, Vilnius, SENT OUT QUEST, Type, 10
+095, Rome, Genoa, SENT OUT QUEST, Type, 10
+095, Brazil, Genoa, SENT OUT QUEST, Type, 10
+095, Persia, Samarkand, era change yield update
+095, Persia, Ragusa, era change yield update
+095, Persia, Budapest, era change yield update
+095, Persia, Antananarivo, era change yield update
+095, Persia, Cape Town, era change yield update
+095, Persia, Quebec City, era change yield update
+095, Persia, Hanoi, era change yield update
+095, Persia, Milan, era change yield update
+095, Persia, Zurich, era change yield update
+095, Persia, Vancouver, era change yield update
+095, Persia, Monaco, era change yield update
+095, Persia, Kyiv, era change yield update
+095, Persia, Mombasa, era change yield update
+095, Persia, Vilnius, era change yield update
+095, Persia, Bratislava, era change yield update
+095, Persia, Genoa, era change yield update
+095, Persia, Ragusa, SENT OUT QUEST, Type, 7
+095, Persia, Budapest, SENT OUT QUEST, Type, 1
+095, Persia, Budapest, SENT OUT QUEST, Type, 7
+095, Persia, Budapest, SENT OUT QUEST, Type, 2
+095, Persia, Antananarivo, SENT OUT QUEST, Type, 1
+095, Persia, Antananarivo, SENT OUT QUEST, Type, 14
+095, Persia, Antananarivo, SENT OUT QUEST, Type, 2
+095, Persia, Monaco, SENT OUT QUEST, Type, 1
+095, Persia, Monaco, SENT OUT QUEST, Type, 7
+095, Persia, Kyiv, SENT OUT QUEST, Type, 1
+095, Persia, Kyiv, SENT OUT QUEST, Type, 7
+095, Persia, Kyiv, SENT OUT QUEST, Type, 3
+095, Persia, Mombasa, SENT OUT QUEST, Type, 2
+095, Persia, Mombasa, SENT OUT QUEST, Type, 1
+095, Persia, Mombasa, SENT OUT QUEST, Type, 0
+095, Persia, Vilnius, SENT OUT QUEST, Type, 2
+095, Persia, Vilnius, SENT OUT QUEST, Type, 17
+095, Persia, Vilnius, SENT OUT QUEST, Type, 10
+095, Persia, Bratislava, SENT OUT QUEST, Type, 3
+095, Persia, Bratislava, SENT OUT QUEST, Type, 1
+095, Persia, Bratislava, SENT OUT QUEST, Type, 2
+095, Persia, Genoa, SENT OUT QUEST, Type, 2
+095, Persia, Genoa, SENT OUT QUEST, Type, 3
+095, Persia, Genoa, SENT OUT QUEST, Type, 10
+095, Russia, Quebec City, lost ally
+095, The Maya, Kyiv, SENT OUT QUEST, Type, 3
+095, The Maya, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+095, Assyria, Vilnius, SENT OUT QUEST, Type, 4
+095, Assyria, Vilnius, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+096, Assyria, Milan, SENT OUT QUEST, Type, 10
+096, Assyria, Milan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+096, Egypt, Quebec City, SENT OUT QUEST, Type, 1
+096, Egypt, Quebec City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+096, Brazil, Samarkand, gained friend
+096, Brazil, Samarkand, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+096, Rome, Samarkand, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+096, Egypt, Samarkand, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+096, The Maya, Samarkand, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+096, Brazil, Samarkand, SENT OUT QUEST, Type, 14
+096, Brazil, Samarkand, RECEIVED QUEST, Bully City-State, Friendship: 40 to 40, MINOR_CIV_SAMARKAND
+096, Rome, Vilnius, SENT OUT QUEST, Type, 3
+096, Rome, Vilnius, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+097, Brazil, Samarkand, SENT OUT QUEST, Type, 2
+097, Brazil, Samarkand, SENT OUT QUEST, Type, 14
+097, Germany, Budapest, gained ally
+097, Germany, Budapest, Gold Gift: 250, Friendship: 36 to 61, Conquest, MINOR_CIV_BUDAPEST, Boost! , Passing Brazil
+097, Germany, Mombasa, Gold Gift: 250, Friendship: 31 to 31, Conquest, MINOR_CIV_MOMBASA, (SAVING) , Boost! , Passing Russia
+097, Egypt, Samarkand, era change yield update
+097, Egypt, Ragusa, era change yield update
+097, Egypt, Budapest, era change yield update
+097, Egypt, Antananarivo, era change yield update
+097, Egypt, Cape Town, era change yield update
+097, Egypt, Quebec City, era change yield update
+097, Egypt, Hanoi, era change yield update
+097, Egypt, Milan, era change yield update
+097, Egypt, Zurich, era change yield update
+097, Egypt, Vancouver, era change yield update
+097, Egypt, Monaco, era change yield update
+097, Egypt, Kyiv, era change yield update
+097, Egypt, Mombasa, era change yield update
+097, Egypt, Vilnius, era change yield update
+097, Egypt, Bratislava, era change yield update
+097, Egypt, Genoa, era change yield update
+097, Egypt, Samarkand, SENT OUT QUEST, Type, 2
+097, Egypt, Ragusa, SENT OUT QUEST, Type, 2
+097, Egypt, Ragusa, SENT OUT QUEST, Type, 4
+097, Egypt, Budapest, SENT OUT QUEST, Type, 1
+097, Egypt, Budapest, SENT OUT QUEST, Type, 16
+097, Egypt, Budapest, SENT OUT QUEST, Type, 2
+097, Egypt, Antananarivo, SENT OUT QUEST, Type, 1
+097, Egypt, Antananarivo, SENT OUT QUEST, Type, 16
+097, Egypt, Cape Town, SENT OUT QUEST, Type, 4
+097, Egypt, Cape Town, SENT OUT QUEST, Type, 16
+097, Egypt, Cape Town, SENT OUT QUEST, Type, 1
+097, Egypt, Quebec City, SENT OUT QUEST, Type, 1
+097, Egypt, Hanoi, SENT OUT QUEST, Type, 2
+097, Egypt, Hanoi, SENT OUT QUEST, Type, 4
+097, Egypt, Hanoi, SENT OUT QUEST, Type, 1
+097, Egypt, Milan, SENT OUT QUEST, Type, 10
+097, Egypt, Zurich, SENT OUT QUEST, Type, 1
+097, Egypt, Zurich, SENT OUT QUEST, Type, 2
+097, Egypt, Zurich, SENT OUT QUEST, Type, 4
+097, Egypt, Mombasa, SENT OUT QUEST, Type, 1
+097, Egypt, Mombasa, SENT OUT QUEST, Type, 4
+097, Egypt, Vilnius, SENT OUT QUEST, Type, 7
+097, Egypt, Vilnius, SENT OUT QUEST, Type, 10
+097, Egypt, Genoa, SENT OUT QUEST, Type, 2
+097, Egypt, Genoa, SENT OUT QUEST, Type, 10
+097, Egypt, Quebec City, SENT OUT QUEST, Type, 1
+097, Samarkand, The Maya, RECEIVED_UNIT_GIFT, Atlatlist
+097, Ragusa, Persia, RECEIVED_UNIT_GIFT, Immortal
+097, Germany, Budapest, lost ally
+097, Brazil, Budapest, cancelled, Bully City-State, Friendship: 4 to 4, MINOR_CIV_BUDAPEST
+097, Persia, Antananarivo, gained ally
+097, Persia, Antananarivo, FINISHED QUEST, Kill Camp, Friendship: 36 to 86, MINOR_CIV_ANTANANARIVO
+097, Germany, Hanoi, lost friend
+097, Rome, Milan, gained friend
+097, Rome, Milan, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_MILAN
+097, Assyria, Milan, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+097, Egypt, Milan, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+097, Russia, Milan, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_MILAN
+097, Brazil, Mombasa, lost friend
+097, Germany, Mombasa, lost friend
+097, Persia, Mombasa, gained friend
+097, Persia, Mombasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+097, Persia, Mombasa, gained ally
+097, Persia, Mombasa, FINISHED QUEST, Kill Camp, Friendship: 40 to 90, MINOR_CIV_MOMBASA
+097, Persia, Bratislava, gained friend
+097, Persia, Bratislava, FINISHED QUEST, Kill Camp, Friendship: 0 to 49, MINOR_CIV_BRATISLAVA
+098, Brazil, Vancouver, SENT OUT QUEST, Type, 13
+098, Brazil, Vancouver, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+098, Germany, Samarkand, era change yield update
+098, Germany, Ragusa, era change yield update
+098, Germany, Budapest, era change yield update
+098, Germany, Antananarivo, era change yield update
+098, Germany, Cape Town, era change yield update
+098, Germany, Quebec City, era change yield update
+098, Germany, Hanoi, era change yield update
+098, Germany, Milan, era change yield update
+098, Germany, Zurich, era change yield update
+098, Germany, Vancouver, era change yield update
+098, Germany, Monaco, era change yield update
+098, Germany, Kyiv, era change yield update
+098, Germany, Mombasa, era change yield update
+098, Germany, Vilnius, era change yield update
+098, Germany, Bratislava, era change yield update
+098, Germany, Genoa, era change yield update
+098, Germany, Budapest, SENT OUT QUEST, Type, 1
+098, Germany, Budapest, SENT OUT QUEST, Type, 3
+098, Germany, Quebec City, SENT OUT QUEST, Type, 1
+098, Germany, Quebec City, SENT OUT QUEST, Type, 14
+098, Germany, Hanoi, SENT OUT QUEST, Type, 1
+098, Germany, Vancouver, SENT OUT QUEST, Type, 2
+098, Germany, Vancouver, SENT OUT QUEST, Type, 13
+098, Germany, Mombasa, SENT OUT QUEST, Type, 1
+098, Germany, Vilnius, SENT OUT QUEST, Type, 10
+098, Germany, Bratislava, SENT OUT QUEST, Type, 1
+098, Germany, Genoa, SENT OUT QUEST, Type, 17
+098, Germany, Genoa, SENT OUT QUEST, Type, 10
+098, Germany, Genoa, SENT OUT QUEST, Type, 2
+098, Persia, Mombasa, SENT OUT QUEST, Type, 0
+098, Persia, Ragusa, gained friend
+098, Persia, Ragusa, FINISHED QUEST, Find Natural Wonder, Friendship: 7 to 47, MINOR_CIV_RAGUSA
+098, Brazil, Budapest, gained friend
+098, Brazil, Budapest, gained ally
+098, Brazil, Budapest, FINISHED QUEST, Kill Camp, Friendship: 15 to 65, MINOR_CIV_BUDAPEST
+098, Persia, Budapest, gained friend
+098, Persia, Budapest, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BUDAPEST
+098, Persia, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 85 to 125, MINOR_CIV_ANTANANARIVO
+098, Rome, Antananarivo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+098, Brazil, Antananarivo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+098, Persia, Antananarivo, cancelled, Bully City-State, Friendship: 125 to 125, MINOR_CIV_ANTANANARIVO
+098, Egypt, Antananarivo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+098, Russia, Antananarivo, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+098, Zurich, The Maya, RECEIVED_UNIT_GIFT, Atlatlist
+098, Brazil, Monaco, gained friend
+098, Brazil, Monaco, gained ally
+098, Brazil, Monaco, FINISHED QUEST, Kill Camp, Friendship: 10 to 60, MINOR_CIV_MONACO
+098, Persia, Monaco, gained friend
+098, Persia, Monaco, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MONACO
+098, Brazil, Kyiv, gained friend
+098, Brazil, Kyiv, FINISHED QUEST, Kill Camp, Friendship: 0 to 49, MINOR_CIV_KIEV
+098, Persia, Kyiv, gained friend
+098, Persia, Kyiv, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KIEV
+098, Russia, Mombasa, gained friend
+098, Russia, Mombasa, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_MOMBASA
+098, Rome, Mombasa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+098, Brazil, Mombasa, cancelled, Kill Camp, Friendship: 26 to 26, MINOR_CIV_MOMBASA
+098, Germany, Mombasa, cancelled, Kill Camp, Friendship: 27 to 27, MINOR_CIV_MOMBASA
+098, Assyria, Mombasa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+098, Egypt, Mombasa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+098, The Maya, Mombasa, cancelled, Kill Camp, Friendship: -1 to -1, MINOR_CIV_MOMBASA
+098, Russia, Mombasa, cancelled, Kill Camp, Friendship: 45 to 45, MINOR_CIV_MOMBASA
+098, Brazil, Vilnius, SENT OUT QUEST, Type, 14
+098, Brazil, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+098, Brazil, Bratislava, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+098, Germany, Bratislava, cancelled, Kill Camp, Friendship: -7 to -7, MINOR_CIV_BRATISLAVA
+099, Egypt, Samarkand, gained friend
+099, Egypt, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+099, Rome, Samarkand, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+099, Brazil, Samarkand, cancelled, Bully City-State, Friendship: 35 to 35, MINOR_CIV_SAMARKAND
+099, Ragusa, The Maya, RECEIVED_UNIT_GIFT, Atlatlist
+099, Brazil, Ragusa, lost ally
+099, The Maya, Ragusa, gained ally
+099, The Maya, Ragusa, FINISHED QUEST, Construct Wonder, Friendship: 48 to 88, MINOR_CIV_RAGUSA
+099, Rome, Budapest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+099, Germany, Budapest, cancelled, Kill Camp, Friendship: 56 to 56, MINOR_CIV_BUDAPEST
+099, Germany, Budapest, cancelled, Construct Wonder, Friendship: 56 to 56, MINOR_CIV_BUDAPEST
+099, Persia, Budapest, cancelled, Kill Camp, Friendship: 38 to 38, MINOR_CIV_BUDAPEST
+099, Assyria, Budapest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+099, Egypt, Budapest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+099, Brazil, Antananarivo, gained friend
+099, Brazil, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+099, Russia, Hanoi, cancelled, Construct Wonder, Friendship: 34 to 34, MINOR_CIV_HANOI
+099, Egypt, Milan, SENT OUT QUEST, Type, 7
+099, Egypt, Milan, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MILAN
+099, Brazil, Monaco, lost ally
+099, Rome, Monaco, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+099, Persia, Monaco, cancelled, Kill Camp, Friendship: 38 to 38, MINOR_CIV_MONACO
+099, Assyria, Monaco, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+099, Persia, Kyiv, cancelled, Kill Camp, Friendship: 38 to 38, MINOR_CIV_KIEV
+099, The Maya, Kyiv, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+099, The Maya, Vilnius, gained friend
+099, The Maya, Vilnius, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+099, Persia, Bratislava, cancelled, Construct Wonder, Friendship: 46 to 46, MINOR_CIV_BRATISLAVA
+099, Assyria, Genoa, lost friend
+099, Persia, Genoa, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_GENOA
+099, Egypt, Genoa, SENT OUT QUEST, Type, 14
+099, Egypt, Genoa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_GENOA
+100, Germany, Quebec City, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+100, Germany, Quebec City, SENT OUT QUEST, Type, 2
+100, Germany, Quebec City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+100, Mombasa, The Maya, RECEIVED_UNIT_GIFT, Atlatlist
+100, The Maya, Mombasa, cancelled, Bully City-State, Friendship: 2 to 2, MINOR_CIV_MOMBASA
+100, Brazil, Genoa, gained friend
+100, Brazil, Genoa, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_GENOA
+100, Rome, Genoa, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_GENOA
+100, Germany, Genoa, cancelled, Contest Culture, Friendship: 50 to 50, MINOR_CIV_GENOA
+100, Persia, Genoa, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_GENOA
+100, Assyria, Genoa, cancelled, Contest Culture, Friendship: 28 to 28, MINOR_CIV_GENOA
+100, Egypt, Genoa, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_GENOA
+101, Brazil, Hanoi, SENT OUT QUEST, Type, 1
+101, Brazil, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+101, Assyria, Samarkand, era change yield update
+101, Assyria, Ragusa, era change yield update
+101, Assyria, Budapest, era change yield update
+101, Assyria, Antananarivo, era change yield update
+101, Assyria, Cape Town, era change yield update
+101, Assyria, Quebec City, era change yield update
+101, Assyria, Hanoi, era change yield update
+101, Assyria, Milan, era change yield update
+101, Assyria, Zurich, era change yield update
+101, Assyria, Vancouver, era change yield update
+101, Assyria, Monaco, era change yield update
+101, Assyria, Kyiv, era change yield update
+101, Assyria, Mombasa, era change yield update
+101, Assyria, Vilnius, era change yield update
+101, Assyria, Bratislava, era change yield update
+101, Assyria, Genoa, era change yield update
+101, Assyria, Budapest, SENT OUT QUEST, Type, 2
+101, Assyria, Cape Town, SENT OUT QUEST, Type, 2
+101, Assyria, Cape Town, SENT OUT QUEST, Type, 7
+101, Assyria, Cape Town, SENT OUT QUEST, Type, 1
+101, Assyria, Quebec City, SENT OUT QUEST, Type, 1
+101, Assyria, Quebec City, SENT OUT QUEST, Type, 7
+101, Assyria, Hanoi, SENT OUT QUEST, Type, 2
+101, Assyria, Hanoi, SENT OUT QUEST, Type, 1
+101, Assyria, Hanoi, SENT OUT QUEST, Type, 3
+101, Assyria, Monaco, SENT OUT QUEST, Type, 2
+101, Assyria, Monaco, SENT OUT QUEST, Type, 3
+101, Assyria, Mombasa, SENT OUT QUEST, Type, 2
+101, Assyria, Mombasa, SENT OUT QUEST, Type, 4
+101, Assyria, Vilnius, SENT OUT QUEST, Type, 10
+101, Assyria, Vilnius, SENT OUT QUEST, Type, 4
+101, Assyria, Genoa, SENT OUT QUEST, Type, 7
+101, The Maya, Quebec City, SENT OUT QUEST, Type, 1
+101, The Maya, Quebec City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+101, Russia, Quebec City, gained ally
+102, Persia, Ragusa, SENT OUT QUEST, Type, 3
+102, Persia, Ragusa, RECEIVED QUEST, Construct Wonder, Friendship: 41 to 41, MINOR_CIV_RAGUSA
+102, Brazil, Budapest, lost ally
+102, Rome, Milan, lost friend
+102, Rome, Milan, SENT OUT QUEST, Type, 2
+102, Rome, Milan, RECEIVED QUEST, Connect Resource, Friendship: 28 to 28, MINOR_CIV_MILAN
+102, Rome, Mombasa, SENT OUT QUEST, Type, 3
+102, Rome, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+103, Brazil, Samarkand, lost friend
+103, Assyria, Ragusa, SENT OUT QUEST, Type, 2
+103, Assyria, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: -6 to -6, MINOR_CIV_RAGUSA
+103, Russia, Quebec City, lost ally
+103, Russia, Hanoi, lost friend
+103, Germany, Hanoi, SENT OUT QUEST, Type, 14
+103, Germany, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 20 to 20, MINOR_CIV_HANOI
+103, Germany, Vancouver, SENT OUT QUEST, Type, 7
+103, Germany, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+103, Monaco, Persia, RECEIVED_UNIT_GIFT, Warrior
+103, Mombasa, Germany, RECEIVED_UNIT_GIFT, Spearman
+103, Brazil, Genoa, SENT OUT QUEST, Type, 7
+103, Brazil, Genoa, RECEIVED QUEST, Find Natural Wonder, Friendship: 40 to 40, MINOR_CIV_GENOA
+104, The Maya, Samarkand, gained friend
+104, The Maya, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+104, Russia, Cape Town, SENT OUT QUEST, Type, 4
+104, Russia, Cape Town, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+104, Assyria, Hanoi, gained friend
+104, Assyria, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_HANOI
+104, The Maya, Vilnius, lost friend
+105, Brazil, Quebec City, SENT OUT QUEST, Type, 1
+105, Brazil, Quebec City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+105, Russia, Mombasa, Gold Gift: 250, Friendship: 31 to 56, Culture, MINOR_CIV_MOMBASA, Boost! , Passing Germany
+105, Russia, Vilnius, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_VILNIUS, (SAVING) 
+105, Persia, Budapest, lost friend
+105, Assyria, Quebec City, SENT OUT QUEST, Type, 17
+105, Assyria, Quebec City, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_QUEBEC_CITY
+105, Persia, Kyiv, lost friend
+106, Egypt, Samarkand, lost friend
+106, Assyria, Budapest, SENT OUT QUEST, Type, 4
+106, Assyria, Budapest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+106, Brazil, Antananarivo, lost friend
+106, Persia, Monaco, SENT OUT QUEST, Type, 14
+106, Persia, Monaco, RECEIVED QUEST, Bully City-State, Friendship: 33 to 33, MINOR_CIV_MONACO
+106, Germany, Mombasa, SENT OUT QUEST, Type, 14
+106, Germany, Mombasa, RECEIVED QUEST, Bully City-State, Friendship: 14 to 14, MINOR_CIV_MOMBASA
+106, Egypt, Vilnius, SENT OUT QUEST, Type, 14
+106, Egypt, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+106, Assyria, Genoa, SENT OUT QUEST, Type, 2
+106, Assyria, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 19 to 19, MINOR_CIV_GENOA
+107, Egypt, Cape Town, gained friend
+107, Egypt, Cape Town, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_CAPE_TOWN
+107, Egypt, Mombasa, gained friend
+107, Egypt, Mombasa, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+107, Ragusa, Egypt, RECEIVED_UNIT_GIFT, Warrior
+107, Brazil, Budapest, SENT OUT QUEST, Type, 4
+107, Brazil, Budapest, RECEIVED QUEST, Great Person, Friendship: 52 to 52, MINOR_CIV_BUDAPEST
+107, Germany, Budapest, SENT OUT QUEST, Type, 17
+107, Germany, Budapest, RECEIVED QUEST, Trade Route, Friendship: 44 to 44, MINOR_CIV_BUDAPEST
+107, Russia, Quebec City, SENT OUT QUEST, Type, 4
+107, Russia, Quebec City, RECEIVED QUEST, Great Person, Friendship: 53 to 53, MINOR_CIV_QUEBEC_CITY
+108, Brazil, Ragusa, SENT OUT QUEST, Type, 0
+108, Brazil, Ragusa, RECEIVED QUEST, Route, Friendship: 49 to 49, MINOR_CIV_RAGUSA
+108, Brazil, Antananarivo, cancelled, Bully City-State, Friendship: 26 to 26, MINOR_CIV_ANTANANARIVO
+108, Rome, Monaco, SENT OUT QUEST, Type, 16
+108, Rome, Monaco, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_MONACO
+108, Persia, Kyiv, cancelled, Construct Wonder, Friendship: 25 to 25, MINOR_CIV_KIEV
+108, Assyria, Vilnius, SENT OUT QUEST, Type, 2
+108, Assyria, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+108, Germany, Bratislava, SENT OUT QUEST, Type, 7
+108, Germany, Bratislava, RECEIVED QUEST, Find Natural Wonder, Friendship: -4 to -4, MINOR_CIV_BRATISLAVA
+109, Brazil, Budapest, gained ally
+109, Brazil, Budapest, FINISHED QUEST, Great Person, Friendship: 50 to 90, MINOR_CIV_BUDAPEST
+109, Assyria, Vilnius, gained friend
+109, Assyria, Vilnius, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+109, Antananarivo, Russia, RECEIVED_UNIT_GIFT, Spearman
+109, Monaco, Persia, RECEIVED_UNIT_GIFT, Immortal
+110, Egypt, Cape Town, SENT OUT QUEST, Type, 16
+110, Egypt, Cape Town, SENT OUT QUEST, Type, 1
+110, Egypt, Hanoi, SENT OUT QUEST, Type, 2
+110, Egypt, Hanoi, SENT OUT QUEST, Type, 4
+110, Egypt, Hanoi, SENT OUT QUEST, Type, 1
+110, Persia, Ragusa, lost friend
+110, Rome, Ragusa, gained friend
+110, Rome, Ragusa, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_RAGUSA
+110, Persia, Ragusa, cancelled, Construct Wonder, Friendship: 29 to 29, MINOR_CIV_RAGUSA
+110, Rome, Cape Town, gained friend
+110, Rome, Cape Town, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_CAPE_TOWN
+110, Assyria, Cape Town, gained friend
+110, Assyria, Cape Town, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_CAPE_TOWN
+110, Assyria, Quebec City, gained friend
+110, Assyria, Quebec City, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_QUEBEC_CITY
+110, Assyria, Hanoi, cancelled, Construct Wonder, Friendship: 36 to 36, MINOR_CIV_HANOI
+110, Rome, Milan, gained friend
+110, Rome, Milan, FINISHED QUEST, Connect Resource, Friendship: 11 to 51, MINOR_CIV_MILAN
+110, Rome, Milan, cancelled, Construct Wonder, Friendship: 51 to 51, MINOR_CIV_MILAN
+110, Assyria, Monaco, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+110, Rome, Vilnius, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+110, Egypt, Vilnius, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+110, Assyria, Genoa, gained friend
+110, Assyria, Genoa, FINISHED QUEST, Find Natural Wonder, Friendship: 13 to 53, MINOR_CIV_GENOA
+111, The Maya, Samarkand, lost friend
+111, Assyria, Milan, SENT OUT QUEST, Type, 4
+111, Assyria, Milan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MILAN
+111, Egypt, Zurich, gained friend
+111, Egypt, Zurich, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ZURICH
+111, Rome, Vancouver, SENT OUT QUEST, Type, 4
+111, Rome, Vancouver, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+111, The Maya, Kyiv, SENT OUT QUEST, Type, 2
+111, The Maya, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+111, Persia, Mombasa, lost ally
+111, Egypt, Mombasa, lost friend
+111, Persia, Bratislava, lost friend
+111, Brazil, Genoa, lost friend
+112, The Maya, Hanoi, SENT OUT QUEST, Type, 1
+112, The Maya, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+112, Rome, Samarkand, SENT OUT QUEST, Type, 4
+112, Rome, Samarkand, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+112, Ragusa, Egypt, RECEIVED_UNIT_GIFT, Warrior
+112, Rome, Budapest, SENT OUT QUEST, Type, 16
+112, Rome, Budapest, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+112, Egypt, Quebec City, SENT OUT QUEST, Type, 7
+112, Egypt, Quebec City, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_QUEBEC_CITY
+112, Persia, Monaco, lost friend
+112, Brazil, Kyiv, lost friend
+112, The Maya, Kyiv, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+112, Rome, Mombasa, gained friend
+112, Rome, Mombasa, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+113, Egypt, Cape Town, lost friend
+113, Brazil, Vancouver, SENT OUT QUEST, Type, 7
+113, Brazil, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: -4 to -4, MINOR_CIV_VANCOUVER
+113, Assyria, Vilnius, lost friend
+113, Brazil, Vilnius, gained friend
+113, Brazil, Vilnius, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+113, Rome, Vilnius, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+113, Germany, Vilnius, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+113, Persia, Vilnius, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+113, Assyria, Vilnius, cancelled, Contest Culture, Friendship: 28 to 28, MINOR_CIV_VILNIUS
+113, Egypt, Vilnius, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+113, The Maya, Vilnius, cancelled, Contest Culture, Friendship: 8 to 8, MINOR_CIV_VILNIUS
+113, Russia, Vilnius, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+114, Brazil, Cape Town, SENT OUT QUEST, Type, 1
+114, Brazil, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+114, Brazil, Samarkand, SENT OUT QUEST, Type, 0
+114, Brazil, Samarkand, RECEIVED QUEST, Route, Friendship: 7 to 7, MINOR_CIV_SAMARKAND
+114, Egypt, Ragusa, gained friend
+114, Egypt, Ragusa, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_RAGUSA
+114, Persia, Budapest, SENT OUT QUEST, Type, 16
+114, Persia, Budapest, RECEIVED QUEST, Spread Religion, Friendship: 16 to 16, MINOR_CIV_BUDAPEST
+114, Assyria, Quebec City, gained ally
+114, Assyria, Quebec City, FINISHED QUEST, Trade Route, Friendship: 39 to 79, MINOR_CIV_QUEBEC_CITY
+114, Rome, Vancouver, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+114, Germany, Vancouver, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+114, Brazil, Vancouver, FINISHED QUEST, Invest, Friendship: -9 to -9, MINOR_CIV_VANCOUVER
+114, Brazil, Monaco, SENT OUT QUEST, Type, 17
+114, Brazil, Monaco, RECEIVED QUEST, Trade Route, Friendship: 36 to 36, MINOR_CIV_MONACO
+114, Germany, Genoa, lost friend
+115, The Maya, Ragusa, SENT OUT QUEST, Type, 2
+115, The Maya, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 64 to 64, MINOR_CIV_RAGUSA
+115, Assyria, Hanoi, lost friend
+115, Brazil, Kyiv, SENT OUT QUEST, Type, 4
+115, Brazil, Kyiv, RECEIVED QUEST, Great Person, Friendship: 24 to 24, MINOR_CIV_KIEV
+115, Russia, Mombasa, SENT OUT QUEST, Type, 16
+115, Russia, Mombasa, RECEIVED QUEST, Spread Religion, Friendship: 32 to 32, MINOR_CIV_MOMBASA
+115, Rome, Genoa, SENT OUT QUEST, Type, 2
+115, Rome, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENOA
+116, Rome, Cape Town, Gold Gift: 250, Friendship: 37 to 57, Diplomacy, MINOR_CIV_CAPE_TOWN, Boost! , Passing Egypt
+116, Rome, Ragusa, Gold Gift: 250, Friendship: 37 to 37, Diplomacy, MINOR_CIV_RAGUSA, (SAVING) , Boost! , Passing Persia
+116, Persia, Cape Town, SENT OUT QUEST, Type, 1
+116, Persia, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+116, Rome, Antananarivo, SENT OUT QUEST, Type, 16
+116, Rome, Antananarivo, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+116, Persia, Antananarivo, SENT OUT QUEST, Type, 2
+116, Persia, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 98 to 98, MINOR_CIV_ANTANANARIVO
+116, Egypt, Antananarivo, SENT OUT QUEST, Type, 4
+116, Egypt, Antananarivo, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+116, Brazil, Hanoi, SENT OUT QUEST, Type, 2
+116, Brazil, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+116, Russia, Mombasa, lost friend
+117, The Maya, Ragusa, lost ally
+117, Rome, Ragusa, gained ally
+117, Rome, Ragusa, FINISHED QUEST, Find Natural Wonder, Friendship: 34 to 74, MINOR_CIV_RAGUSA
+117, Germany, Budapest, lost friend
+117, Rome, Antananarivo, gained friend
+117, Rome, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+117, Germany, Antananarivo, SENT OUT QUEST, Type, 2
+117, Germany, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+117, Assyria, Cape Town, lost friend
+117, Rome, Cape Town, gained ally
+117, Rome, Cape Town, FINISHED QUEST, Find Natural Wonder, Friendship: 54 to 94, MINOR_CIV_CAPE_TOWN
+117, Brazil, Quebec City, SENT OUT QUEST, Type, 2
+117, Brazil, Quebec City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+117, The Maya, Quebec City, SENT OUT QUEST, Type, 2
+117, The Maya, Quebec City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+117, Russia, Hanoi, SENT OUT QUEST, Type, 2
+117, Russia, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 7 to 7, MINOR_CIV_HANOI
+117, Rome, Zurich, SENT OUT QUEST, Type, 16
+117, Rome, Zurich, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_ZURICH
+117, Persia, Kyiv, SENT OUT QUEST, Type, 4
+117, Persia, Kyiv, RECEIVED QUEST, Great Person, Friendship: 11 to 11, MINOR_CIV_KIEV
+117, Rome, Mombasa, lost friend
+117, Brazil, Mombasa, SENT OUT QUEST, Type, 14
+117, Brazil, Mombasa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+117, Rome, Genoa, gained friend
+117, Rome, Genoa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_GENOA
+118, Egypt, Samarkand, SENT OUT QUEST, Type, 14
+118, Egypt, Samarkand, RECEIVED QUEST, Bully City-State, Friendship: 11 to 11, MINOR_CIV_SAMARKAND
+118, Egypt, Quebec City, gained friend
+118, Egypt, Quebec City, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_QUEBEC_CITY
+118, Egypt, Hanoi, gained friend
+118, Egypt, Hanoi, gained ally
+118, Egypt, Hanoi, FINISHED QUEST, Kill Camp, Friendship: 15 to 65, MINOR_CIV_HANOI
+118, Egypt, Milan, SENT OUT QUEST, Type, 4
+118, Egypt, Milan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MILAN
+118, Egypt, Zurich, lost friend
+118, Brazil, Vilnius, lost friend
+118, Brazil, Vilnius, cancelled, Bully City-State, Friendship: 28 to 28, MINOR_CIV_VILNIUS
+118, Germany, Vilnius, SENT OUT QUEST, Type, 2
+118, Germany, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+118, Persia, Bratislava, SENT OUT QUEST, Type, 14
+118, Persia, Bratislava, RECEIVED QUEST, Bully City-State, Friendship: 18 to 18, MINOR_CIV_BRATISLAVA
+119, Assyria, Hanoi, SENT OUT QUEST, Type, 1
+119, Russia, Cape Town, gained friend
+119, Russia, Cape Town, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_CAPE_TOWN
+119, Russia, Milan, gained friend
+119, Russia, Milan, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_MILAN
+119, Russia, Vilnius, gained friend
+119, Russia, Vilnius, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_VILNIUS
+119, Ragusa, Germany, RECEIVED_UNIT_GIFT, Spearman
+119, Brazil, Quebec City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+119, Germany, Quebec City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+119, Assyria, Quebec City, cancelled, Kill Camp, Friendship: 71 to 71, MINOR_CIV_QUEBEC_CITY
+119, The Maya, Quebec City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+119, Russia, Quebec City, cancelled, Kill Camp, Friendship: 35 to 35, MINOR_CIV_QUEBEC_CITY
+119, Brazil, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+119, Germany, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+119, Assyria, Hanoi, cancelled, Kill Camp, Friendship: 22 to 22, MINOR_CIV_HANOI
+119, The Maya, Hanoi, cancelled, Kill Camp, Friendship: 6 to 6, MINOR_CIV_HANOI
+119, Russia, Hanoi, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HANOI
+119, Assyria, Hanoi, SENT OUT QUEST, Type, 4
+119, Assyria, Hanoi, RECEIVED QUEST, Great Person, Friendship: 22 to 22, MINOR_CIV_HANOI
+119, Brazil, Monaco, lost friend
+119, The Maya, Vilnius, SENT OUT QUEST, Type, 7
+119, The Maya, Vilnius, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+119, Egypt, Genoa, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_GENOA
+120, Brazil, Monaco, SENT OUT QUEST, Type, 17
+120, Russia, Quebec City, Gold Gift: 250, Friendship: 35 to 55, Spaceship, MINOR_CIV_QUEBEC_CITY, Boost! 
+120, Russia, Mombasa, Gold Gift: 500, Friendship: 23 to 23, Spaceship, MINOR_CIV_MOMBASA, (SAVING) , Passing Egypt
+120, Egypt, Cape Town, SENT OUT QUEST, Type, 2
+120, Egypt, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 19 to 19, MINOR_CIV_CAPE_TOWN
+120, Rome, Milan, lost friend
+121, The Maya, Samarkand, SENT OUT QUEST, Type, 3
+121, The Maya, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 14 to 14, MINOR_CIV_SAMARKAND
+121, Budapest, Germany, RECEIVED_UNIT_GIFT, Warrior
+121, Germany, Budapest, gained friend
+121, Germany, Budapest, lost friend
+121, Germany, Hanoi, SENT OUT QUEST, Type, 7
+121, Germany, Hanoi, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+121, Brazil, Bratislava, SENT OUT QUEST, Type, 14
+121, Brazil, Bratislava, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+122, Brazil, Kyiv, gained friend
+122, Brazil, Kyiv, FINISHED QUEST, Great Person, Friendship: 15 to 55, MINOR_CIV_KIEV
+122, Brazil, Ragusa, lost friend
+122, Brazil, Budapest, SENT OUT QUEST, Type, 4
+122, Brazil, Budapest, RECEIVED QUEST, Great Person, Friendship: 69 to 69, MINOR_CIV_BUDAPEST
+122, Cape Town, Egypt, RECEIVED_UNIT_GIFT, Warrior
+122, Assyria, Quebec City, lost ally
+122, Egypt, Quebec City, gained ally
+122, Egypt, Quebec City, FINISHED QUEST, Find Natural Wonder, Friendship: 49 to 89, MINOR_CIV_QUEBEC_CITY
+122, Egypt, Milan, gained friend
+122, Egypt, Milan, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MILAN
+122, Egypt, Vilnius, gained friend
+122, Egypt, Vilnius, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+123, Egypt, Quebec City, lost ally
+123, Russia, Quebec City, gained ally
+123, Russia, Quebec City, FINISHED QUEST, Great Person, Friendship: 51 to 91, MINOR_CIV_QUEBEC_CITY
+123, Germany, Budapest, SENT OUT QUEST, Type, 2
+123, Germany, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 25 to 25, MINOR_CIV_BUDAPEST
+123, Antananarivo, Egypt, RECEIVED_UNIT_GIFT, Spearman
+123, Germany, Hanoi, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
+123, Persia, Milan, SENT OUT QUEST, Type, 3
+123, Persia, Milan, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MILAN
+123, Persia, Genoa, SENT OUT QUEST, Type, 4
+123, Persia, Genoa, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_GENOA
+124, Rome, Ragusa, Gold Gift: 250, Friendship: 65 to 85, Diplomacy, MINOR_CIV_RAGUSA, Boost! , Passing The Maya
+124, Rome, Zurich, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_ZURICH, (SAVING) 
+124, Budapest, Germany, RECEIVED_UNIT_GIFT, Spearman
+124, Germany, Budapest, gained friend
+124, Germany, Budapest, lost friend
+124, Rome, Antananarivo, lost friend
+124, Brazil, Antananarivo, SENT OUT QUEST, Type, 4
+124, Brazil, Antananarivo, RECEIVED QUEST, Great Person, Friendship: 2 to 2, MINOR_CIV_ANTANANARIVO
+124, Assyria, Antananarivo, SENT OUT QUEST, Type, 4
+124, Assyria, Antananarivo, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+124, Assyria, Cape Town, SENT OUT QUEST, Type, 14
+124, Assyria, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 19 to 19, MINOR_CIV_CAPE_TOWN
+124, Egypt, Hanoi, lost ally
+124, Rome, Milan, SENT OUT QUEST, Type, 10
+124, Rome, Milan, RECEIVED QUEST, Contest Culture, Friendship: 19 to 19, MINOR_CIV_MILAN
+124, Germany, Milan, SENT OUT QUEST, Type, 10
+124, Germany, Milan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+124, Persia, Milan, SENT OUT QUEST, Type, 10
+124, Persia, Milan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+124, Assyria, Milan, SENT OUT QUEST, Type, 10
+124, Assyria, Milan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+124, Egypt, Milan, SENT OUT QUEST, Type, 10
+124, Egypt, Milan, RECEIVED QUEST, Contest Culture, Friendship: 35 to 35, MINOR_CIV_MILAN
+124, Russia, Milan, SENT OUT QUEST, Type, 10
+124, Russia, Milan, RECEIVED QUEST, Contest Culture, Friendship: 31 to 31, MINOR_CIV_MILAN
+124, Rome, Kyiv, SENT OUT QUEST, Type, 13
+124, Rome, Kyiv, RECEIVED QUEST, Invest, Friendship: -1 to -1, MINOR_CIV_KIEV
+124, Brazil, Kyiv, SENT OUT QUEST, Type, 13
+124, Brazil, Kyiv, RECEIVED QUEST, Invest, Friendship: 51 to 51, MINOR_CIV_KIEV
+124, Persia, Kyiv, SENT OUT QUEST, Type, 13
+124, Persia, Kyiv, RECEIVED QUEST, Invest, Friendship: 1 to 1, MINOR_CIV_KIEV
+124, The Maya, Kyiv, SENT OUT QUEST, Type, 13
+124, The Maya, Kyiv, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KIEV
+124, Persia, Mombasa, lost friend
+124, Germany, Bratislava, SENT OUT QUEST, Type, 2
+124, Germany, Bratislava, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_BRATISLAVA
+124, Assyria, Bratislava, SENT OUT QUEST, Type, 4
+124, Assyria, Bratislava, RECEIVED QUEST, Great Person, Friendship: -27 to -27, MINOR_CIV_BRATISLAVA
+124, Rome, Genoa, lost friend
+125, Brazil, Budapest, Gold Gift: 250, Friendship: 66 to 86, Culture, MINOR_CIV_BUDAPEST, Boost! , Passing Persia
+125, Brazil, Ragusa, Gold Gift: 500, Friendship: 25 to 25, Culture, MINOR_CIV_RAGUSA, (SAVING) , Passing Persia
+125, Brazil, Zurich, SENT OUT QUEST, Type, 1
+125, Brazil, Zurich, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZURICH
+125, Persia, Mombasa, SENT OUT QUEST, Type, 0
+125, Egypt, Ragusa, lost friend
+125, Assyria, Ragusa, SENT OUT QUEST, Type, 4
+125, Assyria, Ragusa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+125, Germany, Budapest, gained friend
+125, Germany, Budapest, FINISHED QUEST, Connect Resource, Friendship: 27 to 67, MINOR_CIV_BUDAPEST
+125, Russia, Cape Town, lost friend
+125, Russia, Milan, lost friend
+125, Germany, Milan, SENT OUT QUEST, Type, 4
+125, Germany, Milan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MILAN
+125, Russia, Vilnius, lost friend
+125, Germany, Genoa, gained friend
+125, Germany, Genoa, FINISHED QUEST, Connect Resource, Friendship: 12 to 52, MINOR_CIV_GENOA
+126, Egypt, Cape Town, SENT OUT QUEST, Type, 16
+126, Egypt, Cape Town, SENT OUT QUEST, Type, 1
+126, Egypt, Cape Town, SENT OUT QUEST, Type, 2
+126, Germany, Quebec City, SENT OUT QUEST, Type, 3
+126, Germany, Quebec City, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+126, Hanoi, Germany, RECEIVED_UNIT_GIFT, Spearman
+126, Persia, Monaco, cancelled, Bully City-State, Friendship: 8 to 8, MINOR_CIV_MONACO
+126, Germany, Mombasa, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+126, Rome, Vilnius, SENT OUT QUEST, Type, 16
+126, Rome, Vilnius, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+126, Assyria, Genoa, lost friend
+126, Brazil, Genoa, SENT OUT QUEST, Type, 2
+126, Brazil, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 6 to 6, MINOR_CIV_GENOA
+127, Egypt, Milan, lost friend
+127, Egypt, Vilnius, lost friend
+127, Egypt, Vilnius, SENT OUT QUEST, Type, 14
+127, Egypt, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 28 to 28, MINOR_CIV_VILNIUS
+127, Rome, Genoa, SENT OUT QUEST, Type, 12
+127, Rome, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 25 to 25, MINOR_CIV_GENOA
+127, Brazil, Genoa, SENT OUT QUEST, Type, 12
+127, Brazil, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_GENOA
+127, Germany, Genoa, SENT OUT QUEST, Type, 12
+127, Germany, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 49 to 49, MINOR_CIV_GENOA
+127, Persia, Genoa, SENT OUT QUEST, Type, 12
+127, Persia, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_GENOA
+127, Assyria, Genoa, SENT OUT QUEST, Type, 12
+127, Assyria, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 27 to 27, MINOR_CIV_GENOA
+127, Egypt, Genoa, SENT OUT QUEST, Type, 12
+127, Egypt, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+128, Ragusa, Persia, RECEIVED_UNIT_GIFT, Horseman
+128, Ragusa, Egypt, RECEIVED_UNIT_GIFT, Spearman
+128, Egypt, Ragusa, gained friend
+128, Egypt, Ragusa, lost friend
+128, Antananarivo, Germany, RECEIVED_UNIT_GIFT, Spearman
+128, Russia, Cape Town, SENT OUT QUEST, Type, 14
+128, Russia, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 25 to 25, MINOR_CIV_CAPE_TOWN
+129, Brazil, Cape Town, SENT OUT QUEST, Type, 4
+129, Brazil, Cape Town, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+129, Egypt, Quebec City, SENT OUT QUEST, Type, 17
+129, Egypt, Quebec City, RECEIVED QUEST, Trade Route, Friendship: 78 to 78, MINOR_CIV_QUEBEC_CITY
+129, The Maya, Hanoi, SENT OUT QUEST, Type, 14
+129, The Maya, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
+129, Brazil, Vancouver, gained friend
+129, Brazil, Vancouver, FINISHED QUEST, Find Natural Wonder, Friendship: -1 to 38, MINOR_CIV_VANCOUVER
+129, Brazil, Vancouver, SENT OUT QUEST, Type, 2
+129, Brazil, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 38 to 38, MINOR_CIV_VANCOUVER
+129, Assyria, Monaco, SENT OUT QUEST, Type, 7
+129, Assyria, Monaco, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+129, Brazil, Kyiv, SENT OUT QUEST, Type, 3
+129, Brazil, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 43 to 43, MINOR_CIV_KIEV
+129, Rome, Mombasa, SENT OUT QUEST, Type, 12
+129, Rome, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 2 to 2, MINOR_CIV_MOMBASA
+129, Brazil, Mombasa, SENT OUT QUEST, Type, 12
+129, Brazil, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, Germany, Mombasa, SENT OUT QUEST, Type, 12
+129, Germany, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+129, Persia, Mombasa, SENT OUT QUEST, Type, 12
+129, Persia, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 18 to 18, MINOR_CIV_MOMBASA
+129, Assyria, Mombasa, SENT OUT QUEST, Type, 12
+129, Assyria, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, Egypt, Mombasa, SENT OUT QUEST, Type, 12
+129, Egypt, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, The Maya, Mombasa, SENT OUT QUEST, Type, 12
+129, The Maya, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, Russia, Mombasa, SENT OUT QUEST, Type, 12
+129, Russia, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+129, Egypt, Mombasa, SENT OUT QUEST, Type, 3
+129, Egypt, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, Brazil, Bratislava, gained friend
+129, Brazil, Bratislava, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BRATISLAVA
+129, Brazil, Genoa, gained friend
+129, Brazil, Genoa, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_GENOA
+130, Rome, Samarkand, gained friend
+130, Rome, Samarkand, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_SAMARKAND
+130, Rome, Vancouver, gained friend
+130, Rome, Vancouver, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
+130, Egypt, Ragusa, SENT OUT QUEST, Type, 7
+130, Egypt, Ragusa, RECEIVED QUEST, Find Natural Wonder, Friendship: 26 to 26, MINOR_CIV_RAGUSA
+130, Quebec City, Germany, RECEIVED_UNIT_GIFT, Spearman
+130, Assyria, Quebec City, SENT OUT QUEST, Type, 7
+130, Assyria, Quebec City, RECEIVED QUEST, Find Natural Wonder, Friendship: 55 to 55, MINOR_CIV_QUEBEC_CITY
+130, The Maya, Quebec City, SENT OUT QUEST, Type, 3
+130, The Maya, Quebec City, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+130, Persia, Monaco, SENT OUT QUEST, Type, 3
+130, Persia, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 2 to 2, MINOR_CIV_MONACO
+130, Rome, Kyiv, SENT OUT QUEST, Type, 3
+130, Rome, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KIEV
+131, Germany, Zurich, SENT OUT QUEST, Type, 1
+131, Germany, Zurich, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZURICH
+131, Rome, Samarkand, SENT OUT QUEST, Type, 10
+131, Rome, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 42 to 42, MINOR_CIV_SAMARKAND
+131, Brazil, Samarkand, SENT OUT QUEST, Type, 10
+131, Brazil, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+131, Germany, Samarkand, SENT OUT QUEST, Type, 10
+131, Germany, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+131, Egypt, Samarkand, SENT OUT QUEST, Type, 10
+131, Egypt, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+131, The Maya, Samarkand, SENT OUT QUEST, Type, 10
+131, The Maya, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+131, Ragusa, Persia, RECEIVED_UNIT_GIFT, Immortal
+131, Persia, Ragusa, SENT OUT QUEST, Type, 17
+131, Persia, Ragusa, RECEIVED QUEST, Trade Route, Friendship: 9 to 9, MINOR_CIV_RAGUSA
+131, Cape Town, Russia, RECEIVED_UNIT_GIFT, Swordsman
+131, Assyria, Genoa, SENT OUT QUEST, Type, 3
+131, Assyria, Genoa, RECEIVED QUEST, Construct Wonder, Friendship: 15 to 15, MINOR_CIV_GENOA
+132, Rome, Ragusa, SENT OUT QUEST, Type, 13
+132, Rome, Ragusa, RECEIVED QUEST, Invest, Friendship: 72 to 72, MINOR_CIV_RAGUSA
+132, Brazil, Ragusa, SENT OUT QUEST, Type, 13
+132, Brazil, Ragusa, RECEIVED QUEST, Invest, Friendship: 13 to 13, MINOR_CIV_RAGUSA
+132, Germany, Ragusa, SENT OUT QUEST, Type, 13
+132, Germany, Ragusa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+132, Persia, Ragusa, SENT OUT QUEST, Type, 13
+132, Persia, Ragusa, RECEIVED QUEST, Invest, Friendship: 7 to 7, MINOR_CIV_RAGUSA
+132, Assyria, Ragusa, SENT OUT QUEST, Type, 13
+132, Assyria, Ragusa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+132, Egypt, Ragusa, SENT OUT QUEST, Type, 13
+132, Egypt, Ragusa, RECEIVED QUEST, Invest, Friendship: 23 to 23, MINOR_CIV_RAGUSA
+132, The Maya, Ragusa, SENT OUT QUEST, Type, 13
+132, The Maya, Ragusa, RECEIVED QUEST, Invest, Friendship: 38 to 38, MINOR_CIV_RAGUSA
+132, Russia, Ragusa, SENT OUT QUEST, Type, 13
+132, Russia, Ragusa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+132, Rome, Ragusa, SENT OUT QUEST, Type, 3
+132, Rome, Ragusa, RECEIVED QUEST, Construct Wonder, Friendship: 72 to 72, MINOR_CIV_RAGUSA
+132, Germany, Ragusa, SENT OUT QUEST, Type, 2
+132, Germany, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+132, The Maya, Milan, SENT OUT QUEST, Type, 10
+132, The Maya, Milan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+132, Rome, Monaco, SENT OUT QUEST, Type, 14
+132, Rome, Monaco, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MONACO
+132, Brazil, Monaco, SENT OUT QUEST, Type, 4
+132, Brazil, Monaco, RECEIVED QUEST, Great Person, Friendship: 9 to 9, MINOR_CIV_MONACO
+132, Persia, Mombasa, SENT OUT QUEST, Type, 2
+132, Persia, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 11 to 11, MINOR_CIV_MOMBASA
+133, Rome, Budapest, SENT OUT QUEST, Type, 13
+133, Rome, Budapest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+133, Brazil, Budapest, SENT OUT QUEST, Type, 13
+133, Brazil, Budapest, RECEIVED QUEST, Invest, Friendship: 73 to 73, MINOR_CIV_BUDAPEST
+133, Germany, Budapest, SENT OUT QUEST, Type, 13
+133, Germany, Budapest, RECEIVED QUEST, Invest, Friendship: 55 to 55, MINOR_CIV_BUDAPEST
+133, Persia, Budapest, SENT OUT QUEST, Type, 13
+133, Persia, Budapest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+133, Assyria, Budapest, SENT OUT QUEST, Type, 13
+133, Assyria, Budapest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+133, Egypt, Budapest, SENT OUT QUEST, Type, 13
+133, Egypt, Budapest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+133, Rome, Cape Town, SENT OUT QUEST, Type, 7
+133, Rome, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: 70 to 70, MINOR_CIV_CAPE_TOWN
+133, Assyria, Milan, SENT OUT QUEST, Type, 3
+133, Assyria, Milan, RECEIVED QUEST, Construct Wonder, Friendship: -1 to -1, MINOR_CIV_MILAN
+133, Persia, Kyiv, SENT OUT QUEST, Type, 14
+133, Persia, Kyiv, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KIEV
+133, The Maya, Kyiv, SENT OUT QUEST, Type, 3
+133, The Maya, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+134, The Maya, Samarkand, era change yield update
+134, The Maya, Ragusa, era change yield update
+134, The Maya, Budapest, era change yield update
+134, The Maya, Antananarivo, era change yield update
+134, The Maya, Cape Town, era change yield update
+134, The Maya, Quebec City, era change yield update
+134, The Maya, Hanoi, era change yield update
+134, The Maya, Milan, era change yield update
+134, The Maya, Zurich, era change yield update
+134, The Maya, Vancouver, era change yield update
+134, The Maya, Monaco, era change yield update
+134, The Maya, Kyiv, era change yield update
+134, The Maya, Mombasa, era change yield update
+134, The Maya, Vilnius, era change yield update
+134, The Maya, Bratislava, era change yield update
+134, The Maya, Genoa, era change yield update
+134, The Maya, Samarkand, SENT OUT QUEST, Type, 16
+134, The Maya, Samarkand, SENT OUT QUEST, Type, 3
+134, The Maya, Samarkand, SENT OUT QUEST, Type, 10
+134, The Maya, Ragusa, SENT OUT QUEST, Type, 16
+134, The Maya, Ragusa, SENT OUT QUEST, Type, 2
+134, The Maya, Ragusa, SENT OUT QUEST, Type, 13
+134, The Maya, Cape Town, SENT OUT QUEST, Type, 2
+134, The Maya, Cape Town, SENT OUT QUEST, Type, 16
+134, The Maya, Cape Town, SENT OUT QUEST, Type, 1
+134, The Maya, Quebec City, SENT OUT QUEST, Type, 2
+134, The Maya, Quebec City, SENT OUT QUEST, Type, 3
+134, The Maya, Hanoi, SENT OUT QUEST, Type, 14
+134, The Maya, Milan, SENT OUT QUEST, Type, 10
+134, The Maya, Zurich, SENT OUT QUEST, Type, 1
+134, The Maya, Zurich, SENT OUT QUEST, Type, 16
+134, The Maya, Zurich, SENT OUT QUEST, Type, 2
+134, The Maya, Kyiv, SENT OUT QUEST, Type, 2
+134, The Maya, Kyiv, SENT OUT QUEST, Type, 13
+134, The Maya, Kyiv, SENT OUT QUEST, Type, 3
+134, The Maya, Mombasa, SENT OUT QUEST, Type, 2
+134, The Maya, Mombasa, SENT OUT QUEST, Type, 12
+134, The Maya, Vilnius, SENT OUT QUEST, Type, 2
+134, The Maya, Vilnius, SENT OUT QUEST, Type, 7
+134, The Maya, Mombasa, SENT OUT QUEST, Type, 17
+134, The Maya, Mombasa, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+134, Germany, Genoa, gained ally
+134, Germany, Genoa, FINISHED QUEST, Trade Route, Friendship: 39 to 79, MINOR_CIV_GENOA
+135, Ragusa, Brazil, RECEIVED_UNIT_GIFT, Warrior
+135, Brazil, Vancouver, lost friend
+135, Russia, Mombasa, gained friend
+135, Russia, Mombasa, FINISHED QUEST, Spread Religion, Friendship: 7 to 47, MINOR_CIV_MOMBASA
+135, Germany, Vilnius, gained friend
+135, Germany, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_VILNIUS
+135, Germany, Bratislava, gained friend
+135, Germany, Bratislava, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_BRATISLAVA
+136, Persia, Samarkand, era change yield update
+136, Persia, Ragusa, era change yield update
+136, Persia, Budapest, era change yield update
+136, Persia, Antananarivo, era change yield update
+136, Persia, Cape Town, era change yield update
+136, Persia, Quebec City, era change yield update
+136, Persia, Hanoi, era change yield update
+136, Persia, Milan, era change yield update
+136, Persia, Zurich, era change yield update
+136, Persia, Vancouver, era change yield update
+136, Persia, Monaco, era change yield update
+136, Persia, Kyiv, era change yield update
+136, Persia, Mombasa, era change yield update
+136, Persia, Vilnius, era change yield update
+136, Persia, Bratislava, era change yield update
+136, Persia, Genoa, era change yield update
+136, Persia, Ragusa, SENT OUT QUEST, Type, 17
+136, Persia, Ragusa, SENT OUT QUEST, Type, 13
+136, Persia, Budapest, SENT OUT QUEST, Type, 2
+136, Persia, Budapest, SENT OUT QUEST, Type, 16
+136, Persia, Budapest, SENT OUT QUEST, Type, 13
+136, Persia, Antananarivo, SENT OUT QUEST, Type, 2
+136, Persia, Cape Town, SENT OUT QUEST, Type, 1
+136, Persia, Milan, SENT OUT QUEST, Type, 3
+136, Persia, Milan, SENT OUT QUEST, Type, 10
+136, Persia, Monaco, SENT OUT QUEST, Type, 3
+136, Persia, Kyiv, SENT OUT QUEST, Type, 4
+136, Persia, Kyiv, SENT OUT QUEST, Type, 13
+136, Persia, Kyiv, SENT OUT QUEST, Type, 14
+136, Persia, Mombasa, SENT OUT QUEST, Type, 0
+136, Persia, Mombasa, SENT OUT QUEST, Type, 12
+136, Persia, Mombasa, SENT OUT QUEST, Type, 2
+136, Persia, Vilnius, SENT OUT QUEST, Type, 2
+136, Persia, Vilnius, SENT OUT QUEST, Type, 17
+136, Persia, Bratislava, SENT OUT QUEST, Type, 2
+136, Persia, Bratislava, SENT OUT QUEST, Type, 14
+136, Persia, Genoa, SENT OUT QUEST, Type, 2
+136, Persia, Genoa, SENT OUT QUEST, Type, 4
+136, Persia, Genoa, SENT OUT QUEST, Type, 12
+136, Assyria, Cape Town, gained friend
+136, Assyria, Cape Town, FINISHED QUEST, Kill Camp, Friendship: 1 to 51, MINOR_CIV_CAPE_TOWN
+136, Russia, Hanoi, SENT OUT QUEST, Type, 4
+136, Russia, Hanoi, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_HANOI
+136, Egypt, Milan, SENT OUT QUEST, Type, 14
+136, Egypt, Milan, RECEIVED QUEST, Bully City-State, Friendship: 8 to 8, MINOR_CIV_MILAN
+136, Rome, Vancouver, lost friend
+136, Rome, Monaco, SENT OUT QUEST, Type, 13
+136, Rome, Monaco, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MONACO
+136, Brazil, Monaco, SENT OUT QUEST, Type, 13
+136, Brazil, Monaco, RECEIVED QUEST, Invest, Friendship: 3 to 3, MINOR_CIV_MONACO
+136, Persia, Monaco, SENT OUT QUEST, Type, 13
+136, Persia, Monaco, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MONACO
+136, Assyria, Monaco, SENT OUT QUEST, Type, 13
+136, Assyria, Monaco, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MONACO
+136, Egypt, Monaco, SENT OUT QUEST, Type, 13
+136, Egypt, Monaco, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MONACO
+136, Brazil, Bratislava, lost friend
+137, Egypt, Ragusa, gained friend
+137, Egypt, Ragusa, FINISHED QUEST, Great Person, Friendship: 17 to 57, MINOR_CIV_RAGUSA
+137, Egypt, Hanoi, gained ally
+137, Assyria, Hanoi, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_HANOI
+137, Egypt, Hanoi, FINISHED QUEST, Great Person, Friendship: 45 to 85, MINOR_CIV_HANOI
+137, Egypt, Milan, gained friend
+137, Egypt, Milan, FINISHED QUEST, Great Person, Friendship: 8 to 48, MINOR_CIV_MILAN
+137, Egypt, Zurich, gained friend
+137, Egypt, Zurich, FINISHED QUEST, Great Person, Friendship: 2 to 42, MINOR_CIV_ZURICH
+137, Antananarivo, Russia, RECEIVED_UNIT_GIFT, Warrior
+137, The Maya, Antananarivo, SENT OUT QUEST, Type, 2
+137, The Maya, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: -4 to -4, MINOR_CIV_ANTANANARIVO
+137, Rome, Cape Town, cancelled, Kill Camp, Friendship: 64 to 64, MINOR_CIV_CAPE_TOWN
+137, Brazil, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+137, Persia, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+137, Egypt, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+137, The Maya, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+137, Russia, Cape Town, cancelled, Kill Camp, Friendship: 16 to 16, MINOR_CIV_CAPE_TOWN
+137, Persia, Cape Town, SENT OUT QUEST, Type, 2
+137, Persia, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+137, Brazil, Zurich, SENT OUT QUEST, Type, 2
+137, Brazil, Zurich, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZURICH
+137, Egypt, Zurich, SENT OUT QUEST, Type, 2
+137, Egypt, Zurich, RECEIVED QUEST, Connect Resource, Friendship: 41 to 41, MINOR_CIV_ZURICH
+137, Rome, Vancouver, SENT OUT QUEST, Type, 16
+137, Rome, Vancouver, RECEIVED QUEST, Spread Religion, Friendship: 28 to 28, MINOR_CIV_VANCOUVER
+137, Brazil, Mombasa, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+137, Rome, Mombasa, SENT OUT QUEST, Type, 4
+137, Rome, Mombasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+138, Rome, Samarkand, era change yield update
+138, Rome, Ragusa, era change yield update
+138, Rome, Budapest, era change yield update
+138, Rome, Antananarivo, era change yield update
+138, Rome, Cape Town, era change yield update
+138, Rome, Quebec City, era change yield update
+138, Rome, Hanoi, era change yield update
+138, Rome, Milan, era change yield update
+138, Rome, Zurich, era change yield update
+138, Rome, Vancouver, era change yield update
+138, Rome, Monaco, era change yield update
+138, Rome, Kyiv, era change yield update
+138, Rome, Mombasa, era change yield update
+138, Rome, Vilnius, era change yield update
+138, Rome, Bratislava, era change yield update
+138, Rome, Genoa, era change yield update
+138, Rome, Samarkand, SENT OUT QUEST, Type, 2
+138, Rome, Samarkand, SENT OUT QUEST, Type, 10
+138, Rome, Ragusa, SENT OUT QUEST, Type, 13
+138, Rome, Ragusa, SENT OUT QUEST, Type, 3
+138, Rome, Budapest, SENT OUT QUEST, Type, 16
+138, Rome, Budapest, SENT OUT QUEST, Type, 13
+138, Rome, Antananarivo, SENT OUT QUEST, Type, 16
+138, Rome, Cape Town, SENT OUT QUEST, Type, 7
+138, Rome, Milan, SENT OUT QUEST, Type, 10
+138, Rome, Zurich, SENT OUT QUEST, Type, 1
+138, Rome, Zurich, SENT OUT QUEST, Type, 17
+138, Rome, Zurich, SENT OUT QUEST, Type, 16
+138, Rome, Vancouver, SENT OUT QUEST, Type, 16
+138, Rome, Monaco, SENT OUT QUEST, Type, 16
+138, Rome, Monaco, SENT OUT QUEST, Type, 14
+138, Rome, Monaco, SENT OUT QUEST, Type, 13
+138, Rome, Kyiv, SENT OUT QUEST, Type, 13
+138, Rome, Kyiv, SENT OUT QUEST, Type, 3
+138, Rome, Mombasa, SENT OUT QUEST, Type, 12
+138, Rome, Mombasa, SENT OUT QUEST, Type, 4
+138, Rome, Vilnius, SENT OUT QUEST, Type, 2
+138, Rome, Vilnius, SENT OUT QUEST, Type, 16
+138, Rome, Genoa, SENT OUT QUEST, Type, 12
+138, Germany, Milan, gained friend
+138, Germany, Milan, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MILAN
+138, Persia, Antananarivo, Gold Gift: 250, Friendship: 67 to 87, Spaceship, MINOR_CIV_ANTANANARIVO, Boost! , Passing Russia
+138, Persia, Ragusa, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_RAGUSA, (SAVING) 
+138, The Maya, Ragusa, Gold Gift: 250, Friendship: 31 to 61, Spaceship, MINOR_CIV_RAGUSA, Boost! , Passing Persia
+138, Egypt, Samarkand, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+138, Brazil, Hanoi, SENT OUT QUEST, Type, 4
+138, Brazil, Hanoi, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_HANOI
+138, Germany, Hanoi, SENT OUT QUEST, Type, 3
+138, Germany, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+138, Persia, Bratislava, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+138, Brazil, Bratislava, SENT OUT QUEST, Type, 10
+138, Brazil, Bratislava, RECEIVED QUEST, Contest Culture, Friendship: 26 to 26, MINOR_CIV_BRATISLAVA
+138, Germany, Bratislava, SENT OUT QUEST, Type, 10
+138, Germany, Bratislava, RECEIVED QUEST, Contest Culture, Friendship: 40 to 40, MINOR_CIV_BRATISLAVA
+138, Persia, Bratislava, SENT OUT QUEST, Type, 10
+138, Persia, Bratislava, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+138, Assyria, Bratislava, SENT OUT QUEST, Type, 10
+138, Assyria, Bratislava, RECEIVED QUEST, Contest Culture, Friendship: -6 to -6, MINOR_CIV_BRATISLAVA
+138, The Maya, Bratislava, SENT OUT QUEST, Type, 10
+138, The Maya, Bratislava, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+139, Brazil, Budapest, FINISHED QUEST, Great Person, Friendship: 65 to 105, MINOR_CIV_BUDAPEST
+139, Brazil, Antananarivo, gained friend
+139, Brazil, Antananarivo, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+139, Brazil, Cape Town, gained friend
+139, Brazil, Cape Town, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_CAPE_TOWN
+139, Brazil, Samarkand, era change yield update
+139, Brazil, Ragusa, era change yield update
+139, Brazil, Budapest, era change yield update
+139, Brazil, Antananarivo, era change yield update
+139, Brazil, Cape Town, era change yield update
+139, Brazil, Quebec City, era change yield update
+139, Brazil, Hanoi, era change yield update
+139, Brazil, Milan, era change yield update
+139, Brazil, Zurich, era change yield update
+139, Brazil, Vancouver, era change yield update
+139, Brazil, Monaco, era change yield update
+139, Brazil, Kyiv, era change yield update
+139, Brazil, Mombasa, era change yield update
+139, Brazil, Vilnius, era change yield update
+139, Brazil, Bratislava, era change yield update
+139, Brazil, Genoa, era change yield update
+139, Brazil, Samarkand, SENT OUT QUEST, Type, 2
+139, Brazil, Samarkand, SENT OUT QUEST, Type, 0
+139, Brazil, Samarkand, SENT OUT QUEST, Type, 10
+139, Brazil, Ragusa, SENT OUT QUEST, Type, 17
+139, Brazil, Ragusa, SENT OUT QUEST, Type, 0
+139, Brazil, Ragusa, SENT OUT QUEST, Type, 13
+139, Brazil, Budapest, SENT OUT QUEST, Type, 4
+139, Brazil, Budapest, SENT OUT QUEST, Type, 13
+139, Brazil, Antananarivo, SENT OUT QUEST, Type, 4
+139, Brazil, Cape Town, SENT OUT QUEST, Type, 4
+139, Brazil, Quebec City, SENT OUT QUEST, Type, 2
+139, Brazil, Hanoi, SENT OUT QUEST, Type, 2
+139, Brazil, Hanoi, SENT OUT QUEST, Type, 4
+139, Brazil, Zurich, SENT OUT QUEST, Type, 1
+139, Brazil, Zurich, SENT OUT QUEST, Type, 2
+139, Brazil, Vancouver, SENT OUT QUEST, Type, 2
+139, Brazil, Monaco, SENT OUT QUEST, Type, 17
+139, Brazil, Monaco, SENT OUT QUEST, Type, 4
+139, Brazil, Monaco, SENT OUT QUEST, Type, 13
+139, Brazil, Kyiv, SENT OUT QUEST, Type, 13
+139, Brazil, Kyiv, SENT OUT QUEST, Type, 3
+139, Brazil, Mombasa, SENT OUT QUEST, Type, 12
+139, Brazil, Vilnius, SENT OUT QUEST, Type, 2
+139, Brazil, Bratislava, SENT OUT QUEST, Type, 14
+139, Brazil, Bratislava, SENT OUT QUEST, Type, 10
+139, Brazil, Genoa, SENT OUT QUEST, Type, 2
+139, Brazil, Genoa, SENT OUT QUEST, Type, 12
+139, Russia, Quebec City, lost friend
+139, Russia, Quebec City, lost ally
+139, Assyria, Quebec City, gained ally
+139, Egypt, Quebec City, lost friend
+139, Egypt, Quebec City, SENT OUT QUEST, Type, 17
+139, Egypt, Quebec City, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_QUEBEC_CITY
+139, The Maya, Quebec City, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_QUEBEC_CITY
+139, The Maya, Quebec City, cancelled, Construct Wonder, Friendship: -60 to -60, MINOR_CIV_QUEBEC_CITY
+139, Rome, Antananarivo, SENT OUT QUEST, Type, 12
+139, Rome, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 7 to 7, MINOR_CIV_ANTANANARIVO
+139, Brazil, Antananarivo, SENT OUT QUEST, Type, 12
+139, Brazil, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 38 to 38, MINOR_CIV_ANTANANARIVO
+139, Germany, Antananarivo, SENT OUT QUEST, Type, 12
+139, Germany, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+139, Persia, Antananarivo, SENT OUT QUEST, Type, 12
+139, Persia, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 84 to 84, MINOR_CIV_ANTANANARIVO
+139, Assyria, Antananarivo, SENT OUT QUEST, Type, 12
+139, Assyria, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+139, Egypt, Antananarivo, SENT OUT QUEST, Type, 12
+139, Egypt, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+139, The Maya, Antananarivo, SENT OUT QUEST, Type, 12
+139, The Maya, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: -13 to -13, MINOR_CIV_ANTANANARIVO
+139, Russia, Antananarivo, SENT OUT QUEST, Type, 12
+139, Russia, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 20 to 20, MINOR_CIV_ANTANANARIVO
+139, Brazil, Kyiv, lost friend
+140, Germany, Vilnius, Gold Gift: 250, Friendship: 36 to 56, Spaceship, MINOR_CIV_VILNIUS, Boost! , Passing Russia
+140, Germany, Mombasa, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_MOMBASA, (SAVING) 
+140, Assyria, Budapest, gained friend
+140, Assyria, Budapest, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUDAPEST
+140, Assyria, Antananarivo, gained friend
+140, Assyria, Antananarivo, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+140, Assyria, Milan, gained friend
+140, Assyria, Milan, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MILAN
+140, Assyria, Mombasa, gained friend
+140, Assyria, Mombasa, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+140, The Maya, Samarkand, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+140, Rome, Ragusa, lost ally
+140, The Maya, Ragusa, gained ally
+140, Assyria, Ragusa, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_RAGUSA
+140, Assyria, Ragusa, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_RAGUSA
+140, Assyria, Ragusa, cancelled, Invest, Friendship: -60 to -60, MINOR_CIV_RAGUSA
+140, The Maya, Ragusa, lost ally
+140, Rome, Ragusa, gained ally
+140, Rome, Ragusa, FINISHED QUEST, Construct Wonder, Friendship: 55 to 95, MINOR_CIV_RAGUSA
+140, Brazil, Antananarivo, SENT OUT QUEST, Type, 14
+140, Brazil, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 37 to 37, MINOR_CIV_ANTANANARIVO
+140, Persia, Milan, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MILAN
+140, Assyria, Milan, cancelled, Construct Wonder, Friendship: 37 to 37, MINOR_CIV_MILAN
+140, Brazil, Kyiv, cancelled, Construct Wonder, Friendship: 27 to 27, MINOR_CIV_KIEV
+140, Russia, Mombasa, gained ally
+140, Russia, Mombasa, lost ally
+140, Brazil, Genoa, lost friend
+140, Assyria, Genoa, cancelled, Construct Wonder, Friendship: 2 to 2, MINOR_CIV_GENOA
+141, Russia, Ragusa, SENT OUT QUEST, Type, 16
+141, Russia, Ragusa, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+141, Rome, Budapest, SENT OUT QUEST, Type, 2
+141, Rome, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+141, Persia, Antananarivo, SENT OUT QUEST, Type, 16
+141, Persia, Antananarivo, RECEIVED QUEST, Spread Religion, Friendship: 81 to 81, MINOR_CIV_ANTANANARIVO
+141, Rome, Cape Town, lost ally
+141, Germany, Milan, SENT OUT QUEST, Type, 4
+141, Germany, Milan, RECEIVED QUEST, Great Person, Friendship: 31 to 31, MINOR_CIV_MILAN
+141, Assyria, Vancouver, SENT OUT QUEST, Type, 7
+141, Assyria, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+141, The Maya, Vilnius, gained friend
+141, The Maya, Vilnius, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+141, Brazil, Bratislava, cancelled, Bully City-State, Friendship: 22 to 22, MINOR_CIV_BRATISLAVA
+142, Russia, Samarkand, era change yield update
+142, Russia, Ragusa, era change yield update
+142, Russia, Budapest, era change yield update
+142, Russia, Antananarivo, era change yield update
+142, Russia, Cape Town, era change yield update
+142, Russia, Quebec City, era change yield update
+142, Russia, Hanoi, era change yield update
+142, Russia, Milan, era change yield update
+142, Russia, Zurich, era change yield update
+142, Russia, Vancouver, era change yield update
+142, Russia, Monaco, era change yield update
+142, Russia, Kyiv, era change yield update
+142, Russia, Mombasa, era change yield update
+142, Russia, Vilnius, era change yield update
+142, Russia, Bratislava, era change yield update
+142, Russia, Genoa, era change yield update
+142, Russia, Ragusa, SENT OUT QUEST, Type, 13
+142, Russia, Ragusa, SENT OUT QUEST, Type, 16
+142, Russia, Antananarivo, SENT OUT QUEST, Type, 2
+142, Russia, Antananarivo, SENT OUT QUEST, Type, 17
+142, Russia, Antananarivo, SENT OUT QUEST, Type, 12
+142, Russia, Cape Town, SENT OUT QUEST, Type, 14
+142, Russia, Quebec City, SENT OUT QUEST, Type, 16
+142, Russia, Hanoi, SENT OUT QUEST, Type, 2
+142, Russia, Hanoi, SENT OUT QUEST, Type, 4
+142, Russia, Milan, SENT OUT QUEST, Type, 2
+142, Russia, Milan, SENT OUT QUEST, Type, 10
+142, Russia, Mombasa, SENT OUT QUEST, Type, 17
+142, Russia, Mombasa, SENT OUT QUEST, Type, 12
+142, Russia, Vilnius, SENT OUT QUEST, Type, 16
+142, Germany, Milan, lost friend
+142, Egypt, Zurich, lost friend
+142, Assyria, Mombasa, lost friend
+142, Assyria, Vilnius, SENT OUT QUEST, Type, 14
+142, Assyria, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+142, Egypt, Genoa, SENT OUT QUEST, Type, 4
+142, Egypt, Genoa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_GENOA
+143, Rome, Samarkand, Gold Gift: 250, Friendship: 30 to 50, Spaceship, MINOR_CIV_SAMARKAND, Boost! , Passing Brazil
+143, Rome, Kyiv, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_KIEV, (SAVING) 
+143, Germany, Genoa, Gold Gift: 250, Friendship: 67 to 87, Spaceship, MINOR_CIV_GENOA, Boost! , Passing Persia
+143, Germany, Bratislava, Gold Gift: 250, Friendship: 34 to 34, Spaceship, MINOR_CIV_BRATISLAVA, (SAVING) , Boost! , Passing Brazil
+143, Egypt, Samarkand, era change yield update
+143, Egypt, Ragusa, era change yield update
+143, Egypt, Budapest, era change yield update
+143, Egypt, Antananarivo, era change yield update
+143, Egypt, Cape Town, era change yield update
+143, Egypt, Quebec City, era change yield update
+143, Egypt, Hanoi, era change yield update
+143, Egypt, Milan, era change yield update
+143, Egypt, Zurich, era change yield update
+143, Egypt, Vancouver, era change yield update
+143, Egypt, Monaco, era change yield update
+143, Egypt, Kyiv, era change yield update
+143, Egypt, Mombasa, era change yield update
+143, Egypt, Vilnius, era change yield update
+143, Egypt, Bratislava, era change yield update
+143, Egypt, Genoa, era change yield update
+143, Egypt, Samarkand, SENT OUT QUEST, Type, 10
+143, Egypt, Ragusa, SENT OUT QUEST, Type, 7
+143, Egypt, Ragusa, SENT OUT QUEST, Type, 13
+143, Egypt, Budapest, SENT OUT QUEST, Type, 16
+143, Egypt, Budapest, SENT OUT QUEST, Type, 2
+143, Egypt, Budapest, SENT OUT QUEST, Type, 13
+143, Egypt, Antananarivo, SENT OUT QUEST, Type, 16
+143, Egypt, Antananarivo, SENT OUT QUEST, Type, 4
+143, Egypt, Antananarivo, SENT OUT QUEST, Type, 12
+143, Egypt, Cape Town, SENT OUT QUEST, Type, 16
+143, Egypt, Cape Town, SENT OUT QUEST, Type, 2
+143, Egypt, Hanoi, SENT OUT QUEST, Type, 2
+143, Egypt, Milan, SENT OUT QUEST, Type, 10
+143, Egypt, Milan, SENT OUT QUEST, Type, 14
+143, Egypt, Zurich, SENT OUT QUEST, Type, 1
+143, Egypt, Zurich, SENT OUT QUEST, Type, 2
+143, Egypt, Monaco, SENT OUT QUEST, Type, 13
+143, Egypt, Mombasa, SENT OUT QUEST, Type, 12
+143, Egypt, Mombasa, SENT OUT QUEST, Type, 3
+143, Egypt, Vilnius, SENT OUT QUEST, Type, 14
+143, Egypt, Genoa, SENT OUT QUEST, Type, 2
+143, Egypt, Genoa, SENT OUT QUEST, Type, 12
+143, Egypt, Genoa, SENT OUT QUEST, Type, 4
+143, Rome, Samarkand, SENT OUT QUEST, Type, 0
+143, Rome, Samarkand, RECEIVED QUEST, Route, Friendship: 49 to 49, MINOR_CIV_SAMARKAND
+143, Russia, Samarkand, SENT OUT QUEST, Type, 10
+143, Russia, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+143, Russia, Ragusa, gained friend
+143, Russia, Ragusa, FINISHED QUEST, Spread Religion, Friendship: 2 to 42, MINOR_CIV_RAGUSA
+143, Assyria, Budapest, lost friend
+143, Germany, Antananarivo, SENT OUT QUEST, Type, 14
+143, Germany, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+143, Assyria, Quebec City, lost ally
+143, Brazil, Quebec City, SENT OUT QUEST, Type, 7
+143, Brazil, Quebec City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+143, Egypt, Mombasa, SENT OUT QUEST, Type, 4
+143, Egypt, Mombasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+143, Rome, Bratislava, SENT OUT QUEST, Type, 10
+143, Rome, Bratislava, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+144, Russia, Ragusa, SENT OUT QUEST, Type, 13
+144, Russia, Zurich, SENT OUT QUEST, Type, 1
+144, Russia, Zurich, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZURICH
+144, Germany, Budapest, SENT OUT QUEST, Type, 3
+144, Germany, Budapest, RECEIVED QUEST, Construct Wonder, Friendship: 59 to 59, MINOR_CIV_BUDAPEST
+144, Assyria, Cape Town, cancelled, Bully City-State, Friendship: 39 to 39, MINOR_CIV_CAPE_TOWN
+144, Russia, Cape Town, cancelled, Bully City-State, Friendship: 6 to 6, MINOR_CIV_CAPE_TOWN
+144, Germany, Hanoi, gained friend
+144, Germany, Hanoi, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_HANOI
+144, Assyria, Milan, lost friend
+144, Rome, Milan, gained friend
+144, Rome, Milan, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_MILAN
+144, Germany, Milan, cancelled, Contest Culture, Friendship: 24 to 24, MINOR_CIV_MILAN
+144, Persia, Milan, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+144, Assyria, Milan, cancelled, Contest Culture, Friendship: 28 to 28, MINOR_CIV_MILAN
+144, Egypt, Milan, cancelled, Contest Culture, Friendship: 30 to 30, MINOR_CIV_MILAN
+144, The Maya, Milan, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MILAN
+144, Russia, Milan, cancelled, Contest Culture, Friendship: 20 to 20, MINOR_CIV_MILAN
+144, Rome, Zurich, gained friend
+144, Rome, Zurich, FINISHED QUEST, Spread Religion, Friendship: 5 to 45, MINOR_CIV_ZURICH
+144, Germany, Vancouver, gained friend
+144, Germany, Vancouver, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
+144, Brazil, Kyiv, FINISHED QUEST, Invest, Friendship: 21 to 21, MINOR_CIV_KIEV
+144, Rome, Kyiv, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_KIEV
+144, Persia, Kyiv, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KIEV
+144, The Maya, Kyiv, FINISHED QUEST, Invest, Friendship: -4 to -4, MINOR_CIV_KIEV
+144, Germany, Bratislava, gained ally
+144, Germany, Bratislava, FINISHED QUEST, Find Natural Wonder, Friendship: 31 to 71, MINOR_CIV_BRATISLAVA
+144, Rome, Genoa, SENT OUT QUEST, Type, 2
+144, Rome, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENOA
+145, Egypt, Samarkand, SENT OUT QUEST, Type, 14
+145, Egypt, Samarkand, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+145, The Maya, Budapest, SENT OUT QUEST, Type, 13
+145, The Maya, Budapest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+145, Brazil, Antananarivo, lost friend
+145, Rome, Antananarivo, SENT OUT QUEST, Type, 14
+145, Rome, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+145, Brazil, Cape Town, lost friend
+145, The Maya, Hanoi, SENT OUT QUEST, Type, 7
+145, The Maya, Hanoi, RECEIVED QUEST, Find Natural Wonder, Friendship: -4 to -4, MINOR_CIV_HANOI
+145, Egypt, Milan, lost friend
+145, Egypt, Vancouver, SENT OUT QUEST, Type, 16
+145, Egypt, Vancouver, RECEIVED QUEST, Spread Religion, Friendship: -1 to -1, MINOR_CIV_VANCOUVER
+145, The Maya, Bratislava, SENT OUT QUEST, Type, 4
+145, The Maya, Bratislava, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+146, Germany, Samarkand, era change yield update
+146, Germany, Ragusa, era change yield update
+146, Germany, Budapest, era change yield update
+146, Germany, Antananarivo, era change yield update
+146, Germany, Cape Town, era change yield update
+146, Germany, Quebec City, era change yield update
+146, Germany, Hanoi, era change yield update
+146, Germany, Milan, era change yield update
+146, Germany, Zurich, era change yield update
+146, Germany, Vancouver, era change yield update
+146, Germany, Monaco, era change yield update
+146, Germany, Kyiv, era change yield update
+146, Germany, Mombasa, era change yield update
+146, Germany, Vilnius, era change yield update
+146, Germany, Bratislava, era change yield update
+146, Germany, Genoa, era change yield update
+146, Germany, Samarkand, SENT OUT QUEST, Type, 10
+146, Germany, Ragusa, SENT OUT QUEST, Type, 13
+146, Germany, Ragusa, SENT OUT QUEST, Type, 2
+146, Germany, Budapest, SENT OUT QUEST, Type, 17
+146, Germany, Budapest, SENT OUT QUEST, Type, 13
+146, Germany, Budapest, SENT OUT QUEST, Type, 3
+146, Germany, Antananarivo, SENT OUT QUEST, Type, 2
+146, Germany, Antananarivo, SENT OUT QUEST, Type, 12
+146, Germany, Antananarivo, SENT OUT QUEST, Type, 14
+146, Germany, Quebec City, SENT OUT QUEST, Type, 2
+146, Germany, Quebec City, SENT OUT QUEST, Type, 3
+146, Germany, Hanoi, SENT OUT QUEST, Type, 3
+146, Germany, Milan, SENT OUT QUEST, Type, 4
+146, Germany, Zurich, SENT OUT QUEST, Type, 1
+146, Germany, Vancouver, SENT OUT QUEST, Type, 2
+146, Germany, Mombasa, SENT OUT QUEST, Type, 12
+146, Germany, Bratislava, SENT OUT QUEST, Type, 10
+146, Germany, Genoa, SENT OUT QUEST, Type, 12
+146, Assyria, Antananarivo, lost friend
+146, Russia, Cape Town, SENT OUT QUEST, Type, 4
+146, Russia, Cape Town, RECEIVED QUEST, Great Person, Friendship: 3 to 3, MINOR_CIV_CAPE_TOWN
+146, Brazil, Quebec City, gained friend
+146, Brazil, Quebec City, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_QUEBEC_CITY
+146, Germany, Mombasa, SENT OUT QUEST, Type, 3
+146, Germany, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+146, Germany, Genoa, SENT OUT QUEST, Type, 2
+146, Germany, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 81 to 81, MINOR_CIV_GENOA
+147, Brazil, Hanoi, gained friend
+147, Brazil, Hanoi, FINISHED QUEST, Great Person, Friendship: -6 to 34, MINOR_CIV_HANOI
+147, Brazil, Monaco, gained friend
+147, Brazil, Monaco, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MONACO
+147, Persia, Ragusa, gained friend
+147, Persia, Ragusa, Gold Gift: 500, Friendship: 5 to 70, Spaceship, MINOR_CIV_RAGUSA
+147, Persia, Genoa, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_GENOA, (SAVING) 
+147, Persia, Samarkand, SENT OUT QUEST, Type, 10
+147, Persia, Samarkand, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+147, Persia, Zurich, SENT OUT QUEST, Type, 1
+147, Persia, Zurich, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZURICH
+147, Assyria, Cape Town, SENT OUT QUEST, Type, 2
+147, Persia, Ragusa, SENT OUT QUEST, Type, 16
+147, Persia, Ragusa, RECEIVED QUEST, Spread Religion, Friendship: 68 to 68, MINOR_CIV_RAGUSA
+147, Assyria, Quebec City, SENT OUT QUEST, Type, 3
+147, Assyria, Quebec City, RECEIVED QUEST, Construct Wonder, Friendship: 53 to 53, MINOR_CIV_QUEBEC_CITY
+147, Rome, Milan, SENT OUT QUEST, Type, 14
+147, Rome, Milan, RECEIVED QUEST, Bully City-State, Friendship: 33 to 33, MINOR_CIV_MILAN
+147, Brazil, Kyiv, SENT OUT QUEST, Type, 17
+147, Brazil, Kyiv, RECEIVED QUEST, Trade Route, Friendship: 16 to 16, MINOR_CIV_KIEV
+147, The Maya, Vilnius, lost friend
+147, Egypt, Vilnius, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+147, Persia, Genoa, gained friend
+147, Persia, Genoa, FINISHED QUEST, Contest Techs, Friendship: 5 to 45, MINOR_CIV_GENOA
+147, Rome, Genoa, gained friend
+147, Rome, Genoa, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_GENOA
+147, Brazil, Genoa, cancelled, Contest Techs, Friendship: 18 to 18, MINOR_CIV_GENOA
+147, Germany, Genoa, cancelled, Contest Techs, Friendship: 80 to 80, MINOR_CIV_GENOA
+147, Assyria, Genoa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+147, Egypt, Genoa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+148, Germany, Bratislava, Tile Improvement, Spaceship, MINOR_CIV_BRATISLAVA
+148, Germany, Bratislava, Gold Gift: 250, Friendship: 67 to 87, Spaceship, MINOR_CIV_BRATISLAVA, Boost! , Passing Brazil
+148, Germany, Mombasa, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_MOMBASA, (SAVING) 
+148, The Maya, Monaco, SENT OUT QUEST, Type, 13
+148, The Maya, Monaco, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MONACO
+148, Russia, Ragusa, Gold Gift: 250, Friendship: 37 to 67, Spaceship, MINOR_CIV_RAGUSA, Boost! , Passing Egypt
+148, Russia, Quebec City, Gold Gift: 500, Friendship: 9 to 9, Spaceship, MINOR_CIV_QUEBEC_CITY, (SAVING) 
+148, Assyria, Antananarivo, SENT OUT QUEST, Type, 7
+148, Assyria, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 26 to 26, MINOR_CIV_ANTANANARIVO
+148, Egypt, Quebec City, SENT OUT QUEST, Type, 2
+148, Egypt, Quebec City, RECEIVED QUEST, Connect Resource, Friendship: 15 to 15, MINOR_CIV_QUEBEC_CITY
+148, Persia, Monaco, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+148, Egypt, Monaco, SENT OUT QUEST, Type, 16
+148, Egypt, Monaco, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_MONACO
+148, Rome, Kyiv, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KIEV
+148, The Maya, Kyiv, cancelled, Construct Wonder, Friendship: -10 to -10, MINOR_CIV_KIEV
+148, Egypt, Mombasa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+148, Brazil, Bratislava, SENT OUT QUEST, Type, 3
+148, Brazil, Bratislava, RECEIVED QUEST, Construct Wonder, Friendship: 11 to 11, MINOR_CIV_BRATISLAVA
+148, Assyria, Bratislava, SENT OUT QUEST, Type, 14
+148, Assyria, Bratislava, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+149, Egypt, Ragusa, Gold Gift: 250, Friendship: 34 to 64, Spaceship, MINOR_CIV_RAGUSA, Boost! , Passing Brazil
+149, Egypt, Quebec City, Gold Gift: 500, Friendship: 15 to 15, Spaceship, MINOR_CIV_QUEBEC_CITY, (SAVING) , Passing Russia
+149, Brazil, Budapest, SENT OUT QUEST, Type, 4
+149, Brazil, Budapest, RECEIVED QUEST, Great Person, Friendship: 84 to 84, MINOR_CIV_BUDAPEST
+149, Rome, Cape Town, gained ally
+149, Rome, Cape Town, FINISHED QUEST, Find Natural Wonder, Friendship: 46 to 86, MINOR_CIV_CAPE_TOWN
+149, The Maya, Cape Town, gained friend
+149, The Maya, Cape Town, FINISHED QUEST, Spread Religion, Friendship: 0 to 40, MINOR_CIV_CAPE_TOWN
+149, Rome, Cape Town, SENT OUT QUEST, Type, 17
+149, Rome, Cape Town, RECEIVED QUEST, Trade Route, Friendship: 86 to 86, MINOR_CIV_CAPE_TOWN
+149, Brazil, Hanoi, lost friend
+149, The Maya, Hanoi, gained friend
+149, The Maya, Hanoi, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_HANOI
+149, The Maya, Hanoi, cancelled, Bully City-State, Friendship: 40 to 40, MINOR_CIV_HANOI
+149, Rome, Hanoi, SENT OUT QUEST, Type, 12
+149, Rome, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_HANOI
+149, Brazil, Hanoi, SENT OUT QUEST, Type, 12
+149, Brazil, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 29 to 29, MINOR_CIV_HANOI
+149, Germany, Hanoi, SENT OUT QUEST, Type, 12
+149, Germany, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 32 to 32, MINOR_CIV_HANOI
+149, Persia, Hanoi, SENT OUT QUEST, Type, 12
+149, Persia, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_HANOI
+149, Egypt, Hanoi, SENT OUT QUEST, Type, 12
+149, Egypt, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 71 to 71, MINOR_CIV_HANOI
+149, The Maya, Hanoi, SENT OUT QUEST, Type, 12
+149, The Maya, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 40 to 40, MINOR_CIV_HANOI
+149, Russia, Hanoi, SENT OUT QUEST, Type, 12
+149, Russia, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_HANOI
+149, Rome, Milan, lost friend
+149, Rome, Mombasa, gained friend
+149, Rome, Mombasa, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+149, Brazil, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+149, Germany, Mombasa, cancelled, Contest Techs, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+149, Persia, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+149, Assyria, Mombasa, cancelled, Contest Techs, Friendship: 12 to 12, MINOR_CIV_MOMBASA
+149, Egypt, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+149, The Maya, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+149, Russia, Mombasa, cancelled, Contest Techs, Friendship: 43 to 43, MINOR_CIV_MOMBASA
+149, Brazil, Genoa, SENT OUT QUEST, Type, 4
+149, Brazil, Genoa, RECEIVED QUEST, Great Person, Friendship: 15 to 15, MINOR_CIV_GENOA
+150, Rome, Vilnius, gained friend
+150, Rome, Vilnius, Gold Gift: 500, Friendship: 5 to 50, Spaceship, MINOR_CIV_VILNIUS
+150, Rome, Kyiv, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_KIEV, (SAVING) 
