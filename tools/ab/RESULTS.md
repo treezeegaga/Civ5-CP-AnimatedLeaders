@@ -1924,6 +1924,27 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: SecondWave, a new attack at war may start with up to 3 units still to come (Nov 4, about 10:26pm ET)
+**Seen in 6 games on ab-e4d5785:** after the first attack is used up, new attacks on the target end NoUnits the turn
+they start:
+- Aztecs 0D47DC20: 8 times;
+- Ottomans 0D5ECB7F: 12 times;
+- Assyria 0DD77369: T106–T109;
+- Inca 0DF72455: T140;
+- Mongolia 0D313EB5: T79–T85;
+- Germany 0E192EC1: no second attack on Heliopolis after T117.
+
+The pattern is "Started Army; Units Recruited 3 … Ended: NoUnits; Duration 0". The siege formation (BASIC_CITY_ATTACK_FORCE
+under SiegeFormation) has 6 required slots. At war CvMilitaryAI::DoCityAttacks asks RequestCityAttack(target, 2) without
+"careful", which allows 0 missing units, outside TimingBuildup's window and attack phases (`f73177c`). TimingBuildup
+closes its window when the war starts, so its allowance ends then too. Nothing in the merged build changes this.
+
+**Hypothesis (flag SecondWave, War, CvMilitaryAI::RequestCityAttack):** at war with the target, a major, an attack may
+form with up to 3 required slots still empty (the units willing to build, at least 3). The operation's own build
+requests fill them, and SiegeArmy's at-war bar (`b7db863`) and SiegeRoll decide when it marches. Expect: fewer NoUnits
+lines at war, and second attacks reaching a city the first one damaged. Risk: up to 3 units in recruiting are hidden
+from the tactical AI while they wait, for at most SiegeArmy's 20 turns.
+
 ### War: 0D5ECB7F (Ottomans), 0E192EC1 (Germany), 0D47DC20 (Aztecs) on ab-e4d5785: real sieges, each worn out about 20 HP short a turn (Nov 4, about 9:54pm ET)
 - **Germany vs Heliopolis (0E192EC1):**
   - Attack 2138 was handed over 3–5 tiles out at T109–T110.
