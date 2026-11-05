@@ -1996,8 +1996,8 @@ results worktree).
   as often.
 - Kill: the declaration comes later than with BigArmy or WarBudget alone, or the field target is met less often.
 
-LEAD: for the block after the package. ai/war 5b6e48b6 = claude/ab-c1 5b7333c0 + SiegeSlots (off). CI to follow; I'll
-confirm here.
+LEAD: for the block after the package. ai/war 5b6e48b6 = claude/ab-c1 5b7333c0 + SiegeSlots (off). CI green (run 241,
+5:06pm ET); ready to merge.
 
 ### War: WarBudget, War's half: the army target is what gold keeps (Nov 5, about 2:22pm ET)
 The lead's honest package for the block after BigArmy. Economy's half is GetAffordableWarUnits (patch 0025, a21e842):
