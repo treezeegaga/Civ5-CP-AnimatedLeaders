@@ -1946,21 +1946,27 @@ there is no idle gold without the waiver.
 - So a sustained army is a gold question first. War's levers inside that ceiling:
   1. **Better units for the same upkeep: ArmyQuality** (coded, c74f22163). The army stays the same size, of units
      that do damage.
-  2. **Upkeep freed from units that don't fight (proposal, ArmyScrap).** Under ArmyQuality, Warriors and Scouts no
+  2. **Upkeep freed from units that don't fight (ArmyScrap; coded, ai/war 74cf8b3cd, 2:20pm ET).** Under ArmyQuality, Warriors and Scouts no
      longer count as army but are still on the payroll. BigArmy's armies carried 42 of 194 such units at the first
      declaration (about 4 a game). At the war-time upkeep BigArmy logged (median 71 a turn for about 20 units, about
      3.5 a unit), scrapping them frees about 14 a turn, a fifth of Economy's 70 a turn gap.
      - Proposed rule: in the window or at war, while the window is paused for gold or the treasury is falling, disband
        one land unit below the ArmyQuality floor a turn, never a city's last garrison.
-     - It needs ArmyQuality's floor, so it would go into the same block or the one after.
+     - It uses ArmyQuality's floor (it works without that flag), so it would go into the same block or the one after.
+     - As coded: from the window on, when the treasury would run dry in under 9 turns (the window's own pause test),
+       the weakest land unit below the floor that isn't siege, a garrison, in an army or upkeep-free. One a turn,
+       gifted to a city-state if one takes it, else disbanded. Logs "ArmyScrap: dropping ...".
+     - Confirm: the gold-pause turns in the window fall (f6d1e84 6.6 a game), and the land units at +20 and +40 grow
+       past 10 with the same gold.
+     - Kill: cities lost to counterattacks go up (CitiesLost), or the army at the declaration is smaller.
   3. **War pays: plunder.** BigArmy plundered 3,700 gold in 11 games (about 340 a game, 100 x era per trade route) and
      pillaged 700. That is about 10 a turn over a 40-turn war. The f6d1e84 and 850e142 builds predate the gold logging,
      so their plunder isn't measured. Not a flag yet: first see what a non-waived army plunders, measured in the next
      block.
 - The rest of the gap (about 70 a turn for the doubled army) is Economy's.
 
-LEAD: reading only. A spend-idle-gold flag is dropped: there is no idle gold without the waiver. ArmyScrap is proposed
-(not coded) to go with ArmyQuality. Tell me if you want it coded for the same block.
+LEAD: a spend-idle-gold flag is dropped: there is no idle gold without the waiver. ArmyScrap is coded on ai/war
+(74cf8b3cd, off) to go with ArmyQuality (c74f22163) in the block after BigArmy.
 
 ### War: a sustained army without the waiver: patterns over the 11 BigArmy games, and the flags (the lead, 2:08pm ET) (Nov 5, about 2:09pm ET)
 **Per-game numbers (BigArmy first games, ab-1750459):**
