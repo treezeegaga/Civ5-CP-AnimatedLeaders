@@ -1956,6 +1956,20 @@ positions, set-up moves, or its scoring of attacks against cities.
   CoopWhenReady (built, not merged) are aimed at.
 - **SiegeDominated never attacked** in this block (only "stays skipped": 1 unit, expected 0).
 
+**Update with the whole block (14 first games, about 2:59am ET).** Four more f6d1e84 games came in after the table, three of
+them "no war declared" (PC 1 pairs 7 and 8, PC 2 pair 6). Over all 14:
+- **Stages:** no war 3, never at walls 2, refused 2, not taken 6, captured 1.
+- **Delivered:** 1.2 attacks a game (6 games with 2 or more).
+- **Attack endings a game:** NoUnits 0.1, DiploOpinionChange 0.9, TimedOut 1.6.
+- **Attempts:** 41 (2.9 a game); the city lost HP in 43%, mean 11.7.
+
+So against e4d5785 the gains shrink: attempts land 43% against 32% (not 57%), mean damage 11.7 against 6.8.
+DiploOpinionChange endings are down to 0.9 from 2.3, not 0.3. The no-war games are back to 3 of 14 (e4d5785: 1 of 14).
+The direction holds (fewer cancelled attacks, harder hits, fewer refusals), but it is smaller.
+
+**Next build:** the lead merged WindowUntilReady and the capture-plan logging into `claude/ab-c1` `850e142f1` (CI run
+219 green); SiegeFeed and CoopWhenReady are merged but off. That block is read against these 14.
+
 **Correction (my earlier at-the-walls entry): SiegeVolley withdrawn.**
 - The "6 or more units in the sim: the city lost HP in 22%" figure came almost entirely from one game: the Inca at
   Mumbai (0DF72455), 18 attempts with 6+ units, 1 landed.
