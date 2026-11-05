@@ -1,0 +1,27 @@
+001, The Inca, LEADER_PACHACUTI, tags E, pursuits 3/0, Expansionist, home meta 0, weights dom 30 sci 50 cul 10 dip 10, risk medium, expansion wide, greedy wide
+001, The Ottomans, LEADER_SULEIMAN, tags W, pursuits 0/1, Conqueror, home meta 80, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest, greedy wide
+001, Indonesia, LEADER_GAJAH_MADA, tags E, pursuits 1/2, Expansionist, home meta 15, weights dom 10 sci 10 cul 30 dip 50, risk high, expansion wide, greedy wide
+001, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 3/0, Expansionist, home meta -20, weights dom 30 sci 50 cul 10 dip 10, risk low, expansion wide, greedy wide
+001, Japan, LEADER_ODA_NOBUNAGA, tags W, pursuits 0/3, Conqueror, home meta 85, weights dom 68 sci 24 cul 4 dip 4, risk medium, expansion conquest, greedy wide
+001, Venice, LEADER_ENRICO_DANDOLO, tags SD, pursuits 1/3, Diplomat, home meta -40, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion tall, greedy tall
+001, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags T, pursuits 1/2, Tourism, home meta -65, weights dom 2 sci 6 cul 48 dip 44, risk medium, expansion tall, greedy tall
+001, Austria, LEADER_MARIA, tags D, pursuits 1/2, Diplomat, home meta -25, weights dom 4 sci 6 cul 26 dip 64, risk low, expansion medium, greedy wide
+050, The Inca, LEADER_PACHACUTI, tags RE, pursuits 3/0, Zealot, home meta 0, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion medium, greedy wide
+050, The Ottomans, LEADER_SULEIMAN, tags WR, pursuits 0/1, Conqueror, home meta 80, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest, greedy wide
+050, Indonesia, LEADER_GAJAH_MADA, tags E, pursuits 1/2, Expansionist, home meta 15, weights dom 10 sci 10 cul 30 dip 50, risk high, expansion wide, greedy wide
+050, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 3/0, Expansionist, home meta -20, weights dom 30 sci 50 cul 10 dip 10, risk low, expansion wide, greedy wide
+050, Japan, LEADER_ODA_NOBUNAGA, tags WR, pursuits 0/3, Conqueror, home meta 85, weights dom 68 sci 24 cul 4 dip 4, risk medium, expansion conquest, greedy wide
+050, Venice, LEADER_ENRICO_DANDOLO, tags RSD, pursuits 1/3, Diplomat, home meta -40, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion tall, greedy tall
+050, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags RT, pursuits 1/2, Zealot, home meta -5, weights dom 6 sci 6 cul 40 dip 48, risk medium, expansion medium, greedy tall
+050, Austria, LEADER_MARIA, tags RD, pursuits 1/2, Diplomat, home meta -25, weights dom 4 sci 6 cul 26 dip 64, risk low, expansion medium, greedy wide
+100, The Inca, LEADER_PACHACUTI, tags RE, pursuits 3/0, Zealot, home meta 0, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion medium, greedy wide
+100, The Ottomans, LEADER_SULEIMAN, tags WR, pursuits 0/1, Conqueror, home meta 80, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest, greedy wide
+100, Indonesia, LEADER_GAJAH_MADA, tags RE, pursuits 1/2, Zealot, home meta 15, weights dom 6 sci 6 cul 40 dip 48, risk high, expansion medium, greedy wide
+100, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 3/0, Zealot, home meta -20, weights dom 26 sci 46 cul 20 dip 8, risk low, expansion wide, greedy wide
+100, Japan, LEADER_ODA_NOBUNAGA, tags WR, pursuits 0/3, Conqueror, home meta 85, weights dom 68 sci 24 cul 4 dip 4, risk medium, expansion conquest, greedy wide
+100, Venice, LEADER_ENRICO_DANDOLO, tags RSD, pursuits 1/3, Diplomat, home meta -40, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion tall, greedy tall
+100, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags RT, pursuits 1/2, Zealot, home meta -5, weights dom 6 sci 6 cul 40 dip 48, risk medium, expansion medium, greedy tall
+100, Austria, LEADER_MARIA, tags RD, pursuits 1/2, Diplomat, home meta -25, weights dom 4 sci 6 cul 26 dip 64, risk low, expansion medium, greedy wide
+150, The Inca, LEADER_PACHACUTI, tags RE, pursuits 3/0, Zealot, home meta 0, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion medium, greedy wide
+150, The Ottomans, LEADER_SULEIMAN, tags WR, pursuits 0/1, Conqueror, home meta 80, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest, greedy wide
+150, Indonesia, LEADER_GAJAH_MADA, tags RE, pursuits 1/2, Zealot, home meta 15, weights dom 6 sci 6 cul 40 dip 48, risk high, expansion medium, greedy wide
