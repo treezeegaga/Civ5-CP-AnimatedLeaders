@@ -1949,11 +1949,21 @@ positions, set-up moves, or its scoring of attacks against cities.
 - If captures jump, size is the lever, and Economy and War make it reachable honestly.
 - If they stay rare with a big army, the siege/tactical code is the blocker, and that is War's next study.
 
-**A caveat:** in debt the game itself disbands units (Civ V's negative-treasury rule), which no flag lifts. The window
-log's gold column shows whether that happened; if it did, the army size at the declaration line is what was tested.
+**Gold made irrelevant (the lead, 8:30am ET):** in 0C22F161 debt itself destroyed an army: CP's "Gifting Warrior ...
+b/c bankrupt" gave away 37 warriors and the siege train. So under BigArmy, from the window's start to the end of the
+war (phase WINDOW, ATTACK or WAR):
+- no unit upkeep (CvTreasury::CalculateUnitCost returns 0); logged each turn as "BigArmy: upkeep waived X (phase P,
+  gold G, Y a turn)";
+- no bankruptcy gifting or disbanding (CvPlayer::DoBankruptcy returns; the treasury is already floored at 0); logged
+  as "BigArmy: bankruptcy skipped";
+- no unit counts as out of supply (CvPlayer::GetNumUnitsOutOfSupply returns 0). That lifts VP's training cap (14 over
+  supply), its 5%-a-unit production penalty and the over-supply scrapping;
+- DisbandObsoleteUnits doesn't count a deficit.
 
-Coded: `ai/war` `0ed387c16` on `claude/ab-c1` `850e142f1` (a fast-forward), CI pending. Runs as a 20-game block
-(RoleFixes + BigArmy) after the WindowUntilReady block.
+Shared code: CvTreasury::CalculateUnitCost, CvPlayer::DoBankruptcy, CvPlayer::GetNumUnitsOutOfSupply, test only.
+
+Coded: `ai/war` `0ed387c16`, `ecdc7837e`, `4cb5ae135` on `claude/ab-c1` `850e142f1` (a fast-forward), CI pending. Runs
+as a 20-game block (RoleFixes + BigArmy) after the WindowUntilReady block.
 
 ### War: the f6d1e84 block against the earlier builds (first games); SiegeVolley withdrawn (Nov 5, about 1:56am ET)
 **Data:**
