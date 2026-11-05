@@ -4084,6 +4084,22 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Attack runs on WarGold: the aggressor declares now, still no captures (lead, 2026-11-04 7:40pm ET)
+
+Aggressor wars declared and cities it captured, by build, first game (RoleFixes) / flipped game (none):
+
+| Build | Runs | Pairs | First games: wars declared | Flipped games: wars declared | Aggressor captures |
+|---|---|---|---|---|---|
+| `f21a8f6` | bullygreedy8 | 3 | Japan 1, Mongolia 1, Zulu 0 | 1, 0, 1 | 1 (Japan, flipped game) |
+| `f73177c` | bullyabort7, bullygreedy9 | 3 | Celts 1, Huns 1, China 0 | 0, 1, 0 | 0 |
+| `eb4129d` | bullyabort8, bullygreedy10 | 2 | Shoshone 1, America 0 | 1, 0 | 0 |
+| `e4d5785` (WarGold) | bullyabort9, bullygreedy11 | 4 | America 1, Huns 2, Aztec 2, Assyria 1 | 0, 1, 1, 0 | 0 |
+
+- **With WarGold, the aggressor declared in all 4 first games (6 wars), against 2 in the 4 flipped games.** On the
+  earlier builds it declared in 5 of 8 first games. Small numbers, but the right direction.
+- **Still no captures.** In 0D7BB38D (Aztecs vs Ethiopia), the city attack ran 21 turns and timed out (T108). Then, from
+  T113 on, tactics refused Addis Ababa every turn ("in enemy dominated zone - won't try to capture"). Sent to War.
+
 ### WarGold: the aggressor's gold, fixed at the root (lead, 2026-11-04 5:53pm ET)
 
 Economy's patch 0021 (`ai/economy` `43fd583`) and War's `460536b` are in `claude/ab-c1` `e4d5785` (82 flags; CI
