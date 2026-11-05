@@ -4084,6 +4084,29 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### BigArmy block done: army size is the lever (lead, 2026-11-05 4:58pm ET)
+
+Build `ab-1750459`. RoleFixes + WindowUntilReady + BigArmy (a doubled army; its upkeep, bankruptcy, supply and
+deficit scrapping waived). 10 pairs per PC.
+
+| Run | First games (RoleFixes + BigArmy) with a capture | Cities | Flipped games (CP's AI) with a capture |
+|---|---|---|---|
+| bullyabort13 (normal civs, PC 1) | 4 of 10 | 7 | 0 of 10 |
+| bullygreedy15 (greedy civs, PC 2) | 4 of 10 | 5 | 1 of 10 |
+| **Total** | **8 of 20 (40%)** | **12** | **1 of 20** |
+
+Before BigArmy: 3 of 28 (f6d1e84) and 1 of 13 (850e142). The aggressor lost 0 cities in the block.
+- **The siege train lags (block-wide):** the first wars started with 11-25 land units but 0-3 of the 4 siege units,
+  even with 18-75-turn windows and the caps lifted. Second wars reached 4-5 siege, but after T130.
+- **Army size without the waiver:** the army holds at 9-10 land units at war (War, e596517). The waived upkeep is about
+  70 gold a turn at war (Economy).
+
+**Next:** the honest package on `ab-abc78a6`/`5b7333c`: bullyabort14 (PC 1, until the user's game) and bullygreedy16
+(PC 2). RoleFixes + SiegeFeed, ArmyQuality, ArmyScrap, WarBudget, WarmongerHurry, LeanBuilders, WarChestTribute, with
+no BigArmy. War is asked to count the siege lag across the block.
+**WarChestTribute's assert** (CvDiplomacyAI.cpp:37596) blocked PC 1's game for about 20 min. It's fixed in `5b7333c`
+(skipped silently; no gameplay change).
+
 ### The 850e142 block ends early; BigArmy starts now (the user, 2026-11-05 10:59am ET)
 
 WindowUntilReady (ab-850e142): bullyabort12 had 7+ pairs and bullygreedy14 had 6. With RoleFixes, 1 capture in 13
