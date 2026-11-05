@@ -1652,6 +1652,39 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: flag `WarChestTribute` (the user's idea; Diplomacy session, 2026-11-05)
+
+**The user's idea:** warmongers should demand tribute from city-states to fund their wars.
+
+**What the logs show:**
+- No AI bullied a city-state for gold in any logged game: "Gold Bully" never appears in `DiplomacyAI_MinorCiv_Log.csv`,
+  across all the logs in `results/`.
+- CP only considers tribute from a city-state its approach is already HOSTILE toward.
+- It also scales the gold by the bully score (`CvMinorCivAI::GetBullyGoldAmount`), so a bully that barely passes gets
+  close to nothing. The base is 50 + up to 400 over the game, about 100 gold by mid-game at Quick.
+
+**Flag `WarChestTribute`:** pushed as `ai/diplomacy` `87836d4`, on `claude/ab-c1` `1750459`; off in the bundle, not compiled
+yet.
+- **Who:** a civ preparing or fighting a war, meaning any of: strategy profile meta position +50 or more, TimingBuildup's
+  window, a committed conquest target, or at war with a major civ.
+- **What it does:**
+  - it always looks for tribute, from any city-state its army can intimidate (CP's `CanMajorBullyGold`), not only
+    hostile ones;
+  - it leaves alone city-states allied to one of its friends, and those protected by a friend or by a civ rated STRONG
+    or stronger than it; its own allies and friends are skipped, as in CP;
+  - it prefers close city-states;
+  - a successful tribute pays at least half the base amount.
+- **The costs stay CP's:** influence with that city-state falls, and civs protecting it are angered.
+- **Major civs only.** Compatible with War's `CSAfterWar`, which stops war declarations on city-states during a build-up;
+  tribute isn't a war.
+- **Hypothesis:** warmongers raise a few hundred gold before and during their wars and field slightly bigger armies when
+  they declare.
+- **Measures:**
+  - tribute gold per warmonger ("Gold Bully" lines in the minor-civ log);
+  - the aggressor's army at its declaration (bully test);
+  - strength: no-worse;
+  - city-state relations: alliances held at T150.
+
 ### Diplomacy: flag `GreedyWideDeals` (Diplomacy session, 2026-11-04 5:25pm ET)
 
 Personality's request, for the user's "greedy wide" design. Pushed as `ai/diplomacy` `f1deaa1`, on `claude/ab-c1`
