@@ -1924,6 +1924,45 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: siege starved in the BigArmy windows: production, not the tech or the ready test (Nov 5, about 4:55pm ET)
+The lead (4:21pm ET): siege at the first declaration is 0 to 3 of the 4 targeted in nearly every BigArmy game, while the
+land "others" target is met. Is it the tech, the siege weight in the window, or the ready test? Counted over the logged
+BigArmy first games (19 with logs; scripts `tools/ab/bigarmy_siege.py` and `bigarmy_siege_weights.py`, run from a
+results worktree).
+
+| Question | Count |
+|---|---|
+| Mathematics (first siege unit in the production list) | median T40 (T35 to T47) |
+| Window opened | median T41 (T26 to T83) |
+| Declaration after Mathematics | 12+ turns in every game (median about 30) |
+| Declarations (28): field target met / siege met / both | 16 / 5 / 2 |
+| Field met but siege short | 14 of 28 |
+| Siege refused in the window: over the land army size ("nosupply") / other | 180 / 24 |
+| City-turns where siege could be built: siege the top-weighted unit | 43 of 395 (a median 81% of the top unit's weight otherwise) |
+| Military picks in the window | siege 69 of 490; Archers 112, Warriors 90, Scouts 45 |
+
+**Read:**
+- **Not the tech.** Siege is buildable about when the window opens, and every war comes 12+ turns later.
+- **Not the ready test.** It wants both halves, but the war comes anyway: when the window runs out, or from CP's own
+  approach. Only 2 of 28 declarations had both.
+- **It's production.**
+  - The window gives siege +4000 and every other land unit +3000, so siege tops the list in only 11% of city-turns.
+    Cheaper Archers and Warriors win the rest.
+  - Once the land count reaches the recommended size (siege target + field target + 2), CP refuses every land unit,
+    siege included ("nosupply", 180 times). The siege slots end up filled by extra field units.
+- This holds for the normal and WarBudget targets too: the cap and the weights are the same.
+
+**Proposal: SiegeSlots (coded, ai/war 5b6e48b6 on claude/ab-c1 5b7333c0, off).** In the window:
+- while siege (built and being built) is short of its target, a siege unit isn't refused for the land army size;
+- other land units get the window's +3000 only while the field units are short of the field target.
+- Siege keeps its +4000 while short.
+- Confirm: siege at the first declaration reaches its target in most games (BigArmy 5 of 28), with the field target met
+  as often.
+- Kill: the declaration comes later than with BigArmy or WarBudget alone, or the field target is met less often.
+
+LEAD: for the block after the package. ai/war 5b6e48b6 = claude/ab-c1 5b7333c0 + SiegeSlots (off). CI to follow; I'll
+confirm here.
+
 ### War: WarBudget, War's half: the army target is what gold keeps (Nov 5, about 2:22pm ET)
 The lead's honest package for the block after BigArmy. Economy's half is GetAffordableWarUnits (patch 0025, a21e842):
 how many more paid units the treasury plus 20 turns of income can keep.
