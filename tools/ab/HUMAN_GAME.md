@@ -175,6 +175,12 @@ observer mode later."* It applies when `MOD_AI_AB_TEST`, single player, turn 0, 
 - **Not a blocker:** roles skip humans (no crash, just the role shift described above); the results rows include the
   human; flags are never applied to the human.
 
+## Decision so far (the user, 2026-11-05)
+
+**The user plays the Aztec tonight (Option A: slot 0, Montezuma).** So no civ swap is needed: use `Player0 = CIVILIZATION_AZTEC LEADER_MONTEZUMA`
+exactly as the replay file has it, and the Zulu AI keeps slot 1. Questions 2 to 4 below are still open (my defaults:
+roles option 1, inherit the AI-founded capital, Quick pace).
+
 ## Open questions for the lead
 
 1. Option A (the user is the Aztec, slot 0) or Option B (the user is the Zulu, same slot numbers swapped)?
