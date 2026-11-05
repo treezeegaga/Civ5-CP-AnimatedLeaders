@@ -1,0 +1,102 @@
+From 759d6e28d9bc12cf46e3b3487677c8c3d6c3ae4b Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Thu, 5 Nov 2026 15:20:15 +0000
+Subject: [PATCH] AI_AB_TEST Economy: SettlerSaveCheck and PeaceHurry candidate
+ flags (Diplomacy's gold-waste findings)
+
+Diplomacy, 112 logged games: no settler-saving stretch ever reached the
+price (6 settlers bought), while DoHurry, tile buys and gifts stood still
+for a median 50 turns; when the goal lapsed, 40,190 gold went on hurries,
+mostly Warriors and Archers.
+
+SettlerSaveCheck: B saves for a settler purchase only when gold now + net
+income x the turns the city needs to finish the settler reaches the price.
+The purchase itself is unchanged.
+
+PeaceHurry: at peace with every major, no city threatened, and no timing
+attack in its window or march, the hurry loop buys no combat units (units
+for armies and operations unchanged).
+
+Both off in the bundle. Written 10:24am ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp | 25 ++++++++++++++++++++++-
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp     |  2 ++
+ CvGameCoreDLL_Expansion2/CvPlayer.h       |  3 +++
+ 3 files changed, 29 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index fcec871..3c4dbd8 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3107,7 +3107,20 @@ bool CvEconomicAI::IsSavingForExpansionSettler()
+ 	UnitTypes eSettler = NO_UNIT;
+ 	CvCity* pBuyCity = NULL;
+ 	int iCost = 0;
+-	return GetWantedExpansionSettler(m_pPlayer, eSettler, pBuyCity, iCost, true) && m_pPlayer->GetTreasury()->GetGold() < iCost;
++	if (!GetWantedExpansionSettler(m_pPlayer, eSettler, pBuyCity, iCost, true) || m_pPlayer->GetTreasury()->GetGold() >= iCost)
++		return false;
++
++	// AI_AB_TEST candidate (SettlerSaveCheck, Diplomacy's finding): in 865 civ-games no saving stretch ever reached the
++	// price (6 settlers bought in 112 games); production always finished the settler first, and meanwhile DoHurry spent
++	// nothing for a median 50 turns. Save only when the gold can get there before the city builds the settler.
++	if (m_pPlayer->UsesCandidateAI(FIX_SETTLER_SAVE_CHECK))
++	{
++		const int iTurnsLeft = max(1, pBuyCity->getProductionTurnsLeft(eSettler, 0));
++		const int iNet = m_pPlayer->GetTreasury()->CalculateBaseNetGold();
++		if (m_pPlayer->GetTreasury()->GetGold() + max(0, iNet) * iTurnsLeft < iCost)
++			return false;
++	}
++	return true;
+ }
+ 
+ /// AI_AB_TEST: buys the wanted settler as soon as the new AI can pay for it
+@@ -3387,6 +3400,16 @@ void CvEconomicAI::DoHurry()
+ 			// AI_AB_TEST: CP's AI often spends its first 100 gold on a scout; the new AI saves it for a settler
+ 			if (pkUnitInfo && m_pPlayer->UsesNewAI() && pkUnitInfo->GetDefaultUnitAIType() == UNITAI_EXPLORE)
+ 				continue;
++			// AI_AB_TEST candidate (PeaceHurry, Diplomacy's finding): at peace and out of danger, no gold for combat units
++			// (104 Warriors bought at 140 gold in 112 games, median T40, then upkeep and upgrades). Units for armies and
++			// operations, and a timing attack's window or march, are unchanged.
++			if (pkUnitInfo && selection.m_eBuildableType == CITY_BUILDABLE_UNIT && m_pPlayer->UsesCandidateAI(FIX_PEACE_HURRY) &&
++				(pkUnitInfo->GetCombat() > 0 || pkUnitInfo->GetRangedCombat() > 0) && pMostThreatenedCity == NULL && !m_pPlayer->IsAtWarAnyMajor())
++			{
++				const CvMilitaryAI::TimingBuildupPhase eHurryPhase = m_pPlayer->GetMilitaryAI()->GetTimingBuildupPhase();
++				if (eHurryPhase != CvMilitaryAI::TIMING_BUILDUP_WINDOW && eHurryPhase != CvMilitaryAI::TIMING_BUILDUP_ATTACK)
++					continue;
++			}
+ 			if (pkUnitInfo)
+ 			{
+ 				int iGoldCost = pSelectedCity->GetPurchaseCost(eUnitType);
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 55a711f..3ceefbf 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33437,6 +33437,8 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"WindowUntilReady", false},
+ 	{"BigArmy", false},
+ 	{"WarChestTribute", false},
++	{"SettlerSaveCheck", false},
++	{"PeaceHurry", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index c077437..2d14317 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -270,6 +270,9 @@ enum CandidateFixTypes
+ 							// Never in the bundle or a style
+ 	FIX_WAR_CHEST_TRIBUTE,	// Diplomacy (the user's idea): a civ preparing or fighting a war demands gold tribute from city-states its
+ 							// army can intimidate (not only hostile ones), and a successful tribute pays at least half. Off in the bundle
++	FIX_SETTLER_SAVE_CHECK,	// Economy (Diplomacy's finding): save for a settler purchase only when gold + income can reach the price before
++							// the city builds it. Off in the bundle
++	FIX_PEACE_HURRY,		// Economy (Diplomacy's finding): at peace and out of danger, gold doesn't hurry combat units. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+-- 
+2.43.0
+

@@ -1588,6 +1588,51 @@ had 4 workers: about 3-4 gold a turn back at T90. Suggest adding `LeanBuilders` 
 - **Status:** coded, patch 0021 on `claude/ab-c1` `eb4129d` (82 flags). It replaces the first 0021 (on `0cb85ae`,
   Currency and gold buildings only). Not built.
 
+### Diplomacy's gold-waste findings: Economy's review (Nov 5, 10:20am ET)
+Source: Diplomacy's "Where the AIs waste gold" (`claude/ai-diplomacy` `fa420b5`), 112 logged games. Checked
+against the code on `claude/ab-c1` `87836d4`.
+
+**1. Settler saving: confirmed, and it costs more than the dumps.**
+- While `IsSavingForExpansionSettler` is true, `DoHurry` returns before anything else: no hurries and no tile
+  purchases, for a median 50 turns.
+- The purchase price doesn't fall as the city builds the settler (`GetPurchaseCost` uses the full production
+  needed). So the gold almost never catches up before production finishes: 6 settlers bought in 112 games.
+- The saving only lapses when `GetWantedExpansionSettler` fails for a turn (unhappy, net gold below 0, book or
+  expansion strategy over). Then the normal hurry loop spends the pot: 214 times, 40,190 gold.
+- **Decision:** take fix 1 (new flag `SettlerSaveCheck`). Fix 2 goes in a different form (`PeaceHurry`, below): with
+  fix 1 the saving stretches become rare and short, and the dumped gold went mostly on combat units.
+
+**2. Warriors bought, then upgraded: partly already handled by CP.**
+- CP's sanity check already refuses to train or hurry a unit whose upgrade the civ can train anywhere
+  (`GetUnitClassTrainingAllowedAnywhere`, in `CheckUnitBuildSanity`, which `ChooseHurry` calls). So "never hurry a
+  unit whose upgrade the civ can already build" is in place.
+- The 104 Warriors (median T40) were bought before Bronze Working. Upgrading one later for 55 is normal play.
+- The waste is buying a Warrior at peace for 140 at all: it adds upkeep (about 1 gold a turn by T50) and doesn't
+  grow the economy. `PeaceHurry` covers it.
+
+**3. Stale upgrade savings:** for War, after C8 (`UpgradeSaveCancel`), as Diplomacy says.
+
+### SettlerSaveCheck: save for a settler only when the gold can get there (Economy, patch 0022)
+- **Change** (new flag, off in the bundle): B saves for a settler purchase only if gold now + net income × the turns
+  the city needs to finish the settler reaches the price. Otherwise the hurry loop runs as normal. If the gold is
+  there anyway, the purchase still happens.
+- **Hypothesis:** the 150-300 gold that sat unused for about 50 turns goes into buildings, workers and tiles early,
+  when they're worth most. No settlers are lost: production builds them anyway.
+- **Measure:** strength share at T150 (no-worse, δ 2). Mechanism: "EXPANSION SETTLER - Saving" turns per civ (should
+  drop from a median 50 to a few), and gold spent by T100 (homeland log).
+- **Also freed:** the same saving test gates tile purchases and city-state gifts (`CvDiplomacyAI`), so those run
+  more often too. Gifts are limited by `GiftsNeedPatronage` in the bundle.
+- **Status:** coded, patch 0022 on `claude/ab-c1` `87836d4` (with PeaceHurry), not built.
+
+### PeaceHurry: no gold for combat units at peace (Economy, patch 0022)
+- **Change** (new flag, off in the bundle): the hurry loop doesn't buy a combat unit when the civ is at peace with
+  every major, no city is threatened, and no timing attack is in its window or under way. Gold goes to buildings and
+  civilians instead. Units for operations and armies, WarChest's purchases and danger are unchanged.
+- **Hypothesis:** fewer Warriors and Archers bought at peace, less upkeep, and more buildings bought.
+- **Measure:** strength share at T150 (no-worse, δ 2). Mechanism: combat units bought at peace (should be 0) and
+  buildings bought (homeland "Buying" lines).
+- **Status:** coded, patch 0022 on `claude/ab-c1` `87836d4` (with SettlerSaveCheck), not built.
+
 ### Backburner: a warmonger's tech-lead opening (Economy, the user's idea, Nov 5)
 Not coded. Pick it up only if we see our warmongers losing fights for lack of a tech edge.
 - **The idea:** a warmonger plays tall early and takes land later with better units instead of settling it.
