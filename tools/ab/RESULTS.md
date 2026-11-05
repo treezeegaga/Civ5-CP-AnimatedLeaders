@@ -1950,12 +1950,22 @@ positions, set-up moves, or its scoring of attacks against cities.
    Funnel stage: not taken / refused.
 
 **Flags for the block after BigArmy:**
-- **ArmyQuality (new, coded below).** A unit counts toward the TimingBuildup army, and is built in the window, only if
-  its strength is at least 70% of the best land unit the civ can train. That rules out Warriors, Scouts and Archers
-  once Swordsmen and Composite Bowmen are trainable. The army becomes the same size, of better units, for the same
-  upkeep.
+- **ArmyQuality (new; coded, ai/war c74f22163, Nov 5 2:20pm ET).** A TimingBuildup civ builds no land unit weaker
+  than 70% of the best of its kind (melee or ranged; siege and scouts apart) it can train, and such units don't count
+  toward its army. That rules out Warriors once Swordsmen are trainable, and Archers once Composite Bowmen are. The
+  army becomes the same size, of better units, for the same upkeep.
+  - Units are compared within their kind so Archers aren't judged against Horsemen.
   - Targets the 22% obsolete share.
   - Funnel stage: not taken (6/11 BigArmy, 11/28 f6d1e84).
+  - Code:
+    - CvMilitaryAI::GetArmyQualityFloor and IsArmyQualityUnit;
+    - IsTimingBuildupArmyReady and GetTimingBuildupUnitsWanted count only units at or above the floor;
+    - shared code: CvUnitProductionAI::CheckUnitBuildSanity refuses units below the floor, unless the city is under
+      siege or the unit is free.
+  - Off in the bundle; nothing changes with the flag off.
+  - Confirm: in the next block, the share of Warriors and Scouts at the first declaration (BigArmy 42/194) falls to
+    near 0, with the same land count at the declaration.
+  - Kill: the declaration comes later than BigArmy's (median), or captures fall below BigArmy's 5/11.
 - **SiegeFeed on (built):** concentration at the walls (5 of 17 in reach).
 - **SecondWave (already in the role):** follow-up waves.
 - **BigArmy's army target (4 siege, 2 x (cities + 4))** without the waivers: whether that is affordable is Economy's
