@@ -1,0 +1,2086 @@
+012, La Venta, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+013, Kyiv, The Aztecs, RECEIVED_UNIT_GIFT, Jaguar
+013, Antananarivo, Russia, RECEIVED_UNIT_GIFT, Warrior
+013, Prague, The Ottomans, RECEIVED_UNIT_GIFT, Warrior
+020, Riga, The Celts, RECEIVED_UNIT_GIFT, Warrior
+022, Prague, The Ottomans, RECEIVED_UNIT_GIFT, Warrior
+025, Japan, Manila, SENT OUT QUEST, Type, 2
+025, Japan, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+025, Babylon, Singapore, SENT OUT QUEST, Type, 1
+025, Babylon, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+025, The Celts, Riga, SENT OUT QUEST, Type, 1
+025, The Celts, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+025, The Ottomans, La Venta, SENT OUT QUEST, Type, 2
+025, The Ottomans, La Venta, RECEIVED QUEST, Connect Resource, Friendship: -1 to -1, MINOR_CIV_LA_VENTA
+025, The Zulus, La Venta, SENT OUT QUEST, Type, 3
+025, The Zulus, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+025, The Zulus, Monaco, SENT OUT QUEST, Type, 1
+025, The Zulus, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+025, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 3
+025, The Aztecs, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+025, The Ottomans, Prague, SENT OUT QUEST, Type, 2
+025, The Ottomans, Prague, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+025, The Celts, Prague, SENT OUT QUEST, Type, 3
+025, The Celts, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+025, The Huns, Bucharest, SENT OUT QUEST, Type, 7
+025, The Huns, Bucharest, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+025, Russia, Bucharest, SENT OUT QUEST, Type, 2
+025, Russia, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+026, The Ottomans, Monaco, SENT OUT QUEST, Type, 1
+026, The Ottomans, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+026, The Aztecs, Kyiv, SENT OUT QUEST, Type, 7
+026, The Aztecs, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+026, The Aztecs, Geneva, SENT OUT QUEST, Type, 1
+026, The Aztecs, Geneva, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENEVA
+026, The Celts, Riga, SENT OUT QUEST, Type, 2
+026, The Celts, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+026, The Ottomans, La Venta, SENT OUT QUEST, Type, 11
+026, The Ottomans, La Venta, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+026, The Zulus, La Venta, SENT OUT QUEST, Type, 11
+026, The Zulus, La Venta, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+026, Babylon, La Venta, SENT OUT QUEST, Type, 11
+026, Babylon, La Venta, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+026, Babylon, La Venta, SENT OUT QUEST, Type, 3
+026, Babylon, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+026, The Ottomans, Prague, SENT OUT QUEST, Type, 1
+026, The Ottomans, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+026, The Celts, Prague, SENT OUT QUEST, Type, 1
+026, The Celts, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+026, Bucharest, The Aztecs, RECEIVED_UNIT_GIFT, Jaguar
+027, Babylon, Riga, SENT OUT QUEST, Type, 1
+027, Babylon, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+027, Russia, Bucharest, gained friend
+027, Russia, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+028, Babylon, Manila, era change yield update
+028, Babylon, Kyiv, era change yield update
+028, Babylon, Budapest, era change yield update
+028, Babylon, Geneva, era change yield update
+028, Babylon, Singapore, era change yield update
+028, Babylon, Riga, era change yield update
+028, Babylon, La Venta, era change yield update
+028, Babylon, Colombo, era change yield update
+028, Babylon, Monaco, era change yield update
+028, Babylon, Antananarivo, era change yield update
+028, Babylon, Wittenberg, era change yield update
+028, Babylon, Ragusa, era change yield update
+028, Babylon, Kyzyl, era change yield update
+028, Babylon, Prague, era change yield update
+028, Babylon, Bucharest, era change yield update
+028, Babylon, Bogota, era change yield update
+028, Babylon, Singapore, SENT OUT QUEST, Type, 1
+028, Babylon, Riga, SENT OUT QUEST, Type, 1
+028, Babylon, La Venta, SENT OUT QUEST, Type, 11
+028, Babylon, La Venta, SENT OUT QUEST, Type, 3
+029, Russia, Antananarivo, Gold Gift: 500, Friendship: 1 to 1, Spaceship, MINOR_CIV_ANTANANARIVO, (SAVING) 
+029, Japan, Budapest, SENT OUT QUEST, Type, 1
+029, Japan, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+030, The Huns, Budapest, SENT OUT QUEST, Type, 1
+030, The Huns, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+030, Japan, Geneva, SENT OUT QUEST, Type, 1
+030, Japan, Geneva, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENEVA
+030, The Celts, La Venta, SENT OUT QUEST, Type, 11
+030, The Celts, La Venta, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+030, Prague, The Celts, RECEIVED_UNIT_GIFT, Warrior
+030, Babylon, Bogota, SENT OUT QUEST, Type, 1
+030, Babylon, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+031, The Aztecs, Geneva, SENT OUT QUEST, Type, 7
+031, The Aztecs, Geneva, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_GENEVA
+032, Russia, Manila, SENT OUT QUEST, Type, 6
+032, Russia, Manila, RECEIVED QUEST, Find Player, Friendship: 5 to 5, MINOR_CIV_MANILA
+032, The Zulus, Colombo, SENT OUT QUEST, Type, 13
+032, The Zulus, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+032, Babylon, Colombo, SENT OUT QUEST, Type, 13
+032, Babylon, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+032, Japan, Antananarivo, SENT OUT QUEST, Type, 10
+032, Japan, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+032, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 10
+032, The Aztecs, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+032, Russia, Antananarivo, SENT OUT QUEST, Type, 10
+032, Russia, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+033, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 1
+033, The Aztecs, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+033, Russia, Kyzyl, SENT OUT QUEST, Type, 1
+033, Russia, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+034, Japan, Kyiv, SENT OUT QUEST, Type, 1
+034, Japan, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+034, The Aztecs, Kyiv, SENT OUT QUEST, Type, 1
+034, The Aztecs, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+034, Russia, Antananarivo, SENT OUT QUEST, Type, 3
+034, Russia, Antananarivo, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+034, Japan, Wittenberg, SENT OUT QUEST, Type, 13
+034, Japan, Wittenberg, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+034, Russia, Wittenberg, SENT OUT QUEST, Type, 13
+034, Russia, Wittenberg, RECEIVED QUEST, Invest, Friendship: -12 to -12, MINOR_CIV_WITTENBERG
+034, Japan, Ragusa, SENT OUT QUEST, Type, 1
+034, Japan, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+034, Russia, Kyzyl, SENT OUT QUEST, Type, 7
+034, Russia, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+034, Russia, Bucharest, lost friend
+035, Manila, The Aztecs, RECEIVED_UNIT_GIFT, Jaguar
+035, The Zulus, Colombo, SENT OUT QUEST, Type, 2
+035, The Zulus, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+035, Japan, Antananarivo, SENT OUT QUEST, Type, 2
+035, Japan, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+035, The Huns, Kyzyl, SENT OUT QUEST, Type, 1
+035, The Huns, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+036, Babylon, Singapore, SENT OUT QUEST, Type, 1
+036, Babylon, Colombo, SENT OUT QUEST, Type, 13
+036, Japan, Manila, SENT OUT QUEST, Type, 1
+036, Japan, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+036, The Aztecs, Manila, SENT OUT QUEST, Type, 1
+036, The Aztecs, Manila, RECEIVED QUEST, Kill Camp, Friendship: 2 to 2, MINOR_CIV_MANILA
+036, Russia, Manila, SENT OUT QUEST, Type, 1
+036, Russia, Manila, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MANILA
+036, The Aztecs, Manila, SENT OUT QUEST, Type, 3
+036, The Aztecs, Manila, RECEIVED QUEST, Construct Wonder, Friendship: 2 to 2, MINOR_CIV_MANILA
+036, Babylon, Singapore, SENT OUT QUEST, Type, 7
+036, Babylon, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 1 to 1, MINOR_CIV_SINGAPORE
+036, Babylon, Colombo, SENT OUT QUEST, Type, 7
+036, Babylon, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 1 to 1, MINOR_CIV_COLOMBO
+036, The Huns, Bucharest, SENT OUT QUEST, Type, 10
+036, The Huns, Bucharest, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+036, The Zulus, Bucharest, SENT OUT QUEST, Type, 10
+036, The Zulus, Bucharest, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+036, The Aztecs, Bucharest, SENT OUT QUEST, Type, 10
+036, The Aztecs, Bucharest, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+036, Russia, Bucharest, SENT OUT QUEST, Type, 10
+036, Russia, Bucharest, RECEIVED QUEST, Contest Culture, Friendship: 26 to 26, MINOR_CIV_BUCHAREST
+037, The Ottomans, Manila, era change yield update
+037, The Ottomans, Kyiv, era change yield update
+037, The Ottomans, Budapest, era change yield update
+037, The Ottomans, Geneva, era change yield update
+037, The Ottomans, Singapore, era change yield update
+037, The Ottomans, Riga, era change yield update
+037, The Ottomans, La Venta, era change yield update
+037, The Ottomans, Colombo, era change yield update
+037, The Ottomans, Monaco, era change yield update
+037, The Ottomans, Antananarivo, era change yield update
+037, The Ottomans, Wittenberg, era change yield update
+037, The Ottomans, Ragusa, era change yield update
+037, The Ottomans, Kyzyl, era change yield update
+037, The Ottomans, Prague, era change yield update
+037, The Ottomans, Bucharest, era change yield update
+037, The Ottomans, Bogota, era change yield update
+037, The Ottomans, La Venta, SENT OUT QUEST, Type, 2
+037, The Ottomans, La Venta, SENT OUT QUEST, Type, 11
+037, The Ottomans, Monaco, SENT OUT QUEST, Type, 1
+037, The Ottomans, Prague, SENT OUT QUEST, Type, 2
+037, The Ottomans, Prague, SENT OUT QUEST, Type, 1
+037, Japan, Manila, era change yield update
+037, Japan, Kyiv, era change yield update
+037, Japan, Budapest, era change yield update
+037, Japan, Geneva, era change yield update
+037, Japan, Singapore, era change yield update
+037, Japan, Riga, era change yield update
+037, Japan, La Venta, era change yield update
+037, Japan, Colombo, era change yield update
+037, Japan, Monaco, era change yield update
+037, Japan, Antananarivo, era change yield update
+037, Japan, Wittenberg, era change yield update
+037, Japan, Ragusa, era change yield update
+037, Japan, Kyzyl, era change yield update
+037, Japan, Prague, era change yield update
+037, Japan, Bucharest, era change yield update
+037, Japan, Bogota, era change yield update
+037, Japan, Manila, SENT OUT QUEST, Type, 2
+037, Japan, Manila, SENT OUT QUEST, Type, 1
+037, Japan, Kyiv, SENT OUT QUEST, Type, 1
+037, Japan, Budapest, SENT OUT QUEST, Type, 1
+037, Japan, Geneva, SENT OUT QUEST, Type, 1
+037, Japan, Antananarivo, SENT OUT QUEST, Type, 10
+037, Japan, Antananarivo, SENT OUT QUEST, Type, 2
+037, Japan, Wittenberg, SENT OUT QUEST, Type, 13
+037, Japan, Ragusa, SENT OUT QUEST, Type, 1
+037, Babylon, Geneva, SENT OUT QUEST, Type, 1
+037, Babylon, Geneva, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENEVA
+037, The Celts, Manila, era change yield update
+037, The Celts, Kyiv, era change yield update
+037, The Celts, Budapest, era change yield update
+037, The Celts, Geneva, era change yield update
+037, The Celts, Singapore, era change yield update
+037, The Celts, Riga, era change yield update
+037, The Celts, La Venta, era change yield update
+037, The Celts, Colombo, era change yield update
+037, The Celts, Monaco, era change yield update
+037, The Celts, Antananarivo, era change yield update
+037, The Celts, Wittenberg, era change yield update
+037, The Celts, Ragusa, era change yield update
+037, The Celts, Kyzyl, era change yield update
+037, The Celts, Prague, era change yield update
+037, The Celts, Bucharest, era change yield update
+037, The Celts, Bogota, era change yield update
+037, The Celts, Riga, SENT OUT QUEST, Type, 1
+037, The Celts, Riga, SENT OUT QUEST, Type, 2
+037, The Celts, La Venta, SENT OUT QUEST, Type, 11
+037, The Celts, Prague, SENT OUT QUEST, Type, 3
+037, The Celts, Prague, SENT OUT QUEST, Type, 1
+037, The Celts, Singapore, SENT OUT QUEST, Type, 1
+037, The Celts, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+037, Japan, Kyiv, SENT OUT QUEST, Type, 7
+037, Japan, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+037, Japan, Budapest, SENT OUT QUEST, Type, 2
+037, Japan, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+037, Prague, The Ottomans, RECEIVED_UNIT_GIFT, Warrior
+037, The Aztecs, Bucharest, SENT OUT QUEST, Type, 3
+037, The Aztecs, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+038, The Ottomans, Bucharest, SENT OUT QUEST, Type, 10
+038, The Ottomans, Bucharest, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+038, The Zulus, Prague, SENT OUT QUEST, Type, 1
+038, The Zulus, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+038, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 13
+038, The Aztecs, Wittenberg, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+038, Russia, Wittenberg, SENT OUT QUEST, Type, 6
+038, Russia, Wittenberg, RECEIVED QUEST, Find Player, Friendship: -6 to -6, MINOR_CIV_WITTENBERG
+039, The Aztecs, Manila, era change yield update
+039, The Aztecs, Kyiv, era change yield update
+039, The Aztecs, Budapest, era change yield update
+039, The Aztecs, Geneva, era change yield update
+039, The Aztecs, Singapore, era change yield update
+039, The Aztecs, Riga, era change yield update
+039, The Aztecs, La Venta, era change yield update
+039, The Aztecs, Colombo, era change yield update
+039, The Aztecs, Monaco, era change yield update
+039, The Aztecs, Antananarivo, era change yield update
+039, The Aztecs, Wittenberg, era change yield update
+039, The Aztecs, Ragusa, era change yield update
+039, The Aztecs, Kyzyl, era change yield update
+039, The Aztecs, Prague, era change yield update
+039, The Aztecs, Bucharest, era change yield update
+039, The Aztecs, Bogota, era change yield update
+039, The Aztecs, Manila, SENT OUT QUEST, Type, 1
+039, The Aztecs, Manila, SENT OUT QUEST, Type, 3
+039, The Aztecs, Kyiv, SENT OUT QUEST, Type, 7
+039, The Aztecs, Kyiv, SENT OUT QUEST, Type, 1
+039, The Aztecs, Geneva, SENT OUT QUEST, Type, 1
+039, The Aztecs, Geneva, SENT OUT QUEST, Type, 7
+039, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 10
+039, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 13
+039, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 3
+039, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 1
+039, The Aztecs, Bucharest, SENT OUT QUEST, Type, 10
+039, The Aztecs, Bucharest, SENT OUT QUEST, Type, 3
+039, Monaco, The Ottomans, RECEIVED_UNIT_GIFT, Warrior
+040, The Huns, Manila, era change yield update
+040, The Huns, Kyiv, era change yield update
+040, The Huns, Budapest, era change yield update
+040, The Huns, Geneva, era change yield update
+040, The Huns, Singapore, era change yield update
+040, The Huns, Riga, era change yield update
+040, The Huns, La Venta, era change yield update
+040, The Huns, Colombo, era change yield update
+040, The Huns, Monaco, era change yield update
+040, The Huns, Antananarivo, era change yield update
+040, The Huns, Wittenberg, era change yield update
+040, The Huns, Ragusa, era change yield update
+040, The Huns, Kyzyl, era change yield update
+040, The Huns, Prague, era change yield update
+040, The Huns, Bucharest, era change yield update
+040, The Huns, Bogota, era change yield update
+040, The Huns, Budapest, SENT OUT QUEST, Type, 1
+040, The Huns, Kyzyl, SENT OUT QUEST, Type, 1
+040, The Huns, Bucharest, SENT OUT QUEST, Type, 7
+040, The Huns, Bucharest, SENT OUT QUEST, Type, 10
+040, The Celts, Singapore, SENT OUT QUEST, Type, 1
+040, Russia, Kyzyl, gained friend
+040, Russia, Kyzyl, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KYZYL
+041, The Zulus, Manila, era change yield update
+041, The Zulus, Kyiv, era change yield update
+041, The Zulus, Budapest, era change yield update
+041, The Zulus, Geneva, era change yield update
+041, The Zulus, Singapore, era change yield update
+041, The Zulus, Riga, era change yield update
+041, The Zulus, La Venta, era change yield update
+041, The Zulus, Colombo, era change yield update
+041, The Zulus, Monaco, era change yield update
+041, The Zulus, Antananarivo, era change yield update
+041, The Zulus, Wittenberg, era change yield update
+041, The Zulus, Ragusa, era change yield update
+041, The Zulus, Kyzyl, era change yield update
+041, The Zulus, Prague, era change yield update
+041, The Zulus, Bucharest, era change yield update
+041, The Zulus, Bogota, era change yield update
+041, The Zulus, La Venta, SENT OUT QUEST, Type, 3
+041, The Zulus, La Venta, SENT OUT QUEST, Type, 11
+041, The Zulus, Colombo, SENT OUT QUEST, Type, 13
+041, The Zulus, Colombo, SENT OUT QUEST, Type, 2
+041, The Zulus, Monaco, SENT OUT QUEST, Type, 1
+041, The Zulus, Prague, SENT OUT QUEST, Type, 1
+041, The Zulus, Bucharest, SENT OUT QUEST, Type, 10
+041, Russia, Manila, era change yield update
+041, Russia, Kyiv, era change yield update
+041, Russia, Budapest, era change yield update
+041, Russia, Geneva, era change yield update
+041, Russia, Singapore, era change yield update
+041, Russia, Riga, era change yield update
+041, Russia, La Venta, era change yield update
+041, Russia, Colombo, era change yield update
+041, Russia, Monaco, era change yield update
+041, Russia, Antananarivo, era change yield update
+041, Russia, Wittenberg, era change yield update
+041, Russia, Ragusa, era change yield update
+041, Russia, Kyzyl, era change yield update
+041, Russia, Prague, era change yield update
+041, Russia, Bucharest, era change yield update
+041, Russia, Bogota, era change yield update
+041, Russia, Manila, SENT OUT QUEST, Type, 6
+041, Russia, Manila, SENT OUT QUEST, Type, 1
+041, Russia, Antananarivo, SENT OUT QUEST, Type, 10
+041, Russia, Antananarivo, SENT OUT QUEST, Type, 3
+041, Russia, Wittenberg, SENT OUT QUEST, Type, 13
+041, Russia, Wittenberg, SENT OUT QUEST, Type, 6
+041, Russia, Kyzyl, SENT OUT QUEST, Type, 1
+041, Russia, Bucharest, SENT OUT QUEST, Type, 10
+041, The Ottomans, Monaco, SENT OUT QUEST, Type, 2
+041, The Ottomans, Monaco, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MONACO
+042, The Huns, Antananarivo, SENT OUT QUEST, Type, 10
+042, The Huns, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+042, The Aztecs, Ragusa, SENT OUT QUEST, Type, 1
+042, The Aztecs, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+042, Babylon, Singapore, gained friend
+042, Babylon, Singapore, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SINGAPORE
+042, Babylon, Colombo, gained friend
+042, Babylon, Colombo, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_COLOMBO
+042, Japan, Antananarivo, gained friend
+042, Japan, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+043, The Celts, Bogota, SENT OUT QUEST, Type, 1
+043, The Celts, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+043, Babylon, Riga, SENT OUT QUEST, Type, 7
+043, Babylon, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+044, The Huns, Manila, SENT OUT QUEST, Type, 1
+044, The Huns, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+044, Japan, Budapest, gained friend
+044, Japan, Budapest, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_BUDAPEST
+044, Babylon, La Venta, gained friend
+044, Babylon, La Venta, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+044, Babylon, La Venta, SENT OUT QUEST, Type, 3
+044, Babylon, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 40 to 40, MINOR_CIV_LA_VENTA
+045, Babylon, La Venta, SENT OUT QUEST, Type, 11
+045, Babylon, La Venta, SENT OUT QUEST, Type, 3
+045, The Huns, Budapest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+045, The Zulus, La Venta, SENT OUT QUEST, Type, 2
+045, The Zulus, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+045, The Celts, Prague, SENT OUT QUEST, Type, 7
+045, The Celts, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+045, The Huns, Bucharest, SENT OUT QUEST, Type, 2
+045, The Huns, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+046, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 1
+046, The Ottomans, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+046, The Zulus, Singapore, SENT OUT QUEST, Type, 1
+046, The Zulus, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+046, The Celts, Kyzyl, SENT OUT QUEST, Type, 1
+046, The Celts, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+046, The Zulus, La Venta, gained friend
+046, The Zulus, La Venta, FINISHED QUEST, Contest Faith, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+046, The Ottomans, La Venta, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+046, Babylon, La Venta, cancelled, Contest Faith, Friendship: 35 to 35, MINOR_CIV_LA_VENTA
+046, The Celts, La Venta, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+046, The Ottomans, La Venta, SENT OUT QUEST, Type, 3
+046, The Ottomans, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+046, Japan, Ragusa, SENT OUT QUEST, Type, 6
+046, Japan, Ragusa, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+046, The Huns, Bucharest, gained friend
+046, The Huns, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+047, The Zulus, Singapore, SENT OUT QUEST, Type, 1
+047, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+047, The Aztecs, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+047, Russia, Kyzyl, lost friend
+047, The Ottomans, Prague, SENT OUT QUEST, Type, 17
+047, The Ottomans, Prague, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+047, The Zulus, Bucharest, SENT OUT QUEST, Type, 2
+047, The Zulus, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+047, Russia, Bucharest, SENT OUT QUEST, Type, 17
+047, Russia, Bucharest, RECEIVED QUEST, Trade Route, Friendship: 10 to 10, MINOR_CIV_BUCHAREST
+048, Russia, Manila, gained friend
+048, Russia, Manila, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_MANILA
+048, Russia, Wittenberg, gained friend
+048, Russia, Wittenberg, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_WITTENBERG
+048, Japan, Ragusa, gained friend
+048, Japan, Ragusa, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_RAGUSA
+049, Babylon, La Venta, lost friend
+049, Japan, Antananarivo, lost friend
+050, The Zulus, Singapore, Gold Gift: 500, Friendship: 4 to 4, Conquest, MINOR_CIV_SINGAPORE, (SAVING) 
+050, Russia, Manila, SENT OUT QUEST, Type, 0
+050, Russia, Manila, RECEIVED QUEST, Route, Friendship: 37 to 37, MINOR_CIV_MANILA
+050, The Zulus, La Venta, cancelled, Construct Wonder, Friendship: 31 to 31, MINOR_CIV_LA_VENTA
+050, Russia, Antananarivo, SENT OUT QUEST, Type, 2
+050, Russia, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+050, The Celts, Prague, gained friend
+050, The Celts, Prague, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+050, The Aztecs, Bucharest, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+050, Babylon, Bogota, SENT OUT QUEST, Type, 4
+050, Babylon, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+051, The Celts, Singapore, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_SINGAPORE, (SAVING) 
+051, Russia, Manila, gained ally
+051, Russia, Manila, Gold Gift: 250, Friendship: 37 to 62, Diplomacy, MINOR_CIV_MANILA, Boost! 
+051, Russia, Antananarivo, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_ANTANANARIVO, (SAVING) 
+051, Japan, Manila, SENT OUT QUEST, Type, 16
+051, Japan, Manila, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_MANILA
+051, Japan, Budapest, SENT OUT QUEST, Type, 16
+051, Japan, Budapest, RECEIVED QUEST, Spread Religion, Friendship: 34 to 34, MINOR_CIV_BUDAPEST
+051, The Zulus, La Venta, lost friend
+051, Japan, Ragusa, lost friend
+052, The Huns, Wittenberg, SENT OUT QUEST, Type, 13
+052, The Huns, Wittenberg, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+052, Japan, Wittenberg, Gold Gift: 500, Friendship: -10 to -10, Conquest, MINOR_CIV_WITTENBERG, (SAVING) 
+052, Japan, Geneva, SENT OUT QUEST, Type, 1
+052, Russia, Manila, lost ally
+052, Babylon, Geneva, SENT OUT QUEST, Type, 3
+052, Babylon, Geneva, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_GENEVA
+052, Babylon, Colombo, FINISHED QUEST, Invest, Friendship: 30 to 30, MINOR_CIV_COLOMBO
+052, The Zulus, Colombo, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+052, The Zulus, Monaco, SENT OUT QUEST, Type, 7
+052, The Zulus, Monaco, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+052, Russia, Antananarivo, gained friend
+052, Russia, Antananarivo, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_ANTANANARIVO
+052, The Huns, Antananarivo, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+052, Japan, Antananarivo, cancelled, Contest Culture, Friendship: 25 to 25, MINOR_CIV_ANTANANARIVO
+052, The Aztecs, Antananarivo, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+052, Russia, Wittenberg, lost friend
+052, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 7
+052, The Aztecs, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+053, The Aztecs, Manila, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+053, The Aztecs, Kyiv, SENT OUT QUEST, Type, 17
+053, The Aztecs, Kyiv, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KIEV
+053, Japan, Budapest, lost friend
+053, Babylon, Singapore, lost friend
+053, Babylon, Colombo, lost friend
+053, Russia, Antananarivo, cancelled, Construct Wonder, Friendship: 43 to 43, MINOR_CIV_ANTANANARIVO
+053, Russia, Wittenberg, SENT OUT QUEST, Type, 7
+053, Russia, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 27 to 27, MINOR_CIV_WITTENBERG
+053, The Aztecs, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+053, The Huns, Bucharest, lost friend
+054, Russia, Kyiv, SENT OUT QUEST, Type, 1
+054, Russia, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+054, The Celts, Singapore, SENT OUT QUEST, Type, 7
+054, The Celts, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+054, Babylon, Colombo, SENT OUT QUEST, Type, 17
+054, Babylon, Colombo, RECEIVED QUEST, Trade Route, Friendship: 27 to 27, MINOR_CIV_COLOMBO
+054, Russia, Wittenberg, FINISHED QUEST, Invest, Friendship: 26 to 26, MINOR_CIV_WITTENBERG
+054, The Huns, Wittenberg, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+054, The Aztecs, Wittenberg, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+054, Japan, Wittenberg, FINISHED QUEST, Invest, Friendship: -6 to -6, MINOR_CIV_WITTENBERG
+054, The Huns, Ragusa, SENT OUT QUEST, Type, 1
+054, The Huns, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+054, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 2
+054, The Aztecs, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KYZYL
+055, The Celts, Riga, SENT OUT QUEST, Type, 16
+055, The Celts, Riga, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_RIGA
+056, The Aztecs, Geneva, SENT OUT QUEST, Type, 2
+056, The Aztecs, Geneva, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENEVA
+056, Babylon, Singapore, SENT OUT QUEST, Type, 7
+056, Babylon, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 24 to 24, MINOR_CIV_SINGAPORE
+056, Japan, Antananarivo, SENT OUT QUEST, Type, 2
+056, Japan, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 19 to 19, MINOR_CIV_ANTANANARIVO
+056, The Huns, Bucharest, gained friend
+056, The Huns, Bucharest, gained ally
+056, The Huns, Bucharest, FINISHED QUEST, Contest Culture, Friendship: 25 to 65, MINOR_CIV_BUCHAREST
+056, The Ottomans, Bucharest, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+056, The Zulus, Bucharest, cancelled, Contest Culture, Friendship: 12 to 12, MINOR_CIV_BUCHAREST
+056, The Aztecs, Bucharest, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+056, Russia, Bucharest, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BUCHAREST
+057, The Huns, Bucharest, Gold Gift: 250, Friendship: 65 to 65, Conquest, MINOR_CIV_BUCHAREST, (SAVING) , Boost! , Passing Russia
+057, The Huns, Bucharest, SENT OUT QUEST, Type, 7
+057, The Aztecs, Manila, SENT OUT QUEST, Type, 2
+057, The Aztecs, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+057, Japan, Geneva, SENT OUT QUEST, Type, 7
+057, Japan, Geneva, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_GENEVA
+057, Russia, Kyzyl, SENT OUT QUEST, Type, 2
+057, Russia, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 14 to 14, MINOR_CIV_KYZYL
+057, The Celts, Prague, lost friend
+057, The Aztecs, Bucharest, SENT OUT QUEST, Type, 2
+057, The Aztecs, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+058, The Ottomans, Singapore, SENT OUT QUEST, Type, 1
+058, The Ottomans, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+058, The Ottomans, Ragusa, SENT OUT QUEST, Type, 1
+058, The Ottomans, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+059, The Ottomans, Manila, SENT OUT QUEST, Type, 1
+059, The Ottomans, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+059, The Ottomans, Singapore, SENT OUT QUEST, Type, 1
+059, The Celts, Singapore, gained friend
+059, The Celts, Singapore, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SINGAPORE
+059, The Zulus, Colombo, SENT OUT QUEST, Type, 3
+059, The Zulus, Colombo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+059, Russia, Antananarivo, gained ally
+059, Russia, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 34 to 74, MINOR_CIV_ANTANANARIVO
+059, Japan, Wittenberg, SENT OUT QUEST, Type, 16
+059, Japan, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 1 to 1, MINOR_CIV_WITTENBERG
+059, Russia, Kyzyl, gained friend
+059, Russia, Kyzyl, FINISHED QUEST, Connect Resource, Friendship: 11 to 51, MINOR_CIV_KYZYL
+059, The Celts, Prague, gained friend
+059, The Celts, Prague, gained ally
+059, The Celts, Prague, FINISHED QUEST, Find Natural Wonder, Friendship: 26 to 66, MINOR_CIV_PRAGUE
+059, The Ottomans, Bucharest, SENT OUT QUEST, Type, 7
+059, The Ottomans, Bucharest, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+060, The Celts, Prague, SENT OUT QUEST, Type, 1
+060, Japan, Kyiv, SENT OUT QUEST, Type, 16
+060, Japan, Kyiv, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KIEV
+060, The Huns, Antananarivo, SENT OUT QUEST, Type, 2
+060, The Huns, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+060, The Huns, Bucharest, lost ally
+061, The Huns, Geneva, SENT OUT QUEST, Type, 1
+061, The Huns, Geneva, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENEVA
+061, Babylon, Riga, SENT OUT QUEST, Type, 3
+061, Babylon, Riga, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+061, Babylon, La Venta, SENT OUT QUEST, Type, 7
+061, Babylon, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+061, The Huns, Kyzyl, SENT OUT QUEST, Type, 3
+061, The Huns, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+062, Japan, Kyiv, gained friend
+062, Japan, Kyiv, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KIEV
+062, Japan, Geneva, gained friend
+062, Japan, Geneva, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_GENEVA
+062, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 7
+062, The Ottomans, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+063, The Ottomans, Monaco, SENT OUT QUEST, Type, 7
+063, The Ottomans, Monaco, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+064, Babylon, Geneva, SENT OUT QUEST, Type, 1
+064, Babylon, Geneva, SENT OUT QUEST, Type, 3
+064, The Celts, Ragusa, SENT OUT QUEST, Type, 1
+064, The Celts, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+064, The Zulus, Singapore, SENT OUT QUEST, Type, 17
+064, The Zulus, Singapore, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+064, The Celts, Prague, lost ally
+065, The Ottomans, Singapore, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_SINGAPORE, (SAVING) 
+065, The Zulus, Prague, SENT OUT QUEST, Type, 3
+065, The Zulus, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+067, The Huns, Bucharest, SENT OUT QUEST, Type, 7
+067, The Aztecs, Kyiv, gained friend
+067, The Aztecs, Kyiv, FINISHED QUEST, Trade Route, Friendship: 0 to 40, MINOR_CIV_KIEV
+067, Antananarivo, The Ottomans, RECEIVED_UNIT_GIFT, Warrior
+067, The Huns, Wittenberg, SENT OUT QUEST, Type, 4
+067, The Huns, Wittenberg, RECEIVED QUEST, Great Person, Friendship: -3 to -3, MINOR_CIV_WITTENBERG
+067, Babylon, Bogota, SENT OUT QUEST, Type, 16
+067, Babylon, Bogota, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+068, Japan, Ragusa, SENT OUT QUEST, Type, 4
+068, Japan, Ragusa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+068, The Huns, Bucharest, gained ally
+068, The Huns, Bucharest, FINISHED QUEST, Find Natural Wonder, Friendship: 47 to 87, MINOR_CIV_BUCHAREST
+068, Russia, Bucharest, SENT OUT QUEST, Type, 3
+068, Russia, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUCHAREST
+069, The Celts, Kyiv, SENT OUT QUEST, Type, 1
+069, The Celts, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+069, Japan, Kyiv, lost friend
+069, Russia, Antananarivo, lost ally
+069, Russia, Wittenberg, SENT OUT QUEST, Type, 2
+069, Russia, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 3 to 3, MINOR_CIV_WITTENBERG
+070, The Celts, Prague, SENT OUT QUEST, Type, 1
+070, The Celts, Singapore, lost friend
+070, Antananarivo, Japan, RECEIVED_UNIT_GIFT, Warrior
+071, Japan, Antananarivo, SENT OUT QUEST, Type, 14
+071, Japan, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 2 to 2, MINOR_CIV_ANTANANARIVO
+071, The Celts, Bogota, SENT OUT QUEST, Type, 16
+071, The Celts, Bogota, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+072, Babylon, Singapore, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_SINGAPORE, (SAVING) 
+072, Russia, Manila, lost friend
+072, The Huns, Manila, SENT OUT QUEST, Type, 4
+072, The Huns, Manila, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MANILA
+072, The Aztecs, Manila, SENT OUT QUEST, Type, 4
+072, The Aztecs, Manila, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MANILA
+072, Russia, Manila, SENT OUT QUEST, Type, 2
+072, Russia, Manila, RECEIVED QUEST, Connect Resource, Friendship: 29 to 29, MINOR_CIV_MANILA
+072, The Ottomans, Singapore, gained friend
+072, The Ottomans, Singapore, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_SINGAPORE
+072, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 14
+072, The Aztecs, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+072, The Ottomans, Prague, gained friend
+072, The Ottomans, Prague, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_PRAGUE
+073, The Huns, Budapest, SENT OUT QUEST, Type, 13
+073, The Huns, Budapest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+073, Japan, Budapest, SENT OUT QUEST, Type, 13
+073, Japan, Budapest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+073, Japan, Geneva, lost friend
+073, The Zulus, Singapore, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+073, Babylon, Singapore, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+073, The Celts, Singapore, cancelled, Kill Camp, Friendship: 24 to 24, MINOR_CIV_SINGAPORE
+073, The Celts, Singapore, SENT OUT QUEST, Type, 2
+073, The Celts, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 24 to 24, MINOR_CIV_SINGAPORE
+073, The Zulus, Prague, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+073, The Celts, Prague, cancelled, Kill Camp, Friendship: 45 to 45, MINOR_CIV_PRAGUE
+073, Bucharest, Russia, RECEIVED_UNIT_GIFT, Warrior
+073, The Aztecs, Bucharest, SENT OUT QUEST, Type, 4
+073, The Aztecs, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+074, The Aztecs, Kyiv, lost friend
+074, The Huns, Budapest, SENT OUT QUEST, Type, 14
+074, The Huns, Budapest, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+074, The Huns, Antananarivo, SENT OUT QUEST, Type, 4
+074, The Huns, Antananarivo, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+074, Russia, Kyzyl, lost friend
+074, The Celts, Kyzyl, SENT OUT QUEST, Type, 4
+074, The Celts, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+074, The Celts, Prague, SENT OUT QUEST, Type, 16
+074, The Celts, Prague, RECEIVED QUEST, Spread Religion, Friendship: 44 to 44, MINOR_CIV_PRAGUE
+074, The Huns, Bucharest, SENT OUT QUEST, Type, 2
+074, The Huns, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 78 to 78, MINOR_CIV_BUCHAREST
+075, The Celts, Manila, era change yield update
+075, The Celts, Kyiv, era change yield update
+075, The Celts, Budapest, era change yield update
+075, The Celts, Geneva, era change yield update
+075, The Celts, Singapore, era change yield update
+075, The Celts, Riga, era change yield update
+075, The Celts, La Venta, era change yield update
+075, The Celts, Colombo, era change yield update
+075, The Celts, Monaco, era change yield update
+075, The Celts, Antananarivo, era change yield update
+075, The Celts, Wittenberg, era change yield update
+075, The Celts, Ragusa, era change yield update
+075, The Celts, Kyzyl, era change yield update
+075, The Celts, Prague, era change yield update
+075, The Celts, Bucharest, era change yield update
+075, The Celts, Bogota, era change yield update
+075, The Celts, Kyiv, SENT OUT QUEST, Type, 1
+075, The Celts, Singapore, SENT OUT QUEST, Type, 2
+075, The Celts, Riga, SENT OUT QUEST, Type, 1
+075, The Celts, Riga, SENT OUT QUEST, Type, 2
+075, The Celts, Riga, SENT OUT QUEST, Type, 16
+075, The Celts, Ragusa, SENT OUT QUEST, Type, 1
+075, The Celts, Kyzyl, SENT OUT QUEST, Type, 1
+075, The Celts, Kyzyl, SENT OUT QUEST, Type, 4
+075, The Celts, Prague, SENT OUT QUEST, Type, 16
+075, The Celts, Bogota, SENT OUT QUEST, Type, 1
+075, The Celts, Bogota, SENT OUT QUEST, Type, 16
+075, The Huns, Kyiv, SENT OUT QUEST, Type, 1
+075, The Huns, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+075, Japan, Geneva, SENT OUT QUEST, Type, 4
+075, Japan, Geneva, RECEIVED QUEST, Great Person, Friendship: 25 to 25, MINOR_CIV_GENEVA
+075, The Celts, La Venta, SENT OUT QUEST, Type, 4
+075, The Celts, La Venta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+075, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 7
+075, The Aztecs, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+075, The Zulus, Bucharest, SENT OUT QUEST, Type, 3
+075, The Zulus, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+076, Japan, Budapest, SENT OUT QUEST, Type, 2
+076, Japan, Budapest, SENT OUT QUEST, Type, 16
+076, Japan, Budapest, SENT OUT QUEST, Type, 13
+076, The Zulus, La Venta, SENT OUT QUEST, Type, 16
+076, The Zulus, La Venta, RECEIVED QUEST, Spread Religion, Friendship: -6 to -6, MINOR_CIV_LA_VENTA
+076, Babylon, Colombo, SENT OUT QUEST, Type, 4
+076, Babylon, Colombo, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+076, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 2
+076, The Aztecs, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+077, Japan, Kyiv, SENT OUT QUEST, Type, 4
+077, Japan, Kyiv, RECEIVED QUEST, Great Person, Friendship: 17 to 17, MINOR_CIV_KIEV
+077, Russia, Kyiv, SENT OUT QUEST, Type, 4
+077, Russia, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+077, Geneva, Japan, RECEIVED_UNIT_GIFT, Warrior
+077, The Zulus, Colombo, gained friend
+077, The Zulus, Colombo, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+077, The Zulus, Monaco, SENT OUT QUEST, Type, 4
+077, The Zulus, Monaco, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MONACO
+077, The Huns, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+077, The Zulus, Prague, gained friend
+077, The Zulus, Prague, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+077, Russia, Bucharest, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUCHAREST
+078, The Zulus, Monaco, SENT OUT QUEST, Type, 1
+078, The Zulus, Monaco, SENT OUT QUEST, Type, 7
+078, The Zulus, Monaco, SENT OUT QUEST, Type, 4
+078, Babylon, Geneva, SENT OUT QUEST, Type, 16
+078, Babylon, Geneva, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_GENEVA
+078, The Celts, Wittenberg, SENT OUT QUEST, Type, 16
+078, The Celts, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+078, The Celts, Ragusa, SENT OUT QUEST, Type, 14
+078, The Celts, Ragusa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+079, Babylon, Manila, era change yield update
+079, Babylon, Kyiv, era change yield update
+079, Babylon, Budapest, era change yield update
+079, Babylon, Geneva, era change yield update
+079, Babylon, Singapore, era change yield update
+079, Babylon, Riga, era change yield update
+079, Babylon, La Venta, era change yield update
+079, Babylon, Colombo, era change yield update
+079, Babylon, Monaco, era change yield update
+079, Babylon, Antananarivo, era change yield update
+079, Babylon, Wittenberg, era change yield update
+079, Babylon, Ragusa, era change yield update
+079, Babylon, Kyzyl, era change yield update
+079, Babylon, Prague, era change yield update
+079, Babylon, Bucharest, era change yield update
+079, Babylon, Bogota, era change yield update
+079, Babylon, Geneva, SENT OUT QUEST, Type, 1
+079, Babylon, Geneva, SENT OUT QUEST, Type, 3
+079, Babylon, Geneva, SENT OUT QUEST, Type, 16
+079, Babylon, Singapore, SENT OUT QUEST, Type, 7
+079, Babylon, Riga, SENT OUT QUEST, Type, 1
+079, Babylon, Riga, SENT OUT QUEST, Type, 7
+079, Babylon, Riga, SENT OUT QUEST, Type, 3
+079, Babylon, La Venta, SENT OUT QUEST, Type, 3
+079, Babylon, La Venta, SENT OUT QUEST, Type, 7
+079, Babylon, Colombo, SENT OUT QUEST, Type, 17
+079, Babylon, Colombo, SENT OUT QUEST, Type, 4
+079, Babylon, Bogota, SENT OUT QUEST, Type, 1
+079, Babylon, Bogota, SENT OUT QUEST, Type, 4
+079, Babylon, Bogota, SENT OUT QUEST, Type, 16
+079, Babylon, Budapest, SENT OUT QUEST, Type, 13
+079, Babylon, Budapest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+079, The Ottomans, La Venta, SENT OUT QUEST, Type, 1
+079, The Ottomans, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+079, The Zulus, La Venta, SENT OUT QUEST, Type, 1
+079, The Zulus, La Venta, RECEIVED QUEST, Kill Camp, Friendship: -1 to -1, MINOR_CIV_LA_VENTA
+079, Babylon, La Venta, SENT OUT QUEST, Type, 1
+079, Babylon, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+079, The Celts, La Venta, SENT OUT QUEST, Type, 1
+079, The Celts, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+080, Japan, Geneva, gained friend
+080, Japan, Geneva, gained ally
+080, The Huns, Geneva, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_GENEVA
+080, The Aztecs, Geneva, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_GENEVA
+080, The Aztecs, Geneva, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_GENEVA
+080, The Aztecs, Geneva, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_GENEVA
+080, Japan, Geneva, FINISHED QUEST, Great Person, Friendship: 24 to 64, MINOR_CIV_GENEVA
+080, Bucharest, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+081, The Zulus, La Venta, SENT OUT QUEST, Type, 2
+081, The Zulus, La Venta, SENT OUT QUEST, Type, 16
+081, The Zulus, La Venta, SENT OUT QUEST, Type, 1
+081, Russia, Antananarivo, SENT OUT QUEST, Type, 2
+081, Russia, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 41 to 41, MINOR_CIV_ANTANANARIVO
+081, The Huns, Ragusa, SENT OUT QUEST, Type, 4
+081, The Huns, Ragusa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+081, The Ottomans, Bucharest, SENT OUT QUEST, Type, 11
+081, The Ottomans, Bucharest, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+081, The Huns, Bucharest, SENT OUT QUEST, Type, 11
+081, The Huns, Bucharest, RECEIVED QUEST, Contest Faith, Friendship: 67 to 67, MINOR_CIV_BUCHAREST
+081, The Zulus, Bucharest, SENT OUT QUEST, Type, 11
+081, The Zulus, Bucharest, RECEIVED QUEST, Contest Faith, Friendship: 2 to 2, MINOR_CIV_BUCHAREST
+081, The Aztecs, Bucharest, SENT OUT QUEST, Type, 11
+081, The Aztecs, Bucharest, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+081, Russia, Bucharest, SENT OUT QUEST, Type, 11
+081, Russia, Bucharest, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_BUCHAREST
+082, Japan, Geneva, cancelled, Kill Camp, Friendship: 60 to 60, MINOR_CIV_GENEVA
+082, Babylon, Geneva, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_GENEVA
+082, Babylon, Singapore, SENT OUT QUEST, Type, 2
+082, Babylon, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+083, Russia, Kyiv, gained friend
+083, Russia, Kyiv, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KIEV
+083, The Ottomans, Manila, SENT OUT QUEST, Type, 7
+083, The Ottomans, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+083, Japan, Geneva, lost ally
+083, The Huns, Wittenberg, SENT OUT QUEST, Type, 7
+083, The Huns, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+083, The Huns, Kyzyl, SENT OUT QUEST, Type, 3
+083, The Huns, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+083, The Zulus, Bucharest, gained friend
+083, The Zulus, Bucharest, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+084, The Ottomans, Riga, SENT OUT QUEST, Type, 1
+084, The Ottomans, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+084, The Zulus, Bucharest, SENT OUT QUEST, Type, 2
+084, The Zulus, Bucharest, SENT OUT QUEST, Type, 11
+084, The Ottomans, Singapore, SENT OUT QUEST, Type, 14
+084, The Ottomans, Singapore, RECEIVED QUEST, Bully City-State, Friendship: 37 to 37, MINOR_CIV_SINGAPORE
+084, The Zulus, Colombo, lost friend
+084, The Zulus, Colombo, gained friend
+084, The Zulus, Colombo, gained ally
+084, The Zulus, Colombo, FINISHED QUEST, Connect Resource, Friendship: 29 to 69, MINOR_CIV_COLOMBO
+084, The Aztecs, Ragusa, SENT OUT QUEST, Type, 2
+084, The Aztecs, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+084, Russia, Kyzyl, SENT OUT QUEST, Type, 4
+084, Russia, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 14 to 14, MINOR_CIV_KYZYL
+084, The Zulus, Prague, lost friend
+084, The Celts, Prague, lost friend
+084, The Huns, Bucharest, lost ally
+084, The Zulus, Bucharest, gained ally
+084, The Zulus, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 38 to 78, MINOR_CIV_BUCHAREST
+085, The Huns, Manila, gained friend
+085, The Huns, Manila, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MANILA
+085, The Huns, Antananarivo, gained friend
+085, The Huns, Antananarivo, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+085, The Huns, Wittenberg, gained friend
+085, The Huns, Wittenberg, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+085, The Huns, Ragusa, gained friend
+085, The Huns, Ragusa, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_RAGUSA
+085, The Huns, Bucharest, SENT OUT QUEST, Type, 2
+085, The Huns, Bucharest, SENT OUT QUEST, Type, 11
+085, Russia, Antananarivo, gained ally
+085, Russia, Antananarivo, Gold Gift: 250, Friendship: 37 to 62, Diplomacy, MINOR_CIV_ANTANANARIVO, Boost! 
+085, Russia, Manila, Gold Gift: 500, Friendship: 11 to 11, Diplomacy, MINOR_CIV_MANILA, (SAVING) 
+085, Russia, Manila, gained friend
+085, Russia, Manila, FINISHED QUEST, Connect Resource, Friendship: 9 to 49, MINOR_CIV_MANILA
+085, The Aztecs, Kyiv, SENT OUT QUEST, Type, 14
+085, The Aztecs, Kyiv, RECEIVED QUEST, Bully City-State, Friendship: 13 to 13, MINOR_CIV_KIEV
+085, The Zulus, La Venta, gained friend
+085, The Zulus, La Venta, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+085, The Zulus, Colombo, SENT OUT QUEST, Type, 13
+085, The Zulus, Colombo, RECEIVED QUEST, Invest, Friendship: 68 to 68, MINOR_CIV_COLOMBO
+085, Babylon, Colombo, SENT OUT QUEST, Type, 13
+085, Babylon, Colombo, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+085, The Huns, Wittenberg, SENT OUT QUEST, Type, 1
+085, The Huns, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 38 to 38, MINOR_CIV_WITTENBERG
+085, Japan, Wittenberg, SENT OUT QUEST, Type, 1
+085, Japan, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+085, The Celts, Wittenberg, SENT OUT QUEST, Type, 1
+085, The Celts, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+085, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 1
+085, The Aztecs, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+085, Russia, Wittenberg, SENT OUT QUEST, Type, 1
+085, Russia, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+085, The Ottomans, Bucharest, SENT OUT QUEST, Type, 4
+085, The Ottomans, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+085, Japan, Bucharest, SENT OUT QUEST, Type, 4
+085, Japan, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+086, The Aztecs, Manila, gained friend
+086, The Aztecs, Manila, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MANILA
+086, Russia, Bogota, SENT OUT QUEST, Type, 1
+086, Russia, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+086, Russia, Antananarivo, lost ally
+086, The Ottomans, Antananarivo, SENT OUT QUEST, Type, 2
+086, The Ottomans, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+086, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 4
+086, The Ottomans, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+086, The Ottomans, Prague, lost friend
+087, The Zulus, Monaco, gained friend
+087, The Zulus, Monaco, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_MONACO
+087, The Huns, Geneva, SENT OUT QUEST, Type, 7
+087, The Huns, Geneva, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_GENEVA
+087, Japan, Wittenberg, SENT OUT QUEST, Type, 7
+087, Japan, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+087, Japan, Ragusa, SENT OUT QUEST, Type, 16
+087, Japan, Ragusa, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+087, The Celts, Bogota, SENT OUT QUEST, Type, 4
+087, The Celts, Bogota, RECEIVED QUEST, Great Person, Friendship: -18 to -18, MINOR_CIV_BOGOTA
+088, The Ottomans, Bogota, SENT OUT QUEST, Type, 1
+088, The Ottomans, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+088, Russia, Manila, era change yield update
+088, Russia, Kyiv, era change yield update
+088, Russia, Budapest, era change yield update
+088, Russia, Geneva, era change yield update
+088, Russia, Singapore, era change yield update
+088, Russia, Riga, era change yield update
+088, Russia, La Venta, era change yield update
+088, Russia, Colombo, era change yield update
+088, Russia, Monaco, era change yield update
+088, Russia, Antananarivo, era change yield update
+088, Russia, Wittenberg, era change yield update
+088, Russia, Ragusa, era change yield update
+088, Russia, Kyzyl, era change yield update
+088, Russia, Prague, era change yield update
+088, Russia, Bucharest, era change yield update
+088, Russia, Bogota, era change yield update
+088, Russia, Manila, SENT OUT QUEST, Type, 1
+088, Russia, Manila, SENT OUT QUEST, Type, 0
+088, Russia, Kyiv, SENT OUT QUEST, Type, 1
+088, Russia, Antananarivo, SENT OUT QUEST, Type, 2
+088, Russia, Wittenberg, SENT OUT QUEST, Type, 7
+088, Russia, Wittenberg, SENT OUT QUEST, Type, 2
+088, Russia, Wittenberg, SENT OUT QUEST, Type, 1
+088, Russia, Kyzyl, SENT OUT QUEST, Type, 1
+088, Russia, Kyzyl, SENT OUT QUEST, Type, 4
+088, Russia, Bucharest, SENT OUT QUEST, Type, 17
+088, Russia, Bucharest, SENT OUT QUEST, Type, 11
+088, Russia, Bogota, SENT OUT QUEST, Type, 1
+088, The Zulus, Singapore, SENT OUT QUEST, Type, 16
+088, The Zulus, Singapore, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+088, Babylon, Riga, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+089, Russia, Kyiv, lost friend
+089, The Huns, Kyiv, SENT OUT QUEST, Type, 4
+089, The Huns, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+089, The Ottomans, Singapore, lost friend
+089, The Celts, Singapore, SENT OUT QUEST, Type, 16
+089, The Celts, Singapore, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+089, The Ottomans, Antananarivo, SENT OUT QUEST, Type, 11
+089, The Ottomans, Antananarivo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+089, The Huns, Antananarivo, SENT OUT QUEST, Type, 11
+089, The Huns, Antananarivo, RECEIVED QUEST, Contest Faith, Friendship: 32 to 32, MINOR_CIV_ANTANANARIVO
+089, Japan, Antananarivo, SENT OUT QUEST, Type, 11
+089, Japan, Antananarivo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+089, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 11
+089, The Aztecs, Antananarivo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+089, Russia, Antananarivo, SENT OUT QUEST, Type, 11
+089, Russia, Antananarivo, RECEIVED QUEST, Contest Faith, Friendship: 54 to 54, MINOR_CIV_ANTANANARIVO
+089, The Huns, Ragusa, lost friend
+090, The Zulus, Riga, SENT OUT QUEST, Type, 1
+090, The Zulus, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+090, The Ottomans, La Venta, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+090, The Celts, La Venta, SENT OUT QUEST, Type, 16
+090, The Celts, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+090, The Zulus, Prague, SENT OUT QUEST, Type, 17
+090, The Zulus, Prague, RECEIVED QUEST, Trade Route, Friendship: 20 to 20, MINOR_CIV_PRAGUE
+090, The Huns, Bucharest, SENT OUT QUEST, Type, 4
+090, The Huns, Bucharest, RECEIVED QUEST, Great Person, Friendship: 54 to 54, MINOR_CIV_BUCHAREST
+091, The Zulus, Colombo, Gold Gift: 250, Friendship: 60 to 95, Conquest, MINOR_CIV_COLOMBO, Boost! , Passing Babylon
+091, The Zulus, La Venta, Gold Gift: 250, Friendship: 33 to 33, Conquest, MINOR_CIV_LA_VENTA, (SAVING) , Boost! , Passing Babylon
+091, The Huns, Manila, lost friend
+091, Russia, Kyiv, SENT OUT QUEST, Type, 3
+091, Russia, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 26 to 26, MINOR_CIV_KIEV
+091, The Huns, Antananarivo, lost friend
+091, Japan, Antananarivo, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+091, The Huns, Wittenberg, lost friend
+091, The Zulus, Bogota, SENT OUT QUEST, Type, 1
+091, The Zulus, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+092, The Zulus, Manila, era change yield update
+092, The Zulus, Kyiv, era change yield update
+092, The Zulus, Budapest, era change yield update
+092, The Zulus, Geneva, era change yield update
+092, The Zulus, Singapore, era change yield update
+092, The Zulus, Riga, era change yield update
+092, The Zulus, La Venta, era change yield update
+092, The Zulus, Colombo, era change yield update
+092, The Zulus, Monaco, era change yield update
+092, The Zulus, Antananarivo, era change yield update
+092, The Zulus, Wittenberg, era change yield update
+092, The Zulus, Ragusa, era change yield update
+092, The Zulus, Kyzyl, era change yield update
+092, The Zulus, Prague, era change yield update
+092, The Zulus, Bucharest, era change yield update
+092, The Zulus, Bogota, era change yield update
+092, The Zulus, Singapore, SENT OUT QUEST, Type, 17
+092, The Zulus, Singapore, SENT OUT QUEST, Type, 16
+092, The Zulus, Riga, SENT OUT QUEST, Type, 1
+092, The Zulus, La Venta, SENT OUT QUEST, Type, 16
+092, The Zulus, La Venta, SENT OUT QUEST, Type, 1
+092, The Zulus, Colombo, SENT OUT QUEST, Type, 13
+092, The Zulus, Monaco, SENT OUT QUEST, Type, 1
+092, The Zulus, Monaco, SENT OUT QUEST, Type, 7
+092, The Zulus, Prague, SENT OUT QUEST, Type, 17
+092, The Zulus, Bucharest, SENT OUT QUEST, Type, 11
+092, The Zulus, Bogota, SENT OUT QUEST, Type, 1
+092, Babylon, Riga, SENT OUT QUEST, Type, 1
+092, Babylon, Riga, SENT OUT QUEST, Type, 7
+092, The Aztecs, Manila, era change yield update
+092, The Aztecs, Kyiv, era change yield update
+092, The Aztecs, Budapest, era change yield update
+092, The Aztecs, Geneva, era change yield update
+092, The Aztecs, Singapore, era change yield update
+092, The Aztecs, Riga, era change yield update
+092, The Aztecs, La Venta, era change yield update
+092, The Aztecs, Colombo, era change yield update
+092, The Aztecs, Monaco, era change yield update
+092, The Aztecs, Antananarivo, era change yield update
+092, The Aztecs, Wittenberg, era change yield update
+092, The Aztecs, Ragusa, era change yield update
+092, The Aztecs, Kyzyl, era change yield update
+092, The Aztecs, Prague, era change yield update
+092, The Aztecs, Bucharest, era change yield update
+092, The Aztecs, Bogota, era change yield update
+092, The Aztecs, Manila, SENT OUT QUEST, Type, 1
+092, The Aztecs, Manila, SENT OUT QUEST, Type, 2
+092, The Aztecs, Kyiv, SENT OUT QUEST, Type, 7
+092, The Aztecs, Kyiv, SENT OUT QUEST, Type, 1
+092, The Aztecs, Kyiv, SENT OUT QUEST, Type, 14
+092, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+092, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 7
+092, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 11
+092, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 7
+092, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 2
+092, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 1
+092, The Aztecs, Ragusa, SENT OUT QUEST, Type, 1
+092, The Aztecs, Ragusa, SENT OUT QUEST, Type, 2
+092, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 1
+092, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 2
+092, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 14
+092, The Aztecs, Bucharest, SENT OUT QUEST, Type, 2
+092, The Aztecs, Bucharest, SENT OUT QUEST, Type, 4
+092, The Aztecs, Bucharest, SENT OUT QUEST, Type, 11
+092, The Aztecs, Manila, SENT OUT QUEST, Type, 1
+092, The Aztecs, Manila, SENT OUT QUEST, Type, 2
+092, The Aztecs, Manila, lost friend
+092, The Zulus, La Venta, lost friend
+092, The Ottomans, Ragusa, SENT OUT QUEST, Type, 2
+092, The Ottomans, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+092, The Aztecs, Kyzyl, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+092, Russia, Bucharest, SENT OUT QUEST, Type, 7
+092, Russia, Bucharest, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_BUCHAREST
+093, The Huns, Manila, era change yield update
+093, The Huns, Kyiv, era change yield update
+093, The Huns, Budapest, era change yield update
+093, The Huns, Geneva, era change yield update
+093, The Huns, Singapore, era change yield update
+093, The Huns, Riga, era change yield update
+093, The Huns, La Venta, era change yield update
+093, The Huns, Colombo, era change yield update
+093, The Huns, Monaco, era change yield update
+093, The Huns, Antananarivo, era change yield update
+093, The Huns, Wittenberg, era change yield update
+093, The Huns, Ragusa, era change yield update
+093, The Huns, Kyzyl, era change yield update
+093, The Huns, Prague, era change yield update
+093, The Huns, Bucharest, era change yield update
+093, The Huns, Bogota, era change yield update
+093, The Huns, Manila, SENT OUT QUEST, Type, 1
+093, The Huns, Kyiv, SENT OUT QUEST, Type, 1
+093, The Huns, Kyiv, SENT OUT QUEST, Type, 4
+093, The Huns, Budapest, SENT OUT QUEST, Type, 13
+093, The Huns, Budapest, SENT OUT QUEST, Type, 14
+093, The Huns, Geneva, SENT OUT QUEST, Type, 7
+093, The Huns, Antananarivo, SENT OUT QUEST, Type, 2
+093, The Huns, Antananarivo, SENT OUT QUEST, Type, 11
+093, The Huns, Wittenberg, SENT OUT QUEST, Type, 7
+093, The Huns, Wittenberg, SENT OUT QUEST, Type, 1
+093, The Huns, Ragusa, SENT OUT QUEST, Type, 1
+093, The Huns, Kyzyl, SENT OUT QUEST, Type, 1
+093, The Huns, Kyzyl, SENT OUT QUEST, Type, 3
+093, The Huns, Bucharest, SENT OUT QUEST, Type, 2
+093, The Huns, Bucharest, SENT OUT QUEST, Type, 11
+093, The Huns, Bucharest, SENT OUT QUEST, Type, 4
+093, Japan, Budapest, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BUDAPEST
+093, The Huns, Budapest, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+093, Babylon, Budapest, FINISHED QUEST, Invest, Friendship: -1 to -1, MINOR_CIV_BUDAPEST
+093, The Zulus, Colombo, SENT OUT QUEST, Type, 3
+093, The Zulus, Colombo, RECEIVED QUEST, Construct Wonder, Friendship: 91 to 91, MINOR_CIV_COLOMBO
+093, The Celts, Ragusa, SENT OUT QUEST, Type, 2
+093, The Celts, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+094, The Ottomans, Manila, era change yield update
+094, The Ottomans, Kyiv, era change yield update
+094, The Ottomans, Budapest, era change yield update
+094, The Ottomans, Geneva, era change yield update
+094, The Ottomans, Singapore, era change yield update
+094, The Ottomans, Riga, era change yield update
+094, The Ottomans, La Venta, era change yield update
+094, The Ottomans, Colombo, era change yield update
+094, The Ottomans, Monaco, era change yield update
+094, The Ottomans, Antananarivo, era change yield update
+094, The Ottomans, Wittenberg, era change yield update
+094, The Ottomans, Ragusa, era change yield update
+094, The Ottomans, Kyzyl, era change yield update
+094, The Ottomans, Prague, era change yield update
+094, The Ottomans, Bucharest, era change yield update
+094, The Ottomans, Bogota, era change yield update
+094, The Ottomans, Manila, SENT OUT QUEST, Type, 1
+094, The Ottomans, Manila, SENT OUT QUEST, Type, 7
+094, The Ottomans, Singapore, SENT OUT QUEST, Type, 14
+094, The Ottomans, Riga, SENT OUT QUEST, Type, 1
+094, The Ottomans, La Venta, SENT OUT QUEST, Type, 2
+094, The Ottomans, La Venta, SENT OUT QUEST, Type, 1
+094, The Ottomans, Monaco, SENT OUT QUEST, Type, 1
+094, The Ottomans, Monaco, SENT OUT QUEST, Type, 2
+094, The Ottomans, Monaco, SENT OUT QUEST, Type, 7
+094, The Ottomans, Antananarivo, SENT OUT QUEST, Type, 2
+094, The Ottomans, Antananarivo, SENT OUT QUEST, Type, 11
+094, The Ottomans, Ragusa, SENT OUT QUEST, Type, 1
+094, The Ottomans, Ragusa, SENT OUT QUEST, Type, 2
+094, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 1
+094, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 7
+094, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 4
+094, The Ottomans, Prague, SENT OUT QUEST, Type, 2
+094, The Ottomans, Prague, SENT OUT QUEST, Type, 17
+094, The Ottomans, Bucharest, SENT OUT QUEST, Type, 7
+094, The Ottomans, Bucharest, SENT OUT QUEST, Type, 11
+094, The Ottomans, Bucharest, SENT OUT QUEST, Type, 4
+094, The Ottomans, Bogota, SENT OUT QUEST, Type, 1
+094, Russia, Bucharest, SENT OUT QUEST, Type, 17
+094, Russia, Bucharest, SENT OUT QUEST, Type, 11
+094, Russia, Bucharest, SENT OUT QUEST, Type, 7
+094, The Huns, Manila, SENT OUT QUEST, Type, 4
+094, The Huns, Manila, RECEIVED QUEST, Great Person, Friendship: 25 to 25, MINOR_CIV_MANILA
+094, The Huns, Budapest, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+094, The Huns, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+094, Bucharest, Japan, RECEIVED_UNIT_GIFT, Archer
+095, The Celts, Kyiv, SENT OUT QUEST, Type, 16
+095, The Celts, Kyiv, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KIEV
+095, Geneva, Japan, RECEIVED_UNIT_GIFT, Warrior
+096, Japan, Budapest, SENT OUT QUEST, Type, 2
+096, Japan, Budapest, SENT OUT QUEST, Type, 16
+096, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 7
+096, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 2
+096, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 1
+096, The Aztecs, Kyiv, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KIEV
+096, Russia, Geneva, SENT OUT QUEST, Type, 17
+096, Russia, Geneva, RECEIVED QUEST, Trade Route, Friendship: -6 to -6, MINOR_CIV_GENEVA
+096, The Zulus, Kyzyl, SENT OUT QUEST, Type, 1
+096, The Zulus, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+097, The Huns, Geneva, SENT OUT QUEST, Type, 7
+097, The Zulus, Monaco, lost friend
+097, The Zulus, Bucharest, lost ally
+098, The Aztecs, Manila, Gold Gift: 500, Friendship: 22 to 22, Conquest, MINOR_CIV_MANILA, (SAVING) , Passing The Huns
+098, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+098, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 7
+098, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 11
+098, Russia, Bucharest, SENT OUT QUEST, Type, 17
+098, Russia, Bucharest, SENT OUT QUEST, Type, 11
+098, Russia, Bucharest, SENT OUT QUEST, Type, 7
+098, Babylon, Geneva, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_GENEVA
+098, Babylon, La Venta, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+098, Russia, Antananarivo, SENT OUT QUEST, Type, 7
+098, Russia, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 41 to 41, MINOR_CIV_ANTANANARIVO
+098, The Celts, Ragusa, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+098, The Aztecs, Ragusa, SENT OUT QUEST, Type, 4
+098, The Aztecs, Ragusa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+098, The Huns, Bogota, SENT OUT QUEST, Type, 1
+098, The Huns, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+099, Russia, Manila, lost friend
+099, Russia, Manila, SENT OUT QUEST, Type, 17
+099, Russia, Manila, RECEIVED QUEST, Trade Route, Friendship: 29 to 29, MINOR_CIV_MANILA
+099, The Ottomans, Riga, SENT OUT QUEST, Type, 4
+099, The Ottomans, Riga, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_RIGA
+100, The Huns, Manila, gained friend
+100, The Huns, Manila, FINISHED QUEST, Great Person, Friendship: 17 to 57, MINOR_CIV_MANILA
+100, Russia, Wittenberg, SENT OUT QUEST, Type, 7
+100, Russia, Wittenberg, SENT OUT QUEST, Type, 2
+100, Russia, Wittenberg, SENT OUT QUEST, Type, 1
+100, The Huns, Ragusa, SENT OUT QUEST, Type, 4
+100, The Huns, Ragusa, RECEIVED QUEST, Great Person, Friendship: 4 to 4, MINOR_CIV_RAGUSA
+100, The Celts, Prague, SENT OUT QUEST, Type, 3
+100, The Celts, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+101, The Ottomans, Wittenberg, SENT OUT QUEST, Type, 1
+101, The Ottomans, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+101, Russia, Geneva, SENT OUT QUEST, Type, 17
+101, The Huns, Budapest, SENT OUT QUEST, Type, 16
+101, The Huns, Budapest, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+101, The Ottomans, Prague, SENT OUT QUEST, Type, 13
+101, The Ottomans, Prague, RECEIVED QUEST, Invest, Friendship: 6 to 6, MINOR_CIV_PRAGUE
+101, The Zulus, Prague, SENT OUT QUEST, Type, 13
+101, The Zulus, Prague, RECEIVED QUEST, Invest, Friendship: 4 to 4, MINOR_CIV_PRAGUE
+101, Babylon, Prague, SENT OUT QUEST, Type, 13
+101, Babylon, Prague, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+101, The Celts, Prague, SENT OUT QUEST, Type, 13
+101, The Celts, Prague, RECEIVED QUEST, Invest, Friendship: 4 to 4, MINOR_CIV_PRAGUE
+101, The Zulus, Bucharest, gained ally
+101, The Zulus, Bucharest, FINISHED QUEST, Contest Faith, Friendship: 53 to 93, MINOR_CIV_BUCHAREST
+101, The Ottomans, Bucharest, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+101, The Huns, Bucharest, cancelled, Contest Faith, Friendship: 38 to 38, MINOR_CIV_BUCHAREST
+101, The Aztecs, Bucharest, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+101, Russia, Bucharest, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_BUCHAREST
+102, The Aztecs, Manila, SENT OUT QUEST, Type, 1
+102, The Aztecs, Manila, SENT OUT QUEST, Type, 2
+102, The Huns, Antananarivo, SENT OUT QUEST, Type, 14
+102, The Huns, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 13 to 13, MINOR_CIV_ANTANANARIVO
+102, The Huns, Wittenberg, SENT OUT QUEST, Type, 2
+102, The Huns, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 13 to 13, MINOR_CIV_WITTENBERG
+102, The Celts, Wittenberg, SENT OUT QUEST, Type, 7
+102, The Celts, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+102, The Celts, Kyzyl, SENT OUT QUEST, Type, 14
+102, The Celts, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+102, Bucharest, The Zulus, RECEIVED_UNIT_GIFT, Chariot Archer
+102, The Zulus, Bucharest, SENT OUT QUEST, Type, 7
+102, The Zulus, Bucharest, RECEIVED QUEST, Find Natural Wonder, Friendship: 96 to 96, MINOR_CIV_BUCHAREST
+103, Japan, Manila, era change yield update
+103, Japan, Kyiv, era change yield update
+103, Japan, Budapest, era change yield update
+103, Japan, Geneva, era change yield update
+103, Japan, Singapore, era change yield update
+103, Japan, Riga, era change yield update
+103, Japan, La Venta, era change yield update
+103, Japan, Colombo, era change yield update
+103, Japan, Monaco, era change yield update
+103, Japan, Antananarivo, era change yield update
+103, Japan, Wittenberg, era change yield update
+103, Japan, Ragusa, era change yield update
+103, Japan, Kyzyl, era change yield update
+103, Japan, Prague, era change yield update
+103, Japan, Bucharest, era change yield update
+103, Japan, Bogota, era change yield update
+103, Japan, Manila, SENT OUT QUEST, Type, 2
+103, Japan, Manila, SENT OUT QUEST, Type, 1
+103, Japan, Manila, SENT OUT QUEST, Type, 16
+103, Japan, Kyiv, SENT OUT QUEST, Type, 1
+103, Japan, Kyiv, SENT OUT QUEST, Type, 16
+103, Japan, Kyiv, SENT OUT QUEST, Type, 4
+103, Japan, Budapest, SENT OUT QUEST, Type, 2
+103, Japan, Budapest, SENT OUT QUEST, Type, 16
+103, Japan, Antananarivo, SENT OUT QUEST, Type, 2
+103, Japan, Antananarivo, SENT OUT QUEST, Type, 11
+103, Japan, Wittenberg, SENT OUT QUEST, Type, 16
+103, Japan, Wittenberg, SENT OUT QUEST, Type, 1
+103, Japan, Wittenberg, SENT OUT QUEST, Type, 7
+103, Japan, Ragusa, SENT OUT QUEST, Type, 1
+103, Japan, Ragusa, SENT OUT QUEST, Type, 4
+103, Japan, Ragusa, SENT OUT QUEST, Type, 16
+103, Japan, Bucharest, SENT OUT QUEST, Type, 4
+103, Japan, Kyiv, SENT OUT QUEST, Type, 1
+103, Japan, Kyiv, SENT OUT QUEST, Type, 16
+103, Japan, Kyiv, SENT OUT QUEST, Type, 4
+103, The Huns, Geneva, SENT OUT QUEST, Type, 16
+103, The Huns, Geneva, RECEIVED QUEST, Spread Religion, Friendship: 3 to 3, MINOR_CIV_GENEVA
+103, The Aztecs, Geneva, SENT OUT QUEST, Type, 7
+103, The Aztecs, Geneva, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_GENEVA
+103, Antananarivo, Russia, RECEIVED_UNIT_GIFT, Horseman
+103, The Aztecs, Ragusa, gained friend
+103, The Aztecs, Ragusa, FINISHED QUEST, Kill Camp, Friendship: 9 to 59, MINOR_CIV_RAGUSA
+104, The Ottomans, Kyiv, SENT OUT QUEST, Type, 1
+104, The Ottomans, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+104, The Aztecs, Riga, SENT OUT QUEST, Type, 1
+104, The Aztecs, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+104, Russia, Kyiv, SENT OUT QUEST, Type, 4
+104, Russia, Kyiv, RECEIVED QUEST, Great Person, Friendship: 7 to 7, MINOR_CIV_KIEV
+104, Japan, Geneva, SENT OUT QUEST, Type, 2
+104, Japan, Geneva, RECEIVED QUEST, Connect Resource, Friendship: 32 to 32, MINOR_CIV_GENEVA
+104, The Ottomans, Singapore, cancelled, Bully City-State, Friendship: 7 to 7, MINOR_CIV_SINGAPORE
+104, The Ottomans, Singapore, SENT OUT QUEST, Type, 12
+104, The Ottomans, Singapore, RECEIVED QUEST, Contest Techs, Friendship: 7 to 7, MINOR_CIV_SINGAPORE
+104, The Zulus, Singapore, SENT OUT QUEST, Type, 12
+104, The Zulus, Singapore, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+104, Babylon, Singapore, SENT OUT QUEST, Type, 12
+104, Babylon, Singapore, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+104, The Celts, Singapore, SENT OUT QUEST, Type, 12
+104, The Celts, Singapore, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+104, The Aztecs, Singapore, SENT OUT QUEST, Type, 12
+104, The Aztecs, Singapore, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+104, The Ottomans, Ragusa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+104, The Huns, Ragusa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+104, Japan, Ragusa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+104, The Celts, Ragusa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+104, The Huns, Kyzyl, SENT OUT QUEST, Type, 14
+104, The Huns, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+104, Russia, Kyzyl, SENT OUT QUEST, Type, 17
+104, Russia, Kyzyl, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KYZYL
+104, Bucharest, The Aztecs, RECEIVED_UNIT_GIFT, Spearman
+104, The Ottomans, Bogota, SENT OUT QUEST, Type, 4
+104, The Ottomans, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+105, Geneva, The Aztecs, RECEIVED_UNIT_GIFT, Swordsman
+105, The Zulus, Colombo, FINISHED QUEST, Invest, Friendship: 73 to 73, MINOR_CIV_COLOMBO
+105, Babylon, Colombo, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+105, Japan, Bucharest, SENT OUT QUEST, Type, 2
+105, Japan, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+106, The Aztecs, Manila, SENT OUT QUEST, Type, 17
+106, The Aztecs, Manila, RECEIVED QUEST, Trade Route, Friendship: 8 to 8, MINOR_CIV_MANILA
+106, Japan, Geneva, lost friend
+107, Manila, The Huns, RECEIVED_UNIT_GIFT, Battering Ram
+107, The Zulus, Monaco, SENT OUT QUEST, Type, 16
+107, The Zulus, Monaco, RECEIVED QUEST, Spread Religion, Friendship: 13 to 13, MINOR_CIV_MONACO
+107, Japan, Antananarivo, SENT OUT QUEST, Type, 7
+107, Japan, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+107, Bucharest, Russia, RECEIVED_UNIT_GIFT, Pikeman
+107, The Huns, Bucharest, lost friend
+108, The Ottomans, Bogota, gained friend
+108, The Ottomans, Bogota, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+108, Babylon, Kyzyl, SENT OUT QUEST, Type, 1
+108, Babylon, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+108, Russia, Bucharest, SENT OUT QUEST, Type, 17
+108, Russia, Bucharest, SENT OUT QUEST, Type, 7
+108, The Zulus, Prague, SENT OUT QUEST, Type, 7
+108, The Zulus, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+108, Japan, Bucharest, gained friend
+108, Japan, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+109, The Huns, Kyiv, SENT OUT QUEST, Type, 14
+109, The Huns, Kyiv, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KIEV
+109, The Celts, Kyiv, SENT OUT QUEST, Type, 2
+109, The Celts, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+109, Japan, Antananarivo, gained friend
+109, Japan, Antananarivo, FINISHED QUEST, Contest Faith, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+109, The Ottomans, Antananarivo, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+109, The Huns, Antananarivo, cancelled, Contest Faith, Friendship: 2 to 2, MINOR_CIV_ANTANANARIVO
+109, The Aztecs, Antananarivo, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+109, Russia, Antananarivo, cancelled, Contest Faith, Friendship: 30 to 30, MINOR_CIV_ANTANANARIVO
+110, Babylon, Colombo, gained friend
+110, Babylon, Colombo, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_COLOMBO
+110, Babylon, Bogota, gained friend
+110, Babylon, Bogota, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+110, Russia, Kyiv, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+110, Babylon, Budapest, SENT OUT QUEST, Type, 4
+110, Babylon, Budapest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+110, The Zulus, Singapore, gained friend
+110, The Zulus, Singapore, FINISHED QUEST, Trade Route, Friendship: 5 to 45, MINOR_CIV_SINGAPORE
+110, The Zulus, Colombo, cancelled, Construct Wonder, Friendship: 65 to 65, MINOR_CIV_COLOMBO
+110, The Zulus, Colombo, SENT OUT QUEST, Type, 16
+110, The Zulus, Colombo, RECEIVED QUEST, Spread Religion, Friendship: 65 to 65, MINOR_CIV_COLOMBO
+110, Russia, Antananarivo, lost friend
+110, The Zulus, Kyzyl, SENT OUT QUEST, Type, 16
+110, The Zulus, Kyzyl, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KYZYL
+110, Babylon, Prague, SENT OUT QUEST, Type, 3
+110, Babylon, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+110, Bucharest, The Huns, RECEIVED_UNIT_GIFT, Horse Archer
+110, The Huns, Bucharest, gained friend
+110, The Huns, Bucharest, lost friend
+111, The Aztecs, La Venta, SENT OUT QUEST, Type, 1
+111, The Aztecs, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+111, The Ottomans, Manila, SENT OUT QUEST, Type, 2
+111, The Ottomans, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+111, The Zulus, Riga, SENT OUT QUEST, Type, 3
+111, The Zulus, Riga, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+111, Bucharest, The Aztecs, RECEIVED_UNIT_GIFT, Spearman
+112, The Aztecs, Manila, gained friend
+112, The Aztecs, Manila, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MANILA
+112, The Aztecs, Kyiv, SENT OUT QUEST, Type, 4
+112, The Aztecs, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+112, The Ottomans, Singapore, SENT OUT QUEST, Type, 7
+112, The Ottomans, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+112, Colombo, The Zulus, RECEIVED_UNIT_GIFT, Impi
+112, The Ottomans, Antananarivo, SENT OUT QUEST, Type, 7
+112, The Ottomans, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+112, The Aztecs, Ragusa, gained ally
+112, The Aztecs, Ragusa, FINISHED QUEST, Connect Resource, Friendship: 39 to 79, MINOR_CIV_RAGUSA
+113, Japan, Bogota, SENT OUT QUEST, Type, 1
+113, Japan, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+113, The Celts, Singapore, gained friend
+113, The Celts, Singapore, Gold Gift: 500, Friendship: 5 to 55, Conquest, MINOR_CIV_SINGAPORE
+113, The Aztecs, Manila, SENT OUT QUEST, Type, 1
+113, The Aztecs, Manila, SENT OUT QUEST, Type, 17
+113, The Aztecs, Ragusa, SENT OUT QUEST, Type, 4
+114, Babylon, Riga, SENT OUT QUEST, Type, 14
+114, Babylon, Riga, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_RIGA
+114, The Ottomans, Wittenberg, SENT OUT QUEST, Type, 7
+114, The Ottomans, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+114, The Ottomans, Bogota, lost friend
+114, Russia, Bogota, SENT OUT QUEST, Type, 3
+114, Russia, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+115, The Huns, Budapest, SENT OUT QUEST, Type, 16
+115, The Aztecs, Monaco, SENT OUT QUEST, Type, 1
+115, The Aztecs, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+115, Babylon, La Venta, SENT OUT QUEST, Type, 16
+115, Babylon, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+115, Japan, Bucharest, lost friend
+115, The Zulus, Bogota, SENT OUT QUEST, Type, 16
+115, The Zulus, Bogota, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+116, Japan, Ragusa, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_RAGUSA
+116, Japan, Ragusa, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_RAGUSA
+116, The Celts, La Venta, gained friend
+116, The Celts, La Venta, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+116, The Celts, Kyzyl, gained friend
+116, The Celts, Kyzyl, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KYZYL
+116, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+116, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 7
+116, The Huns, Manila, SENT OUT QUEST, Type, 16
+116, The Huns, Manila, RECEIVED QUEST, Spread Religion, Friendship: 37 to 37, MINOR_CIV_MANILA
+116, Colombo, The Celts, RECEIVED_UNIT_GIFT, Warrior
+116, Japan, Antananarivo, lost friend
+116, Babylon, Bogota, lost friend
+117, The Zulus, Colombo, Gold Gift: 250, Friendship: 61 to 81, Conquest, MINOR_CIV_COLOMBO, Boost! , Passing Babylon
+117, The Zulus, Singapore, Gold Gift: 250, Friendship: 36 to 36, Conquest, MINOR_CIV_SINGAPORE, (SAVING) , Boost! , Passing Babylon
+117, The Ottomans, Manila, gained friend
+117, The Ottomans, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MANILA
+117, The Ottomans, Singapore, gained friend
+117, The Ottomans, Singapore, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SINGAPORE
+117, The Ottomans, Monaco, gained friend
+117, The Ottomans, Monaco, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MONACO
+117, The Ottomans, Antananarivo, gained friend
+117, The Ottomans, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+117, The Ottomans, Wittenberg, gained friend
+117, The Ottomans, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+117, Ragusa, The Celts, RECEIVED_UNIT_GIFT, Pikeman
+117, The Ottomans, Kyzyl, gained friend
+117, The Ottomans, Kyzyl, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KYZYL
+117, The Celts, Prague, gained friend
+117, The Celts, Prague, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+117, Babylon, Prague, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+117, Bucharest, The Huns, RECEIVED_UNIT_GIFT, Warrior
+117, The Ottomans, Bucharest, gained friend
+117, The Ottomans, Bucharest, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+118, The Huns, Riga, SENT OUT QUEST, Type, 1
+118, The Huns, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+118, The Aztecs, Manila, Gold Gift: 250, Friendship: 32 to 52, Conquest, MINOR_CIV_MANILA, Boost! , Passing Russia
+118, The Aztecs, Wittenberg, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_WITTENBERG, (SAVING) 
+118, Russia, Antananarivo, gained friend
+118, Russia, Antananarivo, gained ally
+118, The Aztecs, Antananarivo, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_ANTANANARIVO
+118, The Aztecs, Antananarivo, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_ANTANANARIVO
+118, Russia, Antananarivo, Gold Gift: 500, Friendship: 18 to 68, Spaceship, MINOR_CIV_ANTANANARIVO, Passing The Aztecs
+118, Russia, Manila, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_MANILA, (SAVING) 
+118, The Ottomans, Riga, SENT OUT QUEST, Type, 17
+118, The Ottomans, Riga, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_RIGA
+118, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 4
+118, The Aztecs, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+118, The Ottomans, Prague, gained friend
+118, The Ottomans, Prague, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+119, Russia, Kyiv, gained friend
+119, Russia, Kyiv, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KIEV
+119, Russia, Kyzyl, gained friend
+119, Russia, Kyzyl, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KYZYL
+119, Colombo, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+120, The Celts, La Venta, lost friend
+120, The Zulus, La Venta, SENT OUT QUEST, Type, 14
+120, The Zulus, La Venta, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+121, The Huns, Manila, lost friend
+121, Russia, Manila, gained friend
+121, Russia, Manila, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_MANILA
+121, The Zulus, Singapore, lost friend
+121, The Aztecs, Singapore, SENT OUT QUEST, Type, 7
+121, The Aztecs, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+121, The Celts, Wittenberg, gained friend
+121, The Celts, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+121, The Aztecs, Ragusa, lost ally
+121, The Ottomans, Prague, FINISHED QUEST, Invest, Friendship: 35 to 35, MINOR_CIV_PRAGUE
+121, The Celts, Prague, FINISHED QUEST, Invest, Friendship: 34 to 34, MINOR_CIV_PRAGUE
+121, Babylon, Prague, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+121, The Zulus, Prague, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+122, Babylon, Monaco, SENT OUT QUEST, Type, 1
+122, Babylon, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+122, Russia, Manila, gained ally
+122, The Aztecs, Manila, lost friend
+122, The Aztecs, Manila, SENT OUT QUEST, Type, 1
+122, The Aztecs, Manila, SENT OUT QUEST, Type, 17
+122, The Aztecs, Manila, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_MANILA
+122, The Aztecs, Manila, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_MANILA
+122, The Ottomans, Manila, cancelled, Kill Camp, Friendship: 32 to 32, MINOR_CIV_MANILA
+122, The Huns, Manila, cancelled, Kill Camp, Friendship: 28 to 28, MINOR_CIV_MANILA
+122, Japan, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+122, The Ottomans, Kyiv, SENT OUT QUEST, Type, 4
+122, The Ottomans, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+122, The Ottomans, Geneva, SENT OUT QUEST, Type, 13
+122, The Ottomans, Geneva, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_GENEVA
+122, The Huns, Geneva, SENT OUT QUEST, Type, 13
+122, The Huns, Geneva, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_GENEVA
+122, Japan, Geneva, SENT OUT QUEST, Type, 13
+122, Japan, Geneva, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_GENEVA
+122, Babylon, Geneva, SENT OUT QUEST, Type, 13
+122, Babylon, Geneva, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_GENEVA
+122, The Celts, Geneva, SENT OUT QUEST, Type, 13
+122, The Celts, Geneva, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENEVA
+122, The Aztecs, Geneva, SENT OUT QUEST, Type, 13
+122, The Aztecs, Geneva, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_GENEVA
+122, Russia, Geneva, SENT OUT QUEST, Type, 13
+122, Russia, Geneva, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_GENEVA
+122, Japan, Geneva, SENT OUT QUEST, Type, 17
+122, Japan, Geneva, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_GENEVA
+122, Russia, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 60 to 100, MINOR_CIV_ANTANANARIVO
+122, The Huns, Antananarivo, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+122, The Celts, Kyzyl, lost friend
+122, The Celts, Kyzyl, cancelled, Bully City-State, Friendship: 29 to 29, MINOR_CIV_KYZYL
+123, Babylon, Monaco, SENT OUT QUEST, Type, 1
+123, The Celts, Geneva, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_GENEVA, (SAVING) 
+123, The Celts, Geneva, SENT OUT QUEST, Type, 13
+123, The Aztecs, Ragusa, SENT OUT QUEST, Type, 4
+123, Singapore, The Zulus, RECEIVED_UNIT_GIFT, Chariot Archer
+123, The Zulus, Singapore, gained friend
+123, Babylon, Singapore, gained friend
+123, Babylon, Singapore, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SINGAPORE
+123, Babylon, Riga, gained friend
+123, Babylon, Riga, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_RIGA
+123, Babylon, La Venta, gained friend
+123, Babylon, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+123, Babylon, Colombo, lost friend
+123, Babylon, Bogota, SENT OUT QUEST, Type, 4
+123, Babylon, Bogota, RECEIVED QUEST, Great Person, Friendship: 19 to 19, MINOR_CIV_BOGOTA
+124, The Zulus, Bucharest, Gold Gift: 250, Friendship: 65 to 85, Conquest, MINOR_CIV_BUCHAREST, Boost! , Passing Japan
+124, The Zulus, Singapore, Gold Gift: 250, Friendship: 30 to 30, Conquest, MINOR_CIV_SINGAPORE, (SAVING) , Boost! 
+124, The Aztecs, Ragusa, gained ally
+124, The Aztecs, Ragusa, FINISHED QUEST, Great Person, Friendship: 55 to 95, MINOR_CIV_RAGUSA
+124, The Aztecs, Kyzyl, gained friend
+124, The Aztecs, Kyzyl, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KYZYL
+124, The Aztecs, Bucharest, gained friend
+124, The Aztecs, Bucharest, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+124, Japan, Kyzyl, SENT OUT QUEST, Type, 1
+124, Japan, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+124, The Aztecs, Ragusa, SENT OUT QUEST, Type, 4
+124, The Ottomans, Manila, lost friend
+124, Babylon, Geneva, SENT OUT QUEST, Type, 4
+124, Babylon, Geneva, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_GENEVA
+124, Russia, Geneva, SENT OUT QUEST, Type, 3
+124, Russia, Geneva, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_GENEVA
+124, The Zulus, Singapore, lost friend
+124, Babylon, Singapore, gained ally
+124, Babylon, Singapore, FINISHED QUEST, Contest Techs, Friendship: 43 to 83, MINOR_CIV_SINGAPORE
+124, The Ottomans, Singapore, cancelled, Contest Techs, Friendship: 34 to 34, MINOR_CIV_SINGAPORE
+124, The Zulus, Singapore, cancelled, Contest Techs, Friendship: 29 to 29, MINOR_CIV_SINGAPORE
+124, The Celts, Singapore, cancelled, Contest Techs, Friendship: 37 to 37, MINOR_CIV_SINGAPORE
+124, The Aztecs, Singapore, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+124, The Ottomans, Monaco, lost friend
+124, The Ottomans, Antananarivo, lost friend
+124, The Ottomans, Wittenberg, lost friend
+124, The Ottomans, Kyzyl, lost friend
+124, The Huns, Kyzyl, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+124, The Zulus, Kyzyl, SENT OUT QUEST, Type, 7
+124, The Zulus, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+124, The Celts, Prague, lost friend
+124, The Ottomans, Bucharest, lost friend
+124, The Zulus, Bucharest, SENT OUT QUEST, Type, 2
+124, The Zulus, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 83 to 83, MINOR_CIV_BUCHAREST
+124, The Huns, Bogota, SENT OUT QUEST, Type, 4
+124, The Huns, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+125, Russia, Kyiv, lost friend
+125, Russia, Kyiv, SENT OUT QUEST, Type, 4
+125, Russia, Kyiv, RECEIVED QUEST, Great Person, Friendship: 29 to 29, MINOR_CIV_KIEV
+125, Japan, Antananarivo, gained friend
+125, Japan, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 16 to 56, MINOR_CIV_ANTANANARIVO
+125, Russia, Kyzyl, lost friend
+125, Babylon, Kyzyl, SENT OUT QUEST, Type, 3
+125, Babylon, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+125, The Ottomans, Prague, lost friend
+126, Russia, Manila, lost ally
+126, The Aztecs, Riga, SENT OUT QUEST, Type, 7
+126, The Aztecs, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+126, The Zulus, Colombo, SENT OUT QUEST, Type, 2
+126, The Zulus, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 71 to 71, MINOR_CIV_COLOMBO
+127, Babylon, Bogota, gained friend
+127, Babylon, Bogota, FINISHED QUEST, Great Person, Friendship: 14 to 54, MINOR_CIV_BOGOTA
+127, The Ottomans, Singapore, SENT OUT QUEST, Type, 17
+127, The Ottomans, Singapore, RECEIVED QUEST, Trade Route, Friendship: 30 to 30, MINOR_CIV_SINGAPORE
+127, The Ottomans, La Venta, SENT OUT QUEST, Type, 14
+127, The Ottomans, La Venta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+127, The Ottomans, Bogota, SENT OUT QUEST, Type, 4
+127, The Ottomans, Bogota, RECEIVED QUEST, Great Person, Friendship: 10 to 10, MINOR_CIV_BOGOTA
+128, The Huns, Kyiv, gained friend
+128, The Huns, Kyiv, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KIEV
+128, The Huns, Bucharest, gained friend
+128, The Huns, Bucharest, FINISHED QUEST, Great Person, Friendship: 9 to 49, MINOR_CIV_BUCHAREST
+128, The Huns, Bogota, gained friend
+128, The Huns, Bogota, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+128, Babylon, Budapest, gained friend
+128, Babylon, Budapest, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUDAPEST
+128, The Celts, Manila, era change yield update
+128, The Celts, Kyiv, era change yield update
+128, The Celts, Budapest, era change yield update
+128, The Celts, Geneva, era change yield update
+128, The Celts, Singapore, era change yield update
+128, The Celts, Riga, era change yield update
+128, The Celts, La Venta, era change yield update
+128, The Celts, Colombo, era change yield update
+128, The Celts, Monaco, era change yield update
+128, The Celts, Antananarivo, era change yield update
+128, The Celts, Wittenberg, era change yield update
+128, The Celts, Ragusa, era change yield update
+128, The Celts, Kyzyl, era change yield update
+128, The Celts, Prague, era change yield update
+128, The Celts, Bucharest, era change yield update
+128, The Celts, Bogota, era change yield update
+128, The Celts, Kyiv, SENT OUT QUEST, Type, 1
+128, The Celts, Kyiv, SENT OUT QUEST, Type, 16
+128, The Celts, Kyiv, SENT OUT QUEST, Type, 2
+128, The Celts, Geneva, SENT OUT QUEST, Type, 13
+128, The Celts, Singapore, SENT OUT QUEST, Type, 2
+128, The Celts, Singapore, SENT OUT QUEST, Type, 16
+128, The Celts, Riga, SENT OUT QUEST, Type, 1
+128, The Celts, Riga, SENT OUT QUEST, Type, 2
+128, The Celts, Riga, SENT OUT QUEST, Type, 16
+128, The Celts, La Venta, SENT OUT QUEST, Type, 1
+128, The Celts, La Venta, SENT OUT QUEST, Type, 16
+128, The Celts, Wittenberg, SENT OUT QUEST, Type, 16
+128, The Celts, Wittenberg, SENT OUT QUEST, Type, 1
+128, The Celts, Ragusa, SENT OUT QUEST, Type, 2
+128, The Celts, Kyzyl, SENT OUT QUEST, Type, 1
+128, The Celts, Prague, SENT OUT QUEST, Type, 16
+128, The Celts, Bogota, SENT OUT QUEST, Type, 1
+128, The Celts, Bogota, SENT OUT QUEST, Type, 16
+128, The Celts, Bogota, SENT OUT QUEST, Type, 4
+128, The Ottomans, Singapore, lost friend
+128, The Celts, Wittenberg, lost friend
+128, The Ottomans, Ragusa, SENT OUT QUEST, Type, 14
+128, The Ottomans, Ragusa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+128, Bucharest, Japan, RECEIVED_UNIT_GIFT, Warrior
+129, The Huns, Kyiv, cancelled, Bully City-State, Friendship: 37 to 37, MINOR_CIV_KIEV
+129, The Celts, Singapore, lost friend
+129, The Zulus, Riga, gained friend
+129, The Zulus, Riga, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_RIGA
+129, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 2
+129, The Ottomans, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 22 to 22, MINOR_CIV_KYZYL
+130, The Zulus, Colombo, Gold Gift: 250, Friendship: 67 to 87, Diplomacy, MINOR_CIV_COLOMBO, Boost! , Passing Babylon
+130, The Zulus, Monaco, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_MONACO, (SAVING) 
+130, Babylon, Manila, era change yield update
+130, Babylon, Kyiv, era change yield update
+130, Babylon, Budapest, era change yield update
+130, Babylon, Geneva, era change yield update
+130, Babylon, Singapore, era change yield update
+130, Babylon, Riga, era change yield update
+130, Babylon, La Venta, era change yield update
+130, Babylon, Colombo, era change yield update
+130, Babylon, Monaco, era change yield update
+130, Babylon, Antananarivo, era change yield update
+130, Babylon, Wittenberg, era change yield update
+130, Babylon, Ragusa, era change yield update
+130, Babylon, Kyzyl, era change yield update
+130, Babylon, Prague, era change yield update
+130, Babylon, Bucharest, era change yield update
+130, Babylon, Bogota, era change yield update
+130, Babylon, Geneva, SENT OUT QUEST, Type, 16
+130, Babylon, Geneva, SENT OUT QUEST, Type, 13
+130, Babylon, Geneva, SENT OUT QUEST, Type, 4
+130, Babylon, Singapore, SENT OUT QUEST, Type, 2
+130, Babylon, Riga, SENT OUT QUEST, Type, 1
+130, Babylon, Riga, SENT OUT QUEST, Type, 14
+130, Babylon, La Venta, SENT OUT QUEST, Type, 1
+130, Babylon, La Venta, SENT OUT QUEST, Type, 16
+130, Babylon, Colombo, SENT OUT QUEST, Type, 17
+130, Babylon, Monaco, SENT OUT QUEST, Type, 1
+130, Babylon, Kyzyl, SENT OUT QUEST, Type, 1
+130, Babylon, Kyzyl, SENT OUT QUEST, Type, 3
+130, Babylon, Bogota, SENT OUT QUEST, Type, 1
+130, Babylon, Bogota, SENT OUT QUEST, Type, 16
+130, Russia, Manila, era change yield update
+130, Russia, Kyiv, era change yield update
+130, Russia, Budapest, era change yield update
+130, Russia, Geneva, era change yield update
+130, Russia, Singapore, era change yield update
+130, Russia, Riga, era change yield update
+130, Russia, La Venta, era change yield update
+130, Russia, Colombo, era change yield update
+130, Russia, Monaco, era change yield update
+130, Russia, Antananarivo, era change yield update
+130, Russia, Wittenberg, era change yield update
+130, Russia, Ragusa, era change yield update
+130, Russia, Kyzyl, era change yield update
+130, Russia, Prague, era change yield update
+130, Russia, Bucharest, era change yield update
+130, Russia, Bogota, era change yield update
+130, Russia, Manila, SENT OUT QUEST, Type, 0
+130, Russia, Manila, SENT OUT QUEST, Type, 17
+130, Russia, Kyiv, SENT OUT QUEST, Type, 1
+130, Russia, Kyiv, SENT OUT QUEST, Type, 4
+130, Russia, Geneva, SENT OUT QUEST, Type, 17
+130, Russia, Geneva, SENT OUT QUEST, Type, 13
+130, Russia, Geneva, SENT OUT QUEST, Type, 3
+130, Russia, Antananarivo, SENT OUT QUEST, Type, 7
+130, Russia, Wittenberg, SENT OUT QUEST, Type, 7
+130, Russia, Wittenberg, SENT OUT QUEST, Type, 2
+130, Russia, Wittenberg, SENT OUT QUEST, Type, 1
+130, Russia, Kyzyl, SENT OUT QUEST, Type, 1
+130, Russia, Kyzyl, SENT OUT QUEST, Type, 17
+130, Russia, Bucharest, SENT OUT QUEST, Type, 17
+130, Russia, Bucharest, SENT OUT QUEST, Type, 7
+130, Russia, Bogota, SENT OUT QUEST, Type, 1
+130, Russia, Bogota, SENT OUT QUEST, Type, 3
+130, Babylon, La Venta, lost friend
+130, The Aztecs, Kyzyl, lost friend
+130, The Huns, Kyzyl, SENT OUT QUEST, Type, 4
+130, The Huns, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+130, The Aztecs, Bucharest, lost friend
+131, The Celts, Riga, gained friend
+131, The Celts, Riga, FINISHED QUEST, Spread Religion, Friendship: 0 to 40, MINOR_CIV_RIGA
+131, The Celts, Kyzyl, SENT OUT QUEST, Type, 4
+131, The Celts, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 16 to 16, MINOR_CIV_KYZYL
+132, The Aztecs, Manila, era change yield update
+132, The Aztecs, Kyiv, era change yield update
+132, The Aztecs, Budapest, era change yield update
+132, The Aztecs, Geneva, era change yield update
+132, The Aztecs, Singapore, era change yield update
+132, The Aztecs, Riga, era change yield update
+132, The Aztecs, La Venta, era change yield update
+132, The Aztecs, Colombo, era change yield update
+132, The Aztecs, Monaco, era change yield update
+132, The Aztecs, Antananarivo, era change yield update
+132, The Aztecs, Wittenberg, era change yield update
+132, The Aztecs, Ragusa, era change yield update
+132, The Aztecs, Kyzyl, era change yield update
+132, The Aztecs, Prague, era change yield update
+132, The Aztecs, Bucharest, era change yield update
+132, The Aztecs, Bogota, era change yield update
+132, The Aztecs, Kyiv, SENT OUT QUEST, Type, 7
+132, The Aztecs, Kyiv, SENT OUT QUEST, Type, 1
+132, The Aztecs, Kyiv, SENT OUT QUEST, Type, 4
+132, The Aztecs, Geneva, SENT OUT QUEST, Type, 7
+132, The Aztecs, Geneva, SENT OUT QUEST, Type, 13
+132, The Aztecs, Singapore, SENT OUT QUEST, Type, 7
+132, The Aztecs, Riga, SENT OUT QUEST, Type, 1
+132, The Aztecs, Riga, SENT OUT QUEST, Type, 7
+132, The Aztecs, La Venta, SENT OUT QUEST, Type, 1
+132, The Aztecs, Monaco, SENT OUT QUEST, Type, 1
+132, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 7
+132, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 2
+132, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 1
+132, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 1
+132, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 2
+132, The Aztecs, Bucharest, SENT OUT QUEST, Type, 2
+132, The Ottomans, Manila, SENT OUT QUEST, Type, 3
+132, The Ottomans, Manila, RECEIVED QUEST, Construct Wonder, Friendship: 17 to 17, MINOR_CIV_MANILA
+132, Babylon, Budapest, lost friend
+132, The Aztecs, Geneva, SENT OUT QUEST, Type, 4
+132, The Aztecs, Geneva, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_GENEVA
+132, Babylon, Colombo, SENT OUT QUEST, Type, 4
+132, Babylon, Colombo, RECEIVED QUEST, Great Person, Friendship: 19 to 19, MINOR_CIV_COLOMBO
+132, The Ottomans, Bucharest, SENT OUT QUEST, Type, 13
+132, The Ottomans, Bucharest, RECEIVED QUEST, Invest, Friendship: 17 to 17, MINOR_CIV_BUCHAREST
+132, The Huns, Bucharest, SENT OUT QUEST, Type, 13
+132, The Huns, Bucharest, RECEIVED QUEST, Invest, Friendship: 41 to 41, MINOR_CIV_BUCHAREST
+132, The Zulus, Bucharest, SENT OUT QUEST, Type, 13
+132, The Zulus, Bucharest, RECEIVED QUEST, Invest, Friendship: 71 to 71, MINOR_CIV_BUCHAREST
+132, Japan, Bucharest, SENT OUT QUEST, Type, 13
+132, Japan, Bucharest, RECEIVED QUEST, Invest, Friendship: 9 to 9, MINOR_CIV_BUCHAREST
+132, Babylon, Bucharest, SENT OUT QUEST, Type, 13
+132, Babylon, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+132, The Aztecs, Bucharest, SENT OUT QUEST, Type, 13
+132, The Aztecs, Bucharest, RECEIVED QUEST, Invest, Friendship: 26 to 26, MINOR_CIV_BUCHAREST
+132, Russia, Bucharest, SENT OUT QUEST, Type, 13
+132, Russia, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+133, Babylon, Geneva, SENT OUT QUEST, Type, 16
+133, Babylon, Geneva, SENT OUT QUEST, Type, 13
+133, Babylon, Geneva, SENT OUT QUEST, Type, 4
+133, Babylon, Riga, SENT OUT QUEST, Type, 1
+133, Babylon, Riga, SENT OUT QUEST, Type, 14
+133, Babylon, Monaco, SENT OUT QUEST, Type, 1
+133, Russia, Geneva, gained friend
+133, Russia, Geneva, gained ally
+133, The Aztecs, Geneva, SENT OUT QUEST, Type, 7
+133, The Aztecs, Geneva, SENT OUT QUEST, Type, 13
+133, The Aztecs, Geneva, SENT OUT QUEST, Type, 4
+133, The Aztecs, Geneva, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_GENEVA
+133, The Aztecs, Geneva, cancelled, Invest, Friendship: -60 to -60, MINOR_CIV_GENEVA
+133, The Aztecs, Geneva, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_GENEVA
+133, Russia, Geneva, Gold Gift: 500, Friendship: 5 to 75, Spaceship, MINOR_CIV_GENEVA, Passing The Ottomans
+133, Russia, Wittenberg, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_WITTENBERG, (SAVING) 
+133, The Zulus, Singapore, SENT OUT QUEST, Type, 2
+133, The Zulus, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 15 to 15, MINOR_CIV_SINGAPORE
+133, The Ottomans, Wittenberg, SENT OUT QUEST, Type, 3
+133, The Ottomans, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 16 to 16, MINOR_CIV_WITTENBERG
+134, The Huns, Kyiv, lost friend
+134, Babylon, Riga, lost friend
+134, Babylon, Riga, cancelled, Bully City-State, Friendship: 28 to 28, MINOR_CIV_RIGA
+134, The Celts, Colombo, SENT OUT QUEST, Type, 17
+134, The Celts, Colombo, RECEIVED QUEST, Trade Route, Friendship: -4 to -4, MINOR_CIV_COLOMBO
+134, The Ottomans, Prague, SENT OUT QUEST, Type, 2
+134, The Ottomans, Prague, RECEIVED QUEST, Connect Resource, Friendship: 16 to 16, MINOR_CIV_PRAGUE
+134, The Huns, Bogota, lost friend
+134, Russia, Bogota, SENT OUT QUEST, Type, 17
+134, Russia, Bogota, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+135, The Celts, Kyzyl, gained friend
+135, The Celts, Kyzyl, FINISHED QUEST, Great Person, Friendship: 11 to 51, MINOR_CIV_KYZYL
+135, The Huns, Budapest, SENT OUT QUEST, Type, 11
+135, The Huns, Budapest, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_BUDAPEST
+135, Japan, Budapest, SENT OUT QUEST, Type, 11
+135, Japan, Budapest, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+135, Babylon, Budapest, SENT OUT QUEST, Type, 11
+135, Babylon, Budapest, RECEIVED QUEST, Contest Faith, Friendship: 22 to 22, MINOR_CIV_BUDAPEST
+135, The Celts, Budapest, SENT OUT QUEST, Type, 11
+135, The Celts, Budapest, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+135, The Zulus, Riga, SENT OUT QUEST, Type, 4
+135, The Zulus, Riga, RECEIVED QUEST, Great Person, Friendship: 31 to 31, MINOR_CIV_RIGA
+135, Japan, Bucharest, SENT OUT QUEST, Type, 16
+135, Japan, Bucharest, RECEIVED QUEST, Spread Religion, Friendship: 4 to 4, MINOR_CIV_BUCHAREST
+135, Japan, Bogota, SENT OUT QUEST, Type, 2
+135, Japan, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+136, The Zulus, Bucharest, Gold Gift: 250, Friendship: 67 to 97, Diplomacy, MINOR_CIV_BUCHAREST, Boost! , Passing The Aztecs
+136, The Zulus, Monaco, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_MONACO, (SAVING) 
+136, The Aztecs, Kyiv, gained friend
+136, The Aztecs, Kyiv, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KIEV
+136, The Zulus, Riga, lost friend
+136, Babylon, La Venta, SENT OUT QUEST, Type, 2
+136, Babylon, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 16 to 16, MINOR_CIV_LA_VENTA
+136, The Aztecs, La Venta, SENT OUT QUEST, Type, 2
+136, The Aztecs, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+137, Babylon, Budapest, SENT OUT QUEST, Type, 2
+137, Babylon, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 17 to 17, MINOR_CIV_BUDAPEST
+137, Russia, Kyzyl, SENT OUT QUEST, Type, 4
+137, Russia, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 11 to 11, MINOR_CIV_KYZYL
+138, The Ottomans, Bogota, gained friend
+138, The Ottomans, Bogota, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+138, The Aztecs, Manila, SENT OUT QUEST, Type, 0
+138, The Aztecs, Manila, RECEIVED QUEST, Route, Friendship: 1 to 1, MINOR_CIV_MANILA
+138, The Ottomans, Monaco, SENT OUT QUEST, Type, 3
+138, The Ottomans, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 8 to 8, MINOR_CIV_MONACO
+138, The Huns, Antananarivo, SENT OUT QUEST, Type, 7
+138, The Huns, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+138, Babylon, Prague, SENT OUT QUEST, Type, 3
+138, Babylon, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+139, The Celts, Geneva, gained friend
+139, Russia, Geneva, lost ally
+139, The Celts, Geneva, gained ally
+139, The Celts, Geneva, Gold Gift: 500, Friendship: 3 to 73, Spaceship, MINOR_CIV_GENEVA
+139, The Celts, Singapore, Gold Gift: 500, Friendship: 16 to 16, Spaceship, MINOR_CIV_SINGAPORE, (SAVING) , Passing The Zulus
+139, The Huns, Budapest, SENT OUT QUEST, Type, 4
+139, The Huns, Budapest, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BUDAPEST
+139, The Aztecs, Singapore, SENT OUT QUEST, Type, 2
+139, The Aztecs, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+139, The Ottomans, Antananarivo, SENT OUT QUEST, Type, 4
+139, The Ottomans, Antananarivo, RECEIVED QUEST, Great Person, Friendship: 7 to 7, MINOR_CIV_ANTANANARIVO
+139, The Aztecs, Ragusa, lost ally
+139, The Aztecs, Ragusa, SENT OUT QUEST, Type, 2
+139, The Aztecs, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 59 to 59, MINOR_CIV_RAGUSA
+140, The Ottomans, Manila, era change yield update
+140, The Ottomans, Kyiv, era change yield update
+140, The Ottomans, Budapest, era change yield update
+140, The Ottomans, Geneva, era change yield update
+140, The Ottomans, Singapore, era change yield update
+140, The Ottomans, Riga, era change yield update
+140, The Ottomans, La Venta, era change yield update
+140, The Ottomans, Colombo, era change yield update
+140, The Ottomans, Monaco, era change yield update
+140, The Ottomans, Antananarivo, era change yield update
+140, The Ottomans, Wittenberg, era change yield update
+140, The Ottomans, Ragusa, era change yield update
+140, The Ottomans, Kyzyl, era change yield update
+140, The Ottomans, Prague, era change yield update
+140, The Ottomans, Bucharest, era change yield update
+140, The Ottomans, Bogota, era change yield update
+140, The Ottomans, Manila, SENT OUT QUEST, Type, 2
+140, The Ottomans, Manila, SENT OUT QUEST, Type, 3
+140, The Ottomans, Kyiv, SENT OUT QUEST, Type, 1
+140, The Ottomans, Kyiv, SENT OUT QUEST, Type, 4
+140, The Ottomans, Geneva, SENT OUT QUEST, Type, 13
+140, The Ottomans, Singapore, SENT OUT QUEST, Type, 17
+140, The Ottomans, Riga, SENT OUT QUEST, Type, 1
+140, The Ottomans, Riga, SENT OUT QUEST, Type, 4
+140, The Ottomans, Riga, SENT OUT QUEST, Type, 17
+140, The Ottomans, La Venta, SENT OUT QUEST, Type, 2
+140, The Ottomans, La Venta, SENT OUT QUEST, Type, 1
+140, The Ottomans, La Venta, SENT OUT QUEST, Type, 14
+140, The Ottomans, Monaco, SENT OUT QUEST, Type, 1
+140, The Ottomans, Monaco, SENT OUT QUEST, Type, 2
+140, The Ottomans, Monaco, SENT OUT QUEST, Type, 3
+140, The Ottomans, Antananarivo, SENT OUT QUEST, Type, 2
+140, The Ottomans, Antananarivo, SENT OUT QUEST, Type, 4
+140, The Ottomans, Wittenberg, SENT OUT QUEST, Type, 1
+140, The Ottomans, Wittenberg, SENT OUT QUEST, Type, 3
+140, The Ottomans, Ragusa, SENT OUT QUEST, Type, 2
+140, The Ottomans, Ragusa, SENT OUT QUEST, Type, 14
+140, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 1
+140, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 4
+140, The Ottomans, Kyzyl, SENT OUT QUEST, Type, 2
+140, The Ottomans, Prague, SENT OUT QUEST, Type, 17
+140, The Ottomans, Prague, SENT OUT QUEST, Type, 2
+140, The Ottomans, Bucharest, SENT OUT QUEST, Type, 4
+140, The Ottomans, Bucharest, SENT OUT QUEST, Type, 13
+140, The Ottomans, Bogota, SENT OUT QUEST, Type, 1
+140, The Zulus, Manila, era change yield update
+140, The Zulus, Kyiv, era change yield update
+140, The Zulus, Budapest, era change yield update
+140, The Zulus, Geneva, era change yield update
+140, The Zulus, Singapore, era change yield update
+140, The Zulus, Riga, era change yield update
+140, The Zulus, La Venta, era change yield update
+140, The Zulus, Colombo, era change yield update
+140, The Zulus, Monaco, era change yield update
+140, The Zulus, Antananarivo, era change yield update
+140, The Zulus, Wittenberg, era change yield update
+140, The Zulus, Ragusa, era change yield update
+140, The Zulus, Kyzyl, era change yield update
+140, The Zulus, Prague, era change yield update
+140, The Zulus, Bucharest, era change yield update
+140, The Zulus, Bogota, era change yield update
+140, The Zulus, Singapore, SENT OUT QUEST, Type, 16
+140, The Zulus, Singapore, SENT OUT QUEST, Type, 2
+140, The Zulus, Riga, SENT OUT QUEST, Type, 1
+140, The Zulus, Riga, SENT OUT QUEST, Type, 4
+140, The Zulus, La Venta, SENT OUT QUEST, Type, 16
+140, The Zulus, La Venta, SENT OUT QUEST, Type, 1
+140, The Zulus, La Venta, SENT OUT QUEST, Type, 14
+140, The Zulus, Colombo, SENT OUT QUEST, Type, 16
+140, The Zulus, Colombo, SENT OUT QUEST, Type, 2
+140, The Zulus, Monaco, SENT OUT QUEST, Type, 1
+140, The Zulus, Monaco, SENT OUT QUEST, Type, 7
+140, The Zulus, Monaco, SENT OUT QUEST, Type, 16
+140, The Zulus, Kyzyl, SENT OUT QUEST, Type, 1
+140, The Zulus, Kyzyl, SENT OUT QUEST, Type, 16
+140, The Zulus, Kyzyl, SENT OUT QUEST, Type, 7
+140, The Zulus, Prague, SENT OUT QUEST, Type, 17
+140, The Zulus, Prague, SENT OUT QUEST, Type, 7
+140, The Zulus, Bucharest, SENT OUT QUEST, Type, 7
+140, The Zulus, Bucharest, SENT OUT QUEST, Type, 2
+140, The Zulus, Bucharest, SENT OUT QUEST, Type, 13
+140, The Zulus, Bogota, SENT OUT QUEST, Type, 1
+140, The Zulus, Bogota, SENT OUT QUEST, Type, 16
+140, Babylon, Riga, SENT OUT QUEST, Type, 1
+140, Babylon, Monaco, SENT OUT QUEST, Type, 1
+140, The Aztecs, Ragusa, SENT OUT QUEST, Type, 2
+140, Russia, Manila, gained ally
+140, The Aztecs, Manila, cancelled, Route, Friendship: -60 to -60, MINOR_CIV_MANILA
+140, Russia, Manila, lost ally
+140, The Aztecs, Kyiv, gained ally
+140, Japan, Kyiv, SENT OUT QUEST, Type, 1
+140, Japan, Kyiv, SENT OUT QUEST, Type, 16
+140, Japan, Kyiv, SENT OUT QUEST, Type, 4
+140, Japan, Kyiv, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_KIEV
+140, Japan, Kyiv, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_KIEV
+140, Japan, Kyiv, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_KIEV
+140, Russia, Kyiv, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_KIEV
+140, Russia, Kyiv, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_KIEV
+140, The Aztecs, Kyiv, FINISHED QUEST, Find Natural Wonder, Friendship: 32 to 72, MINOR_CIV_KIEV
+140, Japan, Geneva, gained friend
+140, Japan, Geneva, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_GENEVA
+140, The Ottomans, Geneva, SENT OUT QUEST, Type, 3
+140, The Ottomans, Geneva, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_GENEVA
+140, Babylon, Singapore, lost ally
+140, The Celts, Singapore, gained friend
+140, The Aztecs, Singapore, gained friend
+140, The Aztecs, Singapore, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+140, The Aztecs, Riga, gained friend
+140, The Aztecs, Riga, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_RIGA
+140, The Huns, Riga, SENT OUT QUEST, Type, 16
+140, The Huns, Riga, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_RIGA
+140, The Zulus, La Venta, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+140, The Aztecs, Wittenberg, gained friend
+140, The Aztecs, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+140, Japan, Ragusa, SENT OUT QUEST, Type, 2
+140, Japan, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+140, The Huns, Bucharest, lost friend
+140, The Aztecs, Bucharest, gained friend
+141, The Zulus, Singapore, gained friend
+141, The Zulus, Singapore, Gold Gift: 500, Friendship: 3 to 48, Diplomacy, MINOR_CIV_SINGAPORE
+141, The Zulus, La Venta, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_LA_VENTA, (SAVING) 
+141, Japan, Wittenberg, SENT OUT QUEST, Type, 16
+141, Japan, Wittenberg, SENT OUT QUEST, Type, 1
+141, Japan, Wittenberg, SENT OUT QUEST, Type, 7
+141, The Aztecs, Kyiv, SENT OUT QUEST, Type, 1
+141, The Celts, Riga, lost friend
+141, The Ottomans, Colombo, SENT OUT QUEST, Type, 12
+141, The Ottomans, Colombo, RECEIVED QUEST, Contest Techs, Friendship: -25 to -25, MINOR_CIV_COLOMBO
+141, The Zulus, Colombo, SENT OUT QUEST, Type, 12
+141, The Zulus, Colombo, RECEIVED QUEST, Contest Techs, Friendship: 69 to 69, MINOR_CIV_COLOMBO
+141, Babylon, Colombo, SENT OUT QUEST, Type, 12
+141, Babylon, Colombo, RECEIVED QUEST, Contest Techs, Friendship: 9 to 9, MINOR_CIV_COLOMBO
+141, The Celts, Colombo, SENT OUT QUEST, Type, 12
+141, The Celts, Colombo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+141, Babylon, Monaco, SENT OUT QUEST, Type, 16
+141, Babylon, Monaco, RECEIVED QUEST, Spread Religion, Friendship: 2 to 2, MINOR_CIV_MONACO
+141, Japan, Kyzyl, SENT OUT QUEST, Type, 16
+141, Japan, Kyzyl, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KYZYL
+141, The Celts, Prague, SENT OUT QUEST, Type, 17
+141, The Celts, Prague, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+141, The Ottomans, Bogota, SENT OUT QUEST, Type, 14
+141, The Ottomans, Bogota, RECEIVED QUEST, Bully City-State, Friendship: 34 to 34, MINOR_CIV_BOGOTA
+142, The Celts, Geneva, FINISHED QUEST, Invest, Friendship: 67 to 67, MINOR_CIV_GENEVA
+142, Russia, Geneva, FINISHED QUEST, Invest, Friendship: 60 to 60, MINOR_CIV_GENEVA
+142, Japan, Geneva, FINISHED QUEST, Invest, Friendship: 42 to 42, MINOR_CIV_GENEVA
+142, The Ottomans, Geneva, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_GENEVA
+142, The Huns, Geneva, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_GENEVA
+142, Babylon, Geneva, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENEVA
+142, The Celts, Ragusa, SENT OUT QUEST, Type, 4
+142, The Celts, Ragusa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+142, Russia, Ragusa, SENT OUT QUEST, Type, 2
+142, Russia, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+142, Babylon, Kyzyl, SENT OUT QUEST, Type, 4
+142, Babylon, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+142, The Huns, Bogota, SENT OUT QUEST, Type, 14
+142, The Huns, Bogota, RECEIVED QUEST, Bully City-State, Friendship: 17 to 17, MINOR_CIV_BOGOTA
+142, Babylon, Bogota, SENT OUT QUEST, Type, 3
+142, Babylon, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 30 to 30, MINOR_CIV_BOGOTA
+143, The Celts, Singapore, lost friend
+143, The Aztecs, Monaco, SENT OUT QUEST, Type, 7
+143, The Aztecs, Monaco, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+143, Japan, Antananarivo, lost friend
+143, Babylon, Bogota, lost friend
+144, The Huns, Budapest, SENT OUT QUEST, Type, 16
+144, The Huns, Budapest, SENT OUT QUEST, Type, 11
+144, The Huns, Budapest, SENT OUT QUEST, Type, 4
+144, The Zulus, Colombo, Gold Gift: 250, Friendship: 66 to 86, Diplomacy, MINOR_CIV_COLOMBO, Boost! , Passing Babylon
+144, The Zulus, La Venta, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_LA_VENTA, (SAVING) 
+144, The Zulus, Riga, gained friend
+144, The Zulus, Riga, FINISHED QUEST, Great Person, Friendship: 19 to 59, MINOR_CIV_RIGA
+144, Russia, Kyzyl, gained friend
+144, Russia, Kyzyl, FINISHED QUEST, Great Person, Friendship: 2 to 42, MINOR_CIV_KYZYL
+144, The Aztecs, Riga, SENT OUT QUEST, Type, 2
+144, The Aztecs, Riga, RECEIVED QUEST, Connect Resource, Friendship: 34 to 34, MINOR_CIV_RIGA
+144, The Huns, Kyzyl, SENT OUT QUEST, Type, 7
+144, The Huns, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+144, The Aztecs, Bucharest, lost friend
+144, The Ottomans, Bucharest, SENT OUT QUEST, Type, 3
+144, The Ottomans, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+144, The Ottomans, Bogota, lost friend
+144, The Zulus, Bogota, SENT OUT QUEST, Type, 3
+144, The Zulus, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+145, The Huns, Manila, SENT OUT QUEST, Type, 7
+145, The Huns, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+145, The Ottomans, Kyiv, SENT OUT QUEST, Type, 3
+145, The Ottomans, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+145, The Huns, Kyiv, SENT OUT QUEST, Type, 14
+145, The Huns, Kyiv, RECEIVED QUEST, Bully City-State, Friendship: 13 to 13, MINOR_CIV_KIEV
+145, The Celts, Riga, SENT OUT QUEST, Type, 3
+145, The Celts, Riga, RECEIVED QUEST, Construct Wonder, Friendship: 24 to 24, MINOR_CIV_RIGA
+145, The Huns, Ragusa, SENT OUT QUEST, Type, 2
+145, The Huns, Ragusa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+145, Babylon, Bucharest, SENT OUT QUEST, Type, 4
+145, Babylon, Bucharest, RECEIVED QUEST, Great Person, Friendship: -1 to -1, MINOR_CIV_BUCHAREST
+146, The Ottomans, Antananarivo, gained friend
+146, The Ottomans, Antananarivo, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+146, Japan, Geneva, lost friend
+146, The Celts, Geneva, Gold Gift: 250, Friendship: 63 to 83, Spaceship, MINOR_CIV_GENEVA, Boost! , Passing Russia
+146, The Celts, Singapore, Gold Gift: 500, Friendship: 25 to 25, Spaceship, MINOR_CIV_SINGAPORE, (SAVING) 
+146, Geneva, The Ottomans, RECEIVED_UNIT_GIFT, Swordsman
+146, The Celts, Geneva, SENT OUT QUEST, Type, 16
+146, The Celts, Geneva, RECEIVED QUEST, Spread Religion, Friendship: 81 to 81, MINOR_CIV_GENEVA
+146, The Ottomans, Ragusa, SENT OUT QUEST, Type, 1
+146, The Ottomans, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+146, The Huns, Ragusa, SENT OUT QUEST, Type, 1
+146, The Huns, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+146, Japan, Ragusa, SENT OUT QUEST, Type, 1
+146, Japan, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+146, The Celts, Ragusa, SENT OUT QUEST, Type, 1
+146, The Celts, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+146, The Aztecs, Ragusa, SENT OUT QUEST, Type, 1
+146, The Aztecs, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 43 to 43, MINOR_CIV_RAGUSA
+146, Russia, Ragusa, SENT OUT QUEST, Type, 1
+146, Russia, Ragusa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+147, The Huns, Budapest, gained friend
+147, The Huns, Budapest, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUDAPEST
+147, The Aztecs, Singapore, lost friend
+147, The Aztecs, Riga, lost friend
+147, The Ottomans, Riga, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+147, The Huns, Riga, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+147, The Zulus, Riga, cancelled, Kill Camp, Friendship: 53 to 53, MINOR_CIV_RIGA
+147, Babylon, Riga, cancelled, Kill Camp, Friendship: 9 to 9, MINOR_CIV_RIGA
+147, The Celts, Riga, cancelled, Kill Camp, Friendship: 22 to 22, MINOR_CIV_RIGA
+147, The Aztecs, Riga, cancelled, Kill Camp, Friendship: 29 to 29, MINOR_CIV_RIGA
+147, The Ottomans, La Venta, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+147, The Ottomans, Colombo, SENT OUT QUEST, Type, 17
+147, The Ottomans, Colombo, RECEIVED QUEST, Trade Route, Friendship: -16 to -16, MINOR_CIV_COLOMBO
+147, The Ottomans, Bogota, cancelled, Kill Camp, Friendship: 25 to 25, MINOR_CIV_BOGOTA
+147, The Huns, Bogota, cancelled, Kill Camp, Friendship: 10 to 10, MINOR_CIV_BOGOTA
+147, The Zulus, Bogota, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+147, Japan, Bogota, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+147, Babylon, Bogota, cancelled, Kill Camp, Friendship: 23 to 23, MINOR_CIV_BOGOTA
+147, The Celts, Bogota, cancelled, Kill Camp, Friendship: -58 to -58, MINOR_CIV_BOGOTA
+147, Russia, Bogota, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+148, The Zulus, Singapore, Gold Gift: 250, Friendship: 37 to 57, Diplomacy, MINOR_CIV_SINGAPORE, Boost! , Passing The Aztecs
+148, The Zulus, Monaco, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_MONACO, (SAVING) 
+148, The Aztecs, Geneva, SENT OUT QUEST, Type, 2
+148, The Aztecs, Geneva, RECEIVED QUEST, Connect Resource, Friendship: 4 to 4, MINOR_CIV_GENEVA
+148, The Ottomans, Singapore, SENT OUT QUEST, Type, 4
+148, The Ottomans, Singapore, RECEIVED QUEST, Great Person, Friendship: -10 to -10, MINOR_CIV_SINGAPORE
+148, The Ottomans, Antananarivo, SENT OUT QUEST, Type, 13
+148, The Ottomans, Antananarivo, RECEIVED QUEST, Invest, Friendship: 35 to 35, MINOR_CIV_ANTANANARIVO
+148, The Huns, Antananarivo, SENT OUT QUEST, Type, 13
+148, The Huns, Antananarivo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+148, Japan, Antananarivo, SENT OUT QUEST, Type, 13
+148, Japan, Antananarivo, RECEIVED QUEST, Invest, Friendship: 21 to 21, MINOR_CIV_ANTANANARIVO
+148, Russia, Antananarivo, SENT OUT QUEST, Type, 13
+148, Russia, Antananarivo, RECEIVED QUEST, Invest, Friendship: 61 to 61, MINOR_CIV_ANTANANARIVO
+148, Japan, Antananarivo, SENT OUT QUEST, Type, 14
+148, Japan, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 21 to 21, MINOR_CIV_ANTANANARIVO
+148, The Ottomans, Ragusa, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RAGUSA
+148, The Aztecs, Bucharest, SENT OUT QUEST, Type, 4
+148, The Aztecs, Bucharest, RECEIVED QUEST, Great Person, Friendship: 22 to 22, MINOR_CIV_BUCHAREST
+149, The Aztecs, Kyiv, lost ally
+149, Babylon, Singapore, SENT OUT QUEST, Type, 16
+149, Babylon, Singapore, RECEIVED QUEST, Spread Religion, Friendship: 41 to 41, MINOR_CIV_SINGAPORE
+149, Russia, Monaco, SENT OUT QUEST, Type, 1
+149, Russia, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+149, Russia, Antananarivo, SENT OUT QUEST, Type, 2
+149, Russia, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 60 to 60, MINOR_CIV_ANTANANARIVO
+149, The Ottomans, Wittenberg, SENT OUT QUEST, Type, 4
+149, The Ottomans, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+149, The Celts, Wittenberg, SENT OUT QUEST, Type, 7
+149, The Celts, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+149, The Celts, Kyzyl, lost friend
+150, The Huns, Manila, era change yield update
+150, The Huns, Kyiv, era change yield update
+150, The Huns, Budapest, era change yield update
+150, The Huns, Geneva, era change yield update
+150, The Huns, Singapore, era change yield update
+150, The Huns, Riga, era change yield update
+150, The Huns, La Venta, era change yield update
+150, The Huns, Colombo, era change yield update
+150, The Huns, Monaco, era change yield update
+150, The Huns, Antananarivo, era change yield update
+150, The Huns, Wittenberg, era change yield update
+150, The Huns, Ragusa, era change yield update
+150, The Huns, Kyzyl, era change yield update
+150, The Huns, Prague, era change yield update
+150, The Huns, Bucharest, era change yield update
+150, The Huns, Bogota, era change yield update
+150, The Huns, Manila, SENT OUT QUEST, Type, 16
+150, The Huns, Manila, SENT OUT QUEST, Type, 7
+150, The Huns, Kyiv, SENT OUT QUEST, Type, 1
+150, The Huns, Kyiv, SENT OUT QUEST, Type, 14
+150, The Huns, Budapest, SENT OUT QUEST, Type, 16
+150, The Huns, Budapest, SENT OUT QUEST, Type, 11
+150, The Huns, Geneva, SENT OUT QUEST, Type, 7
+150, The Huns, Geneva, SENT OUT QUEST, Type, 16
+150, The Huns, Riga, SENT OUT QUEST, Type, 16
+150, The Huns, Antananarivo, SENT OUT QUEST, Type, 2
+150, The Huns, Antananarivo, SENT OUT QUEST, Type, 7
+150, The Huns, Antananarivo, SENT OUT QUEST, Type, 13
+150, The Huns, Wittenberg, SENT OUT QUEST, Type, 7
+150, The Huns, Wittenberg, SENT OUT QUEST, Type, 1
+150, The Huns, Wittenberg, SENT OUT QUEST, Type, 2
+150, The Huns, Ragusa, SENT OUT QUEST, Type, 4
+150, The Huns, Ragusa, SENT OUT QUEST, Type, 2
+150, The Huns, Ragusa, SENT OUT QUEST, Type, 1
+150, The Huns, Kyzyl, SENT OUT QUEST, Type, 1
+150, The Huns, Kyzyl, SENT OUT QUEST, Type, 4
+150, The Huns, Kyzyl, SENT OUT QUEST, Type, 7
+150, The Huns, Bucharest, SENT OUT QUEST, Type, 2
+150, The Huns, Bucharest, SENT OUT QUEST, Type, 13
+150, The Huns, Bogota, SENT OUT QUEST, Type, 14
+150, The Zulus, Monaco, gained friend
+150, The Zulus, Monaco, Gold Gift: 500, Friendship: 5 to 50, Diplomacy, MINOR_CIV_MONACO
+150, The Zulus, La Venta, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_LA_VENTA, (SAVING) 
+150, Babylon, Monaco, SENT OUT QUEST, Type, 1
+150, Babylon, Monaco, SENT OUT QUEST, Type, 16
+150, Russia, Kyiv, SENT OUT QUEST, Type, 2
+150, Russia, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+150, Babylon, Singapore, gained ally
+150, Babylon, Singapore, lost ally
+150, The Celts, Riga, gained friend
+150, Babylon, Riga, SENT OUT QUEST, Type, 16
+150, Babylon, Riga, RECEIVED QUEST, Spread Religion, Friendship: 2 to 2, MINOR_CIV_RIGA
+150, Russia, Antananarivo, lost ally
+150, The Aztecs, Kyzyl, SENT OUT QUEST, Type, 4
+150, The Aztecs, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+150, Bucharest, Japan, RECEIVED_UNIT_GIFT, Warrior
+151, Kyiv, The Ottomans, RECEIVED_UNIT_GIFT, Swordsman
+151, The Huns, Budapest, lost friend
+151, The Zulus, Monaco, gained ally
+151, The Zulus, Monaco, FINISHED QUEST, Spread Religion, Friendship: 47 to 87, MINOR_CIV_MONACO
+151, Russia, Antananarivo, gained ally
+151, Russia, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 57 to 97, MINOR_CIV_ANTANANARIVO
+151, The Aztecs, Wittenberg, lost friend
+151, Russia, Wittenberg, gained friend
+151, Russia, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+151, The Zulus, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 68 to 108, MINOR_CIV_BUCHAREST
+151, Russia, Bucharest, gained friend
+151, Russia, Bucharest, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+152, The Celts, Monaco, SENT OUT QUEST, Type, 1
+152, The Celts, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
