@@ -1,0 +1,37 @@
+﻿Game 108FF626108FF626 (AIABTest_c8e.csv), last logged turn 150
+b    Assyria      tall      cities 3
+  builds to T80 (capital Assur; other cities named): T0 Scout* | T3 Warrior* | T7 Settler* | T16 Worker* | T20 Monument* (Nineveh) | T24 Settler* | T25 Shrine* | T28 Monument* | T30 Granary (Nineveh) | T31 Temple of Artemis | T43 Shrine (Nineveh) | T43 Settler | T44 Settler | T50 Hanging Gardens | T50 Royal Library* (Nineveh) | T54 Granary (Nimrud) | T60 Work Boat (Nineveh) | T62 Worker | T63 Royal Library | T65 Worker (Nineveh) | T67 Market | T74 Settler (Nineveh) | T75 Granary | T80 Trireme
+  settlers ordered T: 7,24,43,44,74,102,121   found-city ops started T: 16,50,81,91,92,104,107,111,134   cities founded T: 20,54
+  ops aborted: T82 NoTarget, T83 NoTarget, T84 NoTarget, T85 NoTarget, T86 NoTarget, T87 NoTarget, T88 NoTarget, T89 NoTarget, T90 NoTarget, T91 HalfStrength, T103 HalfStrength, T106 LostCivilian, T108 LostCivilian, T133 LostPath, T140 NoTarget
+  book SETTLER HELD to T80: 5 (unhappy 3, one at a time 1, growth due 1)   built instead: the normal AI choice 3, Royal Library 1, Monument 1   first: T028 Assur size 3 next Monument | T031 Assur size 4 next the normal AI choice | T043 Assur size 4 next the normal AI choice
+  IDLE SETTLER turns: 3 (first T24)
+  military ops ended (whole game): DiploOpinionChange 14, NoUnits 10, Success 6, LostPath 6, HalfStrength 4, NoTarget 1
+  settler timeline to T80: T7 settler (book) in Assur | T16 op started | T20 FOUNDED | T24 settler (book) in Assur | T43 settler (AI) in Assur | T44 settler (AI) in Assur | T50 op started | T54 FOUNDED | T74 settler (AI) in Nineveh
+  saving gold for a settler: 33 turns (T6-T79)
+b    Morocco      tall      cities 4
+  builds to T80 (capital Marrakech; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T19 Settler* | T31 Warrior | T35 Worker* | T37 Monument* (Rabat) | T38 Stonehenge | T38 Library* (Rabat) | T51 Library* | T55 Worker | T58 Work Boat | T62 Settler | T68 Great Lighthouse | T70 Work Boat (Rabat) | T74 Monument (Fes) | T75 Shrine (Fes) | T78 Settler | T79 Worker | T80 Worker
+  settlers ordered T: 19,62,78,82,83,92   found-city ops started T: 31,68,87   cities founded T: 37,74,91
+  ops aborted: T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: Library 2   first: T038 Marrakech size 4 next Library | T051 Marrakech size 4 next Library
+  IDLE SETTLER turns: 5 (first T62)
+  military ops ended (whole game): Success 1, NoTarget 1
+  settler timeline to T80: T19 settler (book) in Marrakech | T31 op started | T37 FOUNDED | T62 settler (AI) in Marrakech | T68 op started | T74 FOUNDED | T78 settler (AI) in Marrakech
+  saving gold for a settler: 37 turns (T6-T80)
+c    Persia       tall      cities 5
+  builds to T80 (capital Persepolis; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T18 Settler* | T30 Worker* | T33 Monument* (Pasargadae) | T34 Library* (Pasargadae) | T34 Settler* | T45 Worker* | T47 Monument* (Susa) | T48 Library* (Susa) | T49 Stonehenge | T51 Library* | T58 Settler (Pasargadae) | T58 Work Boat | T63 Granary | T69 Granary (Susa) | T69 Scout | T71 Immortal | T76 Archer | T76 Granary (Pasargadae) | T79 Worker | T80 Scout (Susa)
+  settlers ordered T: 18,34,58,88,98   found-city ops started T: 30,45,77,91   cities founded T: 33,47,81,94
+  ops aborted: T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: Library 2   first: T049 Persepolis size 2 next Library | T051 Persepolis size 2 next Library
+  IDLE SETTLER turns: 7 (first T34)
+  military ops ended (whole game): DiploOpinionChange 7, Success 3, NoTarget 2, LostPath 1
+  settler timeline to T80: T18 settler (book) in Persepolis | T30 op started | T33 FOUNDED | T34 settler (book) in Persepolis | T45 op started | T47 FOUNDED | T58 settler (AI) in Pasargadae | T76 BOUGHT in Pasargadae. Cost: 370 | T77 op started
+  saving gold for a settler: 55 turns (T11-T75)
+c    Sweden       tall      cities 6
+  builds to T80 (capital Stockholm; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T23 Worker* | T31 Settler* | T43 Warrior | T47 Stonehenge | T50 Monument* (Sigtuna) | T50 Library* | T51 Library* (Sigtuna) | T56 Scout | T58 Settler | T65 Scout | T66 Spearman | T71 Settler | T72 Monument (Helsinki) | T73 Shrine (Helsinki) | T74 Worker | T78 Scout | T79 Spearman | T80 Granary (Helsinki)
+  settlers ordered T: 31,58,71,83,84,117   found-city ops started T: 43,65,75,93,96,101   cities founded T: 50,72,82,107,114
+  ops aborted: T95 LostCivilian, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 3 (one at a time 2, growth due 1)   built instead: Library 2, Worker 1   first: T023 Stockholm size 3 next Worker | T047 Stockholm size 4 next Library | T050 Stockholm size 4 next Library
+  IDLE SETTLER turns: 6 (first T58)
+  military ops ended (whole game): NoUnits 6, Success 3, HalfStrength 2, NoTarget 2, LostPath 1
+  settler timeline to T80: T31 settler (book) in Stockholm | T43 op started | T50 FOUNDED | T58 settler (AI) in Stockholm | T65 op started | T71 settler (AI) in Stockholm | T72 FOUNDED | T74 BOUGHT in Stockholm. Cost: 370 | T75 op started
+  saving gold for a settler: 54 turns (T6-T73)
