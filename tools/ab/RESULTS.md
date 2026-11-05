@@ -1949,6 +1949,13 @@ SiegeArmy abort here are the cases those three fix. What they don't fix:
 No new fix from these two games; the next logged games on a build with the three commits will show whether the army
 now arrives whole.
 
+**Diagnostic (logging only):** `ai/war` `78437e098` adds the zone strengths to the tactical log's zone line for enemy
+cities: "friendly S (n units, melee, ranged), enemy S (n units, melee, ranged, city HP)". A zone reads enemy dominated
+when enemy strength is over 1.7 times ours (CvTacticalDominanceZone::SetOverallDominance); the city counts as enemy
+ranged strength, and only units within 4 tiles of the city (Ancient and Classical) or in the zone count. The posture
+is also P_WITHDRAW when enemy melee is over 3 times ours and our ranged is over 3 times our melee (a siege-heavy army,
+which the window's siege weight makes likely). The numbers will tell which case it is.
+
 ### War: 0D7BB38D (PC 2, ab-e4d5785 + WarGold), the Aztecs: MarchOn ends at the walls before the war; TimingBuildup demobilises during an attack (Nov 4, about 7:06pm ET)
 - **First war, on Ethiopia at T92** (window at T78; Greece joined the same turn). The one attack (5 units) waited out
   SiegeArmy's 20 turns and was aborted at T108. Peace by T124.
