@@ -1924,6 +1924,24 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0D5ECB7F (Ottomans), 0E192EC1 (Germany), 0D47DC20 (Aztecs) on ab-e4d5785: real sieges, each worn out about 20 HP short a turn (Nov 4, about 9:54pm ET)
+- **Germany vs Heliopolis (0E192EC1):**
+  - Attack 2138 was handed over 3–5 tiles out at T109–T110.
+  - Attempts T110–T116 with 2–5 units, 21–50 damage a turn; the city went down to 117 of 200.
+  - Heliopolis healed about 20 a turn (155 → 175, 125 → 145, 119 → 139).
+  - From T117 the expected damage fell to 9, then 0 ("too early for attacking"): the army was spent and none came
+    after it.
+- **The Ottomans vs Raiatea (0D5ECB7F):** T95–T101, 1–3 units, 15–31 a turn, 200 → 104, healing about 10–20 a turn
+  in between. Then nothing.
+- **The Aztecs (0D47DC20):** windows against France (T43) and Denmark (T133); 8 attacks ended NoUnits. A city-state
+  (Belgrade) made the only capture attempts in that game.
+
+**Read.** The attacks that arrive now hit the city, but with 1–5 units doing about what the city heals, plus 20–30
+a turn, they wear out before it falls, and no second wave follows (NoUnits at war again). SiegeClose (the rest of the
+army in reach) and SiegeDominated (the merged build, `claude/ab-c1` `7bb7885`) add units to the first wave. If the new
+build still shows sieges dying at half HP, the next fix is the second wave: at war, a new attack on the same city may
+start with missing units, as TimingBuildup's phases already allow (RequestCityAttack).
+
 ### War: SiegeDominated, attacking from an enemy-dominated zone when the army at the walls can take the city (the lead's request, 9:20pm ET) (Nov 4, about 9:36pm ET)
 **The lead's tally on ab-e4d5785:** 11 pairs, the aggressor declared in most games, 1 capture. The Zulus took
 Shanghai in 0DB8F250 at T96 (window vs China at T62, MarchOn declared at T92, 80 → 22 HP with 5 of 6 units at T95).
@@ -1945,7 +1963,7 @@ unchanged. Logs "SiegeDominated: attacking X in an enemy-dominated zone (n units
 more captures. Risk: the expected damage runs high (Busan read 41–59 with 10–23 done), so the 3-turn bar is strict
 on purpose.
 
-Coded: `ai/war` `e2397128f` (CI pending). For the bully role, it goes with SiegeClose (moves the rest of the army up
+Coded: `ai/war` `e2397128f` (built, CI run 207); merged by the lead in `claude/ab-c1` `7bb7885` with SiegeClose and TargetHold. For the bully role, it goes with SiegeClose (moves the rest of the army up
 when the zone is ours) and TargetHold.
 
 ### War: 0D1A71BD (Huns), 0D313EB5 (Mongolia), 0DF72455 (Inca), all on ab-e4d5785: the same failures, all fixed after it; one open question (Nov 4, about 9:21pm ET)
