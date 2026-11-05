@@ -2008,7 +2008,7 @@ and zone strengths of every logged game next to the funnel stage. Data: 60 logge
   and to the garrison;
 - the city's combat strength (and whether it has walls) on the attempt line.
 
-Coded (the user: "add the log lines"): `ai/war` `249985284` (CI pending), logging only.
+Coded (the user: "add the log lines"): `ai/war` `249985284` (built, CI run 218), logging only.
 - **The plan line:** "capture plan vs X, agg A: n units in the sim, m in the plan, k attacks (j on the city): <unit>
   MOVE>RANGEATTACK(city, garrison g, self s)>FINISH; ..." (or "no plan"), one per tactsim run against an enemy city,
   so the SiegeClose positioning runs (agg 1) show too.
@@ -2040,7 +2040,7 @@ Coded (the user: "add the log lines"): `ai/war` `249985284` (CI pending), loggin
 - **Not covered:** young cities still can't build military (CP's under-2-buildings rule); that is a bigger change,
   left for later.
 
-Coded: CoopWhenReady `ai/war` `83ed6a540` (built, CI run 216), WindowUntilReady `57a9b02cd` (CI pending, run 217), on `1fe84572f` (SiegeFeed).
+Coded: CoopWhenReady `ai/war` `83ed6a540` (built, CI run 216), WindowUntilReady `57a9b02cd` (built, CI run 217), on `1fe84572f` (SiegeFeed).
 
 ### War: 0DB01EF0 pair 3 (PC 1, ab-7bb7885): the flip without RoleFixes took Troyes; the role game made one attack in 150 turns (Nov 4, about 11:29pm ET)
 - **Flip (0DB01EF0F, CP's Mongolia):**
