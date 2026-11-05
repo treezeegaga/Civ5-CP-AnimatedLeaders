@@ -4099,7 +4099,10 @@ without. 0 captures. No missing snapshots, the first full pair on the fixed runn
   `e4d5785`, follow-up attacks ended NoUnits the turn they started (Aztecs 8 times, Ottomans 12), and Germany's siege of
   Heliopolis (down to 117 of 200) got no second attack.
 
-**`claude/ab-c1` `ad5a2d8`** (86 flags, CI building). Next runs: `bullyabort11` and `bullygreedy13`, RoleFixes + `SecondWave`.
+**`claude/ab-c1` `f6d1e84`** (87 flags; it replaces `ad5a2d8`, whose CI run was cancelled) adds War's **`CSAfterWar`**
+(`0ccd0e0`): while the war on the committed major is building or on, city-states we're not already fighting get no WAR
+approach. Between wars, CSConquest works as before. Next runs: `bullyabort11` and `bullygreedy13`, RoleFixes +
+`SecondWave, CSAfterWar`.
 
 ### Siege build: SiegeClose, TargetHold, SiegeDominated (lead, 2026-11-04 9:40pm ET)
 
