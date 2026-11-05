@@ -1924,6 +1924,28 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0D7BB38D (PC 2, ab-e4d5785 + WarGold), the Aztecs: MarchOn ends at the walls before the war; TimingBuildup demobilises during an attack (Nov 4, about 7:05pm ET)
+- **First war, on Ethiopia at T92** (window at T78; Greece joined the same turn). The one attack (5 units) waited out
+  SiegeArmy's 20 turns and was aborted at T108. Peace by T124.
+- **Second war, on Greece.**
+  - **T129:** "CONQUEST: going for Greece" with the army already ready, so no window opened.
+  - **T136:** sneak attack 3023 "Discovered by enemy" and "MarchOn: declaring, the army marches on; near 3, far 6".
+  - **T137:** "Transition to finished stage; near 1, far 5". The army was at the walls and the operation ended.
+  - **T141:** the war actually came (the diplomacy AI declared 5 turns after the army was in place).
+  - Result: the army was disbanded at the walls 4 turns before the war; no capture attempt in the whole game.
+- **During that attack TimingBuildup demobilised:** "peace, 14 land units over a cap of 8, letting Composite Bowman
+  go" (T134), then two Swordsmen (T135, T136).
+  - The target came back without a window (the army was ready), so the phase stayed PLANNED, which counts as peace.
+  - So the cap and the demobilisation applied during the attack.
+- **WarChest:** no "WAR CHEST" purchase line in the game.
+
+**Fixes (refinements of MarchOn and TimingBuildup, under their own flags):**
+1. **MarchOn:** at peace, an army in place at the walls asks for the war but keeps waiting, as one army, until the
+   war comes. It still falls back to ending after 5 stalled turns at peace.
+2. **TimingBuildup:** when the conquest target is returned (the army ready, or the window over), the attack phase
+   starts if it hasn't. The phase becomes ATTACK, not PLANNED, so no cap and no demobilisation while the attack is
+   on.
+
 ### War: four logged games on ab-f73177c and ab-eb4129d: wars come now; armies are small; MarchOn handed over too early (Nov 4, about 6:36pm ET)
 
 | Game | Build | Aggressor | Windows | War | At the walls |
@@ -1942,7 +1964,7 @@ positions, set-up moves, or its scoring of attacks against cities.
    zone reads "enemy dominated". The Celts declared at T47 on Quick with no attack formed. The Huns' sneak attack
    recruited 3 units in 16 turns.
 3. **Bug: MarchOn's at-war stall rule fired on the first turn of the war.** It counted the turns the army spent
-   waiting at the border at peace. **Fixed in `6578838`:** it now needs 3 turns at war.
+   waiting at the border at peace. **Fixed in `6578838` (built, CI run 201):** it now needs 3 turns at war.
 
 **Next (proposal, not coded):** the declaration should wait for the army. Readiness (2 siege units and cities + 4
 others) is checked only at the window's end. The Celts' war at T47 came from the committed target's WAR approach,
