@@ -1757,7 +1757,7 @@ and none of them comes close to 48 a turn.
 - **Hypothesis:** BigArmy's capture rate (5 of 11) without the waiver, with fewer armies given away to bankruptcy.
 - **Measure:** captures and strength share against the BigArmy block; the army at declaration (War's BigArmy log);
   turns at 0 gold; units disbanded for debt.
-- **Status:** coded, patch 0025 on `claude/ab-c1` `a81abdc`, not built. Waits for War's half.
+- **Status:** coded, patch 0025 on `claude/ab-c1` `0561379` (after ArmyQuality and ArmyScrap), not built. Waits for War's half.
 
 ### WarmongerHurry: a warmonger buys only settlers and siege units (Economy, patch 0023, the user's rule)
 The user (via the lead, Nov 5, 10:34am ET): "I don't love hard rules, but I kind of want to hard-rule that warmonger

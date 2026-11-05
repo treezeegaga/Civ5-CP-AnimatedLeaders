@@ -1,4 +1,4 @@
-From 1a34b38e6a1ee0c9f4a66eb01feb6b4a86535796 Mon Sep 17 00:00:00 2001
+From 1fde8065aa291264811705f922d3788b507abe3e Mon Sep 17 00:00:00 2001
 From: Claude <noreply@anthropic.com>
 Date: Thu, 5 Nov 2026 19:20:25 +0000
 Subject: [PATCH] AI_AB_TEST Economy: WarBudget flag and
@@ -16,7 +16,7 @@ BigArmy's waiver, and is cached per turn (reset on Reset and Read).
 
 The flag WarBudget (off in the bundle) is for War's side: the build-up's
 army target from the normal army up to BigArmy's size, by this answer,
-with no waiver. Economy uses the flag nowhere yet. Written 2:21pm ET.
+with no waiver. Economy uses the flag nowhere yet. Rebased on claude/ab-c1 0561379 (after ArmyQuality and ArmyScrap) at 2:22pm ET; written 2:21pm ET.
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
@@ -155,25 +155,25 @@ index 8123997..641d3b2 100644
  	// DoTurn() sub-functions
  	void DoHurry();
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
-index 017aca2..64a053c 100644
+index 26a4225..490c09b 100644
 --- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
 +++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
-@@ -33441,6 +33441,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
- 	{"NoObsoleteHurry", true},
- 	{"PeaceHurry", false},
+@@ -33443,6 +33443,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
  	{"WarmongerHurry", true},
+ 	{"ArmyQuality", false},
+ 	{"ArmyScrap", false},
 +	{"WarBudget", false},
  };
  // one line per flag, and room in the masks
  typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
-index 5b8b2b6..a4f106f 100644
+index 5a10bcd..e08811f 100644
 --- a/CvGameCoreDLL_Expansion2/CvPlayer.h
 +++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
-@@ -277,6 +277,8 @@ enum CandidateFixTypes
- 	FIX_PEACE_HURRY,		// Economy (Diplomacy's finding): at peace and out of danger, gold doesn't hurry combat units. Off in the bundle
- 	FIX_WARMONGER_HURRY,	// Economy (the user's rule): a candidate warmonger spends gold on production only for settlers and siege units.
- 							// In the bundle (the user's call, untested)
+@@ -283,6 +283,8 @@ enum CandidateFixTypes
+ 	FIX_ARMY_SCRAP,			// War: a TimingBuildup civ short of gold in the window or at war gives away or disbands one land unit a turn
+ 							// below ArmyQuality's floor (not a garrison, not in an army), freeing upkeep for units that fight.
+ 							// Off in the bundle
 +	FIX_WAR_BUDGET,			// Economy and War (the lead's): a timing attacker's army target is what its gold pays for (treasury + 20 turns
 +							// of income, upkeep included), from the normal army up to BigArmy's size, with no upkeep waiver. Off in the bundle
  	NUM_CANDIDATE_FIXES
