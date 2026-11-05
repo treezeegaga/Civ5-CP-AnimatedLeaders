@@ -1759,7 +1759,7 @@ and none of them comes close to 48 a turn.
   turns at 0 gold; units disbanded for debt.
 - **Status:** coded, patch 0025 on `claude/ab-c1` `0561379` (after ArmyQuality and ArmyScrap), not built. Waits for War's half.
 
-### The honest package: why the aggressor's income is so small (Economy, first read, Nov 5, 6:30pm ET)
+### The honest package: why the aggressor's income is so small (Economy, first read, Nov 5, 6:27pm ET)
 
 The lead (6:07pm ET): WarBudget works, but the aggressor's income is tiny (Songhai +2 at the window's start, Assyria
 +6 then −3), so the honest army stops at about 10 land units. Is the gap in income or in costs?
