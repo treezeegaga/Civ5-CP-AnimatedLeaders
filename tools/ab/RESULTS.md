@@ -1924,6 +1924,29 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: pillage gold, counted (the user: "could pillaging help to keep attacking armies in positive money?") (Nov 5, about 10:03am ET)
+**What pillage pays in VP:**
+- an improvement's PillageGold (8 to 20) × the era (at least 1) × 85–100% (CvUnit pillage), so about 8–40 gold early;
+- a trade route plundered: TRADE_ROUTE_BASE_PLUNDER_GOLD (100) × era, adjusted for its domain;
+- the pillaging unit also heals.
+
+So a pillage or two a turn could plausibly cover an army's upkeep during a war; it can't fund the build-up (no
+pillage at peace).
+
+**How much our aggressors pillage now (walls.py over all logged games):**
+- role games: 11 pillages in 88 games, 0.1 a game. 78 of 88 games had none, and the most in one game was 2.
+- CP's flipped games: 5 in 14.
+- So the money is there and almost unused.
+
+**Counting it from now on:**
+- `ai/war` `17504599c` (logging only) logs "Pillage gold: N from <improvement> at (x:y), owner X, gold now G" for every
+  pillage, and "Plunder gold: N from a trade route ..." for plunders.
+- walls.py prints per group: pillages a game, games with none, and the pillage and plunder gold where it's logged.
+
+**The plan:** BigArmy's block logs the war-time upkeep it waives ("BigArmy: upkeep waived X ... a turn"), which gives
+the deficit a big army runs at war. Set against the pillage gold, that shows whether a pillage flag (units with no
+attack to make, and fast units, pillage and plunder near the target) could close it. No pillage flag until then.
+
 ### War: BigArmy, a diagnostic flag, never for the bundle (the user and the lead, 8:20am ET) (Nov 5, about 8:27am ET)
 **The question:** is the attack failing because the army is too small, or because of how it fights at the walls?
 - The user: "a warmonger with 7 super greedy civs, a fox in the henhouse, and they still can't capture cities."

@@ -49,6 +49,9 @@ RE_TOOEARLY = re.compile(r"too early for attacking (\S+), required damage (\d+),
 RE_KILLED = re.compile(r"KilledInCombat (.+?), Domain")
 # logging added in ai/war 249985284 (builds after it): the plan per unit, and the city's defence and garrison per attempt
 RE_PLAN = re.compile(r"capture plan vs (\S+), agg (\d+): (\d+) units in the sim, (\d+) in the plan, (\d+) attacks \((\d+) on the city\)")
+# pillage gold (ai/war 17504599c on); older builds only have "Pillaging <improvement>" without the gold
+RE_PILLAGE_GOLD = re.compile(r"Pillage gold: (\d+) from")
+RE_PLUNDER_GOLD = re.compile(r"Plunder gold: (\d+) from")
 RE_DEFENCE = re.compile(r"city strength (\d+), walls \+(\d+), garrison (.+?) HP (\d+) -> (\d+)")
 
 
@@ -111,6 +114,7 @@ def study(gdir, info):
             ops[m.group(1)]["end"], ops[m.group(1)]["reason"] = t, m.group(2)
 
     attempts, refusals, zones, tooearly, killed = [], collections.Counter(), {}, [], collections.Counter()
+    loot = collections.Counter()  # pillages, pillage gold, plunders, plunder gold
     city_xy = {}
     pending = None
     for t, rest in our_lines(os.path.join(gdir, "PlayerTacticalAILog.csv"), ours):
@@ -161,6 +165,19 @@ def study(gdir, info):
         m = RE_KILLED.search(rest)
         if m:
             killed[kind_of(m.group(1))] += 1
+            continue
+        if rest.startswith("Pillaging "):
+            loot["pillages"] += 1
+            continue
+        m = RE_PILLAGE_GOLD.search(rest)
+        if m:
+            loot["pillage gold lines"] += 1
+            loot["pillage gold"] += int(m.group(1))
+            continue
+        m = RE_PLUNDER_GOLD.search(rest)
+        if m:
+            loot["plunders"] += 1
+            loot["plunder gold"] += int(m.group(1))
 
     # the attack operations that went for a city we attacked or refused (target within 2 plots of the city)
     xy_city = {xy: c for c, xy in city_xy.items()}
@@ -177,7 +194,7 @@ def study(gdir, info):
         o["city"] = op_city(o)
         o["mix"] = collections.Counter(kind_of(n) for n in o["units"].values())
     return {"ops": dict(ops), "attempts": attempts, "refusals": refusals, "zones": zones, "tooearly": tooearly,
-            "killed": killed, "city_xy": city_xy}
+            "killed": killed, "city_xy": city_xy, "loot": loot}
 
 
 def pct(a, b):
@@ -284,6 +301,15 @@ def main():
         if te:
             print("   'too early' (13-turn healing rule): %d turns, expected median %s vs HP %s" %
                   (len(te), med([x[3] for x in te]), med([x[2] for x in te])))
+        lt = collections.Counter()
+        for r in rs:
+            lt.update(r["loot"])
+        gold_games = sum(1 for r in rs if r["loot"]["pillage gold lines"] or r["loot"]["plunders"])
+        print("   pillage: %d pillages (%.1f a game, games with none %d of %d)%s" %
+              (lt["pillages"], lt["pillages"] / max(1, len(rs)), sum(1 for r in rs if not r["loot"]["pillages"]), len(rs),
+               "; gold logged in %d games: pillage %d gold over %d pillages, plunder %d gold over %d routes" %
+               (gold_games, lt["pillage gold"], lt["pillage gold lines"], lt["plunder gold"], lt["plunders"]) if gold_games else
+               " (no pillage gold logged on these builds)"))
         k = collections.Counter()
         for r in rs:
             k.update(r["killed"])
