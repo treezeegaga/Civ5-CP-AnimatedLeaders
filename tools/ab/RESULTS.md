@@ -4084,6 +4084,21 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### WarGold, 11 pairs: the first capture by an aggressor with RoleFixes (lead, 2026-11-04 9:21pm ET)
+
+| Run (`ab-e4d5785`) | Pairs | First games (RoleFixes): declared | Captures | Flipped games: declared | Captures |
+|---|---|---|---|---|---|
+| bullyabort9 (normal civs, PC 1) | 6 | 5 | 0 | 4 | 0 |
+| bullygreedy11 (greedy civs, PC 2) | 5 | 5 | 1 | 3 | 0 |
+
+- **0DB8F250, the Zulus vs China:** the window opened at T62. At T92, MarchOn declared and the army marched on (the op
+  ran 32 turns, Success at T94). Shanghai fell in two turns: T95 HP 80 -> 22 with 5 of 6 units, T96 captured. Logs of
+  both games are kept.
+- **The repeated blocker:** "City of X is in enemy dominated zone - won't try to capture". In the same game it stopped
+  the Zulus at Beijing (T93) and Nanjing (T99-T103), and in 0D7BB38D at Addis Ababa (T113-119). Sent to War as the
+  next lever.
+- **A logging oddity:** some games lack one 10-turn snapshot, e.g. 0DD77369 has no T150 row and ends at T160.
+
 ### Attack runs on WarGold: the aggressor declares now, still no captures (lead, 2026-11-04 7:34pm ET)
 
 Aggressor wars declared and cities it captured, by build, first game (RoleFixes) / flipped game (none):
