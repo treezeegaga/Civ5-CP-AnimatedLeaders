@@ -1924,6 +1924,29 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0D1A71BD (Huns), 0D313EB5 (Mongolia), 0DF72455 (Inca), all on ab-e4d5785: the same failures, all fixed after it; one open question (Nov 4, about 9:21pm ET)
+- **Huns:**
+  - Committed to Arabia at T53, then to Ethiopia at T71.
+  - Attacks ended DiploOpinionChange at T75 and T111 (TargetHold).
+  - MarchOn's old stall rule handed over at T92 and T147 (`6578838`).
+  - No capture attempt; target cities enemy dominated 13–23 times.
+- **Mongolia:**
+  - Persia at T69, Brazil at T77.
+  - DiploOpinionChange at T77, T97 and twice at T150 (TargetHold); NoUnits three times at T79–T85.
+  - No capture attempt.
+- **Inca:**
+  - Committed to India at T36.
+  - SiegeArmy timed out three attacks at T67–T90 (at peace, so `b7db863` doesn't apply; the peace bar is meant to
+    hold these).
+  - DeclareWhenGathered at T99.
+- **Capture attempts on Mumbai and Delhi (T119–T125):** 0 damage every time, though 1–5 units were "used" a turn
+  and 43–47 was expected. Units used without damage moved, they didn't attack. Open: the attempt log doesn't
+  say which units attacked. If games on the new build show the same, the next step is logging each unit's chosen
+  move in the capture sim.
+- **NoUnits at war:** new attacks at once NoUnits (Inca T140, Mongolia T79–T85, Assyria in 0DD77369 T106–T109).
+  RequestCityAttack allows no missing units at war outside TimingBuildup's phases, so after the first army is used up,
+  a new one can't start until a full formation exists. Candidate for a later fix if the new build still shows it.
+
 ### War: 0DD77369 (PC 2, ab-e4d5785 + WarGold), Assyria: capture attempts at last, 3 units at a time (Nov 4, about 8:49pm ET)
 - **Busan (Korea):**
   - Attack 1795 recruited 8 units: 3 Swordsmen, a Siege Tower, a Catapult, an Archer, a Chariot Archer and one more.
