@@ -4084,6 +4084,23 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Planned: a BigArmy diagnostic block (the user, 2026-11-05 8:20am ET)
+
+The user: "a warmonger with 7 super greedy civs, a fox in the henhouse, and they still can't capture cities". The
+evidence:
+- CP's own AI captures in 2 of 27 flipped games, ours in 3 of 27.
+- Expected damage reached the city's HP in only 4 of 112 capture attempts.
+- 46 "too weak" give-ups in the last block.
+
+**The question:** army size or siege execution? Everything so far nudged both.
+
+**The test:** War builds `BigArmy`, test-only and never for the bundle or a style. It doubles the TimingBuildup
+aggressor's army target in the window and lifts the supply and upkeep caps there, nothing else, and logs the army at
+declaration and at the first capture attempt. It runs as one 20-game block per PC after the WindowUntilReady block
+(about 2:30pm ET).
+- If captures jump, size is the lever: make it reachable honestly (economy and build-up).
+- If they stay rare, the siege and tactical code is the blocker.
+
 ### Next block: WindowUntilReady on ab-850e142; PC 2's disk filled up (lead, 2026-11-05 7:17am ET; my session was down 4:15–7:15am)
 
 **War's read of the whole f6d1e84 block** (10 first games, compared with e4d5785's 14). On the right track:
