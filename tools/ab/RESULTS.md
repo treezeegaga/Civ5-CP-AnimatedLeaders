@@ -4099,6 +4099,25 @@ Not moved:
 War withdrew SiegeVolley: its "6+ units, 22% land" effect came from one game (the Inca at Mumbai, 18 attempts), and
 other 6+ attempts landed 8 of 9.
 
+**The whole f6d1e84 block, as played overnight: 27 pairs.** PC 1 kept going to pair 19 (bullyabort11); PC 2 played
+8 complete pairs (bullygreedy13).
+
+| | First games (RoleFixes) | Flipped games (CP) |
+|---|---|---|
+| declared a war | 22 of 27 | 13 of 27 |
+| cities captured by the aggressor | 3 (Ottomans, America, Huns; all vs normal civs) | 2 |
+
+Funnel for the first games, PC 1 and PC 2:
+- no war: 3 and 1
+- never in reach: 2 and 1
+- refused only: 4 and 2
+- attempts, nothing taken: 7 and 4
+- captured: 3 and 0
+
+Against greedy civs, the "easy" matchup, there were 0 captures in 8. There, 24 attacks timed out after 20 turns of
+"too weak", and the window paused 76 turns for gold. Our role nearly doubles how often the aggressor goes to war, but
+captures stay at about 1 in 9 games: the army is too small when it matters.
+
 **Next block:** `claude/ab-c1` `850e142` (90 flags) merges `ai/war` `2499852`. It adds `WindowUntilReady`, which targets
 the funnel-wide pattern of armies too small before the war: 15 "too weak" give-ups and 16 timeouts in this block.
 RoleFixes add WindowUntilReady only. SiegeFeed and CoopWhenReady are in the build but off, to keep one idea per block.
