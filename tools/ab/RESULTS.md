@@ -1924,6 +1924,42 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: BigArmy full block, 20 first games: size is the lever, the waiver pays for it (Nov 5, about 5:00pm ET)
+Data: ab-1750459 (bullyabort13 + bullygreedy15), 20 first games and 20 flips (results CSVs; 20 and 9 logged), against
+850e142 (15 first) and f6d1e84 (28 first). Script: `tools/ab/bigarmy_block.py`. The mid-block entry (11 games) below
+holds up.
+
+| First games | f6d1e84 (28) | 850e142 (15) | **BigArmy (20)** | BigArmy's flips (CP) |
+|---|---|---|---|---|
+| Games with a capture (cities) | 3 (3) | 1 (1) | **8 (12)** | 1 of 20 (1) |
+| War in | 22 | 11 | **18** | 5 of 9 logged |
+| Attacks delivered a game (games with 2+) | 1.4 (12) | 1.1 (4) | **3.9 (19)** | 1.2 (4) |
+| Capture attempts a game | 3.4 | 2.3 | **16.5** | 1.8 |
+| Attempts where the city lost HP; mean damage | 38%; 10.2 | 61%; 21.4 | 40%; 9.5 | 50%; 14.6 |
+| Capture plans: units in the sim (median); with a city attack | – | 4; 52% | 7; 53% | 4; 52% |
+| Pillage + plunder gold a game | not logged | not logged | 59 + 275 | 9 + 0 |
+
+**The army at the declaration** (27 declarations): land median 20, which meets the target; siege median 2 of 4. Both
+met in only 2 (see the siege entry below: production, not the tech).
+
+**Gold:** upkeep waived at war, median 62 a turn over 1,232 war turns; no bankruptcy lines.
+
+**Read:**
+- **Size is the lever, confirmed over the full block.**
+  - 8 of 20 games captured (12 cities), against 3 of 28 and 1 of 15 on the builds before it, and 1 of 20 in BigArmy's
+    own flips under CP's AI.
+  - The attempts are no better (the city lost HP in 40%, mean 9.5, as on f6d1e84). The volume is what changed: 3.9
+    attacks delivered a game against 1.1 to 1.4, and 16.5 capture attempts against 2 to 3.
+- **The waiver pays for it.** About 62 gold a turn at war, against the 24 to 40 gold an attacker holds at war without
+  it. Pillage and plunder bring about 330 a game: roughly 8 a turn over a 40-turn war.
+- **What follows is the package block running now:**
+  - WarBudget's army is what gold keeps;
+  - ArmyQuality and ArmyScrap: better units, and the upkeep of the ones that don't fight;
+  - SiegeSlots (for the block after): the siege half of the army.
+  - Judge the package against BigArmy's 8 of 20.
+
+LEAD: reading only.
+
 ### War: siege starved in the BigArmy windows: production, not the tech or the ready test (Nov 5, about 4:55pm ET)
 The lead (4:21pm ET): siege at the first declaration is 0 to 3 of the 4 targeted in nearly every BigArmy game, while the
 land "others" target is met. Is it the tech, the siege weight in the window, or the ready test? Counted over the logged
