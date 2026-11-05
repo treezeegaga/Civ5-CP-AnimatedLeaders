@@ -1814,7 +1814,7 @@ book and the window's start, so it acts too late for this window.
 No gameplay change. With it, the next block answers "income or costs" directly. The PCs need to keep the file with
 the other logs.
 
-**Proposed change for the block after the package: `WarTradeRoutes`** (one flag, Economy; not built yet).
+**`WarTradeRoutes`** (one flag, Economy; the lead's go at 6:29pm ET; patch 0027 on `claude/ab-c1` `8f43470`, off in the bundle, for the block after the package alongside SiegeSlots).
 - A timing attacker at peace (planned or window, not at war with a major), with free trade-route slots, trains
   caravans and cargo ships even in cities of size 4 or less (exempt from the "useless" rule), with +400 weight until
   its slots are full.
@@ -1826,6 +1826,12 @@ the other logs.
   6-10 gap.
 - **Measure:** net gold at the window's start and at declaration (WarBudget's lines); WarBudget's "affordable"
   count; land units at declaration; GoldBreakdown's trade-route column.
+- **As built:** under the flag, a timing attacker at peace, planned or in its window (not at war with a major):
+  - its trade units get +400 while trade slots are free, and CP's size-4 rule doesn't apply (`CvUnitProductionAI`);
+  - its routes never go to the war target (`CvTradeAI::GetAvailableTR`);
+  - gold routes come first: food, production and wonder routes only when no gold route is open
+    (`CvTradeAI::GetPrioritizedTradeRoutes`).
+  The two `CvTradeClasses.cpp` hooks are one check each, via `CvEconomicAI::IsWarTradeRoutesActive`.
 
 ### WarmongerHurry: a warmonger buys only settlers and siege units (Economy, patch 0023, the user's rule)
 The user (via the lead, Nov 5, 10:34am ET): "I don't love hard rules, but I kind of want to hard-rule that warmonger

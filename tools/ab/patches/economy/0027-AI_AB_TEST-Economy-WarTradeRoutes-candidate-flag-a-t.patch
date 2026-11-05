@@ -1,0 +1,159 @@
+From 1ba9526d8c2f77fa38625539c8cfc7ef6874472c Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Thu, 5 Nov 2026 23:29:32 +0000
+Subject: [PATCH] AI_AB_TEST Economy: WarTradeRoutes candidate flag (a timing
+ attacker fills its trade slots before its war, gold routes, never to its
+ target)
+
+The package block's aggressors netted +2 to +3 gold a turn at T30-T40
+against +8 to +13 for the other civs, with as many cities and a 3-unit
+army. Caravans were offered from T37-T44 and skipped as "useless" (CP: no
+trade units in cities of size 4 or less): 0-1 chosen by T80.
+
+For a timing attacker at peace, planned or in its window (not at war with
+a major), under the flag:
+- trade units get +400 while trade slots are free, and the size-4 rule
+  doesn't apply (CvUnitProductionAI);
+- no route to the war target (CvTradeAI::GetAvailableTR);
+- gold routes first: food, production and wonder routes only when no gold
+  route is open (CvTradeAI::GetPrioritizedTradeRoutes).
+The two CvTradeClasses.cpp hooks are one check each, through
+CvEconomicAI::IsWarTradeRoutesActive. Off in the bundle. Written 6:29pm ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp       | 16 ++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvEconomicAI.h         |  2 ++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp           |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h             |  2 ++
+ CvGameCoreDLL_Expansion2/CvTradeClasses.cpp     | 14 ++++++++++++++
+ CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp |  7 ++++++-
+ 6 files changed, 41 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index 8195e1a..8889eff 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3257,6 +3257,22 @@ bool CvEconomicAI::IsGoldPurchaseAllowed(const CvCity* pCity, UnitTypes eUnit, B
+ 	return false;
+ }
+ 
++/// AI_AB_TEST candidate (WarTradeRoutes, the lead's go): the package block's aggressors netted +2 to +3 gold a turn at
++/// T30-T40 against +8 to +13 for the other civs, with as many cities and a 3-unit army. Caravans were offered from T37-T44
++/// and skipped as "useless" (CP: no trade units in cities of size 4 or less): 0-1 chosen by T80. Before its war, a
++/// timing attacker trains them anyway (CvUnitProductionAI), sends them on gold routes and never to its war target
++/// (CvTradeAI::GetPrioritizedTradeRoutes, GetAvailableTR)
++bool CvEconomicAI::IsWarTradeRoutesActive(const CvPlayer* pPlayer)
++{
++	if (!pPlayer || !pPlayer->UsesCandidateAI(FIX_WAR_TRADE_ROUTES) || !pPlayer->isMajorCiv() || pPlayer->isHuman() || pPlayer->IsAtWarAnyMajor())
++		return false;
++	CvMilitaryAI* pMilitary = pPlayer->GetMilitaryAI();
++	if (!pMilitary || !pMilitary->IsTimingBuildupPlayer())
++		return false;
++	const CvMilitaryAI::TimingBuildupPhase ePhase = pMilitary->GetTimingBuildupPhase();
++	return ePhase == CvMilitaryAI::TIMING_BUILDUP_PEACE || ePhase == CvMilitaryAI::TIMING_BUILDUP_PLANNED || ePhase == CvMilitaryAI::TIMING_BUILDUP_WINDOW;
++}
++
+ /// AI_AB_TEST (WarBudget, the lead's; War uses it for the build-up's army target): how many more paid units this civ can
+ /// keep for iTurns turns, from its treasury and income, with their upkeep. BigArmy measured the honest cost (11 aggressors,
+ /// RESULTS "Paying for BigArmy without the waiver"): unit upkeep 22 a turn in the window and 73 at war, against 7 and 25 left
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.h b/CvGameCoreDLL_Expansion2/CvEconomicAI.h
+index 641d3b2..5f20c33 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.h
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.h
+@@ -221,6 +221,8 @@ public:
+ 	bool IsSavingForExpansionSettler();
+ 	// AI_AB_TEST candidate (WarmongerHurry): may this city's owner buy this item with gold? (CvCity::IsCanPurchase)
+ 	static bool IsGoldPurchaseAllowed(const CvCity* pCity, UnitTypes eUnit, BuildingTypes eBuilding, ProjectTypes eProject, bool bLog);
++	// AI_AB_TEST (WarTradeRoutes): a timing attacker before its war (peace, planned or window) using the flag
++	static bool IsWarTradeRoutesActive(const CvPlayer* pPlayer);
+ 	// AI_AB_TEST (WarBudget): how many more paid units the treasury plus iTurns turns of income pay for (negative: over budget)
+ 	int GetAffordableWarUnits(int iTurns) const;
+ 	void StartSaveForPurchase(PurchaseType ePurchase, int iAmount, int iPriority);
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index fac4641..ef3d4a7 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33446,6 +33446,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"WarBudget", false},
+ 	{"VictoryTechPath", false},
+ 	{"SiegeSlots", false},
++	{"WarTradeRoutes", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 0cd40c9..e9c47d3 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -290,6 +290,8 @@ enum CandidateFixTypes
+ 	FIX_SIEGE_SLOTS,		// War: in the build-up window, while siege is short of its target, siege units skip the land army size cap and
+ 							// other land units stop getting the window's bonus once the field target is met (28 BigArmy declarations: the
+ 							// field target met in 16, siege in 5). Off in the bundle
++	FIX_WAR_TRADE_ROUTES,	// Economy (the lead's go): a timing attacker before its war trains caravans even in small cities until its trade
++							// slots are full, sends them on gold routes, and never to its war target. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+diff --git a/CvGameCoreDLL_Expansion2/CvTradeClasses.cpp b/CvGameCoreDLL_Expansion2/CvTradeClasses.cpp
+index d621b64..fa63ea1 100644
+--- a/CvGameCoreDLL_Expansion2/CvTradeClasses.cpp
++++ b/CvGameCoreDLL_Expansion2/CvTradeClasses.cpp
+@@ -22,6 +22,7 @@
+ 
+ #include "CvDiplomacyAI.h"
+ #include "CvMilitaryAI.h"
++#include "CvEconomicAI.h" // AI_AB_TEST (WarTradeRoutes)
+ 
+ #include "CvGrandStrategyAI.h"
+ 
+@@ -6250,6 +6251,15 @@ void CvTradeAI::GetPrioritizedTradeRoutes(TradeConnectionList& aTradeConnectionL
+ 		}
+ 	}
+ 
++	// AI_AB_TEST candidate (WarTradeRoutes): before its war a timing attacker sends its trade units for gold; food and
++	// production routes only when no gold route is open
++	if (!aGoldSortedTR.empty() && CvEconomicAI::IsWarTradeRoutesActive(m_pPlayer))
++	{
++		aProductionSortedTR.clear();
++		aFoodSortedTR.clear();
++		aWonderSortedTR.clear();
++	}
++
+ 	// Clear the raw available route list before replacing it with the sorted list
+ 	aTradeConnectionList.clear();
+ 
+@@ -6481,6 +6491,10 @@ void CvTradeAI::GetAvailableTR(TradeConnectionList& aTradeConnectionList, bool b
+ 				if (m_pPlayer->IsAtWarWith(eOtherPlayer))
+ 					continue;
+ 
++				// AI_AB_TEST candidate (WarTradeRoutes): no route to the civ we're about to attack (plundered, and it pays them)
++				if (CvEconomicAI::IsWarTradeRoutesActive(m_pPlayer) && eOtherPlayer == m_pPlayer->GetMilitaryAI()->GetTimingBuildupTarget())
++					continue;
++
+ 				int iDestCityLoop = 0;
+ 				for (CvCity* pDestCity = GET_PLAYER(eOtherPlayer).firstCity(&iDestCityLoop); pDestCity != NULL; pDestCity = GET_PLAYER(eOtherPlayer).nextCity(&iDestCityLoop))
+ 				{
+diff --git a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+index 42ddb1f..f795b49 100644
+--- a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+@@ -1105,8 +1105,13 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 
+ 		if (pkUnitEntry->IsTrade())
+ 		{
++			// AI_AB_TEST candidate (WarTradeRoutes): before its war a timing attacker fills its trade slots, small cities too
++			const bool bWarTradeRoutes = CvEconomicAI::IsWarTradeRoutesActive(&kPlayer) && kPlayer.GetTrade()->GetNumTradeUnitsRemaining(true) > 0;
++			if (bWarTradeRoutes)
++				iBonus += 400;
++
+ 			//No if we're small.
+-			if (m_pCity->getPopulation() <= 4)
++			if (m_pCity->getPopulation() <= 4 && !bWarTradeRoutes)
+ 			{
+ 				return SR_USELESS;
+ 			}
+-- 
+2.43.0
+
