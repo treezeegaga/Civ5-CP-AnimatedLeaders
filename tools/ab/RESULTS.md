@@ -1945,6 +1945,8 @@ requests fill them, and SiegeArmy's at-war bar (`b7db863`) and SiegeRoll decide 
 lines at war, and second attacks reaching a city the first one damaged. Risk: up to 3 units in recruiting are hidden
 from the tactical AI while they wait, for at most SiegeArmy's 20 turns.
 
+Coded: `ai/war` `96332cc83` (CI pending), after the lead's merge of `e2397128f`.
+
 ### War: 0D5ECB7F (Ottomans), 0E192EC1 (Germany), 0D47DC20 (Aztecs) on ab-e4d5785: real sieges, each worn out about 20 HP short a turn (Nov 4, about 9:54pm ET)
 - **Germany vs Heliopolis (0E192EC1):**
   - Attack 2138 was handed over 3–5 tiles out at T109–T110.
