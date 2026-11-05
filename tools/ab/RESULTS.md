@@ -1940,13 +1940,15 @@ positions, set-up moves, or its scoring of attacks against cities.
 - **Seen:** the window (10 turns on this speed) built 2 Warriors and an Archer. When it ended at T52, the army target
   (cities+6) and the unit weights ended with it. The attack phase fell back to CP's small army target, and units were
   skipped as "nosupply" from T53.
-- **Hypothesis:** the window lasts until the army is ready, up to 3 windows, the existing limit after which the plan
-  goes back to peace. Its army target, unit weights and purchases stay on, and GetNewAIConquestTarget doesn't return the
+- **Hypothesis:** the window lasts until the army is ready, up to 2 windows. That leaves the attack phase one window as
+  the fallback before the existing 3-window limit sends the plan back to peace. Its army target, unit weights and purchases stay on, and GetNewAIConquestTarget doesn't return the
   target before then, so the attack starts with the army or at the limit.
 - **Logs:** "TimingBuildup: army not ready (s siege, l land), the window goes on".
 - **Expect:** windows ending "ready", more units per window, wars with siege units.
 - **Not covered:** young cities still can't build military (CP's under-2-buildings rule); that is a bigger change,
   left for later.
+
+Coded: CoopWhenReady `ai/war` `83ed6a540`, WindowUntilReady `57a9b02cd` (CI pending), on `1fe84572f` (SiegeFeed).
 
 ### War: 0DB01EF0 pair 3 (PC 1, ab-7bb7885): the flip without RoleFixes took Troyes; the role game made one attack in 150 turns (Nov 4, about 11:29pm ET)
 - **Flip (0DB01EF0F, CP's Mongolia):**
