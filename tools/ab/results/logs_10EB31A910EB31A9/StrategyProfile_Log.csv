@@ -1,0 +1,32 @@
+001, Rome, LEADER_AUGUSTUS, tags , pursuits 1/0, Diplomat, home meta -25, weights dom 24 sci 6 cul 6 dip 64, risk medium, expansion medium, greedy tall
+001, France, LEADER_NAPOLEON, tags TS, pursuits 2/0, Tourism, home meta -50, weights dom 22 sci 6 cul 68 dip 4, risk high, expansion tall, greedy tall
+001, The Maya, LEADER_PACAL, tags , pursuits 3/2, Scientist, home meta -80, weights dom 2 sci 68 cul 24 dip 6, risk low, expansion tall, greedy tall
+001, Portugal, LEADER_MARIA_I, tags , pursuits 1/3, Diplomat, home meta -35, weights dom 4 sci 26 cul 6 dip 64, risk low, expansion medium, greedy tall
+001, Poland, LEADER_CASIMIR, tags T, pursuits 1/0, Tourism, home meta -30, weights dom 22 sci 6 cul 28 dip 44, risk high, expansion medium, greedy wide
+001, Mongolia, LEADER_GENGHIS_KHAN, tags W, pursuits 0/2, Conqueror, home meta 80, weights dom 68 sci 4 cul 24 dip 4, risk medium, expansion conquest, greedy wide
+001, China, LEADER_WU_ZETIAN, tags W, pursuits 0/3, Conqueror, home meta 70, weights dom 68 sci 24 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+001, The Netherlands, LEADER_WILLIAM, tags D, pursuits 1/2, Diplomat, home meta -40, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy wide
+050, Rome, LEADER_AUGUSTUS, tags R, pursuits 1/0, Zealot, home meta -5, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium, greedy tall
+050, France, LEADER_NAPOLEON, tags RTS, pursuits 2/0, Tourism, home meta -50, weights dom 22 sci 6 cul 68 dip 4, risk high, expansion tall, greedy tall
+050, The Maya, LEADER_PACAL, tags R, pursuits 3/2, Zealot, home meta -20, weights dom 6 sci 46 cul 40 dip 8, risk low, expansion medium, greedy tall
+050, Portugal, LEADER_MARIA_I, tags R, pursuits 1/3, Zealot, home meta -15, weights dom 6 sci 26 cul 20 dip 48, risk low, expansion medium, greedy tall
+050, Poland, LEADER_CASIMIR, tags RT, pursuits 1/0, Zealot, home meta 30, weights dom 26 sci 6 cul 20 dip 48, risk high, expansion wide, greedy wide
+050, Mongolia, LEADER_GENGHIS_KHAN, tags W, pursuits 0/2, Conqueror, home meta 80, weights dom 68 sci 4 cul 24 dip 4, risk medium, expansion conquest, greedy wide
+050, China, LEADER_WU_ZETIAN, tags WR, pursuits 0/3, Conqueror, home meta 70, weights dom 68 sci 24 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+050, The Netherlands, LEADER_WILLIAM, tags RD, pursuits 1/2, Diplomat, home meta -40, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy wide
+100, Rome, LEADER_AUGUSTUS, tags R, pursuits 1/0, Zealot, home meta -5, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium, greedy tall
+100, France, LEADER_NAPOLEON, tags RTS, pursuits 2/0, Tourism, home meta -50, weights dom 22 sci 6 cul 68 dip 4, risk high, expansion tall, greedy tall
+100, The Maya, LEADER_PACAL, tags RN, pursuits 3/2, Scientist, home meta -80, weights dom 2 sci 68 cul 24 dip 6, risk low, expansion tall, greedy tall
+100, Portugal, LEADER_MARIA_I, tags R, pursuits 1/3, Zealot, home meta -15, weights dom 6 sci 26 cul 20 dip 48, risk low, expansion medium, greedy tall
+100, Poland, LEADER_CASIMIR, tags RT, pursuits 1/0, Zealot, home meta 30, weights dom 26 sci 6 cul 20 dip 48, risk high, expansion wide, greedy wide
+100, Mongolia, LEADER_GENGHIS_KHAN, tags WR, pursuits 0/2, Conqueror, home meta 80, weights dom 68 sci 4 cul 24 dip 4, risk medium, expansion conquest, greedy wide
+100, China, LEADER_WU_ZETIAN, tags WR, pursuits 0/3, Conqueror, home meta 70, weights dom 68 sci 24 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+100, The Netherlands, LEADER_WILLIAM, tags RD, pursuits 1/2, Diplomat, home meta -40, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy wide
+150, Rome, LEADER_AUGUSTUS, tags R, pursuits 1/0, Zealot, home meta -5, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium, greedy tall
+150, France, LEADER_NAPOLEON, tags RTS, pursuits 2/0, Tourism, home meta -50, weights dom 22 sci 6 cul 68 dip 4, risk high, expansion tall, greedy tall
+150, The Maya, LEADER_PACAL, tags RN, pursuits 3/2, Scientist, home meta -80, weights dom 2 sci 68 cul 24 dip 6, risk low, expansion tall, greedy tall
+150, Portugal, LEADER_MARIA_I, tags R, pursuits 1/3, Zealot, home meta -15, weights dom 6 sci 26 cul 20 dip 48, risk low, expansion medium, greedy tall
+150, Poland, LEADER_CASIMIR, tags T, pursuits 1/0, Tourism, home meta -30, weights dom 22 sci 6 cul 28 dip 44, risk high, expansion medium, greedy wide
+150, Mongolia, LEADER_GENGHIS_KHAN, tags WR, pursuits 0/2, Conqueror, home meta 80, weights dom 68 sci 4 cul 24 dip 4, risk medium, expansion conquest, greedy wide
+150, China, LEADER_WU_ZETIAN, tags WR, pursuits 0/3, Conqueror, home meta 70, weights dom 68 sci 24 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+150, The Netherlands, LEADER_WILLIAM, tags D, pursuits 1/2, Diplomat, home meta -40, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy wide
