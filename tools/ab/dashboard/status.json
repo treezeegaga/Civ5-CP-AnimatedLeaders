@@ -4,14 +4,14 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Both PCs are halfway through a frozen 20-game block on build 850e142 (the build-up lasts until the army is ready). So far 1 capture in 9 games. At about 2:30pm ET they switch to the BigArmy block, which doubles the aggressor's army and waives its costs to test whether army size is what's missing.",
+   "detail": "Army size is the missing piece: with BigArmy (the aggressor's army doubled, its costs waived) the aggressor took cities in 4 of its first 7 games (7 cities), against about 1 game in 9 to 21 before. Without it, in the same matches: 0. Both PCs play 20 BigArmy games each; then the job is to make that army affordable honestly.",
    "state": "running"
   },
   {
    "section": "tile",
    "order": 1,
    "name": "Testing now",
-   "value": "850e142: build-up until the army is ready (9 of 40 games in: 1 capture)"
+   "value": "BigArmy: a doubled army, costs waived (7 games in: captures in 4)"
   },
   {
    "section": "tile",
@@ -32,7 +32,7 @@
    "detail": "no attack formed, or attacks but no declaration",
    "old": 7,
    "cur": 5,
-   "new": 1
+   "new": 0
   },
   {
    "section": "funnel",
@@ -41,7 +41,7 @@
    "detail": "the army never got a city in range",
    "old": 0,
    "cur": 3,
-   "new": 3
+   "new": 0
   },
   {
    "section": "funnel",
@@ -50,7 +50,7 @@
    "detail": "units held back: the area around the city was enemy-held",
    "old": 23,
    "cur": 6,
-   "new": 1
+   "new": 0
   },
   {
    "section": "funnel",
@@ -68,7 +68,7 @@
    "detail": "",
    "old": 3,
    "cur": 3,
-   "new": 1
+   "new": 4
   },
   {
    "section": "session",
@@ -192,8 +192,8 @@
   {
    "section": "queue",
    "order": 1,
-   "name": "Attack block on 850e142",
-   "detail": "Both PCs, 20 games each, frozen. Judged on the funnel: fewer 'tried, took nothing' and more captures.",
+   "name": "BigArmy block (diagnostic)",
+   "detail": "Both PCs, 20 games each on 1750459. Does a big army take cities? So far yes: 4 of 7 games.",
    "state": "running"
   },
   {
