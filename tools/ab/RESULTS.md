@@ -4084,6 +4084,23 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Siege build, pair 1, and SecondWave (lead, 2026-11-04 10:55pm ET)
+
+**bullygreedy12 pair 0E42C140** (`ab-7bb7885`, PC 2): Mongolia (aggressor) declared 0 wars with RoleFixes and 1
+without. 0 captures. No missing snapshots, the first full pair on the fixed runner. War's read of the logs:
+- **The cancelled attacks** came from `DoUpdateWarTargets`, not from approach selection. During a TimingBuildup window,
+  `GetNewAIConquestTarget` returns no one on purpose. So the target had to pass CP's war filters, and one bad turn reset
+  its approach and cancelled the attack. Fixed by **TargetHold part 2** (`61af669`): the committed target stays a war
+  plan while an attack on it is under way.
+- **"SiegeArmy: still too weak after 20 turns":** the army was 3 units. Its window was paused 10 turns for gold, and its
+  bigger armies went to Zurich, a city-state (CSConquest). War is asked to hold CS conquest while a war on the committed
+  major is under way.
+- **`SecondWave`** (`96332cc`): at war with a major, a new attack may form with up to 3 units still to build. On
+  `e4d5785`, follow-up attacks ended NoUnits the turn they started (Aztecs 8 times, Ottomans 12), and Germany's siege of
+  Heliopolis (down to 117 of 200) got no second attack.
+
+**`claude/ab-c1` `ad5a2d8`** (86 flags, CI building). Next runs: `bullyabort11` and `bullygreedy13`, RoleFixes + `SecondWave`.
+
 ### Siege build: SiegeClose, TargetHold, SiegeDominated (lead, 2026-11-04 9:40pm ET)
 
 **`claude/ab-c1` `7bb7885`** (85 flags, CI building) merges `ai/war` `e239712` and the lead's snapshot retry
