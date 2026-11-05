@@ -278,7 +278,7 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "2 captures in 42 bully games so far. The causes are found (armies arrive late, small or bankrupt) and every session's fix is now in one build, f21a8f6: your timing-attack design, the bankruptcy fixes, smarter targets, and the 11 flags you ruled obvious. Both PCs switch to it next.",
+   "detail": "The attack starts now: with WarGold (build e4d5785) the aggressor declared war in all 4 games where it has the fixes (6 wars). Before, its cities built workers instead of an army and it went broke at peace. Still 0 captures: armies time out on the march, then won't attack a city in an enemy-held area. War is on it.",
    "state": "running"
   },
   {
@@ -320,7 +320,7 @@
    "section": "queue",
    "order": 6,
    "name": "Bully conquest test",
-   "detail": "PC 1: conquest package + SiegeAbort + SiegeFormation against normal civs, 20 games.",
+   "detail": "PC 1: bullyabort9 on e4d5785 (25 flags + MarchOn, FocusedWar, WarGold). 2 pairs: wars in both first games, 0 captures.",
    "state": "running"
   },
   {
@@ -348,14 +348,14 @@
    "section": "queue",
    "order": 10,
    "name": "Bully vs greedy civs",
-   "detail": "PC 2: conquest package on the bully, every other civ greedy. Logged pair first.",
+   "detail": "PC 2: bullygreedy11 on e4d5785 (25 flags + MarchOn, FocusedWar, WarGold). 2 pairs: wars in both first games, 0 captures.",
    "state": "running"
   },
   {
    "section": "session",
    "order": 1,
    "name": "Lead",
-   "detail": "Merged everyone's work into build f21a8f6 (73 flags, 24 in the bundle) and widened the flag limit to 128.",
+   "detail": "Merged everyone's fixes into build e4d5785 (82 flags): War's attack fixes, Economy's WarGold, LeanBuilders, WondersForVictory, Personality's greedy wide/tall, Diplomacy's GreedyWideDeals. Trio quick look: ours on top in 3 of 4.",
    "chat": "Civ V AI optimization experiment lead",
    "state": "running"
   },
@@ -363,15 +363,15 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Coded your timing attack (TimingBuildup), DeclareWhenGathered, SiegeConcentrate, SiegeKeep, and TargetVulnerability (your GreedyTarget redesign). CanWin, CSConquest and BoxedInWar went into the bundle.",
+   "detail": "Found why the trio aggressor never attacked (judged targets against its peace army), the worker build queue, and the unaffordable build-up. Now working on armies that time out on the march and won't attack a city in an enemy-held area.",
    "chat": "Civ V AI: War session",
-   "state": "waiting"
+   "state": "running"
   },
   {
    "section": "session",
    "order": 3,
    "name": "Diplomacy",
-   "detail": "StaleWarPeace reworked to your rule (fight on only if you mean to take their cities) and in the bundle, with TradeOpinion, DealReputation and the three coalition flags.",
+   "detail": "GreedyWideDeals: a greedy wide civ out of room seeks trades, open borders and research agreements. Off until tested.",
    "chat": "Civ V AI: Diplomacy session",
    "state": "waiting"
   },
@@ -379,15 +379,15 @@
    "section": "session",
    "order": 4,
    "name": "Personality",
-   "detail": "Aggressive civs: big army only in the build-up and at war, walls only in threatened cities. GreedyAlarmScale (greedier civs react later) is compiling.",
+   "detail": "Greedy now comes in two kinds (your design): wide (Liberty, expand, then grow and trade) and tall (Tradition, 3-4 cities, tech and policy rush). Waiting for the next job.",
    "chat": "Civ V AI: Personality session",
-   "state": "running"
+   "state": "waiting"
   },
   {
    "section": "session",
    "order": 5,
    "name": "Economy",
-   "detail": "Found the bankruptcy cause (CP's check counted only income, not costs) and fixed it: TrueGoldRate, WarChest, WarEconomy. GreedyBook redesigned (National College first); SettlerOverlap and WidePlans in the bundle.",
+   "detail": "WarGold: the aggressor researches Currency early and keeps income at 0 or more at peace; the war chest saves from turn 30. Also LeanBuilders (fewer workers, your call: a normal test) and WondersForVictory.",
    "chat": "Civ V AI: Economy & victory session",
    "state": "waiting"
   },
@@ -395,7 +395,7 @@
    "section": "session",
    "order": 6,
    "name": "PC runner",
-   "detail": "PC 1 (BOX): bully vs normal civs; switches to the 25-flag role on build f21a8f6 next.",
+   "detail": "PC 1 (BOX): bully vs normal civs on e4d5785 with WarGold (bullyabort9), first-game logs always kept. Prints who-is-who at each game's start.",
    "chat": "Civ V AI optimization PC runner",
    "state": "running"
   },
@@ -403,7 +403,7 @@
    "section": "session",
    "order": 7,
    "name": "PC runner 2",
-   "detail": "PC 2 (TREEDESKTOP): replaying the crashed game with logging off (code or memory?), then the 25-flag role on f21a8f6 against greedy civs.",
+   "detail": "PC 2 (TREEDESKTOP): bully vs greedy civs on e4d5785 with WarGold (bullygreedy11), first-game logs always kept. Prints who-is-who at each game's start.",
    "chat": "Civ V AI optimization PC runner 2",
    "state": "running"
   },
@@ -883,6 +883,77 @@
     "PC runner",
     "PC runner 2"
    ]
+  },
+  {
+   "section": "queue",
+   "order": 11,
+   "name": "Trio test",
+   "detail": "Quick look, 4 games: one of ours on top in 3 (75%), our three over half the strength in every game; the aggressor never declared. 20 games once the attack works, with greedy wide/tall.",
+   "state": "waiting"
+  },
+  {
+   "section": "queue",
+   "order": 12,
+   "name": "LeanBuilders, WondersForVictory, GreedyWideDeals",
+   "detail": "New flags, off; normal tests after the attack work.",
+   "state": "waiting"
+  },
+  {
+   "section": "testflag",
+   "order": 41,
+   "name": "MarchOn",
+   "owner": "War",
+   "detail": "A sneak attack that declares keeps marching to the walls as one army, instead of breaking up at the border.",
+   "test": "Bully runs on e4d5785, both PCs.",
+   "state": "testing",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 42,
+   "name": "FocusedWar",
+   "owner": "War",
+   "detail": "An aggressor with a target fights only that war: no coop wars elsewhere, no second war.",
+   "test": "Bully runs on e4d5785, both PCs.",
+   "state": "testing",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 43,
+   "name": "WarGold",
+   "owner": "Economy",
+   "detail": "The aggressor researches Currency early and keeps income at 0 or more at peace, so it can pay for its build-up.",
+   "test": "Bully runs on e4d5785, both PCs: wars in all 4 first games.",
+   "state": "testing",
+   "runs": [
+    "PC runner",
+    "PC runner 2"
+   ]
+  },
+  {
+   "section": "testflag",
+   "order": 44,
+   "name": "GreedyWide",
+   "owner": "Personality",
+   "detail": "Your design: a wide greedy leader takes Liberty and expands as fast as happiness allows, then grows and trades.",
+   "test": "Next trio run.",
+   "state": "next"
+  },
+  {
+   "section": "testflag",
+   "order": 45,
+   "name": "GreedyTall",
+   "owner": "Personality",
+   "detail": "Your design: a tall greedy leader takes Tradition, keeps 3-4 cities and rushes tech and policies.",
+   "test": "Next trio run.",
+   "state": "next"
   }
  ]
 }
