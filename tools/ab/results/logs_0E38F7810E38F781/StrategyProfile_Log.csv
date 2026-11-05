@@ -1,0 +1,32 @@
+001, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags T, pursuits 1/2, Tourism, home meta -50, weights dom 2 sci 6 cul 48 dip 44, risk high, expansion tall, greedy tall
+001, Korea, LEADER_SEJONG, tags NS, pursuits 3/1, Scientist, home meta -80, weights dom 2 sci 68 cul 4 dip 26, risk low, expansion tall, greedy tall
+001, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 1/2, Expansionist, home meta -20, weights dom 10 sci 10 cul 30 dip 50, risk low, expansion wide, greedy wide
+001, India, LEADER_GANDHI, tags , pursuits 3/2, Scientist, home meta -80, weights dom 2 sci 68 cul 24 dip 6, risk low, expansion tall, greedy tall
+001, Brazil, LEADER_PEDRO, tags T, pursuits 2/3, Tourism, home meta -60, weights dom 2 sci 26 cul 68 dip 4, risk medium, expansion tall, greedy tall
+001, The Shoshone, LEADER_POCATELLO, tags WE, pursuits 3/1, Conqueror, home meta 80, weights dom 28 sci 44 cul 4 dip 24, risk medium, expansion conquest, greedy wide
+001, Morocco, LEADER_AHMAD_ALMANSUR, tags SD, pursuits 2/1, Scientist, home meta -60, weights dom 2 sci 28 cul 44 dip 26, risk medium, expansion tall, greedy tall
+001, America, LEADER_WASHINGTON, tags WE, pursuits 3/0, Conqueror, home meta 75, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy wide
+050, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags RT, pursuits 1/2, Zealot, home meta 10, weights dom 6 sci 6 cul 40 dip 48, risk high, expansion medium, greedy tall
+050, Korea, LEADER_SEJONG, tags RNS, pursuits 3/1, Scientist, home meta -80, weights dom 2 sci 68 cul 4 dip 26, risk low, expansion tall, greedy tall
+050, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 1/2, Expansionist, home meta -20, weights dom 10 sci 10 cul 30 dip 50, risk low, expansion wide, greedy wide
+050, India, LEADER_GANDHI, tags R, pursuits 3/2, Zealot, home meta -20, weights dom 6 sci 46 cul 40 dip 8, risk low, expansion tall, greedy tall
+050, Brazil, LEADER_PEDRO, tags RT, pursuits 2/3, Tourism, home meta -60, weights dom 2 sci 26 cul 68 dip 4, risk medium, expansion tall, greedy tall
+050, The Shoshone, LEADER_POCATELLO, tags WE, pursuits 3/1, Conqueror, home meta 80, weights dom 28 sci 44 cul 4 dip 24, risk medium, expansion conquest, greedy wide
+050, Morocco, LEADER_AHMAD_ALMANSUR, tags RSD, pursuits 2/1, Zealot, home meta 0, weights dom 6 sci 6 cul 60 dip 28, risk medium, expansion tall, greedy tall
+050, America, LEADER_WASHINGTON, tags WE, pursuits 3/0, Conqueror, home meta 75, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy wide
+100, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags RT, pursuits 1/2, Zealot, home meta 10, weights dom 6 sci 6 cul 40 dip 48, risk high, expansion medium, greedy tall
+100, Korea, LEADER_SEJONG, tags RNS, pursuits 3/1, Scientist, home meta -80, weights dom 2 sci 68 cul 4 dip 26, risk low, expansion tall, greedy tall
+100, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 1/2, Zealot, home meta -30, weights dom 6 sci 6 cul 40 dip 48, risk low, expansion wide, greedy wide
+100, India, LEADER_GANDHI, tags R, pursuits 3/2, Zealot, home meta -20, weights dom 6 sci 46 cul 40 dip 8, risk low, expansion tall, greedy tall
+100, Brazil, LEADER_PEDRO, tags RT, pursuits 2/3, Tourism, home meta -60, weights dom 2 sci 26 cul 68 dip 4, risk medium, expansion tall, greedy tall
+100, The Shoshone, LEADER_POCATELLO, tags WRE, pursuits 3/1, Conqueror, home meta 80, weights dom 28 sci 44 cul 4 dip 24, risk medium, expansion conquest, greedy wide
+100, Morocco, LEADER_AHMAD_ALMANSUR, tags RSD, pursuits 2/1, Zealot, home meta 0, weights dom 6 sci 6 cul 60 dip 28, risk medium, expansion tall, greedy tall
+100, America, LEADER_WASHINGTON, tags WRE, pursuits 3/0, Conqueror, home meta 75, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy wide
+150, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags RT, pursuits 1/2, Zealot, home meta 10, weights dom 6 sci 6 cul 40 dip 48, risk high, expansion medium, greedy tall
+150, Korea, LEADER_SEJONG, tags RNS, pursuits 3/1, Scientist, home meta -80, weights dom 2 sci 68 cul 4 dip 26, risk low, expansion tall, greedy tall
+150, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 1/2, Zealot, home meta -30, weights dom 6 sci 6 cul 40 dip 48, risk low, expansion wide, greedy wide
+150, India, LEADER_GANDHI, tags R, pursuits 3/2, Zealot, home meta -20, weights dom 6 sci 46 cul 40 dip 8, risk low, expansion tall, greedy tall
+150, Brazil, LEADER_PEDRO, tags RT, pursuits 2/3, Tourism, home meta -60, weights dom 2 sci 26 cul 68 dip 4, risk medium, expansion tall, greedy tall
+150, The Shoshone, LEADER_POCATELLO, tags WRE, pursuits 3/1, Conqueror, home meta 80, weights dom 28 sci 44 cul 4 dip 24, risk medium, expansion conquest, greedy wide
+150, Morocco, LEADER_AHMAD_ALMANSUR, tags RSD, pursuits 2/1, Zealot, home meta 0, weights dom 6 sci 6 cul 60 dip 28, risk medium, expansion tall, greedy tall
+150, America, LEADER_WASHINGTON, tags WRE, pursuits 3/0, Conqueror, home meta 75, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy wide
