@@ -1924,6 +1924,27 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0DD77369 (PC 2, ab-e4d5785 + WarGold), Assyria: capture attempts at last, 3 units at a time (Nov 4, about 8:49pm ET)
+- **Busan (Korea):**
+  - Attack 1795 recruited 8 units: 3 Swordsmen, a Siege Tower, a Catapult, an Archer, a Chariot Archer and one more.
+  - It was discovered at T97 (MarchOn declared) and handed over by the old stall rule at T99.
+- **The first capture attempts in a logged game since the attempt log (`9e9fc9d`):** Busan, T100–T103, zone
+  P_STEAMROLL, 3 units used each turn.
+  - Busan's HP went 200 → 200, 200 → 177, 197 → 187, 200 → 190.
+  - Expected damage was 41–59 a turn; the city healed back each turn.
+  - The other 5 units never joined.
+- **T106–T109:** three new attacks on Busan each ended NoUnits at once (3 recruited of the formation; no missing
+  units allowed at war outside TimingBuildup's phases).
+- **The Inca, committed at T130:**
+  - Attacks 3172 and 3012 ended DiploOpinionChange at T141 and T143 (the target flip TargetHold fixes).
+  - Attack 3229 declared by DeclareWhenGathered at T149 and attacked Cusco at T152 (250 → 235, 4 of 4 units).
+- **WarChest:** one purchase (a Siege Tower, T83).
+
+**Read.** This is the SiegeClose case on a city we did attack. With the zone ours (STEAMROLL), only units within
+striking distance attacked; the rest of the 8 were never moved up. 3 units can't beat a city's healing. The 13-turn
+estimate counts every unit in reach, so it read 41–59 against 10–23 done. No new fix: SiegeClose (`c588aa8fa`) and
+TargetHold (`eab859e4d`) cover what went wrong here; the next logged games need a build with both.
+
 ### War: 0D03FDB9 (Mongolia) and 0CED9749 (Songhai), PC 1 bully abort9 on ab-e4d5785: the committed target is dropped for a turn and the attack under way is cancelled (Nov 4, about 8:26pm ET)
 - **0D03FDB9, Mongolia never declared** (the lead's note).
   - "CONQUEST: going for The Netherlands" at T76, T79, T89 and T113. Each one is a return to WAR after a turn
@@ -1955,7 +1976,7 @@ limits (SiegeArmy's 20 turns, SiegeAbort) end a hopeless attack. Log: "CONQUEST:
 reason)", once a turn. Expect: no runs of "War goal changed" against the committed target, the attack gathered to the
 end, and the failed check named in the log.
 
-Coded: `ai/war` `eab859e4d` (CI pending). SiegeArmy's bar at peace still keeps a weak army from declaring, so a
+Coded: `ai/war` `eab859e4d` (built, CI run 206). SiegeArmy's bar at peace still keeps a weak army from declaring, so a
 held target with CanWin failing waits rather than marching.
 
 ### War: 0D9AF4AA (PC 2, ab-e4d5785 + WarGold), Assyria: the army reached Hamburg with the zone in our favour, and the tactical AI sent it home (Nov 4, about 7:39pm ET)
