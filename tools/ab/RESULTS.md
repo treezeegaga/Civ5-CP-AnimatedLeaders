@@ -1924,6 +1924,43 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: a sustained army without the waiver: patterns over the 11 BigArmy games, and the flags (the lead, 2:08pm ET) (Nov 5, about 2:09pm ET)
+**Per-game numbers (BigArmy first games, ab-1750459):**
+
+| Pattern | Over the 11 games |
+|---|---|
+| Siege at the first declaration (of 4) | 4/4 in 3 games (1 captured); 0–2 in 8 games (4 captured) |
+| Units in reach at the first capture attempt / land army | median 5 / 17 (range 1–8 of 12–29) |
+| Gold at war (per-game median; max) | 40–247; 174–837 in every game |
+| Land units added a window turn | 0.16–0.72 (window 19–48 turns) |
+| First-declaration army | 194 units: Swordsman 34, Archer 34, **Warrior 31**, Catapult 18, Jaguar 16, Chariot Archer 11, Composite Bowman 11, **Scout 11**, Spearman 9 |
+
+**What these say:**
+1. **Siege before the declaration: not supported.** Games that declared with the full train captured less often (1 of 3)
+   than those without it (4 of 8). No gate on siege; the lead's proposal is noted against the data.
+2. **Idle gold at war is the waiver's gold.** The 71 gold a turn of upkeep BigArmy waived at war is about what sat
+   in the treasury. Without the waiver there is no idle gold to spend, so no buying flag from War. Economy's gap
+   measure covers it.
+3. **Composition is real and honest.**
+   - 22% of the army at the first declarations was Warriors and Scouts (42 of 194), counted as army by
+     IsTimingBuildupArmyReady and paid upkeep like the rest.
+   - Funnel stage: not taken (6 of 11 BigArmy first games, 11 of 28 on f6d1e84).
+4. **Concentration:** about a third of the army is in reach at the first attempt. SiegeFeed (built, merged into 850e142
+   but off) keeps the units in reach from being pulled into new armies; SiegeClose (in the role) brings them up.
+   Funnel stage: not taken / refused.
+
+**Flags for the block after BigArmy:**
+- **ArmyQuality (new, coded below).** A unit counts toward the TimingBuildup army, and is built in the window, only if
+  its strength is at least 70% of the best land unit the civ can train. That rules out Warriors, Scouts and Archers
+  once Swordsmen and Composite Bowmen are trainable. The army becomes the same size, of better units, for the same
+  upkeep.
+  - Targets the 22% obsolete share.
+  - Funnel stage: not taken (6/11 BigArmy, 11/28 f6d1e84).
+- **SiegeFeed on (built):** concentration at the walls (5 of 17 in reach).
+- **SecondWave (already in the role):** follow-up waves.
+- **BigArmy's army target (4 siege, 2 x (cities + 4))** without the waivers: whether that is affordable is Economy's
+  gap (about 70 a turn).
+
 ### War: BigArmy mid-block, 11 first games: size is the lever (Nov 5, about 1:57pm ET)
 Data: ab-1750459 (bullyabort13 + bullygreedy15), 11 first games and 5 flipped, against 850e142 (15 first) and f6d1e84
 (28 first). Script: `tools/ab/bigarmy_block.py` (uses attack_funnel.py and walls.py).
