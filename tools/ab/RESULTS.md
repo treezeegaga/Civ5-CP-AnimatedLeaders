@@ -1979,7 +1979,7 @@ SiegeArmy abort here are the cases those three fix. What they don't fix:
 No new fix from these two games; the next logged games on a build with the three commits will show whether the army
 now arrives whole.
 
-**Diagnostic (logging only):** `ai/war` `78437e098` adds the zone strengths to the tactical log's zone line for enemy
+**Diagnostic (logging only):** `ai/war` `78437e098` (built, CI run 204) adds the zone strengths to the tactical log's zone line for enemy
 cities: "friendly S (n units, melee, ranged), enemy S (n units, melee, ranged, city HP)". A zone reads enemy dominated
 when enemy strength is over 1.7 times ours (CvTacticalDominanceZone::SetOverallDominance); the city counts as enemy
 ranged strength, and only units within 4 tiles of the city (Ancient and Classical) or in the zone count. The posture
@@ -2017,6 +2017,8 @@ which the window's siege weight makes likely). The numbers will tell which case 
      applies instead: an attack is worth it if 13 turns of damage beat the city's healing. **At war with the target,
      the bar becomes healing + max HP / 13** (36 for 200 HP, 40 for 250); at 45 a turn this attack would have
      marched at once. At peace (sneak attacks) the bar is unchanged.
+
+Coded: `ai/war` `a6a9f399` (fixes 1 and 2; built, CI run 202), `b7db863` (fix 3; built, CI run 203).
 
 
 ### War: four logged games on ab-f73177c and ab-eb4129d: wars come now; armies are small; MarchOn handed over too early (Nov 4, about 6:36pm ET)
