@@ -3311,6 +3311,31 @@ logged pair".
 - **Status:** compiles (CI run 175 passed on `35272f9`, 2026-11-04 3:00pm ET); merged into `claude/ab-c1` (`b06d504`) by
   the lead. In the greedy style set.
 
+### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 11:40am ET)
+- **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
+  138 logged games, tech turns read from the first unlock in a build list): after the opening book, research follows
+  the target victory only loosely. Science civs reach Education by T150 in 69% of games, fewer than culture civs (83%)
+  or diplomats (74%), and 30% research Physics and 37% Chivalry before Education. Diplomats skip Banking (40% by T150,
+  74% Chivalry first). Warmongers get Physics (trebuchets) at T138 median, 60% by T150, and 36% research Education
+  first. Only warmongers have a forced mid-game path, and only for the early war techs and Currency.
+- **The user (2026-11-05): build the flag.**
+- **Hypothesis:** extra weight (not a forced path) on each target victory's key techs gets them sooner without
+  starving the rest. Expected: science civs reach Education sooner and more often by T150; diplomats get Banking;
+  warmongers get Physics and Steel sooner. Strength share no worse (2 points).
+- **The flag** (`VictoryTechPath`, `FIX_VICTORY_TECH_PATH`, off in the bundle). After the opening book, each key tech
+  gets extra weight, passed on to its prerequisites the way CP passes on flavour weight:
+  - science: Philosophy, Education, Astronomy;
+  - culture: Drama and Poetry, Theology, Acoustics;
+  - diplomacy: Currency, Banking;
+  - domination: Construction, Iron Working, Physics, Steel.
+
+  How much: the strategy profile's victory weights (they add up to 100). A key tech gets the average weight of the
+  techs in reach, times the victory's weight / 50: about double for a victory at 50 (a typical primary), a fifth for
+  one at 10. Not forced, so the cost reweighting and the rest of the weights still count.
+- **Measure:** per target victory, the share of civs with the key techs by T150 and their median turn (Economy's
+  script), against the flag off; strength share at T150.
+- **Status:** coding.
+
 ### Greedy wide and greedy tall (Personality, 2026-11-04 4:50pm ET)
 - **The user's design** (via the lead, 4:46pm ET; AGENTS.md, "Greedy comes in two kinds"): the trio quick look's top
   civ usually had the most cities, and our greedy civ (always tall) was never on top. Tall isn't the best answer to civs
