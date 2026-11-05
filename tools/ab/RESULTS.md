@@ -1588,6 +1588,17 @@ had 4 workers: about 3-4 gold a turn back at T90. Suggest adding `LeanBuilders` 
 - **Status:** coded, patch 0021 on `claude/ab-c1` `eb4129d` (82 flags). It replaces the first 0021 (on `0cb85ae`,
   Currency and gold buildings only). Not built.
 
+### Backburner: a warmonger's tech-lead opening (Economy, the user's idea, Nov 5)
+Not coded. Pick it up only if we see our warmongers losing fights for lack of a tech edge.
+- **The idea:** a warmonger plays tall early and takes land later with better units instead of settling it.
+- **Not one city:** one city can't build or pay for the army (the Aztecs had 5-7 cities and still went broke).
+- **The version to try:** 3-4 cities fast, Libraries and the National College, then a beeline to one strong unit
+  (trebuchets, crossbows or knights), and attack at that power spike.
+- **When:** only once War's attack fixes produce real city captures. Before that, a failed attack and a bad opening
+  look the same in the results.
+- **Not for everyone:** the one-city College beeline stays a tall-civ book (GreedyBook). Wide and greedy civs need
+  the land.
+
 ### CvPolicyAI audit (Economy, 2026-11-02)
 
 `CvPolicyAI.cpp` read in full except `WeightPolicyAttributes` (lines 1037-4692, about 300 per-attribute
