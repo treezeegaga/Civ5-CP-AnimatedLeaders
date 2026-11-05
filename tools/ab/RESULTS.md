@@ -1869,6 +1869,15 @@ yet.
   - strength: no-worse;
   - city-state relations: alliances held at T150.
 
+**Fix, 2026-11-05 5:15pm ET (`ai/diplomacy` 5158909, CI green).**
+- **What broke:** in its first block (`ab-abc78a6`), an assert ("Chose a minor to bully gold from that cannot
+  actually be bullied!") opened a dialog that stopped PC 1's game for about 20 minutes.
+- **Cause:** without heavy tribute (CP's setting), the pick calls `CanMajorBullyGold(eID, 0)`, which always passes. Only
+  the bully itself checks the real bully score. CP picks only city-states it's hostile to, so the mismatch rarely
+  fired. A war-chest civ considers many more.
+- **Fix:** for a war-chest seeker, the pick also requires the plain `CanMajorBullyGold(eID)`, so a pick can't fail.
+  The lead's silent skip (5b7333c) stays as a safety net. No gameplay change: a failed pick did nothing.
+
 ### Diplomacy: flag `GreedyWideDeals` (Diplomacy session, 2026-11-04 5:25pm ET)
 
 Personality's request, for the user's "greedy wide" design. Pushed as `ai/diplomacy` `f1deaa1`, on `claude/ab-c1`
