@@ -1924,6 +1924,49 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the f6d1e84 block against the earlier builds (first games); SiegeVolley withdrawn (Nov 5, about 1:56am ET)
+**Data:**
+- **f6d1e84 (bullyabort11, bullygreedy13):** 10 first games, 2 flipped.
+- **e4d5785 (bullyabort9, bullygreedy11):** 14 first games.
+- **7bb7885 (bullyabort10, bullygreedy12):** 5 first games.
+- **Tools:** attack_funnel.py and walls.py. The samples are small; the differences below are signals, not proofs.
+
+| First games, per game | e4d5785 (14) | 7bb7885 (5) | f6d1e84 (10) |
+|---|---|---|---|
+| Stages: no war / never at walls / refused / not taken / captured | 1 / 0 / 8 / 4 / 1 | 3 / 0 / 1 / 1 / 0 | 0 / 2 / 2 / 5 / 1 |
+| Attacks formed (median) | 5 | 3 | 5 |
+| Attacks delivered to the target (mean; games with 2+) | 1.4 (5) | 0.6 (1) | 1.5 (5) |
+| Attacks ended NoUnits (mean) | 1.0 | 0.0 | **0.0** |
+| Attacks ended DiploOpinionChange (mean) | 2.3 | 1.2 | **0.3** |
+| Attacks ended TimedOut (mean) | 0.7 | 1.0 | **1.6** |
+| Capture attempts per game | 3.6 | 1.4 | 1.9 |
+| Attempts where the city lost HP | 32% | 57% | **57%** |
+| Mean damage per attempt | 6.8 | 16.6 | **18.6** |
+| Own units killed | 4.2 | 4.4 | 5.4 |
+
+**Read:**
+- **Fewer cancelled attacks:** SecondWave and TargetHold do what they were for. NoUnits endings are gone, and
+  DiploOpinionChange endings fell from 2.3 a game to 0.3. CSAfterWar's effect can't be read here (city-state attacks
+  aren't counted yet).
+- **Better attempts:** they land more often and hit harder: 57% against 32%, mean 18.6 against 6.8. Fewer games
+  stop at "refused" (2 of 10 against 8 of 14).
+- **Waves, the funnel's best predictor of a capture, haven't moved:** 1.5 delivered a game against 1.4.
+- **More TimedOut endings:** up from 0.7 to 1.6. SiegeArmy holds the sneak attacks at peace for 20 turns, then gives
+  up, because the armies are still too small at peace. That is the army-building side WindowUntilReady and
+  CoopWhenReady (built, not merged) are aimed at.
+- **SiegeDominated never attacked** in this block (only "stays skipped": 1 unit, expected 0).
+
+**Correction (my earlier at-the-walls entry): SiegeVolley withdrawn.**
+- The "6 or more units in the sim: the city lost HP in 22%" figure came almost entirely from one game: the Inca at
+  Mumbai (0DF72455), 18 attempts with 6+ units, 1 landed.
+- Every other attempt with 6+ units over all logged games landed: 8 of 9 (f6d1e84: 3 of 4).
+- So it isn't a pattern, and SiegeVolley would have been a one-game fix.
+- The capture-plan logging (`249985284`) stays useful: it will show what a plan does when a city like Mumbai holds.
+
+**What the block points at (funnel stages: not taken 5 of 10, refused 2, never at walls 2):** the armies still get
+one wave, and the peace-time attacks time out in SiegeArmy. The next merge's candidates are already built: SiegeFeed,
+CoopWhenReady, WindowUntilReady, and the logging. Nothing new is coded from this block.
+
 ### War: the first two games on ab-f6d1e84 (block 1, pair 1 on each PC): which merged flags show up (Nov 5, about 12:01am ET)
 Signals only; the block is read as a whole (the user's rule), not fixed game by game.
 - **SecondWave:** it forms attacks at war that used to end NoUnits.
@@ -1997,7 +2040,7 @@ and zone strengths of every logged game next to the funnel stage. Data: 60 logge
    - SecondWave (in f6d1e84, running) and SiegeFeed (ready, not merged) are aimed at exactly this.
    - The f6d1e84 block will show whether delivered attacks per war go from 1 to 2+.
    - No new code until then.
-2. **Big sims at the walls (not taken 18, captured 3):**
+2. **(Withdrawn at the f6d1e84 block read: the effect was one game.) Big sims at the walls (not taken 18, captured 3):**
    - Flag SiegeVolley: when 6 or more units are in striking distance of a city, the capture attempt runs in two passes.
      Ranged and siege units go first (a small sim that can only attack), then the melee units with the city's new HP.
    - Each sim stays well under the 384-plan budget; the 4–5-unit sims are the ones that land.
