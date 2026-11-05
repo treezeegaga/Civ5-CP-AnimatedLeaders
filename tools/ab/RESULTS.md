@@ -4098,6 +4098,23 @@ evidence:
 aggressor's army target in the window and lifts the supply and upkeep caps there, nothing else, and logs the army at
 declaration and at the first capture attempt. It runs as one 20-game block per PC after the WindowUntilReady block
 (about 2:30pm ET).
+
+**Earlier tries at bigger armies never reached the walls.**
+- Standing armies of 3-4 per city plus the siege book went bankrupt: the Huns in 0C22F161 had GPT -130 and gifted away
+  37 warriors and the siege train.
+- TimingBuildup's armies then came out small.
+
+**Army size and captures over 211 logged bully games:** the aggressor's military at T100 against the average civ's.
+
+| Aggressor's military at T100 | Games | Captures |
+|---|---|---|
+| under 1x the average civ | 67 | 2 (3%) |
+| 1-1.5x | 84 | 3 (4%) |
+| 1.5-2x | 41 | 2 (5%) |
+| 2x or more | 19 | 3 (16%) |
+
+In capture games the aggressor's military was about 1.9x the average at T120, against about 1.2x in the others. So
+size helps, but few games ever reached 2x. BigArmy lifts the gold caps to see what a really big army does.
 - If captures jump, size is the lever: make it reachable honestly (economy and build-up).
 - If they stay rare, the siege and tactical code is the blocker.
 
