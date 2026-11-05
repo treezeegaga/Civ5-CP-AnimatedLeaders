@@ -1792,6 +1792,64 @@ civs are only allowed to hurry two production items: settlers and siege weapons.
   Warrior...), Bronze Working or not, for every major AI. It moved into the same gold-purchase check, so it covers
   every purchase path. `SettlerSaveRealistic` and `PeaceHurry` stay off and get tested.
 
+### Do civs research for their target victory? (Economy, the user's question, Nov 5, 2:35pm ET)
+
+**Data:** 966 civ-games from all 138 logged games. There is no tech log, so a tech's turn is inferred from the
+first turn something it unlocks appears in any city's build list (`CityStrategyAIProductionLog.csv`, "PRE" lines):
+a Library for Writing, a Catapult for Mathematics, and so on.
+
+The victory is the primary pursuit at T1 (`StrategyProfile_Log.csv`).
+
+Script: `tools/ab/scripts/tech/tech_unlocks.py <folder with logs_*>`.
+
+**Caveat:** some unlocks also need a building in the city, so those turns run late and the shares run low:
+- a University needs a Library;
+- a Bank needs a Market;
+- a Castle needs Walls.
+
+**Median turn first available, and the share of civ-games that had it by T150:**
+
+| Tech | Domination (263) | Diplomacy (242) | Culture (224) | Science (237) |
+|---|---|---|---|---|
+| Writing | 42 | 42 | 37 | 40 (86%) |
+| Mathematics | **48** | 89 | 77 | 72 |
+| Philosophy | 56 (**51%**) | 56 (91%) | 56 (81%) | 55 (90%) |
+| Currency | 81 | 95 | 91 | 89 |
+| Drama and Poetry | 93 | 78 | 79 | 82 |
+| Construction | 92 | 96 | 91 | 91 |
+| Theology | 123 (28%) | 97 (73%) | 99 (77%) | 102 (67%) |
+| Education | 136 (37%) | 135 (74%) | 135 (**83%**) | 131 (**69%**) |
+| Physics | 138 (60%) | 141 (23%) | 144 (30%) | 138 (43%) |
+| Chivalry | 136 (60%) | 132 (54%) | 135 (58%) | 133 (60%) |
+| Banking | 143 (9%) | 144 (**40%**) | 145 (38%) | 143 (40%) |
+| Steel | 134 (55%) | 141 (16%) | 142 (16%) | 140 (35%) |
+
+**What fits:**
+- Warmongers get Mathematics early (T48; the book does it) and skip Theology and Education.
+- Culture civs lead on Drama and Poetry and on Theology.
+- The early game follows the opening books.
+
+**What doesn't fit** (counted in civ-games that reached either tech):
+- **Science civs don't research like science civs.**
+  - Education by T150 in only 69%, fewer than culture civs (83%) or diplomats (74%).
+  - Philosophy and Writing come no sooner than for anyone else.
+  - 30% research Physics before Education, and 37% Chivalry before Education.
+- **Diplomats skip Banking.** Banking comes in 40%, and 74% get Chivalry before Banking.
+- **Warmongers' siege tech comes late.** Physics (Trebuchets) has a median of T138, and only 60% get it.
+  - 36% research Education before Physics.
+  - Construction (Composite Bowmen) comes no earlier than for other civs (T92).
+
+**Why:** after the opening book, CvTechAI picks by its flavour weights. These follow the grand strategy only loosely,
+and the mid-game techs all draw on the same few flavours. Only warmongers have a forced mid-game tech path (War's
+TimingBuildup techs, and `WarGold`'s Currency).
+
+**Candidate fix (not built):** a flag `VictoryTechPath`. After the book, each target victory gets a short list of key
+techs that are weighted up, not forced:
+- science: Philosophy, Education, Astronomy;
+- culture: Drama and Poetry, Theology, Acoustics;
+- diplomacy: Currency, Banking;
+- domination: Construction, Iron Working, Physics, Steel.
+
 ### Backburner: a warmonger's tech-lead opening (Economy, the user's idea, Nov 5)
 Not coded. Pick it up only if we see our warmongers losing fights for lack of a tech edge.
 - **The idea:** a warmonger plays tall early and takes land later with better units instead of settling it.
