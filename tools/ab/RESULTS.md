@@ -1924,6 +1924,20 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the first two games on ab-f6d1e84 (block 1, pair 1 on each PC): which merged flags show up (Nov 5, about 12:01am ET)
+Signals only; the block is read as a whole (the user's rule), not fixed game by game.
+- **SecondWave:** it forms attacks at war that used to end NoUnits.
+  - Huns 0DC8850A: attack 2102 started with 3 units at T100, at war; it ended WarStateChange at T106.
+  - Germany 0E84B5F4: attack 2678 started with 3 units at T132, at war, and was handed over at T149.
+- **TargetHold part 2:** "CONQUEST: holding Egypt as a war plan, attack under way" (Germany, T58).
+- **SiegeClose:** fired at Thebes (T148).
+- **Still there:**
+  - Germany's sneak attacks on Egypt timed out in SiegeArmy four times before the war (T56, T60, T82, T107; 1–5 units
+    each).
+  - Germany logged 155 "requested attack … not possible for lack of units".
+  - Thebes' one attempt (T118, 3 units) did 0 damage.
+- **Count after the block:** run walls.py and attack_funnel.py on all f6d1e84 games.
+
 ### War: at the walls, over every logged bully game (the lead's funnel; the user: patterns, not single games) (Nov 5, about 11:52pm ET)
 **Tool.** `tools/ab/walls.py` (on this branch; it imports the lead's `attack_funnel.py` from claude/sleepy-hopper-x77moh).
 `python3 tools/ab/walls.py [results dir] [--games]` puts the aggressor's attack operations, capture attempts, refusals
