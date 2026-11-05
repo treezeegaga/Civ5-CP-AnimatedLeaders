@@ -187,3 +187,13 @@ roles option 1, inherit the AI-founded capital, Quick pace).
 2. Roles option 1 (every AI greedy, no roles) or 2 (bully roles on AI civs)?
 3. OK to inherit an AI-founded capital, or should War add the `Human = 1` skip?
 4. Pace: Quick, as in 106F8550 (my default), or the user's "standard speed"?
+
+## Setup done on PC 1 (2026-11-05, evening)
+
+Set up with the steps above, Option A, roles option 1: build **ab-5b7333c** (the lead's choice: it has the tribute popup fix;
+the greedy AIs don't use WarChestTribute; the replay game itself ran on 850e142), logging on, results file moved aside
+(`AIABTest_c8e.before-humangame.csv`), `AIABTest.ini` written (every AI civ greedy, no roles, StopTurn 100, 51 civ, seed and
+city-state keys), `GraphicsSettingsDX11.ini` has `FullScreen =1` (backup next to it), `GraphicsSettingsDX9.ini` untouched, Civ closed.
+First steps for the player: start `CivilizationV_DX11.exe`, check the title bar says DX11, Options > Video > 3840x2160 full
+screen, Single Player > Set Up Game (Pangaea, Standard, 8 civs, Quick, King, Quick Combat and Quick Movement), start, then
+**Ctrl+Shift+O at once**. After the game: `Run-ABTest.ps1 -Restore` before any multiplayer.
