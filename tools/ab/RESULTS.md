@@ -1924,6 +1924,76 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: at the walls, over every logged bully game (the lead's funnel; the user: patterns, not single games) (Nov 5, about 11:52pm ET)
+**Tool.** `tools/ab/walls.py` (on this branch; it imports the lead's `attack_funnel.py` from claude/sleepy-hopper-x77moh).
+`python3 tools/ab/walls.py [results dir] [--games]` puts the aggressor's attack operations, capture attempts, refusals
+and zone strengths of every logged game next to the funnel stage. Data: 60 logged games, 51 first (RoleFixes), 9 flipped
+(CP).
+
+**What the armies look like.**
+- **Size:** each attack recruits a median 5 units (refused games) or 7 (not taken, captured); CP's flipped attacks 5–6.
+- **Composition:**
+  - Ours are Warriors, Swordsmen, Composite Bowmen and Archers, as CP's are, but with more siege: 40% of the units
+    recruited in our capturing games, 21–22% in refused and not taken, against 2–15% in CP's.
+  - Before T80, 54 Catapults across our attacks against none in CP's.
+  - Composition is not where we're worse than CP.
+- **Waves:**
+  - The games that captured had 2–3 attacks delivered to the target (ours: 2, CP's: 3).
+  - Refused and not taken had 1, out of a median 3–3.5 attacks formed; the rest ended NoUnits, DiploOpinionChange
+    or TimedOut.
+- **Arrival:** handed over with the nearest unit a median 3 tiles from the city and the farthest 5, in every group,
+  ours and CP's.
+- **Losses:** a median 5 of our units killed per not-taken game (melee 63, ranged 19, siege 11 over 18 games).
+
+**What happens at the walls (capture attempts with an outcome: 88 ours, 27 CP's).**
+- **Expected damage:**
+  - A median 53 a turn against 200 HP in not-taken games; it never reached the city's HP there.
+  - The city must be hit about 4 turns in a row, less its healing.
+- **Damage done:** the city lost HP in 30% of our attempts against 52% of CP's (58% on consecutive turns, against
+  our 33%). The median damage done is 0 for both.
+- **Units within striking distance (sim size) against how often the city lost HP:**
+
+  | Units in the sim | Ours: attempts, city lost HP | CP's: attempts, city lost HP |
+  |---|---|---|
+  | 1 | 5, 0% | – |
+  | 2–3 | 23, 47% | 14, 28% |
+  | 4–5 | 19, 57% | 11, 90% |
+  | 6+ | 22, 22% | 1, 0% |
+
+  With 6 or more units the tactsim explored a median 4,768 positions and completed 429, past King's budget of 384
+  completed plans (TacticalSimMaxCompletedPositions), and the plan chosen rarely hurt the city.
+- **Aggression:** at AL_HIGH (more than 2 melee within reach) the city lost HP in 21% of our attempts; at AL_MEDIUM
+  38%. CP's: 53% and 50%.
+- **"Too early" (the 13-turn healing rule):** 348 turns in not-taken games, 245 in refused. The median expected damage
+  was 0, meaning every unit in reach would take more damage than it dealt (ComputeTotalExpectedDamage drops "suicidal"
+  attacks).
+
+**Read.**
+- **Waves:** the armies are not obviously worse than CP's, and they arrive the same way. What separates the captures
+  is waves: 2–3 delivered, not 1.
+- **The attempts themselves:** ours land less often than CP's, and much less when the sim is big (6+ units: 22%).
+  The new AI's tactsim differs from CP's in one known way here: one extra breadth-first level for battles up to 9
+  units (an earlier AI_AB_TEST change in FindBestUnitAssignments). SiegeExposure also changes the end-turn danger score
+  after an attack on a city.
+- **Untested:** the counts are small (73 attempts of ours with a tactsim line, 26 of CP's), and the logs don't say
+  which units attacked, so the sim-size effect is a lead, not a proof.
+
+**Proposals (each names its funnel stage):**
+1. **Waves (refused 23 games, not taken 18):**
+   - SecondWave (in f6d1e84, running) and SiegeFeed (ready, not merged) are aimed at exactly this.
+   - The f6d1e84 block will show whether delivered attacks per war go from 1 to 2+.
+   - No new code until then.
+2. **Big sims at the walls (not taken 18, captured 3):**
+   - Flag SiegeVolley: when 6 or more units are in striking distance of a city, the capture attempt runs in two passes.
+     Ranged and siege units go first (a small sim that can only attack), then the melee units with the city's new HP.
+   - Each sim stays well under the 384-plan budget; the 4–5-unit sims are the ones that land.
+   - Before coding it I'd want one logging-only line (below) to confirm the big sims choose moves instead of attacks.
+
+**Log lines asked for (logging only):**
+- per capture attempt, each unit's chosen action (ranged attack, melee attack, move, none) with damage to the city
+  and to the garrison;
+- the city's combat strength (and whether it has walls) on the attempt line.
+
 ### War: CoopWhenReady and WindowUntilReady, from the corrected read of 0DB01EF0 (the user: "code both") (Nov 4, about 11:37pm ET)
 **CoopWhenReady (flag, War; shared: CvDiplomacyAI::DoUpdatePlanningExchanges' coop loop, around DoStartCoopWar).**
 - **Seen:** the Ottomans' coop war on the Shoshone (agreed T63) declared itself at T73. Mongolia went in with 3
