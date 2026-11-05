@@ -1735,6 +1735,30 @@ gold a turn). After about 20 turns at war, either the army shrinks to what incom
 Not proposed: selling buildings, gold focus, lower building upkeep. Building upkeep is already netted out of the +25,
 and none of them comes close to 48 a turn.
 
+**The lead's go (2:17pm ET):**
+- The next block is the honest package: no BigArmy waiver, with the army size coming from `WarBudget`.
+- The aggressor's RoleFixes add `LeanBuilders`, `WarChestTribute` and `WarmongerHurry`. Bully runs use only
+  RoleFixes, so a bundle flag has to be listed there too.
+
+### WarBudget: the army the gold pays for (Economy's half, patch 0025)
+- **Change** (new flag `WarBudget`, off in the bundle): `CvEconomicAI::GetAffordableWarUnits(iTurns)` returns the
+  largest N such that gold + iTurns × (net income before unit upkeep − today's unit upkeep − the extra upkeep of N
+  more units) ≥ 0.
+  - The extra upkeep comes from CP's own formula (`CvTreasury::CalculateUnitCost`, which grows faster than linear).
+  - It's negative when today's units can't be kept that long.
+  - It ignores BigArmy's waiver, and is cached for the turn.
+- **War's half:** in `GetTimingBuildupFieldTarget`, under `WarBudget`, the target is the normal army plus
+  `min(normal, GetAffordableWarUnits(20))` in place of BigArmy's flat ×2. CP's upkeep guard and deficit rule stay,
+  with no waiver.
+- **What it should give**, from the measured numbers (rough):
+  - At the window's start: about 180 gold and +7 a turn after buildings, with marginal upkeep about 1.5-2 a unit
+    around T60. Over 20 turns that pays for about 8-10 more units, close to BigArmy's doubling (cities + 4 more).
+  - With `WarChest` and `WarGold` adding to the treasury and income, the full doubling should usually pass.
+- **Hypothesis:** BigArmy's capture rate (5 of 11) without the waiver, with fewer armies given away to bankruptcy.
+- **Measure:** captures and strength share against the BigArmy block; the army at declaration (War's BigArmy log);
+  turns at 0 gold; units disbanded for debt.
+- **Status:** coded, patch 0025 on `claude/ab-c1` `a81abdc`, not built. Waits for War's half.
+
 ### WarmongerHurry: a warmonger buys only settlers and siege units (Economy, patch 0023, the user's rule)
 The user (via the lead, Nov 5, 10:34am ET): "I don't love hard rules, but I kind of want to hard-rule that warmonger
 civs are only allowed to hurry two production items: settlers and siege weapons."

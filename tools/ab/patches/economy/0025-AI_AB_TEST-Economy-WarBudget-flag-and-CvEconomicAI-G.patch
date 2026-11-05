@@ -1,0 +1,184 @@
+From 1a34b38e6a1ee0c9f4a66eb01feb6b4a86535796 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Thu, 5 Nov 2026 19:20:25 +0000
+Subject: [PATCH] AI_AB_TEST Economy: WarBudget flag and
+ CvEconomicAI::GetAffordableWarUnits (the army gold can pay for, for War's
+ build-up target)
+
+BigArmy's honest cost (11 aggressors): unit upkeep 22 a turn in the window
+and 73 at war, against 7 and 25 left after buildings. GetAffordableWarUnits
+(iTurns) returns the largest N such that
+  gold + iTurns x (net before unit upkeep - today's unit upkeep
+                   - extra upkeep of N more units) >= 0,
+with the extra upkeep from CP's own formula (CalculateUnitCost). It's
+negative when today's units already can't be kept that long, ignores
+BigArmy's waiver, and is cached per turn (reset on Reset and Read).
+
+The flag WarBudget (off in the bundle) is for War's side: the build-up's
+army target from the normal army up to BigArmy's size, by this answer,
+with no waiver. Economy uses the flag nowhere yet. Written 2:21pm ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp | 71 ++++++++++++++++++++++-
+ CvGameCoreDLL_Expansion2/CvEconomicAI.h   |  6 ++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp     |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h       |  2 +
+ 4 files changed, 79 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index 4ee413d..2d255e0 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -264,7 +264,10 @@ CvEconomicAIStrategyXMLEntry* CvEconomicAIStrategyXMLEntries::GetEntry(int index
+ /// Constructor
+ CvEconomicAI::CvEconomicAI():
+ 	m_pabUsingStrategy(NULL),
+-	m_paiTurnStrategyAdopted(NULL)
++	m_paiTurnStrategyAdopted(NULL),
++	m_iWarBudgetTurn(-1),
++	m_iWarBudgetTurns(-1),
++	m_iWarBudgetUnits(0)
+ {
+ }
+ 
+@@ -309,6 +312,9 @@ void CvEconomicAI::Reset()
+ {
+ 	int iI = 0;
+ 
++	m_iWarBudgetTurn = -1; // AI_AB_TEST (WarBudget): the cache belongs to one game
++	m_mWarmongerHurryLogTurn.clear();
++
+ 	for(iI = 0; iI < m_pAIStrategies->GetNumEconomicAIStrategies(); iI++)
+ 	{
+ 		m_pabUsingStrategy[iI] = false;
+@@ -371,6 +377,8 @@ void CvEconomicAI::Serialize(EconomicAI& economicAI, Visitor& visitor)
+ /// Serialization read
+ void CvEconomicAI::Read(FDataStream& kStream)
+ {
++	m_iWarBudgetTurn = -1; // AI_AB_TEST (WarBudget): a loaded game recomputes
++
+ 	CvStreamLoadVisitor serialVisitor(kStream);
+ 	CvEconomicAI::Serialize(*this, serialVisitor);
+ }
+@@ -3196,6 +3204,67 @@ bool CvEconomicAI::IsGoldPurchaseAllowed(const CvCity* pCity, UnitTypes eUnit, B
+ 	return false;
+ }
+ 
++/// AI_AB_TEST (WarBudget, the lead's; War uses it for the build-up's army target): how many more paid units this civ can
++/// keep for iTurns turns, from its treasury and income, with their upkeep. BigArmy measured the honest cost (11 aggressors,
++/// RESULTS "Paying for BigArmy without the waiver"): unit upkeep 22 a turn in the window and 73 at war, against 7 and 25 left
++/// after buildings. The answer is the largest N with
++///     gold + iTurns x (net income before unit upkeep - upkeep of today's units - extra upkeep of N more) >= 0,
++/// where the extra upkeep comes from CP's own formula (CvTreasury::CalculateUnitCost, which grows faster than linearly).
++/// Negative when today's units already can't be kept that long: -N means N units too many. Any BigArmy waiver is ignored
++/// (the real upkeep is used). Cached for the turn.
++int CvEconomicAI::GetAffordableWarUnits(int iTurns) const
++{
++	const int iGameTurn = GC.getGame().getGameTurn();
++	if (m_iWarBudgetTurn == iGameTurn && m_iWarBudgetTurns == iTurns)
++		return m_iWarBudgetUnits;
++
++	CvTreasury* pTreasury = m_pPlayer->GetTreasury();
++	const int iGold = pTreasury->GetGold();
++	const int iUnitCostNow = pTreasury->CalculateUnitCost(-1, /*bIgnoreBigArmyWaiver*/ true);
++	// CalculateBaseNetGold has subtracted the upkeep actually charged (0 under BigArmy's waiver); add it back
++	const int iNetBeforeUnits = pTreasury->CalculateBaseNetGold() + pTreasury->CalculateUnitCost(-1, false);
++
++	// paid units today, as CalculateUnitCost counts them
++	const CvHandicapInfo& kHandicap = m_pPlayer->getHandicapInfo();
++	int iFreeUnits = kHandicap.getMaintenanceFreeUnits() + m_pPlayer->GetNumMaintenanceFreeUnits() + m_pPlayer->getBaseFreeUnits();
++	iFreeUnits += m_pPlayer->isHuman(ISHUMAN_HANDICAP) ? 0 : GC.getGame().getHandicapInfo().getAIMaintenanceFreeUnits();
++	const int iPaid = max(0, m_pPlayer->getNumUnits() - iFreeUnits);
++	const int iBase = pTreasury->CalculateUnitCost(iPaid, true);
++	const int iTurnsUsed = max(1, iTurns);
++
++	// can we keep iPaid + N units for iTurns turns? (N may be negative)
++	int iAnswer = 0;
++	const int iMargin = iGold + iTurnsUsed * (iNetBeforeUnits - iUnitCostNow);
++	if (iMargin >= 0)
++	{
++		for (int iExtra = 1; iExtra <= 200; iExtra++)
++		{
++			const int iMore = pTreasury->CalculateUnitCost(iPaid + iExtra, true) - iBase;
++			if (iMargin - iTurnsUsed * iMore < 0)
++				break;
++			iAnswer = iExtra;
++		}
++	}
++	else
++	{
++		iAnswer = -iPaid;
++		for (int iFewer = 1; iFewer <= iPaid; iFewer++)
++		{
++			const int iLess = iBase - pTreasury->CalculateUnitCost(iPaid - iFewer, true);
++			if (iMargin + iTurnsUsed * iLess >= 0)
++			{
++				iAnswer = -iFewer;
++				break;
++			}
++		}
++	}
++
++	m_iWarBudgetTurn = iGameTurn;
++	m_iWarBudgetTurns = iTurns;
++	m_iWarBudgetUnits = iAnswer;
++	return iAnswer;
++}
++
+ /// AI_AB_TEST: buys the wanted settler as soon as the new AI can pay for it
+ static void BuyExpansionSettler(CvPlayer* pPlayer)
+ {
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.h b/CvGameCoreDLL_Expansion2/CvEconomicAI.h
+index 8123997..641d3b2 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.h
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.h
+@@ -221,6 +221,8 @@ public:
+ 	bool IsSavingForExpansionSettler();
+ 	// AI_AB_TEST candidate (WarmongerHurry): may this city's owner buy this item with gold? (CvCity::IsCanPurchase)
+ 	static bool IsGoldPurchaseAllowed(const CvCity* pCity, UnitTypes eUnit, BuildingTypes eBuilding, ProjectTypes eProject, bool bLog);
++	// AI_AB_TEST (WarBudget): how many more paid units the treasury plus iTurns turns of income pay for (negative: over budget)
++	int GetAffordableWarUnits(int iTurns) const;
+ 	void StartSaveForPurchase(PurchaseType ePurchase, int iAmount, int iPriority);
+ 	bool IsSavingForThisPurchase(PurchaseType ePurchase);
+ 	void CancelSaveForPurchase(PurchaseType ePurchase);
+@@ -287,6 +289,10 @@ private:
+ 
+ 	// AI_AB_TEST (WarmongerHurry): last turn a blocked purchase was logged, per city and item (logging only, not saved)
+ 	std::map<int, int> m_mWarmongerHurryLogTurn;
++	// AI_AB_TEST (WarBudget): GetAffordableWarUnits' answer, cached for one turn and one iTurns (not saved: recomputed)
++	mutable int m_iWarBudgetTurn;
++	mutable int m_iWarBudgetTurns;
++	mutable int m_iWarBudgetUnits;
+ 
+ 	// DoTurn() sub-functions
+ 	void DoHurry();
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 017aca2..64a053c 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33441,6 +33441,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"NoObsoleteHurry", true},
+ 	{"PeaceHurry", false},
+ 	{"WarmongerHurry", true},
++	{"WarBudget", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 5b8b2b6..a4f106f 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -277,6 +277,8 @@ enum CandidateFixTypes
+ 	FIX_PEACE_HURRY,		// Economy (Diplomacy's finding): at peace and out of danger, gold doesn't hurry combat units. Off in the bundle
+ 	FIX_WARMONGER_HURRY,	// Economy (the user's rule): a candidate warmonger spends gold on production only for settlers and siege units.
+ 							// In the bundle (the user's call, untested)
++	FIX_WAR_BUDGET,			// Economy and War (the lead's): a timing attacker's army target is what its gold pays for (treasury + 20 turns
++							// of income, upkeep included), from the normal army up to BigArmy's size, with no upkeep waiver. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+-- 
+2.43.0
+
