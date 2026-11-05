@@ -1652,6 +1652,45 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: the 850e142 bully games, and a fix to my log script (Diplomacy session, 2026-11-05 10:45am ET)
+
+**1. These games can't test the coalition flags or `StaleWarPeace`.**
+- **Why:** the runner gives the role fixes to the aggressor only (`Fixes = none`, `OthersBase` empty in
+  `Run-Games.log`). Every other civ runs CP, so none of my bundle flags is on for the civs that would gang up or make
+  peace.
+- **Nothing to test anyway:** no city was captured, so warmonger threat stayed NONE for every pair on every turn of the
+  6 logged games (`0FAA4CEA` to `101B5567`). Without a threat, no coalition forms.
+- **What the check needs:** a capturing aggressor (the BigArmy block may give one) and the bundle on for the other civs.
+
+**2. In 3 of the 6 logged games a neighbour declared war on the aggressor first, during its build-up.**
+
+| Game | Aggressor | Its approach to the target before the war | Who declared, and when | War length |
+|---|---|---|---|---|
+| `0FD69D1F` | Spain | WAR_FRIENDLY toward Indonesia from T58 | Indonesia, T90 (WAR toward Spain since T47); then the Maya and Mongolia | 52 turns |
+| `10042DBD` | Japan | WAR_FRIENDLY / DECEPTIVE toward Carthage T76-T90, then GUARDED (opinion ENEMY) | Carthage, T113 | 37 turns |
+| `0FED651B` | Assyria | WAR_NEUTRAL toward Indonesia from T36 | Indonesia, T80 | 32 turns |
+
+- **The runner's "NO war declared" undercounts wars.** It is true for Spain and Japan, yet both spent 37-52 turns at
+  war with the civ they were preparing against. The funnel's "No war declared" row should split off "at war, declared
+  on first": those games had wars, and the question there is why the aggressor took nothing as the defender.
+- **None of this comes from the aggressor's diplomacy holding back.** Each aggressor already had a WAR approach toward
+  its target (or DECEPTIVE, Japan's flip-flop T83-T87). With every other neighbour it was FRIENDLY or neutral, never
+  AFRAID. Waiting is the military timing (Greece held a WAR approach toward a PATHETIC Portugal for 49 turns,
+  T91-T140, before declaring), which is War's area and what this block tests.
+
+**3. Fix to `tools/ab/diplo_logs.py`: it read only about half the rows.**
+- **The bug:** it kept rows whose third column was `Diplomacy`. That column is the observer's grand strategy, so it
+  dropped every civ playing Conquest, Culture or Spaceship.
+- **The fix:** keep every row that has the `W_THT` column.
+- **What changes in my 2026-11-03 entry on War's 3 King games** (rerun on the same logs):
+  - Point 1 still holds: warmonger threat NONE everywhere.
+  - "No pair was ever AFRAID" was wrong. Babylon was AFRAID of the Celts for 10 turns in `02F5C9E3` (IMMENSE/POWERFUL,
+    opinion ENEMY) after their war at T52. So AFRAID can come from strength alone, without conquests, which fits the
+    diagnosis.
+  - Point 3's `EasyTarget` proxy finds more cases: 22, 17 and 17 pairs (not 15, 5 and 7).
+  - The demands, joint-war and deal counts came from the messages log and don't change.
+  - The other numbers in that entry are now in the script's output only.
+
 ### Where the AIs waste gold: all logged games (Diplomacy session for the user, 2026-11-05)
 
 **Data:** 112 logged games (`PlayerHomelandAILog.csv`, which logs purchases and savings) and the `Gold` column of every
@@ -2027,7 +2066,9 @@ every turn), `DiplomacyAI_Messages_Log.csv` and the results rows. Script:
 `tools/ab/diplo_logs.py <results folder>`. No city changed hands, so these show B's diplomacy without a conqueror.
 
 **1. The AFRAID diagnosis can't be checked here, and nothing contradicts it.**
-- **Warmonger threat was NONE** for every pair on every turn of all three games, and no pair was ever AFRAID.
+- **Warmonger threat was NONE** for every pair on every turn of all three games. (Corrected 2026-11-05: the script
+  read only half the rows, and one pair was AFRAID for 10 turns; see "the 850e142 bully games, and a fix to my log
+  script".)
   That's what the code predicts: threat comes from conquests, and AFRAID needs a POWERFUL or IMMENSE neighbour.
 - **Strength estimates stayed between PATHETIC and Strong:** no civ pulled far ahead by T150.
 - **The check needs the bully test with a conqueror that takes cities** (War's work). Watch `W_THT` and `AFRAID` in

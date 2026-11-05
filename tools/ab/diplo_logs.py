@@ -8,7 +8,7 @@ for g in games:
     with open(os.path.join(d,'DiplomacyAI_Log.csv'), encoding='latin-1') as f:
         for line in f:
             p = [x.strip() for x in line.split(',')]
-            if len(p) < 19 or p[2] != 'Diplomacy' or p[3].startswith('---'): continue
+            if len(p) < 19 or not p[17].startswith('W_THT') or p[3].startswith('---'): continue
             rows.append(dict(turn=int(p[0]), obs=p[1], tgt=p[3], den=p[5], war=p[6]=='AT WAR', cw=p[7],
                 app=clean(p[8]), opn=clean(p[9]).replace('OPN ',''), prx=p[10].replace('PRX ',''),
                 wst=p[11].replace('WST ',''), estr=clean(p[12]).replace('ESTR ',''), mstr=clean(p[13]).replace('MSTR ',''),
