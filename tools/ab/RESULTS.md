@@ -1924,6 +1924,50 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: BigArmy mid-block, 11 first games: size is the lever (Nov 5, about 1:57pm ET)
+Data: ab-1750459 (bullyabort13 + bullygreedy15), 11 first games and 5 flipped, against 850e142 (15 first) and f6d1e84
+(28 first). Script: `tools/ab/bigarmy_block.py` (uses attack_funnel.py and walls.py).
+
+| First games | f6d1e84 (28) | 850e142 (15) | **BigArmy (11)** | BigArmy's flips (5, CP) |
+|---|---|---|---|---|
+| Games with a capture (cities) | 3 (3) | 1 (1) | **5 (9)** | 0 (0) |
+| War in | 22 | 11 | **11** | 3 |
+| Attacks delivered a game (games with 2+) | 1.4 (12) | 1.1 (4) | **4.3 (11)** | 1.2 (2) |
+| Capture attempts a game | 3.4 | 2.3 | **21.2** | 1.4 |
+| Attempts where the city lost HP; mean damage | 38%; 10.2 | 61%; 21.4 | 38%; 9.3 | 28%; 4.6 |
+| Capture plans: units in the sim (median); plans with a city attack | – | 4; 52% | 7; 52% | 4; 60% |
+
+**The army.** 15 declarations:
+- land median 20, which meets the target (siege + others median 20);
+- siege median 2 against a target of 4. Fully ready (both met) in only 2: the first war usually comes before the
+  siege train, from CP's own WAR approach and MarchOn.
+- no "bankruptcy skipped" lines.
+
+**Read:**
+- **Size is the lever.** With the doubled army, 5 of 11 games captured (9 cities), against 3 of 28 on f6d1e84, 1 of
+  15 on 850e142, and none of BigArmy's own CP flips.
+- **The attempts themselves didn't get better:** the city lost HP in 38% of them, mean 9.3, as on f6d1e84, and the
+  plans attack the city as often (52%). What changed is volume:
+  - 4.3 attacks delivered a game against 1.1–1.4, every game with 2 or more;
+  - 21 capture attempts a game against 2–3.
+  - The army survives the first wave and keeps coming back, which is the wave effect the funnel pointed at.
+- **The cost:**
+  - At war, the waived upkeep was a median 71 gold a turn (750 turns logged); at peace it was 7–13 in the window.
+  - Pillage and plunder paid 64 + 336 gold a game: a few turns' worth, far from 71 a turn.
+  - So pillaging can't fund an army this size.
+
+**What follows (the lead's rule: if captures jump, size is the lever, and Economy and War make it reachable
+honestly):**
+- **Economy:** about 70 gold a turn of upkeep at war is the gap to fund (gold buildings, trade, war-time taxes...).
+- **War: cheaper armies, sustained.**
+  - Waves: SecondWave and SiegeFeed keep units flowing.
+  - Composition: siege first; the declaration waits for the siege train (2 of 15 were ready).
+  - Using unspent gold: Japan sat on 638.
+- **The capture-plan line (half the plans don't attack the city)** stays the open question at the walls; with more
+  attempts, the per-attempt rate matters less than it seemed.
+
+The block runs to 20 games each; the full read follows.
+
 ### War: WindowUntilReady block (850e142, ended early) and the first BigArmy game (Nov 5, about 11:53am ET)
 **850e142 (bullyabort12 + bullygreedy14, 15 first games) against f6d1e84 (28 first games).** Small block; signals only.
 
