@@ -1936,12 +1936,33 @@ positions, set-up moves, or its scoring of attacks against cities.
     formation's 6 required slots couldn't be met, the same as the six e4d5785 games behind SecondWave. Here it failed
     before the operation even formed, so no NoUnits lines.
   - SiegeDominated looked at Te-Moak, Guangzhou and Pohokwi with 1 unit and correctly stayed skipped.
-- **Read:**
-  - The difference is the follow-up. CP's flip kept forming 6–8 unit attacks and found a soft city on a neighbour
-    (FocusedWar keeps the role off non-targets). The role game's war on its target got one wave.
-  - SecondWave (in f6d1e84, running now) is the fix for the missing waves.
-  - The role's 6-required-slot formation (SiegeFormation) against CP's 5 also makes each wave harder to start; if
-    f6d1e84 still shows single waves, that is the next thing to look at.
+- **Read, corrected after a closer look (the user didn't buy the first one).** The first read blamed missing second
+  waves. The role game's war was lost long before that:
+  - **The war came on someone else's clock.** The Ottomans agreed a coop war against the Shoshone at T63 (PREPARING),
+    and it declared itself at T73. FocusedWar allows coop wars against the committed target, so Mongolia went to war
+    with what it had: attack 1659 was 3 Warriors, 2 Archers and Kublai (a Great General), no siege unit.
+  - **The window built almost nothing.**
+    - TimingBuildup's window ran T42–T52 (10 turns on this speed). Only the capital built military: 2 Warriors and an
+      Archer, with unit weights about 4,900 against 450 for buildings.
+    - Turfan skipped every military unit as "badtimeorplace": CP's "no units in underdeveloped cities" rule, under 2
+      buildings.
+    - Beshbalik skipped them as "nosupply" at T53. That is the recommended army size, not real supply: the window's
+      cities+6 target ends with the window, and the attack phase falls back to CP's small early target.
+    - Hsia couldn't afford buildings (−7 gold a turn).
+  - **At Te-Moak the army never attacked.**
+    - The zone was EXPLOIT_FLANKS (not ours), so SiegeClose and SiegeDominated didn't apply; the city stayed at 200/200
+      from T81 to T90.
+    - From T93 the Shoshone had 6 units there (enemy 13859 against our 4038), and they killed the army: 8 units lost
+      T91–T100, 6 of them to the Shoshone.
+    - The flip lost none.
+  - **The flip's army was no better** (Warriors, a Swordsman, a Catapult, an Archer, a general). CP kept it alive, and
+    its own target choice found Troyes, a French city soft enough for 115 expected damage a turn.
+- **What this points at:**
+  1. A coop war against the committed target shouldn't declare before the army is ready.
+  2. The window's push (army target and unit weights) should last until the army is ready, not 10 turns.
+  3. Young cities can't build military at all during the window.
+
+  SecondWave can't help an army that is already dead.
 
 ### War: the lead's regression flag (declared in 1 of 4 first games on ab-7bb7885, 11 of 12 on e4d5785): 0E62C44F read (Nov 4, about 11:16pm ET)
 **0E62C44F (Aztecs, PC 1):**
