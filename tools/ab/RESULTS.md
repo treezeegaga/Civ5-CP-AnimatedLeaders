@@ -1642,6 +1642,99 @@ against the code on `claude/ab-c1` `87836d4`.
   buildings bought (homeland "Buying" lines).
 - **Status:** coded, patch 0022 on `claude/ab-c1` `87836d4` (with SettlerSaveRealistic and NoObsoleteHurry), not built.
 
+### Paying for BigArmy without the waiver: the numbers (Economy, Nov 5, 2:15pm ET)
+
+The lead's question: BigArmy doubled the aggressor's army with its upkeep waived, and the aggressor captured in 5 of
+11 games (9 cities), against 3 of 28 before. What would that army cost honestly, and which flags close the gap?
+
+**Data:** the 11 BigArmy aggressors with logs in `bullyabort13` and `bullygreedy15` (build `ab-1750459`; the
+flipped games have no BigArmy civ). Logs: `logs_10626C4E` ... `logs_118B38C9` on `claude/sleepy-hopper-x77moh`.
+Script: `tools/ab/scripts/gold/bigarmy_gold.py <folder with the logs_* folders>`.
+
+How the war log line reads: "BigArmy: upkeep waived X (phase P, gold G, Y a turn)".
+- X: the unit upkeep that would have been paid (`CalculateUnitCost(-1, true)`).
+- Y: net gold per turn with the waiver, so buildings and everything else are already in it.
+- Real net without the waiver: Y − X.
+
+**1. The cost per turn**, turn-weighted over all 11 games:
+
+| Phase | Games | Turns | Unit upkeep (waived) | Net with the waiver | Real net |
+|---|---|---|---|---|---|
+| Window | 11 | 370 | 21.5 | +7.0 | **−14.5** |
+| March (army moving, no war yet) | 5 | 42 | 59.1 | +20.2 | **−38.9** |
+| War | 11 | 750 | 72.6 | +25.1 | **−47.5** |
+
+War's estimate of about 70 a turn at war is right. The gap is about **48 gold a turn at war and 15 in the window**.
+
+**2. How long it has to be paid.**
+
+| Stretch | Typical length | Real deficit |
+|---|---|---|
+| Window | median about 35 turns (19-48) | median 260 gold (28-2,157) |
+| Declaration to first capture attempt | usually 1-6 turns (Japan 13, Assyria 6, Celts 9) | |
+| Window start to first capture attempt | | median 400 gold (88-1,094) |
+| Whole run, window to T150 | 60-100 turns at war | median 3,867 gold (1,569-6,009) |
+
+The 5 capturing games took their first city within about 6-40 turns of declaring (CSV turn marks: by T60, T70,
+T100, T110, T110).
+
+**So the build-up and the first strike are affordable. The long war after it isn't:** 60-100 turns at −48 a turn.
+
+**3. Income and the treasury.**
+- Net income with the waiver: +7 a turn in the window and +25 at war. That's after building upkeep, so it's what's
+  left for units.
+- Treasury when the window opened: 13 to 258 (median about 180).
+- Pillage and plunder: 0 to 1,907 per game (median 226), about 3 a turn over the run. Japan (110B2E42, 1,907) and
+  Songhai (10797AB4, 1,131) are the outliers; both captured.
+
+**4. Where the waived gold went.** Net with the waiver summed over each run, plus pillage, minus the treasury change:
+
+| | Per game |
+|---|---|
+| Spent in total | 960-3,330 (median about 1,900) |
+| Logged purchases | 0-2,460 (median 195). Biggest: Triremes 960, WarChest catapults 840, WarChest Warriors 700, settlers 740, knights and Mandekalu 660 |
+| The rest: upgrades (6-20 per game, median 8), tiles, city-state gifts | about 1,000-3,300 |
+
+The Warriors are gone with patch 0024 (`NoObsoleteHurry`). Triremes, knights and pikemen are gone for warmongers
+with `WarmongerHurry`.
+
+All of this was spent out of the waived gold, though. Without the waiver it wouldn't exist. **Cutting extras doesn't
+close the gap. The gap is structural: about 25 a turn left after buildings, against about 73 of unit upkeep at war.**
+
+**5. What each flag can close.** Rough, from the numbers above.
+
+| Lever | Flag (status) | Gold it brings | Per turn at war |
+|---|---|---|---|
+| Treasury at the window's start | `WarChest` saving at peace (role) | +200-500 once (5-10 a turn from T30) | covers 5-10 war turns |
+| Income before the window | `WarGold` (role) | +5-10 a turn (Markets 40+ turns sooner) | +5-10 |
+| No gold on Warriors or non-siege units | `WarmongerHurry`, `NoObsoleteHurry` (bundle) | keeps the window's pot | 0 (protects the treasury) |
+| Fewer workers | `LeanBuilders` (off) | 2-3 fewer workers ≈ 3-5 a turn | +3-5 |
+| City-state tribute | `WarChestTribute` (Diplomacy) | not measured; one demand ≈ 50-150 | +3-8? |
+| Pillage and plunder | (War's tactics) | median 226 per game | +3 |
+| **All of it** | | | **about +15-25 a turn, and 400-900 gold at the start** |
+
+**Verdict:** with all of this, the honest budget pays for the window, the march, and roughly **15-25 turns of war**
+at BigArmy's size: 900-1,500 gold. That's about the stretch in which the 5 capturing games took their cities. **It
+doesn't pay for the 60-100 turns of war that follow.** No set of economy flags will (that would need another +50
+gold a turn). After about 20 turns at war, either the army shrinks to what income pays for, or the war ends.
+
+**Proposal: the smallest set.**
+1. **Aggressor role:** `WarChest` and `WarGold` (both in), plus `LeanBuilders` and `WarChestTribute`. All built.
+2. **Already in the bundle:** `WarmongerHurry` and `NoObsoleteHurry`.
+3. **One new flag, `WarBudget` (Economy and War together):** the build-up target scales with what the civ can pay.
+   - Target: 2x the normal army only when treasury + 20 × (net income + upkeep of the units still to come) stays
+     ≥ 0. Otherwise the biggest army that passes that test, but never below the normal army.
+   - Economy writes the test (`CvEconomicAI::GetAffordableWarUnits(int iTurns)`); War uses it in
+     `GetTimingBuildupFieldTarget` in place of BigArmy's flat ×2.
+   - Then CP's upkeep guard (no units under 9 turns to bankruptcy) and the deficit rule stay as they are, with no
+     waiver.
+4. **For War and Diplomacy, not Economy:** after the first captures, take peace (or at least stop building) once
+   real net income is negative and the treasury is under 10 turns of it. Otherwise CP's deficit rule disbands the
+   army anyway, around war turn 25.
+
+Not proposed: selling buildings, gold focus, lower building upkeep. Building upkeep is already netted out of the +25,
+and none of them comes close to 48 a turn.
+
 ### WarmongerHurry: a warmonger buys only settlers and siege units (Economy, patch 0023, the user's rule)
 The user (via the lead, Nov 5, 10:34am ET): "I don't love hard rules, but I kind of want to hard-rule that warmonger
 civs are only allowed to hurry two production items: settlers and siege weapons."
