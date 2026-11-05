@@ -1924,6 +1924,33 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: WarBudget, War's half: the army target is what gold keeps (Nov 5, about 2:30pm ET)
+The lead's honest package for the block after BigArmy. Economy's half is GetAffordableWarUnits (patch 0025, a21e842):
+how many more paid units the treasury plus 20 turns of income can keep.
+
+**War's half (ai/war dbe68ec0, on claude/ab-c1 0561379 plus 0025):**
+- The field target is min(2 x normal, max(normal, field units now + affordable)), with normal = cities + 4. It runs
+  from the normal army up to BigArmy's size, with no waiver and no lifted build caps.
+- It is counted from today's army, not the lead's normal + min(normal, affordable). Affordable falls by one with each
+  unit built, so added to a fixed normal, the target would shrink as the army grows. Counted from today's army, it
+  stays put.
+- "Ready" then means gold can't keep another unit, or the army is at twice normal. WindowUntilReady's 2 windows
+  bound it; the gold pause and CP's upkeep guard still apply.
+- Logs: "WarBudget: army ..." with "affordable N more", in the window, at the declaration and at the first capture
+  attempt. bigarmy_block.py reads both names.
+
+**Hypothesis:**
+- Economy measured 22 a turn of upkeep in the window and 73 at war for BigArmy's armies, against +7 and +25 left after
+  buildings. So 20 turns should afford roughly 8 to 10 extra units at the window's start: an army near BigArmy's land
+  median of 20.
+- Confirm: land at the declaration at or above 15 (median), and captures at or above half of BigArmy's rate (5 of 11)
+  with no waiver.
+- Kill: land at the declaration under 12, or the army shrinks at war (land at +20 below the declaration), or captures
+  at f6d1e84's rate (3 of 28).
+- Read with ArmyQuality and ArmyScrap: the field count and the gold both change under them.
+
+LEAD: ai/war dbe68ec0 is 0561379 + Economy's 0025 + War's WarBudget half. Merge once CI is green (I'll confirm here).
+
 ### War: without the waiver, gold holds the army at 9 to 10 units for 40 turns of war (Nov 5, about 2:15pm ET)
 The lead asked for idle gold to go to the army. The results CSVs (aggressor rows every 10 turns; first games only) say
 there is no idle gold without the waiver.

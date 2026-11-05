@@ -17,7 +17,7 @@ for gdir in sorted(glob.glob('tools/ab/results/logs_*')):
     A['pill'].append(s['loot']['pillages']); A['pgold'].append(s['loot']['pillage gold']); A['plgold'].append(s['loot']['plunder gold'])
     ours=af.log_name_matches(info['civ'])
     for t,r in walls.our_lines(os.path.join(gdir,'PlayerTacticalAILog.csv'),ours):
-        m=re.search(r'BigArmy: army at the declaration on .+?: (\d+) land \((\d+) siege; target (\d+) siege, (\d+) others',r)
+        m=re.search(r'(?:BigArmy|WarBudget): army at the declaration on .+?: (\d+) land \((\d+) siege; target (\d+) siege, (\d+) others',r)
         if m: A['decl'].append(tuple(map(int,m.groups())))
         m=re.search(r'BigArmy: upkeep waived (\d+) \(phase 5',r)
         if m: A['waivedwar'].append(int(m.group(1)))
