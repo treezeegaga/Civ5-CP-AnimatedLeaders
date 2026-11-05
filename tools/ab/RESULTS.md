@@ -1924,6 +1924,22 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: CSAfterWar, city-state conquest waits while the war on the committed major is building or on (the lead's request, 10:55pm ET) (Nov 4, about 10:55pm ET)
+**Seen:** in 0E42C140 (ab-7bb7885) Mongolia's attacks on its committed target Denmark had 3 units each (four of them,
+T77–T132). At the same time, attacks on Zurich, a city-state, got 6 and 7 units (2708 at T112, 3653 at T141). CSConquest
+(the user's: "true bullies take city-states") makes WAR the top approach toward a weak, close, unguarded city-state
+whenever we're at war with no major. That includes the peace phase, while the army for the committed major is
+being built and gathered, so the two compete for the same units. The lead: "not at the cost of the main war".
+
+**Hypothesis (flag CSAfterWar, War; shared: CvDiplomacyAI::SelectBestApproachTowardsMinorCiv):** while a war on the
+committed conquest target is building or under way, a city-state we're not already at war with gets no WAR
+approach: CSConquest's boost is skipped and CP's own WAR weight toward it is zeroed (FocusedWar does this for other
+majors). "Building or under way" means TimingBuildup's window or attack phase, an offensive operation against the
+committed target, or a war with it. Between wars and after them CSConquest works as before. An attack on a city-state
+already gathering is ended by CP's own minor approach logic once the approach isn't WAR, so its units go back.
+Expect: no city-state attacks while the window or attack on the major runs, bigger first armies against the major,
+and city-state captures still happening between wars.
+
 ### War: TargetHold, second part: the held target stays a war plan in DoUpdateWarTargets (the lead's read of 0E42C140, 10:46pm ET) (Nov 4, about 10:51pm ET)
 **The lead:** in 0E42C140 (ab-7bb7885, TargetHold on) Mongolia's sneak attacks on Denmark still ended DiploOpinionChange
 (T111, twice at T140), so TargetHold doesn't cover that. Also: window vs Egypt at T56 (paused 10 turns, units
