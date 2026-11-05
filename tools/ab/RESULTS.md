@@ -1940,6 +1940,8 @@ already gathering is ended by CP's own minor approach logic once the approach is
 Expect: no city-state attacks while the window or attack on the major runs, bigger first armies against the major,
 and city-state captures still happening between wars.
 
+Coded: `ai/war` `0ccd0e07e` (CI pending), on `61af66972` (merged by the lead in `claude/ab-c1` `ad5a2d8`).
+
 ### War: TargetHold, second part: the held target stays a war plan in DoUpdateWarTargets (the lead's read of 0E42C140, 10:46pm ET) (Nov 4, about 10:51pm ET)
 **The lead:** in 0E42C140 (ab-7bb7885, TargetHold on) Mongolia's sneak attacks on Denmark still ended DiploOpinionChange
 (T111, twice at T140), so TargetHold doesn't cover that. Also: window vs Egypt at T56 (paused 10 turns, units
@@ -1961,7 +1963,7 @@ is under way, as the returned target already does. A war still needs the army in
 window keep a weak army from declaring. Logs "CONQUEST: holding X as a war plan, attack under way" once a turn when this
 is what keeps it. TargetHold is in the role on ab-7bb7885, so its results so far are the first part alone.
 
-Coded: `ai/war` `61af66972` (CI pending), on `96332cc83` (SecondWave).
+Coded: `ai/war` `61af66972` (CI pending), on `96332cc83` (SecondWave); both merged by the lead in `claude/ab-c1` `ad5a2d8`.
 
 **On the lead's other point (SiegeArmy "too weak" for 20 turns against greedy civs):** that is the peace bar doing
 its job with a 3-unit army. The army was small because the window was paused 10 of its turns for gold ("units
