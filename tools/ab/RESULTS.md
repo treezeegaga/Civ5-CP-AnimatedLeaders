@@ -4084,7 +4084,7 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
-### Patterns, not whack-a-mole: the attack funnel over 60 logged games (lead, 2026-11-04 11:50pm ET)
+### Patterns, not whack-a-mole: the attack funnel over 60 logged games (lead, 2026-11-04 11:45pm ET)
 
 The user: "instead of trying to fix the individual problems that happen each match, we should be looking for patterns
 and trends that exist over multiple matches". New tool `tools/ab/attack_funnel.py`. It reads every `results/logs_*`
