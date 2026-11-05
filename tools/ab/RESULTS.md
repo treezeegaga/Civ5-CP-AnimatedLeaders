@@ -1759,6 +1759,74 @@ and none of them comes close to 48 a turn.
   turns at 0 gold; units disbanded for debt.
 - **Status:** coded, patch 0025 on `claude/ab-c1` `0561379` (after ArmyQuality and ArmyScrap), not built. Waits for War's half.
 
+### The honest package: why the aggressor's income is so small (Economy, first read, Nov 5, 6:30pm ET)
+
+The lead (6:07pm ET): WarBudget works, but the aggressor's income is tiny (Songhai +2 at the window's start, Assyria
++6 then −3), so the honest army stops at about 10 land units. Is the gap in income or in costs?
+
+**What the logs can show today.** No log shows gross income, building upkeep or unit upkeep. What there is:
+- the net gold per turn on every production choice (`GPT:` in the production log; with TrueGoldRate it's the real net);
+- the build lists;
+- the homeland log's trade-route lines.
+
+Script: `tools/ab/scripts/gold/aggr_income.py <folder with logs_*> ...`. Others are major civs only.
+
+**Data:** 4 package games (bullyabort14, bullygreedy16; windows opened T35-T46), plus the 11 BigArmy games for the
+turns before their windows. After the window, BigArmy's waiver inflates the aggressor's net.
+
+| | T30 | T40 | T50 | T75 | T100 |
+|---|---|---|---|---|---|
+| Package aggressor (4), median net | | +3 | 0 | −1 | +3.5 |
+| Package others (28) | +13 | +9 | +8.5 | +11.5 | +4 |
+| BigArmy aggressor (11), before its window | +2 | +3 | | | |
+| BigArmy others (77) | +9 | +8 | +7 | +7 | +6 |
+
+Cities with something in production (a rough count):
+- aggressor: 1.2 at T30, 2.0-3.0 at T40-50;
+- others: 1.0-1.4.
+
+So the aggressor has as many or more cities, and the gap (6-10 gold a turn) is already there at T30-T40, before
+the window and with a 3-unit army (WarBudget's first window line: 3-4 land units). **It isn't army upkeep.** Whether
+it's lower gross income or higher building and road costs, these logs can't say. Hence patch 0026, below.
+
+**What's missing early, for everyone, and most for the aggressor:**
+
+Trade routes. Caravans are offered from T37-T44, but the aggressor's cities skip them as "useless" because of CP's
+rule that a city of size 4 or less never trains a trade unit.
+
+| Aggressor | Caravan skipped "useless" by T80 | "badtimeorplace" | Caravans chosen by T80 |
+|---|---|---|---|
+| Huns | 19 | 5 | 0 |
+| Greece | 41 | 2 | 0 |
+| Songhai | 4 | 2 | 1 |
+| Assyria | 15 | 7 | 0 |
+
+Gold buildings: the first Market comes after T75 (0.2 chosen by T75, 3.2 by T100). WarGold's Currency comes after the
+book and the window's start, so it acts too late for this window.
+
+**Patch 0026 (logging only), `GoldBreakdown_Log.csv`.** One row per major AI every 5 turns:
+- cities, units;
+- gross income: city gold split into tiles, flat building gold, specialists, gold processes and modifiers; trade
+  routes; city connections; other (diplomacy, religion, minors);
+- costs: building upkeep, improvement and road upkeep, real unit upkeep;
+- net, treasury, gold buildings, trade units.
+
+No gameplay change. With it, the next block answers "income or costs" directly. The PCs need to keep the file with
+the other logs.
+
+**Proposed change for the block after the package: `WarTradeRoutes`** (one flag, Economy; not built yet).
+- A timing attacker at peace (planned or window, not at war with a major), with free trade-route slots, trains
+  caravans and cargo ships even in cities of size 4 or less (exempt from the "useless" rule), with +400 weight until
+  its slots are full.
+- Routes go to the best gold destination that isn't the war target (CP's own choice, minus the target, whose routes
+  would be plundered on declaration).
+- **Why this one:** a trade route is the only gold source open at T37-T45, when the window starts. Markets need
+  Currency, which comes later; gold focus would take production from the army the window builds. One early route
+  to a city-state or neighbour is worth roughly +3-6 gold a turn, so 1-2 routes would cover most of the measured
+  6-10 gap.
+- **Measure:** net gold at the window's start and at declaration (WarBudget's lines); WarBudget's "affordable"
+  count; land units at declaration; GoldBreakdown's trade-route column.
+
 ### WarmongerHurry: a warmonger buys only settlers and siege units (Economy, patch 0023, the user's rule)
 The user (via the lead, Nov 5, 10:34am ET): "I don't love hard rules, but I kind of want to hard-rule that warmonger
 civs are only allowed to hurry two production items: settlers and siege weapons."
