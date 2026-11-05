@@ -1691,6 +1691,29 @@ named, and reload the save before every try.
   - The demands, joint-war and deal counts came from the messages log and don't change.
   - The other numbers in that entry are now in the script's output only.
 
+**4. L3 (half the world's military counts as "close to world conquest") and the BigArmy block.**
+- **The rule (CP):**
+  - `GetDominationVictoryProgress` is the larger of the civ's share of the original capitals and its share of all
+    major civs' `GetMilitaryMight`.
+  - At 50 or more, `IsCloseToWorldConquest` is true.
+- **What that switches on.**
+  - **For the civ itself:** pursuit Domination, +9000 on the Conquest grand strategy, production valued ×2.
+  - **For every other civ:** it's a victory concern. They make opportunity attacks on it, rank it biggest competitor
+    and refuse trade deals with it (`CvDealAI` ~2128).
+- **How often it happens now:** rarely. The results CSVs' `Military` column is `GetMilitaryMight`. Across 458 logged
+  games, one civ reached 50% of the world's might once (Venice, tall, T150, `0EE4DE74`). The bully aggressor's best
+  share from T80 on is a median 20%, 90th percentile 31%, max 47% (228 games).
+- **What BigArmy changes:**
+  - **How often it would fire:** an exactly doubled army crosses 50% whenever the aggressor already has 33% or more,
+    which is 13 of those 228 games. Waiving its costs could add more.
+  - **What the block would measure in those games:** army size, plus the aggressor's own conquest push, plus every
+    other civ treating it as a near-winner.
+  - **How to read it:** split the block's games by whether the aggressor's `Military` share crossed 50% at any logged
+    turn. That's post hoc from the CSV, with no new logging. I'll run the split when the block's results are in.
+  Scripts: `tools/ab/scripts/diplo/military_share.py` and `aggressor_share.py`, each taking a folder of results CSVs.
+- **L3 itself waits:** in normal test games it almost never fires. My planned cap is military share counting only up
+  to twice the share of original capitals held. It stays planned, with the coalition flags, until captures are common.
+
 ### Where the AIs waste gold: all logged games (Diplomacy session for the user, 2026-11-05)
 
 **Data:** 112 logged games (`PlayerHomelandAILog.csv`, which logs purchases and savings) and the `Gold` column of every
