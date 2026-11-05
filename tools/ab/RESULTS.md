@@ -1924,6 +1924,37 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: BigArmy, a diagnostic flag, never for the bundle (the user and the lead, 8:20am ET) (Nov 5, about 8:27am ET)
+**The question:** is the attack failing because the army is too small, or because of how it fights at the walls?
+- The user: "a warmonger with 7 super greedy civs, a fox in the henhouse, and they still can't capture cities."
+- CP's AI captures in 2 of 27 flipped games, ours in 3 of 27.
+- 4 of 112 capture attempts were expected to reach the city's HP.
+- 46 "too weak" give-ups in the last block.
+
+**BigArmy (flag; War; test only, never in the bundle or a style), for a TimingBuildup aggressor:**
+- **Twice the ready army:** 4 siege units and 2 x (cities + 4) others, against 2 and cities + 4. This applies to
+  IsTimingBuildupArmyReady and GetTimingBuildupUnitsWanted, and through them the declaration, WindowUntilReady,
+  CoopWhenReady and WarChest's purchases. It also covers the window's siege weight (+4000 until 4 siege) and its
+  recommended army size.
+- **Time to build it:** the window lasts until the army is ready, up to 4 windows; the plan goes back to peace after 5.
+- **The window's build caps are lifted** for land combat units: CP's under-2-buildings rule, the
+  9-turns-to-bankruptcy upkeep guard, and the window's own pause for gold. It may go into debt.
+- **Nothing else changes.** A capture difference is then about army size.
+- **Logs:** "BigArmy: army <when>: n land (s siege; target ...), gold G, X a turn: <unit types>", logged:
+  - each window turn;
+  - at the declaration on a major;
+  - at the first capture attempt on each city, with the units in reach.
+
+**How it's read (the lead):**
+- If captures jump, size is the lever, and Economy and War make it reachable honestly.
+- If they stay rare with a big army, the siege/tactical code is the blocker, and that is War's next study.
+
+**A caveat:** in debt the game itself disbands units (Civ V's negative-treasury rule), which no flag lifts. The window
+log's gold column shows whether that happened; if it did, the army size at the declaration line is what was tested.
+
+Coded: `ai/war` `0ed387c16` on `claude/ab-c1` `850e142f1` (a fast-forward), CI pending. Runs as a 20-game block
+(RoleFixes + BigArmy) after the WindowUntilReady block.
+
 ### War: the f6d1e84 block against the earlier builds (first games); SiegeVolley withdrawn (Nov 5, about 1:56am ET)
 **Data:**
 - **f6d1e84 (bullyabort11, bullygreedy13):** 10 first games, 2 flipped.
