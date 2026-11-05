@@ -1,221 +1,228 @@
 {
  "rows": [
   {
-   "section": "flag",
+   "section": "headline",
    "order": 1,
-   "name": "TimingAttack",
-   "detail": "In the bully conquest test on PC 1 now (the aggressor runs it with DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff). Civs barely fought in screening, so it couldn't be judged there.",
-   "state": "testing"
+   "name": "Now",
+   "detail": "Both PCs play a frozen 20-game block on build 850e142, which adds one change: the aggressor's build-up lasts until its army is ready. The last block showed the pattern to beat: the aggressor goes to war in most games but rarely takes a city, because its army is too small at the walls.",
+   "state": "running"
   },
   {
-   "section": "flag",
+   "section": "tile",
+   "order": 1,
+   "name": "Testing now",
+   "value": "850e142: build-up until the army is ready"
+  },
+  {
+   "section": "tile",
    "order": 2,
-   "name": "DeclareTiming",
-   "detail": "In the bully conquest test on PC 1 now.",
-   "state": "testing"
+   "name": "Wars, last block",
+   "value": "22 of 27 games (13 of 27 without our fixes)"
   },
   {
-   "section": "flag",
+   "section": "tile",
    "order": 3,
-   "name": "SiegeBook",
-   "detail": "In the bully conquest test on PC 1 now; its weak screen rank is from games with almost no wars.",
-   "state": "testing"
+   "name": "Captures, last block",
+   "value": "3 of 27 games (2 without)"
   },
   {
-   "section": "flag",
+   "section": "funnel",
+   "order": 1,
+   "name": "No war declared",
+   "detail": "no attack formed, or attacks but no declaration",
+   "old": 7,
+   "cur": 5,
+   "new": "…"
+  },
+  {
+   "section": "funnel",
+   "order": 2,
+   "name": "At war, never in reach of a city",
+   "detail": "the army never got a city in range",
+   "old": 0,
+   "cur": 3,
+   "new": "…"
+  },
+  {
+   "section": "funnel",
+   "order": 3,
+   "name": "At war, never tried a capture",
+   "detail": "units held back: the area around the city was enemy-held",
+   "old": 23,
+   "cur": 6,
+   "new": "…"
+  },
+  {
+   "section": "funnel",
    "order": 4,
-   "name": "SiegeTechs",
-   "detail": "In the bully conquest test on PC 1 now.",
-   "state": "testing"
+   "name": "Tried, took nothing",
+   "detail": "capture attempts that didn't do enough damage",
+   "old": 17,
+   "cur": 11,
+   "new": "…"
   },
   {
-   "section": "flag",
+   "section": "funnel",
    "order": 5,
-   "name": "DealExploits",
-   "detail": "In C8 (passed with the top five); its own gainer test is next on a free PC.",
-   "state": "in C8"
+   "name": "Took a city",
+   "detail": "",
+   "old": 3,
+   "cur": 3,
+   "new": "…"
   },
   {
-   "section": "flag",
+   "section": "session",
+   "order": 1,
+   "name": "Lead",
+   "detail": "Runs the tests and reads results across many games, not one (your rule). Built the attack funnel below. Freezes each build for a 20-game block.",
+   "chat": "Civ V AI optimization experiment lead",
+   "state": "running"
+  },
+  {
+   "section": "session",
+   "order": 2,
+   "name": "War",
+   "detail": "Read the last block across all games: attacks at the walls improved (damage per attempt about 3x), but armies are too small before the war. Its WindowUntilReady fix is the one change being tested.",
+   "chat": "Civ V AI: War session",
+   "state": "waiting"
+  },
+  {
+   "section": "session",
+   "order": 3,
+   "name": "Diplomacy",
+   "detail": "GreedyWideDeals (a wide greedy civ out of room trades more) waits for a test.",
+   "chat": "Civ V AI: Diplomacy session",
+   "state": "waiting"
+  },
+  {
+   "section": "session",
+   "order": 4,
+   "name": "Personality",
+   "detail": "Greedy wide and tall are built and wait for the trio and matchup tests.",
+   "chat": "Civ V AI: Personality session",
+   "state": "waiting"
+  },
+  {
+   "section": "session",
+   "order": 5,
+   "name": "Economy",
+   "detail": "WarGold and the war chest are in the test. LeanBuilders and WondersForVictory wait for a normal test after the attack work.",
+   "chat": "Civ V AI: Economy & victory session",
+   "state": "waiting"
+  },
+  {
+   "section": "session",
    "order": 6,
-   "name": "PolicyPrereqDepth",
-   "detail": "Passed with the top five and the bug-fix bundle.",
-   "state": "in C8"
+   "name": "PC runner",
+   "detail": "PC 1 (BOX): attack test vs normal civs on 850e142 (bullyabort12), 20 games.",
+   "chat": "Civ V AI optimization PC runner",
+   "state": "running"
   },
   {
-   "section": "flag",
+   "section": "session",
    "order": 7,
-   "name": "LosingWarBuildings",
-   "detail": "Passed with the top five and the bug-fix bundle.",
-   "state": "in C8"
+   "name": "PC runner 2",
+   "detail": "PC 2 (TREEDESKTOP): attack test vs greedy civs on 850e142 (bullygreedy14), 20 games. Its Civ log archive now lives on D:.",
+   "chat": "Civ V AI optimization PC runner 2",
+   "state": "running"
   },
   {
-   "section": "flag",
-   "order": 8,
-   "name": "SettlersBeforeWonders",
-   "detail": "Ruled obviously right by the user (two extra cities beat Stonehenge): no single-flag test.",
-   "state": "in C8"
+   "section": "testflag",
+   "order": 1,
+   "name": "WindowUntilReady",
+   "owner": "War",
+   "detail": "The build-up lasts until the army is ready (2 siege units, cities + 4 others), up to 2 build-up periods.",
+   "test": "Being tested now, both PCs.",
+   "state": "running"
   },
   {
-   "section": "flag",
-   "order": 9,
-   "name": "SettlerOverlap",
-   "detail": "Screened +0.38, not significant; could get its own test later.",
-   "state": "off"
+   "section": "testflag",
+   "order": 2,
+   "name": "SiegeFeed",
+   "owner": "War",
+   "detail": "No second attack is started on a city we're already besieging, so units join the fight.",
+   "test": "Built, off. Waits for a funnel-backed reason.",
+   "state": "waiting"
   },
   {
-   "section": "flag",
-   "order": 10,
-   "name": "BoxedIn",
-   "detail": "Screened +0.34, not significant; left C with the c7c ideas, could get its own test later.",
-   "state": "off"
+   "section": "testflag",
+   "order": 3,
+   "name": "CoopWhenReady",
+   "owner": "War",
+   "detail": "A joint war waits until our aggressor's army is ready.",
+   "test": "Built, off.",
+   "state": "waiting"
   },
   {
-   "section": "flag",
-   "order": 11,
-   "name": "DiploBugs",
-   "detail": "Bug fix: passed the no-worse test.",
-   "state": "in C8"
+   "section": "testflag",
+   "order": 4,
+   "name": "LeanBuilders",
+   "owner": "Economy",
+   "detail": "At most 2 workers per 3 cities; work boats only for a city's own sea tiles (your call: a normal test).",
+   "test": "Normal test after the attack work.",
+   "state": "waiting"
   },
   {
-   "section": "flag",
-   "order": 12,
-   "name": "EasyTarget",
-   "detail": "Bug fix: passed the no-worse test.",
-   "state": "in C8"
+   "section": "testflag",
+   "order": 5,
+   "name": "WondersForVictory",
+   "owner": "Economy",
+   "detail": "A world wonder only if it suits the civ's target victory, or is an economy wonder.",
+   "test": "Normal test after the attack work.",
+   "state": "waiting"
   },
   {
-   "section": "flag",
-   "order": 13,
-   "name": "UpgradeSaveCancel",
-   "detail": "Bug fix: passed the no-worse test.",
-   "state": "in C8"
+   "section": "testflag",
+   "order": 6,
+   "name": "GreedyWideDeals",
+   "owner": "Diplomacy",
+   "detail": "A wide greedy civ out of room trades luxuries, open borders and research agreements more.",
+   "test": "With the trio test.",
+   "state": "waiting"
   },
   {
-   "section": "flag",
-   "order": 14,
-   "name": "LuxuryAsk",
-   "detail": "Bug fix: passed the no-worse test.",
-   "state": "in C8"
+   "section": "testflag",
+   "order": 7,
+   "name": "GreedyWide / GreedyTall",
+   "owner": "Personality",
+   "detail": "Your two kinds of greedy: wide (Liberty, expand, then grow and trade) and tall (Tradition, 3-4 cities, tech and policy rush).",
+   "test": "With the trio test.",
+   "state": "waiting"
   },
   {
-   "section": "flag",
-   "order": 15,
-   "name": "DiploPolicyValue",
-   "detail": "Bug fix: passed the no-worse test.",
-   "state": "in C8"
+   "section": "queue",
+   "order": 1,
+   "name": "Attack block on 850e142",
+   "detail": "Both PCs, 20 games each, frozen. Judged on the funnel: fewer 'tried, took nothing' and more captures.",
+   "state": "running"
   },
   {
-   "section": "flag",
-   "order": 16,
-   "name": "CultureRivalValue",
-   "detail": "Bug fix: passed the no-worse test (city-state crash fixed in 8109f67).",
-   "state": "in C8"
+   "section": "queue",
+   "order": 2,
+   "name": "Trio test, 20 games",
+   "detail": "One of our three styles on top in 90% of 6-civ games. Waits until attacks take cities.",
+   "state": "waiting"
   },
   {
-   "section": "flag",
-   "order": 17,
-   "name": "GreedyTarget",
-   "detail": "Only acts with TimingAttack.",
-   "state": "waits for wars"
+   "section": "queue",
+   "order": 3,
+   "name": "Matchup test",
+   "detail": "Each style beats one and loses to one. Waits until attacks take cities.",
+   "state": "waiting"
   },
   {
-   "section": "flag",
-   "order": 18,
-   "name": "CanWin",
-   "detail": "Only acts with TimingAttack.",
-   "state": "waits for wars"
-  },
-  {
-   "section": "flag",
-   "order": 19,
-   "name": "SiegeStay",
-   "detail": "No captures in the bully siege test; nothing to act on until sieges can win.",
-   "state": "waits for wars"
-  },
-  {
-   "section": "flag",
-   "order": 20,
-   "name": "SiegePosture",
-   "detail": "No captures in the bully siege test; nothing to act on until sieges can win.",
-   "state": "waits for wars"
-  },
-  {
-   "section": "flag",
-   "order": 21,
-   "name": "BoxedInWar",
-   "detail": "Only acts with BoxedIn on boxed-in wide civs; screened −0.69.",
-   "state": "waits for wars"
-  },
-  {
-   "section": "flag",
-   "order": 22,
-   "name": "DeclareAtBorder",
-   "detail": "Passed with the top five, but alone it did nothing (gain +0.04, gainer failed): its rank was luck.",
-   "state": "in C8"
-  },
-  {
-   "section": "flag",
-   "order": 23,
-   "name": "BookFinishesSettlers",
-   "detail": "No sign of a gain (+0.14).",
-   "state": "off"
-  },
-  {
-   "section": "flag",
-   "order": 24,
-   "name": "AqueductValue",
-   "detail": "No sign of a gain (+0.09); left C with the c7c ideas.",
-   "state": "off"
-  },
-  {
-   "section": "flag",
-   "order": 25,
-   "name": "WidePlans",
-   "detail": "No sign of a gain (+0.08); left C with the c7c ideas.",
-   "state": "off"
-  },
-  {
-   "section": "flag",
-   "order": 26,
-   "name": "DealReputation",
-   "detail": "No sign of a gain (+0.01).",
-   "state": "off"
-  },
-  {
-   "section": "flag",
-   "order": 27,
-   "name": "GreedyBook",
-   "detail": "No sign of a gain (−0.02); left C with the c7c ideas.",
-   "state": "off"
-  },
-  {
-   "section": "flag",
-   "order": 28,
-   "name": "SettlersFirst",
-   "detail": "No sign of a gain (−0.20).",
-   "state": "off"
-  },
-  {
-   "section": "flag",
-   "order": 29,
-   "name": "GrowthTech",
-   "detail": "No sign of a gain (−0.47); left C with the c7c ideas.",
-   "state": "off"
-  },
-  {
-   "section": "flag",
-   "order": 30,
-   "name": "ClosedBorders",
-   "detail": "Looked harmful in screening (−0.63, 94% chance no better).",
-   "state": "dropped"
+   "section": "queue",
+   "order": 4,
+   "name": "Waiting flags",
+   "detail": "LeanBuilders, WondersForVictory, GreedyWideDeals: normal tests after the attack work.",
+   "state": "waiting"
   },
   {
    "section": "goal",
    "order": 1,
    "name": "Trio: one of our three styles wins",
    "target": "In a 6-player game with our greedy, balanced and aggressive civs and 3 CP civs, one of ours wins ≥ 90% of full games (the user's aim: every game)",
-   "detail": "Built. Quick look (4 games to T150): one of ours on top in 3 (75%); our three held 51.7-57.6% of the strength in every game; greedy never on top. Our aggressor never attacked in those games (since fixed). The real 20-game run waits for working attacks, with greedy wide/tall.",
+   "detail": "Built. A first look (4 games to T150) had one of ours on top in 3 (75%), but our aggressor never attacked there. The real 20-game run waits until attacks take cities.",
    "state": "first look"
   },
   {
@@ -231,7 +238,7 @@
    "order": 3,
    "name": "Attack: an aggressor takes cities",
    "target": "Against greedy civs (few units, no walls) several cities by T150; against balanced civs at most 1 per war",
-   "detail": "Progress tonight: with WarGold (e4d5785) the aggressor declared war in 10 of 11 games where it runs the fixes (it used to sit broke, its cities building workers). 1 capture in those 11 (Zulus took Shanghai). The blocker now: tactics won't attack a city in an enemy-held area. War's SiegeDominated fix is in the siege build 7bb7885, testing next.",
+   "detail": "The war comes now: the aggressor declared in 22 of 27 games of the last block (13 of 27 without our fixes). Captures are still rare: 3 in 27 games, all against normal civs, none against greedy ones. The attack dies at the walls: the army is too small when it matters.",
    "state": "focus now"
   },
   {
@@ -265,687 +272,6 @@
    "target": "AI turns ≤ 1.25× B's",
    "detail": "C8 games average 5.6 s per AI turn. In split games both groups share one turn, so this needs an all-C run against an all-B run; not run yet.",
    "state": "not measured"
-  },
-  {
-   "section": "headline",
-   "order": 1,
-   "name": "Now",
-   "detail": "The attack starts now: with WarGold (build e4d5785) the aggressor declared war in all 4 games where it has the fixes (6 wars). Before, its cities built workers instead of an army and it went broke at peace. Still 0 captures: armies time out on the march, then won't attack a city in an enemy-held area. War is on it.",
-   "state": "running"
-  },
-  {
-   "section": "queue",
-   "order": 1,
-   "name": "Top-five test",
-   "detail": "Passed: +1.35 points over B in 5 pairs.",
-   "state": "passed"
-  },
-  {
-   "section": "queue",
-   "order": 2,
-   "name": "Bug-fix bundle",
-   "detail": "Passed the no-worse test.",
-   "state": "passed"
-  },
-  {
-   "section": "queue",
-   "order": 3,
-   "name": "Bully siege test",
-   "detail": "0 captures in 6–7 pairs: the aggressor never went to war.",
-   "state": "failed"
-  },
-  {
-   "section": "queue",
-   "order": 4,
-   "name": "C8 against B",
-   "detail": "Gainer failed at 6 pairs (+0.36 points); no-worse passed, so C8 stays the base.",
-   "state": "failed"
-  },
-  {
-   "section": "queue",
-   "order": 5,
-   "name": "SettlersBeforeWonders alone",
-   "detail": "Skipped: ruled obviously right by the user; stays in C8.",
-   "state": "passed"
-  },
-  {
-   "section": "queue",
-   "order": 6,
-   "name": "Bully conquest test",
-   "detail": "PC 1: bullyabort9 on e4d5785 (25 flags + MarchOn, FocusedWar, WarGold). 2 pairs: wars in both first games, 0 captures.",
-   "state": "running"
-  },
-  {
-   "section": "queue",
-   "order": 7,
-   "name": "TradeOpinion",
-   "detail": "No-worse on strength, and more wars.",
-   "state": "waiting"
-  },
-  {
-   "section": "queue",
-   "order": 8,
-   "name": "DealExploits alone",
-   "detail": "Single-flag test.",
-   "state": "waiting"
-  },
-  {
-   "section": "queue",
-   "order": 9,
-   "name": "Defence columns build",
-   "detail": "In ab-c13eb1c with every topic branch merged: WalledCities, CityStrength, LandUnits.",
-   "state": "next"
-  },
-  {
-   "section": "queue",
-   "order": 10,
-   "name": "Bully vs greedy civs",
-   "detail": "PC 2: bullygreedy11 on e4d5785 (25 flags + MarchOn, FocusedWar, WarGold). 2 pairs: wars in both first games, 0 captures.",
-   "state": "running"
-  },
-  {
-   "section": "session",
-   "order": 1,
-   "name": "Lead",
-   "detail": "Merged everyone's fixes into build e4d5785 (82 flags): War's attack fixes, Economy's WarGold, LeanBuilders, WondersForVictory, Personality's greedy wide/tall, Diplomacy's GreedyWideDeals. Trio quick look: ours on top in 3 of 4.",
-   "chat": "Civ V AI optimization experiment lead",
-   "state": "running"
-  },
-  {
-   "section": "session",
-   "order": 2,
-   "name": "War",
-   "detail": "Found why the trio aggressor never attacked (judged targets against its peace army), the worker build queue, and the unaffordable build-up. Now working on armies that time out on the march and won't attack a city in an enemy-held area.",
-   "chat": "Civ V AI: War session",
-   "state": "running"
-  },
-  {
-   "section": "session",
-   "order": 3,
-   "name": "Diplomacy",
-   "detail": "GreedyWideDeals: a greedy wide civ out of room seeks trades, open borders and research agreements. Off until tested.",
-   "chat": "Civ V AI: Diplomacy session",
-   "state": "waiting"
-  },
-  {
-   "section": "session",
-   "order": 4,
-   "name": "Personality",
-   "detail": "Greedy now comes in two kinds (your design): wide (Liberty, expand, then grow and trade) and tall (Tradition, 3-4 cities, tech and policy rush). Waiting for the next job.",
-   "chat": "Civ V AI: Personality session",
-   "state": "waiting"
-  },
-  {
-   "section": "session",
-   "order": 5,
-   "name": "Economy",
-   "detail": "WarGold: the aggressor researches Currency early and keeps income at 0 or more at peace; the war chest saves from turn 30. Also LeanBuilders (fewer workers, your call: a normal test) and WondersForVictory.",
-   "chat": "Civ V AI: Economy & victory session",
-   "state": "waiting"
-  },
-  {
-   "section": "session",
-   "order": 6,
-   "name": "PC runner",
-   "detail": "PC 1 (BOX): bully vs normal civs on e4d5785 with WarGold (bullyabort9), first-game logs always kept. Prints who-is-who at each game's start.",
-   "chat": "Civ V AI optimization PC runner",
-   "state": "running"
-  },
-  {
-   "section": "session",
-   "order": 7,
-   "name": "PC runner 2",
-   "detail": "PC 2 (TREEDESKTOP): bully vs greedy civs on e4d5785 with WarGold (bullygreedy11), first-game logs always kept. Prints who-is-who at each game's start.",
-   "chat": "Civ V AI optimization PC runner 2",
-   "state": "running"
-  },
-  {
-   "section": "testflag",
-   "order": 1,
-   "name": "SiegeArmy",
-   "owner": "War",
-   "detail": "A city attack keeps recruiting until it's strong enough to take its city (up to 20 turns).",
-   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 2,
-   "name": "SiegeAbort",
-   "owner": "War",
-   "detail": "An attack still too weak after those 20 turns is called off instead of sent to die.",
-   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 3,
-   "name": "SiegeFormation",
-   "owner": "War",
-   "detail": "Early city attacks get 5 slots for catapults and archers, not 2.",
-   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 4,
-   "name": "ArmyHandoff",
-   "owner": "War",
-   "detail": "Units an attack delivered can join the siege from anywhere nearby.",
-   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 5,
-   "name": "TimingAttack",
-   "owner": "War",
-   "detail": "A warmonger plans its attack for when its army peaks.",
-   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 6,
-   "name": "DeclareTiming",
-   "owner": "War",
-   "detail": "A warmonger declares war when its attack is ready, not before.",
-   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 7,
-   "name": "SiegeBook",
-   "owner": "War",
-   "detail": "A warmonger's opening builds toward a siege army.",
-   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 8,
-   "name": "SiegeTechs",
-   "owner": "War",
-   "detail": "A warmonger researches siege units early.",
-   "test": "Bully runs, both PCs: the aggressor runs it in the first game of each pair.",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 9,
-   "name": "GreedyFewUnits",
-   "owner": "Personality",
-   "detail": "Greedy civs keep 1 land unit per city at peace, 2 at war.",
-   "test": "Bully vs greedy civs, PC 2: every civ except the aggressor and the tall civ runs it.",
-   "state": "running",
-   "runs": [
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 10,
-   "name": "GreedyNoWalls",
-   "owner": "Personality",
-   "detail": "Greedy civs build no walls, castles or other defence buildings.",
-   "test": "Bully vs greedy civs, PC 2: every civ except the aggressor and the tall civ runs it.",
-   "state": "running",
-   "runs": [
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 11,
-   "name": "GreedyNoUpgrades",
-   "owner": "Personality",
-   "detail": "Greedy civs don't upgrade units unless at war.",
-   "test": "Bully vs greedy civs, PC 2: every civ except the aggressor and the tall civ runs it.",
-   "state": "running",
-   "runs": [
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 12,
-   "name": "GreedyBuilds",
-   "owner": "Personality",
-   "detail": "Greedy civs value growth, science and wonders 50% more.",
-   "test": "Bully vs greedy civs, PC 2: every civ except the aggressor and the tall civ runs it.",
-   "state": "running",
-   "runs": [
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 13,
-   "name": "StaleWarPeace",
-   "owner": "Diplomacy",
-   "detail": "Your rule: at war, fight on only if you mean to take their cities; otherwise accept a fair peace.",
-   "test": "You ruled it obvious: in the bundle since f21a8f6 (no test).",
-   "state": "passed",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 14,
-   "name": "WarAppetite",
-   "owner": "Diplomacy",
-   "detail": "The urge to go to war follows the leader's style: half for greedy, double for aggressive.",
-   "test": "On the integration build (dbdfbb3); tested once attacks take cities.",
-   "state": "next",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 15,
-   "name": "TradeOpinion",
-   "owner": "Diplomacy",
-   "detail": "Trade friendship counts only deals running now, and can't make a friend on its own.",
-   "test": "You ruled it obvious: in the bundle since f21a8f6 (no test).",
-   "state": "passed",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 16,
-   "name": "BalancedArmy",
-   "owner": "Personality",
-   "detail": "Balanced civs keep 2–3 land units per city at peace, defenders first.",
-   "test": "Later: the matchup test.",
-   "state": "waiting",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 17,
-   "name": "BalancedWalls",
-   "owner": "Personality",
-   "detail": "Balanced civs build walls and castles first in border cities and the capital.",
-   "test": "Later: the matchup test.",
-   "state": "waiting",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 18,
-   "name": "AggressivePlan",
-   "owner": "Personality",
-   "detail": "The civ plays the warmonger plan whatever its personality.",
-   "test": "Later: the matchup test.",
-   "state": "waiting",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 19,
-   "name": "AggressiveArmy",
-   "owner": "Personality",
-   "detail": "Aggressive civs keep 3–4 land units per city, attackers first.",
-   "test": "Later: the matchup test.",
-   "state": "waiting",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 20,
-   "name": "MetaDial",
-   "owner": "Personality",
-   "detail": "Each leader's army size, walls and war plan follow its personality, from greedy to aggressive.",
-   "test": "Later: once the three styles are tested.",
-   "state": "waiting",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 21,
-   "name": "SettlerEscortSafe",
-   "owner": "Economy",
-   "detail": "A settler's escort isn't dropped next to danger.",
-   "test": "Later: a bug-fix (no-worse) test.",
-   "state": "waiting",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 22,
-   "name": "SettlerSitePathFlags",
-   "owner": "Economy",
-   "detail": "Settlers check a site's path with the right movement rules.",
-   "test": "Later: a bug-fix (no-worse) test.",
-   "state": "waiting",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 23,
-   "name": "SettlerPathCheck",
-   "owner": "Economy",
-   "detail": "Settler operations stop retrying sites they can't reach.",
-   "test": "Later: a bug-fix (no-worse) test.",
-   "state": "waiting",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 24,
-   "name": "SiegeStay",
-   "owner": "War",
-   "detail": "A siege keeps its units in place to heal, instead of walking home while the city recovers.",
-   "test": "Bully runs on ab-dbdfbb3, both PCs, from their next pair: the aggressor runs it in the first game.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 25,
-   "name": "SiegePosture",
-   "owner": "War",
-   "detail": "Siege units take positions that keep up the damage on the city.",
-   "test": "Bully runs on ab-dbdfbb3, both PCs, from their next pair: the aggressor runs it in the first game.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 26,
-   "name": "SiegeFirst",
-   "owner": "War",
-   "detail": "A waiting attack fills its spare siege slots with catapults, not bowmen.",
-   "test": "Bully runs on both PCs (12-flag role).",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 27,
-   "name": "SiegeFinish",
-   "owner": "War",
-   "detail": "Melee units storm a city once it's down to a third of its HP.",
-   "test": "Bully runs on both PCs (12-flag role).",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 28,
-   "name": "GreedyWarArmy",
-   "owner": "Personality",
-   "detail": "At war a greedy civ judges the threat: a far or weak enemy changes nothing; a force that could take a city gets defenders and border walls.",
-   "test": "Later: the matchup test.",
-   "state": "waiting",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 29,
-   "name": "CSConquest",
-   "owner": "War",
-   "detail": "A warmonger goes to war on a weak, nearby city-state with no strong protector. CP's AI almost never attacked city-states.",
-   "test": "You ruled it obvious: in the bundle since f21a8f6 (no test).",
-   "state": "passed",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 30,
-   "name": "ConquestTraitTargets",
-   "owner": "War",
-   "detail": "A warmonger's civ bonus shapes its targets: Assyria favours civs with techs it lacks, Songhai rich cities, Mongolia city-states.",
-   "test": "Bully runs on both PCs.",
-   "state": "running",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 31,
-   "name": "GiftsNeedPatronage",
-   "owner": "Diplomacy",
-   "detail": "No gold gifts to city-states without Patronage, except city-state civs, a diplomatic victory, a resource at stake, or a quest. You ruled it obvious: in the bundle.",
-   "test": "In the bundle since ed449fd (no test).",
-   "state": "passed",
-   "runs": []
-  },
-  {
-   "section": "testflag",
-   "order": 32,
-   "name": "TimingBuildup",
-   "owner": "War",
-   "detail": "Your design: a small army at peace while researching and saving for the attack, then a fast 15-turn build-up, the attack, and back to a garrison after peace.",
-   "test": "Bully runs on f21a8f6, both PCs, next.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 33,
-   "name": "DeclareWhenGathered",
-   "owner": "War",
-   "detail": "Declare once the army has gathered at the border, instead of waiting to be spotted.",
-   "test": "Bully runs on f21a8f6, both PCs, next.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 34,
-   "name": "SiegeConcentrate",
-   "owner": "War",
-   "detail": "A follow-up wave waits to join the units near the city, so each push is one army.",
-   "test": "Bully runs on f21a8f6, both PCs, next.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 35,
-   "name": "SiegeKeep",
-   "owner": "War",
-   "detail": "At war, units at a siege aren't pulled off to clear barbarian camps.",
-   "test": "Bully runs on f21a8f6, both PCs, next.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 36,
-   "name": "AggressiveWalls",
-   "owner": "Personality",
-   "detail": "An aggressive civ builds walls only in threatened cities, not everywhere.",
-   "test": "Bully runs on f21a8f6, both PCs, next.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 37,
-   "name": "TrueGoldRate",
-   "owner": "Economy",
-   "detail": "Bankruptcy is judged on real income minus costs; CP counted only income, so a civ losing gold every turn looked safe until its army was given away.",
-   "test": "Bully runs on f21a8f6, both PCs, next.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 38,
-   "name": "WarChest",
-   "owner": "Economy",
-   "detail": "A warmonger saves gold for its build-up, buys the army with it, and keeps its income above zero.",
-   "test": "Bully runs on f21a8f6, both PCs, next.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 39,
-   "name": "WarEconomy",
-   "owner": "Economy",
-   "detail": "While a timing attack is planned, cities near the target favour production and military buildings; workers go for iron and horses.",
-   "test": "Bully runs on f21a8f6, both PCs, next.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 40,
-   "name": "TargetVulnerability",
-   "owner": "War",
-   "detail": "Your GreedyTarget redesign: attack the most vulnerable city in reach, by its defence, its owner's army against ours, and distance.",
-   "test": "Bully runs on f21a8f6, both PCs, next.",
-   "state": "next",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "queue",
-   "order": 11,
-   "name": "Trio test",
-   "detail": "Quick look, 4 games: one of ours on top in 3 (75%), our three over half the strength in every game; the aggressor never declared. 20 games once the attack works, with greedy wide/tall.",
-   "state": "waiting"
-  },
-  {
-   "section": "queue",
-   "order": 12,
-   "name": "LeanBuilders, WondersForVictory, GreedyWideDeals",
-   "detail": "New flags, off; normal tests after the attack work.",
-   "state": "waiting"
-  },
-  {
-   "section": "testflag",
-   "order": 41,
-   "name": "MarchOn",
-   "owner": "War",
-   "detail": "A sneak attack that declares keeps marching to the walls as one army, instead of breaking up at the border.",
-   "test": "Bully runs on e4d5785, both PCs.",
-   "state": "testing",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 42,
-   "name": "FocusedWar",
-   "owner": "War",
-   "detail": "An aggressor with a target fights only that war: no coop wars elsewhere, no second war.",
-   "test": "Bully runs on e4d5785, both PCs.",
-   "state": "testing",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 43,
-   "name": "WarGold",
-   "owner": "Economy",
-   "detail": "The aggressor researches Currency early and keeps income at 0 or more at peace, so it can pay for its build-up.",
-   "test": "Bully runs on e4d5785, both PCs: wars in all 4 first games.",
-   "state": "testing",
-   "runs": [
-    "PC runner",
-    "PC runner 2"
-   ]
-  },
-  {
-   "section": "testflag",
-   "order": 44,
-   "name": "GreedyWide",
-   "owner": "Personality",
-   "detail": "Your design: a wide greedy leader takes Liberty and expands as fast as happiness allows, then grows and trades.",
-   "test": "Next trio run.",
-   "state": "next"
-  },
-  {
-   "section": "testflag",
-   "order": 45,
-   "name": "GreedyTall",
-   "owner": "Personality",
-   "detail": "Your design: a tall greedy leader takes Tradition, keeps 3-4 cities and rushes tech and policies.",
-   "test": "Next trio run.",
-   "state": "next"
   }
  ]
 }
