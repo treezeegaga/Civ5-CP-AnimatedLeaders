@@ -27,7 +27,7 @@ import re
 import sys
 
 RESULTS = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "results")
-STAGES = ["no build-up", "no attack op", "no war", "never at walls", "refused", "not taken", "captured"]
+STAGES = ["no build-up", "no attack op", "no war", "never at walls", "refused", "not taken", "captured", "attacked first"]
 ATTACK_OP = re.compile(r"OP_CITY_ATTACK_\w+")
 
 
@@ -46,7 +46,8 @@ def games_from_csvs():
                 if prev is None or t >= prev["turn"]:
                     out[g] = {"civ": r["Civ"].replace("CIVILIZATION_", ""), "build": run.split("@")[0],
                               "run": run, "turn": t, "wars": int(r.get("WarsDeclared") or 0),
-                              "captured": int(r.get("CitiesCaptured") or 0)}
+                              "captured": int(r.get("CitiesCaptured") or 0),
+                              "warsOnUs": int(r.get("WarsOnUs") or 0)}
     return out
 
 
@@ -100,6 +101,8 @@ def classify(gdir, info):
         stage = 4
     elif info["wars"]:
         stage = 3
+    elif info["warsOnUs"]:
+        stage = 7   # declared no war itself, but was at war: declared on first (Diplomacy, 2026-11-05)
     elif attack_op:
         stage = 2
     elif window:
