@@ -1,0 +1,42 @@
+﻿Game 0CC09E9A0CC09E9A (AIABTest_c8e.csv), last logged turn 150
+b    America      wide      cities 6
+  builds to T80 (capital Washington; other cities named): T0 Scout* | T4 Warrior* | T9 Settler* | T19 Worker* | T22 Monument* (New York) | T25 Settler* | T32 Shrine | T35 Shrine (New York) | T37 Granary | T44 Barracks (New York) | T44 Scout | T45 Barracks | T50 Monument* | T51 Monument* (Boston) | T52 Temple of Artemis | T55 Chariot Archer (New York) | T59 Trireme (New York) | T61 Library* | T62 Archer (New York) | T63 Granary (Boston) | T64 Catapult | T65 Cargo Ship (New York) | T68 Caravan | T71 Terracotta Army | T72 Worker (New York) | T76 Granary (New York) | T77 Settler (Boston) | T80 Monument (Philadelphia) | T80 Spearman (New York)
+  settlers ordered T: 9,25,77,99   found-city ops started T: 19,32,77,89,124   cities founded T: 22,51,80,97,135
+  ops aborted: T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget
+  book SETTLER HELD to T80: 3 (unhappy 3)   built instead: Library 2, the normal AI choice 1   first: T052 Washington size 4 next Library | T061 Washington size 5 next Library | T064 Washington size 5 next the normal AI choice
+  IDLE SETTLER turns: 3 (first T25)
+  military ops ended (whole game): NoTarget 2, Success 2, TimedOut 1
+  settler timeline to T80: T9 settler (book) in Washington | T19 op started | T22 FOUNDED | T25 settler (book) in Washington | T32 op started | T51 FOUNDED | T77 settler (AI) in Boston | T77 op started | T80 FOUNDED
+  saving gold for a settler: 21 turns (T6-T76)
+b    Egypt        tall      cities 6
+  builds to T80 (capital Thebes; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T16 Warrior* | T21 Settler* | T32 Worker* | T35 Monument* (Memphis) | T36 Library* (Memphis) | T36 Settler* | T46 Worker | T48 Shrine (Heliopolis) | T51 Stonehenge | T55 Warrior | T56 Warrior | T58 Worker | T63 Warrior | T67 Settler | T69 Work Boat (Heliopolis) | T72 Scout | T74 Burial Tomb | T76 Shrine (Elephantine) | T79 Worker (Elephantine) | T80 Worker (Memphis)
+  settlers ordered T: 21,36,67,92,100,141   found-city ops started T: 32,46,73,93,108,145   cities founded T: 35,48,76,103,117
+  book SETTLER HELD to T80: 1 (unhappy 1)   built instead: Library 1   first: T051 Thebes size 3 next Library
+  IDLE SETTLER turns: 7 (first T36)
+  military ops ended (whole game): WarStateChange 2, Success 1, LostPath 1
+  settler timeline to T80: T21 settler (book) in Thebes | T32 op started | T35 FOUNDED | T36 settler (book) in Thebes | T46 op started | T48 FOUNDED | T67 settler (AI) in Thebes | T72 BOUGHT in Thebes. Cost: 370 | T73 op started | T76 FOUNDED
+  saving gold for a settler: 44 turns (T6-T80)
+c    Byzantium    tall      cities 7
+  builds to T80 (capital Constantinople; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T14 Warrior* | T20 Settler* | T32 Warrior | T36 Granary (Adrianople) | T37 Worker* | T45 Stonehenge | T48 Library* (Adrianople) | T54 Work Boat (Nicaea) | T55 Work Boat (Nicaea) | T55 Work Boat | T56 Work Boat | T60 Warrior (Adrianople) | T60 Work Boat | T63 Warrior (Adrianople) | T67 Shrine (Adrianople) | T67 Worker | T69 Granary (Nicaea) | T70 Settler (Adrianople) | T75 Warrior | T77 Writers' Guild | T78 Scout (Adrianople) | T80 Shrine (Nicaea)
+  settlers ordered T: 20,70,81,94,110   found-city ops started T: 32,51,78,90,105,118   cities founded T: 36,54,81,97,113,124
+  book SETTLER HELD to T80: 1 (unhappy 1)   built instead: Library 1   first: T045 Constantinople size 4 next Library
+  IDLE SETTLER turns: 6 (first T50)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T20 settler (book) in Constantinople | T32 op started | T36 FOUNDED | T50 BOUGHT in Constantinople. Cost: 370 | T51 op started | T54 FOUNDED | T70 settler (AI) in Adrianople | T78 op started
+  saving gold for a settler: 48 turns (T6-T78)
+c    England      tall      cities 7
+  builds to T80 (capital London; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T12 Warrior* | T16 Settler* | T27 Warrior | T30 Granary | T33 Monument* (York) | T34 Library* (York) | T36 Worker* | T41 Great Library | T49 Settler* | T50 Library* | T55 Settler | T59 Water Mill | T60 Granary (York) | T65 Settler | T67 Monument (Nottingham) | T68 Shrine (Nottingham) | T69 Hanging Gardens | T74 Work Boat (York) | T75 Work Boat (Hastings) | T76 Work Boat (Hastings) | T78 Work Boat (Hastings) | T78 Worker | T79 Work Boat (Hastings) | T79 Worker | T80 Work Boat (Hastings) | T80 Trireme
+  settlers ordered T: 16,49,55,65,92,97,121   found-city ops started T: 27,59,73,73,95,100   cities founded T: 33,67,75,85,98,109
+  ops aborted: T68 NoTarget, T69 NoTarget, T69 NoTarget, T69 NoTarget, T70 NoTarget, T70 NoTarget, T71 NoTarget, T71 NoTarget, T72 NoTarget, T72 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: Library 2   first: T041 London size 3 next Library | T050 London size 3 next Library
+  IDLE SETTLER turns: 4 (first T49)
+  military ops ended (whole game): NoTarget 2, Success 1, LostPath 1
+  settler timeline to T80: T16 settler (book) in London | T27 op started | T33 FOUNDED | T49 settler (book) in London | T55 settler (AI) in London | T59 op started | T65 settler (AI) in London | T67 FOUNDED | T68 op ended: NoTarget | T69 op ended: NoTarget | T69 op ended: NoTarget | T69 op ended: NoTarget | T70 op ended: NoTarget | T70 op ended: NoTarget | T71 op ended: NoTarget | T71 op ended: NoTarget | T72 op ended: NoTarget | T72 op ended: NoTarget | T73 op started | T73 op started | T75 FOUNDED
+  saving gold for a settler: 36 turns (T6-T59)
+c    Siam         tall      cities 2
+  builds to T80 (capital Sukhothai; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T19 Settler* | T31 Granary | T39 Stonehenge | T55 Work Boat | T59 Work Boat | T65 Work Boat | T70 Work Boat | T75 Settler
+  settlers ordered T: 19,75,95,97   found-city ops started T: 31,81,99   cities founded T: 96
+  ops aborted: T49 LostCivilian, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget
+  IDLE SETTLER turns: 1 (first T97)
+  settler timeline to T80: T19 settler (book) in Sukhothai | T31 op started | T49 op ended: LostCivilian | T75 settler (AI) in Sukhothai
+  saving gold for a settler: 53 turns (T11-T80)

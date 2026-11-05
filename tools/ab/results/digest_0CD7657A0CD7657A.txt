@@ -1,0 +1,50 @@
+﻿Game 0CD7657A0CD7657A (AIABTest_c8e.csv), last logged turn 150
+b    Korea        tall      cities 3
+  builds to T80 (capital Seoul; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T19 Settler* | T34 Warrior | T40 Granary (Busan) | T40 Worker | T41 Settler* | T42 Worker* | T43 Settler* | T44 Library* | T52 Worker* | T54 Work Boat (Busan) | T59 Temple | T65 Settler (Busan) | T69 Writers' Guild | T77 Lighthouse (Busan) | T77 Oracle | T80 Monument (Jeonju)
+  settlers ordered T: 19,41,43,65,99   found-city ops started T: 34,77   cities founded T: 40,80
+  ops aborted: T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 1 (one at a time 1)   built instead: Library 1   first: T044 Seoul size 4 next Library
+  IDLE SETTLER turns: 3 (first T41)
+  military ops ended (whole game): NoUnits 12, NoTarget 1
+  settler timeline to T80: T19 settler (book) in Seoul | T34 op started | T40 FOUNDED | T41 settler (book) in Seoul | T43 settler (book) in Seoul | T65 settler (AI) in Busan | T77 op started | T80 FOUNDED
+  saving gold for a settler: 42 turns (T6-T77)
+c    Brazil       tall      cities 4
+  builds to T80 (capital Rio de Janeiro; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Worker* | T35 Settler* | T41 Library* | T53 Worker* | T54 Monument (Sao Paulo) | T55 Worker (Sao Paulo) | T55 Scout | T56 Spearman | T61 Temple | T68 Writers' Guild | T74 Parthenon | T79 Settler (Sao Paulo)
+  settlers ordered T: 35,79,102,129   found-city ops started T: 42,94,106   cities founded T: 54,97,113
+  ops aborted: T133 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 2 (one at a time 1, growth due 1)   built instead: Library 1, Worker 1   first: T024 Rio de Janeiro size 3 next Worker | T041 Rio de Janeiro size 4 next Library
+  IDLE SETTLER turns: 5 (first T41)
+  military ops ended (whole game): WarStateChange 2, LostPath 1, Success 1
+  settler timeline to T80: T35 settler (book) in Rio de Janeiro | T41 BOUGHT in Rio de Janeiro. Cost: 370 | T42 op started | T54 FOUNDED | T79 settler (AI) in Sao Paulo
+  saving gold for a settler: 35 turns (T6-T40)
+c    Persia       tall      cities 5
+  builds to T80 (capital Persepolis; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Worker* | T32 Settler* | T43 Library* | T46 Monument* (Pasargadae) | T47 Library* (Pasargadae) | T54 Settler | T57 Settler | T62 Immortal | T66 Monument (Susa) | T66 Shrine (Pasargadae) | T67 Shrine (Susa) | T67 Archer | T70 Worker | T73 Archer (Pasargadae) | T75 Work Boat (Susa) | T76 Worker | T79 Immortal | T79 Worker | T80 Granary (Pasargadae)
+  settlers ordered T: 32,54,57,82,83,112   found-city ops started T: 43,62,88,108,133,144   cities founded T: 46,66,131,147
+  ops aborted: T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget
+  book SETTLER HELD to T80: 2 (one at a time 1, growth due 1)   built instead: Library 1, Worker 1   first: T024 Persepolis size 3 next Worker | T043 Persepolis size 4 next Library
+  IDLE SETTLER turns: 3 (first T54)
+  military ops ended (whole game): LostPath 1, NoTarget 1
+  settler timeline to T80: T32 settler (book) in Persepolis | T43 op started | T46 FOUNDED | T54 settler (AI) in Persepolis | T57 settler (AI) in Persepolis | T62 op started | T66 FOUNDED
+  saving gold for a settler: 68 turns (T6-T80)
+c    Siam         tall      cities 6
+  builds to T80 (capital Sukhothai; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T17 Settler* | T29 Worker* | T33 Monument* (Si Satchanalai) | T34 Stonehenge | T34 Library* (Si Satchanalai) | T38 Library* | T46 Worker* | T49 Temple | T54 Granary (Si Satchanalai) | T58 Settler | T64 Worker (Si Satchanalai) | T66 Granary | T71 Shrine (Si Satchanalai) | T71 Settler | T74 Monument (Muang Saluang) | T74 Temple (Si Satchanalai) | T75 Shrine (Muang Saluang) | T77 Spearman
+  settlers ordered T: 17,58,71,91,102,139   found-city ops started T: 29,66,77,97,107,144   cities founded T: 33,74,83,107,117
+  book SETTLER HELD to T80: 3 (unhappy 2, growth due 1)   built instead: Library 2, the normal AI choice 1   first: T034 Sukhothai size 2 next Library | T038 Sukhothai size 3 next Library | T049 Sukhothai size 3 next the normal AI choice
+  IDLE SETTLER turns: 5 (first T58)
+  military ops ended (whole game): NoUnits 5, WarStateChange 2, NoTarget 2, LostPath 1
+  settler timeline to T80: T17 settler (book) in Sukhothai | T29 op started | T33 FOUNDED | T58 settler (AI) in Sukhothai | T66 op started | T71 settler (AI) in Sukhothai | T74 FOUNDED | T77 op started
+  saving gold for a settler: 48 turns (T6-T77)
+c    Sweden       tall      cities 5
+  builds to T80 (capital Stockholm; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T16 Warrior* | T21 Settler* | T33 Worker* | T37 Monument* (Sigtuna) | T38 Library* (Sigtuna) | T38 Library* | T46 Worker* | T50 Warrior | T54 Great Library | T58 Settler | T59 Settler | T60 Granary (Sigtuna) | T63 Granary | T68 Settler | T69 Granary (Helsinki) | T69 Settler | T71 Warrior (Sigtuna) | T74 Worker | T74 Worker | T75 Worker | T76 Shrine (Sigtuna) | T76 Worker | T77 Worker | T78 Shrine (Birka) | T79 Scout | T80 Worker
+  settlers ordered T: 21,58,59,68,69,90,117   found-city ops started T: 33,63,75,105   cities founded T: 37,69,78,111
+  ops aborted: T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: the normal AI choice 1, Library 1   first: T038 Stockholm size 3 next Library | T050 Stockholm size 3 next the normal AI choice
+  IDLE SETTLER turns: 6 (first T58)
+  military ops ended (whole game): NoUnits 6, NoTarget 3, LostPath 1, HalfStrength 1, WarStateChange 1, Success 1
+  settler timeline to T80: T21 settler (book) in Stockholm | T33 op started | T37 FOUNDED | T58 settler (AI) in Stockholm | T59 settler (AI) in Stockholm | T63 op started | T68 settler (AI) in Stockholm | T69 settler (AI) in Stockholm | T69 FOUNDED | T74 BOUGHT in Stockholm. Cost: 370 | T75 op started | T78 FOUNDED
+  saving gold for a settler: 41 turns (T6-T80)
+c    Venice       tall      cities 4
+  builds to T80 (capital Venice; other cities named): T1 Scout* | T4 Monument* | T8 Warrior* | T12 Shrine* | T16 Worker* | T22 Library* | T28 Stonehenge | T38 National College* | T47 Work Boat | T50 Shrine (Hanoi) | T50 Great Library | T50 Monument* (Hanoi) | T54 Temple (Hanoi) | T58 Great Lighthouse | T61 Hagia Sophia | T64 Barracks (Hanoi) | T68 Writers' Guild | T71 Grand Temple | T72 Walls (Hanoi) | T76 Colossus | T79 Market (Hanoi)
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: National College 1   first: T038 Venice size 4 next National College
+  military ops ended (whole game): HalfStrength 5, NoTarget 4, Success 3, WarStateChange 2, LostPath 2
