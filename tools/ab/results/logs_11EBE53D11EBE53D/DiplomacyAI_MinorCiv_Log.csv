@@ -1,0 +1,2248 @@
+014, Samarkand, The Inca, RECEIVED_UNIT_GIFT, Warrior
+014, Colombo, Korea, RECEIVED_UNIT_GIFT, Warrior
+014, Colombo, Denmark, RECEIVED_UNIT_GIFT, Warrior
+015, Buenos Aires, China, RECEIVED_UNIT_GIFT, Warrior
+021, Colombo, Korea, RECEIVED_UNIT_GIFT, Warrior
+023, Antwerp, Babylon, RECEIVED_UNIT_GIFT, Warrior
+025, China, Buenos Aires, SENT OUT QUEST, Type, 1
+025, China, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+025, The Huns, Zanzibar, SENT OUT QUEST, Type, 1
+025, The Huns, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+025, Morocco, Zanzibar, SENT OUT QUEST, Type, 1
+025, Morocco, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+025, Denmark, Vilnius, SENT OUT QUEST, Type, 2
+025, Denmark, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+025, Denmark, Colombo, SENT OUT QUEST, Type, 2
+025, Denmark, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+025, The Huns, Colombo, SENT OUT QUEST, Type, 2
+025, The Huns, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+025, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 17
+025, The Iroquois, Mogadishu, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+026, Ife, The Iroquois, RECEIVED_UNIT_GIFT, Warrior
+026, Morocco, Ife, SENT OUT QUEST, Type, 7
+026, Morocco, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+026, Babylon, Wellington, SENT OUT QUEST, Type, 1
+026, Babylon, Wellington, RECEIVED QUEST, Kill Camp, Friendship: -1 to -1, MINOR_CIV_WELLINGTON
+026, Samarkand, The Inca, RECEIVED_UNIT_GIFT, Warrior
+027, Korea, Zanzibar, SENT OUT QUEST, Type, 1
+027, Korea, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+027, Babylon, Buenos Aires, era change yield update
+027, Babylon, Zanzibar, era change yield update
+027, Babylon, Ormus, era change yield update
+027, Babylon, Hanoi, era change yield update
+027, Babylon, Vilnius, era change yield update
+027, Babylon, Antwerp, era change yield update
+027, Babylon, Ife, era change yield update
+027, Babylon, Wellington, era change yield update
+027, Babylon, Ur, era change yield update
+027, Babylon, Samarkand, era change yield update
+027, Babylon, Sydney, era change yield update
+027, Babylon, Vatican City, era change yield update
+027, Babylon, Cahokia, era change yield update
+027, Babylon, Colombo, era change yield update
+027, Babylon, Mogadishu, era change yield update
+027, Babylon, Milan, era change yield update
+027, Babylon, Wellington, SENT OUT QUEST, Type, 1
+027, The Huns, Vilnius, SENT OUT QUEST, Type, 6
+027, The Huns, Vilnius, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+028, Babylon, Antwerp, SENT OUT QUEST, Type, 2
+028, Babylon, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+028, Babylon, Wellington, SENT OUT QUEST, Type, 2
+028, Babylon, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+028, Babylon, Sydney, SENT OUT QUEST, Type, 1
+028, Babylon, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+028, Denmark, Sydney, SENT OUT QUEST, Type, 1
+028, Denmark, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+028, Cahokia, China, RECEIVED_UNIT_GIFT, Warrior
+028, China, Cahokia, SENT OUT QUEST, Type, 3
+028, China, Cahokia, RECEIVED QUEST, Construct Wonder, Friendship: 3 to 3, MINOR_CIV_CAHOKIA
+029, The Huns, Sydney, SENT OUT QUEST, Type, 1
+029, The Huns, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+029, Korea, Vilnius, SENT OUT QUEST, Type, 6
+029, Korea, Vilnius, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+029, Babylon, Antwerp, SENT OUT QUEST, Type, 1
+029, Babylon, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+029, Korea, Colombo, SENT OUT QUEST, Type, 3
+029, Korea, Colombo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+030, The Iroquois, Antwerp, SENT OUT QUEST, Type, 1
+030, The Iroquois, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+030, China, Buenos Aires, SENT OUT QUEST, Type, 7
+030, China, Buenos Aires, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+030, Zanzibar, Korea, RECEIVED_UNIT_GIFT, Warrior
+030, Morocco, Zanzibar, SENT OUT QUEST, Type, 2
+030, Morocco, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+030, Korea, Vilnius, SENT OUT QUEST, Type, 1
+030, Korea, Vilnius, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+030, Babylon, Vilnius, SENT OUT QUEST, Type, 1
+030, Babylon, Vilnius, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+030, The Iroquois, Vilnius, SENT OUT QUEST, Type, 1
+030, The Iroquois, Vilnius, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+030, Denmark, Vilnius, SENT OUT QUEST, Type, 1
+030, Denmark, Vilnius, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+030, The Huns, Vilnius, SENT OUT QUEST, Type, 1
+030, The Huns, Vilnius, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+030, The Iroquois, Ife, SENT OUT QUEST, Type, 17
+030, The Iroquois, Ife, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_IFE
+031, Babylon, Vilnius, SENT OUT QUEST, Type, 2
+031, Babylon, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+031, The Inca, Ur, SENT OUT QUEST, Type, 1
+031, The Inca, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+031, Colombo, Denmark, RECEIVED_UNIT_GIFT, Warrior
+032, Babylon, Sydney, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_SYDNEY, (SAVING) 
+032, Babylon, Sydney, SENT OUT QUEST, Type, 1
+032, The Iroquois, Vilnius, SENT OUT QUEST, Type, 3
+032, The Iroquois, Vilnius, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+032, Korea, Cahokia, SENT OUT QUEST, Type, 12
+032, Korea, Cahokia, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+032, China, Cahokia, SENT OUT QUEST, Type, 12
+032, China, Cahokia, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+032, Morocco, Cahokia, SENT OUT QUEST, Type, 12
+032, Morocco, Cahokia, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+032, Morocco, Mogadishu, SENT OUT QUEST, Type, 2
+032, Morocco, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+033, Korea, Ife, SENT OUT QUEST, Type, 1
+033, Korea, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+033, The Iroquois, Ife, SENT OUT QUEST, Type, 1
+033, The Iroquois, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+033, Denmark, Ife, SENT OUT QUEST, Type, 1
+033, Denmark, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+033, The Huns, Ife, SENT OUT QUEST, Type, 1
+033, The Huns, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+033, Morocco, Ife, SENT OUT QUEST, Type, 1
+033, Morocco, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+033, Morocco, Cahokia, SENT OUT QUEST, Type, 2
+033, Morocco, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+034, Denmark, Cahokia, SENT OUT QUEST, Type, 12
+034, Denmark, Cahokia, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+034, The Iroquois, Hanoi, SENT OUT QUEST, Type, 1
+034, The Iroquois, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+034, China, Hanoi, SENT OUT QUEST, Type, 1
+034, China, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+034, Morocco, Ife, gained friend
+034, Morocco, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_IFE
+034, Korea, Ife, SENT OUT QUEST, Type, 2
+034, Korea, Ife, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+034, Denmark, Ife, SENT OUT QUEST, Type, 3
+034, Denmark, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+034, The Inca, Samarkand, SENT OUT QUEST, Type, 3
+034, The Inca, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+035, The Iroquois, Wellington, SENT OUT QUEST, Type, 1
+035, The Iroquois, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+035, The Inca, Samarkand, Gold Gift: 500, Friendship: 0 to 0, Culture, MINOR_CIV_SAMARKAND, (SAVING) 
+035, The Inca, Samarkand, SENT OUT QUEST, Type, 3
+035, The Huns, Ife, SENT OUT QUEST, Type, 2
+035, The Huns, Ife, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+035, The Inca, Samarkand, SENT OUT QUEST, Type, 1
+035, The Inca, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 1 to 1, MINOR_CIV_SAMARKAND
+035, Morocco, Milan, SENT OUT QUEST, Type, 1
+035, Morocco, Milan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MILAN
+036, The Huns, Buenos Aires, era change yield update
+036, The Huns, Zanzibar, era change yield update
+036, The Huns, Ormus, era change yield update
+036, The Huns, Hanoi, era change yield update
+036, The Huns, Vilnius, era change yield update
+036, The Huns, Antwerp, era change yield update
+036, The Huns, Ife, era change yield update
+036, The Huns, Wellington, era change yield update
+036, The Huns, Ur, era change yield update
+036, The Huns, Samarkand, era change yield update
+036, The Huns, Sydney, era change yield update
+036, The Huns, Vatican City, era change yield update
+036, The Huns, Cahokia, era change yield update
+036, The Huns, Colombo, era change yield update
+036, The Huns, Mogadishu, era change yield update
+036, The Huns, Milan, era change yield update
+036, The Huns, Zanzibar, SENT OUT QUEST, Type, 1
+036, The Huns, Vilnius, SENT OUT QUEST, Type, 6
+036, The Huns, Vilnius, SENT OUT QUEST, Type, 1
+036, The Huns, Ife, SENT OUT QUEST, Type, 1
+036, The Huns, Ife, SENT OUT QUEST, Type, 2
+036, The Huns, Sydney, SENT OUT QUEST, Type, 1
+036, The Huns, Colombo, SENT OUT QUEST, Type, 2
+036, The Iroquois, Hanoi, SENT OUT QUEST, Type, 2
+036, The Iroquois, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+036, The Inca, Ur, SENT OUT QUEST, Type, 3
+036, The Inca, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_UR
+036, Korea, Colombo, SENT OUT QUEST, Type, 1
+036, Korea, Colombo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+036, Denmark, Colombo, SENT OUT QUEST, Type, 1
+036, Denmark, Colombo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+036, The Huns, Colombo, SENT OUT QUEST, Type, 1
+036, The Huns, Colombo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+036, Morocco, Colombo, SENT OUT QUEST, Type, 1
+036, Morocco, Colombo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+036, Korea, Mogadishu, SENT OUT QUEST, Type, 1
+036, Korea, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+036, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 1
+036, The Iroquois, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+036, China, Mogadishu, SENT OUT QUEST, Type, 1
+036, China, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+036, The Inca, Mogadishu, SENT OUT QUEST, Type, 1
+036, The Inca, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+036, Morocco, Mogadishu, SENT OUT QUEST, Type, 1
+036, Morocco, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+037, Denmark, Zanzibar, SENT OUT QUEST, Type, 1
+037, Denmark, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+037, The Huns, Zanzibar, SENT OUT QUEST, Type, 2
+037, The Huns, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+037, China, Ormus, SENT OUT QUEST, Type, 1
+037, China, Ormus, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ORMUS
+037, Denmark, Sydney, SENT OUT QUEST, Type, 3
+037, Denmark, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+038, Denmark, Vilnius, gained friend
+038, Denmark, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+038, Denmark, Colombo, SENT OUT QUEST, Type, 7
+038, Denmark, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+039, Korea, Buenos Aires, era change yield update
+039, Korea, Zanzibar, era change yield update
+039, Korea, Ormus, era change yield update
+039, Korea, Hanoi, era change yield update
+039, Korea, Vilnius, era change yield update
+039, Korea, Antwerp, era change yield update
+039, Korea, Ife, era change yield update
+039, Korea, Wellington, era change yield update
+039, Korea, Ur, era change yield update
+039, Korea, Samarkand, era change yield update
+039, Korea, Sydney, era change yield update
+039, Korea, Vatican City, era change yield update
+039, Korea, Cahokia, era change yield update
+039, Korea, Colombo, era change yield update
+039, Korea, Mogadishu, era change yield update
+039, Korea, Milan, era change yield update
+039, Korea, Zanzibar, SENT OUT QUEST, Type, 1
+039, Korea, Vilnius, SENT OUT QUEST, Type, 6
+039, Korea, Vilnius, SENT OUT QUEST, Type, 1
+039, Korea, Ife, SENT OUT QUEST, Type, 1
+039, Korea, Ife, SENT OUT QUEST, Type, 2
+039, Korea, Cahokia, SENT OUT QUEST, Type, 12
+039, Korea, Colombo, SENT OUT QUEST, Type, 3
+039, Korea, Colombo, SENT OUT QUEST, Type, 1
+039, Korea, Mogadishu, SENT OUT QUEST, Type, 1
+040, The Inca, Buenos Aires, era change yield update
+040, The Inca, Zanzibar, era change yield update
+040, The Inca, Ormus, era change yield update
+040, The Inca, Hanoi, era change yield update
+040, The Inca, Vilnius, era change yield update
+040, The Inca, Antwerp, era change yield update
+040, The Inca, Ife, era change yield update
+040, The Inca, Wellington, era change yield update
+040, The Inca, Ur, era change yield update
+040, The Inca, Samarkand, era change yield update
+040, The Inca, Sydney, era change yield update
+040, The Inca, Vatican City, era change yield update
+040, The Inca, Cahokia, era change yield update
+040, The Inca, Colombo, era change yield update
+040, The Inca, Mogadishu, era change yield update
+040, The Inca, Milan, era change yield update
+040, The Inca, Ur, SENT OUT QUEST, Type, 1
+040, The Inca, Ur, SENT OUT QUEST, Type, 3
+040, The Inca, Samarkand, SENT OUT QUEST, Type, 3
+040, The Inca, Samarkand, SENT OUT QUEST, Type, 1
+040, The Inca, Mogadishu, SENT OUT QUEST, Type, 1
+041, The Iroquois, Buenos Aires, era change yield update
+041, The Iroquois, Zanzibar, era change yield update
+041, The Iroquois, Ormus, era change yield update
+041, The Iroquois, Hanoi, era change yield update
+041, The Iroquois, Vilnius, era change yield update
+041, The Iroquois, Antwerp, era change yield update
+041, The Iroquois, Ife, era change yield update
+041, The Iroquois, Wellington, era change yield update
+041, The Iroquois, Ur, era change yield update
+041, The Iroquois, Samarkand, era change yield update
+041, The Iroquois, Sydney, era change yield update
+041, The Iroquois, Vatican City, era change yield update
+041, The Iroquois, Cahokia, era change yield update
+041, The Iroquois, Colombo, era change yield update
+041, The Iroquois, Mogadishu, era change yield update
+041, The Iroquois, Milan, era change yield update
+041, The Iroquois, Hanoi, SENT OUT QUEST, Type, 1
+041, The Iroquois, Hanoi, SENT OUT QUEST, Type, 2
+041, The Iroquois, Vilnius, SENT OUT QUEST, Type, 1
+041, The Iroquois, Vilnius, SENT OUT QUEST, Type, 3
+041, The Iroquois, Antwerp, SENT OUT QUEST, Type, 1
+041, The Iroquois, Ife, SENT OUT QUEST, Type, 17
+041, The Iroquois, Ife, SENT OUT QUEST, Type, 1
+041, The Iroquois, Wellington, SENT OUT QUEST, Type, 1
+041, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 17
+041, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 1
+041, Denmark, Buenos Aires, era change yield update
+041, Denmark, Zanzibar, era change yield update
+041, Denmark, Ormus, era change yield update
+041, Denmark, Hanoi, era change yield update
+041, Denmark, Vilnius, era change yield update
+041, Denmark, Antwerp, era change yield update
+041, Denmark, Ife, era change yield update
+041, Denmark, Wellington, era change yield update
+041, Denmark, Ur, era change yield update
+041, Denmark, Samarkand, era change yield update
+041, Denmark, Sydney, era change yield update
+041, Denmark, Vatican City, era change yield update
+041, Denmark, Cahokia, era change yield update
+041, Denmark, Colombo, era change yield update
+041, Denmark, Mogadishu, era change yield update
+041, Denmark, Milan, era change yield update
+041, Denmark, Zanzibar, SENT OUT QUEST, Type, 1
+041, Denmark, Vilnius, SENT OUT QUEST, Type, 1
+041, Denmark, Ife, SENT OUT QUEST, Type, 1
+041, Denmark, Ife, SENT OUT QUEST, Type, 3
+041, Denmark, Sydney, SENT OUT QUEST, Type, 1
+041, Denmark, Sydney, SENT OUT QUEST, Type, 3
+041, Denmark, Cahokia, SENT OUT QUEST, Type, 12
+041, Denmark, Colombo, SENT OUT QUEST, Type, 2
+041, Denmark, Colombo, SENT OUT QUEST, Type, 1
+041, Denmark, Colombo, SENT OUT QUEST, Type, 7
+041, Denmark, Ife, SENT OUT QUEST, Type, 1
+041, Denmark, Ife, SENT OUT QUEST, Type, 3
+041, Morocco, Buenos Aires, era change yield update
+041, Morocco, Zanzibar, era change yield update
+041, Morocco, Ormus, era change yield update
+041, Morocco, Hanoi, era change yield update
+041, Morocco, Vilnius, era change yield update
+041, Morocco, Antwerp, era change yield update
+041, Morocco, Ife, era change yield update
+041, Morocco, Wellington, era change yield update
+041, Morocco, Ur, era change yield update
+041, Morocco, Samarkand, era change yield update
+041, Morocco, Sydney, era change yield update
+041, Morocco, Vatican City, era change yield update
+041, Morocco, Cahokia, era change yield update
+041, Morocco, Colombo, era change yield update
+041, Morocco, Mogadishu, era change yield update
+041, Morocco, Milan, era change yield update
+041, Morocco, Zanzibar, SENT OUT QUEST, Type, 1
+041, Morocco, Zanzibar, SENT OUT QUEST, Type, 2
+041, Morocco, Ife, SENT OUT QUEST, Type, 1
+041, Morocco, Cahokia, SENT OUT QUEST, Type, 12
+041, Morocco, Cahokia, SENT OUT QUEST, Type, 2
+041, Morocco, Colombo, SENT OUT QUEST, Type, 1
+041, Morocco, Mogadishu, SENT OUT QUEST, Type, 2
+041, Morocco, Mogadishu, SENT OUT QUEST, Type, 1
+041, Morocco, Milan, SENT OUT QUEST, Type, 1
+041, Vilnius, Denmark, RECEIVED_UNIT_GIFT, Warrior
+041, Morocco, Ife, lost friend
+042, The Huns, Wellington, SENT OUT QUEST, Type, 1
+042, The Huns, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+042, Morocco, Ife, SENT OUT QUEST, Type, 2
+042, Morocco, Ife, RECEIVED QUEST, Connect Resource, Friendship: 28 to 28, MINOR_CIV_IFE
+043, The Huns, Antwerp, SENT OUT QUEST, Type, 1
+043, The Huns, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+043, The Huns, Colombo, SENT OUT QUEST, Type, 3
+043, The Huns, Colombo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+044, China, Buenos Aires, era change yield update
+044, China, Zanzibar, era change yield update
+044, China, Ormus, era change yield update
+044, China, Hanoi, era change yield update
+044, China, Vilnius, era change yield update
+044, China, Antwerp, era change yield update
+044, China, Ife, era change yield update
+044, China, Wellington, era change yield update
+044, China, Ur, era change yield update
+044, China, Samarkand, era change yield update
+044, China, Sydney, era change yield update
+044, China, Vatican City, era change yield update
+044, China, Cahokia, era change yield update
+044, China, Colombo, era change yield update
+044, China, Mogadishu, era change yield update
+044, China, Milan, era change yield update
+044, China, Buenos Aires, SENT OUT QUEST, Type, 1
+044, China, Buenos Aires, SENT OUT QUEST, Type, 7
+044, China, Ormus, SENT OUT QUEST, Type, 1
+044, China, Hanoi, SENT OUT QUEST, Type, 1
+044, China, Cahokia, SENT OUT QUEST, Type, 3
+044, China, Cahokia, SENT OUT QUEST, Type, 12
+044, China, Mogadishu, SENT OUT QUEST, Type, 1
+045, The Iroquois, Colombo, SENT OUT QUEST, Type, 1
+045, The Iroquois, Colombo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+045, Denmark, Ife, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_IFE, (SAVING) 
+045, The Inca, Milan, SENT OUT QUEST, Type, 1
+045, The Inca, Milan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MILAN
+045, Denmark, Vilnius, lost friend
+045, The Iroquois, Vilnius, SENT OUT QUEST, Type, 2
+045, The Iroquois, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+045, China, Vatican City, SENT OUT QUEST, Type, 1
+045, China, Vatican City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+045, China, Vatican City, SENT OUT QUEST, Type, 2
+045, China, Vatican City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+045, Korea, Cahokia, SENT OUT QUEST, Type, 3
+045, Korea, Cahokia, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+046, The Huns, Sydney, SENT OUT QUEST, Type, 2
+046, The Huns, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+046, Morocco, Cahokia, SENT OUT QUEST, Type, 7
+046, Morocco, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+046, Korea, Colombo, SENT OUT QUEST, Type, 6
+046, Korea, Colombo, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+047, Korea, Milan, SENT OUT QUEST, Type, 1
+047, Korea, Milan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MILAN
+048, Korea, Vilnius, gained friend
+048, Korea, Vilnius, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_VILNIUS
+048, The Huns, Vilnius, gained friend
+048, The Huns, Vilnius, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_VILNIUS
+048, The Iroquois, Vilnius, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+048, Korea, Vilnius, SENT OUT QUEST, Type, 4
+048, Korea, Vilnius, RECEIVED QUEST, Great Person, Friendship: 35 to 35, MINOR_CIV_VILNIUS
+048, Denmark, Ife, cancelled, Construct Wonder, Friendship: 3 to 3, MINOR_CIV_IFE
+048, The Iroquois, Ife, SENT OUT QUEST, Type, 3
+048, The Iroquois, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+048, The Inca, Ur, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_UR
+048, China, Cahokia, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+048, Korea, Colombo, gained friend
+048, Korea, Colombo, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_COLOMBO
+048, Morocco, Milan, SENT OUT QUEST, Type, 2
+048, Morocco, Milan, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MILAN
+049, Morocco, Wellington, SENT OUT QUEST, Type, 1
+049, Morocco, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+049, The Inca, Samarkand, SENT OUT QUEST, Type, 2
+049, The Inca, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+049, Morocco, Cahokia, gained friend
+049, Morocco, Cahokia, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+049, The Inca, Mogadishu, SENT OUT QUEST, Type, 2
+049, The Inca, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+050, The Iroquois, Hanoi, SENT OUT QUEST, Type, 17
+050, The Iroquois, Hanoi, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_HANOI
+050, Korea, Vilnius, cancelled, Kill Camp, Friendship: 30 to 30, MINOR_CIV_VILNIUS
+050, Babylon, Vilnius, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+050, The Iroquois, Vilnius, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+050, Denmark, Vilnius, cancelled, Kill Camp, Friendship: 6 to 6, MINOR_CIV_VILNIUS
+050, The Huns, Vilnius, cancelled, Kill Camp, Friendship: 30 to 30, MINOR_CIV_VILNIUS
+050, Korea, Ife, gained friend
+050, Korea, Ife, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_IFE
+050, Korea, Ife, cancelled, Kill Camp, Friendship: 40 to 40, MINOR_CIV_IFE
+050, The Iroquois, Ife, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+050, Denmark, Ife, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_IFE
+050, The Huns, Ife, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+050, Morocco, Ife, cancelled, Kill Camp, Friendship: 16 to 16, MINOR_CIV_IFE
+051, Korea, Vilnius, lost friend
+051, The Huns, Vilnius, lost friend
+051, Babylon, Wellington, SENT OUT QUEST, Type, 3
+051, Babylon, Wellington, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+051, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 3
+051, The Iroquois, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+052, Denmark, Zanzibar, SENT OUT QUEST, Type, 2
+052, Denmark, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+052, China, Ormus, SENT OUT QUEST, Type, 7
+052, China, Ormus, RECEIVED QUEST, Find Natural Wonder, Friendship: -1 to -1, MINOR_CIV_ORMUS
+052, Korea, Cahokia, gained friend
+052, Korea, Cahokia, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+052, Denmark, Cahokia, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+052, China, Cahokia, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+052, Morocco, Cahokia, cancelled, Contest Techs, Friendship: 35 to 35, MINOR_CIV_CAHOKIA
+052, Korea, Colombo, lost friend
+053, Babylon, Antwerp, SENT OUT QUEST, Type, 7
+053, Babylon, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+053, The Iroquois, Antwerp, SENT OUT QUEST, Type, 2
+053, The Iroquois, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+053, Korea, Mogadishu, SENT OUT QUEST, Type, 4
+053, Korea, Mogadishu, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+054, The Inca, Zanzibar, SENT OUT QUEST, Type, 1
+054, The Inca, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+054, Morocco, Antwerp, SENT OUT QUEST, Type, 1
+054, Morocco, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+054, China, Hanoi, SENT OUT QUEST, Type, 2
+054, China, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+054, Korea, Cahokia, cancelled, Construct Wonder, Friendship: 37 to 37, MINOR_CIV_CAHOKIA
+054, Korea, Colombo, cancelled, Construct Wonder, Friendship: 26 to 26, MINOR_CIV_COLOMBO
+055, Korea, Zanzibar, SENT OUT QUEST, Type, 4
+055, Korea, Zanzibar, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+056, Morocco, Zanzibar, SENT OUT QUEST, Type, 7
+056, Morocco, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+056, Morocco, Cahokia, lost friend
+056, China, Cahokia, SENT OUT QUEST, Type, 7
+056, China, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+056, Morocco, Colombo, SENT OUT QUEST, Type, 7
+056, Morocco, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+057, China, Zanzibar, SENT OUT QUEST, Type, 1
+057, China, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+057, Denmark, Vilnius, SENT OUT QUEST, Type, 2
+057, Denmark, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+057, Korea, Ife, lost friend
+057, The Huns, Ife, SENT OUT QUEST, Type, 7
+057, The Huns, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+058, Korea, Wellington, SENT OUT QUEST, Type, 1
+058, Korea, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+058, Babylon, Sydney, SENT OUT QUEST, Type, 3
+058, Babylon, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+059, Babylon, Colombo, SENT OUT QUEST, Type, 1
+059, Babylon, Colombo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+059, Denmark, Wellington, SENT OUT QUEST, Type, 1
+059, Denmark, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+059, The Huns, Sydney, SENT OUT QUEST, Type, 17
+059, The Huns, Sydney, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+059, Korea, Cahokia, lost friend
+059, Denmark, Colombo, gained friend
+059, Denmark, Colombo, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 39, MINOR_CIV_COLOMBO
+060, The Inca, Milan, SENT OUT QUEST, Type, 2
+060, The Inca, Milan, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MILAN
+061, Morocco, Zanzibar, SENT OUT QUEST, Type, 1
+061, Morocco, Zanzibar, SENT OUT QUEST, Type, 2
+061, Morocco, Zanzibar, SENT OUT QUEST, Type, 7
+061, Morocco, Cahokia, SENT OUT QUEST, Type, 2
+061, Morocco, Mogadishu, SENT OUT QUEST, Type, 2
+061, Morocco, Mogadishu, SENT OUT QUEST, Type, 1
+061, Morocco, Milan, SENT OUT QUEST, Type, 1
+061, Morocco, Milan, SENT OUT QUEST, Type, 2
+061, Babylon, Antwerp, gained friend
+061, Babylon, Antwerp, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+061, Denmark, Cahokia, SENT OUT QUEST, Type, 2
+061, Denmark, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+061, China, Mogadishu, SENT OUT QUEST, Type, 3
+061, China, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+062, China, Buenos Aires, SENT OUT QUEST, Type, 14
+062, China, Buenos Aires, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+062, The Huns, Antwerp, SENT OUT QUEST, Type, 2
+062, The Huns, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+062, Korea, Ife, SENT OUT QUEST, Type, 3
+062, Korea, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 22 to 22, MINOR_CIV_IFE
+062, Denmark, Ife, SENT OUT QUEST, Type, 2
+062, Denmark, Ife, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_IFE
+063, The Huns, Zanzibar, SENT OUT QUEST, Type, 7
+063, The Huns, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+063, The Iroquois, Wellington, SENT OUT QUEST, Type, 7
+063, The Iroquois, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+063, China, Vatican City, SENT OUT QUEST, Type, 3
+063, China, Vatican City, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+064, Korea, Buenos Aires, SENT OUT QUEST, Type, 1
+064, Korea, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+064, China, Zanzibar, SENT OUT QUEST, Type, 1
+064, The Huns, Vatican City, SENT OUT QUEST, Type, 1
+064, The Huns, Vatican City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+064, Korea, Zanzibar, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+064, Denmark, Zanzibar, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+064, China, Zanzibar, cancelled, Kill Camp, Friendship: 1 to 1, MINOR_CIV_ZANZIBAR
+064, The Huns, Zanzibar, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+064, The Inca, Zanzibar, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+064, Morocco, Zanzibar, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+064, The Iroquois, Ife, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+064, The Inca, Samarkand, gained friend
+064, The Inca, Samarkand, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_SAMARKAND
+064, Denmark, Sydney, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+064, The Iroquois, Mogadishu, gained friend
+064, The Iroquois, Mogadishu, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_MOGADISHU
+064, The Iroquois, Mogadishu, cancelled, Construct Wonder, Friendship: 50 to 50, MINOR_CIV_MOGADISHU
+064, Morocco, Mogadishu, SENT OUT QUEST, Type, 17
+064, Morocco, Mogadishu, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+065, The Iroquois, Zanzibar, Gold Gift: 500, Friendship: -6 to -6, Diplomacy, MINOR_CIV_ZANZIBAR, (SAVING) 
+065, Zanzibar, Korea, RECEIVED_UNIT_GIFT, Warrior
+065, Babylon, Wellington, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+065, Korea, Colombo, gained friend
+065, Korea, Colombo, FINISHED QUEST, Kill Camp, Friendship: 9 to 59, MINOR_CIV_COLOMBO
+065, The Huns, Colombo, gained friend
+065, The Huns, Colombo, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+065, The Iroquois, Colombo, SENT OUT QUEST, Type, 7
+065, The Iroquois, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+065, Korea, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+065, China, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+065, The Inca, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+065, Morocco, Mogadishu, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+066, Morocco, Ife, SENT OUT QUEST, Type, 7
+066, Morocco, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+066, Morocco, Cahokia, SENT OUT QUEST, Type, 14
+066, Morocco, Cahokia, RECEIVED QUEST, Bully City-State, Friendship: 14 to 14, MINOR_CIV_CAHOKIA
+066, Denmark, Colombo, lost friend
+066, Babylon, Colombo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+066, The Iroquois, Colombo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+066, Denmark, Colombo, cancelled, Kill Camp, Friendship: 29 to 29, MINOR_CIV_COLOMBO
+066, The Huns, Colombo, cancelled, Kill Camp, Friendship: 38 to 38, MINOR_CIV_COLOMBO
+066, Morocco, Colombo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+066, Korea, Colombo, SENT OUT QUEST, Type, 14
+066, Korea, Colombo, RECEIVED QUEST, Bully City-State, Friendship: 58 to 58, MINOR_CIV_COLOMBO
+066, Morocco, Milan, SENT OUT QUEST, Type, 17
+066, Morocco, Milan, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MILAN
+067, Babylon, Vilnius, SENT OUT QUEST, Type, 4
+067, Babylon, Vilnius, RECEIVED QUEST, Great Person, Friendship: -1 to -1, MINOR_CIV_VILNIUS
+067, The Huns, Vilnius, SENT OUT QUEST, Type, 2
+067, The Huns, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+067, The Huns, Wellington, SENT OUT QUEST, Type, 7
+067, The Huns, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+067, Denmark, Sydney, SENT OUT QUEST, Type, 14
+067, Denmark, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+067, Korea, Mogadishu, SENT OUT QUEST, Type, 2
+067, Korea, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+068, Korea, Zanzibar, SENT OUT QUEST, Type, 2
+068, Korea, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+068, Babylon, Antwerp, lost friend
+068, The Inca, Ur, SENT OUT QUEST, Type, 2
+068, The Inca, Ur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_UR
+069, Korea, Ife, gained friend
+069, Korea, Ife, FINISHED QUEST, Construct Wonder, Friendship: 11 to 51, MINOR_CIV_IFE
+069, Korea, Cahokia, SENT OUT QUEST, Type, 4
+069, Korea, Cahokia, RECEIVED QUEST, Great Person, Friendship: 14 to 14, MINOR_CIV_CAHOKIA
+069, The Inca, Milan, gained friend
+069, The Inca, Milan, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MILAN
+070, Morocco, Antwerp, SENT OUT QUEST, Type, 2
+070, Morocco, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+070, Korea, Milan, SENT OUT QUEST, Type, 3
+070, Korea, Milan, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MILAN
+071, The Inca, Milan, SENT OUT QUEST, Type, 1
+071, The Inca, Zanzibar, SENT OUT QUEST, Type, 3
+071, The Inca, Zanzibar, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+071, The Huns, Vilnius, gained friend
+071, The Huns, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+071, The Huns, Antwerp, gained friend
+071, The Huns, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+071, Morocco, Wellington, SENT OUT QUEST, Type, 7
+071, Morocco, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+071, The Inca, Samarkand, lost friend
+071, The Huns, Vatican City, gained friend
+071, The Huns, Vatican City, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_VATICAN_CITY
+072, Denmark, Zanzibar, SENT OUT QUEST, Type, 3
+072, Denmark, Zanzibar, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+072, China, Vatican City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+072, The Huns, Colombo, lost friend
+073, Morocco, Ife, SENT OUT QUEST, Type, 2
+073, Morocco, Ife, SENT OUT QUEST, Type, 7
+073, Morocco, Cahokia, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+073, The Iroquois, Mogadishu, lost friend
+074, China, Zanzibar, SENT OUT QUEST, Type, 2
+074, China, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+074, Denmark, Vilnius, SENT OUT QUEST, Type, 0
+074, Denmark, Vilnius, RECEIVED QUEST, Route, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+074, The Iroquois, Sydney, SENT OUT QUEST, Type, 1
+074, The Iroquois, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+074, Korea, Mogadishu, gained friend
+074, Korea, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOGADISHU
+075, China, Cahokia, SENT OUT QUEST, Type, 7
+075, Morocco, Sydney, SENT OUT QUEST, Type, 1
+075, Morocco, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+075, China, Vatican City, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+075, The Inca, Cahokia, SENT OUT QUEST, Type, 2
+075, The Inca, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+075, Denmark, Colombo, SENT OUT QUEST, Type, 17
+075, Denmark, Colombo, RECEIVED QUEST, Trade Route, Friendship: 16 to 16, MINOR_CIV_COLOMBO
+075, China, Mogadishu, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+076, China, Wellington, SENT OUT QUEST, Type, 1
+076, China, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+076, China, Hanoi, SENT OUT QUEST, Type, 14
+076, China, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
+076, The Huns, Vilnius, lost friend
+076, Morocco, Vilnius, SENT OUT QUEST, Type, 2
+076, Morocco, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: -3 to -3, MINOR_CIV_VILNIUS
+076, The Huns, Antwerp, gained ally
+076, Babylon, Antwerp, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_ANTWERP
+076, Babylon, Antwerp, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_ANTWERP
+076, The Huns, Antwerp, FINISHED QUEST, Kill Camp, Friendship: 32 to 82, MINOR_CIV_ANTWERP
+076, The Huns, Ife, gained friend
+076, The Huns, Ife, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_IFE
+076, The Huns, Wellington, gained friend
+076, The Huns, Wellington, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_WELLINGTON
+076, The Huns, Colombo, gained friend
+076, The Huns, Colombo, gained ally
+076, The Huns, Colombo, FINISHED QUEST, Connect Resource, Friendship: 23 to 63, MINOR_CIV_COLOMBO
+076, The Inca, Milan, lost friend
+077, China, Cahokia, Gold Gift: 500, Friendship: 2 to 2, Conquest, MINOR_CIV_CAHOKIA, (SAVING) 
+077, China, Buenos Aires, gained friend
+077, China, Buenos Aires, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BUENOS_AIRES
+077, The Huns, Zanzibar, gained friend
+077, The Huns, Zanzibar, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+077, China, Ormus, gained friend
+077, China, Ormus, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ORMUS
+077, The Iroquois, Antwerp, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+077, Morocco, Antwerp, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+077, Morocco, Ife, gained friend
+077, Morocco, Ife, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_IFE
+077, Korea, Ife, SENT OUT QUEST, Type, 11
+077, Korea, Ife, RECEIVED QUEST, Contest Faith, Friendship: 39 to 39, MINOR_CIV_IFE
+077, Babylon, Ife, SENT OUT QUEST, Type, 11
+077, Babylon, Ife, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+077, The Iroquois, Ife, SENT OUT QUEST, Type, 11
+077, The Iroquois, Ife, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+077, Denmark, Ife, SENT OUT QUEST, Type, 11
+077, Denmark, Ife, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_IFE
+077, China, Ife, SENT OUT QUEST, Type, 11
+077, China, Ife, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+077, The Huns, Ife, SENT OUT QUEST, Type, 11
+077, The Huns, Ife, RECEIVED QUEST, Contest Faith, Friendship: 38 to 38, MINOR_CIV_IFE
+077, The Inca, Ife, SENT OUT QUEST, Type, 11
+077, The Inca, Ife, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+077, Morocco, Ife, SENT OUT QUEST, Type, 11
+077, Morocco, Ife, RECEIVED QUEST, Contest Faith, Friendship: 45 to 45, MINOR_CIV_IFE
+077, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+077, The Iroquois, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+077, China, Ife, SENT OUT QUEST, Type, 2
+077, China, Ife, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+077, Korea, Wellington, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+077, Babylon, Wellington, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+077, The Iroquois, Wellington, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+077, Denmark, Wellington, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+077, China, Wellington, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+077, Morocco, Wellington, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+077, The Huns, Sydney, gained friend
+077, The Huns, Sydney, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+077, China, Cahokia, gained friend
+077, China, Cahokia, FINISHED QUEST, Find Natural Wonder, Friendship: 4 to 44, MINOR_CIV_CAHOKIA
+078, Babylon, Ife, SENT OUT QUEST, Type, 11
+078, China, Ormus, SENT OUT QUEST, Type, 2
+078, China, Ormus, RECEIVED QUEST, Connect Resource, Friendship: 38 to 38, MINOR_CIV_ORMUS
+078, Korea, Wellington, SENT OUT QUEST, Type, 17
+078, Korea, Wellington, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+078, The Iroquois, Wellington, SENT OUT QUEST, Type, 3
+078, The Iroquois, Wellington, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+078, Korea, Cahokia, SENT OUT QUEST, Type, 10
+078, Korea, Cahokia, RECEIVED QUEST, Contest Culture, Friendship: 1 to 1, MINOR_CIV_CAHOKIA
+078, The Iroquois, Cahokia, SENT OUT QUEST, Type, 10
+078, The Iroquois, Cahokia, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+078, Denmark, Cahokia, SENT OUT QUEST, Type, 10
+078, Denmark, Cahokia, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+078, China, Cahokia, SENT OUT QUEST, Type, 10
+078, China, Cahokia, RECEIVED QUEST, Contest Culture, Friendship: 42 to 42, MINOR_CIV_CAHOKIA
+078, The Inca, Cahokia, SENT OUT QUEST, Type, 10
+078, The Inca, Cahokia, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+078, Morocco, Cahokia, SENT OUT QUEST, Type, 10
+078, Morocco, Cahokia, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+078, Morocco, Colombo, SENT OUT QUEST, Type, 2
+078, Morocco, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+079, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 2
+079, The Iroquois, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+079, The Iroquois, Cahokia, SENT OUT QUEST, Type, 17
+079, The Iroquois, Cahokia, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+079, Denmark, Cahokia, SENT OUT QUEST, Type, 4
+079, Denmark, Cahokia, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+079, The Huns, Colombo, lost ally
+079, Korea, Mogadishu, lost friend
+080, Korea, Ife, SENT OUT QUEST, Type, 11
+080, The Iroquois, Antwerp, SENT OUT QUEST, Type, 7
+080, The Iroquois, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+080, Denmark, Ife, SENT OUT QUEST, Type, 3
+080, Denmark, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_IFE
+080, Babylon, Sydney, SENT OUT QUEST, Type, 14
+080, Babylon, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+080, China, Vatican City, gained friend
+080, China, Vatican City, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VATICAN_CITY
+081, The Inca, Milan, SENT OUT QUEST, Type, 1
+081, The Inca, Buenos Aires, SENT OUT QUEST, Type, 1
+081, The Inca, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+081, China, Ormus, gained ally
+081, China, Ormus, FINISHED QUEST, Connect Resource, Friendship: 34 to 74, MINOR_CIV_ORMUS
+081, China, Ife, gained friend
+081, China, Ife, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_IFE
+081, China, Cahokia, SENT OUT QUEST, Type, 7
+081, China, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 38 to 38, MINOR_CIV_CAHOKIA
+082, China, Zanzibar, SENT OUT QUEST, Type, 2
+082, China, Ormus, SENT OUT QUEST, Type, 1
+082, China, Buenos Aires, lost friend
+082, China, Buenos Aires, cancelled, Bully City-State, Friendship: 28 to 28, MINOR_CIV_BUENOS_AIRES
+082, China, Ormus, cancelled, Kill Camp, Friendship: 72 to 72, MINOR_CIV_ORMUS
+082, The Iroquois, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+082, China, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+082, Korea, Vilnius, SENT OUT QUEST, Type, 10
+082, Korea, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+082, Babylon, Vilnius, SENT OUT QUEST, Type, 10
+082, Babylon, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+082, The Iroquois, Vilnius, SENT OUT QUEST, Type, 10
+082, The Iroquois, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+082, Denmark, Vilnius, SENT OUT QUEST, Type, 10
+082, Denmark, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+082, China, Vilnius, SENT OUT QUEST, Type, 10
+082, China, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+082, The Huns, Vilnius, SENT OUT QUEST, Type, 10
+082, The Huns, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 15 to 15, MINOR_CIV_VILNIUS
+082, The Inca, Vilnius, SENT OUT QUEST, Type, 10
+082, The Inca, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+082, Morocco, Vilnius, SENT OUT QUEST, Type, 10
+082, Morocco, Vilnius, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+082, The Inca, Ur, SENT OUT QUEST, Type, 14
+082, The Inca, Ur, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_UR
+082, The Huns, Sydney, lost friend
+082, Babylon, Colombo, SENT OUT QUEST, Type, 3
+082, Babylon, Colombo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+083, Korea, Ife, Gold Gift: 250, Friendship: 32 to 32, Spaceship, MINOR_CIV_IFE, (SAVING) , Boost! , Passing The Huns
+083, Korea, Sydney, SENT OUT QUEST, Type, 1
+083, Korea, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+083, The Iroquois, Ife, SENT OUT QUEST, Type, 17
+083, The Iroquois, Ife, SENT OUT QUEST, Type, 11
+083, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+083, China, Ife, SENT OUT QUEST, Type, 11
+083, The Huns, Ife, SENT OUT QUEST, Type, 7
+083, The Huns, Ife, SENT OUT QUEST, Type, 11
+083, The Huns, Ife, lost friend
+083, Denmark, Colombo, gained friend
+083, Denmark, Colombo, FINISHED QUEST, Trade Route, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+084, Denmark, Colombo, SENT OUT QUEST, Type, 2
+084, Morocco, Ife, Gold Gift: 250, Friendship: 36 to 36, Culture, MINOR_CIV_IFE, (SAVING) , Boost! , Passing The Huns
+084, The Huns, Zanzibar, lost friend
+084, Korea, Ife, lost friend
+084, Babylon, Ife, SENT OUT QUEST, Type, 16
+084, Babylon, Ife, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_IFE
+085, Babylon, Buenos Aires, era change yield update
+085, Babylon, Zanzibar, era change yield update
+085, Babylon, Ormus, era change yield update
+085, Babylon, Hanoi, era change yield update
+085, Babylon, Vilnius, era change yield update
+085, Babylon, Antwerp, era change yield update
+085, Babylon, Ife, era change yield update
+085, Babylon, Wellington, era change yield update
+085, Babylon, Ur, era change yield update
+085, Babylon, Samarkand, era change yield update
+085, Babylon, Sydney, era change yield update
+085, Babylon, Vatican City, era change yield update
+085, Babylon, Cahokia, era change yield update
+085, Babylon, Colombo, era change yield update
+085, Babylon, Mogadishu, era change yield update
+085, Babylon, Milan, era change yield update
+085, Babylon, Vilnius, SENT OUT QUEST, Type, 2
+085, Babylon, Vilnius, SENT OUT QUEST, Type, 4
+085, Babylon, Vilnius, SENT OUT QUEST, Type, 10
+085, Babylon, Ife, SENT OUT QUEST, Type, 11
+085, Babylon, Ife, SENT OUT QUEST, Type, 16
+085, Babylon, Wellington, SENT OUT QUEST, Type, 2
+085, Babylon, Sydney, SENT OUT QUEST, Type, 1
+085, Babylon, Sydney, SENT OUT QUEST, Type, 3
+085, Babylon, Sydney, SENT OUT QUEST, Type, 14
+085, Babylon, Colombo, SENT OUT QUEST, Type, 3
+085, The Inca, Ife, SENT OUT QUEST, Type, 16
+085, The Inca, Ife, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_IFE
+085, The Huns, Vatican City, lost friend
+085, Korea, Colombo, lost friend
+086, The Iroquois, Vilnius, SENT OUT QUEST, Type, 14
+086, The Iroquois, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+086, Denmark, Wellington, SENT OUT QUEST, Type, 4
+086, Denmark, Wellington, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+086, Korea, Colombo, cancelled, Bully City-State, Friendship: 22 to 22, MINOR_CIV_COLOMBO
+086, The Inca, Milan, SENT OUT QUEST, Type, 16
+086, The Inca, Milan, RECEIVED QUEST, Spread Religion, Friendship: 14 to 14, MINOR_CIV_MILAN
+087, The Huns, Buenos Aires, SENT OUT QUEST, Type, 1
+087, The Huns, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+087, The Inca, Zanzibar, SENT OUT QUEST, Type, 2
+087, The Inca, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+087, Korea, Ife, SENT OUT QUEST, Type, 16
+087, Korea, Ife, RECEIVED QUEST, Spread Religion, Friendship: 24 to 24, MINOR_CIV_IFE
+087, Morocco, Wellington, SENT OUT QUEST, Type, 2
+087, Morocco, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+087, Denmark, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+087, China, Vatican City, lost friend
+087, China, Cahokia, lost friend
+087, China, Cahokia, gained friend
+087, China, Cahokia, gained ally
+087, China, Cahokia, FINISHED QUEST, Find Natural Wonder, Friendship: 29 to 69, MINOR_CIV_CAHOKIA
+088, Korea, Buenos Aires, era change yield update
+088, Korea, Zanzibar, era change yield update
+088, Korea, Ormus, era change yield update
+088, Korea, Hanoi, era change yield update
+088, Korea, Vilnius, era change yield update
+088, Korea, Antwerp, era change yield update
+088, Korea, Ife, era change yield update
+088, Korea, Wellington, era change yield update
+088, Korea, Ur, era change yield update
+088, Korea, Samarkand, era change yield update
+088, Korea, Sydney, era change yield update
+088, Korea, Vatican City, era change yield update
+088, Korea, Cahokia, era change yield update
+088, Korea, Colombo, era change yield update
+088, Korea, Mogadishu, era change yield update
+088, Korea, Milan, era change yield update
+088, Korea, Buenos Aires, SENT OUT QUEST, Type, 1
+088, Korea, Zanzibar, SENT OUT QUEST, Type, 4
+088, Korea, Zanzibar, SENT OUT QUEST, Type, 2
+088, Korea, Vilnius, SENT OUT QUEST, Type, 4
+088, Korea, Vilnius, SENT OUT QUEST, Type, 10
+088, Korea, Ife, SENT OUT QUEST, Type, 11
+088, Korea, Ife, SENT OUT QUEST, Type, 16
+088, Korea, Wellington, SENT OUT QUEST, Type, 17
+088, Korea, Sydney, SENT OUT QUEST, Type, 1
+088, Korea, Cahokia, SENT OUT QUEST, Type, 4
+088, Korea, Cahokia, SENT OUT QUEST, Type, 10
+088, Korea, Mogadishu, SENT OUT QUEST, Type, 4
+088, Korea, Milan, SENT OUT QUEST, Type, 1
+088, Korea, Milan, SENT OUT QUEST, Type, 3
+088, Korea, Vilnius, SENT OUT QUEST, Type, 16
+088, Korea, Vilnius, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+088, China, Ife, lost friend
+088, Morocco, Ife, lost friend
+088, Korea, Cahokia, SENT OUT QUEST, Type, 3
+088, Korea, Cahokia, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+088, The Huns, Colombo, SENT OUT QUEST, Type, 14
+088, The Huns, Colombo, RECEIVED QUEST, Bully City-State, Friendship: 45 to 45, MINOR_CIV_COLOMBO
+088, China, Mogadishu, SENT OUT QUEST, Type, 2
+088, China, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+089, The Huns, Zanzibar, SENT OUT QUEST, Type, 14
+089, The Huns, Zanzibar, RECEIVED QUEST, Bully City-State, Friendship: 22 to 22, MINOR_CIV_ZANZIBAR
+089, The Huns, Vatican City, SENT OUT QUEST, Type, 3
+089, The Huns, Vatican City, RECEIVED QUEST, Construct Wonder, Friendship: 23 to 23, MINOR_CIV_VATICAN_CITY
+089, Korea, Colombo, SENT OUT QUEST, Type, 16
+089, Korea, Colombo, RECEIVED QUEST, Spread Religion, Friendship: 17 to 17, MINOR_CIV_COLOMBO
+090, Korea, Zanzibar, SENT OUT QUEST, Type, 12
+090, Korea, Zanzibar, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+090, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 12
+090, The Iroquois, Zanzibar, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+090, Denmark, Zanzibar, SENT OUT QUEST, Type, 12
+090, Denmark, Zanzibar, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+090, China, Zanzibar, SENT OUT QUEST, Type, 12
+090, China, Zanzibar, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+090, The Huns, Zanzibar, SENT OUT QUEST, Type, 12
+090, The Huns, Zanzibar, RECEIVED QUEST, Contest Techs, Friendship: 20 to 20, MINOR_CIV_ZANZIBAR
+090, The Inca, Zanzibar, SENT OUT QUEST, Type, 12
+090, The Inca, Zanzibar, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+090, Morocco, Zanzibar, SENT OUT QUEST, Type, 12
+090, Morocco, Zanzibar, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+090, The Iroquois, Vilnius, gained friend
+090, The Iroquois, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+090, Antwerp, The Inca, RECEIVED_UNIT_GIFT, Warrior
+090, The Huns, Wellington, lost friend
+090, Babylon, Wellington, SENT OUT QUEST, Type, 3
+090, Babylon, Wellington, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+090, Denmark, Colombo, lost friend
+090, Babylon, Colombo, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+090, Korea, Milan, gained friend
+090, Korea, Milan, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_MILAN
+091, The Huns, Antwerp, Gold Gift: 250, Friendship: 61 to 86, Conquest, MINOR_CIV_ANTWERP, Boost! , Passing The Inca
+091, The Huns, Ife, Gold Gift: 500, Friendship: 19 to 19, Conquest, MINOR_CIV_IFE, (SAVING) , Passing Denmark
+091, China, Ormus, lost ally
+091, The Huns, Antwerp, SENT OUT QUEST, Type, 2
+091, The Huns, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 85 to 85, MINOR_CIV_ANTWERP
+091, The Iroquois, Colombo, SENT OUT QUEST, Type, 2
+091, The Iroquois, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+091, China, Colombo, SENT OUT QUEST, Type, 2
+091, China, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+092, Korea, Wellington, SENT OUT QUEST, Type, 14
+092, Korea, Wellington, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+092, Denmark, Colombo, gained friend
+092, Denmark, Colombo, gained ally
+092, Korea, Colombo, SENT OUT QUEST, Type, 16
+092, Korea, Colombo, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_COLOMBO
+092, The Iroquois, Colombo, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_COLOMBO
+092, The Iroquois, Colombo, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_COLOMBO
+092, Denmark, Colombo, FINISHED QUEST, Connect Resource, Friendship: 26 to 66, MINOR_CIV_COLOMBO
+092, The Inca, Mogadishu, SENT OUT QUEST, Type, 3
+092, The Inca, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+093, Denmark, Zanzibar, gained friend
+093, Denmark, Zanzibar, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+093, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 17
+093, The Iroquois, Zanzibar, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+093, Denmark, Vilnius, gained friend
+093, Denmark, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+093, Denmark, Ife, gained friend
+093, Denmark, Ife, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_IFE
+093, Morocco, Sydney, SENT OUT QUEST, Type, 2
+093, Morocco, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+094, Korea, Antwerp, SENT OUT QUEST, Type, 2
+094, Korea, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+094, Morocco, Antwerp, SENT OUT QUEST, Type, 14
+094, Morocco, Antwerp, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+094, China, Wellington, SENT OUT QUEST, Type, 2
+094, China, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+094, Korea, Samarkand, SENT OUT QUEST, Type, 1
+094, Korea, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+094, China, Vatican City, SENT OUT QUEST, Type, 17
+094, China, Vatican City, RECEIVED QUEST, Trade Route, Friendship: 19 to 19, MINOR_CIV_VATICAN_CITY
+094, China, Cahokia, lost ally
+094, Morocco, Cahokia, SENT OUT QUEST, Type, 16
+094, Morocco, Cahokia, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+095, Denmark, Buenos Aires, era change yield update
+095, Denmark, Zanzibar, era change yield update
+095, Denmark, Ormus, era change yield update
+095, Denmark, Hanoi, era change yield update
+095, Denmark, Vilnius, era change yield update
+095, Denmark, Antwerp, era change yield update
+095, Denmark, Ife, era change yield update
+095, Denmark, Wellington, era change yield update
+095, Denmark, Ur, era change yield update
+095, Denmark, Samarkand, era change yield update
+095, Denmark, Sydney, era change yield update
+095, Denmark, Vatican City, era change yield update
+095, Denmark, Cahokia, era change yield update
+095, Denmark, Colombo, era change yield update
+095, Denmark, Mogadishu, era change yield update
+095, Denmark, Milan, era change yield update
+095, Denmark, Zanzibar, SENT OUT QUEST, Type, 3
+095, Denmark, Zanzibar, SENT OUT QUEST, Type, 12
+095, Denmark, Vilnius, SENT OUT QUEST, Type, 0
+095, Denmark, Vilnius, SENT OUT QUEST, Type, 10
+095, Denmark, Ife, SENT OUT QUEST, Type, 11
+095, Denmark, Ife, SENT OUT QUEST, Type, 3
+095, Denmark, Wellington, SENT OUT QUEST, Type, 4
+095, Denmark, Sydney, SENT OUT QUEST, Type, 1
+095, Denmark, Cahokia, SENT OUT QUEST, Type, 2
+095, Denmark, Cahokia, SENT OUT QUEST, Type, 10
+095, Denmark, Cahokia, SENT OUT QUEST, Type, 4
+095, China, Buenos Aires, SENT OUT QUEST, Type, 4
+095, China, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+095, The Iroquois, Vilnius, lost friend
+095, The Iroquois, Antwerp, gained friend
+095, The Iroquois, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+095, The Iroquois, Cahokia, SENT OUT QUEST, Type, 2
+095, The Iroquois, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+095, The Inca, Cahokia, SENT OUT QUEST, Type, 14
+095, The Inca, Cahokia, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+095, The Inca, Colombo, SENT OUT QUEST, Type, 7
+095, The Inca, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+096, The Inca, Sydney, SENT OUT QUEST, Type, 1
+096, The Inca, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+096, Korea, Buenos Aires, SENT OUT QUEST, Type, 16
+096, Korea, Buenos Aires, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+096, China, Hanoi, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
+096, The Huns, Wellington, SENT OUT QUEST, Type, 3
+096, The Huns, Wellington, RECEIVED QUEST, Construct Wonder, Friendship: 20 to 20, MINOR_CIV_WELLINGTON
+096, Denmark, Colombo, SENT OUT QUEST, Type, 0
+096, Denmark, Colombo, RECEIVED QUEST, Route, Friendship: 60 to 60, MINOR_CIV_COLOMBO
+096, Korea, Milan, SENT OUT QUEST, Type, 4
+096, Korea, Milan, RECEIVED QUEST, Great Person, Friendship: 31 to 31, MINOR_CIV_MILAN
+097, China, Sydney, SENT OUT QUEST, Type, 1
+097, China, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+097, Denmark, Ife, gained ally
+097, Korea, Ife, SENT OUT QUEST, Type, 11
+097, Korea, Ife, SENT OUT QUEST, Type, 16
+097, Korea, Ife, cancelled, Contest Faith, Friendship: -60 to -60, MINOR_CIV_IFE
+097, Korea, Ife, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_IFE
+097, The Iroquois, Ife, SENT OUT QUEST, Type, 17
+097, The Iroquois, Ife, SENT OUT QUEST, Type, 11
+097, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+097, The Iroquois, Ife, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_IFE
+097, The Iroquois, Ife, cancelled, Contest Faith, Friendship: -60 to -60, MINOR_CIV_IFE
+097, The Iroquois, Ife, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_IFE
+097, Denmark, Ife, FINISHED QUEST, Contest Faith, Friendship: 39 to 79, MINOR_CIV_IFE
+097, Babylon, Ife, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_IFE
+097, China, Ife, cancelled, Contest Faith, Friendship: 16 to 16, MINOR_CIV_IFE
+097, The Huns, Ife, cancelled, Contest Faith, Friendship: 8 to 8, MINOR_CIV_IFE
+097, The Inca, Ife, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+097, Morocco, Ife, cancelled, Contest Faith, Friendship: 15 to 15, MINOR_CIV_IFE
+097, Denmark, Colombo, lost ally
+097, Korea, Milan, lost friend
+098, The Inca, Zanzibar, gained friend
+098, The Inca, Zanzibar, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+098, China, Zanzibar, SENT OUT QUEST, Type, 7
+098, China, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+098, Denmark, Vilnius, lost friend
+098, Babylon, Wellington, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+098, The Iroquois, Wellington, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+098, Babylon, Sydney, cancelled, Construct Wonder, Friendship: -4 to -4, MINOR_CIV_SYDNEY
+098, The Huns, Vatican City, cancelled, Construct Wonder, Friendship: 9 to 9, MINOR_CIV_VATICAN_CITY
+098, Korea, Cahokia, gained friend
+098, Korea, Cahokia, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+098, The Iroquois, Cahokia, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+098, Denmark, Cahokia, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+098, China, Cahokia, cancelled, Contest Culture, Friendship: 53 to 53, MINOR_CIV_CAHOKIA
+098, The Inca, Cahokia, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+098, Morocco, Cahokia, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+098, The Inca, Mogadishu, gained friend
+098, The Inca, Mogadishu, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_MOGADISHU
+098, Korea, Mogadishu, SENT OUT QUEST, Type, 2
+098, Korea, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+099, Korea, Zanzibar, gained friend
+099, Korea, Zanzibar, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+099, Korea, Vilnius, gained friend
+099, Korea, Vilnius, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+099, Korea, Cahokia, gained ally
+099, Denmark, Cahokia, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_CAHOKIA
+099, Denmark, Cahokia, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_CAHOKIA
+099, Korea, Cahokia, FINISHED QUEST, Great Person, Friendship: 40 to 80, MINOR_CIV_CAHOKIA
+099, Korea, Mogadishu, gained friend
+099, Korea, Mogadishu, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MOGADISHU
+099, Korea, Milan, gained friend
+099, Korea, Milan, gained ally
+099, Korea, Milan, FINISHED QUEST, Great Person, Friendship: 28 to 68, MINOR_CIV_MILAN
+099, China, Vilnius, SENT OUT QUEST, Type, 4
+099, China, Vilnius, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+099, The Huns, Vilnius, SENT OUT QUEST, Type, 2
+099, The Huns, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+099, China, Ife, SENT OUT QUEST, Type, 2
+099, China, Ife, RECEIVED QUEST, Connect Resource, Friendship: 13 to 13, MINOR_CIV_IFE
+099, Morocco, Ife, SENT OUT QUEST, Type, 16
+099, Morocco, Ife, RECEIVED QUEST, Spread Religion, Friendship: 12 to 12, MINOR_CIV_IFE
+099, Korea, Vatican City, SENT OUT QUEST, Type, 11
+099, Korea, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+099, China, Vatican City, SENT OUT QUEST, Type, 11
+099, China, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 11 to 11, MINOR_CIV_VATICAN_CITY
+099, The Huns, Vatican City, SENT OUT QUEST, Type, 11
+099, The Huns, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 8 to 8, MINOR_CIV_VATICAN_CITY
+099, The Huns, Colombo, lost friend
+099, Korea, Mogadishu, gained ally
+099, Korea, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 37 to 77, MINOR_CIV_MOGADISHU
+100, Korea, Cahokia, SENT OUT QUEST, Type, 3
+100, Korea, Milan, SENT OUT QUEST, Type, 1
+100, Denmark, Zanzibar, lost friend
+100, The Iroquois, Zanzibar, gained friend
+100, The Iroquois, Zanzibar, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_ZANZIBAR
+100, Babylon, Sydney, cancelled, Bully City-State, Friendship: -1 to -1, MINOR_CIV_SYDNEY
+100, The Iroquois, Cahokia, gained friend
+100, The Iroquois, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+101, The Iroquois, Sydney, SENT OUT QUEST, Type, 14
+101, The Iroquois, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+101, Babylon, Colombo, SENT OUT QUEST, Type, 7
+101, Babylon, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+101, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 2
+101, The Iroquois, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+102, China, Ormus, SENT OUT QUEST, Type, 2
+102, China, Ormus, RECEIVED QUEST, Connect Resource, Friendship: 42 to 42, MINOR_CIV_ORMUS
+102, Korea, Vilnius, gained ally
+102, Denmark, Vilnius, cancelled, Route, Friendship: -60 to -60, MINOR_CIV_VILNIUS
+102, Denmark, Vilnius, cancelled, Contest Culture, Friendship: -60 to -60, MINOR_CIV_VILNIUS
+102, Korea, Vilnius, FINISHED QUEST, Contest Culture, Friendship: 31 to 71, MINOR_CIV_VILNIUS
+102, Babylon, Vilnius, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+102, The Iroquois, Vilnius, cancelled, Contest Culture, Friendship: 13 to 13, MINOR_CIV_VILNIUS
+102, China, Vilnius, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+102, The Huns, Vilnius, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+102, The Inca, Vilnius, cancelled, Contest Culture, Friendship: -4 to -4, MINOR_CIV_VILNIUS
+102, Morocco, Vilnius, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+102, The Iroquois, Antwerp, lost friend
+102, The Inca, Wellington, SENT OUT QUEST, Type, 7
+102, The Inca, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+102, The Inca, Ur, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_UR
+103, Korea, Vilnius, SENT OUT QUEST, Type, 16
+103, The Iroquois, Buenos Aires, era change yield update
+103, The Iroquois, Zanzibar, era change yield update
+103, The Iroquois, Ormus, era change yield update
+103, The Iroquois, Hanoi, era change yield update
+103, The Iroquois, Vilnius, era change yield update
+103, The Iroquois, Antwerp, era change yield update
+103, The Iroquois, Ife, era change yield update
+103, The Iroquois, Wellington, era change yield update
+103, The Iroquois, Ur, era change yield update
+103, The Iroquois, Samarkand, era change yield update
+103, The Iroquois, Sydney, era change yield update
+103, The Iroquois, Vatican City, era change yield update
+103, The Iroquois, Cahokia, era change yield update
+103, The Iroquois, Colombo, era change yield update
+103, The Iroquois, Mogadishu, era change yield update
+103, The Iroquois, Milan, era change yield update
+103, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 12
+103, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 17
+103, The Iroquois, Hanoi, SENT OUT QUEST, Type, 2
+103, The Iroquois, Hanoi, SENT OUT QUEST, Type, 17
+103, The Iroquois, Vilnius, SENT OUT QUEST, Type, 14
+103, The Iroquois, Antwerp, SENT OUT QUEST, Type, 7
+103, The Iroquois, Wellington, SENT OUT QUEST, Type, 7
+103, The Iroquois, Sydney, SENT OUT QUEST, Type, 1
+103, The Iroquois, Sydney, SENT OUT QUEST, Type, 14
+103, The Iroquois, Cahokia, SENT OUT QUEST, Type, 17
+103, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 17
+103, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 2
+103, The Iroquois, Cahokia, SENT OUT QUEST, Type, 17
+103, China, Buenos Aires, era change yield update
+103, China, Zanzibar, era change yield update
+103, China, Ormus, era change yield update
+103, China, Hanoi, era change yield update
+103, China, Vilnius, era change yield update
+103, China, Antwerp, era change yield update
+103, China, Ife, era change yield update
+103, China, Wellington, era change yield update
+103, China, Ur, era change yield update
+103, China, Samarkand, era change yield update
+103, China, Sydney, era change yield update
+103, China, Vatican City, era change yield update
+103, China, Cahokia, era change yield update
+103, China, Colombo, era change yield update
+103, China, Mogadishu, era change yield update
+103, China, Milan, era change yield update
+103, China, Buenos Aires, SENT OUT QUEST, Type, 1
+103, China, Buenos Aires, SENT OUT QUEST, Type, 4
+103, China, Zanzibar, SENT OUT QUEST, Type, 2
+103, China, Zanzibar, SENT OUT QUEST, Type, 12
+103, China, Zanzibar, SENT OUT QUEST, Type, 7
+103, China, Ormus, SENT OUT QUEST, Type, 2
+103, China, Hanoi, SENT OUT QUEST, Type, 2
+103, China, Vilnius, SENT OUT QUEST, Type, 4
+103, China, Ife, SENT OUT QUEST, Type, 2
+103, China, Wellington, SENT OUT QUEST, Type, 2
+103, China, Sydney, SENT OUT QUEST, Type, 1
+103, China, Vatican City, SENT OUT QUEST, Type, 17
+103, China, Vatican City, SENT OUT QUEST, Type, 11
+103, China, Colombo, SENT OUT QUEST, Type, 2
+103, China, Mogadishu, SENT OUT QUEST, Type, 2
+103, The Inca, Vilnius, SENT OUT QUEST, Type, 14
+103, The Inca, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: -3 to -3, MINOR_CIV_VILNIUS
+103, The Huns, Ife, SENT OUT QUEST, Type, 17
+103, The Huns, Ife, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_IFE
+103, The Huns, Vatican City, SENT OUT QUEST, Type, 7
+103, The Huns, Vatican City, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_VATICAN_CITY
+103, The Inca, Mogadishu, lost friend
+104, The Iroquois, Cahokia, Gold Gift: 250, Friendship: 35 to 60, Diplomacy, MINOR_CIV_CAHOKIA, Boost! , Passing Morocco
+104, The Iroquois, Ife, Gold Gift: 500, Friendship: -6 to -6, Diplomacy, MINOR_CIV_IFE, (SAVING) 
+104, Denmark, Zanzibar, cancelled, Construct Wonder, Friendship: 23 to 23, MINOR_CIV_ZANZIBAR
+104, Ife, China, RECEIVED_UNIT_GIFT, Warrior
+104, Denmark, Ife, cancelled, Construct Wonder, Friendship: 68 to 68, MINOR_CIV_IFE
+104, The Huns, Wellington, cancelled, Construct Wonder, Friendship: 8 to 8, MINOR_CIV_WELLINGTON
+104, Denmark, Sydney, SENT OUT QUEST, Type, 4
+104, Denmark, Sydney, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+104, Korea, Cahokia, FINISHED QUEST, Construct Wonder, Friendship: 71 to 111, MINOR_CIV_CAHOKIA
+104, Korea, Milan, lost ally
+105, The Huns, Buenos Aires, era change yield update
+105, The Huns, Zanzibar, era change yield update
+105, The Huns, Ormus, era change yield update
+105, The Huns, Hanoi, era change yield update
+105, The Huns, Vilnius, era change yield update
+105, The Huns, Antwerp, era change yield update
+105, The Huns, Ife, era change yield update
+105, The Huns, Wellington, era change yield update
+105, The Huns, Ur, era change yield update
+105, The Huns, Samarkand, era change yield update
+105, The Huns, Sydney, era change yield update
+105, The Huns, Vatican City, era change yield update
+105, The Huns, Cahokia, era change yield update
+105, The Huns, Colombo, era change yield update
+105, The Huns, Mogadishu, era change yield update
+105, The Huns, Milan, era change yield update
+105, The Huns, Buenos Aires, SENT OUT QUEST, Type, 1
+105, The Huns, Zanzibar, SENT OUT QUEST, Type, 7
+105, The Huns, Zanzibar, SENT OUT QUEST, Type, 14
+105, The Huns, Zanzibar, SENT OUT QUEST, Type, 12
+105, The Huns, Vilnius, SENT OUT QUEST, Type, 2
+105, The Huns, Antwerp, SENT OUT QUEST, Type, 2
+105, The Huns, Ife, SENT OUT QUEST, Type, 7
+105, The Huns, Ife, SENT OUT QUEST, Type, 17
+105, The Huns, Wellington, SENT OUT QUEST, Type, 7
+105, The Huns, Sydney, SENT OUT QUEST, Type, 1
+105, The Huns, Sydney, SENT OUT QUEST, Type, 17
+105, The Huns, Vatican City, SENT OUT QUEST, Type, 11
+105, The Huns, Vatican City, SENT OUT QUEST, Type, 7
+105, The Huns, Colombo, SENT OUT QUEST, Type, 14
+105, The Inca, Buenos Aires, era change yield update
+105, The Inca, Zanzibar, era change yield update
+105, The Inca, Ormus, era change yield update
+105, The Inca, Hanoi, era change yield update
+105, The Inca, Vilnius, era change yield update
+105, The Inca, Antwerp, era change yield update
+105, The Inca, Ife, era change yield update
+105, The Inca, Wellington, era change yield update
+105, The Inca, Ur, era change yield update
+105, The Inca, Samarkand, era change yield update
+105, The Inca, Sydney, era change yield update
+105, The Inca, Vatican City, era change yield update
+105, The Inca, Cahokia, era change yield update
+105, The Inca, Colombo, era change yield update
+105, The Inca, Mogadishu, era change yield update
+105, The Inca, Milan, era change yield update
+105, The Inca, Buenos Aires, SENT OUT QUEST, Type, 1
+105, The Inca, Zanzibar, SENT OUT QUEST, Type, 2
+105, The Inca, Zanzibar, SENT OUT QUEST, Type, 12
+105, The Inca, Vilnius, SENT OUT QUEST, Type, 14
+105, The Inca, Ife, SENT OUT QUEST, Type, 16
+105, The Inca, Wellington, SENT OUT QUEST, Type, 7
+105, The Inca, Ur, SENT OUT QUEST, Type, 1
+105, The Inca, Ur, SENT OUT QUEST, Type, 2
+105, The Inca, Samarkand, SENT OUT QUEST, Type, 1
+105, The Inca, Samarkand, SENT OUT QUEST, Type, 2
+105, The Inca, Sydney, SENT OUT QUEST, Type, 1
+105, The Inca, Cahokia, SENT OUT QUEST, Type, 2
+105, The Inca, Cahokia, SENT OUT QUEST, Type, 14
+105, The Inca, Colombo, SENT OUT QUEST, Type, 7
+105, The Inca, Mogadishu, SENT OUT QUEST, Type, 2
+105, The Inca, Milan, SENT OUT QUEST, Type, 1
+105, The Inca, Milan, SENT OUT QUEST, Type, 16
+105, The Huns, Buenos Aires, SENT OUT QUEST, Type, 2
+105, The Huns, Buenos Aires, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+105, Korea, Zanzibar, lost friend
+105, The Inca, Zanzibar, lost friend
+105, The Huns, Sydney, SENT OUT QUEST, Type, 14
+105, The Huns, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+105, China, Cahokia, SENT OUT QUEST, Type, 7
+105, China, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 42 to 42, MINOR_CIV_CAHOKIA
+105, Korea, Colombo, SENT OUT QUEST, Type, 11
+105, Korea, Colombo, RECEIVED QUEST, Contest Faith, Friendship: -6 to -6, MINOR_CIV_COLOMBO
+105, Babylon, Colombo, SENT OUT QUEST, Type, 11
+105, Babylon, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+105, The Iroquois, Colombo, SENT OUT QUEST, Type, 11
+105, The Iroquois, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+105, Denmark, Colombo, SENT OUT QUEST, Type, 11
+105, Denmark, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 47 to 47, MINOR_CIV_COLOMBO
+105, China, Colombo, SENT OUT QUEST, Type, 11
+105, China, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+105, The Huns, Colombo, SENT OUT QUEST, Type, 11
+105, The Huns, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 20 to 20, MINOR_CIV_COLOMBO
+105, The Inca, Colombo, SENT OUT QUEST, Type, 11
+105, The Inca, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+105, Morocco, Colombo, SENT OUT QUEST, Type, 11
+105, Morocco, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+106, Denmark, Ife, Gold Gift: 250, Friendship: 67 to 92, Conquest, MINOR_CIV_IFE, Boost! , Passing Morocco
+106, Vilnius, China, RECEIVED_UNIT_GIFT, Warrior
+106, The Iroquois, Vilnius, cancelled, Bully City-State, Friendship: 4 to 4, MINOR_CIV_VILNIUS
+107, The Huns, Antwerp, Gold Gift: 250, Friendship: 62 to 87, Conquest, MINOR_CIV_ANTWERP, Boost! , Passing The Iroquois
+107, The Huns, Vatican City, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_VATICAN_CITY, (SAVING) 
+107, Korea, Vilnius, lost ally
+107, The Inca, Samarkand, SENT OUT QUEST, Type, 17
+107, The Inca, Samarkand, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+107, Korea, Colombo, SENT OUT QUEST, Type, 2
+107, Korea, Colombo, RECEIVED QUEST, Connect Resource, Friendship: -3 to -3, MINOR_CIV_COLOMBO
+107, Korea, Mogadishu, lost ally
+108, Denmark, Zanzibar, SENT OUT QUEST, Type, 2
+108, Denmark, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 17 to 17, MINOR_CIV_ZANZIBAR
+108, Babylon, Ife, SENT OUT QUEST, Type, 3
+108, Babylon, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_IFE
+108, The Inca, Ife, SENT OUT QUEST, Type, 7
+108, The Inca, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+108, The Huns, Colombo, cancelled, Bully City-State, Friendship: 15 to 15, MINOR_CIV_COLOMBO
+109, Morocco, Zanzibar, gained friend
+109, Morocco, Zanzibar, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_ZANZIBAR
+109, The Huns, Zanzibar, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+109, The Inca, Antwerp, SENT OUT QUEST, Type, 2
+109, The Inca, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+109, Morocco, Ife, gained friend
+109, Morocco, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_IFE
+109, Denmark, Ife, SENT OUT QUEST, Type, 16
+109, Denmark, Ife, RECEIVED QUEST, Spread Religion, Friendship: 86 to 86, MINOR_CIV_IFE
+109, Morocco, Wellington, gained friend
+109, Morocco, Wellington, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_WELLINGTON
+109, Morocco, Colombo, gained friend
+109, Morocco, Colombo, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+109, China, Colombo, SENT OUT QUEST, Type, 4
+109, China, Colombo, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+110, Korea, Milan, SENT OUT QUEST, Type, 1
+110, The Iroquois, Zanzibar, gained ally
+110, The Iroquois, Zanzibar, FINISHED QUEST, Contest Techs, Friendship: 30 to 70, MINOR_CIV_ZANZIBAR
+110, Korea, Zanzibar, gained friend
+110, Korea, Zanzibar, FINISHED QUEST, Contest Techs, Friendship: 22 to 62, MINOR_CIV_ZANZIBAR
+110, China, Zanzibar, gained friend
+110, China, Zanzibar, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+110, The Huns, Zanzibar, gained friend
+110, The Huns, Zanzibar, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+110, Denmark, Zanzibar, cancelled, Contest Techs, Friendship: 14 to 14, MINOR_CIV_ZANZIBAR
+110, The Inca, Zanzibar, cancelled, Contest Techs, Friendship: 22 to 22, MINOR_CIV_ZANZIBAR
+110, Morocco, Zanzibar, cancelled, Contest Techs, Friendship: 43 to 43, MINOR_CIV_ZANZIBAR
+110, The Iroquois, Hanoi, gained friend
+110, The Iroquois, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HANOI
+110, Korea, Antwerp, SENT OUT QUEST, Type, 4
+110, Korea, Antwerp, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+110, Korea, Ife, SENT OUT QUEST, Type, 16
+110, Korea, Ife, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_IFE
+110, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+110, The Iroquois, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: -13 to -13, MINOR_CIV_IFE
+110, Korea, Samarkand, SENT OUT QUEST, Type, 16
+110, Korea, Samarkand, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+110, The Inca, Milan, SENT OUT QUEST, Type, 17
+110, The Inca, Milan, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_MILAN
+111, Korea, Ife, SENT OUT QUEST, Type, 16
+111, Korea, Wellington, SENT OUT QUEST, Type, 17
+111, Korea, Wellington, SENT OUT QUEST, Type, 14
+111, China, Ormus, lost friend
+112, Morocco, Antwerp, gained friend
+112, Morocco, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+112, Korea, Wellington, cancelled, Bully City-State, Friendship: 2 to 2, MINOR_CIV_WELLINGTON
+112, Denmark, Wellington, SENT OUT QUEST, Type, 7
+112, Denmark, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+112, Morocco, Sydney, gained friend
+112, Morocco, Sydney, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+112, The Inca, Sydney, SENT OUT QUEST, Type, 2
+112, The Inca, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+112, Korea, Vatican City, SENT OUT QUEST, Type, 2
+112, Korea, Vatican City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+112, The Huns, Colombo, SENT OUT QUEST, Type, 17
+112, The Huns, Colombo, RECEIVED QUEST, Trade Route, Friendship: 9 to 9, MINOR_CIV_COLOMBO
+112, Morocco, Mogadishu, gained friend
+112, Morocco, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_MOGADISHU
+113, Denmark, Colombo, Gold Gift: 250, Friendship: 36 to 36, Conquest, MINOR_CIV_COLOMBO, (SAVING) , Boost! , Passing Morocco
+113, The Inca, Zanzibar, SENT OUT QUEST, Type, 16
+113, The Inca, Zanzibar, RECEIVED QUEST, Spread Religion, Friendship: 17 to 17, MINOR_CIV_ZANZIBAR
+113, The Iroquois, Cahokia, SENT OUT QUEST, Type, 4
+113, The Iroquois, Cahokia, RECEIVED QUEST, Great Person, Friendship: 45 to 45, MINOR_CIV_CAHOKIA
+114, Korea, Antwerp, SENT OUT QUEST, Type, 2
+114, Korea, Antwerp, SENT OUT QUEST, Type, 4
+114, Morocco, Buenos Aires, era change yield update
+114, Morocco, Zanzibar, era change yield update
+114, Morocco, Ormus, era change yield update
+114, Morocco, Hanoi, era change yield update
+114, Morocco, Vilnius, era change yield update
+114, Morocco, Antwerp, era change yield update
+114, Morocco, Ife, era change yield update
+114, Morocco, Wellington, era change yield update
+114, Morocco, Ur, era change yield update
+114, Morocco, Samarkand, era change yield update
+114, Morocco, Sydney, era change yield update
+114, Morocco, Vatican City, era change yield update
+114, Morocco, Cahokia, era change yield update
+114, Morocco, Colombo, era change yield update
+114, Morocco, Mogadishu, era change yield update
+114, Morocco, Milan, era change yield update
+114, Morocco, Zanzibar, SENT OUT QUEST, Type, 2
+114, Morocco, Vilnius, SENT OUT QUEST, Type, 2
+114, Morocco, Antwerp, SENT OUT QUEST, Type, 14
+114, Morocco, Ife, SENT OUT QUEST, Type, 16
+114, Morocco, Wellington, SENT OUT QUEST, Type, 2
+114, Morocco, Sydney, SENT OUT QUEST, Type, 1
+114, Morocco, Cahokia, SENT OUT QUEST, Type, 2
+114, Morocco, Cahokia, SENT OUT QUEST, Type, 16
+114, Morocco, Colombo, SENT OUT QUEST, Type, 2
+114, Morocco, Colombo, SENT OUT QUEST, Type, 11
+114, Morocco, Mogadishu, SENT OUT QUEST, Type, 17
+114, Morocco, Milan, SENT OUT QUEST, Type, 1
+114, Morocco, Milan, SENT OUT QUEST, Type, 2
+114, Morocco, Milan, SENT OUT QUEST, Type, 17
+114, Morocco, Ur, SENT OUT QUEST, Type, 1
+114, Morocco, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+114, China, Buenos Aires, FINISHED QUEST, Kill Camp, Friendship: -24 to 25, MINOR_CIV_BUENOS_AIRES
+114, Korea, Hanoi, SENT OUT QUEST, Type, 12
+114, Korea, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_HANOI
+114, The Iroquois, Hanoi, SENT OUT QUEST, Type, 12
+114, The Iroquois, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 31 to 31, MINOR_CIV_HANOI
+114, Denmark, Hanoi, SENT OUT QUEST, Type, 12
+114, Denmark, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_HANOI
+114, China, Hanoi, SENT OUT QUEST, Type, 12
+114, China, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_HANOI
+114, Morocco, Antwerp, cancelled, Bully City-State, Friendship: 37 to 37, MINOR_CIV_ANTWERP
+114, Ife, The Iroquois, RECEIVED_UNIT_GIFT, Composite Bowman
+114, China, Vatican City, SENT OUT QUEST, Type, 2
+114, China, Vatican City, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_VATICAN_CITY
+114, China, Cahokia, lost friend
+114, The Iroquois, Colombo, SENT OUT QUEST, Type, 4
+114, The Iroquois, Colombo, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+115, Morocco, Ur, SENT OUT QUEST, Type, 1
+115, Korea, Buenos Aires, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+115, The Huns, Buenos Aires, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+115, The Inca, Buenos Aires, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+115, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 2
+115, The Iroquois, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 62 to 62, MINOR_CIV_ZANZIBAR
+115, Korea, Ormus, SENT OUT QUEST, Type, 10
+115, Korea, Ormus, RECEIVED QUEST, Contest Culture, Friendship: -3 to -3, MINOR_CIV_ORMUS
+115, The Iroquois, Ormus, SENT OUT QUEST, Type, 10
+115, The Iroquois, Ormus, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_ORMUS
+115, China, Ormus, SENT OUT QUEST, Type, 10
+115, China, Ormus, RECEIVED QUEST, Contest Culture, Friendship: 23 to 23, MINOR_CIV_ORMUS
+115, The Iroquois, Hanoi, lost friend
+115, Morocco, Vilnius, SENT OUT QUEST, Type, 14
+115, Morocco, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+115, Antwerp, The Iroquois, RECEIVED_UNIT_GIFT, Composite Bowman
+115, The Huns, Antwerp, SENT OUT QUEST, Type, 7
+115, The Huns, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 74 to 74, MINOR_CIV_ANTWERP
+115, Korea, Wellington, gained friend
+115, Korea, Wellington, FINISHED QUEST, Trade Route, Friendship: 5 to 45, MINOR_CIV_WELLINGTON
+115, Babylon, Sydney, SENT OUT QUEST, Type, 17
+115, Babylon, Sydney, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+115, The Inca, Cahokia, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+116, The Inca, Vatican City, SENT OUT QUEST, Type, 11
+116, The Inca, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+116, The Inca, Buenos Aires, SENT OUT QUEST, Type, 14
+116, The Inca, Buenos Aires, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+116, Zanzibar, The Iroquois, RECEIVED_UNIT_GIFT, Spearman
+116, Morocco, Wellington, lost friend
+116, China, Wellington, SENT OUT QUEST, Type, 7
+116, China, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+116, Morocco, Colombo, lost friend
+116, Denmark, Colombo, SENT OUT QUEST, Type, 4
+116, Denmark, Colombo, RECEIVED QUEST, Great Person, Friendship: 30 to 30, MINOR_CIV_COLOMBO
+116, The Inca, Colombo, SENT OUT QUEST, Type, 2
+116, The Inca, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+116, Korea, Milan, SENT OUT QUEST, Type, 3
+116, Korea, Milan, RECEIVED QUEST, Construct Wonder, Friendship: 41 to 41, MINOR_CIV_MILAN
+117, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+117, Denmark, Ormus, SENT OUT QUEST, Type, 10
+117, Denmark, Ormus, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ORMUS
+117, China, Zanzibar, lost friend
+117, The Huns, Zanzibar, lost friend
+117, Denmark, Hanoi, SENT OUT QUEST, Type, 16
+117, Denmark, Hanoi, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_HANOI
+117, Korea, Antwerp, SENT OUT QUEST, Type, 1
+117, Korea, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+117, The Iroquois, Antwerp, SENT OUT QUEST, Type, 1
+117, The Iroquois, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 12 to 12, MINOR_CIV_ANTWERP
+117, Denmark, Antwerp, SENT OUT QUEST, Type, 1
+117, Denmark, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+117, China, Antwerp, SENT OUT QUEST, Type, 1
+117, China, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: -4 to -4, MINOR_CIV_ANTWERP
+117, The Huns, Antwerp, SENT OUT QUEST, Type, 1
+117, The Huns, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 71 to 71, MINOR_CIV_ANTWERP
+117, The Inca, Antwerp, SENT OUT QUEST, Type, 1
+117, The Inca, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+117, Morocco, Antwerp, SENT OUT QUEST, Type, 1
+117, Morocco, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 32 to 32, MINOR_CIV_ANTWERP
+117, Babylon, Wellington, SENT OUT QUEST, Type, 16
+117, Babylon, Wellington, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+117, Morocco, Sydney, lost friend
+117, Denmark, Colombo, lost friend
+118, Korea, Vilnius, Gold Gift: 250, Friendship: 37 to 57, Spaceship, MINOR_CIV_VILNIUS, Boost! 
+118, Korea, Antwerp, gained friend
+118, Korea, Antwerp, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_ANTWERP
+118, The Iroquois, Vatican City, SENT OUT QUEST, Type, 11
+118, The Iroquois, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+118, The Iroquois, Vilnius, SENT OUT QUEST, Type, 7
+118, The Iroquois, Vilnius, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+118, Korea, Wellington, SENT OUT QUEST, Type, 12
+118, Korea, Wellington, RECEIVED QUEST, Contest Techs, Friendship: 40 to 40, MINOR_CIV_WELLINGTON
+118, Babylon, Wellington, SENT OUT QUEST, Type, 12
+118, Babylon, Wellington, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+118, The Iroquois, Wellington, SENT OUT QUEST, Type, 12
+118, The Iroquois, Wellington, RECEIVED QUEST, Contest Techs, Friendship: -4 to -4, MINOR_CIV_WELLINGTON
+118, Denmark, Wellington, SENT OUT QUEST, Type, 12
+118, Denmark, Wellington, RECEIVED QUEST, Contest Techs, Friendship: -6 to -6, MINOR_CIV_WELLINGTON
+118, China, Wellington, SENT OUT QUEST, Type, 12
+118, China, Wellington, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+118, The Huns, Wellington, SENT OUT QUEST, Type, 12
+118, The Huns, Wellington, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+118, The Inca, Wellington, SENT OUT QUEST, Type, 12
+118, The Inca, Wellington, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+118, Morocco, Wellington, SENT OUT QUEST, Type, 12
+118, Morocco, Wellington, RECEIVED QUEST, Contest Techs, Friendship: 20 to 20, MINOR_CIV_WELLINGTON
+118, The Iroquois, Wellington, SENT OUT QUEST, Type, 2
+118, The Iroquois, Wellington, RECEIVED QUEST, Connect Resource, Friendship: -4 to -4, MINOR_CIV_WELLINGTON
+118, Korea, Mogadishu, SENT OUT QUEST, Type, 1
+118, Korea, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 35 to 35, MINOR_CIV_MOGADISHU
+118, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 1
+118, The Iroquois, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+118, Denmark, Mogadishu, SENT OUT QUEST, Type, 1
+118, Denmark, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+118, China, Mogadishu, SENT OUT QUEST, Type, 1
+118, China, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+118, The Inca, Mogadishu, SENT OUT QUEST, Type, 1
+118, The Inca, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+118, Morocco, Mogadishu, SENT OUT QUEST, Type, 1
+118, Morocco, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 31 to 31, MINOR_CIV_MOGADISHU
+118, China, Mogadishu, SENT OUT QUEST, Type, 7
+118, China, Mogadishu, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+119, China, Buenos Aires, gained friend
+119, China, Buenos Aires, FINISHED QUEST, Great Person, Friendship: 10 to 50, MINOR_CIV_BUENOS_AIRES
+119, China, Vilnius, gained friend
+119, China, Vilnius, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+119, China, Colombo, gained friend
+119, China, Colombo, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+119, Morocco, Antwerp, lost friend
+119, Denmark, Sydney, SENT OUT QUEST, Type, 14
+119, Denmark, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+119, China, Vatican City, gained friend
+119, China, Vatican City, FINISHED QUEST, Contest Faith, Friendship: 5 to 45, MINOR_CIV_VATICAN_CITY
+119, Korea, Vatican City, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+119, The Iroquois, Vatican City, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+119, The Huns, Vatican City, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_VATICAN_CITY
+119, The Inca, Vatican City, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+119, Babylon, Colombo, SENT OUT QUEST, Type, 2
+119, Babylon, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+119, Morocco, Mogadishu, lost friend
+120, Babylon, Vilnius, gained friend
+120, Babylon, Vilnius, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+120, The Inca, Samarkand, gained friend
+120, The Inca, Samarkand, Gold Gift: 500, Friendship: 5 to 55, Diplomacy, MINOR_CIV_SAMARKAND
+120, Morocco, Zanzibar, lost friend
+120, Morocco, Ife, lost friend
+121, Korea, Buenos Aires, era change yield update
+121, Korea, Zanzibar, era change yield update
+121, Korea, Ormus, era change yield update
+121, Korea, Hanoi, era change yield update
+121, Korea, Vilnius, era change yield update
+121, Korea, Antwerp, era change yield update
+121, Korea, Ife, era change yield update
+121, Korea, Wellington, era change yield update
+121, Korea, Ur, era change yield update
+121, Korea, Samarkand, era change yield update
+121, Korea, Sydney, era change yield update
+121, Korea, Vatican City, era change yield update
+121, Korea, Cahokia, era change yield update
+121, Korea, Colombo, era change yield update
+121, Korea, Mogadishu, era change yield update
+121, Korea, Milan, era change yield update
+121, Korea, Buenos Aires, SENT OUT QUEST, Type, 16
+121, Korea, Zanzibar, SENT OUT QUEST, Type, 2
+121, Korea, Ormus, SENT OUT QUEST, Type, 10
+121, Korea, Hanoi, SENT OUT QUEST, Type, 12
+121, Korea, Vilnius, SENT OUT QUEST, Type, 16
+121, Korea, Antwerp, SENT OUT QUEST, Type, 2
+121, Korea, Antwerp, SENT OUT QUEST, Type, 1
+121, Korea, Ife, SENT OUT QUEST, Type, 16
+121, Korea, Wellington, SENT OUT QUEST, Type, 12
+121, Korea, Samarkand, SENT OUT QUEST, Type, 1
+121, Korea, Samarkand, SENT OUT QUEST, Type, 16
+121, Korea, Sydney, SENT OUT QUEST, Type, 1
+121, Korea, Vatican City, SENT OUT QUEST, Type, 2
+121, Korea, Colombo, SENT OUT QUEST, Type, 11
+121, Korea, Colombo, SENT OUT QUEST, Type, 2
+121, Korea, Mogadishu, SENT OUT QUEST, Type, 1
+121, Korea, Milan, SENT OUT QUEST, Type, 1
+121, Korea, Milan, SENT OUT QUEST, Type, 3
+121, Korea, Vilnius, SENT OUT QUEST, Type, 16
+121, Denmark, Colombo, gained friend
+121, Denmark, Colombo, gained ally
+121, Denmark, Colombo, FINISHED QUEST, Great Person, Friendship: 24 to 64, MINOR_CIV_COLOMBO
+121, China, Samarkand, SENT OUT QUEST, Type, 1
+121, China, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+121, The Huns, Antwerp, Gold Gift: 250, Friendship: 66 to 86, Conquest, MINOR_CIV_ANTWERP, Boost! , Passing Morocco
+121, The Huns, Vatican City, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_VATICAN_CITY, (SAVING) 
+121, The Iroquois, Zanzibar, lost ally
+121, The Huns, Vilnius, SENT OUT QUEST, Type, 17
+121, The Huns, Vilnius, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+121, The Iroquois, Antwerp, SENT OUT QUEST, Type, 14
+121, The Iroquois, Antwerp, RECEIVED QUEST, Bully City-State, Friendship: 6 to 6, MINOR_CIV_ANTWERP
+121, The Iroquois, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+121, Korea, Cahokia, SENT OUT QUEST, Type, 2
+121, Korea, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 85 to 85, MINOR_CIV_CAHOKIA
+121, Denmark, Cahokia, SENT OUT QUEST, Type, 2
+121, Denmark, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+121, Korea, Mogadishu, lost friend
+122, Zanzibar, Denmark, RECEIVED_UNIT_GIFT, Swordsman
+122, Korea, Zanzibar, SENT OUT QUEST, Type, 16
+122, Korea, Zanzibar, RECEIVED QUEST, Spread Religion, Friendship: 44 to 44, MINOR_CIV_ZANZIBAR
+122, Korea, Ormus, SENT OUT QUEST, Type, 2
+122, Korea, Ormus, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ORMUS
+122, China, Ormus, SENT OUT QUEST, Type, 7
+122, China, Ormus, RECEIVED QUEST, Find Natural Wonder, Friendship: 12 to 12, MINOR_CIV_ORMUS
+122, Ife, Korea, RECEIVED_UNIT_GIFT, Warrior
+122, China, Vatican City, gained ally
+122, China, Vatican City, FINISHED QUEST, Connect Resource, Friendship: 40 to 80, MINOR_CIV_VATICAN_CITY
+122, Denmark, Colombo, lost ally
+122, China, Colombo, gained ally
+122, China, Colombo, FINISHED QUEST, Connect Resource, Friendship: 34 to 74, MINOR_CIV_COLOMBO
+122, Korea, Colombo, SENT OUT QUEST, Type, 3
+122, Korea, Colombo, RECEIVED QUEST, Construct Wonder, Friendship: -42 to -42, MINOR_CIV_COLOMBO
+122, China, Mogadishu, gained friend
+122, China, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOGADISHU
+122, Morocco, Milan, gained friend
+122, Morocco, Milan, gained ally
+122, Morocco, Milan, FINISHED QUEST, Kill Camp, Friendship: 15 to 65, MINOR_CIV_MILAN
+122, Denmark, Milan, SENT OUT QUEST, Type, 4
+122, Denmark, Milan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MILAN
+123, China, Colombo, SENT OUT QUEST, Type, 11
+123, China, Zanzibar, gained friend
+123, China, Zanzibar, gained ally
+123, China, Zanzibar, FINISHED QUEST, Connect Resource, Friendship: 20 to 60, MINOR_CIV_ZANZIBAR
+123, China, Hanoi, gained friend
+123, China, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HANOI
+123, China, Vilnius, lost friend
+123, The Inca, Vilnius, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+123, China, Ife, gained friend
+123, China, Ife, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_IFE
+123, Wellington, Korea, RECEIVED_UNIT_GIFT, Spearman
+123, China, Wellington, gained friend
+123, China, Wellington, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_WELLINGTON
+123, Cahokia, Denmark, RECEIVED_UNIT_GIFT, Swordsman
+123, Korea, Cahokia, SENT OUT QUEST, Type, 13
+123, Korea, Cahokia, RECEIVED QUEST, Invest, Friendship: 82 to 82, MINOR_CIV_CAHOKIA
+123, The Iroquois, Cahokia, SENT OUT QUEST, Type, 13
+123, The Iroquois, Cahokia, RECEIVED QUEST, Invest, Friendship: 30 to 30, MINOR_CIV_CAHOKIA
+123, Denmark, Cahokia, SENT OUT QUEST, Type, 13
+123, Denmark, Cahokia, RECEIVED QUEST, Invest, Friendship: 3 to 3, MINOR_CIV_CAHOKIA
+123, China, Cahokia, SENT OUT QUEST, Type, 13
+123, China, Cahokia, RECEIVED QUEST, Invest, Friendship: 15 to 15, MINOR_CIV_CAHOKIA
+123, The Huns, Cahokia, SENT OUT QUEST, Type, 13
+123, The Huns, Cahokia, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+123, The Inca, Cahokia, SENT OUT QUEST, Type, 13
+123, The Inca, Cahokia, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+123, Morocco, Cahokia, SENT OUT QUEST, Type, 13
+123, Morocco, Cahokia, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+123, Morocco, Colombo, gained friend
+123, Morocco, Colombo, FINISHED QUEST, Connect Resource, Friendship: 19 to 59, MINOR_CIV_COLOMBO
+123, Korea, Milan, cancelled, Kill Camp, Friendship: 30 to 30, MINOR_CIV_MILAN
+123, The Inca, Milan, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MILAN
+124, Korea, Antwerp, SENT OUT QUEST, Type, 2
+124, Korea, Antwerp, SENT OUT QUEST, Type, 1
+124, China, Zanzibar, Gold Gift: 250, Friendship: 60 to 80, Spaceship, MINOR_CIV_ZANZIBAR, Boost! , Passing Morocco
+124, China, Zanzibar, SENT OUT QUEST, Type, 7
+124, Korea, Buenos Aires, SENT OUT QUEST, Type, 2
+124, Korea, Buenos Aires, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+124, Morocco, Zanzibar, SENT OUT QUEST, Type, 7
+124, Morocco, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 22 to 22, MINOR_CIV_ZANZIBAR
+124, Babylon, Vilnius, lost friend
+124, Denmark, Vilnius, SENT OUT QUEST, Type, 2
+124, Denmark, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+124, Antwerp, Denmark, RECEIVED_UNIT_GIFT, Pikeman
+124, The Iroquois, Ife, SENT OUT QUEST, Type, 4
+124, The Iroquois, Ife, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_IFE
+124, The Inca, Wellington, SENT OUT QUEST, Type, 2
+124, The Inca, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+124, The Iroquois, Cahokia, lost friend
+124, Colombo, Korea, RECEIVED_UNIT_GIFT, Swordsman
+124, Korea, Milan, lost friend
+125, The Iroquois, Cahokia, SENT OUT QUEST, Type, 17
+125, The Iroquois, Cahokia, SENT OUT QUEST, Type, 4
+125, The Iroquois, Cahokia, SENT OUT QUEST, Type, 13
+125, Babylon, Antwerp, SENT OUT QUEST, Type, 14
+125, Babylon, Antwerp, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+125, The Huns, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+125, China, Colombo, lost ally
+125, Denmark, Colombo, gained ally
+125, Denmark, Colombo, FINISHED QUEST, Contest Faith, Friendship: 57 to 97, MINOR_CIV_COLOMBO
+125, Korea, Colombo, cancelled, Contest Faith, Friendship: -33 to -33, MINOR_CIV_COLOMBO
+125, Babylon, Colombo, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+125, The Iroquois, Colombo, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+125, China, Colombo, cancelled, Contest Faith, Friendship: 69 to 69, MINOR_CIV_COLOMBO
+125, The Huns, Colombo, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+125, The Inca, Colombo, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+125, Morocco, Colombo, cancelled, Contest Faith, Friendship: 56 to 56, MINOR_CIV_COLOMBO
+125, The Huns, Colombo, SENT OUT QUEST, Type, 2
+125, The Huns, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+125, Milan, Denmark, RECEIVED_UNIT_GIFT, Pikeman
+126, Babylon, Buenos Aires, era change yield update
+126, Babylon, Zanzibar, era change yield update
+126, Babylon, Ormus, era change yield update
+126, Babylon, Hanoi, era change yield update
+126, Babylon, Vilnius, era change yield update
+126, Babylon, Antwerp, era change yield update
+126, Babylon, Ife, era change yield update
+126, Babylon, Wellington, era change yield update
+126, Babylon, Ur, era change yield update
+126, Babylon, Samarkand, era change yield update
+126, Babylon, Sydney, era change yield update
+126, Babylon, Vatican City, era change yield update
+126, Babylon, Cahokia, era change yield update
+126, Babylon, Colombo, era change yield update
+126, Babylon, Mogadishu, era change yield update
+126, Babylon, Milan, era change yield update
+126, Babylon, Vilnius, SENT OUT QUEST, Type, 2
+126, Babylon, Antwerp, SENT OUT QUEST, Type, 14
+126, Babylon, Ife, SENT OUT QUEST, Type, 16
+126, Babylon, Ife, SENT OUT QUEST, Type, 3
+126, Babylon, Wellington, SENT OUT QUEST, Type, 2
+126, Babylon, Wellington, SENT OUT QUEST, Type, 16
+126, Babylon, Wellington, SENT OUT QUEST, Type, 12
+126, Babylon, Sydney, SENT OUT QUEST, Type, 1
+126, Babylon, Sydney, SENT OUT QUEST, Type, 17
+126, Babylon, Colombo, SENT OUT QUEST, Type, 7
+126, Babylon, Colombo, SENT OUT QUEST, Type, 2
+126, Babylon, Wellington, SENT OUT QUEST, Type, 2
+126, Babylon, Wellington, SENT OUT QUEST, Type, 16
+126, Babylon, Wellington, SENT OUT QUEST, Type, 12
+126, Denmark, Zanzibar, gained friend
+126, Denmark, Zanzibar, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+126, Korea, Ormus, gained friend
+126, Korea, Ormus, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ORMUS
+126, Korea, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 78 to 118, MINOR_CIV_CAHOKIA
+126, Korea, Colombo, FINISHED QUEST, Connect Resource, Friendship: -31 to 8, MINOR_CIV_COLOMBO
+126, Morocco, Milan, lost ally
+127, Babylon, Colombo, SENT OUT QUEST, Type, 7
+127, Babylon, Colombo, SENT OUT QUEST, Type, 2
+127, Denmark, Milan, gained friend
+127, Denmark, Milan, FINISHED QUEST, Great Person, Friendship: 2 to 42, MINOR_CIV_MILAN
+127, China, Buenos Aires, SENT OUT QUEST, Type, 14
+127, China, Buenos Aires, RECEIVED QUEST, Bully City-State, Friendship: 30 to 30, MINOR_CIV_BUENOS_AIRES
+127, The Iroquois, Ormus, SENT OUT QUEST, Type, 17
+127, The Iroquois, Ormus, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_ORMUS
+127, Denmark, Ife, lost ally
+127, Korea, Ife, SENT OUT QUEST, Type, 3
+127, Korea, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_IFE
+127, China, Mogadishu, lost friend
+128, The Huns, Hanoi, SENT OUT QUEST, Type, 12
+128, The Huns, Hanoi, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_HANOI
+128, China, Buenos Aires, lost friend
+128, China, Hanoi, lost friend
+128, Babylon, Vilnius, gained friend
+128, Babylon, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 19 to 59, MINOR_CIV_VILNIUS
+128, Morocco, Vilnius, gained friend
+128, Morocco, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+128, Antwerp, China, RECEIVED_UNIT_GIFT, Warrior
+128, Korea, Antwerp, lost friend
+128, Denmark, Antwerp, SENT OUT QUEST, Type, 7
+128, Denmark, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+128, China, Ife, SENT OUT QUEST, Type, 4
+128, China, Ife, RECEIVED QUEST, Great Person, Friendship: 37 to 37, MINOR_CIV_IFE
+128, Morocco, Ife, SENT OUT QUEST, Type, 2
+128, Morocco, Ife, RECEIVED QUEST, Connect Resource, Friendship: 16 to 16, MINOR_CIV_IFE
+128, Korea, Sydney, SENT OUT QUEST, Type, 2
+128, Korea, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+128, Morocco, Cahokia, gained friend
+128, Morocco, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_CAHOKIA
+129, China, Ife, Gold Gift: 250, Friendship: 37 to 37, Spaceship, MINOR_CIV_IFE, (SAVING) , Boost! , Passing Morocco
+129, China, Ur, SENT OUT QUEST, Type, 1
+129, China, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+129, The Huns, Mogadishu, SENT OUT QUEST, Type, 1
+129, The Huns, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+129, The Inca, Vilnius, SENT OUT QUEST, Type, 16
+129, The Inca, Vilnius, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+129, Korea, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+129, Babylon, Sydney, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+129, The Iroquois, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+129, Denmark, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+129, China, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+129, The Huns, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+129, The Inca, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+129, Morocco, Sydney, cancelled, Kill Camp, Friendship: 2 to 2, MINOR_CIV_SYDNEY
+129, The Huns, Vatican City, SENT OUT QUEST, Type, 4
+129, The Huns, Vatican City, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_VATICAN_CITY
+129, The Huns, Cahokia, SENT OUT QUEST, Type, 14
+129, The Huns, Cahokia, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+130, Korea, Zanzibar, lost friend
+130, The Huns, Zanzibar, gained friend
+130, Denmark, Zanzibar, lost friend
+130, The Inca, Zanzibar, gained friend
+130, The Inca, Zanzibar, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+130, The Iroquois, Hanoi, SENT OUT QUEST, Type, 2
+130, The Iroquois, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+130, Korea, Vilnius, lost friend
+130, China, Vilnius, SENT OUT QUEST, Type, 2
+130, China, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 13 to 13, MINOR_CIV_VILNIUS
+130, Korea, Antwerp, cancelled, Kill Camp, Friendship: 25 to 25, MINOR_CIV_ANTWERP
+130, The Iroquois, Antwerp, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+130, Denmark, Antwerp, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+130, China, Antwerp, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+130, The Huns, Antwerp, cancelled, Kill Camp, Friendship: 84 to 84, MINOR_CIV_ANTWERP
+130, The Inca, Antwerp, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+130, Morocco, Antwerp, cancelled, Kill Camp, Friendship: 13 to 13, MINOR_CIV_ANTWERP
+130, China, Ife, lost friend
+130, Morocco, Ife, gained friend
+130, Morocco, Ife, FINISHED QUEST, Connect Resource, Friendship: 8 to 48, MINOR_CIV_IFE
+130, Babylon, Ife, cancelled, Construct Wonder, Friendship: 1 to 1, MINOR_CIV_IFE
+130, China, Wellington, lost friend
+130, Morocco, Wellington, gained friend
+130, Morocco, Wellington, FINISHED QUEST, Connect Resource, Friendship: 2 to 42, MINOR_CIV_WELLINGTON
+130, Morocco, Wellington, SENT OUT QUEST, Type, 14
+130, Morocco, Wellington, RECEIVED QUEST, Bully City-State, Friendship: 42 to 42, MINOR_CIV_WELLINGTON
+130, The Inca, Ur, gained friend
+130, The Inca, Ur, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_UR
+130, The Inca, Samarkand, gained ally
+130, The Inca, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 36 to 76, MINOR_CIV_SAMARKAND
+130, Korea, Colombo, cancelled, Construct Wonder, Friendship: 2 to 2, MINOR_CIV_COLOMBO
+130, The Inca, Mogadishu, gained friend
+130, The Inca, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOGADISHU
+130, Morocco, Milan, gained ally
+130, Morocco, Milan, FINISHED QUEST, Connect Resource, Friendship: 73 to 113, MINOR_CIV_MILAN
+130, Korea, Milan, cancelled, Construct Wonder, Friendship: 15 to 15, MINOR_CIV_MILAN
+131, The Iroquois, Colombo, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_COLOMBO
+131, Denmark, Cahokia, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_CAHOKIA
+131, Denmark, Cahokia, cancelled, Invest, Friendship: -60 to -60, MINOR_CIV_CAHOKIA
+131, The Huns, Ormus, SENT OUT QUEST, Type, 10
+131, The Huns, Ormus, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ORMUS
+131, The Huns, Zanzibar, lost friend
+131, Antwerp, China, RECEIVED_UNIT_GIFT, Horseman
+131, The Inca, Antwerp, SENT OUT QUEST, Type, 7
+131, The Inca, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+131, Korea, Wellington, lost friend
+131, The Huns, Wellington, SENT OUT QUEST, Type, 2
+131, The Huns, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+131, Babylon, Sydney, gained friend
+131, Babylon, Sydney, gained ally
+131, Korea, Sydney, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_SYDNEY
+131, Babylon, Sydney, FINISHED QUEST, Trade Route, Friendship: 21 to 61, MINOR_CIV_SYDNEY
+131, Vatican City, The Inca, RECEIVED_UNIT_GIFT, Warrior
+131, Denmark, Milan, lost friend
+132, Korea, Ife, Gold Gift: 500, Friendship: 2 to 2, Spaceship, MINOR_CIV_IFE, (SAVING) 
+132, Korea, Wellington, SENT OUT QUEST, Type, 12
+132, The Huns, Zanzibar, SENT OUT QUEST, Type, 2
+132, The Huns, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 27 to 27, MINOR_CIV_ZANZIBAR
+132, Babylon, Antwerp, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+132, Babylon, Sydney, lost ally
+133, The Iroquois, Zanzibar, Gold Gift: 250, Friendship: 37 to 57, Diplomacy, MINOR_CIV_ZANZIBAR, Boost! , Passing Morocco
+133, The Iroquois, Ife, Gold Gift: 500, Friendship: 20 to 20, Diplomacy, MINOR_CIV_IFE, (SAVING) , Passing The Huns
+133, China, Zanzibar, Gold Gift: 250, Friendship: 62 to 82, Spaceship, MINOR_CIV_ZANZIBAR, Boost! , Passing Morocco
+133, China, Vatican City, Gold Gift: 250, Friendship: 65 to 65, Spaceship, MINOR_CIV_VATICAN_CITY, (SAVING) , Boost! , Passing The Huns
+133, Korea, Ormus, lost friend
+133, China, Hanoi, SENT OUT QUEST, Type, 14
+133, China, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 17 to 17, MINOR_CIV_HANOI
+133, Morocco, Vilnius, lost friend
+133, China, Antwerp, SENT OUT QUEST, Type, 14
+133, China, Antwerp, RECEIVED QUEST, Bully City-State, Friendship: 1 to 1, MINOR_CIV_ANTWERP
+133, Morocco, Antwerp, SENT OUT QUEST, Type, 2
+133, Morocco, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 8 to 8, MINOR_CIV_ANTWERP
+133, Denmark, Ife, SENT OUT QUEST, Type, 7
+133, Denmark, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 45 to 45, MINOR_CIV_IFE
+133, Samarkand, China, RECEIVED_UNIT_GIFT, Swordsman
+133, The Inca, Mogadishu, SENT OUT QUEST, Type, 16
+133, The Inca, Mogadishu, RECEIVED QUEST, Spread Religion, Friendship: 33 to 33, MINOR_CIV_MOGADISHU
+134, The Huns, Vatican City, gained friend
+134, The Huns, Vatican City, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_VATICAN_CITY
+134, Korea, Hanoi, gained friend
+134, Korea, Hanoi, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_HANOI
+134, The Iroquois, Hanoi, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_HANOI
+134, Denmark, Hanoi, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_HANOI
+134, China, Hanoi, cancelled, Contest Techs, Friendship: 15 to 15, MINOR_CIV_HANOI
+134, The Huns, Hanoi, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_HANOI
+134, Korea, Vatican City, SENT OUT QUEST, Type, 16
+134, Korea, Vatican City, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+134, China, Cahokia, SENT OUT QUEST, Type, 2
+134, China, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+134, Morocco, Colombo, SENT OUT QUEST, Type, 2
+134, Morocco, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 42 to 42, MINOR_CIV_COLOMBO
+134, Denmark, Mogadishu, SENT OUT QUEST, Type, 16
+134, Denmark, Mogadishu, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+135, China, Vatican City, lost friend
+135, China, Vatican City, lost ally
+135, The Huns, Vatican City, gained ally
+135, Korea, Ormus, gained friend
+135, Korea, Ormus, gained ally
+135, Denmark, Ormus, cancelled, Contest Culture, Friendship: -60 to -60, MINOR_CIV_ORMUS
+135, Korea, Ormus, FINISHED QUEST, Contest Culture, Friendship: 26 to 66, MINOR_CIV_ORMUS
+135, The Iroquois, Ormus, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_ORMUS
+135, China, Ormus, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ORMUS
+135, The Huns, Ormus, cancelled, Contest Culture, Friendship: -1 to -1, MINOR_CIV_ORMUS
+135, Korea, Hanoi, SENT OUT QUEST, Type, 2
+135, Korea, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 37 to 37, MINOR_CIV_HANOI
+135, Morocco, Vilnius, cancelled, Bully City-State, Friendship: 24 to 24, MINOR_CIV_VILNIUS
+135, Korea, Ife, SENT OUT QUEST, Type, 13
+135, Korea, Ife, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_IFE
+135, Babylon, Ife, SENT OUT QUEST, Type, 13
+135, Babylon, Ife, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_IFE
+135, The Iroquois, Ife, SENT OUT QUEST, Type, 13
+135, The Iroquois, Ife, RECEIVED QUEST, Invest, Friendship: 16 to 16, MINOR_CIV_IFE
+135, Denmark, Ife, SENT OUT QUEST, Type, 13
+135, Denmark, Ife, RECEIVED QUEST, Invest, Friendship: 42 to 42, MINOR_CIV_IFE
+135, China, Ife, SENT OUT QUEST, Type, 13
+135, China, Ife, RECEIVED QUEST, Invest, Friendship: 22 to 22, MINOR_CIV_IFE
+135, The Huns, Ife, SENT OUT QUEST, Type, 13
+135, The Huns, Ife, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_IFE
+135, The Inca, Ife, SENT OUT QUEST, Type, 13
+135, The Inca, Ife, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_IFE
+135, Morocco, Ife, SENT OUT QUEST, Type, 13
+135, Morocco, Ife, RECEIVED QUEST, Invest, Friendship: 41 to 41, MINOR_CIV_IFE
+135, The Inca, Ur, lost friend
+135, The Inca, Samarkand, FINISHED QUEST, Trade Route, Friendship: 68 to 108, MINOR_CIV_SAMARKAND
+135, The Inca, Mogadishu, lost friend
+135, Milan, The Inca, RECEIVED_UNIT_GIFT, Warrior
+136, Babylon, Wellington, SENT OUT QUEST, Type, 2
+136, Babylon, Wellington, SENT OUT QUEST, Type, 16
+136, Babylon, Wellington, SENT OUT QUEST, Type, 12
+136, Korea, Buenos Aires, gained friend
+136, Korea, Buenos Aires, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUENOS_AIRES
+136, The Inca, Buenos Aires, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+136, Korea, Zanzibar, gained friend
+136, Korea, Zanzibar, FINISHED QUEST, Connect Resource, Friendship: 18 to 58, MINOR_CIV_ZANZIBAR
+136, Korea, Vilnius, SENT OUT QUEST, Type, 2
+136, Korea, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 15 to 15, MINOR_CIV_VILNIUS
+136, Korea, Wellington, SENT OUT QUEST, Type, 2
+136, Korea, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 24 to 24, MINOR_CIV_WELLINGTON
+136, The Huns, Vatican City, lost ally
+136, The Inca, Milan, gained friend
+136, The Inca, Milan, FINISHED QUEST, Trade Route, Friendship: 2 to 42, MINOR_CIV_MILAN
+137, The Huns, Zanzibar, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_ZANZIBAR
+137, The Huns, Zanzibar, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_ZANZIBAR
+137, China, Antwerp, cancelled, Bully City-State, Friendship: -60 to -60, MINOR_CIV_ANTWERP
+137, The Inca, Milan, SENT OUT QUEST, Type, 16
+137, The Inca, Zanzibar, lost friend
+137, Denmark, Zanzibar, SENT OUT QUEST, Type, 2
+137, Denmark, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 18 to 18, MINOR_CIV_ZANZIBAR
+137, The Iroquois, Sydney, SENT OUT QUEST, Type, 14
+137, The Iroquois, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+137, Morocco, Sydney, SENT OUT QUEST, Type, 14
+137, Morocco, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+138, The Iroquois, Cahokia, gained friend
+138, The Iroquois, Cahokia, FINISHED QUEST, Great Person, Friendship: 9 to 49, MINOR_CIV_CAHOKIA
+138, Korea, Wellington, gained friend
+138, Korea, Wellington, gained ally
+138, Babylon, Wellington, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_WELLINGTON
+138, Babylon, Wellington, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_WELLINGTON
+138, Babylon, Wellington, cancelled, Contest Techs, Friendship: -60 to -60, MINOR_CIV_WELLINGTON
+138, Denmark, Wellington, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_WELLINGTON
+138, Denmark, Wellington, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_WELLINGTON
+138, Denmark, Wellington, cancelled, Contest Techs, Friendship: -60 to -60, MINOR_CIV_WELLINGTON
+138, Korea, Wellington, FINISHED QUEST, Contest Techs, Friendship: 21 to 61, MINOR_CIV_WELLINGTON
+138, The Iroquois, Wellington, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+138, China, Wellington, cancelled, Contest Techs, Friendship: 17 to 17, MINOR_CIV_WELLINGTON
+138, The Huns, Wellington, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+138, The Inca, Wellington, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+138, Morocco, Wellington, cancelled, Contest Techs, Friendship: 30 to 30, MINOR_CIV_WELLINGTON
+138, China, Sydney, SENT OUT QUEST, Type, 14
+138, China, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+138, Denmark, Colombo, SENT OUT QUEST, Type, 16
+138, Denmark, Colombo, RECEIVED QUEST, Spread Religion, Friendship: 78 to 78, MINOR_CIV_COLOMBO
+138, Korea, Mogadishu, SENT OUT QUEST, Type, 2
+138, Korea, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+138, Korea, Milan, SENT OUT QUEST, Type, 3
+138, Korea, Milan, RECEIVED QUEST, Construct Wonder, Friendship: 3 to 3, MINOR_CIV_MILAN
+138, Denmark, Milan, SENT OUT QUEST, Type, 7
+138, Denmark, Milan, RECEIVED QUEST, Find Natural Wonder, Friendship: 19 to 19, MINOR_CIV_MILAN
+139, Korea, Wellington, SENT OUT QUEST, Type, 2
+139, Korea, Hanoi, lost friend
+139, Morocco, Wellington, lost friend
+139, Denmark, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+139, The Iroquois, Vatican City, SENT OUT QUEST, Type, 7
+139, The Iroquois, Vatican City, RECEIVED QUEST, Find Natural Wonder, Friendship: -1 to -1, MINOR_CIV_VATICAN_CITY
+139, Morocco, Cahokia, lost friend
+140, The Inca, Buenos Aires, SENT OUT QUEST, Type, 4
+140, The Inca, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+140, Korea, Ormus, lost ally
+140, Korea, Antwerp, SENT OUT QUEST, Type, 17
+140, Korea, Antwerp, RECEIVED QUEST, Trade Route, Friendship: 10 to 10, MINOR_CIV_ANTWERP
+140, Korea, Wellington, lost ally
+140, China, Wellington, SENT OUT QUEST, Type, 3
+140, China, Wellington, RECEIVED QUEST, Construct Wonder, Friendship: 14 to 14, MINOR_CIV_WELLINGTON
+140, Korea, Cahokia, SENT OUT QUEST, Type, 4
+140, Korea, Cahokia, RECEIVED QUEST, Great Person, Friendship: 97 to 97, MINOR_CIV_CAHOKIA
+140, Morocco, Colombo, lost friend
+141, Denmark, Sydney, gained friend
+141, Denmark, Sydney, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+141, Denmark, Colombo, lost ally
+141, China, Colombo, gained ally
+141, The Huns, Colombo, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_COLOMBO
+141, The Huns, Colombo, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_COLOMBO
+141, Korea, Buenos Aires, lost friend
+141, The Iroquois, Antwerp, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+141, Babylon, Antwerp, SENT OUT QUEST, Type, 2
+141, Babylon, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+141, The Inca, Sydney, gained friend
+141, The Inca, Sydney, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+141, Korea, Sydney, SENT OUT QUEST, Type, 3
+141, Korea, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+142, Babylon, Antwerp, SENT OUT QUEST, Type, 2
+142, The Inca, Milan, Gold Gift: 250, Friendship: 34 to 54, Diplomacy, MINOR_CIV_MILAN, Boost! , Passing Denmark
+142, Denmark, Ormus, SENT OUT QUEST, Type, 3
+142, Denmark, Ormus, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ORMUS
+142, Babylon, Vilnius, lost friend
+142, The Inca, Cahokia, SENT OUT QUEST, Type, 7
+142, The Inca, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+142, The Iroquois, Colombo, SENT OUT QUEST, Type, 2
+142, The Iroquois, Colombo, RECEIVED QUEST, Connect Resource, Friendship: -57 to -57, MINOR_CIV_COLOMBO
+142, Morocco, Mogadishu, SENT OUT QUEST, Type, 14
+142, Morocco, Mogadishu, RECEIVED QUEST, Bully City-State, Friendship: 12 to 12, MINOR_CIV_MOGADISHU
+143, Korea, Zanzibar, SENT OUT QUEST, Type, 13
+143, Korea, Zanzibar, RECEIVED QUEST, Invest, Friendship: 47 to 47, MINOR_CIV_ZANZIBAR
+143, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 13
+143, The Iroquois, Zanzibar, RECEIVED QUEST, Invest, Friendship: 40 to 40, MINOR_CIV_ZANZIBAR
+143, Denmark, Zanzibar, SENT OUT QUEST, Type, 13
+143, Denmark, Zanzibar, RECEIVED QUEST, Invest, Friendship: 9 to 9, MINOR_CIV_ZANZIBAR
+143, China, Zanzibar, SENT OUT QUEST, Type, 13
+143, China, Zanzibar, RECEIVED QUEST, Invest, Friendship: 65 to 65, MINOR_CIV_ZANZIBAR
+143, The Inca, Zanzibar, SENT OUT QUEST, Type, 13
+143, The Inca, Zanzibar, RECEIVED QUEST, Invest, Friendship: 20 to 20, MINOR_CIV_ZANZIBAR
+143, Morocco, Zanzibar, SENT OUT QUEST, Type, 13
+143, Morocco, Zanzibar, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+143, Morocco, Ife, lost friend
+143, The Inca, Ur, SENT OUT QUEST, Type, 4
+143, The Inca, Ur, RECEIVED QUEST, Great Person, Friendship: 11 to 11, MINOR_CIV_UR
+143, The Inca, Vatican City, SENT OUT QUEST, Type, 16
+143, The Inca, Vatican City, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+143, Korea, Cahokia, FINISHED QUEST, Invest, Friendship: 92 to 92, MINOR_CIV_CAHOKIA
+143, The Iroquois, Cahokia, FINISHED QUEST, Invest, Friendship: 40 to 40, MINOR_CIV_CAHOKIA
+143, Morocco, Cahokia, FINISHED QUEST, Invest, Friendship: 22 to 22, MINOR_CIV_CAHOKIA
+143, China, Cahokia, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+143, The Huns, Cahokia, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+143, The Inca, Cahokia, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+143, Morocco, Mogadishu, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+144, The Inca, Ur, gained friend
+144, The Inca, Ur, FINISHED QUEST, Great Person, Friendship: 11 to 51, MINOR_CIV_UR
+144, Korea, Ormus, SENT OUT QUEST, Type, 4
+144, Korea, Ormus, RECEIVED QUEST, Great Person, Friendship: 53 to 53, MINOR_CIV_ORMUS
+144, Denmark, Hanoi, SENT OUT QUEST, Type, 4
+144, Denmark, Hanoi, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_HANOI
+144, Denmark, Ife, lost friend
+144, Denmark, Ife, gained friend
+144, Denmark, Ife, gained ally
+144, Korea, Ife, SENT OUT QUEST, Type, 16
+144, Korea, Ife, SENT OUT QUEST, Type, 3
+144, Korea, Ife, SENT OUT QUEST, Type, 13
+144, Korea, Ife, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_IFE
+144, Korea, Ife, cancelled, Construct Wonder, Friendship: -60 to -60, MINOR_CIV_IFE
+144, Korea, Ife, cancelled, Invest, Friendship: -60 to -60, MINOR_CIV_IFE
+144, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+144, The Iroquois, Ife, SENT OUT QUEST, Type, 4
+144, The Iroquois, Ife, SENT OUT QUEST, Type, 13
+144, The Iroquois, Ife, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_IFE
+144, The Iroquois, Ife, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_IFE
+144, The Iroquois, Ife, cancelled, Invest, Friendship: -60 to -60, MINOR_CIV_IFE
+144, Denmark, Ife, FINISHED QUEST, Spread Religion, Friendship: 29 to 69, MINOR_CIV_IFE
+144, Korea, Samarkand, SENT OUT QUEST, Type, 3
+144, Korea, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+144, China, Colombo, SENT OUT QUEST, Type, 7
+144, China, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 64 to 64, MINOR_CIV_COLOMBO
+144, Morocco, Mogadishu, gained friend
+144, Morocco, Mogadishu, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_MOGADISHU
+145, Denmark, Buenos Aires, era change yield update
+145, Denmark, Zanzibar, era change yield update
+145, Denmark, Ormus, era change yield update
+145, Denmark, Hanoi, era change yield update
+145, Denmark, Vilnius, era change yield update
+145, Denmark, Antwerp, era change yield update
+145, Denmark, Ife, era change yield update
+145, Denmark, Wellington, era change yield update
+145, Denmark, Ur, era change yield update
+145, Denmark, Samarkand, era change yield update
+145, Denmark, Sydney, era change yield update
+145, Denmark, Vatican City, era change yield update
+145, Denmark, Cahokia, era change yield update
+145, Denmark, Colombo, era change yield update
+145, Denmark, Mogadishu, era change yield update
+145, Denmark, Milan, era change yield update
+145, Denmark, Zanzibar, SENT OUT QUEST, Type, 2
+145, Denmark, Zanzibar, SENT OUT QUEST, Type, 13
+145, Denmark, Ormus, SENT OUT QUEST, Type, 3
+145, Denmark, Hanoi, SENT OUT QUEST, Type, 16
+145, Denmark, Hanoi, SENT OUT QUEST, Type, 4
+145, Denmark, Vilnius, SENT OUT QUEST, Type, 2
+145, Denmark, Antwerp, SENT OUT QUEST, Type, 7
+145, Denmark, Ife, SENT OUT QUEST, Type, 7
+145, Denmark, Ife, SENT OUT QUEST, Type, 13
+145, Denmark, Colombo, SENT OUT QUEST, Type, 0
+145, Denmark, Colombo, SENT OUT QUEST, Type, 16
+145, Denmark, Mogadishu, SENT OUT QUEST, Type, 1
+145, Denmark, Mogadishu, SENT OUT QUEST, Type, 16
+145, Denmark, Milan, SENT OUT QUEST, Type, 7
+145, Denmark, Sydney, lost friend
+145, China, Vatican City, SENT OUT QUEST, Type, 2
+145, China, Vatican City, RECEIVED QUEST, Connect Resource, Friendship: 7 to 7, MINOR_CIV_VATICAN_CITY
+145, The Huns, Cahokia, SENT OUT QUEST, Type, 2
+145, The Huns, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+145, Korea, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+145, The Iroquois, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+145, Denmark, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+145, China, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+145, The Huns, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+145, The Inca, Mogadishu, cancelled, Kill Camp, Friendship: 1 to 1, MINOR_CIV_MOGADISHU
+146, Korea, Ormus, SENT OUT QUEST, Type, 4
+146, The Inca, Zanzibar, SENT OUT QUEST, Type, 4
+146, The Inca, Zanzibar, RECEIVED QUEST, Great Person, Friendship: 16 to 16, MINOR_CIV_ZANZIBAR
+146, The Huns, Antwerp, FINISHED QUEST, Find Natural Wonder, Friendship: 60 to 100, MINOR_CIV_ANTWERP
+146, The Huns, Ife, gained friend
+146, The Huns, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_IFE
+146, The Huns, Wellington, gained friend
+146, The Huns, Wellington, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_WELLINGTON
+146, China, Samarkand, SENT OUT QUEST, Type, 2
+146, China, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+146, The Inca, Sydney, lost friend
+146, Babylon, Sydney, SENT OUT QUEST, Type, 2
+146, Babylon, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 36 to 36, MINOR_CIV_SYDNEY
+146, The Inca, Sydney, SENT OUT QUEST, Type, 14
+146, The Inca, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 28 to 28, MINOR_CIV_SYDNEY
+146, The Huns, Vatican City, gained ally
+146, China, Vatican City, SENT OUT QUEST, Type, 17
+146, China, Vatican City, SENT OUT QUEST, Type, 2
+146, China, Vatican City, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_VATICAN_CITY
+146, China, Vatican City, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_VATICAN_CITY
+146, The Huns, Vatican City, FINISHED QUEST, Find Natural Wonder, Friendship: 44 to 84, MINOR_CIV_VATICAN_CITY
+147, Korea, Buenos Aires, era change yield update
+147, Korea, Zanzibar, era change yield update
+147, Korea, Ormus, era change yield update
+147, Korea, Hanoi, era change yield update
+147, Korea, Vilnius, era change yield update
+147, Korea, Antwerp, era change yield update
+147, Korea, Ife, era change yield update
+147, Korea, Wellington, era change yield update
+147, Korea, Ur, era change yield update
+147, Korea, Samarkand, era change yield update
+147, Korea, Sydney, era change yield update
+147, Korea, Vatican City, era change yield update
+147, Korea, Cahokia, era change yield update
+147, Korea, Colombo, era change yield update
+147, Korea, Mogadishu, era change yield update
+147, Korea, Milan, era change yield update
+147, Korea, Buenos Aires, SENT OUT QUEST, Type, 16
+147, Korea, Zanzibar, SENT OUT QUEST, Type, 16
+147, Korea, Zanzibar, SENT OUT QUEST, Type, 13
+147, Korea, Ormus, SENT OUT QUEST, Type, 4
+147, Korea, Hanoi, SENT OUT QUEST, Type, 2
+147, Korea, Vilnius, SENT OUT QUEST, Type, 16
+147, Korea, Vilnius, SENT OUT QUEST, Type, 2
+147, Korea, Antwerp, SENT OUT QUEST, Type, 2
+147, Korea, Antwerp, SENT OUT QUEST, Type, 17
+147, Korea, Wellington, SENT OUT QUEST, Type, 2
+147, Korea, Samarkand, SENT OUT QUEST, Type, 1
+147, Korea, Samarkand, SENT OUT QUEST, Type, 16
+147, Korea, Samarkand, SENT OUT QUEST, Type, 3
+147, Korea, Sydney, SENT OUT QUEST, Type, 3
+147, Korea, Vatican City, SENT OUT QUEST, Type, 2
+147, Korea, Vatican City, SENT OUT QUEST, Type, 16
+147, Korea, Cahokia, SENT OUT QUEST, Type, 4
+147, Korea, Mogadishu, SENT OUT QUEST, Type, 2
+147, Korea, Milan, SENT OUT QUEST, Type, 3
+147, The Iroquois, Zanzibar, lost friend
+147, China, Zanzibar, lost friend
+147, China, Zanzibar, lost ally
+147, Korea, Zanzibar, gained ally
+147, Denmark, Zanzibar, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_ZANZIBAR
+147, Denmark, Zanzibar, cancelled, Invest, Friendship: -60 to -60, MINOR_CIV_ZANZIBAR
+147, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 17
+147, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 2
+147, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 13
+147, China, Zanzibar, SENT OUT QUEST, Type, 7
+147, China, Zanzibar, SENT OUT QUEST, Type, 13
+147, China, Buenos Aires, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+147, Korea, Zanzibar, lost ally
+147, China, Zanzibar, SENT OUT QUEST, Type, 0
+147, China, Zanzibar, RECEIVED QUEST, Route, Friendship: 21 to 21, MINOR_CIV_ZANZIBAR
+147, China, Colombo, lost ally
+147, The Inca, Mogadishu, SENT OUT QUEST, Type, 14
+147, The Inca, Mogadishu, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+148, The Inca, Vilnius, SENT OUT QUEST, Type, 2
+148, The Inca, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+149, The Iroquois, Buenos Aires, era change yield update
+149, The Iroquois, Zanzibar, era change yield update
+149, The Iroquois, Ormus, era change yield update
+149, The Iroquois, Hanoi, era change yield update
+149, The Iroquois, Vilnius, era change yield update
+149, The Iroquois, Antwerp, era change yield update
+149, The Iroquois, Ife, era change yield update
+149, The Iroquois, Wellington, era change yield update
+149, The Iroquois, Ur, era change yield update
+149, The Iroquois, Samarkand, era change yield update
+149, The Iroquois, Sydney, era change yield update
+149, The Iroquois, Vatican City, era change yield update
+149, The Iroquois, Cahokia, era change yield update
+149, The Iroquois, Colombo, era change yield update
+149, The Iroquois, Mogadishu, era change yield update
+149, The Iroquois, Milan, era change yield update
+149, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 17
+149, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 2
+149, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 13
+149, The Iroquois, Ormus, SENT OUT QUEST, Type, 17
+149, The Iroquois, Hanoi, SENT OUT QUEST, Type, 17
+149, The Iroquois, Hanoi, SENT OUT QUEST, Type, 2
+149, The Iroquois, Vilnius, SENT OUT QUEST, Type, 7
+149, The Iroquois, Antwerp, SENT OUT QUEST, Type, 7
+149, The Iroquois, Wellington, SENT OUT QUEST, Type, 7
+149, The Iroquois, Wellington, SENT OUT QUEST, Type, 2
+149, The Iroquois, Sydney, SENT OUT QUEST, Type, 14
+149, The Iroquois, Vatican City, SENT OUT QUEST, Type, 7
+149, The Iroquois, Cahokia, SENT OUT QUEST, Type, 17
+149, The Iroquois, Colombo, SENT OUT QUEST, Type, 2
+149, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 17
+149, The Iroquois, Mogadishu, SENT OUT QUEST, Type, 2
+149, Korea, Buenos Aires, SENT OUT QUEST, Type, 10
+149, Korea, Buenos Aires, RECEIVED QUEST, Contest Culture, Friendship: 11 to 11, MINOR_CIV_BUENOS_AIRES
+149, The Iroquois, Buenos Aires, SENT OUT QUEST, Type, 10
+149, The Iroquois, Buenos Aires, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+149, China, Buenos Aires, SENT OUT QUEST, Type, 10
+149, China, Buenos Aires, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+149, The Huns, Buenos Aires, SENT OUT QUEST, Type, 10
+149, The Huns, Buenos Aires, RECEIVED QUEST, Contest Culture, Friendship: -6 to -6, MINOR_CIV_BUENOS_AIRES
+149, The Inca, Buenos Aires, SENT OUT QUEST, Type, 10
+149, The Inca, Buenos Aires, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+149, The Iroquois, Ormus, SENT OUT QUEST, Type, 2
+149, The Iroquois, Ormus, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ORMUS
+149, Babylon, Vilnius, SENT OUT QUEST, Type, 2
+149, Babylon, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 13 to 13, MINOR_CIV_VILNIUS
+149, The Huns, Cahokia, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+149, China, Mogadishu, SENT OUT QUEST, Type, 3
+149, China, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+149, China, Milan, SENT OUT QUEST, Type, 4
+149, China, Milan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MILAN
+150, The Huns, Buenos Aires, SENT OUT QUEST, Type, 4
+150, The Huns, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: -4 to -4, MINOR_CIV_BUENOS_AIRES
+150, Denmark, Antwerp, SENT OUT QUEST, Type, 14
+150, Denmark, Antwerp, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+150, Morocco, Ife, SENT OUT QUEST, Type, 2
+150, Morocco, Ife, RECEIVED QUEST, Connect Resource, Friendship: 18 to 18, MINOR_CIV_IFE
+150, Morocco, Wellington, cancelled, Bully City-State, Friendship: 12 to 12, MINOR_CIV_WELLINGTON
+150, Korea, Wellington, SENT OUT QUEST, Type, 14
+150, Korea, Wellington, RECEIVED QUEST, Bully City-State, Friendship: 48 to 48, MINOR_CIV_WELLINGTON
+150, Babylon, Sydney, lost friend
+150, Babylon, Sydney, gained friend
+150, Babylon, Sydney, gained ally
+150, Korea, Sydney, cancelled, Construct Wonder, Friendship: -60 to -60, MINOR_CIV_SYDNEY
+150, The Iroquois, Sydney, cancelled, Bully City-State, Friendship: -60 to -60, MINOR_CIV_SYDNEY
+150, Babylon, Sydney, FINISHED QUEST, Connect Resource, Friendship: 29 to 69, MINOR_CIV_SYDNEY
+150, Korea, Colombo, SENT OUT QUEST, Type, 14
+150, Korea, Colombo, RECEIVED QUEST, Bully City-State, Friendship: -45 to -45, MINOR_CIV_COLOMBO
+150, Morocco, Mogadishu, gained ally
+150, The Iroquois, Milan, SENT OUT QUEST, Type, 4
+150, The Iroquois, Milan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MILAN
+150, Morocco, Milan, SENT OUT QUEST, Type, 2
+150, Morocco, Milan, RECEIVED QUEST, Connect Resource, Friendship: 83 to 83, MINOR_CIV_MILAN
+151, Denmark, Ife, Gold Gift: 250, Friendship: 62 to 92, Conquest, MINOR_CIV_IFE, Boost! , Passing Morocco
+151, Denmark, Colombo, Gold Gift: 250, Friendship: 32 to 32, Conquest, MINOR_CIV_COLOMBO, (SAVING) , Boost! , Passing Babylon
+151, The Inca, Buenos Aires, era change yield update
+151, The Inca, Zanzibar, era change yield update
+151, The Inca, Ormus, era change yield update
+151, The Inca, Hanoi, era change yield update
+151, The Inca, Vilnius, era change yield update
+151, The Inca, Antwerp, era change yield update
+151, The Inca, Ife, era change yield update
+151, The Inca, Wellington, era change yield update
+151, The Inca, Ur, era change yield update
+151, The Inca, Samarkand, era change yield update
+151, The Inca, Sydney, era change yield update
+151, The Inca, Vatican City, era change yield update
+151, The Inca, Cahokia, era change yield update
+151, The Inca, Colombo, era change yield update
+151, The Inca, Mogadishu, era change yield update
+151, The Inca, Milan, era change yield update
+151, The Inca, Buenos Aires, SENT OUT QUEST, Type, 4
+151, The Inca, Buenos Aires, SENT OUT QUEST, Type, 10
+151, The Inca, Zanzibar, SENT OUT QUEST, Type, 16
+151, The Inca, Zanzibar, SENT OUT QUEST, Type, 13
+151, The Inca, Zanzibar, SENT OUT QUEST, Type, 4
+151, The Inca, Vilnius, SENT OUT QUEST, Type, 16
+151, The Inca, Vilnius, SENT OUT QUEST, Type, 2
+151, The Inca, Antwerp, SENT OUT QUEST, Type, 2
+151, The Inca, Antwerp, SENT OUT QUEST, Type, 7
+151, The Inca, Ife, SENT OUT QUEST, Type, 16
+151, The Inca, Ife, SENT OUT QUEST, Type, 7
+151, The Inca, Ife, SENT OUT QUEST, Type, 13
+151, The Inca, Wellington, SENT OUT QUEST, Type, 7
+151, The Inca, Wellington, SENT OUT QUEST, Type, 2
+151, The Inca, Ur, SENT OUT QUEST, Type, 1
+151, The Inca, Samarkand, SENT OUT QUEST, Type, 1
+151, The Inca, Sydney, SENT OUT QUEST, Type, 14
+151, The Inca, Vatican City, SENT OUT QUEST, Type, 16
+151, The Inca, Cahokia, SENT OUT QUEST, Type, 2
+151, The Inca, Cahokia, SENT OUT QUEST, Type, 7
+151, The Inca, Colombo, SENT OUT QUEST, Type, 7
+151, The Inca, Colombo, SENT OUT QUEST, Type, 2
+151, The Inca, Mogadishu, SENT OUT QUEST, Type, 16
+151, The Inca, Mogadishu, SENT OUT QUEST, Type, 14
+151, The Inca, Milan, SENT OUT QUEST, Type, 16
+151, Morocco, Vilnius, SENT OUT QUEST, Type, 14
+151, Morocco, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+151, Morocco, Antwerp, gained friend
+151, Morocco, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+151, Babylon, Ife, SENT OUT QUEST, Type, 4
+151, Babylon, Ife, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_IFE
+151, Morocco, Ur, SENT OUT QUEST, Type, 2
+151, Morocco, Ur, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_UR
+151, The Iroquois, Cahokia, lost friend

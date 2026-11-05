@@ -1,0 +1,43 @@
+﻿Game 11EBE53D11EBE53DF (AIABTest_c8e.csv), last logged turn 150
+b    Babylon      tall      cities 4
+  builds to T80 (capital Babylon; other cities named): T1 Scout* | T5 Monument* | T10 Shrine* | T15 Warrior* | T20 Settler* | T29 Granary | T34 Warrior* | T37 Monument* (Akkad) | T37 Worker* | T38 Stonehenge | T38 Library* (Akkad) | T48 Great Library | T51 Settler* | T52 Worker* | T57 Settler | T61 Water Mill | T66 Library | T67 Granary (Dur-Kurigalzu) | T70 Bowman | T72 Granary (Akkad) | T75 Settler | T79 Spearman
+  settlers ordered T: 20,51,57,75   found-city ops started T: 29,61,79,90   cities founded T: 37,67,98
+  ops aborted: T81 NoTarget, T82 NoTarget, T83 NoTarget, T84 NoTarget, T85 NoTarget, T86 NoTarget, T87 NoTarget, T88 NoTarget, T89 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 2 (growth due 1, unhappy 1)   built instead: Library 2   first: T038 Babylon size 4 next Library | T048 Babylon size 4 next Library
+  IDLE SETTLER turns: 3 (first T51)
+  settler timeline to T80: T20 settler (book) in Babylon | T29 op started | T37 FOUNDED | T51 settler (book) in Babylon | T57 settler (AI) in Babylon | T61 op started | T67 FOUNDED | T75 settler (AI) in Babylon | T79 op started
+  saving gold for a settler: 48 turns (T6-T79)
+b    China        wide      cities 3
+  builds to T80 (capital Beijing; other cities named): T1 Scout* | T5 Warrior* | T12 Worker* | T20 Warrior* | T25 Settler* | T36 Granary | T39 Monument (Shanghai) | T43 Warrior* | T47 Shrine* | T50 Monument* | T53 Paper Maker* | T58 Settler* | T62 Work Boat (Shanghai) | T66 Spearman | T69 Petra | T73 Granary (Shanghai) | T75 Water Mill | T76 Paper Maker (Shanghai) | T78 Spearman
+  settlers ordered T: 25,58   found-city ops started T: 36,66,80   cities founded T: 39,88,89
+  book SETTLER HELD to T80: 3 (unhappy 2, growth due 1)   built instead: Paper Maker 1, Monument 1, Worker 1   first: T012 Beijing size 2 next Worker | T050 Beijing size 4 next Monument | T053 Beijing size 4 next Paper Maker
+  IDLE SETTLER turns: 1 (first T58)
+  settler timeline to T80: T25 settler (book) in Beijing | T36 op started | T39 FOUNDED | T58 settler (book) in Beijing | T66 op started | T80 op started
+  saving gold for a settler: 51 turns (T7-T66)
+b    Denmark      wide      cities 2
+  builds to T80 (capital Copenhagen; other cities named): T0 Scout* | T4 Warrior* | T11 Worker* | T22 Warrior* | T28 Settler* | T36 Water Mill | T39 Granary (Aarhus) | T44 Warrior* | T47 Shrine* | T49 Monument* | T51 Library* | T55 Temple of Artemis | T59 Monument* (Aarhus) | T65 Petra | T71 Settler (Aarhus) | T75 Granary | T77 Caravan | T79 Caravan | T79 Water Mill (Aarhus) | T80 Caravan
+  settlers ordered T: 28,71   found-city ops started T: 36,80,80   cities founded T: 39
+  ops aborted: T81 NoTarget, T81 NoTarget, T82 NoTarget, T82 NoTarget, T83 NoTarget, T83 NoTarget, T84 NoTarget, T84 NoTarget, T85 NoTarget, T85 NoTarget, T86 NoTarget, T86 NoTarget, T87 NoTarget, T87 NoTarget, T88 NoTarget, T88 NoTarget, T89 NoTarget, T89 NoTarget, T90 NoTarget, T90 NoTarget, T91 NoTarget, T91 NoTarget, T92 NoTarget, T92 NoTarget, T93 NoTarget, T93 NoTarget, T94 NoTarget, T94 NoTarget, T95 NoTarget, T95 NoTarget, T96 NoTarget, T96 NoTarget, T97 NoTarget, T97 NoTarget, T98 NoTarget, T98 NoTarget, T99 NoTarget, T99 NoTarget
+  book SETTLER HELD to T80: 5 (unhappy 4, growth due 1)   built instead: the normal AI choice 2, Worker 1, Library 1, Monument 1   first: T011 Copenhagen size 2 next Worker | T049 Copenhagen size 5 next Monument | T051 Copenhagen size 5 next Library
+  IDLE SETTLER turns: 2 (first T72)
+  military ops ended (whole game): WarStateChange 27
+  settler timeline to T80: T28 settler (book) in Copenhagen | T36 op started | T39 FOUNDED | T71 settler (AI) in Aarhus | T79 BOUGHT in Aarhus. Cost: 370 | T80 op started | T80 op started
+  saving gold for a settler: 48 turns (T6-T78)
+b    Korea        tall      cities 5
+  builds to T80 (capital Seoul; other cities named): T0 Scout* | T3 Monument* | T7 Warrior* | T11 Shrine* | T15 Warrior* | T18 Settler* | T26 Granary | T31 Granary (Busan) | T31 Warrior | T32 Worker* | T36 Warrior* | T39 Stonehenge | T48 Library* | T52 Settler | T54 Lighthouse (Busan) | T56 Spearman | T58 Great Lighthouse | T64 Settler | T65 Granary (Jeonju) | T65 Settler | T68 Work Boat (Busan) | T68 Swordsman | T70 Swordsman | T72 Settler (Busan) | T73 Oracle | T79 Work Boat (Jeonju) | T79 Worker (Busan) | T80 Parthenon
+  settlers ordered T: 18,52,64,65,72,93   found-city ops started T: 26,56,68,79   cities founded T: 31,65,81,86
+  ops aborted: T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 3 (growth due 2, unhappy 1)   built instead: Library 2, the normal AI choice 1   first: T039 Seoul size 4 next Library | T048 Seoul size 5 next Library | T052 Seoul size 6 next the normal AI choice
+  IDLE SETTLER turns: 3 (first T52)
+  military ops ended (whole game): WarStateChange 4, NoUnits 2, NoTarget 2, Success 1, HalfStrength 1
+  settler timeline to T80: T18 settler (book) in Seoul | T26 op started | T31 FOUNDED | T52 settler (AI) in Seoul | T56 op started | T64 settler (AI) in Seoul | T65 settler (AI) in Seoul | T65 FOUNDED | T68 op started | T72 settler (AI) in Busan | T79 op started
+  saving gold for a settler: 40 turns (T6-T68)
+b    Morocco      tall      cities 4
+  builds to T80 (capital Marrakech; other cities named): T2 Scout* | T6 Monument* | T13 Shrine* | T19 Warrior* | T26 Worker* | T34 Settler* | T52 Spearman | T61 Granary (Rabat) | T61 Granary | T68 Monument (Fes) | T69 Shrine (Fes) | T70 Archer | T76 Worker (Rabat) | T76 Water Mill
+  settlers ordered T: 34,85,107   found-city ops started T: 52,64,93   cities founded T: 61,68,99
+  ops aborted: T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Worker 1   first: T026 Marrakech size 3 next Worker
+  IDLE SETTLER turns: 5 (first T63)
+  military ops ended (whole game): Success 2
+  settler timeline to T80: T34 settler (book) in Marrakech | T52 op started | T61 FOUNDED | T63 BOUGHT in Marrakech. Cost: 370 | T64 op started | T68 FOUNDED
+  saving gold for a settler: 56 turns (T8-T80)
