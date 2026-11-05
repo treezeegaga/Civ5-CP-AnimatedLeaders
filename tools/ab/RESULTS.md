@@ -1970,6 +1970,35 @@ The direction holds (fewer cancelled attacks, harder hits, fewer refusals), but 
 **Next build:** the lead merged WindowUntilReady and the capture-plan logging into `claude/ab-c1` `850e142f1` (CI run
 219 green); SiegeFeed and CoopWhenReady are merged but off. That block is read against these 14.
 
+**Update with 22 first games (about 5:05am ET; the PCs stayed on f6d1e84 past the block).**
+
+| First games | e4d5785 (14) | f6d1e84 (22) |
+|---|---|---|
+| Stages: no war / never at walls / refused / not taken / captured | 1 / 0 / 8 / 4 / 1 | 4 / 2 / 5 / 9 / 2 |
+| Attacks delivered a game (games with 2+) | 1.4 (5 of 14) | 1.4 (10 of 22) |
+| Endings a game: NoUnits / DiploOpinionChange / TimedOut | 1.0 / 2.3 / 0.7 | 0.1 / 1.0 / 1.9 |
+| Capture attempts a game | 3.6 | 3.6 |
+| Attempts where the city lost HP; mean damage | 32%; 6.8 | **35%; 9.2** |
+| Own units killed a game | 4.2 | 5.3 |
+
+**Read at 22 games: the early numbers were noise.**
+- At the walls, almost nothing changed: attempts land 35% against 32% (the 57% at 10 games was the first games'
+  luck), and captures are 2 of 22 (9%) against 1 of 14.
+- What clearly changed is upstream:
+  - attacks no longer end NoUnits (SecondWave);
+  - half as many end DiploOpinionChange (TargetHold);
+  - but TimedOut nearly tripled (0.7 → 1.9), and no-war games rose from 1 in 14 to 4 in 22.
+- The attacks that used to be cancelled now sit in SiegeArmy's peace bar until they time out, and some wars never come.
+- Waves didn't move (1.4).
+- The sieges are not being won at the walls by any of the at-the-walls flags yet (SiegeClose, SiegeDominated,
+  SiegeExposure, SiegeFinish are all in this role).
+
+**Next:**
+- The new build (850e142f1) changes the army-building side: WindowUntilReady keeps the window's army target until the
+  army is ready. Its block should show whether TimedOut and no-war fall and waves rise.
+- At the walls, the capture-plan logging in that build is the first chance to see what the plans actually do. Until
+  then, no new at-the-walls change.
+
 **Correction (my earlier at-the-walls entry): SiegeVolley withdrawn.**
 - The "6 or more units in the sim: the city lost HP in 22%" figure came almost entirely from one game: the Inca at
   Mumbai (0DF72455), 18 attempts with 6+ units, 1 landed.
