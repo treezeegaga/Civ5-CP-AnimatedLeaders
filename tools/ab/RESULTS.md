@@ -1792,7 +1792,7 @@ civs are only allowed to hurry two production items: settlers and siege weapons.
   Warrior...), Bronze Working or not, for every major AI. It moved into the same gold-purchase check, so it covers
   every purchase path. `SettlerSaveRealistic` and `PeaceHurry` stay off and get tested.
 
-### Do civs research for their target victory? (Economy, the user's question, Nov 5, 2:35pm ET)
+### Do civs research for their target victory? (Economy, the user's question, Nov 5, 2:55pm ET)
 
 **Data:** 966 civ-games from all 138 logged games. There is no tech log, so a tech's turn is inferred from the
 first turn something it unlocks appears in any city's build list (`CityStrategyAIProductionLog.csv`, "PRE" lines):
