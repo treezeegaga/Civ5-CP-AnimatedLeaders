@@ -575,7 +575,7 @@ entry is in RESULTS.md, and the scoreboard is at its top.
    cities per war, coalition size and speed, interactivity rate, banned-behaviour count, strength
    vs CP, AI turn time. Plus a goal row (set the numbers with the players) that says when we're done.
 
-## Experiment lead: the check-in ("avengers assemble")
+## Experiment lead: the check-in ("avengers assemble", or just "aa")
 
 When the user says **"avengers assemble"**, the lead checks on every session and reports back in one
 summary. A scheduled task (`trig_011XWTtRZXtTjdt9KBqEG31m`, hourly at :42, firing into the lead's session)
