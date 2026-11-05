@@ -1945,6 +1945,17 @@ positions, set-up moves, or its scoring of attacks against cities.
 2. **TimingBuildup:** when the conquest target is returned (the army ready, or the window over), the attack phase
    starts if it hasn't. The phase becomes ATTACK, not PLANNED, so no cap and no demobilisation while the attack is
    on.
+3. **SiegeArmy's bar at war (the lead's read: "the army times out on the way").**
+   - Attack 1906 against Addis Ababa recruited 2 Swordsmen, 1–2 Jaguars, 2 Catapults and an Archer: 40–45 expected
+     a turn against a bar of 60.
+   - It sat 20 turns in recruiting after the war began (T92), its units hidden from the tactical AI, then SiegeAbort
+     at 67–75% of the bar.
+   - Addis Ababa's zone then read "enemy dominated" every turn T113–T119.
+   - The bar exists so a weak army doesn't declare a war. Once at war with the target, the tactical AI's own rule
+     applies instead: an attack is worth it if 13 turns of damage beat the city's healing. **At war with the target,
+     the bar becomes healing + max HP / 13** (36 for 200 HP, 40 for 250); at 45 a turn this attack would have
+     marched at once. At peace (sneak attacks) the bar is unchanged.
+
 
 ### War: four logged games on ab-f73177c and ab-eb4129d: wars come now; armies are small; MarchOn handed over too early (Nov 4, about 6:36pm ET)
 
