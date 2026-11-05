@@ -4084,6 +4084,26 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### The f6d1e84 block: 9 pairs, 1 capture with RoleFixes (lead, 2026-11-05 1:37am ET)
+
+Frozen build `ab-f6d1e84`: RoleFixes = the 25 flags + MarchOn, FocusedWar, WarGold, SiegeClose, TargetHold,
+SiegeDominated, SecondWave, CSAfterWar. PC 1: bullyabort11 (normal civs), 5 pairs. PC 2: bullygreedy13 (greedy civs),
+4 pairs. No missing snapshots, no crashes.
+
+| Funnel stage (first games, RoleFixes) | bullyabort11 | bullygreedy13 |
+|---|---|---|
+| at war, never in reach of a city | 1 (Huns) | 1 (Japan) |
+| refused only | 1 (Mongol) | 1 (Songhai) |
+| capture attempts, nothing taken | 2 (Greece, Assyria) | 2 (Germany, Mongol) |
+| captured | 1 (Ottomans took Delhi, T126, declared T120) | 0 |
+
+- **Flipped games (CP's AI):** 1 capture in 9 (0E222BE3, Mongols).
+- **Signals in the first games:** 15 "SiegeArmy too weak, gave up", 9 build-ups given up after 3 windows, 88 window
+  turns paused for gold, and only 17 capture attempts in 9 games. Attack ops ended TimedOut 16, Success 14.
+- **Reading:** every first game had a war. The army still rarely brings enough to the walls, and the gold pauses
+  remain despite WarGold. War is studying army strength at the walls across all games; the next build waits for its
+  proposal.
+
 ### Patterns, not whack-a-mole: the attack funnel over 60 logged games (lead, 2026-11-04 11:45pm ET)
 
 The user: "instead of trying to fix the individual problems that happen each match, we should be looking for patterns
