@@ -4084,6 +4084,30 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Next block: WindowUntilReady on ab-850e142; PC 2's disk filled up (lead, 2026-11-05 4:18am ET)
+
+**War's read of the whole f6d1e84 block** (10 first games, compared with e4d5785's 14). On the right track:
+- NoUnits endings are gone (SecondWave), and DiploOpinionChange endings fell from 2.3 to 0.3 a game (TargetHold).
+- Attempts that hurt the city rose from 32% to 57%, mean damage from 6.8 to 18.6, and "refused" fell from 8/14 to 2/10.
+
+Not moved:
+- Waves, the best predictor of a capture, are flat: 1.5 delivered a game, against 1.4.
+- TimedOut doubled (0.7 to 1.6 a game): SiegeArmy holds the peacetime attacks for 20 turns because the armies are too
+  small, then gives up.
+- SiegeDominated never attacked.
+
+War withdrew SiegeVolley: its "6+ units, 22% land" effect came from one game (the Inca at Mumbai, 18 attempts), and
+other 6+ attempts landed 8 of 9.
+
+**Next block:** `claude/ab-c1` `850e142` (90 flags) merges `ai/war` `2499852`. It adds `WindowUntilReady`, which targets
+the funnel-wide pattern of armies too small before the war: 15 "too weak" give-ups and 16 timeouts in this block.
+RoleFixes add WindowUntilReady only. SiegeFeed and CoopWhenReady are in the build but off, to keep one idea per block.
+The capture-plan logging rides along. Runs: `bullyabort12`, `bullygreedy14`, 20 games each, frozen.
+
+**PC 2's disk:** C: filled at 4:10am ET. Civ's `LogsArchive` held 48.7 GB in 68 game folders, and the logs of
+0F82B771 (pair 9, first game) were lost; the CSV rows are fine. The fix is to move `LogsArchive` to D: with a junction,
+nothing deleted. PC 1 was asked to check its space.
+
 ### The f6d1e84 block: 9 pairs, 1 capture with RoleFixes (lead, 2026-11-05 1:37am ET)
 
 Frozen build `ab-f6d1e84`: RoleFixes = the 25 flags + MarchOn, FocusedWar, WarGold, SiegeClose, TargetHold,
