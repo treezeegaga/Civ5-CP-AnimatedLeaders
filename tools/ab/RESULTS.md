@@ -1924,6 +1924,34 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0D9905E5 (Aztecs) and 0D82E4A9 (Carthage), PC 1 on ab-7bb7885: SiegeClose fills the zone; a new army for the same city takes the besiegers; SiegeFeed (Nov 4, about 11:10pm ET)
+- **Aztecs at Ribe (Denmark), T130–T150:**
+  - SiegeClose fired every turn ("zone 1836 (Ribe) is ours, moving units in reach up around the city").
+  - The zone-strength line shows our units there growing from 2 to 11 (friendly 3766 → 29581 against enemy 5000–6500;
+    city HP 153–200).
+  - But each capture attempt had only 1–3 units within striking distance: Ribe 173 → 173, 167 → 167, 183 → 156; later
+    200 → 172.
+  - **Why:** attack 3401, a new CP city attack on Ribe itself (target 18:30, muster 14:25), started at war at T129
+    and recruited 5 units on the spot, more as they came.
+  - Its army was in recruiting ("Gathering army 3402" each turn, units at 17–23:25–29, around Ribe), hidden from the
+    tactical AI for 10 turns.
+  - Then "SiegeRoll: target 3 tiles from the muster point, moving with 4 units" (T139) and HalfStrength at T142.
+  - Two Rapid Response operations (3566, 3590) also held units near Ribe.
+  - So the units SiegeClose brought up were standing in the zone inside armies, not attacking.
+- **Carthage (0D82E4A9):**
+  - Windows vs the Zulus (T37) and Byzantium (T114); "at war" closed both windows (T54, T120).
+  - Attack 2259 ended "War goal changed" at T120 (TargetHold's second part is not in ab-7bb7885).
+  - SiegeDominated looked twice and stayed skipped (1 unit, expected 0).
+  - The lead's note says Carthage never declared; the wars came to it.
+
+**Hypothesis (flag SiegeFeed, War, CvMilitaryAI::RequestCityAttack):** while one of our sieges is on at a city (at war,
+its land zone dominated by us with 3 or more of our units in it), no new attack operation is started against that city.
+The units in reach go in as tactical reinforcements (SiegeClose) instead of being held in a gathering army beside the
+walls. Other cities of the same enemy can still get attacks, and once the siege collapses (zone no longer ours) a new
+wave can form (SecondWave). Logs "SiegeFeed: X is under siege (n units in the zone), no new army for it" in the
+military log. Expect: no "Gathering army" for a city attack on the city being besieged, and more units within
+striking distance per capture attempt.
+
 ### War: CSAfterWar, city-state conquest waits while the war on the committed major is building or on (the lead's request, 10:55pm ET) (Nov 4, about 10:55pm ET)
 **Seen:** in 0E42C140 (ab-7bb7885) Mongolia's attacks on its committed target Denmark had 3 units each (four of them,
 T77–T132). At the same time, attacks on Zurich, a city-state, got 6 and 7 units (2708 at T112, 3653 at T141). CSConquest
@@ -1963,7 +1991,7 @@ is under way, as the returned target already does. A war still needs the army in
 window keep a weak army from declaring. Logs "CONQUEST: holding X as a war plan, attack under way" once a turn when this
 is what keeps it. TargetHold is in the role on ab-7bb7885, so its results so far are the first part alone.
 
-Coded: `ai/war` `61af66972` (CI pending), on `96332cc83` (SecondWave); both merged by the lead in `claude/ab-c1` `ad5a2d8`.
+Coded: `ai/war` `61af66972` (built, CI run 211), on `96332cc83` (SecondWave); both merged by the lead in `claude/ab-c1` `ad5a2d8`.
 
 **On the lead's other point (SiegeArmy "too weak" for 20 turns against greedy civs):** that is the peace bar doing
 its job with a 3-unit army. The army was small because the window was paused 10 of its turns for gold ("units
