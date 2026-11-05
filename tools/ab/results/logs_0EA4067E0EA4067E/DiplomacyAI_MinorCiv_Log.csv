@@ -1,0 +1,2128 @@
+014, Ife, Rome, RECEIVED_UNIT_GIFT, Warrior
+016, Samarkand, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
+017, Ur, Siam, RECEIVED_UNIT_GIFT, Warrior
+021, Sydney, The Ottomans, RECEIVED_UNIT_GIFT, Warrior
+022, Samarkand, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
+025, Ethiopia, Belgrade, SENT OUT QUEST, Type, 1
+025, Ethiopia, Belgrade, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+025, Rome, Samarkand, SENT OUT QUEST, Type, 6
+025, Rome, Samarkand, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+025, The Ottomans, Riga, SENT OUT QUEST, Type, 2
+025, The Ottomans, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+026, Morocco, Sofia, SENT OUT QUEST, Type, 2
+026, Morocco, Sofia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SOFIA
+026, Siam, Ur, SENT OUT QUEST, Type, 7
+026, Siam, Ur, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_UR
+026, Ife, England, RECEIVED_UNIT_GIFT, Warrior
+026, England, Ife, SENT OUT QUEST, Type, 12
+026, England, Ife, RECEIVED QUEST, Contest Techs, Friendship: 3 to 3, MINOR_CIV_IFE
+026, Morocco, Ife, SENT OUT QUEST, Type, 12
+026, Morocco, Ife, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_IFE
+026, Rome, Ife, SENT OUT QUEST, Type, 12
+026, Rome, Ife, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_IFE
+026, Morocco, Ife, SENT OUT QUEST, Type, 7
+026, Morocco, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+026, England, Wittenberg, SENT OUT QUEST, Type, 7
+026, England, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+026, Songhai, Wittenberg, SENT OUT QUEST, Type, 7
+026, Songhai, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+027, Ethiopia, Ife, SENT OUT QUEST, Type, 12
+027, Ethiopia, Ife, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_IFE
+027, Siam, Sofia, SENT OUT QUEST, Type, 2
+027, Siam, Sofia, RECEIVED QUEST, Connect Resource, Friendship: -7 to -7, MINOR_CIV_SOFIA
+027, Kabul, Sweden, RECEIVED_UNIT_GIFT, Warrior
+027, Ethiopia, Ur, SENT OUT QUEST, Type, 2
+027, Ethiopia, Ur, RECEIVED QUEST, Connect Resource, Friendship: -9 to -9, MINOR_CIV_UR
+027, Songhai, Sydney, SENT OUT QUEST, Type, 6
+027, Songhai, Sydney, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+027, Samarkand, Siam, RECEIVED_UNIT_GIFT, Warrior
+027, Morocco, Samarkand, SENT OUT QUEST, Type, 1
+027, Morocco, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+027, Siam, Samarkand, SENT OUT QUEST, Type, 1
+027, Siam, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 3 to 3, MINOR_CIV_SAMARKAND
+027, Rome, Samarkand, SENT OUT QUEST, Type, 1
+027, Rome, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+027, Ethiopia, Samarkand, SENT OUT QUEST, Type, 1
+027, Ethiopia, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+027, Morocco, Prague, SENT OUT QUEST, Type, 3
+027, Morocco, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+028, Songhai, Riga, SENT OUT QUEST, Type, 6
+028, Songhai, Riga, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_RIGA
+029, Siam, Ur, gained friend
+029, Siam, Ur, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_UR
+029, Sweden, Hanoi, SENT OUT QUEST, Type, 1
+029, Sweden, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+029, Morocco, Hanoi, SENT OUT QUEST, Type, 1
+029, Morocco, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+029, The Ottomans, Sydney, SENT OUT QUEST, Type, 1
+029, The Ottomans, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+029, Songhai, Sydney, SENT OUT QUEST, Type, 1
+029, Songhai, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+029, Ethiopia, Samarkand, SENT OUT QUEST, Type, 2
+029, Ethiopia, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+030, Sweden, Kabul, SENT OUT QUEST, Type, 7
+030, Sweden, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+030, Sweden, Hanoi, SENT OUT QUEST, Type, 3
+030, Sweden, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+030, Morocco, Hanoi, SENT OUT QUEST, Type, 2
+030, Morocco, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+031, Morocco, Sofia, SENT OUT QUEST, Type, 1
+031, Morocco, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+031, Siam, Sofia, SENT OUT QUEST, Type, 1
+031, Siam, Sofia, RECEIVED QUEST, Kill Camp, Friendship: -1 to -1, MINOR_CIV_SOFIA
+031, Rome, Sofia, SENT OUT QUEST, Type, 1
+031, Rome, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+031, Ethiopia, Sofia, SENT OUT QUEST, Type, 1
+031, Ethiopia, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+031, Samarkand, Rome, RECEIVED_UNIT_GIFT, Warrior
+031, Morocco, Prague, SENT OUT QUEST, Type, 1
+031, Morocco, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+032, The Ottomans, Sydney, SENT OUT QUEST, Type, 2
+032, The Ottomans, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+032, Siam, Samarkand, SENT OUT QUEST, Type, 2
+032, Siam, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+032, Sweden, Wittenberg, SENT OUT QUEST, Type, 3
+032, Sweden, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+032, Rome, Wittenberg, SENT OUT QUEST, Type, 7
+032, Rome, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+032, England, Riga, SENT OUT QUEST, Type, 13
+032, England, Riga, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+032, The Ottomans, Riga, SENT OUT QUEST, Type, 13
+032, The Ottomans, Riga, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+032, Siam, Riga, SENT OUT QUEST, Type, 13
+032, Siam, Riga, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+032, Rome, Riga, SENT OUT QUEST, Type, 13
+032, Rome, Riga, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+032, Songhai, Riga, SENT OUT QUEST, Type, 13
+032, Songhai, Riga, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+033, Ethiopia, Sofia, SENT OUT QUEST, Type, 3
+033, Ethiopia, Sofia, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SOFIA
+033, Sydney, The Ottomans, RECEIVED_UNIT_GIFT, Warrior
+033, England, Ife, SENT OUT QUEST, Type, 7
+033, England, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+034, England, Belgrade, era change yield update
+034, England, Sofia, era change yield update
+034, England, Kathmandu, era change yield update
+034, England, Kabul, era change yield update
+034, England, Ur, era change yield update
+034, England, Budapest, era change yield update
+034, England, Yerevan, era change yield update
+034, England, Hanoi, era change yield update
+034, England, Sydney, era change yield update
+034, England, Tyre, era change yield update
+034, England, Ife, era change yield update
+034, England, Samarkand, era change yield update
+034, England, Wittenberg, era change yield update
+034, England, Prague, era change yield update
+034, England, Brussels, era change yield update
+034, England, Riga, era change yield update
+034, England, Ife, SENT OUT QUEST, Type, 12
+034, England, Ife, SENT OUT QUEST, Type, 7
+034, England, Wittenberg, SENT OUT QUEST, Type, 7
+034, England, Riga, SENT OUT QUEST, Type, 13
+034, Sweden, Belgrade, era change yield update
+034, Sweden, Sofia, era change yield update
+034, Sweden, Kathmandu, era change yield update
+034, Sweden, Kabul, era change yield update
+034, Sweden, Ur, era change yield update
+034, Sweden, Budapest, era change yield update
+034, Sweden, Yerevan, era change yield update
+034, Sweden, Hanoi, era change yield update
+034, Sweden, Sydney, era change yield update
+034, Sweden, Tyre, era change yield update
+034, Sweden, Ife, era change yield update
+034, Sweden, Samarkand, era change yield update
+034, Sweden, Wittenberg, era change yield update
+034, Sweden, Prague, era change yield update
+034, Sweden, Brussels, era change yield update
+034, Sweden, Riga, era change yield update
+034, Sweden, Kabul, SENT OUT QUEST, Type, 7
+034, Sweden, Hanoi, SENT OUT QUEST, Type, 1
+034, Sweden, Hanoi, SENT OUT QUEST, Type, 3
+034, Sweden, Wittenberg, SENT OUT QUEST, Type, 3
+034, Sweden, Kathmandu, SENT OUT QUEST, Type, 1
+034, Sweden, Kathmandu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+034, Sweden, Kabul, SENT OUT QUEST, Type, 1
+034, Sweden, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+034, Sweden, Yerevan, SENT OUT QUEST, Type, 1
+034, Sweden, Yerevan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+034, Ife, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
+034, Rome, Ife, SENT OUT QUEST, Type, 7
+034, Rome, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+035, Ethiopia, Belgrade, SENT OUT QUEST, Type, 3
+035, Ethiopia, Belgrade, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+035, Sweden, Yerevan, SENT OUT QUEST, Type, 7
+035, Sweden, Yerevan, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+035, England, Tyre, SENT OUT QUEST, Type, 13
+035, England, Tyre, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_TYRE
+035, Rome, Tyre, SENT OUT QUEST, Type, 13
+035, Rome, Tyre, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_TYRE
+035, Songhai, Tyre, SENT OUT QUEST, Type, 13
+035, Songhai, Tyre, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_TYRE
+035, Samarkand, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
+036, England, Sydney, SENT OUT QUEST, Type, 1
+036, England, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+036, Morocco, Hanoi, SENT OUT QUEST, Type, 1
+036, Morocco, Hanoi, SENT OUT QUEST, Type, 2
+036, Morocco, Prague, SENT OUT QUEST, Type, 3
+036, Morocco, Prague, SENT OUT QUEST, Type, 1
+036, The Ottomans, Kathmandu, SENT OUT QUEST, Type, 1
+036, The Ottomans, Kathmandu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+036, Siam, Ur, lost friend
+036, Morocco, Ur, SENT OUT QUEST, Type, 1
+036, Morocco, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+036, Siam, Ur, SENT OUT QUEST, Type, 1
+036, Siam, Ur, RECEIVED QUEST, Kill Camp, Friendship: 29 to 29, MINOR_CIV_UR
+036, Ethiopia, Ur, SENT OUT QUEST, Type, 1
+036, Ethiopia, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+036, Siam, Riga, SENT OUT QUEST, Type, 2
+036, Siam, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+037, Rome, Sofia, SENT OUT QUEST, Type, 2
+037, Rome, Sofia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SOFIA
+037, England, Wittenberg, SENT OUT QUEST, Type, 11
+037, England, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+037, Sweden, Wittenberg, SENT OUT QUEST, Type, 11
+037, Sweden, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+037, Rome, Wittenberg, SENT OUT QUEST, Type, 11
+037, Rome, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+037, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 11
+037, Ethiopia, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+037, Songhai, Wittenberg, SENT OUT QUEST, Type, 11
+037, Songhai, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+038, The Ottomans, Belgrade, era change yield update
+038, The Ottomans, Sofia, era change yield update
+038, The Ottomans, Kathmandu, era change yield update
+038, The Ottomans, Kabul, era change yield update
+038, The Ottomans, Ur, era change yield update
+038, The Ottomans, Budapest, era change yield update
+038, The Ottomans, Yerevan, era change yield update
+038, The Ottomans, Hanoi, era change yield update
+038, The Ottomans, Sydney, era change yield update
+038, The Ottomans, Tyre, era change yield update
+038, The Ottomans, Ife, era change yield update
+038, The Ottomans, Samarkand, era change yield update
+038, The Ottomans, Wittenberg, era change yield update
+038, The Ottomans, Prague, era change yield update
+038, The Ottomans, Brussels, era change yield update
+038, The Ottomans, Riga, era change yield update
+038, The Ottomans, Kathmandu, SENT OUT QUEST, Type, 1
+038, The Ottomans, Sydney, SENT OUT QUEST, Type, 1
+038, The Ottomans, Sydney, SENT OUT QUEST, Type, 2
+038, The Ottomans, Riga, SENT OUT QUEST, Type, 2
+038, The Ottomans, Riga, SENT OUT QUEST, Type, 13
+038, Sweden, Kabul, gained friend
+038, Sweden, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+038, Sweden, Yerevan, gained friend
+038, Sweden, Yerevan, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_YEREVAN
+039, Morocco, Belgrade, era change yield update
+039, Morocco, Sofia, era change yield update
+039, Morocco, Kathmandu, era change yield update
+039, Morocco, Kabul, era change yield update
+039, Morocco, Ur, era change yield update
+039, Morocco, Budapest, era change yield update
+039, Morocco, Yerevan, era change yield update
+039, Morocco, Hanoi, era change yield update
+039, Morocco, Sydney, era change yield update
+039, Morocco, Tyre, era change yield update
+039, Morocco, Ife, era change yield update
+039, Morocco, Samarkand, era change yield update
+039, Morocco, Wittenberg, era change yield update
+039, Morocco, Prague, era change yield update
+039, Morocco, Brussels, era change yield update
+039, Morocco, Riga, era change yield update
+039, Morocco, Sofia, SENT OUT QUEST, Type, 2
+039, Morocco, Sofia, SENT OUT QUEST, Type, 1
+039, Morocco, Ur, SENT OUT QUEST, Type, 1
+039, Morocco, Hanoi, SENT OUT QUEST, Type, 1
+039, Morocco, Hanoi, SENT OUT QUEST, Type, 2
+039, Morocco, Ife, SENT OUT QUEST, Type, 12
+039, Morocco, Ife, SENT OUT QUEST, Type, 7
+039, Morocco, Samarkand, SENT OUT QUEST, Type, 1
+039, Morocco, Prague, SENT OUT QUEST, Type, 3
+039, Morocco, Prague, SENT OUT QUEST, Type, 1
+039, Ethiopia, Belgrade, era change yield update
+039, Ethiopia, Sofia, era change yield update
+039, Ethiopia, Kathmandu, era change yield update
+039, Ethiopia, Kabul, era change yield update
+039, Ethiopia, Ur, era change yield update
+039, Ethiopia, Budapest, era change yield update
+039, Ethiopia, Yerevan, era change yield update
+039, Ethiopia, Hanoi, era change yield update
+039, Ethiopia, Sydney, era change yield update
+039, Ethiopia, Tyre, era change yield update
+039, Ethiopia, Ife, era change yield update
+039, Ethiopia, Samarkand, era change yield update
+039, Ethiopia, Wittenberg, era change yield update
+039, Ethiopia, Prague, era change yield update
+039, Ethiopia, Brussels, era change yield update
+039, Ethiopia, Riga, era change yield update
+039, Ethiopia, Belgrade, SENT OUT QUEST, Type, 1
+039, Ethiopia, Belgrade, SENT OUT QUEST, Type, 3
+039, Ethiopia, Sofia, SENT OUT QUEST, Type, 1
+039, Ethiopia, Sofia, SENT OUT QUEST, Type, 3
+039, Ethiopia, Ur, SENT OUT QUEST, Type, 2
+039, Ethiopia, Ur, SENT OUT QUEST, Type, 1
+039, Ethiopia, Ife, SENT OUT QUEST, Type, 12
+039, Ethiopia, Samarkand, SENT OUT QUEST, Type, 1
+039, Ethiopia, Samarkand, SENT OUT QUEST, Type, 2
+039, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 11
+039, Songhai, Samarkand, SENT OUT QUEST, Type, 1
+039, Songhai, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+039, Rome, Samarkand, gained friend
+039, Rome, Samarkand, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_SAMARKAND
+041, Siam, Belgrade, era change yield update
+041, Siam, Sofia, era change yield update
+041, Siam, Kathmandu, era change yield update
+041, Siam, Kabul, era change yield update
+041, Siam, Ur, era change yield update
+041, Siam, Budapest, era change yield update
+041, Siam, Yerevan, era change yield update
+041, Siam, Hanoi, era change yield update
+041, Siam, Sydney, era change yield update
+041, Siam, Tyre, era change yield update
+041, Siam, Ife, era change yield update
+041, Siam, Samarkand, era change yield update
+041, Siam, Wittenberg, era change yield update
+041, Siam, Prague, era change yield update
+041, Siam, Brussels, era change yield update
+041, Siam, Riga, era change yield update
+041, Siam, Sofia, SENT OUT QUEST, Type, 2
+041, Siam, Sofia, SENT OUT QUEST, Type, 1
+041, Siam, Ur, SENT OUT QUEST, Type, 1
+041, Siam, Samarkand, SENT OUT QUEST, Type, 1
+041, Siam, Samarkand, SENT OUT QUEST, Type, 2
+041, Siam, Riga, SENT OUT QUEST, Type, 13
+041, Siam, Riga, SENT OUT QUEST, Type, 2
+041, Rome, Belgrade, era change yield update
+041, Rome, Sofia, era change yield update
+041, Rome, Kathmandu, era change yield update
+041, Rome, Kabul, era change yield update
+041, Rome, Ur, era change yield update
+041, Rome, Budapest, era change yield update
+041, Rome, Yerevan, era change yield update
+041, Rome, Hanoi, era change yield update
+041, Rome, Sydney, era change yield update
+041, Rome, Tyre, era change yield update
+041, Rome, Ife, era change yield update
+041, Rome, Samarkand, era change yield update
+041, Rome, Wittenberg, era change yield update
+041, Rome, Prague, era change yield update
+041, Rome, Brussels, era change yield update
+041, Rome, Riga, era change yield update
+041, Rome, Sofia, SENT OUT QUEST, Type, 1
+041, Rome, Sofia, SENT OUT QUEST, Type, 2
+041, Rome, Tyre, SENT OUT QUEST, Type, 13
+041, Rome, Ife, SENT OUT QUEST, Type, 12
+041, Rome, Ife, SENT OUT QUEST, Type, 7
+041, Rome, Samarkand, SENT OUT QUEST, Type, 1
+041, Rome, Wittenberg, SENT OUT QUEST, Type, 7
+041, Rome, Wittenberg, SENT OUT QUEST, Type, 11
+041, Rome, Riga, SENT OUT QUEST, Type, 13
+041, Songhai, Belgrade, era change yield update
+041, Songhai, Sofia, era change yield update
+041, Songhai, Kathmandu, era change yield update
+041, Songhai, Kabul, era change yield update
+041, Songhai, Ur, era change yield update
+041, Songhai, Budapest, era change yield update
+041, Songhai, Yerevan, era change yield update
+041, Songhai, Hanoi, era change yield update
+041, Songhai, Sydney, era change yield update
+041, Songhai, Tyre, era change yield update
+041, Songhai, Ife, era change yield update
+041, Songhai, Samarkand, era change yield update
+041, Songhai, Wittenberg, era change yield update
+041, Songhai, Prague, era change yield update
+041, Songhai, Brussels, era change yield update
+041, Songhai, Riga, era change yield update
+041, Songhai, Sydney, SENT OUT QUEST, Type, 6
+041, Songhai, Sydney, SENT OUT QUEST, Type, 1
+041, Songhai, Tyre, SENT OUT QUEST, Type, 13
+041, Songhai, Samarkand, SENT OUT QUEST, Type, 1
+041, Songhai, Wittenberg, SENT OUT QUEST, Type, 7
+041, Songhai, Wittenberg, SENT OUT QUEST, Type, 11
+041, Songhai, Riga, SENT OUT QUEST, Type, 6
+041, Songhai, Riga, SENT OUT QUEST, Type, 13
+041, Ethiopia, Ur, SENT OUT QUEST, Type, 7
+041, Ethiopia, Ur, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_UR
+042, Siam, Sofia, SENT OUT QUEST, Type, 2
+042, Siam, Sofia, SENT OUT QUEST, Type, 1
+042, Siam, Ur, SENT OUT QUEST, Type, 1
+042, Siam, Samarkand, SENT OUT QUEST, Type, 1
+042, Siam, Samarkand, SENT OUT QUEST, Type, 2
+042, Siam, Riga, SENT OUT QUEST, Type, 13
+042, Siam, Riga, SENT OUT QUEST, Type, 2
+042, Songhai, Kabul, SENT OUT QUEST, Type, 1
+042, Songhai, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+042, Siam, Ur, SENT OUT QUEST, Type, 2
+042, Siam, Ur, RECEIVED QUEST, Connect Resource, Friendship: 20 to 20, MINOR_CIV_UR
+042, Ife, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
+042, Ethiopia, Ife, SENT OUT QUEST, Type, 2
+042, Ethiopia, Ife, RECEIVED QUEST, Connect Resource, Friendship: 3 to 3, MINOR_CIV_IFE
+042, Samarkand, Siam, RECEIVED_UNIT_GIFT, Warrior
+042, Samarkand, Rome, RECEIVED_UNIT_GIFT, Warrior
+042, Ethiopia, Samarkand, SENT OUT QUEST, Type, 7
+042, Ethiopia, Samarkand, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+043, Kabul, Sweden, RECEIVED_UNIT_GIFT, Warrior
+043, Sweden, Hanoi, SENT OUT QUEST, Type, 17
+043, Sweden, Hanoi, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_HANOI
+043, Songhai, Sydney, SENT OUT QUEST, Type, 2
+043, Songhai, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+044, Rome, Sofia, SENT OUT QUEST, Type, 1
+044, Rome, Sofia, SENT OUT QUEST, Type, 2
+044, Rome, Wittenberg, SENT OUT QUEST, Type, 7
+044, Rome, Wittenberg, SENT OUT QUEST, Type, 11
+044, Songhai, Kathmandu, SENT OUT QUEST, Type, 1
+044, Songhai, Kathmandu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+044, Sweden, Kabul, SENT OUT QUEST, Type, 2
+044, Sweden, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 36 to 36, MINOR_CIV_KABUL
+044, Sweden, Yerevan, gained ally
+044, Sweden, Yerevan, FINISHED QUEST, Kill Camp, Friendship: 31 to 81, MINOR_CIV_YEREVAN
+044, Tyre, England, RECEIVED_UNIT_GIFT, Warrior
+044, England, Wittenberg, SENT OUT QUEST, Type, 2
+044, England, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+045, Sweden, Kabul, gained ally
+045, Sweden, Kabul, Gold Gift: 250, Friendship: 36 to 61, Diplomacy, MINOR_CIV_KABUL, Boost! 
+045, Sweden, Wittenberg, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_WITTENBERG, (SAVING) 
+045, Sweden, Kabul, SENT OUT QUEST, Type, 1
+045, Sweden, Kabul, SENT OUT QUEST, Type, 2
+045, Sweden, Hanoi, SENT OUT QUEST, Type, 1
+045, Sweden, Hanoi, SENT OUT QUEST, Type, 3
+045, Sweden, Hanoi, SENT OUT QUEST, Type, 17
+045, Sweden, Wittenberg, SENT OUT QUEST, Type, 3
+045, Sweden, Wittenberg, SENT OUT QUEST, Type, 11
+045, Ethiopia, Hanoi, SENT OUT QUEST, Type, 1
+045, Ethiopia, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+045, Sweden, Kabul, lost ally
+045, Ethiopia, Ur, gained friend
+045, Ethiopia, Ur, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_UR
+045, Songhai, Tyre, SENT OUT QUEST, Type, 6
+045, Songhai, Tyre, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_TYRE
+045, Ethiopia, Samarkand, gained friend
+045, Ethiopia, Samarkand, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+045, Morocco, Samarkand, SENT OUT QUEST, Type, 7
+045, Morocco, Samarkand, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+046, England, Ife, gained friend
+046, England, Ife, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_IFE
+046, Morocco, Ife, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_IFE
+046, Rome, Ife, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_IFE
+046, Ethiopia, Ife, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_IFE
+046, Rome, Samarkand, lost friend
+046, England, Riga, SENT OUT QUEST, Type, 2
+046, England, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+047, Songhai, Sofia, SENT OUT QUEST, Type, 1
+047, Songhai, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+047, England, Ife, SENT OUT QUEST, Type, 2
+047, England, Ife, RECEIVED QUEST, Connect Resource, Friendship: 38 to 38, MINOR_CIV_IFE
+048, Ethiopia, Ur, SENT OUT QUEST, Type, 2
+048, Ethiopia, Ur, SENT OUT QUEST, Type, 1
+048, Morocco, Belgrade, SENT OUT QUEST, Type, 1
+048, Morocco, Belgrade, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+048, Rome, Ife, SENT OUT QUEST, Type, 3
+048, Rome, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+049, Sweden, Kathmandu, SENT OUT QUEST, Type, 1
+049, Rome, Wittenberg, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_WITTENBERG, (SAVING) 
+049, Rome, Kathmandu, SENT OUT QUEST, Type, 1
+049, Rome, Kathmandu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+050, Morocco, Hanoi, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_HANOI, (SAVING) 
+050, Ethiopia, Belgrade, gained friend
+050, Ethiopia, Belgrade, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BELGRADE
+050, Ethiopia, Sofia, gained friend
+050, Ethiopia, Sofia, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_SOFIA
+050, Morocco, Hanoi, SENT OUT QUEST, Type, 3
+050, Morocco, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_HANOI
+050, Rome, Samarkand, SENT OUT QUEST, Type, 2
+050, Rome, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 23 to 23, MINOR_CIV_SAMARKAND
+050, Sweden, Wittenberg, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+050, Morocco, Prague, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+051, Songhai, Sydney, gained friend
+051, Songhai, Sydney, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_SYDNEY
+051, Rome, Tyre, SENT OUT QUEST, Type, 2
+051, Rome, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_TYRE
+051, Songhai, Riga, gained friend
+051, Songhai, Riga, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_RIGA
+052, Rome, Kabul, SENT OUT QUEST, Type, 1
+052, Rome, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+052, The Ottomans, Kathmandu, SENT OUT QUEST, Type, 17
+052, The Ottomans, Kathmandu, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+052, Ethiopia, Ur, lost friend
+052, England, Sydney, SENT OUT QUEST, Type, 2
+052, England, Sydney, RECEIVED QUEST, Connect Resource, Friendship: -21 to -21, MINOR_CIV_SYDNEY
+052, Morocco, Ife, SENT OUT QUEST, Type, 3
+052, Morocco, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+052, Ethiopia, Samarkand, lost friend
+052, Songhai, Wittenberg, SENT OUT QUEST, Type, 3
+052, Songhai, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: -1 to -1, MINOR_CIV_WITTENBERG
+052, Songhai, Riga, FINISHED QUEST, Invest, Friendship: 32 to 32, MINOR_CIV_RIGA
+052, Siam, Riga, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_RIGA
+052, England, Riga, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+052, The Ottomans, Riga, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+052, Rome, Riga, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+053, Sweden, Yerevan, SENT OUT QUEST, Type, 7
+053, Sweden, Yerevan, RECEIVED QUEST, Find Natural Wonder, Friendship: 67 to 67, MINOR_CIV_YEREVAN
+053, Rome, Tyre, gained friend
+053, Rome, Tyre, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_TYRE
+053, England, Ife, lost friend
+053, Morocco, Brussels, SENT OUT QUEST, Type, 1
+053, Morocco, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+054, Morocco, Brussels, SENT OUT QUEST, Type, 1
+054, The Ottomans, Sydney, SENT OUT QUEST, Type, 7
+054, The Ottomans, Sydney, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+054, Sweden, Wittenberg, SENT OUT QUEST, Type, 17
+054, Sweden, Wittenberg, RECEIVED QUEST, Trade Route, Friendship: 11 to 11, MINOR_CIV_WITTENBERG
+054, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 3
+054, Ethiopia, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+054, Songhai, Riga, lost friend
+055, Ethiopia, Sofia, lost friend
+055, Songhai, Sydney, lost friend
+055, Rome, Tyre, FINISHED QUEST, Invest, Friendship: 37 to 37, MINOR_CIV_TYRE
+055, England, Tyre, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_TYRE
+055, Songhai, Tyre, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_TYRE
+055, Morocco, Prague, SENT OUT QUEST, Type, 3
+055, Morocco, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+055, Rome, Riga, SENT OUT QUEST, Type, 2
+055, Rome, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+056, Songhai, Belgrade, SENT OUT QUEST, Type, 1
+056, Songhai, Belgrade, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+056, Songhai, Kathmandu, SENT OUT QUEST, Type, 6
+056, Songhai, Kathmandu, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+056, Sweden, Hanoi, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_HANOI
+057, Ethiopia, Belgrade, lost friend
+057, Morocco, Ur, SENT OUT QUEST, Type, 3
+057, Morocco, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_UR
+057, England, Tyre, SENT OUT QUEST, Type, 7
+057, England, Tyre, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_TYRE
+057, Sweden, Wittenberg, gained friend
+057, Sweden, Wittenberg, FINISHED QUEST, Contest Faith, Friendship: 18 to 58, MINOR_CIV_WITTENBERG
+057, England, Wittenberg, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+057, Rome, Wittenberg, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+057, Ethiopia, Wittenberg, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+057, Songhai, Wittenberg, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+058, Siam, Sofia, SENT OUT QUEST, Type, 17
+058, Siam, Sofia, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SOFIA
+058, Songhai, Kathmandu, gained friend
+058, Songhai, Kathmandu, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_KATHMANDU
+058, Songhai, Tyre, gained friend
+058, Songhai, Tyre, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_TYRE
+059, Ethiopia, Belgrade, SENT OUT QUEST, Type, 17
+059, Ethiopia, Belgrade, RECEIVED QUEST, Trade Route, Friendship: 26 to 26, MINOR_CIV_BELGRADE
+059, England, Sofia, SENT OUT QUEST, Type, 1
+059, England, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+059, Sweden, Yerevan, lost ally
+059, Ethiopia, Samarkand, gained friend
+059, Ethiopia, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 19 to 59, MINOR_CIV_SAMARKAND
+060, Sweden, Kathmandu, SENT OUT QUEST, Type, 3
+060, Sweden, Kathmandu, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+060, Rome, Ur, SENT OUT QUEST, Type, 1
+060, Rome, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+060, Rome, Tyre, lost friend
+060, Siam, Samarkand, SENT OUT QUEST, Type, 17
+060, Siam, Samarkand, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+060, Rome, Wittenberg, SENT OUT QUEST, Type, 17
+060, Rome, Wittenberg, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+060, Siam, Riga, gained friend
+060, Siam, Riga, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_RIGA
+060, The Ottomans, Riga, SENT OUT QUEST, Type, 17
+060, The Ottomans, Riga, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_RIGA
+062, Songhai, Kathmandu, lost friend
+062, Ethiopia, Ur, SENT OUT QUEST, Type, 7
+062, Ethiopia, Ur, RECEIVED QUEST, Find Natural Wonder, Friendship: 14 to 14, MINOR_CIV_UR
+062, Songhai, Tyre, lost friend
+062, Songhai, Tyre, SENT OUT QUEST, Type, 2
+062, Songhai, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 29 to 29, MINOR_CIV_TYRE
+062, Siam, Riga, SENT OUT QUEST, Type, 17
+062, Siam, Riga, RECEIVED QUEST, Trade Route, Friendship: 40 to 40, MINOR_CIV_RIGA
+063, Siam, Samarkand, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_SAMARKAND, (SAVING) 
+063, Songhai, Sofia, SENT OUT QUEST, Type, 17
+063, Songhai, Sofia, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_SOFIA
+063, Songhai, Kabul, SENT OUT QUEST, Type, 7
+063, Songhai, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+063, Morocco, Samarkand, SENT OUT QUEST, Type, 2
+063, Morocco, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+064, Morocco, Belgrade, SENT OUT QUEST, Type, 3
+064, Morocco, Belgrade, RECEIVED QUEST, Construct Wonder, Friendship: -1 to -1, MINOR_CIV_BELGRADE
+064, Rome, Sofia, SENT OUT QUEST, Type, 17
+064, Rome, Sofia, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SOFIA
+064, Ethiopia, Ife, SENT OUT QUEST, Type, 7
+064, Ethiopia, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+064, Songhai, Samarkand, SENT OUT QUEST, Type, 16
+064, Songhai, Samarkand, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+065, Ethiopia, Ur, Gold Gift: 500, Friendship: 11 to 11, Diplomacy, MINOR_CIV_UR, (SAVING) , Passing Siam
+065, Songhai, Wittenberg, Gold Gift: 500, Friendship: 0 to 0, Conquest, MINOR_CIV_WITTENBERG, (SAVING) 
+065, Songhai, Wittenberg, SENT OUT QUEST, Type, 7
+065, Songhai, Wittenberg, SENT OUT QUEST, Type, 3
+065, Sweden, Kabul, lost friend
+065, Rome, Tyre, SENT OUT QUEST, Type, 7
+065, Rome, Tyre, RECEIVED QUEST, Find Natural Wonder, Friendship: 22 to 22, MINOR_CIV_TYRE
+066, Rome, Ur, SENT OUT QUEST, Type, 1
+066, Rome, Samarkand, SENT OUT QUEST, Type, 1
+066, Rome, Samarkand, SENT OUT QUEST, Type, 2
+066, Ethiopia, Ife, SENT OUT QUEST, Type, 2
+066, Ethiopia, Ife, SENT OUT QUEST, Type, 7
+066, Samarkand, Ethiopia, RECEIVED_UNIT_GIFT, Spearman
+067, Siam, Riga, Gold Gift: 250, Friendship: 31 to 56, Diplomacy, MINOR_CIV_RIGA, Boost! , Passing Songhai
+067, Siam, Samarkand, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_SAMARKAND, (SAVING) , Passing Rome
+067, Rome, Kathmandu, SENT OUT QUEST, Type, 14
+067, Rome, Kathmandu, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+067, Sweden, Yerevan, SENT OUT QUEST, Type, 2
+067, Sweden, Yerevan, RECEIVED QUEST, Connect Resource, Friendship: 46 to 46, MINOR_CIV_YEREVAN
+067, Riga, Siam, RECEIVED_UNIT_GIFT, Warrior
+067, Siam, Riga, gained ally
+067, Siam, Riga, lost ally
+068, Sweden, Kabul, SENT OUT QUEST, Type, 7
+068, Sweden, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 25 to 25, MINOR_CIV_KABUL
+068, Siam, Ur, SENT OUT QUEST, Type, 3
+068, Siam, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_UR
+068, Sweden, Yerevan, gained ally
+068, Sweden, Yerevan, FINISHED QUEST, Connect Resource, Friendship: 45 to 85, MINOR_CIV_YEREVAN
+068, Rome, Ife, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+068, Wittenberg, Rome, RECEIVED_UNIT_GIFT, Warrior
+068, Songhai, Wittenberg, gained friend
+068, Songhai, Wittenberg, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+069, Songhai, Kathmandu, gained friend
+069, Songhai, Kathmandu, gained ally
+069, Songhai, Kathmandu, FINISHED QUEST, Kill Camp, Friendship: 18 to 68, MINOR_CIV_KATHMANDU
+069, Songhai, Kabul, gained friend
+069, Songhai, Kabul, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_KABUL
+069, Songhai, Kabul, gained ally
+069, Songhai, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 50 to 90, MINOR_CIV_KABUL
+069, Songhai, Wittenberg, gained ally
+069, Songhai, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 43 to 83, MINOR_CIV_WITTENBERG
+070, Sweden, Sydney, SENT OUT QUEST, Type, 1
+070, Sweden, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+070, Sweden, Kathmandu, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+070, The Ottomans, Kathmandu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+070, Rome, Kathmandu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+070, Sweden, Kabul, cancelled, Kill Camp, Friendship: 22 to 22, MINOR_CIV_KABUL
+070, Rome, Kabul, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+070, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 16
+070, Ethiopia, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+071, Ethiopia, Yerevan, SENT OUT QUEST, Type, 4
+071, Ethiopia, Yerevan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+071, Ethiopia, Samarkand, SENT OUT QUEST, Type, 2
+071, Ethiopia, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 46 to 46, MINOR_CIV_SAMARKAND
+072, Morocco, Sofia, SENT OUT QUEST, Type, 14
+072, Morocco, Sofia, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+072, Morocco, Budapest, SENT OUT QUEST, Type, 1
+072, Morocco, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+072, Ethiopia, Hanoi, SENT OUT QUEST, Type, 2
+072, Ethiopia, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+072, Songhai, Riga, SENT OUT QUEST, Type, 7
+072, Songhai, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+073, Morocco, Budapest, SENT OUT QUEST, Type, 1
+073, Morocco, Ife, SENT OUT QUEST, Type, 7
+073, Morocco, Ife, SENT OUT QUEST, Type, 3
+073, Wittenberg, Rome, RECEIVED_UNIT_GIFT, Warrior
+074, Sweden, Kathmandu, SENT OUT QUEST, Type, 16
+074, Sweden, Kathmandu, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+074, Ethiopia, Ur, gained friend
+074, Ethiopia, Ur, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_UR
+074, Sweden, Hanoi, SENT OUT QUEST, Type, 16
+074, Sweden, Hanoi, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_HANOI
+074, Songhai, Sydney, SENT OUT QUEST, Type, 14
+074, Songhai, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+074, Ethiopia, Ife, gained friend
+074, Ethiopia, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_IFE
+075, Siam, Belgrade, SENT OUT QUEST, Type, 1
+075, Siam, Belgrade, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+075, Songhai, Kathmandu, lost ally
+075, England, Tyre, SENT OUT QUEST, Type, 14
+075, England, Tyre, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_TYRE
+075, Ethiopia, Samarkand, gained ally
+075, Ethiopia, Samarkand, FINISHED QUEST, Kill Camp, Friendship: 40 to 90, MINOR_CIV_SAMARKAND
+075, Rome, Riga, SENT OUT QUEST, Type, 14
+075, Rome, Riga, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+076, Siam, Belgrade, SENT OUT QUEST, Type, 1
+076, Ethiopia, Samarkand, SENT OUT QUEST, Type, 2
+076, The Ottomans, Kathmandu, SENT OUT QUEST, Type, 7
+076, The Ottomans, Kathmandu, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+076, Morocco, Samarkand, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+076, Siam, Samarkand, cancelled, Kill Camp, Friendship: -2 to -2, MINOR_CIV_SAMARKAND
+076, Rome, Samarkand, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+076, Songhai, Samarkand, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+076, Songhai, Riga, gained friend
+076, Songhai, Riga, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_RIGA
+077, Rome, Kathmandu, SENT OUT QUEST, Type, 14
+077, Rome, Ife, SENT OUT QUEST, Type, 7
+077, Ethiopia, Sofia, SENT OUT QUEST, Type, 2
+077, Ethiopia, Sofia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SOFIA
+077, Yerevan, Ethiopia, RECEIVED_UNIT_GIFT, Spearman
+077, England, Sydney, SENT OUT QUEST, Type, 7
+077, England, Sydney, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+078, England, Ife, SENT OUT QUEST, Type, 7
+078, England, Ife, SENT OUT QUEST, Type, 2
+078, England, Wittenberg, SENT OUT QUEST, Type, 7
+078, England, Wittenberg, SENT OUT QUEST, Type, 2
+078, Songhai, Ur, SENT OUT QUEST, Type, 1
+078, Songhai, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+078, Morocco, Belgrade, SENT OUT QUEST, Type, 16
+078, Morocco, Belgrade, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+078, Rome, Samarkand, SENT OUT QUEST, Type, 7
+078, Rome, Samarkand, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+078, Morocco, Brussels, SENT OUT QUEST, Type, 7
+078, Morocco, Brussels, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_BRUSSELS
+079, Ethiopia, Belgrade, gained friend
+079, Ethiopia, Belgrade, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_BELGRADE
+079, Ethiopia, Ur, gained ally
+079, Ethiopia, Ur, FINISHED QUEST, Kill Camp, Friendship: 37 to 87, MINOR_CIV_UR
+079, Morocco, Ur, SENT OUT QUEST, Type, 2
+079, Morocco, Ur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_UR
+079, Sweden, Tyre, SENT OUT QUEST, Type, 2
+079, Sweden, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_TYRE
+079, Morocco, Prague, SENT OUT QUEST, Type, 16
+079, Morocco, Prague, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+080, Ethiopia, Belgrade, SENT OUT QUEST, Type, 17
+080, Morocco, Belgrade, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+080, Siam, Belgrade, cancelled, Kill Camp, Friendship: 1 to 1, MINOR_CIV_BELGRADE
+080, Songhai, Belgrade, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+080, Rome, Kabul, SENT OUT QUEST, Type, 2
+080, Rome, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+080, Morocco, Ur, gained friend
+080, Morocco, Ur, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_UR
+080, Morocco, Ur, cancelled, Kill Camp, Friendship: 40 to 40, MINOR_CIV_UR
+080, Siam, Ur, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_UR
+080, Rome, Ur, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_UR
+080, Songhai, Ur, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+080, Rome, Ur, SENT OUT QUEST, Type, 7
+080, Rome, Ur, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_UR
+080, Songhai, Samarkand, SENT OUT QUEST, Type, 14
+080, Songhai, Samarkand, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+081, Ethiopia, Belgrade, SENT OUT QUEST, Type, 16
+081, Ethiopia, Belgrade, RECEIVED QUEST, Spread Religion, Friendship: 47 to 47, MINOR_CIV_BELGRADE
+081, Sweden, Yerevan, SENT OUT QUEST, Type, 13
+081, Sweden, Yerevan, RECEIVED QUEST, Invest, Friendship: 70 to 70, MINOR_CIV_YEREVAN
+081, Rome, Yerevan, SENT OUT QUEST, Type, 13
+081, Rome, Yerevan, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+081, Ethiopia, Yerevan, SENT OUT QUEST, Type, 13
+081, Ethiopia, Yerevan, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+081, Songhai, Riga, lost friend
+081, Siam, Riga, SENT OUT QUEST, Type, 3
+081, Siam, Riga, RECEIVED QUEST, Construct Wonder, Friendship: 40 to 40, MINOR_CIV_RIGA
+082, Morocco, Belgrade, gained friend
+082, Morocco, Belgrade, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BELGRADE
+082, Sweden, Kathmandu, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+082, Ur, Siam, RECEIVED_UNIT_GIFT, Spearman
+082, Morocco, Ur, FINISHED QUEST, Construct Wonder, Friendship: 37 to 77, MINOR_CIV_UR
+082, Siam, Ur, cancelled, Construct Wonder, Friendship: 8 to 8, MINOR_CIV_UR
+082, Morocco, Hanoi, gained friend
+082, Morocco, Hanoi, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_HANOI
+082, Morocco, Ife, gained friend
+082, Morocco, Ife, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_IFE
+082, Ethiopia, Wittenberg, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+082, Sweden, Wittenberg, SENT OUT QUEST, Type, 0
+082, Sweden, Wittenberg, RECEIVED QUEST, Route, Friendship: 30 to 30, MINOR_CIV_WITTENBERG
+082, Morocco, Prague, gained friend
+082, Morocco, Prague, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_PRAGUE
+083, Songhai, Belgrade, SENT OUT QUEST, Type, 2
+083, Songhai, Belgrade, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+083, Siam, Sofia, gained friend
+083, Siam, Sofia, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_SOFIA
+083, Songhai, Kabul, SENT OUT QUEST, Type, 17
+083, Songhai, Kabul, RECEIVED QUEST, Trade Route, Friendship: 69 to 69, MINOR_CIV_KABUL
+083, Rome, Yerevan, SENT OUT QUEST, Type, 3
+083, Rome, Yerevan, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+083, England, Tyre, SENT OUT QUEST, Type, 12
+083, England, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+083, Sweden, Tyre, SENT OUT QUEST, Type, 12
+083, Sweden, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+083, The Ottomans, Tyre, SENT OUT QUEST, Type, 12
+083, The Ottomans, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+083, Morocco, Tyre, SENT OUT QUEST, Type, 12
+083, Morocco, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+083, Siam, Tyre, SENT OUT QUEST, Type, 12
+083, Siam, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_TYRE
+083, Rome, Tyre, SENT OUT QUEST, Type, 12
+083, Rome, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+083, Songhai, Tyre, SENT OUT QUEST, Type, 12
+083, Songhai, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+083, Rome, Tyre, SENT OUT QUEST, Type, 2
+083, Rome, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_TYRE
+083, Sweden, Wittenberg, lost friend
+084, Morocco, Sydney, SENT OUT QUEST, Type, 1
+084, Morocco, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+084, Songhai, Kathmandu, SENT OUT QUEST, Type, 16
+084, Songhai, Kathmandu, RECEIVED QUEST, Spread Religion, Friendship: 46 to 46, MINOR_CIV_KATHMANDU
+085, England, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+085, Sweden, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+085, The Ottomans, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+085, Morocco, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+085, Songhai, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+085, Ethiopia, Ife, lost friend
+085, Wittenberg, Sweden, RECEIVED_UNIT_GIFT, Spearman
+085, Sweden, Wittenberg, gained friend
+085, Songhai, Wittenberg, lost ally
+086, Rome, Brussels, SENT OUT QUEST, Type, 1
+086, Rome, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+086, Siam, Riga, lost friend
+087, Songhai, Sofia, SENT OUT QUEST, Type, 14
+087, Songhai, Sofia, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+087, Rome, Kathmandu, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+087, Ethiopia, Hanoi, SENT OUT QUEST, Type, 16
+087, Ethiopia, Hanoi, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_HANOI
+087, Sweden, Sydney, SENT OUT QUEST, Type, 3
+087, Sweden, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+087, England, Ife, SENT OUT QUEST, Type, 1
+087, England, Ife, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_IFE
+087, Morocco, Ife, SENT OUT QUEST, Type, 1
+087, Morocco, Ife, RECEIVED QUEST, Kill Camp, Friendship: 37 to 37, MINOR_CIV_IFE
+087, Rome, Ife, SENT OUT QUEST, Type, 1
+087, Rome, Ife, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_IFE
+087, Ethiopia, Ife, SENT OUT QUEST, Type, 1
+087, Ethiopia, Ife, RECEIVED QUEST, Kill Camp, Friendship: 25 to 25, MINOR_CIV_IFE
+088, Siam, Sofia, gained ally
+088, Siam, Sofia, Gold Gift: 250, Friendship: 36 to 61, Diplomacy, MINOR_CIV_SOFIA, Boost! , Passing Rome
+088, Siam, Tyre, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_TYRE, (SAVING) 
+088, Rome, Budapest, SENT OUT QUEST, Type, 1
+088, Rome, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+088, Siam, Sofia, lost ally
+088, Sweden, Yerevan, SENT OUT QUEST, Type, 17
+088, Sweden, Yerevan, RECEIVED QUEST, Trade Route, Friendship: 62 to 62, MINOR_CIV_YEREVAN
+088, Songhai, Tyre, SENT OUT QUEST, Type, 14
+088, Songhai, Tyre, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_TYRE
+088, Sweden, Wittenberg, lost friend
+088, Sweden, Riga, SENT OUT QUEST, Type, 14
+088, Sweden, Riga, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+088, Morocco, Riga, SENT OUT QUEST, Type, 16
+088, Morocco, Riga, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_RIGA
+089, Sweden, Yerevan, Gold Gift: 250, Friendship: 62 to 97, Diplomacy, MINOR_CIV_YEREVAN, Boost! 
+089, Sweden, Wittenberg, Gold Gift: 500, Friendship: 28 to 28, Diplomacy, MINOR_CIV_WITTENBERG, (SAVING) , Passing Rome
+089, Morocco, Belgrade, lost friend
+089, England, Riga, SENT OUT QUEST, Type, 14
+089, England, Riga, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+090, Ethiopia, Belgrade, era change yield update
+090, Ethiopia, Sofia, era change yield update
+090, Ethiopia, Kathmandu, era change yield update
+090, Ethiopia, Kabul, era change yield update
+090, Ethiopia, Ur, era change yield update
+090, Ethiopia, Budapest, era change yield update
+090, Ethiopia, Yerevan, era change yield update
+090, Ethiopia, Hanoi, era change yield update
+090, Ethiopia, Sydney, era change yield update
+090, Ethiopia, Tyre, era change yield update
+090, Ethiopia, Ife, era change yield update
+090, Ethiopia, Samarkand, era change yield update
+090, Ethiopia, Wittenberg, era change yield update
+090, Ethiopia, Prague, era change yield update
+090, Ethiopia, Brussels, era change yield update
+090, Ethiopia, Riga, era change yield update
+090, Ethiopia, Belgrade, SENT OUT QUEST, Type, 17
+090, Ethiopia, Belgrade, SENT OUT QUEST, Type, 16
+090, Ethiopia, Sofia, SENT OUT QUEST, Type, 1
+090, Ethiopia, Sofia, SENT OUT QUEST, Type, 2
+090, Ethiopia, Ur, SENT OUT QUEST, Type, 2
+090, Ethiopia, Yerevan, SENT OUT QUEST, Type, 4
+090, Ethiopia, Yerevan, SENT OUT QUEST, Type, 13
+090, Ethiopia, Hanoi, SENT OUT QUEST, Type, 1
+090, Ethiopia, Hanoi, SENT OUT QUEST, Type, 2
+090, Ethiopia, Hanoi, SENT OUT QUEST, Type, 16
+090, Ethiopia, Ife, SENT OUT QUEST, Type, 2
+090, Ethiopia, Ife, SENT OUT QUEST, Type, 1
+090, Ethiopia, Samarkand, SENT OUT QUEST, Type, 2
+090, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 16
+090, Songhai, Kabul, lost ally
+090, Songhai, Ur, SENT OUT QUEST, Type, 16
+090, Songhai, Ur, RECEIVED QUEST, Spread Religion, Friendship: -1 to -1, MINOR_CIV_UR
+090, Songhai, Riga, SENT OUT QUEST, Type, 14
+090, Songhai, Riga, RECEIVED QUEST, Bully City-State, Friendship: 8 to 8, MINOR_CIV_RIGA
+091, England, Belgrade, era change yield update
+091, England, Sofia, era change yield update
+091, England, Kathmandu, era change yield update
+091, England, Kabul, era change yield update
+091, England, Ur, era change yield update
+091, England, Budapest, era change yield update
+091, England, Yerevan, era change yield update
+091, England, Hanoi, era change yield update
+091, England, Sydney, era change yield update
+091, England, Tyre, era change yield update
+091, England, Ife, era change yield update
+091, England, Samarkand, era change yield update
+091, England, Wittenberg, era change yield update
+091, England, Prague, era change yield update
+091, England, Brussels, era change yield update
+091, England, Riga, era change yield update
+091, England, Sofia, SENT OUT QUEST, Type, 1
+091, England, Sydney, SENT OUT QUEST, Type, 2
+091, England, Sydney, SENT OUT QUEST, Type, 7
+091, England, Tyre, SENT OUT QUEST, Type, 7
+091, England, Tyre, SENT OUT QUEST, Type, 14
+091, England, Tyre, SENT OUT QUEST, Type, 12
+091, England, Ife, SENT OUT QUEST, Type, 7
+091, England, Ife, SENT OUT QUEST, Type, 2
+091, England, Ife, SENT OUT QUEST, Type, 1
+091, England, Wittenberg, SENT OUT QUEST, Type, 7
+091, England, Wittenberg, SENT OUT QUEST, Type, 2
+091, England, Riga, SENT OUT QUEST, Type, 2
+091, England, Riga, SENT OUT QUEST, Type, 14
+091, Songhai, Kabul, SENT OUT QUEST, Type, 17
+091, Kabul, England, RECEIVED_UNIT_GIFT, Composite Bowman
+091, Morocco, Tyre, SENT OUT QUEST, Type, 14
+091, Morocco, Tyre, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_TYRE
+091, Ethiopia, Samarkand, SENT OUT QUEST, Type, 3
+091, Ethiopia, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 66 to 66, MINOR_CIV_SAMARKAND
+092, England, Yerevan, SENT OUT QUEST, Type, 13
+092, England, Yerevan, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+092, Morocco, Sofia, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+092, Rome, Kathmandu, SENT OUT QUEST, Type, 3
+092, Rome, Kathmandu, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+092, The Ottomans, Tyre, SENT OUT QUEST, Type, 3
+092, The Ottomans, Tyre, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_TYRE
+092, Samarkand, Songhai, RECEIVED_UNIT_GIFT, Spearman
+093, Ethiopia, Samarkand, Gold Gift: 250, Friendship: 64 to 89, Spaceship, MINOR_CIV_SAMARKAND, Boost! , Passing Songhai
+093, Ethiopia, Belgrade, Gold Gift: 250, Friendship: 30 to 30, Spaceship, MINOR_CIV_BELGRADE, (SAVING) , Boost! , Passing Siam
+093, Ethiopia, Belgrade, lost friend
+093, Ethiopia, Ur, SENT OUT QUEST, Type, 17
+093, Ethiopia, Ur, RECEIVED QUEST, Trade Route, Friendship: 66 to 66, MINOR_CIV_UR
+093, Morocco, Hanoi, lost friend
+093, Morocco, Ife, lost friend
+093, Morocco, Prague, lost friend
+094, Ur, Siam, RECEIVED_UNIT_GIFT, Spearman
+094, Ur, Songhai, RECEIVED_UNIT_GIFT, Archer
+094, Songhai, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+094, Siam, Tyre, SENT OUT QUEST, Type, 2
+094, Siam, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_TYRE
+094, Rome, Ife, SENT OUT QUEST, Type, 2
+094, Rome, Ife, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_IFE
+095, Siam, Belgrade, SENT OUT QUEST, Type, 2
+095, Siam, Belgrade, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+095, England, Sofia, SENT OUT QUEST, Type, 2
+095, England, Sofia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SOFIA
+095, Songhai, Kathmandu, lost friend
+095, The Ottomans, Kathmandu, gained friend
+095, The Ottomans, Kathmandu, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KATHMANDU
+095, Morocco, Ur, SENT OUT QUEST, Type, 3
+095, Morocco, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 57 to 57, MINOR_CIV_UR
+095, Siam, Ur, SENT OUT QUEST, Type, 3
+095, Siam, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 4 to 4, MINOR_CIV_UR
+095, The Ottomans, Sydney, gained friend
+095, The Ottomans, Sydney, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+095, England, Tyre, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_TYRE
+095, Ethiopia, Ife, SENT OUT QUEST, Type, 16
+095, Ethiopia, Ife, RECEIVED QUEST, Spread Religion, Friendship: 13 to 13, MINOR_CIV_IFE
+095, Samarkand, Songhai, RECEIVED_UNIT_GIFT, Warrior
+095, Rome, Riga, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+096, Siam, Belgrade, era change yield update
+096, Siam, Sofia, era change yield update
+096, Siam, Kathmandu, era change yield update
+096, Siam, Kabul, era change yield update
+096, Siam, Ur, era change yield update
+096, Siam, Budapest, era change yield update
+096, Siam, Yerevan, era change yield update
+096, Siam, Hanoi, era change yield update
+096, Siam, Sydney, era change yield update
+096, Siam, Tyre, era change yield update
+096, Siam, Ife, era change yield update
+096, Siam, Samarkand, era change yield update
+096, Siam, Wittenberg, era change yield update
+096, Siam, Prague, era change yield update
+096, Siam, Brussels, era change yield update
+096, Siam, Riga, era change yield update
+096, Siam, Belgrade, SENT OUT QUEST, Type, 2
+096, Siam, Sofia, SENT OUT QUEST, Type, 1
+096, Siam, Sofia, SENT OUT QUEST, Type, 17
+096, Siam, Ur, SENT OUT QUEST, Type, 2
+096, Siam, Ur, SENT OUT QUEST, Type, 3
+096, Siam, Tyre, SENT OUT QUEST, Type, 12
+096, Siam, Tyre, SENT OUT QUEST, Type, 2
+096, Siam, Samarkand, SENT OUT QUEST, Type, 2
+096, Siam, Samarkand, SENT OUT QUEST, Type, 17
+096, Siam, Riga, SENT OUT QUEST, Type, 17
+096, Siam, Riga, SENT OUT QUEST, Type, 3
+096, Songhai, Kathmandu, SENT OUT QUEST, Type, 16
+096, Rome, Kabul, SENT OUT QUEST, Type, 4
+096, Rome, Kabul, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KABUL
+096, Yerevan, England, RECEIVED_UNIT_GIFT, Warrior
+096, Sweden, Tyre, SENT OUT QUEST, Type, 16
+096, Sweden, Tyre, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_TYRE
+096, Morocco, Ife, SENT OUT QUEST, Type, 16
+096, Morocco, Ife, RECEIVED QUEST, Spread Religion, Friendship: 24 to 24, MINOR_CIV_IFE
+096, The Ottomans, Samarkand, SENT OUT QUEST, Type, 4
+096, The Ottomans, Samarkand, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+096, England, Wittenberg, SENT OUT QUEST, Type, 1
+096, England, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+096, Sweden, Wittenberg, SENT OUT QUEST, Type, 1
+096, Sweden, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 20 to 20, MINOR_CIV_WITTENBERG
+096, Siam, Wittenberg, SENT OUT QUEST, Type, 1
+096, Siam, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+096, Rome, Wittenberg, SENT OUT QUEST, Type, 1
+096, Rome, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+096, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 1
+096, Ethiopia, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+096, Songhai, Wittenberg, SENT OUT QUEST, Type, 1
+096, Songhai, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 43 to 43, MINOR_CIV_WITTENBERG
+096, Songhai, Wittenberg, SENT OUT QUEST, Type, 4
+096, Songhai, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 43 to 43, MINOR_CIV_WITTENBERG
+097, England, Wittenberg, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_WITTENBERG, (SAVING) 
+097, Siam, Wittenberg, SENT OUT QUEST, Type, 1
+097, Ethiopia, Kabul, SENT OUT QUEST, Type, 4
+097, Ethiopia, Kabul, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KABUL
+097, Rome, Yerevan, SENT OUT QUEST, Type, 7
+097, Rome, Yerevan, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+097, The Ottomans, Riga, gained friend
+097, The Ottomans, Riga, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_RIGA
+098, Ethiopia, Ur, lost ally
+098, Yerevan, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
+098, Morocco, Prague, SENT OUT QUEST, Type, 4
+098, Morocco, Prague, RECEIVED QUEST, Great Person, Friendship: 21 to 21, MINOR_CIV_PRAGUE
+099, England, Hanoi, SENT OUT QUEST, Type, 1
+099, England, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+099, Morocco, Ur, SENT OUT QUEST, Type, 3
+099, Siam, Belgrade, gained friend
+099, Siam, Belgrade, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_BELGRADE
+099, Ur, Songhai, RECEIVED_UNIT_GIFT, Spearman
+099, Ethiopia, Yerevan, SENT OUT QUEST, Type, 3
+099, Ethiopia, Yerevan, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+099, England, Sydney, gained friend
+099, England, Sydney, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+099, England, Tyre, gained friend
+099, England, Tyre, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_TYRE
+099, England, Ife, gained friend
+099, England, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_IFE
+099, England, Wittenberg, gained friend
+099, England, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+100, Morocco, Belgrade, era change yield update
+100, Morocco, Sofia, era change yield update
+100, Morocco, Kathmandu, era change yield update
+100, Morocco, Kabul, era change yield update
+100, Morocco, Ur, era change yield update
+100, Morocco, Budapest, era change yield update
+100, Morocco, Yerevan, era change yield update
+100, Morocco, Hanoi, era change yield update
+100, Morocco, Sydney, era change yield update
+100, Morocco, Tyre, era change yield update
+100, Morocco, Ife, era change yield update
+100, Morocco, Samarkand, era change yield update
+100, Morocco, Wittenberg, era change yield update
+100, Morocco, Prague, era change yield update
+100, Morocco, Brussels, era change yield update
+100, Morocco, Riga, era change yield update
+100, Morocco, Belgrade, SENT OUT QUEST, Type, 16
+100, Morocco, Sofia, SENT OUT QUEST, Type, 2
+100, Morocco, Sofia, SENT OUT QUEST, Type, 1
+100, Morocco, Ur, SENT OUT QUEST, Type, 3
+100, Morocco, Budapest, SENT OUT QUEST, Type, 1
+100, Morocco, Hanoi, SENT OUT QUEST, Type, 1
+100, Morocco, Hanoi, SENT OUT QUEST, Type, 2
+100, Morocco, Tyre, SENT OUT QUEST, Type, 12
+100, Morocco, Tyre, SENT OUT QUEST, Type, 14
+100, Morocco, Ife, SENT OUT QUEST, Type, 7
+100, Morocco, Ife, SENT OUT QUEST, Type, 1
+100, Morocco, Ife, SENT OUT QUEST, Type, 16
+100, Morocco, Samarkand, SENT OUT QUEST, Type, 7
+100, Morocco, Samarkand, SENT OUT QUEST, Type, 2
+100, Morocco, Prague, SENT OUT QUEST, Type, 1
+100, Morocco, Prague, SENT OUT QUEST, Type, 16
+100, Morocco, Prague, SENT OUT QUEST, Type, 4
+100, Morocco, Brussels, SENT OUT QUEST, Type, 1
+100, Morocco, Brussels, SENT OUT QUEST, Type, 7
+100, Morocco, Riga, SENT OUT QUEST, Type, 16
+100, Songhai, Kabul, SENT OUT QUEST, Type, 4
+100, Songhai, Kabul, RECEIVED QUEST, Great Person, Friendship: 43 to 43, MINOR_CIV_KABUL
+100, Yerevan, England, RECEIVED_UNIT_GIFT, Spearman
+100, Songhai, Samarkand, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+101, Sweden, Belgrade, era change yield update
+101, Sweden, Sofia, era change yield update
+101, Sweden, Kathmandu, era change yield update
+101, Sweden, Kabul, era change yield update
+101, Sweden, Ur, era change yield update
+101, Sweden, Budapest, era change yield update
+101, Sweden, Yerevan, era change yield update
+101, Sweden, Hanoi, era change yield update
+101, Sweden, Sydney, era change yield update
+101, Sweden, Tyre, era change yield update
+101, Sweden, Ife, era change yield update
+101, Sweden, Samarkand, era change yield update
+101, Sweden, Wittenberg, era change yield update
+101, Sweden, Prague, era change yield update
+101, Sweden, Brussels, era change yield update
+101, Sweden, Riga, era change yield update
+101, Sweden, Kathmandu, SENT OUT QUEST, Type, 16
+101, Sweden, Kabul, SENT OUT QUEST, Type, 2
+101, Sweden, Kabul, SENT OUT QUEST, Type, 7
+101, Sweden, Yerevan, SENT OUT QUEST, Type, 7
+101, Sweden, Yerevan, SENT OUT QUEST, Type, 13
+101, Sweden, Yerevan, SENT OUT QUEST, Type, 17
+101, Sweden, Hanoi, SENT OUT QUEST, Type, 1
+101, Sweden, Hanoi, SENT OUT QUEST, Type, 17
+101, Sweden, Hanoi, SENT OUT QUEST, Type, 16
+101, Sweden, Sydney, SENT OUT QUEST, Type, 3
+101, Sweden, Tyre, SENT OUT QUEST, Type, 2
+101, Sweden, Tyre, SENT OUT QUEST, Type, 12
+101, Sweden, Tyre, SENT OUT QUEST, Type, 16
+101, Sweden, Wittenberg, SENT OUT QUEST, Type, 17
+101, Sweden, Wittenberg, SENT OUT QUEST, Type, 0
+101, Sweden, Wittenberg, SENT OUT QUEST, Type, 1
+101, Sweden, Riga, SENT OUT QUEST, Type, 14
+101, Morocco, Belgrade, SENT OUT QUEST, Type, 4
+101, Morocco, Belgrade, RECEIVED QUEST, Great Person, Friendship: 11 to 11, MINOR_CIV_BELGRADE
+101, Siam, Sofia, lost friend
+101, Sweden, Yerevan, FINISHED QUEST, Invest, Friendship: 83 to 83, MINOR_CIV_YEREVAN
+101, England, Yerevan, FINISHED QUEST, Invest, Friendship: 2 to 2, MINOR_CIV_YEREVAN
+101, Rome, Yerevan, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+101, Ethiopia, Yerevan, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+101, Siam, Tyre, gained friend
+101, Siam, Tyre, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_TYRE
+102, Rome, Kabul, gained friend
+102, Rome, Kabul, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KABUL
+102, Rome, Belgrade, era change yield update
+102, Rome, Sofia, era change yield update
+102, Rome, Kathmandu, era change yield update
+102, Rome, Kabul, era change yield update
+102, Rome, Ur, era change yield update
+102, Rome, Budapest, era change yield update
+102, Rome, Yerevan, era change yield update
+102, Rome, Hanoi, era change yield update
+102, Rome, Sydney, era change yield update
+102, Rome, Tyre, era change yield update
+102, Rome, Ife, era change yield update
+102, Rome, Samarkand, era change yield update
+102, Rome, Wittenberg, era change yield update
+102, Rome, Prague, era change yield update
+102, Rome, Brussels, era change yield update
+102, Rome, Riga, era change yield update
+102, Rome, Sofia, SENT OUT QUEST, Type, 1
+102, Rome, Sofia, SENT OUT QUEST, Type, 2
+102, Rome, Sofia, SENT OUT QUEST, Type, 17
+102, Rome, Kathmandu, SENT OUT QUEST, Type, 3
+102, Rome, Kabul, SENT OUT QUEST, Type, 2
+102, Rome, Kabul, SENT OUT QUEST, Type, 4
+102, Rome, Ur, SENT OUT QUEST, Type, 7
+102, Rome, Budapest, SENT OUT QUEST, Type, 1
+102, Rome, Yerevan, SENT OUT QUEST, Type, 3
+102, Rome, Yerevan, SENT OUT QUEST, Type, 7
+102, Rome, Tyre, SENT OUT QUEST, Type, 7
+102, Rome, Tyre, SENT OUT QUEST, Type, 12
+102, Rome, Tyre, SENT OUT QUEST, Type, 2
+102, Rome, Ife, SENT OUT QUEST, Type, 7
+102, Rome, Ife, SENT OUT QUEST, Type, 1
+102, Rome, Ife, SENT OUT QUEST, Type, 2
+102, Rome, Samarkand, SENT OUT QUEST, Type, 2
+102, Rome, Samarkand, SENT OUT QUEST, Type, 7
+102, Rome, Wittenberg, SENT OUT QUEST, Type, 7
+102, Rome, Wittenberg, SENT OUT QUEST, Type, 17
+102, Rome, Wittenberg, SENT OUT QUEST, Type, 1
+102, Rome, Brussels, SENT OUT QUEST, Type, 1
+102, Rome, Riga, SENT OUT QUEST, Type, 2
+102, The Ottomans, Kathmandu, lost friend
+102, Rome, Ur, SENT OUT QUEST, Type, 2
+102, Rome, Ur, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_UR
+102, Morocco, Hanoi, gained friend
+102, Morocco, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 15 to 55, MINOR_CIV_HANOI
+102, The Ottomans, Sydney, lost friend
+102, The Ottomans, Riga, lost friend
+102, Sweden, Riga, SENT OUT QUEST, Type, 2
+102, Sweden, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+103, The Ottomans, Kabul, SENT OUT QUEST, Type, 4
+103, The Ottomans, Kabul, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KABUL
+103, Morocco, Sydney, SENT OUT QUEST, Type, 2
+103, Morocco, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+103, Siam, Tyre, gained ally
+103, Siam, Tyre, FINISHED QUEST, Contest Techs, Friendship: 42 to 82, MINOR_CIV_TYRE
+103, England, Tyre, FINISHED QUEST, Contest Techs, Friendship: 34 to 74, MINOR_CIV_TYRE
+103, Sweden, Tyre, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+103, The Ottomans, Tyre, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+103, Morocco, Tyre, cancelled, Contest Techs, Friendship: -3 to -3, MINOR_CIV_TYRE
+103, Rome, Tyre, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+103, Songhai, Tyre, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+103, Siam, Samarkand, gained friend
+103, Siam, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_SAMARKAND
+104, Rome, Prague, SENT OUT QUEST, Type, 1
+104, Rome, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+104, Morocco, Ur, gained ally
+104, Morocco, Ur, FINISHED QUEST, Construct Wonder, Friendship: 44 to 84, MINOR_CIV_UR
+104, Siam, Ur, gained friend
+104, Siam, Ur, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_UR
+104, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 7
+104, Ethiopia, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+104, Rome, Brussels, SENT OUT QUEST, Type, 4
+104, Rome, Brussels, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+105, England, Kathmandu, SENT OUT QUEST, Type, 11
+105, England, Kathmandu, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+105, Sweden, Kathmandu, SENT OUT QUEST, Type, 11
+105, Sweden, Kathmandu, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+105, The Ottomans, Kathmandu, SENT OUT QUEST, Type, 11
+105, The Ottomans, Kathmandu, RECEIVED QUEST, Contest Faith, Friendship: 25 to 25, MINOR_CIV_KATHMANDU
+105, Siam, Kathmandu, SENT OUT QUEST, Type, 11
+105, Siam, Kathmandu, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+105, Rome, Kathmandu, SENT OUT QUEST, Type, 11
+105, Rome, Kathmandu, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+105, Ethiopia, Kathmandu, SENT OUT QUEST, Type, 11
+105, Ethiopia, Kathmandu, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+105, Songhai, Kathmandu, SENT OUT QUEST, Type, 11
+105, Songhai, Kathmandu, RECEIVED QUEST, Contest Faith, Friendship: 14 to 14, MINOR_CIV_KATHMANDU
+105, Rome, Ur, gained friend
+105, Rome, Ur, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_UR
+105, Rome, Yerevan, gained friend
+105, Rome, Yerevan, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_YEREVAN
+105, Rome, Tyre, gained friend
+105, Rome, Tyre, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_TYRE
+105, Rome, Ife, gained friend
+105, Rome, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_IFE
+105, Rome, Samarkand, gained friend
+105, Rome, Samarkand, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SAMARKAND
+105, Songhai, Wittenberg, lost friend
+105, Rome, Wittenberg, gained friend
+105, Rome, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+105, Morocco, Brussels, SENT OUT QUEST, Type, 17
+105, Morocco, Brussels, RECEIVED QUEST, Trade Route, Friendship: -1 to -1, MINOR_CIV_BRUSSELS
+106, Siam, Kathmandu, SENT OUT QUEST, Type, 11
+106, Rome, Sofia, gained friend
+106, Rome, Sofia, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_SOFIA
+106, Ethiopia, Kathmandu, SENT OUT QUEST, Type, 3
+106, Ethiopia, Kathmandu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+106, England, Sydney, lost friend
+107, Songhai, Sofia, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+107, England, Kabul, SENT OUT QUEST, Type, 10
+107, England, Kabul, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KABUL
+107, Sweden, Kabul, SENT OUT QUEST, Type, 10
+107, Sweden, Kabul, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_KABUL
+107, The Ottomans, Kabul, SENT OUT QUEST, Type, 10
+107, The Ottomans, Kabul, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KABUL
+107, Rome, Kabul, SENT OUT QUEST, Type, 10
+107, Rome, Kabul, RECEIVED QUEST, Contest Culture, Friendship: 31 to 31, MINOR_CIV_KABUL
+107, Ethiopia, Kabul, SENT OUT QUEST, Type, 10
+107, Ethiopia, Kabul, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KABUL
+107, Songhai, Kabul, SENT OUT QUEST, Type, 10
+107, Songhai, Kabul, RECEIVED QUEST, Contest Culture, Friendship: 33 to 33, MINOR_CIV_KABUL
+107, Rome, Budapest, SENT OUT QUEST, Type, 4
+107, Rome, Budapest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+107, Songhai, Sydney, SENT OUT QUEST, Type, 14
+107, Songhai, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+107, Sweden, Tyre, gained friend
+107, Sweden, Tyre, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_TYRE
+107, Morocco, Tyre, SENT OUT QUEST, Type, 16
+107, Morocco, Tyre, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_TYRE
+108, Ethiopia, Samarkand, Gold Gift: 250, Friendship: 67 to 92, Spaceship, MINOR_CIV_SAMARKAND, Boost! , Passing Rome
+108, Ethiopia, Ife, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_IFE, (SAVING) 
+108, Rome, Kathmandu, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+108, Rome, Kathmandu, SENT OUT QUEST, Type, 4
+108, Rome, Kathmandu, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+108, Rome, Kabul, lost friend
+108, Siam, Ur, cancelled, Construct Wonder, Friendship: 39 to 39, MINOR_CIV_UR
+108, Rome, Yerevan, cancelled, Construct Wonder, Friendship: 35 to 35, MINOR_CIV_YEREVAN
+108, The Ottomans, Tyre, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_TYRE
+108, Songhai, Tyre, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_TYRE
+108, The Ottomans, Tyre, SENT OUT QUEST, Type, 4
+108, The Ottomans, Tyre, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_TYRE
+108, Sweden, Riga, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+108, Siam, Riga, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_RIGA
+108, England, Riga, SENT OUT QUEST, Type, 12
+108, England, Riga, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+108, Sweden, Riga, SENT OUT QUEST, Type, 12
+108, Sweden, Riga, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+108, The Ottomans, Riga, SENT OUT QUEST, Type, 12
+108, The Ottomans, Riga, RECEIVED QUEST, Contest Techs, Friendship: 15 to 15, MINOR_CIV_RIGA
+108, Morocco, Riga, SENT OUT QUEST, Type, 12
+108, Morocco, Riga, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+108, Siam, Riga, SENT OUT QUEST, Type, 12
+108, Siam, Riga, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_RIGA
+108, Rome, Riga, SENT OUT QUEST, Type, 12
+108, Rome, Riga, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+108, Ethiopia, Riga, SENT OUT QUEST, Type, 12
+108, Ethiopia, Riga, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+108, Songhai, Riga, SENT OUT QUEST, Type, 12
+108, Songhai, Riga, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+108, Morocco, Riga, SENT OUT QUEST, Type, 14
+108, Morocco, Riga, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+109, Sweden, Prague, SENT OUT QUEST, Type, 1
+109, Sweden, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+109, Sweden, Kathmandu, SENT OUT QUEST, Type, 7
+109, Sweden, Kathmandu, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+109, Morocco, Budapest, SENT OUT QUEST, Type, 7
+109, Morocco, Budapest, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_BUDAPEST
+109, Morocco, Hanoi, SENT OUT QUEST, Type, 17
+109, Morocco, Hanoi, RECEIVED QUEST, Trade Route, Friendship: 44 to 44, MINOR_CIV_HANOI
+109, Sweden, Sydney, SENT OUT QUEST, Type, 2
+109, Sweden, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+109, England, Wittenberg, cancelled, Kill Camp, Friendship: 30 to 30, MINOR_CIV_WITTENBERG
+109, Sweden, Wittenberg, cancelled, Kill Camp, Friendship: 20 to 20, MINOR_CIV_WITTENBERG
+109, Siam, Wittenberg, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+109, Rome, Wittenberg, cancelled, Kill Camp, Friendship: 39 to 39, MINOR_CIV_WITTENBERG
+109, Ethiopia, Wittenberg, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+109, Songhai, Wittenberg, cancelled, Kill Camp, Friendship: 23 to 23, MINOR_CIV_WITTENBERG
+109, England, Riga, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+110, Sweden, Prague, SENT OUT QUEST, Type, 1
+110, Ethiopia, Kabul, gained friend
+110, Ethiopia, Kabul, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KABUL
+110, Ethiopia, Yerevan, gained friend
+110, Ethiopia, Yerevan, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_YEREVAN
+110, Siam, Belgrade, lost friend
+110, Siam, Belgrade, SENT OUT QUEST, Type, 7
+110, Siam, Belgrade, RECEIVED QUEST, Find Natural Wonder, Friendship: 28 to 28, MINOR_CIV_BELGRADE
+110, England, Sofia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+110, Morocco, Sofia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+110, Siam, Sofia, cancelled, Kill Camp, Friendship: 9 to 9, MINOR_CIV_SOFIA
+110, Rome, Sofia, cancelled, Kill Camp, Friendship: 36 to 36, MINOR_CIV_SOFIA
+110, Ethiopia, Sofia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+110, Songhai, Sofia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+110, Songhai, Kathmandu, SENT OUT QUEST, Type, 14
+110, Songhai, Kathmandu, RECEIVED QUEST, Bully City-State, Friendship: 7 to 7, MINOR_CIV_KATHMANDU
+110, Songhai, Kabul, lost friend
+110, England, Kabul, SENT OUT QUEST, Type, 3
+110, England, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+110, England, Ife, lost friend
+110, The Ottomans, Samarkand, SENT OUT QUEST, Type, 13
+110, The Ottomans, Samarkand, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+110, Morocco, Samarkand, SENT OUT QUEST, Type, 13
+110, Morocco, Samarkand, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+110, Siam, Samarkand, SENT OUT QUEST, Type, 13
+110, Siam, Samarkand, RECEIVED QUEST, Invest, Friendship: 34 to 34, MINOR_CIV_SAMARKAND
+110, Rome, Samarkand, SENT OUT QUEST, Type, 13
+110, Rome, Samarkand, RECEIVED QUEST, Invest, Friendship: 37 to 37, MINOR_CIV_SAMARKAND
+110, Ethiopia, Samarkand, SENT OUT QUEST, Type, 13
+110, Ethiopia, Samarkand, RECEIVED QUEST, Invest, Friendship: 88 to 88, MINOR_CIV_SAMARKAND
+110, Songhai, Samarkand, SENT OUT QUEST, Type, 13
+110, Songhai, Samarkand, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+110, The Ottomans, Samarkand, SENT OUT QUEST, Type, 14
+110, The Ottomans, Samarkand, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+110, England, Wittenberg, lost friend
+110, Songhai, Riga, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+111, The Ottomans, Belgrade, era change yield update
+111, The Ottomans, Sofia, era change yield update
+111, The Ottomans, Kathmandu, era change yield update
+111, The Ottomans, Kabul, era change yield update
+111, The Ottomans, Ur, era change yield update
+111, The Ottomans, Budapest, era change yield update
+111, The Ottomans, Yerevan, era change yield update
+111, The Ottomans, Hanoi, era change yield update
+111, The Ottomans, Sydney, era change yield update
+111, The Ottomans, Tyre, era change yield update
+111, The Ottomans, Ife, era change yield update
+111, The Ottomans, Samarkand, era change yield update
+111, The Ottomans, Wittenberg, era change yield update
+111, The Ottomans, Prague, era change yield update
+111, The Ottomans, Brussels, era change yield update
+111, The Ottomans, Riga, era change yield update
+111, The Ottomans, Kathmandu, SENT OUT QUEST, Type, 17
+111, The Ottomans, Kathmandu, SENT OUT QUEST, Type, 11
+111, The Ottomans, Kabul, SENT OUT QUEST, Type, 4
+111, The Ottomans, Kabul, SENT OUT QUEST, Type, 10
+111, The Ottomans, Sydney, SENT OUT QUEST, Type, 2
+111, The Ottomans, Tyre, SENT OUT QUEST, Type, 4
+111, The Ottomans, Samarkand, SENT OUT QUEST, Type, 4
+111, The Ottomans, Samarkand, SENT OUT QUEST, Type, 13
+111, The Ottomans, Samarkand, SENT OUT QUEST, Type, 14
+111, The Ottomans, Riga, SENT OUT QUEST, Type, 17
+111, The Ottomans, Riga, SENT OUT QUEST, Type, 12
+111, Rome, Wittenberg, gained ally
+111, Rome, Wittenberg, Gold Gift: 250, Friendship: 37 to 62, Spaceship, MINOR_CIV_WITTENBERG, Boost! , Passing Songhai
+111, Rome, Ife, Gold Gift: 250, Friendship: 37 to 37, Spaceship, MINOR_CIV_IFE, (SAVING) , Boost! , Passing Ethiopia
+111, Songhai, Wittenberg, gained friend
+111, Songhai, Wittenberg, FINISHED QUEST, Great Person, Friendship: 22 to 62, MINOR_CIV_WITTENBERG
+111, Songhai, Belgrade, SENT OUT QUEST, Type, 4
+111, Songhai, Belgrade, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+111, Morocco, Tyre, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_TYRE
+111, Songhai, Wittenberg, SENT OUT QUEST, Type, 16
+111, Songhai, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 60 to 60, MINOR_CIV_WITTENBERG
+111, Rome, Riga, gained friend
+111, Rome, Riga, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_RIGA
+112, England, Kathmandu, SENT OUT QUEST, Type, 3
+112, England, Kathmandu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+112, Rome, Yerevan, lost friend
+112, Sweden, Sydney, gained friend
+112, Sweden, Sydney, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+112, England, Sydney, SENT OUT QUEST, Type, 7
+112, England, Sydney, RECEIVED QUEST, Find Natural Wonder, Friendship: 20 to 20, MINOR_CIV_SYDNEY
+112, Rome, Tyre, lost friend
+112, Rome, Wittenberg, lost ally
+113, The Ottomans, Belgrade, SENT OUT QUEST, Type, 13
+113, The Ottomans, Belgrade, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+113, Morocco, Belgrade, SENT OUT QUEST, Type, 13
+113, Morocco, Belgrade, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+113, Siam, Belgrade, SENT OUT QUEST, Type, 13
+113, Siam, Belgrade, RECEIVED QUEST, Invest, Friendship: 24 to 24, MINOR_CIV_BELGRADE
+113, Ethiopia, Belgrade, SENT OUT QUEST, Type, 13
+113, Ethiopia, Belgrade, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+113, Songhai, Belgrade, SENT OUT QUEST, Type, 13
+113, Songhai, Belgrade, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+113, Rome, Sofia, lost friend
+113, Morocco, Ur, SENT OUT QUEST, Type, 2
+113, Morocco, Ur, RECEIVED QUEST, Connect Resource, Friendship: 70 to 70, MINOR_CIV_UR
+113, England, Yerevan, SENT OUT QUEST, Type, 3
+113, England, Yerevan, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+113, Songhai, Riga, SENT OUT QUEST, Type, 16
+113, Songhai, Riga, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_RIGA
+114, Morocco, Belgrade, gained friend
+114, Morocco, Belgrade, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BELGRADE
+114, Ethiopia, Ur, Gold Gift: 250, Friendship: 36 to 61, Spaceship, MINOR_CIV_UR, Boost! , Passing Rome
+114, Ethiopia, Belgrade, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_BELGRADE, (SAVING) 
+114, Sweden, Sydney, cancelled, Construct Wonder, Friendship: 37 to 37, MINOR_CIV_SYDNEY
+114, Sweden, Tyre, lost friend
+114, Siam, Samarkand, lost friend
+115, The Ottomans, Kathmandu, SENT OUT QUEST, Type, 4
+115, The Ottomans, Kathmandu, RECEIVED QUEST, Great Person, Friendship: 10 to 10, MINOR_CIV_KATHMANDU
+115, Siam, Ur, lost friend
+115, Yerevan, Rome, RECEIVED_UNIT_GIFT, Warrior
+115, Rome, Yerevan, gained friend
+115, Morocco, Hanoi, gained ally
+115, Morocco, Hanoi, FINISHED QUEST, Trade Route, Friendship: 35 to 75, MINOR_CIV_HANOI
+115, Morocco, Ife, gained friend
+115, Morocco, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_IFE
+115, Morocco, Samarkand, gained friend
+115, Morocco, Samarkand, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+115, Ethiopia, Samarkand, cancelled, Construct Wonder, Friendship: 80 to 80, MINOR_CIV_SAMARKAND
+115, Morocco, Brussels, gained friend
+115, Morocco, Brussels, FINISHED QUEST, Find Natural Wonder, Friendship: -4 to 35, MINOR_CIV_BRUSSELS
+116, Ethiopia, Kabul, lost friend
+116, The Ottomans, Kabul, SENT OUT QUEST, Type, 3
+116, The Ottomans, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+116, Rome, Ur, lost friend
+116, Morocco, Budapest, gained friend
+116, Morocco, Budapest, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_BUDAPEST
+116, Rome, Yerevan, lost friend
+116, Ethiopia, Yerevan, lost friend
+116, England, Hanoi, SENT OUT QUEST, Type, 2
+116, England, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+116, England, Tyre, SENT OUT QUEST, Type, 2
+116, England, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 54 to 54, MINOR_CIV_TYRE
+116, Rome, Ife, lost friend
+116, Rome, Samarkand, lost friend
+116, Rome, Riga, lost friend
+117, The Ottomans, Belgrade, SENT OUT QUEST, Type, 2
+117, The Ottomans, Belgrade, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+117, Rome, Kabul, SENT OUT QUEST, Type, 4
+117, Rome, Kabul, RECEIVED QUEST, Great Person, Friendship: 16 to 16, MINOR_CIV_KABUL
+117, Rome, Hanoi, SENT OUT QUEST, Type, 1
+117, Rome, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+118, Rome, Hanoi, SENT OUT QUEST, Type, 1
+118, Songhai, Ur, SENT OUT QUEST, Type, 2
+118, Songhai, Ur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_UR
+118, The Ottomans, Sydney, SENT OUT QUEST, Type, 14
+118, The Ottomans, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+118, Siam, Tyre, lost ally
+119, Sweden, Yerevan, Gold Gift: 250, Friendship: 64 to 84, Diplomacy, MINOR_CIV_YEREVAN, Boost! , Passing Ethiopia
+119, Sweden, Kathmandu, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_KATHMANDU, (SAVING) 
+119, Siam, Ife, SENT OUT QUEST, Type, 1
+119, Siam, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+119, Ethiopia, Sofia, SENT OUT QUEST, Type, 14
+119, Ethiopia, Sofia, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+119, Sweden, Sydney, lost friend
+119, Siam, Wittenberg, SENT OUT QUEST, Type, 7
+119, Siam, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+119, Rome, Brussels, SENT OUT QUEST, Type, 2
+119, Rome, Brussels, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+119, Sweden, Riga, gained friend
+119, Sweden, Riga, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_RIGA
+120, Sweden, Riga, SENT OUT QUEST, Type, 12
+120, Siam, Ife, SENT OUT QUEST, Type, 1
+120, Songhai, Belgrade, era change yield update
+120, Songhai, Sofia, era change yield update
+120, Songhai, Kathmandu, era change yield update
+120, Songhai, Kabul, era change yield update
+120, Songhai, Ur, era change yield update
+120, Songhai, Budapest, era change yield update
+120, Songhai, Yerevan, era change yield update
+120, Songhai, Hanoi, era change yield update
+120, Songhai, Sydney, era change yield update
+120, Songhai, Tyre, era change yield update
+120, Songhai, Ife, era change yield update
+120, Songhai, Samarkand, era change yield update
+120, Songhai, Wittenberg, era change yield update
+120, Songhai, Prague, era change yield update
+120, Songhai, Brussels, era change yield update
+120, Songhai, Riga, era change yield update
+120, Songhai, Belgrade, SENT OUT QUEST, Type, 2
+120, Songhai, Belgrade, SENT OUT QUEST, Type, 4
+120, Songhai, Belgrade, SENT OUT QUEST, Type, 13
+120, Songhai, Sofia, SENT OUT QUEST, Type, 17
+120, Songhai, Kathmandu, SENT OUT QUEST, Type, 16
+120, Songhai, Kathmandu, SENT OUT QUEST, Type, 11
+120, Songhai, Kathmandu, SENT OUT QUEST, Type, 14
+120, Songhai, Kabul, SENT OUT QUEST, Type, 17
+120, Songhai, Kabul, SENT OUT QUEST, Type, 4
+120, Songhai, Kabul, SENT OUT QUEST, Type, 10
+120, Songhai, Ur, SENT OUT QUEST, Type, 16
+120, Songhai, Ur, SENT OUT QUEST, Type, 2
+120, Songhai, Sydney, SENT OUT QUEST, Type, 2
+120, Songhai, Sydney, SENT OUT QUEST, Type, 14
+120, Songhai, Tyre, SENT OUT QUEST, Type, 2
+120, Songhai, Samarkand, SENT OUT QUEST, Type, 16
+120, Songhai, Samarkand, SENT OUT QUEST, Type, 13
+120, Songhai, Wittenberg, SENT OUT QUEST, Type, 16
+120, Songhai, Riga, SENT OUT QUEST, Type, 12
+120, Songhai, Riga, SENT OUT QUEST, Type, 16
+120, Morocco, Belgrade, lost friend
+120, Morocco, Sofia, SENT OUT QUEST, Type, 14
+120, Morocco, Sofia, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+120, Ethiopia, Kathmandu, SENT OUT QUEST, Type, 14
+120, Ethiopia, Kathmandu, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+120, Morocco, Hanoi, FINISHED QUEST, Kill Camp, Friendship: 68 to 118, MINOR_CIV_HANOI
+120, England, Sydney, SENT OUT QUEST, Type, 1
+120, England, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 8 to 8, MINOR_CIV_SYDNEY
+120, Sweden, Sydney, SENT OUT QUEST, Type, 1
+120, Sweden, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 28 to 28, MINOR_CIV_SYDNEY
+120, The Ottomans, Sydney, SENT OUT QUEST, Type, 1
+120, The Ottomans, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 2 to 2, MINOR_CIV_SYDNEY
+120, Morocco, Sydney, SENT OUT QUEST, Type, 1
+120, Morocco, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+120, Ethiopia, Sydney, SENT OUT QUEST, Type, 1
+120, Ethiopia, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+120, Songhai, Sydney, SENT OUT QUEST, Type, 1
+120, Songhai, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+120, Siam, Tyre, SENT OUT QUEST, Type, 2
+120, Siam, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 56 to 56, MINOR_CIV_TYRE
+120, Ethiopia, Tyre, SENT OUT QUEST, Type, 2
+120, Ethiopia, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_TYRE
+120, Siam, Samarkand, SENT OUT QUEST, Type, 3
+120, Siam, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 19 to 19, MINOR_CIV_SAMARKAND
+120, Morocco, Prague, gained friend
+120, Morocco, Prague, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_PRAGUE
+120, Morocco, Brussels, lost friend
+120, Siam, Riga, SENT OUT QUEST, Type, 3
+120, Siam, Riga, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_RIGA
+121, Morocco, Ur, lost ally
+121, Morocco, Ur, SENT OUT QUEST, Type, 10
+121, Morocco, Ur, RECEIVED QUEST, Contest Culture, Friendship: 58 to 58, MINOR_CIV_UR
+121, Siam, Ur, SENT OUT QUEST, Type, 10
+121, Siam, Ur, RECEIVED QUEST, Contest Culture, Friendship: 19 to 19, MINOR_CIV_UR
+121, Rome, Ur, SENT OUT QUEST, Type, 10
+121, Rome, Ur, RECEIVED QUEST, Contest Culture, Friendship: 21 to 21, MINOR_CIV_UR
+121, Ethiopia, Ur, SENT OUT QUEST, Type, 10
+121, Ethiopia, Ur, RECEIVED QUEST, Contest Culture, Friendship: 49 to 49, MINOR_CIV_UR
+121, Songhai, Ur, SENT OUT QUEST, Type, 10
+121, Songhai, Ur, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_UR
+121, England, Hanoi, cancelled, Kill Camp, Friendship: -1 to -1, MINOR_CIV_HANOI
+121, Sweden, Hanoi, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HANOI
+121, Rome, Hanoi, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HANOI
+121, Ethiopia, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+121, Sweden, Prague, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+121, Rome, Prague, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+122, England, Budapest, SENT OUT QUEST, Type, 1
+122, England, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+122, The Ottomans, Kathmandu, gained friend
+122, The Ottomans, Kathmandu, FINISHED QUEST, Great Person, Friendship: 1 to 41, MINOR_CIV_KATHMANDU
+122, The Ottomans, Kabul, gained friend
+122, The Ottomans, Kabul, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KABUL
+122, The Ottomans, Tyre, gained friend
+122, The Ottomans, Tyre, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_TYRE
+122, The Ottomans, Samarkand, gained friend
+122, The Ottomans, Samarkand, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+122, Ethiopia, Kabul, SENT OUT QUEST, Type, 3
+122, Ethiopia, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 20 to 20, MINOR_CIV_KABUL
+122, Rome, Budapest, SENT OUT QUEST, Type, 14
+122, Rome, Budapest, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+122, England, Sydney, gained friend
+122, England, Sydney, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_SYDNEY
+122, The Ottomans, Tyre, SENT OUT QUEST, Type, 14
+122, The Ottomans, Tyre, RECEIVED QUEST, Bully City-State, Friendship: 38 to 38, MINOR_CIV_TYRE
+122, Rome, Tyre, SENT OUT QUEST, Type, 3
+122, Rome, Tyre, RECEIVED QUEST, Construct Wonder, Friendship: 14 to 14, MINOR_CIV_TYRE
+122, Morocco, Samarkand, lost friend
+122, Rome, Wittenberg, SENT OUT QUEST, Type, 4
+122, Rome, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 44 to 44, MINOR_CIV_WITTENBERG
+122, England, Riga, gained friend
+122, England, Riga, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_RIGA
+123, The Ottomans, Tyre, SENT OUT QUEST, Type, 14
+123, Rome, Sofia, SENT OUT QUEST, Type, 0
+123, Rome, Sofia, RECEIVED QUEST, Route, Friendship: 7 to 7, MINOR_CIV_SOFIA
+123, The Ottomans, Kabul, gained ally
+123, Songhai, Kabul, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_KABUL
+123, Songhai, Kabul, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_KABUL
+123, Songhai, Kabul, cancelled, Contest Culture, Friendship: -60 to -60, MINOR_CIV_KABUL
+123, The Ottomans, Kabul, FINISHED QUEST, Construct Wonder, Friendship: 37 to 77, MINOR_CIV_KABUL
+123, Ethiopia, Kabul, cancelled, Construct Wonder, Friendship: 19 to 19, MINOR_CIV_KABUL
+123, Morocco, Budapest, lost friend
+123, Ethiopia, Yerevan, cancelled, Construct Wonder, Friendship: 19 to 19, MINOR_CIV_YEREVAN
+123, The Ottomans, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+123, Rome, Tyre, cancelled, Construct Wonder, Friendship: 13 to 13, MINOR_CIV_TYRE
+123, Siam, Samarkand, cancelled, Construct Wonder, Friendship: 15 to 15, MINOR_CIV_SAMARKAND
+123, Songhai, Samarkand, SENT OUT QUEST, Type, 4
+123, Songhai, Samarkand, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+123, Siam, Riga, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_RIGA
+124, Sweden, Brussels, SENT OUT QUEST, Type, 1
+124, Sweden, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+124, The Ottomans, Tyre, Gold Gift: 250, Friendship: 37 to 37, Conquest, MINOR_CIV_TYRE, (SAVING) , Boost! , Passing Rome
+124, The Ottomans, Kabul, SENT OUT QUEST, Type, 10
+124, Siam, Sofia, SENT OUT QUEST, Type, 2
+124, Siam, Sofia, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_SOFIA
+124, Sweden, Kathmandu, gained friend
+124, Sweden, Kathmandu, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_KATHMANDU
+124, Sweden, Kabul, gained friend
+124, Sweden, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_KABUL
+124, Sweden, Yerevan, FINISHED QUEST, Find Natural Wonder, Friendship: 77 to 117, MINOR_CIV_YEREVAN
+124, Sweden, Riga, lost friend
+125, Ethiopia, Samarkand, Gold Gift: 250, Friendship: 67 to 97, Culture, MINOR_CIV_SAMARKAND, Boost! , Passing Rome
+125, Ethiopia, Belgrade, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_BELGRADE, (SAVING) 
+125, Ethiopia, Kathmandu, gained friend
+125, Ethiopia, Kathmandu, FINISHED QUEST, Contest Faith, Friendship: 0 to 40, MINOR_CIV_KATHMANDU
+125, England, Kathmandu, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+125, Sweden, Kathmandu, cancelled, Contest Faith, Friendship: 43 to 43, MINOR_CIV_KATHMANDU
+125, The Ottomans, Kathmandu, cancelled, Contest Faith, Friendship: 35 to 35, MINOR_CIV_KATHMANDU
+125, Siam, Kathmandu, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+125, Rome, Kathmandu, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+125, Songhai, Kathmandu, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+125, Morocco, Hanoi, SENT OUT QUEST, Type, 2
+125, Morocco, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 110 to 110, MINOR_CIV_HANOI
+125, Rome, Prague, SENT OUT QUEST, Type, 4
+125, Rome, Prague, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+126, Rome, Ur, SENT OUT QUEST, Type, 4
+126, Rome, Ur, RECEIVED QUEST, Great Person, Friendship: 13 to 13, MINOR_CIV_UR
+126, Rome, Yerevan, SENT OUT QUEST, Type, 14
+126, Rome, Yerevan, RECEIVED QUEST, Bully City-State, Friendship: 13 to 13, MINOR_CIV_YEREVAN
+126, Morocco, Tyre, SENT OUT QUEST, Type, 2
+126, Morocco, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_TYRE
+126, Morocco, Ife, lost friend
+126, England, Ife, SENT OUT QUEST, Type, 3
+126, England, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_IFE
+127, Ethiopia, Belgrade, era change yield update
+127, Ethiopia, Sofia, era change yield update
+127, Ethiopia, Kathmandu, era change yield update
+127, Ethiopia, Kabul, era change yield update
+127, Ethiopia, Ur, era change yield update
+127, Ethiopia, Budapest, era change yield update
+127, Ethiopia, Yerevan, era change yield update
+127, Ethiopia, Hanoi, era change yield update
+127, Ethiopia, Sydney, era change yield update
+127, Ethiopia, Tyre, era change yield update
+127, Ethiopia, Ife, era change yield update
+127, Ethiopia, Samarkand, era change yield update
+127, Ethiopia, Wittenberg, era change yield update
+127, Ethiopia, Prague, era change yield update
+127, Ethiopia, Brussels, era change yield update
+127, Ethiopia, Riga, era change yield update
+127, Ethiopia, Belgrade, SENT OUT QUEST, Type, 17
+127, Ethiopia, Belgrade, SENT OUT QUEST, Type, 16
+127, Ethiopia, Belgrade, SENT OUT QUEST, Type, 13
+127, Ethiopia, Sofia, SENT OUT QUEST, Type, 2
+127, Ethiopia, Sofia, SENT OUT QUEST, Type, 14
+127, Ethiopia, Kathmandu, SENT OUT QUEST, Type, 3
+127, Ethiopia, Kathmandu, SENT OUT QUEST, Type, 14
+127, Ethiopia, Kabul, SENT OUT QUEST, Type, 10
+127, Ethiopia, Ur, SENT OUT QUEST, Type, 2
+127, Ethiopia, Ur, SENT OUT QUEST, Type, 17
+127, Ethiopia, Ur, SENT OUT QUEST, Type, 10
+127, Ethiopia, Hanoi, SENT OUT QUEST, Type, 2
+127, Ethiopia, Hanoi, SENT OUT QUEST, Type, 16
+127, Ethiopia, Sydney, SENT OUT QUEST, Type, 1
+127, Ethiopia, Tyre, SENT OUT QUEST, Type, 2
+127, Ethiopia, Ife, SENT OUT QUEST, Type, 2
+127, Ethiopia, Ife, SENT OUT QUEST, Type, 1
+127, Ethiopia, Ife, SENT OUT QUEST, Type, 16
+127, Ethiopia, Samarkand, SENT OUT QUEST, Type, 2
+127, Ethiopia, Samarkand, SENT OUT QUEST, Type, 13
+127, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 16
+127, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 7
+127, Ethiopia, Riga, SENT OUT QUEST, Type, 12
+127, Ethiopia, Kabul, gained friend
+127, Ethiopia, Kabul, FINISHED QUEST, Contest Culture, Friendship: 13 to 53, MINOR_CIV_KABUL
+127, England, Kabul, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KABUL
+127, Sweden, Kabul, cancelled, Contest Culture, Friendship: 40 to 40, MINOR_CIV_KABUL
+127, The Ottomans, Kabul, cancelled, Contest Culture, Friendship: 71 to 71, MINOR_CIV_KABUL
+127, Rome, Kabul, cancelled, Contest Culture, Friendship: 1 to 1, MINOR_CIV_KABUL
+127, Morocco, Ur, SENT OUT QUEST, Type, 16
+127, Morocco, Ur, RECEIVED QUEST, Spread Religion, Friendship: 49 to 49, MINOR_CIV_UR
+127, Songhai, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+127, England, Wittenberg, SENT OUT QUEST, Type, 4
+127, England, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+127, England, Brussels, SENT OUT QUEST, Type, 1
+127, England, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+127, England, Riga, lost friend
+127, Ethiopia, Riga, SENT OUT QUEST, Type, 4
+127, Ethiopia, Riga, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_RIGA
+128, Sweden, Budapest, SENT OUT QUEST, Type, 1
+128, Sweden, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+128, Ethiopia, Kathmandu, gained ally
+128, Ethiopia, Kathmandu, FINISHED QUEST, Construct Wonder, Friendship: 35 to 75, MINOR_CIV_KATHMANDU
+128, Siam, Ur, SENT OUT QUEST, Type, 3
+128, Siam, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 9 to 9, MINOR_CIV_UR
+128, England, Yerevan, SENT OUT QUEST, Type, 14
+128, England, Yerevan, RECEIVED QUEST, Bully City-State, Friendship: -4 to -4, MINOR_CIV_YEREVAN
+128, The Ottomans, Tyre, lost friend
+128, The Ottomans, Samarkand, lost friend
+128, Songhai, Riga, gained friend
+128, Songhai, Riga, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_RIGA
+128, England, Riga, cancelled, Contest Techs, Friendship: 26 to 26, MINOR_CIV_RIGA
+128, Sweden, Riga, cancelled, Contest Techs, Friendship: 19 to 19, MINOR_CIV_RIGA
+128, The Ottomans, Riga, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+128, Morocco, Riga, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+128, Morocco, Riga, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+128, Siam, Riga, cancelled, Contest Techs, Friendship: 5 to 5, MINOR_CIV_RIGA
+128, Rome, Riga, cancelled, Contest Techs, Friendship: 2 to 2, MINOR_CIV_RIGA
+128, Ethiopia, Riga, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+128, Rome, Riga, SENT OUT QUEST, Type, 14
+128, Rome, Riga, RECEIVED QUEST, Bully City-State, Friendship: 2 to 2, MINOR_CIV_RIGA
+129, Rome, Kathmandu, SENT OUT QUEST, Type, 4
+129, Ethiopia, Kathmandu, SENT OUT QUEST, Type, 14
+129, The Ottomans, Kathmandu, lost friend
+129, Songhai, Tyre, SENT OUT QUEST, Type, 4
+129, Songhai, Tyre, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_TYRE
+130, Songhai, Sofia, SENT OUT QUEST, Type, 14
+130, Songhai, Sofia, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+130, Songhai, Kathmandu, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+130, Rome, Kathmandu, SENT OUT QUEST, Type, 7
+130, Rome, Kathmandu, RECEIVED QUEST, Find Natural Wonder, Friendship: 2 to 2, MINOR_CIV_KATHMANDU
+130, Morocco, Sydney, SENT OUT QUEST, Type, 4
+130, Morocco, Sydney, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+130, Rome, Ife, SENT OUT QUEST, Type, 17
+130, Rome, Ife, RECEIVED QUEST, Trade Route, Friendship: 7 to 7, MINOR_CIV_IFE
+130, Ethiopia, Samarkand, FINISHED QUEST, Invest, Friendship: 88 to 88, MINOR_CIV_SAMARKAND
+130, The Ottomans, Samarkand, FINISHED QUEST, Invest, Friendship: 26 to 26, MINOR_CIV_SAMARKAND
+130, Morocco, Samarkand, FINISHED QUEST, Invest, Friendship: 17 to 17, MINOR_CIV_SAMARKAND
+130, Rome, Samarkand, FINISHED QUEST, Invest, Friendship: 7 to 7, MINOR_CIV_SAMARKAND
+130, Siam, Samarkand, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+130, Songhai, Samarkand, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+130, The Ottomans, Samarkand, cancelled, Bully City-State, Friendship: 26 to 26, MINOR_CIV_SAMARKAND
+131, Ethiopia, Ur, Gold Gift: 250, Friendship: 36 to 56, Culture, MINOR_CIV_UR, Boost! , Passing Rome
+131, Ethiopia, Belgrade, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_BELGRADE, (SAVING) 
+131, Morocco, Belgrade, SENT OUT QUEST, Type, 2
+131, Morocco, Belgrade, RECEIVED QUEST, Connect Resource, Friendship: 13 to 13, MINOR_CIV_BELGRADE
+131, England, Kabul, SENT OUT QUEST, Type, 14
+131, England, Kabul, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+131, England, Sydney, gained ally
+131, England, Sydney, FINISHED QUEST, Find Natural Wonder, Friendship: 32 to 72, MINOR_CIV_SYDNEY
+131, Morocco, Ife, SENT OUT QUEST, Type, 4
+131, Morocco, Ife, RECEIVED QUEST, Great Person, Friendship: 21 to 21, MINOR_CIV_IFE
+131, Rome, Samarkand, SENT OUT QUEST, Type, 14
+131, Rome, Samarkand, RECEIVED QUEST, Bully City-State, Friendship: 6 to 6, MINOR_CIV_SAMARKAND
+131, Morocco, Brussels, SENT OUT QUEST, Type, 4
+131, Morocco, Brussels, RECEIVED QUEST, Great Person, Friendship: 12 to 12, MINOR_CIV_BRUSSELS
+132, England, Sydney, SENT OUT QUEST, Type, 1
+132, Rome, Kabul, gained friend
+132, Rome, Kabul, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KABUL
+132, Rome, Prague, gained friend
+132, Rome, Prague, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+132, Siam, Belgrade, SENT OUT QUEST, Type, 2
+132, Siam, Belgrade, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+132, Ethiopia, Yerevan, SENT OUT QUEST, Type, 3
+132, Ethiopia, Yerevan, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_YEREVAN
+132, Ethiopia, Sydney, SENT OUT QUEST, Type, 14
+132, Ethiopia, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+132, England, Tyre, SENT OUT QUEST, Type, 12
+132, England, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 30 to 30, MINOR_CIV_TYRE
+132, Sweden, Tyre, SENT OUT QUEST, Type, 12
+132, Sweden, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 2 to 2, MINOR_CIV_TYRE
+132, The Ottomans, Tyre, SENT OUT QUEST, Type, 12
+132, The Ottomans, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 23 to 23, MINOR_CIV_TYRE
+132, Morocco, Tyre, SENT OUT QUEST, Type, 12
+132, Morocco, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+132, Siam, Tyre, SENT OUT QUEST, Type, 12
+132, Siam, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 38 to 38, MINOR_CIV_TYRE
+132, Rome, Tyre, SENT OUT QUEST, Type, 12
+132, Rome, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+132, Ethiopia, Tyre, SENT OUT QUEST, Type, 12
+132, Ethiopia, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+132, Songhai, Tyre, SENT OUT QUEST, Type, 12
+132, Songhai, Tyre, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_TYRE
+132, Rome, Wittenberg, lost friend
+132, Songhai, Wittenberg, lost friend
+133, Rome, Ur, gained friend
+133, Rome, Ur, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_UR
+133, Morocco, Belgrade, FINISHED QUEST, Invest, Friendship: 10 to 10, MINOR_CIV_BELGRADE
+133, Siam, Belgrade, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+133, Ethiopia, Belgrade, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+133, The Ottomans, Belgrade, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+133, Songhai, Belgrade, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+133, Siam, Kathmandu, SENT OUT QUEST, Type, 14
+133, Siam, Kathmandu, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+133, Sweden, Sydney, SENT OUT QUEST, Type, 3
+133, Sweden, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 8 to 8, MINOR_CIV_SYDNEY
+133, England, Tyre, lost friend
+133, Morocco, Ife, gained friend
+133, Morocco, Ife, gained ally
+133, Morocco, Ife, FINISHED QUEST, Kill Camp, Friendship: 18 to 68, MINOR_CIV_IFE
+133, Songhai, Riga, lost friend
+133, The Ottomans, Riga, SENT OUT QUEST, Type, 2
+133, The Ottomans, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+134, England, Wittenberg, gained friend
+134, England, Wittenberg, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+134, Sweden, Kathmandu, Gold Gift: 250, Friendship: 31 to 51, Diplomacy, MINOR_CIV_KATHMANDU, Boost! , Passing Siam
+134, Sweden, Kabul, Gold Gift: 250, Friendship: 31 to 31, Diplomacy, MINOR_CIV_KABUL, (SAVING) , Boost! 
+134, Sweden, Tyre, SENT OUT QUEST, Type, 7
+134, Sweden, Tyre, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_TYRE
+134, England, Ife, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_IFE
+134, Siam, Ife, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_IFE
+134, Rome, Ife, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_IFE
+134, Ethiopia, Ife, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_IFE
+134, Ethiopia, Samarkand, SENT OUT QUEST, Type, 17
+134, Ethiopia, Samarkand, RECEIVED QUEST, Trade Route, Friendship: 82 to 82, MINOR_CIV_SAMARKAND
+135, Morocco, Brussels, gained friend
+135, Morocco, Brussels, FINISHED QUEST, Great Person, Friendship: 7 to 47, MINOR_CIV_BRUSSELS
+135, Ethiopia, Kathmandu, Gold Gift: 250, Friendship: 66 to 86, Culture, MINOR_CIV_KATHMANDU, Boost! , Passing Siam
+135, Ethiopia, Belgrade, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_BELGRADE, (SAVING) 
+135, The Ottomans, Belgrade, SENT OUT QUEST, Type, 16
+135, The Ottomans, Belgrade, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+135, England, Sofia, SENT OUT QUEST, Type, 3
+135, England, Sofia, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SOFIA
+135, Sweden, Kabul, lost friend
+135, The Ottomans, Kabul, lost ally
+135, England, Sydney, SENT OUT QUEST, Type, 3
+135, England, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 66 to 66, MINOR_CIV_SYDNEY
+135, Songhai, Wittenberg, SENT OUT QUEST, Type, 0
+135, Songhai, Wittenberg, RECEIVED QUEST, Route, Friendship: 25 to 25, MINOR_CIV_WITTENBERG
+136, Ethiopia, Kabul, SENT OUT QUEST, Type, 4
+136, Ethiopia, Kabul, RECEIVED QUEST, Great Person, Friendship: 39 to 39, MINOR_CIV_KABUL
+136, England, Ife, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_IFE
+137, Morocco, Ur, SENT OUT QUEST, Type, 2
+137, Morocco, Ur, SENT OUT QUEST, Type, 10
+137, Morocco, Ur, SENT OUT QUEST, Type, 16
+137, Morocco, Budapest, SENT OUT QUEST, Type, 3
+137, Morocco, Budapest, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BUDAPEST
+137, Ethiopia, Tyre, SENT OUT QUEST, Type, 3
+137, Ethiopia, Tyre, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_TYRE
+137, Morocco, Prague, lost friend
+137, Sweden, Prague, SENT OUT QUEST, Type, 2
+137, Sweden, Prague, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+138, The Ottomans, Tyre, SENT OUT QUEST, Type, 14
+138, The Ottomans, Tyre, SENT OUT QUEST, Type, 12
+138, Siam, Sydney, SENT OUT QUEST, Type, 1
+138, Siam, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+138, Rome, Ur, Gold Gift: 250, Friendship: 37 to 57, Spaceship, MINOR_CIV_UR, Boost! , Passing Siam
+138, Rome, Prague, Gold Gift: 250, Friendship: 31 to 31, Spaceship, MINOR_CIV_PRAGUE, (SAVING) , Boost! , Passing Morocco
+138, Ethiopia, Ife, gained friend
+138, Ethiopia, Ife, Gold Gift: 500, Friendship: 5 to 50, Culture, MINOR_CIV_IFE
+138, Ethiopia, Belgrade, gained friend
+138, Ethiopia, Belgrade, FINISHED QUEST, Spread Religion, Friendship: 5 to 45, MINOR_CIV_BELGRADE
+138, England, Kathmandu, gained friend
+138, England, Kathmandu, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_KATHMANDU
+138, Rome, Kabul, lost friend
+138, England, Kabul, gained friend
+138, England, Kabul, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+138, The Ottomans, Kabul, SENT OUT QUEST, Type, 4
+138, The Ottomans, Kabul, RECEIVED QUEST, Great Person, Friendship: 54 to 54, MINOR_CIV_KABUL
+138, England, Yerevan, gained friend
+138, England, Yerevan, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_YEREVAN
+138, Siam, Tyre, lost friend
+138, Rome, Prague, lost friend
+139, Ethiopia, Sofia, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+139, Siam, Kathmandu, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+139, Morocco, Hanoi, SENT OUT QUEST, Type, 16
+139, Morocco, Hanoi, RECEIVED QUEST, Spread Religion, Friendship: 90 to 90, MINOR_CIV_HANOI
+139, Rome, Hanoi, SENT OUT QUEST, Type, 2
+139, Rome, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_HANOI
+139, Songhai, Sydney, SENT OUT QUEST, Type, 7
+139, Songhai, Sydney, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+139, Morocco, Ife, lost ally
+139, The Ottomans, Samarkand, SENT OUT QUEST, Type, 2
+139, The Ottomans, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 13 to 13, MINOR_CIV_SAMARKAND
+139, Sweden, Riga, SENT OUT QUEST, Type, 2
+139, Sweden, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+140, Morocco, Sofia, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+140, Ethiopia, Kathmandu, cancelled, Bully City-State, Friendship: 77 to 77, MINOR_CIV_KATHMANDU
+140, England, Kathmandu, SENT OUT QUEST, Type, 2
+140, England, Kathmandu, RECEIVED QUEST, Connect Resource, Friendship: 37 to 37, MINOR_CIV_KATHMANDU
+140, Ethiopia, Kabul, lost friend
+140, Sweden, Kabul, SENT OUT QUEST, Type, 17
+140, Sweden, Kabul, RECEIVED QUEST, Trade Route, Friendship: 16 to 16, MINOR_CIV_KABUL
+140, England, Sydney, lost ally
+140, Siam, Tyre, gained friend
+140, Siam, Tyre, SENT OUT QUEST, Type, 14
+140, Siam, Tyre, RECEIVED QUEST, Bully City-State, Friendship: 46 to 46, MINOR_CIV_TYRE
+140, Sweden, Wittenberg, gained friend
+140, England, Wittenberg, lost friend
+140, Sweden, Brussels, SENT OUT QUEST, Type, 4
+140, Sweden, Brussels, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+141, Siam, Sydney, SENT OUT QUEST, Type, 1
+141, Morocco, Ur, lost friend
+141, Ethiopia, Ur, gained ally
+141, Ethiopia, Ur, FINISHED QUEST, Contest Culture, Friendship: 43 to 83, MINOR_CIV_UR
+141, Morocco, Ur, cancelled, Contest Culture, Friendship: 29 to 29, MINOR_CIV_UR
+141, Siam, Ur, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_UR
+141, Rome, Ur, cancelled, Contest Culture, Friendship: 51 to 51, MINOR_CIV_UR
+141, Songhai, Ur, cancelled, Contest Culture, Friendship: -7 to -7, MINOR_CIV_UR
+141, England, Yerevan, SENT OUT QUEST, Type, 10
+141, England, Yerevan, RECEIVED QUEST, Contest Culture, Friendship: 35 to 35, MINOR_CIV_YEREVAN
+141, Sweden, Yerevan, SENT OUT QUEST, Type, 10
+141, Sweden, Yerevan, RECEIVED QUEST, Contest Culture, Friendship: 98 to 98, MINOR_CIV_YEREVAN
+141, The Ottomans, Yerevan, SENT OUT QUEST, Type, 10
+141, The Ottomans, Yerevan, RECEIVED QUEST, Contest Culture, Friendship: -4 to -4, MINOR_CIV_YEREVAN
+141, Siam, Yerevan, SENT OUT QUEST, Type, 10
+141, Siam, Yerevan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+141, Rome, Yerevan, SENT OUT QUEST, Type, 10
+141, Rome, Yerevan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+141, Ethiopia, Yerevan, SENT OUT QUEST, Type, 10
+141, Ethiopia, Yerevan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+141, Sweden, Yerevan, SENT OUT QUEST, Type, 2
+141, Sweden, Yerevan, RECEIVED QUEST, Connect Resource, Friendship: 98 to 98, MINOR_CIV_YEREVAN
+141, Siam, Tyre, cancelled, Bully City-State, Friendship: 45 to 45, MINOR_CIV_TYRE
+141, Morocco, Samarkand, SENT OUT QUEST, Type, 14
+141, Morocco, Samarkand, RECEIVED QUEST, Bully City-State, Friendship: 1 to 1, MINOR_CIV_SAMARKAND
+141, Morocco, Prague, gained friend
+141, Morocco, Prague, gained ally
+141, Morocco, Prague, FINISHED QUEST, Spread Religion, Friendship: 24 to 64, MINOR_CIV_PRAGUE
+142, England, Sydney, SENT OUT QUEST, Type, 1
+142, England, Sydney, SENT OUT QUEST, Type, 3
+142, Morocco, Prague, FINISHED QUEST, Great Person, Friendship: 64 to 104, MINOR_CIV_PRAGUE
+142, Siam, Belgrade, gained friend
+142, Siam, Belgrade, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_BELGRADE
+142, The Ottomans, Sofia, SENT OUT QUEST, Type, 4
+142, The Ottomans, Sofia, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SOFIA
+142, Songhai, Kathmandu, SENT OUT QUEST, Type, 14
+142, Songhai, Kathmandu, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+142, England, Kabul, lost friend
+142, Siam, Ur, SENT OUT QUEST, Type, 2
+142, Siam, Ur, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_UR
+142, Rome, Budapest, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+142, The Ottomans, Tyre, cancelled, Bully City-State, Friendship: 3 to 3, MINOR_CIV_TYRE
+142, Ethiopia, Ife, gained ally
+142, Ethiopia, Ife, FINISHED QUEST, Spread Religion, Friendship: 37 to 77, MINOR_CIV_IFE
+142, Siam, Wittenberg, gained friend
+142, Siam, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 4 to 44, MINOR_CIV_WITTENBERG
+142, England, Wittenberg, SENT OUT QUEST, Type, 10
+142, England, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 26 to 26, MINOR_CIV_WITTENBERG
+142, Sweden, Wittenberg, SENT OUT QUEST, Type, 10
+142, Sweden, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 36 to 36, MINOR_CIV_WITTENBERG
+142, The Ottomans, Wittenberg, SENT OUT QUEST, Type, 10
+142, The Ottomans, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 4 to 4, MINOR_CIV_WITTENBERG
+142, Siam, Wittenberg, SENT OUT QUEST, Type, 10
+142, Siam, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 44 to 44, MINOR_CIV_WITTENBERG
+142, Rome, Wittenberg, SENT OUT QUEST, Type, 10
+142, Rome, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 9 to 9, MINOR_CIV_WITTENBERG
+142, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 10
+142, Ethiopia, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+142, Songhai, Wittenberg, SENT OUT QUEST, Type, 10
+142, Songhai, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 9 to 9, MINOR_CIV_WITTENBERG
+142, The Ottomans, Wittenberg, SENT OUT QUEST, Type, 16
+142, The Ottomans, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 4 to 4, MINOR_CIV_WITTENBERG
+143, Morocco, Wittenberg, SENT OUT QUEST, Type, 10
+143, Morocco, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+143, Siam, Belgrade, era change yield update
+143, Siam, Sofia, era change yield update
+143, Siam, Kathmandu, era change yield update
+143, Siam, Kabul, era change yield update
+143, Siam, Ur, era change yield update
+143, Siam, Budapest, era change yield update
+143, Siam, Yerevan, era change yield update
+143, Siam, Hanoi, era change yield update
+143, Siam, Sydney, era change yield update
+143, Siam, Tyre, era change yield update
+143, Siam, Ife, era change yield update
+143, Siam, Samarkand, era change yield update
+143, Siam, Wittenberg, era change yield update
+143, Siam, Prague, era change yield update
+143, Siam, Brussels, era change yield update
+143, Siam, Riga, era change yield update
+143, Siam, Belgrade, SENT OUT QUEST, Type, 2
+143, Siam, Sofia, SENT OUT QUEST, Type, 17
+143, Siam, Sofia, SENT OUT QUEST, Type, 2
+143, Siam, Ur, SENT OUT QUEST, Type, 3
+143, Siam, Ur, SENT OUT QUEST, Type, 2
+143, Siam, Yerevan, SENT OUT QUEST, Type, 10
+143, Siam, Sydney, SENT OUT QUEST, Type, 1
+143, Siam, Tyre, SENT OUT QUEST, Type, 2
+143, Siam, Tyre, SENT OUT QUEST, Type, 12
+143, Siam, Samarkand, SENT OUT QUEST, Type, 17
+143, Siam, Wittenberg, SENT OUT QUEST, Type, 10
+143, Siam, Riga, SENT OUT QUEST, Type, 17
+143, Ethiopia, Kathmandu, SENT OUT QUEST, Type, 16
+143, Ethiopia, Kathmandu, RECEIVED QUEST, Spread Religion, Friendship: 73 to 73, MINOR_CIV_KATHMANDU
+143, England, Budapest, SENT OUT QUEST, Type, 14
+143, England, Budapest, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+143, Siam, Yerevan, SENT OUT QUEST, Type, 7
+143, Siam, Yerevan, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+143, England, Tyre, SENT OUT QUEST, Type, 7
+143, England, Tyre, RECEIVED QUEST, Find Natural Wonder, Friendship: 9 to 9, MINOR_CIV_TYRE
+144, Morocco, Wittenberg, SENT OUT QUEST, Type, 10
+144, Morocco, Yerevan, SENT OUT QUEST, Type, 10
+144, Morocco, Yerevan, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+144, Rome, Belgrade, era change yield update
+144, Rome, Sofia, era change yield update
+144, Rome, Kathmandu, era change yield update
+144, Rome, Kabul, era change yield update
+144, Rome, Ur, era change yield update
+144, Rome, Budapest, era change yield update
+144, Rome, Yerevan, era change yield update
+144, Rome, Hanoi, era change yield update
+144, Rome, Sydney, era change yield update
+144, Rome, Tyre, era change yield update
+144, Rome, Ife, era change yield update
+144, Rome, Samarkand, era change yield update
+144, Rome, Wittenberg, era change yield update
+144, Rome, Prague, era change yield update
+144, Rome, Brussels, era change yield update
+144, Rome, Riga, era change yield update
+144, Rome, Sofia, SENT OUT QUEST, Type, 17
+144, Rome, Sofia, SENT OUT QUEST, Type, 0
+144, Rome, Kathmandu, SENT OUT QUEST, Type, 4
+144, Rome, Kathmandu, SENT OUT QUEST, Type, 7
+144, Rome, Kabul, SENT OUT QUEST, Type, 2
+144, Rome, Ur, SENT OUT QUEST, Type, 2
+144, Rome, Budapest, SENT OUT QUEST, Type, 1
+144, Rome, Budapest, SENT OUT QUEST, Type, 4
+144, Rome, Yerevan, SENT OUT QUEST, Type, 14
+144, Rome, Yerevan, SENT OUT QUEST, Type, 10
+144, Rome, Hanoi, SENT OUT QUEST, Type, 2
+144, Rome, Tyre, SENT OUT QUEST, Type, 2
+144, Rome, Tyre, SENT OUT QUEST, Type, 12
+144, Rome, Ife, SENT OUT QUEST, Type, 2
+144, Rome, Ife, SENT OUT QUEST, Type, 17
+144, Rome, Samarkand, SENT OUT QUEST, Type, 2
+144, Rome, Samarkand, SENT OUT QUEST, Type, 14
+144, Rome, Wittenberg, SENT OUT QUEST, Type, 17
+144, Rome, Wittenberg, SENT OUT QUEST, Type, 4
+144, Rome, Wittenberg, SENT OUT QUEST, Type, 10
+144, Rome, Brussels, SENT OUT QUEST, Type, 1
+144, Rome, Brussels, SENT OUT QUEST, Type, 4
+144, Rome, Brussels, SENT OUT QUEST, Type, 2
+144, Rome, Riga, SENT OUT QUEST, Type, 14
+144, Rome, Yerevan, SENT OUT QUEST, Type, 4
+144, Rome, Yerevan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+144, England, Hanoi, SENT OUT QUEST, Type, 14
+144, England, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
+144, The Ottomans, Tyre, SENT OUT QUEST, Type, 2
+144, The Ottomans, Tyre, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_TYRE
+144, Morocco, Brussels, gained ally
+144, Morocco, Brussels, FINISHED QUEST, Trade Route, Friendship: 32 to 72, MINOR_CIV_BRUSSELS
+144, England, Riga, SENT OUT QUEST, Type, 2
+144, England, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+145, Morocco, Yerevan, SENT OUT QUEST, Type, 10
+145, Morocco, Sofia, gained friend
+145, Morocco, Sofia, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SOFIA
+145, England, Kathmandu, lost friend
+145, England, Yerevan, lost friend
+145, Morocco, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 81 to 121, MINOR_CIV_HANOI
+145, Rome, Tyre, SENT OUT QUEST, Type, 4
+145, Rome, Tyre, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_TYRE
+146, England, Belgrade, era change yield update
+146, England, Sofia, era change yield update
+146, England, Kathmandu, era change yield update
+146, England, Kabul, era change yield update
+146, England, Ur, era change yield update
+146, England, Budapest, era change yield update
+146, England, Yerevan, era change yield update
+146, England, Hanoi, era change yield update
+146, England, Sydney, era change yield update
+146, England, Tyre, era change yield update
+146, England, Ife, era change yield update
+146, England, Samarkand, era change yield update
+146, England, Wittenberg, era change yield update
+146, England, Prague, era change yield update
+146, England, Brussels, era change yield update
+146, England, Riga, era change yield update
+146, England, Sofia, SENT OUT QUEST, Type, 2
+146, England, Sofia, SENT OUT QUEST, Type, 3
+146, England, Kathmandu, SENT OUT QUEST, Type, 2
+146, England, Kabul, SENT OUT QUEST, Type, 14
+146, England, Budapest, SENT OUT QUEST, Type, 1
+146, England, Budapest, SENT OUT QUEST, Type, 14
+146, England, Yerevan, SENT OUT QUEST, Type, 14
+146, England, Yerevan, SENT OUT QUEST, Type, 10
+146, England, Hanoi, SENT OUT QUEST, Type, 2
+146, England, Hanoi, SENT OUT QUEST, Type, 14
+146, England, Sydney, SENT OUT QUEST, Type, 1
+146, England, Sydney, SENT OUT QUEST, Type, 3
+146, England, Tyre, SENT OUT QUEST, Type, 2
+146, England, Tyre, SENT OUT QUEST, Type, 12
+146, England, Tyre, SENT OUT QUEST, Type, 7
+146, England, Ife, SENT OUT QUEST, Type, 2
+146, England, Wittenberg, SENT OUT QUEST, Type, 2
+146, England, Wittenberg, SENT OUT QUEST, Type, 10
+146, England, Brussels, SENT OUT QUEST, Type, 1
+146, England, Riga, SENT OUT QUEST, Type, 2
+146, Ethiopia, Belgrade, Gold Gift: 250, Friendship: 37 to 57, Spaceship, MINOR_CIV_BELGRADE, Boost! 
+146, Rome, Yerevan, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+146, England, Hanoi, SENT OUT QUEST, Type, 10
+146, England, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_HANOI
+146, Sweden, Hanoi, SENT OUT QUEST, Type, 10
+146, Sweden, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_HANOI
+146, The Ottomans, Hanoi, SENT OUT QUEST, Type, 10
+146, The Ottomans, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_HANOI
+146, Morocco, Hanoi, SENT OUT QUEST, Type, 10
+146, Morocco, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 119 to 119, MINOR_CIV_HANOI
+146, Rome, Hanoi, SENT OUT QUEST, Type, 10
+146, Rome, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_HANOI
+146, Ethiopia, Hanoi, SENT OUT QUEST, Type, 10
+146, Ethiopia, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_HANOI
+146, The Ottomans, Sydney, SENT OUT QUEST, Type, 17
+146, The Ottomans, Sydney, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+146, Siam, Ife, SENT OUT QUEST, Type, 4
+146, Siam, Ife, RECEIVED QUEST, Great Person, Friendship: 4 to 4, MINOR_CIV_IFE
+146, Morocco, Samarkand, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+146, Siam, Wittenberg, SENT OUT QUEST, Type, 2
+146, Siam, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 38 to 38, MINOR_CIV_WITTENBERG
+147, Ethiopia, Hanoi, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_HANOI
+147, Ethiopia, Hanoi, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_HANOI
+147, Ethiopia, Hanoi, cancelled, Contest Culture, Friendship: -60 to -60, MINOR_CIV_HANOI
+147, Morocco, Ur, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_UR
+147, Morocco, Ur, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_UR
+147, Morocco, Ife, lost friend
+147, Morocco, Ife, SENT OUT QUEST, Type, 16
+147, Morocco, Ife, SENT OUT QUEST, Type, 4
+147, Morocco, Ife, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_IFE
+147, Morocco, Ife, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_IFE
+147, Morocco, Samarkand, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_SAMARKAND
+147, Rome, Hanoi, SENT OUT QUEST, Type, 2
+147, Rome, Hanoi, SENT OUT QUEST, Type, 10
+147, Rome, Hanoi, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_HANOI
+147, Rome, Hanoi, cancelled, Contest Culture, Friendship: -60 to -60, MINOR_CIV_HANOI
+147, Rome, Brussels, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_BRUSSELS
+147, Rome, Brussels, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_BRUSSELS
+147, Rome, Brussels, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_BRUSSELS
+147, England, Kathmandu, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_KATHMANDU
+147, England, Ife, SENT OUT QUEST, Type, 2
+147, England, Ife, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_IFE
+147, England, Wittenberg, SENT OUT QUEST, Type, 2
+147, England, Wittenberg, SENT OUT QUEST, Type, 10
+147, Rome, Samarkand, SENT OUT QUEST, Type, 2
+147, Rome, Samarkand, SENT OUT QUEST, Type, 14
+147, The Ottomans, Kathmandu, SENT OUT QUEST, Type, 2
+147, The Ottomans, Kathmandu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+147, Songhai, Kabul, SENT OUT QUEST, Type, 4
+147, Songhai, Kabul, RECEIVED QUEST, Great Person, Friendship: 8 to 8, MINOR_CIV_KABUL
+148, Ethiopia, Samarkand, Gold Gift: 250, Friendship: 67 to 67, Spaceship, MINOR_CIV_SAMARKAND, (SAVING) , Boost! , Passing Rome
+148, England, Sofia, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SOFIA
+148, Sweden, Kathmandu, lost friend
+148, Songhai, Ur, gained friend
+148, Songhai, Ur, FINISHED QUEST, Connect Resource, Friendship: -9 to 30, MINOR_CIV_UR
+148, England, Yerevan, cancelled, Bully City-State, Friendship: 25 to 25, MINOR_CIV_YEREVAN
+148, England, Sydney, cancelled, Construct Wonder, Friendship: 46 to 46, MINOR_CIV_SYDNEY
+148, Sweden, Sydney, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+148, Sweden, Tyre, gained friend
+148, Sweden, Tyre, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_TYRE
+148, Siam, Samarkand, SENT OUT QUEST, Type, 2
+148, Siam, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_SAMARKAND
+148, Morocco, Brussels, SENT OUT QUEST, Type, 2
+148, Morocco, Brussels, RECEIVED QUEST, Connect Resource, Friendship: 66 to 66, MINOR_CIV_BRUSSELS
+148, Rome, Riga, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_RIGA
+149, Sweden, Kathmandu, SENT OUT QUEST, Type, 4
+149, Sweden, Kathmandu, RECEIVED QUEST, Great Person, Friendship: 27 to 27, MINOR_CIV_KATHMANDU
+149, Songhai, Ur, lost friend
+149, The Ottomans, Yerevan, SENT OUT QUEST, Type, 14
+149, The Ottomans, Yerevan, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+149, Sweden, Wittenberg, lost friend
+149, Songhai, Riga, SENT OUT QUEST, Type, 17
+149, Songhai, Riga, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_RIGA
+150, Sweden, Belgrade, era change yield update
+150, Sweden, Sofia, era change yield update
+150, Sweden, Kathmandu, era change yield update
+150, Sweden, Kabul, era change yield update
+150, Sweden, Ur, era change yield update
+150, Sweden, Budapest, era change yield update
+150, Sweden, Yerevan, era change yield update
+150, Sweden, Hanoi, era change yield update
+150, Sweden, Sydney, era change yield update
+150, Sweden, Tyre, era change yield update
+150, Sweden, Ife, era change yield update
+150, Sweden, Samarkand, era change yield update
+150, Sweden, Wittenberg, era change yield update
+150, Sweden, Prague, era change yield update
+150, Sweden, Brussels, era change yield update
+150, Sweden, Riga, era change yield update
+150, Sweden, Kathmandu, SENT OUT QUEST, Type, 16
+150, Sweden, Kathmandu, SENT OUT QUEST, Type, 4
+150, Sweden, Kabul, SENT OUT QUEST, Type, 2
+150, Sweden, Kabul, SENT OUT QUEST, Type, 17
+150, Sweden, Budapest, SENT OUT QUEST, Type, 1
+150, Sweden, Yerevan, SENT OUT QUEST, Type, 17
+150, Sweden, Yerevan, SENT OUT QUEST, Type, 10
+150, Sweden, Yerevan, SENT OUT QUEST, Type, 2
+150, Sweden, Hanoi, SENT OUT QUEST, Type, 17
+150, Sweden, Hanoi, SENT OUT QUEST, Type, 16
+150, Sweden, Hanoi, SENT OUT QUEST, Type, 10
+150, Sweden, Sydney, SENT OUT QUEST, Type, 1
+150, Sweden, Tyre, SENT OUT QUEST, Type, 16
+150, Sweden, Tyre, SENT OUT QUEST, Type, 12
+150, Sweden, Wittenberg, SENT OUT QUEST, Type, 17
+150, Sweden, Wittenberg, SENT OUT QUEST, Type, 0
+150, Sweden, Wittenberg, SENT OUT QUEST, Type, 10
+150, Sweden, Prague, SENT OUT QUEST, Type, 2
+150, Sweden, Brussels, SENT OUT QUEST, Type, 1
+150, Sweden, Brussels, SENT OUT QUEST, Type, 4
+150, Sweden, Riga, SENT OUT QUEST, Type, 2
+150, Songhai, Tyre, gained friend
+150, Songhai, Tyre, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_TYRE
+150, Morocco, Sofia, lost friend
+150, Songhai, Sofia, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+150, Ethiopia, Kathmandu, lost ally
+150, The Ottomans, Kabul, lost friend
+150, Rome, Ife, gained friend
+150, Rome, Ife, lost friend
+150, Siam, Riga, SENT OUT QUEST, Type, 2
+150, Siam, Riga, RECEIVED QUEST, Connect Resource, Friendship: 3 to 3, MINOR_CIV_RIGA

@@ -1,0 +1,32 @@
+001, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 3/1, Expansionist, home meta -15, weights dom 10 sci 50 cul 10 dip 30, risk low, expansion wide, greedy wide
+001, Byzantium, LEADER_THEODORA, tags R, pursuits 2/0, Zealot, home meta -30, weights dom 26 sci 6 cul 60 dip 8, risk low, expansion tall, greedy tall
+001, The Ottomans, LEADER_SULEIMAN, tags W, pursuits 0/1, Conqueror, home meta 90, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest, greedy wide
+001, Songhai, LEADER_ASKIA, tags W, pursuits 0/2, Conqueror, home meta 85, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest, greedy wide
+001, Denmark, LEADER_HARALD, tags W, pursuits 0/1, Raider, home meta 75, weights dom 56 sci 8 cul 8 dip 28, risk high, expansion wide, greedy wide
+001, The Huns, LEADER_ATTILA, tags , pursuits 0/1, Raider, home meta 80, weights dom 56 sci 8 cul 8 dip 28, risk medium, expansion medium, greedy wide
+001, The Shoshone, LEADER_POCATELLO, tags WE, pursuits 1/3, Conqueror, home meta 65, weights dom 28 sci 24 cul 4 dip 44, risk medium, expansion conquest, greedy wide
+001, Assyria, LEADER_ASHURBANIPAL, tags WN, pursuits 2/0, Conqueror, home meta 70, weights dom 48 sci 4 cul 44 dip 4, risk medium, expansion conquest, greedy tall
+050, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 3/1, Zealot, home meta -15, weights dom 6 sci 46 cul 20 dip 28, risk low, expansion medium, greedy wide
+050, Byzantium, LEADER_THEODORA, tags R, pursuits 2/0, Zealot, home meta -30, weights dom 26 sci 6 cul 60 dip 8, risk low, expansion tall, greedy tall
+050, The Ottomans, LEADER_SULEIMAN, tags W, pursuits 0/1, Conqueror, home meta 90, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest, greedy wide
+050, Songhai, LEADER_ASKIA, tags WR, pursuits 0/2, Conqueror, home meta 85, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest, greedy wide
+050, Denmark, LEADER_HARALD, tags WR, pursuits 0/1, Raider, home meta 75, weights dom 56 sci 8 cul 8 dip 28, risk high, expansion wide, greedy wide
+050, The Huns, LEADER_ATTILA, tags R, pursuits 0/1, Raider, home meta 80, weights dom 56 sci 8 cul 8 dip 28, risk medium, expansion medium, greedy wide
+050, The Shoshone, LEADER_POCATELLO, tags WRE, pursuits 1/3, Conqueror, home meta 65, weights dom 28 sci 24 cul 4 dip 44, risk medium, expansion conquest, greedy wide
+050, Assyria, LEADER_ASHURBANIPAL, tags WRN, pursuits 2/0, Conqueror, home meta 70, weights dom 48 sci 4 cul 44 dip 4, risk medium, expansion conquest, greedy tall
+100, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 3/1, Zealot, home meta -15, weights dom 6 sci 46 cul 20 dip 28, risk low, expansion medium, greedy wide
+100, Byzantium, LEADER_THEODORA, tags R, pursuits 2/0, Zealot, home meta -30, weights dom 26 sci 6 cul 60 dip 8, risk low, expansion tall, greedy tall
+100, The Ottomans, LEADER_SULEIMAN, tags WR, pursuits 0/1, Conqueror, home meta 90, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest, greedy wide
+100, Songhai, LEADER_ASKIA, tags WR, pursuits 0/2, Conqueror, home meta 85, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest, greedy wide
+100, Denmark, LEADER_HARALD, tags WR, pursuits 0/1, Raider, home meta 75, weights dom 56 sci 8 cul 8 dip 28, risk high, expansion wide, greedy wide
+100, The Huns, LEADER_ATTILA, tags R, pursuits 0/1, Raider, home meta 80, weights dom 56 sci 8 cul 8 dip 28, risk medium, expansion medium, greedy wide
+100, The Shoshone, LEADER_POCATELLO, tags WRE, pursuits 1/3, Conqueror, home meta 65, weights dom 28 sci 24 cul 4 dip 44, risk medium, expansion conquest, greedy wide
+100, Assyria, LEADER_ASHURBANIPAL, tags WRN, pursuits 2/0, Conqueror, home meta 70, weights dom 48 sci 4 cul 44 dip 4, risk medium, expansion conquest, greedy tall
+150, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 3/1, Zealot, home meta -15, weights dom 6 sci 46 cul 20 dip 28, risk low, expansion medium, greedy wide
+150, Byzantium, LEADER_THEODORA, tags R, pursuits 2/0, Zealot, home meta -30, weights dom 26 sci 6 cul 60 dip 8, risk low, expansion tall, greedy tall
+150, The Ottomans, LEADER_SULEIMAN, tags WR, pursuits 0/1, Conqueror, home meta 90, weights dom 68 sci 4 cul 4 dip 24, risk high, expansion conquest, greedy wide
+150, Songhai, LEADER_ASKIA, tags W, pursuits 0/2, Conqueror, home meta 85, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest, greedy wide
+150, Denmark, LEADER_HARALD, tags WR, pursuits 0/1, Raider, home meta 75, weights dom 56 sci 8 cul 8 dip 28, risk high, expansion wide, greedy wide
+150, The Huns, LEADER_ATTILA, tags , pursuits 0/1, Raider, home meta 80, weights dom 56 sci 8 cul 8 dip 28, risk medium, expansion medium, greedy wide
+150, The Shoshone, LEADER_POCATELLO, tags WRE, pursuits 1/3, Conqueror, home meta 65, weights dom 28 sci 24 cul 4 dip 44, risk medium, expansion conquest, greedy wide
+150, Assyria, LEADER_ASHURBANIPAL, tags WRN, pursuits 2/0, Conqueror, home meta 70, weights dom 48 sci 4 cul 44 dip 4, risk medium, expansion conquest, greedy tall

@@ -1,0 +1,1655 @@
+000, -4000, Mecca, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Moscow, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Moson Kahni, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Persepolis, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Onondaga, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Berlin, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Gao, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Cusco, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Genoa, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Geneva, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Lhasa, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Buenos Aires, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Zanzibar, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, La Venta, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Bratislava, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Ormus, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Antwerp, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Hanoi, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Belgrade, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Cahokia, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Sofia, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Bucharest, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Hong Kong, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Brussels, POP_CHANGE, Pop: 1, No religion in city
+005, -3700, Mecca, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Moscow, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Moson Kahni, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, The Shoshone, Belief, Religious Idols, 242
+005, -3700, The Shoshone, Belief, God-King, 191
+005, -3700, The Shoshone, Belief, Messenger of the Gods, 108
+005, -3700, The Shoshone, Belief, Religious Settlements, 75
+005, -3700, The Shoshone, Belief, Stone Circles, 72
+005, -3700, The Shoshone, Belief, God of the Open Sky, 45
+005, -3700, The Shoshone, Belief, God of Craftsmen, 42
+005, -3700, The Shoshone, Belief, Oral Tradition, 37
+005, -3700, The Shoshone, Belief, Ancestor Worship, 35
+005, -3700, The Shoshone, Belief, Goddess of Love, 33
+005, -3700, The Shoshone, Belief, Dance of the Aurora, 32
+005, -3700, The Shoshone, Belief, Monument to the Gods, 30
+005, -3700, The Shoshone, Belief, Fertility Rites, 20
+005, -3700, The Shoshone, Belief, Goddess of Festivals, 11
+005, -3700, The Shoshone, Belief, Sacred Waters, 9
+005, -3700, The Shoshone, Belief, Tears of the Gods, 8
+005, -3700, The Shoshone, Belief, Goddess of the Hunt, 4
+005, -3700, The Shoshone, Belief, God of the Sea, 3
+005, -3700, The Shoshone, Belief, One with Nature, 0
+005, -3700, The Shoshone, Belief, God of War, 0
+005, -3700, The Shoshone, Belief, Desert Folklore, 0
+005, -3700, The Shoshone, Belief, Sacred Path, 0
+005, -3700, The Shoshone, Belief, Goddess of Protection, 0
+005, -3700, The Shoshone, Belief, Faith Healers, 0
+005, -3700, The Shoshone, Belief, Earth Mother, 0
+005, -3700, The Shoshone, Belief, Sun God, 0
+005, -3700, The Shoshone, CHOSEN, Religious Idols
+005, -3700, Moson Kahni, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
+005, -3700, The Shoshone, PANTHEON FOUNDED, Pantheon
+005, -3700, Persepolis, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Berlin, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Gao, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Genoa, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Geneva, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Zanzibar, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, La Venta, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Bratislava, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Ormus, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Antwerp, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Belgrade, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Bucharest, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Hong Kong, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Brussels, POP_CHANGE, Pop: 2, No religion in city
+010, -3400, Onondaga, POP_CHANGE, Pop: 2, No religion in city
+010, -3400, Cusco, POP_CHANGE, Pop: 2, No religion in city
+010, -3400, Lhasa, POP_CHANGE, Pop: 2, No religion in city
+010, -3400, Buenos Aires, POP_CHANGE, Pop: 2, No religion in city
+010, -3400, Hanoi, POP_CHANGE, Pop: 2, No religion in city
+010, -3400, Cahokia, POP_CHANGE, Pop: 2, No religion in city
+010, -3400, Sofia, POP_CHANGE, Pop: 2, No religion in city
+013, -3220, Gao, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Genoa, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Geneva, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, La Venta, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Ormus, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Antwerp, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Bucharest, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Hong Kong, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Brussels, POP_CHANGE, Pop: 3, No religion in city
+015, -3100, Berlin, POP_CHANGE, Pop: 3, No religion in city
+016, -3040, Arabia, Belief, Desert Folklore, 715
+016, -3040, Arabia, Belief, God-King, 195
+016, -3040, Arabia, Belief, Messenger of the Gods, 164
+016, -3040, Arabia, Belief, Goddess of Festivals, 100
+016, -3040, Arabia, Belief, Ancestor Worship, 95
+016, -3040, Arabia, Belief, Religious Settlements, 75
+016, -3040, Arabia, Belief, Monument to the Gods, 60
+016, -3040, Arabia, Belief, God of Craftsmen, 52
+016, -3040, Arabia, Belief, Sacred Waters, 43
+016, -3040, Arabia, Belief, Fertility Rites, 40
+016, -3040, Arabia, Belief, Goddess of Love, 40
+016, -3040, Arabia, Belief, Oral Tradition, 40
+016, -3040, Arabia, Belief, Sun God, 14
+016, -3040, Arabia, Belief, Dance of the Aurora, 10
+016, -3040, Arabia, Belief, God of the Open Sky, 4
+016, -3040, Arabia, Belief, Goddess of the Hunt, 1
+016, -3040, Arabia, Belief, God of the Sea, 1
+016, -3040, Arabia, Belief, One with Nature, 0
+016, -3040, Arabia, Belief, Stone Circles, 0
+016, -3040, Arabia, Belief, God of War, 0
+016, -3040, Arabia, Belief, Sacred Path, 0
+016, -3040, Arabia, Belief, Goddess of Protection, 0
+016, -3040, Arabia, Belief, Faith Healers, 0
+016, -3040, Arabia, Belief, Tears of the Gods, 0
+016, -3040, Arabia, Belief, Earth Mother, 0
+016, -3040, Arabia, CHOSEN, Desert Folklore
+016, -3040, Mecca, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
+016, -3040, Arabia, PANTHEON FOUNDED, Pantheon
+017, -2980, Mecca, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+017, -2980, Cusco, POP_CHANGE, Pop: 3, No religion in city
+017, -2980, Zanzibar, POP_CHANGE, Pop: 3, No religion in city
+018, -2920, Persepolis, POP_CHANGE, Pop: 3, No religion in city
+018, -2920, Bratislava, POP_CHANGE, Pop: 3, No religion in city
+018, -2920, Belgrade, POP_CHANGE, Pop: 3, No religion in city
+021, -2740, St. Petersburg, POP_CHANGE, Pop: 1, No religion in city
+021, -2740, Persia, Belief, Tears of the Gods, 340
+021, -2740, Persia, Belief, Religious Settlements, 245
+021, -2740, Persia, Belief, God-King, 241
+021, -2740, Persia, Belief, Messenger of the Gods, 196
+021, -2740, Persia, Belief, Stone Circles, 88
+021, -2740, Persia, Belief, God of Craftsmen, 77
+021, -2740, Persia, Belief, Ancestor Worship, 76
+021, -2740, Persia, Belief, Monument to the Gods, 60
+021, -2740, Persia, Belief, Goddess of Love, 43
+021, -2740, Persia, Belief, Fertility Rites, 40
+021, -2740, Persia, Belief, God of the Sea, 31
+021, -2740, Persia, Belief, Goddess of Festivals, 24
+021, -2740, Persia, Belief, Sacred Path, 18
+021, -2740, Persia, Belief, Sacred Waters, 13
+021, -2740, Persia, Belief, Goddess of the Hunt, 11
+021, -2740, Persia, Belief, God of the Open Sky, 10
+021, -2740, Persia, Belief, Oral Tradition, 6
+021, -2740, Persia, Belief, One with Nature, 0
+021, -2740, Persia, Belief, God of War, 0
+021, -2740, Persia, Belief, Goddess of Protection, 0
+021, -2740, Persia, Belief, Faith Healers, 0
+021, -2740, Persia, Belief, Dance of the Aurora, 0
+021, -2740, Persia, Belief, Earth Mother, 0
+021, -2740, Persia, Belief, Sun God, 0
+021, -2740, Persia, CHOSEN, Tears of the Gods
+021, -2740, Persepolis, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+021, -2740, Persia, PANTHEON FOUNDED, Pantheon
+021, -2740, Ormus, POP_CHANGE, Pop: 4, No religion in city
+021, -2740, Sofia, POP_CHANGE, Pop: 3, No religion in city
+022, -2680, Moscow, POP_CHANGE, Pop: 3, No religion in city
+022, -2680, Genoa, POP_CHANGE, Pop: 4, No religion in city
+022, -2680, Buenos Aires, POP_CHANGE, Pop: 3, No religion in city
+023, -2620, Songhai, Belief, God-King, 235
+023, -2620, Songhai, Belief, Messenger of the Gods, 230
+023, -2620, Songhai, Belief, Ancestor Worship, 132
+023, -2620, Songhai, Belief, Earth Mother, 91
+023, -2620, Songhai, Belief, Religious Settlements, 75
+023, -2620, Songhai, Belief, Sun God, 72
+023, -2620, Songhai, Belief, Oral Tradition, 60
+023, -2620, Songhai, Belief, God of Craftsmen, 52
+023, -2620, Songhai, Belief, Goddess of Love, 51
+023, -2620, Songhai, Belief, Sacred Waters, 48
+023, -2620, Songhai, Belief, Fertility Rites, 40
+023, -2620, Songhai, Belief, Goddess of Festivals, 26
+023, -2620, Songhai, Belief, God of the Open Sky, 15
+023, -2620, Songhai, Belief, Stone Circles, 14
+023, -2620, Songhai, Belief, Monument to the Gods, 12
+023, -2620, Songhai, Belief, Goddess of the Hunt, 8
+023, -2620, Songhai, Belief, God of the Sea, 1
+023, -2620, Songhai, Belief, One with Nature, 0
+023, -2620, Songhai, Belief, God of War, 0
+023, -2620, Songhai, Belief, Sacred Path, 0
+023, -2620, Songhai, Belief, Goddess of Protection, 0
+023, -2620, Songhai, Belief, Faith Healers, 0
+023, -2620, Songhai, Belief, Dance of the Aurora, 0
+023, -2620, Songhai, CHOSEN, God-King
+023, -2620, Gao, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+023, -2620, Songhai, PANTHEON FOUNDED, Pantheon
+023, -2620, Geneva, POP_CHANGE, Pop: 4, No religion in city
+023, -2620, La Venta, POP_CHANGE, Pop: 4, No religion in city
+023, -2620, Antwerp, POP_CHANGE, Pop: 4, No religion in city
+023, -2620, Hanoi, POP_CHANGE, Pop: 3, No religion in city
+023, -2620, Brussels, POP_CHANGE, Pop: 4, No religion in city
+024, -2560, Te-Moak, POP_CHANGE, Pop: 1, No religion in city
+024, -2560, Te-Moak, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+024, -2560, Zanzibar, POP_CHANGE, Pop: 4, No religion in city
+024, -2560, Hong Kong, POP_CHANGE, Pop: 4, No religion in city
+025, -2500, Ormus, POP_CHANGE, Pop: 5, No religion in city
+025, -2500, Sofia, POP_CHANGE, Pop: 4, No religion in city
+026, -2440, St. Petersburg, POP_CHANGE, Pop: 2, No religion in city
+026, -2440, Tombouctu, POP_CHANGE, Pop: 1, No religion in city
+026, -2440, Tombouctu, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+026, -2440, Bucharest, POP_CHANGE, Pop: 4, No religion in city
+027, -2380, Genoa, POP_CHANGE, Pop: 5, No religion in city
+028, -2320, Buenos Aires, POP_CHANGE, Pop: 4, No religion in city
+029, -2260, Bratislava, POP_CHANGE, Pop: 4, No religion in city
+029, -2260, Cahokia, POP_CHANGE, Pop: 3, No religion in city
+030, -2200, The Iroquois, Belief, Ancestor Worship, 154
+030, -2200, The Iroquois, Belief, One with Nature, 140
+030, -2200, The Iroquois, Belief, Religious Settlements, 140
+030, -2200, The Iroquois, Belief, Sacred Path, 86
+030, -2200, The Iroquois, Belief, Messenger of the Gods, 76
+030, -2200, The Iroquois, Belief, Monument to the Gods, 60
+030, -2200, The Iroquois, Belief, Sacred Waters, 48
+030, -2200, The Iroquois, Belief, Goddess of Love, 48
+030, -2200, The Iroquois, Belief, Fertility Rites, 40
+030, -2200, The Iroquois, Belief, God of Craftsmen, 37
+030, -2200, The Iroquois, Belief, Oral Tradition, 27
+030, -2200, The Iroquois, Belief, Sun God, 22
+030, -2200, The Iroquois, Belief, God of the Open Sky, 3
+030, -2200, The Iroquois, Belief, Goddess of the Hunt, 0
+030, -2200, The Iroquois, Belief, God of the Sea, 0
+030, -2200, The Iroquois, Belief, Stone Circles, 0
+030, -2200, The Iroquois, Belief, God of War, 0
+030, -2200, The Iroquois, Belief, Goddess of Festivals, 0
+030, -2200, The Iroquois, Belief, Goddess of Protection, 0
+030, -2200, The Iroquois, Belief, Faith Healers, 0
+030, -2200, The Iroquois, Belief, Dance of the Aurora, 0
+030, -2200, The Iroquois, Belief, Earth Mother, 0
+030, -2200, The Iroquois, CHOSEN, One with Nature
+030, -2200, Onondaga, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
+030, -2200, The Iroquois, PANTHEON FOUNDED, Pantheon
+030, -2200, Sofia, POP_CHANGE, Pop: 5, No religion in city
+031, -2140, Tombouctu, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+031, -2140, Geneva, POP_CHANGE, Pop: 5, No religion in city
+031, -2140, Lhasa, POP_CHANGE, Pop: 3, No religion in city
+031, -2140, La Venta, POP_CHANGE, Pop: 5, No religion in city
+031, -2140, Ormus, POP_CHANGE, Pop: 6, No religion in city
+031, -2140, Belgrade, POP_CHANGE, Pop: 4, No religion in city
+032, -2080, Osininka, POP_CHANGE, Pop: 1, No religion in city
+032, -2080, Osininka, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+032, -2080, Antwerp, POP_CHANGE, Pop: 5, No religion in city
+033, -2020, Te-Moak, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+033, -2020, Hamburg, POP_CHANGE, Pop: 1, No religion in city
+033, -2020, Hong Kong, POP_CHANGE, Pop: 5, No religion in city
+034, -1960, Germany, Belief, Messenger of the Gods, 261
+034, -1960, Germany, Belief, Oral Tradition, 146
+034, -1960, Germany, Belief, God of Craftsmen, 110
+034, -1960, Germany, Belief, Ancestor Worship, 84
+034, -1960, Germany, Belief, Stone Circles, 80
+034, -1960, Germany, Belief, Religious Settlements, 75
+034, -1960, Germany, Belief, Monument to the Gods, 72
+034, -1960, Germany, Belief, Sacred Path, 54
+034, -1960, Germany, Belief, Goddess of Love, 43
+034, -1960, Germany, Belief, Fertility Rites, 40
+034, -1960, Germany, Belief, God of the Open Sky, 38
+034, -1960, Germany, Belief, God of the Sea, 34
+034, -1960, Germany, Belief, Sacred Waters, 34
+034, -1960, Germany, Belief, Sun God, 5
+034, -1960, Germany, Belief, Goddess of the Hunt, 0
+034, -1960, Germany, Belief, God of War, 0
+034, -1960, Germany, Belief, Goddess of Festivals, 0
+034, -1960, Germany, Belief, Goddess of Protection, 0
+034, -1960, Germany, Belief, Faith Healers, 0
+034, -1960, Germany, Belief, Dance of the Aurora, 0
+034, -1960, Germany, Belief, Earth Mother, 0
+034, -1960, Germany, CHOSEN, Messenger of the Gods
+034, -1960, Berlin, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+034, -1960, Hamburg, PANTHEON_FOUNDED, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+034, -1960, Germany, PANTHEON FOUNDED, Pantheon
+034, -1960, Zanzibar, POP_CHANGE, Pop: 5, No religion in city
+034, -1960, Brussels, POP_CHANGE, Pop: 5, No religion in city
+035, -1900, Cusco, POP_CHANGE, Pop: 4, No religion in city
+036, -1840, Medina, POP_CHANGE, Pop: 1, No religion in city
+036, -1840, Medina, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+036, -1840, Gao, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+036, -1840, Tiwanaku, POP_CHANGE, Pop: 1, No religion in city
+036, -1840, Genoa, POP_CHANGE, Pop: 6, No religion in city
+036, -1840, Buenos Aires, POP_CHANGE, Pop: 5, No religion in city
+036, -1840, Bratislava, POP_CHANGE, Pop: 5, No religion in city
+036, -1840, Hanoi, POP_CHANGE, Pop: 4, No religion in city
+036, -1840, Bucharest, POP_CHANGE, Pop: 5, No religion in city
+037, -1780, Sofia, POP_CHANGE, Pop: 6, No religion in city
+038, -1720, Hamburg, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+038, -1720, Tombouctu, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+038, -1720, Ormus, POP_CHANGE, Pop: 7, No religion in city
+038, -1720, Antwerp, POP_CHANGE, Pop: 6, No religion in city
+040, -1600, Tiwanaku, POP_CHANGE, Pop: 2, No religion in city
+040, -1600, Geneva, POP_CHANGE, Pop: 6, No religion in city
+040, -1600, La Venta, POP_CHANGE, Pop: 6, No religion in city
+040, -1600, Cahokia, POP_CHANGE, Pop: 4, No religion in city
+042, -1480, Osininka, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+042, -1480, Bratislava, POP_CHANGE, Pop: 6, No religion in city
+042, -1480, Hong Kong, POP_CHANGE, Pop: 6, No religion in city
+043, -1420, Brussels, POP_CHANGE, Pop: 6, No religion in city
+044, -1360, Arabia, PROPHET SPAWNED, Mecca, Faith: 0
+044, -1360, Arabia, Belief, Initiation Rites, 95
+044, -1360, Arabia, Belief, Peace Loving, 74
+044, -1360, Arabia, Belief, Interfaith Dialogue, 31
+044, -1360, Arabia, Belief, Papal Primacy, 31
+044, -1360, Arabia, Belief, Tithe, 21
+044, -1360, Arabia, Belief, Ceremonial Burial, 1
+044, -1360, Arabia, Belief, Church Property, 0
+044, -1360, Arabia, Belief, Pilgrimage, 0
+044, -1360, Arabia, Belief, World Church, 0
+044, -1360, Arabia, CHOSEN, Initiation Rites
+044, -1360, Arabia, Belief, Mosques, 596
+044, -1360, Arabia, Belief, Monasteries, 590
+044, -1360, Arabia, Belief, Pagodas, 561
+044, -1360, Arabia, Belief, Cathedrals, 488
+044, -1360, Arabia, Belief, Swords into Plowshares, 230
+044, -1360, Arabia, Belief, Religious Art, 218
+044, -1360, Arabia, Belief, Divine Inspiration, 218
+044, -1360, Arabia, Belief, Guruship, 146
+044, -1360, Arabia, Belief, Feed the World, 140
+044, -1360, Arabia, Belief, Religious Community, 134
+044, -1360, Arabia, Belief, Peace Gardens, 122
+044, -1360, Arabia, Belief, Religious Center, 122
+044, -1360, Arabia, Belief, Asceticism, 104
+044, -1360, Arabia, Belief, Choral Music, 86
+044, -1360, Arabia, Belief, Liturgical Drama, 74
+044, -1360, Arabia, Belief, Holy Warriors, 53
+044, -1360, Arabia, CHOSEN, Monasteries
+044, -1360, Mecca, RELIGION_FOUNDED, Pop: 3, Nonreligious: 0
+044, -1360, Arabia, RELIGION FOUNDED, Mecca, Islam
+044, -1360, Lhasa, POP_CHANGE, Pop: 4, No religion in city
+044, -1360, Te-Moak, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
+045, -1300, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+045, -1300, Novgorod, POP_CHANGE, Pop: 1, No religion in city
+045, -1300, Buenos Aires, POP_CHANGE, Pop: 6, No religion in city
+045, -1300, Zanzibar, POP_CHANGE, Pop: 6, No religion in city
+045, -1300, Antwerp, POP_CHANGE, Pop: 7, No religion in city
+046, -1240, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 6.00
+046, -1240, St. Petersburg, POP_CHANGE, Pop: 3, No religion in city
+046, -1240, Persepolis, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+046, -1240, Pasargadae, POP_CHANGE, Pop: 1, No religion in city
+046, -1240, Pasargadae, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+046, -1240, Machu, POP_CHANGE, Pop: 1, No religion in city
+046, -1240, Belgrade, POP_CHANGE, Pop: 5, No religion in city
+046, -1240, Sofia, POP_CHANGE, Pop: 7, No religion in city
+047, -1180, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 11.00
+047, -1180, Grand River, POP_CHANGE, Pop: 1, No religion in city
+047, -1180, Grand River, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+047, -1180, Hanoi, POP_CHANGE, Pop: 5, No religion in city
+048, -1120, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 20.00
+048, -1120, Te-Moak, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+048, -1120, Bratislava, POP_CHANGE, Pop: 7, No religion in city
+048, -1120, Bucharest, POP_CHANGE, Pop: 6, No religion in city
+049, -1060, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
+049, -1060, Persia, PROPHET SPAWNED, Persepolis, Faith: 0
+049, -1060, Persia, Belief, Peace Loving, 40
+049, -1060, Persia, Belief, Papal Primacy, 33
+049, -1060, Persia, Belief, Interfaith Dialogue, 18
+049, -1060, Persia, Belief, Tithe, 9
+049, -1060, Persia, Belief, Ceremonial Burial, 4
+049, -1060, Persia, Belief, Church Property, 3
+049, -1060, Persia, Belief, Pilgrimage, 3
+049, -1060, Persia, Belief, World Church, 0
+049, -1060, Persia, CHOSEN, Peace Loving
+049, -1060, Persia, Belief, Mosques, 698
+049, -1060, Persia, Belief, Pagodas, 588
+049, -1060, Persia, Belief, Cathedrals, 461
+049, -1060, Persia, Belief, Swords into Plowshares, 260
+049, -1060, Persia, Belief, Religious Art, 248
+049, -1060, Persia, Belief, Religious Community, 230
+049, -1060, Persia, Belief, Peace Gardens, 224
+049, -1060, Persia, Belief, Religious Center, 224
+049, -1060, Persia, Belief, Asceticism, 188
+049, -1060, Persia, Belief, Guruship, 182
+049, -1060, Persia, Belief, Feed the World, 170
+049, -1060, Persia, Belief, Divine Inspiration, 128
+049, -1060, Persia, Belief, Choral Music, 116
+049, -1060, Persia, Belief, Liturgical Drama, 104
+049, -1060, Persia, Belief, Holy Warriors, 98
+049, -1060, Persia, CHOSEN, Mosques
+049, -1060, Persepolis, RELIGION_FOUNDED, Pop: 4, Nonreligious: 1
+049, -1060, Persia, RELIGION FOUNDED, Persepolis, Zoroastrianism
+049, -1060, Tombouctu, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+049, -1060, Tiwanaku, POP_CHANGE, Pop: 3, No religion in city
+049, -1060, Ormus, POP_CHANGE, Pop: 8, No religion in city
+050, -1000, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
+050, -1000, Russia, Belief, Dance of the Aurora, 630
+050, -1000, Russia, Belief, Goddess of Protection, 390
+050, -1000, Russia, Belief, Faith Healers, 390
+050, -1000, Russia, Belief, God of the Open Sky, 202
+050, -1000, Russia, Belief, God of Craftsmen, 160
+050, -1000, Russia, Belief, Ancestor Worship, 140
+050, -1000, Russia, Belief, Earth Mother, 133
+050, -1000, Russia, Belief, Stone Circles, 84
+050, -1000, Russia, Belief, God of the Sea, 81
+050, -1000, Russia, Belief, Goddess of Love, 79
+050, -1000, Russia, Belief, Religious Settlements, 75
+050, -1000, Russia, Belief, Oral Tradition, 60
+050, -1000, Russia, Belief, Sacred Waters, 43
+050, -1000, Russia, Belief, Fertility Rites, 20
+050, -1000, Russia, Belief, Monument to the Gods, 18
+050, -1000, Russia, Belief, Goddess of the Hunt, 10
+050, -1000, Russia, Belief, Sun God, 8
+050, -1000, Russia, Belief, God of War, 0
+050, -1000, Russia, Belief, Goddess of Festivals, 0
+050, -1000, Russia, Belief, Sacred Path, 0
+050, -1000, Russia, CHOSEN, Dance of the Aurora
+050, -1000, Moscow, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+050, -1000, St. Petersburg, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+050, -1000, Novgorod, PANTHEON_FOUNDED, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+050, -1000, Russia, PANTHEON FOUNDED, Pantheon
+050, -1000, Agaidika, POP_CHANGE, Pop: 1, No religion in city
+050, -1000, Agaidika, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+050, -1000, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+050, -1000, Berlin, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+051, -960, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
+051, -960, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 5.00
+051, -960, Onondaga, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+051, -960, Persepolis, HOLY_CITY, Pop: 4, First: Zoroastrianism(4), Nonreligious: 0
+052, -920, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 41.00
+052, -920, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 10.00
+052, -920, Hong Kong, POP_CHANGE, Pop: 7, No religion in city
+053, -880, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 47.00
+053, -880, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 15.00
+053, -880, Grand River, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+053, -880, Gao, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+053, -880, Geneva, POP_CHANGE, Pop: 7, No religion in city
+053, -880, Antwerp, POP_CHANGE, Pop: 8, No religion in city
+054, -840, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 53.00
+054, -840, Agaidika, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+054, -840, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
+054, -840, Hamburg, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+054, -840, Genoa, POP_CHANGE, Pop: 7, No religion in city
+054, -840, Zanzibar, POP_CHANGE, Pop: 7, No religion in city
+055, -800, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 60.00
+055, -800, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 29.00
+055, -800, Songhai, PROPHET SPAWNED, Gao, Faith: 0
+055, -800, Songhai, Belief, Papal Primacy, 34
+055, -800, Songhai, Belief, Interfaith Dialogue, 30
+055, -800, Songhai, Belief, Tithe, 18
+055, -800, Songhai, Belief, Ceremonial Burial, 6
+055, -800, Songhai, Belief, Church Property, 6
+055, -800, Songhai, Belief, Pilgrimage, 6
+055, -800, Songhai, Belief, World Church, 3
+055, -800, Songhai, CHOSEN, Papal Primacy
+055, -800, Songhai, Belief, Religious Community, 528
+055, -800, Songhai, Belief, Pagodas, 458
+055, -800, Songhai, Belief, Cathedrals, 433
+055, -800, Songhai, Belief, Divine Inspiration, 276
+055, -800, Songhai, Belief, Swords into Plowshares, 264
+055, -800, Songhai, Belief, Religious Art, 252
+055, -800, Songhai, Belief, Religious Center, 237
+055, -800, Songhai, Belief, Feed the World, 222
+055, -800, Songhai, Belief, Choral Music, 219
+055, -800, Songhai, Belief, Guruship, 218
+055, -800, Songhai, Belief, Asceticism, 162
+055, -800, Songhai, Belief, Peace Gardens, 159
+055, -800, Songhai, Belief, Liturgical Drama, 125
+055, -800, Songhai, Belief, Holy Warriors, 112
+055, -800, Songhai, CHOSEN, Religious Community
+055, -800, Gao, RELIGION_FOUNDED, Pop: 5, Nonreligious: 1
+055, -800, Songhai, RELIGION FOUNDED, Gao, Hinduism
+056, -760, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 66.00
+056, -760, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 34.00
+056, -760, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+056, -760, Buenos Aires, POP_CHANGE, Pop: 7, Second: Zoroastrianism(0), Nonreligious: 7
+056, -760, La Venta, POP_CHANGE, Pop: 7, Second: Zoroastrianism(0), Nonreligious: 7
+056, -760, Belgrade, POP_CHANGE, Pop: 6, Second: Hinduism(0), Nonreligious: 6
+057, -720, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 74.00
+057, -720, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
+057, -720, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 9.00
+057, -720, Jenne, POP_CHANGE, Pop: 1, No religion in city
+057, -720, Bucharest, POP_CHANGE, Pop: 7, No religion in city
+057, -720, Brussels, POP_CHANGE, Pop: 7, Second: Hinduism(0), Nonreligious: 7
+058, -680, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 80.00
+058, -680, The Shoshone, PROPHET SPAWNED, Moson Kahni, Faith: 0
+058, -680, The Shoshone, Belief, Interfaith Dialogue, 46
+058, -680, The Shoshone, Belief, Tithe, 28
+058, -680, The Shoshone, Belief, Ceremonial Burial, 13
+058, -680, The Shoshone, Belief, Church Property, 9
+058, -680, The Shoshone, Belief, Pilgrimage, 9
+058, -680, The Shoshone, Belief, World Church, 0
+058, -680, The Shoshone, CHOSEN, Interfaith Dialogue
+058, -680, The Shoshone, Belief, Pagodas, 763
+058, -680, The Shoshone, Belief, Cathedrals, 619
+058, -680, The Shoshone, Belief, Swords into Plowshares, 400
+058, -680, The Shoshone, Belief, Religious Art, 382
+058, -680, The Shoshone, Belief, Divine Inspiration, 382
+058, -680, The Shoshone, Belief, Guruship, 280
+058, -680, The Shoshone, Belief, Feed the World, 256
+058, -680, The Shoshone, Belief, Peace Gardens, 238
+058, -680, The Shoshone, Belief, Religious Center, 238
+058, -680, The Shoshone, Belief, Asceticism, 202
+058, -680, The Shoshone, Belief, Choral Music, 184
+058, -680, The Shoshone, Belief, Holy Warriors, 160
+058, -680, The Shoshone, Belief, Liturgical Drama, 160
+058, -680, The Shoshone, CHOSEN, Pagodas
+058, -680, Moson Kahni, RELIGION_FOUNDED, Pop: 2, Nonreligious: 0
+058, -680, The Shoshone, RELIGION FOUNDED, Moson Kahni, Protestantism
+058, -680, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
+058, -680, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
+058, -680, Bratislava, POP_CHANGE, Pop: 8, No religion in city
+058, -680, Agaidika, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
+059, -640, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 88.00
+059, -640, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+059, -640, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 41.00
+059, -640, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 27.00
+059, -640, Gao, POP_CHANGE, Pop: 6, First: Hinduism(5), Nonreligious: 1
+059, -640, The Inca, Belief, Goddess of Protection, 990
+059, -640, The Inca, Belief, Faith Healers, 990
+059, -640, The Inca, Belief, Sacred Path, 456
+059, -640, The Inca, Belief, Sun God, 219
+059, -640, The Inca, Belief, God of the Open Sky, 182
+059, -640, The Inca, Belief, Ancestor Worship, 165
+059, -640, The Inca, Belief, Oral Tradition, 159
+059, -640, The Inca, Belief, Sacred Waters, 103
+059, -640, The Inca, Belief, Goddess of Love, 82
+059, -640, The Inca, Belief, Religious Settlements, 75
+059, -640, The Inca, Belief, God of Craftsmen, 60
+059, -640, The Inca, Belief, Monument to the Gods, 54
+059, -640, The Inca, Belief, Fertility Rites, 20
+059, -640, The Inca, Belief, Goddess of the Hunt, 19
+059, -640, The Inca, Belief, Stone Circles, 16
+059, -640, The Inca, Belief, God of the Sea, 0
+059, -640, The Inca, Belief, God of War, 0
+059, -640, The Inca, Belief, Goddess of Festivals, 0
+059, -640, The Inca, Belief, Earth Mother, 0
+059, -640, The Inca, CHOSEN, Faith Healers
+059, -640, Cusco, PANTHEON_FOUNDED, Pop: 4, Second: Pantheon(3), Nonreligious: 1
+059, -640, Tiwanaku, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+059, -640, Machu, PANTHEON_FOUNDED, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+059, -640, The Inca, PANTHEON FOUNDED, Pantheon
+060, -600, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 94.00
+060, -600, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 5.00
+060, -600, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 50.00
+060, -600, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 36.00
+060, -600, Tombouctu, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+060, -600, Sofia, POP_CHANGE, Pop: 8, Second: Hinduism(0), Nonreligious: 8
+061, -560, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 102.00
+061, -560, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 10.00
+061, -560, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 51.00
+061, -560, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 45.00
+061, -560, Cahokia, POP_CHANGE, Pop: 5, No religion in city
+061, -560, Persepolis, HOLY_CITY, Pop: 5, First: Zoroastrianism(5), Nonreligious: 0
+062, -520, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 110.00
+062, -520, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 15.00
+062, -520, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 56.00
+062, -520, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 54.00
+062, -520, Jenne, POP_CHANGE, Pop: 2, Second: Hinduism(0), Nonreligious: 2
+062, -520, Machu, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+062, -520, Hong Kong, POP_CHANGE, Pop: 8, No religion in city
+063, -480, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 120.00
+063, -480, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 20.00
+063, -480, Te-Moak, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+063, -480, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 57.00
+063, -480, Susa, POP_CHANGE, Pop: 1, No religion in city
+063, -480, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 63.00
+064, -440, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 129.00
+064, -440, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
+064, -440, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 62.00
+064, -440, Berlin, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+064, -440, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 72.00
+064, -440, Ormus, POP_CHANGE, Pop: 9, No religion in city
+065, -400, Arabia, FAITH UNIT PURCHASE, Missionary, Mecca, Faith Cost: 130, Faith Left: 8.00
+065, -400, Arabia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 8.00
+065, -400, Damascus, POP_CHANGE, Pop: 1, No religion in city
+065, -400, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
+065, -400, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 67.00
+065, -400, Hamburg, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+065, -400, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 81.00
+066, -360, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 17.00
+066, -360, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
+066, -360, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 72.00
+066, -360, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 90.00
+067, -320, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 28.00
+067, -320, Medina, MISSIONARY, Pop: 2, Nonreligious: 0
+067, -320, Rostov, POP_CHANGE, Pop: 1, No religion in city
+067, -320, Rostov, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+067, -320, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 39.00
+067, -320, Goshute, POP_CHANGE, Pop: 1, No religion in city
+067, -320, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 73.00
+067, -320, Persepolis, POP_CHANGE, Pop: 7, First: Zoroastrianism(6), Nonreligious: 1
+067, -320, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 99.00
+067, -320, Gao, POP_CHANGE, Pop: 7, First: Hinduism(6), Nonreligious: 1
+067, -320, Zanzibar, POP_CHANGE, Pop: 8, No religion in city
+067, -320, Bratislava, POP_CHANGE, Pop: 9, No religion in city
+068, -280, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 39.00
+068, -280, Mecca, POP_CHANGE, Pop: 4, First: Islam(4), Nonreligious: 0
+068, -280, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 44.00
+068, -280, Agaidika, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+068, -280, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 78.00
+068, -280, Onondaga, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+068, -280, Akwesasme, POP_CHANGE, Pop: 1, No religion in city
+068, -280, Akwesasme, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+068, -280, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 108.00
+068, -280, Buenos Aires, POP_CHANGE, Pop: 8, Second: Zoroastrianism(0), Nonreligious: 8
+068, -280, Antwerp, POP_CHANGE, Pop: 9, No religion in city
+068, -280, Belgrade, POP_CHANGE, Pop: 7, Second: Hinduism(0), Nonreligious: 7
+068, -280, Bucharest, POP_CHANGE, Pop: 8, No religion in city
+069, -240, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 49.00
+069, -240, Damascus, MISSIONARY, Pop: 1, Second: Islam(1), Nonreligious: 0
+069, -240, Moscow, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+069, -240, Novgorod, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+069, -240, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 49.00
+069, -240, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 79.00
+069, -240, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 117.00
+070, -200, Arabia, Saving up for a Prophet for religion enhancement., Faith: 59.00
+070, -200, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 54.00
+070, -200, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 82.00
+070, -200, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 126.00
+070, -200, La Venta, POP_CHANGE, Pop: 8, Second: Zoroastrianism(0), Nonreligious: 8
+071, -160, Arabia, Saving up for a Prophet for religion enhancement., Faith: 70.00
+071, -160, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 59.00
+071, -160, Pohokwi, POP_CHANGE, Pop: 1, No religion in city
+071, -160, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 87.00
+071, -160, Susa, POP_CHANGE, Pop: 2, Second: Zoroastrianism(0), Nonreligious: 2
+071, -160, Onondaga, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+071, -160, Songhai, FAITH UNIT PURCHASE, Missionary, Gao, Faith Cost: 130, Faith Left: 6.00
+071, -160, Songhai, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 6.00
+071, -160, Tombouctu, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+072, -120, Arabia, Saving up for a Prophet for religion enhancement., Faith: 80.00
+072, -120, St. Petersburg, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+072, -120, Rostov, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+072, -120, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 62.00
+072, -120, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 88.00
+072, -120, Persepolis, POP_CHANGE, Pop: 8, First: Zoroastrianism(7), Nonreligious: 1
+072, -120, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 16.00
+072, -120, Lhasa, POP_CHANGE, Pop: 5, Second: Islam(0), Nonreligious: 5
+073, -80, Arabia, Saving up for a Prophet for religion enhancement., Faith: 91.00
+073, -80, Yaroslavl', POP_CHANGE, Pop: 1, No religion in city
+073, -80, Yaroslavl', POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+073, -80, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 65.00
+073, -80, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 91.00
+073, -80, Berlin, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+073, -80, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 26.00
+073, -80, Jenne, POP_CHANGE, Pop: 3, Second: Hinduism(0), Nonreligious: 3
+073, -80, Jenne, MISSIONARY, Pop: 3, Second: Hinduism(2), Nonreligious: 1
+073, -80, Tiwanaku, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+073, -80, Lhasa, ADJACENT_PRESSURE, Pop: 5, Second: Islam(1), Nonreligious: 4
+074, -40, Arabia, Saving up for a Prophet for religion enhancement., Faith: 101.00
+074, -40, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 68.00
+074, -40, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 92.00
+074, -40, Onondaga, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+074, -40, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
+074, -40, Gao, POP_CHANGE, Pop: 8, First: Hinduism(7), Nonreligious: 1
+074, -40, Tombouctu, MISSIONARY, Pop: 7, Nonreligious: 1
+075, 0, Arabia, Saving up for a Prophet for religion enhancement., Faith: 111.00
+075, 0, Medina, POP_CHANGE, Pop: 3, First: Islam(3), Nonreligious: 0
+075, 0, Damascus, POP_CHANGE, Pop: 2, First: Islam(2), Nonreligious: 0
+075, 0, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 71.00
+075, 0, Moson Kahni, POP_CHANGE, Pop: 3, First: Protestantism(3), Second: Islam(0), Nonreligious: 0
+075, 0, Goshute, POP_CHANGE, Pop: 2, Second: Islam(0), Nonreligious: 2
+075, 0, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 97.00
+075, 0, Songhai, Saving up for a Prophet for religion enhancement., Faith: 54.00
+075, 0, Bratislava, POP_CHANGE, Pop: 10, No religion in city
+076, 40, Arabia, Saving up for a Prophet for religion enhancement., Faith: 122.00
+076, 40, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 75.00
+076, 40, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 98.00
+076, 40, Songhai, Saving up for a Prophet for religion enhancement., Faith: 70.00
+076, 40, Pasargadae, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Second: Zoroastrianism(1), Nonreligious: 0
+077, 80, Arabia, Saving up for a Prophet for religion enhancement., Faith: 134.00
+077, 80, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 79.00
+077, 80, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 103.00
+077, 80, Pasargadae, POP_CHANGE, Pop: 3, First: Zoroastrianism(2), Second: Pantheon(0), Nonreligious: 1
+077, 80, Akwesasme, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+077, 80, Songhai, Saving up for a Prophet for religion enhancement., Faith: 86.00
+077, 80, Tombouctu, POP_CHANGE, Pop: 8, First: Hinduism(7), Nonreligious: 1
+077, 80, Te-Moak, ADJACENT_PRESSURE, Pop: 4, First: Pantheon(2), Nonreligious: 1
+077, 80, Goshute, ADJACENT_PRESSURE, Pop: 2, Second: Islam(1), Nonreligious: 1
+078, 120, Arabia, Saving up for a Prophet for religion enhancement., Faith: 145.00
+078, 120, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 84.00
+078, 120, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 104.00
+078, 120, Onondaga, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+078, 120, Osininka, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+078, 120, Songhai, Saving up for a Prophet for religion enhancement., Faith: 102.00
+079, 160, Arabia, Saving up for a Prophet for religion enhancement., Faith: 156.00
+079, 160, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 89.00
+079, 160, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 109.00
+079, 160, Songhai, Saving up for a Prophet for religion enhancement., Faith: 118.00
+079, 160, Jenne, POP_CHANGE, Pop: 4, First: Hinduism(3), Nonreligious: 1
+079, 160, Hanoi, POP_CHANGE, Pop: 6, No religion in city
+079, 160, Bucharest, POP_CHANGE, Pop: 9, No religion in city
+080, 200, Arabia, Saving up for a Prophet for religion enhancement., Faith: 168.00
+080, 200, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 94.00
+080, 200, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 110.00
+080, 200, The Iroquois, PROPHET SPAWNED, Onondaga, Faith: 0
+080, 200, The Iroquois, Belief, Tithe, 57
+080, 200, The Iroquois, Belief, Church Property, 19
+080, 200, The Iroquois, Belief, Pilgrimage, 19
+080, 200, The Iroquois, Belief, Ceremonial Burial, 9
+080, 200, The Iroquois, Belief, World Church, 9
+080, 200, The Iroquois, CHOSEN, Tithe
+080, 200, The Iroquois, Belief, Cathedrals, 717
+080, 200, The Iroquois, Belief, Swords into Plowshares, 460
+080, 200, The Iroquois, Belief, Religious Art, 436
+080, 200, The Iroquois, Belief, Divine Inspiration, 388
+080, 200, The Iroquois, Belief, Guruship, 340
+080, 200, The Iroquois, Belief, Religious Center, 280
+080, 200, The Iroquois, Belief, Feed the World, 262
+080, 200, The Iroquois, Belief, Peace Gardens, 244
+080, 200, The Iroquois, Belief, Asceticism, 226
+080, 200, The Iroquois, Belief, Choral Music, 190
+080, 200, The Iroquois, Belief, Liturgical Drama, 178
+080, 200, The Iroquois, Belief, Holy Warriors, 106
+080, 200, The Iroquois, CHOSEN, Cathedrals
+080, 200, Onondaga, RELIGION_FOUNDED, Pop: 7, Nonreligious: 0
+080, 200, The Iroquois, RELIGION FOUNDED, Onondaga, Taoism
+080, 200, Songhai, Saving up for a Prophet for religion enhancement., Faith: 134.00
+080, 200, Akwesasme, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
+080, 200, Belgrade, ADJACENT_PRESSURE, Pop: 7, Second: Hinduism(1), Nonreligious: 6
+081, 230, Arabia, Saving up for a Prophet for religion enhancement., Faith: 179.00
+081, 230, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 99.00
+081, 230, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 115.00
+081, 230, Susa, POP_CHANGE, Pop: 3, Second: Zoroastrianism(0), Nonreligious: 3
+081, 230, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+081, 230, Songhai, Saving up for a Prophet for religion enhancement., Faith: 148.00
+081, 230, Tiwanaku, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+081, 230, Sofia, POP_CHANGE, Pop: 9, Second: Hinduism(0), Nonreligious: 9
+082, 260, Arabia, Saving up for a Prophet for religion enhancement., Faith: 190.00
+082, 260, Mecca, POP_CHANGE, Pop: 5, First: Islam(5), Nonreligious: 0
+082, 260, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 104.00
+082, 260, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 116.00
+082, 260, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 5.00
+082, 260, Berlin, POP_CHANGE, Pop: 8, First: Pantheon(6), Nonreligious: 2
+082, 260, Songhai, Saving up for a Prophet for religion enhancement., Faith: 162.00
+082, 260, Gao, POP_CHANGE, Pop: 9, First: Hinduism(8), Nonreligious: 1
+082, 260, Geneva, POP_CHANGE, Pop: 8, Second: Islam(0), Nonreligious: 8
+083, 290, Arabia, Saving up for a Prophet for religion enhancement., Faith: 201.00
+083, 290, Medina, POP_CHANGE, Pop: 4, First: Islam(4), Nonreligious: 0
+083, 290, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 109.00
+083, 290, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 121.00
+083, 290, Persepolis, POP_CHANGE, Pop: 9, First: Zoroastrianism(8), Nonreligious: 1
+083, 290, Ecbatana, POP_CHANGE, Pop: 1, No religion in city
+083, 290, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 10.00
+083, 290, Songhai, Saving up for a Prophet for religion enhancement., Faith: 176.00
+083, 290, Antwerp, POP_CHANGE, Pop: 10, No religion in city
+083, 290, St. Petersburg, ADJACENT_PRESSURE, Pop: 4, First: Pantheon(2), Nonreligious: 1
+083, 290, Geneva, ADJACENT_PRESSURE, Pop: 8, Second: Islam(1), Nonreligious: 7
+084, 320, Arabia, Saving up for a Prophet for religion enhancement., Faith: 213.00
+084, 320, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 114.00
+084, 320, Agaidika, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+084, 320, Goshute, POP_CHANGE, Pop: 3, Second: Islam(1), Nonreligious: 2
+084, 320, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 122.00
+084, 320, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 15.00
+084, 320, Onondaga, POP_CHANGE, Pop: 8, First: Taoism(8), Nonreligious: 0
+084, 320, Buffalo Creek, POP_CHANGE, Pop: 1, No religion in city
+084, 320, Songhai, Saving up for a Prophet for religion enhancement., Faith: 190.00
+084, 320, Cusco, POP_CHANGE, Pop: 6, First: Pantheon(4), Nonreligious: 2
+084, 320, Cahokia, POP_CHANGE, Pop: 6, No religion in city
+085, 350, Arabia, Saving up for a Prophet for religion enhancement., Faith: 224.00
+085, 350, Moscow, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+085, 350, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 123.00
+085, 350, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 125.00
+085, 350, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 20.00
+085, 350, Grand River, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+085, 350, Songhai, Saving up for a Prophet for religion enhancement., Faith: 204.00
+085, 350, La Venta, POP_CHANGE, Pop: 9, Second: Zoroastrianism(0), Nonreligious: 9
+085, 350, Sofia, ADJACENT_PRESSURE, Pop: 9, Second: Hinduism(1), Nonreligious: 8
+086, 380, Arabia, Saving up for a Prophet for religion enhancement., Faith: 237.00
+086, 380, Medina, POP_CHANGE, Pop: 5, First: Islam(5), Nonreligious: 0
+086, 380, Arabia, PROPHET SPAWNED, Mecca, Faith: 0
+086, 380, Arabia, Belief, Swords into Plowshares, 356
+086, 380, Arabia, Belief, Religious Art, 338
+086, 380, Arabia, Belief, Divine Inspiration, 338
+086, 380, Arabia, Belief, Guruship, 332
+086, 380, Arabia, Belief, Religious Center, 266
+086, 380, Arabia, Belief, Feed the World, 212
+086, 380, Arabia, Belief, Peace Gardens, 194
+086, 380, Arabia, Belief, Choral Music, 176
+086, 380, Arabia, Belief, Asceticism, 176
+086, 380, Arabia, Belief, Liturgical Drama, 146
+086, 380, Arabia, Belief, Holy Warriors, 92
+086, 380, Arabia, CHOSEN, Guruship
+086, 380, Arabia, Belief, Religious Unity, 574
+086, 380, Arabia, Belief, Reliquary, 138
+086, 380, Arabia, Belief, Defender of the Faith, 137
+086, 380, Arabia, Belief, Just War, 116
+086, 380, Arabia, Belief, Messiah, 90
+086, 380, Arabia, Belief, Missionary Zeal, 57
+086, 380, Arabia, Belief, Holy Order, 57
+086, 380, Arabia, Belief, Religious Texts, 36
+086, 380, Arabia, Belief, Itinerant Preachers, 36
+086, 380, Arabia, CHOSEN, Religious Unity
+086, 380, Arabia, RELIGION ENHANCED
+086, 380, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 128.00
+086, 380, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 126.00
+086, 380, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
+086, 380, Songhai, Saving up for a Prophet for religion enhancement., Faith: 222.00
+086, 380, Zanzibar, POP_CHANGE, Pop: 9, Second: Hinduism(0), Nonreligious: 9
+086, 380, Bratislava, POP_CHANGE, Pop: 11, No religion in city
+086, 380, Ormus, POP_CHANGE, Pop: 10, No religion in city
+087, 410, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 0.00
+087, 410, The Shoshone, FAITH UNIT PURCHASE, Missionary, Moson Kahni, Faith Cost: 130, Faith Left: 3.00
+087, 410, The Shoshone, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 3.00
+087, 410, Persia, FAITH UNIT PURCHASE, Missionary, Persepolis, Faith Cost: 130, Faith Left: 1.00
+087, 410, Persia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 1.00
+087, 410, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
+087, 410, Songhai, Saving up for a Prophet for religion enhancement., Faith: 240.00
+088, 440, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 12.00
+088, 440, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 8.00
+088, 440, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 2.00
+088, 440, Persepolis, POP_CHANGE, Pop: 10, First: Zoroastrianism(9), Nonreligious: 1
+088, 440, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
+088, 440, Hamburg, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+088, 440, Songhai, Saving up for a Prophet for religion enhancement., Faith: 254.00
+088, 440, Gao, POP_CHANGE, Pop: 10, First: Hinduism(9), Nonreligious: 1
+088, 440, Jenne, POP_CHANGE, Pop: 5, First: Hinduism(4), Nonreligious: 1
+088, 440, Songhai, PROPHET SPAWNED, Gao, Faith: 0
+088, 440, Songhai, Belief, Divine Inspiration, 401
+088, 440, Songhai, Belief, Swords into Plowshares, 383
+088, 440, Songhai, Belief, Religious Art, 365
+088, 440, Songhai, Belief, Religious Center, 329
+088, 440, Songhai, Belief, Feed the World, 275
+088, 440, Songhai, Belief, Choral Music, 257
+088, 440, Songhai, Belief, Peace Gardens, 221
+088, 440, Songhai, Belief, Asceticism, 221
+088, 440, Songhai, Belief, Liturgical Drama, 167
+088, 440, Songhai, Belief, Holy Warriors, 132
+088, 440, Songhai, CHOSEN, Religious Art
+088, 440, Songhai, Belief, Defender of the Faith, 775
+088, 440, Songhai, Belief, Just War, 400
+088, 440, Songhai, Belief, Reliquary, 128
+088, 440, Songhai, Belief, Messiah, 44
+088, 440, Songhai, Belief, Missionary Zeal, 35
+088, 440, Songhai, Belief, Holy Order, 35
+088, 440, Songhai, Belief, Religious Texts, 26
+088, 440, Songhai, Belief, Itinerant Preachers, 26
+088, 440, Songhai, CHOSEN, Defender of the Faith
+088, 440, Songhai, RELIGION ENHANCED
+089, 470, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 26.00
+089, 470, Yaroslavl', POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+089, 470, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 13.00
+089, 470, Goshute, POP_CHANGE, Pop: 4, Second: Islam(1), Nonreligious: 3
+089, 470, Agaidika, MISSIONARY, Pop: 4, Nonreligious: 0
+089, 470, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 7.00
+089, 470, Ecbatana, POP_CHANGE, Pop: 2, Second: Zoroastrianism(0), Nonreligious: 2
+089, 470, Ecbatana, MISSIONARY, Pop: 2, Second: Zoroastrianism(2), Nonreligious: 0
+089, 470, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
+089, 470, Buffalo Creek, POP_CHANGE, Pop: 2, Second: Taoism(0), Nonreligious: 2
+089, 470, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 0.00
+089, 470, Taghaza, POP_CHANGE, Pop: 1, No religion in city
+089, 470, Machu, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+089, 470, Ollantaytambo, POP_CHANGE, Pop: 1, No religion in city
+089, 470, Ollantaytambo, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+089, 470, Genoa, POP_CHANGE, Pop: 8, No religion in city
+089, 470, Buenos Aires, POP_CHANGE, Pop: 9, Second: Zoroastrianism(0), Nonreligious: 9
+089, 470, Belgrade, POP_CHANGE, Pop: 8, Second: Hinduism(1), Nonreligious: 7
+090, 500, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 39.00
+090, 500, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
+090, 500, Pohokwi, POP_CHANGE, Pop: 2, Second: Protestantism(0), Nonreligious: 2
+090, 500, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 8.00
+090, 500, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 45.00
+090, 500, Berlin, POP_CHANGE, Pop: 9, First: Pantheon(7), Nonreligious: 2
+090, 500, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 16.00
+091, 530, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 52.00
+091, 530, Medina, POP_CHANGE, Pop: 6, First: Islam(6), Nonreligious: 0
+091, 530, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 23.00
+091, 530, Agaidika, POP_CHANGE, Pop: 5, First: Protestantism(5), Nonreligious: 0
+091, 530, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 15.00
+091, 530, Susa, MISSIONARY, Pop: 4, Second: Zoroastrianism(3), Nonreligious: 1
+091, 530, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 50.00
+091, 530, Onondaga, POP_CHANGE, Pop: 9, First: Taoism(9), Nonreligious: 0
+091, 530, Akwesasme, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+091, 530, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 32.00
+091, 530, Corihuayrachina, POP_CHANGE, Pop: 1, No religion in city
+091, 530, Corihuayrachina, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+091, 530, Brussels, POP_CHANGE, Pop: 8, Second: Hinduism(0), Nonreligious: 8
+091, 530, Te-Moak, ADJACENT_PRESSURE, Pop: 4, First: Pantheon(1), Second: Islam(1), Nonreligious: 1
+091, 530, Goshute, ADJACENT_PRESSURE, Pop: 4, Second: Islam(1), Nonreligious: 2
+092, 560, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 65.00
+092, 560, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 34.00
+092, 560, Pohokwi, MISSIONARY, Pop: 2, Second: Protestantism(2), Nonreligious: 0
+092, 560, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 18.00
+092, 560, Pasargadae, POP_CHANGE, Pop: 4, First: Zoroastrianism(3), Nonreligious: 1
+092, 560, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 55.00
+092, 560, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 48.00
+092, 560, Taghaza, POP_CHANGE, Pop: 2, Second: Hinduism(0), Nonreligious: 2
+093, 590, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 78.00
+093, 590, Moscow, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+093, 590, Rostov, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+093, 590, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 43.00
+093, 590, Persia, Saving up for a Prophet for religion enhancement., Faith: 27.00
+093, 590, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 60.00
+093, 590, Hamburg, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+093, 590, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 64.00
+093, 590, Cusco, POP_CHANGE, Pop: 7, First: Pantheon(5), Nonreligious: 2
+093, 590, Ollantaytambo, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+093, 590, La Venta, ADJACENT_PRESSURE, Pop: 9, Second: Zoroastrianism(1), Nonreligious: 8
+094, 620, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 90.00
+094, 620, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 53.00
+094, 620, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 32.00
+094, 620, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 66.00
+094, 620, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 80.00
+094, 620, La Venta, POP_CHANGE, Pop: 10, Second: Zoroastrianism(1), Nonreligious: 9
+095, 650, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 103.00
+095, 650, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 63.00
+095, 650, Persia, Saving up for a Prophet for religion enhancement., Faith: 41.00
+095, 650, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 72.00
+095, 650, Grand River, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+095, 650, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 96.00
+095, 650, Machu, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+095, 650, Te-Moak, ADJACENT_PRESSURE, Pop: 5, First: Pantheon(1), Second: Islam(1), Nonreligious: 2
+096, 680, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 116.00
+096, 680, Damascus, POP_CHANGE, Pop: 3, First: Islam(3), Nonreligious: 0
+096, 680, Rostov, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+096, 680, Yaroslavl', POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+096, 680, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 73.00
+096, 680, Washakie, POP_CHANGE, Pop: 1, No religion in city
+096, 680, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 46.00
+096, 680, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 78.00
+096, 680, Berlin, POP_CHANGE, Pop: 10, First: Pantheon(8), Nonreligious: 2
+096, 680, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 112.00
+096, 680, Tombouctu, POP_CHANGE, Pop: 9, First: Hinduism(8), Nonreligious: 1
+096, 680, Tiwanaku, POP_CHANGE, Pop: 7, First: Pantheon(5), Nonreligious: 2
+096, 680, Corihuayrachina, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+096, 680, Bucharest, POP_CHANGE, Pop: 10, Second: Taoism(0), Nonreligious: 10
+096, 680, Buenos Aires, ADJACENT_PRESSURE, Pop: 9, Second: Zoroastrianism(1), Nonreligious: 8
+096, 680, Belgrade, ADJACENT_PRESSURE, Pop: 8, Second: Hinduism(2), Nonreligious: 6
+097, 710, Arabia, FAITH UNIT PURCHASE, Missionary, Mecca, Faith Cost: 130, Faith Left: 0.00
+097, 710, Arabia, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 0.00
+097, 710, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 84.00
+097, 710, Agaidika, POP_CHANGE, Pop: 6, First: Protestantism(6), Nonreligious: 0
+097, 710, Goshute, POP_CHANGE, Pop: 5, Second: Islam(1), Nonreligious: 3
+097, 710, Persia, Saving up for a Prophet for religion enhancement., Faith: 55.00
+097, 710, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 84.00
+097, 710, Osininka, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+097, 710, Brantford, POP_CHANGE, Pop: 1, No religion in city
+097, 710, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 128.00
+097, 710, Gao, POP_CHANGE, Pop: 11, First: Hinduism(10), Nonreligious: 1
+097, 710, Jenne, POP_CHANGE, Pop: 6, First: Hinduism(5), Nonreligious: 1
+097, 710, Taghaza, POP_CHANGE, Pop: 3, Second: Hinduism(0), Nonreligious: 3
+097, 710, Geneva, POP_CHANGE, Pop: 9, Second: Islam(1), Nonreligious: 8
+097, 710, Bratislava, POP_CHANGE, Pop: 12, Second: Zoroastrianism(0), Nonreligious: 12
+098, 740, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 14.00
+098, 740, Medina, POP_CHANGE, Pop: 7, First: Islam(7), Nonreligious: 0
+098, 740, Novgorod, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+098, 740, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 95.00
+098, 740, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 60.00
+098, 740, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 90.00
+098, 740, Hamburg, POP_CHANGE, Pop: 8, First: Pantheon(7), Nonreligious: 1
+098, 740, Songhai, FAITH UNIT PURCHASE, Inquisitor, Gao, Faith Cost: 130, Faith Left: 14.00
+098, 740, Songhai, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 14.00
+098, 740, Machu, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+098, 740, Ormus, POP_CHANGE, Pop: 11, No religion in city
+098, 740, Antwerp, POP_CHANGE, Pop: 11, No religion in city
+099, 770, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 29.00
+099, 770, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 106.00
+099, 770, Persia, Saving up for a Prophet for religion enhancement., Faith: 69.00
+099, 770, Ecbatana, POP_CHANGE, Pop: 3, First: Zoroastrianism(3), Nonreligious: 0
+099, 770, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 96.00
+099, 770, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
+099, 770, Tondibi, POP_CHANGE, Pop: 1, No religion in city
+099, 770, Cahokia, POP_CHANGE, Pop: 7, No religion in city
+100, 800, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 46.00
+100, 800, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 115.00
+100, 800, Persia, Saving up for a Prophet for religion enhancement., Faith: 76.00
+100, 800, Pasargadae, POP_CHANGE, Pop: 5, First: Zoroastrianism(4), Nonreligious: 1
+100, 800, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 102.00
+100, 800, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 46.00
+101, 820, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 62.00
+101, 820, Baghdad, POP_CHANGE, Pop: 1, No religion in city
+101, 820, Rostov, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+101, 820, Yaroslavl', POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+101, 820, Yekaterinburg, POP_CHANGE, Pop: 1, No religion in city
+101, 820, Yekaterinburg, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+101, 820, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 124.00
+101, 820, Persia, Saving up for a Prophet for religion enhancement., Faith: 87.00
+101, 820, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 108.00
+101, 820, Akwesasme, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+101, 820, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 62.00
+102, 840, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 78.00
+102, 840, Novgorod, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+102, 840, The Shoshone, FAITH UNIT PURCHASE, Missionary, Moson Kahni, Faith Cost: 130, Faith Left: 2.00
+102, 840, The Shoshone, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 2.00
+102, 840, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 94.00
+102, 840, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 114.00
+102, 840, Brantford, POP_CHANGE, Pop: 2, Second: Taoism(0), Nonreligious: 2
+102, 840, Hamburg, POP_CHANGE, Pop: 9, First: Pantheon(8), Nonreligious: 1
+102, 840, Munich, POP_CHANGE, Pop: 1, No religion in city
+102, 840, Munich, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+102, 840, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 79.00
+102, 840, Machu, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+102, 840, Sofia, POP_CHANGE, Pop: 10, Second: Hinduism(1), Nonreligious: 9
+102, 840, Hong Kong, POP_CHANGE, Pop: 9, Second: Zoroastrianism(0), Nonreligious: 9
+102, 840, Te-Moak, ADJACENT_PRESSURE, Pop: 5, First: Islam(2), Second: Protestantism(1), Nonreligious: 1
+103, 860, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 96.00
+103, 860, Damascus, POP_CHANGE, Pop: 4, First: Islam(4), Nonreligious: 0
+103, 860, St. Petersburg, POP_CHANGE, Pop: 5, First: Pantheon(2), Nonreligious: 2
+103, 860, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 13.00
+103, 860, Persia, Saving up for a Prophet for religion enhancement., Faith: 107.00
+103, 860, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 120.00
+103, 860, Buffalo Creek, POP_CHANGE, Pop: 3, Second: Taoism(0), Nonreligious: 3
+103, 860, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 100.00
+103, 860, La Venta, POP_CHANGE, Pop: 11, Second: Zoroastrianism(1), Nonreligious: 10
+103, 860, Grand River, ADJACENT_PRESSURE, Pop: 5, First: Pantheon(3), Nonreligious: 1
+103, 860, Lhasa, ADJACENT_PRESSURE, Pop: 5, Second: Islam(1), Nonreligious: 3
+104, 880, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 114.00
+104, 880, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 26.00
+104, 880, Washakie, MISSIONARY, Pop: 1, Second: Protestantism(1), Nonreligious: 0
+104, 880, Persia, Saving up for a Prophet for religion enhancement., Faith: 116.00
+104, 880, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 126.00
+104, 880, Grand River, POP_CHANGE, Pop: 6, First: Pantheon(4), Nonreligious: 1
+104, 880, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 121.00
+104, 880, Taghaza, POP_CHANGE, Pop: 4, Second: Hinduism(0), Nonreligious: 4
+104, 880, St. Petersburg, ADJACENT_PRESSURE, Pop: 5, First: Pantheon(2), Nonreligious: 1
+104, 880, La Venta, ADJACENT_PRESSURE, Pop: 11, Second: Zoroastrianism(1), Nonreligious: 9
+105, 900, Arabia, FAITH UNIT PURCHASE, Inquisitor, Mecca, Faith Cost: 130, Faith Left: 2.00
+105, 900, Arabia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 2.00
+105, 900, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 39.00
+105, 900, Persia, Saving up for a Prophet for religion enhancement., Faith: 129.00
+105, 900, Persepolis, POP_CHANGE, Pop: 11, First: Zoroastrianism(10), Nonreligious: 1
+105, 900, The Iroquois, FAITH UNIT PURCHASE, Missionary, Onondaga, Faith Cost: 130, Faith Left: 2.00
+105, 900, The Iroquois, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 2.00
+105, 900, Songhai, FAITH UNIT PURCHASE, Inquisitor, Gao, Faith Cost: 130, Faith Left: 12.00
+105, 900, Songhai, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 12.00
+105, 900, Tondibi, POP_CHANGE, Pop: 2, Second: Taoism(0), Nonreligious: 2
+105, 900, Osininka, ADJACENT_PRESSURE, Pop: 5, First: Pantheon(3), Nonreligious: 1
+106, 920, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 20.00
+106, 920, Novgorod, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+106, 920, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 49.00
+106, 920, Agaidika, POP_CHANGE, Pop: 7, First: Protestantism(7), Nonreligious: 0
+106, 920, Persia, Saving up for a Prophet for religion enhancement., Faith: 138.00
+106, 920, Susa, POP_CHANGE, Pop: 5, First: Zoroastrianism(4), Nonreligious: 1
+106, 920, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 8.00
+106, 920, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 33.00
+107, 940, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 42.00
+107, 940, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 59.00
+107, 940, Te-Moak, MISSIONARY, Pop: 5, First: Islam(1), Second: Protestantism(4), Nonreligious: 0
+107, 940, Persia, Saving up for a Prophet for religion enhancement., Faith: 151.00
+107, 940, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 14.00
+107, 940, Grand River, MISSIONARY, Pop: 6, Second: Taoism(6), Nonreligious: 0
+107, 940, Hamburg, POP_CHANGE, Pop: 10, First: Pantheon(9), Nonreligious: 1
+107, 940, Munich, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+107, 940, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 54.00
+107, 940, Kumbi Saleh, POP_CHANGE, Pop: 1, No religion in city
+108, 960, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 65.00
+108, 960, Medina, POP_CHANGE, Pop: 8, First: Islam(8), Nonreligious: 0
+108, 960, Yaroslavl', POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+108, 960, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 69.00
+108, 960, Persia, Saving up for a Prophet for religion enhancement., Faith: 160.00
+108, 960, Ecbatana, POP_CHANGE, Pop: 4, First: Zoroastrianism(4), Nonreligious: 0
+108, 960, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 20.00
+108, 960, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 75.00
+108, 960, Jenne, POP_CHANGE, Pop: 7, First: Hinduism(6), Nonreligious: 1
+109, 980, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 86.00
+109, 980, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 81.00
+109, 980, Persia, Saving up for a Prophet for religion enhancement., Faith: 173.00
+109, 980, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 26.00
+109, 980, Buffalo Creek, POP_CHANGE, Pop: 4, Second: Taoism(0), Nonreligious: 4
+109, 980, Brantford, POP_CHANGE, Pop: 3, Second: Taoism(0), Nonreligious: 3
+109, 980, The Iroquois, Belief, Swords into Plowshares, 713
+109, 980, The Iroquois, Belief, Divine Inspiration, 605
+109, 980, The Iroquois, Belief, Religious Center, 497
+109, 980, The Iroquois, Belief, Feed the World, 443
+109, 980, The Iroquois, Belief, Peace Gardens, 389
+109, 980, The Iroquois, Belief, Asceticism, 389
+109, 980, The Iroquois, Belief, Choral Music, 371
+109, 980, The Iroquois, Belief, Liturgical Drama, 299
+109, 980, The Iroquois, Belief, Holy Warriors, 177
+109, 980, The Iroquois, CHOSEN, Swords into Plowshares
+109, 980, The Iroquois, Belief, Reliquary, 167
+109, 980, The Iroquois, Belief, Just War, 146
+109, 980, The Iroquois, Belief, Messiah, 72
+109, 980, The Iroquois, Belief, Religious Texts, 63
+109, 980, The Iroquois, Belief, Itinerant Preachers, 63
+109, 980, The Iroquois, Belief, Missionary Zeal, 63
+109, 980, The Iroquois, Belief, Holy Order, 63
+109, 980, The Iroquois, CHOSEN, Reliquary
+109, 980, The Iroquois, RELIGION ENHANCED
+109, 980, Osininka, MISSIONARY, Pop: 5, Second: Taoism(5), Nonreligious: 0
+109, 980, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 96.00
+109, 980, Taghaza, POP_CHANGE, Pop: 5, Second: Hinduism(0), Nonreligious: 5
+109, 980, Belgrade, POP_CHANGE, Pop: 9, Second: Hinduism(2), Nonreligious: 7
+110, 1000, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 106.00
+110, 1000, Rostov, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+110, 1000, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 93.00
+110, 1000, Persia, Saving up for a Prophet for religion enhancement., Faith: 182.00
+110, 1000, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 87.00
+110, 1000, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 117.00
+110, 1000, Kumbi Saleh, POP_CHANGE, Pop: 2, Second: Hinduism(0), Nonreligious: 2
+110, 1000, Corihuayrachina, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+110, 1000, Huamanga, POP_CHANGE, Pop: 1, No religion in city
+110, 1000, Huamanga, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+110, 1000, Bratislava, POP_CHANGE, Pop: 13, Second: Zoroastrianism(0), Nonreligious: 13
+111, 1020, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 127.00
+111, 1020, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 105.00
+111, 1020, Persia, Saving up for a Prophet for religion enhancement., Faith: 195.00
+111, 1020, The Iroquois, FAITH UNIT PURCHASE, Inquisitor, Onondaga, Faith Cost: 130, Faith Left: 18.00
+111, 1020, The Iroquois, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 18.00
+111, 1020, Akwesasme, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+111, 1020, Berlin, POP_CHANGE, Pop: 11, First: Pantheon(9), Nonreligious: 2
+111, 1020, Songhai, FAITH UNIT PURCHASE, Missionary, Gao, Faith Cost: 130, Faith Left: 8.00
+111, 1020, Songhai, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 8.00
+111, 1020, Jenne, POP_CHANGE, Pop: 8, First: Hinduism(7), Nonreligious: 1
+111, 1020, Buffalo Creek, ADJACENT_PRESSURE, Pop: 4, Second: Taoism(1), Nonreligious: 3
+111, 1020, Taghaza, ADJACENT_PRESSURE, Pop: 5, Second: Hinduism(1), Nonreligious: 4
+111, 1020, Tiwanaku, ADJACENT_PRESSURE, Pop: 8, First: Pantheon(4), Nonreligious: 2
+111, 1020, Geneva, ADJACENT_PRESSURE, Pop: 9, Second: Islam(2), Nonreligious: 7
+112, 1040, Arabia, FAITH UNIT PURCHASE, Inquisitor, Mecca, Faith Cost: 130, Faith Left: 14.00
+112, 1040, Arabia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 14.00
+112, 1040, Novgorod, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+112, 1040, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 117.00
+112, 1040, Persia, FAITH UNIT PURCHASE, Missionary, Persepolis, Faith Cost: 130, Faith Left: 70.00
+112, 1040, Persia, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 70.00
+112, 1040, Pasargadae, POP_CHANGE, Pop: 6, First: Zoroastrianism(5), Nonreligious: 1
+112, 1040, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 29.00
+112, 1040, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 29.00
+112, 1040, Gao, POP_CHANGE, Pop: 12, First: Hinduism(11), Nonreligious: 1
+112, 1040, Tondibi, POP_CHANGE, Pop: 3, Second: Taoism(0), Nonreligious: 3
+112, 1040, Kumbi Saleh, MISSIONARY, Pop: 2, Second: Hinduism(2), Nonreligious: 0
+112, 1040, Ollantaytambo, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+112, 1040, Ormus, POP_CHANGE, Pop: 12, Second: Taoism(0), Nonreligious: 12
+112, 1040, Cahokia, POP_CHANGE, Pop: 8, No religion in city
+112, 1040, Goshute, ADJACENT_PRESSURE, Pop: 5, Second: Islam(2), Nonreligious: 2
+112, 1040, Sofia, ADJACENT_PRESSURE, Pop: 10, Second: Hinduism(2), Nonreligious: 8
+113, 1060, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 31.00
+113, 1060, Baghdad, POP_CHANGE, Pop: 3, Second: Islam(1), Nonreligious: 2
+113, 1060, Yekaterinburg, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+113, 1060, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 129.00
+113, 1060, Persia, Saving up for a Prophet for religion enhancement., Faith: 79.00
+113, 1060, Persepolis, POP_CHANGE, Pop: 12, First: Zoroastrianism(11), Nonreligious: 1
+113, 1060, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
+113, 1060, Hamburg, POP_CHANGE, Pop: 11, First: Pantheon(10), Nonreligious: 1
+113, 1060, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 50.00
+113, 1060, Buenos Aires, POP_CHANGE, Pop: 10, Second: Zoroastrianism(1), Nonreligious: 9
+113, 1060, Brantford, ADJACENT_PRESSURE, Pop: 3, Second: Taoism(1), Nonreligious: 2
+113, 1060, Bratislava, ADJACENT_PRESSURE, Pop: 13, Second: Zoroastrianism(1), Nonreligious: 12
+114, 1080, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 47.00
+114, 1080, The Shoshone, FAITH UNIT PURCHASE, Missionary, Moson Kahni, Faith Cost: 130, Faith Left: 8.00
+114, 1080, The Shoshone, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 8.00
+114, 1080, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 86.00
+114, 1080, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 55.00
+114, 1080, Onondaga, POP_CHANGE, Pop: 10, First: Taoism(10), Nonreligious: 0
+114, 1080, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 71.00
+114, 1080, Jenne, POP_CHANGE, Pop: 9, First: Hinduism(8), Nonreligious: 1
+114, 1080, Taghaza, POP_CHANGE, Pop: 6, Second: Hinduism(1), Nonreligious: 5
+114, 1080, Kumbi Saleh, POP_CHANGE, Pop: 3, First: Hinduism(3), Nonreligious: 0
+114, 1080, Taghaza, MISSIONARY, Pop: 6, Second: Hinduism(4), Nonreligious: 2
+115, 1100, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 64.00
+115, 1100, The Shoshone, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
+115, 1100, Washakie, POP_CHANGE, Pop: 2, First: Protestantism(2), Nonreligious: 0
+115, 1100, Goshute, MISSIONARY, Pop: 5, Second: Protestantism(3), Nonreligious: 1
+115, 1100, Persia, Saving up for a Prophet for religion enhancement., Faith: 97.00
+115, 1100, Hong Kong, MISSIONARY, Pop: 9, Second: Zoroastrianism(5), Nonreligious: 4
+115, 1100, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 66.00
+115, 1100, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 88.00
+115, 1100, Belgrade, ADJACENT_PRESSURE, Pop: 9, Second: Hinduism(3), Nonreligious: 6
+116, 1120, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 80.00
+116, 1120, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 28.00
+116, 1120, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 104.00
+116, 1120, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 77.00
+116, 1120, Akwesasme, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+116, 1120, Buffalo Creek, POP_CHANGE, Pop: 5, Second: Taoism(1), Nonreligious: 4
+116, 1120, Brantford, POP_CHANGE, Pop: 4, Second: Taoism(1), Nonreligious: 3
+116, 1120, Berlin, POP_CHANGE, Pop: 12, First: Pantheon(10), Nonreligious: 2
+116, 1120, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 105.00
+116, 1120, Gao, POP_CHANGE, Pop: 13, First: Hinduism(12), Nonreligious: 1
+116, 1120, Corihuayrachina, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+116, 1120, Zanzibar, ADJACENT_PRESSURE, Pop: 9, Second: Hinduism(1), Nonreligious: 8
+117, 1140, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 99.00
+117, 1140, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 38.00
+117, 1140, Persia, Saving up for a Prophet for religion enhancement., Faith: 115.00
+117, 1140, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 88.00
+117, 1140, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 122.00
+117, 1140, Zanzibar, POP_CHANGE, Pop: 10, Second: Hinduism(1), Nonreligious: 9
+117, 1140, Buenos Aires, ADJACENT_PRESSURE, Pop: 10, Second: Zoroastrianism(1), Nonreligious: 8
+117, 1140, Ormus, ADJACENT_PRESSURE, Pop: 12, Second: Taoism(1), Nonreligious: 11
+118, 1160, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 119.00
+118, 1160, Mecca, POP_CHANGE, Pop: 6, First: Islam(6), Nonreligious: 0
+118, 1160, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 48.00
+118, 1160, Pohokwi, POP_CHANGE, Pop: 3, First: Protestantism(3), Nonreligious: 0
+118, 1160, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 122.00
+118, 1160, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 99.00
+118, 1160, Osininka, POP_CHANGE, Pop: 6, First: Taoism(6), Nonreligious: 0
+118, 1160, Hamburg, POP_CHANGE, Pop: 12, First: Pantheon(11), Nonreligious: 1
+118, 1160, Songhai, FAITH UNIT PURCHASE, Missionary, Gao, Faith Cost: 130, Faith Left: 9.00
+118, 1160, Songhai, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 9.00
+118, 1160, Bucharest, POP_CHANGE, Pop: 11, Second: Taoism(0), Nonreligious: 11
+118, 1160, Tiwanaku, ADJACENT_PRESSURE, Pop: 8, First: Pantheon(3), Second: Islam(3), Nonreligious: 2
+119, 1180, Arabia, FAITH UNIT PURCHASE, Missionary, Mecca, Faith Cost: 130, Faith Left: 9.00
+119, 1180, Arabia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 9.00
+119, 1180, Persia, Saving up for a Prophet for religion enhancement., Faith: 133.00
+119, 1180, Pasargadae, POP_CHANGE, Pop: 7, First: Zoroastrianism(6), Second: Protestantism(1), Nonreligious: 0
+119, 1180, Susa, POP_CHANGE, Pop: 6, First: Zoroastrianism(5), Nonreligious: 1
+119, 1180, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 110.00
+119, 1180, Munich, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+119, 1180, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 26.00
+119, 1180, Antwerp, POP_CHANGE, Pop: 12, Second: Taoism(0), Nonreligious: 12
+119, 1180, Berlin, ADJACENT_PRESSURE, Pop: 12, First: Pantheon(9), Nonreligious: 2
+120, 1200, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
+120, 1200, Moson Kahni, POP_CHANGE, Pop: 4, First: Protestantism(4), Second: Islam(0), Nonreligious: 0
+120, 1200, Goshute, POP_CHANGE, Pop: 6, First: Protestantism(4), Nonreligious: 1
+120, 1200, Machu, MISSIONARY, Pop: 7, Nonreligious: 1
+120, 1200, Persia, FAITH UNIT PURCHASE, Missionary, Persepolis, Faith Cost: 130, Faith Left: 10.00
+120, 1200, Persia, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 10.00
+120, 1200, La Venta, MISSIONARY, Pop: 12, Second: Zoroastrianism(6), Nonreligious: 6
+120, 1200, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 121.00
+120, 1200, Akwesasme, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+120, 1200, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 43.00
+120, 1200, Jenne, POP_CHANGE, Pop: 10, First: Hinduism(9), Nonreligious: 1
+120, 1200, Taghaza, POP_CHANGE, Pop: 7, First: Hinduism(5), Nonreligious: 2
+120, 1200, Tondibi, POP_CHANGE, Pop: 4, Second: Hinduism(0), Nonreligious: 4
+120, 1200, Tondibi, MISSIONARY, Pop: 4, Second: Hinduism(3), Nonreligious: 1
+120, 1200, The Inca, FAITH BUILDING PURCHASE, Pagoda, Machu, Faith Cost: 130, Faith Left: 122.00
+120, 1200, The Inca, Bought a Faith Building, Faith: 122.00
+120, 1200, Machu, POP_CHANGE, Pop: 8, First: Protestantism(7), Nonreligious: 1
+120, 1200, Bratislava, POP_CHANGE, Pop: 14, Second: Zoroastrianism(1), Nonreligious: 13
+120, 1200, Brussels, POP_CHANGE, Pop: 9, Second: Hinduism(0), Nonreligious: 9
+121, 1220, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 46.00
+121, 1220, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 76.00
+121, 1220, Persia, Saving up for a Prophet for religion enhancement., Faith: 21.00
+121, 1220, The Iroquois, FAITH UNIT PURCHASE, Inquisitor, Onondaga, Faith Cost: 130, Faith Left: 2.00
+121, 1220, The Iroquois, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 2.00
+121, 1220, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 60.00
+121, 1220, St. Petersburg, ADJACENT_PRESSURE, Pop: 5, First: Hinduism(2), Second: Pantheon(1), Nonreligious: 2
+121, 1220, Ecbatana, ADJACENT_PRESSURE, Pop: 5, First: Zoroastrianism(5), Nonreligious: 0
+121, 1220, Cusco, ADJACENT_PRESSURE, Pop: 8, First: Pantheon(4), Nonreligious: 2
+121, 1220, Brussels, ADJACENT_PRESSURE, Pop: 9, Second: Hinduism(1), Nonreligious: 8
+122, 1240, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 63.00
+122, 1240, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 86.00
+122, 1240, Persia, Saving up for a Prophet for religion enhancement., Faith: 28.00
+122, 1240, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 13.00
+122, 1240, Grand River, POP_CHANGE, Pop: 7, First: Taoism(7), Nonreligious: 0
+122, 1240, Brantford, POP_CHANGE, Pop: 5, Second: Taoism(1), Nonreligious: 4
+122, 1240, Montreal, POP_CHANGE, Pop: 1, No religion in city
+122, 1240, Berlin, POP_CHANGE, Pop: 13, First: Pantheon(10), Nonreligious: 2
+122, 1240, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 77.00
+122, 1240, Gao, POP_CHANGE, Pop: 14, First: Hinduism(13), Nonreligious: 1
+122, 1240, Hanoi, POP_CHANGE, Pop: 7, Second: Taoism(0), Nonreligious: 7
+122, 1240, Sofia, POP_CHANGE, Pop: 11, Second: Hinduism(2), Nonreligious: 9
+122, 1240, St. Petersburg, ADJACENT_PRESSURE, Pop: 5, First: Hinduism(3), Second: Pantheon(1), Nonreligious: 1
+122, 1240, Rostov, ADJACENT_PRESSURE, Pop: 7, First: Pantheon(5), Nonreligious: 1
+123, 1260, Arabia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 80.00
+123, 1260, Baghdad, MISSIONARY, Pop: 3, Second: Islam(2), Nonreligious: 1
+123, 1260, Russia, Favorite Foreign Religion is, Hinduism
+123, 1260, Russia, FAITH UNIT PURCHASE, Missionary, St. Petersburg, Faith Cost: 130, Faith Left: 687.00
+123, 1260, Russia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 687.00
+123, 1260, Moscow, POP_CHANGE, Pop: 8, First: Pantheon(6), Nonreligious: 2
+123, 1260, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 97.00
+123, 1260, Persia, Saving up for a Prophet for religion enhancement., Faith: 51.00
+123, 1260, Tarsus, POP_CHANGE, Pop: 1, No religion in city
+123, 1260, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
+123, 1260, Osininka, POP_CHANGE, Pop: 7, First: Taoism(7), Nonreligious: 0
+123, 1260, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 94.00
+123, 1260, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 152.00
+124, 1280, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 97.00
+124, 1280, Russia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 705.00
+124, 1280, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 108.00
+124, 1280, Washakie, POP_CHANGE, Pop: 3, First: Protestantism(3), Second: Zoroastrianism(0), Nonreligious: 0
+124, 1280, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 70.00
+124, 1280, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
+124, 1280, Buffalo Creek, POP_CHANGE, Pop: 6, Second: Taoism(1), Nonreligious: 5
+124, 1280, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 111.00
+124, 1280, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 162.00
+124, 1280, Cahokia, POP_CHANGE, Pop: 9, No religion in city
+124, 1280, Persepolis, ADJACENT_PRESSURE, Pop: 12, First: Zoroastrianism(12), Nonreligious: 0
+125, 1300, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 112.00
+125, 1300, Russia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 723.00
+125, 1300, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 119.00
+125, 1300, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 93.00
+125, 1300, Susa, POP_CHANGE, Pop: 7, First: Zoroastrianism(6), Nonreligious: 1
+125, 1300, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 46.00
+125, 1300, Montreal, POP_CHANGE, Pop: 2, Second: Taoism(0), Nonreligious: 2
+125, 1300, Hamburg, POP_CHANGE, Pop: 13, First: Pantheon(12), Nonreligious: 1
+125, 1300, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 128.00
+125, 1300, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 172.00
+125, 1300, Ormus, POP_CHANGE, Pop: 13, Second: Taoism(1), Nonreligious: 12
+125, 1300, St. Petersburg, ADJACENT_PRESSURE, Pop: 6, First: Hinduism(4), Second: Pantheon(1), Nonreligious: 1
+126, 1320, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 129.00
+126, 1320, Tiwanaku, MISSIONARY, Pop: 9, First: Islam(7), Nonreligious: 2
+126, 1320, Russia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 741.00
+126, 1320, Rostov, POP_CHANGE, Pop: 8, First: Pantheon(6), Second: Hinduism(1), Nonreligious: 1
+126, 1320, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 130.00
+126, 1320, Persia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 112.00
+126, 1320, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 57.00
+126, 1320, Munich, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+126, 1320, Songhai, FAITH UNIT PURCHASE, Missionary, Gao, Faith Cost: 130, Faith Left: 15.00
+126, 1320, Songhai, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 15.00
+126, 1320, Moscow, MISSIONARY, Pop: 8, First: Pantheon(0), Nonreligious: 2
+126, 1320, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 182.00
+126, 1320, Pasargadae, ADJACENT_PRESSURE, Pop: 7, First: Zoroastrianism(5), Second: Protestantism(1), Nonreligious: 1
+126, 1320, Pasargadae, ADJACENT_PRESSURE, Pop: 7, First: Zoroastrianism(6), Second: Protestantism(1), Nonreligious: 0
+126, 1320, Berlin, ADJACENT_PRESSURE, Pop: 13, First: Pantheon(9), Nonreligious: 2
+127, 1340, Arabia, FAITH UNIT PURCHASE, Missionary, Mecca, Faith Cost: 130, Faith Left: 14.00
+127, 1340, Arabia, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 14.00
+127, 1340, Russia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 759.00
+127, 1340, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 142.00
+127, 1340, Persia, FAITH UNIT PURCHASE, Missionary, Persepolis, Faith Cost: 130, Faith Left: 5.00
+127, 1340, Persia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 5.00
+127, 1340, Tarsus, MISSIONARY, Pop: 1, Second: Hinduism(0), Nonreligious: 0
+127, 1340, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 68.00
+127, 1340, Brantford, POP_CHANGE, Pop: 6, Second: Taoism(1), Nonreligious: 5
+127, 1340, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 32.00
+127, 1340, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 192.00
+127, 1340, Huamanga, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+127, 1340, La Venta, POP_CHANGE, Pop: 13, First: Zoroastrianism(7), Nonreligious: 6
+127, 1340, Pasargadae, ADJACENT_PRESSURE, Pop: 7, First: Zoroastrianism(5), Second: Protestantism(1), Nonreligious: 1
+127, 1340, Montreal, ADJACENT_PRESSURE, Pop: 2, Second: Taoism(1), Nonreligious: 1
+127, 1340, Sofia, ADJACENT_PRESSURE, Pop: 11, Second: Hinduism(3), Nonreligious: 8
+128, 1360, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 31.00
+128, 1360, Damascus, POP_CHANGE, Pop: 5, First: Islam(5), Nonreligious: 0
+128, 1360, Baghdad, POP_CHANGE, Pop: 4, First: Islam(3), Nonreligious: 1
+128, 1360, Russia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 778.00
+128, 1360, Novgorod, POP_CHANGE, Pop: 8, First: Pantheon(7), Nonreligious: 1
+128, 1360, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 154.00
+128, 1360, Persia, Saving up for a Prophet for religion enhancement., Faith: 24.00
+128, 1360, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 79.00
+128, 1360, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 49.00
+128, 1360, Tombouctu, POP_CHANGE, Pop: 10, First: Hinduism(9), Nonreligious: 1
+128, 1360, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 202.00
+128, 1360, Bratislava, POP_CHANGE, Pop: 15, Second: Taoism(1), Nonreligious: 14
+128, 1360, Bratislava, ADJACENT_PRESSURE, Pop: 15, Second: Taoism(1), Nonreligious: 13
+129, 1380, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 48.00
+129, 1380, Mecca, POP_CHANGE, Pop: 7, First: Islam(7), Nonreligious: 0
+129, 1380, Medina, POP_CHANGE, Pop: 9, First: Islam(9), Nonreligious: 0
+129, 1380, Russia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 796.00
+129, 1380, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 166.00
+129, 1380, Persia, Saving up for a Prophet for religion enhancement., Faith: 47.00
+129, 1380, Susa, POP_CHANGE, Pop: 8, First: Zoroastrianism(7), Nonreligious: 1
+129, 1380, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 90.00
+129, 1380, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 66.00
+129, 1380, Rostov, MISSIONARY, Pop: 8, Second: Hinduism(7), Nonreligious: 1
+129, 1380, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 208.00
+129, 1380, Kumbi Saleh, ADJACENT_PRESSURE, Pop: 4, First: Hinduism(4), Nonreligious: 0
+129, 1380, Geneva, ADJACENT_PRESSURE, Pop: 9, Second: Islam(3), Nonreligious: 6
+129, 1380, Bucharest, ADJACENT_PRESSURE, Pop: 11, Second: Taoism(1), Nonreligious: 10
+130, 1400, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 65.00
+130, 1400, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 178.00
+130, 1400, Persia, Saving up for a Prophet for religion enhancement., Faith: 68.00
+130, 1400, Ecbatana, POP_CHANGE, Pop: 7, First: Zoroastrianism(6), Nonreligious: 1
+130, 1400, The Iroquois, FAITH UNIT PURCHASE, Missionary, Onondaga, Faith Cost: 130, Faith Left: 21.00
+130, 1400, The Iroquois, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 21.00
+130, 1400, Osininka, POP_CHANGE, Pop: 8, First: Taoism(8), Nonreligious: 0
+130, 1400, Akwesasme, POP_CHANGE, Pop: 9, First: Pantheon(7), Second: Taoism(1), Nonreligious: 1
+130, 1400, Montreal, POP_CHANGE, Pop: 3, Second: Taoism(1), Nonreligious: 2
+130, 1400, Berlin, POP_CHANGE, Pop: 14, First: Pantheon(10), Nonreligious: 2
+130, 1400, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 83.00
+130, 1400, The Inca, Favorite Foreign Religion is, Islam
+130, 1400, The Inca, FAITH UNIT PURCHASE, Missionary, Tiwanaku, Faith Cost: 130, Faith Left: 84.00
+130, 1400, The Inca, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 84.00
+130, 1400, Brantford, ADJACENT_PRESSURE, Pop: 6, Second: Taoism(1), Nonreligious: 4
+131, 1410, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 83.00
+131, 1410, St. Petersburg, POP_CHANGE, Pop: 7, First: Hinduism(5), Nonreligious: 2
+131, 1410, Novgorod, POP_CHANGE, Pop: 9, First: Pantheon(8), Nonreligious: 1
+131, 1410, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 190.00
+131, 1410, Agaidika, POP_CHANGE, Pop: 9, First: Protestantism(8), Nonreligious: 1
+131, 1410, Washakie, POP_CHANGE, Pop: 4, First: Protestantism(4), Second: Zoroastrianism(0), Nonreligious: 0
+131, 1410, Persia, Saving up for a Prophet for religion enhancement., Faith: 93.00
+131, 1410, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 34.00
+131, 1410, Montreal, MISSIONARY, Pop: 3, Second: Taoism(2), Nonreligious: 1
+131, 1410, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 101.00
+131, 1410, Jenne, POP_CHANGE, Pop: 11, First: Hinduism(10), Nonreligious: 1
+131, 1410, The Inca, Favorite Foreign Religion is, Islam
+131, 1410, Buenos Aires, POP_CHANGE, Pop: 11, Second: Zoroastrianism(1), Nonreligious: 9
+131, 1410, Zanzibar, POP_CHANGE, Pop: 11, Second: Hinduism(1), Nonreligious: 10
+132, 1420, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 101.00
+132, 1420, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 202.00
+132, 1420, Persia, Saving up for a Prophet for religion enhancement., Faith: 114.00
+132, 1420, Tarsus, POP_CHANGE, Pop: 2, First: Zoroastrianism(2), Nonreligious: 0
+132, 1420, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 47.00
+132, 1420, Brantford, POP_CHANGE, Pop: 7, Second: Taoism(1), Nonreligious: 5
+132, 1420, Munich, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+132, 1420, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 119.00
+132, 1420, Yekaterinburg, MISSIONARY, Pop: 4, Second: Hinduism(4), Nonreligious: 0
+132, 1420, The Inca, Favorite Foreign Religion is, Islam
+132, 1420, Huamanga, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+132, 1420, Cusco, MISSIONARY, Pop: 8, Nonreligious: 2
+132, 1420, Belgrade, POP_CHANGE, Pop: 10, Second: Hinduism(3), Nonreligious: 7
+132, 1420, Novgorod, ADJACENT_PRESSURE, Pop: 9, First: Pantheon(7), Nonreligious: 1
+132, 1420, Grand River, ADJACENT_PRESSURE, Pop: 8, First: Taoism(8), Nonreligious: 0
+132, 1420, Buffalo Creek, ADJACENT_PRESSURE, Pop: 6, Second: Taoism(2), Nonreligious: 4
+132, 1420, Berlin, ADJACENT_PRESSURE, Pop: 14, First: Pantheon(9), Second: Taoism(3), Nonreligious: 2
+132, 1420, Lhasa, ADJACENT_PRESSURE, Pop: 5, Second: Islam(2), Nonreligious: 2
+133, 1430, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 119.00
+133, 1430, Russia, FAITH UNIT PURCHASE, Missionary, Moscow, Faith Cost: 130, Faith Left: 741.00
+133, 1430, Russia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 741.00
+133, 1430, Moscow, POP_CHANGE, Pop: 9, First: Hinduism(7), Nonreligious: 2
+133, 1430, Rostov, POP_CHANGE, Pop: 9, First: Hinduism(8), Nonreligious: 1
+133, 1430, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 215.00
+133, 1430, Goshute, POP_CHANGE, Pop: 7, First: Protestantism(5), Nonreligious: 1
+133, 1430, Persia, Saving up for a Prophet for religion enhancement., Faith: 139.00
+133, 1430, Ecbatana, POP_CHANGE, Pop: 8, First: Zoroastrianism(7), Nonreligious: 1
+133, 1430, Huamanga, MISSIONARY, Pop: 4, Nonreligious: 0
+133, 1430, Corihuayrachina, MISSIONARY, Pop: 5, Nonreligious: 1
+133, 1430, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 60.00
+133, 1430, Akwesasme, MISSIONARY, Pop: 9, Second: Taoism(8), Nonreligious: 1
+133, 1430, Songhai, FAITH UNIT PURCHASE, Missionary, Gao, Faith Cost: 130, Faith Left: 7.00
+133, 1430, Songhai, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 7.00
+133, 1430, Gao, POP_CHANGE, Pop: 15, First: Hinduism(14), Nonreligious: 1
+133, 1430, The Inca, Favorite Foreign Religion is, Islam
+133, 1430, The Inca, FAITH BUILDING PURCHASE, Monastery, Cusco, Faith Cost: 100, Faith Left: 2.00
+133, 1430, The Inca, Bought a Faith Building, Faith: 2.00
+133, 1430, Corihuayrachina, POP_CHANGE, Pop: 6, First: Zoroastrianism(5), Second: Protestantism(0), Nonreligious: 1
+133, 1430, Brussels, POP_CHANGE, Pop: 10, Second: Hinduism(1), Nonreligious: 9
+133, 1430, Yaroslavl', ADJACENT_PRESSURE, Pop: 6, First: Pantheon(4), Nonreligious: 1
+134, 1440, Arabia, FAITH UNIT PURCHASE, Missionary, Mecca, Faith Cost: 130, Faith Left: 6.00
+134, 1440, Arabia, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 6.00
+134, 1440, Yaroslavl', POP_CHANGE, Pop: 7, First: Pantheon(5), Nonreligious: 1
+134, 1440, Novgorod, MISSIONARY, Pop: 9, Nonreligious: 1
+134, 1440, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 228.00
+134, 1440, Persia, Saving up for a Prophet for religion enhancement., Faith: 156.00
+134, 1440, Persepolis, POP_CHANGE, Pop: 14, First: Zoroastrianism(13), Nonreligious: 1
+134, 1440, Pasargadae, POP_CHANGE, Pop: 8, First: Zoroastrianism(6), Second: Protestantism(2), Nonreligious: 0
+134, 1440, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 73.00
+134, 1440, Onondaga, POP_CHANGE, Pop: 11, First: Taoism(11), Nonreligious: 0
+134, 1440, Akwesasme, POP_CHANGE, Pop: 10, First: Taoism(9), Nonreligious: 1
+134, 1440, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 25.00
+134, 1440, The Inca, Favorite Foreign Religion is, Islam
+134, 1440, Ollantaytambo, MISSIONARY, Pop: 4, Nonreligious: 0
+134, 1440, Genoa, POP_CHANGE, Pop: 9, Second: Protestantism(0), Nonreligious: 9
+134, 1440, Ollantaytambo, ADJACENT_PRESSURE, Pop: 4, First: Islam(3), Second: Hinduism(0), Nonreligious: 1
+134, 1440, Belgrade, ADJACENT_PRESSURE, Pop: 10, Second: Hinduism(4), Nonreligious: 6
+135, 1450, Geneva, MISSIONARY, Pop: 9, Second: Islam(6), Nonreligious: 3
+135, 1450, St. Petersburg, POP_CHANGE, Pop: 8, First: Hinduism(6), Nonreligious: 2
+135, 1450, Novgorod, POP_CHANGE, Pop: 10, First: Hinduism(9), Nonreligious: 1
+135, 1450, Yaroslavl', MISSIONARY, Pop: 7, Second: Hinduism(6), Nonreligious: 1
+135, 1450, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 241.00
+135, 1450, Persia, Saving up for a Prophet for religion enhancement., Faith: 177.00
+135, 1450, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 86.00
+135, 1450, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 39.00
+135, 1450, Sofia, MISSIONARY, Pop: 11, Second: Hinduism(6), Nonreligious: 5
+135, 1450, Washakie, ADJACENT_PRESSURE, Pop: 4, First: Protestantism(3), Second: Zoroastrianism(1), Nonreligious: 0
+135, 1450, Genoa, ADJACENT_PRESSURE, Pop: 9, Second: Protestantism(1), Nonreligious: 8
+136, 1460, The Shoshone, Saving up for a Prophet for religion enhancement., Faith: 254.00
+136, 1460, The Shoshone, PROPHET SPAWNED, Moson Kahni, Faith: 0
+136, 1460, The Shoshone, Belief, Divine Inspiration, 726
+136, 1460, The Shoshone, Belief, Religious Center, 533
+136, 1460, The Shoshone, Belief, Feed the World, 506
+136, 1460, The Shoshone, Belief, Peace Gardens, 420
+136, 1460, The Shoshone, Belief, Asceticism, 420
+136, 1460, The Shoshone, Belief, Holy Warriors, 360
+136, 1460, The Shoshone, Belief, Choral Music, 353
+136, 1460, The Shoshone, Belief, Liturgical Drama, 321
+136, 1460, The Shoshone, CHOSEN, Divine Inspiration
+136, 1460, The Shoshone, Belief, Just War, 2840
+136, 1460, The Shoshone, Belief, Messiah, 251
+136, 1460, The Shoshone, Belief, Missionary Zeal, 165
+136, 1460, The Shoshone, Belief, Holy Order, 165
+136, 1460, The Shoshone, Belief, Itinerant Preachers, 89
+136, 1460, The Shoshone, Belief, Religious Texts, 80
+136, 1460, The Shoshone, CHOSEN, Just War
+136, 1460, The Shoshone, RELIGION ENHANCED
+136, 1460, Persia, Saving up for a Prophet for religion enhancement., Faith: 199.00
+136, 1460, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 99.00
+136, 1460, Montreal, POP_CHANGE, Pop: 4, First: Taoism(3), Nonreligious: 1
+136, 1460, Hamburg, POP_CHANGE, Pop: 14, First: Pantheon(13), Nonreligious: 1
+136, 1460, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 53.00
+136, 1460, The Inca, Favorite Foreign Religion is, Islam
+136, 1460, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 29.00
+136, 1460, Antwerp, POP_CHANGE, Pop: 13, Second: Taoism(0), Nonreligious: 13
+136, 1460, Buenos Aires, ADJACENT_PRESSURE, Pop: 11, Second: Zoroastrianism(2), Nonreligious: 8
+136, 1460, Zanzibar, ADJACENT_PRESSURE, Pop: 11, Second: Hinduism(2), Nonreligious: 9
+136, 1460, Ormus, ADJACENT_PRESSURE, Pop: 13, Second: Taoism(2), Nonreligious: 11
+137, 1470, Mecca, POP_CHANGE, Pop: 8, First: Islam(8), Nonreligious: 0
+137, 1470, Persia, Saving up for a Prophet for religion enhancement., Faith: 225.00
+137, 1470, Persia, PROPHET SPAWNED, Persepolis, Faith: 0
+137, 1470, Persia, Belief, Religious Center, 771
+137, 1470, Persia, Belief, Peace Gardens, 465
+137, 1470, Persia, Belief, Asceticism, 453
+137, 1470, Persia, Belief, Feed the World, 369
+137, 1470, Persia, Belief, Choral Music, 315
+137, 1470, Persia, Belief, Holy Warriors, 263
+137, 1470, Persia, Belief, Liturgical Drama, 201
+137, 1470, Persia, CHOSEN, Religious Center
+137, 1470, Persia, Belief, Messiah, 106
+137, 1470, Persia, Belief, Missionary Zeal, 82
+137, 1470, Persia, Belief, Holy Order, 82
+137, 1470, Persia, Belief, Itinerant Preachers, 61
+137, 1470, Persia, Belief, Religious Texts, 58
+137, 1470, Persia, CHOSEN, Messiah
+137, 1470, Persia, RELIGION ENHANCED
+137, 1470, Buenos Aires, MISSIONARY, Pop: 11, Second: Zoroastrianism(5), Nonreligious: 5
+137, 1470, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 112.00
+137, 1470, Osininka, POP_CHANGE, Pop: 9, First: Taoism(9), Nonreligious: 0
+137, 1470, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 67.00
+137, 1470, The Inca, Favorite Foreign Religion is, Islam
+137, 1470, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
+137, 1470, Cahokia, POP_CHANGE, Pop: 10, Second: Taoism(0), Nonreligious: 10
+137, 1470, Machu, ADJACENT_PRESSURE, Pop: 8, First: Protestantism(6), Second: Islam(1), Nonreligious: 1
+137, 1470, Hanoi, ADJACENT_PRESSURE, Pop: 7, Second: Taoism(1), Nonreligious: 6
+138, 1480, Rostov, POP_CHANGE, Pop: 10, First: Hinduism(9), Nonreligious: 1
+138, 1480, Washakie, POP_CHANGE, Pop: 5, First: Protestantism(4), Second: Zoroastrianism(1), Nonreligious: 0
+138, 1480, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 0.00
+138, 1480, Susa, POP_CHANGE, Pop: 10, First: Zoroastrianism(8), Nonreligious: 2
+138, 1480, Ecbatana, POP_CHANGE, Pop: 9, First: Zoroastrianism(8), Nonreligious: 1
+138, 1480, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 125.00
+138, 1480, Berlin, POP_CHANGE, Pop: 15, First: Pantheon(10), Second: Taoism(3), Nonreligious: 2
+138, 1480, Munich, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+138, 1480, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 81.00
+138, 1480, Belgrade, MISSIONARY, Pop: 10, Second: Hinduism(6), Nonreligious: 4
+138, 1480, The Inca, Favorite Foreign Religion is, Islam
+138, 1480, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 51.00
+138, 1480, Ollantaytambo, POP_CHANGE, Pop: 5, First: Islam(4), Second: Hinduism(1), Nonreligious: 0
+138, 1480, Bratislava, POP_CHANGE, Pop: 16, Second: Taoism(1), Nonreligious: 14
+138, 1480, Berlin, ADJACENT_PRESSURE, Pop: 15, First: Pantheon(9), Second: Taoism(4), Nonreligious: 2
+138, 1480, Brussels, ADJACENT_PRESSURE, Pop: 10, Second: Hinduism(2), Nonreligious: 8
+139, 1490, Arabia, FAITH BUILDING PURCHASE, Monastery, Mecca, Faith Cost: 100, Faith Left: 11.00
+139, 1490, Arabia, Bought a Faith Building, Faith: 11.00
+139, 1490, St. Petersburg, POP_CHANGE, Pop: 9, First: Hinduism(7), Nonreligious: 2
+139, 1490, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 23.00
+139, 1490, The Iroquois, FAITH UNIT PURCHASE, Missionary, Onondaga, Faith Cost: 130, Faith Left: 8.00
+139, 1490, The Iroquois, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 8.00
+139, 1490, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 95.00
+139, 1490, The Inca, Favorite Foreign Religion is, Islam
+139, 1490, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 64.00
+139, 1490, Grand River, ADJACENT_PRESSURE, Pop: 9, First: Taoism(9), Nonreligious: 0
+139, 1490, Sofia, ADJACENT_PRESSURE, Pop: 11, First: Hinduism(7), Nonreligious: 4
+140, 1500, Moscow, POP_CHANGE, Pop: 10, First: Hinduism(8), Nonreligious: 2
+140, 1500, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 46.00
+140, 1500, Tarsus, POP_CHANGE, Pop: 1, First: Zoroastrianism(1), Second: Hinduism(0), Nonreligious: 0
+140, 1500, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 21.00
+140, 1500, Buffalo Creek, MISSIONARY, Pop: 6, Second: Taoism(4), Nonreligious: 2
+140, 1500, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 109.00
+140, 1500, Tarsus, POP_CHANGE, Pop: 1, No religion in city
+140, 1500, Tarsus, CONQUEST, Pop: 1, First: Zoroastrianism(1), Second: Hinduism(0), Nonreligious: 0
+140, 1500, The Inca, Favorite Foreign Religion is, Islam
+140, 1500, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 77.00
+140, 1500, Buenos Aires, POP_CHANGE, Pop: 12, First: Zoroastrianism(6), Nonreligious: 5
+140, 1500, Bucharest, POP_CHANGE, Pop: 12, Second: Taoism(1), Nonreligious: 11
+140, 1500, Hamburg, ADJACENT_PRESSURE, Pop: 14, First: Pantheon(12), Nonreligious: 1
+141, 1510, Lhasa, MISSIONARY, Pop: 5, Second: Islam(3), Nonreligious: 1
+141, 1510, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 69.00
+141, 1510, Persepolis, POP_CHANGE, Pop: 15, First: Zoroastrianism(14), Nonreligious: 1
+141, 1510, The Iroquois, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 38.00
+141, 1510, Brantford, MISSIONARY, Pop: 8, Second: Taoism(5), Nonreligious: 3
+141, 1510, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 124.00
+141, 1510, St. Petersburg, ADJACENT_PRESSURE, Pop: 9, First: Hinduism(8), Nonreligious: 1
+142, 1520, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 84.00
+142, 1520, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 92.00
+142, 1520, Pasargadae, POP_CHANGE, Pop: 9, First: Zoroastrianism(7), Second: Protestantism(2), Nonreligious: 0
+142, 1520, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 51.00
+142, 1520, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 139.00
+142, 1520, The Inca, FAITH BUILDING PURCHASE, Monastery, Ollantaytambo, Faith Cost: 100, Faith Left: 3.00
+142, 1520, The Inca, Bought a Faith Building, Faith: 3.00
+143, 1530, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 113.00
+143, 1530, Mecca, POP_CHANGE, Pop: 9, First: Islam(9), Nonreligious: 0
+143, 1530, Machu, MISSIONARY, Pop: 8, First: Protestantism(4), Second: Islam(4), Nonreligious: 0
+143, 1530, Te-Moak, POP_CHANGE, Pop: 7, First: Protestantism(5), Second: Islam(1), Nonreligious: 0
+143, 1530, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 115.00
+143, 1530, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 64.00
+143, 1530, Munich, POP_CHANGE, Pop: 8, First: Pantheon(7), Nonreligious: 1
+143, 1530, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 155.00
+143, 1530, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
+143, 1530, Ormus, POP_CHANGE, Pop: 14, Second: Taoism(2), Nonreligious: 12
+143, 1530, Yaroslavl', ADJACENT_PRESSURE, Pop: 7, First: Hinduism(7), Nonreligious: 0
+143, 1530, Yaroslavl', ADJACENT_PRESSURE, Pop: 7, First: Hinduism(6), Nonreligious: 1
+143, 1530, Yaroslavl', ADJACENT_PRESSURE, Pop: 7, First: Hinduism(7), Nonreligious: 0
+143, 1530, Bratislava, ADJACENT_PRESSURE, Pop: 16, Second: Taoism(2), Nonreligious: 13
+144, 1540, Arabia, FAITH UNIT PURCHASE, Missionary, Mecca, Faith Cost: 130, Faith Left: 14.00
+144, 1540, Arabia, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 14.00
+144, 1540, Medina, POP_CHANGE, Pop: 10, First: Islam(10), Nonreligious: 0
+144, 1540, Agaidika, POP_CHANGE, Pop: 10, First: Protestantism(9), Second: Zoroastrianism(1), Nonreligious: 0
+144, 1540, Persia, FAITH UNIT PURCHASE, Missionary, Persepolis, Faith Cost: 130, Faith Left: 8.00
+144, 1540, Persia, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 8.00
+144, 1540, Ecbatana, POP_CHANGE, Pop: 10, First: Zoroastrianism(9), Nonreligious: 1
+144, 1540, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 77.00
+144, 1540, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 171.00
+144, 1540, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 38.00
+144, 1540, Huamanga, POP_CHANGE, Pop: 5, First: Zoroastrianism(5), Second: Hinduism(0), Nonreligious: 0
+144, 1540, Moscow, ADJACENT_PRESSURE, Pop: 10, First: Hinduism(9), Nonreligious: 1
+144, 1540, Berlin, ADJACENT_PRESSURE, Pop: 15, First: Pantheon(8), Second: Taoism(5), Nonreligious: 2
+144, 1540, Tombouctu, ADJACENT_PRESSURE, Pop: 10, First: Hinduism(10), Nonreligious: 0
+145, 1550, Yekaterinburg, POP_CHANGE, Pop: 5, First: Hinduism(5), Nonreligious: 0
+145, 1550, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 31.00
+145, 1550, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 90.00
+145, 1550, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 187.00
+145, 1550, Taghaza, POP_CHANGE, Pop: 8, First: Hinduism(6), Nonreligious: 2
+145, 1550, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 58.00
+145, 1550, Huamanga, ADJACENT_PRESSURE, Pop: 5, First: Zoroastrianism(4), Second: Hinduism(0), Nonreligious: 1
+145, 1550, Huamanga, ADJACENT_PRESSURE, Pop: 5, First: Zoroastrianism(5), Second: Hinduism(0), Nonreligious: 0
+146, 1560, Baghdad, POP_CHANGE, Pop: 5, First: Islam(4), Nonreligious: 1
+146, 1560, Genoa, MISSIONARY, Pop: 9, Second: Protestantism(0), Nonreligious: 4
+146, 1560, The Shoshone, FAITH BUILDING PURCHASE, Pagoda, Moson Kahni, Faith Cost: 130, Faith Left: 5.00
+146, 1560, The Shoshone, Bought a Faith Building, Faith: 5.00
+146, 1560, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 50.00
+146, 1560, Susa, POP_CHANGE, Pop: 11, First: Zoroastrianism(9), Nonreligious: 2
+146, 1560, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 103.00
+146, 1560, Berlin, POP_CHANGE, Pop: 16, First: Pantheon(9), Second: Taoism(5), Nonreligious: 2
+146, 1560, Hamburg, POP_CHANGE, Pop: 15, First: Pantheon(13), Nonreligious: 1
+146, 1560, Songhai, FAITH UNIT PURCHASE, Missionary, Gao, Faith Cost: 200, Faith Left: 3.00
+146, 1560, Songhai, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 3.00
+146, 1560, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 78.00
+146, 1560, Corihuayrachina, POP_CHANGE, Pop: 7, First: Zoroastrianism(6), Second: Islam(1), Nonreligious: 0
+146, 1560, La Venta, POP_CHANGE, Pop: 14, First: Zoroastrianism(8), Nonreligious: 5
+146, 1560, Te-Moak, ADJACENT_PRESSURE, Pop: 7, First: Protestantism(4), Second: Islam(2), Nonreligious: 0
+146, 1560, Huamanga, ADJACENT_PRESSURE, Pop: 5, First: Zoroastrianism(4), Second: Hinduism(0), Nonreligious: 1
+146, 1560, Zanzibar, ADJACENT_PRESSURE, Pop: 11, Second: Hinduism(2), Nonreligious: 8
+147, 1570, Arabia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 110.00
+147, 1570, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 69.00
+147, 1570, Persepolis, POP_CHANGE, Pop: 16, First: Zoroastrianism(15), Nonreligious: 1
+147, 1570, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 166.00
+147, 1570, Munich, POP_CHANGE, Pop: 9, First: Pantheon(8), Nonreligious: 1
+147, 1570, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 19.00
+147, 1570, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 98.00
+147, 1570, Tiwanaku, POP_CHANGE, Pop: 10, First: Islam(8), Nonreligious: 1
+147, 1570, Machu, POP_CHANGE, Pop: 9, First: Islam(5), Second: Protestantism(4), Nonreligious: 0
+147, 1570, Onondaga, ADJACENT_PRESSURE, Pop: 11, First: Taoism(10), Second: Hinduism(1), Nonreligious: 0
+147, 1570, Gao, ADJACENT_PRESSURE, Pop: 15, First: Hinduism(15), Nonreligious: 0
+147, 1570, Gao, ADJACENT_PRESSURE, Pop: 15, First: Hinduism(14), Nonreligious: 1
+147, 1570, Gao, ADJACENT_PRESSURE, Pop: 15, First: Hinduism(15), Nonreligious: 0
+147, 1570, Gao, ADJACENT_PRESSURE, Pop: 15, First: Hinduism(14), Nonreligious: 1
+147, 1570, Gao, ADJACENT_PRESSURE, Pop: 15, First: Hinduism(15), Nonreligious: 0
+147, 1570, Gao, ADJACENT_PRESSURE, Pop: 15, First: Hinduism(14), Nonreligious: 1
+147, 1570, Gao, ADJACENT_PRESSURE, Pop: 15, First: Hinduism(15), Nonreligious: 0
+147, 1570, Bucharest, ADJACENT_PRESSURE, Pop: 12, Second: Taoism(1), Nonreligious: 10
+147, 1570, Brussels, ADJACENT_PRESSURE, Pop: 10, Second: Hinduism(2), Nonreligious: 7
+148, 1580, Arabia, FAITH UNIT PURCHASE, Missionary, Mecca, Faith Cost: 130, Faith Left: 11.00
+148, 1580, Arabia, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 11.00
+148, 1580, Mecca, POP_CHANGE, Pop: 10, First: Islam(10), Nonreligious: 0
+148, 1580, Te-Moak, POP_CHANGE, Pop: 8, First: Protestantism(5), Second: Islam(2), Nonreligious: 0
+148, 1580, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 88.00
+148, 1580, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 179.00
+148, 1580, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 35.00
+148, 1580, Brussels, MISSIONARY, Pop: 10, Second: Hinduism(6), Nonreligious: 4
+148, 1580, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 119.00
+149, 1590, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 107.00
+149, 1590, Bratislava, MISSIONARY, Pop: 16, Second: Taoism(1), Nonreligious: 9
+149, 1590, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 192.00
+149, 1590, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 53.00
+149, 1590, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 140.00
+149, 1590, Huamanga, POP_CHANGE, Pop: 6, First: Zoroastrianism(5), Second: Hinduism(0), Nonreligious: 1
+150, 1600, Washakie, POP_CHANGE, Pop: 6, First: Protestantism(5), Second: Zoroastrianism(1), Nonreligious: 0
+150, 1600, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 126.00
+150, 1600, Ecbatana, POP_CHANGE, Pop: 11, First: Zoroastrianism(10), Nonreligious: 1
+150, 1600, Bratislava, MISSIONARY, Pop: 16, Second: Zoroastrianism(9), Nonreligious: 6
+150, 1600, The Iroquois, FAITH UNIT PURCHASE, Missionary, Onondaga, Faith Cost: 200, Faith Left: 5.00
+150, 1600, The Iroquois, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 5.00
+150, 1600, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 71.00
+150, 1600, Jenne, POP_CHANGE, Pop: 12, First: Hinduism(11), Nonreligious: 1
+150, 1600, Tondibi, POP_CHANGE, Pop: 6, First: Hinduism(4), Nonreligious: 1
+150, 1600, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 161.00
+151, 1610, Arabia, FAITH BUILDING PURCHASE, Monastery, Medina, Faith Cost: 100, Faith Left: 15.00
+151, 1610, Arabia, Bought a Faith Building, Faith: 15.00
+151, 1610, Rostov, POP_CHANGE, Pop: 11, First: Hinduism(10), Nonreligious: 1
+151, 1610, Persia, FAITH UNIT PURCHASE, Missionary, Persepolis, Faith Cost: 130, Faith Left: 15.00
+151, 1610, Persia, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 15.00
+151, 1610, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 18.00
+151, 1610, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 93.00
+151, 1610, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 182.00
+151, 1610, Damascus, ADJACENT_PRESSURE, Pop: 5, First: Islam(4), Second: Protestantism(1), Nonreligious: 0
+151, 1610, Damascus, ADJACENT_PRESSURE, Pop: 5, First: Islam(5), Second: Protestantism(0), Nonreligious: 0
+151, 1610, Brantford, ADJACENT_PRESSURE, Pop: 8, First: Taoism(4), Nonreligious: 3
+152, 1620, Mecca, POP_CHANGE, Pop: 11, First: Islam(11), Nonreligious: 0
+152, 1620, Goshute, POP_CHANGE, Pop: 9, First: Protestantism(6), Second: Islam(2), Nonreligious: 1
+152, 1620, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 34.00
+152, 1620, Susa, POP_CHANGE, Pop: 12, First: Zoroastrianism(10), Nonreligious: 2
+152, 1620, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 35.00
+152, 1620, Munich, POP_CHANGE, Pop: 10, First: Pantheon(9), Nonreligious: 1
+152, 1620, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 115.00
+152, 1620, Zanzibar, MISSIONARY, Pop: 11, Second: Hinduism(5), Nonreligious: 5
+152, 1620, The Inca, FAITH UNIT PURCHASE, Missionary, Cusco, Faith Cost: 200, Faith Left: 3.00
+152, 1620, The Inca, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 3.00
+152, 1620, Damascus, ADJACENT_PRESSURE, Pop: 5, First: Islam(4), Second: Protestantism(1), Nonreligious: 0
+152, 1620, Brantford, ADJACENT_PRESSURE, Pop: 8, First: Taoism(5), Nonreligious: 3
+152, 1620, Brantford, ADJACENT_PRESSURE, Pop: 8, First: Taoism(4), Nonreligious: 3
+152, 1620, Geneva, ADJACENT_PRESSURE, Pop: 9, First: Islam(7), Nonreligious: 2
+152, 1620, Ormus, ADJACENT_PRESSURE, Pop: 14, Second: Taoism(3), Nonreligious: 11
+152, 1620, Hanoi, ADJACENT_PRESSURE, Pop: 7, Second: Taoism(2), Nonreligious: 5
+153, 1630, Novgorod, MISSIONARY, Pop: 10, First: Hinduism(6), Nonreligious: 0
+153, 1630, Moscow, POP_CHANGE, Pop: 11, First: Hinduism(10), Nonreligious: 1
+153, 1630, Novgorod, POP_CHANGE, Pop: 11, First: Hinduism(7), Second: Islam(4), Nonreligious: 0
+153, 1630, The Shoshone, FAITH BUILDING PURCHASE, Pagoda, Te-Moak, Faith Cost: 130, Faith Left: 14.00
+153, 1630, The Shoshone, Bought a Faith Building, Faith: 14.00
+153, 1630, Persia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 53.00
+153, 1630, The Iroquois, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 48.00
+153, 1630, Hanoi, MISSIONARY, Pop: 7, Second: Taoism(4), Nonreligious: 3
+153, 1630, Songhai, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 137.00
+153, 1630, Corihuayrachina, MISSIONARY, Pop: 7, First: Zoroastrianism(4), Second: Islam(3), Nonreligious: 0

@@ -4101,6 +4101,240 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Planned: a BigArmy diagnostic block (the user, 2026-11-05 8:20am ET)
+
+The user: "a warmonger with 7 super greedy civs, a fox in the henhouse, and they still can't capture cities". The
+evidence:
+- CP's own AI captures in 2 of 27 flipped games, ours in 3 of 27.
+- Expected damage reached the city's HP in only 4 of 112 capture attempts.
+- 46 "too weak" give-ups in the last block.
+
+**The question:** army size or siege execution? Everything so far nudged both.
+
+**The test:** War builds `BigArmy`, test-only and never for the bundle or a style. It doubles the TimingBuildup
+aggressor's army target in the window and lifts the supply and upkeep caps there, nothing else, and logs the army at
+declaration and at the first capture attempt. It runs as one 20-game block per PC after the WindowUntilReady block
+(about 2:30pm ET).
+
+**Earlier tries at bigger armies never reached the walls.**
+- Standing armies of 3-4 per city plus the siege book went bankrupt: the Huns in 0C22F161 had GPT -130 and gifted away
+  37 warriors and the siege train.
+- TimingBuildup's armies then came out small.
+
+**Army size and captures over 211 logged bully games:** the aggressor's military at T100 against the average civ's.
+
+| Aggressor's military at T100 | Games | Captures |
+|---|---|---|
+| under 1x the average civ | 67 | 2 (3%) |
+| 1-1.5x | 84 | 3 (4%) |
+| 1.5-2x | 41 | 2 (5%) |
+| 2x or more | 19 | 3 (16%) |
+
+In capture games the aggressor's military was about 1.9x the average at T120, against about 1.2x in the others. So
+size helps, but few games ever reached 2x. BigArmy lifts the gold caps to see what a really big army does.
+- If captures jump, size is the lever: make it reachable honestly (economy and build-up).
+- If they stay rare, the siege and tactical code is the blocker.
+
+### Next block: WindowUntilReady on ab-850e142; PC 2's disk filled up (lead, 2026-11-05 7:17am ET; my session was down 4:15–7:15am)
+
+**War's read of the whole f6d1e84 block** (10 first games, compared with e4d5785's 14). On the right track:
+- NoUnits endings are gone (SecondWave), and DiploOpinionChange endings fell from 2.3 to 0.3 a game (TargetHold).
+- Attempts that hurt the city rose from 32% to 57%, mean damage from 6.8 to 18.6, and "refused" fell from 8/14 to 2/10.
+
+Not moved:
+- Waves, the best predictor of a capture, are flat: 1.5 delivered a game, against 1.4.
+- TimedOut doubled (0.7 to 1.6 a game): SiegeArmy holds the peacetime attacks for 20 turns because the armies are too
+  small, then gives up.
+- SiegeDominated never attacked.
+
+War withdrew SiegeVolley: its "6+ units, 22% land" effect came from one game (the Inca at Mumbai, 18 attempts), and
+other 6+ attempts landed 8 of 9.
+
+**The whole f6d1e84 block, as played overnight: 27 pairs.** PC 1 kept going to pair 19 (bullyabort11); PC 2 played
+8 complete pairs (bullygreedy13).
+
+| | First games (RoleFixes) | Flipped games (CP) |
+|---|---|---|
+| declared a war | 22 of 27 | 13 of 27 |
+| cities captured by the aggressor | 3 (Ottomans, America, Huns; all vs normal civs) | 2 |
+
+Funnel for the first games, PC 1 and PC 2:
+- no war: 3 and 1
+- never in reach: 2 and 1
+- refused only: 4 and 2
+- attempts, nothing taken: 7 and 4
+- captured: 3 and 0
+
+Against greedy civs, the "easy" matchup, there were 0 captures in 8. There, 24 attacks timed out after 20 turns of
+"too weak", and the window paused 76 turns for gold. Our role nearly doubles how often the aggressor goes to war, but
+captures stay at about 1 in 9 games: the army is too small when it matters.
+
+**Next block:** `claude/ab-c1` `850e142` (90 flags) merges `ai/war` `2499852`. It adds `WindowUntilReady`, which targets
+the funnel-wide pattern of armies too small before the war: 15 "too weak" give-ups and 16 timeouts in this block.
+RoleFixes add WindowUntilReady only. SiegeFeed and CoopWhenReady are in the build but off, to keep one idea per block.
+The capture-plan logging rides along. Runs: `bullyabort12`, `bullygreedy14`, 20 games each, frozen.
+
+**PC 2's disk:** C: filled at 4:10am ET. Civ's `LogsArchive` held 48.7 GB in 68 game folders, and the logs of
+0F82B771 (pair 9, first game) were lost; the CSV rows are fine. The fix is to move `LogsArchive` to D: with a junction,
+nothing deleted. PC 1 was asked to check its space.
+
+### The f6d1e84 block: 9 pairs, 1 capture with RoleFixes (lead, 2026-11-05 1:37am ET)
+
+Frozen build `ab-f6d1e84`: RoleFixes = the 25 flags + MarchOn, FocusedWar, WarGold, SiegeClose, TargetHold,
+SiegeDominated, SecondWave, CSAfterWar. PC 1: bullyabort11 (normal civs), 5 pairs. PC 2: bullygreedy13 (greedy civs),
+4 pairs. No missing snapshots, no crashes.
+
+| Funnel stage (first games, RoleFixes) | bullyabort11 | bullygreedy13 |
+|---|---|---|
+| at war, never in reach of a city | 1 (Huns) | 1 (Japan) |
+| refused only | 1 (Mongol) | 1 (Songhai) |
+| capture attempts, nothing taken | 2 (Greece, Assyria) | 2 (Germany, Mongol) |
+| captured | 1 (Ottomans took Delhi, T126, declared T120) | 0 |
+
+- **Flipped games (CP's AI):** 1 capture in 9 (0E222BE3, Mongols).
+- **Signals in the first games:** 15 "SiegeArmy too weak, gave up", 9 build-ups given up after 3 windows, 88 window
+  turns paused for gold, and only 17 capture attempts in 9 games. Attack ops ended TimedOut 16, Success 14.
+- **Reading:** every first game had a war. The army still rarely brings enough to the walls, and the gold pauses
+  remain despite WarGold. War is studying army strength at the walls across all games; the next build waits for its
+  proposal.
+
+### Patterns, not whack-a-mole: the attack funnel over 60 logged games (lead, 2026-11-04 11:45pm ET)
+
+The user: "instead of trying to fix the individual problems that happen each match, we should be looking for patterns
+and trends that exist over multiple matches". New tool `tools/ab/attack_funnel.py`. It reads every `results/logs_*`
+bully game and places it at the deepest stage the aggressor reached. It covers 51 first games (RoleFixes, every run
+since bullyconquest) and 9 flipped games (CP's AI; only capture games and partners keep flipped logs).
+
+| Stage the attack died at | First games (RoleFixes) | Flipped games (CP) |
+|---|---|---|
+| no attack operation formed | 1 | 0 |
+| attack operations, but no war declared | 6 | 1 |
+| at war, never tried a capture (tactics refused: "enemy dominated zone") | 23 | 3 |
+| capture attempts, no city taken | 18 | 3 |
+| took a city | 3 | 2 |
+
+Over all first games:
+- 3,960 turns of zone refusals.
+- 112 capture attempts, and expected damage reached the city's HP in only 4 of them.
+- Of the 88 attempts with a logged outcome, 69% left the city untouched or healed it. 26 used 0 units; 20 used 6.
+- Attack operations ended: DiploOpinionChange 54, Success 54, NoUnits 47, TimedOut 32.
+- Signals: 28 build-ups given up ("no war after 3 windows"), 32 "SiegeArmy too weak" give-ups, 143 window turns paused
+  for gold.
+
+**The pattern:** the wars now come (45 of 51 first games are at war). The army reaches the target region, but it can't
+hurt the city. Most attacks never try, because the zone is enemy-dominated, and the attacks that do try lack the
+damage, at almost any unit count. That is a strength problem (army size and composition, siege units and their
+timing against walls and city strength), not a sequencing bug. Next: one change aimed at damage at the walls, judged on
+this funnel over a frozen block of at least 8 pairs.
+
+**New rule (AGENTS.md, Rules 0):** fixes target funnel-level patterns, and builds are frozen for blocks of pairs.
+
+### Siege build, pair 1, and SecondWave (lead, 2026-11-04 10:55pm ET)
+
+**bullygreedy12 pair 0E42C140** (`ab-7bb7885`, PC 2): Mongolia (aggressor) declared 0 wars with RoleFixes and 1
+without. 0 captures. No missing snapshots, the first full pair on the fixed runner. War's read of the logs:
+- **The cancelled attacks** came from `DoUpdateWarTargets`, not from approach selection. During a TimingBuildup window,
+  `GetNewAIConquestTarget` returns no one on purpose. So the target had to pass CP's war filters, and one bad turn reset
+  its approach and cancelled the attack. Fixed by **TargetHold part 2** (`61af669`): the committed target stays a war
+  plan while an attack on it is under way.
+- **"SiegeArmy: still too weak after 20 turns":** the army was 3 units. Its window was paused 10 turns for gold, and its
+  bigger armies went to Zurich, a city-state (CSConquest). War is asked to hold CS conquest while a war on the committed
+  major is under way.
+- **`SecondWave`** (`96332cc`): at war with a major, a new attack may form with up to 3 units still to build. On
+  `e4d5785`, follow-up attacks ended NoUnits the turn they started (Aztecs 8 times, Ottomans 12), and Germany's siege of
+  Heliopolis (down to 117 of 200) got no second attack.
+
+**`claude/ab-c1` `f6d1e84`** (87 flags; it replaces `ad5a2d8`, whose CI run was cancelled) adds War's **`CSAfterWar`**
+(`0ccd0e0`): while the war on the committed major is building or on, city-states we're not already fighting get no WAR
+approach. Between wars, CSConquest works as before. Next runs: `bullyabort11` and `bullygreedy13`, RoleFixes +
+`SecondWave, CSAfterWar`.
+
+### Siege build: SiegeClose, TargetHold, SiegeDominated (lead, 2026-11-04 9:40pm ET)
+
+**`claude/ab-c1` `7bb7885`** (85 flags, CI building) merges `ai/war` `e239712` and the lead's snapshot retry
+(`220bfcf`). New since `e4d5785`:
+- MarchOn waits at the walls for the war, and its at-war stall rule counts only turns at war.
+- SiegeArmy's bar, once at war with the target, becomes the tactical 13-turn rule.
+- Zone strengths are logged.
+- **`SiegeClose`:** an enemy major dominating its city's zone no longer stops tactics from closing in.
+- **`TargetHold`:** a committed target isn't dropped for one failed turn while the attack is under way. In 0D03FDB9,
+  Mongolia's approach flipped every few turns and cancelled about ten attacks.
+- **`SiegeDominated`:** at a city in an enemy-dominated zone, attack anyway if 3 or more units can strike and their
+  expected damage, less the city's healing, takes its HP within 3 turns.
+
+Next runs, once the release is out: `bullyabort10` (PC 1) and `bullygreedy12` (PC 2), RoleFixes = the 25 flags +
+`MarchOn, FocusedWar, WarGold, SiegeClose, TargetHold, SiegeDominated`.
+
+### WarGold, 11 pairs: the first capture by an aggressor with RoleFixes (lead, 2026-11-04 9:21pm ET)
+
+| Run (`ab-e4d5785`) | Pairs | First games (RoleFixes): declared | Captures | Flipped games: declared | Captures |
+|---|---|---|---|---|---|
+| bullyabort9 (normal civs, PC 1) | 6 | 5 | 0 | 4 | 0 |
+| bullygreedy11 (greedy civs, PC 2) | 5 | 5 | 1 | 3 | 0 |
+
+- **0DB8F250, the Zulus vs China:** the window opened at T62. At T92, MarchOn declared and the army marched on (the op
+  ran 32 turns, Success at T94). Shanghai fell in two turns: T95 HP 80 -> 22 with 5 of 6 units, T96 captured. Logs of
+  both games are kept.
+- **The repeated blocker:** "City of X is in enemy dominated zone - won't try to capture". In the same game it stopped
+  the Zulus at Beijing (T93) and Nanjing (T99-T103), and in 0D7BB38D at Addis Ababa (T113-119). Sent to War as the
+  next lever.
+- **A logging oddity:** some games lack one 10-turn snapshot, e.g. 0DD77369 has no T150 row and ends at T160.
+
+### Attack runs on WarGold: the aggressor declares now, still no captures (lead, 2026-11-04 7:34pm ET)
+
+Aggressor wars declared and cities it captured, by build, first game (RoleFixes) / flipped game (none):
+
+| Build | Runs | Pairs | First games: wars declared | Flipped games: wars declared | Aggressor captures |
+|---|---|---|---|---|---|
+| `f21a8f6` | bullygreedy8 | 3 | Japan 1, Mongolia 1, Zulu 0 | 1, 0, 1 | 1 (Japan, flipped game) |
+| `f73177c` | bullyabort7, bullygreedy9 | 3 | Celts 1, Huns 1, China 0 | 0, 1, 0 | 0 |
+| `eb4129d` | bullyabort8, bullygreedy10 | 2 | Shoshone 1, America 0 | 1, 0 | 0 |
+| `e4d5785` (WarGold) | bullyabort9, bullygreedy11 | 4 | America 1, Huns 2, Aztec 2, Assyria 1 | 0, 1, 1, 0 | 0 |
+
+- **With WarGold, the aggressor declared in all 4 first games (6 wars), against 2 in the 4 flipped games.** On the
+  earlier builds it declared in 5 of 8 first games. Small numbers, but the right direction.
+- **Still no captures.** In 0D7BB38D (Aztecs vs Ethiopia), the city attack ran 21 turns and timed out (T108). Then, from
+  T113 on, tactics refused Addis Ababa every turn ("in enemy dominated zone - won't try to capture"). Sent to War.
+
+### WarGold: the aggressor's gold, fixed at the root (lead, 2026-11-04 5:53pm ET)
+
+Economy's patch 0021 (`ai/economy` `43fd583`) and War's `460536b` are in `claude/ab-c1` `e4d5785` (82 flags; CI
+building).
+- **Cause (Economy):** the warmonger's forced research (the opening book, then TimingBuildup's techs) skipped Currency.
+  The Aztecs got their Market at T103; our other civs had theirs at T55-T59.
+- **`WarGold`** (new, off unless named): applies to a warmonger at peace with the majors whose net gold is below
+  cities + 2, outside the window and attack phases.
+  - Research goes toward Currency right after the opening book.
+  - Gold buildings get +500.
+  - While net gold is negative: no world wonders, and no upkeep buildings unless they make gold, defend, or ready the
+    army. Caravans and cargo ships get +300.
+- **`WarChest`:** now also saves at peace, from T30, at least 2 siege units' price.
+- **`460536b` (War):** SiegeAbort spares an attack that is close to SiegeArmy's strength bar.
+
+**Next attack runs:** RoleFixes = the 25 flags + `MarchOn, FocusedWar, WarGold`, on `ab-e4d5785`. This follows one
+logged pair per PC on `ab-eb4129d` (`bullygreedy10`, `bullyabort8`). The first game's logs are now always kept, war or
+no war.
+
+### Why the Aztecs never attacked: broke at peace, and workers won the build queue (lead, 2026-11-04 5:31pm ET)
+
+War and Economy, from replay 0C3C8913 (`logs_0C3C89130C3C8913`):
+- **Workers and work boats** (the user, watching live: "a million workers and work boats"): in TimingBuildup's peace
+  phase the unit cap refused land units, while CP's building AI cut every building by 75% at 1 military unit per city.
+  So workers and work boats won the cities' choice. Fixed by `f863b01`: the peace phase skips the cut, as greedy civs do.
+- **Broke at peace:** GPT 0 at T0, -4 at T50, -10 at T80, then -8 to -13 to T108. The cause was the upkeep of
+  expansion, buildings and wonders with no gold income, not the army: 7 settlers, 3 caravans, 3 Floating Gardens and
+  2 wonders by T80. WarChest saves only in PLANNED/WINDOW, and the Aztecs went straight from PEACE to the window at T81,
+  so nothing was saved.
+- **So the window starved:** 82 units were refused as "too expensive" (CP's upkeep guard: no combat unit under 9 turns
+  to bankruptcy), and it ran out with no army. Stop-gap `69c9587`: the window's clock pauses while units are
+  unaffordable.
+- **Next, Economy:** WarChest saves in PEACE from T30 (at least 2 siege units' price), and a timing attacker keeps
+  GPT >= 0 at peace (gold buildings and tiles first, hold off on maintenance-heavy builds).
+
+**`claude/ab-c1` `eb4129d`:** ai/war `69c9587`, Economy's `WondersForVictory` and `LeanBuilders` (patches 0019/0020),
+and Diplomacy's `GreedyWideDeals`. 81 flags, 24 in the bundle; the new flags are off. The PCs switch after their first
+logged pair on `ab-f73177c`.
+
 ### Greedy wide and tall merged (lead, 2026-11-04 5:10pm ET)
 
 Personality's `ai/personality` `cf84181` (CI run 187) is merged into `claude/ab-c1` `c5015f1` (78 flags; the conflict

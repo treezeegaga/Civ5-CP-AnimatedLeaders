@@ -1,0 +1,32 @@
+001, Japan, LEADER_ODA_NOBUNAGA, tags W, pursuits 0/2, Conqueror, home meta 80, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest, greedy wide
+001, Venice, LEADER_ENRICO_DANDOLO, tags SD, pursuits 1/3, Diplomat, home meta -50, weights dom 4 sci 26 cul 6 dip 64, risk low, expansion tall, greedy tall
+001, Carthage, LEADER_DIDO, tags , pursuits 1/0, Diplomat, home meta 0, weights dom 24 sci 6 cul 6 dip 64, risk medium, expansion medium, greedy tall
+001, Poland, LEADER_CASIMIR, tags T, pursuits 2/3, Tourism, home meta -50, weights dom 2 sci 26 cul 68 dip 4, risk medium, expansion tall, greedy wide
+001, The Inca, LEADER_PACHACUTI, tags E, pursuits 3/0, Expansionist, home meta -10, weights dom 30 sci 50 cul 10 dip 10, risk low, expansion wide, greedy wide
+001, Babylon, LEADER_NEBUCHADNEZZAR, tags NS, pursuits 2/3, Scientist, home meta -55, weights dom 2 sci 48 cul 44 dip 6, risk medium, expansion tall, greedy tall
+001, Portugal, LEADER_MARIA_I, tags , pursuits 1/3, Diplomat, home meta -15, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion medium, greedy wide
+001, Siam, LEADER_RAMKHAMHAENG, tags D, pursuits 1/3, Diplomat, home meta -20, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion wide, greedy wide
+050, Japan, LEADER_ODA_NOBUNAGA, tags WR, pursuits 0/2, Conqueror, home meta 80, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest, greedy wide
+050, Venice, LEADER_ENRICO_DANDOLO, tags RSD, pursuits 1/3, Diplomat, home meta -50, weights dom 4 sci 26 cul 6 dip 64, risk low, expansion tall, greedy tall
+050, Carthage, LEADER_DIDO, tags R, pursuits 1/0, Zealot, home meta 20, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium, greedy tall
+050, Poland, LEADER_CASIMIR, tags RT, pursuits 2/3, Tourism, home meta -50, weights dom 2 sci 26 cul 68 dip 4, risk medium, expansion tall, greedy wide
+050, The Inca, LEADER_PACHACUTI, tags E, pursuits 3/0, Expansionist, home meta -10, weights dom 30 sci 50 cul 10 dip 10, risk low, expansion wide, greedy wide
+050, Babylon, LEADER_NEBUCHADNEZZAR, tags RNS, pursuits 2/3, Zealot, home meta 5, weights dom 6 sci 26 cul 60 dip 8, risk medium, expansion medium, greedy tall
+050, Portugal, LEADER_MARIA_I, tags R, pursuits 1/3, Zealot, home meta 5, weights dom 6 sci 26 cul 20 dip 48, risk medium, expansion medium, greedy wide
+050, Siam, LEADER_RAMKHAMHAENG, tags D, pursuits 1/3, Diplomat, home meta -20, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion wide, greedy wide
+100, Japan, LEADER_ODA_NOBUNAGA, tags WR, pursuits 0/2, Conqueror, home meta 80, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest, greedy wide
+100, Venice, LEADER_ENRICO_DANDOLO, tags RSD, pursuits 1/3, Diplomat, home meta -50, weights dom 4 sci 26 cul 6 dip 64, risk low, expansion tall, greedy tall
+100, Carthage, LEADER_DIDO, tags R, pursuits 1/0, Zealot, home meta 20, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium, greedy tall
+100, Poland, LEADER_CASIMIR, tags RT, pursuits 2/3, Tourism, home meta -50, weights dom 2 sci 26 cul 68 dip 4, risk medium, expansion tall, greedy wide
+100, The Inca, LEADER_PACHACUTI, tags RE, pursuits 3/0, Zealot, home meta -10, weights dom 26 sci 46 cul 20 dip 8, risk low, expansion medium, greedy wide
+100, Babylon, LEADER_NEBUCHADNEZZAR, tags RNS, pursuits 2/3, Zealot, home meta 5, weights dom 6 sci 26 cul 60 dip 8, risk medium, expansion medium, greedy tall
+100, Portugal, LEADER_MARIA_I, tags R, pursuits 1/3, Zealot, home meta 5, weights dom 6 sci 26 cul 20 dip 48, risk medium, expansion medium, greedy wide
+100, Siam, LEADER_RAMKHAMHAENG, tags RD, pursuits 1/3, Diplomat, home meta -20, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion wide, greedy wide
+150, Japan, LEADER_ODA_NOBUNAGA, tags WR, pursuits 0/2, Conqueror, home meta 80, weights dom 68 sci 4 cul 24 dip 4, risk high, expansion conquest, greedy wide
+150, Venice, LEADER_ENRICO_DANDOLO, tags RSD, pursuits 1/3, Diplomat, home meta -50, weights dom 4 sci 26 cul 6 dip 64, risk low, expansion tall, greedy tall
+150, Carthage, LEADER_DIDO, tags R, pursuits 1/0, Zealot, home meta 20, weights dom 26 sci 6 cul 20 dip 48, risk medium, expansion medium, greedy tall
+150, Poland, LEADER_CASIMIR, tags RT, pursuits 2/3, Tourism, home meta -50, weights dom 2 sci 26 cul 68 dip 4, risk medium, expansion tall, greedy wide
+150, The Inca, LEADER_PACHACUTI, tags RE, pursuits 3/0, Zealot, home meta -10, weights dom 26 sci 46 cul 20 dip 8, risk low, expansion medium, greedy wide
+150, Babylon, LEADER_NEBUCHADNEZZAR, tags RNS, pursuits 2/3, Zealot, home meta 5, weights dom 6 sci 26 cul 60 dip 8, risk medium, expansion medium, greedy tall
+150, Portugal, LEADER_MARIA_I, tags , pursuits 1/3, Diplomat, home meta -15, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion medium, greedy wide
+150, Siam, LEADER_RAMKHAMHAENG, tags RD, pursuits 1/3, Diplomat, home meta -20, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion wide, greedy wide

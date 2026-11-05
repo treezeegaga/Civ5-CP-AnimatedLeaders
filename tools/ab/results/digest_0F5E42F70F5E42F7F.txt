@@ -1,0 +1,36 @@
+﻿Game 0F5E42F70F5E42F7F (AIABTest_c8e.csv), last logged turn 150
+b    Assyria      tall      cities 4
+  builds to T80 (capital Assur; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T20 Worker* | T29 Settler* | T37 Granary | T43 Monument* (Nineveh) | T44 Royal Library* (Nineveh) | T44 Stonehenge | T45 Royal Library* | T49 Archer | T52 Temple | T58 Shrine (Nineveh) | T60 Oracle | T66 Settler (Nineveh) | T73 Hanging Gardens
+  settlers ordered T: 29,66,90   found-city ops started T: 37,81,95   cities founded T: 43,93,100
+  book SETTLER HELD to T80: 5 (unhappy 4, growth due 1)   built instead: the normal AI choice 2, Royal Library 2, Worker 1   first: T020 Assur size 3 next Worker | T044 Assur size 5 next Royal Library | T045 Assur size 5 next Royal Library
+  IDLE SETTLER turns: 2 (first T67)
+  military ops ended (whole game): Success 1
+  settler timeline to T80: T29 settler (book) in Assur | T37 op started | T43 FOUNDED | T66 settler (AI) in Nineveh
+  saving gold for a settler: 42 turns (T10-T80)
+b    Byzantium    tall      cities 4
+  builds to T80 (capital Constantinople; other cities named): T0 Scout* | T4 Monument* | T10 Shrine* | T16 Warrior* | T22 Worker* | T31 Stonehenge | T45 Settler* | T51 Library* | T58 Work Boat (Adrianople) | T59 Work Boat (Adrianople) | T59 Settler | T64 Great Lighthouse | T68 Granary (Nicaea) | T69 Shrine (Adrianople) | T72 Settler | T73 Settler | T77 Granary | T78 Granary (Adrianople)
+  settlers ordered T: 45,59,72,73,112   found-city ops started T: 51,64,77   cities founded T: 58,68,82
+  ops aborted: T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget
+  book SETTLER HELD to T80: 3 (growth due 2, one at a time 1)   built instead: Library 2, Worker 1   first: T022 Constantinople size 4 next Worker | T031 Constantinople size 5 next Library | T051 Constantinople size 6 next Library
+  IDLE SETTLER turns: 4 (first T59)
+  military ops ended (whole game): NoTarget 5
+  settler timeline to T80: T45 settler (book) in Constantinople | T51 op started | T58 FOUNDED | T59 settler (AI) in Constantinople | T64 op started | T68 FOUNDED | T72 settler (AI) in Constantinople | T73 settler (AI) in Constantinople | T77 op started
+  saving gold for a settler: 59 turns (T5-T77)
+b    Denmark      wide      cities 5
+  builds to T80 (capital Copenhagen; other cities named): T1 Scout* | T5 Warrior* | T11 Settler* | T21 Worker* | T23 Monument* (Aarhus) | T25 Shrine* | T28 Worker* | T31 Monument* | T34 Great Library | T36 Shrine (Aarhus) | T42 Settler (Aarhus) | T49 Warrior | T49 Settler (Aarhus) | T51 Water Mill (Aarhus) | T51 Granary | T55 Water Mill | T58 Market (Aarhus) | T60 Writers' Guild | T62 Monument* (Kaupang) | T64 Archer (Aarhus) | T65 Archer | T66 Monument* (Ribe) | T67 Scout (Aarhus) | T68 Library (Aarhus) | T68 Spearman | T72 Market (Kaupang) | T72 Market | T73 Worker (Aarhus) | T76 Market (Ribe) | T76 Walls (Aarhus) | T78 Terracotta Army | T80 Worker (Aarhus)
+  settlers ordered T: 11,42,49,98,99,113,114   found-city ops started T: 21,51,57,104   cities founded T: 23,62,66,111
+  ops aborted: T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 7 (unhappy 3, growth due 2, one at a time 2)   built instead: the normal AI choice 5, Monument 1, Library 1   first: T031 Copenhagen size 2 next Monument | T034 Copenhagen size 2 next Library | T049 Copenhagen size 2 next the normal AI choice
+  IDLE SETTLER turns: 3 (first T43)
+  military ops ended (whole game): Success 1, NoUnits 1, NoTarget 1
+  settler timeline to T80: T11 settler (book) in Copenhagen | T21 op started | T23 FOUNDED | T42 settler (AI) in Aarhus | T49 settler (AI) in Aarhus | T51 op started | T57 op started | T62 FOUNDED | T66 FOUNDED
+  saving gold for a settler: 34 turns (T7-T51)
+b    Songhai      tall      cities 5
+  builds to T80 (capital Gao; other cities named): T1 Scout* | T5 Monument* | T12 Shrine* | T17 Warrior* | T22 Settler* | T34 Worker* | T40 Monument* (Tombouctu) | T41 Stonehenge | T41 Library* (Tombouctu) | T45 Library* | T53 Worker* | T54 Worker | T55 Worker | T56 Spearman | T62 Scout (Tombouctu) | T62 Settler | T63 Worker (Tombouctu) | T64 Archer (Tombouctu) | T65 Archer (Tombouctu) | T66 Archer (Tombouctu) | T69 Water Mill (Tombouctu) | T70 Hanging Gardens | T70 Settler | T74 Granary (Jenne) | T78 Worker (Tombouctu)
+  settlers ordered T: 22,62,70,83,85,90,108   found-city ops started T: 34,70,89,96   cities founded T: 40,74,103,107
+  ops aborted: T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: Library 2   first: T041 Gao size 3 next Library | T045 Gao size 3 next Library
+  IDLE SETTLER turns: 4 (first T62)
+  military ops ended (whole game): NoUnits 7, LostPath 3, WarStateChange 1, NoTarget 1
+  settler timeline to T80: T22 settler (book) in Gao | T34 op started | T40 FOUNDED | T62 settler (AI) in Gao | T70 op started | T70 settler (AI) in Gao | T74 FOUNDED
+  saving gold for a settler: 44 turns (T7-T80)

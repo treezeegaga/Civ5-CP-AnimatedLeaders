@@ -1,0 +1,41 @@
+﻿Game 0D7BB38D0D7BB38D (AIABTest_c8e.csv), last logged turn 150
+b    Polynesia    tall      cities 5
+  builds to T80 (capital Honolulu; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Maori Warrior* | T24 Settler* | T35 Maori Warrior | T41 Worker | T47 Monument* (Samoa) | T48 Library* | T48 Library* (Samoa) | T58 Work Boat | T62 Work Boat | T68 Work Boat | T73 Work Boat | T78 Work Boat
+  settlers ordered T: 24,86,87,111,128,140   found-city ops started T: 35,99,120,133   cities founded T: 47,101,122,137
+  ops aborted: T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 1 (unhappy 1)   built instead: Library 1   first: T048 Honolulu size 5 next Library
+  IDLE SETTLER turns: 4 (first T87)
+  settler timeline to T80: T24 settler (book) in Honolulu | T35 op started | T47 FOUNDED
+  saving gold for a settler: 60 turns (T5-T80)
+c    Assyria      tall      cities 3
+  builds to T80 (capital Assur; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Settler* | T41 Warrior | T43 Granary (Nineveh) | T44 Worker* | T50 Warrior | T50 Settler (Nineveh) | T52 Worker | T52 Warrior | T53 Warrior | T55 Warrior | T58 Granary | T63 Royal Library | T69 Warrior | T70 Shrine (Nineveh) | T72 Water Mill | T74 Monument (Nimrud) | T75 Shrine (Nimrud) | T76 Hanging Gardens
+  settlers ordered T: 24,50,84,85   found-city ops started T: 41,70   cities founded T: 43,74
+  ops aborted: T87 NoTarget, T88 NoTarget, T89 NoTarget, T90 NoTarget, T91 NoTarget, T92 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  IDLE SETTLER turns: 2 (first T50)
+  military ops ended (whole game): WarStateChange 1, NoTarget 1
+  settler timeline to T80: T24 settler (book) in Assur | T41 op started | T43 FOUNDED | T50 settler (AI) in Nineveh | T70 op started | T74 FOUNDED
+  saving gold for a settler: 67 turns (T6-T80)
+c    Ethiopia     tall      cities 1
+  builds to T80 (capital Addis Ababa; other cities named): T0 Scout* | T4 Stele* | T11 Shrine* | T16 Warrior* | T22 Settler* | T34 Granary | T43 Warrior* | T50 Settler* | T57 Worker | T66 National College | T78 Writers' Guild
+  settlers ordered T: 22,50   found-city ops started T: 34,57,72   cities founded T: 
+  ops aborted: T40 LostCivilian, T71 NoTarget, T76 NoTarget, T77 NoTarget, T78 NoTarget, T79 NoTarget, T80 NoTarget, T81 NoTarget, T82 NoTarget, T83 NoTarget, T84 NoTarget, T85 NoTarget, T86 NoTarget, T87 NoTarget, T88 NoTarget, T89 NoTarget, T90 NoTarget, T91 NoTarget, T92 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  settler timeline to T80: T22 settler (book) in Addis Ababa | T34 op started | T40 op ended: LostCivilian | T50 settler (book) in Addis Ababa | T57 op started | T71 op ended: NoTarget | T72 op started | T76 op ended: NoTarget | T77 op ended: NoTarget | T78 op ended: NoTarget | T79 op ended: NoTarget | T80 op ended: NoTarget
+  saving gold for a settler: 47 turns (T6-T57)
+c    Greece       wide      cities 9
+  builds to T80 (capital Athens; other cities named): T0 Scout* | T4 Warrior* | T9 Settler* | T19 Granary | T27 Shrine | T30 Monument* | T33 Warrior* | T34 Monument* (Sparta) | T35 Settler* | T40 Warrior | T41 Warrior | T44 Great Library | T45 Library* | T46 Water Mill (Sparta) | T49 Temple of Artemis | T52 Monument* (Corinth) | T55 Archer | T56 Worker | T56 Archer | T58 Market (Corinth) | T59 Shrine (Sparta) | T60 Petra | T66 Granary (Sparta) | T70 Work Boat (Corinth) | T72 Granary (Argos) | T72 Work Boat | T73 Settler (Sparta) | T73 Work Boat | T74 Work Boat | T76 Granary (Corinth) | T76 Scout | T77 Worker
+  settlers ordered T: 9,35,73,86,95,115,129,130,131,141   found-city ops started T: 19,40,67,81,92,97,107,123,132   cities founded T: 34,52,72,87,102,120,134,135
+  ops aborted: T102 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 8 (unhappy 4, one at a time 3, growth due 1)   built instead: the normal AI choice 5, Library 2, Monument 1   first: T030 Athens size 3 next Monument | T044 Athens size 3 next Library | T045 Athens size 3 next Library
+  IDLE SETTLER turns: 7 (first T35)
+  military ops ended (whole game): NoTarget 3, NoUnits 2, Success 2, WarStateChange 1, HalfStrength 1
+  settler timeline to T80: T9 settler (book) in Athens | T19 op started | T34 FOUNDED | T35 settler (book) in Athens | T40 op started | T52 FOUNDED | T67 op started | T72 FOUNDED | T73 settler (AI) in Sparta
+  saving gold for a settler: 29 turns (T6-T80)
+c    Russia       tall      cities 5
+  builds to T80 (capital Moscow; other cities named): T0 Scout* | T3 Monument* | T6 Warrior* | T10 Shrine* | T13 Warrior* | T17 Settler* | T25 Granary | T27 Monument (St. Petersburg) | T30 Warrior* | T33 Worker* | T33 Library* (St. Petersburg) | T38 Settler* | T44 Warrior | T46 Granary (Novgorod) | T47 Warrior | T50 Library* | T53 Settler* | T58 Spearman | T60 Worker | T61 Granary (St. Petersburg) | T62 Worker (Novgorod) | T63 Scout | T64 Monument (Rostov) | T64 Settler | T65 Granary (Rostov) | T69 Spearman | T71 Library (Novgorod) | T72 Monument (Yaroslavl') | T72 Spearman | T74 Worker | T77 Scout (St. Petersburg) | T77 Spearman | T78 Work Boat (Novgorod) | T80 Worker (St. Petersburg) | T80 Spearman
+  settlers ordered T: 17,38,53,64,86,87,106   found-city ops started T: 25,44,58,69   cities founded T: 27,46,64,72
+  ops aborted: T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T050 Moscow size 3 next Library
+  IDLE SETTLER turns: 5 (first T38)
+  military ops ended (whole game): NoTarget 4, Success 1, LostPath 1
+  settler timeline to T80: T17 settler (book) in Moscow | T25 op started | T27 FOUNDED | T38 settler (book) in Moscow | T44 op started | T46 FOUNDED | T53 settler (book) in Moscow | T58 op started | T64 FOUNDED | T64 settler (AI) in Moscow | T69 op started | T72 FOUNDED
+  saving gold for a settler: 46 turns (T11-T69)
