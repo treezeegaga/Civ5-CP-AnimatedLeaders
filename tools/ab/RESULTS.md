@@ -3311,7 +3311,7 @@ logged pair".
 - **Status:** compiles (CI run 175 passed on `35272f9`, 2026-11-04 3:00pm ET); merged into `claude/ab-c1` (`b06d504`) by
   the lead. In the greedy style set.
 
-### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 11:40am ET)
+### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
   138 logged games, tech turns read from the first unlock in a build list): after the opening book, research follows
   the target victory only loosely. Science civs reach Education by T150 in 69% of games, fewer than culture civs (83%)
