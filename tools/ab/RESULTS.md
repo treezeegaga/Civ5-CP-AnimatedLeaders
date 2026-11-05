@@ -1952,6 +1952,8 @@ wave can form (SecondWave). Logs "SiegeFeed: X is under siege (n units in the zo
 military log. Expect: no "Gathering army" for a city attack on the city being besieged, and more units within
 striking distance per capture attempt.
 
+Coded: `ai/war` `1fe84572f` (CI pending), on `0ccd0e07e` (CSAfterWar, in `claude/ab-c1` `f6d1e84`).
+
 ### War: CSAfterWar, city-state conquest waits while the war on the committed major is building or on (the lead's request, 10:55pm ET) (Nov 4, about 10:55pm ET)
 **Seen:** in 0E42C140 (ab-7bb7885) Mongolia's attacks on its committed target Denmark had 3 units each (four of them,
 T77–T132). At the same time, attacks on Zurich, a city-state, got 6 and 7 units (2708 at T112, 3653 at T141). CSConquest
