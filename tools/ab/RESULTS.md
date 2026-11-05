@@ -1924,6 +1924,27 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: SiegeDominated, attacking from an enemy-dominated zone when the army at the walls can take the city (the lead's request, 9:20pm ET) (Nov 4, about 9:36pm ET)
+**The lead's tally on ab-e4d5785:** 11 pairs, the aggressor declared in most games, 1 capture. The Zulus took
+Shanghai in 0DB8F250 at T96 (window vs China at T62, MarchOn declared at T92, 80 → 22 HP with 5 of 6 units at T95).
+Correction: my 0D03FDB9 entry says no candidate aggressor ran in 0DB8F250; it did (I looked for CONQUEST lines,
+which that game doesn't have).
+
+**The blocker in every game:** "City of X, is in enemy dominated zone - won't try to capture" (Beijing T93 and
+Nanjing T99–T103 in 0DB8F250, Addis Ababa T113–T119 in 0D7BB38D; 11–38 times a city in the other games).
+ExecuteCaptureCityMoves skips the city before it even looks at which units can strike it. The zone counts the city as
+enemy ranged strength and only units within 4 tiles (Ancient/Classical), and it needs enemy strength over 1.7 times
+ours, so a siege army at the walls of a defended city often reads as outnumbered.
+
+**Hypothesis (flag SiegeDominated, War, CvTacticalAI::ExecuteCaptureCityMoves):** at a city of a major we're at war
+with, an enemy-dominated zone doesn't skip the city outright. The units within striking distance are found as usual.
+The attack goes ahead if at least 3 can strike and their expected damage, less the city's healing, would take the
+city's HP within 3 turns. Otherwise the skip stands, logged with the numbers. The healing and melee checks after it are
+unchanged. Logs "SiegeDominated: attacking X in an enemy-dominated zone (n units, expected e a turn, h HP to go)" or
+"SiegeDominated: X stays skipped (…)". Expect: attempts at cities that read enemy dominated with the army there, and
+more captures. Risk: the expected damage runs high (Busan read 41–59 with 10–23 done), so the 3-turn bar is strict
+on purpose.
+
 ### War: 0D1A71BD (Huns), 0D313EB5 (Mongolia), 0DF72455 (Inca), all on ab-e4d5785: the same failures, all fixed after it; one open question (Nov 4, about 9:21pm ET)
 - **Huns:**
   - Committed to Arabia at T53, then to Ethiopia at T71.
