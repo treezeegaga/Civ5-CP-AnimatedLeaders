@@ -1924,6 +1924,42 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: WindowUntilReady block (850e142, ended early) and the first BigArmy game (Nov 5, about 11:53am ET)
+**850e142 (bullyabort12 + bullygreedy14, 15 first games) against f6d1e84 (28 first games).** Small block; signals only.
+
+| First games | f6d1e84 (28) | 850e142 (15) |
+|---|---|---|
+| Stages: no war / attacked first / never at walls / refused / not taken / captured | 1 / 4 / 3 / 6 / 11 / 3 | 0 / 2 / 4 / 2 / 6 / 1 |
+| Attacks delivered a game (games with 2+) | 1.4 (12) | 1.1 (4) |
+| Endings a game: NoUnits / DiploOpinionChange / TimedOut | 0.1 / 0.9 / 1.7 | 0.2 / 0.2 / 1.3 |
+| Attempts a game; city lost HP; mean damage | 3.4; 38%; 10.2 | 2.3; 61%; 21.4 |
+
+- **WindowUntilReady fired:** "army not ready ... the window goes on" 28 times across the 15 games. TimedOut endings
+  fell a little (1.7 → 1.3), and DiploOpinionChange endings fell (0.9 → 0.2).
+- **Fewer waves:** 1.1 delivered a game.
+- **Capture plans (the new log; agg 2 and up), 70 plans:**
+  - a median 4 units in the sim;
+  - 52% of plans include an attack on the city, a median of 1 city attack a plan.
+- **City defence at the 34 logged attempts:** strength median 13, walls in 47%, and the garrison took damage in 29%.
+- **Read:** attempts hurt more when they happen, but there are fewer of them and fewer waves. Half of all plans at a
+  city don't attack it at all. That's the next look at the walls, now that the log can show it.
+
+**The first BigArmy game (110B2E42, PC 2, ab-1750459), the lead's question: does the doubled army form and reach a
+city?** Yes, slowly.
+- **Japan's window opened vs Russia at T44** with 4 land units (target 4 siege, 12–16 others).
+- **Army growth in the window:** 8 land by T62 and 13 by T68, nearly all Warriors and Archers. With 4 small cities a
+  unit took 3–5 turns, and the capital built the Great Library T54–T65.
+- **Gold:** went unused, up to 262 by T69 and 638 by T121. BigArmy lifts caps but doesn't buy.
+- **The first war came before the army was ready:** Japan declared on Assyria at T69 with 15 land and 1 of 4 siege.
+  - The route: a sneak attack and MarchOn, on Japan's own WAR approach toward Assyria (PATHETIC, Soft).
+  - The readiness gate is only in GetNewAIConquestTarget; CP's own WAR approach and MarchOn don't ask it.
+- **Later:** the army kept growing: 25 land at T104, 30 at the declaration on Russia at T118, 35 at T121.
+  Attempts on Assur, Nineveh, Novgorod, St. Petersburg and Moscow had 2–8 units in reach.
+- **Result: 2 cities captured** (by T110 and by T130); the flipped game took none.
+- **Not a bug to fix mid-block:** the army forms and reaches cities.
+- **The caveat for the block read:** the first war doesn't wait for the doubled army, so read BigArmy's
+  "at the declaration" lines next to the captures.
+
 ### War: pillage gold, counted (the user: "could pillaging help to keep attacking armies in positive money?") (Nov 5, about 10:03am ET)
 **What pillage pays in VP:**
 - an improvement's PillageGold (8 to 20) × the era (at least 1) × 85–100% (CvUnit pillage), so about 8–40 gold early;
