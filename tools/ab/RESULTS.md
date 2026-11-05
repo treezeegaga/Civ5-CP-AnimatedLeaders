@@ -1942,6 +1942,10 @@ bullygreedy16). Script: `tools/ab/package_armyscrap.py`.
 LEAD: ArmyScrap fired 7 times, all at war (5 games). ai/war dc4290cf takes it out of the war, for the block after the
 package; the package block keeps the version it has. Its effect in 128B4199 is 1 of 5 units lost; 4 died in combat.
 
+CI green: run 248 on ai/war dc4290cf, 6:47pm ET.
+
+LEAD: ai/war dc4290cf (SiegeSlots + ArmyScrap not at war) is green. Ready to merge for the block after the package.
+
 ### War: BigArmy full block, 20 first games: size is the lever, the waiver pays for it (Nov 5, about 5:00pm ET)
 Data: ab-1750459 (bullyabort13 + bullygreedy15), 20 first games and 20 flips (results CSVs; 20 and 9 logged), against
 850e142 (15 first) and f6d1e84 (28 first). Script: `tools/ab/bigarmy_block.py`. The mid-block entry (11 games) below
