@@ -1951,6 +1951,9 @@ fits the "enemy dominated" counts in the other games too: the zone tips the othe
 the target instead of garrison or explore moves, and captures in the bully games. Risk: units pulled from friendly
 zones at home while a war is on; the existing check already keeps units in zones that need them.
 
+Coded: `ai/war` `c588aa8fa` (CI pending). Log line: "SiegeClose: zone N (city) is ours, moving units in reach up around
+the city". For the bully role: SiegeClose goes with MarchOn, SiegeArmy and TimingBuildup.
+
 ### War: 0CC09E9A (America) and 0CD7657A (Huns), PC 1 on ab-e4d5785: wars on the target, early handovers, enemy-dominated zones, no captures (Nov 4, about 7:35pm ET)
 - **0CC09E9A, America.**
   - Windows: T62 against the Shoshone (closed at war, T99) and T138 against the Inca.
