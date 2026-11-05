@@ -4084,6 +4084,22 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Siege build: SiegeClose, TargetHold, SiegeDominated (lead, 2026-11-04 9:40pm ET)
+
+**`claude/ab-c1` `7bb7885`** (85 flags, CI building) merges `ai/war` `e239712` and the lead's snapshot retry
+(`220bfcf`). New since `e4d5785`:
+- MarchOn waits at the walls for the war, and its at-war stall rule counts only turns at war.
+- SiegeArmy's bar, once at war with the target, becomes the tactical 13-turn rule.
+- Zone strengths are logged.
+- **`SiegeClose`:** an enemy major dominating its city's zone no longer stops tactics from closing in.
+- **`TargetHold`:** a committed target isn't dropped for one failed turn while the attack is under way. In 0D03FDB9,
+  Mongolia's approach flipped every few turns and cancelled about ten attacks.
+- **`SiegeDominated`:** at a city in an enemy-dominated zone, attack anyway if 3 or more units can strike and their
+  expected damage, less the city's healing, takes its HP within 3 turns.
+
+Next runs, once the release is out: `bullyabort10` (PC 1) and `bullygreedy12` (PC 2), RoleFixes = the 25 flags +
+`MarchOn, FocusedWar, WarGold, SiegeClose, TargetHold, SiegeDominated`.
+
 ### WarGold, 11 pairs: the first capture by an aggressor with RoleFixes (lead, 2026-11-04 9:21pm ET)
 
 | Run (`ab-e4d5785`) | Pairs | First games (RoleFixes): declared | Captures | Flipped games: declared | Captures |
