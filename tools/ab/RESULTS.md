@@ -1924,6 +1924,33 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the lead's regression flag (declared in 1 of 4 first games on ab-7bb7885, 11 of 12 on e4d5785): 0E62C44F read (Nov 4, about 11:16pm ET)
+**0E62C44F (Aztecs, PC 1):**
+- **The target:** window vs Denmark at T80; "CONQUEST: going for Denmark" at T104, Greece at T120.
+  - Toward Denmark: approach WAR, strength PATHETIC, TGT Soft every turn T100–T105.
+  - Aarhus was the preferred attack target (score 6450).
+- **Every attack request on Denmark failed:** "requested attack on, Kaupang … not possible for lack of units" (T82, T100);
+  likewise Aarhus (T100).
+- **Where the units were:** attacks on Byblos, a city-state.
+  - 1635 (T85, 6 units recruited) and then 2011 (T107, 8 units) stood in recruiting.
+  - SiegeArmy's peace bar held them: "expected damage 38–50 a turn, Byblos needs 70". Each timed out at 20 turns
+    (T106, T128).
+  - 42 turns of the army in a city-state attack while the window and attack on Denmark ran.
+- **"No war 3 windows after the build-up" at T121** (back to the peace army); war came at T126 (window vs Greece).
+
+**Read.** In this game the declaration on the major is blocked by the city-state attack holding the army, not by the
+siege flags. The same shape is in 0E42C140 (Mongolia: 6–7 units at Zurich, 3 at Denmark). CSAfterWar (in f6d1e84,
+running now) is aimed at exactly this: no WAR approach to city-states while the window or attack on the committed
+major runs, so CP's minor-civ logic ends a city-state attack already gathering and Denmark's requests find units.
+
+**For the 1-of-4 count:**
+- Carthage 0D82E4A9: wars came to it; my entry below.
+- FocusedWar is new in this role. It removes wars on anyone but the committed target, so wars on others that e4d5785's
+  count included can't happen now. A count of wars on the committed target alone would separate that from a real
+  regression.
+- None of SiegeClose, SiegeDominated or the at-war bar act before a war. MarchOn's wait at the walls (`a6a9f399`) only
+  starts once an army is at the target, and no army reached Denmark in this game.
+
 ### War: 0D9905E5 (Aztecs) and 0D82E4A9 (Carthage), PC 1 on ab-7bb7885: SiegeClose fills the zone; a new army for the same city takes the besiegers; SiegeFeed (Nov 4, about 11:10pm ET)
 - **Aztecs at Ribe (Denmark), T130–T150:**
   - SiegeClose fired every turn ("zone 1836 (Ribe) is ours, moving units in reach up around the city").
