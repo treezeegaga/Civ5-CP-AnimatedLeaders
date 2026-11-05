@@ -1924,6 +1924,25 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0DB01EF0 pair 3 (PC 1, ab-7bb7885): the flip without RoleFixes took Troyes; the role game made one attack in 150 turns (Nov 4, about 11:29pm ET)
+- **Flip (0DB01EF0F, CP's Mongolia):**
+  - City attacks at T69, T101, T104, T119, T142 and T147, each recruiting 6–8 units (CP's smaller formation, 9 slots).
+  - Troyes (France) was taken in 3 turns: expected 115–121 a turn, 200 → 97 at T111, CAPTURED at T112, 5 of 5 units each turn.
+  - That war on France came from CP's own approach.
+- **Role game (0DB01EF0, Mongolia with RoleFixes):**
+  - Window vs the Shoshone at T42; war at T73 (a coop war with the Ottomans); SiegeRoll moved 6 units at T79.
+  - The attack ended in place at T84, then no city attack at all to T150.
+  - Requests failed "for lack of units": Kathmandu T89, Beijing T90. With 0 missing units allowed at war, the siege
+    formation's 6 required slots couldn't be met, the same as the six e4d5785 games behind SecondWave. Here it failed
+    before the operation even formed, so no NoUnits lines.
+  - SiegeDominated looked at Te-Moak, Guangzhou and Pohokwi with 1 unit and correctly stayed skipped.
+- **Read:**
+  - The difference is the follow-up. CP's flip kept forming 6–8 unit attacks and found a soft city on a neighbour
+    (FocusedWar keeps the role off non-targets). The role game's war on its target got one wave.
+  - SecondWave (in f6d1e84, running now) is the fix for the missing waves.
+  - The role's 6-required-slot formation (SiegeFormation) against CP's 5 also makes each wave harder to start; if
+    f6d1e84 still shows single waves, that is the next thing to look at.
+
 ### War: the lead's regression flag (declared in 1 of 4 first games on ab-7bb7885, 11 of 12 on e4d5785): 0E62C44F read (Nov 4, about 11:16pm ET)
 **0E62C44F (Aztecs, PC 1):**
 - **The target:** window vs Denmark at T80; "CONQUEST: going for Denmark" at T104, Greece at T120.
@@ -1979,7 +1998,7 @@ wave can form (SecondWave). Logs "SiegeFeed: X is under siege (n units in the zo
 military log. Expect: no "Gathering army" for a city attack on the city being besieged, and more units within
 striking distance per capture attempt.
 
-Coded: `ai/war` `1fe84572f` (CI pending), on `0ccd0e07e` (CSAfterWar, in `claude/ab-c1` `f6d1e84`).
+Coded: `ai/war` `1fe84572f` (built, CI run 215), on `0ccd0e07e` (CSAfterWar, in `claude/ab-c1` `f6d1e84`).
 
 ### War: CSAfterWar, city-state conquest waits while the war on the committed major is building or on (the lead's request, 10:55pm ET) (Nov 4, about 10:55pm ET)
 **Seen:** in 0E42C140 (ab-7bb7885) Mongolia's attacks on its committed target Denmark had 3 units each (four of them,
@@ -1997,7 +2016,7 @@ already gathering is ended by CP's own minor approach logic once the approach is
 Expect: no city-state attacks while the window or attack on the major runs, bigger first armies against the major,
 and city-state captures still happening between wars.
 
-Coded: `ai/war` `0ccd0e07e` (CI pending), on `61af66972` (merged by the lead in `claude/ab-c1` `ad5a2d8`).
+Coded: `ai/war` `0ccd0e07e` (built in `claude/ab-c1` `f6d1e84`, CI run 214; its own run cancelled by the lead), on `61af66972` (merged by the lead in `claude/ab-c1` `ad5a2d8`).
 
 ### War: TargetHold, second part: the held target stays a war plan in DoUpdateWarTargets (the lead's read of 0E42C140, 10:46pm ET) (Nov 4, about 10:51pm ET)
 **The lead:** in 0E42C140 (ab-7bb7885, TargetHold on) Mongolia's sneak attacks on Denmark still ended DiploOpinionChange
