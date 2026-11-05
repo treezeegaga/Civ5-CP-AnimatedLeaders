@@ -1652,6 +1652,41 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Do AIs make deals that don't help them win? All logged games (Diplomacy session for the user, 2026-11-05 2:30pm ET)
+
+**Data:** 23,200 completed AI-to-AI deals in 133 logged games (`DiplomacyAI_TradeAgreements_Log.csv`), joined with
+each pair's war state and approach (`DiplomacyAI_Log.csv`) and the scores and roles in the results CSVs. Scripts:
+`tools/ab/scripts/diplo/deal_parse.py` (run in a folder of `logs_*` folders) and `deal_patterns.py`.
+What's traded: 9,033 luxury-for-GPT deals, 3,695 embassy swaps, 3,269 open borders for GPT, 2,642 open borders swaps,
+457 strategic resources for GPT, 370 defensive pacts with GPT, 283 gold gifts, 255 peace treaties, 116+42 research
+agreements. Deals last 25 turns on Quick (renewals cluster at exactly 25).
+
+**Answer: the trades themselves are sound. Six ways a deal could hurt the civ were checked; none shows up.**
+
+| Check | Result |
+|---|---|
+| Buying a luxury it already has (a second import of the same luxury, or one it owns) | 16 of 12,601 imports (0.1%), 22 GPT in all. CP already avoids this |
+| Selling to a civ it then goes to war with within the deal's 25 turns | 2-4% by item, against 3.3% for any two civs at peace. Trading partners fight *less* than average |
+| Selling to a civ it's preparing to attack (its own WAR approach) | 0.1-0.9% of items (91 luxuries, 26 GPT payments); no iron, 1 horses. The war cancels the deal, so it gets paid while it lasts |
+| Giving open borders, iron or horses to a civ preparing to attack it | 8 open borders grants, 1 horses, no iron in 8,500 items |
+| Feeding the score leader | Gold, luxuries and strategic resources reach the leader at about its share (12-15% with ~8 civs). Research agreements a little more often (18%). Only 5 gifts or sales went to a leader 25%+ ahead |
+| Feeding the bully aggressor | The aggressor trades like anyone else: GPT received 1,241 a game vs 1,141 for other civs with a role, luxuries received 10.6 vs 12.2, strategic 0.4 vs 0.9 |
+| Gold gifts to richer friends ("can you spare something") | 223 gifts, 5,409 gold in all (about 40 a game); half went to a higher-scoring civ, which is chance |
+| Research agreements lost to war | None of 144 was cut short by war |
+
+**The patterns that did cost civs are diplomatic side effects of deals, and they're already fixed or in test:**
+- **Trade buys friendship with an aggressor.** Each deal counts toward opinion, so a civ that trades a lot with its
+  future attacker becomes friendly toward it. That's `TradeOpinion` (bundle): only resources the other side actually
+  supplies count, and the bonus ends when the deal does.
+- **Gold gifts to city-states the giver can't win.** 1,250-3,750 gold a game. `GiftsNeedPatronage` (bundle).
+- **Lump sum for GPT:** a human exploit, not AI-to-AI. CP's `BlockTemporaryForPermanentTrade` covers ordinary trades,
+  `DealExploits` (bundle) covers peace deals.
+
+**One observation, no fix proposed:** all 255 peace treaties were white peace (some with third-party peace toward
+city-states). No winner ever took gold, resources or a city in a treaty. That fits the rarity of captures (war scores
+stay low). Re-check once BigArmy produces captures: a winner that gives up a won war for nothing would be a deal that
+doesn't help it win.
+
 ### Diplomacy: the 850e142 bully games, and a fix to my log script (Diplomacy session, 2026-11-05 10:40am ET)
 
 **1. These games can't test the coalition flags or `StaleWarPeace`.**
