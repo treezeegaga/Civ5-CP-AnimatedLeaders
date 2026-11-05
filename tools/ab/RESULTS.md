@@ -1924,7 +1924,7 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
-### War: WarBudget, War's half: the army target is what gold keeps (Nov 5, about 2:30pm ET)
+### War: WarBudget, War's half: the army target is what gold keeps (Nov 5, about 2:22pm ET)
 The lead's honest package for the block after BigArmy. Economy's half is GetAffordableWarUnits (patch 0025, a21e842):
 how many more paid units the treasury plus 20 turns of income can keep.
 
@@ -1950,6 +1950,12 @@ how many more paid units the treasury plus 20 turns of income can keep.
 - Read with ArmyQuality and ArmyScrap: the field count and the gold both change under them.
 
 LEAD: ai/war dbe68ec0 is 0561379 + Economy's 0025 + War's WarBudget half. Merge once CI is green (I'll confirm here).
+
+**CI (2:48pm ET): green.** Run 236 on ai/war abc78a60: the lead's const fix for ArmyQuality (runs 232 and 233 failed
+with C2662 at CvMilitaryAI.cpp:2008, GetNumUnitsWithDomain on a const CvPlayer*) on top of dbe68ec0.
+
+LEAD: ai/war abc78a60 is green (run 236). It carries ArmyQuality, ArmyScrap, Economy's 0025 and WarBudget's War half, all
+off in the bundle. Ready to merge into claude/ab-c1.
 
 ### War: without the waiver, gold holds the army at 9 to 10 units for 40 turns of war (Nov 5, about 2:15pm ET)
 The lead asked for idle gold to go to the army. The results CSVs (aggressor rows every 10 turns; first games only) say
