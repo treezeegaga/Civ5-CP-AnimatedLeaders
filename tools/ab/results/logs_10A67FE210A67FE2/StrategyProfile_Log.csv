@@ -1,0 +1,32 @@
+001, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 2/1, Expansionist, home meta -15, weights dom 10 sci 10 cul 50 dip 30, risk low, expansion wide, greedy wide
+001, Portugal, LEADER_MARIA_I, tags , pursuits 1/2, Diplomat, home meta -20, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy wide
+001, Byzantium, LEADER_THEODORA, tags R, pursuits 2/0, Zealot, home meta 5, weights dom 26 sci 6 cul 60 dip 8, risk medium, expansion medium, greedy tall
+001, Austria, LEADER_MARIA, tags D, pursuits 1/3, Diplomat, home meta -25, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion tall, greedy tall
+001, Indonesia, LEADER_GAJAH_MADA, tags E, pursuits 3/0, Expansionist, home meta 0, weights dom 30 sci 50 cul 10 dip 10, risk medium, expansion wide, greedy wide
+001, The Maya, LEADER_PACAL, tags , pursuits 3/2, Scientist, home meta -85, weights dom 2 sci 68 cul 24 dip 6, risk low, expansion tall, greedy tall
+001, Songhai, LEADER_ASKIA, tags W, pursuits 3/0, Conqueror, home meta 80, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+001, England, LEADER_ELIZABETH, tags W, pursuits 1/0, Conqueror, home meta 60, weights dom 48 sci 4 cul 4 dip 44, risk medium, expansion conquest, greedy tall
+050, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 2/1, Zealot, home meta -15, weights dom 6 sci 6 cul 60 dip 28, risk low, expansion medium, greedy wide
+050, Portugal, LEADER_MARIA_I, tags , pursuits 1/2, Diplomat, home meta -20, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy wide
+050, Byzantium, LEADER_THEODORA, tags R, pursuits 2/0, Zealot, home meta 5, weights dom 26 sci 6 cul 60 dip 8, risk medium, expansion medium, greedy tall
+050, Austria, LEADER_MARIA, tags RD, pursuits 1/3, Diplomat, home meta -25, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion tall, greedy tall
+050, Indonesia, LEADER_GAJAH_MADA, tags RE, pursuits 3/0, Zealot, home meta 0, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion wide, greedy wide
+050, The Maya, LEADER_PACAL, tags R, pursuits 3/2, Zealot, home meta -25, weights dom 6 sci 46 cul 40 dip 8, risk low, expansion medium, greedy tall
+050, Songhai, LEADER_ASKIA, tags W, pursuits 3/0, Conqueror, home meta 80, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+050, England, LEADER_ELIZABETH, tags WR, pursuits 1/0, Conqueror, home meta 60, weights dom 48 sci 4 cul 4 dip 44, risk medium, expansion conquest, greedy tall
+100, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 2/1, Zealot, home meta -15, weights dom 6 sci 6 cul 60 dip 28, risk low, expansion medium, greedy wide
+100, Portugal, LEADER_MARIA_I, tags R, pursuits 1/2, Zealot, home meta 0, weights dom 6 sci 6 cul 40 dip 48, risk medium, expansion medium, greedy wide
+100, Byzantium, LEADER_THEODORA, tags R, pursuits 2/0, Zealot, home meta 5, weights dom 26 sci 6 cul 60 dip 8, risk medium, expansion medium, greedy tall
+100, Austria, LEADER_MARIA, tags RD, pursuits 1/3, Diplomat, home meta -25, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion tall, greedy tall
+100, Indonesia, LEADER_GAJAH_MADA, tags RE, pursuits 3/0, Zealot, home meta 0, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion wide, greedy wide
+100, The Maya, LEADER_PACAL, tags RN, pursuits 3/2, Scientist, home meta -85, weights dom 2 sci 68 cul 24 dip 6, risk low, expansion tall, greedy tall
+100, Songhai, LEADER_ASKIA, tags WR, pursuits 3/0, Conqueror, home meta 80, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+100, England, LEADER_ELIZABETH, tags WR, pursuits 1/0, Conqueror, home meta 60, weights dom 48 sci 4 cul 4 dip 44, risk medium, expansion conquest, greedy tall
+150, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 2/1, Zealot, home meta -15, weights dom 6 sci 6 cul 60 dip 28, risk low, expansion medium, greedy wide
+150, Portugal, LEADER_MARIA_I, tags R, pursuits 1/2, Zealot, home meta 0, weights dom 6 sci 6 cul 40 dip 48, risk medium, expansion medium, greedy wide
+150, Byzantium, LEADER_THEODORA, tags R, pursuits 2/0, Zealot, home meta 5, weights dom 26 sci 6 cul 60 dip 8, risk medium, expansion medium, greedy tall
+150, Austria, LEADER_MARIA, tags RD, pursuits 1/3, Diplomat, home meta -25, weights dom 4 sci 26 cul 6 dip 64, risk medium, expansion tall, greedy tall
+150, Indonesia, LEADER_GAJAH_MADA, tags RE, pursuits 3/0, Zealot, home meta 0, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion wide, greedy wide
+150, The Maya, LEADER_PACAL, tags RN, pursuits 3/2, Scientist, home meta -85, weights dom 2 sci 68 cul 24 dip 6, risk low, expansion tall, greedy tall
+150, Songhai, LEADER_ASKIA, tags WR, pursuits 3/0, Conqueror, home meta 80, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+150, England, LEADER_ELIZABETH, tags WR, pursuits 1/0, Conqueror, home meta 60, weights dom 48 sci 4 cul 4 dip 44, risk medium, expansion conquest, greedy tall
