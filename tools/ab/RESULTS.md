@@ -1642,6 +1642,34 @@ against the code on `claude/ab-c1` `87836d4`.
   buildings bought (homeland "Buying" lines).
 - **Status:** coded, patch 0022 on `claude/ab-c1` `87836d4` (with SettlerSaveRealistic and NoObsoleteHurry), not built.
 
+### WarmongerHurry: a warmonger buys only settlers and siege units (Economy, patch 0023, the user's rule)
+The user (via the lead, Nov 5, 10:34am ET): "I don't love hard rules, but I kind of want to hard-rule that warmonger
+civs are only allowed to hurry two production items: settlers and siege weapons."
+- **Who:** candidate warmongers (`IsCandidateWarmonger`: majors, not human; the aggressor role and the other
+  conquest-minded civs). Other civs are unchanged.
+- **What:** gold buys only:
+  - settlers (units that found cities);
+  - siege units: default AI `UNITAI_CITY_BOMBARD` or combat class `UNITCOMBAT_SIEGE`. In CP that's the catapult,
+    ballista, trebuchet, cannon, artillery and rocket artillery, plus unique versions. VP's battering ram counts if
+    its data gives it the siege class, but that data isn't in this game (CP only).
+
+  Nothing else: no buildings, wonders, projects, workers, work boats, caravans or other combat units. Faith
+  purchases and tile purchases are unchanged. No exceptions.
+- **Where:** one check in `CvCity::IsCanPurchase` (gold only). Every gold purchase passes through it:
+  - Economy's hurry loop;
+  - CP's emergency defence purchases (`CvMilitaryAI`);
+  - the city AI's own purchases;
+  - WarChest and War's window purchases.
+  The hurry loop also checks before VP's investment paths, which skip `IsCanPurchase`. WarChest now buys only siege
+  units under this flag.
+- **Logging:** "WarmongerHurry: blocked X in threatened city Y" (homeland log), once per city, item and turn, when the
+  city is in danger of falling or under siege. It shows whether the rule ever costs a city.
+- **Hypothesis:** the gold that went on Warriors, Archers and buildings (Diplomacy's findings) is there for the siege
+  units the attack needs. Fewer window turns paused for gold.
+- **Measure:** strength share at T150 (no-worse, δ 2); siege units bought; window turns paused for gold (War's
+  "window paused" lines); and the blocked-in-a-threatened-city lines, plus any of those cities lost within 5 turns.
+- **Status:** coded, patch 0023 on `ai/economy` `6aa6386`, not built.
+
 ### Backburner: a warmonger's tech-lead opening (Economy, the user's idea, Nov 5)
 Not coded. Pick it up only if we see our warmongers losing fights for lack of a tech edge.
 - **The idea:** a warmonger plays tall early and takes land later with better units instead of settling it.

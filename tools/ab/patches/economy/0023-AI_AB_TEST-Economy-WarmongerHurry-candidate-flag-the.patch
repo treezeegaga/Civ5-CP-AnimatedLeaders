@@ -1,0 +1,179 @@
+From 3a815fc33a3c810757e1e893e0a3af90c88b9ae4 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Thu, 5 Nov 2026 15:26:44 +0000
+Subject: [PATCH] AI_AB_TEST Economy: WarmongerHurry candidate flag (the user's
+ rule: a warmonger buys only settlers and siege units with gold)
+
+A candidate warmonger's gold purchases of production are allowed only for
+settlers and siege units (UNITAI_CITY_BOMBARD or UNITCOMBAT_SIEGE). No
+buildings, wonders, projects, workers, work boats, caravans or other combat
+units; no exceptions. Faith and tile purchases are unchanged.
+
+The check is in CvCity::IsCanPurchase (gold only), so every purchase path
+obeys it; the hurry loop checks too, ahead of VP's investment paths, and
+WarChest buys siege units only. A block in a city in danger of falling or
+under siege is logged ("WarmongerHurry: blocked X in threatened city Y"),
+once per city, item and turn. Off in the bundle. Written 10:27am ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvCity.cpp       |  6 +++
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp | 59 +++++++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvEconomicAI.h   |  5 ++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp     |  1 +
+ CvGameCoreDLL_Expansion2/CvPlayer.h       |  2 +
+ 5 files changed, 73 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvCity.cpp b/CvGameCoreDLL_Expansion2/CvCity.cpp
+index 2c28728..78fac43 100644
+--- a/CvGameCoreDLL_Expansion2/CvCity.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCity.cpp
+@@ -30697,6 +30697,12 @@ bool CvCity::IsCanPurchase(const std::vector<int>& vPreExistingBuildings, bool b
+ 		return false;
+ 	}
+ 
++	// AI_AB_TEST candidate (WarmongerHurry, Economy): a warmonger buys only settlers and siege units with gold
++	if (ePurchaseYield == YIELD_GOLD && !CvEconomicAI::IsGoldPurchaseAllowed(this, eUnitType, eBuildingType, eProjectType, bTestPurchaseCost))
++	{
++		return false;
++	}
++
+ 	// Check situational reasons we can't purchase now (similar to not having enough gold or faith)
+ 	if (bTestPurchaseCost)
+ 	{
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index f9db416..ad9a396 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3123,6 +3123,51 @@ bool CvEconomicAI::IsSavingForExpansionSettler()
+ 	return true;
+ }
+ 
++/// AI_AB_TEST candidate (WarmongerHurry, the user's rule): a candidate warmonger spends gold on production only for
++/// settlers and siege units (unit combat class UNITCOMBAT_SIEGE, or city-bombard units: catapult, ballista, trebuchet,
++/// cannon, artillery, rocket artillery and their unique versions). No buildings, wonders, projects, workers, work
++/// boats, caravans or other combat units, and no exceptions. Faith purchases and tiles aren't purchases of production.
++/// Checked in CvCity::IsCanPurchase, so every gold purchase path obeys it.
++bool CvEconomicAI::IsGoldPurchaseAllowed(const CvCity* pCity, UnitTypes eUnit, BuildingTypes eBuilding, ProjectTypes eProject, bool bLog)
++{
++	if (!pCity)
++		return true;
++	CvPlayer& kPlayer = GET_PLAYER(pCity->getOwner());
++	if (!kPlayer.IsCandidateWarmonger(FIX_WARMONGER_HURRY))
++		return true;
++
++	if (eUnit != NO_UNIT)
++	{
++		CvUnitEntry* pkUnitInfo = GC.getUnitInfo(eUnit);
++		if (!pkUnitInfo)
++			return false;
++		static const UnitCombatTypes eSiegeCombat = (UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_SIEGE", true);
++		if (pkUnitInfo->IsFound() || pkUnitInfo->IsFoundAbroad())
++			return true;
++		if (pkUnitInfo->GetDefaultUnitAIType() == UNITAI_CITY_BOMBARD || (eSiegeCombat != NO_UNITCOMBAT && pkUnitInfo->GetUnitCombatType() == eSiegeCombat))
++			return true;
++	}
++
++	// blocked: log it when the city is in danger, once per city, item and turn
++	if (bLog && GC.getLogging() && GC.getAILogging() && (pCity->isInDangerOfFalling() || pCity->isUnderSiege()))
++	{
++		const int iItem = (eUnit != NO_UNIT) ? (int)eUnit : (eBuilding != NO_BUILDING) ? 10000 + (int)eBuilding : 20000 + (int)eProject;
++		const int iKey = pCity->GetID() * 32768 + iItem;
++		const int iTurn = GC.getGame().getGameTurn();
++		std::map<int, int>& mLogged = kPlayer.GetEconomicAI()->m_mWarmongerHurryLogTurn;
++		std::map<int, int>::iterator it = mLogged.find(iKey);
++		if (it == mLogged.end() || it->second != iTurn)
++		{
++			mLogged[iKey] = iTurn;
++			const char* szItem = (eUnit != NO_UNIT) ? GC.getUnitInfo(eUnit)->GetDescription() :
++				(eBuilding != NO_BUILDING) ? GC.getBuildingInfo(eBuilding)->GetDescription() : GC.getProjectInfo(eProject)->GetDescription();
++			kPlayer.GetHomelandAI()->LogHomelandMessage(CvString::format("WarmongerHurry: blocked %s in threatened city %s",
++				szItem, pCity->getName().c_str()));
++		}
++	}
++	return false;
++}
++
+ /// AI_AB_TEST: buys the wanted settler as soon as the new AI can pay for it
+ static void BuyExpansionSettler(CvPlayer* pPlayer)
+ {
+@@ -3204,6 +3249,9 @@ static void DoWarChest(CvPlayer* pPlayer)
+ 		return;
+ 	const bool bNeedSiege = pPlayer->GetNumUnitsWithUnitAI(UNITAI_CITY_BOMBARD, false, true) < 2;
+ 	UnitTypes eType = bNeedSiege ? eSiege : eAttack;
++	// WarmongerHurry: gold buys siege units only
++	if (pPlayer->UsesCandidateAI(FIX_WARMONGER_HURRY))
++		eType = eSiege;
+ 	if (eType == NO_UNIT || !pBuyCity->IsCanPurchase(/*bTestPurchaseCost*/ true, /*bTestTrainable*/ true, eType, NO_BUILDING, NO_PROJECT, YIELD_GOLD))
+ 		return;
+ 	const int iCost = pBuyCity->GetPurchaseCost(eType);
+@@ -3384,6 +3432,17 @@ void CvEconomicAI::DoHurry()
+ 		if (pSelectedCity == NULL)
+ 			continue;
+ 
++		// AI_AB_TEST candidate (WarmongerHurry): also covers the investment paths below, which skip IsCanPurchase
++		if (m_pPlayer->UsesCandidateAI(FIX_WARMONGER_HURRY))
++		{
++			const bool bUnit = selection.m_eBuildableType == CITY_BUILDABLE_UNIT || selection.m_eBuildableType == CITY_BUILDABLE_UNIT_FOR_ARMY ||
++				selection.m_eBuildableType == CITY_BUILDABLE_UNIT_FOR_OPERATION;
++			const bool bBuilding = selection.m_eBuildableType == CITY_BUILDABLE_BUILDING;
++			if ((bUnit || bBuilding) && !IsGoldPurchaseAllowed(pSelectedCity, bUnit ? (UnitTypes)selection.m_iIndex : NO_UNIT,
++					bBuilding ? (BuildingTypes)selection.m_iIndex : NO_BUILDING, NO_PROJECT, true))
++				continue;
++		}
++
+ 		//Units
+ 		switch (selection.m_eBuildableType)
+ 		{
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.h b/CvGameCoreDLL_Expansion2/CvEconomicAI.h
+index 63430de..8123997 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.h
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.h
+@@ -219,6 +219,8 @@ public:
+ 
+ 	// AI_AB_TEST: the new AI saving gold to buy its next settler
+ 	bool IsSavingForExpansionSettler();
++	// AI_AB_TEST candidate (WarmongerHurry): may this city's owner buy this item with gold? (CvCity::IsCanPurchase)
++	static bool IsGoldPurchaseAllowed(const CvCity* pCity, UnitTypes eUnit, BuildingTypes eBuilding, ProjectTypes eProject, bool bLog);
+ 	void StartSaveForPurchase(PurchaseType ePurchase, int iAmount, int iPriority);
+ 	bool IsSavingForThisPurchase(PurchaseType ePurchase);
+ 	void CancelSaveForPurchase(PurchaseType ePurchase);
+@@ -283,6 +285,9 @@ private:
+ 
+ 	CvString GetLogFileName(CvString& playerName) const;
+ 
++	// AI_AB_TEST (WarmongerHurry): last turn a blocked purchase was logged, per city and item (logging only, not saved)
++	std::map<int, int> m_mWarmongerHurryLogTurn;
++
+ 	// DoTurn() sub-functions
+ 	void DoHurry();
+ 	void DoPlotPurchases();
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index f2c9dea..f90f003 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33440,6 +33440,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"SettlerSaveRealistic", false},
+ 	{"NoObsoleteHurry", false},
+ 	{"PeaceHurry", false},
++	{"WarmongerHurry", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 2af11f3..cb3c0f3 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -274,6 +274,8 @@ enum CandidateFixTypes
+ 							// the city builds it. Off in the bundle
+ 	FIX_NO_OBSOLETE_HURRY,	// Economy (Diplomacy's finding): gold doesn't hurry a unit whose upgrade the civ can already train. Off in the bundle
+ 	FIX_PEACE_HURRY,		// Economy (Diplomacy's finding): at peace and out of danger, gold doesn't hurry combat units. Off in the bundle
++	FIX_WARMONGER_HURRY,	// Economy (the user's rule): a candidate warmonger spends gold on production only for settlers and siege units.
++							// Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+-- 
+2.43.0
+
