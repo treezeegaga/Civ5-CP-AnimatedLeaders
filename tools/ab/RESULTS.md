@@ -1994,6 +1994,14 @@ and zone strengths of every logged game next to the funnel stage. Data: 60 logge
   and to the garrison;
 - the city's combat strength (and whether it has walls) on the attempt line.
 
+Coded (the user: "add the log lines"): `ai/war` `249985284` (CI pending), logging only.
+- **The plan line:** "capture plan vs X, agg A: n units in the sim, m in the plan, k attacks (j on the city): <unit>
+  MOVE>RANGEATTACK(city, garrison g, self s)>FINISH; ..." (or "no plan"), one per tactsim run against an enemy city,
+  so the SiegeClose positioning runs (agg 1) show too.
+- **The attempt line:** gains "; city strength S, walls +W, garrison G HP a -> b".
+- **walls.py** reads both: attacks on the city per attempt, attempts with none, city strength, walls, and how often
+  the garrison took the damage.
+
 ### War: CoopWhenReady and WindowUntilReady, from the corrected read of 0DB01EF0 (the user: "code both") (Nov 4, about 11:37pm ET)
 **CoopWhenReady (flag, War; shared: CvDiplomacyAI::DoUpdatePlanningExchanges' coop loop, around DoStartCoopWar).**
 - **Seen:** the Ottomans' coop war on the Shoshone (agreed T63) declared itself at T73. Mongolia went in with 3
