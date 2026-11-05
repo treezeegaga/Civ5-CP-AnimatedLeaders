@@ -213,7 +213,15 @@ function Test-Ticked([string]$name) {
 }
 
 function Get-ResultsFile { Get-ChildItem $MyGames -Filter "AIABTest*.csv" -ErrorAction SilentlyContinue | Sort-Object LastWriteTime | Select-Object -Last 1 }
-function Get-GameIds { $f = Get-ResultsFile; if ($f) { @(Import-Csv $f.FullName | ForEach-Object { $_.GameId } | Sort-Object -Unique) } else { @() } }
+# Reads the results file while Civ may be appending to it. Import-Csv opens it denying writers, and the DLL's append
+# (_wfopen_s) then fails and that turn's snapshot is lost (bullygreedy11: T30 missing in a pair, T150 missing so the game
+# ran on to T160). Share read, write and delete so the game's write always succeeds.
+function Read-ResultsCsv([string]$path) {
+    $fs = [IO.File]::Open($path, [IO.FileMode]::Open, [IO.FileAccess]::Read, ([IO.FileShare]::ReadWrite -bor [IO.FileShare]::Delete))
+    try { $sr = New-Object IO.StreamReader($fs); $text = $sr.ReadToEnd() } finally { $fs.Dispose() }
+    @($text -split "`r?`n" | Where-Object { $_ } | ConvertFrom-Csv)
+}
+function Get-GameIds { $f = Get-ResultsFile; if ($f) { @(Read-ResultsCsv $f.FullName | ForEach-Object { $_.GameId } | Sort-Object -Unique) } else { @() } }
 
 # True once the screen matches a saved one (CivScreens.json; same screen ~0, different screens 4 or more)
 function Test-Screen([string]$name) { $s = Get-CivScreen; return ($s.Name -eq $name -and $s.Distance -lt 2.5) }
@@ -284,7 +292,7 @@ function Wait-TestGame([string[]]$knownIds) {
         Start-Sleep 20
         if (-not (Get-CivWindow)) { return "civ exited" }
         $f = Get-ResultsFile
-        $rows = if ($f) { @(Import-Csv $f.FullName) } else { @() }
+        $rows = if ($f) { @(Read-ResultsCsv $f.FullName) } else { @() }
         if ($rows.Count -ne $lastRows) { $lastRows = $rows.Count; $lastChange = Get-Date }
         $mine = @($rows | Where-Object { $knownIds -notcontains $_.GameId })
         if ($mine.Count -eq 0) {
@@ -330,7 +338,7 @@ while ($played -lt $MaxGames -or $pairReplay) {
     if ($AttachRunning -and $played -eq 0 -and $failures -eq 0 -and (Get-CivWindow)) {
         # the newest game in the results file is the one running; it's played as a single game
         $f = Get-ResultsFile
-        $current = if ($f) { (Import-Csv $f.FullName)[-1].GameId } else { $null }
+        $current = if ($f) { (Read-ResultsCsv $f.FullName)[-1].GameId } else { $null }
         $known = @($known | Where-Object { $_ -ne $current })
         Write-Log "Finishing the game already running ($current)"
         $wasFirstOfPair = $false
