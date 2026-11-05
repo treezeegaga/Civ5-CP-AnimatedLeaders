@@ -1924,6 +1924,37 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0D03FDB9 (Mongolia) and 0CED9749 (Songhai), PC 1 bully abort9 on ab-e4d5785: the committed target is dropped for a turn and the attack under way is cancelled (Nov 4, about 8:26pm ET)
+- **0D03FDB9, Mongolia never declared** (the lead's note).
+  - "CONQUEST: going for The Netherlands" at T76, T79, T89 and T113. Each one is a return to WAR after a turn
+    without it.
+  - The approach toward the Netherlands flips WAR ↔ DECEPTIVE/GUARDED every few turns from T72 to T150.
+  - Each flip ends the sneak attack being gathered: about ten attacks against 56:37 ended "War goal changed,
+    probably another war is more important" / "DiploOpinionChange" after 1–8 turns (T72, 78, 87, 96, 98, 106, 123…),
+    with 3–4 units recruited each time.
+  - No TimingBuildup lines: this role runs the timing attack without the build-up.
+- **0CED9749, Songhai.**
+  - The Korea attack (1443, T64) ended "DiploOpinionChange" at T78; at T80 the target became the Shoshone.
+  - The Shoshone attack 1657 was handed over by the old MarchOn stall rule at T90 (fixed in `6578838`, not on
+    this build).
+  - Attacks 1739 and 2624 timed out in SiegeArmy at 20 turns (the bar at war is `b7db863`, not on this build).
+  - No capture attempt; Goshute and Agaidika read enemy dominated 29 and 12 times.
+- **0DB8F250 (pair 3 on PC 2, Zulus):** no CONQUEST or TimingBuildup line in either game, so no candidate
+  aggressor's war to read.
+
+**Cause.** GetNewAIConquestTarget keeps a committed target only while it passes every check again, with one strength
+step of slack. One turn failing the strength comparison, HavePossibleAttackTarget / IsWarWouldBankruptUs or CanWin
+(CanTakeNearestCity) clears the commitment (m_eNewAIConquestTarget = the turn's best, often NO_PLAYER). The WAR boost
+is lost, SetCivApproach cancels the sneak attack, and the next turn starts a new one from nothing. These checks swing
+from turn to turn as units join the army, move or heal, and as gold changes.
+
+**Hypothesis (flag TargetHold, War; shared: CvDiplomacyAI::GetNewAIConquestTarget):** while an offensive operation
+against the committed target is under way, failing the strength, attack-target/bankruptcy or CanWin check doesn't drop
+the target. The hard checks still do: can't declare war, not close, a defensive ally would join. The operation's own
+limits (SiegeArmy's 20 turns, SiegeAbort) end a hopeless attack. Log: "CONQUEST: holding X, attack under way (failed:
+reason)", once a turn. Expect: no runs of "War goal changed" against the committed target, the attack gathered to the
+end, and the failed check named in the log.
+
 ### War: 0D9AF4AA (PC 2, ab-e4d5785 + WarGold), Assyria: the army reached Hamburg with the zone in our favour, and the tactical AI sent it home (Nov 4, about 7:39pm ET)
 - **Plan:** TimingBuildup window T26 against Germany; "CONQUEST: going for Germany" at T36; war at T102.
 - **Attack 1819** (target Hamburg, 27:23): 2 Spearmen, a Swordsman, 3 Siege Towers and an Archer.
@@ -1951,7 +1982,7 @@ fits the "enemy dominated" counts in the other games too: the zone tips the othe
 the target instead of garrison or explore moves, and captures in the bully games. Risk: units pulled from friendly
 zones at home while a war is on; the existing check already keeps units in zones that need them.
 
-Coded: `ai/war` `c588aa8fa` (CI pending). Log line: "SiegeClose: zone N (city) is ours, moving units in reach up around
+Coded: `ai/war` `c588aa8fa` (built, CI run 205). Log line: "SiegeClose: zone N (city) is ours, moving units in reach up around
 the city". For the bully role: SiegeClose goes with MarchOn, SiegeArmy and TimingBuildup.
 
 ### War: 0CC09E9A (America) and 0CD7657A (Huns), PC 1 on ab-e4d5785: wars on the target, early handovers, enemy-dominated zones, no captures (Nov 4, about 7:35pm ET)
