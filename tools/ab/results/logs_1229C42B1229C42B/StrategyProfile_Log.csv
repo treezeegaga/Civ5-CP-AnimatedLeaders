@@ -1,0 +1,32 @@
+001, The Inca, LEADER_PACHACUTI, tags E, pursuits 2/3, Expansionist, home meta -10, weights dom 10 sci 30 cul 50 dip 10, risk low, expansion wide, greedy wide
+001, The Aztecs, LEADER_MONTEZUMA, tags W, pursuits 0/3, Conqueror, home meta 100, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy wide
+001, China, LEADER_WU_ZETIAN, tags W, pursuits 3/0, Conqueror, home meta 75, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+001, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags T, pursuits 1/2, Tourism, home meta -50, weights dom 2 sci 6 cul 48 dip 44, risk medium, expansion tall, greedy tall
+001, Poland, LEADER_CASIMIR, tags T, pursuits 3/0, Tourism, home meta -30, weights dom 22 sci 46 cul 28 dip 4, risk high, expansion tall, greedy tall
+001, Venice, LEADER_ENRICO_DANDOLO, tags SD, pursuits 1/3, Diplomat, home meta -45, weights dom 4 sci 26 cul 6 dip 64, risk low, expansion tall, greedy tall
+001, Korea, LEADER_SEJONG, tags NS, pursuits 3/0, Scientist, home meta -65, weights dom 22 sci 68 cul 4 dip 6, risk low, expansion tall, greedy tall
+001, Ethiopia, LEADER_SELASSIE, tags , pursuits 2/3, Tourism, home meta -80, weights dom 2 sci 26 cul 68 dip 4, risk low, expansion tall, greedy tall
+050, The Inca, LEADER_PACHACUTI, tags E, pursuits 2/3, Expansionist, home meta -10, weights dom 10 sci 30 cul 50 dip 10, risk low, expansion wide, greedy wide
+050, The Aztecs, LEADER_MONTEZUMA, tags W, pursuits 0/3, Conqueror, home meta 100, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy wide
+050, China, LEADER_WU_ZETIAN, tags WR, pursuits 3/0, Conqueror, home meta 75, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+050, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags RT, pursuits 1/2, Zealot, home meta 10, weights dom 6 sci 6 cul 40 dip 48, risk medium, expansion medium, greedy tall
+050, Poland, LEADER_CASIMIR, tags RT, pursuits 3/0, Zealot, home meta 30, weights dom 26 sci 46 cul 20 dip 8, risk high, expansion medium, greedy tall
+050, Venice, LEADER_ENRICO_DANDOLO, tags RSD, pursuits 1/3, Diplomat, home meta -45, weights dom 4 sci 26 cul 6 dip 64, risk low, expansion tall, greedy tall
+050, Korea, LEADER_SEJONG, tags RNS, pursuits 3/0, Scientist, home meta -65, weights dom 22 sci 68 cul 4 dip 6, risk low, expansion tall, greedy tall
+050, Ethiopia, LEADER_SELASSIE, tags R, pursuits 2/3, Zealot, home meta -20, weights dom 6 sci 26 cul 60 dip 8, risk low, expansion medium, greedy tall
+100, The Inca, LEADER_PACHACUTI, tags RE, pursuits 2/3, Zealot, home meta -10, weights dom 6 sci 26 cul 60 dip 8, risk low, expansion medium, greedy wide
+100, The Aztecs, LEADER_MONTEZUMA, tags WR, pursuits 0/3, Conqueror, home meta 100, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy wide
+100, China, LEADER_WU_ZETIAN, tags WR, pursuits 3/0, Conqueror, home meta 75, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+100, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags RT, pursuits 1/2, Zealot, home meta 10, weights dom 6 sci 6 cul 40 dip 48, risk medium, expansion medium, greedy tall
+100, Poland, LEADER_CASIMIR, tags RT, pursuits 3/0, Zealot, home meta 30, weights dom 26 sci 46 cul 20 dip 8, risk high, expansion medium, greedy tall
+100, Venice, LEADER_ENRICO_DANDOLO, tags RSD, pursuits 1/3, Diplomat, home meta -45, weights dom 4 sci 26 cul 6 dip 64, risk low, expansion tall, greedy tall
+100, Korea, LEADER_SEJONG, tags RNS, pursuits 3/0, Scientist, home meta -65, weights dom 22 sci 68 cul 4 dip 6, risk low, expansion tall, greedy tall
+100, Ethiopia, LEADER_SELASSIE, tags R, pursuits 2/3, Zealot, home meta -20, weights dom 6 sci 26 cul 60 dip 8, risk low, expansion medium, greedy tall
+150, The Inca, LEADER_PACHACUTI, tags RE, pursuits 2/3, Zealot, home meta -10, weights dom 6 sci 26 cul 60 dip 8, risk low, expansion medium, greedy wide
+150, The Aztecs, LEADER_MONTEZUMA, tags WR, pursuits 0/3, Conqueror, home meta 100, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy wide
+150, China, LEADER_WU_ZETIAN, tags WR, pursuits 3/0, Conqueror, home meta 75, weights dom 48 sci 44 cul 4 dip 4, risk medium, expansion conquest, greedy tall
+150, Sweden, LEADER_GUSTAVUS_ADOLPHUS, tags RT, pursuits 1/2, Zealot, home meta 10, weights dom 6 sci 6 cul 40 dip 48, risk medium, expansion medium, greedy tall
+150, Poland, LEADER_CASIMIR, tags RT, pursuits 3/0, Zealot, home meta 30, weights dom 26 sci 46 cul 20 dip 8, risk high, expansion medium, greedy tall
+150, Venice, LEADER_ENRICO_DANDOLO, tags RSD, pursuits 1/3, Diplomat, home meta -45, weights dom 4 sci 26 cul 6 dip 64, risk low, expansion tall, greedy tall
+150, Korea, LEADER_SEJONG, tags NS, pursuits 3/0, Scientist, home meta -65, weights dom 22 sci 68 cul 4 dip 6, risk low, expansion tall, greedy tall
+150, Ethiopia, LEADER_SELASSIE, tags R, pursuits 2/3, Zealot, home meta -20, weights dom 6 sci 26 cul 60 dip 8, risk low, expansion medium, greedy tall

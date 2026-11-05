@@ -1,0 +1,45 @@
+﻿Game 1229C42B1229C42B (AIABTest_c8e.csv), last logged turn 150
+b    Venice       tall      cities 3
+  builds to T80 (capital Venice; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T20 Worker* | T29 Stonehenge | T43 Library* | T53 Great Lighthouse | T54 Lighthouse (Antwerp) | T54 Granary (Antwerp) | T59 Walls (Antwerp) | T64 Cargo Ship (Antwerp) | T64 Caravan | T65 Caravan | T68 Caravan | T70 Cargo Ship (Antwerp) | T71 Parthenon | T76 Shrine (Antwerp) | T79 Temple (Antwerp) | T80 Scout
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: National College 1   first: T053 Venice size 6 next National College
+  military ops ended (whole game): Success 2
+c    China        tall      cities 7
+  builds to T80 (capital Beijing; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T18 Settler* | T28 Granary | T35 Stonehenge | T44 Warrior* | T46 Worker* | T47 Monument* (Shanghai) | T48 Warrior* | T48 Paper Maker* (Shanghai) | T50 Worker* | T54 Settler | T60 Worker | T62 Granary (Guangzhou) | T63 Scout | T65 Settler | T68 Archer (Shanghai) | T68 Granary (Guangzhou) | T70 Hanging Gardens | T73 Archer (Shanghai) | T75 Granary (Nanjing) | T76 Archer (Shanghai) | T77 Worker (Guangzhou) | T78 Worker (Guangzhou) | T79 Water Mill (Guangzhou) | T79 Work Boat | T80 Work Boat
+  settlers ordered T: 18,54,65,86,102,109,139   found-city ops started T: 28,60,70,93,106,112,143   cities founded T: 47,62,75,98,115,117
+  IDLE SETTLER turns: 7 (first T54)
+  military ops ended (whole game): NoTarget 2, LostPath 2, Success 1, WarStateChange 1
+  settler timeline to T80: T18 settler (book) in Beijing | T28 op started | T47 FOUNDED | T54 settler (AI) in Beijing | T60 op started | T62 FOUNDED | T65 settler (AI) in Beijing | T70 op started | T75 FOUNDED
+  saving gold for a settler: 40 turns (T11-T80)
+c    Ethiopia     tall      cities 6
+  builds to T80 (capital Addis Ababa; other cities named): T0 Scout* | T4 Stele* | T11 Shrine* | T17 Warrior* | T22 Worker* | T29 Warrior* | T33 Settler* | T43 Warrior | T46 Stele (Harar) | T46 Granary | T47 Granary (Harar) | T52 Great Library | T55 Settler | T56 Settler | T59 Great Lighthouse | T62 Stele (Adwa) | T63 Granary (Adwa) | T64 Warrior | T65 Settler | T65 Warrior | T67 Worker (Harar) | T70 Trireme | T72 Library | T73 Library (Harar) | T77 Writers' Guild
+  settlers ordered T: 33,55,56,65,85,108,128,143   found-city ops started T: 43,59,74,103,120,132   cities founded T: 46,62,82,119,136
+  ops aborted: T70 NoTarget, T71 NoTarget, T72 NoTarget, T73 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget
+  book SETTLER HELD to T80: 2 (growth due 2)   built instead: Library 1, Worker 1   first: T022 Addis Ababa size 3 next Worker | T052 Addis Ababa size 4 next Library
+  IDLE SETTLER turns: 3 (first T55)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T33 settler (book) in Addis Ababa | T43 op started | T46 FOUNDED | T55 settler (AI) in Addis Ababa | T56 settler (AI) in Addis Ababa | T59 op started | T62 FOUNDED | T65 settler (AI) in Addis Ababa | T70 op ended: NoTarget | T71 op ended: NoTarget | T72 op ended: NoTarget | T73 op ended: NoTarget | T74 op started
+  saving gold for a settler: 59 turns (T6-T70)
+c    Korea        tall      cities 2
+  builds to T80 (capital Seoul; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T18 Worker* | T27 Warrior* | T32 Stonehenge | T43 Warrior* | T47 Library* | T57 Granary | T65 Writers' Guild | T73 Warrior | T76 Trireme | T79 Trireme
+  settlers ordered T: 118   found-city ops started T: 58,105   cities founded T: 109
+  ops aborted: T61 LostCivilian, T82 NoTarget, T83 NoTarget, T84 NoTarget, T85 NoTarget, T86 NoTarget, T87 NoTarget, T88 NoTarget, T89 NoTarget, T90 NoTarget, T91 NoTarget, T92 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget
+  book SETTLER HELD to T80: 3 (growth due 3)   built instead: Library 2, Worker 1   first: T018 Seoul size 4 next Worker | T032 Seoul size 6 next Library | T047 Seoul size 8 next Library
+  IDLE SETTLER turns: 3 (first T57)
+  settler timeline to T80: T57 BOUGHT in Seoul. Cost: 370 | T58 op started | T61 op ended: LostCivilian
+  saving gold for a settler: 72 turns (T5-T80)
+c    Poland       tall      cities 5
+  builds to T80 (capital Warsaw; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T22 Settler* | T34 Granary | T37 Granary (Krakow) | T42 Warrior* | T46 Worker* | T52 Great Library | T55 Work Boat | T56 Work Boat | T59 Work Boat | T63 Work Boat | T66 Work Boat | T70 Work Boat | T71 Settler (Krakow) | T73 Work Boat | T76 Work Boat | T79 Worker
+  settlers ordered T: 22,71,92,118   found-city ops started T: 34,89,97,128   cities founded T: 37,93,99,144
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T052 Warsaw size 4 next Library
+  IDLE SETTLER turns: 3 (first T72)
+  settler timeline to T80: T22 settler (book) in Warsaw | T34 op started | T37 FOUNDED | T71 settler (AI) in Krakow
+  saving gold for a settler: 62 turns (T5-T80)
+c    Sweden       tall      cities 6
+  builds to T80 (capital Stockholm; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T14 Warrior* | T20 Settler* | T32 Warrior | T35 Granary (Sigtuna) | T36 Worker* | T38 Warrior* | T39 Worker* | T44 Warrior | T45 Warrior | T45 Warrior | T47 Granary (Helsinki) | T50 Settler* | T58 Granary | T65 Worker | T66 Settler (Sigtuna) | T67 Granary (Birka) | T68 Shrine (Helsinki) | T68 Settler (Sigtuna) | T68 Scout | T69 Worker | T74 Spearman | T80 Library (Sigtuna) | T80 Spearman
+  settlers ordered T: 20,50,66,68,81,100   found-city ops started T: 32,41,58,80,87,98,108,113   cities founded T: 35,47,67,90,106
+  ops aborted: T85 NoTarget, T86 NoTarget, T112 HalfStrength, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget
+  IDLE SETTLER turns: 4 (first T40)
+  military ops ended (whole game): Success 6, LostPath 4, NoTarget 3, WarStateChange 1
+  settler timeline to T80: T20 settler (book) in Stockholm | T32 op started | T35 FOUNDED | T40 BOUGHT in Stockholm. Cost: 370 | T41 op started | T47 FOUNDED | T50 settler (book) in Stockholm | T58 op started | T66 settler (AI) in Sigtuna | T67 FOUNDED | T68 settler (AI) in Sigtuna | T80 op started
+  saving gold for a settler: 53 turns (T6-T80)
