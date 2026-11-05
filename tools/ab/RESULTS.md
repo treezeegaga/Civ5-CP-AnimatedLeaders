@@ -1924,7 +1924,7 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
-### War: 0D7BB38D (PC 2, ab-e4d5785 + WarGold), the Aztecs: MarchOn ends at the walls before the war; TimingBuildup demobilises during an attack (Nov 4, about 7:05pm ET)
+### War: 0D7BB38D (PC 2, ab-e4d5785 + WarGold), the Aztecs: MarchOn ends at the walls before the war; TimingBuildup demobilises during an attack (Nov 4, about 7:06pm ET)
 - **First war, on Ethiopia at T92** (window at T78; Greece joined the same turn). The one attack (5 units) waited out
   SiegeArmy's 20 turns and was aborted at T108. Peace by T124.
 - **Second war, on Greece.**
