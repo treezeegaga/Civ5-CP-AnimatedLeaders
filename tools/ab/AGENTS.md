@@ -270,6 +270,13 @@ and goals, diplomacy changes how decisions are computed from them.
 
 ## Rules
 
+0. **Patterns, not whack-a-mole (the user, 2026-11-04 11:45pm ET).** Don't fix what went wrong in one game. Look for
+   what goes wrong across many games, and fix the biggest pattern. For the attack, `python3 tools/ab/attack_funnel.py`
+   places every logged bully game at the stage where the aggressor's attack died and counts the signals. A new fix
+   names the funnel stage it targets and how many games die there. A build is frozen for a block of pairs (at least
+   8, both PCs) before the next merge, so each block measures one build. A crash or a broken build is the only reason
+   to switch sooner.
+
 1. **One idea per fix.** Each fix gets its own flag (`FIX_18`, `FIX_OPENING_BOOK`, ...). Never bundle. Adding a
    flag (from fork commit `27437f0`):
    - append it to `CandidateFixTypes` in `CvPlayer.h`;

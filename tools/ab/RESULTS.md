@@ -4084,6 +4084,37 @@ T150. So the T78 crash ("32-bit address space nearly exhausted") points to loggi
 only. Logging stays on for the bully runs (the logs are what War works from); a second out-of-memory crash turns it
 off. Note: the runner stops games at its own `-StopTurn` (150); the ini's `StopTurn` only records it.
 
+### Patterns, not whack-a-mole: the attack funnel over 60 logged games (lead, 2026-11-04 11:50pm ET)
+
+The user: "instead of trying to fix the individual problems that happen each match, we should be looking for patterns
+and trends that exist over multiple matches". New tool `tools/ab/attack_funnel.py`. It reads every `results/logs_*`
+bully game and places it at the deepest stage the aggressor reached. It covers 51 first games (RoleFixes, every run
+since bullyconquest) and 9 flipped games (CP's AI; only capture games and partners keep flipped logs).
+
+| Stage the attack died at | First games (RoleFixes) | Flipped games (CP) |
+|---|---|---|
+| no attack operation formed | 1 | 0 |
+| attack operations, but no war declared | 6 | 1 |
+| at war, never tried a capture (tactics refused: "enemy dominated zone") | 23 | 3 |
+| capture attempts, no city taken | 18 | 3 |
+| took a city | 3 | 2 |
+
+Over all first games:
+- 3,960 turns of zone refusals.
+- 112 capture attempts, and expected damage reached the city's HP in only 4 of them.
+- Of the 88 attempts with a logged outcome, 69% left the city untouched or healed it. 26 used 0 units; 20 used 6.
+- Attack operations ended: DiploOpinionChange 54, Success 54, NoUnits 47, TimedOut 32.
+- Signals: 28 build-ups given up ("no war after 3 windows"), 32 "SiegeArmy too weak" give-ups, 143 window turns paused
+  for gold.
+
+**The pattern:** the wars now come (45 of 51 first games are at war). The army reaches the target region, but it can't
+hurt the city. Most attacks never try, because the zone is enemy-dominated, and the attacks that do try lack the
+damage, at almost any unit count. That is a strength problem (army size and composition, siege units and their
+timing against walls and city strength), not a sequencing bug. Next: one change aimed at damage at the walls, judged on
+this funnel over a frozen block of at least 8 pairs.
+
+**New rule (AGENTS.md, Rules 0):** fixes target funnel-level patterns, and builds are frozen for blocks of pairs.
+
 ### Siege build, pair 1, and SecondWave (lead, 2026-11-04 10:55pm ET)
 
 **bullygreedy12 pair 0E42C140** (`ab-7bb7885`, PC 2): Mongolia (aggressor) declared 0 wars with RoleFixes and 1
