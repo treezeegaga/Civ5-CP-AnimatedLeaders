@@ -1,0 +1,2414 @@
+025, Spain, Colombo, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_COLOMBO, (SAVING) 
+025, Babylon, Samarkand, SENT OUT QUEST, Type, 2
+025, Babylon, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+025, Spain, Colombo, SENT OUT QUEST, Type, 2
+025, Spain, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+025, America, Mombasa, SENT OUT QUEST, Type, 2
+025, America, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+025, Babylon, Brussels, SENT OUT QUEST, Type, 2
+025, Babylon, Brussels, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+025, Babylon, Almaty, SENT OUT QUEST, Type, 1
+025, Babylon, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+025, Persia, Almaty, SENT OUT QUEST, Type, 1
+025, Persia, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+026, Babylon, Mombasa, SENT OUT QUEST, Type, 12
+026, Babylon, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+026, Byzantium, Mombasa, SENT OUT QUEST, Type, 12
+026, Byzantium, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+026, America, Mombasa, SENT OUT QUEST, Type, 12
+026, America, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+026, Brazil, Mombasa, SENT OUT QUEST, Type, 12
+026, Brazil, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+026, Babylon, La Venta, SENT OUT QUEST, Type, 2
+026, Babylon, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+026, Babylon, Almaty, SENT OUT QUEST, Type, 3
+026, Babylon, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+027, Babylon, Antwerp, era change yield update
+027, Babylon, Kyzyl, era change yield update
+027, Babylon, Samarkand, era change yield update
+027, Babylon, Hong Kong, era change yield update
+027, Babylon, Bogota, era change yield update
+027, Babylon, Bucharest, era change yield update
+027, Babylon, Manila, era change yield update
+027, Babylon, Byblos, era change yield update
+027, Babylon, Jerusalem, era change yield update
+027, Babylon, Prague, era change yield update
+027, Babylon, Colombo, era change yield update
+027, Babylon, Geneva, era change yield update
+027, Babylon, Mombasa, era change yield update
+027, Babylon, Brussels, era change yield update
+027, Babylon, La Venta, era change yield update
+027, Babylon, Almaty, era change yield update
+027, Babylon, Samarkand, SENT OUT QUEST, Type, 2
+027, Babylon, Mombasa, SENT OUT QUEST, Type, 12
+027, Babylon, Brussels, SENT OUT QUEST, Type, 2
+027, Babylon, La Venta, SENT OUT QUEST, Type, 2
+027, Babylon, Almaty, SENT OUT QUEST, Type, 1
+027, Babylon, Almaty, SENT OUT QUEST, Type, 3
+027, Byzantium, Kyzyl, SENT OUT QUEST, Type, 2
+027, Byzantium, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KYZYL
+027, Babylon, Mombasa, SENT OUT QUEST, Type, 2
+027, Babylon, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+028, Persia, Kyzyl, SENT OUT QUEST, Type, 7
+028, Persia, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+028, America, Samarkand, SENT OUT QUEST, Type, 3
+028, America, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+028, Babylon, Hong Kong, SENT OUT QUEST, Type, 1
+028, Babylon, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+028, Songhai, Hong Kong, SENT OUT QUEST, Type, 1
+028, Songhai, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: -4 to -4, MINOR_CIV_HONG_KONG
+028, Babylon, Hong Kong, SENT OUT QUEST, Type, 6
+028, Babylon, Hong Kong, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+028, Persia, Colombo, SENT OUT QUEST, Type, 7
+028, Persia, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+028, Babylon, Brussels, SENT OUT QUEST, Type, 1
+028, Babylon, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+028, Persia, Brussels, SENT OUT QUEST, Type, 1
+028, Persia, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+028, Persia, Brussels, SENT OUT QUEST, Type, 6
+028, Persia, Brussels, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+028, Babylon, La Venta, SENT OUT QUEST, Type, 1
+028, Babylon, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+028, Byzantium, La Venta, SENT OUT QUEST, Type, 1
+028, Byzantium, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+028, Persia, La Venta, SENT OUT QUEST, Type, 1
+028, Persia, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+029, Byzantium, Bogota, SENT OUT QUEST, Type, 1
+029, Byzantium, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+030, Persia, Hong Kong, SENT OUT QUEST, Type, 1
+030, Persia, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+030, Germany, La Venta, SENT OUT QUEST, Type, 1
+030, Germany, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+030, Germany, Antwerp, SENT OUT QUEST, Type, 17
+030, Germany, Antwerp, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+030, Brazil, Antwerp, SENT OUT QUEST, Type, 2
+030, Brazil, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 6 to 6, MINOR_CIV_ANTWERP
+030, Byzantium, Samarkand, SENT OUT QUEST, Type, 2
+030, Byzantium, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+030, Persia, Manila, SENT OUT QUEST, Type, 1
+030, Persia, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+030, Songhai, Manila, SENT OUT QUEST, Type, 1
+030, Songhai, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+030, Songhai, Byblos, SENT OUT QUEST, Type, 17
+030, Songhai, Byblos, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+030, Byzantium, Almaty, SENT OUT QUEST, Type, 1
+030, Byzantium, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+031, Babylon, Manila, SENT OUT QUEST, Type, 1
+031, Babylon, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+031, Persia, Hong Kong, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_HONG_KONG, (SAVING) 
+031, Persia, Hong Kong, SENT OUT QUEST, Type, 1
+031, Germany, La Venta, SENT OUT QUEST, Type, 1
+031, Byzantium, Mombasa, SENT OUT QUEST, Type, 2
+031, Byzantium, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+032, Brazil, Samarkand, SENT OUT QUEST, Type, 2
+032, Brazil, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+032, Songhai, Manila, SENT OUT QUEST, Type, 6
+032, Songhai, Manila, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_MANILA
+033, Germany, Antwerp, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_ANTWERP, (SAVING) , Passing Brazil
+033, Byzantium, Kyzyl, SENT OUT QUEST, Type, 1
+033, Byzantium, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+033, Persia, Kyzyl, SENT OUT QUEST, Type, 1
+033, Persia, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+033, Germany, Kyzyl, SENT OUT QUEST, Type, 1
+033, Germany, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KYZYL
+033, America, Kyzyl, SENT OUT QUEST, Type, 1
+033, America, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+033, America, Kyzyl, SENT OUT QUEST, Type, 3
+033, America, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+033, Persia, Manila, SENT OUT QUEST, Type, 2
+033, Persia, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+033, Persia, La Venta, SENT OUT QUEST, Type, 7
+033, Persia, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+034, Babylon, Samarkand, SENT OUT QUEST, Type, 11
+034, Babylon, Samarkand, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+034, Byzantium, Samarkand, SENT OUT QUEST, Type, 11
+034, Byzantium, Samarkand, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+034, America, Samarkand, SENT OUT QUEST, Type, 11
+034, America, Samarkand, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+034, Brazil, Samarkand, SENT OUT QUEST, Type, 11
+034, Brazil, Samarkand, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+034, Songhai, Byblos, SENT OUT QUEST, Type, 1
+034, Songhai, Byblos, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+034, Spain, Colombo, gained friend
+034, Spain, Colombo, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_COLOMBO
+034, Persia, Almaty, SENT OUT QUEST, Type, 6
+034, Persia, Almaty, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_ALMATY
+035, Babylon, Byblos, SENT OUT QUEST, Type, 1
+035, Babylon, Byblos, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+035, Brazil, Mombasa, SENT OUT QUEST, Type, 7
+035, Brazil, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+036, Babylon, Hong Kong, gained friend
+036, Babylon, Hong Kong, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_HONG_KONG
+036, Persia, Colombo, SENT OUT QUEST, Type, 13
+036, Persia, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+036, Spain, Colombo, SENT OUT QUEST, Type, 13
+036, Spain, Colombo, RECEIVED QUEST, Invest, Friendship: 42 to 42, MINOR_CIV_COLOMBO
+036, Germany, Colombo, SENT OUT QUEST, Type, 13
+036, Germany, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+036, Byzantium, La Venta, SENT OUT QUEST, Type, 2
+036, Byzantium, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+037, Songhai, Mombasa, SENT OUT QUEST, Type, 12
+037, Songhai, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+037, Germany, Antwerp, SENT OUT QUEST, Type, 1
+037, Germany, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+037, Brazil, Antwerp, SENT OUT QUEST, Type, 1
+037, Brazil, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+037, Byzantium, Bucharest, SENT OUT QUEST, Type, 1
+037, Byzantium, Bucharest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+037, Spain, Bucharest, SENT OUT QUEST, Type, 1
+037, Spain, Bucharest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+037, Spain, Bucharest, SENT OUT QUEST, Type, 3
+037, Spain, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+038, Spain, Antwerp, era change yield update
+038, Spain, Kyzyl, era change yield update
+038, Spain, Samarkand, era change yield update
+038, Spain, Hong Kong, era change yield update
+038, Spain, Bogota, era change yield update
+038, Spain, Bucharest, era change yield update
+038, Spain, Manila, era change yield update
+038, Spain, Byblos, era change yield update
+038, Spain, Jerusalem, era change yield update
+038, Spain, Prague, era change yield update
+038, Spain, Colombo, era change yield update
+038, Spain, Geneva, era change yield update
+038, Spain, Mombasa, era change yield update
+038, Spain, Brussels, era change yield update
+038, Spain, La Venta, era change yield update
+038, Spain, Almaty, era change yield update
+038, Spain, Bucharest, SENT OUT QUEST, Type, 1
+038, Spain, Bucharest, SENT OUT QUEST, Type, 3
+038, Spain, Colombo, SENT OUT QUEST, Type, 13
+038, Songhai, Antwerp, era change yield update
+038, Songhai, Kyzyl, era change yield update
+038, Songhai, Samarkand, era change yield update
+038, Songhai, Hong Kong, era change yield update
+038, Songhai, Bogota, era change yield update
+038, Songhai, Bucharest, era change yield update
+038, Songhai, Manila, era change yield update
+038, Songhai, Byblos, era change yield update
+038, Songhai, Jerusalem, era change yield update
+038, Songhai, Prague, era change yield update
+038, Songhai, Colombo, era change yield update
+038, Songhai, Geneva, era change yield update
+038, Songhai, Mombasa, era change yield update
+038, Songhai, Brussels, era change yield update
+038, Songhai, La Venta, era change yield update
+038, Songhai, Almaty, era change yield update
+038, Songhai, Hong Kong, SENT OUT QUEST, Type, 1
+038, Songhai, Manila, SENT OUT QUEST, Type, 1
+038, Songhai, Manila, SENT OUT QUEST, Type, 6
+038, Songhai, Byblos, SENT OUT QUEST, Type, 17
+038, Songhai, Byblos, SENT OUT QUEST, Type, 1
+038, Songhai, Mombasa, SENT OUT QUEST, Type, 12
+039, Germany, Kyzyl, SENT OUT QUEST, Type, 7
+039, Germany, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_KYZYL
+039, America, Mombasa, SENT OUT QUEST, Type, 3
+039, America, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+039, Babylon, Brussels, SENT OUT QUEST, Type, 3
+039, Babylon, Brussels, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+040, Songhai, La Venta, SENT OUT QUEST, Type, 1
+040, Songhai, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+040, Babylon, Hong Kong, lost friend
+041, Byzantium, Antwerp, era change yield update
+041, Byzantium, Kyzyl, era change yield update
+041, Byzantium, Samarkand, era change yield update
+041, Byzantium, Hong Kong, era change yield update
+041, Byzantium, Bogota, era change yield update
+041, Byzantium, Bucharest, era change yield update
+041, Byzantium, Manila, era change yield update
+041, Byzantium, Byblos, era change yield update
+041, Byzantium, Jerusalem, era change yield update
+041, Byzantium, Prague, era change yield update
+041, Byzantium, Colombo, era change yield update
+041, Byzantium, Geneva, era change yield update
+041, Byzantium, Mombasa, era change yield update
+041, Byzantium, Brussels, era change yield update
+041, Byzantium, La Venta, era change yield update
+041, Byzantium, Almaty, era change yield update
+041, Byzantium, Kyzyl, SENT OUT QUEST, Type, 2
+041, Byzantium, Kyzyl, SENT OUT QUEST, Type, 1
+041, Byzantium, Samarkand, SENT OUT QUEST, Type, 2
+041, Byzantium, Samarkand, SENT OUT QUEST, Type, 11
+041, Byzantium, Bogota, SENT OUT QUEST, Type, 1
+041, Byzantium, Bucharest, SENT OUT QUEST, Type, 1
+041, Byzantium, Mombasa, SENT OUT QUEST, Type, 12
+041, Byzantium, Mombasa, SENT OUT QUEST, Type, 2
+041, Byzantium, La Venta, SENT OUT QUEST, Type, 1
+041, Byzantium, La Venta, SENT OUT QUEST, Type, 2
+041, Byzantium, Almaty, SENT OUT QUEST, Type, 1
+041, Songhai, Almaty, SENT OUT QUEST, Type, 1
+041, Songhai, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+041, Brazil, Antwerp, era change yield update
+041, Brazil, Kyzyl, era change yield update
+041, Brazil, Samarkand, era change yield update
+041, Brazil, Hong Kong, era change yield update
+041, Brazil, Bogota, era change yield update
+041, Brazil, Bucharest, era change yield update
+041, Brazil, Manila, era change yield update
+041, Brazil, Byblos, era change yield update
+041, Brazil, Jerusalem, era change yield update
+041, Brazil, Prague, era change yield update
+041, Brazil, Colombo, era change yield update
+041, Brazil, Geneva, era change yield update
+041, Brazil, Mombasa, era change yield update
+041, Brazil, Brussels, era change yield update
+041, Brazil, La Venta, era change yield update
+041, Brazil, Almaty, era change yield update
+041, Brazil, Antwerp, SENT OUT QUEST, Type, 2
+041, Brazil, Antwerp, SENT OUT QUEST, Type, 1
+041, Brazil, Samarkand, SENT OUT QUEST, Type, 2
+041, Brazil, Samarkand, SENT OUT QUEST, Type, 11
+041, Brazil, Mombasa, SENT OUT QUEST, Type, 12
+041, Brazil, Mombasa, SENT OUT QUEST, Type, 7
+042, Persia, Antwerp, era change yield update
+042, Persia, Kyzyl, era change yield update
+042, Persia, Samarkand, era change yield update
+042, Persia, Hong Kong, era change yield update
+042, Persia, Bogota, era change yield update
+042, Persia, Bucharest, era change yield update
+042, Persia, Manila, era change yield update
+042, Persia, Byblos, era change yield update
+042, Persia, Jerusalem, era change yield update
+042, Persia, Prague, era change yield update
+042, Persia, Colombo, era change yield update
+042, Persia, Geneva, era change yield update
+042, Persia, Mombasa, era change yield update
+042, Persia, Brussels, era change yield update
+042, Persia, La Venta, era change yield update
+042, Persia, Almaty, era change yield update
+042, Persia, Kyzyl, SENT OUT QUEST, Type, 7
+042, Persia, Kyzyl, SENT OUT QUEST, Type, 1
+042, Persia, Hong Kong, SENT OUT QUEST, Type, 1
+042, Persia, Manila, SENT OUT QUEST, Type, 1
+042, Persia, Manila, SENT OUT QUEST, Type, 2
+042, Persia, Colombo, SENT OUT QUEST, Type, 7
+042, Persia, Colombo, SENT OUT QUEST, Type, 13
+042, Persia, Brussels, SENT OUT QUEST, Type, 1
+042, Persia, Brussels, SENT OUT QUEST, Type, 6
+042, Persia, La Venta, SENT OUT QUEST, Type, 1
+042, Persia, La Venta, SENT OUT QUEST, Type, 7
+042, Persia, Almaty, SENT OUT QUEST, Type, 1
+042, Persia, Almaty, SENT OUT QUEST, Type, 6
+042, Spain, Colombo, gained ally
+042, Spain, Colombo, Gold Gift: 250, Friendship: 34 to 74, Diplomacy, MINOR_CIV_COLOMBO, Boost! 
+042, America, Antwerp, SENT OUT QUEST, Type, 1
+042, America, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+042, Songhai, Hong Kong, SENT OUT QUEST, Type, 6
+042, Songhai, Hong Kong, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+042, Byzantium, Bogota, SENT OUT QUEST, Type, 2
+042, Byzantium, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+043, Germany, Antwerp, era change yield update
+043, Germany, Kyzyl, era change yield update
+043, Germany, Samarkand, era change yield update
+043, Germany, Hong Kong, era change yield update
+043, Germany, Bogota, era change yield update
+043, Germany, Bucharest, era change yield update
+043, Germany, Manila, era change yield update
+043, Germany, Byblos, era change yield update
+043, Germany, Jerusalem, era change yield update
+043, Germany, Prague, era change yield update
+043, Germany, Colombo, era change yield update
+043, Germany, Geneva, era change yield update
+043, Germany, Mombasa, era change yield update
+043, Germany, Brussels, era change yield update
+043, Germany, La Venta, era change yield update
+043, Germany, Almaty, era change yield update
+043, Germany, Antwerp, SENT OUT QUEST, Type, 17
+043, Germany, Antwerp, SENT OUT QUEST, Type, 1
+043, Germany, Kyzyl, SENT OUT QUEST, Type, 1
+043, Germany, Kyzyl, SENT OUT QUEST, Type, 7
+043, Germany, Colombo, SENT OUT QUEST, Type, 13
+043, Germany, La Venta, SENT OUT QUEST, Type, 1
+043, Byzantium, Kyzyl, SENT OUT QUEST, Type, 7
+043, Byzantium, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+043, Songhai, Bogota, SENT OUT QUEST, Type, 1
+043, Songhai, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+044, America, Antwerp, era change yield update
+044, America, Kyzyl, era change yield update
+044, America, Samarkand, era change yield update
+044, America, Hong Kong, era change yield update
+044, America, Bogota, era change yield update
+044, America, Bucharest, era change yield update
+044, America, Manila, era change yield update
+044, America, Byblos, era change yield update
+044, America, Jerusalem, era change yield update
+044, America, Prague, era change yield update
+044, America, Colombo, era change yield update
+044, America, Geneva, era change yield update
+044, America, Mombasa, era change yield update
+044, America, Brussels, era change yield update
+044, America, La Venta, era change yield update
+044, America, Almaty, era change yield update
+044, America, Antwerp, SENT OUT QUEST, Type, 1
+044, America, Kyzyl, SENT OUT QUEST, Type, 1
+044, America, Kyzyl, SENT OUT QUEST, Type, 3
+044, America, Samarkand, SENT OUT QUEST, Type, 3
+044, America, Samarkand, SENT OUT QUEST, Type, 11
+044, America, Mombasa, SENT OUT QUEST, Type, 2
+044, America, Mombasa, SENT OUT QUEST, Type, 12
+044, America, Mombasa, SENT OUT QUEST, Type, 3
+044, Persia, Kyzyl, SENT OUT QUEST, Type, 2
+044, Persia, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KYZYL
+044, America, Samarkand, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+044, Byzantium, Bucharest, SENT OUT QUEST, Type, 2
+044, Byzantium, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+044, Babylon, Almaty, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+045, Persia, Bucharest, SENT OUT QUEST, Type, 1
+045, Persia, Bucharest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+045, Songhai, Brussels, SENT OUT QUEST, Type, 1
+045, Songhai, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+046, Byzantium, Mombasa, Gold Gift: 500, Friendship: 0 to 0, Culture, MINOR_CIV_MOMBASA, (SAVING) 
+046, Byzantium, Mombasa, SENT OUT QUEST, Type, 12
+046, Byzantium, Mombasa, SENT OUT QUEST, Type, 2
+046, Spain, Samarkand, SENT OUT QUEST, Type, 11
+046, Spain, Samarkand, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+046, Babylon, Mombasa, gained friend
+046, Babylon, Mombasa, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+046, Byzantium, Mombasa, cancelled, Contest Techs, Friendship: 1 to 1, MINOR_CIV_MOMBASA
+046, Songhai, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+046, America, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+046, Brazil, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+046, Persia, Brussels, SENT OUT QUEST, Type, 2
+046, Persia, Brussels, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+046, Byzantium, Almaty, SENT OUT QUEST, Type, 2
+046, Byzantium, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ALMATY
+047, Brazil, Colombo, SENT OUT QUEST, Type, 13
+047, Brazil, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+047, America, Kyzyl, SENT OUT QUEST, Type, 6
+047, America, Kyzyl, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_KYZYL
+047, Persia, Almaty, SENT OUT QUEST, Type, 17
+047, Persia, Almaty, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_ALMATY
+048, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
+048, Songhai, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+048, Germany, Colombo, SENT OUT QUEST, Type, 13
+048, Germany, Antwerp, SENT OUT QUEST, Type, 2
+048, Germany, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+048, Brazil, Antwerp, SENT OUT QUEST, Type, 7
+048, Brazil, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+049, Babylon, Hong Kong, SENT OUT QUEST, Type, 2
+049, Babylon, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 15 to 15, MINOR_CIV_HONG_KONG
+049, Babylon, Byblos, SENT OUT QUEST, Type, 2
+049, Babylon, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+050, Babylon, Hong Kong, SENT OUT QUEST, Type, 1
+050, Babylon, Hong Kong, SENT OUT QUEST, Type, 2
+050, Babylon, Manila, SENT OUT QUEST, Type, 1
+050, Babylon, Mombasa, SENT OUT QUEST, Type, 2
+050, Persia, Bogota, SENT OUT QUEST, Type, 1
+050, Persia, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+050, America, Hong Kong, SENT OUT QUEST, Type, 1
+050, America, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+050, Brazil, La Venta, SENT OUT QUEST, Type, 1
+050, Brazil, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+050, America, Kyzyl, gained friend
+050, America, Kyzyl, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_KYZYL
+050, Songhai, Hong Kong, gained friend
+050, Songhai, Hong Kong, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_HONG_KONG
+050, Persia, Hong Kong, SENT OUT QUEST, Type, 3
+050, Persia, Hong Kong, RECEIVED QUEST, Construct Wonder, Friendship: 1 to 1, MINOR_CIV_HONG_KONG
+050, Songhai, Bogota, gained friend
+050, Songhai, Bogota, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_BOGOTA
+050, Songhai, Byblos, SENT OUT QUEST, Type, 6
+050, Songhai, Byblos, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+050, Byzantium, Byblos, SENT OUT QUEST, Type, 1
+050, Byzantium, Byblos, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+050, Babylon, La Venta, SENT OUT QUEST, Type, 7
+050, Babylon, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+051, Persia, Bogota, SENT OUT QUEST, Type, 1
+051, Brazil, Samarkand, SENT OUT QUEST, Type, 17
+051, Brazil, Samarkand, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+051, Byzantium, Bogota, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+051, Persia, Bogota, cancelled, Kill Camp, Friendship: 1 to 1, MINOR_CIV_BOGOTA
+051, Songhai, Manila, gained friend
+051, Songhai, Manila, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_MANILA
+051, Songhai, Byblos, gained friend
+051, Songhai, Byblos, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_BYBLOS
+051, Spain, Colombo, lost ally
+051, Babylon, Mombasa, SENT OUT QUEST, Type, 17
+051, Babylon, Mombasa, RECEIVED QUEST, Trade Route, Friendship: 32 to 32, MINOR_CIV_MOMBASA
+051, Persia, Brussels, gained friend
+051, Persia, Brussels, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_BRUSSELS
+051, Byzantium, La Venta, SENT OUT QUEST, Type, 3
+051, Byzantium, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+051, Persia, Almaty, gained friend
+051, Persia, Almaty, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_ALMATY
+052, Persia, Brussels, SENT OUT QUEST, Type, 1
+052, Persia, Brussels, SENT OUT QUEST, Type, 2
+052, Persia, Kyzyl, gained friend
+052, Persia, Kyzyl, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KYZYL
+052, Persia, Colombo, gained friend
+052, Persia, Colombo, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+052, Germany, Colombo, SENT OUT QUEST, Type, 2
+052, Germany, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+052, America, Colombo, SENT OUT QUEST, Type, 13
+052, America, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+052, Persia, La Venta, gained friend
+052, Persia, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+053, Byzantium, Manila, SENT OUT QUEST, Type, 1
+053, Byzantium, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+053, America, Colombo, Gold Gift: 500, Friendship: 0 to 0, Conquest, MINOR_CIV_COLOMBO, (SAVING) 
+053, America, Antwerp, SENT OUT QUEST, Type, 1
+053, America, Colombo, SENT OUT QUEST, Type, 13
+053, Brazil, Mombasa, Gold Gift: 500, Friendship: 0 to 0, Culture, MINOR_CIV_MOMBASA, (SAVING) 
+053, Brazil, Mombasa, SENT OUT QUEST, Type, 7
+053, Spain, Colombo, SENT OUT QUEST, Type, 2
+053, Spain, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 56 to 56, MINOR_CIV_COLOMBO
+053, Babylon, Mombasa, lost friend
+053, Songhai, Mombasa, SENT OUT QUEST, Type, 2
+053, Songhai, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+053, Songhai, La Venta, SENT OUT QUEST, Type, 7
+053, Songhai, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+054, Spain, Bogota, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_BOGOTA, (SAVING) 
+054, America, Kyzyl, lost friend
+054, Babylon, Samarkand, gained friend
+054, Babylon, Samarkand, FINISHED QUEST, Contest Faith, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+054, Byzantium, Samarkand, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+054, Spain, Samarkand, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+054, America, Samarkand, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+054, Brazil, Samarkand, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+054, Songhai, Hong Kong, lost friend
+054, Songhai, Manila, lost friend
+055, Babylon, Hong Kong, Gold Gift: 500, Friendship: 8 to 8, Spaceship, MINOR_CIV_HONG_KONG, (SAVING) , Passing Persia
+055, America, Brussels, SENT OUT QUEST, Type, 1
+055, America, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+055, Songhai, Byblos, lost friend
+055, Persia, Brussels, lost friend
+055, Persia, Almaty, lost friend
+055, Babylon, Almaty, SENT OUT QUEST, Type, 7
+055, Babylon, Almaty, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+056, Songhai, Bucharest, SENT OUT QUEST, Type, 1
+056, Songhai, Bucharest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+056, Spain, Colombo, FINISHED QUEST, Invest, Friendship: 52 to 52, MINOR_CIV_COLOMBO
+056, Persia, Colombo, FINISHED QUEST, Invest, Friendship: 34 to 34, MINOR_CIV_COLOMBO
+056, Germany, Colombo, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+056, America, Colombo, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+056, Brazil, Colombo, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+056, Persia, Colombo, SENT OUT QUEST, Type, 7
+056, Persia, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 34 to 34, MINOR_CIV_COLOMBO
+056, Songhai, Mombasa, gained friend
+056, Songhai, Mombasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+057, Germany, Bucharest, SENT OUT QUEST, Type, 1
+057, Germany, Bucharest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+057, Babylon, Samarkand, SENT OUT QUEST, Type, 6
+057, Babylon, Samarkand, RECEIVED QUEST, Find Player, Friendship: 33 to 33, MINOR_CIV_SAMARKAND
+057, Songhai, Brussels, SENT OUT QUEST, Type, 7
+057, Songhai, Brussels, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+057, Persia, La Venta, SENT OUT QUEST, Type, 2
+057, Persia, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 32 to 32, MINOR_CIV_LA_VENTA
+057, Germany, La Venta, SENT OUT QUEST, Type, 17
+057, Germany, La Venta, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+058, America, Almaty, SENT OUT QUEST, Type, 1
+058, America, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+058, Babylon, Samarkand, gained ally
+058, Babylon, Samarkand, FINISHED QUEST, Find Player, Friendship: 31 to 66, MINOR_CIV_SAMARKAND
+059, Babylon, Samarkand, Gold Gift: 250, Friendship: 66 to 91, Spaceship, MINOR_CIV_SAMARKAND, Boost! 
+059, Babylon, Manila, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_MANILA, (SAVING) 
+059, Babylon, Samarkand, SENT OUT QUEST, Type, 2
+059, Persia, Kyzyl, lost friend
+059, Germany, Kyzyl, SENT OUT QUEST, Type, 3
+059, Germany, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KYZYL
+059, Persia, Colombo, lost friend
+059, Byzantium, Mombasa, SENT OUT QUEST, Type, 4
+059, Byzantium, Mombasa, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+059, Brazil, Mombasa, SENT OUT QUEST, Type, 17
+059, Brazil, Mombasa, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+059, Persia, La Venta, lost friend
+060, Germany, Bucharest, gained friend
+060, Germany, Bucharest, FINISHED QUEST, Kill Camp, Friendship: -3 to 46, MINOR_CIV_BUCHAREST
+061, America, La Venta, SENT OUT QUEST, Type, 1
+061, America, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+061, Byzantium, Bucharest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+061, Persia, Bucharest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+061, Spain, Bucharest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+061, Songhai, Bucharest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+061, Persia, Bucharest, SENT OUT QUEST, Type, 2
+061, Persia, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+061, Songhai, Almaty, SENT OUT QUEST, Type, 2
+061, Songhai, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ALMATY
+062, America, Kyzyl, cancelled, Construct Wonder, Friendship: 17 to 17, MINOR_CIV_KYZYL
+062, Persia, Hong Kong, cancelled, Construct Wonder, Friendship: 8 to 8, MINOR_CIV_HONG_KONG
+062, Songhai, Hong Kong, SENT OUT QUEST, Type, 2
+062, Songhai, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 17 to 17, MINOR_CIV_HONG_KONG
+062, Spain, Bucharest, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+062, America, Mombasa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+062, Babylon, Brussels, gained friend
+062, Babylon, Brussels, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BRUSSELS
+062, Brazil, La Venta, SENT OUT QUEST, Type, 2
+062, Brazil, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+063, Babylon, Brussels, SENT OUT QUEST, Type, 2
+063, Babylon, Brussels, SENT OUT QUEST, Type, 1
+063, Songhai, Bogota, Gold Gift: 250, Friendship: 32 to 32, Conquest, MINOR_CIV_BOGOTA, (SAVING) , Boost! , Passing Spain
+063, Persia, Bogota, SENT OUT QUEST, Type, 7
+063, Persia, Bogota, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+063, Byzantium, Bucharest, gained friend
+063, Byzantium, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+063, Byzantium, Bucharest, SENT OUT QUEST, Type, 4
+063, Byzantium, Bucharest, RECEIVED QUEST, Great Person, Friendship: 40 to 40, MINOR_CIV_BUCHAREST
+063, Spain, Bucharest, SENT OUT QUEST, Type, 7
+063, Spain, Bucharest, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+063, Songhai, Mombasa, lost friend
+063, Byzantium, Brussels, SENT OUT QUEST, Type, 1
+063, Byzantium, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+064, America, Antwerp, SENT OUT QUEST, Type, 2
+064, America, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+064, Songhai, Bogota, lost friend
+064, Byzantium, Almaty, SENT OUT QUEST, Type, 4
+064, Byzantium, Almaty, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ALMATY
+065, Persia, Brussels, SENT OUT QUEST, Type, 1
+065, Persia, Brussels, SENT OUT QUEST, Type, 2
+065, Spain, La Venta, SENT OUT QUEST, Type, 1
+065, Spain, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+065, Persia, Hong Kong, SENT OUT QUEST, Type, 2
+065, Persia, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_HONG_KONG
+065, Brazil, La Venta, gained friend
+065, Brazil, La Venta, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_LA_VENTA
+066, Spain, Brussels, SENT OUT QUEST, Type, 1
+066, Spain, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+066, America, Samarkand, SENT OUT QUEST, Type, 2
+066, America, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+066, Songhai, Manila, SENT OUT QUEST, Type, 17
+066, Songhai, Manila, RECEIVED QUEST, Trade Route, Friendship: 1 to 1, MINOR_CIV_MANILA
+066, Songhai, Byblos, SENT OUT QUEST, Type, 7
+066, Songhai, Byblos, RECEIVED QUEST, Find Natural Wonder, Friendship: 12 to 12, MINOR_CIV_BYBLOS
+066, Babylon, La Venta, gained friend
+066, Babylon, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+066, Babylon, La Venta, cancelled, Kill Camp, Friendship: 40 to 40, MINOR_CIV_LA_VENTA
+066, Byzantium, La Venta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+066, Persia, La Venta, cancelled, Kill Camp, Friendship: 19 to 19, MINOR_CIV_LA_VENTA
+066, Spain, La Venta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+066, Songhai, La Venta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+066, Germany, La Venta, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+066, America, La Venta, cancelled, Kill Camp, Friendship: -3 to -3, MINOR_CIV_LA_VENTA
+066, Babylon, Almaty, gained friend
+066, Babylon, Almaty, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ALMATY
+067, Brazil, Kyzyl, SENT OUT QUEST, Type, 1
+067, Brazil, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+067, Germany, Kyzyl, gained friend
+067, Germany, Kyzyl, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_KYZYL
+067, Babylon, Byblos, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+067, Byzantium, Byblos, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+067, Songhai, Byblos, cancelled, Kill Camp, Friendship: 11 to 11, MINOR_CIV_BYBLOS
+067, Songhai, La Venta, SENT OUT QUEST, Type, 2
+067, Songhai, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+068, America, Kyzyl, SENT OUT QUEST, Type, 17
+068, America, Kyzyl, RECEIVED QUEST, Trade Route, Friendship: 8 to 8, MINOR_CIV_KYZYL
+068, Byzantium, Samarkand, SENT OUT QUEST, Type, 17
+068, Byzantium, Samarkand, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+068, Byzantium, Bogota, SENT OUT QUEST, Type, 4
+068, Byzantium, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+068, Germany, Colombo, SENT OUT QUEST, Type, 7
+068, Germany, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+068, Persia, Brussels, SENT OUT QUEST, Type, 3
+068, Persia, Brussels, RECEIVED QUEST, Construct Wonder, Friendship: 9 to 9, MINOR_CIV_BRUSSELS
+069, Spain, Kyzyl, SENT OUT QUEST, Type, 1
+069, Spain, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+069, Spain, Almaty, SENT OUT QUEST, Type, 1
+069, Spain, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+069, Brazil, La Venta, SENT OUT QUEST, Type, 2
+069, Persia, Kyzyl, SENT OUT QUEST, Type, 3
+069, Persia, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 14 to 14, MINOR_CIV_KYZYL
+069, Spain, Bogota, SENT OUT QUEST, Type, 4
+069, Spain, Bogota, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+069, Spain, Colombo, SENT OUT QUEST, Type, 17
+069, Spain, Colombo, RECEIVED QUEST, Trade Route, Friendship: 32 to 32, MINOR_CIV_COLOMBO
+069, Babylon, Brussels, lost friend
+070, Byzantium, Bucharest, lost friend
+070, Germany, Almaty, SENT OUT QUEST, Type, 1
+070, Germany, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+071, Byzantium, Hong Kong, SENT OUT QUEST, Type, 1
+071, Byzantium, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+071, Germany, Almaty, SENT OUT QUEST, Type, 1
+071, Babylon, Samarkand, SENT OUT QUEST, Type, 4
+071, Babylon, Samarkand, RECEIVED QUEST, Great Person, Friendship: 62 to 62, MINOR_CIV_SAMARKAND
+071, Spain, Colombo, lost friend
+071, Brazil, Colombo, SENT OUT QUEST, Type, 2
+071, Brazil, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+072, Byzantium, Hong Kong, SENT OUT QUEST, Type, 1
+072, Songhai, Kyzyl, SENT OUT QUEST, Type, 7
+072, Songhai, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+072, Babylon, Samarkand, lost ally
+072, Songhai, Bogota, SENT OUT QUEST, Type, 7
+072, Songhai, Bogota, RECEIVED QUEST, Find Natural Wonder, Friendship: 17 to 17, MINOR_CIV_BOGOTA
+072, Germany, Bucharest, lost friend
+072, Babylon, Almaty, SENT OUT QUEST, Type, 3
+072, Babylon, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 31 to 31, MINOR_CIV_ALMATY
+073, Babylon, Samarkand, SENT OUT QUEST, Type, 2
+073, Babylon, Samarkand, SENT OUT QUEST, Type, 4
+073, Brazil, Samarkand, gained friend
+073, Brazil, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+073, Babylon, La Venta, lost friend
+073, Brazil, La Venta, gained ally
+073, Brazil, La Venta, FINISHED QUEST, Connect Resource, Friendship: 38 to 78, MINOR_CIV_LA_VENTA
+073, Germany, La Venta, SENT OUT QUEST, Type, 2
+073, Germany, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+073, Babylon, Almaty, lost friend
+074, Byzantium, La Venta, SENT OUT QUEST, Type, 2
+074, Byzantium, La Venta, SENT OUT QUEST, Type, 3
+074, Brazil, Samarkand, SENT OUT QUEST, Type, 17
+074, Babylon, Manila, SENT OUT QUEST, Type, 14
+074, Babylon, Manila, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_MANILA
+074, Byzantium, Manila, SENT OUT QUEST, Type, 14
+074, Byzantium, Manila, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MANILA
+074, Persia, Manila, SENT OUT QUEST, Type, 14
+074, Persia, Manila, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MANILA
+074, Spain, Mombasa, SENT OUT QUEST, Type, 3
+074, Spain, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+074, America, Brussels, SENT OUT QUEST, Type, 14
+074, America, Brussels, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+075, Brazil, Brussels, SENT OUT QUEST, Type, 1
+075, Brazil, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+075, Babylon, Hong Kong, gained friend
+075, Babylon, Hong Kong, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_HONG_KONG
+075, Babylon, Hong Kong, SENT OUT QUEST, Type, 4
+075, Babylon, Hong Kong, RECEIVED QUEST, Great Person, Friendship: 55 to 55, MINOR_CIV_HONG_KONG
+075, Byzantium, Byblos, SENT OUT QUEST, Type, 2
+075, Byzantium, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+075, Songhai, Mombasa, SENT OUT QUEST, Type, 2
+075, Songhai, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 11 to 11, MINOR_CIV_MOMBASA
+075, Persia, La Venta, SENT OUT QUEST, Type, 7
+075, Persia, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+076, Byzantium, Hong Kong, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HONG_KONG
+076, Persia, Hong Kong, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HONG_KONG
+076, Songhai, Hong Kong, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+076, America, Hong Kong, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+076, Spain, Bucharest, gained friend
+076, Spain, Bucharest, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+076, Songhai, Bucharest, SENT OUT QUEST, Type, 2
+076, Songhai, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+076, Babylon, Byblos, SENT OUT QUEST, Type, 4
+076, Babylon, Byblos, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+076, Persia, Almaty, SENT OUT QUEST, Type, 14
+076, Persia, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ALMATY
+077, Spain, Antwerp, era change yield update
+077, Spain, Kyzyl, era change yield update
+077, Spain, Samarkand, era change yield update
+077, Spain, Hong Kong, era change yield update
+077, Spain, Bogota, era change yield update
+077, Spain, Bucharest, era change yield update
+077, Spain, Manila, era change yield update
+077, Spain, Byblos, era change yield update
+077, Spain, Jerusalem, era change yield update
+077, Spain, Prague, era change yield update
+077, Spain, Colombo, era change yield update
+077, Spain, Geneva, era change yield update
+077, Spain, Mombasa, era change yield update
+077, Spain, Brussels, era change yield update
+077, Spain, La Venta, era change yield update
+077, Spain, Almaty, era change yield update
+077, Spain, Kyzyl, SENT OUT QUEST, Type, 1
+077, Spain, Bogota, SENT OUT QUEST, Type, 4
+077, Spain, Colombo, SENT OUT QUEST, Type, 2
+077, Spain, Colombo, SENT OUT QUEST, Type, 17
+077, Spain, Mombasa, SENT OUT QUEST, Type, 3
+077, Spain, Brussels, SENT OUT QUEST, Type, 1
+077, Spain, Almaty, SENT OUT QUEST, Type, 1
+077, America, Hong Kong, SENT OUT QUEST, Type, 2
+077, America, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+077, Babylon, Bogota, SENT OUT QUEST, Type, 3
+077, Babylon, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+078, Germany, Kyzyl, lost friend
+078, Brazil, Samarkand, lost friend
+078, Songhai, Hong Kong, SENT OUT QUEST, Type, 7
+078, Songhai, Hong Kong, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+078, Brazil, Bogota, SENT OUT QUEST, Type, 14
+078, Brazil, Bogota, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+079, Byzantium, Samarkand, gained friend
+079, Byzantium, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+079, America, Colombo, SENT OUT QUEST, Type, 2
+079, America, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+079, Germany, La Venta, gained friend
+079, Germany, La Venta, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+080, Babylon, La Venta, SENT OUT QUEST, Type, 2
+080, Byzantium, Samarkand, SENT OUT QUEST, Type, 17
+080, America, Antwerp, SENT OUT QUEST, Type, 7
+080, America, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+080, Spain, Samarkand, SENT OUT QUEST, Type, 2
+080, Spain, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+080, America, Bogota, SENT OUT QUEST, Type, 4
+080, America, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+080, Persia, Colombo, SENT OUT QUEST, Type, 3
+080, Persia, Colombo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+080, Songhai, Almaty, SENT OUT QUEST, Type, 14
+080, Songhai, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ALMATY
+081, America, Bogota, SENT OUT QUEST, Type, 4
+081, America, Almaty, SENT OUT QUEST, Type, 1
+081, Spain, Kyzyl, SENT OUT QUEST, Type, 3
+081, Spain, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+081, Spain, Samarkand, gained friend
+081, Spain, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+081, Songhai, Manila, gained friend
+081, Songhai, Manila, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_MANILA
+081, Songhai, Brussels, gained friend
+081, Songhai, Brussels, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_BRUSSELS
+082, Babylon, Brussels, SENT OUT QUEST, Type, 2
+082, Babylon, Brussels, SENT OUT QUEST, Type, 1
+082, Persia, Bucharest, SENT OUT QUEST, Type, 3
+082, Persia, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+082, Babylon, Manila, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MANILA
+082, Byzantium, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+082, Persia, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+082, Babylon, Mombasa, SENT OUT QUEST, Type, 12
+082, Babylon, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+082, Byzantium, Mombasa, SENT OUT QUEST, Type, 12
+082, Byzantium, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+082, Spain, Mombasa, SENT OUT QUEST, Type, 12
+082, Spain, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+082, Songhai, Mombasa, SENT OUT QUEST, Type, 12
+082, Songhai, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 1 to 1, MINOR_CIV_MOMBASA
+082, America, Mombasa, SENT OUT QUEST, Type, 12
+082, America, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+082, Brazil, Mombasa, SENT OUT QUEST, Type, 12
+082, Brazil, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+082, Babylon, Brussels, cancelled, Kill Camp, Friendship: 4 to 4, MINOR_CIV_BRUSSELS
+082, Byzantium, Brussels, cancelled, Kill Camp, Friendship: -3 to -3, MINOR_CIV_BRUSSELS
+082, Persia, Brussels, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+082, Spain, Brussels, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+082, America, Brussels, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+082, Brazil, Brussels, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+083, Spain, Bucharest, lost friend
+083, Brazil, Bucharest, SENT OUT QUEST, Type, 2
+083, Brazil, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+084, Brazil, Samarkand, SENT OUT QUEST, Type, 17
+084, Germany, Kyzyl, SENT OUT QUEST, Type, 0
+084, Germany, Kyzyl, RECEIVED QUEST, Route, Friendship: 19 to 19, MINOR_CIV_KYZYL
+084, Byzantium, Samarkand, lost friend
+084, Germany, Bucharest, SENT OUT QUEST, Type, 2
+084, Germany, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 11 to 11, MINOR_CIV_BUCHAREST
+084, Spain, Almaty, SENT OUT QUEST, Type, 4
+084, Spain, Almaty, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ALMATY
+085, Persia, Kyzyl, gained friend
+085, Persia, Kyzyl, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_KYZYL
+085, Byzantium, Bucharest, SENT OUT QUEST, Type, 14
+085, Byzantium, Bucharest, RECEIVED QUEST, Bully City-State, Friendship: 7 to 7, MINOR_CIV_BUCHAREST
+085, America, Bucharest, SENT OUT QUEST, Type, 3
+085, America, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+085, Persia, Brussels, gained friend
+085, Persia, Brussels, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BRUSSELS
+085, Songhai, Brussels, SENT OUT QUEST, Type, 14
+085, Songhai, Brussels, RECEIVED QUEST, Bully City-State, Friendship: 44 to 44, MINOR_CIV_BRUSSELS
+085, America, Almaty, SENT OUT QUEST, Type, 2
+085, America, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ALMATY
+086, Brazil, Kyzyl, SENT OUT QUEST, Type, 3
+086, Brazil, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+086, Babylon, Samarkand, lost friend
+086, Spain, Samarkand, lost friend
+086, Babylon, Samarkand, SENT OUT QUEST, Type, 1
+086, Babylon, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 28 to 28, MINOR_CIV_SAMARKAND
+086, Byzantium, Samarkand, SENT OUT QUEST, Type, 1
+086, Byzantium, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 24 to 24, MINOR_CIV_SAMARKAND
+086, Spain, Samarkand, SENT OUT QUEST, Type, 1
+086, Spain, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 28 to 28, MINOR_CIV_SAMARKAND
+086, America, Samarkand, SENT OUT QUEST, Type, 1
+086, America, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+086, Brazil, Samarkand, SENT OUT QUEST, Type, 1
+086, Brazil, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 11 to 11, MINOR_CIV_SAMARKAND
+086, Brazil, La Venta, lost ally
+086, Babylon, La Venta, SENT OUT QUEST, Type, 16
+086, Babylon, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 10 to 10, MINOR_CIV_LA_VENTA
+087, Babylon, Kyzyl, SENT OUT QUEST, Type, 1
+087, Babylon, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+087, Persia, Hong Kong, SENT OUT QUEST, Type, 7
+087, Persia, Hong Kong, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_HONG_KONG
+087, Spain, Bogota, SENT OUT QUEST, Type, 3
+087, Spain, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+087, America, Mombasa, SENT OUT QUEST, Type, 7
+087, America, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+087, Byzantium, Brussels, SENT OUT QUEST, Type, 4
+087, Byzantium, Brussels, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+087, America, La Venta, SENT OUT QUEST, Type, 4
+087, America, La Venta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+088, Babylon, Hong Kong, gained ally
+088, Babylon, Hong Kong, Gold Gift: 250, Friendship: 37 to 62, Spaceship, MINOR_CIV_HONG_KONG, Boost! , Passing Persia
+088, Babylon, Bogota, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_BOGOTA, (SAVING) 
+088, Persia, Brussels, SENT OUT QUEST, Type, 2
+088, Songhai, Bucharest, gained friend
+088, Songhai, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+088, Persia, Byblos, SENT OUT QUEST, Type, 2
+088, Persia, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+088, Babylon, Colombo, SENT OUT QUEST, Type, 2
+088, Babylon, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+088, Songhai, Mombasa, SENT OUT QUEST, Type, 7
+088, Songhai, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+088, Spain, La Venta, SENT OUT QUEST, Type, 3
+088, Spain, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+088, Brazil, La Venta, SENT OUT QUEST, Type, 14
+088, Brazil, La Venta, RECEIVED QUEST, Bully City-State, Friendship: 55 to 55, MINOR_CIV_LA_VENTA
+088, Germany, Almaty, SENT OUT QUEST, Type, 7
+088, Germany, Almaty, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_ALMATY
+089, Babylon, Samarkand, gained friend
+089, Babylon, Samarkand, gained ally
+089, Babylon, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 21 to 61, MINOR_CIV_SAMARKAND
+089, Babylon, Hong Kong, lost ally
+089, Songhai, Hong Kong, gained friend
+089, Songhai, Hong Kong, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HONG_KONG
+089, Babylon, Bucharest, SENT OUT QUEST, Type, 4
+089, Babylon, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+089, Spain, Bucharest, SENT OUT QUEST, Type, 3
+089, Spain, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 20 to 20, MINOR_CIV_BUCHAREST
+089, Babylon, Brussels, SENT OUT QUEST, Type, 16
+089, Babylon, Brussels, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+090, Babylon, Samarkand, SENT OUT QUEST, Type, 4
+090, Babylon, Samarkand, SENT OUT QUEST, Type, 1
+090, Byzantium, Samarkand, SENT OUT QUEST, Type, 17
+090, Byzantium, Samarkand, SENT OUT QUEST, Type, 1
+090, Babylon, Samarkand, lost ally
+090, Babylon, Bogota, SENT OUT QUEST, Type, 10
+090, Babylon, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+090, Byzantium, Bogota, SENT OUT QUEST, Type, 10
+090, Byzantium, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+090, Persia, Bogota, SENT OUT QUEST, Type, 10
+090, Persia, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+090, Spain, Bogota, SENT OUT QUEST, Type, 10
+090, Spain, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+090, Songhai, Bogota, SENT OUT QUEST, Type, 10
+090, Songhai, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+090, Germany, Bogota, SENT OUT QUEST, Type, 10
+090, Germany, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+090, America, Bogota, SENT OUT QUEST, Type, 10
+090, America, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+090, Brazil, Bogota, SENT OUT QUEST, Type, 10
+090, Brazil, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+090, Persia, Bogota, SENT OUT QUEST, Type, 4
+090, Persia, Bogota, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+090, Songhai, Manila, lost friend
+090, Germany, La Venta, lost friend
+091, Songhai, Kyzyl, SENT OUT QUEST, Type, 2
+091, Songhai, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KYZYL
+091, Babylon, Colombo, SENT OUT QUEST, Type, 10
+091, Babylon, Colombo, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+091, Persia, Colombo, SENT OUT QUEST, Type, 10
+091, Persia, Colombo, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+091, Spain, Colombo, SENT OUT QUEST, Type, 10
+091, Spain, Colombo, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+091, Songhai, Colombo, SENT OUT QUEST, Type, 10
+091, Songhai, Colombo, RECEIVED QUEST, Contest Culture, Friendship: -3 to -3, MINOR_CIV_COLOMBO
+091, Germany, Colombo, SENT OUT QUEST, Type, 10
+091, Germany, Colombo, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+091, America, Colombo, SENT OUT QUEST, Type, 10
+091, America, Colombo, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+091, Brazil, Colombo, SENT OUT QUEST, Type, 10
+091, Brazil, Colombo, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+092, Spain, Almaty, gained friend
+092, Spain, Almaty, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ALMATY
+092, America, La Venta, SENT OUT QUEST, Type, 4
+092, Brazil, Almaty, SENT OUT QUEST, Type, 1
+092, Brazil, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+092, Persia, Kyzyl, lost friend
+092, Germany, Bogota, SENT OUT QUEST, Type, 4
+092, Germany, Bogota, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+092, Babylon, Manila, SENT OUT QUEST, Type, 2
+092, Babylon, Manila, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MANILA
+092, Persia, Brussels, lost friend
+092, America, Brussels, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+092, Spain, Brussels, SENT OUT QUEST, Type, 4
+092, Spain, Brussels, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+092, America, Brussels, SENT OUT QUEST, Type, 4
+092, America, Brussels, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+092, Byzantium, La Venta, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+093, Babylon, Antwerp, era change yield update
+093, Babylon, Kyzyl, era change yield update
+093, Babylon, Samarkand, era change yield update
+093, Babylon, Hong Kong, era change yield update
+093, Babylon, Bogota, era change yield update
+093, Babylon, Bucharest, era change yield update
+093, Babylon, Manila, era change yield update
+093, Babylon, Byblos, era change yield update
+093, Babylon, Jerusalem, era change yield update
+093, Babylon, Prague, era change yield update
+093, Babylon, Colombo, era change yield update
+093, Babylon, Geneva, era change yield update
+093, Babylon, Mombasa, era change yield update
+093, Babylon, Brussels, era change yield update
+093, Babylon, La Venta, era change yield update
+093, Babylon, Almaty, era change yield update
+093, Babylon, Kyzyl, SENT OUT QUEST, Type, 1
+093, Babylon, Samarkand, SENT OUT QUEST, Type, 4
+093, Babylon, Samarkand, SENT OUT QUEST, Type, 1
+093, Babylon, Hong Kong, SENT OUT QUEST, Type, 2
+093, Babylon, Hong Kong, SENT OUT QUEST, Type, 4
+093, Babylon, Bogota, SENT OUT QUEST, Type, 3
+093, Babylon, Bogota, SENT OUT QUEST, Type, 10
+093, Babylon, Bucharest, SENT OUT QUEST, Type, 4
+093, Babylon, Manila, SENT OUT QUEST, Type, 14
+093, Babylon, Manila, SENT OUT QUEST, Type, 2
+093, Babylon, Byblos, SENT OUT QUEST, Type, 2
+093, Babylon, Byblos, SENT OUT QUEST, Type, 4
+093, Babylon, Colombo, SENT OUT QUEST, Type, 2
+093, Babylon, Colombo, SENT OUT QUEST, Type, 10
+093, Babylon, Mombasa, SENT OUT QUEST, Type, 2
+093, Babylon, Mombasa, SENT OUT QUEST, Type, 17
+093, Babylon, Mombasa, SENT OUT QUEST, Type, 12
+093, Babylon, Brussels, SENT OUT QUEST, Type, 2
+093, Babylon, Brussels, SENT OUT QUEST, Type, 16
+093, Babylon, La Venta, SENT OUT QUEST, Type, 2
+093, Babylon, La Venta, SENT OUT QUEST, Type, 16
+093, Babylon, Almaty, SENT OUT QUEST, Type, 1
+093, Babylon, Almaty, SENT OUT QUEST, Type, 3
+093, Brazil, Antwerp, era change yield update
+093, Brazil, Kyzyl, era change yield update
+093, Brazil, Samarkand, era change yield update
+093, Brazil, Hong Kong, era change yield update
+093, Brazil, Bogota, era change yield update
+093, Brazil, Bucharest, era change yield update
+093, Brazil, Manila, era change yield update
+093, Brazil, Byblos, era change yield update
+093, Brazil, Jerusalem, era change yield update
+093, Brazil, Prague, era change yield update
+093, Brazil, Colombo, era change yield update
+093, Brazil, Geneva, era change yield update
+093, Brazil, Mombasa, era change yield update
+093, Brazil, Brussels, era change yield update
+093, Brazil, La Venta, era change yield update
+093, Brazil, Almaty, era change yield update
+093, Brazil, Antwerp, SENT OUT QUEST, Type, 2
+093, Brazil, Antwerp, SENT OUT QUEST, Type, 1
+093, Brazil, Antwerp, SENT OUT QUEST, Type, 7
+093, Brazil, Kyzyl, SENT OUT QUEST, Type, 1
+093, Brazil, Kyzyl, SENT OUT QUEST, Type, 3
+093, Brazil, Samarkand, SENT OUT QUEST, Type, 17
+093, Brazil, Samarkand, SENT OUT QUEST, Type, 1
+093, Brazil, Bogota, SENT OUT QUEST, Type, 14
+093, Brazil, Bogota, SENT OUT QUEST, Type, 10
+093, Brazil, Bucharest, SENT OUT QUEST, Type, 2
+093, Brazil, Colombo, SENT OUT QUEST, Type, 2
+093, Brazil, Colombo, SENT OUT QUEST, Type, 10
+093, Brazil, Mombasa, SENT OUT QUEST, Type, 7
+093, Brazil, Mombasa, SENT OUT QUEST, Type, 17
+093, Brazil, Mombasa, SENT OUT QUEST, Type, 12
+093, Brazil, La Venta, SENT OUT QUEST, Type, 14
+093, Brazil, Almaty, SENT OUT QUEST, Type, 1
+093, America, Hong Kong, SENT OUT QUEST, Type, 16
+093, America, Hong Kong, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+093, Germany, Prague, SENT OUT QUEST, Type, 1
+093, Germany, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+093, Babylon, Colombo, gained friend
+093, Babylon, Colombo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+093, Songhai, Colombo, SENT OUT QUEST, Type, 14
+093, Songhai, Colombo, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+094, Songhai, Bogota, SENT OUT QUEST, Type, 0
+094, Songhai, Bogota, RECEIVED QUEST, Route, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+094, Babylon, Manila, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_MANILA
+094, Byzantium, Manila, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MANILA
+094, Persia, Manila, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MANILA
+094, Brazil, Colombo, SENT OUT QUEST, Type, 16
+094, Brazil, Colombo, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+095, America, Bogota, gained friend
+095, America, Bogota, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_BOGOTA
+095, America, Brussels, gained friend
+095, America, Brussels, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BRUSSELS
+095, America, La Venta, gained friend
+095, America, La Venta, FINISHED QUEST, Great Person, Friendship: 4 to 44, MINOR_CIV_LA_VENTA
+095, Germany, Antwerp, gained friend
+095, Germany, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_ANTWERP
+095, Songhai, Bucharest, lost friend
+095, Germany, Bucharest, gained friend
+095, Germany, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+095, America, Colombo, gained friend
+095, America, Colombo, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_COLOMBO
+095, Songhai, Brussels, lost friend
+095, Brazil, Brussels, SENT OUT QUEST, Type, 14
+095, Brazil, Brussels, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+096, America, Kyzyl, SENT OUT QUEST, Type, 7
+096, America, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+096, Spain, Samarkand, SENT OUT QUEST, Type, 7
+096, Spain, Samarkand, RECEIVED QUEST, Find Natural Wonder, Friendship: 6 to 6, MINOR_CIV_SAMARKAND
+096, Songhai, Hong Kong, lost friend
+096, Songhai, Mombasa, gained friend
+096, Songhai, Mombasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+096, Songhai, La Venta, gained friend
+096, Songhai, La Venta, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+096, Songhai, Almaty, gained friend
+096, Songhai, Almaty, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ALMATY
+096, Persia, Almaty, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ALMATY
+097, Spain, Samarkand, gained friend
+097, Spain, Samarkand, FINISHED QUEST, Find Natural Wonder, Friendship: 4 to 44, MINOR_CIV_SAMARKAND
+097, Babylon, Bucharest, SENT OUT QUEST, Type, 13
+097, Babylon, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+097, Byzantium, Bucharest, SENT OUT QUEST, Type, 13
+097, Byzantium, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+097, Persia, Bucharest, SENT OUT QUEST, Type, 13
+097, Persia, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+097, Spain, Bucharest, SENT OUT QUEST, Type, 13
+097, Spain, Bucharest, RECEIVED QUEST, Invest, Friendship: 8 to 8, MINOR_CIV_BUCHAREST
+097, Songhai, Bucharest, SENT OUT QUEST, Type, 13
+097, Songhai, Bucharest, RECEIVED QUEST, Invest, Friendship: 26 to 26, MINOR_CIV_BUCHAREST
+097, Germany, Bucharest, SENT OUT QUEST, Type, 13
+097, Germany, Bucharest, RECEIVED QUEST, Invest, Friendship: 37 to 37, MINOR_CIV_BUCHAREST
+097, America, Bucharest, SENT OUT QUEST, Type, 13
+097, America, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+097, Brazil, Bucharest, SENT OUT QUEST, Type, 13
+097, Brazil, Bucharest, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+098, Persia, La Venta, SENT OUT QUEST, Type, 2
+098, Persia, La Venta, SENT OUT QUEST, Type, 7
+098, Spain, Bogota, gained friend
+098, Spain, Bogota, Gold Gift: 500, Friendship: 5 to 55, Spaceship, MINOR_CIV_BOGOTA
+098, Spain, Colombo, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_COLOMBO, (SAVING) 
+098, Songhai, La Venta, SENT OUT QUEST, Type, 7
+098, Germany, Bogota, gained friend
+098, Germany, Bogota, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_BOGOTA
+098, Byzantium, Hong Kong, SENT OUT QUEST, Type, 16
+098, Byzantium, Hong Kong, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_HONG_KONG
+098, Brazil, Bogota, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+098, Byzantium, Byblos, SENT OUT QUEST, Type, 3
+098, Byzantium, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+098, Germany, Colombo, gained friend
+098, Germany, Colombo, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_COLOMBO
+098, Spain, Almaty, lost friend
+098, Babylon, Almaty, SENT OUT QUEST, Type, 14
+098, Babylon, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ALMATY
+099, Byzantium, Mombasa, SENT OUT QUEST, Type, 2
+099, Byzantium, Mombasa, SENT OUT QUEST, Type, 4
+099, Byzantium, Mombasa, SENT OUT QUEST, Type, 12
+099, Spain, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+099, Spain, Bogota, cancelled, Construct Wonder, Friendship: 52 to 52, MINOR_CIV_BOGOTA
+099, Songhai, Manila, SENT OUT QUEST, Type, 14
+099, Songhai, Manila, RECEIVED QUEST, Bully City-State, Friendship: 9 to 9, MINOR_CIV_MANILA
+099, Spain, Mombasa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+099, Spain, La Venta, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+099, Babylon, La Venta, SENT OUT QUEST, Type, 13
+099, Babylon, La Venta, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+099, Byzantium, La Venta, SENT OUT QUEST, Type, 13
+099, Byzantium, La Venta, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+099, Persia, La Venta, SENT OUT QUEST, Type, 13
+099, Persia, La Venta, RECEIVED QUEST, Invest, Friendship: 2 to 2, MINOR_CIV_LA_VENTA
+099, Spain, La Venta, SENT OUT QUEST, Type, 13
+099, Spain, La Venta, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+099, Songhai, La Venta, SENT OUT QUEST, Type, 13
+099, Songhai, La Venta, RECEIVED QUEST, Invest, Friendship: 35 to 35, MINOR_CIV_LA_VENTA
+099, Germany, La Venta, SENT OUT QUEST, Type, 13
+099, Germany, La Venta, RECEIVED QUEST, Invest, Friendship: 15 to 15, MINOR_CIV_LA_VENTA
+099, America, La Venta, SENT OUT QUEST, Type, 13
+099, America, La Venta, RECEIVED QUEST, Invest, Friendship: 37 to 37, MINOR_CIV_LA_VENTA
+099, Brazil, La Venta, SENT OUT QUEST, Type, 13
+099, Brazil, La Venta, RECEIVED QUEST, Invest, Friendship: 39 to 39, MINOR_CIV_LA_VENTA
+100, Babylon, Samarkand, SENT OUT QUEST, Type, 4
+100, Babylon, Samarkand, SENT OUT QUEST, Type, 1
+100, America, Antwerp, era change yield update
+100, America, Kyzyl, era change yield update
+100, America, Samarkand, era change yield update
+100, America, Hong Kong, era change yield update
+100, America, Bogota, era change yield update
+100, America, Bucharest, era change yield update
+100, America, Manila, era change yield update
+100, America, Byblos, era change yield update
+100, America, Jerusalem, era change yield update
+100, America, Prague, era change yield update
+100, America, Colombo, era change yield update
+100, America, Geneva, era change yield update
+100, America, Mombasa, era change yield update
+100, America, Brussels, era change yield update
+100, America, La Venta, era change yield update
+100, America, Almaty, era change yield update
+100, America, Antwerp, SENT OUT QUEST, Type, 1
+100, America, Antwerp, SENT OUT QUEST, Type, 2
+100, America, Antwerp, SENT OUT QUEST, Type, 7
+100, America, Kyzyl, SENT OUT QUEST, Type, 1
+100, America, Kyzyl, SENT OUT QUEST, Type, 17
+100, America, Kyzyl, SENT OUT QUEST, Type, 7
+100, America, Samarkand, SENT OUT QUEST, Type, 2
+100, America, Samarkand, SENT OUT QUEST, Type, 1
+100, America, Hong Kong, SENT OUT QUEST, Type, 2
+100, America, Hong Kong, SENT OUT QUEST, Type, 16
+100, America, Bogota, SENT OUT QUEST, Type, 10
+100, America, Bucharest, SENT OUT QUEST, Type, 3
+100, America, Bucharest, SENT OUT QUEST, Type, 13
+100, America, Colombo, SENT OUT QUEST, Type, 10
+100, America, Mombasa, SENT OUT QUEST, Type, 2
+100, America, Mombasa, SENT OUT QUEST, Type, 12
+100, America, Mombasa, SENT OUT QUEST, Type, 7
+100, America, La Venta, SENT OUT QUEST, Type, 13
+100, America, Almaty, SENT OUT QUEST, Type, 1
+100, America, Almaty, SENT OUT QUEST, Type, 2
+100, America, Samarkand, SENT OUT QUEST, Type, 3
+100, America, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+100, America, Bogota, SENT OUT QUEST, Type, 3
+100, America, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 36 to 36, MINOR_CIV_BOGOTA
+100, Germany, Bucharest, SENT OUT QUEST, Type, 7
+100, Germany, Bucharest, RECEIVED QUEST, Find Natural Wonder, Friendship: 32 to 32, MINOR_CIV_BUCHAREST
+100, Babylon, Colombo, lost friend
+100, Songhai, Almaty, cancelled, Bully City-State, Friendship: 34 to 34, MINOR_CIV_ALMATY
+100, Spain, Almaty, SENT OUT QUEST, Type, 3
+100, Spain, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 26 to 26, MINOR_CIV_ALMATY
+101, Byzantium, Samarkand, SENT OUT QUEST, Type, 2
+101, Byzantium, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+101, Spain, Mombasa, SENT OUT QUEST, Type, 14
+101, Spain, Mombasa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+101, America, Brussels, lost friend
+102, Germany, Prague, SENT OUT QUEST, Type, 1
+102, Persia, Kyzyl, SENT OUT QUEST, Type, 4
+102, Persia, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 14 to 14, MINOR_CIV_KYZYL
+102, Babylon, Bogota, SENT OUT QUEST, Type, 2
+102, Babylon, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+102, Germany, Bucharest, lost friend
+102, Germany, Byblos, SENT OUT QUEST, Type, 2
+102, Germany, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+102, Spain, Jerusalem, SENT OUT QUEST, Type, 13
+102, Spain, Jerusalem, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+102, Germany, Jerusalem, SENT OUT QUEST, Type, 13
+102, Germany, Jerusalem, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+102, Babylon, Colombo, SENT OUT QUEST, Type, 2
+102, Babylon, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 26 to 26, MINOR_CIV_COLOMBO
+102, Byzantium, Mombasa, gained friend
+102, Byzantium, Mombasa, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+102, Babylon, Mombasa, cancelled, Contest Techs, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+102, Spain, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+102, Songhai, Mombasa, cancelled, Contest Techs, Friendship: 31 to 31, MINOR_CIV_MOMBASA
+102, America, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+102, Brazil, Mombasa, cancelled, Contest Techs, Friendship: 4 to 4, MINOR_CIV_MOMBASA
+103, Persia, Antwerp, era change yield update
+103, Persia, Kyzyl, era change yield update
+103, Persia, Samarkand, era change yield update
+103, Persia, Hong Kong, era change yield update
+103, Persia, Bogota, era change yield update
+103, Persia, Bucharest, era change yield update
+103, Persia, Manila, era change yield update
+103, Persia, Byblos, era change yield update
+103, Persia, Jerusalem, era change yield update
+103, Persia, Prague, era change yield update
+103, Persia, Colombo, era change yield update
+103, Persia, Geneva, era change yield update
+103, Persia, Mombasa, era change yield update
+103, Persia, Brussels, era change yield update
+103, Persia, La Venta, era change yield update
+103, Persia, Almaty, era change yield update
+103, Persia, Kyzyl, SENT OUT QUEST, Type, 1
+103, Persia, Kyzyl, SENT OUT QUEST, Type, 2
+103, Persia, Kyzyl, SENT OUT QUEST, Type, 4
+103, Persia, Hong Kong, SENT OUT QUEST, Type, 2
+103, Persia, Hong Kong, SENT OUT QUEST, Type, 7
+103, Persia, Bogota, SENT OUT QUEST, Type, 7
+103, Persia, Bogota, SENT OUT QUEST, Type, 10
+103, Persia, Bogota, SENT OUT QUEST, Type, 4
+103, Persia, Bucharest, SENT OUT QUEST, Type, 2
+103, Persia, Bucharest, SENT OUT QUEST, Type, 3
+103, Persia, Bucharest, SENT OUT QUEST, Type, 13
+103, Persia, Manila, SENT OUT QUEST, Type, 2
+103, Persia, Byblos, SENT OUT QUEST, Type, 2
+103, Persia, Colombo, SENT OUT QUEST, Type, 7
+103, Persia, Colombo, SENT OUT QUEST, Type, 3
+103, Persia, Colombo, SENT OUT QUEST, Type, 10
+103, Persia, Brussels, SENT OUT QUEST, Type, 2
+103, Persia, La Venta, SENT OUT QUEST, Type, 2
+103, Persia, La Venta, SENT OUT QUEST, Type, 7
+103, Persia, La Venta, SENT OUT QUEST, Type, 13
+103, Persia, Almaty, SENT OUT QUEST, Type, 1
+103, Persia, Almaty, SENT OUT QUEST, Type, 17
+103, Songhai, Jerusalem, SENT OUT QUEST, Type, 13
+103, Songhai, Jerusalem, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+103, Songhai, Bucharest, SENT OUT QUEST, Type, 14
+103, Songhai, Bucharest, RECEIVED QUEST, Bully City-State, Friendship: 17 to 17, MINOR_CIV_BUCHAREST
+103, Brazil, Bucharest, SENT OUT QUEST, Type, 14
+103, Brazil, Bucharest, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+103, Songhai, Mombasa, lost friend
+103, Songhai, La Venta, lost friend
+103, Spain, La Venta, SENT OUT QUEST, Type, 4
+103, Spain, La Venta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+103, Songhai, Almaty, lost friend
+104, Byzantium, Antwerp, SENT OUT QUEST, Type, 1
+104, Byzantium, Antwerp, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+104, Songhai, Jerusalem, SENT OUT QUEST, Type, 13
+104, Germany, Antwerp, era change yield update
+104, Germany, Kyzyl, era change yield update
+104, Germany, Samarkand, era change yield update
+104, Germany, Hong Kong, era change yield update
+104, Germany, Bogota, era change yield update
+104, Germany, Bucharest, era change yield update
+104, Germany, Manila, era change yield update
+104, Germany, Byblos, era change yield update
+104, Germany, Jerusalem, era change yield update
+104, Germany, Prague, era change yield update
+104, Germany, Colombo, era change yield update
+104, Germany, Geneva, era change yield update
+104, Germany, Mombasa, era change yield update
+104, Germany, Brussels, era change yield update
+104, Germany, La Venta, era change yield update
+104, Germany, Almaty, era change yield update
+104, Germany, Antwerp, SENT OUT QUEST, Type, 17
+104, Germany, Antwerp, SENT OUT QUEST, Type, 1
+104, Germany, Kyzyl, SENT OUT QUEST, Type, 1
+104, Germany, Kyzyl, SENT OUT QUEST, Type, 3
+104, Germany, Kyzyl, SENT OUT QUEST, Type, 0
+104, Germany, Bogota, SENT OUT QUEST, Type, 10
+104, Germany, Bucharest, SENT OUT QUEST, Type, 13
+104, Germany, Bucharest, SENT OUT QUEST, Type, 7
+104, Germany, Byblos, SENT OUT QUEST, Type, 2
+104, Germany, Jerusalem, SENT OUT QUEST, Type, 13
+104, Germany, Prague, SENT OUT QUEST, Type, 1
+104, Germany, Colombo, SENT OUT QUEST, Type, 7
+104, Germany, Colombo, SENT OUT QUEST, Type, 10
+104, Germany, La Venta, SENT OUT QUEST, Type, 17
+104, Germany, La Venta, SENT OUT QUEST, Type, 13
+104, Germany, Almaty, SENT OUT QUEST, Type, 1
+104, Germany, Almaty, SENT OUT QUEST, Type, 7
+104, Babylon, Samarkand, lost friend
+104, Spain, Samarkand, lost friend
+104, Babylon, Byblos, SENT OUT QUEST, Type, 10
+104, Babylon, Byblos, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+104, Byzantium, Byblos, SENT OUT QUEST, Type, 10
+104, Byzantium, Byblos, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+104, Persia, Byblos, SENT OUT QUEST, Type, 10
+104, Persia, Byblos, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+104, Spain, Byblos, SENT OUT QUEST, Type, 10
+104, Spain, Byblos, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+104, Songhai, Byblos, SENT OUT QUEST, Type, 10
+104, Songhai, Byblos, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+104, Germany, Byblos, SENT OUT QUEST, Type, 10
+104, Germany, Byblos, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+104, Brazil, Byblos, SENT OUT QUEST, Type, 10
+104, Brazil, Byblos, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+104, Persia, Byblos, SENT OUT QUEST, Type, 3
+104, Persia, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+104, America, La Venta, lost friend
+104, America, Almaty, SENT OUT QUEST, Type, 14
+104, America, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_ALMATY
+105, America, Bogota, lost friend
+105, Byzantium, Bucharest, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+105, America, Bucharest, SENT OUT QUEST, Type, 4
+105, America, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+105, America, Byblos, SENT OUT QUEST, Type, 10
+105, America, Byblos, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+105, America, Colombo, SENT OUT QUEST, Type, 2
+105, America, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 30 to 30, MINOR_CIV_COLOMBO
+105, Songhai, Brussels, cancelled, Bully City-State, Friendship: 14 to 14, MINOR_CIV_BRUSSELS
+105, America, La Venta, SENT OUT QUEST, Type, 7
+105, America, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 28 to 28, MINOR_CIV_LA_VENTA
+106, Byzantium, Antwerp, era change yield update
+106, Byzantium, Kyzyl, era change yield update
+106, Byzantium, Samarkand, era change yield update
+106, Byzantium, Hong Kong, era change yield update
+106, Byzantium, Bogota, era change yield update
+106, Byzantium, Bucharest, era change yield update
+106, Byzantium, Manila, era change yield update
+106, Byzantium, Byblos, era change yield update
+106, Byzantium, Jerusalem, era change yield update
+106, Byzantium, Prague, era change yield update
+106, Byzantium, Colombo, era change yield update
+106, Byzantium, Geneva, era change yield update
+106, Byzantium, Mombasa, era change yield update
+106, Byzantium, Brussels, era change yield update
+106, Byzantium, La Venta, era change yield update
+106, Byzantium, Almaty, era change yield update
+106, Byzantium, Antwerp, SENT OUT QUEST, Type, 1
+106, Byzantium, Kyzyl, SENT OUT QUEST, Type, 2
+106, Byzantium, Kyzyl, SENT OUT QUEST, Type, 1
+106, Byzantium, Kyzyl, SENT OUT QUEST, Type, 7
+106, Byzantium, Samarkand, SENT OUT QUEST, Type, 17
+106, Byzantium, Samarkand, SENT OUT QUEST, Type, 1
+106, Byzantium, Samarkand, SENT OUT QUEST, Type, 2
+106, Byzantium, Hong Kong, SENT OUT QUEST, Type, 16
+106, Byzantium, Bogota, SENT OUT QUEST, Type, 2
+106, Byzantium, Bogota, SENT OUT QUEST, Type, 4
+106, Byzantium, Bogota, SENT OUT QUEST, Type, 10
+106, Byzantium, Bucharest, SENT OUT QUEST, Type, 4
+106, Byzantium, Bucharest, SENT OUT QUEST, Type, 13
+106, Byzantium, Byblos, SENT OUT QUEST, Type, 2
+106, Byzantium, Byblos, SENT OUT QUEST, Type, 3
+106, Byzantium, Byblos, SENT OUT QUEST, Type, 10
+106, Byzantium, Mombasa, SENT OUT QUEST, Type, 2
+106, Byzantium, Mombasa, SENT OUT QUEST, Type, 4
+106, Byzantium, Brussels, SENT OUT QUEST, Type, 4
+106, Byzantium, La Venta, SENT OUT QUEST, Type, 2
+106, Byzantium, La Venta, SENT OUT QUEST, Type, 13
+106, Byzantium, Almaty, SENT OUT QUEST, Type, 1
+106, Byzantium, Almaty, SENT OUT QUEST, Type, 2
+106, Byzantium, Almaty, SENT OUT QUEST, Type, 4
+106, Brazil, Prague, SENT OUT QUEST, Type, 1
+106, Brazil, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+106, Germany, Antwerp, lost friend
+106, Brazil, Bogota, SENT OUT QUEST, Type, 2
+106, Brazil, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+106, America, Colombo, lost friend
+106, Brazil, La Venta, lost friend
+106, Brazil, La Venta, SENT OUT QUEST, Type, 16
+106, Brazil, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 28 to 28, MINOR_CIV_LA_VENTA
+107, Spain, Kyzyl, SENT OUT QUEST, Type, 14
+107, Spain, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+107, Spain, Bucharest, SENT OUT QUEST, Type, 7
+107, Spain, Bucharest, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+107, Germany, Manila, SENT OUT QUEST, Type, 2
+107, Germany, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+107, Germany, La Venta, SENT OUT QUEST, Type, 7
+107, Germany, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+108, Songhai, Kyzyl, gained friend
+108, Songhai, Kyzyl, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KYZYL
+108, Babylon, Kyzyl, SENT OUT QUEST, Type, 3
+108, Babylon, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+108, Songhai, Hong Kong, gained friend
+108, Songhai, Hong Kong, FINISHED QUEST, Find Natural Wonder, Friendship: 11 to 51, MINOR_CIV_HONG_KONG
+108, Germany, Bogota, lost friend
+108, Songhai, Bogota, gained friend
+108, Songhai, Bogota, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_BOGOTA
+108, Spain, Manila, SENT OUT QUEST, Type, 2
+108, Spain, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+108, Songhai, Byblos, gained friend
+108, Songhai, Byblos, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+108, Byzantium, Prague, SENT OUT QUEST, Type, 1
+108, Byzantium, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+108, Songhai, Mombasa, gained friend
+108, Songhai, Mombasa, gained ally
+108, Spain, Mombasa, cancelled, Bully City-State, Friendship: -60 to -60, MINOR_CIV_MOMBASA
+108, Songhai, Mombasa, FINISHED QUEST, Find Natural Wonder, Friendship: 22 to 62, MINOR_CIV_MOMBASA
+108, Songhai, Brussels, gained friend
+108, Songhai, Brussels, FINISHED QUEST, Find Natural Wonder, Friendship: 9 to 49, MINOR_CIV_BRUSSELS
+108, Persia, Brussels, SENT OUT QUEST, Type, 3
+108, Persia, Brussels, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BRUSSELS
+108, Songhai, La Venta, gained friend
+108, Songhai, La Venta, gained ally
+108, Spain, La Venta, cancelled, Invest, Friendship: -60 to -60, MINOR_CIV_LA_VENTA
+108, Spain, La Venta, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_LA_VENTA
+108, Songhai, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 22 to 62, MINOR_CIV_LA_VENTA
+108, Brazil, La Venta, cancelled, Bully City-State, Friendship: 25 to 25, MINOR_CIV_LA_VENTA
+109, Persia, Prague, SENT OUT QUEST, Type, 1
+109, Persia, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+109, Brazil, Mombasa, SENT OUT QUEST, Type, 7
+109, Brazil, Mombasa, SENT OUT QUEST, Type, 17
+109, Byzantium, Kyzyl, gained friend
+109, Byzantium, Kyzyl, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KYZYL
+109, Babylon, Samarkand, SENT OUT QUEST, Type, 3
+109, Babylon, Samarkand, RECEIVED QUEST, Construct Wonder, Friendship: 17 to 17, MINOR_CIV_SAMARKAND
+109, Babylon, Hong Kong, lost friend
+109, Persia, Hong Kong, gained friend
+109, Persia, Hong Kong, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_HONG_KONG
+109, Persia, Bogota, gained friend
+109, Persia, Bogota, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_BOGOTA
+109, Babylon, Bucharest, SENT OUT QUEST, Type, 2
+109, Babylon, Bucharest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+109, Germany, Colombo, lost friend
+109, Persia, Colombo, gained friend
+109, Persia, Colombo, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+109, Byzantium, Mombasa, lost friend
+109, Persia, La Venta, gained friend
+109, Persia, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+110, Persia, Colombo, SENT OUT QUEST, Type, 3
+110, Persia, Colombo, SENT OUT QUEST, Type, 10
+110, Songhai, Hong Kong, SENT OUT QUEST, Type, 2
+110, Songhai, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 48 to 48, MINOR_CIV_HONG_KONG
+110, Spain, Bogota, gained ally
+110, Songhai, Bogota, lost friend
+110, Songhai, Bogota, SENT OUT QUEST, Type, 10
+110, Songhai, Bogota, SENT OUT QUEST, Type, 0
+110, Songhai, Bogota, cancelled, Contest Culture, Friendship: -60 to -60, MINOR_CIV_BOGOTA
+110, Songhai, Bogota, cancelled, Route, Friendship: -60 to -60, MINOR_CIV_BOGOTA
+110, Spain, Bogota, FINISHED QUEST, Contest Culture, Friendship: 35 to 75, MINOR_CIV_BOGOTA
+110, Babylon, Bogota, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+110, Byzantium, Bogota, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+110, Persia, Bogota, cancelled, Contest Culture, Friendship: 43 to 43, MINOR_CIV_BOGOTA
+110, Germany, Bogota, cancelled, Contest Culture, Friendship: 25 to 25, MINOR_CIV_BOGOTA
+110, America, Bogota, cancelled, Contest Culture, Friendship: 21 to 21, MINOR_CIV_BOGOTA
+110, Brazil, Bogota, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+110, Byzantium, Manila, SENT OUT QUEST, Type, 3
+110, Byzantium, Manila, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+110, Germany, Jerusalem, SENT OUT QUEST, Type, 16
+110, Germany, Jerusalem, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+110, Songhai, Mombasa, lost ally
+110, Songhai, La Venta, lost ally
+111, Germany, Prague, SENT OUT QUEST, Type, 3
+111, Germany, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+111, Spain, Colombo, gained friend
+111, Spain, Colombo, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_COLOMBO
+111, Babylon, Colombo, cancelled, Contest Culture, Friendship: 13 to 13, MINOR_CIV_COLOMBO
+111, Persia, Colombo, cancelled, Contest Culture, Friendship: 37 to 37, MINOR_CIV_COLOMBO
+111, Songhai, Colombo, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+111, Germany, Colombo, cancelled, Contest Culture, Friendship: 25 to 25, MINOR_CIV_COLOMBO
+111, America, Colombo, cancelled, Contest Culture, Friendship: 21 to 21, MINOR_CIV_COLOMBO
+111, Brazil, Colombo, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+111, Brazil, Brussels, SENT OUT QUEST, Type, 3
+111, Brazil, Brussels, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+111, Byzantium, La Venta, SENT OUT QUEST, Type, 16
+111, Byzantium, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+112, Brazil, Jerusalem, SENT OUT QUEST, Type, 13
+112, Brazil, Jerusalem, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+112, Germany, Antwerp, SENT OUT QUEST, Type, 7
+112, Germany, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 19 to 19, MINOR_CIV_ANTWERP
+112, Brazil, Kyzyl, SENT OUT QUEST, Type, 14
+112, Brazil, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+112, Byzantium, Brussels, SENT OUT QUEST, Type, 2
+112, Byzantium, Brussels, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+113, Babylon, Manila, SENT OUT QUEST, Type, 2
+113, Songhai, Antwerp, era change yield update
+113, Songhai, Kyzyl, era change yield update
+113, Songhai, Samarkand, era change yield update
+113, Songhai, Hong Kong, era change yield update
+113, Songhai, Bogota, era change yield update
+113, Songhai, Bucharest, era change yield update
+113, Songhai, Manila, era change yield update
+113, Songhai, Byblos, era change yield update
+113, Songhai, Jerusalem, era change yield update
+113, Songhai, Prague, era change yield update
+113, Songhai, Colombo, era change yield update
+113, Songhai, Geneva, era change yield update
+113, Songhai, Mombasa, era change yield update
+113, Songhai, Brussels, era change yield update
+113, Songhai, La Venta, era change yield update
+113, Songhai, Almaty, era change yield update
+113, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
+113, Songhai, Kyzyl, SENT OUT QUEST, Type, 2
+113, Songhai, Hong Kong, SENT OUT QUEST, Type, 2
+113, Songhai, Bucharest, SENT OUT QUEST, Type, 13
+113, Songhai, Bucharest, SENT OUT QUEST, Type, 14
+113, Songhai, Manila, SENT OUT QUEST, Type, 17
+113, Songhai, Manila, SENT OUT QUEST, Type, 14
+113, Songhai, Byblos, SENT OUT QUEST, Type, 17
+113, Songhai, Byblos, SENT OUT QUEST, Type, 10
+113, Songhai, Jerusalem, SENT OUT QUEST, Type, 13
+113, Songhai, Colombo, SENT OUT QUEST, Type, 14
+113, Songhai, La Venta, SENT OUT QUEST, Type, 13
+113, Songhai, Almaty, SENT OUT QUEST, Type, 1
+113, Brazil, Antwerp, gained friend
+113, Brazil, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+113, Spain, Manila, gained friend
+113, Spain, Manila, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MANILA
+113, Jerusalem, Spain, RECEIVED_UNIT_GIFT, Trireme
+113, Songhai, Colombo, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+113, Songhai, Colombo, SENT OUT QUEST, Type, 3
+113, Songhai, Colombo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+113, Spain, Brussels, SENT OUT QUEST, Type, 7
+113, Spain, Brussels, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+114, Persia, Samarkand, SENT OUT QUEST, Type, 1
+114, Persia, Samarkand, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+114, Brazil, Antwerp, SENT OUT QUEST, Type, 1
+114, Brazil, Antwerp, SENT OUT QUEST, Type, 7
+114, Germany, Kyzyl, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KYZYL
+114, America, Jerusalem, SENT OUT QUEST, Type, 13
+114, America, Jerusalem, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+115, Persia, Kyzyl, gained friend
+115, Persia, Kyzyl, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KYZYL
+115, Songhai, Kyzyl, lost friend
+115, Songhai, Byblos, lost friend
+115, Babylon, Colombo, SENT OUT QUEST, Type, 16
+115, Babylon, Colombo, RECEIVED QUEST, Spread Religion, Friendship: 7 to 7, MINOR_CIV_COLOMBO
+115, Songhai, Mombasa, SENT OUT QUEST, Type, 7
+115, Songhai, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 51 to 51, MINOR_CIV_MOMBASA
+115, Brazil, Brussels, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+115, Persia, Almaty, SENT OUT QUEST, Type, 0
+115, Persia, Almaty, RECEIVED QUEST, Route, Friendship: 0 to 0, MINOR_CIV_ALMATY
+116, Byzantium, Antwerp, SENT OUT QUEST, Type, 4
+116, Byzantium, Antwerp, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+116, Byzantium, Kyzyl, lost friend
+116, Persia, Manila, SENT OUT QUEST, Type, 4
+116, Persia, Manila, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MANILA
+116, Spain, Byblos, SENT OUT QUEST, Type, 2
+116, Spain, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+116, Germany, Prague, gained friend
+116, Germany, Prague, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_PRAGUE
+116, Persia, Colombo, lost friend
+116, Spain, Almaty, SENT OUT QUEST, Type, 4
+116, Spain, Almaty, RECEIVED QUEST, Great Person, Friendship: 2 to 2, MINOR_CIV_ALMATY
+117, Brazil, Samarkand, SENT OUT QUEST, Type, 0
+117, Brazil, Samarkand, RECEIVED QUEST, Route, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+117, Babylon, Hong Kong, gained friend
+117, Babylon, Hong Kong, FINISHED QUEST, Connect Resource, Friendship: 17 to 57, MINOR_CIV_HONG_KONG
+117, Babylon, Hong Kong, SENT OUT QUEST, Type, 1
+117, Babylon, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 57 to 57, MINOR_CIV_HONG_KONG
+117, Byzantium, Hong Kong, SENT OUT QUEST, Type, 1
+117, Byzantium, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HONG_KONG
+117, Persia, Hong Kong, SENT OUT QUEST, Type, 1
+117, Persia, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 33 to 33, MINOR_CIV_HONG_KONG
+117, Songhai, Hong Kong, SENT OUT QUEST, Type, 1
+117, Songhai, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 38 to 38, MINOR_CIV_HONG_KONG
+117, America, Hong Kong, SENT OUT QUEST, Type, 1
+117, America, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+117, Brazil, Bogota, gained friend
+117, Brazil, Bogota, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+117, Brazil, Bucharest, gained friend
+117, Brazil, Bucharest, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+117, Brazil, Bucharest, FINISHED QUEST, Invest, Friendship: 40 to 40, MINOR_CIV_BUCHAREST
+117, Germany, Bucharest, FINISHED QUEST, Invest, Friendship: 1 to 1, MINOR_CIV_BUCHAREST
+117, Babylon, Bucharest, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+117, Byzantium, Bucharest, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+117, Persia, Bucharest, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+117, Spain, Bucharest, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+117, Songhai, Bucharest, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+117, America, Bucharest, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+117, Babylon, Manila, gained friend
+117, Babylon, Manila, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MANILA
+117, Babylon, Byblos, gained friend
+117, Babylon, Byblos, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+117, Byzantium, Prague, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+117, Persia, Prague, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+117, Brazil, Prague, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+117, Germany, Almaty, SENT OUT QUEST, Type, 4
+117, Germany, Almaty, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_ALMATY
+118, America, Antwerp, gained friend
+118, America, Antwerp, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_ANTWERP
+118, America, Kyzyl, gained friend
+118, America, Kyzyl, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KYZYL
+118, Spain, Manila, lost friend
+118, Germany, Byblos, SENT OUT QUEST, Type, 16
+118, Germany, Byblos, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+118, Germany, Colombo, SENT OUT QUEST, Type, 16
+118, Germany, Colombo, RECEIVED QUEST, Spread Religion, Friendship: 15 to 15, MINOR_CIV_COLOMBO
+118, America, Mombasa, gained friend
+118, America, Mombasa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+118, America, La Venta, gained friend
+118, America, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 8 to 48, MINOR_CIV_LA_VENTA
+118, Babylon, Almaty, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ALMATY
+119, Byzantium, Antwerp, gained friend
+119, Byzantium, Antwerp, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+119, Byzantium, Bogota, gained friend
+119, Byzantium, Bogota, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+119, Byzantium, Bucharest, gained friend
+119, Byzantium, Bucharest, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+119, Byzantium, Mombasa, gained friend
+119, Byzantium, Mombasa, FINISHED QUEST, Great Person, Friendship: 16 to 56, MINOR_CIV_MOMBASA
+119, Byzantium, Brussels, gained friend
+119, Byzantium, Brussels, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BRUSSELS
+119, Byzantium, Almaty, gained friend
+119, Byzantium, Almaty, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ALMATY
+119, Songhai, Mombasa, SENT OUT QUEST, Type, 7
+119, Songhai, Manila, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MANILA
+119, Babylon, Manila, SENT OUT QUEST, Type, 12
+119, Babylon, Manila, RECEIVED QUEST, Contest Techs, Friendship: 35 to 35, MINOR_CIV_MANILA
+119, Byzantium, Manila, SENT OUT QUEST, Type, 12
+119, Byzantium, Manila, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+119, Persia, Manila, SENT OUT QUEST, Type, 12
+119, Persia, Manila, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+119, Spain, Manila, SENT OUT QUEST, Type, 12
+119, Spain, Manila, RECEIVED QUEST, Contest Techs, Friendship: 26 to 26, MINOR_CIV_MANILA
+119, Songhai, Manila, SENT OUT QUEST, Type, 12
+119, Songhai, Manila, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+119, Germany, Manila, SENT OUT QUEST, Type, 12
+119, Germany, Manila, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+119, America, Manila, SENT OUT QUEST, Type, 12
+119, America, Manila, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+119, Brazil, Manila, SENT OUT QUEST, Type, 12
+119, Brazil, Manila, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+119, Babylon, Brussels, SENT OUT QUEST, Type, 1
+119, Babylon, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+119, Byzantium, Brussels, SENT OUT QUEST, Type, 1
+119, Byzantium, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 38 to 38, MINOR_CIV_BRUSSELS
+119, Persia, Brussels, SENT OUT QUEST, Type, 1
+119, Persia, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_BRUSSELS
+119, Spain, Brussels, SENT OUT QUEST, Type, 1
+119, Spain, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+119, Songhai, Brussels, SENT OUT QUEST, Type, 1
+119, Songhai, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 33 to 33, MINOR_CIV_BRUSSELS
+119, America, Brussels, SENT OUT QUEST, Type, 1
+119, America, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 2 to 2, MINOR_CIV_BRUSSELS
+119, Brazil, Brussels, SENT OUT QUEST, Type, 1
+119, Brazil, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+119, America, La Venta, FINISHED QUEST, Invest, Friendship: 47 to 47, MINOR_CIV_LA_VENTA
+119, Songhai, La Venta, FINISHED QUEST, Invest, Friendship: 45 to 45, MINOR_CIV_LA_VENTA
+119, Persia, La Venta, FINISHED QUEST, Invest, Friendship: 30 to 30, MINOR_CIV_LA_VENTA
+119, Brazil, La Venta, FINISHED QUEST, Invest, Friendship: 9 to 9, MINOR_CIV_LA_VENTA
+119, Babylon, La Venta, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+119, Byzantium, La Venta, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+119, Germany, La Venta, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+120, Brazil, Antwerp, lost friend
+120, Germany, Antwerp, gained friend
+120, Germany, Antwerp, FINISHED QUEST, Trade Route, Friendship: 7 to 47, MINOR_CIV_ANTWERP
+120, Germany, Antwerp, gained ally
+120, Brazil, Antwerp, SENT OUT QUEST, Type, 1
+120, Brazil, Antwerp, SENT OUT QUEST, Type, 7
+120, Brazil, Antwerp, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_ANTWERP
+120, Brazil, Antwerp, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_ANTWERP
+120, Germany, Antwerp, FINISHED QUEST, Find Natural Wonder, Friendship: 47 to 87, MINOR_CIV_ANTWERP
+120, Persia, Hong Kong, lost friend
+120, Bogota, Germany, RECEIVED_UNIT_GIFT, Archer
+120, Persia, Bogota, lost friend
+120, America, Bogota, cancelled, Construct Wonder, Friendship: 6 to 6, MINOR_CIV_BOGOTA
+120, Germany, Bucharest, gained friend
+120, Germany, Bucharest, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+120, Germany, Manila, gained friend
+120, Germany, Manila, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MANILA
+120, Germany, Byblos, gained friend
+120, Germany, Byblos, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+120, Brazil, Byblos, SENT OUT QUEST, Type, 4
+120, Brazil, Byblos, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+120, Germany, Colombo, gained friend
+120, Germany, Colombo, FINISHED QUEST, Find Natural Wonder, Friendship: 12 to 52, MINOR_CIV_COLOMBO
+120, Persia, La Venta, lost friend
+120, Germany, La Venta, gained friend
+120, Germany, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+120, Songhai, La Venta, SENT OUT QUEST, Type, 2
+120, Songhai, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 44 to 44, MINOR_CIV_LA_VENTA
+120, Germany, Almaty, gained friend
+120, Germany, Almaty, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_ALMATY
+120, Brazil, Almaty, SENT OUT QUEST, Type, 4
+120, Brazil, Almaty, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ALMATY
+121, Persia, Kyzyl, lost friend
+121, Spain, Bogota, lost ally
+121, Germany, Bogota, SENT OUT QUEST, Type, 3
+121, Germany, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 14 to 14, MINOR_CIV_BOGOTA
+121, Brazil, Bogota, SENT OUT QUEST, Type, 2
+121, Brazil, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 34 to 34, MINOR_CIV_BOGOTA
+121, Germany, Bucharest, SENT OUT QUEST, Type, 7
+121, Germany, Bucharest, RECEIVED QUEST, Find Natural Wonder, Friendship: 38 to 38, MINOR_CIV_BUCHAREST
+121, America, Manila, SENT OUT QUEST, Type, 2
+121, America, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+121, Prague, Germany, RECEIVED_UNIT_GIFT, Horseman
+121, Persia, Colombo, SENT OUT QUEST, Type, 7
+121, Persia, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 22 to 22, MINOR_CIV_COLOMBO
+121, America, Brussels, SENT OUT QUEST, Type, 7
+121, America, Brussels, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+122, Germany, Almaty, gained ally
+122, Brazil, Almaty, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_ALMATY
+122, Brazil, Almaty, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_ALMATY
+122, Germany, Almaty, FINISHED QUEST, Great Person, Friendship: 43 to 83, MINOR_CIV_ALMATY
+122, Kyzyl, Germany, RECEIVED_UNIT_GIFT, Warrior
+122, Babylon, Manila, lost friend
+122, Songhai, Jerusalem, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+122, Spain, Jerusalem, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+122, Germany, Jerusalem, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+122, America, Jerusalem, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+122, Brazil, Jerusalem, FINISHED QUEST, Invest, Friendship: -9 to -9, MINOR_CIV_JERUSALEM
+122, Spain, Colombo, lost friend
+122, Spain, Geneva, SENT OUT QUEST, Type, 13
+122, Spain, Geneva, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENEVA
+122, America, Geneva, SENT OUT QUEST, Type, 13
+122, America, Geneva, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENEVA
+122, Songhai, Brussels, lost friend
+122, Germany, Brussels, SENT OUT QUEST, Type, 1
+122, Germany, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+123, Germany, Brussels, SENT OUT QUEST, Type, 1
+123, Spain, Kyzyl, SENT OUT QUEST, Type, 3
+123, Spain, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+123, Songhai, Kyzyl, SENT OUT QUEST, Type, 4
+123, Songhai, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 17 to 17, MINOR_CIV_KYZYL
+123, Songhai, Hong Kong, lost friend
+123, Bogota, Germany, RECEIVED_UNIT_GIFT, Swordsman
+123, Songhai, Bucharest, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+123, Brazil, Bucharest, cancelled, Bully City-State, Friendship: 31 to 31, MINOR_CIV_BUCHAREST
+123, Spain, Mombasa, SENT OUT QUEST, Type, 14
+123, Spain, Mombasa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+123, Songhai, Almaty, SENT OUT QUEST, Type, 3
+123, Songhai, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+124, Babylon, Samarkand, gained friend
+124, Babylon, Samarkand, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+124, Babylon, Hong Kong, gained ally
+124, Babylon, Hong Kong, FINISHED QUEST, Great Person, Friendship: 48 to 88, MINOR_CIV_HONG_KONG
+124, Babylon, Bucharest, gained friend
+124, Babylon, Bucharest, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+124, Babylon, Byblos, gained ally
+124, Babylon, Byblos, FINISHED QUEST, Great Person, Friendship: 31 to 71, MINOR_CIV_BYBLOS
+124, Byzantium, Hong Kong, SENT OUT QUEST, Type, 16
+124, Byzantium, Hong Kong, SENT OUT QUEST, Type, 1
+124, Songhai, Hong Kong, gained friend
+124, Songhai, Hong Kong, FINISHED QUEST, Connect Resource, Friendship: 27 to 67, MINOR_CIV_HONG_KONG
+124, Byzantium, Hong Kong, SENT OUT QUEST, Type, 3
+124, Byzantium, Hong Kong, RECEIVED QUEST, Construct Wonder, Friendship: 3 to 3, MINOR_CIV_HONG_KONG
+124, Brazil, Bogota, lost friend
+124, Babylon, Bogota, gained friend
+124, Babylon, Bogota, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_BOGOTA
+124, America, Bogota, SENT OUT QUEST, Type, 4
+124, America, Bogota, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+124, Brazil, Bucharest, lost friend
+124, Byzantium, Bucharest, SENT OUT QUEST, Type, 3
+124, Byzantium, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 31 to 31, MINOR_CIV_BUCHAREST
+124, Babylon, Manila, SENT OUT QUEST, Type, 16
+124, Babylon, Manila, RECEIVED QUEST, Spread Religion, Friendship: 24 to 24, MINOR_CIV_MANILA
+124, Spain, Byblos, gained friend
+124, Spain, Byblos, FINISHED QUEST, Contest Culture, Friendship: -7 to 32, MINOR_CIV_BYBLOS
+124, Babylon, Byblos, cancelled, Contest Culture, Friendship: 69 to 69, MINOR_CIV_BYBLOS
+124, Byzantium, Byblos, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+124, Persia, Byblos, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+124, Songhai, Byblos, cancelled, Contest Culture, Friendship: 16 to 16, MINOR_CIV_BYBLOS
+124, Germany, Byblos, cancelled, Contest Culture, Friendship: 34 to 34, MINOR_CIV_BYBLOS
+124, America, Byblos, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+124, Brazil, Byblos, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+124, Germany, Jerusalem, SENT OUT QUEST, Type, 7
+124, Germany, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+124, Babylon, Colombo, gained friend
+124, Babylon, Colombo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+124, Babylon, Brussels, gained friend
+124, Babylon, Brussels, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BRUSSELS
+124, America, Almaty, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_ALMATY
+125, Byzantium, Antwerp, lost friend
+125, America, Kyzyl, lost friend
+125, Byzantium, Samarkand, gained friend
+125, Byzantium, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+125, Byzantium, Bogota, lost friend
+125, Byzantium, Bucharest, lost friend
+125, Germany, Manila, lost friend
+125, Spain, Jerusalem, SENT OUT QUEST, Type, 4
+125, Spain, Jerusalem, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+125, America, Mombasa, lost friend
+125, Byzantium, Mombasa, gained ally
+125, Byzantium, Mombasa, FINISHED QUEST, Connect Resource, Friendship: 45 to 85, MINOR_CIV_MOMBASA
+125, Byzantium, Brussels, lost friend
+125, Byzantium, Almaty, lost friend
+126, Spain, Bogota, SENT OUT QUEST, Type, 17
+126, Spain, Bogota, RECEIVED QUEST, Trade Route, Friendship: 51 to 51, MINOR_CIV_BOGOTA
+126, Spain, Byblos, lost friend
+126, Byzantium, Byblos, gained friend
+126, Byzantium, Byblos, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+126, Brazil, La Venta, SENT OUT QUEST, Type, 2
+126, Brazil, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+127, America, Bogota, gained friend
+127, America, Bogota, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_BOGOTA
+127, Spain, Kyzyl, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+127, Germany, Bucharest, lost friend
+127, Germany, Byblos, lost friend
+127, Brazil, Prague, SENT OUT QUEST, Type, 17
+127, Brazil, Prague, RECEIVED QUEST, Trade Route, Friendship: -7 to -7, MINOR_CIV_PRAGUE
+127, Spain, Geneva, SENT OUT QUEST, Type, 17
+127, Spain, Geneva, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_GENEVA
+128, Songhai, La Venta, Gold Gift: 250, Friendship: 33 to 53, Conquest, MINOR_CIV_LA_VENTA, Boost! , Passing Brazil
+128, Songhai, Jerusalem, Gold Gift: 500, Friendship: 0 to 0, Conquest, MINOR_CIV_JERUSALEM, (SAVING) 
+128, Babylon, Samarkand, lost friend
+128, Brazil, Jerusalem, SENT OUT QUEST, Type, 2
+128, Brazil, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+128, Persia, Prague, SENT OUT QUEST, Type, 4
+128, Persia, Prague, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+128, America, Colombo, SENT OUT QUEST, Type, 7
+128, America, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+128, Persia, Mombasa, SENT OUT QUEST, Type, 7
+128, Persia, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, Songhai, Kyzyl, gained friend
+129, Songhai, Kyzyl, FINISHED QUEST, Great Person, Friendship: 10 to 50, MINOR_CIV_KYZYL
+129, America, Antwerp, lost friend
+129, Songhai, Bucharest, SENT OUT QUEST, Type, 3
+129, Songhai, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+129, America, Byblos, SENT OUT QUEST, Type, 3
+129, America, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+129, Songhai, Jerusalem, SENT OUT QUEST, Type, 17
+129, Songhai, Jerusalem, RECEIVED QUEST, Trade Route, Friendship: 3 to 3, MINOR_CIV_JERUSALEM
+129, Spain, Colombo, gained friend
+129, Spain, Colombo, FINISHED QUEST, Connect Resource, Friendship: 18 to 58, MINOR_CIV_COLOMBO
+129, Songhai, Colombo, SENT OUT QUEST, Type, 7
+129, Songhai, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+130, Spain, Hong Kong, SENT OUT QUEST, Type, 1
+130, Spain, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+130, Persia, Kyzyl, SENT OUT QUEST, Type, 14
+130, Persia, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: 16 to 16, MINOR_CIV_KYZYL
+130, Byzantium, Samarkand, lost friend
+130, Spain, Samarkand, SENT OUT QUEST, Type, 2
+130, Spain, Samarkand, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+130, Babylon, Hong Kong, SENT OUT QUEST, Type, 17
+130, Babylon, Hong Kong, RECEIVED QUEST, Trade Route, Friendship: 78 to 78, MINOR_CIV_HONG_KONG
+130, Persia, Bogota, SENT OUT QUEST, Type, 3
+130, Persia, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 13 to 13, MINOR_CIV_BOGOTA
+130, Babylon, Bucharest, lost friend
+130, Babylon, Byblos, SENT OUT QUEST, Type, 3
+130, Babylon, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 60 to 60, MINOR_CIV_BYBLOS
+130, America, Jerusalem, SENT OUT QUEST, Type, 3
+130, America, Jerusalem, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+130, Songhai, Mombasa, lost friend
+130, Brazil, Brussels, SENT OUT QUEST, Type, 4
+130, Brazil, Brussels, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+131, Babylon, Byblos, lost ally
+131, Babylon, Colombo, lost friend
+131, Spain, Colombo, gained ally
+131, Songhai, Colombo, cancelled, Construct Wonder, Friendship: -60 to -60, MINOR_CIV_COLOMBO
+131, Songhai, Colombo, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_COLOMBO
+131, Spain, Colombo, FINISHED QUEST, Trade Route, Friendship: 55 to 95, MINOR_CIV_COLOMBO
+131, Babylon, Mombasa, SENT OUT QUEST, Type, 12
+131, Babylon, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+131, Byzantium, Mombasa, SENT OUT QUEST, Type, 12
+131, Byzantium, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 76 to 76, MINOR_CIV_MOMBASA
+131, Persia, Mombasa, SENT OUT QUEST, Type, 12
+131, Persia, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: -1 to -1, MINOR_CIV_MOMBASA
+131, Spain, Mombasa, SENT OUT QUEST, Type, 12
+131, Spain, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+131, Songhai, Mombasa, SENT OUT QUEST, Type, 12
+131, Songhai, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 27 to 27, MINOR_CIV_MOMBASA
+131, America, Mombasa, SENT OUT QUEST, Type, 12
+131, America, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 20 to 20, MINOR_CIV_MOMBASA
+131, Brazil, Mombasa, SENT OUT QUEST, Type, 12
+131, Brazil, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+131, Babylon, Brussels, lost friend
+131, Germany, La Venta, lost friend
+131, America, La Venta, lost friend
+131, Spain, La Venta, SENT OUT QUEST, Type, 4
+131, Spain, La Venta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+131, America, La Venta, SENT OUT QUEST, Type, 4
+131, America, La Venta, RECEIVED QUEST, Great Person, Friendship: 29 to 29, MINOR_CIV_LA_VENTA
+132, Persia, Colombo, SENT OUT QUEST, Type, 3
+132, Persia, Colombo, SENT OUT QUEST, Type, 7
+132, Brazil, Kyzyl, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+132, Byzantium, Kyzyl, SENT OUT QUEST, Type, 3
+132, Byzantium, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KYZYL
+132, Songhai, Hong Kong, SENT OUT QUEST, Type, 2
+132, Songhai, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 55 to 55, MINOR_CIV_HONG_KONG
+132, Brazil, Manila, SENT OUT QUEST, Type, 2
+132, Brazil, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+132, Spain, Byblos, SENT OUT QUEST, Type, 7
+132, Spain, Byblos, RECEIVED QUEST, Find Natural Wonder, Friendship: 20 to 20, MINOR_CIV_BYBLOS
+132, Byzantium, Mombasa, SENT OUT QUEST, Type, 4
+132, Byzantium, Mombasa, RECEIVED QUEST, Great Person, Friendship: 75 to 75, MINOR_CIV_MOMBASA
+133, Byzantium, Byblos, lost friend
+133, Songhai, Brussels, SENT OUT QUEST, Type, 4
+133, Songhai, Brussels, RECEIVED QUEST, Great Person, Friendship: 12 to 12, MINOR_CIV_BRUSSELS
+134, Brazil, Bucharest, SENT OUT QUEST, Type, 14
+134, Brazil, Bucharest, RECEIVED QUEST, Bully City-State, Friendship: 14 to 14, MINOR_CIV_BUCHAREST
+135, Babylon, Byblos, SENT OUT QUEST, Type, 3
+135, Spain, Jerusalem, gained friend
+135, Spain, Jerusalem, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+135, America, Bucharest, gained friend
+135, America, Bucharest, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+135, Brazil, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+135, Byzantium, Samarkand, gained friend
+135, Byzantium, Samarkand, gained ally
+135, Byzantium, Samarkand, FINISHED QUEST, Kill Camp, Friendship: 11 to 61, MINOR_CIV_SAMARKAND
+135, Babylon, Samarkand, cancelled, Construct Wonder, Friendship: 13 to 13, MINOR_CIV_SAMARKAND
+135, America, Samarkand, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+135, Persia, Hong Kong, SENT OUT QUEST, Type, 7
+135, Persia, Hong Kong, RECEIVED QUEST, Find Natural Wonder, Friendship: 6 to 6, MINOR_CIV_HONG_KONG
+135, Babylon, Bogota, lost friend
+135, Brazil, Bogota, gained friend
+135, Brazil, Bogota, FINISHED QUEST, Connect Resource, Friendship: 13 to 53, MINOR_CIV_BOGOTA
+135, Babylon, Bogota, cancelled, Construct Wonder, Friendship: 28 to 28, MINOR_CIV_BOGOTA
+135, Byzantium, Manila, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+135, Germany, Manila, SENT OUT QUEST, Type, 16
+135, Germany, Manila, RECEIVED QUEST, Spread Religion, Friendship: 6 to 6, MINOR_CIV_MANILA
+135, Germany, Colombo, lost friend
+135, Persia, Colombo, gained friend
+135, Persia, Colombo, FINISHED QUEST, Construct Wonder, Friendship: 1 to 41, MINOR_CIV_COLOMBO
+135, Brazil, Colombo, gained friend
+135, Brazil, Colombo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_COLOMBO
+135, America, Geneva, SENT OUT QUEST, Type, 16
+135, America, Geneva, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_GENEVA
+135, Persia, Brussels, gained friend
+135, Persia, Brussels, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_BRUSSELS
+135, Brazil, Brussels, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+135, Brazil, La Venta, gained friend
+135, Brazil, La Venta, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+135, Babylon, Almaty, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+135, Spain, Almaty, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+135, Germany, Almaty, SENT OUT QUEST, Type, 4
+135, Germany, Almaty, RECEIVED QUEST, Great Person, Friendship: 62 to 62, MINOR_CIV_ALMATY
+136, Byzantium, Samarkand, SENT OUT QUEST, Type, 17
+136, Spain, Almaty, gained friend
+136, Spain, Almaty, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ALMATY
+136, Antwerp, America, RECEIVED_UNIT_GIFT, Composite Bowman
+136, Byzantium, Kyzyl, gained friend
+136, Byzantium, Kyzyl, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KYZYL
+136, Babylon, Kyzyl, SENT OUT QUEST, Type, 16
+136, Babylon, Kyzyl, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KYZYL
+136, Byzantium, Samarkand, lost ally
+136, Babylon, Samarkand, cancelled, Kill Camp, Friendship: 11 to 11, MINOR_CIV_SAMARKAND
+136, Persia, Samarkand, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+136, Spain, Samarkand, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+136, America, Samarkand, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+136, Brazil, Samarkand, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+136, Songhai, Byblos, SENT OUT QUEST, Type, 7
+136, Songhai, Byblos, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+136, Brazil, Byblos, SENT OUT QUEST, Type, 7
+136, Brazil, Byblos, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+136, Byzantium, Prague, SENT OUT QUEST, Type, 16
+136, Byzantium, Prague, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+136, Babylon, Colombo, SENT OUT QUEST, Type, 7
+136, Babylon, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 22 to 22, MINOR_CIV_COLOMBO
+136, Byzantium, Brussels, SENT OUT QUEST, Type, 4
+136, Byzantium, Brussels, RECEIVED QUEST, Great Person, Friendship: 13 to 13, MINOR_CIV_BRUSSELS
+137, Spain, Antwerp, era change yield update
+137, Spain, Kyzyl, era change yield update
+137, Spain, Samarkand, era change yield update
+137, Spain, Hong Kong, era change yield update
+137, Spain, Bogota, era change yield update
+137, Spain, Bucharest, era change yield update
+137, Spain, Manila, era change yield update
+137, Spain, Byblos, era change yield update
+137, Spain, Jerusalem, era change yield update
+137, Spain, Prague, era change yield update
+137, Spain, Colombo, era change yield update
+137, Spain, Geneva, era change yield update
+137, Spain, Mombasa, era change yield update
+137, Spain, Brussels, era change yield update
+137, Spain, La Venta, era change yield update
+137, Spain, Almaty, era change yield update
+137, Spain, Kyzyl, SENT OUT QUEST, Type, 1
+137, Spain, Kyzyl, SENT OUT QUEST, Type, 3
+137, Spain, Samarkand, SENT OUT QUEST, Type, 2
+137, Spain, Hong Kong, SENT OUT QUEST, Type, 1
+137, Spain, Bogota, SENT OUT QUEST, Type, 4
+137, Spain, Bogota, SENT OUT QUEST, Type, 17
+137, Spain, Bucharest, SENT OUT QUEST, Type, 3
+137, Spain, Bucharest, SENT OUT QUEST, Type, 7
+137, Spain, Manila, SENT OUT QUEST, Type, 12
+137, Spain, Byblos, SENT OUT QUEST, Type, 2
+137, Spain, Byblos, SENT OUT QUEST, Type, 7
+137, Spain, Geneva, SENT OUT QUEST, Type, 13
+137, Spain, Geneva, SENT OUT QUEST, Type, 17
+137, Spain, Mombasa, SENT OUT QUEST, Type, 14
+137, Spain, Mombasa, SENT OUT QUEST, Type, 12
+137, Spain, Brussels, SENT OUT QUEST, Type, 4
+137, Spain, Brussels, SENT OUT QUEST, Type, 7
+137, Spain, Brussels, SENT OUT QUEST, Type, 1
+137, Spain, La Venta, SENT OUT QUEST, Type, 4
+137, Spain, Almaty, SENT OUT QUEST, Type, 1
+137, America, Antwerp, SENT OUT QUEST, Type, 3
+137, America, Antwerp, RECEIVED QUEST, Construct Wonder, Friendship: 21 to 21, MINOR_CIV_ANTWERP
+137, America, Bogota, lost friend
+137, Germany, Prague, lost friend
+137, Persia, La Venta, SENT OUT QUEST, Type, 3
+137, Persia, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+137, Germany, Almaty, lost ally
+137, America, Almaty, SENT OUT QUEST, Type, 17
+137, America, Almaty, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_ALMATY
+138, Babylon, Brussels, SENT OUT QUEST, Type, 3
+138, Babylon, Brussels, RECEIVED QUEST, Construct Wonder, Friendship: 7 to 7, MINOR_CIV_BRUSSELS
+138, Songhai, La Venta, SENT OUT QUEST, Type, 4
+138, Songhai, La Venta, RECEIVED QUEST, Great Person, Friendship: 37 to 37, MINOR_CIV_LA_VENTA
+138, Brazil, Almaty, SENT OUT QUEST, Type, 3
+138, Brazil, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+139, Songhai, La Venta, Gold Gift: 250, Friendship: 37 to 57, Conquest, MINOR_CIV_LA_VENTA, Boost! , Passing America
+139, Songhai, Jerusalem, Gold Gift: 500, Friendship: 3 to 3, Conquest, MINOR_CIV_JERUSALEM, (SAVING) 
+139, Germany, Antwerp, lost ally
+139, Byzantium, Antwerp, gained friend
+139, Byzantium, Antwerp, gained ally
+139, Byzantium, Antwerp, FINISHED QUEST, Kill Camp, Friendship: 20 to 70, MINOR_CIV_ANTWERP
+139, America, Antwerp, gained friend
+139, America, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 18 to 58, MINOR_CIV_ANTWERP
+139, Spain, Kyzyl, SENT OUT QUEST, Type, 4
+139, Spain, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+139, America, Kyzyl, SENT OUT QUEST, Type, 14
+139, America, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: 8 to 8, MINOR_CIV_KYZYL
+139, Germany, Manila, gained friend
+139, Germany, Manila, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_MANILA
+139, Babylon, Manila, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+139, Byzantium, Manila, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+139, Persia, Manila, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+139, Spain, Manila, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+139, Songhai, Manila, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+139, America, Manila, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+139, Brazil, Manila, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MANILA
+139, America, Colombo, gained friend
+139, America, Colombo, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_COLOMBO
+139, America, Mombasa, gained friend
+139, America, Mombasa, FINISHED QUEST, Connect Resource, Friendship: 8 to 48, MINOR_CIV_MOMBASA
+139, Songhai, Mombasa, SENT OUT QUEST, Type, 3
+139, Songhai, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 15 to 15, MINOR_CIV_MOMBASA
+139, America, Almaty, gained friend
+139, America, Almaty, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_ALMATY
+140, Spain, La Venta, SENT OUT QUEST, Type, 4
+140, Spain, Almaty, SENT OUT QUEST, Type, 1
+140, Songhai, Jerusalem, SENT OUT QUEST, Type, 17
+140, Germany, Antwerp, cancelled, Kill Camp, Friendship: 57 to 57, MINOR_CIV_ANTWERP
+140, America, Antwerp, cancelled, Kill Camp, Friendship: 57 to 57, MINOR_CIV_ANTWERP
+140, Brazil, Antwerp, SENT OUT QUEST, Type, 4
+140, Brazil, Antwerp, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+140, Songhai, Bogota, SENT OUT QUEST, Type, 4
+140, Songhai, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+140, Germany, Bucharest, SENT OUT QUEST, Type, 4
+140, Germany, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+140, Germany, Prague, SENT OUT QUEST, Type, 7
+140, Germany, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 24 to 24, MINOR_CIV_PRAGUE
+140, Spain, Mombasa, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+141, Songhai, Bogota, gained friend
+141, Songhai, Bogota, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+141, Songhai, Brussels, gained friend
+141, Songhai, Brussels, FINISHED QUEST, Great Person, Friendship: 2 to 42, MINOR_CIV_BRUSSELS
+141, Songhai, La Venta, gained ally
+141, Songhai, La Venta, FINISHED QUEST, Great Person, Friendship: 54 to 94, MINOR_CIV_LA_VENTA
+141, Byzantium, Antwerp, lost ally
+141, America, Antwerp, gained ally
+141, Hong Kong, Persia, RECEIVED_UNIT_GIFT, Chariot Archer
+141, Babylon, Hong Kong, lost ally
+141, Songhai, Hong Kong, gained ally
+141, Songhai, Hong Kong, FINISHED QUEST, Connect Resource, Friendship: 42 to 82, MINOR_CIV_HONG_KONG
+141, Spain, Bogota, lost friend
+141, Byzantium, Bogota, SENT OUT QUEST, Type, 4
+141, Byzantium, Bogota, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+141, America, Bucharest, lost friend
+141, Babylon, Bucharest, SENT OUT QUEST, Type, 3
+141, Babylon, Bucharest, RECEIVED QUEST, Construct Wonder, Friendship: 13 to 13, MINOR_CIV_BUCHAREST
+141, America, Manila, gained friend
+141, America, Manila, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MANILA
+141, Spain, Jerusalem, lost friend
+141, Germany, Colombo, SENT OUT QUEST, Type, 2
+141, Germany, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 20 to 20, MINOR_CIV_COLOMBO
+141, Songhai, La Venta, FINISHED QUEST, Connect Resource, Friendship: 92 to 132, MINOR_CIV_LA_VENTA
+142, Songhai, Hong Kong, SENT OUT QUEST, Type, 1
+142, Germany, Bucharest, gained friend
+142, Germany, Bucharest, FINISHED QUEST, Great Person, Friendship: -4 to 35, MINOR_CIV_BUCHAREST
+142, Germany, Almaty, gained ally
+142, Brazil, Almaty, cancelled, Construct Wonder, Friendship: -60 to -60, MINOR_CIV_ALMATY
+142, Germany, Almaty, FINISHED QUEST, Great Person, Friendship: 53 to 93, MINOR_CIV_ALMATY
+142, Songhai, Kyzyl, lost friend
+142, Songhai, Kyzyl, gained friend
+142, Songhai, Kyzyl, gained ally
+142, Songhai, Kyzyl, FINISHED QUEST, Connect Resource, Friendship: 29 to 69, MINOR_CIV_KYZYL
+142, Germany, Kyzyl, SENT OUT QUEST, Type, 3
+142, Germany, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KYZYL
+142, Byzantium, Samarkand, SENT OUT QUEST, Type, 7
+142, Byzantium, Samarkand, RECEIVED QUEST, Find Natural Wonder, Friendship: 46 to 46, MINOR_CIV_SAMARKAND
+142, Songhai, Manila, SENT OUT QUEST, Type, 14
+142, Songhai, Manila, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MANILA
+142, Brazil, Colombo, lost friend
+142, Spain, Geneva, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENEVA
+142, America, Geneva, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENEVA
+142, America, Mombasa, SENT OUT QUEST, Type, 7
+142, America, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 44 to 44, MINOR_CIV_MOMBASA
+142, Germany, La Venta, SENT OUT QUEST, Type, 16
+142, Germany, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 12 to 12, MINOR_CIV_LA_VENTA
+142, Spain, Almaty, lost friend
+143, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
+143, Byzantium, Kyzyl, lost friend
+143, Songhai, Hong Kong, lost ally
+143, Babylon, Hong Kong, gained ally
+143, Babylon, Hong Kong, FINISHED QUEST, Kill Camp, Friendship: 58 to 108, MINOR_CIV_HONG_KONG
+143, Brazil, Manila, gained friend
+143, Brazil, Manila, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MANILA
+143, Babylon, Prague, SENT OUT QUEST, Type, 2
+143, Babylon, Prague, RECEIVED QUEST, Connect Resource, Friendship: -4 to -4, MINOR_CIV_PRAGUE
+143, Brazil, Prague, SENT OUT QUEST, Type, 4
+143, Brazil, Prague, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+143, Persia, Colombo, lost friend
+143, Byzantium, Mombasa, lost ally
+143, Babylon, Brussels, gained friend
+143, Babylon, Brussels, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_BRUSSELS
+143, America, Brussels, SENT OUT QUEST, Type, 4
+143, America, Brussels, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+144, Byzantium, Antwerp, SENT OUT QUEST, Type, 4
+144, Byzantium, Antwerp, RECEIVED QUEST, Great Person, Friendship: 31 to 31, MINOR_CIV_ANTWERP
+144, Babylon, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+144, Byzantium, Hong Kong, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+144, Persia, Hong Kong, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HONG_KONG
+144, Spain, Hong Kong, cancelled, Kill Camp, Friendship: -12 to -12, MINOR_CIV_HONG_KONG
+144, Songhai, Hong Kong, cancelled, Kill Camp, Friendship: 78 to 78, MINOR_CIV_HONG_KONG
+144, America, Hong Kong, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+144, Germany, Bogota, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+144, America, Bogota, SENT OUT QUEST, Type, 0
+144, America, Bogota, RECEIVED QUEST, Route, Friendship: 18 to 18, MINOR_CIV_BOGOTA
+144, Persia, Bucharest, gained friend
+144, Persia, Bucharest, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+144, America, Bucharest, cancelled, Construct Wonder, Friendship: 25 to 25, MINOR_CIV_BUCHAREST
+144, Germany, Manila, lost friend
+144, Persia, Byblos, gained friend
+144, Persia, Byblos, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+144, Byzantium, Byblos, cancelled, Construct Wonder, Friendship: 13 to 13, MINOR_CIV_BYBLOS
+144, America, Byblos, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+144, Germany, Prague, cancelled, Construct Wonder, Friendship: 18 to 18, MINOR_CIV_PRAGUE
+144, Babylon, Prague, SENT OUT QUEST, Type, 10
+144, Babylon, Prague, RECEIVED QUEST, Contest Culture, Friendship: -3 to -3, MINOR_CIV_PRAGUE
+144, Byzantium, Prague, SENT OUT QUEST, Type, 10
+144, Byzantium, Prague, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+144, Persia, Prague, SENT OUT QUEST, Type, 10
+144, Persia, Prague, RECEIVED QUEST, Contest Culture, Friendship: -4 to -4, MINOR_CIV_PRAGUE
+144, Germany, Prague, SENT OUT QUEST, Type, 10
+144, Germany, Prague, RECEIVED QUEST, Contest Culture, Friendship: 18 to 18, MINOR_CIV_PRAGUE
+144, Brazil, Prague, SENT OUT QUEST, Type, 10
+144, Brazil, Prague, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+144, Byzantium, Brussels, cancelled, Kill Camp, Friendship: 1 to 1, MINOR_CIV_BRUSSELS
+144, Persia, Brussels, cancelled, Kill Camp, Friendship: 31 to 31, MINOR_CIV_BRUSSELS
+144, Spain, Brussels, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+144, Songhai, Brussels, cancelled, Kill Camp, Friendship: 36 to 36, MINOR_CIV_BRUSSELS
+144, Germany, Brussels, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_BRUSSELS
+144, America, Brussels, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+144, Brazil, Brussels, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+144, Germany, Brussels, SENT OUT QUEST, Type, 3
+144, Germany, Brussels, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BRUSSELS
+144, Byzantium, Almaty, SENT OUT QUEST, Type, 3
+144, Byzantium, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 1 to 1, MINOR_CIV_ALMATY
+145, Persia, Byblos, SENT OUT QUEST, Type, 2
+145, Byzantium, Antwerp, lost friend
+145, Germany, Antwerp, SENT OUT QUEST, Type, 2
+145, Germany, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 30 to 30, MINOR_CIV_ANTWERP
+145, Babylon, Bogota, SENT OUT QUEST, Type, 10
+145, Babylon, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 13 to 13, MINOR_CIV_BOGOTA
+145, Byzantium, Bogota, SENT OUT QUEST, Type, 10
+145, Byzantium, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+145, Persia, Bogota, SENT OUT QUEST, Type, 10
+145, Persia, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+145, Spain, Bogota, SENT OUT QUEST, Type, 10
+145, Spain, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 23 to 23, MINOR_CIV_BOGOTA
+145, Songhai, Bogota, SENT OUT QUEST, Type, 10
+145, Songhai, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 32 to 32, MINOR_CIV_BOGOTA
+145, Germany, Bogota, SENT OUT QUEST, Type, 10
+145, Germany, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+145, America, Bogota, SENT OUT QUEST, Type, 10
+145, America, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 16 to 16, MINOR_CIV_BOGOTA
+145, Brazil, Bogota, SENT OUT QUEST, Type, 10
+145, Brazil, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 38 to 38, MINOR_CIV_BOGOTA
+145, Germany, Bucharest, lost friend
+145, Spain, Bucharest, gained friend
+145, Spain, Bucharest, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BUCHAREST
+145, Byzantium, Bucharest, SENT OUT QUEST, Type, 7
+145, Byzantium, Bucharest, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+145, Spain, Byblos, gained friend
+145, Spain, Byblos, FINISHED QUEST, Find Natural Wonder, Friendship: 1 to 41, MINOR_CIV_BYBLOS
+145, Spain, Brussels, gained friend
+145, Spain, Brussels, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BRUSSELS
+145, Babylon, Almaty, SENT OUT QUEST, Type, 14
+145, Babylon, Almaty, RECEIVED QUEST, Bully City-State, Friendship: -1 to -1, MINOR_CIV_ALMATY
+146, Germany, Antwerp, lost friend
+146, Persia, Samarkand, SENT OUT QUEST, Type, 14
+146, Persia, Samarkand, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SAMARKAND
+146, America, Manila, lost friend
+146, Germany, Byblos, SENT OUT QUEST, Type, 14
+146, Germany, Byblos, RECEIVED QUEST, Bully City-State, Friendship: 1 to 1, MINOR_CIV_BYBLOS
+146, Brazil, Jerusalem, SENT OUT QUEST, Type, 4
+146, Brazil, Jerusalem, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+146, Byzantium, Colombo, SENT OUT QUEST, Type, 4
+146, Byzantium, Colombo, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+146, Persia, Brussels, lost friend
+146, Brazil, La Venta, lost friend
+147, America, La Venta, gained friend
+147, America, La Venta, FINISHED QUEST, Great Person, Friendship: 6 to 46, MINOR_CIV_LA_VENTA
+147, America, Antwerp, lost ally
+147, Songhai, Kyzyl, SENT OUT QUEST, Type, 14
+147, Songhai, Kyzyl, RECEIVED QUEST, Bully City-State, Friendship: 61 to 61, MINOR_CIV_KYZYL
+147, Songhai, Bogota, lost friend
+147, Brazil, Bogota, SENT OUT QUEST, Type, 16
+147, Brazil, Bogota, RECEIVED QUEST, Spread Religion, Friendship: 35 to 35, MINOR_CIV_BOGOTA
+148, Persia, Manila, gained friend
+148, Persia, Manila, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MANILA
+148, Brazil, Manila, lost friend
+148, Byzantium, Manila, SENT OUT QUEST, Type, 3
+148, Byzantium, Manila, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+148, Babylon, Byblos, SENT OUT QUEST, Type, 2
+148, Babylon, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 33 to 33, MINOR_CIV_BYBLOS
+148, Byzantium, Byblos, SENT OUT QUEST, Type, 16
+148, Byzantium, Byblos, RECEIVED QUEST, Spread Religion, Friendship: 7 to 7, MINOR_CIV_BYBLOS
+148, Persia, Mombasa, SENT OUT QUEST, Type, 4
+148, Persia, Mombasa, RECEIVED QUEST, Great Person, Friendship: -3 to -3, MINOR_CIV_MOMBASA
+148, Songhai, Brussels, SENT OUT QUEST, Type, 2
+148, Songhai, Brussels, RECEIVED QUEST, Connect Resource, Friendship: 30 to 30, MINOR_CIV_BRUSSELS
+149, Persia, Manila, SENT OUT QUEST, Type, 2
+149, Songhai, Kyzyl, lost ally
+149, Germany, Kyzyl, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KYZYL
+149, Brazil, Kyzyl, SENT OUT QUEST, Type, 4
+149, Brazil, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+149, America, Samarkand, gained friend
+149, America, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+149, America, Hong Kong, gained friend
+149, America, Hong Kong, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HONG_KONG
+149, Persia, Bogota, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+149, Babylon, Bucharest, gained friend
+149, Babylon, Bucharest, FINISHED QUEST, Construct Wonder, Friendship: 1 to 41, MINOR_CIV_BUCHAREST
+149, Songhai, Byblos, gained friend
+149, Songhai, Byblos, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+149, Babylon, Colombo, SENT OUT QUEST, Type, 11
+149, Babylon, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 2 to 2, MINOR_CIV_COLOMBO
+149, Byzantium, Colombo, SENT OUT QUEST, Type, 11
+149, Byzantium, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+149, Persia, Colombo, SENT OUT QUEST, Type, 11
+149, Persia, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 20 to 20, MINOR_CIV_COLOMBO
+149, Spain, Colombo, SENT OUT QUEST, Type, 11
+149, Spain, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 68 to 68, MINOR_CIV_COLOMBO
+149, Songhai, Colombo, SENT OUT QUEST, Type, 11
+149, Songhai, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+149, Germany, Colombo, SENT OUT QUEST, Type, 11
+149, Germany, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 9 to 9, MINOR_CIV_COLOMBO
+149, America, Colombo, SENT OUT QUEST, Type, 11
+149, America, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 30 to 30, MINOR_CIV_COLOMBO
+149, Brazil, Colombo, SENT OUT QUEST, Type, 11
+149, Brazil, Colombo, RECEIVED QUEST, Contest Faith, Friendship: 19 to 19, MINOR_CIV_COLOMBO
+149, America, Geneva, SENT OUT QUEST, Type, 4
+149, America, Geneva, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_GENEVA
+149, Songhai, Mombasa, gained friend
+149, Songhai, Mombasa, FINISHED QUEST, Find Natural Wonder, Friendship: 1 to 41, MINOR_CIV_MOMBASA
+149, Songhai, Mombasa, cancelled, Construct Wonder, Friendship: 41 to 41, MINOR_CIV_MOMBASA
+149, Spain, Mombasa, SENT OUT QUEST, Type, 4
+149, Spain, Mombasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+149, Songhai, Brussels, lost friend
+149, Babylon, Brussels, gained ally
+149, Babylon, Brussels, FINISHED QUEST, Construct Wonder, Friendship: 41 to 81, MINOR_CIV_BRUSSELS
+149, Spain, La Venta, SENT OUT QUEST, Type, 3
+149, Spain, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+149, Babylon, Almaty, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ALMATY
+149, Songhai, Almaty, SENT OUT QUEST, Type, 17
+149, Songhai, Almaty, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_ALMATY
+150, Babylon, Brussels, SENT OUT QUEST, Type, 16
+150, Byzantium, Antwerp, SENT OUT QUEST, Type, 4
+150, Spain, Almaty, SENT OUT QUEST, Type, 1
+150, America, Antwerp, era change yield update
+150, America, Kyzyl, era change yield update
+150, America, Samarkand, era change yield update
+150, America, Hong Kong, era change yield update
+150, America, Bogota, era change yield update
+150, America, Bucharest, era change yield update
+150, America, Manila, era change yield update
+150, America, Byblos, era change yield update
+150, America, Jerusalem, era change yield update
+150, America, Prague, era change yield update
+150, America, Colombo, era change yield update
+150, America, Geneva, era change yield update
+150, America, Mombasa, era change yield update
+150, America, Brussels, era change yield update
+150, America, La Venta, era change yield update
+150, America, Almaty, era change yield update
+150, America, Antwerp, SENT OUT QUEST, Type, 3
+150, America, Kyzyl, SENT OUT QUEST, Type, 1
+150, America, Kyzyl, SENT OUT QUEST, Type, 17
+150, America, Kyzyl, SENT OUT QUEST, Type, 14
+150, America, Hong Kong, SENT OUT QUEST, Type, 16
+150, America, Bogota, SENT OUT QUEST, Type, 0
+150, America, Bogota, SENT OUT QUEST, Type, 10
+150, America, Jerusalem, SENT OUT QUEST, Type, 3
+150, America, Colombo, SENT OUT QUEST, Type, 7
+150, America, Colombo, SENT OUT QUEST, Type, 11
+150, America, Geneva, SENT OUT QUEST, Type, 16
+150, America, Geneva, SENT OUT QUEST, Type, 4
+150, America, Mombasa, SENT OUT QUEST, Type, 12
+150, America, Mombasa, SENT OUT QUEST, Type, 7
+150, America, Brussels, SENT OUT QUEST, Type, 7
+150, America, Brussels, SENT OUT QUEST, Type, 4
+150, America, Almaty, SENT OUT QUEST, Type, 1
+150, America, Almaty, SENT OUT QUEST, Type, 17
+150, America, Antwerp, gained ally
+150, America, Antwerp, FINISHED QUEST, Construct Wonder, Friendship: 54 to 94, MINOR_CIV_ANTWERP
+150, Persia, Kyzyl, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KYZYL
+150, Spain, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+150, Byzantium, Samarkand, lost friend
+150, Germany, Bogota, SENT OUT QUEST, Type, 7
+150, Germany, Bogota, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+150, Byzantium, Bucharest, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+150, Spain, Bucharest, cancelled, Construct Wonder, Friendship: 32 to 32, MINOR_CIV_BUCHAREST
+150, Songhai, Bucharest, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+150, America, Jerusalem, gained friend
+150, America, Jerusalem, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+150, America, Colombo, lost friend
+150, Songhai, Colombo, SENT OUT QUEST, Type, 2
+150, Songhai, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+150, America, Mombasa, lost friend
+150, America, Almaty, lost friend
+150, Songhai, Almaty, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+151, Persia, Byblos, Gold Gift: 250, Friendship: 31 to 51, Spaceship, MINOR_CIV_BYBLOS, Boost! , Passing Byzantium
+151, Persia, Manila, Gold Gift: 250, Friendship: 33 to 33, Spaceship, MINOR_CIV_MANILA, (SAVING) , Boost! , Passing Brazil
+151, Babylon, Kyzyl, gained friend
+151, Babylon, Kyzyl, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_KYZYL
+151, Spain, Samarkand, gained friend
+151, Spain, Samarkand, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SAMARKAND
+151, Songhai, Hong Kong, SENT OUT QUEST, Type, 7
+151, Songhai, Hong Kong, RECEIVED QUEST, Find Natural Wonder, Friendship: 87 to 87, MINOR_CIV_HONG_KONG
+151, Brazil, Bogota, lost friend
+151, Babylon, Bogota, SENT OUT QUEST, Type, 4
+151, Babylon, Bogota, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+151, Persia, Bucharest, lost friend
+151, Songhai, Bucharest, SENT OUT QUEST, Type, 4
+151, Songhai, Bucharest, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUCHAREST
+151, Babylon, Byblos, lost friend
+151, Spain, Byblos, gained ally
+151, Spain, Byblos, FINISHED QUEST, Connect Resource, Friendship: 32 to 72, MINOR_CIV_BYBLOS
+151, Babylon, Byblos, SENT OUT QUEST, Type, 12
+151, Babylon, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 29 to 29, MINOR_CIV_BYBLOS
+151, Byzantium, Byblos, SENT OUT QUEST, Type, 12
+151, Byzantium, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 2 to 2, MINOR_CIV_BYBLOS
+151, Persia, Byblos, SENT OUT QUEST, Type, 12
+151, Persia, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 49 to 49, MINOR_CIV_BYBLOS
+151, Spain, Byblos, SENT OUT QUEST, Type, 12
+151, Spain, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 72 to 72, MINOR_CIV_BYBLOS
+151, Songhai, Byblos, SENT OUT QUEST, Type, 12
+151, Songhai, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 37 to 37, MINOR_CIV_BYBLOS
+151, Germany, Byblos, SENT OUT QUEST, Type, 12
+151, Germany, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+151, America, Byblos, SENT OUT QUEST, Type, 12
+151, America, Byblos, RECEIVED QUEST, Contest Techs, Friendship: -6 to -6, MINOR_CIV_BYBLOS
+151, Brazil, Byblos, SENT OUT QUEST, Type, 12
+151, Brazil, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+151, Spain, Jerusalem, SENT OUT QUEST, Type, 17
+151, Spain, Jerusalem, RECEIVED QUEST, Trade Route, Friendship: 14 to 14, MINOR_CIV_JERUSALEM
+151, Spain, Geneva, SENT OUT QUEST, Type, 4
+151, Spain, Geneva, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_GENEVA
+151, Byzantium, Mombasa, gained ally
+151, Byzantium, Mombasa, FINISHED QUEST, Contest Techs, Friendship: 41 to 81, MINOR_CIV_MOMBASA
+151, Songhai, Mombasa, FINISHED QUEST, Contest Techs, Friendship: 33 to 73, MINOR_CIV_MOMBASA
+151, America, Mombasa, gained friend
+151, America, Mombasa, FINISHED QUEST, Contest Techs, Friendship: 25 to 65, MINOR_CIV_MOMBASA
+151, Spain, Mombasa, gained friend
+151, Spain, Mombasa, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+151, Babylon, Mombasa, cancelled, Contest Techs, Friendship: 15 to 15, MINOR_CIV_MOMBASA
+151, Persia, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+151, Brazil, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+151, Babylon, Almaty, gained friend
+151, Babylon, Almaty, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_ALMATY
+151, Spain, Almaty, SENT OUT QUEST, Type, 14
+151, Spain, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 16 to 16, MINOR_CIV_ALMATY
+152, Byzantium, Antwerp, era change yield update
+152, Byzantium, Kyzyl, era change yield update
+152, Byzantium, Samarkand, era change yield update
+152, Byzantium, Hong Kong, era change yield update
+152, Byzantium, Bogota, era change yield update
+152, Byzantium, Bucharest, era change yield update
+152, Byzantium, Manila, era change yield update
+152, Byzantium, Byblos, era change yield update
+152, Byzantium, Jerusalem, era change yield update
+152, Byzantium, Prague, era change yield update
+152, Byzantium, Colombo, era change yield update
+152, Byzantium, Geneva, era change yield update
+152, Byzantium, Mombasa, era change yield update
+152, Byzantium, Brussels, era change yield update
+152, Byzantium, La Venta, era change yield update
+152, Byzantium, Almaty, era change yield update
+152, Byzantium, Antwerp, SENT OUT QUEST, Type, 4
+152, Byzantium, Kyzyl, SENT OUT QUEST, Type, 1
+152, Byzantium, Kyzyl, SENT OUT QUEST, Type, 3
+152, Byzantium, Samarkand, SENT OUT QUEST, Type, 17
+152, Byzantium, Samarkand, SENT OUT QUEST, Type, 7
+152, Byzantium, Hong Kong, SENT OUT QUEST, Type, 16
+152, Byzantium, Hong Kong, SENT OUT QUEST, Type, 3
+152, Byzantium, Bogota, SENT OUT QUEST, Type, 2
+152, Byzantium, Bogota, SENT OUT QUEST, Type, 4
+152, Byzantium, Bogota, SENT OUT QUEST, Type, 10
+152, Byzantium, Bucharest, SENT OUT QUEST, Type, 7
+152, Byzantium, Manila, SENT OUT QUEST, Type, 3
+152, Byzantium, Byblos, SENT OUT QUEST, Type, 16
+152, Byzantium, Byblos, SENT OUT QUEST, Type, 12
+152, Byzantium, Prague, SENT OUT QUEST, Type, 16
+152, Byzantium, Prague, SENT OUT QUEST, Type, 10
+152, Byzantium, Colombo, SENT OUT QUEST, Type, 4
+152, Byzantium, Colombo, SENT OUT QUEST, Type, 11
+152, Byzantium, Mombasa, SENT OUT QUEST, Type, 4
+152, Byzantium, Brussels, SENT OUT QUEST, Type, 2
+152, Byzantium, Brussels, SENT OUT QUEST, Type, 4
+152, Byzantium, La Venta, SENT OUT QUEST, Type, 2
+152, Byzantium, La Venta, SENT OUT QUEST, Type, 16
+152, Byzantium, Almaty, SENT OUT QUEST, Type, 1
+152, Byzantium, Almaty, SENT OUT QUEST, Type, 2
+152, Byzantium, Almaty, SENT OUT QUEST, Type, 3
+152, Spain, Byblos, SENT OUT QUEST, Type, 12
+152, Songhai, Hong Kong, SENT OUT QUEST, Type, 7
+152, Byzantium, Kyzyl, cancelled, Kill Camp, Friendship: 11 to 11, MINOR_CIV_KYZYL
+152, Persia, Kyzyl, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+152, Spain, Kyzyl, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+152, Songhai, Kyzyl, cancelled, Kill Camp, Friendship: 49 to 49, MINOR_CIV_KYZYL
+152, Germany, Kyzyl, cancelled, Kill Camp, Friendship: 20 to 20, MINOR_CIV_KYZYL
+152, America, Kyzyl, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+152, Brazil, Kyzyl, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+152, Spain, Bucharest, lost friend
+152, Persia, Manila, lost friend
+152, America, Jerusalem, SENT OUT QUEST, Type, 4
+152, America, Jerusalem, RECEIVED QUEST, Great Person, Friendship: 37 to 37, MINOR_CIV_JERUSALEM
+152, Spain, Colombo, SENT OUT QUEST, Type, 2
+152, Spain, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 63 to 63, MINOR_CIV_COLOMBO
+152, Spain, Brussels, lost friend
+152, Byzantium, Almaty, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+152, Persia, Almaty, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+152, Spain, Almaty, cancelled, Kill Camp, Friendship: 14 to 14, MINOR_CIV_ALMATY
+152, Songhai, Almaty, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+152, Germany, Almaty, cancelled, Kill Camp, Friendship: 77 to 77, MINOR_CIV_ALMATY
+152, America, Almaty, cancelled, Kill Camp, Friendship: 25 to 25, MINOR_CIV_ALMATY
+153, Babylon, Antwerp, era change yield update
+153, Babylon, Kyzyl, era change yield update
+153, Babylon, Samarkand, era change yield update
+153, Babylon, Hong Kong, era change yield update
+153, Babylon, Bogota, era change yield update
+153, Babylon, Bucharest, era change yield update
+153, Babylon, Manila, era change yield update
+153, Babylon, Byblos, era change yield update
+153, Babylon, Jerusalem, era change yield update
+153, Babylon, Prague, era change yield update
+153, Babylon, Colombo, era change yield update
+153, Babylon, Geneva, era change yield update
+153, Babylon, Mombasa, era change yield update
+153, Babylon, Brussels, era change yield update
+153, Babylon, La Venta, era change yield update
+153, Babylon, Almaty, era change yield update
+153, Babylon, Kyzyl, SENT OUT QUEST, Type, 16
+153, Babylon, Hong Kong, SENT OUT QUEST, Type, 17
+153, Babylon, Bogota, SENT OUT QUEST, Type, 10
+153, Babylon, Bogota, SENT OUT QUEST, Type, 4
+153, Babylon, Bucharest, SENT OUT QUEST, Type, 2
+153, Babylon, Manila, SENT OUT QUEST, Type, 16
+153, Babylon, Byblos, SENT OUT QUEST, Type, 3
+153, Babylon, Byblos, SENT OUT QUEST, Type, 2
+153, Babylon, Byblos, SENT OUT QUEST, Type, 12
+153, Babylon, Prague, SENT OUT QUEST, Type, 2
+153, Babylon, Prague, SENT OUT QUEST, Type, 10
+153, Babylon, Colombo, SENT OUT QUEST, Type, 16
+153, Babylon, Colombo, SENT OUT QUEST, Type, 7
+153, Babylon, Colombo, SENT OUT QUEST, Type, 11
+153, Babylon, Mombasa, SENT OUT QUEST, Type, 2
+153, Babylon, Mombasa, SENT OUT QUEST, Type, 17
+153, Babylon, Brussels, SENT OUT QUEST, Type, 16
+153, Babylon, La Venta, SENT OUT QUEST, Type, 2
+153, Babylon, La Venta, SENT OUT QUEST, Type, 16
+153, Spain, Geneva, SENT OUT QUEST, Type, 17
+153, Spain, Geneva, SENT OUT QUEST, Type, 4
+153, Songhai, Kyzyl, SENT OUT QUEST, Type, 14
+153, Byzantium, Kyzyl, SENT OUT QUEST, Type, 2
+153, Byzantium, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 9 to 9, MINOR_CIV_KYZYL
+153, America, Hong Kong, lost friend
+153, Babylon, Hong Kong, SENT OUT QUEST, Type, 4
+153, Babylon, Hong Kong, RECEIVED QUEST, Great Person, Friendship: 88 to 88, MINOR_CIV_HONG_KONG
