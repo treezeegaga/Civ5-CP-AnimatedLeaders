@@ -260,14 +260,6 @@
   },
   {
    "section": "goal",
-   "order": 7,
-   "name": "Banned behaviours",
-   "target": "0 per game (workers stolen in peace, wonder chops)",
-   "detail": "Wonder chops about 1 per game in both B and C8 (12 C8 games); 1 stolen worker by B, 0 by C8. Not worked on yet.",
-   "state": "not met"
-  },
-  {
-   "section": "goal",
    "order": 8,
    "name": "AI turn speed",
    "target": "AI turns ≤ 1.25× B's",

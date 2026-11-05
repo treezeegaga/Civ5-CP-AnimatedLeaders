@@ -20,7 +20,7 @@ one, ends up with ~100 cities and wins easily, and the game is boring. We want A
 3. **Are engaged in the world.** Lots of trade offers, friendships, alliances, requests, joint war
    proposals, denouncements and wars of their own: a world that feels alive, without spamming.
 4. **Are extremely competent, but not experts.** Sound fundamentals and no blunders, played like
-   a good, honest human player, not a min-maxer. No cheese (see Banned behaviours), no cheating
+   a good, honest human player, not a min-maxer. No cheese, no cheating
    (see Fog cheats in AUDIT.md).
 
 5. **Play many different styles, each one well.** Personality picks a real game plan, from
@@ -92,7 +92,7 @@ already hard, so the work comes in two phases:
 **Phase 1: strength, until the AI is competent.** The number one priority is making the AI play
 better: bug fixes, combat, defence, expansion, economy, and not being exploitable in diplomacy.
 Strength share against CP's AI is the main measure. Flavour work waits, except the rules that are
-never optional (no cheating, banned behaviours, multiplayer-safe).
+never optional (no cheating, multiplayer-safe).
 
 **Phase 2: flavour and fun.** Archetypes, interactivity, coalitions tuned for fun, the
 two-turtle game. Strength becomes a guard: phase 2 changes must pass a no-worse test so they don't
@@ -138,7 +138,8 @@ at the top of RESULTS.md):
   and the matchups. The attack is judged by matchups (the user): against greedy civs with few units and no walls the
   aggressor should take several cities, against balanced ones it should struggle.
 - a lively world without spam: **0.5–2 deals per civ per 10 turns**
-- **0 banned behaviours**, and AI turns **no more than 25% slower** than B's
+- AI turns **no more than 25% slower** than B's (the banned-behaviours goal, 0 per game, was **removed by the user,
+  2026-11-04 9:55pm ET**)
 - most tricks on the exploit checklist no longer work
 - milestones at a good human player's pace (not an expert's)
 - no obvious blunders when we watch games or play against it
@@ -146,15 +147,10 @@ at the top of RESULTS.md):
 The bully test, builders test and interactivity measures run from the start so we can see where
 the AI stands, but in phase 1 they're for tracking, not for deciding what merges.
 
-### Banned behaviours
+### Banned behaviours (removed)
 
-The new AI never does these, whatever they're worth:
-
-- Stealing workers from city-states
-- Rushing wonders by chopping forests
-- (add more as they come up in games)
-
-Each one is a hard rule in the strategy profile, and the tests count how often it happens (target: 0).
+The user removed this goal (2026-11-04 9:55pm ET). There is no list of banned moves, such as stealing city-state workers or
+chopping forests for wonders, and nobody works on them. The digest's counts stay as information only.
 
 ## Where we are
 
@@ -220,7 +216,7 @@ been measured.
 | **War** | Military execution: tactics, armies, war decisions. Defence against a conqueror comes first | After the lead's first jobs |
 | **Economy & victory** | Growth, research, buildings, gold, settling, the push to the target victory | With War: most phase 1 fixes are already coded |
 | **Diplomacy** | Phase 1: bugs and exploits (deal pricing, being bluffed, reacting to real threats). Phase 2: coalitions tuned for fun, alliances, joint wars, lively trade, game-theory decisions within the personality's limits | After War and Economy have passing fixes |
-| **Personality** | Each leader's strategy profile and archetype: which victory to aim for, risk appetite, wide or tall, hard rules (including the banned behaviours) | Phase 2, except the banned-behaviour rules, which come early |
+| **Personality** | Each leader's strategy profile and archetype: which victory to aim for, risk appetite, wide or tall, hard rules | Phase 2 |
 | **PC runner** (local, on the Windows PC) | Pulls builds, runs `Run-ABTest.ps1` / `Run-Games.ps1`, collects CSVs and logs, pushes results | Whenever games run |
 
 Cloud sessions can't reach the Windows PC, so anything that runs Civ V is the PC runner's job: the
@@ -508,7 +504,7 @@ whether the AIs felt engaged or annoying, and whether they put up a fight.
 
 ### Banned-behaviour counts
 
-The log digest counts each banned behaviour per game. Target 0 for the new AI.
+Information only (the goal was removed): the log digest still counts stolen workers and wonder chops.
 
 ### Personality tests
 
@@ -797,7 +793,7 @@ branch, and the lead applies them to `ai/<topic>` (see the check-in).
 > War, Economy and Diplomacy decide how. Read "The goal" in AGENTS.md: leaders should play
 > clearly different game plans (the archetype table, from greedy tall to early timing attacks)
 > and each one competently. Your first job: design the strategy profile (archetype, victory
-> weights, risk appetite, expansion style, hard rules including the banned behaviours), and
+> weights, risk appetite, expansion style, hard rules), and
 > assign an archetype to every leader, from CP's existing leader flavours,
 > `CvGrandStrategyAI` and the opening-book plan choice, and write it up for the other sessions as
 > a short spec in RESULTS.md before coding it. Your changes are judged by no-worse tests on
