@@ -1924,6 +1924,24 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: ArmyScrap in the package block fires only at war (Nov 5, about 6:40pm ET)
+The lead (6:39pm ET): in 128B4199 (Assyria), the army went from 11 land at the T83 declaration to 6 at the first capture
+attempt (T86). Is ArmyScrap scrapping units mid-war? Counted over the package block's first 5 games (bullyabort14 +
+bullygreedy16). Script: `tools/ab/package_armyscrap.py`.
+
+- **7 drops in 5 games, all at war, none in the window:** 5 Warriors, a Scout and a Spearman.
+- In the window the treasury never fell under 9 turns (the window's gold pause and WarBudget's target hold it). At war
+  these aggressors are always under 9, so ArmyScrap took bodies out of the fight it was meant to fund.
+- **128B4199's loss was mostly combat.** 4 were killed in combat (2 Archers T84, a Warrior and a Spearman T85) and 1
+  Warrior was scrapped (T86). The army was small for its war: 11 land against WarBudget's 8 others + 2 siege, and
+  affordable -5 at the declaration.
+- **Change (ai/war dc4290cf, for the block after the package):** no ArmyScrap at war; only in the window and the attack
+  phase.
+  - On these counts it would rarely fire. If the next block shows no window drops, drop the flag.
+
+LEAD: ArmyScrap fired 7 times, all at war (5 games). ai/war dc4290cf takes it out of the war, for the block after the
+package; the package block keeps the version it has. Its effect in 128B4199 is 1 of 5 units lost; 4 died in combat.
+
 ### War: BigArmy full block, 20 first games: size is the lever, the waiver pays for it (Nov 5, about 5:00pm ET)
 Data: ab-1750459 (bullyabort13 + bullygreedy15), 20 first games and 20 flips (results CSVs; 20 and 9 logged), against
 850e142 (15 first) and f6d1e84 (28 first). Script: `tools/ab/bigarmy_block.py`. The mid-block entry (11 games) below
