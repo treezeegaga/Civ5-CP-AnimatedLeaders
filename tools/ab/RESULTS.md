@@ -1924,6 +1924,31 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: 0CC09E9A (America) and 0CD7657A (Huns), PC 1 on ab-e4d5785: wars on the target, early handovers, enemy-dominated zones, no captures (Nov 4, about 7:35pm ET)
+- **0CC09E9A, America.**
+  - Windows: T62 against the Shoshone (closed at war, T99) and T138 against the Inca.
+  - "CONQUEST: going for The Shoshone" at T81, then the Inca at T82; war on the Inca at T99.
+  - Attack 1963 was discovered at T98; "MarchOn: stalled near the target at war, handing over" at T101, the war's
+    second turn.
+  - Attack 2229: SiegeArmy aborted it at T112.
+  - Attack 3012: SiegeRoll with 4 units, handed over at T125.
+  - No capture attempt. Tiwanaku and Machu read "enemy dominated" 38 times each; the Inca zones' posture was
+    P_WITHDRAW.
+  - 16 "window paused" lines (turns to bankruptcy under 9); no WAR CHEST purchase.
+- **0CD7657A, Huns.**
+  - Window at T51 against the Maya; war on the Maya at T84, on Siam at T123.
+  - Attack 1770 was handed over by the MarchOn stall rule at T99.
+  - No capture attempt; every target city read "enemy dominated" 11–28 times; no WAR CHEST purchase.
+
+**Read.** ab-e4d5785 has none of `6578838` (stall rule counts turns at war only), `a6a9f399` (MarchOn waits at the
+walls; ATTACK phase when the target is returned) or `b7db863` (SiegeArmy's bar at war). The early handovers and the
+SiegeArmy abort here are the cases those three fix. What they don't fix:
+- **Small armies:** 3–5 units reach the target, so the zone reads enemy dominated and ExecuteCaptureCityMoves won't try.
+- **Gold:** the windows pause on the bankruptcy guard and no WAR CHEST purchase shows (Economy's area).
+
+No new fix from these two games; the next logged games on a build with the three commits will show whether the army
+now arrives whole.
+
 ### War: 0D7BB38D (PC 2, ab-e4d5785 + WarGold), the Aztecs: MarchOn ends at the walls before the war; TimingBuildup demobilises during an attack (Nov 4, about 7:06pm ET)
 - **First war, on Ethiopia at T92** (window at T78; Greece joined the same turn). The one attack (5 units) waited out
   SiegeArmy's 20 turns and was aborted at T108. Peace by T124.
