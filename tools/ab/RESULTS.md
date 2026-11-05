@@ -3334,7 +3334,8 @@ logged pair".
   one at 10. Not forced, so the cost reweighting and the rest of the weights still count.
 - **Measure:** per target victory, the share of civs with the key techs by T150 and their median turn (Economy's
   script), against the flag off; strength share at T150.
-- **Status:** coding.
+- **Build:** fork `ai/personality` `df0c168` (`CvTechAI::AddVictoryPathWeights`, called where the tech weights are rebuilt).
+- **Status:** coded, CI pending.
 
 ### Greedy wide and greedy tall (Personality, 2026-11-04 4:50pm ET)
 - **The user's design** (via the lead, 4:46pm ET; AGENTS.md, "Greedy comes in two kinds"): the trio quick look's top
