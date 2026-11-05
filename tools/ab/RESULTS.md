@@ -1924,6 +1924,44 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: without the waiver, gold holds the army at 9 to 10 units for 40 turns of war (Nov 5, about 2:15pm ET)
+The lead asked for idle gold to go to the army. The results CSVs (aggressor rows every 10 turns; first games only) say
+there is no idle gold without the waiver.
+
+**Gold and land units from the first sample with a war:**
+
+| | f6d1e84 (22 at war) | 850e142 (11) | BigArmy (11, waiver) |
+|---|---|---|---|
+| Land units at -10 / 0 / +10 / +20 / +30 / +40 | 9 / 9 / 9 / 10 / 10 / 9 | 9 / 10 / 9 / 8 / 9 / 9 | 16 / 16 / 17 / 20 / 21 / 25 |
+| Gold median at war; samples with 300+ | 40; 4% | 24; 3% | 143; 17% |
+| Window paused for gold (turns a game) | 6.6 | 8.7 | 0 (waived) |
+| Gave up: no war 3 windows after the build-up | 28 in 28 games | 12 in 15 | 1 in 11 |
+
+**Read:**
+- **No idle gold.** Without the waiver, an aggressor at war holds a median of 24 to 40 gold, and 300+ in 3 to 4% of
+  the samples. A "spend idle gold on the army" flag would target nothing: the gold BigArmy left idle was the waiver's.
+- **The army is held at the gold ceiling, not destroyed.** Without the waiver, land units stay at 9 to 10 from the
+  declaration to 40 turns in: losses are replaced and the army never grows. With the waiver it grows from 16 to 25,
+  and the captures come along the way (2 games by the declaration sample, 4 by +10, 5 by +40).
+- So a sustained army is a gold question first. War's levers inside that ceiling:
+  1. **Better units for the same upkeep: ArmyQuality** (coded, c74f22163). The army stays the same size, of units
+     that do damage.
+  2. **Upkeep freed from units that don't fight (proposal, ArmyScrap).** Under ArmyQuality, Warriors and Scouts no
+     longer count as army but are still on the payroll. BigArmy's armies carried 42 of 194 such units at the first
+     declaration (about 4 a game). At the war-time upkeep BigArmy logged (median 71 a turn for about 20 units, about
+     3.5 a unit), scrapping them frees about 14 a turn, a fifth of Economy's 70 a turn gap.
+     - Proposed rule: in the window or at war, while the window is paused for gold or the treasury is falling, disband
+       one land unit below the ArmyQuality floor a turn, never a city's last garrison.
+     - It needs ArmyQuality's floor, so it would go into the same block or the one after.
+  3. **War pays: plunder.** BigArmy plundered 3,700 gold in 11 games (about 340 a game, 100 x era per trade route) and
+     pillaged 700. That is about 10 a turn over a 40-turn war. The f6d1e84 and 850e142 builds predate the gold logging,
+     so their plunder isn't measured. Not a flag yet: first see what a non-waived army plunders, measured in the next
+     block.
+- The rest of the gap (about 70 a turn for the doubled army) is Economy's.
+
+LEAD: reading only. A spend-idle-gold flag is dropped: there is no idle gold without the waiver. ArmyScrap is proposed
+(not coded) to go with ArmyQuality. Tell me if you want it coded for the same block.
+
 ### War: a sustained army without the waiver: patterns over the 11 BigArmy games, and the flags (the lead, 2:08pm ET) (Nov 5, about 2:09pm ET)
 **Per-game numbers (BigArmy first games, ab-1750459):**
 
@@ -1950,7 +1988,7 @@ positions, set-up moves, or its scoring of attacks against cities.
    Funnel stage: not taken / refused.
 
 **Flags for the block after BigArmy:**
-- **ArmyQuality (new; coded, ai/war c74f22163, Nov 5 2:20pm ET).** A TimingBuildup civ builds no land unit weaker
+- **ArmyQuality (new; coded, ai/war c74f22163, Nov 5 2:12pm ET).** A TimingBuildup civ builds no land unit weaker
   than 70% of the best of its kind (melee or ranged; siege and scouts apart) it can train, and such units don't count
   toward its army. That rules out Warriors once Swordsmen are trainable, and Archers once Composite Bowmen are. The
   army becomes the same size, of better units, for the same upkeep.
