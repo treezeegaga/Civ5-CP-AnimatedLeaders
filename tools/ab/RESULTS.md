@@ -1945,6 +1945,9 @@ unchanged. Logs "SiegeDominated: attacking X in an enemy-dominated zone (n units
 more captures. Risk: the expected damage runs high (Busan read 41–59 with 10–23 done), so the 3-turn bar is strict
 on purpose.
 
+Coded: `ai/war` `e2397128f` (CI pending). For the bully role, it goes with SiegeClose (moves the rest of the army up
+when the zone is ours) and TargetHold.
+
 ### War: 0D1A71BD (Huns), 0D313EB5 (Mongolia), 0DF72455 (Inca), all on ab-e4d5785: the same failures, all fixed after it; one open question (Nov 4, about 9:21pm ET)
 - **Huns:**
   - Committed to Arabia at T53, then to Ethiopia at T71.
