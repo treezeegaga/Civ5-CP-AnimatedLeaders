@@ -84,7 +84,7 @@ Built: `GreedyWide`, `GreedyTall` (`claude/ab-c1` `c5015f1`), in the greedy styl
 The greedy role in the trio and matchup tests plays whichever kind its leader is. Judged by matchups like every style
 flag. Expected: wide out-grows tall while nobody attacks; once attacks take cities, aggressors punish wide more.
 
-**Hurry rules, no test (the user, 2026-11-05 10:37am ET):** "I just never want to see a civ hurry a warrior again."
+**Hurry rules, no test (the user, 2026-11-05 10:25am ET):** "I just never want to see a civ hurry a warrior again."
 - No civ of ours buys a Warrior with gold, ever: `NoObsoleteHurry`, in the bundle.
 - Warmongers buy only settlers and siege units with gold: `WarmongerHurry`, in the bundle.
 
