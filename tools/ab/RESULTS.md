@@ -1955,6 +1955,9 @@ limits (SiegeArmy's 20 turns, SiegeAbort) end a hopeless attack. Log: "CONQUEST:
 reason)", once a turn. Expect: no runs of "War goal changed" against the committed target, the attack gathered to the
 end, and the failed check named in the log.
 
+Coded: `ai/war` `eab859e4d` (CI pending). SiegeArmy's bar at peace still keeps a weak army from declaring, so a
+held target with CanWin failing waits rather than marching.
+
 ### War: 0D9AF4AA (PC 2, ab-e4d5785 + WarGold), Assyria: the army reached Hamburg with the zone in our favour, and the tactical AI sent it home (Nov 4, about 7:39pm ET)
 - **Plan:** TimingBuildup window T26 against Germany; "CONQUEST: going for Germany" at T36; war at T102.
 - **Attack 1819** (target Hamburg, 27:23): 2 Spearmen, a Swordsman, 3 Siege Towers and an Archer.
