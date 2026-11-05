@@ -1962,7 +1962,7 @@ war (phase WINDOW, ATTACK or WAR):
 
 Shared code: CvTreasury::CalculateUnitCost, CvPlayer::DoBankruptcy, CvPlayer::GetNumUnitsOutOfSupply, test only.
 
-Coded: `ai/war` `0ed387c16`, `ecdc7837e`, `4cb5ae135` on `claude/ab-c1` `850e142f1` (a fast-forward), CI pending. Runs
+Coded: `ai/war` `0ed387c16`, `ecdc7837e`, `4cb5ae135`, `5db364c47` (include fix; run 222 had failed on it) on `claude/ab-c1` `850e142f1` (a fast-forward), CI run 223 green. Runs
 as a 20-game block (RoleFixes + BigArmy) after the WindowUntilReady block.
 
 ### War: the f6d1e84 block against the earlier builds (first games); SiegeVolley withdrawn (Nov 5, about 1:56am ET)
