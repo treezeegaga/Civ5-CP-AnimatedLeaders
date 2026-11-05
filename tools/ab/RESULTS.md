@@ -1652,6 +1652,44 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: the BigArmy block, split by "close to world conquest" (Diplomacy session, 2026-11-05 5:00pm ET)
+
+Follow-up to point 4 of "the 850e142 bully games". The block: build `ab-1750459`, 20 pairs across both PCs
+(`AIABTest_bullyabort13@BOX.csv`, `AIABTest_bullygreedy15@TREEDESKTOP.csv`). BigArmy is on in the first game of each pair
+and off in the flip. Script: `tools/ab/scripts/diplo/bigarmy_split.py <csv>...`. The share is the aggressor's
+`Military` (`GetMilitaryMight`) over all living civs', at the logged turns (every 10).
+
+**L3 isn't a confound in this block.** Only 3 of 20 BigArmy aggressors ever reached 50% of the world's might, and late:
+Japan `118B38C9` at T90 (exactly 50%, one logged turn), the Huns `11EBE53D` at T130, Japan `110B2E42` at T150. Two of the
+three come after the wars were decided. The other 17 peaked at 18-46%. No flip aggressor got past 35%.
+
+| BigArmy games | n | Capture games | Cities taken | Wars declared | Wars on it | Deals | Friends | Pacts |
+|---|---|---|---|---|---|---|---|---|
+| crossed 50% | 3 | 2 | 3 | 1.3 | 0.3 | 50.7 | 1.3 | 0.3 |
+| stayed below | 17 | 6 | 9 | 1.4 | 0.4 | 49.6 | 1.6 | 0.9 |
+| flips (no BigArmy) | 20 | 1 | 1 | 1.1 | 0.8 | 40.0 | 1.4 | 0.7 |
+
+- **The capture gain comes from army size, not from being seen as a near-winner.** 6 of the 8 capture games stayed
+  below 50% throughout, and the 3 that crossed weren't attacked more (0.3 wars on it, vs 0.4).
+- **Two diplomatic side effects of a big army, both expected:**
+  - It gets attacked less: 0.4 wars declared on it per game, against 0.8 in the flips. That fits the "attacked first"
+    games in the 850e142 block: a weak army invites a neighbour's war.
+  - It makes more deals: 50 per game, against 40 in the flips. Gold freed by BigArmy's waived costs is probably going
+    into luxury and open-borders purchases. Worth a look if BigArmy becomes a real flag, since `TradeOpinion` turns
+    those deals into friendship.
+- **StaleWarPeace / coalition check:** not possible here, since the non-aggressor civs run CP in bully mode. But the
+  capture games show the problem the coalition flags target, under plain CP:
+  - **Japan `110B2E42` (2 cities taken):** China and Russia rated it a SEVERE warmonger from T109-T110 to the end, and
+    Rome, France and Brazil rated it MAJOR. Each saw Japan's military as IMMENSE next to its own. Russia, Japan's victim
+    and at war with it, was **AFRAID** on 28 of its SEVERE turns. China was **DECEPTIVE** (friendly on the surface).
+    Nobody else joined the war.
+  - **Songhai `10797AB4`:** Babylon rated Songhai SEVERE for 6 turns and stayed **FRIENDLY**, again seeing IMMENSE
+    strength. Venice and Babylon rated it MAJOR from T110.
+  - **This is the AFRAID diagnosis from 11-03, now seen in logs:** one-on-one strength estimates make each observer
+    afraid of a big army, so nobody gangs up. `CoalitionStrength` (counting allies at war with the warmonger) and
+    `CoalitionCoop` are the fixes. The lead's planned block with `OthersBase = bundle` on BigArmy would test them on
+    exactly this setup.
+
 ### Do AIs make deals that don't help them win? All logged games (Diplomacy session for the user, 2026-11-05 2:30pm ET)
 
 **Data:** 23,200 completed AI-to-AI deals in 133 logged games (`DiplomacyAI_TradeAgreements_Log.csv`), joined with
