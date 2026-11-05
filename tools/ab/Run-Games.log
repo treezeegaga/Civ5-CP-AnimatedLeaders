@@ -979,3 +979,17 @@ NOTE 10:02PM ET: installed ab-7bb7885; logging on; starting bullyabort10 (25 fla
 2026-11-04 22:52:03    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0D9905E50D9905E5F
 2026-11-04 22:52:03  Starting game 5: first game of a pair; Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll, DeclareWhenGathered, SiegeConcentrate, SiegeKeep, TimingBuildup, AggressiveWalls, TrueGoldRate, WarChest, WarEconomy, TargetVulnerability, MarchOn, FocusedWar, WarGold, SiegeClose, TargetHold, SiegeDominated; OthersBase = ; GreedyFixes = ; BalancedFixes = ; Civs = 0
 2026-11-04 22:52:24 ET  PC 1 (BOX): bullyabort10 on ab-7bb7885, 2 pairs: 0D82E4A9 Carthage (6/5 cities, NO war declared in either game) and 0D9905E5 Aztecs (7 cities in game 1, 2 wars): 0 captures, 0 city-state captures. Game-1 logs+digests kept, flips deleted. Replays match, no dialogs. Run continues.
+NOTE 10:54PM ET: ab-ad5a2d8 not out yet; STOP created, pair 3 of bullyabort10 is the one more pair on 7bb7885, then check again
+2026-11-04 23:00:16    turn 100 after 7 minutes
+2026-11-04 23:04:21  Game ended: turn 150 (0DB01EF00DB01EF0)
+2026-11-04 23:04:27    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0DB01EF00DB01EF0.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0DB01EF00DB01EF0
+2026-11-04 23:04:27    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0DB01EF00DB01EF0
+2026-11-04 23:04:27  Starting game 6: second game of the pair (Flip = 1); Mode = bully; Fixes = none; Screen = ; Base = ; RoleFixes = TimingAttack, DeclareTiming, SiegeBook, SiegeTechs, SiegeArmy, ArmyHandoff, SiegeAbort, SiegeFormation, SiegeStay, SiegePosture, SiegeFirst, SiegeFinish, CSConquest, ConquestTraitTargets, SiegeExposure, SiegeRoll, DeclareWhenGathered, SiegeConcentrate, SiegeKeep, TimingBuildup, AggressiveWalls, TrueGoldRate, WarChest, WarEconomy, TargetVulnerability, MarchOn, FocusedWar, WarGold, SiegeClose, TargetHold, SiegeDominated; OthersBase = ; GreedyFixes = ; BalancedFixes = ; Civs = 0
+2026-11-04 23:05:39    replay matches the first game
+2026-11-04 23:12:21    turn 100 after 7 minutes
+2026-11-04 23:16:45  Game ended: turn 150 (0DB01EF00DB01EF0F)
+2026-11-04 23:16:51    logs saved: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\digest_0DB01EF00DB01EF0F.txt and C:\Users\itstr\Documents\My Games\Sid Meier's Civilization 5\LogsArchive\0DB01EF00DB01EF0F
+2026-11-04 23:16:52    logs for the sessions: C:\Users\itstr\Documents\Civ5-MP-Leaderheads\tools\ab\results\logs_0DB01EF00DB01EF0F
+2026-11-04 23:16:52  Stop file found; stopping
+2026-11-04 23:16:52  Runner finished after 6 games
+2026-11-04 23:17:10 ET  PC 1 (BOX): bullyabort10 on ab-7bb7885, pair 3: 0DB01EF0 Mongols (4 cities in game 1, 1 war) 0 captures, 0 city-state captures. 3 pairs total, none with a capture. Game-1 logs+digest kept, flip's deleted. Replays match, no dialogs. Stopped; installing ab-f6d1e84 for bullyabort11.
