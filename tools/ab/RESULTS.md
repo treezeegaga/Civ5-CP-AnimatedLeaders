@@ -1924,6 +1924,30 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: CoopWhenReady and WindowUntilReady, from the corrected read of 0DB01EF0 (the user: "code both") (Nov 4, about 11:37pm ET)
+**CoopWhenReady (flag, War; shared: CvDiplomacyAI::DoUpdatePlanningExchanges' coop loop, around DoStartCoopWar).**
+- **Seen:** the Ottomans' coop war on the Shoshone (agreed T63) declared itself at T73. Mongolia went in with 3
+  Warriors, 2 Archers and a general and lost 8 units.
+- **The mechanism:** CP starts a coop war 10 turns after it is agreed (COOP_WAR_SOON_COUNTER), whatever the armies,
+  and either partner's turn can start it for both.
+- **Hypothesis:** if either partner is a TimingBuildup attacker whose army isn't ready (2 siege units plus cities+4
+  others), the coop war waits. Neither partner's turn starts it. After 30 turns (Standard) it starts anyway, so an ally
+  isn't held forever.
+- **Logs:** "CoopWhenReady: coop war on X waits for the army (n turns since agreed)".
+- **Expect:** coop wars on the target starting with a siege army, or not at all in the first window.
+
+**WindowUntilReady (flag, War, CvMilitaryAI::IsInTimingBuildupWindow).**
+- **Seen:** the window (10 turns on this speed) built 2 Warriors and an Archer. When it ended at T52, the army target
+  (cities+6) and the unit weights ended with it. The attack phase fell back to CP's small army target, and units were
+  skipped as "nosupply" from T53.
+- **Hypothesis:** the window lasts until the army is ready, up to 3 windows, the existing limit after which the plan
+  goes back to peace. Its army target, unit weights and purchases stay on, and GetNewAIConquestTarget doesn't return the
+  target before then, so the attack starts with the army or at the limit.
+- **Logs:** "TimingBuildup: army not ready (s siege, l land), the window goes on".
+- **Expect:** windows ending "ready", more units per window, wars with siege units.
+- **Not covered:** young cities still can't build military (CP's under-2-buildings rule); that is a bigger change,
+  left for later.
+
 ### War: 0DB01EF0 pair 3 (PC 1, ab-7bb7885): the flip without RoleFixes took Troyes; the role game made one attack in 150 turns (Nov 4, about 11:29pm ET)
 - **Flip (0DB01EF0F, CP's Mongolia):**
   - City attacks at T69, T101, T104, T119, T142 and T147, each recruiting 6–8 units (CP's smaller formation, 9 slots).
