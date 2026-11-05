@@ -1945,6 +1945,13 @@ is under way, as the returned target already does. A war still needs the army in
 window keep a weak army from declaring. Logs "CONQUEST: holding X as a war plan, attack under way" once a turn when this
 is what keeps it. TargetHold is in the role on ab-7bb7885, so its results so far are the first part alone.
 
+Coded: `ai/war` `61af66972` (CI pending), on `96332cc83` (SecondWave).
+
+**On the lead's other point (SiegeArmy "too weak" for 20 turns against greedy civs):** that is the peace bar doing
+its job with a 3-unit army. The army was small because the window was paused 10 of its turns for gold ("units
+unaffordable", T60–T71), and the attacks' units went to Zurich (6–7 units). Gold is Economy's (WarChest/WarGold);
+whether attacks on city-states should stand aside for a committed target is a question for the next games.
+
 ### War: 0E42C140, the first game on ab-7bb7885 (PC 2, bullygreedy12): Mongolia never declared; armies of 3 held at peace (Nov 4, about 10:49pm ET)
 - **Target:** "CONQUEST: going for Denmark" at T76. No TimingBuildup window line for Mongolia in this game.
 - **Attacks on Copenhagen (47:31):** 1785 (T77, 3 units), 2145 (T94, 3), 3191 (T124, 3) and 3441 (T132, 3).
