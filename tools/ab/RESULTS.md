@@ -1652,7 +1652,7 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
-### Diplomacy: the 850e142 bully games, and a fix to my log script (Diplomacy session, 2026-11-05 10:45am ET)
+### Diplomacy: the 850e142 bully games, and a fix to my log script (Diplomacy session, 2026-11-05 10:40am ET)
 
 **1. These games can't test the coalition flags or `StaleWarPeace`.**
 - **Why:** the runner gives the role fixes to the aggressor only (`Fixes = none`, `OthersBase` empty in
