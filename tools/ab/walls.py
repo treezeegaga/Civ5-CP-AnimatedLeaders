@@ -47,6 +47,9 @@ RE_ZONE = re.compile(r"Zone (-?\d+), land, city of (\S+), posture (\w+), \d+ tar
                      r"ranged (\d+)\), enemy (\d+) \((\d+) units, melee (\d+), ranged (\d+), city HP (\d+)/(\d+)\)")
 RE_TOOEARLY = re.compile(r"too early for attacking (\S+), required damage (\d+), expected max damage per turn (\d+)")
 RE_KILLED = re.compile(r"KilledInCombat (.+?), Domain")
+# logging added in ai/war 249985284 (builds after it): the plan per unit, and the city's defence and garrison per attempt
+RE_PLAN = re.compile(r"capture plan vs (\S+), agg (\d+): (\d+) units in the sim, (\d+) in the plan, (\d+) attacks \((\d+) on the city\)")
+RE_DEFENCE = re.compile(r"city strength (\d+), walls \+(\d+), garrison (.+?) HP (\d+) -> (\d+)")
 
 
 def kind_of(name):
@@ -122,6 +125,11 @@ def study(gdir, info):
         if m:
             pending = {"turn": t, "city": m.group(2), "req": int(m.group(3)), "exp": int(m.group(4)), "xy": None}
             continue
+        m = RE_PLAN.search(rest)
+        if m and pending and pending["city"] == m.group(1):
+            pending.setdefault("plans", []).append({"sim": int(m.group(3)), "plan": int(m.group(4)),
+                                                    "attacks": int(m.group(5)), "city_attacks": int(m.group(6))})
+            continue
         m = RE_TACTSIM.search(rest)
         if m and pending and pending["xy"] is None:
             pending["xy"] = (int(m.group(1)), int(m.group(2)))
@@ -132,6 +140,10 @@ def study(gdir, info):
                                                                             "exp": None, "xy": None}
             a.update({"hp0": int(m.group(2)), "hp1": int(m.group(3)), "used": int(m.group(4)), "avail": int(m.group(5)),
                       "agg": int(m.group(6)), "captured": bool(m.group(7))})
+            d = RE_DEFENCE.search(rest)
+            if d:
+                a.update({"strength": int(d.group(1)), "walls": int(d.group(2)), "garrison": d.group(3),
+                          "ghp0": int(d.group(4)), "ghp1": int(d.group(5))})
             if a["xy"]:
                 city_xy.setdefault(a["city"], a["xy"])
             attempts.append(a)
@@ -229,6 +241,17 @@ def main():
                    sum(1 for a in atts if a["used"] == 0)))
             ratio = [(a["hp0"] - a["hp1"]) / a["exp"] for a in with_exp if a["exp"] > 0]
             print("   damage done / expected: median %.2f" % med(ratio))
+            planned = [a for a in atts if a.get("plans")]
+            if planned:
+                atk = [sum(p["city_attacks"] for p in a["plans"]) for a in planned]
+                print("   plans logged %d: attacks on the city per attempt median %s, attempts with none %s; units in the sim median %s"
+                      % (len(planned), med(atk), pct(sum(1 for x in atk if x == 0), len(atk)),
+                         med([a["plans"][0]["sim"] for a in planned])))
+            dfn = [a for a in atts if "strength" in a]
+            if dfn:
+                print("   city defence at attempts (%d): strength median %s, walls in %s; garrison hit in %s, garrison HP lost median %s"
+                      % (len(dfn), med([a["strength"] for a in dfn]), pct(sum(1 for a in dfn if a["walls"] > 0), len(dfn)),
+                         pct(sum(1 for a in dfn if a["ghp0"] > a["ghp1"]), len(dfn)), med([a["ghp0"] - a["ghp1"] for a in dfn])))
         zs = [z for r in rs for z in r["zones"].values()]
         if zs:
             att_z = []
