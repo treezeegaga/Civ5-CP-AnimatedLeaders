@@ -215,8 +215,8 @@
    "order": 1,
    "name": "Trio: one of our three styles wins",
    "target": "In a 6-player game with our greedy, balanced and aggressive civs and 3 CP civs, one of ours wins ≥ 90% of full games (the user's aim: every game)",
-   "detail": "Not built yet. It needs a 6-civ test mode (3 style slots, 3 CP slots) and working attacks first. At T150 the stand-in: one of our three holds the top strength spot. The baseline, if all six played alike, is 50%.",
-   "state": "waits"
+   "detail": "Built. Quick look (4 games to T150): one of ours on top in 3 (75%); our three held 51.7-57.6% of the strength in every game; greedy never on top. Our aggressor never attacked in those games (since fixed). The real 20-game run waits for working attacks, with greedy wide/tall.",
+   "state": "first look"
   },
   {
    "section": "goal",
@@ -231,7 +231,7 @@
    "order": 3,
    "name": "Attack: an aggressor takes cities",
    "target": "Against greedy civs (few units, no walls) several cities by T150; against balanced civs at most 1 per war",
-   "detail": "2 captures in 42 bully games: the Huns took 2 cities from Spain (normal civs) and the Inca took Persepolis (greedy civs; 8 cities against 5 without the flags). War's trace: the siege works at the walls, but the army arrives late, small or bankrupt; fixes for all three are in build f21a8f6.",
+   "detail": "Progress tonight: with WarGold (e4d5785) the aggressor declared war in 10 of 11 games where it runs the fixes (it used to sit broke, its cities building workers). 1 capture in those 11 (Zulus took Shanghai). The blocker now: tactics won't attack a city in an enemy-held area. War's SiegeDominated fix is in the siege build 7bb7885, testing next.",
    "state": "focus now"
   },
   {
