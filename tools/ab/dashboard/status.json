@@ -4,14 +4,14 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Both PCs play a frozen 20-game block on build 850e142, which adds one change: the aggressor's build-up lasts until its army is ready. The last block showed the pattern to beat: the aggressor goes to war in most games but rarely takes a city, because its army is too small at the walls.",
+   "detail": "Both PCs are halfway through a frozen 20-game block on build 850e142 (the build-up lasts until the army is ready). So far 1 capture in 9 games. At about 2:30pm ET they switch to the BigArmy block, which doubles the aggressor's army and waives its costs to test whether army size is what's missing.",
    "state": "running"
   },
   {
    "section": "tile",
    "order": 1,
    "name": "Testing now",
-   "value": "850e142: build-up until the army is ready"
+   "value": "850e142: build-up until the army is ready (9 of 40 games in: 1 capture)"
   },
   {
    "section": "tile",
@@ -32,7 +32,7 @@
    "detail": "no attack formed, or attacks but no declaration",
    "old": 7,
    "cur": 5,
-   "new": "…"
+   "new": 1
   },
   {
    "section": "funnel",
@@ -41,7 +41,7 @@
    "detail": "the army never got a city in range",
    "old": 0,
    "cur": 3,
-   "new": "…"
+   "new": 3
   },
   {
    "section": "funnel",
@@ -50,7 +50,7 @@
    "detail": "units held back: the area around the city was enemy-held",
    "old": 23,
    "cur": 6,
-   "new": "…"
+   "new": 1
   },
   {
    "section": "funnel",
@@ -59,7 +59,7 @@
    "detail": "capture attempts that didn't do enough damage",
    "old": 17,
    "cur": 11,
-   "new": "…"
+   "new": 3
   },
   {
    "section": "funnel",
@@ -68,7 +68,7 @@
    "detail": "",
    "old": 3,
    "cur": 3,
-   "new": "…"
+   "new": 1
   },
   {
    "section": "session",
