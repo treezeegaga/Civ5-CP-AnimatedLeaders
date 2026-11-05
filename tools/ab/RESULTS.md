@@ -1652,6 +1652,55 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Where the AIs waste gold: all logged games (Diplomacy session for the user, 2026-11-05)
+
+**Data:** 112 logged games (`PlayerHomelandAILog.csv`, which logs purchases and savings) and the `Gold` column of every
+results file (3,500+ civ-rows per turn mark). The scripts are in `tools/ab/scripts/gold/`; run each with the results
+folder as its argument.
+
+**Not the problem: hoarding.** Median treasury at T50: 174 gold; T100: 56; T150: 84. Only 1% of civs ever hold 500+.
+The AIs spend their gold. The problem is what they spend it on, and what it waits for.
+
+**1. B's settler savings never buy a settler.** (`CvEconomicAI.cpp`, `BuyExpansionSettler`/`IsSavingForExpansionSettler`,
+B's code, Economy's file.)
+- **How often it saves:** 865 civ-games saved gold for a settler purchase, for a median of 50 turns. 469 of them were
+  still saving at T100.
+- **How often it succeeds:** none reached the price even once (it peaks at a median 298 against about 370). Only 6
+  settlers were bought in 112 games. The city always builds the settler with production first, so the gold just sits.
+- **Why it can't add up:**
+  - The goal switches on and off all the time: 4,793 separate saving stretches, about 5-6 per civ per game. It drops
+    when the conditions lapse for a turn (unhappy right after founding a city, net gold below zero, the opening book
+    or expansion strategy ending).
+  - Then `DoHurry`'s normal loop is free again.
+  - 214 of those stops were followed within 3 turns by hurry purchases: 40,190 gold, mostly Warriors (54), Archers
+    (41), Workers (33), Granaries, Shrines, Triremes. Songhai (`07614B74`) saved 136 by T26, the goal lapsed after it
+    founded a city at T29, and at T31 it hurried a Warrior for 140.
+- **Suggested fixes, for Economy** (one flag each):
+  1. **Save only when it can pay off:** start saving only if gold now + income × (turns until the city finishes the
+     settler) reaches the price. Otherwise spend normally. That frees the 150-300 gold it sits on for ~50 turns.
+  2. **Don't dump the pot when saving lapses:** for a few turns after a stretch ends, hurry only what the empire needs
+     (a settler, a worker, a defender when in danger), not whatever a city happens to be building.
+
+**2. Buying Warriors, then paying to upgrade them.**
+- **How much:** 104 Warriors were bought (140 gold each, median turn T40), 14,530 gold.
+- **What follows:** in 80 civ-games a civ that bought Warriors later set gold aside to upgrade them (55 gold each).
+- **The cause:** the hurry loop buys whatever a city is building, and the production AI still builds Warriors late.
+- **Suggested fix (Economy):** never hurry a unit whose upgrade the civ can already build (a Warrior once it has
+  Bronze Working). The production AI could also stop training those, as can the Archer-into-Composite Bowman cases.
+
+**3. Gold held for upgrades that don't happen.**
+- **How often:** in 263 cases (game, civ, unit type), the civ logged "Need gold for X upgrade" with enough gold for 5+
+  turns (median 12, up to 65) without upgrading. The savings request kept the gold reserved.
+- **Most of these logs predate C8,** whose bundle has War's `UpgradeSaveCancel` (bug H1: the stale upgrade request is
+  cancelled). Re-check this count on the next logged C8+ games before acting.
+
+**Small or already handled:**
+- **Tile purchases:** 279, 9,215 gold over 112 games, median 35 each. Fine.
+- **City-state gifts:** 1,250-3,750 gold per game across all civs. Now `GiftsNeedPatronage` (bundle).
+- **Missionaries** are bought with faith, not gold.
+
+**Request for Economy (owner of `CvEconomicAI`):** items 1 and 2. Item 3 is for War to re-check after C8.
+
 ### Diplomacy: flag `WarChestTribute` (the user's idea; Diplomacy session, 2026-11-05)
 
 **The user's idea:** warmongers should demand tribute from city-states to fund their wars.
