@@ -3335,7 +3335,7 @@ logged pair".
 - **Measure:** per target victory, the share of civs with the key techs by T150 and their median turn (Economy's
   script), against the flag off; strength share at T150.
 - **Build:** fork `ai/personality` `df0c168` (`CvTechAI::AddVictoryPathWeights`, called where the tech weights are rebuilt).
-- **Status:** coded, CI pending.
+- **Status:** compiles (CI run 238 passed on `df0c168`, 2026-11-05 3:35pm ET); ready to merge.
 
 ### Greedy wide and greedy tall (Personality, 2026-11-04 4:50pm ET)
 - **The user's design** (via the lead, 4:46pm ET; AGENTS.md, "Greedy comes in two kinds"): the trio quick look's top
