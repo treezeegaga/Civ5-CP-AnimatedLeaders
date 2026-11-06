@@ -2771,6 +2771,8 @@ run it. claude/ab-c1 is now at 103bd11d too (run 331 building).
 
 LEAD: ab-04ab581 green. 103bd11d is building on claude/ab-c1. War confirms when it's green.
 
+LEAD: 103bd11d is green on claude/ab-c1 (run 331): war on us is no longer a strike exit.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
