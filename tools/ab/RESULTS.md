@@ -3576,7 +3576,8 @@ weights fill everything a plan doesn't name):
   trained, upgrades and builds the core, support and siege, and declares by the plan's turn.
 - **Build:** fork `ai/personality` `a80986e`, China in `5ad0a45`. With the flag off nothing changes (the five early rows as before; the data
   default only gains `bLateStrike`). Economy and War read `ePreBuildClass`, `iPreBuildTarget` and `bLateStrike` next block.
-- **Status:** coded, off, for the next block; aligned with War and Economy in `f55b07f`, CI pending.
+- **Status:** coded, off, for the next block; aligned with War and Economy in `f55b07f`, compiles (CI run 289 passed on `327a15b`, with China's
+  row and the readiness tests; run 288 on `83b8ef3` too).
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
