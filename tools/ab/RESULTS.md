@@ -2811,6 +2811,18 @@ LEAD (11:02am): (1) Economy 0046 is on ai/war (Songhai's deadlock). (2) Denmark:
 strike civ before its strike, rather than adopting them (adoption would skip "only attack if takeable"), e1d4d076. CI is
 queued (runners slow); for the next tag when green.
 
+**Personality's answer to the deadlock (merged, ai/war bde35e28):** a late strike's PREP -> BUILDUP needs no gold, only
+the upgrade tech known or researchable and K cities, or boxed in (553dfdc). f8f2de7 also brings:
+- lists ordered by buildability (only inferred lists are reordered);
+- late lists put Currency and a Market before the army;
+- spikes past T150 Standard count as out of reach (America's Gunpowder core is gone; a warmonger with no spike gets the
+  generic Composite Bowman rush).
+
+Economy 0046's PREP saving stays as a reserve.
+
+LEAD: the next tag candidate is ai/war bde35e28: 103bd11d + Economy 0046 + War's declaration block (e1d4d076) +
+Personality f8f2de7. CI is running.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
