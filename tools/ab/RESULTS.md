@@ -2794,6 +2794,23 @@ LEAD (10:28am): reading only. ab-103bd11's first game: Songhai (late) never left
 gold saved, and Economy saves only after BUILDUP, so nothing ever saved it (peak 283 at T60, then spent). Asked
 Personality and Economy to settle which side changes. War's code is unaffected.
 
+**Economy 0046 (ai/war 4cc694de):** a late strike's PREP keeps its income. The list holds combat items while net gold is
+under +2 a turn, and IsLateStrikePrepSaving keeps the treasury toward iEconomyGoldTarget once K cities and the upgrade
+tech are in reach. That's Songhai's deadlock; unit upkeep was what drained it (Economy's read).
+
+**Denmark (bullygreedy22, 15E8F168, ab-103bd11; the lead).** LateStrike Denmark went PREP -> OVER at T69: CP's own war
+logic declared on China, outside the strike (it still took a city at T90). The lead asked: block, or adopt CP's war as
+the strike? **War's call: block.** The user's rule is "only start the attack if the city is takeable", and adopting
+would skip that check.
+- **Coded, ai/war e1d4d076.** CvDiplomacyAI::DeclareWar, which every AI declaration goes through, refuses for a strike
+  civ in PREP or BUILDUP unless the declaration is the strike's own: on its target, in BUILDUP, with the army ready or
+  as ready as it gets (both require the city takeable and home safe). Logged "Strike: declaration on X refused".
+- Wars on us are unaffected. After OVER, or once at the strike's war, nothing is blocked.
+
+LEAD (11:02am): (1) Economy 0046 is on ai/war (Songhai's deadlock). (2) Denmark: War blocks CP's own declarations for a
+strike civ before its strike, rather than adopting them (adoption would skip "only attack if takeable"), e1d4d076. CI is
+queued (runners slow); for the next tag when green.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
