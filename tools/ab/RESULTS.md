@@ -3569,7 +3569,19 @@ weights fill everything a plan doesn't name):
 
 - The late civs' lists (Zulu to China) apply with `LateStrike`, as their rows do. Persia isn't in the research: it gets
   the generated list.
-- **Status:** coded (`da1a760`), CI pending. Economy's book reads the lists next.
+- **Lists run to the strike** (the lead, 8:12am ET, a STOP on `ab-8555f21`: Germany, a late-strike civ on the data
+  default, had a four-item list, Monument, Worker, Settler, Settler; then CP chose for ~90 turns and Munich built a
+  wonder). `184fe09`: every plan's lists are completed to the strike (up to 32 builds): settlers up to K cities; for a
+  late strike the economy buildings (Granary, Library, Market) if missing; then the whole army, interleaved: the
+  pre-build or core, support and siege up to their targets (siege in the second half). Research adds the core's tech and
+  the upgrade tech if missing.
+- **The late data default** is now a generic warmonger list [I]: Scout, Monument, Worker, Settler, Granary, Settler,
+  Library, Shrine, Barracks, Market, then the army; research Pottery, luxury, Writing, Bronze Working, Currency, the
+  core's tech. It upgrades and goes too: its pre-build is the class that upgrades into the core, earliest by tech
+  (Germany: Spearmen into Landsknechts at Civil Service).
+- **For Economy's executor:** an item that can't be built yet (its tech not in) should wait for the research list rather
+  than hand the city back to CP.
+- **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) CI pending.
 
 ### LateStrikePlans: expert rows for the late-strike civs (Personality, draft, 2026-11-05 10:27pm ET)
 - **The lead (about 10:30pm ET by its clock, overnight; the user asleep):** the expert block (`ab-40203a3`) is frozen. Draft expert rows
