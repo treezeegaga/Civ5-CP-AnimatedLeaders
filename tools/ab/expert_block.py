@@ -1,0 +1,127 @@
+"""The expert strike block (EarlyStrike + EarlyStrikeAggressor, ab-40203a3 and later): judged by captures per civ.
+
+    python3 tools/ab/expert_block.py [run ...]      (default: bullyabort18 bullygreedy18)
+
+Per aggressor (first games): captures and the first capture turn, the declaration turn, the plan (Personality's strike
+plan line in StrategyProfile_Log), the build-up ("EarlyStrike: build-up opens"), upgrade and go, barbarian hunting
+(BarbHunt / BarbKill before the window) and promotions at the declaration (the army line), melee in reach at each first
+capture attempt, and where the strike exits:
+  captured      took a city
+  no capture    declared war, took nothing
+  fell back     no war by the plan's fallback turn (or by T75 Quick without a plan line)
+  no strike     no EarlyStrike build-up and no war
+"""
+import sys, os, glob, re, csv, collections, statistics as st
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+RUNS = sys.argv[1:] or ['bullyabort18', 'bullygreedy18']
+sys.argv = sys.argv[:1]
+import attack_funnel as af, walls
+
+CAPTURER = re.compile(r"^(Warrior|Spearman|Pikeman|Swordsman|Longswordsman|Jaguar|Legion|Hoplite|Impi|Maori Warrior|Pictish Warrior|"
+                      r"Mohawk Warrior|Kris Swordsman|Samurai|Berserker|Landsknecht|Mandekalu Cavalry|Horseman|Knight|Keshik|Cataphract|"
+                      r"Companion Cavalry|Musketman|Tercio|Conquistador|Immortal|Sipahi|Lancer)$")
+ARMY = re.compile(r"(?:BigArmy|WarBudget|EarlyStrike): army (at the declaration on .+?|at the first capture attempt on (\S+) \(in reach: ([^)]*)\)|in the window \(turn \d+\)): "
+                  r"(\d+) land(?:.*?promoted (\d+) \((\d+) promotions, (\d+) XP\))?")
+PLAN = re.compile(r"strike plan .*?open T(\d+), declare by T(\d+), fallback T(\d+)")
+med = lambda v: st.median(v) if v else '-'
+
+games = af.games_from_csvs()
+CSVROWS = collections.defaultdict(dict)
+for f in glob.glob(os.path.join(af.RESULTS, 'AIABTest_*.csv')):
+    run = os.path.basename(f)[9:-4].split('@')[0]
+    if run not in RUNS:
+        continue
+    for r in csv.DictReader(open(f, encoding='utf-8-sig')):
+        if r.get('Role') == 'aggressor':
+            CSVROWS[r['GameId']][int(r['Turn'] or 0)] = r
+
+rows = []
+for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
+    gid = os.path.basename(gdir)[5:]
+    info = games.get(gid)
+    if not info or info['build'] not in RUNS or len(gid) != 16:
+        continue
+    ours = af.log_name_matches(info['civ'])
+    g = dict(gid=gid[:8], civ=info['civ'].title(), run=info['build'], capt=info['captured'], first_capt=None, decl=None,
+             open=None, walled=None, upgrades=[], hunts=0, kills=0, kill_xp=[], decl_land=None, decl_promoted=None,
+             decl_promotions=None, reach=[], plan=None)
+    for t, r in walls.our_lines(os.path.join(gdir, 'StrategyProfile_Log.csv'), ours):
+        m = PLAN.search(r)
+        if m:
+            g['plan'] = tuple(map(int, m.groups()))
+    for t, r in walls.our_lines(os.path.join(gdir, 'CitySpecializationLog.csv'), ours):
+        if 'Update: Enemy city captured' in r and g['first_capt'] is None:
+            g['first_capt'] = t
+    capt_cities = set()
+    lines = list(walls.our_lines(os.path.join(gdir, 'PlayerTacticalAILog.csv'), ours))
+    for t, r in lines:
+        m = re.search(r'capture attempt on (\S+) done:.*CAPTURED', r)
+        if m:
+            capt_cities.add(m.group(1))
+    for t, r in lines:
+        if r.startswith('EarlyStrike: build-up opens') and g['open'] is None:
+            g['open'] = t
+            g['walled'] = 'unwalled' not in r
+        elif r.startswith('EarlyStrike: upgrade and go'):
+            m = re.search(r'(\d+) units to upgrade for (\d+) gold', r)
+            if m:
+                g['upgrades'].append((t, int(m.group(1)), int(m.group(2))))
+        elif r.startswith('BarbHunt:') and (g['open'] is None or t < g['open']):
+            g['hunts'] += 1
+        elif r.startswith('BarbKill:') and (g['open'] is None or t < g['open']):
+            g['kills'] += 1
+            m = re.search(r'XP (\d+)', r)
+            if m:
+                g['kill_xp'].append(int(m.group(1)))
+        m = ARMY.search(r)
+        if m:
+            if m.group(1).startswith('at the declaration') and g['decl'] is None:
+                g['decl'], g['decl_land'] = t, int(m.group(4))
+                if m.group(5):
+                    g['decl_promoted'], g['decl_promotions'] = int(m.group(5)), int(m.group(6))
+            elif m.group(2):
+                units = [u.strip() for u in m.group(3).split(',') if u.strip()]
+                g['reach'].append((m.group(2), sum(1 for u in units if CAPTURER.match(u)), m.group(2) in capt_cities))
+    if g['decl'] is None:
+        T = CSVROWS.get(gid, {})
+        wt = [t for t in sorted(T) if (T[t].get('WarsDeclared') or '0') not in ('', '0')]
+        g['decl'] = wt[0] if wt else None
+    fallback = g['plan'][2] if g['plan'] else 75
+    g['exit'] = ('captured' if g['capt'] > 0 else 'no capture' if g['decl'] is not None else
+                 'no strike' if g['open'] is None else 'fell back')
+    rows.append(g)
+
+print('expert block: %d logged first games in %s' % (len(rows), ', '.join(RUNS)))
+if not rows:
+    sys.exit()
+print('\nPer civ (captures are the measure):')
+print('  %-10s %5s %8s %6s %10s %8s %10s %12s %10s' % ('civ', 'games', 'captured', 'cities', '1st capt T', 'decl T', 'BarbKills', 'promoted/land', 'exits'))
+for civ in sorted({g['civ'] for g in rows}):
+    L = [g for g in rows if g['civ'] == civ]
+    prom = ['%d/%d' % (g['decl_promoted'], g['decl_land']) for g in L if g['decl_promoted'] is not None]
+    ex = collections.Counter(g['exit'] for g in L)
+    print('  %-10s %5d %8d %6d %10s %8s %10s %12s  %s' % (civ, len(L), sum(g['capt'] > 0 for g in L), sum(g['capt'] for g in L),
+          med([g['first_capt'] for g in L if g['first_capt']]), med([g['decl'] for g in L if g['decl']]),
+          '%.1f' % (sum(g['kills'] for g in L) / len(L)), ' '.join(prom) or '-', ', '.join('%s %d' % kv for kv in ex.most_common())))
+print('\nAll: %d of %d games captured (%d cities); first capture median T%s; declaration median T%s' % (
+    sum(g['capt'] > 0 for g in rows), len(rows), sum(g['capt'] for g in rows),
+    med([g['first_capt'] for g in rows if g['first_capt']]), med([g['decl'] for g in rows if g['decl']])))
+print('Exits:', dict(collections.Counter(g['exit'] for g in rows)))
+B = [g for g in rows if g['open'] is not None]
+print('EarlyStrike build-ups: %d (opened median T%s; target walled in %d)' % (len(B), med([g['open'] for g in B]), sum(1 for g in B if g['walled'])))
+U = [u for g in rows for u in g['upgrades'][:1]]
+print('Upgrade and go: %d games; first bill per unit median %s gold (research: 70-80)' % (len(U), med([u[2] // max(1, u[1]) for u in U])))
+print('Barbarian hunting before the window: BarbHunt lines %.1f a game, kills %.1f a game, kill XP max median %s (cap 45)' % (
+    sum(g['hunts'] for g in rows) / len(rows), sum(g['kills'] for g in rows) / len(rows), med([max(g['kill_xp']) for g in rows if g['kill_xp']])))
+D = [g for g in rows if g['decl_promoted'] is not None]
+print('Promotions at the declaration: %d games with the army line; promoted units median %s of land median %s; promotions median %s' % (
+    len(D), med([g['decl_promoted'] for g in D]), med([g['decl_land'] for g in D]), med([g['decl_promotions'] for g in D])))
+R = [x for g in rows for x in g['reach']]
+for lo, hi, lab in ((0, 1, '0'), (1, 2, '1'), (2, 99, '2+')):
+    S = [x for x in R if lo <= x[1] < hi]
+    print('  melee in reach %-2s at a first capture attempt: %d attempts, taken by a CAPTURED attempt %d' % (lab, len(S), sum(x[2] for x in S)))
+print('\nGames:')
+for g in rows:
+    print('  %s %-9s %-13s capt %d (T%s) decl T%s open T%s %s plan %s kills %d upgrades %s exit %s' % (
+        g['gid'], g['civ'], g['run'], g['capt'], g['first_capt'], g['decl'], g['open'], '(walled)' if g['walled'] else '',
+        g['plan'], g['kills'], g['upgrades'][:1], g['exit']))

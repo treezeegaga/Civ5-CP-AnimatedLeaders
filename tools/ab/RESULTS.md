@@ -1924,6 +1924,37 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the read for the expert block (ab-40203a3, bullyabort18 + bullygreedy18), prepared (Nov 5, about 10:35pm ET)
+`tools/ab/expert_block.py [runs]` (default bullyabort18 bullygreedy18), run from a results worktree with walls.py and
+attack_funnel.py beside it. It was tested on the package block (bullygreedy16 + bullyabort14), where it gives the old
+numbers.
+
+**Per civ (captures are the measure):**
+- games, games with a capture, cities;
+- the first capture turn (CitySpecializationLog);
+- the declaration turn (the army line, or the CSV);
+- barbarian kills before the window (BarbKill);
+- promoted units over land units at the declaration (the army line);
+- exits.
+
+**Then, over the block:**
+- **Exits:** captured / no capture (war, nothing taken) / fell back (an EarlyStrike build-up, no war by the plan's
+  fallback turn) / no strike.
+- **The build-ups** ("EarlyStrike: build-up opens"): turn, and walled targets.
+- **Upgrade and go:** gold per unit against the research's 70 to 80.
+- **Barbarian hunting before the window:** BarbHunt lines, BarbKill kills and their XP against the cap of 45.
+- **Promotions at the declaration.**
+- **Melee in reach at each first capture attempt (0 / 1 / 2+)**, against the city being taken.
+- **Per game:** the plan's open, declare-by and fallback turns, from Personality's "strike plan" line in
+  StrategyProfile_Log.
+
+**Logging note.** The army line was written only under BigArmy or WarBudget. If this block's RoleFixes lacks WarBudget,
+promotions and melee in reach will be missing. ai/war 8a56aad1 (logging only, on 40203a3) writes it for every EarlyStrike
+civ ("EarlyStrike: army ...").
+
+LEAD: the expert block's read is ready (tools/ab/expert_block.py). If RoleFixes lacks WarBudget, take ai/war 8a56aad1
+(army line for EarlyStrike civs, logging only) into the next build. CI to follow.
+
 ### War: the expert strike, coded under EarlyStrike (ai/war c87e8a29, d0fbd91f, 94e55acf) (Nov 5, about 10:10pm ET)
 The user, via the lead (9:58pm ET): "no, we dont need a baseline. use the experts ideas right away and we will know if
 they are good by if they take cities." All under FIX_EARLY_STRIKE, no new flag. It reads Personality's per-civ plan
