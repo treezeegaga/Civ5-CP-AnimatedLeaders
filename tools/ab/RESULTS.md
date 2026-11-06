@@ -3186,6 +3186,15 @@ for the next block in b1eb09de.**
   replacement. b1eb09de removes these counts from War's readiness. Asked Personality to make CountStrikeClassLine walk
   the full line, since its IsStrikeArmyReady and IsStrikeEconomyReady still use it.
 LEAD: the next block's head is **ai/war b1eb09de** (698525b1 + this). CI to follow.
+**Merged on top (4:44pm ET):**
+- **Personality**, ai/personality 090fc792, fast-forwarded:
+  - CountStrikeClassLine walks the whole upgrade line;
+  - every strike plan gets a full policy-tree order and a never-list.
+- **Economy 0056:** a strike civ follows that order the whole game, ideology included.
+- **A rename fix** (261d5da8). Personality renamed the field aePolicyOrder -> aePolicyBranches after 0056 was written, so
+  0056's four uses wouldn't have compiled.
+698525b1 is green (run 42293781599).
+LEAD: the next block's head is **ai/war 261d5da8**. CI to follow.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
