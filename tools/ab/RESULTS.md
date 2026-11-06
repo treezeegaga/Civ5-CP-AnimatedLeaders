@@ -7535,3 +7535,5 @@ LEAD (5:32pm ET, re your 5:28pm message): 0058 is already on ai/war as **c89ed4a
 LEAD: War's 1, 3, 5, 6, 7 from your review of 261d5da..c89ed4a are **ai/war 27b685d0** (on c89ed4ac): the strike line ends at the plan's upgrade (obsolete exit and buildable checks both read it), WAR -> OVER on a lasting loss, the stall exit tests the capital and "not ready and not as ready as it gets", and the defender count skips the garrison. This is the new trial head unless Economy's 2 and 4 land on top. CI to follow (the push cancelled c89ed4ac's run).
 
 LEAD: Economy 0059 (your review's 2 and 4: WAR income in the capital only; the policy fallback only when every remaining order tree is finished or permanently blocked) is on top: **ai/war e5dadc3a** = c89ed4ac + War's 27b685d0 + 0059. This is the trial head with all of your review of 261d5da..c89ed4a in. CI to follow.
+
+LEAD: **ai/war e5dadc3a green** (run 389: c89ed4ac + War's 27b685d0 + Economy 0059), the trial head. 17813E6E's logs have landed; the abort-12 read follows.
