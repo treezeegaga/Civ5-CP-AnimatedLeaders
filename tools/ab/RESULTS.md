@@ -2653,6 +2653,35 @@ promoted. They returned to normal play: a wonder at T90, a war at T93.
 LEAD: the walled exit now re-targets, then switches to siege, then goes OVER (ai/war dd375b2a, after b2657046). "Ready
 for the next block" follows on dd375b2a when CI is green.
 
+**Walls are not an exit: a strength check instead (design, 8:49am ET).** The user: "i think i brute forced through
+marrakeshs walls when i attacked." Their Aztec took a walled capital with 6 Jaguars and 4 Composite Bowmen, no siege. The
+research: Composite Bowmen are fine up to about city strength 23-25 with 7 of them.
+
+- **The measure** (CvMilitaryAI::IsStrikeArmyStrongEnough(city)):
+  - The army is the strike plan's full army: the core and support classes at their counts, as the units they will be
+    after the strike's own upgrade (upgrade and go).
+  - Each unit's attack is its ranged strength if ranged, else its melee strength. A unit counts only if its attack is at
+    least 40% of the city's defence (getStrengthValue, walls and garrison included).
+  - The army can take the city when the counted units' total attack is at least 3x the city's defence, with at least 2
+    melee units among them.
+  - Calibration: 7 Composite Bowmen (11 ranged) give 77 = 3.1x a city of 25. The user's 6 Jaguars + 4 Composite Bowmen
+    give about 92 against a T54 capital in the high teens.
+- **In BUILDUP, every turn, against the target's nearest city:**
+  1. **Strong enough:** go, walls or not. No siege is asked for.
+  2. **Too weak, and a clearly easier city is in reach:** re-target. Clearly easier means another unwalled or walled
+     city within 12 tiles, a major's or a city-state's, with at most 75% of the target's defence, that the plan's army
+     can take. Logged.
+  3. **Too weak, and no easier city:** the build-up brings siege (the larger of 2 and the plan's siege count). Logged.
+- **OVER only on the real game-state exits:** the counter units, the army lost, no target in reach, the core obsolete, a
+  major declaring on us, peace. The walls exit is gone.
+- **Personality's plan exits:** iExitCityStrength (China's 25) works the same way as an absolute strength limit, and
+  stays.
+
+LEAD (8:49am): design first, as asked. Walls are no longer an exit or a reason to re-target. A strength check (the plan's
+upgraded army vs the city's defence: counted units >= 40% of it, total >= 3x, 2+ melee) decides: go if strong enough;
+re-target only to a clearly easier city (at most 75% of the defence, takeable); bring siege only when too weak; OVER only
+on the real exits. Coding it on ai/war now (replaces dd375b2a's walled logic).
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
