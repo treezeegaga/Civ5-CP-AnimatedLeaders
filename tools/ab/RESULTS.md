@@ -3368,7 +3368,10 @@ logged pair".
   StrikeWindow/EarlyStrike on top, behind its own flags.
 - **Status:** draft. `1173f7c` and War's fields (`d1d4063`) merged into `claude/ab-c1` by the lead; War agreed the
   interface as built (EarlyStrike, `e4268e7`, one `FIX_EARLY_STRIKE` with Economy's book half). The window-end fix
-  `b5432b5`, CI pending. The table needs checking against the log.
+  `b5432b5` is **on hold, not to be merged** (the lead, 8:40pm ET): the user captured Marrakesh at T54 and declared
+  earlier, and the window is about when to start the war (the strike itself can run past it), so its end should be
+  compared with the user's declaration turn, which the lead is asking for. I'll revise the end once it comes. The table
+  needs checking against the log.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
