@@ -1830,7 +1830,7 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
-**Expert block, pair 3 (12:36am ET): the strike never ran.**
+**Expert block, pairs 3 and 5 (12:36am and 2:00am ET): the strike never ran** (Polynesia, then the Maya).
 - The harness picked Polynesia as the early-spike aggressor (`EarlyStrikeAggressor`), and the RoleFixes include
   `EarlyStrike` and `TimingBuildup`.
 - But every strike half is gated on `IsCandidateWarmonger`: a warmonger personality, `AggressivePlan`, or MetaDial
@@ -1881,6 +1881,7 @@ The lead: overnight, the block is frozen; check the book on each pair as it land
 | bullygreedy18 pair 2 (13A89116) | Persia (early spike; Personality's default plan: core Immortal, N 2, K 3, Liberty) | **off plan:** Worker, Settler first (nothing in reach at T0), then no escort for 14 turns (below); first Immortal T30-33 | 5 (declared T119; this build lifts the K cap at T60 Quick) | Composite Bowman (Construction) T57, after Bronze Working T19 and Archery T30 | a plantation planned T10 | Liberty (the plan's) | 0 | 1, at T117; gold 239-257 in the window (T81-87), 0 at T104-106 |
 | bullygreedy18 pair 3 (13CA9885) | Polynesia (early spike, Maori Warrior; **not a warmonger personality**, `Warmonger` 0) | **not tested:** the wide book (Scout, Maori Warrior, Settler, Worker, Shrine, Monument, Library); no EarlyStrike, no TimingBuildup line in the game | 6 at T150 (one war declared, no capture) | - | - | - | - | - |
 | bullygreedy18 pair 4 (13E9ECC9) | Persia (early spike, warmonger; Personality's default plan) | the book's army as planned (Immortal x5 T28-49, Archer x4 T37-42), but again after a lone Worker and Settler: no escort at T20 ("Found 0 potential units"), CP's fill-in a Monument (T8) and Barracks (T20); first Immortal T28 | 3 (= K; build-up T40, declared T81) | Composite Bowman (Construction) T56, after Bronze Working T20 and Archery ~T37 | a plantation planned T8 | Liberty (the plan's) | 0 | gold 219-275 saved in the build-up (T41-46), 18-29 at the declaration; 3 upgrades (T87 on). **Took a city** (1) |
+| bullygreedy18 pair 5 (1408BFF3) | the Maya (early spike, Atlatlist; **not a warmonger personality**, `Warmonger` 0) | **not tested**, as pair 3: the tall book (Scout, Monument, Pyramid, Warrior, Settler, Worker); no EarlyStrike, no TimingBuildup line | 4 at T150, no war declared | - | - | - | - | - |
 
 ### LateStrike, the book half (Economy, patch 0033, prepared for the next block, Nov 5, 10:29pm ET; not merged)
 The lead: prepare the late-strike civs' book half for the next block. Personality's late-spike table: Denmark, Mongolia,
