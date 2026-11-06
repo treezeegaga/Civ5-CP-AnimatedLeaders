@@ -1,0 +1,144 @@
+From 4e08fa514fdc9399e4b9d52edc84da6f4e805152 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 21:04:33 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0055: the strike adds no combat unit it
+ can't afford (army no longer scrapped for deficit)
+
+Trial ab-791ab9d (GoldBreakdown_Log):
+- 172518A7: Mongolia's BUILDUP (T96-T120) went from 14 to 27 units, unit upkeep 23 -> 59,
+  net -4 -> -30 a turn, and the treasury sat at 0 from T110.
+- 171787CD: the Aztecs went from 6 to 13 units, net -1 -> -11, treasury 183 -> 14.
+The strike list had no gold check (the experts' lists come with their own economy), only
+the late-PREP hold (0048) and 0050's extra-core rule. Since War's IsStrikeKeepingUnit, the
+army can't be scrapped for a deficit, so nothing kept it affordable.
+
+New CvPlayer::IsStrikeUnitHold: the late-PREP hold, or, while the strike is active, one more
+unit unaffordable for 10 turns (GetAffordableWarUnits(10) < 1: treasury, income, CP's own
+upkeep formula). It replaces the late hold everywhere:
+- list items, logged "LIST HOLD: net gold N, affordable M";
+- the army short of the plan ("LIST NORMAL (army short, unaffordable)");
+- 0053's siege;
+- the regular book's unit steps;
+- CP's unit sanity check (unless the city is in danger).
+0054's income-first pick (Market, Caravan) also runs under it. The danger defender is
+unaffected.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 29 ++++++++++++++-----
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  1 +
+ .../CvUnitProductionAI.cpp                    |  2 +-
+ 3 files changed, 24 insertions(+), 8 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 5c364bc..4f0b738 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33978,6 +33978,19 @@ bool CvPlayer::IsStrikeNoWonders() const
+ /// book after it, and CP's choice (CvUnitProductionAI). bullyabort22 15286C56: Songhai's list built 6 Horsemen and 3 Archers
+ /// in PREP (T42-T88), its upkeep went from 13 to 30 a turn, net -7 to -12, and the treasury drained to 0. (0048: the PREP
+ /// saving 0046 also had is gone, since Personality's 553dfdc made BUILDUP need no gold; BUILDUP does the saving)
++/// AI_AB_TEST (Economy 0055): no new combat unit for the strike right now. Either the late-PREP hold (0048: net gold under +2),
++/// or, while the strike is active, one more unit couldn't be kept for 10 turns (WarBudget's GetAffordableWarUnits: treasury,
++/// income and CP's own upkeep formula). The strike list ran without a gold check (the experts' lists come with their own
++/// economy). Since War's IsStrikeKeepingUnit, the army can't be scrapped for a deficit, so nothing kept it affordable. Trial
++/// ab-791ab9d 172518A7: Mongolia's BUILDUP (T96-T120) went from 14 to 27 units and net gold from -4 to -30 a turn, and the
++/// treasury sat at 0 from T110. 171787CD: the Aztecs' treasury fell from 183 to 14
++bool CvPlayer::IsStrikeUnitHold() const
++{
++	if (IsLateStrikeUnitHold())
++		return true;
++	return IsStrikeActive() && GetEconomicAI() && GetEconomicAI()->GetAffordableWarUnits(10) < 1;
++}
++
+ bool CvPlayer::IsLateStrikeUnitHold() const
+ {
+ 	// cheapest first: this runs in CP's unit sanity check (every unit, every city)
+@@ -34851,7 +34864,7 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 				GetEconomicAI()->GetAffordableWarUnits(10) < 1)
+ 				continue;
+ 			// AI_AB_TEST (LateStrike, Economy 0048): a late strike's PREP holds combat units while net gold is under +2
+-			if (IsLateStrikeHeldUnit(pkUnitInfo) && IsLateStrikeUnitHold())
++			if (IsLateStrikeHeldUnit(pkUnitInfo) && IsStrikeUnitHold())
+ 				continue;
+ 
+ 			eOrder = ORDER_TRAIN;
+@@ -35313,7 +35326,7 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	// (0054) a late strike's PREP held for income (net gold under +2, IsLateStrikeUnitHold): an income item comes first, a
+ 	// Market, else a Caravan where a trade route is free, so the hold lifts. Trial ab-791ab9d 172518A7: Karakorum's list
+ 	// waited on its held Chariot Archer from T29 to T85 with net gold at 0
+-	if (IsLateStrikeUnitHold())
++	if (IsStrikeUnitHold())	// (0055: the general hold too)
+ 	{
+ 		const BuildingTypes eMarket = GetSpecificBuildingType("BUILDINGCLASS_MARKET", true);
+ 		if (eMarket != NO_BUILDING && pCity->canConstruct(eMarket))
+@@ -35355,10 +35368,11 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 				// (net under +2 a turn) and the list goes on to its economy items. bullyabort22 15286C56: Songhai's list built
+ 				// 6 Horsemen and 3 Archers in PREP (T42-T88), its upkeep went from 13 to 30 a turn, net -7 to -12, and the
+ 				// treasury never reached the 300 its BUILDUP waits for
+-				if (IsLateStrikeHeldUnit(pkUnitInfo) && IsLateStrikeUnitHold())
++				// (0055) and, while the strike is active, whenever one more unit is unaffordable for 10 turns (IsStrikeUnitHold)
++				if (IsLateStrikeHeldUnit(pkUnitInfo) && IsStrikeUnitHold())
+ 				{
+ 					if (strWait.IsEmpty())
+-						strWait.Format("(item %d %s, LIST HOLD: net gold %d)", i + 1, pkUnitInfo->GetDescription(), GetTreasury()->CalculateBaseNetGold());
++						strWait.Format("(item %d %s, LIST HOLD: net gold %d, affordable %d)", i + 1, pkUnitInfo->GetDescription(), GetTreasury()->CalculateBaseNetGold(), GetEconomicAI()->GetAffordableWarUnits(10));
+ 					continue;
+ 				}
+ 				// the item's class, or its upgrade once it's obsolete (0047; the upgraded unit counts toward the item)
+@@ -35438,7 +35452,7 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	if (eStrikeState == CvMilitaryAI::STRIKE_BUILDUP)
+ 	{
+ 		const int iSiegeWanted = GetMilitaryAI()->GetTimingBuildupSiegeTarget();
+-		if (iSiegeWanted > 0 && GetNumUnitsWithUnitAI(UNITAI_CITY_BOMBARD, true) < iSiegeWanted)
++		if (iSiegeWanted > 0 && GetNumUnitsWithUnitAI(UNITAI_CITY_BOMBARD, true) < iSiegeWanted && !IsStrikeUnitHold())	// (0055) affordable
+ 		{
+ 			const UnitClassTypes eSiegeClass = (kPlan.eSiegeClass != NO_UNITCLASS) ? kPlan.eSiegeClass : (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_CATAPULT", true);
+ 			const UnitTypes eSiege = (eSiegeClass != NO_UNITCLASS) ? GetStrikeListTrainableOnLine(*this, eSiegeClass, pCity) : NO_UNIT;
+@@ -35461,14 +35475,15 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	// too-weak army and no easier city waited forever, and its cities fell to CP's picks before the strike)
+ 	const bool bTooWeak = eStrikeState == CvMilitaryAI::STRIKE_BUILDUP && !GetMilitaryAI()->IsStrikeTargetTakeableNow();
+ 	const bool bMoreCore = (eStrikeState == CvMilitaryAI::STRIKE_WAR || bTooWeak) && GetEconomicAI()->GetAffordableWarUnits(10) >= 1;
+-	if (eArmy != NO_UNIT && (bShort || bMoreCore))
++	// (0055) the army short of the plan too only while one more unit is affordable (IsStrikeUnitHold)
++	if (eArmy != NO_UNIT && ((bShort && !IsStrikeUnitHold()) || bMoreCore))
+ 	{
+ 		eOrder = ORDER_TRAIN;
+ 		iData = eArmy;
+ 		LogStrikeList(*this, pCity, bShort ? "the army (short of the plan):" : (bTooWeak ? "the army (too weak for the target, more core):" : "the army (the plan's counts met, more core):"), GC.getUnitInfo(eArmy)->GetDescription());
+ 		return true;
+ 	}
+-	LogStrikeList(*this, pCity, eArmy == NO_UNIT ? "LIST NORMAL (no army unit trainable)" :
++	LogStrikeList(*this, pCity, eArmy == NO_UNIT ? "LIST NORMAL (no army unit trainable)" : bShort ? "LIST NORMAL (army short, unaffordable)" :
+ 		(GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR ? "LIST NORMAL (army complete, no more affordable)" : "LIST NORMAL (army complete, waiting for the declaration)"), NULL);
+ 	return false;
+ }
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 2884914..e79d230 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -1934,6 +1934,7 @@ public:
+ 	bool IsLateStrikeCiv() const; // AI_AB_TEST Economy, flag LateStrike: a warmonger with a late spike and a strike plan
+ 	bool IsLateStrikeSaving() const; // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
+ 	bool IsStrikePending() const; // AI_AB_TEST Economy, flags EarlyStrike/LateStrike (0040): a strike civ before its strike (state PREP or BUILDUP) // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
++	bool IsStrikeUnitHold() const; // AI_AB_TEST Economy 0055: no new combat unit for the strike: the late-PREP hold, or one more unit unaffordable for 10 turns while the strike is active
+ 	bool IsLateStrikeUnitHold() const; // AI_AB_TEST Economy 0046/0048: a late strike's PREP with net gold under +2: no new combat unit
+ 	bool IsStrikeNoWonders() const; // AI_AB_TEST Economy 0042: no world or national wonder now (a strike civ before its strike)
+ 	bool IsStrikeActive() const; // AI_AB_TEST Economy 0049: an AI strike civ with its strike under way (PREP, BUILDUP or WAR): the strike owns production, gold, research and policy
+diff --git a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+index b978d1c..e6a2221 100644
+--- a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+@@ -210,7 +210,7 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 	// AI_AB_TEST (LateStrike, Economy 0048): a late strike's PREP is economy first. No new combat unit while net gold is under
+ 	// +2 a turn, unless the city is in danger (CvPlayer::IsLateStrikeUnitHold)
+ 	if (bCombat && !bFree && !bDesperate && pkUnitEntry->GetDefaultUnitAIType() != UNITAI_EXPLORE &&
+-		kPlayer.IsLateStrikeUnitHold() && !m_pCity->isInDangerOfFalling())
++		kPlayer.IsStrikeUnitHold() && !m_pCity->isInDangerOfFalling())	// (0055: the general hold)
+ 		return SR_STRATEGY;
+ 
+ 	if (bCombat && !bFree && !bDesperate && pkUnitEntry->GetDomainType() == DOMAIN_LAND && pkUnitEntry->GetDefaultUnitAIType() != UNITAI_EXPLORE &&
+-- 
+2.43.0
+

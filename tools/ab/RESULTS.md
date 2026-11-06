@@ -1950,6 +1950,32 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### First games on the ownership build (ab-791ab9d); patch 0055 (Economy, Nov 6, 4:04pm ET)
+Two games with logs: the bullygreedy24 pair-1 game (`172518A7`, Mongolia, late strike) and the trial25 game (`171787CD`,
+the Aztecs, early strike, to T80).
+
+| Check | Mongolia (172518A7) | Aztecs (171787CD) |
+|---|---|---|
+| List followed | yes. 19 items; the held Chariot Archer (item 6) waited T29-T85 while later items went on (Settlers, Library, Market at T78) | yes. Items 2-11; Composite Bowman built in place of the obsolete Archer (0047) |
+| REDIRECT lines (a path the audit missed) | **0** | **0** |
+| Wonders and gifts before the first own declaration | **none**. Statue of Zeus (T121), Writers' Guild (T128), Notre Dame (T149) and Ife (T141) came after the T120 declaration | **none**. The Kyzyl declaration (T61) was confirmed at T62 (0052); Terracotta Army (T67) and Samarkand (T72) came after |
+| Gold in BUILDUP (units, unit upkeep, net, treasury) | **trouble.** T95: 14 units, 23, -4, 55. T110: 25, 52, -23, **0**. T120: 27, 59, -12, **0** | **draining.** T45: 6 units, 6, +1, 183. T60: 9, 11, -3, 119. T75: 13, 19, -10, **14** |
+| Siege, too weak (0053) | Old Sarai built a Catapult (T96, "the siege, the army too weak for the target") | none needed |
+| Strike | PREP T1, BUILDUP T96, WAR T120 on Ethiopia ("as ready as it got"), **city taken T123**, OVER T124 | PREP T2, BUILDUP T45 (Kyzyl), WAR T62 on Kyzyl; no capture by T80 (game ended) |
+
+**Patch 0055.** The strike list ran with no gold check, only the late-PREP hold and 0050's extra-core rule. Since War's
+`IsStrikeKeepingUnit`, the army can't be scrapped for a deficit, so nothing kept it affordable. New `IsStrikeUnitHold`
+covers the late-PREP hold, or, while a strike is active, one more unit unaffordable for 10 turns
+(`GetAffordableWarUnits(10) < 1`).
+
+It applies to:
+- list items, the army short of the plan, and 0053's siege;
+- the regular book's unit steps;
+- CP's unit sanity check (unless the city is in danger).
+
+0054's income-first pick (Market, Caravan) runs under it too. The patch is on ai/war `06fd0b8` (which has 0054), 3
+files, +24/-8. Not compiled here.
+
 ### Patch 0054: income first under the hold; research serves the build list (Economy, Nov 6, 3:50pm ET)
 The first strike capture on the ownership build: in the trial (ab-791ab9d, PC 2, `172518A7`), Mongolia's late strike
 declared at T120 on Ethiopia and took cities at T123 and T146, with no ban hits. The lead's notes for the next block:
