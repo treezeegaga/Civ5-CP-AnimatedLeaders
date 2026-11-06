@@ -1830,6 +1830,29 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
+### EarlyStrike book: changes planned after this block (Economy, Nov 5, 9:50pm ET; not coded)
+From the expert research (`tools/ab/STRIKE_PLANS_RESEARCH.md`, lead's `8f04839`). The running block (`ab-db638c3`)
+is unchanged.
+
+1. **One luxury tech before Construction (G1).** The experts' order: The Wheel or Mining, a luxury tech the capital
+   can use, Archery, then Construction. The book now goes spike tech, support tech, Construction, with no luxury.
+   Planned: after the spike and support techs, one tech that improves a luxury resource in or next to our borders
+   (Calendar, Mining, Trapping, Animal Husbandry, Sailing), if there is one, then Construction.
+2. **First policy tree per civ.**
+   - Honor pays for kill-reward civs (Aztec, Celts) and the Huns.
+   - Plain Composite Bowman rushers do better with Liberty ("Liberty saves a ton of turns prior to t60").
+   - Tradition comes first only with strong capital tiles.
+   - Patch 0030 opens Honor for every EarlyStrike civ; keep it for this block. Afterwards, take the first tree from
+     Personality's table column (`4c91e08`) once the per-civ plan is agreed (the lead: hold Tradition first for the
+     Zulu, Japan and China until then).
+3. **2-3 cities before the strike, then annex.**
+   - The small-empire rule now stops at 2 (the book's one settler). Planned: a 3rd city when the capital's book
+     army is done and gold allows.
+   - After the first capture: annex conquered cities rather than settle ("I'd much rather annex on t40 than plant a
+     settler"). Annex-or-puppet is CP's choice today; it would need a check of who owns that decision.
+   - The research also warns of the after-war trap: no gold for settlers, broken happiness, teching behind. The
+     economy plan after the first capital is open.
+
 ### EarlyStrike opens Honor (Economy, spec, Nov 5, 9:12pm ET)
 
 The user on the Aztec game: "i also decided to go honor instead of liberty because of the barb hunting".
