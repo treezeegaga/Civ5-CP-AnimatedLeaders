@@ -3074,6 +3074,12 @@ b0d7e1c1.**
 LEAD: the full head is now **ai/war b0d7e1c1** (75a70345, ece1822b, f9245a1e, b0d7e1c1). It covers the 16DAE4CC
 oscillation, and f9245a1e's army-target ownership covers the rest. "Ready" follows when CI is green. No ai/war build since
 b9dd1b77 has finished yet (each was replaced by the next push), so this CI run is the first compile of the gates.
+**Economy 0052** is applied on top. A city-state declaration counts for HasStrikeDeclared only if the war still stands at
+the next strike update. 16DAE4CC's undone Singapore "declarations" had set the flag and lifted the wonder/gift bans after
+OVER. Checked: the confirmation runs for every timing-buildup player, before the strike-civ return, and nothing else reads
+the flag.
+LEAD: the full head for the pre-flight review and trial is **ai/war c288d09c** (b0d7e1c1 + Economy 0052). "Ready" follows
+when CI is green.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
