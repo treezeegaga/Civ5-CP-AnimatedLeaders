@@ -2823,6 +2823,18 @@ Economy 0046's PREP saving stays as a reserve.
 LEAD: the next tag candidate is ai/war bde35e28: 103bd11d + Economy 0046 + War's declaration block (e1d4d076) +
 Personality f8f2de7. CI is running.
 
+**The lead (11:08am ET): 3 of 3 late-strike games on ab-103bd11 ended PREP through CP's own war** (Denmark T69, Songhai
+T148, Zulu T110). War's e1d4d076 blocks exactly that. Personality's head (553dfdc, d43fece, f8f2de7) is already merged
+after e1d4d076 and Economy 0046, at bde35e28.
+
+**Zulu 162667AE:** after losing units, the list went back to Archer items and waited from T80 to T106 ("item 8/7
+Archer"). Most likely the Archer is obsolete once the Composite Bowman can be trained, so the item can never be built.
+That's Economy's executor. Asked Economy to build the unit an item's class upgrades into when the class itself can't be
+trained, and to count it toward the item.
+
+LEAD: bde35e28 already has Personality's head after e1d4d076 and Economy 0046. "Ready for the next block" comes when
+its CI is green (check due about 11:31am). Zulu's Archer wait is passed to Economy (executor).
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
