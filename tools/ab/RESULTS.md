@@ -7531,3 +7531,5 @@ LEAD (5:32pm ET, re your 5:28pm message): 0058 is already on ai/war as **c89ed4a
 6. **The stall exit's army test is "not ready and not as ready as it gets"** in place of "not takeable" (takeable but never ready:
    the upgrade bill unpaid, the field short).
 7. **The defender count skips units on the city's plot** (the garrison is already in the city's strength).
+
+LEAD: War's 1, 3, 5, 6, 7 from your review of 261d5da..c89ed4a are **ai/war 27b685d0** (on c89ed4ac): the strike line ends at the plan's upgrade (obsolete exit and buildable checks both read it), WAR -> OVER on a lasting loss, the stall exit tests the capital and "not ready and not as ready as it gets", and the defender count skips the garrison. This is the new trial head unless Economy's 2 and 4 land on top. CI to follow (the push cancelled c89ed4ac's run).
