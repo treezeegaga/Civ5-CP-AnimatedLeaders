@@ -4,26 +4,26 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Your game showed the plan: a military-first capital, a beeline to Construction, upgrade the archers, then declare. That is now coded as EarlyStrike (build ab-c337c77) and starts on PC 1 tonight. The current block (honest package, greedy civs) has captures in 2 of 7 pairs, both when the army reached about 13 units before the war.",
+   "detail": "The strike now follows the experts' build lists strictly. On that build Greece built its list in order, declared at T50 with its planned army and took a Dutch city at T59, the first early-strike capture. Your wonder/gift stop rule caught three leaks this morning; each is fixed. Build ab-04ab581 has everything and starts on both PCs once it compiles.",
    "state": "running"
   },
   {
    "section": "tile",
    "order": 1,
-   "name": "Testing now",
-   "value": "Honest package vs greedy civs: captures in 2 of 7 pairs (3 cities); EarlyStrike next"
+   "name": "Testing next",
+   "value": "ab-04ab581: expert lists strictly, strength check (walls aren't an exit), no retreat, wonder/gift bans airtight"
   },
   {
    "section": "tile",
    "order": 2,
-   "name": "Your game",
-   "value": "Aztec took Marrakesh at T54 (declared T41-50): 6 Jaguars + 4 Composite Bowmen, no siege"
+   "name": "Best result so far",
+   "value": "Greece: expert list, declared T50, took a city T59 (CP's AI on the same map: nothing)"
   },
   {
    "section": "tile",
    "order": 3,
-   "name": "Biggest lever",
-   "value": "Army size at the declaration: captures came with about 13 land units"
+   "name": "Overnight expert blocks",
+   "value": "3 captures in 20 games (2 by T100); 4 games void (non-warmonger aggressors), since fixed"
   },
   {
    "section": "funnel",
@@ -82,7 +82,7 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Coded EarlyStrike's war half from your game: build-up on the book's army, gold saved for upgrades, declare after upgrade and go. Merged.",
+   "detail": "Strength check from your Marrakesh game (city ~19, walls, no siege); city-state targets attacked; declare only when the army can take it; no retreat until a city falls.",
    "chat": "Civ V AI: War session",
    "state": "waiting"
   },
@@ -90,7 +90,7 @@
    "section": "session",
    "order": 3,
    "name": "Diplomacy",
-   "detail": "Deals with a purpose (RivalTrade, Spoiler): planned, waits for full games past T150.",
+   "detail": "Coalitions removed; deals with a purpose (Spoiler coded, off) wait for full games.",
    "chat": "Civ V AI: Diplomacy session",
    "state": "waiting"
   },
@@ -98,7 +98,7 @@
    "section": "session",
    "order": 4,
    "name": "Personality",
-   "detail": "Strike window set from your game (Quick: open T40, declare by T50) and names the upgrade tech the strike waits for. Merged.",
+   "detail": "Expert build and research lists per civ, run to the strike; spikes out of reach ignored (your Germany ruling): those warmongers play the Composite Bowman rush.",
    "chat": "Civ V AI: Personality session",
    "state": "waiting"
   },
@@ -106,7 +106,7 @@
    "section": "session",
    "order": 5,
    "name": "Economy",
-   "detail": "Coded EarlyStrike's build order: military-first capital, straight line to Construction, treasury saved for upgrades. Merged.",
+   "detail": "Follow-the-list executor; the build order trains the plan's army on time; wonder and city-state gift bans at their chokepoints until the first declaration.",
    "chat": "Civ V AI: Economy & victory session",
    "state": "waiting"
   },
@@ -114,34 +114,34 @@
    "section": "session",
    "order": 6,
    "name": "PC runner",
-   "detail": "PC 1 (BOX): back from your game. Fixed a restart loop (Set Up Game remembered Montezuma). Starting EarlyStrike (bullyabort16, ab-c337c77).",
+   "detail": "PC 1 (BOX): waiting for ab-04ab581, then 20 games vs normal civs (bullyabort22).",
    "chat": "Civ V AI optimization PC runner",
-   "state": "running"
+   "state": "waiting"
   },
   {
    "section": "session",
    "order": 7,
    "name": "PC runner 2",
-   "detail": "PC 2 (TREEDESKTOP): honest package vs greedy civs (bullygreedy16), 7 of 10 pairs, done about 10:10pm. Then EarlyStrike (bullygreedy17).",
+   "detail": "PC 2 (TREEDESKTOP): waiting for ab-04ab581, then 20 games vs greedy civs (bullygreedy22). Wonder/gift and list checks after each first game.",
    "chat": "Civ V AI optimization PC runner 2",
-   "state": "running"
+   "state": "waiting"
   },
   {
    "section": "testflag",
    "order": 1,
-   "name": "EarlyStrike",
+   "name": "EarlyStrike + StrikeList",
    "owner": "War, Economy, Personality",
-   "detail": "Your opening: military-first capital for warmongers with an early unique unit, beeline to the upgrade tech, save gold, upgrade and go.",
-   "test": "Starting now on PC 1; PC 2 after its block.",
+   "detail": "Your opening, from the experts: follow the list, Honor/policy per civ, barbarian hunting, upgrade and go; strike stages from game state, no turn windows.",
+   "test": "Next block, both PCs.",
    "state": "running"
   },
   {
    "section": "testflag",
    "order": 2,
-   "name": "SiegeSlots / WarTradeRoutes",
-   "owner": "War, Economy",
-   "detail": "Siege no longer refused as over the army cap; small cities skip caravans while at war, so the army budget isn't starved.",
-   "test": "In the next blocks on both PCs.",
+   "name": "LateStrike + generic rush",
+   "owner": "War, Economy, Personality",
+   "detail": "Late-spike civs (Zulu, Mongolia, China's Chu-Ko-Nu...) build up, then strike; warmongers without a reachable spike play the Composite Bowman rush.",
+   "test": "Next block.",
    "state": "running"
   },
   {
@@ -192,15 +192,15 @@
   {
    "section": "queue",
    "order": 1,
-   "name": "EarlyStrike blocks",
-   "detail": "PC 1 now (vs normal civs), PC 2 from about 10:10pm (vs greedy civs), 20 games each on ab-c337c77.",
+   "name": "Strike block on ab-04ab581",
+   "detail": "Both PCs, 20 games each, stop on any wonder or gift before a strike. Judged by captures, and how many by T100.",
    "state": "running"
   },
   {
    "section": "queue",
    "order": 2,
-   "name": "Per-civ strike plans",
-   "detail": "Personality's table: early-spike civs strike early (EarlyStrike, Honor, barbarian hunting); late-spike civs like the Zulu build up, then time their unique unit. Overrides only where the default is wrong.",
+   "name": "Per-civ plans for more civs",
+   "detail": "Expert rows for the most common aggressors are in; more civs as the data shows which plans work.",
    "state": "waiting"
   },
   {
@@ -238,7 +238,7 @@
    "order": 3,
    "name": "Attack: an aggressor takes cities",
    "target": "Against greedy civs (few units, no walls) several cities by T150; against balanced civs at most 1 per war",
-   "detail": "Captures now happen: the honest package took cities in 2 of 7 pairs vs greedy civs, BigArmy in 4 of 20 vs normal civs and 5 of 16 vs greedy. The wins came with about 13 land units at the declaration. Your game reached a capture at T54; ours come after T110. EarlyStrike aims at that gap.",
+   "detail": "Getting closer: on the follow-the-list build Greece took a city at T59, like your Aztec at T54. Over the overnight expert blocks, 3 captures in 20 games. The next block is the first with every known leak closed.",
    "state": "focus now"
   },
   {
