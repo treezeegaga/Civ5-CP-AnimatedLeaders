@@ -3138,6 +3138,19 @@ block: b446678a.**
   - SiegeArmy's bar doesn't hold an attack on the strike's target while the strike's math says it's takeable.
 LEAD: on ai/war **b446678a** (791ab9d7 + this), for the NEXT block; the current block runs to 20 games. CI to follow.
 
+**Economy 0054** (income first under the late-PREP hold; research serves the build list) is applied on top: a24c5408.
+
+**172518A7 (Mongolia, LateStrike; Economy relaying the lead, 3:51pm ET): should Chivalry gate a late strike's readiness?
+Yes. Fixed in bf212f7e.**
+- **What happened.** Mongolia declared at T120 "as ready as it got" with Chariot Archers, its core (Knight x8) at 0/8,
+  before Chivalry, the plan's upgrade tech.
+- **Cause.** IsStrikeAsReadyAsItGets looks only at a normal-size army, 3 melee, nothing more affordable and a takeable
+  target. A late strike's point is its spike.
+- **Fix.** New IsLateStrikeSpikeIn() (the plan's upgrade tech known) gates both readiness paths for late strikes. Early
+  strikes are unchanged. A late strike whose tech never comes still exits by the existing rules (core obsolete, no
+  target), and Economy's research puts the plan's techs first.
+LEAD: the next block's head is **ai/war bf212f7e** (791ab9d7 + the Kyzyl fix b446678a + Economy 0054 + this). CI to follow.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
