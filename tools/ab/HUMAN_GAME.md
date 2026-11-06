@@ -208,7 +208,7 @@ the war was declared between T41 and T50.
 - **Upgrade and go:** the user saved gold and, at Construction, upgraded 3 Archers to Composite Bowmen right before
   declaring. That's why the Aztec treasury fell from 263 to 31 between T40 and T50.
 - **The army that took the capital:** about 6 Jaguars and 4 Composite Bowmen. The Jaguars had hunted barbarians and had the
-  +33% ranged defence promotion. There was no siege, and the target had no walls.
+  +33% ranged defence promotion. There was no siege. The user brute-forced through Marrakesh's walls ("i think i brute forced through marrakeshs walls"), so walls alone don't stop a strike with enough army.
 - **The user's ruling:** the Jaguar suits this opening, so it can't be generalised. Every civ should build to its own strengths.
 - **Before the war:** the first 3 Jaguars hunted barbarians for experience and promotions. The user opened **Honor**, not
   Liberty, "because of the barb hunting".
