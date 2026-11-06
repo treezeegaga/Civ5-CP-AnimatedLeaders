@@ -3221,6 +3221,13 @@ LEAD: the head for the pre-flight review and trial is now **ai/war c7eed909** (2
 - **7. A stalled BUILDUP ends.** It ends when all four hold: the unit hold is on, the army on hand can't take the target,
   net gold is negative, and no city can build a Market or a Caravan.
 LEAD: the head is **ai/war 2c8256d2** (c7eed909 + these), with Economy's 1-3 and 8 to go on top. CI to follow.
+**Economy 0057** (review findings 1-3 and 8) is applied on top. Its field names match aePolicyBranches.
+- **1.** The policy order applies only while a strike state exists.
+- **2.** The unit hold's affordability arm is off at war with a major. My stalled-BUILDUP exit needs the hold, so it
+  doesn't fire then either.
+- **3.** Income-first runs only in the capital, outside war.
+- **8.** When the policy order hits a dead end, the best open tree that isn't on the never-list is taken.
+LEAD: the head for the trial and next block is **ai/war 824f1dbf**. CI to follow.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
