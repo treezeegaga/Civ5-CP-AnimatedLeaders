@@ -3166,6 +3166,22 @@ LEAD: the next block's head is **ai/war 06fd0b87**, the same code as a24c5408 (7
 - **Also from Economy:** 0 REDIRECT lines, no ban hits, and Mongolia's capture at T123 in those games.
 LEAD: the next block's head is **ai/war 698525b1** (791ab9d7 + the Kyzyl fix b446678a + Economy 0054, 0055). CI to follow.
 
+**bullygreedy24 17436CCD (Zulu, LateStrike; the lead, 4:28pm ET): BUILDUP from T107 to the end with no declaration. Fixed
+for the next block in b1eb09de.**
+- **What happened.** The strike's own check said "the plan's army takes it in about 2 turns" against Washington (defence
+  17-21). But IsTimingBuildupArmyReady also required, for a strike, that the army count as built, by one of three tests:
+  - CP's normal field target, which grew from 13 to 21;
+  - Personality's plan-ready check;
+  - core and support at exact counts: support was 7/8 from T116 to T145 (core 9/5).
+- **Fix.** For a strike, readiness is now only: no upgrade waiting whose tech is in, 3 melee units, the army on hand taking
+  the target, and home safe. CP's field target, the exact plan counts and siege no longer hold it. Non-strike timing
+  attacks are unchanged.
+- **The support unit lost and never replaced over 30 turns.** That build ran on ab-791ab9d, before Economy 0055's income
+  hold. The list's army phase should have rebuilt it (support short of the plan). Asked Economy to check the Zulu
+  production lines from T116 when the pair-2 logs land (about 4:30pm). With b1eb09de it no longer blocks the declaration
+  either way.
+LEAD: the next block's head is **ai/war b1eb09de** (698525b1 + this). CI to follow.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
