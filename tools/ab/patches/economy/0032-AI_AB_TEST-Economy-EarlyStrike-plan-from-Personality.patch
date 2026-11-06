@@ -1,0 +1,175 @@
+From fadaf64b5f23bf5ad2e93d2e6e3d638e3517ff24 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 02:59:23 +0000
+Subject: [PATCH] AI_AB_TEST Economy: EarlyStrike plan from Personality's
+ strike plan (one source of truth)
+
+CvPlayer::GetEarlyStrikePlan now fills CvEarlyStrikePlan from
+CvGrandStrategyAI::GetStrikePlan (expert rows, else its data default):
+core/support/siege classes and targets, N (iCoreBeforeSettler), K
+(iMaxCitiesBeforeStrike), the fallback turn, the first policy branch, and
+the upgrade tech (new field eUpgradeTech, used by the book's research).
+The hard-coded rows are gone; the name and signature stay, so War's
+callers don't change. GetEarlyStrikeCoreClass returns the plan's core
+when it has one (the Huns' Horse Archer, not the Ram); it still gates on
+the profile's bMilitaryFirst. A NO_POLICY_BRANCH_TYPE first tree leaves
+the book's own. On claude/ab-c1 03bbc90. Written 9:59pm ET by this machine's clock.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 95 +++++++--------------------
+ CvGameCoreDLL_Expansion2/CvPlayer.h   |  7 +-
+ 2 files changed, 29 insertions(+), 73 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index f649985..a5a8c2d 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33859,7 +33859,11 @@ UnitClassTypes CvPlayer::GetEarlyStrikeCoreClass() const
+ 		const CvStrategyProfile kProfile = GetGrandStrategyAI()->GetStrategyProfile();
+ 		CvUnitEntry* pkSpike = (kProfile.eSpikeUnit != NO_UNIT) ? GC.getUnitInfo(kProfile.eSpikeUnit) : NULL;
+ 		if (kProfile.bMilitaryFirst && pkSpike)
+-			m_iEarlyStrikeCoreClass = pkSpike->GetUnitClassType();
++		{
++			// the strike plan's core when it has one (the Huns' Horse Archer, not the Battering Ram), else the spike unit
++			const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
++			m_iEarlyStrikeCoreClass = (kStrike.bValid && kStrike.eCoreClass != NO_UNITCLASS) ? kStrike.eCoreClass : pkSpike->GetUnitClassType();
++		}
+ 	}
+ 	return (UnitClassTypes)m_iEarlyStrikeCoreClass;
+ }
+@@ -33881,77 +33885,28 @@ bool CvPlayer::IsEarlyStrikeBook() const
+ 	return true;
+ }
+ 
+-/// AI_AB_TEST (EarlyStrike, the expert openings; the user: "use the experts ideas right away"): the civ's opening plan.
+-/// Per-civ numbers from Personality's strike-plan table (its RESULTS.md, "Strike plans per civ: spec"; N, K and the
+-/// fallback turn) for the Huns, Aztec, Inca, Greece and Celts; other early-spike civs get the user's Aztec opening
+-/// (core x3 then x2 more, support x4, 2 cities). The fallback turn is T50 Quick (75 Standard). When Personality's
+-/// profile carries these fields, they replace this table.
++/// AI_AB_TEST (EarlyStrike, the expert openings; the user: "use the experts ideas right away"): the civ's opening plan,
++/// read from Personality's strike plan (CvGrandStrategyAI::GetStrikePlan: the expert rows from STRIKE_PLANS_RESEARCH.md,
++/// else its data default), so the book, War's strike and the log share one source. False when the civ isn't an
++/// early-spike civ (GetEarlyStrikeCoreClass) or has no plan.
+ bool CvPlayer::GetEarlyStrikePlan(CvEarlyStrikePlan& kPlan) const
+ {
+-	const UnitClassTypes eProfileCore = GetEarlyStrikeCoreClass();
+-	if (eProfileCore == NO_UNITCLASS)
++	if (GetEarlyStrikeCoreClass() == NO_UNITCLASS || !GetGrandStrategyAI())
+ 		return false;
+-	const int iSpeed = GC.getGame().getGameSpeedInfo().getTrainPercent();
+-	const UnitClassTypes eArcher = (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_ARCHER", true);
+-	const UnitClassTypes eSpearman = (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_SPEARMAN", true);
+-
+-	kPlan.eCore = eProfileCore;
+-	kPlan.iCoreBeforeSettler = 3;
+-	kPlan.iCoreTotal = 5;
+-	const UnitTypes eCoreUnit = GetSpecificUnitType(eProfileCore);
+-	const bool bRangedCore = eCoreUnit != NO_UNIT && GC.getUnitInfo(eCoreUnit)->GetRangedCombat() > 0;
+-	kPlan.eSupport = bRangedCore ? eSpearman : eArcher;
+-	kPlan.iSupportTotal = 4;
+-	kPlan.eSiege = NO_UNITCLASS;
+-	kPlan.iSiegeTotal = 0;
+-	kPlan.iMaxCities = 2;
+-	kPlan.iFallbackTurn = 75 * iSpeed / 100;
+-	kPlan.eFirstTree = (PolicyBranchTypes)GC.getInfoTypeForString("POLICY_BRANCH_HONOR", true);
+-
+-	const char* szCiv = getCivilizationTypeKey();
+-	if (!szCiv)
+-		return true;
+-	if (strcmp(szCiv, "CIVILIZATION_HUNS") == 0)
+-	{
+-		// Horse Archers x2, settler, worker, Battering Rams x2, Horse Archer, Archer, settler (the Ram is the siege, not the core)
+-		kPlan.eCore = (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_CHARIOT_ARCHER", true);
+-		kPlan.iCoreBeforeSettler = 2;
+-		kPlan.iCoreTotal = 4;
+-		kPlan.eSupport = eArcher;
+-		kPlan.iSupportTotal = 1;
+-		kPlan.eSiege = eSpearman;
+-		kPlan.iSiegeTotal = 2;
+-		kPlan.iMaxCities = 3;
+-	}
+-	else if (strcmp(szCiv, "CIVILIZATION_AZTEC") == 0)
+-	{
+-		// the user's: Jaguar x3, Worker, Settler, Archer x4, Jaguar x2
+-		kPlan.iCoreBeforeSettler = 3;
+-		kPlan.iCoreTotal = 5;
+-		kPlan.eSupport = eArcher;
+-		kPlan.iSupportTotal = 4;
+-		kPlan.iMaxCities = 2;
+-	}
+-	else if (strcmp(szCiv, "CIVILIZATION_INCA") == 0)
+-	{
+-		// Slingers x2, settler, worker, Slingers x2, a Spearman (or Warrior) in front, settler, Slinger
+-		kPlan.eCore = eArcher;
+-		kPlan.iCoreBeforeSettler = 2;
+-		kPlan.iCoreTotal = 5;
+-		kPlan.eSupport = eSpearman;
+-		kPlan.iSupportTotal = 1;
+-		kPlan.iMaxCities = 3;
+-	}
+-	else if (strcmp(szCiv, "CIVILIZATION_GREECE") == 0 || strcmp(szCiv, "CIVILIZATION_CELTS") == 0)
+-	{
+-		// Hoplites (Pictish Warriors) x3-4 with Archers x2; the Celts settle after one Pictish Warrior
+-		kPlan.eCore = eSpearman;
+-		kPlan.iCoreBeforeSettler = (strcmp(szCiv, "CIVILIZATION_CELTS") == 0) ? 1 : 2;
+-		kPlan.iCoreTotal = 4;
+-		kPlan.eSupport = eArcher;
+-		kPlan.iSupportTotal = 2;
+-		kPlan.iMaxCities = 3;
+-	}
++	const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
++	if (!kStrike.bValid || kStrike.eCoreClass == NO_UNITCLASS)
++		return false;
++	kPlan.eCore = kStrike.eCoreClass;
++	kPlan.iCoreBeforeSettler = kStrike.iCoreBeforeSettler;
++	kPlan.iCoreTotal = kStrike.iCoreTarget;
++	kPlan.eSupport = kStrike.eSupportClass;
++	kPlan.iSupportTotal = kStrike.iSupportTarget;
++	kPlan.eSiege = kStrike.eSiegeClass;
++	kPlan.iSiegeTotal = kStrike.iSiegeTarget;
++	kPlan.iMaxCities = max(1, kStrike.iMaxCitiesBeforeStrike);
++	kPlan.iFallbackTurn = kStrike.iFallbackTurn;
++	kPlan.eFirstTree = kStrike.eFirstPolicyBranch;
++	kPlan.eUpgradeTech = kStrike.eUpgradeTech;
+ 	return true;
+ }
+ 
+@@ -34850,7 +34805,7 @@ TechTypes CvPlayer::GetOpeningBookTech() const
+ 		CvUnitEntry* pkSupport = (eSupport != NO_UNIT) ? GC.getUnitInfo(eSupport) : NULL;
+ 		if (pkSupport)
+ 			vPath.push_back((TechTypes)pkSupport->GetPrereqAndTech());
+-		const TechTypes eProfileUpgrade = GetGrandStrategyAI() ? GetGrandStrategyAI()->GetStrategyProfile().eUpgradeTech : NO_TECH;
++		const TechTypes eProfileUpgrade = kStrikePlan.eUpgradeTech;
+ 		if (eProfileUpgrade != NO_TECH)
+ 			vPath.push_back(eProfileUpgrade);
+ 		else
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 8bee08d..42fa5c8 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -126,8 +126,8 @@ struct SPlayerActiveEspionageEvent
+ 	int iAmount;
+ };
+ 
+-// AI_AB_TEST (EarlyStrike, Economy): a strike civ's opening plan (the expert openings, STRIKE_PLANS_RESEARCH.md, with
+-// Personality's per-civ numbers). Classes are unit classes (the civ's own unit is built through GetSpecificUnitType).
++// AI_AB_TEST (EarlyStrike, Economy): a strike civ's opening plan, filled from Personality's CvStrikePlan
++// (CvGrandStrategyAI::GetStrikePlan). Classes are unit classes (the civ's own unit is built through GetSpecificUnitType).
+ struct CvEarlyStrikePlan
+ {
+ 	UnitClassTypes eCore;		// the spike unit
+@@ -139,7 +139,8 @@ struct CvEarlyStrikePlan
+ 	int iSiegeTotal;
+ 	int iMaxCities;				// K: cities before the strike
+ 	int iFallbackTurn;			// elapsed turns, this game's speed: no target in reach and no war by then, back to the normal plan
+-	PolicyBranchTypes eFirstTree;
++	PolicyBranchTypes eFirstTree;	// NO_POLICY_BRANCH_TYPE: the book's own
++	TechTypes eUpgradeTech;		// upgrade and go (NO_TECH: none)
+ };
+ 
+ // AI_AB_TEST opening book: a scripted start for the new AI (see CvPlayer::GetOpeningBook)
+-- 
+2.43.0
+

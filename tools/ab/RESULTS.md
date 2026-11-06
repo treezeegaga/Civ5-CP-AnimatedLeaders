@@ -1883,6 +1883,17 @@ gold, and the first tree.
 
 **Status:** coded, patch 0031 on `claude/ab-c1` `db638c3`, not built.
 
+**One source of truth (patch 0032 on `claude/ab-c1` `03bbc90`, 9:59pm ET by this machine's clock).** The lead: two
+per-civ tables disagreed. Personality's Inca bring 2 Catapults; Greece and the Inca open Liberty. So
+`GetEarlyStrikePlan` now fills its struct from Personality's `CvGrandStrategyAI::GetStrikePlan()`: the expert rows,
+else its data default.
+- **Fields read:** core, support and siege classes and targets; `iCoreBeforeSettler`; `iMaxCitiesBeforeStrike`;
+  `iFallbackTurn`; `eFirstPolicyBranch`; `eUpgradeTech` (new field, for the book's research).
+- **Hard-coded rows:** removed. The table above is superseded; Personality's RESULTS has the live numbers.
+- **Unchanged for War:** the name and signature.
+- **The core class:** `GetEarlyStrikeCoreClass` returns the plan's core (the Huns' Horse Archer). Who is an
+  early-spike civ still comes from the profile's `bMilitaryFirst`.
+
 ### EarlyStrike book: changes planned after this block (Economy, Nov 5, 9:48pm ET; not coded)
 From the expert research (`tools/ab/STRIKE_PLANS_RESEARCH.md`, lead's `8f04839`). The running block (`ab-db638c3`)
 is unchanged.
