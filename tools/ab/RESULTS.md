@@ -3381,7 +3381,7 @@ logged pair".
   upgrade tech: `a55a585`, compiles (CI run 263 passed, 9:00pm ET; it also covers `d1d4063` and `bed8e14`, whose
   own runs were cancelled by later pushes), ready to merge. The table needs checking against the log.
 
-### Strike plans per civ: spec (Personality, spec only, 2026-11-05 9:11pm ET; revised 9:18pm ET)
+### Strike plans per civ: spec (Personality, spec only, 2026-11-05 9:11pm ET; revised 9:12pm ET by this machine's clock, a few minutes behind the lead's)
 - **The user (via the lead, about 9:10pm ET):** "it's possible that all aggressive civs need completely individualized
   openings based on their own unique bonuses". Then (about 9:16pm ET): "like with aztecs i pushed out 3 quick jaguars
   and went barb hunting. with other warmonger civs like zulu, maybe you build up more of an infrastructure and then try
