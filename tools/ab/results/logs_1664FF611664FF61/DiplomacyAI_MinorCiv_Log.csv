@@ -1,0 +1,623 @@
+014, Quebec City, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+021, Vancouver, Songhai, RECEIVED_UNIT_GIFT, Warrior
+023, Hong Kong, Germany, RECEIVED_UNIT_GIFT, Warrior
+024, Byblos, England, RECEIVED_UNIT_GIFT, Warrior
+025, Songhai, Byblos, SENT OUT QUEST, Type, 12
+025, Songhai, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+025, England, Byblos, SENT OUT QUEST, Type, 12
+025, England, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 2 to 2, MINOR_CIV_BYBLOS
+025, Denmark, Byblos, SENT OUT QUEST, Type, 12
+025, Denmark, Byblos, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+025, Songhai, Byblos, SENT OUT QUEST, Type, 6
+025, Songhai, Byblos, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+025, Germany, Prague, SENT OUT QUEST, Type, 2
+025, Germany, Prague, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+025, The Maya, Prague, SENT OUT QUEST, Type, 2
+025, The Maya, Prague, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+025, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 1
+025, Songhai, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+025, Persia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+025, Persia, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+025, Persia, Kuala Lumpur, SENT OUT QUEST, Type, 7
+025, Persia, Kuala Lumpur, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+025, Germany, Antananarivo, SENT OUT QUEST, Type, 7
+025, Germany, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+026, Songhai, Vancouver, SENT OUT QUEST, Type, 2
+026, Songhai, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+026, The Netherlands, Vancouver, SENT OUT QUEST, Type, 3
+026, The Netherlands, Vancouver, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+026, The Maya, Riga, SENT OUT QUEST, Type, 3
+026, The Maya, Riga, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+026, England, Hanoi, SENT OUT QUEST, Type, 1
+026, England, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+026, Germany, Prague, SENT OUT QUEST, Type, 12
+026, Germany, Prague, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+026, The Netherlands, Prague, SENT OUT QUEST, Type, 12
+026, The Netherlands, Prague, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+026, The Maya, Prague, SENT OUT QUEST, Type, 12
+026, The Maya, Prague, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+026, Germany, Antananarivo, SENT OUT QUEST, Type, 12
+026, Germany, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+026, The Netherlands, Antananarivo, SENT OUT QUEST, Type, 12
+026, The Netherlands, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+026, The Maya, Antananarivo, SENT OUT QUEST, Type, 12
+026, The Maya, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+027, Vancouver, The Maya, RECEIVED_UNIT_GIFT, Warrior
+027, Songhai, Vancouver, SENT OUT QUEST, Type, 1
+027, Songhai, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+027, The Netherlands, Vancouver, SENT OUT QUEST, Type, 1
+027, The Netherlands, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+027, The Maya, Vancouver, SENT OUT QUEST, Type, 1
+027, The Maya, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 3 to 3, MINOR_CIV_VANCOUVER
+027, Songhai, Byblos, gained friend
+027, Songhai, Byblos, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_BYBLOS
+028, Germany, Riga, SENT OUT QUEST, Type, 7
+028, Germany, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+028, Songhai, Ife, SENT OUT QUEST, Type, 2
+028, Songhai, Ife, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+028, England, Byblos, SENT OUT QUEST, Type, 2
+028, England, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+028, England, Bratislava, SENT OUT QUEST, Type, 1
+028, England, Bratislava, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+028, England, Bratislava, SENT OUT QUEST, Type, 3
+028, England, Bratislava, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+028, The Zulus, Quebec City, SENT OUT QUEST, Type, 3
+028, The Zulus, Quebec City, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+028, The Netherlands, Antananarivo, SENT OUT QUEST, Type, 3
+028, The Netherlands, Antananarivo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+029, The Maya, Kuala Lumpur, SENT OUT QUEST, Type, 1
+029, The Maya, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+029, Persia, Cape Town, SENT OUT QUEST, Type, 1
+029, Persia, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+029, The Netherlands, Budapest, SENT OUT QUEST, Type, 1
+029, The Netherlands, Budapest, RECEIVED QUEST, Kill Camp, Friendship: -4 to -4, MINOR_CIV_BUDAPEST
+030, The Netherlands, Riga, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_RIGA, (SAVING) 
+030, Quebec City, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+030, Denmark, Quebec City, SENT OUT QUEST, Type, 7
+030, Denmark, Quebec City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+031, Songhai, Ife, SENT OUT QUEST, Type, 1
+031, Songhai, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+031, The Netherlands, Ife, SENT OUT QUEST, Type, 1
+031, The Netherlands, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+031, Denmark, Ife, SENT OUT QUEST, Type, 1
+031, Denmark, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+031, The Netherlands, Ife, SENT OUT QUEST, Type, 2
+031, The Netherlands, Ife, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+031, Byblos, Denmark, RECEIVED_UNIT_GIFT, Warrior
+031, Songhai, Byblos, lost friend
+031, Songhai, Cahokia, SENT OUT QUEST, Type, 1
+031, Songhai, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+032, Songhai, Byblos, Gold Gift: 500, Friendship: 29 to 29, Culture, MINOR_CIV_BYBLOS, (SAVING) , Passing Denmark
+032, Songhai, Byblos, SENT OUT QUEST, Type, 12
+032, The Maya, Hong Kong, era change yield update
+032, The Maya, Vancouver, era change yield update
+032, The Maya, Riga, era change yield update
+032, The Maya, Cape Town, era change yield update
+032, The Maya, Ife, era change yield update
+032, The Maya, Hanoi, era change yield update
+032, The Maya, Byblos, era change yield update
+032, The Maya, Yerevan, era change yield update
+032, The Maya, Budapest, era change yield update
+032, The Maya, Cahokia, era change yield update
+032, The Maya, Prague, era change yield update
+032, The Maya, Bratislava, era change yield update
+032, The Maya, Kuala Lumpur, era change yield update
+032, The Maya, Quebec City, era change yield update
+032, The Maya, Antananarivo, era change yield update
+032, The Maya, Zanzibar, era change yield update
+032, The Maya, Vancouver, SENT OUT QUEST, Type, 1
+032, The Maya, Riga, SENT OUT QUEST, Type, 3
+032, The Maya, Prague, SENT OUT QUEST, Type, 2
+032, The Maya, Prague, SENT OUT QUEST, Type, 12
+032, The Maya, Kuala Lumpur, SENT OUT QUEST, Type, 1
+032, The Maya, Antananarivo, SENT OUT QUEST, Type, 12
+032, Denmark, Byblos, SENT OUT QUEST, Type, 7
+032, Denmark, Byblos, RECEIVED QUEST, Find Natural Wonder, Friendship: 2 to 2, MINOR_CIV_BYBLOS
+032, The Netherlands, Prague, SENT OUT QUEST, Type, 6
+032, The Netherlands, Prague, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+033, The Netherlands, Prague, gained friend
+033, The Netherlands, Prague, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_PRAGUE
+034, Songhai, Cape Town, SENT OUT QUEST, Type, 1
+034, Songhai, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+034, Germany, Hong Kong, SENT OUT QUEST, Type, 1
+034, Germany, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+034, The Netherlands, Budapest, SENT OUT QUEST, Type, 3
+034, The Netherlands, Budapest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+034, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 3
+034, Songhai, Kuala Lumpur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+034, England, Quebec City, SENT OUT QUEST, Type, 1
+034, England, Quebec City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+034, The Zulus, Quebec City, SENT OUT QUEST, Type, 1
+034, The Zulus, Quebec City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+034, Denmark, Quebec City, SENT OUT QUEST, Type, 1
+034, Denmark, Quebec City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+035, Germany, Hong Kong, SENT OUT QUEST, Type, 2
+035, Germany, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+035, The Maya, Vancouver, SENT OUT QUEST, Type, 3
+035, The Maya, Vancouver, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+036, Germany, Hong Kong, era change yield update
+036, Germany, Vancouver, era change yield update
+036, Germany, Riga, era change yield update
+036, Germany, Cape Town, era change yield update
+036, Germany, Ife, era change yield update
+036, Germany, Hanoi, era change yield update
+036, Germany, Byblos, era change yield update
+036, Germany, Yerevan, era change yield update
+036, Germany, Budapest, era change yield update
+036, Germany, Cahokia, era change yield update
+036, Germany, Prague, era change yield update
+036, Germany, Bratislava, era change yield update
+036, Germany, Kuala Lumpur, era change yield update
+036, Germany, Quebec City, era change yield update
+036, Germany, Antananarivo, era change yield update
+036, Germany, Zanzibar, era change yield update
+036, Germany, Hong Kong, SENT OUT QUEST, Type, 1
+036, Germany, Hong Kong, SENT OUT QUEST, Type, 2
+036, Germany, Riga, SENT OUT QUEST, Type, 7
+036, Germany, Prague, SENT OUT QUEST, Type, 2
+036, Germany, Prague, SENT OUT QUEST, Type, 12
+036, Germany, Antananarivo, SENT OUT QUEST, Type, 7
+036, Germany, Antananarivo, SENT OUT QUEST, Type, 12
+036, The Netherlands, Hong Kong, era change yield update
+036, The Netherlands, Vancouver, era change yield update
+036, The Netherlands, Riga, era change yield update
+036, The Netherlands, Cape Town, era change yield update
+036, The Netherlands, Ife, era change yield update
+036, The Netherlands, Hanoi, era change yield update
+036, The Netherlands, Byblos, era change yield update
+036, The Netherlands, Yerevan, era change yield update
+036, The Netherlands, Budapest, era change yield update
+036, The Netherlands, Cahokia, era change yield update
+036, The Netherlands, Prague, era change yield update
+036, The Netherlands, Bratislava, era change yield update
+036, The Netherlands, Kuala Lumpur, era change yield update
+036, The Netherlands, Quebec City, era change yield update
+036, The Netherlands, Antananarivo, era change yield update
+036, The Netherlands, Zanzibar, era change yield update
+036, The Netherlands, Vancouver, SENT OUT QUEST, Type, 3
+036, The Netherlands, Vancouver, SENT OUT QUEST, Type, 1
+036, The Netherlands, Ife, SENT OUT QUEST, Type, 1
+036, The Netherlands, Ife, SENT OUT QUEST, Type, 2
+036, The Netherlands, Budapest, SENT OUT QUEST, Type, 1
+036, The Netherlands, Budapest, SENT OUT QUEST, Type, 3
+036, The Netherlands, Prague, SENT OUT QUEST, Type, 12
+036, The Netherlands, Antananarivo, SENT OUT QUEST, Type, 12
+036, The Netherlands, Antananarivo, SENT OUT QUEST, Type, 3
+036, Denmark, Hong Kong, era change yield update
+036, Denmark, Vancouver, era change yield update
+036, Denmark, Riga, era change yield update
+036, Denmark, Cape Town, era change yield update
+036, Denmark, Ife, era change yield update
+036, Denmark, Hanoi, era change yield update
+036, Denmark, Byblos, era change yield update
+036, Denmark, Yerevan, era change yield update
+036, Denmark, Budapest, era change yield update
+036, Denmark, Cahokia, era change yield update
+036, Denmark, Prague, era change yield update
+036, Denmark, Bratislava, era change yield update
+036, Denmark, Kuala Lumpur, era change yield update
+036, Denmark, Quebec City, era change yield update
+036, Denmark, Antananarivo, era change yield update
+036, Denmark, Zanzibar, era change yield update
+036, Denmark, Ife, SENT OUT QUEST, Type, 1
+036, Denmark, Byblos, SENT OUT QUEST, Type, 12
+036, Denmark, Byblos, SENT OUT QUEST, Type, 7
+036, Denmark, Quebec City, SENT OUT QUEST, Type, 7
+036, Denmark, Quebec City, SENT OUT QUEST, Type, 1
+036, Germany, Riga, SENT OUT QUEST, Type, 12
+036, Germany, Riga, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+036, The Netherlands, Riga, SENT OUT QUEST, Type, 12
+036, The Netherlands, Riga, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_RIGA
+036, The Maya, Riga, SENT OUT QUEST, Type, 12
+036, The Maya, Riga, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+036, The Netherlands, Riga, SENT OUT QUEST, Type, 2
+036, The Netherlands, Riga, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_RIGA
+036, Persia, Cape Town, SENT OUT QUEST, Type, 2
+036, Persia, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+036, Songhai, Cahokia, SENT OUT QUEST, Type, 2
+036, Songhai, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+036, The Netherlands, Prague, lost friend
+036, The Maya, Antananarivo, SENT OUT QUEST, Type, 2
+036, The Maya, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+037, Songhai, Hong Kong, era change yield update
+037, Songhai, Vancouver, era change yield update
+037, Songhai, Riga, era change yield update
+037, Songhai, Cape Town, era change yield update
+037, Songhai, Ife, era change yield update
+037, Songhai, Hanoi, era change yield update
+037, Songhai, Byblos, era change yield update
+037, Songhai, Yerevan, era change yield update
+037, Songhai, Budapest, era change yield update
+037, Songhai, Cahokia, era change yield update
+037, Songhai, Prague, era change yield update
+037, Songhai, Bratislava, era change yield update
+037, Songhai, Kuala Lumpur, era change yield update
+037, Songhai, Quebec City, era change yield update
+037, Songhai, Antananarivo, era change yield update
+037, Songhai, Zanzibar, era change yield update
+037, Songhai, Vancouver, SENT OUT QUEST, Type, 2
+037, Songhai, Vancouver, SENT OUT QUEST, Type, 1
+037, Songhai, Cape Town, SENT OUT QUEST, Type, 1
+037, Songhai, Ife, SENT OUT QUEST, Type, 2
+037, Songhai, Ife, SENT OUT QUEST, Type, 1
+037, Songhai, Byblos, SENT OUT QUEST, Type, 12
+037, Songhai, Cahokia, SENT OUT QUEST, Type, 1
+037, Songhai, Cahokia, SENT OUT QUEST, Type, 2
+037, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 1
+037, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 3
+037, England, Hong Kong, era change yield update
+037, England, Vancouver, era change yield update
+037, England, Riga, era change yield update
+037, England, Cape Town, era change yield update
+037, England, Ife, era change yield update
+037, England, Hanoi, era change yield update
+037, England, Byblos, era change yield update
+037, England, Yerevan, era change yield update
+037, England, Budapest, era change yield update
+037, England, Cahokia, era change yield update
+037, England, Prague, era change yield update
+037, England, Bratislava, era change yield update
+037, England, Kuala Lumpur, era change yield update
+037, England, Quebec City, era change yield update
+037, England, Antananarivo, era change yield update
+037, England, Zanzibar, era change yield update
+037, England, Hanoi, SENT OUT QUEST, Type, 1
+037, England, Byblos, SENT OUT QUEST, Type, 12
+037, England, Byblos, SENT OUT QUEST, Type, 2
+037, England, Bratislava, SENT OUT QUEST, Type, 1
+037, England, Bratislava, SENT OUT QUEST, Type, 3
+037, England, Quebec City, SENT OUT QUEST, Type, 1
+037, The Maya, Hong Kong, SENT OUT QUEST, Type, 1
+037, The Maya, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+037, England, Hanoi, SENT OUT QUEST, Type, 7
+037, England, Hanoi, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+038, Hong Kong, Germany, RECEIVED_UNIT_GIFT, Warrior
+038, Songhai, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+038, Persia, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+038, Persia, Kuala Lumpur, SENT OUT QUEST, Type, 6
+038, Persia, Kuala Lumpur, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+039, Germany, Vancouver, SENT OUT QUEST, Type, 1
+039, Germany, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+039, The Netherlands, Antananarivo, SENT OUT QUEST, Type, 12
+039, The Netherlands, Antananarivo, SENT OUT QUEST, Type, 3
+039, Germany, Riga, gained friend
+039, Germany, Riga, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_RIGA
+039, Germany, Antananarivo, gained friend
+039, Germany, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+040, Germany, Hong Kong, SENT OUT QUEST, Type, 1
+040, Germany, Hong Kong, SENT OUT QUEST, Type, 2
+040, Germany, Riga, SENT OUT QUEST, Type, 12
+040, Germany, Antananarivo, SENT OUT QUEST, Type, 12
+040, Germany, Prague, SENT OUT QUEST, Type, 3
+040, Germany, Prague, RECEIVED QUEST, Construct Wonder, Friendship: -3 to -3, MINOR_CIV_PRAGUE
+040, Denmark, Kuala Lumpur, SENT OUT QUEST, Type, 1
+040, Denmark, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+042, Byblos, England, RECEIVED_UNIT_GIFT, Warrior
+042, England, Byblos, SENT OUT QUEST, Type, 7
+042, England, Byblos, RECEIVED QUEST, Find Natural Wonder, Friendship: 3 to 3, MINOR_CIV_BYBLOS
+042, Quebec City, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+043, Germany, Prague, SENT OUT QUEST, Type, 2
+043, Germany, Prague, SENT OUT QUEST, Type, 12
+043, Germany, Prague, SENT OUT QUEST, Type, 3
+043, The Zulus, Hong Kong, era change yield update
+043, The Zulus, Vancouver, era change yield update
+043, The Zulus, Riga, era change yield update
+043, The Zulus, Cape Town, era change yield update
+043, The Zulus, Ife, era change yield update
+043, The Zulus, Hanoi, era change yield update
+043, The Zulus, Byblos, era change yield update
+043, The Zulus, Yerevan, era change yield update
+043, The Zulus, Budapest, era change yield update
+043, The Zulus, Cahokia, era change yield update
+043, The Zulus, Prague, era change yield update
+043, The Zulus, Bratislava, era change yield update
+043, The Zulus, Kuala Lumpur, era change yield update
+043, The Zulus, Quebec City, era change yield update
+043, The Zulus, Antananarivo, era change yield update
+043, The Zulus, Zanzibar, era change yield update
+043, The Zulus, Quebec City, SENT OUT QUEST, Type, 3
+043, The Zulus, Quebec City, SENT OUT QUEST, Type, 1
+043, Hong Kong, The Maya, RECEIVED_UNIT_GIFT, Warrior
+043, The Maya, Riga, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+043, The Maya, Prague, SENT OUT QUEST, Type, 6
+043, The Maya, Prague, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+043, England, Bratislava, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+043, The Zulus, Quebec City, cancelled, Construct Wonder, Friendship: 2 to 2, MINOR_CIV_QUEBEC_CITY
+044, Germany, Antananarivo, lost friend
+045, Germany, Riga, Gold Gift: 250, Friendship: 32 to 32, Spaceship, MINOR_CIV_RIGA, (SAVING) , Boost! 
+045, Germany, Ife, SENT OUT QUEST, Type, 1
+045, Germany, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+045, The Netherlands, Kuala Lumpur, SENT OUT QUEST, Type, 1
+045, The Netherlands, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+045, Songhai, Byblos, gained friend
+045, Songhai, Byblos, FINISHED QUEST, Contest Techs, Friendship: 8 to 48, MINOR_CIV_BYBLOS
+045, England, Byblos, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+045, Denmark, Byblos, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+045, Denmark, Byblos, SENT OUT QUEST, Type, 2
+045, Denmark, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+046, Germany, Riga, Gold Gift: 250, Friendship: 31 to 56, Spaceship, MINOR_CIV_RIGA, Boost! 
+046, Germany, Hong Kong, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_HONG_KONG, (SAVING) 
+046, Germany, Riga, SENT OUT QUEST, Type, 2
+046, Germany, Riga, RECEIVED QUEST, Connect Resource, Friendship: 54 to 54, MINOR_CIV_RIGA
+046, The Netherlands, Prague, gained friend
+046, The Netherlands, Prague, FINISHED QUEST, Contest Techs, Friendship: 6 to 46, MINOR_CIV_PRAGUE
+046, The Maya, Prague, gained friend
+046, The Maya, Prague, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+046, Germany, Prague, cancelled, Contest Techs, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+046, The Netherlands, Antananarivo, gained friend
+046, The Netherlands, Antananarivo, FINISHED QUEST, Contest Techs, Friendship: 5 to 45, MINOR_CIV_ANTANANARIVO
+046, The Maya, Antananarivo, gained friend
+046, The Maya, Antananarivo, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+046, Germany, Antananarivo, cancelled, Contest Techs, Friendship: 24 to 24, MINOR_CIV_ANTANANARIVO
+047, England, Bratislava, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_BRATISLAVA, (SAVING) 
+047, England, Bratislava, SENT OUT QUEST, Type, 1
+047, Songhai, Vancouver, SENT OUT QUEST, Type, 7
+047, Songhai, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+048, The Netherlands, Vancouver, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+048, The Maya, Vancouver, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+048, Songhai, Byblos, SENT OUT QUEST, Type, 4
+048, Songhai, Byblos, RECEIVED QUEST, Great Person, Friendship: 43 to 43, MINOR_CIV_BYBLOS
+048, The Netherlands, Budapest, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+048, Songhai, Kuala Lumpur, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+048, The Zulus, Quebec City, SENT OUT QUEST, Type, 3
+048, The Zulus, Quebec City, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+048, The Netherlands, Antananarivo, cancelled, Construct Wonder, Friendship: 40 to 40, MINOR_CIV_ANTANANARIVO
+049, Quebec City, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+050, The Netherlands, Vancouver, SENT OUT QUEST, Type, 7
+050, The Netherlands, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+051, The Netherlands, Antananarivo, gained ally
+051, The Netherlands, Antananarivo, Gold Gift: 250, Friendship: 36 to 61, Culture, MINOR_CIV_ANTANANARIVO, Boost! , Passing The Maya
+051, The Netherlands, Zanzibar, Gold Gift: 500, Friendship: 2 to 2, Culture, MINOR_CIV_ZANZIBAR, (SAVING) 
+051, The Maya, Prague, lost friend
+051, The Netherlands, Antananarivo, lost ally
+051, The Maya, Antananarivo, lost friend
+052, Persia, Hong Kong, era change yield update
+052, Persia, Vancouver, era change yield update
+052, Persia, Riga, era change yield update
+052, Persia, Cape Town, era change yield update
+052, Persia, Ife, era change yield update
+052, Persia, Hanoi, era change yield update
+052, Persia, Byblos, era change yield update
+052, Persia, Yerevan, era change yield update
+052, Persia, Budapest, era change yield update
+052, Persia, Cahokia, era change yield update
+052, Persia, Prague, era change yield update
+052, Persia, Bratislava, era change yield update
+052, Persia, Kuala Lumpur, era change yield update
+052, Persia, Quebec City, era change yield update
+052, Persia, Antananarivo, era change yield update
+052, Persia, Zanzibar, era change yield update
+052, Persia, Cape Town, SENT OUT QUEST, Type, 2
+052, Persia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+052, Persia, Kuala Lumpur, SENT OUT QUEST, Type, 7
+052, Persia, Kuala Lumpur, SENT OUT QUEST, Type, 6
+052, The Maya, Vancouver, SENT OUT QUEST, Type, 6
+052, The Maya, Vancouver, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+052, The Maya, Kuala Lumpur, SENT OUT QUEST, Type, 2
+052, The Maya, Kuala Lumpur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+053, Songhai, Byblos, gained ally
+053, Songhai, Byblos, Gold Gift: 250, Friendship: 37 to 62, Spaceship, MINOR_CIV_BYBLOS, Boost! 
+053, The Maya, Riga, SENT OUT QUEST, Type, 7
+053, The Maya, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+053, Byblos, Denmark, RECEIVED_UNIT_GIFT, Warrior
+053, England, Bratislava, SENT OUT QUEST, Type, 2
+053, England, Bratislava, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_BRATISLAVA
+053, England, Quebec City, SENT OUT QUEST, Type, 2
+053, England, Quebec City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+054, Songhai, Byblos, lost ally
+054, The Netherlands, Prague, lost friend
+054, Denmark, Kuala Lumpur, SENT OUT QUEST, Type, 2
+054, Denmark, Kuala Lumpur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+055, Denmark, Ife, SENT OUT QUEST, Type, 2
+055, Denmark, Ife, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+055, The Zulus, Yerevan, SENT OUT QUEST, Type, 1
+055, The Zulus, Yerevan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+055, The Zulus, Yerevan, SENT OUT QUEST, Type, 7
+055, The Zulus, Yerevan, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+055, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 4
+055, Songhai, Kuala Lumpur, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+055, England, Kuala Lumpur, SENT OUT QUEST, Type, 1
+055, England, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+056, The Netherlands, Vancouver, gained friend
+056, The Netherlands, Vancouver, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
+056, Germany, Riga, gained ally
+056, Germany, Riga, FINISHED QUEST, Contest Techs, Friendship: 39 to 79, MINOR_CIV_RIGA
+056, The Netherlands, Riga, gained friend
+056, The Netherlands, Riga, FINISHED QUEST, Contest Techs, Friendship: 5 to 45, MINOR_CIV_RIGA
+056, The Maya, Riga, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_RIGA
+056, The Netherlands, Bratislava, SENT OUT QUEST, Type, 1
+056, The Netherlands, Bratislava, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+056, Quebec City, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+056, The Netherlands, Antananarivo, SENT OUT QUEST, Type, 2
+056, The Netherlands, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 47 to 47, MINOR_CIV_ANTANANARIVO
+057, Germany, Hong Kong, SENT OUT QUEST, Type, 3
+057, Germany, Hong Kong, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_HONG_KONG
+057, Songhai, Cahokia, SENT OUT QUEST, Type, 3
+057, Songhai, Cahokia, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+057, Denmark, Quebec City, SENT OUT QUEST, Type, 17
+057, Denmark, Quebec City, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+058, Songhai, Budapest, SENT OUT QUEST, Type, 1
+058, Songhai, Budapest, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+058, Germany, Ife, SENT OUT QUEST, Type, 2
+058, Germany, Ife, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+058, The Netherlands, Kuala Lumpur, SENT OUT QUEST, Type, 2
+058, The Netherlands, Kuala Lumpur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+058, Germany, Antananarivo, SENT OUT QUEST, Type, 3
+058, Germany, Antananarivo, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+060, The Maya, Vancouver, gained friend
+060, The Maya, Vancouver, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_VANCOUVER
+060, The Maya, Prague, gained friend
+060, The Maya, Prague, FINISHED QUEST, Find Player, Friendship: 8 to 43, MINOR_CIV_PRAGUE
+061, Songhai, Budapest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+061, The Netherlands, Budapest, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+062, The Maya, Hong Kong, SENT OUT QUEST, Type, 2
+062, The Maya, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+062, Songhai, Vancouver, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+062, Germany, Vancouver, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+062, The Netherlands, Vancouver, cancelled, Kill Camp, Friendship: 31 to 31, MINOR_CIV_VANCOUVER
+062, The Maya, Vancouver, cancelled, Kill Camp, Friendship: 32 to 32, MINOR_CIV_VANCOUVER
+062, Persia, Cape Town, SENT OUT QUEST, Type, 6
+062, Persia, Cape Town, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+062, Germany, Bratislava, SENT OUT QUEST, Type, 1
+062, Germany, Bratislava, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+062, The Zulus, Quebec City, SENT OUT QUEST, Type, 7
+062, The Zulus, Quebec City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+063, The Netherlands, Vancouver, lost friend
+063, Germany, Riga, lost ally
+063, The Netherlands, Riga, gained ally
+063, The Netherlands, Riga, FINISHED QUEST, Connect Resource, Friendship: 34 to 74, MINOR_CIV_RIGA
+063, Songhai, Byblos, SENT OUT QUEST, Type, 17
+063, Songhai, Byblos, RECEIVED QUEST, Trade Route, Friendship: 46 to 46, MINOR_CIV_BYBLOS
+063, The Netherlands, Yerevan, SENT OUT QUEST, Type, 1
+063, The Netherlands, Yerevan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+063, Songhai, Cahokia, gained friend
+063, Songhai, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+064, Songhai, Cahokia, SENT OUT QUEST, Type, 1
+064, Songhai, Cahokia, SENT OUT QUEST, Type, 3
+064, The Maya, Hong Kong, era change yield update
+064, The Maya, Vancouver, era change yield update
+064, The Maya, Riga, era change yield update
+064, The Maya, Cape Town, era change yield update
+064, The Maya, Ife, era change yield update
+064, The Maya, Hanoi, era change yield update
+064, The Maya, Byblos, era change yield update
+064, The Maya, Yerevan, era change yield update
+064, The Maya, Budapest, era change yield update
+064, The Maya, Cahokia, era change yield update
+064, The Maya, Prague, era change yield update
+064, The Maya, Bratislava, era change yield update
+064, The Maya, Kuala Lumpur, era change yield update
+064, The Maya, Quebec City, era change yield update
+064, The Maya, Antananarivo, era change yield update
+064, The Maya, Zanzibar, era change yield update
+064, The Maya, Hong Kong, SENT OUT QUEST, Type, 1
+064, The Maya, Hong Kong, SENT OUT QUEST, Type, 2
+064, The Maya, Riga, SENT OUT QUEST, Type, 7
+064, The Maya, Prague, SENT OUT QUEST, Type, 2
+064, The Maya, Kuala Lumpur, SENT OUT QUEST, Type, 1
+064, The Maya, Kuala Lumpur, SENT OUT QUEST, Type, 2
+064, The Maya, Antananarivo, SENT OUT QUEST, Type, 2
+064, The Maya, Vancouver, lost friend
+064, The Netherlands, Cape Town, SENT OUT QUEST, Type, 2
+064, The Netherlands, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+064, The Netherlands, Antananarivo, lost friend
+065, Germany, Vancouver, SENT OUT QUEST, Type, 2
+065, Germany, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+065, The Netherlands, Riga, SENT OUT QUEST, Type, 17
+065, The Netherlands, Riga, RECEIVED QUEST, Trade Route, Friendship: 71 to 71, MINOR_CIV_RIGA
+065, Songhai, Ife, SENT OUT QUEST, Type, 3
+065, Songhai, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+066, England, Hanoi, SENT OUT QUEST, Type, 2
+066, England, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+066, Germany, Yerevan, SENT OUT QUEST, Type, 1
+066, Germany, Yerevan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+067, The Maya, Prague, lost friend
+067, England, Bratislava, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_BRATISLAVA
+067, Germany, Bratislava, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+067, The Netherlands, Bratislava, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+067, Kuala Lumpur, Persia, RECEIVED_UNIT_GIFT, Immortal
+068, Germany, Riga, SENT OUT QUEST, Type, 17
+068, Germany, Riga, RECEIVED QUEST, Trade Route, Friendship: 61 to 61, MINOR_CIV_RIGA
+068, Germany, Yerevan, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+068, The Netherlands, Yerevan, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+068, The Zulus, Yerevan, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+068, Songhai, Cahokia, lost friend
+069, Songhai, Cahokia, Gold Gift: 500, Friendship: 28 to 28, Spaceship, MINOR_CIV_CAHOKIA, (SAVING) 
+069, Riga, The Netherlands, RECEIVED_UNIT_GIFT, Spearman
+069, The Maya, Ife, SENT OUT QUEST, Type, 1
+069, The Maya, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+069, The Netherlands, Budapest, SENT OUT QUEST, Type, 3
+069, The Netherlands, Budapest, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+070, The Netherlands, Vancouver, SENT OUT QUEST, Type, 3
+070, The Netherlands, Vancouver, RECEIVED QUEST, Construct Wonder, Friendship: 19 to 19, MINOR_CIV_VANCOUVER
+070, Denmark, Ife, SENT OUT QUEST, Type, 7
+070, Denmark, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+071, Songhai, Cape Town, SENT OUT QUEST, Type, 2
+071, Songhai, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+071, The Netherlands, Ife, SENT OUT QUEST, Type, 3
+071, The Netherlands, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+071, The Netherlands, Prague, SENT OUT QUEST, Type, 2
+071, The Netherlands, Prague, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+071, Kuala Lumpur, Persia, RECEIVED_UNIT_GIFT, Immortal
+071, Persia, Kuala Lumpur, gained friend
+071, Persia, Kuala Lumpur, FINISHED QUEST, Find Natural Wonder, Friendship: 3 to 43, MINOR_CIV_KUALA_LUMPUR
+071, England, Quebec City, SENT OUT QUEST, Type, 7
+071, England, Quebec City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_QUEBEC_CITY
+072, England, Bratislava, SENT OUT QUEST, Type, 2
+072, Persia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+072, Persia, Kuala Lumpur, SENT OUT QUEST, Type, 6
+072, The Maya, Kuala Lumpur, gained friend
+072, The Maya, Kuala Lumpur, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KUALA_LUMPUR
+073, Hong Kong, Germany, RECEIVED_UNIT_GIFT, Warrior
+073, Germany, Hong Kong, cancelled, Construct Wonder, Friendship: 7 to 7, MINOR_CIV_HONG_KONG
+073, Songhai, Cahokia, cancelled, Construct Wonder, Friendship: 17 to 17, MINOR_CIV_CAHOKIA
+073, The Zulus, Quebec City, gained friend
+073, The Zulus, Quebec City, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_QUEBEC_CITY
+073, Germany, Antananarivo, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+074, The Maya, Vancouver, SENT OUT QUEST, Type, 3
+074, The Maya, Vancouver, RECEIVED QUEST, Construct Wonder, Friendship: 14 to 14, MINOR_CIV_VANCOUVER
+074, The Maya, Riga, gained friend
+074, The Maya, Riga, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_RIGA
+074, Songhai, Byblos, lost friend
+074, The Netherlands, Kuala Lumpur, SENT OUT QUEST, Type, 7
+074, The Netherlands, Kuala Lumpur, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+075, Germany, Ife, SENT OUT QUEST, Type, 1
+075, Germany, Ife, SENT OUT QUEST, Type, 2
+075, The Maya, Ife, SENT OUT QUEST, Type, 1
+075, England, Bratislava, SENT OUT QUEST, Type, 3
+075, England, Bratislava, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA
+076, Denmark, Ife, gained friend
+076, Denmark, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_IFE
+076, Denmark, Byblos, gained friend
+076, Denmark, Byblos, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+076, Denmark, Quebec City, gained friend
+076, Denmark, Quebec City, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_QUEBEC_CITY
+076, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 2
+076, The Netherlands, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+077, Denmark, Byblos, SENT OUT QUEST, Type, 2
+077, Denmark, Hong Kong, SENT OUT QUEST, Type, 1
+077, Denmark, Hong Kong, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
+077, The Maya, Ife, Gold Gift: 500, Friendship: 2 to 2, Culture, MINOR_CIV_IFE, (SAVING) 
+077, The Netherlands, Riga, lost ally
+077, Germany, Bratislava, SENT OUT QUEST, Type, 2
+077, Germany, Bratislava, RECEIVED QUEST, Connect Resource, Friendship: -4 to -4, MINOR_CIV_BRATISLAVA
+077, England, Kuala Lumpur, SENT OUT QUEST, Type, 14
+077, England, Kuala Lumpur, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+078, Songhai, Byblos, SENT OUT QUEST, Type, 1
+078, Songhai, Byblos, RECEIVED QUEST, Kill Camp, Friendship: 24 to 24, MINOR_CIV_BYBLOS
+078, England, Byblos, SENT OUT QUEST, Type, 1
+078, England, Byblos, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+078, Denmark, Byblos, SENT OUT QUEST, Type, 1
+078, Denmark, Byblos, RECEIVED QUEST, Kill Camp, Friendship: 37 to 37, MINOR_CIV_BYBLOS
+078, Kuala Lumpur, Persia, RECEIVED_UNIT_GIFT, Immortal
+078, The Maya, Kuala Lumpur, SENT OUT QUEST, Type, 3
+078, The Maya, Kuala Lumpur, RECEIVED QUEST, Construct Wonder, Friendship: 31 to 31, MINOR_CIV_KUALA_LUMPUR
+078, Quebec City, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+079, The Netherlands, Riga, SENT OUT QUEST, Type, 3
+079, The Netherlands, Riga, RECEIVED QUEST, Construct Wonder, Friendship: 55 to 55, MINOR_CIV_RIGA
+079, Persia, Cape Town, FINISHED QUEST, Find Player, Friendship: -6 to 28, MINOR_CIV_CAPE_TOWN
+079, The Maya, Kuala Lumpur, lost friend
+079, Persia, Kuala Lumpur, gained ally
+079, Persia, Kuala Lumpur, FINISHED QUEST, Find Player, Friendship: 36 to 71, MINOR_CIV_KUALA_LUMPUR
+079, Songhai, Kuala Lumpur, SENT OUT QUEST, Type, 3
+079, Songhai, Kuala Lumpur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+080, The Maya, Riga, SENT OUT QUEST, Type, 7
+080, The Maya, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 31 to 31, MINOR_CIV_RIGA
+080, Germany, Prague, gained friend
+080, Germany, Prague, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_PRAGUE
+081, The Maya, Riga, lost friend
+081, Denmark, Ife, lost friend
+081, Songhai, Budapest, SENT OUT QUEST, Type, 2
+081, Songhai, Budapest, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUDAPEST
+081, Songhai, Cahokia, SENT OUT QUEST, Type, 2
+081, Songhai, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+081, Songhai, Prague, SENT OUT QUEST, Type, 1
+081, Songhai, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+081, Germany, Prague, SENT OUT QUEST, Type, 1
+081, Germany, Prague, RECEIVED QUEST, Kill Camp, Friendship: 42 to 42, MINOR_CIV_PRAGUE
+081, The Netherlands, Prague, SENT OUT QUEST, Type, 1
+081, The Netherlands, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+081, The Maya, Prague, SENT OUT QUEST, Type, 1
+081, The Maya, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+081, The Netherlands, Bratislava, SENT OUT QUEST, Type, 3
+081, The Netherlands, Bratislava, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BRATISLAVA

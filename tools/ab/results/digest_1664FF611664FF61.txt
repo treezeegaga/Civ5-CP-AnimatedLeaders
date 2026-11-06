@@ -1,0 +1,33 @@
+﻿Game 1664FF611664FF61 (AIABTest_c8e.csv), last logged turn 80
+b    Persia       tall      cities 3
+  builds to T80 (capital Persepolis; other cities named): T0 Worker* | T11 Settler* | T20 Settler* | T30 Immortal* | T34 Immortal* (Pasargadae) | T35 Immortal* (Pasargadae) | T35 Immortal* | T36 Immortal* | T39 Immortal* (Susa) | T40 Immortal* (Susa) | T41 Immortal* | T42 Archer* (Pasargadae) | T46 Archer* | T47 Archer* (Pasargadae) | T50 Immortal* | T52 Immortal* (Susa) | T55 Worker | T57 Colosseum (Pasargadae) | T60 Worker | T60 Worker | T61 Colosseum (Susa) | T66 Colosseum | T68 Catapult (Pasargadae) | T73 Immortal* | T74 Caravan (Susa) | T76 Water Mill | T77 Immortal* (Pasargadae) | T80 Monument
+  settlers ordered T: 11,20   found-city ops started T: 20,30   cities founded T: 34,39
+  military ops ended (whole game): TimedOut 1, NoTarget 1
+  settler timeline to T80: T11 settler (book) in Persepolis | T20 op started | T20 settler (book) in Persepolis | T30 op started | T34 FOUNDED | T39 FOUNDED
+c    Denmark      tall      cities 1
+  builds to T80 (capital Copenhagen; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T12 Warrior* | T16 Worker* | T23 Warrior* | T28 Settler* | T37 Granary | T45 Warrior* | T50 Worker* | T60 Work Boat | T66 Work Boat | T73 Work Boat | T78 Settler
+  settlers ordered T: 28,78   found-city ops started T: 37   cities founded T: 
+  ops aborted: T39 LostCivilian
+  book SETTLER HELD to T80: 2 (growth due 2)   built instead: Worker 2   first: T016 Copenhagen size 3 next Worker | T050 Copenhagen size 6 next Worker
+  settler timeline to T80: T28 settler (book) in Copenhagen | T37 op started | T39 op ended: LostCivilian | T78 settler (AI) in Copenhagen
+  saving gold for a settler: 65 turns (T5-T80)
+c    England      tall      cities 3
+  builds to T80 (capital London; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T21 Settler* | T32 Warrior | T39 Granary | T44 Monument* (York) | T45 Library* (York) | T47 Warrior* | T48 Worker* | T50 Warrior* | T51 Worker* | T52 Warrior* | T53 Worker* | T54 Work Boat | T55 Work Boat | T56 Work Boat | T57 Work Boat | T59 Worker | T61 Work Boat | T65 Warrior | T66 Trireme (York) | T66 Settler | T73 Hanging Gardens | T75 Water Mill (York) | T78 Granary (Nottingham)
+  settlers ordered T: 21,66   found-city ops started T: 32,73   cities founded T: 44,78
+  IDLE SETTLER turns: 1 (first T66)
+  settler timeline to T80: T21 settler (book) in London | T32 op started | T44 FOUNDED | T66 settler (AI) in London | T73 op started | T78 FOUNDED
+  saving gold for a settler: 41 turns (T6-T80)
+c    Germany      tall      cities 3
+  builds to T80 (capital Berlin; other cities named): T0 Scout* | T4 Monument* | T10 Shrine* | T15 Warrior* | T20 Settler* | T30 Warrior | T35 Stonehenge | T39 Monument* (Hamburg) | T40 Library* (Hamburg) | T48 Warrior* | T49 Worker* | T55 Settler | T62 Spearman | T66 Spearman | T67 Shrine (Hamburg) | T70 Worker | T74 Granary (Munich) | T74 Library | T78 Archer (Hamburg) | T80 Oracle
+  settlers ordered T: 20,55   found-city ops started T: 30,62   cities founded T: 39,74
+  IDLE SETTLER turns: 1 (first T55)
+  settler timeline to T80: T20 settler (book) in Berlin | T30 op started | T39 FOUNDED | T55 settler (AI) in Berlin | T62 op started | T74 FOUNDED
+  saving gold for a settler: 43 turns (T5-T62)
+c    Songhai      tall      cities 3
+  builds to T80 (capital Gao; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T18 Settler* | T27 Warrior | T31 Granary (Tombouctu) | T31 Settler | T32 Great Library | T43 Worker* | T44 Worker | T48 Writers' Guild | T55 Granary | T61 Settler | T63 Shrine (Tombouctu) | T67 Spearman | T69 Work Boat (Jenne) | T70 Work Boat (Jenne) | T72 Settler | T76 Worker (Tombouctu) | T77 Hanging Gardens
+  settlers ordered T: 18,31,61,72   found-city ops started T: 27,67,77   cities founded T: 31,69,81
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: the normal AI choice 2   first: T044 Gao size 4 next the normal AI choice | T048 Gao size 4 next the normal AI choice
+  IDLE SETTLER turns: 2 (first T61)
+  military ops ended (whole game): NoUnits 2
+  settler timeline to T80: T18 settler (book) in Gao | T27 op started | T31 settler (AI) in Gao | T31 FOUNDED | T61 settler (AI) in Gao | T67 op started | T69 FOUNDED | T72 settler (AI) in Gao | T77 op started
+  saving gold for a settler: 44 turns (T6-T77)

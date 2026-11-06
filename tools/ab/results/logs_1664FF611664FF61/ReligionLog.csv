@@ -1,0 +1,575 @@
+000, -4000, Gao, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, London, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Berlin, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Persepolis, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Amsterdam, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Ulundi, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Copenhagen, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Palenque, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Hong Kong, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Vancouver, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Riga, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Cape Town, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Ife, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Hanoi, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Byblos, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Yerevan, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Budapest, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Cahokia, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Prague, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Bratislava, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Kuala Lumpur, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Quebec City, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Antananarivo, POP_CHANGE, Pop: 1, No religion in city
+000, -4000, Zanzibar, POP_CHANGE, Pop: 1, No religion in city
+004, -3760, Berlin, POP_CHANGE, Pop: 2, No religion in city
+004, -3760, Copenhagen, POP_CHANGE, Pop: 2, No religion in city
+004, -3760, Riga, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Gao, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, London, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Persepolis, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Amsterdam, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Ulundi, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Palenque, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Hong Kong, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Cape Town, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Ife, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Byblos, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Yerevan, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Prague, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Bratislava, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Kuala Lumpur, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Quebec City, POP_CHANGE, Pop: 2, No religion in city
+005, -3700, Zanzibar, POP_CHANGE, Pop: 2, No religion in city
+007, -3580, Vancouver, POP_CHANGE, Pop: 2, No religion in city
+008, -3520, Hanoi, POP_CHANGE, Pop: 2, No religion in city
+009, -3460, Berlin, POP_CHANGE, Pop: 3, No religion in city
+009, -3460, Copenhagen, POP_CHANGE, Pop: 3, No religion in city
+010, -3400, Vancouver, POP_CHANGE, Pop: 3, No religion in city
+010, -3400, Riga, POP_CHANGE, Pop: 3, No religion in city
+010, -3400, Budapest, POP_CHANGE, Pop: 2, No religion in city
+010, -3400, Cahokia, POP_CHANGE, Pop: 2, No religion in city
+010, -3400, Antananarivo, POP_CHANGE, Pop: 2, No religion in city
+011, -3340, Songhai, Belief, God-King, 195
+011, -3340, Songhai, Belief, Messenger of the Gods, 164
+011, -3340, Songhai, Belief, Sacred Path, 117
+011, -3340, Songhai, Belief, Religious Idols, 80
+011, -3340, Songhai, Belief, Religious Settlements, 75
+011, -3340, Songhai, Belief, Ancestor Worship, 75
+011, -3340, Songhai, Belief, Monument to the Gods, 60
+011, -3340, Songhai, Belief, Stone Circles, 55
+011, -3340, Songhai, Belief, God of Craftsmen, 52
+011, -3340, Songhai, Belief, Fertility Rites, 40
+011, -3340, Songhai, Belief, Goddess of Love, 40
+011, -3340, Songhai, Belief, Oral Tradition, 32
+011, -3340, Songhai, Belief, Sacred Waters, 13
+011, -3340, Songhai, Belief, God of the Open Sky, 8
+011, -3340, Songhai, Belief, Sun God, 8
+011, -3340, Songhai, Belief, Desert Folklore, 5
+011, -3340, Songhai, Belief, Goddess of the Hunt, 0
+011, -3340, Songhai, Belief, God of the Sea, 0
+011, -3340, Songhai, Belief, One with Nature, 0
+011, -3340, Songhai, Belief, God of War, 0
+011, -3340, Songhai, Belief, Goddess of Festivals, 0
+011, -3340, Songhai, Belief, Goddess of Protection, 0
+011, -3340, Songhai, Belief, Faith Healers, 0
+011, -3340, Songhai, Belief, Dance of the Aurora, 0
+011, -3340, Songhai, Belief, Tears of the Gods, 0
+011, -3340, Songhai, Belief, Earth Mother, 0
+011, -3340, Songhai, CHOSEN, God-King
+011, -3340, Gao, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
+011, -3340, Songhai, PANTHEON FOUNDED, Pantheon
+011, -3340, London, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Gao, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+013, -3220, Amsterdam, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Ulundi, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Palenque, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Hong Kong, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Cape Town, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Ife, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Byblos, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Bratislava, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Quebec City, POP_CHANGE, Pop: 3, No religion in city
+013, -3220, Zanzibar, POP_CHANGE, Pop: 3, No religion in city
+016, -3040, London, POP_CHANGE, Pop: 4, No religion in city
+016, -3040, Vancouver, POP_CHANGE, Pop: 4, No religion in city
+017, -2980, Copenhagen, POP_CHANGE, Pop: 4, No religion in city
+018, -2920, Prague, POP_CHANGE, Pop: 3, No religion in city
+019, -2860, Berlin, POP_CHANGE, Pop: 4, No religion in city
+019, -2860, Yerevan, POP_CHANGE, Pop: 3, No religion in city
+019, -2860, Kuala Lumpur, POP_CHANGE, Pop: 3, No religion in city
+020, -2800, Denmark, Belief, Sacred Path, 294
+020, -2800, Denmark, Belief, Messenger of the Gods, 190
+020, -2800, Denmark, Belief, Tears of the Gods, 114
+020, -2800, Denmark, Belief, Ancestor Worship, 96
+020, -2800, Denmark, Belief, Oral Tradition, 92
+020, -2800, Denmark, Belief, Religious Settlements, 75
+020, -2800, Denmark, Belief, God of Craftsmen, 54
+020, -2800, Denmark, Belief, Monument to the Gods, 48
+020, -2800, Denmark, Belief, Sun God, 44
+020, -2800, Denmark, Belief, Fertility Rites, 40
+020, -2800, Denmark, Belief, Goddess of Love, 39
+020, -2800, Denmark, Belief, God of the Open Sky, 36
+020, -2800, Denmark, Belief, Stone Circles, 33
+020, -2800, Denmark, Belief, God of the Sea, 31
+020, -2800, Denmark, Belief, Sacred Waters, 9
+020, -2800, Denmark, Belief, Earth Mother, 3
+020, -2800, Denmark, Belief, Goddess of the Hunt, 2
+020, -2800, Denmark, Belief, One with Nature, 0
+020, -2800, Denmark, Belief, Religious Idols, 0
+020, -2800, Denmark, Belief, God of War, 0
+020, -2800, Denmark, Belief, Goddess of Festivals, 0
+020, -2800, Denmark, Belief, Desert Folklore, 0
+020, -2800, Denmark, Belief, Goddess of Protection, 0
+020, -2800, Denmark, Belief, Faith Healers, 0
+020, -2800, Denmark, Belief, Dance of the Aurora, 0
+020, -2800, Denmark, CHOSEN, Sacred Path
+020, -2800, Copenhagen, PANTHEON_FOUNDED, Pop: 4, Second: Pantheon(3), Nonreligious: 1
+020, -2800, Denmark, PANTHEON FOUNDED, Pantheon
+020, -2800, Cahokia, POP_CHANGE, Pop: 3, No religion in city
+021, -2740, Vancouver, POP_CHANGE, Pop: 5, No religion in city
+021, -2740, Riga, POP_CHANGE, Pop: 4, No religion in city
+021, -2740, Ife, POP_CHANGE, Pop: 4, No religion in city
+021, -2740, Hanoi, POP_CHANGE, Pop: 3, No religion in city
+022, -2680, The Maya, Belief, Tears of the Gods, 345
+022, -2680, The Maya, Belief, Messenger of the Gods, 344
+022, -2680, The Maya, Belief, Ancestor Worship, 224
+022, -2680, The Maya, Belief, Desert Folklore, 154
+022, -2680, The Maya, Belief, Religious Idols, 120
+022, -2680, The Maya, Belief, Monument to the Gods, 108
+022, -2680, The Maya, Belief, Religious Settlements, 75
+022, -2680, The Maya, Belief, God of Craftsmen, 65
+022, -2680, The Maya, Belief, Oral Tradition, 65
+022, -2680, The Maya, Belief, Goddess of Love, 51
+022, -2680, The Maya, Belief, Sacred Waters, 48
+022, -2680, The Maya, Belief, Fertility Rites, 40
+022, -2680, The Maya, Belief, Stone Circles, 21
+022, -2680, The Maya, Belief, Sun God, 14
+022, -2680, The Maya, Belief, God of the Open Sky, 8
+022, -2680, The Maya, Belief, Earth Mother, 7
+022, -2680, The Maya, Belief, Goddess of the Hunt, 0
+022, -2680, The Maya, Belief, God of the Sea, 0
+022, -2680, The Maya, Belief, One with Nature, 0
+022, -2680, The Maya, Belief, God of War, 0
+022, -2680, The Maya, Belief, Goddess of Festivals, 0
+022, -2680, The Maya, Belief, Goddess of Protection, 0
+022, -2680, The Maya, Belief, Faith Healers, 0
+022, -2680, The Maya, Belief, Dance of the Aurora, 0
+022, -2680, The Maya, CHOSEN, Messenger of the Gods
+022, -2680, Palenque, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+022, -2680, The Maya, PANTHEON FOUNDED, Pantheon
+023, -2620, Palenque, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+023, -2620, Byblos, POP_CHANGE, Pop: 4, No religion in city
+023, -2620, Bratislava, POP_CHANGE, Pop: 4, No religion in city
+023, -2620, Quebec City, POP_CHANGE, Pop: 4, No religion in city
+024, -2560, The Netherlands, Belief, Desert Folklore, 150
+024, -2560, The Netherlands, Belief, Ancestor Worship, 133
+024, -2560, The Netherlands, Belief, Stone Circles, 108
+024, -2560, The Netherlands, Belief, Oral Tradition, 105
+024, -2560, The Netherlands, Belief, God of Craftsmen, 77
+024, -2560, The Netherlands, Belief, Religious Settlements, 75
+024, -2560, The Netherlands, Belief, Monument to the Gods, 60
+024, -2560, The Netherlands, Belief, Goddess of Love, 43
+024, -2560, The Netherlands, Belief, Fertility Rites, 40
+024, -2560, The Netherlands, Belief, God of the Open Sky, 21
+024, -2560, The Netherlands, Belief, Sacred Waters, 13
+024, -2560, The Netherlands, Belief, God of the Sea, 12
+024, -2560, The Netherlands, Belief, Dance of the Aurora, 6
+024, -2560, The Netherlands, Belief, Goddess of the Hunt, 0
+024, -2560, The Netherlands, Belief, One with Nature, 0
+024, -2560, The Netherlands, Belief, Religious Idols, 0
+024, -2560, The Netherlands, Belief, God of War, 0
+024, -2560, The Netherlands, Belief, Goddess of Festivals, 0
+024, -2560, The Netherlands, Belief, Goddess of Protection, 0
+024, -2560, The Netherlands, Belief, Faith Healers, 0
+024, -2560, The Netherlands, Belief, Tears of the Gods, 0
+024, -2560, The Netherlands, Belief, Earth Mother, 0
+024, -2560, The Netherlands, Belief, Sun God, 0
+024, -2560, The Netherlands, CHOSEN, Desert Folklore
+024, -2560, Amsterdam, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+024, -2560, The Netherlands, PANTHEON FOUNDED, Pantheon
+024, -2560, Ulundi, POP_CHANGE, Pop: 4, No religion in city
+024, -2560, Cape Town, POP_CHANGE, Pop: 4, No religion in city
+025, -2500, Rotterdam, POP_CHANGE, Pop: 1, No religion in city
+025, -2500, Rotterdam, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+025, -2500, Cahokia, POP_CHANGE, Pop: 4, No religion in city
+025, -2500, Kuala Lumpur, POP_CHANGE, Pop: 4, No religion in city
+025, -2500, Antananarivo, POP_CHANGE, Pop: 3, No religion in city
+026, -2440, Vancouver, POP_CHANGE, Pop: 6, No religion in city
+026, -2440, Riga, POP_CHANGE, Pop: 5, No religion in city
+026, -2440, Yerevan, POP_CHANGE, Pop: 4, No religion in city
+026, -2440, Budapest, POP_CHANGE, Pop: 3, No religion in city
+027, -2380, Hong Kong, POP_CHANGE, Pop: 4, No religion in city
+028, -2320, Ife, POP_CHANGE, Pop: 5, No religion in city
+028, -2320, Hanoi, POP_CHANGE, Pop: 4, No religion in city
+029, -2260, Rotterdam, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+030, -2200, Gao, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+030, -2200, Byblos, POP_CHANGE, Pop: 5, No religion in city
+030, -2200, Prague, POP_CHANGE, Pop: 4, No religion in city
+030, -2200, Zanzibar, POP_CHANGE, Pop: 4, No religion in city
+031, -2140, Tombouctu, POP_CHANGE, Pop: 1, No religion in city
+031, -2140, Tombouctu, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+031, -2140, Bratislava, POP_CHANGE, Pop: 5, No religion in city
+031, -2140, Quebec City, POP_CHANGE, Pop: 5, No religion in city
+032, -2080, Germany, Belief, Oral Tradition, 175
+032, -2080, Germany, Belief, Ancestor Worship, 154
+032, -2080, Germany, Belief, Sun God, 81
+032, -2080, Germany, Belief, God of Craftsmen, 78
+032, -2080, Germany, Belief, Religious Settlements, 75
+032, -2080, Germany, Belief, Goddess of Love, 54
+032, -2080, Germany, Belief, Sacred Waters, 48
+032, -2080, Germany, Belief, Monument to the Gods, 48
+032, -2080, Germany, Belief, Fertility Rites, 40
+032, -2080, Germany, Belief, Stone Circles, 26
+032, -2080, Germany, Belief, God of the Open Sky, 9
+032, -2080, Germany, Belief, Religious Idols, 9
+032, -2080, Germany, Belief, God of the Sea, 3
+032, -2080, Germany, Belief, Goddess of the Hunt, 1
+032, -2080, Germany, Belief, One with Nature, 0
+032, -2080, Germany, Belief, God of War, 0
+032, -2080, Germany, Belief, Goddess of Festivals, 0
+032, -2080, Germany, Belief, Goddess of Protection, 0
+032, -2080, Germany, Belief, Faith Healers, 0
+032, -2080, Germany, Belief, Dance of the Aurora, 0
+032, -2080, Germany, Belief, Tears of the Gods, 0
+032, -2080, Germany, Belief, Earth Mother, 0
+032, -2080, Germany, CHOSEN, Oral Tradition
+032, -2080, Berlin, PANTHEON_FOUNDED, Pop: 4, Second: Pantheon(3), Nonreligious: 1
+032, -2080, Germany, PANTHEON FOUNDED, Pantheon
+032, -2080, Riga, POP_CHANGE, Pop: 6, No religion in city
+032, -2080, Cape Town, POP_CHANGE, Pop: 5, No religion in city
+032, -2080, Kuala Lumpur, POP_CHANGE, Pop: 5, No religion in city
+033, -2020, Antananarivo, POP_CHANGE, Pop: 4, No religion in city
+034, -1960, Pasargadae, POP_CHANGE, Pop: 1, No religion in city
+035, -1900, Vancouver, POP_CHANGE, Pop: 7, No religion in city
+035, -1900, Cahokia, POP_CHANGE, Pop: 5, No religion in city
+036, -1840, Yerevan, POP_CHANGE, Pop: 5, No religion in city
+037, -1780, England, Belief, Goddess of Protection, 720
+037, -1780, England, Belief, Faith Healers, 720
+037, -1780, England, Belief, Religious Settlements, 140
+037, -1780, England, Belief, Ancestor Worship, 133
+037, -1780, England, Belief, Religious Idols, 117
+037, -1780, England, Belief, One with Nature, 104
+037, -1780, England, Belief, Monument to the Gods, 84
+037, -1780, England, Belief, God of Craftsmen, 66
+037, -1780, England, Belief, Dance of the Aurora, 66
+037, -1780, England, Belief, Goddess of Love, 46
+037, -1780, England, Belief, Sacred Waters, 43
+037, -1780, England, Belief, God of the Open Sky, 42
+037, -1780, England, Belief, Fertility Rites, 40
+037, -1780, England, Belief, Stone Circles, 24
+037, -1780, England, Belief, Goddess of the Hunt, 22
+037, -1780, England, Belief, God of the Sea, 9
+037, -1780, England, Belief, God of War, 0
+037, -1780, England, Belief, Goddess of Festivals, 0
+037, -1780, England, Belief, Tears of the Gods, 0
+037, -1780, England, Belief, Earth Mother, 0
+037, -1780, England, Belief, Sun God, 0
+037, -1780, England, CHOSEN, Goddess of Protection
+037, -1780, London, PANTHEON_FOUNDED, Pop: 4, Second: Pantheon(3), Nonreligious: 1
+037, -1780, England, PANTHEON FOUNDED, Pantheon
+037, -1780, Budapest, POP_CHANGE, Pop: 4, No religion in city
+038, -1720, Utrecht, POP_CHANGE, Pop: 1, No religion in city
+038, -1720, Utrecht, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+038, -1720, Byblos, POP_CHANGE, Pop: 6, No religion in city
+038, -1720, Quebec City, POP_CHANGE, Pop: 6, No religion in city
+039, -1660, Hamburg, POP_CHANGE, Pop: 1, No religion in city
+039, -1660, Hamburg, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+039, -1660, Susa, POP_CHANGE, Pop: 1, No religion in city
+040, -1600, Persepolis, POP_CHANGE, Pop: 3, No religion in city
+040, -1600, Riga, POP_CHANGE, Pop: 7, No religion in city
+040, -1600, Ife, POP_CHANGE, Pop: 6, No religion in city
+040, -1600, Bratislava, POP_CHANGE, Pop: 6, No religion in city
+041, -1540, Umgungundlovu, POP_CHANGE, Pop: 1, No religion in city
+041, -1540, Cape Town, POP_CHANGE, Pop: 6, No religion in city
+041, -1540, Prague, POP_CHANGE, Pop: 5, No religion in city
+041, -1540, Kuala Lumpur, POP_CHANGE, Pop: 6, No religion in city
+042, -1480, Antananarivo, POP_CHANGE, Pop: 5, No religion in city
+043, -1420, Hamburg, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+043, -1420, Hanoi, POP_CHANGE, Pop: 5, No religion in city
+044, -1360, York, POP_CHANGE, Pop: 1, No religion in city
+044, -1360, York, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+044, -1360, Copenhagen, POP_CHANGE, Pop: 6, First: Pantheon(4), Nonreligious: 2
+044, -1360, Palenque, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+045, -1300, Tombouctu, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+045, -1300, Tikal, POP_CHANGE, Pop: 1, No religion in city
+045, -1300, Tikal, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+046, -1240, Umgungundlovu, POP_CHANGE, Pop: 2, No religion in city
+047, -1180, Quebec City, POP_CHANGE, Pop: 7, No religion in city
+048, -1120, Amsterdam, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+048, -1120, Cahokia, POP_CHANGE, Pop: 6, No religion in city
+049, -1060, Vancouver, POP_CHANGE, Pop: 8, No religion in city
+049, -1060, Riga, POP_CHANGE, Pop: 8, No religion in city
+049, -1060, Byblos, POP_CHANGE, Pop: 7, No religion in city
+050, -1000, Copenhagen, POP_CHANGE, Pop: 7, First: Pantheon(5), Nonreligious: 2
+050, -1000, Tikal, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+051, -960, Cape Town, POP_CHANGE, Pop: 7, No religion in city
+051, -960, Yerevan, POP_CHANGE, Pop: 6, No religion in city
+051, -960, Budapest, POP_CHANGE, Pop: 5, No religion in city
+052, -920, Palenque, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+052, -920, Bratislava, POP_CHANGE, Pop: 7, No religion in city
+053, -880, York, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+053, -880, Rotterdam, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+053, -880, Utrecht, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+053, -880, Zanzibar, POP_CHANGE, Pop: 5, No religion in city
+054, -840, Nobamba, POP_CHANGE, Pop: 1, No religion in city
+054, -840, Kuala Lumpur, POP_CHANGE, Pop: 7, No religion in city
+054, -840, Antananarivo, POP_CHANGE, Pop: 6, No religion in city
+055, -800, Gao, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+055, -800, Copenhagen, POP_CHANGE, Pop: 8, First: Pantheon(6), Nonreligious: 2
+056, -760, London, POP_CHANGE, Pop: 6, First: Pantheon(4), Nonreligious: 2
+056, -760, Hamburg, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+056, -760, Prague, POP_CHANGE, Pop: 6, No religion in city
+058, -680, Hong Kong, POP_CHANGE, Pop: 5, No religion in city
+058, -680, Hanoi, POP_CHANGE, Pop: 6, No religion in city
+059, -640, Tombouctu, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+059, -640, Songhai, PROPHET SPAWNED, Gao, Faith: 0
+059, -640, Songhai, Belief, Initiation Rites, 49
+059, -640, Songhai, Belief, Peace Loving, 40
+059, -640, Songhai, Belief, Papal Primacy, 28
+059, -640, Songhai, Belief, Interfaith Dialogue, 18
+059, -640, Songhai, Belief, Tithe, 9
+059, -640, Songhai, Belief, Ceremonial Burial, 4
+059, -640, Songhai, Belief, Church Property, 3
+059, -640, Songhai, Belief, Pilgrimage, 3
+059, -640, Songhai, Belief, World Church, 0
+059, -640, Songhai, CHOSEN, Initiation Rites
+059, -640, Songhai, Belief, Mosques, 598
+059, -640, Songhai, Belief, Pagodas, 530
+059, -640, Songhai, Belief, Monasteries, 509
+059, -640, Songhai, Belief, Cathedrals, 464
+059, -640, Songhai, Belief, Religious Community, 449
+059, -640, Songhai, Belief, Guruship, 277
+059, -640, Songhai, Belief, Swords into Plowshares, 263
+059, -640, Songhai, Belief, Religious Art, 251
+059, -640, Songhai, Belief, Divine Inspiration, 251
+059, -640, Songhai, Belief, Feed the World, 209
+059, -640, Songhai, Belief, Religious Center, 200
+059, -640, Songhai, Belief, Choral Music, 195
+059, -640, Songhai, Belief, Asceticism, 161
+059, -640, Songhai, Belief, Peace Gardens, 158
+059, -640, Songhai, Belief, Liturgical Drama, 130
+059, -640, Songhai, Belief, Holy Warriors, 101
+059, -640, Songhai, CHOSEN, Mosques
+059, -640, Gao, RELIGION_FOUNDED, Pop: 5, Nonreligious: 0
+059, -640, Songhai, RELIGION FOUNDED, Gao, Islam
+059, -640, Copenhagen, POP_CHANGE, Pop: 9, First: Pantheon(7), Nonreligious: 2
+059, -640, Riga, POP_CHANGE, Pop: 9, No religion in city
+059, -640, Cape Town, POP_CHANGE, Pop: 8, No religion in city
+059, -640, Quebec City, POP_CHANGE, Pop: 8, No religion in city
+060, -600, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+061, -560, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 4.00
+061, -560, Hamburg, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+061, -560, Rotterdam, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+061, -560, Budapest, POP_CHANGE, Pop: 6, No religion in city
+062, -520, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 8.00
+063, -480, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 12.00
+064, -440, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 16.00
+064, -440, Tombouctu, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+064, -440, Copenhagen, POP_CHANGE, Pop: 10, First: Pantheon(8), Nonreligious: 2
+064, -440, Vancouver, POP_CHANGE, Pop: 9, No religion in city
+064, -440, Prague, POP_CHANGE, Pop: 7, No religion in city
+065, -400, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 20.00
+065, -400, Amsterdam, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+065, -400, The Zulus, Belief, Faith Healers, 810
+065, -400, The Zulus, Belief, Goddess of Festivals, 217
+065, -400, The Zulus, Belief, Ancestor Worship, 175
+065, -400, The Zulus, Belief, God of Craftsmen, 117
+065, -400, The Zulus, Belief, Sacred Waters, 103
+065, -400, The Zulus, Belief, Goddess of Love, 79
+065, -400, The Zulus, Belief, Religious Settlements, 75
+065, -400, The Zulus, Belief, Religious Idols, 70
+065, -400, The Zulus, Belief, Goddess of the Hunt, 64
+065, -400, The Zulus, Belief, God of the Sea, 44
+065, -400, The Zulus, Belief, God of the Open Sky, 40
+065, -400, The Zulus, Belief, Sun God, 32
+065, -400, The Zulus, Belief, Monument to the Gods, 30
+065, -400, The Zulus, Belief, Earth Mother, 24
+065, -400, The Zulus, Belief, Fertility Rites, 20
+065, -400, The Zulus, Belief, Stone Circles, 2
+065, -400, The Zulus, Belief, One with Nature, 0
+065, -400, The Zulus, Belief, God of War, 0
+065, -400, The Zulus, Belief, Dance of the Aurora, 0
+065, -400, The Zulus, Belief, Tears of the Gods, 0
+065, -400, The Zulus, CHOSEN, Faith Healers
+065, -400, Ulundi, PANTHEON_FOUNDED, Pop: 4, Second: Pantheon(3), Nonreligious: 1
+065, -400, Umgungundlovu, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
+065, -400, Nobamba, PANTHEON_FOUNDED, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+065, -400, The Zulus, PANTHEON FOUNDED, Pantheon
+066, -360, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
+066, -360, Nobamba, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+067, -320, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 28.00
+067, -320, The Maya, Belief, Peace Loving, 55
+067, -320, The Maya, Belief, Papal Primacy, 33
+067, -320, The Maya, Belief, Interfaith Dialogue, 27
+067, -320, The Maya, Belief, Tithe, 15
+067, -320, The Maya, Belief, Church Property, 3
+067, -320, The Maya, Belief, Pilgrimage, 3
+067, -320, The Maya, Belief, Ceremonial Burial, 2
+067, -320, The Maya, Belief, World Church, 0
+067, -320, The Maya, CHOSEN, Peace Loving
+067, -320, The Maya, Belief, Pagodas, 851
+067, -320, The Maya, Belief, Monasteries, 831
+067, -320, The Maya, Belief, Cathedrals, 698
+067, -320, The Maya, Belief, Religious Community, 566
+067, -320, The Maya, Belief, Religious Art, 250
+067, -320, The Maya, Belief, Swords into Plowshares, 230
+067, -320, The Maya, Belief, Guruship, 184
+067, -320, The Maya, Belief, Divine Inspiration, 170
+067, -320, The Maya, Belief, Religious Center, 167
+067, -320, The Maya, Belief, Feed the World, 151
+067, -320, The Maya, Belief, Peace Gardens, 140
+067, -320, The Maya, Belief, Choral Music, 128
+067, -320, The Maya, Belief, Asceticism, 128
+067, -320, The Maya, Belief, Liturgical Drama, 120
+067, -320, The Maya, Belief, Holy Warriors, 58
+067, -320, The Maya, CHOSEN, Monasteries
+067, -320, Palenque, RELIGION_FOUNDED, Pop: 7, Nonreligious: 1
+067, -320, The Maya, RELIGION FOUNDED, Palenque, Catholicism
+068, -280, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 32.00
+068, -280, Germany, PROPHET SPAWNED, Berlin, Faith: 0
+068, -280, Germany, Belief, Interfaith Dialogue, 31
+068, -280, Germany, Belief, Papal Primacy, 31
+068, -280, Germany, Belief, Tithe, 18
+068, -280, Germany, Belief, Ceremonial Burial, 6
+068, -280, Germany, Belief, Church Property, 6
+068, -280, Germany, Belief, Pilgrimage, 6
+068, -280, Germany, Belief, World Church, 3
+068, -280, Germany, CHOSEN, Papal Primacy
+068, -280, Germany, Belief, Pagodas, 636
+068, -280, Germany, Belief, Religious Community, 525
+068, -280, Germany, Belief, Cathedrals, 504
+068, -280, Germany, Belief, Religious Center, 369
+068, -280, Germany, Belief, Swords into Plowshares, 261
+068, -280, Germany, Belief, Religious Art, 249
+068, -280, Germany, Belief, Divine Inspiration, 249
+068, -280, Germany, Belief, Peace Gardens, 225
+068, -280, Germany, Belief, Asceticism, 225
+068, -280, Germany, Belief, Guruship, 213
+068, -280, Germany, Belief, Feed the World, 171
+068, -280, Germany, Belief, Choral Music, 153
+068, -280, Germany, Belief, Liturgical Drama, 117
+068, -280, Germany, Belief, Holy Warriors, 99
+068, -280, Germany, CHOSEN, Pagodas
+068, -280, Berlin, RELIGION_FOUNDED, Pop: 5, Nonreligious: 1
+068, -280, Germany, RELIGION FOUNDED, Berlin, Protestantism
+068, -280, Amsterdam, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+068, -280, Rotterdam, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+068, -280, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+069, -240, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 36.00
+069, -240, Tombouctu, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+069, -240, Jenne, POP_CHANGE, Pop: 1, No religion in city
+069, -240, York, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+069, -240, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+069, -240, Utrecht, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+069, -240, Copenhagen, POP_CHANGE, Pop: 11, First: Pantheon(9), Nonreligious: 2
+069, -240, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 2.00
+069, -240, Chichen Itza, POP_CHANGE, Pop: 1, No religion in city
+069, -240, Cahokia, POP_CHANGE, Pop: 7, Second: Islam(0), Nonreligious: 7
+069, -240, Antananarivo, POP_CHANGE, Pop: 7, Second: Catholicism(0), Nonreligious: 7
+070, -200, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
+070, -200, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 6.00
+070, -200, Groningen, POP_CHANGE, Pop: 1, No religion in city
+070, -200, Groningen, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+070, -200, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 8.00
+070, -200, Tikal, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+070, -200, Byblos, POP_CHANGE, Pop: 8, Second: Islam(0), Nonreligious: 8
+071, -160, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 44.00
+071, -160, Gao, POP_CHANGE, Pop: 6, First: Islam(6), Nonreligious: 0
+071, -160, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 12.00
+071, -160, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 10.00
+071, -160, Ife, POP_CHANGE, Pop: 7, No religion in city
+072, -120, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 48.00
+072, -120, Jenne, POP_CHANGE, Pop: 2, Second: Islam(0), Nonreligious: 2
+072, -120, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
+072, -120, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 12.00
+072, -120, Cape Town, POP_CHANGE, Pop: 9, No religion in city
+073, -80, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 52.00
+073, -80, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
+073, -80, Groningen, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+073, -80, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 14.00
+073, -80, Yerevan, POP_CHANGE, Pop: 7, No religion in city
+073, -80, Budapest, POP_CHANGE, Pop: 7, No religion in city
+073, -80, Bratislava, POP_CHANGE, Pop: 8, No religion in city
+073, -80, Quebec City, POP_CHANGE, Pop: 9, No religion in city
+074, -40, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 56.00
+074, -40, York, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+074, -40, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
+074, -40, Munich, POP_CHANGE, Pop: 1, No religion in city
+074, -40, Rotterdam, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+074, -40, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 16.00
+074, -40, Chichen Itza, POP_CHANGE, Pop: 2, Second: Catholicism(0), Nonreligious: 2
+074, -40, Riga, POP_CHANGE, Pop: 10, No religion in city
+075, 0, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 60.00
+075, 0, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 36.00
+075, 0, Hamburg, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+075, 0, Susa, POP_CHANGE, Pop: 2, Second: Catholicism(0), Nonreligious: 2
+075, 0, Utrecht, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+075, 0, The Netherlands, PROPHET SPAWNED, Amsterdam, Faith: 0
+075, 0, The Netherlands, Belief, Interfaith Dialogue, 55
+075, 0, The Netherlands, Belief, Tithe, 33
+075, 0, The Netherlands, Belief, Church Property, 11
+075, 0, The Netherlands, Belief, Pilgrimage, 11
+075, 0, The Netherlands, Belief, Ceremonial Burial, 1
+075, 0, The Netherlands, Belief, World Church, 0
+075, 0, The Netherlands, CHOSEN, Interfaith Dialogue
+075, 0, The Netherlands, Belief, Religious Community, 1070
+075, 0, The Netherlands, Belief, Cathedrals, 978
+075, 0, The Netherlands, Belief, Swords into Plowshares, 410
+075, 0, The Netherlands, Belief, Religious Art, 386
+075, 0, The Netherlands, Belief, Guruship, 311
+075, 0, The Netherlands, Belief, Religious Center, 293
+075, 0, The Netherlands, Belief, Feed the World, 227
+075, 0, The Netherlands, Belief, Divine Inspiration, 194
+075, 0, The Netherlands, Belief, Peace Gardens, 191
+075, 0, The Netherlands, Belief, Asceticism, 170
+075, 0, The Netherlands, Belief, Choral Music, 155
+075, 0, The Netherlands, Belief, Liturgical Drama, 115
+075, 0, The Netherlands, Belief, Holy Warriors, 59
+075, 0, The Netherlands, CHOSEN, Cathedrals
+075, 0, Amsterdam, RELIGION_FOUNDED, Pop: 6, Nonreligious: 1
+075, 0, The Netherlands, RELIGION FOUNDED, Amsterdam, Judaism
+075, 0, Copenhagen, POP_CHANGE, Pop: 12, First: Pantheon(10), Nonreligious: 2
+075, 0, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
+075, 0, Groningen, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
+075, 0, Palenque, HOLY_CITY, Pop: 7, First: Catholicism(7), Nonreligious: 0
+076, 40, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 64.00
+076, 40, Tombouctu, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+076, 40, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 42.00
+076, 40, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+076, 40, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 20.00
+077, 80, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 69.00
+077, 80, Jenne, POP_CHANGE, Pop: 3, Second: Islam(0), Nonreligious: 3
+077, 80, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 48.00
+077, 80, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 8.00
+077, 80, Umgungundlovu, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+077, 80, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 22.00
+077, 80, Prague, POP_CHANGE, Pop: 8, No religion in city
+078, 120, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 74.00
+078, 120, Nottingham, POP_CHANGE, Pop: 1, No religion in city
+078, 120, Nottingham, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+078, 120, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 54.00
+078, 120, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 16.00
+078, 120, Groningen, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+078, 120, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
+078, 120, Tikal, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+079, 160, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 79.00
+079, 160, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 61.00
+079, 160, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
+079, 160, Nobamba, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+079, 160, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 26.00
+079, 160, Hanoi, POP_CHANGE, Pop: 7, No religion in city
+080, 200, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 84.00
+080, 200, York, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+080, 200, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 68.00
+080, 200, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 32.00
+080, 200, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 28.00
+081, 230, Songhai, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 89.00
+081, 230, Taghaza, POP_CHANGE, Pop: 1, No religion in city
+081, 230, Germany, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 75.00
+081, 230, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 41.00
+081, 230, Bulawayo, POP_CHANGE, Pop: 1, No religion in city
+081, 230, Bulawayo, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+081, 230, The Maya, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
+081, 230, Uxmal, POP_CHANGE, Pop: 1, No religion in city
+081, 230, Vancouver, POP_CHANGE, Pop: 10, No religion in city
