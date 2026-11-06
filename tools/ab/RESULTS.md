@@ -5093,3 +5093,14 @@ flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
 
 **Verdict:** captures by the aggressor against greedy and normal civs. Until the build is out, both PCs play
 `ab-db638c3` as filler, not as a baseline, and switch at the next pair boundary once it lands.
+
+### Block done: honest package vs greedy civs (bullygreedy16, PC 2, 10 pairs; lead 10:40pm ET Nov 5)
+- **Captures:** our aggressor (RoleFixes + the honest package) took cities in 2 of 10 first games (3 cities). CP's
+  aggressor in the flipped games took 1 city in 1 of 10. No aggressor lost a city.
+- **Readout:** a draw at this size. The package doesn't take cities from greedy civs much more often than CP's AI does.
+- **When it worked:** both capture games had the biggest first armies (13-17 land units, siege target met) after
+  64-turn build-ups. First wars went out on 8-17 land units, often broke (Inca: -22 gold a turn) or with obsolete units
+  (8 Warriors).
+- **No first capture by T100.** The captures came at T120-T130.
+- **Next:** the expert block (bullygreedy18 on `ab-40203a3`, started 10:39pm ET). It's judged by captures and how
+  many fall before T100.
