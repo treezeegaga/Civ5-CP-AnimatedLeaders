@@ -1,0 +1,1893 @@
+012, Milan, The Iroquois, RECEIVED_UNIT_GIFT, Warrior
+022, Lhasa, Assyria, RECEIVED_UNIT_GIFT, Warrior
+022, Zanzibar, Persia, RECEIVED_UNIT_GIFT, Warrior
+022, Manila, Poland, RECEIVED_UNIT_GIFT, Warrior
+024, Zanzibar, The Netherlands, RECEIVED_UNIT_GIFT, Warrior
+025, The Iroquois, Brussels, SENT OUT QUEST, Type, 1
+025, The Iroquois, Brussels, RECEIVED QUEST, Kill Camp, Friendship: -4 to -4, MINOR_CIV_BRUSSELS
+025, Lhasa, Brazil, RECEIVED_UNIT_GIFT, Warrior
+025, Assyria, Lhasa, SENT OUT QUEST, Type, 1
+025, Assyria, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
+025, Brazil, Lhasa, SENT OUT QUEST, Type, 1
+025, Brazil, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 3 to 3, MINOR_CIV_LHASA
+025, The Iroquois, Lhasa, SENT OUT QUEST, Type, 1
+025, The Iroquois, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
+025, Brazil, Lhasa, SENT OUT QUEST, Type, 2
+025, Brazil, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 3 to 3, MINOR_CIV_LHASA
+025, The Iroquois, Lhasa, SENT OUT QUEST, Type, 2
+025, The Iroquois, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
+025, Assyria, Cahokia, SENT OUT QUEST, Type, 7
+025, Assyria, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+025, Brazil, Valletta, SENT OUT QUEST, Type, 2
+025, Brazil, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+025, Brazil, Zanzibar, SENT OUT QUEST, Type, 7
+025, Brazil, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+025, Brazil, Kyiv, SENT OUT QUEST, Type, 7
+025, Brazil, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+025, The Iroquois, Milan, SENT OUT QUEST, Type, 1
+025, The Iroquois, Milan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MILAN
+025, Siam, Panama City, SENT OUT QUEST, Type, 1
+025, Siam, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+025, Siam, Panama City, SENT OUT QUEST, Type, 7
+025, Siam, Panama City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+026, Assyria, La Venta, SENT OUT QUEST, Type, 3
+026, Assyria, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+026, Lhasa, The Iroquois, RECEIVED_UNIT_GIFT, Warrior
+026, Poland, Wittenberg, SENT OUT QUEST, Type, 7
+026, Poland, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+026, The Netherlands, Manila, SENT OUT QUEST, Type, 7
+026, The Netherlands, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+027, Assyria, Byblos, SENT OUT QUEST, Type, 3
+027, Assyria, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+028, Poland, Byblos, SENT OUT QUEST, Type, 2
+028, Poland, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+028, Assyria, Cahokia, SENT OUT QUEST, Type, 1
+028, Assyria, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+028, The Netherlands, Cahokia, SENT OUT QUEST, Type, 1
+028, The Netherlands, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+028, Persia, Zanzibar, SENT OUT QUEST, Type, 2
+028, Persia, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+028, Persia, Wittenberg, SENT OUT QUEST, Type, 7
+028, Persia, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+029, Brazil, La Venta, SENT OUT QUEST, Type, 2
+029, Brazil, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+029, Assyria, Lhasa, SENT OUT QUEST, Type, 7
+029, Assyria, Lhasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
+029, The Netherlands, Valletta, SENT OUT QUEST, Type, 2
+029, The Netherlands, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+030, Greece, Ur, SENT OUT QUEST, Type, 1
+030, Greece, Ur, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_UR
+030, Brazil, Manila, SENT OUT QUEST, Type, 1
+030, Brazil, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+030, Poland, Manila, SENT OUT QUEST, Type, 1
+030, Poland, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+030, The Netherlands, Manila, SENT OUT QUEST, Type, 1
+030, The Netherlands, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+030, Persia, Manila, SENT OUT QUEST, Type, 1
+030, Persia, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+031, Brazil, Zanzibar, SENT OUT QUEST, Type, 1
+031, Brazil, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+031, Poland, Zanzibar, SENT OUT QUEST, Type, 1
+031, Poland, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: -1 to -1, MINOR_CIV_ZANZIBAR
+031, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 1
+031, The Netherlands, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+031, Persia, Zanzibar, SENT OUT QUEST, Type, 1
+031, Persia, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+031, Brazil, Kyiv, SENT OUT QUEST, Type, 1
+031, Brazil, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+031, The Netherlands, Kyiv, SENT OUT QUEST, Type, 1
+031, The Netherlands, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+032, Siam, Panama City, SENT OUT QUEST, Type, 1
+032, Siam, Panama City, SENT OUT QUEST, Type, 7
+032, The Iroquois, La Venta, SENT OUT QUEST, Type, 6
+032, The Iroquois, La Venta, RECEIVED QUEST, Find Player, Friendship: -7 to -7, MINOR_CIV_LA_VENTA
+032, Poland, Zanzibar, SENT OUT QUEST, Type, 2
+032, Poland, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+032, Poland, Wittenberg, SENT OUT QUEST, Type, 13
+032, Poland, Wittenberg, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+032, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 13
+032, The Netherlands, Wittenberg, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+032, Persia, Wittenberg, SENT OUT QUEST, Type, 13
+032, Persia, Wittenberg, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+032, Siam, Singapore, SENT OUT QUEST, Type, 1
+032, Siam, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+033, The Netherlands, Lhasa, SENT OUT QUEST, Type, 1
+033, The Netherlands, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
+033, Brussels, The Iroquois, RECEIVED_UNIT_GIFT, Warrior
+033, The Iroquois, La Venta, FINISHED QUEST, Find Player, Friendship: -6 to 28, MINOR_CIV_LA_VENTA
+033, Assyria, Valletta, SENT OUT QUEST, Type, 13
+033, Assyria, Valletta, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+033, Brazil, Valletta, SENT OUT QUEST, Type, 13
+033, Brazil, Valletta, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+033, Poland, Valletta, SENT OUT QUEST, Type, 13
+033, Poland, Valletta, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+033, The Netherlands, Valletta, SENT OUT QUEST, Type, 13
+033, The Netherlands, Valletta, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+033, The Iroquois, Milan, SENT OUT QUEST, Type, 2
+033, The Iroquois, Milan, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MILAN
+033, Brazil, Manila, SENT OUT QUEST, Type, 2
+033, Brazil, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+034, The Iroquois, Brussels, SENT OUT QUEST, Type, 7
+034, The Iroquois, Brussels, RECEIVED QUEST, Find Natural Wonder, Friendship: 2 to 2, MINOR_CIV_BRUSSELS
+034, Greece, Ur, SENT OUT QUEST, Type, 7
+034, Greece, Ur, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_UR
+034, Poland, Manila, SENT OUT QUEST, Type, 7
+034, Poland, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+034, Persia, Manila, SENT OUT QUEST, Type, 3
+034, Persia, Manila, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+035, The Iroquois, Cahokia, SENT OUT QUEST, Type, 1
+035, The Iroquois, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+035, Siam, Malacca, SENT OUT QUEST, Type, 1
+035, Siam, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MALACCA
+036, Assyria, La Venta, SENT OUT QUEST, Type, 11
+036, Assyria, La Venta, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+036, Brazil, La Venta, SENT OUT QUEST, Type, 11
+036, Brazil, La Venta, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+036, The Iroquois, La Venta, SENT OUT QUEST, Type, 11
+036, The Iroquois, La Venta, RECEIVED QUEST, Contest Faith, Friendship: 22 to 22, MINOR_CIV_LA_VENTA
+036, The Netherlands, La Venta, SENT OUT QUEST, Type, 11
+036, The Netherlands, La Venta, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+036, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 2
+036, The Netherlands, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+036, Siam, Malacca, SENT OUT QUEST, Type, 2
+036, Siam, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MALACCA
+036, Siam, Singapore, SENT OUT QUEST, Type, 3
+036, Siam, Singapore, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+036, Greece, Manila, SENT OUT QUEST, Type, 2
+036, Greece, Manila, RECEIVED QUEST, Connect Resource, Friendship: 2 to 2, MINOR_CIV_MANILA
+037, Assyria, Byblos, SENT OUT QUEST, Type, 1
+037, Assyria, Byblos, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+037, Poland, Byblos, SENT OUT QUEST, Type, 1
+037, Poland, Byblos, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+038, Assyria, Manila, SENT OUT QUEST, Type, 1
+038, Assyria, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+038, The Netherlands, Singapore, SENT OUT QUEST, Type, 1
+038, The Netherlands, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+038, Brazil, Cahokia, SENT OUT QUEST, Type, 1
+038, Brazil, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+040, Assyria, La Venta, SENT OUT QUEST, Type, 2
+040, Assyria, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+040, Poland, Wittenberg, SENT OUT QUEST, Type, 2
+040, Poland, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+041, Siam, Lhasa, SENT OUT QUEST, Type, 1
+041, Siam, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
+041, Cahokia, The Netherlands, RECEIVED_UNIT_GIFT, Warrior
+041, The Iroquois, Valletta, SENT OUT QUEST, Type, 13
+041, The Iroquois, Valletta, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+041, Assyria, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+041, Brazil, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+041, Poland, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+041, The Netherlands, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+041, Persia, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+042, Siam, Lhasa, SENT OUT QUEST, Type, 1
+042, Greece, Wittenberg, SENT OUT QUEST, Type, 13
+042, Greece, Wittenberg, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+042, Persia, Brussels, era change yield update
+042, Persia, La Venta, era change yield update
+042, Persia, Lhasa, era change yield update
+042, Persia, Byblos, era change yield update
+042, Persia, Cahokia, era change yield update
+042, Persia, Valletta, era change yield update
+042, Persia, Ur, era change yield update
+042, Persia, Zanzibar, era change yield update
+042, Persia, Kyiv, era change yield update
+042, Persia, Milan, era change yield update
+042, Persia, Ormus, era change yield update
+042, Persia, Malacca, era change yield update
+042, Persia, Wittenberg, era change yield update
+042, Persia, Singapore, era change yield update
+042, Persia, Manila, era change yield update
+042, Persia, Panama City, era change yield update
+042, Persia, Zanzibar, SENT OUT QUEST, Type, 2
+042, Persia, Zanzibar, SENT OUT QUEST, Type, 1
+042, Persia, Wittenberg, SENT OUT QUEST, Type, 7
+042, Persia, Wittenberg, SENT OUT QUEST, Type, 13
+042, Persia, Manila, SENT OUT QUEST, Type, 3
+042, Assyria, Byblos, SENT OUT QUEST, Type, 2
+042, Assyria, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+043, Assyria, Brussels, era change yield update
+043, Assyria, La Venta, era change yield update
+043, Assyria, Lhasa, era change yield update
+043, Assyria, Byblos, era change yield update
+043, Assyria, Cahokia, era change yield update
+043, Assyria, Valletta, era change yield update
+043, Assyria, Ur, era change yield update
+043, Assyria, Zanzibar, era change yield update
+043, Assyria, Kyiv, era change yield update
+043, Assyria, Milan, era change yield update
+043, Assyria, Ormus, era change yield update
+043, Assyria, Malacca, era change yield update
+043, Assyria, Wittenberg, era change yield update
+043, Assyria, Singapore, era change yield update
+043, Assyria, Manila, era change yield update
+043, Assyria, Panama City, era change yield update
+043, Assyria, La Venta, SENT OUT QUEST, Type, 3
+043, Assyria, La Venta, SENT OUT QUEST, Type, 11
+043, Assyria, La Venta, SENT OUT QUEST, Type, 2
+043, Assyria, Lhasa, SENT OUT QUEST, Type, 1
+043, Assyria, Lhasa, SENT OUT QUEST, Type, 7
+043, Assyria, Byblos, SENT OUT QUEST, Type, 3
+043, Assyria, Byblos, SENT OUT QUEST, Type, 1
+043, Assyria, Byblos, SENT OUT QUEST, Type, 2
+043, Assyria, Cahokia, SENT OUT QUEST, Type, 7
+043, Assyria, Cahokia, SENT OUT QUEST, Type, 1
+043, Assyria, Valletta, SENT OUT QUEST, Type, 13
+043, Brazil, Brussels, era change yield update
+043, Brazil, La Venta, era change yield update
+043, Brazil, Lhasa, era change yield update
+043, Brazil, Byblos, era change yield update
+043, Brazil, Cahokia, era change yield update
+043, Brazil, Valletta, era change yield update
+043, Brazil, Ur, era change yield update
+043, Brazil, Zanzibar, era change yield update
+043, Brazil, Kyiv, era change yield update
+043, Brazil, Milan, era change yield update
+043, Brazil, Ormus, era change yield update
+043, Brazil, Malacca, era change yield update
+043, Brazil, Wittenberg, era change yield update
+043, Brazil, Singapore, era change yield update
+043, Brazil, Manila, era change yield update
+043, Brazil, Panama City, era change yield update
+043, Brazil, La Venta, SENT OUT QUEST, Type, 2
+043, Brazil, La Venta, SENT OUT QUEST, Type, 11
+043, Brazil, Lhasa, SENT OUT QUEST, Type, 1
+043, Brazil, Lhasa, SENT OUT QUEST, Type, 2
+043, Brazil, Cahokia, SENT OUT QUEST, Type, 1
+043, Brazil, Valletta, SENT OUT QUEST, Type, 2
+043, Brazil, Valletta, SENT OUT QUEST, Type, 13
+043, Brazil, Zanzibar, SENT OUT QUEST, Type, 7
+043, Brazil, Zanzibar, SENT OUT QUEST, Type, 1
+043, Brazil, Kyiv, SENT OUT QUEST, Type, 7
+043, Brazil, Kyiv, SENT OUT QUEST, Type, 1
+043, Brazil, Manila, SENT OUT QUEST, Type, 2
+043, Poland, Brussels, era change yield update
+043, Poland, La Venta, era change yield update
+043, Poland, Lhasa, era change yield update
+043, Poland, Byblos, era change yield update
+043, Poland, Cahokia, era change yield update
+043, Poland, Valletta, era change yield update
+043, Poland, Ur, era change yield update
+043, Poland, Zanzibar, era change yield update
+043, Poland, Kyiv, era change yield update
+043, Poland, Milan, era change yield update
+043, Poland, Ormus, era change yield update
+043, Poland, Malacca, era change yield update
+043, Poland, Wittenberg, era change yield update
+043, Poland, Singapore, era change yield update
+043, Poland, Manila, era change yield update
+043, Poland, Panama City, era change yield update
+043, Poland, Byblos, SENT OUT QUEST, Type, 2
+043, Poland, Byblos, SENT OUT QUEST, Type, 1
+043, Poland, Valletta, SENT OUT QUEST, Type, 13
+043, Poland, Zanzibar, SENT OUT QUEST, Type, 1
+043, Poland, Zanzibar, SENT OUT QUEST, Type, 2
+043, Poland, Wittenberg, SENT OUT QUEST, Type, 7
+043, Poland, Wittenberg, SENT OUT QUEST, Type, 13
+043, Poland, Wittenberg, SENT OUT QUEST, Type, 2
+043, Poland, Manila, SENT OUT QUEST, Type, 7
+043, Siam, Brussels, era change yield update
+043, Siam, La Venta, era change yield update
+043, Siam, Lhasa, era change yield update
+043, Siam, Byblos, era change yield update
+043, Siam, Cahokia, era change yield update
+043, Siam, Valletta, era change yield update
+043, Siam, Ur, era change yield update
+043, Siam, Zanzibar, era change yield update
+043, Siam, Kyiv, era change yield update
+043, Siam, Milan, era change yield update
+043, Siam, Ormus, era change yield update
+043, Siam, Malacca, era change yield update
+043, Siam, Wittenberg, era change yield update
+043, Siam, Singapore, era change yield update
+043, Siam, Manila, era change yield update
+043, Siam, Panama City, era change yield update
+043, Siam, Lhasa, SENT OUT QUEST, Type, 1
+043, Siam, Malacca, SENT OUT QUEST, Type, 1
+043, Siam, Malacca, SENT OUT QUEST, Type, 2
+043, Siam, Singapore, SENT OUT QUEST, Type, 1
+043, Siam, Singapore, SENT OUT QUEST, Type, 3
+043, Siam, Panama City, SENT OUT QUEST, Type, 1
+043, Siam, Panama City, SENT OUT QUEST, Type, 7
+043, Greece, Wittenberg, SENT OUT QUEST, Type, 13
+043, The Netherlands, Brussels, era change yield update
+043, The Netherlands, La Venta, era change yield update
+043, The Netherlands, Lhasa, era change yield update
+043, The Netherlands, Byblos, era change yield update
+043, The Netherlands, Cahokia, era change yield update
+043, The Netherlands, Valletta, era change yield update
+043, The Netherlands, Ur, era change yield update
+043, The Netherlands, Zanzibar, era change yield update
+043, The Netherlands, Kyiv, era change yield update
+043, The Netherlands, Milan, era change yield update
+043, The Netherlands, Ormus, era change yield update
+043, The Netherlands, Malacca, era change yield update
+043, The Netherlands, Wittenberg, era change yield update
+043, The Netherlands, Singapore, era change yield update
+043, The Netherlands, Manila, era change yield update
+043, The Netherlands, Panama City, era change yield update
+043, The Netherlands, La Venta, SENT OUT QUEST, Type, 11
+043, The Netherlands, Lhasa, SENT OUT QUEST, Type, 1
+043, The Netherlands, Cahokia, SENT OUT QUEST, Type, 1
+043, The Netherlands, Valletta, SENT OUT QUEST, Type, 2
+043, The Netherlands, Valletta, SENT OUT QUEST, Type, 13
+043, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 1
+043, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 2
+043, The Netherlands, Kyiv, SENT OUT QUEST, Type, 1
+043, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 13
+043, The Netherlands, Singapore, SENT OUT QUEST, Type, 1
+043, The Netherlands, Manila, SENT OUT QUEST, Type, 7
+043, Brazil, Zanzibar, SENT OUT QUEST, Type, 2
+043, Brazil, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+043, Brazil, Kyiv, SENT OUT QUEST, Type, 2
+043, Brazil, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+044, The Netherlands, Panama City, SENT OUT QUEST, Type, 1
+044, The Netherlands, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+045, The Netherlands, Malacca, SENT OUT QUEST, Type, 1
+045, The Netherlands, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
+045, Assyria, Lhasa, SENT OUT QUEST, Type, 2
+045, Assyria, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
+045, Poland, Byblos, gained friend
+045, Poland, Byblos, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_BYBLOS
+046, Poland, Byblos, SENT OUT QUEST, Type, 2
+046, Poland, Byblos, gained ally
+046, Brazil, Lhasa, SENT OUT QUEST, Type, 3
+046, Brazil, Lhasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
+046, The Iroquois, Lhasa, SENT OUT QUEST, Type, 3
+046, The Iroquois, Lhasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
+046, Assyria, Byblos, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+046, Cahokia, The Netherlands, RECEIVED_UNIT_GIFT, Warrior
+047, The Iroquois, Wittenberg, SENT OUT QUEST, Type, 13
+047, The Iroquois, Wittenberg, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+047, Siam, La Venta, SENT OUT QUEST, Type, 11
+047, Siam, La Venta, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+047, Poland, Byblos, lost ally
+047, Assyria, Byblos, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+047, The Netherlands, Kyiv, SENT OUT QUEST, Type, 2
+047, The Netherlands, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+047, The Netherlands, Manila, SENT OUT QUEST, Type, 2
+047, The Netherlands, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+048, Assyria, Wittenberg, SENT OUT QUEST, Type, 13
+048, Assyria, Wittenberg, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+048, The Iroquois, Brussels, era change yield update
+048, The Iroquois, La Venta, era change yield update
+048, The Iroquois, Lhasa, era change yield update
+048, The Iroquois, Byblos, era change yield update
+048, The Iroquois, Cahokia, era change yield update
+048, The Iroquois, Valletta, era change yield update
+048, The Iroquois, Ur, era change yield update
+048, The Iroquois, Zanzibar, era change yield update
+048, The Iroquois, Kyiv, era change yield update
+048, The Iroquois, Milan, era change yield update
+048, The Iroquois, Ormus, era change yield update
+048, The Iroquois, Malacca, era change yield update
+048, The Iroquois, Wittenberg, era change yield update
+048, The Iroquois, Singapore, era change yield update
+048, The Iroquois, Manila, era change yield update
+048, The Iroquois, Panama City, era change yield update
+048, The Iroquois, Brussels, SENT OUT QUEST, Type, 1
+048, The Iroquois, Brussels, SENT OUT QUEST, Type, 7
+048, The Iroquois, La Venta, SENT OUT QUEST, Type, 11
+048, The Iroquois, Lhasa, SENT OUT QUEST, Type, 1
+048, The Iroquois, Lhasa, SENT OUT QUEST, Type, 2
+048, The Iroquois, Lhasa, SENT OUT QUEST, Type, 3
+048, The Iroquois, Cahokia, SENT OUT QUEST, Type, 1
+048, The Iroquois, Valletta, SENT OUT QUEST, Type, 13
+048, The Iroquois, Milan, SENT OUT QUEST, Type, 1
+048, The Iroquois, Milan, SENT OUT QUEST, Type, 2
+048, The Iroquois, Wittenberg, SENT OUT QUEST, Type, 13
+048, La Venta, Assyria, RECEIVED_UNIT_GIFT, Warrior
+049, The Iroquois, La Venta, SENT OUT QUEST, Type, 3
+049, The Iroquois, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+049, Cahokia, The Netherlands, RECEIVED_UNIT_GIFT, Warrior
+049, Assyria, Cahokia, SENT OUT QUEST, Type, 2
+049, Assyria, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+049, Greece, Ur, SENT OUT QUEST, Type, 2
+049, Greece, Ur, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_UR
+050, The Netherlands, Zanzibar, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_ZANZIBAR, (SAVING) 
+050, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 1
+050, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 2
+050, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 13
+050, The Netherlands, Manila, SENT OUT QUEST, Type, 7
+050, The Netherlands, Manila, SENT OUT QUEST, Type, 2
+050, The Netherlands, Cahokia, SENT OUT QUEST, Type, 2
+050, The Netherlands, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 2 to 2, MINOR_CIV_CAHOKIA
+050, Persia, Valletta, SENT OUT QUEST, Type, 13
+050, Persia, Valletta, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+050, Siam, Kyiv, SENT OUT QUEST, Type, 1
+050, Siam, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+051, Siam, Kyiv, SENT OUT QUEST, Type, 1
+051, Greece, Wittenberg, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_WITTENBERG, (SAVING) , Passing The Netherlands
+051, Persia, Cahokia, SENT OUT QUEST, Type, 1
+051, Persia, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+051, The Iroquois, Milan, SENT OUT QUEST, Type, 3
+051, The Iroquois, Milan, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MILAN
+052, Siam, Cahokia, SENT OUT QUEST, Type, 1
+052, Siam, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+052, Greece, Zanzibar, SENT OUT QUEST, Type, 1
+052, Greece, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+052, The Iroquois, Brussels, SENT OUT QUEST, Type, 3
+052, The Iroquois, Brussels, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+052, Assyria, La Venta, gained friend
+052, Assyria, La Venta, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+052, Siam, Malacca, SENT OUT QUEST, Type, 4
+052, Siam, Malacca, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_MALACCA
+052, Greece, Wittenberg, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+052, The Netherlands, Wittenberg, FINISHED QUEST, Invest, Friendship: 4 to 4, MINOR_CIV_WITTENBERG
+052, Assyria, Wittenberg, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+052, Poland, Wittenberg, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+052, The Iroquois, Wittenberg, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+052, Persia, Wittenberg, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+052, Siam, Singapore, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+052, Persia, Manila, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+052, Brazil, Manila, SENT OUT QUEST, Type, 7
+052, Brazil, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+053, Poland, Wittenberg, SENT OUT QUEST, Type, 7
+053, Poland, Wittenberg, SENT OUT QUEST, Type, 2
+053, Greece, Zanzibar, SENT OUT QUEST, Type, 1
+053, Persia, Cahokia, SENT OUT QUEST, Type, 1
+053, Assyria, Valletta, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+053, Brazil, Valletta, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+053, The Iroquois, Valletta, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+053, The Netherlands, Valletta, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+053, Persia, Valletta, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+053, Poland, Valletta, FINISHED QUEST, Invest, Friendship: -3 to -3, MINOR_CIV_VALLETTA
+053, Persia, Zanzibar, SENT OUT QUEST, Type, 7
+053, Persia, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+053, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 17
+053, The Netherlands, Wittenberg, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+053, Persia, Manila, SENT OUT QUEST, Type, 2
+053, Persia, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+054, The Netherlands, Lhasa, SENT OUT QUEST, Type, 2
+054, The Netherlands, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
+054, Assyria, Valletta, SENT OUT QUEST, Type, 2
+054, Assyria, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+054, Brazil, Valletta, SENT OUT QUEST, Type, 7
+054, Brazil, Valletta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+054, Poland, Valletta, SENT OUT QUEST, Type, 17
+054, Poland, Valletta, RECEIVED QUEST, Trade Route, Friendship: -1 to -1, MINOR_CIV_VALLETTA
+054, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 17
+054, The Netherlands, Zanzibar, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+054, Persia, Wittenberg, SENT OUT QUEST, Type, 2
+054, Persia, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+055, The Netherlands, Manila, gained friend
+055, The Netherlands, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_MANILA
+056, Assyria, La Venta, gained ally
+056, Assyria, La Venta, FINISHED QUEST, Contest Faith, Friendship: 31 to 71, MINOR_CIV_LA_VENTA
+056, Brazil, La Venta, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+056, The Iroquois, La Venta, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+056, Siam, La Venta, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+056, The Netherlands, La Venta, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+056, The Netherlands, La Venta, SENT OUT QUEST, Type, 7
+056, The Netherlands, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+056, Assyria, Lhasa, gained friend
+056, Assyria, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_LHASA
+056, Poland, Byblos, SENT OUT QUEST, Type, 17
+056, Poland, Byblos, RECEIVED QUEST, Trade Route, Friendship: 45 to 45, MINOR_CIV_BYBLOS
+056, Siam, Singapore, SENT OUT QUEST, Type, 2
+056, Siam, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+057, Assyria, La Venta, SENT OUT QUEST, Type, 2
+057, Assyria, Lhasa, SENT OUT QUEST, Type, 1
+057, Assyria, Lhasa, SENT OUT QUEST, Type, 7
+057, Poland, Wittenberg, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_WITTENBERG, (SAVING) 
+057, Assyria, Kyiv, SENT OUT QUEST, Type, 1
+057, Assyria, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+057, Persia, Kyiv, SENT OUT QUEST, Type, 1
+057, Persia, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+058, Poland, Zanzibar, SENT OUT QUEST, Type, 16
+058, Poland, Zanzibar, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+059, Siam, Lhasa, SENT OUT QUEST, Type, 7
+059, Siam, Lhasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_LHASA
+060, Siam, Lhasa, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_LHASA, (SAVING) 
+060, The Netherlands, Manila, SENT OUT QUEST, Type, 2
+060, The Iroquois, Cahokia, SENT OUT QUEST, Type, 7
+060, The Iroquois, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+060, The Netherlands, Kyiv, SENT OUT QUEST, Type, 4
+060, The Netherlands, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+060, Siam, Panama City, SENT OUT QUEST, Type, 2
+060, Siam, Panama City, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_PANAMA_CITY
+061, Greece, Brussels, era change yield update
+061, Greece, La Venta, era change yield update
+061, Greece, Lhasa, era change yield update
+061, Greece, Byblos, era change yield update
+061, Greece, Cahokia, era change yield update
+061, Greece, Valletta, era change yield update
+061, Greece, Ur, era change yield update
+061, Greece, Zanzibar, era change yield update
+061, Greece, Kyiv, era change yield update
+061, Greece, Milan, era change yield update
+061, Greece, Ormus, era change yield update
+061, Greece, Malacca, era change yield update
+061, Greece, Wittenberg, era change yield update
+061, Greece, Singapore, era change yield update
+061, Greece, Manila, era change yield update
+061, Greece, Panama City, era change yield update
+061, Greece, Ur, SENT OUT QUEST, Type, 1
+061, Greece, Ur, SENT OUT QUEST, Type, 7
+061, Greece, Ur, SENT OUT QUEST, Type, 2
+061, Greece, Zanzibar, SENT OUT QUEST, Type, 1
+061, Greece, Manila, SENT OUT QUEST, Type, 2
+061, Assyria, La Venta, lost ally
+061, Brazil, Cahokia, SENT OUT QUEST, Type, 2
+061, Brazil, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+061, The Iroquois, Valletta, SENT OUT QUEST, Type, 3
+061, The Iroquois, Valletta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+061, The Netherlands, Singapore, SENT OUT QUEST, Type, 7
+061, The Netherlands, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+061, Poland, Manila, SENT OUT QUEST, Type, 17
+061, Poland, Manila, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_MANILA
+062, Assyria, Lhasa, Gold Gift: 250, Friendship: 32 to 32, Spaceship, MINOR_CIV_LHASA, (SAVING) , Boost! , Passing Siam
+062, Siam, La Venta, SENT OUT QUEST, Type, 16
+062, Siam, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 2 to 2, MINOR_CIV_LA_VENTA
+063, Assyria, Lhasa, lost friend
+063, Greece, Manila, SENT OUT QUEST, Type, 17
+063, Greece, Manila, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MANILA
+064, Cahokia, The Iroquois, RECEIVED_UNIT_GIFT, Warrior
+064, Siam, Kyiv, SENT OUT QUEST, Type, 4
+064, Siam, Kyiv, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_KIEV
+064, Poland, Wittenberg, gained friend
+064, Poland, Wittenberg, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+064, The Iroquois, Wittenberg, SENT OUT QUEST, Type, 7
+064, The Iroquois, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+064, Greece, Wittenberg, SENT OUT QUEST, Type, 6
+064, Greece, Wittenberg, RECEIVED QUEST, Find Player, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+065, The Netherlands, Valletta, SENT OUT QUEST, Type, 4
+065, The Netherlands, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+065, Greece, Wittenberg, gained friend
+065, Greece, Wittenberg, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_WITTENBERG
+065, Assyria, Manila, SENT OUT QUEST, Type, 2
+065, Assyria, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+066, Greece, Ormus, SENT OUT QUEST, Type, 1
+066, Greece, Ormus, RECEIVED QUEST, Kill Camp, Friendship: 2 to 2, MINOR_CIV_ORMUS
+066, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 4
+066, The Netherlands, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+066, The Netherlands, Manila, lost friend
+067, Assyria, La Venta, SENT OUT QUEST, Type, 2
+067, Brazil, La Venta, SENT OUT QUEST, Type, 7
+067, Brazil, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+067, The Netherlands, Lhasa, SENT OUT QUEST, Type, 4
+067, The Netherlands, Lhasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_LHASA
+067, Poland, Byblos, lost friend
+067, Siam, Cahokia, SENT OUT QUEST, Type, 4
+067, Siam, Cahokia, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+068, Assyria, Byblos, SENT OUT QUEST, Type, 4
+068, Assyria, Byblos, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+068, The Netherlands, Malacca, SENT OUT QUEST, Type, 4
+068, The Netherlands, Malacca, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MALACCA
+070, Persia, Cahokia, SENT OUT QUEST, Type, 17
+070, Persia, Cahokia, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+070, Assyria, Valletta, SENT OUT QUEST, Type, 4
+070, Assyria, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+070, The Netherlands, Manila, SENT OUT QUEST, Type, 7
+070, The Netherlands, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 22 to 22, MINOR_CIV_MANILA
+071, The Iroquois, La Venta, SENT OUT QUEST, Type, 2
+071, The Iroquois, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+071, The Netherlands, Panama City, SENT OUT QUEST, Type, 7
+071, The Netherlands, Panama City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+072, The Iroquois, Brussels, gained friend
+072, The Iroquois, Brussels, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BRUSSELS
+072, The Iroquois, La Venta, gained friend
+072, The Iroquois, La Venta, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+072, The Iroquois, Lhasa, gained friend
+072, The Iroquois, Lhasa, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_LHASA
+072, Brazil, Lhasa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
+072, The Iroquois, Valletta, gained friend
+072, The Iroquois, Valletta, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+072, Greece, Zanzibar, SENT OUT QUEST, Type, 3
+072, Greece, Zanzibar, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+072, The Iroquois, Milan, gained friend
+072, The Iroquois, Milan, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_MILAN
+072, The Iroquois, Manila, SENT OUT QUEST, Type, 7
+072, The Iroquois, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+073, Assyria, Wittenberg, SENT OUT QUEST, Type, 4
+073, Assyria, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+074, The Netherlands, Cahokia, SENT OUT QUEST, Type, 7
+074, The Netherlands, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+075, Assyria, La Venta, lost friend
+075, Brazil, Cahokia, SENT OUT QUEST, Type, 3
+075, Brazil, Cahokia, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+075, Poland, Wittenberg, lost friend
+076, Assyria, Byblos, SENT OUT QUEST, Type, 13
+076, Assyria, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+076, Poland, Byblos, SENT OUT QUEST, Type, 13
+076, Poland, Byblos, RECEIVED QUEST, Invest, Friendship: 15 to 15, MINOR_CIV_BYBLOS
+076, The Iroquois, Byblos, SENT OUT QUEST, Type, 13
+076, The Iroquois, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+076, The Netherlands, Singapore, SENT OUT QUEST, Type, 3
+076, The Netherlands, Singapore, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+077, The Iroquois, La Venta, lost friend
+077, The Iroquois, La Venta, gained friend
+077, The Iroquois, La Venta, gained ally
+077, The Iroquois, La Venta, FINISHED QUEST, Connect Resource, Friendship: 28 to 68, MINOR_CIV_LA_VENTA
+077, The Iroquois, Valletta, lost friend
+077, The Iroquois, Kyiv, SENT OUT QUEST, Type, 1
+077, The Iroquois, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+078, Lhasa, The Iroquois, RECEIVED_UNIT_GIFT, Warrior
+078, Assyria, Lhasa, gained friend
+078, Assyria, Lhasa, FINISHED QUEST, Find Natural Wonder, Friendship: 7 to 47, MINOR_CIV_LHASA
+078, Assyria, Cahokia, gained friend
+078, Assyria, Cahokia, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+079, Greece, Byblos, SENT OUT QUEST, Type, 13
+079, Greece, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+079, The Iroquois, Brussels, lost friend
+079, Siam, Kyiv, SENT OUT QUEST, Type, 2
+079, Siam, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_KIEV
+079, Persia, Kyiv, SENT OUT QUEST, Type, 2
+079, Persia, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+079, The Iroquois, Milan, lost friend
+079, Greece, Wittenberg, lost friend
+079, Assyria, Wittenberg, SENT OUT QUEST, Type, 11
+079, Assyria, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+079, Poland, Wittenberg, SENT OUT QUEST, Type, 11
+079, Poland, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 22 to 22, MINOR_CIV_WITTENBERG
+079, The Iroquois, Wittenberg, SENT OUT QUEST, Type, 11
+079, The Iroquois, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+079, Siam, Wittenberg, SENT OUT QUEST, Type, 11
+079, Siam, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+079, Greece, Wittenberg, SENT OUT QUEST, Type, 11
+079, Greece, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 29 to 29, MINOR_CIV_WITTENBERG
+079, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 11
+079, The Netherlands, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+079, Persia, Wittenberg, SENT OUT QUEST, Type, 11
+079, Persia, Wittenberg, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+080, Siam, Wittenberg, SENT OUT QUEST, Type, 11
+080, Assyria, Lhasa, SENT OUT QUEST, Type, 16
+080, Assyria, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 44 to 44, MINOR_CIV_LHASA
+080, Persia, Valletta, SENT OUT QUEST, Type, 17
+080, Persia, Valletta, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+080, Greece, Wittenberg, SENT OUT QUEST, Type, 3
+080, Greece, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 28 to 28, MINOR_CIV_WITTENBERG
+080, Assyria, Manila, SENT OUT QUEST, Type, 1
+080, Assyria, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+080, Brazil, Manila, SENT OUT QUEST, Type, 1
+080, Brazil, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+080, Poland, Manila, SENT OUT QUEST, Type, 1
+080, Poland, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+080, The Iroquois, Manila, SENT OUT QUEST, Type, 1
+080, The Iroquois, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+080, Siam, Manila, SENT OUT QUEST, Type, 1
+080, Siam, Manila, RECEIVED QUEST, Kill Camp, Friendship: -3 to -3, MINOR_CIV_MANILA
+080, Greece, Manila, SENT OUT QUEST, Type, 1
+080, Greece, Manila, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MANILA
+080, The Netherlands, Manila, SENT OUT QUEST, Type, 1
+080, The Netherlands, Manila, RECEIVED QUEST, Kill Camp, Friendship: 7 to 7, MINOR_CIV_MANILA
+080, Persia, Manila, SENT OUT QUEST, Type, 1
+080, Persia, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+081, The Iroquois, La Venta, lost ally
+081, Siam, Cahokia, SENT OUT QUEST, Type, 2
+081, Siam, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+082, Siam, Lhasa, SENT OUT QUEST, Type, 16
+082, Siam, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_LHASA
+082, Greece, Ormus, SENT OUT QUEST, Type, 7
+082, Greece, Ormus, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_ORMUS
+082, Persia, Manila, SENT OUT QUEST, Type, 17
+082, Persia, Manila, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_MANILA
+083, Assyria, Cahokia, SENT OUT QUEST, Type, 1
+083, Assyria, Cahokia, SENT OUT QUEST, Type, 2
+083, Assyria, La Venta, SENT OUT QUEST, Type, 7
+083, Assyria, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 10 to 10, MINOR_CIV_LA_VENTA
+083, The Iroquois, Lhasa, lost friend
+083, Poland, Byblos, gained friend
+083, Poland, Byblos, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_BYBLOS
+083, Poland, Zanzibar, gained friend
+083, Poland, Zanzibar, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+084, The Netherlands, Byblos, SENT OUT QUEST, Type, 13
+084, The Netherlands, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+084, Assyria, La Venta, SENT OUT QUEST, Type, 13
+084, Assyria, La Venta, RECEIVED QUEST, Invest, Friendship: 8 to 8, MINOR_CIV_LA_VENTA
+084, Brazil, La Venta, SENT OUT QUEST, Type, 13
+084, Brazil, La Venta, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+084, The Iroquois, La Venta, SENT OUT QUEST, Type, 13
+084, The Iroquois, La Venta, RECEIVED QUEST, Invest, Friendship: 53 to 53, MINOR_CIV_LA_VENTA
+084, Siam, La Venta, SENT OUT QUEST, Type, 13
+084, Siam, La Venta, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+084, The Netherlands, La Venta, SENT OUT QUEST, Type, 13
+084, The Netherlands, La Venta, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+084, The Iroquois, Lhasa, gained friend
+084, The Iroquois, Lhasa, gained ally
+084, The Iroquois, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 27 to 67, MINOR_CIV_LHASA
+085, The Iroquois, Lhasa, SENT OUT QUEST, Type, 1
+085, Brazil, Lhasa, gained friend
+085, Brazil, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_LHASA
+085, Assyria, Cahokia, lost friend
+085, Assyria, Kyiv, SENT OUT QUEST, Type, 16
+085, Assyria, Kyiv, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KIEV
+085, The Iroquois, Milan, SENT OUT QUEST, Type, 14
+085, The Iroquois, Milan, RECEIVED QUEST, Bully City-State, Friendship: 20 to 20, MINOR_CIV_MILAN
+085, Poland, Wittenberg, SENT OUT QUEST, Type, 4
+085, Poland, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 13 to 13, MINOR_CIV_WITTENBERG
+085, Siam, Singapore, SENT OUT QUEST, Type, 7
+085, Siam, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+086, Assyria, Lhasa, Gold Gift: 250, Friendship: 36 to 61, Spaceship, MINOR_CIV_LHASA, Boost! , Passing Siam
+086, Assyria, Cahokia, Gold Gift: 500, Friendship: 29 to 29, Spaceship, MINOR_CIV_CAHOKIA, (SAVING) , Passing Persia
+086, Poland, Brussels, era change yield update
+086, Poland, La Venta, era change yield update
+086, Poland, Lhasa, era change yield update
+086, Poland, Byblos, era change yield update
+086, Poland, Cahokia, era change yield update
+086, Poland, Valletta, era change yield update
+086, Poland, Ur, era change yield update
+086, Poland, Zanzibar, era change yield update
+086, Poland, Kyiv, era change yield update
+086, Poland, Milan, era change yield update
+086, Poland, Ormus, era change yield update
+086, Poland, Malacca, era change yield update
+086, Poland, Wittenberg, era change yield update
+086, Poland, Singapore, era change yield update
+086, Poland, Manila, era change yield update
+086, Poland, Panama City, era change yield update
+086, Poland, Byblos, SENT OUT QUEST, Type, 17
+086, Poland, Byblos, SENT OUT QUEST, Type, 13
+086, Poland, Valletta, SENT OUT QUEST, Type, 17
+086, Poland, Zanzibar, SENT OUT QUEST, Type, 1
+086, Poland, Zanzibar, SENT OUT QUEST, Type, 16
+086, Poland, Wittenberg, SENT OUT QUEST, Type, 7
+086, Poland, Wittenberg, SENT OUT QUEST, Type, 11
+086, Poland, Wittenberg, SENT OUT QUEST, Type, 4
+086, Poland, Manila, SENT OUT QUEST, Type, 7
+086, Poland, Manila, SENT OUT QUEST, Type, 17
+086, Poland, Manila, SENT OUT QUEST, Type, 1
+086, The Iroquois, Byblos, SENT OUT QUEST, Type, 14
+086, The Iroquois, Byblos, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+086, Persia, Cahokia, SENT OUT QUEST, Type, 2
+086, Persia, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+086, Greece, Manila, gained friend
+086, Greece, Manila, FINISHED QUEST, Trade Route, Friendship: 5 to 45, MINOR_CIV_MANILA
+087, Siam, Byblos, SENT OUT QUEST, Type, 13
+087, Siam, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+087, Assyria, Wittenberg, SENT OUT QUEST, Type, 3
+087, Assyria, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+087, The Iroquois, Manila, SENT OUT QUEST, Type, 2
+087, The Iroquois, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+088, Poland, Wittenberg, gained friend
+088, Poland, Wittenberg, FINISHED QUEST, Great Person, Friendship: 10 to 50, MINOR_CIV_WITTENBERG
+088, Siam, Byblos, SENT OUT QUEST, Type, 13
+088, Brazil, Lhasa, SENT OUT QUEST, Type, 2
+088, Brazil, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 35 to 35, MINOR_CIV_LHASA
+088, The Iroquois, Cahokia, SENT OUT QUEST, Type, 2
+088, The Iroquois, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+089, Poland, Byblos, gained ally
+089, Poland, Byblos, Gold Gift: 250, Friendship: 37 to 72, Culture, MINOR_CIV_BYBLOS, Boost! , Passing Siam
+089, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 1
+089, The Iroquois, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+089, The Iroquois, Brussels, SENT OUT QUEST, Type, 4
+089, The Iroquois, Brussels, RECEIVED QUEST, Great Person, Friendship: 14 to 14, MINOR_CIV_BRUSSELS
+089, The Iroquois, Lhasa, lost ally
+089, Persia, Kyiv, gained friend
+089, Persia, Kyiv, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KIEV
+089, Persia, Wittenberg, gained friend
+089, Persia, Wittenberg, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+090, Persia, Wittenberg, SENT OUT QUEST, Type, 7
+090, Persia, Wittenberg, SENT OUT QUEST, Type, 11
+090, The Iroquois, La Venta, SENT OUT QUEST, Type, 2
+090, The Iroquois, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 39 to 39, MINOR_CIV_LA_VENTA
+090, Poland, Zanzibar, lost friend
+091, The Iroquois, Valletta, SENT OUT QUEST, Type, 4
+091, The Iroquois, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+091, The Iroquois, Wittenberg, SENT OUT QUEST, Type, 16
+091, The Iroquois, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+092, Brazil, Lhasa, lost friend
+092, The Netherlands, Malacca, SENT OUT QUEST, Type, 2
+092, The Netherlands, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MALACCA
+093, Greece, Wittenberg, SENT OUT QUEST, Type, 4
+093, Greece, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 19 to 19, MINOR_CIV_WITTENBERG
+093, Assyria, Manila, SENT OUT QUEST, Type, 7
+093, Assyria, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+094, Greece, Byblos, SENT OUT QUEST, Type, 2
+094, Greece, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+094, The Iroquois, Kyiv, SENT OUT QUEST, Type, 4
+094, The Iroquois, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+094, The Iroquois, Singapore, SENT OUT QUEST, Type, 1
+094, The Iroquois, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+095, The Iroquois, Singapore, SENT OUT QUEST, Type, 1
+095, Persia, Wittenberg, Gold Gift: 250, Friendship: 32 to 57, Conquest, MINOR_CIV_WITTENBERG, Boost! , Passing The Netherlands
+095, Persia, Cahokia, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_CAHOKIA, (SAVING) 
+095, The Iroquois, La Venta, lost friend
+095, Siam, Malacca, gained friend
+095, Siam, Malacca, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_MALACCA
+095, Siam, Panama City, gained friend
+095, Siam, Panama City, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_PANAMA_CITY
+096, Brazil, Brussels, era change yield update
+096, Brazil, La Venta, era change yield update
+096, Brazil, Lhasa, era change yield update
+096, Brazil, Byblos, era change yield update
+096, Brazil, Cahokia, era change yield update
+096, Brazil, Valletta, era change yield update
+096, Brazil, Ur, era change yield update
+096, Brazil, Zanzibar, era change yield update
+096, Brazil, Kyiv, era change yield update
+096, Brazil, Milan, era change yield update
+096, Brazil, Ormus, era change yield update
+096, Brazil, Malacca, era change yield update
+096, Brazil, Wittenberg, era change yield update
+096, Brazil, Singapore, era change yield update
+096, Brazil, Manila, era change yield update
+096, Brazil, Panama City, era change yield update
+096, Brazil, La Venta, SENT OUT QUEST, Type, 2
+096, Brazil, La Venta, SENT OUT QUEST, Type, 7
+096, Brazil, La Venta, SENT OUT QUEST, Type, 13
+096, Brazil, Lhasa, SENT OUT QUEST, Type, 1
+096, Brazil, Lhasa, SENT OUT QUEST, Type, 2
+096, Brazil, Cahokia, SENT OUT QUEST, Type, 1
+096, Brazil, Cahokia, SENT OUT QUEST, Type, 2
+096, Brazil, Cahokia, SENT OUT QUEST, Type, 3
+096, Brazil, Valletta, SENT OUT QUEST, Type, 2
+096, Brazil, Valletta, SENT OUT QUEST, Type, 7
+096, Brazil, Zanzibar, SENT OUT QUEST, Type, 7
+096, Brazil, Zanzibar, SENT OUT QUEST, Type, 1
+096, Brazil, Zanzibar, SENT OUT QUEST, Type, 2
+096, Brazil, Kyiv, SENT OUT QUEST, Type, 7
+096, Brazil, Kyiv, SENT OUT QUEST, Type, 1
+096, Brazil, Kyiv, SENT OUT QUEST, Type, 2
+096, Brazil, Manila, SENT OUT QUEST, Type, 2
+096, Brazil, Manila, SENT OUT QUEST, Type, 7
+096, Brazil, Manila, SENT OUT QUEST, Type, 1
+096, Brazil, La Venta, SENT OUT QUEST, Type, 2
+096, Brazil, La Venta, SENT OUT QUEST, Type, 7
+096, Brazil, La Venta, SENT OUT QUEST, Type, 13
+096, Brazil, Lhasa, SENT OUT QUEST, Type, 1
+096, Brazil, Lhasa, SENT OUT QUEST, Type, 2
+096, Persia, Kyiv, SENT OUT QUEST, Type, 1
+096, The Iroquois, Brussels, gained friend
+096, The Iroquois, Brussels, FINISHED QUEST, Kill Camp, Friendship: 4 to 54, MINOR_CIV_BRUSSELS
+096, The Iroquois, Lhasa, SENT OUT QUEST, Type, 16
+096, The Iroquois, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 49 to 49, MINOR_CIV_LHASA
+096, Poland, Byblos, FINISHED QUEST, Invest, Friendship: 61 to 61, MINOR_CIV_BYBLOS
+096, Siam, Byblos, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+096, Assyria, Byblos, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+096, The Iroquois, Byblos, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+096, Greece, Byblos, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+096, The Netherlands, Byblos, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+096, Persia, Kyiv, lost friend
+096, The Iroquois, Singapore, gained friend
+096, The Iroquois, Singapore, FINISHED QUEST, Kill Camp, Friendship: 2 to 52, MINOR_CIV_SINGAPORE
+097, Poland, Byblos, lost ally
+097, Siam, Valletta, SENT OUT QUEST, Type, 14
+097, Siam, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+097, Persia, Valletta, SENT OUT QUEST, Type, 14
+097, Persia, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+097, Poland, Zanzibar, SENT OUT QUEST, Type, 4
+097, Poland, Zanzibar, RECEIVED QUEST, Great Person, Friendship: 7 to 7, MINOR_CIV_ZANZIBAR
+097, Siam, Singapore, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+097, The Netherlands, Singapore, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+098, Poland, Wittenberg, gained ally
+098, Poland, Wittenberg, Gold Gift: 250, Friendship: 35 to 60, Culture, MINOR_CIV_WITTENBERG, Boost! , Passing The Netherlands
+098, Assyria, Lhasa, SENT OUT QUEST, Type, 4
+098, Assyria, Lhasa, RECEIVED QUEST, Great Person, Friendship: 42 to 42, MINOR_CIV_LHASA
+098, Poland, Valletta, SENT OUT QUEST, Type, 14
+098, Poland, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+098, Poland, Wittenberg, lost ally
+099, Brazil, La Venta, Gold Gift: 500, Friendship: 4 to 4, Culture, MINOR_CIV_LA_VENTA, (SAVING) 
+099, Persia, Brussels, era change yield update
+099, Persia, La Venta, era change yield update
+099, Persia, Lhasa, era change yield update
+099, Persia, Byblos, era change yield update
+099, Persia, Cahokia, era change yield update
+099, Persia, Valletta, era change yield update
+099, Persia, Ur, era change yield update
+099, Persia, Zanzibar, era change yield update
+099, Persia, Kyiv, era change yield update
+099, Persia, Milan, era change yield update
+099, Persia, Ormus, era change yield update
+099, Persia, Malacca, era change yield update
+099, Persia, Wittenberg, era change yield update
+099, Persia, Singapore, era change yield update
+099, Persia, Manila, era change yield update
+099, Persia, Panama City, era change yield update
+099, Persia, Cahokia, SENT OUT QUEST, Type, 1
+099, Persia, Cahokia, SENT OUT QUEST, Type, 17
+099, Persia, Cahokia, SENT OUT QUEST, Type, 2
+099, Persia, Valletta, SENT OUT QUEST, Type, 17
+099, Persia, Valletta, SENT OUT QUEST, Type, 14
+099, Persia, Zanzibar, SENT OUT QUEST, Type, 2
+099, Persia, Zanzibar, SENT OUT QUEST, Type, 1
+099, Persia, Zanzibar, SENT OUT QUEST, Type, 7
+099, Persia, Kyiv, SENT OUT QUEST, Type, 1
+099, Persia, Wittenberg, SENT OUT QUEST, Type, 7
+099, Persia, Wittenberg, SENT OUT QUEST, Type, 11
+099, Persia, Manila, SENT OUT QUEST, Type, 2
+099, Persia, Manila, SENT OUT QUEST, Type, 1
+099, Persia, Manila, SENT OUT QUEST, Type, 17
+099, The Netherlands, La Venta, SENT OUT QUEST, Type, 14
+099, The Netherlands, La Venta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+099, Byblos, The Iroquois, RECEIVED_UNIT_GIFT, Mohawk Warrior
+099, Assyria, Cahokia, SENT OUT QUEST, Type, 16
+099, Assyria, Cahokia, RECEIVED QUEST, Spread Religion, Friendship: 8 to 8, MINOR_CIV_CAHOKIA
+099, Siam, Wittenberg, gained friend
+099, Siam, Wittenberg, FINISHED QUEST, Contest Faith, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+099, Assyria, Wittenberg, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+099, Poland, Wittenberg, cancelled, Contest Faith, Friendship: 57 to 57, MINOR_CIV_WITTENBERG
+099, The Iroquois, Wittenberg, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+099, Greece, Wittenberg, cancelled, Contest Faith, Friendship: 14 to 14, MINOR_CIV_WITTENBERG
+099, The Netherlands, Wittenberg, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+099, Persia, Wittenberg, cancelled, Contest Faith, Friendship: 50 to 50, MINOR_CIV_WITTENBERG
+099, Greece, Manila, SENT OUT QUEST, Type, 0
+099, Greece, Manila, RECEIVED QUEST, Route, Friendship: 35 to 35, MINOR_CIV_MANILA
+099, The Netherlands, Panama City, SENT OUT QUEST, Type, 4
+099, The Netherlands, Panama City, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+100, Assyria, Brussels, era change yield update
+100, Assyria, La Venta, era change yield update
+100, Assyria, Lhasa, era change yield update
+100, Assyria, Byblos, era change yield update
+100, Assyria, Cahokia, era change yield update
+100, Assyria, Valletta, era change yield update
+100, Assyria, Ur, era change yield update
+100, Assyria, Zanzibar, era change yield update
+100, Assyria, Kyiv, era change yield update
+100, Assyria, Milan, era change yield update
+100, Assyria, Ormus, era change yield update
+100, Assyria, Malacca, era change yield update
+100, Assyria, Wittenberg, era change yield update
+100, Assyria, Singapore, era change yield update
+100, Assyria, Manila, era change yield update
+100, Assyria, Panama City, era change yield update
+100, Assyria, La Venta, SENT OUT QUEST, Type, 2
+100, Assyria, La Venta, SENT OUT QUEST, Type, 7
+100, Assyria, La Venta, SENT OUT QUEST, Type, 13
+100, Assyria, Lhasa, SENT OUT QUEST, Type, 1
+100, Assyria, Lhasa, SENT OUT QUEST, Type, 16
+100, Assyria, Lhasa, SENT OUT QUEST, Type, 4
+100, Assyria, Byblos, SENT OUT QUEST, Type, 2
+100, Assyria, Byblos, SENT OUT QUEST, Type, 4
+100, Assyria, Cahokia, SENT OUT QUEST, Type, 1
+100, Assyria, Cahokia, SENT OUT QUEST, Type, 2
+100, Assyria, Cahokia, SENT OUT QUEST, Type, 16
+100, Assyria, Valletta, SENT OUT QUEST, Type, 2
+100, Assyria, Valletta, SENT OUT QUEST, Type, 4
+100, Assyria, Kyiv, SENT OUT QUEST, Type, 1
+100, Assyria, Kyiv, SENT OUT QUEST, Type, 16
+100, Assyria, Wittenberg, SENT OUT QUEST, Type, 4
+100, Assyria, Wittenberg, SENT OUT QUEST, Type, 3
+100, Assyria, Manila, SENT OUT QUEST, Type, 2
+100, Assyria, Manila, SENT OUT QUEST, Type, 1
+100, Assyria, Manila, SENT OUT QUEST, Type, 7
+100, Siam, Byblos, SENT OUT QUEST, Type, 2
+100, Siam, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+100, Greece, Zanzibar, SENT OUT QUEST, Type, 2
+100, Greece, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+100, Siam, Manila, SENT OUT QUEST, Type, 2
+100, Siam, Manila, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MANILA
+101, The Iroquois, Brussels, gained ally
+101, The Iroquois, Brussels, FINISHED QUEST, Great Person, Friendship: 48 to 88, MINOR_CIV_BRUSSELS
+101, The Iroquois, Valletta, gained friend
+101, The Iroquois, Valletta, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+101, Assyria, Valletta, gained friend
+101, Assyria, Valletta, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+101, Assyria, Kyiv, SENT OUT QUEST, Type, 4
+101, Assyria, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+101, The Iroquois, Milan, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MILAN
+101, Manila, Greece, RECEIVED_UNIT_GIFT, Archer
+101, Siam, Manila, gained friend
+101, Siam, Manila, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MANILA
+102, Assyria, Cahokia, SENT OUT QUEST, Type, 1
+102, Assyria, Cahokia, SENT OUT QUEST, Type, 2
+102, Assyria, Cahokia, SENT OUT QUEST, Type, 16
+102, Assyria, Valletta, SENT OUT QUEST, Type, 4
+102, The Iroquois, Brussels, SENT OUT QUEST, Type, 7
+102, Siam, Brussels, era change yield update
+102, Siam, La Venta, era change yield update
+102, Siam, Lhasa, era change yield update
+102, Siam, Byblos, era change yield update
+102, Siam, Cahokia, era change yield update
+102, Siam, Valletta, era change yield update
+102, Siam, Ur, era change yield update
+102, Siam, Zanzibar, era change yield update
+102, Siam, Kyiv, era change yield update
+102, Siam, Milan, era change yield update
+102, Siam, Ormus, era change yield update
+102, Siam, Malacca, era change yield update
+102, Siam, Wittenberg, era change yield update
+102, Siam, Singapore, era change yield update
+102, Siam, Manila, era change yield update
+102, Siam, Panama City, era change yield update
+102, Siam, La Venta, SENT OUT QUEST, Type, 16
+102, Siam, La Venta, SENT OUT QUEST, Type, 13
+102, Siam, Lhasa, SENT OUT QUEST, Type, 1
+102, Siam, Lhasa, SENT OUT QUEST, Type, 7
+102, Siam, Lhasa, SENT OUT QUEST, Type, 16
+102, Siam, Byblos, SENT OUT QUEST, Type, 2
+102, Siam, Cahokia, SENT OUT QUEST, Type, 1
+102, Siam, Cahokia, SENT OUT QUEST, Type, 4
+102, Siam, Cahokia, SENT OUT QUEST, Type, 2
+102, Siam, Valletta, SENT OUT QUEST, Type, 14
+102, Siam, Kyiv, SENT OUT QUEST, Type, 1
+102, Siam, Kyiv, SENT OUT QUEST, Type, 4
+102, Siam, Kyiv, SENT OUT QUEST, Type, 2
+102, Siam, Malacca, SENT OUT QUEST, Type, 1
+102, Siam, Malacca, SENT OUT QUEST, Type, 4
+102, Siam, Singapore, SENT OUT QUEST, Type, 2
+102, Siam, Singapore, SENT OUT QUEST, Type, 7
+102, Siam, Manila, SENT OUT QUEST, Type, 1
+102, Siam, Panama City, SENT OUT QUEST, Type, 1
+102, Siam, Panama City, SENT OUT QUEST, Type, 7
+102, The Iroquois, Byblos, SENT OUT QUEST, Type, 3
+102, The Iroquois, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+102, Ormus, Greece, RECEIVED_UNIT_GIFT, Composite Bowman
+102, Poland, Wittenberg, SENT OUT QUEST, Type, 4
+102, Poland, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 53 to 53, MINOR_CIV_WITTENBERG
+102, Siam, Panama City, lost friend
+103, Poland, Zanzibar, gained friend
+103, Poland, Zanzibar, FINISHED QUEST, Great Person, Friendship: -6 to 34, MINOR_CIV_ZANZIBAR
+103, Poland, Wittenberg, gained ally
+103, Poland, Wittenberg, FINISHED QUEST, Great Person, Friendship: 53 to 93, MINOR_CIV_WITTENBERG
+103, Persia, Kyiv, SENT OUT QUEST, Type, 3
+103, Persia, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 19 to 19, MINOR_CIV_KIEV
+103, The Iroquois, Panama City, SENT OUT QUEST, Type, 1
+103, The Iroquois, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+104, The Iroquois, La Venta, FINISHED QUEST, Invest, Friendship: 8 to 8, MINOR_CIV_LA_VENTA
+104, Brazil, La Venta, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+104, Siam, La Venta, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+104, Assyria, La Venta, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+104, The Netherlands, La Venta, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+104, Poland, Byblos, SENT OUT QUEST, Type, 4
+104, Poland, Byblos, RECEIVED QUEST, Great Person, Friendship: 49 to 49, MINOR_CIV_BYBLOS
+104, The Netherlands, Zanzibar, gained friend
+104, The Netherlands, Zanzibar, FINISHED QUEST, Trade Route, Friendship: 5 to 45, MINOR_CIV_ZANZIBAR
+104, Greece, Ormus, SENT OUT QUEST, Type, 4
+104, Greece, Ormus, RECEIVED QUEST, Great Person, Friendship: 7 to 7, MINOR_CIV_ORMUS
+104, Manila, Greece, RECEIVED_UNIT_GIFT, Archer
+105, The Iroquois, Lhasa, gained ally
+105, The Iroquois, Lhasa, Gold Gift: 250, Friendship: 37 to 62, Diplomacy, MINOR_CIV_LHASA, Boost! , Passing Siam
+105, Siam, La Venta, SENT OUT QUEST, Type, 7
+105, Siam, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+105, The Iroquois, Valletta, lost friend
+105, Poland, Zanzibar, lost friend
+105, Wittenberg, The Iroquois, RECEIVED_UNIT_GIFT, Mohawk Warrior
+106, Greece, Byblos, SENT OUT QUEST, Type, 2
+106, Persia, Kyiv, SENT OUT QUEST, Type, 1
+106, Persia, Kyiv, SENT OUT QUEST, Type, 3
+106, The Iroquois, La Venta, SENT OUT QUEST, Type, 16
+106, The Iroquois, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+106, The Iroquois, Lhasa, lost ally
+106, The Iroquois, Byblos, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+106, Assyria, Valletta, lost friend
+106, Assyria, Valletta, SENT OUT QUEST, Type, 1
+106, Assyria, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 28 to 28, MINOR_CIV_VALLETTA
+106, Brazil, Valletta, SENT OUT QUEST, Type, 1
+106, Brazil, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+106, Poland, Valletta, SENT OUT QUEST, Type, 1
+106, Poland, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+106, The Iroquois, Valletta, SENT OUT QUEST, Type, 1
+106, The Iroquois, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 26 to 26, MINOR_CIV_VALLETTA
+106, Siam, Valletta, SENT OUT QUEST, Type, 1
+106, Siam, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+106, The Netherlands, Valletta, SENT OUT QUEST, Type, 1
+106, The Netherlands, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+106, Persia, Valletta, SENT OUT QUEST, Type, 1
+106, Persia, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+106, Kyiv, Persia, RECEIVED_UNIT_GIFT, Pikeman
+106, Siam, Malacca, lost friend
+106, Persia, Wittenberg, SENT OUT QUEST, Type, 2
+106, Persia, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 39 to 39, MINOR_CIV_WITTENBERG
+107, Assyria, Lhasa, lost friend
+107, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 4
+107, The Iroquois, Zanzibar, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+107, Wittenberg, Assyria, RECEIVED_UNIT_GIFT, Archer
+107, Siam, Wittenberg, SENT OUT QUEST, Type, 7
+107, Siam, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 33 to 33, MINOR_CIV_WITTENBERG
+108, Assyria, Byblos, SENT OUT QUEST, Type, 2
+108, Assyria, Byblos, SENT OUT QUEST, Type, 4
+108, Assyria, Cahokia, SENT OUT QUEST, Type, 1
+108, Assyria, Cahokia, SENT OUT QUEST, Type, 2
+108, Assyria, Cahokia, SENT OUT QUEST, Type, 16
+108, Valletta, Assyria, RECEIVED_UNIT_GIFT, Archer
+108, Assyria, Valletta, gained friend
+108, Assyria, Valletta, lost friend
+108, Siam, Manila, lost friend
+109, Greece, Ormus, gained friend
+109, Greece, Ormus, FINISHED QUEST, Great Person, Friendship: 6 to 46, MINOR_CIV_ORMUS
+109, Greece, Brussels, era change yield update
+109, Greece, La Venta, era change yield update
+109, Greece, Lhasa, era change yield update
+109, Greece, Byblos, era change yield update
+109, Greece, Cahokia, era change yield update
+109, Greece, Valletta, era change yield update
+109, Greece, Ur, era change yield update
+109, Greece, Zanzibar, era change yield update
+109, Greece, Kyiv, era change yield update
+109, Greece, Milan, era change yield update
+109, Greece, Ormus, era change yield update
+109, Greece, Malacca, era change yield update
+109, Greece, Wittenberg, era change yield update
+109, Greece, Singapore, era change yield update
+109, Greece, Manila, era change yield update
+109, Greece, Panama City, era change yield update
+109, Greece, Byblos, SENT OUT QUEST, Type, 2
+109, Greece, Ur, SENT OUT QUEST, Type, 1
+109, Greece, Ur, SENT OUT QUEST, Type, 7
+109, Greece, Ur, SENT OUT QUEST, Type, 2
+109, Greece, Zanzibar, SENT OUT QUEST, Type, 1
+109, Greece, Zanzibar, SENT OUT QUEST, Type, 3
+109, Greece, Zanzibar, SENT OUT QUEST, Type, 2
+109, Greece, Ormus, SENT OUT QUEST, Type, 1
+109, Greece, Ormus, SENT OUT QUEST, Type, 7
+109, Greece, Ormus, SENT OUT QUEST, Type, 4
+109, Greece, Wittenberg, SENT OUT QUEST, Type, 3
+109, Greece, Wittenberg, SENT OUT QUEST, Type, 4
+109, Greece, Manila, SENT OUT QUEST, Type, 2
+109, Greece, Manila, SENT OUT QUEST, Type, 1
+109, Greece, Manila, SENT OUT QUEST, Type, 0
+109, Lhasa, Assyria, RECEIVED_UNIT_GIFT, Warrior
+109, Assyria, Lhasa, gained friend
+110, The Iroquois, Brussels, era change yield update
+110, The Iroquois, La Venta, era change yield update
+110, The Iroquois, Lhasa, era change yield update
+110, The Iroquois, Byblos, era change yield update
+110, The Iroquois, Cahokia, era change yield update
+110, The Iroquois, Valletta, era change yield update
+110, The Iroquois, Ur, era change yield update
+110, The Iroquois, Zanzibar, era change yield update
+110, The Iroquois, Kyiv, era change yield update
+110, The Iroquois, Milan, era change yield update
+110, The Iroquois, Ormus, era change yield update
+110, The Iroquois, Malacca, era change yield update
+110, The Iroquois, Wittenberg, era change yield update
+110, The Iroquois, Singapore, era change yield update
+110, The Iroquois, Manila, era change yield update
+110, The Iroquois, Panama City, era change yield update
+110, The Iroquois, Brussels, SENT OUT QUEST, Type, 7
+110, The Iroquois, La Venta, SENT OUT QUEST, Type, 2
+110, The Iroquois, La Venta, SENT OUT QUEST, Type, 16
+110, The Iroquois, Lhasa, SENT OUT QUEST, Type, 1
+110, The Iroquois, Lhasa, SENT OUT QUEST, Type, 16
+110, The Iroquois, Byblos, SENT OUT QUEST, Type, 3
+110, The Iroquois, Cahokia, SENT OUT QUEST, Type, 1
+110, The Iroquois, Cahokia, SENT OUT QUEST, Type, 7
+110, The Iroquois, Cahokia, SENT OUT QUEST, Type, 2
+110, The Iroquois, Valletta, SENT OUT QUEST, Type, 1
+110, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 1
+110, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 4
+110, The Iroquois, Kyiv, SENT OUT QUEST, Type, 1
+110, The Iroquois, Kyiv, SENT OUT QUEST, Type, 4
+110, The Iroquois, Milan, SENT OUT QUEST, Type, 1
+110, The Iroquois, Milan, SENT OUT QUEST, Type, 2
+110, The Iroquois, Wittenberg, SENT OUT QUEST, Type, 7
+110, The Iroquois, Wittenberg, SENT OUT QUEST, Type, 16
+110, The Iroquois, Manila, SENT OUT QUEST, Type, 7
+110, The Iroquois, Manila, SENT OUT QUEST, Type, 1
+110, The Iroquois, Manila, SENT OUT QUEST, Type, 2
+110, The Iroquois, Panama City, SENT OUT QUEST, Type, 1
+110, Assyria, Lhasa, lost friend
+110, Greece, Byblos, SENT OUT QUEST, Type, 4
+110, Greece, Byblos, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+110, Persia, Valletta, gained friend
+110, Persia, Valletta, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_VALLETTA
+110, Siam, Wittenberg, lost friend
+110, Persia, Manila, gained friend
+110, Persia, Manila, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_MANILA
+111, Assyria, Lhasa, gained friend
+111, Assyria, Lhasa, gained ally
+111, Assyria, Lhasa, FINISHED QUEST, Great Person, Friendship: 23 to 63, MINOR_CIV_LHASA
+111, Assyria, Wittenberg, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_WITTENBERG
+111, Assyria, Wittenberg, cancelled, Construct Wonder, Friendship: -60 to -60, MINOR_CIV_WITTENBERG
+111, Greece, Panama City, SENT OUT QUEST, Type, 1
+111, Greece, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+111, Persia, Valletta, SENT OUT QUEST, Type, 17
+111, Persia, Valletta, SENT OUT QUEST, Type, 14
+111, Persia, Manila, SENT OUT QUEST, Type, 2
+111, Persia, Manila, SENT OUT QUEST, Type, 17
+111, Brazil, Lhasa, SENT OUT QUEST, Type, 16
+111, Brazil, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_LHASA
+111, The Netherlands, Byblos, SENT OUT QUEST, Type, 2
+111, The Netherlands, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+111, Assyria, Valletta, cancelled, Kill Camp, Friendship: 22 to 22, MINOR_CIV_VALLETTA
+111, Brazil, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+111, Poland, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+111, The Iroquois, Valletta, cancelled, Kill Camp, Friendship: 15 to 15, MINOR_CIV_VALLETTA
+111, Siam, Valletta, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+111, The Netherlands, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+111, Persia, Valletta, cancelled, Bully City-State, Friendship: 47 to 47, MINOR_CIV_VALLETTA
+111, The Iroquois, Valletta, SENT OUT QUEST, Type, 2
+111, The Iroquois, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 15 to 15, MINOR_CIV_VALLETTA
+111, Siam, Malacca, SENT OUT QUEST, Type, 2
+111, Siam, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 21 to 21, MINOR_CIV_MALACCA
+111, Wittenberg, Persia, RECEIVED_UNIT_GIFT, Pikeman
+111, Assyria, Manila, cancelled, Kill Camp, Friendship: -7 to -7, MINOR_CIV_MANILA
+111, Brazil, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+111, Poland, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+111, The Iroquois, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+111, Siam, Manila, cancelled, Kill Camp, Friendship: 25 to 25, MINOR_CIV_MANILA
+111, Greece, Manila, cancelled, Kill Camp, Friendship: 39 to 39, MINOR_CIV_MANILA
+111, The Netherlands, Manila, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+112, The Netherlands, Lhasa, gained friend
+112, The Netherlands, Lhasa, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_LHASA
+112, The Netherlands, Valletta, gained friend
+112, The Netherlands, Valletta, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+112, The Netherlands, Kyiv, gained friend
+112, The Netherlands, Kyiv, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KIEV
+112, The Netherlands, Malacca, gained friend
+112, The Netherlands, Malacca, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MALACCA
+112, The Netherlands, Wittenberg, gained friend
+112, The Netherlands, Wittenberg, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+112, The Netherlands, Panama City, gained friend
+112, The Netherlands, Panama City, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
+112, Wittenberg, The Iroquois, RECEIVED_UNIT_GIFT, Mohawk Warrior
+112, The Iroquois, Singapore, lost friend
+113, Assyria, Panama City, SENT OUT QUEST, Type, 1
+113, Assyria, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+113, Siam, Cahokia, gained friend
+113, Siam, Cahokia, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+113, Siam, Kyiv, gained friend
+113, Siam, Kyiv, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_KIEV
+113, Siam, Malacca, gained friend
+113, Siam, Malacca, FINISHED QUEST, Great Person, Friendship: 19 to 59, MINOR_CIV_MALACCA
+113, Greece, Wittenberg, gained friend
+113, Greece, Wittenberg, FINISHED QUEST, Great Person, Friendship: 8 to 48, MINOR_CIV_WITTENBERG
+113, Assyria, Lhasa, lost ally
+113, Brazil, Cahokia, gained friend
+113, Brazil, Cahokia, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+113, Greece, Ur, gained friend
+113, Greece, Ur, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_UR
+113, Greece, Ormus, gained ally
+113, Greece, Ormus, FINISHED QUEST, Find Natural Wonder, Friendship: 44 to 84, MINOR_CIV_ORMUS
+113, The Netherlands, Singapore, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+114, Brazil, Cahokia, SENT OUT QUEST, Type, 1
+114, Brazil, Cahokia, SENT OUT QUEST, Type, 2
+114, Poland, Byblos, Gold Gift: 250, Friendship: 35 to 35, Culture, MINOR_CIV_BYBLOS, (SAVING) , Boost! , Passing Greece
+114, Greece, Byblos, gained friend
+114, Greece, Byblos, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_BYBLOS
+114, The Iroquois, Milan, SENT OUT QUEST, Type, 4
+114, The Iroquois, Milan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MILAN
+115, The Iroquois, Malacca, SENT OUT QUEST, Type, 1
+115, The Iroquois, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
+115, Siam, Cahokia, SENT OUT QUEST, Type, 1
+115, Siam, Cahokia, SENT OUT QUEST, Type, 2
+115, The Netherlands, Zanzibar, lost friend
+116, Assyria, Malacca, SENT OUT QUEST, Type, 1
+116, Assyria, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
+116, The Iroquois, Malacca, SENT OUT QUEST, Type, 1
+116, The Iroquois, Ur, SENT OUT QUEST, Type, 1
+116, The Iroquois, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+116, Siam, Lhasa, gained friend
+116, Siam, Lhasa, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_LHASA
+116, Brazil, Cahokia, gained ally
+116, Brazil, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 35 to 75, MINOR_CIV_CAHOKIA
+116, The Netherlands, Valletta, lost friend
+116, Brazil, Kyiv, gained friend
+116, Brazil, Kyiv, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KIEV
+116, The Iroquois, Kyiv, SENT OUT QUEST, Type, 2
+116, The Iroquois, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+116, Persia, Wittenberg, lost friend
+116, The Iroquois, Singapore, SENT OUT QUEST, Type, 4
+116, The Iroquois, Singapore, RECEIVED QUEST, Great Person, Friendship: 23 to 23, MINOR_CIV_SINGAPORE
+116, The Netherlands, Panama City, lost friend
+116, Siam, Panama City, gained friend
+116, Siam, Panama City, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_PANAMA_CITY
+117, Persia, Cahokia, SENT OUT QUEST, Type, 1
+117, Persia, Cahokia, SENT OUT QUEST, Type, 17
+117, Persia, Cahokia, SENT OUT QUEST, Type, 2
+117, Persia, Wittenberg, SENT OUT QUEST, Type, 7
+117, Persia, Wittenberg, SENT OUT QUEST, Type, 2
+117, Assyria, Lhasa, cancelled, Kill Camp, Friendship: 53 to 53, MINOR_CIV_LHASA
+117, Brazil, Lhasa, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_LHASA
+117, The Iroquois, Lhasa, cancelled, Kill Camp, Friendship: 42 to 42, MINOR_CIV_LHASA
+117, The Netherlands, Lhasa, cancelled, Kill Camp, Friendship: 32 to 32, MINOR_CIV_LHASA
+117, The Iroquois, Lhasa, SENT OUT QUEST, Type, 4
+117, The Iroquois, Lhasa, RECEIVED QUEST, Great Person, Friendship: 42 to 42, MINOR_CIV_LHASA
+117, Poland, Byblos, lost friend
+117, Siam, Valletta, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+117, Manila, Persia, RECEIVED_UNIT_GIFT, Pikeman
+117, Assyria, Panama City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+117, The Iroquois, Panama City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+117, Greece, Panama City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+117, The Netherlands, Panama City, cancelled, Kill Camp, Friendship: 28 to 28, MINOR_CIV_PANAMA_CITY
+118, Assyria, Byblos, gained friend
+118, Assyria, Byblos, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_BYBLOS
+118, Assyria, Valletta, gained friend
+118, Assyria, Valletta, FINISHED QUEST, Great Person, Friendship: 9 to 49, MINOR_CIV_VALLETTA
+118, Assyria, Kyiv, gained friend
+118, Assyria, Kyiv, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KIEV
+118, Assyria, Cahokia, SENT OUT QUEST, Type, 1
+118, Assyria, Cahokia, SENT OUT QUEST, Type, 2
+118, Assyria, Cahokia, SENT OUT QUEST, Type, 16
+118, The Netherlands, Brussels, era change yield update
+118, The Netherlands, La Venta, era change yield update
+118, The Netherlands, Lhasa, era change yield update
+118, The Netherlands, Byblos, era change yield update
+118, The Netherlands, Cahokia, era change yield update
+118, The Netherlands, Valletta, era change yield update
+118, The Netherlands, Ur, era change yield update
+118, The Netherlands, Zanzibar, era change yield update
+118, The Netherlands, Kyiv, era change yield update
+118, The Netherlands, Milan, era change yield update
+118, The Netherlands, Ormus, era change yield update
+118, The Netherlands, Malacca, era change yield update
+118, The Netherlands, Wittenberg, era change yield update
+118, The Netherlands, Singapore, era change yield update
+118, The Netherlands, Manila, era change yield update
+118, The Netherlands, Panama City, era change yield update
+118, The Netherlands, La Venta, SENT OUT QUEST, Type, 7
+118, The Netherlands, La Venta, SENT OUT QUEST, Type, 14
+118, The Netherlands, Lhasa, SENT OUT QUEST, Type, 2
+118, The Netherlands, Byblos, SENT OUT QUEST, Type, 2
+118, The Netherlands, Cahokia, SENT OUT QUEST, Type, 1
+118, The Netherlands, Cahokia, SENT OUT QUEST, Type, 2
+118, The Netherlands, Cahokia, SENT OUT QUEST, Type, 7
+118, The Netherlands, Valletta, SENT OUT QUEST, Type, 2
+118, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 1
+118, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 2
+118, The Netherlands, Kyiv, SENT OUT QUEST, Type, 1
+118, The Netherlands, Kyiv, SENT OUT QUEST, Type, 2
+118, The Netherlands, Malacca, SENT OUT QUEST, Type, 1
+118, The Netherlands, Malacca, SENT OUT QUEST, Type, 2
+118, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 17
+118, The Netherlands, Singapore, SENT OUT QUEST, Type, 7
+118, The Netherlands, Manila, SENT OUT QUEST, Type, 2
+118, The Netherlands, Manila, SENT OUT QUEST, Type, 7
+118, The Netherlands, Panama City, SENT OUT QUEST, Type, 7
+118, Assyria, La Venta, gained friend
+118, Assyria, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+118, Poland, Valletta, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+118, Poland, Wittenberg, SENT OUT QUEST, Type, 2
+118, Poland, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 69 to 69, MINOR_CIV_WITTENBERG
+118, Assyria, Manila, gained friend
+118, Assyria, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MANILA
+119, The Iroquois, Brussels, lost ally
+119, The Iroquois, Brussels, gained ally
+119, The Iroquois, Brussels, FINISHED QUEST, Find Natural Wonder, Friendship: 59 to 99, MINOR_CIV_BRUSSELS
+119, The Iroquois, Brussels, SENT OUT QUEST, Type, 16
+119, The Iroquois, Brussels, RECEIVED QUEST, Spread Religion, Friendship: 99 to 99, MINOR_CIV_BRUSSELS
+119, The Netherlands, La Venta, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+119, The Netherlands, Lhasa, lost friend
+119, The Iroquois, Byblos, gained friend
+119, The Iroquois, Byblos, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+119, Siam, Cahokia, lost friend
+119, The Iroquois, Cahokia, gained friend
+119, The Iroquois, Cahokia, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+119, Persia, Valletta, lost friend
+119, Greece, Zanzibar, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+119, The Netherlands, Kyiv, lost friend
+119, The Netherlands, Malacca, lost friend
+119, The Iroquois, Wittenberg, gained friend
+119, The Iroquois, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+119, Greece, Wittenberg, cancelled, Construct Wonder, Friendship: 45 to 45, MINOR_CIV_WITTENBERG
+119, The Iroquois, Manila, gained friend
+119, The Iroquois, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MANILA
+120, Brazil, Cahokia, lost ally
+120, The Iroquois, Cahokia, gained ally
+120, The Iroquois, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 38 to 78, MINOR_CIV_CAHOKIA
+120, The Iroquois, Valletta, gained friend
+120, The Iroquois, Valletta, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+120, Greece, Ur, gained ally
+120, Greece, Ur, FINISHED QUEST, Connect Resource, Friendship: 42 to 82, MINOR_CIV_UR
+120, The Iroquois, Milan, gained friend
+120, The Iroquois, Milan, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MILAN
+120, The Iroquois, Manila, gained ally
+120, The Iroquois, Manila, FINISHED QUEST, Connect Resource, Friendship: 38 to 78, MINOR_CIV_MANILA
+121, The Iroquois, Cahokia, SENT OUT QUEST, Type, 1
+121, Persia, Valletta, SENT OUT QUEST, Type, 17
+121, Persia, Manila, SENT OUT QUEST, Type, 2
+121, Persia, Manila, SENT OUT QUEST, Type, 17
+121, The Iroquois, Kyiv, gained friend
+121, The Iroquois, Kyiv, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KIEV
+122, Poland, Wittenberg, Gold Gift: 250, Friendship: 66 to 86, Culture, MINOR_CIV_WITTENBERG, Boost! , Passing Persia
+122, Poland, Byblos, Gold Gift: 500, Friendship: 23 to 23, Culture, MINOR_CIV_BYBLOS, (SAVING) , Passing Siam
+122, The Iroquois, Milan, gained ally
+122, The Iroquois, Milan, FINISHED QUEST, Great Person, Friendship: 38 to 78, MINOR_CIV_MILAN
+122, The Iroquois, Singapore, gained friend
+122, The Iroquois, Singapore, FINISHED QUEST, Great Person, Friendship: 15 to 55, MINOR_CIV_SINGAPORE
+122, Siam, La Venta, gained friend
+122, Siam, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+122, Siam, Lhasa, gained ally
+122, Siam, Lhasa, FINISHED QUEST, Find Natural Wonder, Friendship: 46 to 86, MINOR_CIV_LHASA
+122, Assyria, Cahokia, gained friend
+122, Assyria, Cahokia, FINISHED QUEST, Spread Religion, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+122, Poland, Zanzibar, SENT OUT QUEST, Type, 2
+122, Poland, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 4 to 4, MINOR_CIV_ZANZIBAR
+122, Siam, Wittenberg, gained friend
+122, Siam, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 10 to 50, MINOR_CIV_WITTENBERG
+122, Siam, Singapore, gained friend
+122, Siam, Singapore, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SINGAPORE
+122, Siam, Panama City, gained ally
+122, Siam, Panama City, FINISHED QUEST, Find Natural Wonder, Friendship: 41 to 81, MINOR_CIV_PANAMA_CITY
+123, The Iroquois, Milan, SENT OUT QUEST, Type, 1
+123, Assyria, La Venta, lost friend
+123, Assyria, Byblos, SENT OUT QUEST, Type, 13
+123, Assyria, Byblos, RECEIVED QUEST, Invest, Friendship: 36 to 36, MINOR_CIV_BYBLOS
+123, Poland, Byblos, SENT OUT QUEST, Type, 13
+123, Poland, Byblos, RECEIVED QUEST, Invest, Friendship: 20 to 20, MINOR_CIV_BYBLOS
+123, The Iroquois, Byblos, SENT OUT QUEST, Type, 13
+123, The Iroquois, Byblos, RECEIVED QUEST, Invest, Friendship: 34 to 34, MINOR_CIV_BYBLOS
+123, Siam, Byblos, SENT OUT QUEST, Type, 13
+123, Siam, Byblos, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+123, Greece, Byblos, SENT OUT QUEST, Type, 13
+123, Greece, Byblos, RECEIVED QUEST, Invest, Friendship: 41 to 41, MINOR_CIV_BYBLOS
+123, The Netherlands, Byblos, SENT OUT QUEST, Type, 13
+123, The Netherlands, Byblos, RECEIVED QUEST, Invest, Friendship: -3 to -3, MINOR_CIV_BYBLOS
+123, Persia, Byblos, SENT OUT QUEST, Type, 13
+123, Persia, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+123, Siam, Cahokia, gained friend
+123, Siam, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 17 to 57, MINOR_CIV_CAHOKIA
+123, Brazil, Kyiv, lost friend
+123, Siam, Kyiv, lost friend
+123, Persia, Kyiv, SENT OUT QUEST, Type, 4
+123, Persia, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+124, Brazil, Cahokia, SENT OUT QUEST, Type, 1
+124, The Iroquois, Byblos, SENT OUT QUEST, Type, 3
+124, The Iroquois, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 32 to 32, MINOR_CIV_BYBLOS
+124, Siam, Byblos, SENT OUT QUEST, Type, 4
+124, Siam, Byblos, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+124, Assyria, Kyiv, lost friend
+124, The Netherlands, Wittenberg, lost friend
+125, Greece, Wittenberg, lost friend
+125, Poland, Byblos, SENT OUT QUEST, Type, 17
+125, Poland, Byblos, SENT OUT QUEST, Type, 4
+125, Poland, Byblos, SENT OUT QUEST, Type, 13
+125, Persia, Cahokia, gained friend
+125, Persia, Cahokia, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_CAHOKIA
+125, The Iroquois, Valletta, lost friend
+125, Siam, Valletta, SENT OUT QUEST, Type, 4
+125, Siam, Valletta, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+125, Persia, Kyiv, gained friend
+125, Persia, Kyiv, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_KIEV
+125, Persia, Kyiv, gained ally
+125, Persia, Kyiv, FINISHED QUEST, Construct Wonder, Friendship: 50 to 90, MINOR_CIV_KIEV
+125, Persia, Wittenberg, gained friend
+125, Persia, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 16 to 56, MINOR_CIV_WITTENBERG
+125, Assyria, Manila, lost friend
+126, Persia, Kyiv, SENT OUT QUEST, Type, 4
+126, Persia, Wittenberg, SENT OUT QUEST, Type, 2
+126, The Iroquois, Brussels, SENT OUT QUEST, Type, 1
+126, The Iroquois, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 89 to 89, MINOR_CIV_BRUSSELS
+126, The Iroquois, Lhasa, lost friend
+126, The Iroquois, Byblos, lost friend
+126, Assyria, Cahokia, cancelled, Kill Camp, Friendship: 35 to 35, MINOR_CIV_CAHOKIA
+126, Brazil, Cahokia, cancelled, Kill Camp, Friendship: 60 to 60, MINOR_CIV_CAHOKIA
+126, The Iroquois, Cahokia, cancelled, Kill Camp, Friendship: 69 to 69, MINOR_CIV_CAHOKIA
+126, Siam, Cahokia, cancelled, Kill Camp, Friendship: 53 to 53, MINOR_CIV_CAHOKIA
+126, The Netherlands, Cahokia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+126, Siam, Cahokia, SENT OUT QUEST, Type, 16
+126, Siam, Cahokia, RECEIVED QUEST, Spread Religion, Friendship: 53 to 53, MINOR_CIV_CAHOKIA
+126, Assyria, Valletta, lost friend
+126, Persia, Zanzibar, gained friend
+126, Persia, Zanzibar, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+126, Assyria, Kyiv, cancelled, Kill Camp, Friendship: 26 to 26, MINOR_CIV_KIEV
+126, Brazil, Kyiv, cancelled, Kill Camp, Friendship: 25 to 25, MINOR_CIV_KIEV
+126, The Iroquois, Kyiv, cancelled, Kill Camp, Friendship: 32 to 32, MINOR_CIV_KIEV
+126, Siam, Kyiv, cancelled, Kill Camp, Friendship: 24 to 24, MINOR_CIV_KIEV
+126, The Netherlands, Kyiv, cancelled, Kill Camp, Friendship: 22 to 22, MINOR_CIV_KIEV
+126, The Netherlands, Malacca, gained friend
+126, The Netherlands, Malacca, gained ally
+126, The Netherlands, Malacca, FINISHED QUEST, Connect Resource, Friendship: 22 to 62, MINOR_CIV_MALACCA
+126, The Iroquois, Wittenberg, lost friend
+126, Poland, Wittenberg, SENT OUT QUEST, Type, 10
+126, Poland, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 81 to 81, MINOR_CIV_WITTENBERG
+126, The Iroquois, Wittenberg, SENT OUT QUEST, Type, 10
+126, The Iroquois, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 29 to 29, MINOR_CIV_WITTENBERG
+126, Siam, Wittenberg, SENT OUT QUEST, Type, 10
+126, Siam, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 44 to 44, MINOR_CIV_WITTENBERG
+126, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 10
+126, The Netherlands, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 27 to 27, MINOR_CIV_WITTENBERG
+126, Persia, Wittenberg, SENT OUT QUEST, Type, 10
+126, Persia, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 54 to 54, MINOR_CIV_WITTENBERG
+126, Siam, Manila, SENT OUT QUEST, Type, 7
+126, Siam, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 2 to 2, MINOR_CIV_MANILA
+127, The Iroquois, Ormus, SENT OUT QUEST, Type, 1
+127, The Iroquois, Ormus, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ORMUS
+127, The Netherlands, Malacca, SENT OUT QUEST, Type, 1
+127, The Netherlands, Lhasa, SENT OUT QUEST, Type, 7
+127, The Netherlands, Lhasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 21 to 21, MINOR_CIV_LHASA
+127, The Netherlands, Kyiv, gained friend
+127, The Netherlands, Kyiv, FINISHED QUEST, Connect Resource, Friendship: 21 to 61, MINOR_CIV_KIEV
+127, Siam, Kyiv, SENT OUT QUEST, Type, 3
+127, Siam, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 22 to 22, MINOR_CIV_KIEV
+127, Persia, Manila, lost friend
+127, Assyria, Panama City, SENT OUT QUEST, Type, 16
+127, Assyria, Panama City, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+128, The Iroquois, La Venta, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_LA_VENTA, (SAVING) 
+128, Greece, Byblos, gained ally
+128, Poland, Byblos, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_BYBLOS
+128, Poland, Byblos, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_BYBLOS
+128, Poland, Byblos, cancelled, Invest, Friendship: -60 to -60, MINOR_CIV_BYBLOS
+128, Greece, Byblos, FINISHED QUEST, Great Person, Friendship: 40 to 80, MINOR_CIV_BYBLOS
+128, Assyria, Byblos, lost friend
+128, The Iroquois, Kyiv, lost friend
+128, The Netherlands, Malacca, lost ally
+128, Siam, Wittenberg, SENT OUT QUEST, Type, 16
+128, Siam, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 41 to 41, MINOR_CIV_WITTENBERG
+128, Assyria, Singapore, SENT OUT QUEST, Type, 13
+128, Assyria, Singapore, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+128, Brazil, Singapore, SENT OUT QUEST, Type, 13
+128, Brazil, Singapore, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+128, The Iroquois, Singapore, SENT OUT QUEST, Type, 13
+128, The Iroquois, Singapore, RECEIVED QUEST, Invest, Friendship: 45 to 45, MINOR_CIV_SINGAPORE
+128, Siam, Singapore, SENT OUT QUEST, Type, 13
+128, Siam, Singapore, RECEIVED QUEST, Invest, Friendship: 36 to 36, MINOR_CIV_SINGAPORE
+128, Greece, Singapore, SENT OUT QUEST, Type, 13
+128, Greece, Singapore, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+128, The Netherlands, Singapore, SENT OUT QUEST, Type, 13
+128, The Netherlands, Singapore, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+129, Assyria, Byblos, SENT OUT QUEST, Type, 2
+129, Assyria, Byblos, SENT OUT QUEST, Type, 13
+129, Siam, La Venta, lost friend
+129, Assyria, Lhasa, SENT OUT QUEST, Type, 4
+129, Assyria, Lhasa, RECEIVED QUEST, Great Person, Friendship: 35 to 35, MINOR_CIV_LHASA
+129, The Netherlands, Valletta, SENT OUT QUEST, Type, 14
+129, The Netherlands, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 2 to 2, MINOR_CIV_VALLETTA
+129, The Iroquois, Ur, SENT OUT QUEST, Type, 7
+129, The Iroquois, Ur, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_UR
+129, The Netherlands, Kyiv, SENT OUT QUEST, Type, 4
+129, The Netherlands, Kyiv, RECEIVED QUEST, Great Person, Friendship: 58 to 58, MINOR_CIV_KIEV
+129, Malacca, The Iroquois, RECEIVED_UNIT_GIFT, Mohawk Warrior
+130, Siam, Malacca, SENT OUT QUEST, Type, 3
+130, Siam, Malacca, RECEIVED QUEST, Construct Wonder, Friendship: 32 to 32, MINOR_CIV_MALACCA
+131, Persia, Kyiv, FINISHED QUEST, Great Person, Friendship: 82 to 122, MINOR_CIV_KIEV
+131, The Netherlands, Byblos, gained friend
+131, The Netherlands, Byblos, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+131, The Netherlands, Zanzibar, SENT OUT QUEST, Type, 7
+131, The Netherlands, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 11 to 11, MINOR_CIV_ZANZIBAR
+131, The Netherlands, Singapore, SENT OUT QUEST, Type, 2
+131, The Netherlands, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+132, The Iroquois, Cahokia, Tile Improvement, Diplomacy, MINOR_CIV_CAHOKIA
+132, The Iroquois, Cahokia, Gold Gift: 250, Friendship: 62 to 62, Diplomacy, MINOR_CIV_CAHOKIA, Boost! , Passing Persia
+132, The Iroquois, Manila, Gold Gift: 250, Friendship: 62 to 62, Diplomacy, MINOR_CIV_MANILA, (SAVING) , Boost! , Passing Persia
+132, Persia, Singapore, SENT OUT QUEST, Type, 13
+132, Persia, Singapore, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+132, Assyria, La Venta, SENT OUT QUEST, Type, 12
+132, Assyria, La Venta, RECEIVED QUEST, Contest Techs, Friendship: 8 to 8, MINOR_CIV_LA_VENTA
+132, Brazil, La Venta, SENT OUT QUEST, Type, 12
+132, Brazil, La Venta, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+132, The Iroquois, La Venta, SENT OUT QUEST, Type, 12
+132, The Iroquois, La Venta, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+132, Siam, La Venta, SENT OUT QUEST, Type, 12
+132, Siam, La Venta, RECEIVED QUEST, Contest Techs, Friendship: 22 to 22, MINOR_CIV_LA_VENTA
+132, The Netherlands, La Venta, SENT OUT QUEST, Type, 12
+132, The Netherlands, La Venta, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+132, Poland, Lhasa, SENT OUT QUEST, Type, 16
+132, Poland, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_LHASA
+132, Assyria, Cahokia, lost friend
+132, Brazil, Cahokia, SENT OUT QUEST, Type, 17
+132, Brazil, Cahokia, RECEIVED QUEST, Trade Route, Friendship: 51 to 51, MINOR_CIV_CAHOKIA
+132, Siam, Malacca, lost friend
+132, Siam, Panama City, SENT OUT QUEST, Type, 17
+132, Siam, Panama City, RECEIVED QUEST, Trade Route, Friendship: 62 to 62, MINOR_CIV_PANAMA_CITY
+133, Assyria, Lhasa, Gold Gift: 250, Friendship: 30 to 50, Spaceship, MINOR_CIV_LHASA, Boost! , Passing The Netherlands
+133, Assyria, Valletta, Gold Gift: 500, Friendship: 15 to 15, Spaceship, MINOR_CIV_VALLETTA, (SAVING) , Passing Greece
+133, Siam, Byblos, gained friend
+133, Siam, Byblos, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_BYBLOS
+133, The Iroquois, Brussels, SENT OUT QUEST, Type, 7
+133, The Iroquois, Brussels, RECEIVED QUEST, Find Natural Wonder, Friendship: 79 to 79, MINOR_CIV_BRUSSELS
+133, Persia, Byblos, SENT OUT QUEST, Type, 2
+133, Persia, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+133, The Iroquois, Cahokia, lost ally
+133, Persia, Zanzibar, lost friend
+133, Greece, Zanzibar, SENT OUT QUEST, Type, 4
+133, Greece, Zanzibar, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+133, Siam, Singapore, lost friend
+133, The Iroquois, Manila, lost ally
+133, Assyria, Manila, SENT OUT QUEST, Type, 4
+133, Assyria, Manila, RECEIVED QUEST, Great Person, Friendship: 17 to 17, MINOR_CIV_MANILA
+134, Brazil, Cahokia, SENT OUT QUEST, Type, 17
+134, Persia, Cahokia, SENT OUT QUEST, Type, 17
+134, Persia, Cahokia, SENT OUT QUEST, Type, 2
+134, Brazil, La Venta, gained friend
+134, Brazil, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+134, Brazil, Valletta, gained friend
+134, Brazil, Valletta, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+134, Brazil, Zanzibar, gained friend
+134, Brazil, Zanzibar, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+134, Brazil, Kyiv, gained friend
+134, Brazil, Kyiv, FINISHED QUEST, Find Natural Wonder, Friendship: 7 to 47, MINOR_CIV_KIEV
+134, The Iroquois, Milan, lost ally
+134, Greece, Ormus, SENT OUT QUEST, Type, 17
+134, Greece, Ormus, RECEIVED QUEST, Trade Route, Friendship: 76 to 76, MINOR_CIV_ORMUS
+134, The Netherlands, Ormus, SENT OUT QUEST, Type, 2
+134, The Netherlands, Ormus, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ORMUS
+134, The Iroquois, Malacca, SENT OUT QUEST, Type, 14
+134, The Iroquois, Malacca, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_MALACCA
+134, Brazil, Singapore, SENT OUT QUEST, Type, 16
+134, Brazil, Singapore, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+134, Brazil, Manila, gained friend
+134, Brazil, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MANILA
+134, Siam, Panama City, lost ally
+135, Cahokia, The Netherlands, RECEIVED_UNIT_GIFT, Warrior
+135, Greece, Ur, SENT OUT QUEST, Type, 17
+135, Greece, Ur, RECEIVED QUEST, Trade Route, Friendship: 76 to 76, MINOR_CIV_UR
+135, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 3
+135, The Iroquois, Zanzibar, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+136, Poland, Brussels, era change yield update
+136, Poland, La Venta, era change yield update
+136, Poland, Lhasa, era change yield update
+136, Poland, Byblos, era change yield update
+136, Poland, Cahokia, era change yield update
+136, Poland, Valletta, era change yield update
+136, Poland, Ur, era change yield update
+136, Poland, Zanzibar, era change yield update
+136, Poland, Kyiv, era change yield update
+136, Poland, Milan, era change yield update
+136, Poland, Ormus, era change yield update
+136, Poland, Malacca, era change yield update
+136, Poland, Wittenberg, era change yield update
+136, Poland, Singapore, era change yield update
+136, Poland, Manila, era change yield update
+136, Poland, Panama City, era change yield update
+136, Poland, Lhasa, SENT OUT QUEST, Type, 16
+136, Poland, Valletta, SENT OUT QUEST, Type, 17
+136, Poland, Zanzibar, SENT OUT QUEST, Type, 1
+136, Poland, Zanzibar, SENT OUT QUEST, Type, 16
+136, Poland, Zanzibar, SENT OUT QUEST, Type, 2
+136, Poland, Wittenberg, SENT OUT QUEST, Type, 7
+136, Poland, Wittenberg, SENT OUT QUEST, Type, 2
+136, Poland, Wittenberg, SENT OUT QUEST, Type, 10
+136, Poland, Manila, SENT OUT QUEST, Type, 7
+136, Poland, Manila, SENT OUT QUEST, Type, 17
+136, Poland, Valletta, SENT OUT QUEST, Type, 3
+136, Poland, Valletta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+136, Assyria, Malacca, SENT OUT QUEST, Type, 2
+136, Assyria, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MALACCA
+136, Siam, Wittenberg, lost friend
+136, The Iroquois, Wittenberg, SENT OUT QUEST, Type, 2
+136, The Iroquois, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 14 to 14, MINOR_CIV_WITTENBERG
+136, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 7
+136, The Netherlands, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 16 to 16, MINOR_CIV_WITTENBERG
+136, Greece, Manila, lost friend
+137, Greece, Byblos, SENT OUT QUEST, Type, 7
+137, Greece, Byblos, RECEIVED QUEST, Find Natural Wonder, Friendship: 76 to 76, MINOR_CIV_BYBLOS
+137, The Iroquois, Valletta, SENT OUT QUEST, Type, 14
+137, The Iroquois, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 2 to 2, MINOR_CIV_VALLETTA
+137, Brazil, Kyiv, SENT OUT QUEST, Type, 4
+137, Brazil, Kyiv, RECEIVED QUEST, Great Person, Friendship: 42 to 42, MINOR_CIV_KIEV
+137, The Netherlands, Malacca, SENT OUT QUEST, Type, 3
+137, The Netherlands, Malacca, RECEIVED QUEST, Construct Wonder, Friendship: 50 to 50, MINOR_CIV_MALACCA
+137, Greece, Singapore, SENT OUT QUEST, Type, 2
+137, Greece, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+138, Lhasa, Persia, RECEIVED_UNIT_GIFT, Warrior
+138, The Netherlands, Byblos, SENT OUT QUEST, Type, 7
+138, The Netherlands, Byblos, RECEIVED QUEST, Find Natural Wonder, Friendship: 32 to 32, MINOR_CIV_BYBLOS
+138, Assyria, Valletta, SENT OUT QUEST, Type, 16
+138, Assyria, Valletta, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+139, Assyria, Brussels, era change yield update
+139, Assyria, La Venta, era change yield update
+139, Assyria, Lhasa, era change yield update
+139, Assyria, Byblos, era change yield update
+139, Assyria, Cahokia, era change yield update
+139, Assyria, Valletta, era change yield update
+139, Assyria, Ur, era change yield update
+139, Assyria, Zanzibar, era change yield update
+139, Assyria, Kyiv, era change yield update
+139, Assyria, Milan, era change yield update
+139, Assyria, Ormus, era change yield update
+139, Assyria, Malacca, era change yield update
+139, Assyria, Wittenberg, era change yield update
+139, Assyria, Singapore, era change yield update
+139, Assyria, Manila, era change yield update
+139, Assyria, Panama City, era change yield update
+139, Assyria, La Venta, SENT OUT QUEST, Type, 2
+139, Assyria, La Venta, SENT OUT QUEST, Type, 12
+139, Assyria, Lhasa, SENT OUT QUEST, Type, 16
+139, Assyria, Lhasa, SENT OUT QUEST, Type, 4
+139, Assyria, Byblos, SENT OUT QUEST, Type, 2
+139, Assyria, Byblos, SENT OUT QUEST, Type, 13
+139, Assyria, Cahokia, SENT OUT QUEST, Type, 2
+139, Assyria, Valletta, SENT OUT QUEST, Type, 16
+139, Assyria, Kyiv, SENT OUT QUEST, Type, 16
+139, Assyria, Malacca, SENT OUT QUEST, Type, 1
+139, Assyria, Malacca, SENT OUT QUEST, Type, 2
+139, Assyria, Singapore, SENT OUT QUEST, Type, 13
+139, Assyria, Manila, SENT OUT QUEST, Type, 2
+139, Assyria, Manila, SENT OUT QUEST, Type, 4
+139, Assyria, Panama City, SENT OUT QUEST, Type, 16
+139, Lhasa, The Iroquois, RECEIVED_UNIT_GIFT, Mohawk Warrior
+139, Assyria, Byblos, SENT OUT QUEST, Type, 17
+139, Assyria, Byblos, RECEIVED QUEST, Trade Route, Friendship: 17 to 17, MINOR_CIV_BYBLOS
+139, Persia, Cahokia, lost friend
+139, Brazil, Valletta, lost friend
+139, Greece, Ur, FINISHED QUEST, Trade Route, Friendship: 75 to 115, MINOR_CIV_UR
+139, The Iroquois, Singapore, lost friend
+139, Siam, Singapore, SENT OUT QUEST, Type, 3
+139, Siam, Singapore, RECEIVED QUEST, Construct Wonder, Friendship: 19 to 19, MINOR_CIV_SINGAPORE
+140, The Netherlands, Malacca, SENT OUT QUEST, Type, 1
+140, The Netherlands, Malacca, SENT OUT QUEST, Type, 3
+140, Persia, Brussels, era change yield update
+140, Persia, La Venta, era change yield update
+140, Persia, Lhasa, era change yield update
+140, Persia, Byblos, era change yield update
+140, Persia, Cahokia, era change yield update
+140, Persia, Valletta, era change yield update
+140, Persia, Ur, era change yield update
+140, Persia, Zanzibar, era change yield update
+140, Persia, Kyiv, era change yield update
+140, Persia, Milan, era change yield update
+140, Persia, Ormus, era change yield update
+140, Persia, Malacca, era change yield update
+140, Persia, Wittenberg, era change yield update
+140, Persia, Singapore, era change yield update
+140, Persia, Manila, era change yield update
+140, Persia, Panama City, era change yield update
+140, Persia, Byblos, SENT OUT QUEST, Type, 13
+140, Persia, Byblos, SENT OUT QUEST, Type, 2
+140, Persia, Cahokia, SENT OUT QUEST, Type, 17
+140, Persia, Cahokia, SENT OUT QUEST, Type, 2
+140, Persia, Valletta, SENT OUT QUEST, Type, 17
+140, Persia, Zanzibar, SENT OUT QUEST, Type, 2
+140, Persia, Zanzibar, SENT OUT QUEST, Type, 1
+140, Persia, Wittenberg, SENT OUT QUEST, Type, 2
+140, Persia, Wittenberg, SENT OUT QUEST, Type, 10
+140, Persia, Singapore, SENT OUT QUEST, Type, 13
+140, Persia, Manila, SENT OUT QUEST, Type, 2
+140, Persia, Manila, SENT OUT QUEST, Type, 17
+140, Siam, Lhasa, lost ally
+140, Greece, Lhasa, SENT OUT QUEST, Type, 4
+140, Greece, Lhasa, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_LHASA
+140, The Iroquois, Singapore, SENT OUT QUEST, Type, 0
+140, The Iroquois, Singapore, RECEIVED QUEST, Route, Friendship: 27 to 27, MINOR_CIV_SINGAPORE
+141, The Iroquois, Zanzibar, gained friend
+141, The Iroquois, Zanzibar, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+141, The Iroquois, Kyiv, gained friend
+141, The Iroquois, Kyiv, FINISHED QUEST, Great Person, Friendship: 11 to 51, MINOR_CIV_KIEV
+141, Brazil, La Venta, lost friend
+141, Siam, Lhasa, SENT OUT QUEST, Type, 17
+141, Siam, Lhasa, RECEIVED QUEST, Trade Route, Friendship: 57 to 57, MINOR_CIV_LHASA
+141, The Netherlands, Byblos, lost friend
+141, Assyria, Valletta, SENT OUT QUEST, Type, 12
+141, Assyria, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+141, Brazil, Valletta, SENT OUT QUEST, Type, 12
+141, Brazil, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 24 to 24, MINOR_CIV_VALLETTA
+141, Poland, Valletta, SENT OUT QUEST, Type, 12
+141, Poland, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+141, The Iroquois, Valletta, SENT OUT QUEST, Type, 12
+141, The Iroquois, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+141, Siam, Valletta, SENT OUT QUEST, Type, 12
+141, Siam, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+141, Greece, Valletta, SENT OUT QUEST, Type, 12
+141, Greece, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+141, The Netherlands, Valletta, SENT OUT QUEST, Type, 12
+141, The Netherlands, Valletta, RECEIVED QUEST, Contest Techs, Friendship: -15 to -15, MINOR_CIV_VALLETTA
+141, Persia, Valletta, SENT OUT QUEST, Type, 12
+141, Persia, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+141, The Netherlands, Ur, SENT OUT QUEST, Type, 14
+141, The Netherlands, Ur, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_UR
+141, Brazil, Zanzibar, lost friend
+141, The Iroquois, Kyiv, SENT OUT QUEST, Type, 3
+141, The Iroquois, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 50 to 50, MINOR_CIV_KIEV
+141, Brazil, Manila, lost friend
+141, Siam, Manila, gained friend
+141, Siam, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MANILA
+141, The Netherlands, Panama City, SENT OUT QUEST, Type, 4
+141, The Netherlands, Panama City, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+142, The Iroquois, Brussels, Gold Gift: 250, Friendship: 67 to 87, Diplomacy, MINOR_CIV_BRUSSELS, Boost! 
+142, The Iroquois, Malacca, Gold Gift: 500, Friendship: -1 to -1, Diplomacy, MINOR_CIV_MALACCA, (SAVING) 
+142, The Iroquois, Brussels, FINISHED QUEST, Find Natural Wonder, Friendship: 85 to 125, MINOR_CIV_BRUSSELS
+142, Siam, Cahokia, lost friend
+142, Greece, Valletta, SENT OUT QUEST, Type, 4
+142, Greece, Valletta, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+142, The Iroquois, Ur, gained friend
+142, The Iroquois, Ur, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_UR
+142, The Iroquois, Manila, SENT OUT QUEST, Type, 4
+142, The Iroquois, Manila, RECEIVED QUEST, Great Person, Friendship: 45 to 45, MINOR_CIV_MANILA
+143, Persia, Wittenberg, Gold Gift: 250, Friendship: 31 to 51, Spaceship, MINOR_CIV_WITTENBERG, Boost! , Passing The Netherlands
+143, Persia, Cahokia, Gold Gift: 500, Friendship: 24 to 24, Spaceship, MINOR_CIV_CAHOKIA, (SAVING) , Passing Greece
+143, Siam, Byblos, lost friend
+143, Greece, Byblos, FINISHED QUEST, Invest, Friendship: 74 to 74, MINOR_CIV_BYBLOS
+143, Siam, Byblos, FINISHED QUEST, Invest, Friendship: 28 to 28, MINOR_CIV_BYBLOS
+143, The Netherlands, Byblos, FINISHED QUEST, Invest, Friendship: 26 to 26, MINOR_CIV_BYBLOS
+143, Assyria, Byblos, FINISHED QUEST, Invest, Friendship: 13 to 13, MINOR_CIV_BYBLOS
+143, The Iroquois, Byblos, FINISHED QUEST, Invest, Friendship: 4 to 4, MINOR_CIV_BYBLOS
+143, Persia, Byblos, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+143, The Iroquois, Singapore, gained friend
+143, The Iroquois, Singapore, gained ally
+143, The Iroquois, Singapore, FINISHED QUEST, Route, Friendship: 22 to 72, MINOR_CIV_SINGAPORE
+144, Assyria, Lhasa, Gold Gift: 250, Friendship: 34 to 54, Spaceship, MINOR_CIV_LHASA, Boost! , Passing The Netherlands
+144, Assyria, Singapore, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_SINGAPORE, (SAVING) 
+144, Brazil, Cahokia, SENT OUT QUEST, Type, 17
+144, Brazil, Singapore, SENT OUT QUEST, Type, 13
+144, Brazil, Singapore, SENT OUT QUEST, Type, 16
+144, The Iroquois, Milan, SENT OUT QUEST, Type, 1
+144, The Iroquois, La Venta, gained friend
+144, The Iroquois, La Venta, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+144, Assyria, La Venta, SENT OUT QUEST, Type, 3
+144, Assyria, La Venta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+144, The Iroquois, Byblos, cancelled, Construct Wonder, Friendship: 2 to 2, MINOR_CIV_BYBLOS
+144, The Iroquois, Cahokia, SENT OUT QUEST, Type, 2
+144, The Iroquois, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 42 to 42, MINOR_CIV_CAHOKIA
+144, Poland, Valletta, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+144, Greece, Ormus, FINISHED QUEST, Trade Route, Friendship: 72 to 112, MINOR_CIV_ORMUS
+144, The Netherlands, Malacca, cancelled, Construct Wonder, Friendship: 42 to 42, MINOR_CIV_MALACCA
+144, Assyria, Singapore, SENT OUT QUEST, Type, 7
+144, Assyria, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+144, The Iroquois, Panama City, SENT OUT QUEST, Type, 4
+144, The Iroquois, Panama City, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+145, Persia, La Venta, SENT OUT QUEST, Type, 12
+145, Persia, La Venta, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+145, Assyria, Kyiv, SENT OUT QUEST, Type, 14
+145, Assyria, Kyiv, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KIEV
+145, Poland, Wittenberg, lost ally
+146, Assyria, Brussels, SENT OUT QUEST, Type, 1
+146, Assyria, Brussels, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BRUSSELS
+146, Brazil, Kyiv, lost friend
+146, Persia, Kyiv, SENT OUT QUEST, Type, 4
+146, Persia, Kyiv, RECEIVED QUEST, Great Person, Friendship: 98 to 98, MINOR_CIV_KIEV
+146, Persia, Wittenberg, gained ally
+146, Persia, Wittenberg, FINISHED QUEST, Contest Culture, Friendship: 45 to 85, MINOR_CIV_WITTENBERG
+146, Poland, Wittenberg, cancelled, Contest Culture, Friendship: 58 to 58, MINOR_CIV_WITTENBERG
+146, The Iroquois, Wittenberg, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+146, Siam, Wittenberg, cancelled, Contest Culture, Friendship: 8 to 8, MINOR_CIV_WITTENBERG
+146, The Netherlands, Wittenberg, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+146, Assyria, Wittenberg, SENT OUT QUEST, Type, 16
+146, Assyria, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+146, Greece, Wittenberg, SENT OUT QUEST, Type, 7
+146, Greece, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 15 to 15, MINOR_CIV_WITTENBERG
+146, Greece, Panama City, SENT OUT QUEST, Type, 4
+146, Greece, Panama City, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+147, Brazil, La Venta, SENT OUT QUEST, Type, 16
+147, Brazil, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 16 to 16, MINOR_CIV_LA_VENTA
+147, Brazil, Cahokia, lost friend
+147, Persia, Valletta, SENT OUT QUEST, Type, 2
+147, Persia, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+147, The Iroquois, Zanzibar, lost friend
+147, Persia, Zanzibar, SENT OUT QUEST, Type, 7
+147, Persia, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 8 to 8, MINOR_CIV_ZANZIBAR
+147, The Iroquois, Milan, SENT OUT QUEST, Type, 3
+147, The Iroquois, Milan, RECEIVED QUEST, Construct Wonder, Friendship: 39 to 39, MINOR_CIV_MILAN
+147, Assyria, Singapore, gained friend
+147, Assyria, Singapore, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SINGAPORE
+148, Siam, La Venta, SENT OUT QUEST, Type, 4
+148, Siam, La Venta, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+148, Assyria, Lhasa, gained ally
+148, Poland, Lhasa, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_LHASA
+148, Assyria, Lhasa, FINISHED QUEST, Spread Religion, Friendship: 47 to 87, MINOR_CIV_LHASA
+148, Assyria, Cahokia, SENT OUT QUEST, Type, 14
+148, Assyria, Cahokia, RECEIVED QUEST, Bully City-State, Friendship: 11 to 11, MINOR_CIV_CAHOKIA
+148, The Netherlands, Kyiv, SENT OUT QUEST, Type, 14
+148, The Netherlands, Kyiv, RECEIVED QUEST, Bully City-State, Friendship: 37 to 37, MINOR_CIV_KIEV
+148, The Iroquois, Singapore, FINISHED QUEST, Invest, Friendship: 65 to 65, MINOR_CIV_SINGAPORE
+148, Assyria, Singapore, FINISHED QUEST, Invest, Friendship: 43 to 43, MINOR_CIV_SINGAPORE
+148, Siam, Singapore, FINISHED QUEST, Invest, Friendship: 6 to 6, MINOR_CIV_SINGAPORE
+148, Brazil, Singapore, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+148, Greece, Singapore, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+148, The Netherlands, Singapore, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+148, Persia, Singapore, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+148, Siam, Manila, lost friend
+149, Assyria, Manila, gained friend
+149, Assyria, Manila, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MANILA
+149, The Iroquois, Lhasa, SENT OUT QUEST, Type, 16
+149, The Iroquois, Lhasa, SENT OUT QUEST, Type, 4
+149, The Iroquois, Brussels, FINISHED QUEST, Spread Religion, Friendship: 115 to 155, MINOR_CIV_BRUSSELS
+149, The Netherlands, Valletta, cancelled, Bully City-State, Friendship: -27 to -27, MINOR_CIV_VALLETTA
+149, The Iroquois, Ur, lost friend
+149, The Iroquois, Zanzibar, gained friend
+149, The Iroquois, Zanzibar, gained ally
+149, The Iroquois, Zanzibar, FINISHED QUEST, Construct Wonder, Friendship: 26 to 66, MINOR_CIV_ZANZIBAR
+149, The Iroquois, Kyiv, FINISHED QUEST, Construct Wonder, Friendship: 38 to 78, MINOR_CIV_KIEV
+149, Siam, Kyiv, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KIEV
+149, Siam, Malacca, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MALACCA
+149, The Iroquois, Wittenberg, gained friend
+149, The Iroquois, Wittenberg, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+149, Siam, Wittenberg, SENT OUT QUEST, Type, 2
+149, Siam, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+149, Greece, Singapore, gained friend
+149, Greece, Singapore, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+149, Siam, Singapore, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+150, The Iroquois, Zanzibar, SENT OUT QUEST, Type, 1
+150, Siam, Zanzibar, SENT OUT QUEST, Type, 1
+150, Siam, Zanzibar, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+150, The Iroquois, La Venta, gained ally
+150, The Iroquois, La Venta, FINISHED QUEST, Spread Religion, Friendship: 32 to 72, MINOR_CIV_LA_VENTA
+150, The Netherlands, Byblos, gained friend
+150, The Iroquois, Byblos, SENT OUT QUEST, Type, 16
+150, The Iroquois, Byblos, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+150, Siam, Cahokia, SENT OUT QUEST, Type, 4
+150, Siam, Cahokia, RECEIVED QUEST, Great Person, Friendship: 17 to 17, MINOR_CIV_CAHOKIA
+150, The Iroquois, Malacca, SENT OUT QUEST, Type, 2
+150, The Iroquois, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MALACCA
+150, The Iroquois, Singapore, lost ally
+150, Assyria, Manila, SENT OUT QUEST, Type, 11
+150, Assyria, Manila, RECEIVED QUEST, Contest Faith, Friendship: 37 to 37, MINOR_CIV_MANILA
+150, Brazil, Manila, SENT OUT QUEST, Type, 11
+150, Brazil, Manila, RECEIVED QUEST, Contest Faith, Friendship: 16 to 16, MINOR_CIV_MANILA
+150, Poland, Manila, SENT OUT QUEST, Type, 11
+150, Poland, Manila, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_MANILA
+150, The Iroquois, Manila, SENT OUT QUEST, Type, 11
+150, The Iroquois, Manila, RECEIVED QUEST, Contest Faith, Friendship: 33 to 33, MINOR_CIV_MANILA
+150, Siam, Manila, SENT OUT QUEST, Type, 11
+150, Siam, Manila, RECEIVED QUEST, Contest Faith, Friendship: 26 to 26, MINOR_CIV_MANILA
+150, Greece, Manila, SENT OUT QUEST, Type, 11
+150, Greece, Manila, RECEIVED QUEST, Contest Faith, Friendship: 24 to 24, MINOR_CIV_MANILA
+150, The Netherlands, Manila, SENT OUT QUEST, Type, 11
+150, The Netherlands, Manila, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_MANILA
+150, Persia, Manila, SENT OUT QUEST, Type, 11
+150, Persia, Manila, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_MANILA
+150, Siam, Manila, SENT OUT QUEST, Type, 2
+150, Siam, Manila, RECEIVED QUEST, Connect Resource, Friendship: 26 to 26, MINOR_CIV_MANILA
+151, Brazil, La Venta, SENT OUT QUEST, Type, 2
+151, Brazil, La Venta, SENT OUT QUEST, Type, 12
+151, Brazil, La Venta, SENT OUT QUEST, Type, 16
