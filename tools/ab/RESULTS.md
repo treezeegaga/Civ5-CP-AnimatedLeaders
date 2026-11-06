@@ -3228,6 +3228,7 @@ LEAD: the head is **ai/war 2c8256d2** (c7eed909 + these), with Economy's 1-3 and
 - **3.** Income-first runs only in the capital, outside war.
 - **8.** When the policy order hits a dead end, the best open tree that isn't on the never-list is taken.
 LEAD: the head for the trial and next block is **ai/war 824f1dbf**. CI to follow.
+LEAD (5:26pm ET): **ai/war 824f1dbf green, ready for the trial and next block**. MSVC and clang: run 42301553189 on ai/war, and run 42302277577 on claude/ab-c1 for the same SHA. c7eed909 is also green (run 42301186413). RoleFixes += StrikeList.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
