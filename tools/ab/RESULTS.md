@@ -2773,6 +2773,27 @@ LEAD: ab-04ab581 green. 103bd11d is building on claude/ab-c1. War confirms when 
 
 LEAD: 103bd11d is green on claude/ab-c1 (run 331): war on us is no longer a strike exit.
 
+**Read, first game on ab-103bd11 (PC 1 bullyabort22, 15286C56; 10:28am ET).** Songhai, a late strike: core Knight x6
+(Mandekalu), pre-build Horseman x6, upgrade at Chivalry, K 2. It sat in **PREP from T1 to T148** and never reached
+BUILDUP. It declared on India at T148 outside the strike, so the strike went OVER ("we declared a war outside the
+strike"), and it took 1 city. No wonders or gifts (Economy's bans held).
+- **Why no BUILDUP: a deadlock between two halves.**
+  - Personality's late economy-ready (IsStrikeEconomyReady) needs half the upgrade bill saved: 6 x 100 / 2 = 300 gold.
+  - Economy's late-strike saving runs only in BUILDUP (IsLateStrikeSaving). Before BUILDUP nothing holds the gold:
+    51 (T10), 237 (T50), **283 (T60, the peak)**, 188 (T80), 0 (T100), 167 (T120), 15 (T140).
+  - So BUILDUP waited for gold that nothing saves until BUILDUP.
+- **The army stayed small in PREP.** The Horseman (the pre-build) was "badtimeorplace" from T56. The list stalled at
+  "LIST WAIT ... item 18 Horseman" from about T100. In late PREP (economy first), Personality's aggressive-style quiet cap
+  (cities + 1 land units, not in a war build-up) applies, as well as War's peace cap (now the plan's army, 9). The army
+  comes in BUILDUP by design, and BUILDUP never came.
+- **The fix belongs to Personality or Economy (asked both).** Either the late gold gate is dropped or met another way
+  (e.g. counted at BUILDUP instead of before it), or Economy saves toward it in PREP once the tech and K cities are met.
+  War's state machine needs no change; it calls IsStrikeEconomyReady.
+
+LEAD (10:28am): reading only. ab-103bd11's first game: Songhai (late) never left PREP. Personality's economy-ready wants 300
+gold saved, and Economy saves only after BUILDUP, so nothing ever saved it (peak 283 at T60, then spent). Asked
+Personality and Economy to settle which side changes. War's code is unaffected.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
