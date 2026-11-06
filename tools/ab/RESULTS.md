@@ -2392,6 +2392,38 @@ the army.
 LEAD (3:26am): reading only. Greece (1464B588): its upgrades were held past the declaration, and it gave 500 gold to Jerusalem
 at T46 during its strike build-up. War's fix: the upgrade hold lifts whenever the army is ready by any measure (coded on
 ai/war). Economy: block city-state gold gifts for a strike civ in PREP or BUILDUP.
+
+**Read 5 (3:28am ET): 8 logged first games**, all PC 2. PC 1's bullyabort18 still hasn't pushed.
+
+| civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
+|---|---|---|---|---|---|---|---|---|
+| China | 1 | 1 | 1 | 59 | 57 | 5 | 1 / 11 | captured |
+| Persia | 2 | 1 | 1 | 87 | 119, 81 | 10, 1 | 10 / 16, 12 / 16 | no capture 1, captured 1 |
+| Greece | 1 | 0 | 0 | - | 63 | 1 | 0 / 7 | no capture (upgrades held, 500 gold gifted) |
+| Polynesia | 1 | 0 | 0 | - | 140 | 1 | - | void (Warmonger 0) |
+| Maya | 1 | 0 | 0 | - | never | 1 | - | void (Warmonger 0) |
+| Celts | 1 | 0 | 0 | - | never | 11 | - | void (Warmonger 0) |
+| Inca | 1 | 0 | 0 | - | never | 2 | - | void (Warmonger 0) |
+
+2 of 8 captured, and **4 of 8 are void**: Inca (144733A5) is a fourth non-warmonger picked by EarlyStrikeAggressor.
+- Of the 4 real games, 2 captured (China T59, Persia T87). Neither capture came from an EarlyStrike build-up.
+- Both strike build-ups (Persia T40, Greece T36) opened with 2-3 land units and never reached the army.
+- Melee in reach at the first capture attempts: 0 melee took 0 of 3; 2+ melee took 2 of 4.
+
+**Economy's note (3:31am): WarmongerHurry refuses gold purchases of core and melee units for a candidate warmonger**
+(CvEconomicAI::IsGoldPurchaseAllowed: only settlers and siege). NoObsoleteHurry blocks warrior-class units for every
+major. Both are the user's hard rules.
+- So bb2fa51c's build-up purchase can only buy siege. For a plan without siege it buys nothing, and the gold above the
+  bill waits for the upgrades.
+- It's harmless, but it's not the lever read 3 hoped for. Economy has put the question (exempt strike build-ups?) to the
+  user through the lead.
+- Economy's 0036 (no city-state gold gifts in a strike's PREP and BUILDUP) is done.
+
+LEAD (3:28am): reading only. 2 of 8 captured; 4 of 8 void (EarlyStrikeAggressor picked non-warmongers: Polynesia, Maya,
+Celts, Inca). Again: drop EarlyStrikeAggressor from PC 2's RoleFixes for the rest of the night. The user's question
+(through you, from Economy): may a strike's build-up buy core or melee units with the gold above its upgrade bill,
+despite WarmongerHurry and NoObsoleteHurry? Without that, an early strike's army is production-bound: 2-3 units at the
+open, 7 of 12 by T50.
 - Expert block pair 1: China (no EarlyStrike civ in the game) captured 1 at T59. BarbKill works (44 lines).
 - **ai/next b2a6f75 lacks War's readiness wiring.** The wiring is ai/war 74ae9fd9 (CvMilitaryAI.cpp only, on top of
   the same three parts). Without it, the late strike's PREP to BUILDUP is still War's placeholder ("K cities, book
