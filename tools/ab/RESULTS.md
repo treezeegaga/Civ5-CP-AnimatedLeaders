@@ -2439,6 +2439,12 @@ city-state as the only neighbour with the peace cap shedding units, idle or gift
 addressed on ai/war 9d40bb28 (green). Open questions for the user: (1) strike purchases of core and melee despite
 WarmongerHurry; (2) hypothesis 5, a city-state as the early strike's target when no major is in reach.
 
+**BarbHunt coded: ai/war f9c16cd9.** A lone hunter goes only within 5 tiles; farther out it takes two. CI green (run 301,
+4:40am ET).
+
+LEAD: f9c16cd9 green; add it to the ai/next list. ai/war = ai/next + 74ae9fd9, e10e2f34, bb2fa51c, e8655858, Economy
+0035/0036 (cf9d2a91, 9d40bb28), f9c16cd9.
+
 **Read 5 (3:28am ET): 8 logged first games**, all PC 2. PC 1's bullyabort18 still hasn't pushed.
 
 | civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
