@@ -1950,7 +1950,7 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
-### Patch 0053: BUILDUP builds what the target needs until it's takeable (Economy, Nov 6, 2:41pm ET)
+### Patch 0053: BUILDUP builds what the target needs until it's takeable (Economy, Nov 6, 2:37pm ET)
 The lead's pre-flight review confirmed a deadlock in 0050:
 - The plan's army is too weak for the target, and no easier city is in reach.
 - War asks for siege (`m_iStrikeSiege`, `GetTimingBuildupSiegeTarget`), but the strike list only built the plan's own
