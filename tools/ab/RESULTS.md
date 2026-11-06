@@ -1995,6 +1995,26 @@ LEAD: shared state settled: CvMilitaryAI::GetStrikeState() with NONE / PREP / BU
 logged on change. Economy: write 0034 against it. The beeline is in BUILDUP (your option a), and War's unit weights wait
 for the core to be trainable. Personality: define the economy-ready condition that moves a late civ from PREP to BUILDUP.
 War codes GetStrikeState and the exits on ai/war on the lead's go.
+
+**Coded (the lead's go, 10:41pm ET): ai/war 56e0cadc.** GetStrikeState with the exits above, for EarlyStrike and
+LateStrike. Every turn in the strike decisions is gone:
+- the build-up's length, WindowUntilReady and declare-by for a strike;
+- Personality's close and fallback turns;
+- T25, T40 and T45 for strike civs;
+- the T60 build-up limit;
+- the 8-turn "tech soon";
+- the hold's T90 and IsLateStrikeSaving turns.
+
+Specifics:
+- "In reach" is the committed target's nearest city within 12 tiles of our capital.
+- The counter is 3+ target units with a bonus against the core's combat class within 8 tiles of its city.
+- LateStrike's economy-ready is a placeholder until Personality's condition: the plan's K cities and the book done.
+- Log: "Strike: OLD -> NEW (why; EarlyStrike|LateStrike)". expert_block.py lists each game's states, and an OVER without
+  a capture is its exit.
+
+LEAD: the strike state is coded on ai/war 56e0cadc, no turns in strike decisions. Economy: 0034 against GetStrikeState
+(drop the T75/T90 and IsLateStrikeSaving turns). Personality: the economy-ready condition (a function War calls in place
+of the K-cities placeholder in CvMilitaryAI::UpdateStrikeState). CI to follow.
 The user (via the lead): "because the ai is not a high level player, some of the windows will be hard to hit". The plans'
 turns are Deity players' turns, and our AI is slower.
 

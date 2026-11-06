@@ -51,7 +51,7 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
     g = dict(gid=gid[:8], civ=info['civ'].title(), run=info['build'], capt=info['captured'], first_capt=None, decl=None,
              open=None, walled=None, upgrades=[], hunts=0, kills=0, kill_xp=[], decl_land=None, decl_promoted=None,
              decl_promotions=None, reach=[], plan=None, need_field=None, upgrade_tech=None,
-             t_tech=None, t_gold=None, t_army=None, t_upgraded=None)
+             t_tech=None, t_gold=None, t_army=None, t_upgraded=None, states=[])
     for t, r in walls.our_lines(os.path.join(gdir, 'StrategyProfile_Log.csv'), ours):
         m = PLAN.search(r)
         if m:
@@ -83,6 +83,10 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
         if m:
             capt_cities.add(m.group(1))
     for t, r in lines:
+        if r.startswith('Strike: '):   # the strike state (ai/war 56e0cadc on): "Strike: OLD -> NEW (why; ...)"
+            m = re.match(r'Strike: (\w+) -> (\w+) \((.*?);', r)
+            if m:
+                g['states'].append((t, m.group(2), m.group(3)))
         if r.startswith('EarlyStrike: build-up opens') and g['open'] is None:
             g['open'] = t
             g['walled'] = 'unwalled' not in r
@@ -119,6 +123,9 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
     fallback = g['plan'][2] if g['plan'] else 75
     g['exit'] = ('captured' if g['capt'] > 0 else 'no capture' if g['decl'] is not None else
                  'no strike' if g['open'] is None else 'fell back')
+    over = [x for x in g['states'] if x[1] == 'OVER']
+    if over and g['capt'] == 0:
+        g['exit'] = 'over: ' + over[0][2][:40]
     rows.append(g)
 
 print('expert block: %d logged first games in %s' % (len(rows), ', '.join(RUNS)))
@@ -167,6 +174,11 @@ P = sum(1 for g in rows if g['plan'])
 if P:
     print('  of %d games with a plan line, met after the declare-by turn (or never): %s' % (P, dict(late)))
 
+S = [g for g in rows if g['states']]
+if S:
+    print('\nStrike states (%d games): ' % len(S))
+    for g in S:
+        print('  %s %-9s %s' % (g['gid'], g['civ'], ' | '.join('T%d %s (%s)' % x for x in g['states'])))
 print('\nGames:')
 for g in rows:
     print('  %s %-9s %-13s capt %d (T%s) decl T%s open T%s %s plan %s kills %d upgrades %s exit %s' % (
