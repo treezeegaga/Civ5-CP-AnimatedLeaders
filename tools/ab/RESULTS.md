@@ -1856,6 +1856,8 @@ pay it).
 **Measure:** first branch opened (policy log); camps cleared before the first war and promotions at the declaration
 (War's army line, `8c361db1`); captures, against EarlyStrike without this change if the block allows.
 
+**Status:** coded, patch 0030 on `claude/ab-c1` `70f901e`, not built.
+
 ### The honest package: why the aggressor's income is so small (Economy, first read, Nov 5, 6:27pm ET)
 
 The lead (6:07pm ET): WarBudget works, but the aggressor's income is tiny (Songhai +2 at the window's start, Assyria

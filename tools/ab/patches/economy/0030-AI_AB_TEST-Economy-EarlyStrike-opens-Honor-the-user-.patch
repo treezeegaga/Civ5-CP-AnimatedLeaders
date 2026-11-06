@@ -1,0 +1,38 @@
+From 3001b7cdb1fc51e48e5e27e8ba3dbfe807b4d2b9 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 02:13:10 +0000
+Subject: [PATCH] AI_AB_TEST Economy: EarlyStrike opens Honor (the user: "honor
+ instead of liberty because of the barb hunting")
+
+Under EarlyStrike, while the opening book is active, the strike civ's
+first policy branch is Honor (bonus against barbarians, culture from
+kills, faster promotions) instead of the wide book's Liberty: the book's
+early units hunt camps before the war. CP's weights choose the rest and
+finish Honor first, as now. On claude/ab-c1 70f901e. Written 9:13pm ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index dfd8b0a..5b5844e 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -34702,6 +34702,12 @@ PolicyBranchTypes CvPlayer::GetOpeningBookPolicyBranch() const
+ 	if (!IsOpeningBookActive())
+ 		return NO_POLICY_BRANCH_TYPE;
+ 
++	// AI_AB_TEST candidate (EarlyStrike, the user's Aztec game: "i also decided to go honor instead of liberty because of
++	// the barb hunting"): the strike civ opens Honor. Its opener's bonus against barbarians and culture from kills pay
++	// while the book's first units hunt camps before the war. Without this, warmongers open Liberty (WidePlans: the wide book)
++	if (IsEarlyStrikeBook())
++		return (PolicyBranchTypes)GC.getInfoTypeForString("POLICY_BRANCH_HONOR", true);
++
+ 	switch (GetOpeningBook())
+ 	{
+ 	case OPENING_BOOK_TALL:
+-- 
+2.43.0
+
