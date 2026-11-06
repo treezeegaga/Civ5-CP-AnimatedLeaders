@@ -2393,6 +2393,14 @@ LEAD (3:26am): reading only. Greece (1464B588): its upgrades were held past the 
 at T46 during its strike build-up. War's fix: the upgrade hold lifts whenever the army is ready by any measure (coded on
 ai/war). Economy: block city-state gold gifts for a strike civ in PREP or BUILDUP.
 
+**Coded: ai/war e8655858, CI green (run 298).** Economy's 0035 and 0036 are applied on top (cf9d2a91, 9d40bb28); the
+head is green (run 299, 3:46am ET).
+
+LEAD: ai/war 9d40bb28 green. To bring ai/next up to date, cherry-pick 74ae9fd9 (Personality's readiness wired),
+e10e2f34 (aggressor picker and peace cap), bb2fa51c (strike purchases; WarmongerHurry limits them to siege), e8655858
+(upgrade hold) and Economy's 0035 and 0036 (cf9d2a91, 9d40bb28). Or build the next block from ai/war, which is ai/next
+plus exactly these.
+
 **Read 5 (3:28am ET): 8 logged first games**, all PC 2. PC 1's bullyabort18 still hasn't pushed.
 
 | civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
