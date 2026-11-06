@@ -1950,7 +1950,7 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
-### Patch 0042: the wonder ban on every pick path (Economy, Nov 6, 8:21am ET)
+### Patch 0042: the wonder ban on every pick path (Economy, Nov 6, 8:14am ET)
 PC 1 stopped bullyabort20 game 1 (`14BC6621`, ab-8555f21). LateStrike Germany was in strike PREP from T1 to T115.
 Its second city, Munich, chose Heroic Epic at T61 and the Temple of Artemis at T62.
 
