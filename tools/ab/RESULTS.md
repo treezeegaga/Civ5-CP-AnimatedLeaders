@@ -2582,6 +2582,29 @@ units, and took a Dutch city at T59.
 LEAD: the next block is ai/war f939c50c (Personality 184fe09 and Economy 0042 are in). "Ready for the next block"
 follows when CI is green; RoleFixes += StrikeList.
 
+**Read, the strike-state builds so far (8:28am ET; 4 first games: ab-8f9b7f9 pair 1 on each PC, ab-8555f21 pair 1 on each
+PC):**
+
+| game | build | civ | states | BUILDUP: land, core / support vs plan | WAR: land, core / support vs plan | capital + 2nd city to BUILDUP | result |
+|---|---|---|---|---|---|---|---|
+| 1468D9F4 | 8f9b7f9 | Japan (late) | PREP T1, BUILDUP T149 | - | T102: 5, 0/7, 1/4 (not the strike's war) | Building 8, Wonder 3, Military 5, Settler 5, Worker 7 | no capture (STOP: wonders, gifts) |
+| 152231C3 | 8f9b7f9 | Aztec (early) | BUILDUP T44, WAR T77, OVER T101 (army below half) | T45: 5, 4/6, 1/4 | T77: 10, 7/6, 3/4 | Building 1, Military 5 | no capture (upgrades held, fixed in 8555f21b) |
+| 14BC6621 | 8555f21 | Germany (late, Tank default) | PREP T1, OVER T115 (war on us) | - | - | Building 12, Military 7, Settler 6 | no war (STOP: wonders; fixed by 0042, 0225d198, 184fe09) |
+| 157C6FE0 | 8555f21 | **Greece (early)** | BUILDUP T41 (Amsterdam in reach), WAR T50 (as ready as it got), OVER T123 (peace after a capture) | T42: 6, 3/3 Spearman, 3/5 Archer | T50: 8, 3/3, 4/5 | **Military 16, Building 1, Settler 1, Worker 1** | **captured T59** |
+
+What Greece's capture shows:
+- **The list builds the army on time.** Before BUILDUP, the capital and second city produced 16 military to 1 building.
+- **The strike went the expert's way.** The army was within one unit of the plan at the declaration (T50, plan
+  declare-by T43), the target was unwalled, and it captured 9 turns later.
+- **Promotions.** 0 of 8 units at the declaration (it made 0 BarbKills before the window).
+
+Japan and Germany are the two late-strike STOPs, both covered in the next block. Aztec's failure was the held upgrade,
+fixed in 8555f21b.
+
+LEAD (8:28am): reading only. On the strike-state builds, 1 of 4 first games captured: Greece on 8555f21, list-built
+(16 military to 1 building before BUILDUP), declared at T50 with 8 of the plan's 8 counted units, captured at T59. The
+other three each failed on something the next block (f939c50c) fixes.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
