@@ -2954,6 +2954,24 @@ LEAD (12:28pm ET): ready for the next block: ai/war 0cb5402b green (MSVC and cla
 SHA; the ai/war run is still queued); RoleFixes += StrikeList. bullyabort23 on ab-0cb5402 is already running on PC 1. Reading
 only: no new expert-block games this hour.
 
+**bullygreedy23 167DE984 (ab-0cb5402, the lead, 12:47pm ET): the Celts' city-state declaration was undone every turn. Fix
+for the next block: 5fe900a1.**
+- **What happened.** The calibrated math works ("the plan's army takes it in about 2 turns" against defence 13-14). But
+  the Celts logged "Strike: declaring war on the city-state Panama City (the army ready)" every turn from T66 to T87,
+  and no war held. The war came at T88, by which time Panama's defence was 26, and nothing was taken in 62 turns.
+- **Cause, from the code** (the logs aren't in yet). The strike's city-state got the WAR approach only in the ATTACK
+  phase, but while the window is open the phase is WINDOW. So it was never our CS war target, and part 3 of
+  DoUpdatePeaceTreatyWillingness made peace with it after each declaration ("This City-State is no longer our war
+  target!"). T88 is when the window ended and the phase became ATTACK. **To confirm in the pair-1 logs:**
+  DiplomacyAI_Peace_Log should show the Celts making peace with Panama City from T66 to T87.
+- **Fix.**
+  - The approach is WAR toward the strike's city-state in BUILDUP once we're at war with it, or once the army is ready
+    or as ready as it gets, whatever the phase.
+  - The city-state peace skips the strike's own target (BUILDUP, and while IsStrikeNoRetreat).
+  - The declaration's outcome is logged ("made: at war" or "failed: <why>").
+LEAD: the fix is on ai/war **5fe900a1**, for the next block; the running block is untouched. I'll confirm the cause from
+the pair-1 logs when they land.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
