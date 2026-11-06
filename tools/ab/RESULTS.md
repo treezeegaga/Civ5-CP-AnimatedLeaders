@@ -3626,6 +3626,11 @@ weights fill everything a plan doesn't name):
   | late defaults [I] | Tradition, Honor, Commerce, Rationalism, Exploration, Autocracy |
 
   Economy's policy gate takes the trees in this order and never opens a never-list tree.
+  - **Compiles with Economy 0056** (4:55pm ET): the field is `aePolicyBranches` (renamed in `090fc79`, Economy's
+    name; War renamed 0056's four reads in `CvPolicyAI.cpp` to match). `090fc79` also makes `CountStrikeClassLine` walk
+    the whole upgrade line breadth-first (War's Zulu in `17436CCD` read support 7/8 for 30 turns with a Crossbowman two
+    steps up from the Archer). `ai/war` = `ai/personality` = `261d5da`: CI run 379 (`ai/war`) and run 380
+    (`ai/personality`) passed.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
   (the ruling, no wonders) compiles (CI run 318; `da1a760` run 305, `184fe09` run 313). Economy's book needs to treat `bGenericRush` like an early strike.
 
