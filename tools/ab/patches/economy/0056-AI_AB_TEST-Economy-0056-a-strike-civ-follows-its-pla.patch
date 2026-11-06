@@ -1,0 +1,141 @@
+From fdd26b4276408c5cfbdae32b756d848bc8c25d1e Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 21:39:13 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0056: a strike civ follows its plan's
+ policy-tree order the whole game
+
+The user caught the Aztec aggressor taking Aesthetics (PC 1, 168C0544, ab-0cb5402). The
+lead: follow the whole order, the whole game, not only while the strike is active and not
+only the first tree. CP picks individual policies only inside the allowed tree.
+Personality's f6952dd gives every strike plan aePolicyOrder[0..iNumPolicyBranches), with
+Autocracy in the ideology slot, and a never-list aeNeverBranches (Aesthetics, Piety).
+
+CvPolicyAI::ChooseNextPolicy, for an AI StrikeList civ with an order, every turn of the game
+(tenets aside):
+- The allowed tree is the first in the order that isn't finished:
+  - if it's open, its best adoptable policy (CP's weights);
+  - if it can be unlocked, it's unlocked;
+  - otherwise (an era gate, or nothing adoptable now), the next tree in the order.
+- A tree outside the order is never opened.
+- With nothing in the order possible, a policy from an already open tree (never a
+  never-list one), else no choice: the culture is kept for later.
+CvPolicyAI::DoChooseIdeology: the order's ideology entry is taken when it's on offer.
+The 0049/0051 strike-tree block stays as the fallback for a plan without an order.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp | 90 +++++++++++++++++++++++++
+ 1 file changed, 90 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index ef92a99..1cc0921 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -186,6 +186,76 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 		}
+ 	}
+ 
++	// AI_AB_TEST (Economy 0056; the user caught the Aztec aggressor taking Aesthetics, 168C0544): a strike civ follows its plan's
++	// policy-tree order (Personality's aePolicyOrder) the whole game, not only while the strike is active. The allowed tree
++	// is the first in the order that isn't finished: its best adoptable policy (CP's weights) if it's open, else it's opened.
++	// A tree that can't be opened yet (an era gate) or has nothing adoptable now gives way to the next in the order. A tree
++	// that isn't in the order is never opened. Ideology tenets stay CP's
++	const CvStrikePlan* pOrderPlan = (MOD_AI_AB_TEST && !pPlayer->isHuman() && pPlayer->UsesCandidateAI(FIX_STRIKE_LIST) && pPlayer->GetGrandStrategyAI()) ?
++		&pPlayer->GetGrandStrategyAI()->GetStrikePlan() : NULL;
++	if (!bMustChooseTenet && pOrderPlan && pOrderPlan->bValid && pOrderPlan->iNumPolicyBranches > 0)
++	{
++		for (int iOrder = 0; iOrder < pOrderPlan->iNumPolicyBranches; iOrder++)
++		{
++			const PolicyBranchTypes eTree = pOrderPlan->aePolicyOrder[iOrder];
++			if (eTree == NO_POLICY_BRANCH_TYPE || m_pCurrentPolicies->IsPolicyBranchFinished(eTree))
++				continue;
++			if (m_pCurrentPolicies->IsPolicyBranchUnlocked(eTree))
++			{
++				int iBest = -1;
++				int iBestWeight = INT_MIN;
++				for (int i = 0; i < m_AdoptablePolicies.size(); i++)
++				{
++					const int iElement = m_AdoptablePolicies.GetElement(i);
++					if (iElement < GC.getNumPolicyBranchInfos())
++						continue;
++					CvPolicyEntry* pkPolicy = m_pCurrentPolicies->GetPolicies()->GetPolicyEntry(iElement - GC.getNumPolicyBranchInfos());
++					if (pkPolicy && pkPolicy->GetPolicyBranchType() == (int)eTree && m_AdoptablePolicies.GetWeight(i) > iBestWeight)
++					{
++						iBest = iElement;
++						iBestWeight = m_AdoptablePolicies.GetWeight(i);
++					}
++				}
++				if (iBest >= 0)
++				{
++					LogPolicyChoice((PolicyTypes)(iBest - GC.getNumPolicyBranchInfos()));
++					return iBest;
++				}
++				continue;	// open but nothing adoptable now: the next tree in the order
++			}
++			if (m_pCurrentPolicies->CanUnlockPolicyBranch(eTree))
++			{
++				LogBranchChoice(eTree);
++				return (int)eTree;
++			}
++		}
++		// nothing in the order can take a policy now: no tree outside the order; the policies of trees already open (CP's
++		// weights) are the only other choice, never one of the plan's never-list trees (Aesthetics, Piety)
++		int iBest = -1;
++		int iBestWeight = INT_MIN;
++		for (int i = 0; i < m_AdoptablePolicies.size(); i++)
++		{
++			const int iElement = m_AdoptablePolicies.GetElement(i);
++			if (iElement < GC.getNumPolicyBranchInfos())
++				continue;
++			CvPolicyEntry* pkPolicy = m_pCurrentPolicies->GetPolicies()->GetPolicyEntry(iElement - GC.getNumPolicyBranchInfos());
++			bool bNever = false;
++			for (int iNever = 0; pkPolicy && iNever < pOrderPlan->iNumNeverBranches; iNever++)
++				bNever = bNever || pkPolicy->GetPolicyBranchType() == (int)pOrderPlan->aeNeverBranches[iNever];
++			if (!bNever && m_AdoptablePolicies.GetWeight(i) > iBestWeight)
++			{
++				iBest = iElement;
++				iBestWeight = m_AdoptablePolicies.GetWeight(i);
++			}
++		}
++		if (iBest >= 0)
++		{
++			LogPolicyChoice((PolicyTypes)(iBest - GC.getNumPolicyBranchInfos()));
++			return iBest;
++		}
++		return (int)NO_POLICY;
++	}
++
+ 	// AI_AB_TEST: the new AI opens the branch its opening book wants as its first branch
+ 	if (!bMustChooseTenet && !bNeedToFinish && m_pCurrentPolicies->GetNumPolicyBranchesUnlocked() == 0)
+ 	{
+@@ -661,6 +731,26 @@ void CvPolicyAI::DoChooseIdeology(CvPlayer *pPlayer)
+ 		if (iBestOpen >= 0)
+ 			iBestBranchIdx = iBestOpen;
+ 	}
++	// AI_AB_TEST (Economy 0056): a strike civ takes the ideology in its plan's policy-tree order (Personality's aePolicyOrder),
++	// when it's one of those on offer
++	if (MOD_AI_AB_TEST && !pPlayer->isHuman() && pPlayer->UsesCandidateAI(FIX_STRIKE_LIST) && pPlayer->GetGrandStrategyAI())
++	{
++		const CvStrikePlan& kOrderPlan = pPlayer->GetGrandStrategyAI()->GetStrikePlan();
++		for (int iOrder = 0; kOrderPlan.bValid && iOrder < kOrderPlan.iNumPolicyBranches; iOrder++)
++		{
++			bool bFound = false;
++			for (size_t i = 0; i < vIdeologyBranches.size() && !bFound; ++i)
++			{
++				if (vIdeologyBranches[i] == kOrderPlan.aePolicyOrder[iOrder])
++				{
++					iBestBranchIdx = (int)i;
++					bFound = true;
++				}
++			}
++			if (bFound)
++				break;
++		}
++	}
+ 	PolicyBranchTypes eChosenBranch = vIdeologyBranches[iBestBranchIdx];
+ 	
+ 	pPlayer->GetPlayerPolicies()->SetPolicyBranchUnlocked(eChosenBranch, true, false);
+-- 
+2.43.0
+

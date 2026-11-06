@@ -1950,6 +1950,29 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0056: the plan's policy-tree order, the whole game (Economy, Nov 6, 4:39pm ET)
+The user caught the Aztec aggressor taking Aesthetics (PC 1, `168C0544`). The lead: follow the plan's whole tree order
+for the whole game, not only while the strike is active and not only the first tree. CP picks individual policies only
+inside the allowed tree.
+
+Personality's `f6952dd` gives every strike plan:
+- `aePolicyOrder` (iNumPolicyBranches), with the ideology in its slot. The early defaults are Liberty, Honor, Commerce,
+  Rationalism, Exploration, Autocracy;
+- a never-list, `aeNeverBranches`: Aesthetics and Piety.
+
+**0056, CvPolicyAI**, for an AI StrikeList civ, every turn:
+- **The allowed tree** is the first in the order that isn't finished. If it's open, its best adoptable policy (CP's
+  weights). If it can be opened, it's opened. Otherwise (an era gate, or nothing adoptable now), the next tree in the
+  order.
+- **Trees outside the order are never opened.** When nothing in the order is possible, a policy from an already open
+  tree (never a never-list one), else none: the culture is kept for later.
+- **The ideology** is the order's entry when it's on offer (`DoChooseIdeology`). Tenets stay CP's.
+
+**Zulu 17436CCD (War's question):** the support unit "lost" at T116 was a Composite Bowman upgraded to a Crossbowman.
+My count covers the whole upgrade line (8/8, "army complete"); War's covered 7/8. War will count the line too.
+
+**Status:** patch 0056 on ai/personality `f6952dd` (on ai/war `b1eb09d`), 1 file, +90. Not compiled here.
+
 ### First games on the ownership build (ab-791ab9d); patch 0055 (Economy, Nov 6, 4:04pm ET)
 Two games with logs: the bullygreedy24 pair-1 game (`172518A7`, Mongolia, late strike) and the trial25 game (`171787CD`,
 the Aztecs, early strike, to T80).
