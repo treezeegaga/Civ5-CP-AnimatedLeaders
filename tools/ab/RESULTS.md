@@ -2021,8 +2021,9 @@ Three back doors remained, which 0039 closes:
 
 **0040.** A new `CvPlayer::IsStrikePending()` is true for any strike civ, early or late, while its state is PREP or
 BUILDUP. It joins every wonder and gift gate. The state is NONE when the strike flags are off, so the baseline is
-unchanged. A non-strike war during PREP (Japan on Spain at T102) does not lift the ban; the strike's own declaration
-or OVER does.
+unchanged. The ban ends with the strike's declaration (WAR) or OVER. With War's change on ai/war (6:33am ET), any
+war we declare during PREP ends the strike (OVER), as Japan's CP war on Spain at T102 would have. So the ban covers
+everything before the first declaration, which is the lead's check.
 
 **Open for the user.** The user's rule names the early strike. 0040 extends it to a late strike's whole economy phase:
 Japan would have built no wonder at all to T149. If that is too strict for late strikes, the narrower option keeps
