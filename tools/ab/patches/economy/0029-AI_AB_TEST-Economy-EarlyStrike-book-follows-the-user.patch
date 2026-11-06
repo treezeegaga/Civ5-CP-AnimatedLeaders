@@ -1,0 +1,95 @@
+From 6cf9a6aaf18fb90b5025f7c71d632d37390374b9 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 01:45:40 +0000
+Subject: [PATCH] AI_AB_TEST Economy: EarlyStrike book follows the user's
+ notes: a straight line to the support's upgrade tech, and the treasury saved
+ for upgrades
+
+The user on the Aztec game: "i beelined to construction. i didnt even get
+plantations for my citrus" and "i upgraded 3 archers to composite
+archers... upgrade and go" (263 gold at T40, 31 at T50).
+
+Under EarlyStrike:
+- research: the spike unit's tech, the support's, then the support's
+  upgrade tech when it's in the first 4 tech-tree columns (Construction
+  for archers; not Civil Service for spearmen); Pottery, Calendar and the
+  rest of the warmonger list only after it;
+- gold: until the strike (IsEarlyStrikeSmallEmpire: no war with a major,
+  to turn 90 Standard), DoHurry buys nothing (only the book's settler while
+  there's one city), WarChest buys nothing, and no tiles are bought. The
+  treasury is left for War's upgrades before the declaration.
+On claude/ab-c1 ec78b0d. Written 8:45pm ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp | 14 ++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp     | 20 ++++++++++++++++++++
+ 2 files changed, 34 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index 8e8835b..3fff721 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3436,6 +3436,16 @@ void CvEconomicAI::DoHurry()
+ {
+ 	int iLoop = 0;
+ 
++	// AI_AB_TEST candidate (EarlyStrike, the user's Aztec game): the treasury is saved until the strike (263 gold at T40,
++	// no building or unit bought) and goes on upgrades just before the declaration (31 at T50; War's half times those).
++	// No hurries, no WarChest purchases, no bought settler past the book's one: the book's units are built, not bought.
++	if (m_pPlayer->IsEarlyStrikeSmallEmpire())
++	{
++		if (m_pPlayer->getNumCities() < 2)
++			BuyExpansionSettler(m_pPlayer);
++		return;
++	}
++
+ 	DoWarChest(m_pPlayer);
+ 
+ 	if (m_pPlayer->UsesNewAI())
+@@ -3797,6 +3807,10 @@ void CvEconomicAI::DoPlotPurchases()
+ 	if (IsSavingForExpansionSettler())
+ 		return;
+ 
++	// AI_AB_TEST candidate (EarlyStrike): no tiles bought before the strike, the gold is for the upgrades
++	if (m_pPlayer->IsEarlyStrikeSmallEmpire())
++		return;
++
+ 	// AI_AB_TEST: CP never cancels a tile savings request, so after one unaffordable plot the amount stays
+ 	// reserved (and blocks hurrying) for the rest of the game. The new AI clears it here; the loop below
+ 	// renews it while a plot is still wanted and unaffordable.
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 6dfab53..84ae832 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -34637,6 +34637,26 @@ TechTypes CvPlayer::GetOpeningBookTech() const
+ 			eStep = GetOpeningBookTechStep(*this, (TechTypes)GC.getInfoTypeForString(pkCoreUnit->GetRangedCombat() > 0 ? "TECH_BRONZE_WORKING" : "TECH_ARCHERY", true), 0);
+ 			if (eStep != NO_TECH)
+ 				return eStep;
++			// then the support's upgrade, if it's early (the user: "i beelined to construction. i didnt even get
++			// plantations for my citrus", and upgraded 3 archers to composite bowmen just before declaring). A straight
++			// line: Calendar, Pottery and the rest wait until after it. Only an upgrade within the first 4 tech-tree
++			// columns (Construction's Composite Bowman; not Civil Service's Pikeman)
++			const UnitTypes eSupport = GetSpecificUnitType((UnitClassTypes)GC.getInfoTypeForString(pkCoreUnit->GetRangedCombat() > 0 ? "UNITCLASS_SPEARMAN" : "UNITCLASS_ARCHER", true));
++			CvUnitEntry* pkSupport = (eSupport != NO_UNIT) ? GC.getUnitInfo(eSupport) : NULL;
++			for (int iClass = 0; pkSupport && iClass < GC.getNumUnitClassInfos(); iClass++)
++			{
++				if (!pkSupport->GetUpgradeUnitClass(iClass))
++					continue;
++				const UnitTypes eUpgrade = GetSpecificUnitType((UnitClassTypes)iClass);
++				CvUnitEntry* pkUpgrade = (eUpgrade != NO_UNIT) ? GC.getUnitInfo(eUpgrade) : NULL;
++				const TechTypes eUpgradeTech = pkUpgrade ? (TechTypes)pkUpgrade->GetPrereqAndTech() : NO_TECH;
++				CvTechEntry* pkUpgradeTech = (eUpgradeTech != NO_TECH) ? GC.getTechInfo(eUpgradeTech) : NULL;
++				if (!pkUpgradeTech || pkUpgradeTech->GetGridX() > 3)
++					continue;
++				eStep = GetOpeningBookTechStep(*this, eUpgradeTech, 0);
++				if (eStep != NO_TECH)
++					return eStep;
++			}
+ 		}
+ 	}
+ 
+-- 
+2.43.0
+

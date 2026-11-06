@@ -1815,6 +1815,21 @@ going broke.
 
 **Status:** coded, patch 0028 on `claude/ab-c1` `ce7a93c`, not built. War's half reads the same flag.
 
+**Revised with the user's notes (patch 0029 on `claude/ab-c1` `ec78b0d`, 8:46pm ET).** The user: "i beelined to
+construction. i didnt even get plantations for my citrus" and "i upgraded 3 archers to composite archers... upgrade
+and go". The treasury was 263 at T40 and 31 at T50.
+- **Research is a straight line:** the spike unit's tech, the support's, then the support's upgrade tech. That's
+  Construction for archers, and only an upgrade within the first 4 tech-tree columns (not Civil Service for
+  spearmen). Pottery, Calendar and the rest of the warmonger list come after it.
+- **The treasury is saved until the strike** (while `IsEarlyStrikeSmallEmpire`: no war with a major, to T90 Standard).
+  Nothing is bought:
+  - no hurries;
+  - no WarChest purchases;
+  - no tiles;
+  - only the book's settler while there's one city.
+- **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
+  soon as there's enough.
+
 ### The honest package: why the aggressor's income is so small (Economy, first read, Nov 5, 6:27pm ET)
 
 The lead (6:07pm ET): WarBudget works, but the aggressor's income is tiny (Songhai +2 at the window's start, Assyria
