@@ -2055,6 +2055,31 @@ LEAD: URGENT. PC 1's bullyabort16 and 17 ran DLL 8fe8e0f (CSV Build `No-Tag 8fe8
 EarlyStrikeAggressor missing from Fixes). The install didn't replace the loaded DLL. The release DLLs are correct (I
 checked their strings), so no code fix is needed. Drop those games, have PC 1 find the stale DLL (steps above), and
 check bullyabort18's Build column before it counts. PC 2's bullygreedy18 check follows when its first pair lands.
+
+**Answers to the lead's 10:54pm questions:**
+
+(1) BarbKill has 0 lines in 138A0F7F at about T110.
+- The line is not gated by any flag or by the strike path. Its only conditions are a barbarian loser, a major-civ
+  winner and AI logging on.
+- It runs in ApplyPostKillTraitEffects, which every kill path calls: melee, ranged, air, air sweep and extra damage.
+- The ab-40203a3 release DLL contains the string ("BarbKill: %s killed a barbarian ...").
+- It writes to **PlayerTacticalAILog.csv**, like BarbHunt, not to MilitaryAILog.csv. That log is opened with
+  kDontFlushOnWrite, so a live file lags.
+- No saved game has run a build with BarbKill yet:
+  - PC 1 ran 8fe8e0f (see above).
+  - PC 2's honest package ran 5b7333c, which predates 728495a5.
+  - So the 0 BarbKill in every saved PlayerTacticalAILog.csv so far is expected.
+- 138A0F7F is the first test. Grep its saved PlayerTacticalAILog.csv once the logs are pushed. If it is still 0 while
+  barbarians died to majors, it's broken and I'll fix it.
+
+(2) The Aztec in 12A96A78. That game ran 8fe8e0f, not db638c3 (the URGENT note above), so it had no strike plan,
+bMilitaryFirst or EarlyStrike code. The T51 declaration came from the older TimingBuildup and WarBudget path, which the
+WarBudget lines at the declaration show. Its StrategyProfile_Log can't print the spike fields because that build doesn't
+have them.
+
+LEAD: (1) BarbKill is ungated and is in the 40203a3 DLL. It writes to PlayerTacticalAILog.csv, not MilitaryAILog. No
+saved game has run it yet. Check 138A0F7F's saved PlayerTacticalAILog.csv; 0 there means broken. (2) The Aztec game ran
+8fe8e0f, so no strike plan existed; it isn't EarlyStrike data.
 The user (via the lead): "because the ai is not a high level player, some of the windows will be hard to hit". The plans'
 turns are Deity players' turns, and our AI is slower.
 
