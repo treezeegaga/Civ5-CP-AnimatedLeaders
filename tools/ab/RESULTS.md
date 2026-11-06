@@ -1950,6 +1950,26 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0058: no wonders in the strike's WAR; income before CP when broke (Economy, Nov 6, 5:29pm ET)
+The lead, on bullygreedy24 game 7 (`17813E6E`, ab-791ab9d): the Celts went to WAR at T73 on America, with 13 land units
+at -16 gold a turn, and sat in WAR for 77 turns with no capture. "LIST NORMAL (army complete)" handed their cities to
+CP, which chose the Terracotta Army (T77), the Mausoleum (T78), the Statue of Zeus (T94) and Circus Maximus (T108) as
+gold per turn fell to -48. The ban rule allows wonders after the first declaration, but the strike owns production
+until OVER.
+
+**0058:**
+- **No wonders in WAR.** `IsStrikeNoWonders` also holds while the strike is in WAR. All 11 chokepoints read it, so
+  that means no wonder and no city-state gold during the war. After OVER the bans lift as before.
+- **In WAR with nothing more to train:**
+  1. replacements for losses, affordability-checked;
+  2. income while net gold is below 0: a Market, else a Caravan where a route is free ("income in WAR");
+  3. CP's non-wonder picks.
+
+  A city in danger builds its defender first. 0057's at-war exemptions don't reopen this: they only drop the
+  affordability arm of `IsStrikeUnitHold`.
+
+**Status:** patch 0058 on ai/war `824f1db`, 1 file, +27. Not compiled here.
+
 ### Patch 0057: the lead's review of 791ab9d..261d5da (Economy, Nov 6, 5:00pm ET)
 1. **The policy order reached non-strike civs.** It, and its ideology, checked only the plan's `bValid`, which every civ
    with a land unique unit has, so a greedy-tall China or a balanced Japan was locked into a warmonger order. It now

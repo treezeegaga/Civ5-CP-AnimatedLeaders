@@ -1,0 +1,77 @@
+From 825387ab8562cbae365db80dbcf703432671589f Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 22:27:52 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0058: no wonders in the strike's WAR;
+ income before CP when broke
+
+The lead, bullygreedy24 game 7 (17813E6E, ab-791ab9d): the Celts went to WAR at T73 on
+America with 13 land units at -16 gold a turn and sat 77 turns in WAR with no capture.
+Meanwhile "LIST NORMAL (army complete)" handed their cities to CP, which chose the
+Terracotta Army (T77), the Mausoleum (T78), the Statue of Zeus (T94) and Circus Maximus
+(T108) as gold per turn fell to -48. The user's ban rule allows a wonder after the first
+declaration, but the strike owns production until OVER.
+- IsStrikeNoWonders holds while the strike's state is WAR. All 11 chokepoints read it
+  (canConstruct and the rest), so there's no wonder and no city-state gold in the war. After
+  OVER, HasStrikeDeclared lifts the bans as before.
+- In WAR, once the army has nothing more to train (replacements are still affordability-
+  checked), a city builds income while net gold is below 0 (a Market, else a Caravan where
+  a route is free), then CP's non-wonder picks. Logged "income in WAR (net gold N)". A city
+  in danger took its defender first.
+0057's at-war exemptions don't reopen this: they only drop IsStrikeUnitHold's affordability
+arm. WAR's more-core uses GetAffordableWarUnits directly, and wonders are refused at
+canConstruct.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 27 +++++++++++++++++++++++++++
+ 1 file changed, 27 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 5a3175f..623a0fb 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33962,6 +33962,11 @@ bool CvPlayer::IsStrikeNoWonders() const
+ {
+ 	if (IsStrikePending() || IsEarlyStrikeSmallEmpire() || IsLateStrikeSaving())
+ 		return true;
++	// (0058, the lead) nor while the strike's war is on: the strike owns production until OVER. bullygreedy24 17813E6E: the
++	// Celts' WAR (T73-T150) chose the Terracotta Army, the Mausoleum, the Statue of Zeus and Circus Maximus while gold per
++	// turn fell to -48. Every chokepoint reads this, so no city-state gold in the war either
++	if (!isHuman() && GetMilitaryAI() && GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR)
++		return true;
+ 	// AI_AB_TEST (Economy 0044; the lead's check: no wonder and no city-state gold "before its first declaration"): a strike
+ 	// that ended OVER before we declared anything keeps the ban until our first declaration. bullygreedy21 15A7D14F: Persia's
+ 	// strike went OVER at T70 (a major declared on us first), then Persia built the Terracotta Army (T72), the Pyramids (T75),
+@@ -35488,6 +35493,28 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 		LogStrikeList(*this, pCity, bShort ? "the army (short of the plan):" : (bTooWeak ? "the army (too weak for the target, more core):" : "the army (the plan's counts met, more core):"), GC.getUnitInfo(eArmy)->GetDescription());
+ 		return true;
+ 	}
++	// (0058, the lead) in WAR with nothing more to train for the army: income while net gold is below 0 (a Market, else a
++	// Caravan where a route is free), then CP's picks (no wonders in WAR, IsStrikeNoWonders). A city in danger took its
++	// defender above
++	if (GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR && GetTreasury()->CalculateBaseNetGold() < 0)
++	{
++		const BuildingTypes eMarket = GetSpecificBuildingType("BUILDINGCLASS_MARKET", true);
++		if (eMarket != NO_BUILDING && pCity->canConstruct(eMarket))
++		{
++			eOrder = ORDER_CONSTRUCT;
++			iData = eMarket;
++			LogStrikeList(*this, pCity, CvString::format("income in WAR (net gold %d):", GetTreasury()->CalculateBaseNetGold()).c_str(), GC.getBuildingInfo(eMarket)->GetDescription());
++			return true;
++		}
++		const UnitTypes eCaravan = GetSpecificUnitType("UNITCLASS_CARAVAN", true);
++		if (eCaravan != NO_UNIT && pCity->canTrain(eCaravan))
++		{
++			eOrder = ORDER_TRAIN;
++			iData = eCaravan;
++			LogStrikeList(*this, pCity, CvString::format("income in WAR (net gold %d):", GetTreasury()->CalculateBaseNetGold()).c_str(), GC.getUnitInfo(eCaravan)->GetDescription());
++			return true;
++		}
++	}
+ 	LogStrikeList(*this, pCity, eArmy == NO_UNIT ? "LIST NORMAL (no army unit trainable)" : bShort ? "LIST NORMAL (army short, unaffordable)" :
+ 		(GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR ? "LIST NORMAL (army complete, no more affordable)" : "LIST NORMAL (army complete, waiting for the declaration)"), NULL);
+ 	return false;
+-- 
+2.43.0
+
