@@ -1652,7 +1652,7 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
-### Diplomacy: flag `Spoiler` (the user's design; Diplomacy session, 2026-11-05 10:05pm ET)
+### Diplomacy: flag `Spoiler` (the user's design; Diplomacy session, 2026-11-05 9:40pm ET)
 
 `ai/diplomacy` fe4f0f7, off and out of the bundle. The lead cleared coding it now (9:38pm ET), since with the user's
 definitions it can act in T150 games. It gets no test time until the attack blocks finish, then a gainer test.
@@ -1694,11 +1694,11 @@ to keep, and makes losing civs feel like players with memory rather than neutral
 - **Does it work?** The grudge's trade (deals per 10 turns) and its share of all cities and score at the end, with
   the flag vs without.
 - **Does it cost the spoiler?** Its own strength, no-worse.
-- **How often to expect it:** in T150 games, a civ under 60% of the leader for 20 turns should be common (median
-  scores spread widely by T100). A blame of 15+ needs a war, a city lost, a denouncement or a strong land dispute.
-  So I expect it in a minority of civ-games.
+- **How often to expect it:** in the logged results (3,636 civ-games), 25% of civs were under 60% of first place
+  for 20+ turns from T50, in 375 of 454 games. So "can't win" is common. A blame of 15+ also needs a war, a city
+  lost, a denouncement or a strong land dispute with a contender. So I expect a grudge in some of those 25%, not all.
 
-### Deals with a purpose: the user's direction, and a hypothesis (Diplomacy session, 2026-11-05 10:00pm ET)
+### Deals with a purpose: the user's direction, and a hypothesis (Diplomacy session, 2026-11-05 9:30pm ET)
 
 **The user (replacing the deal-count band):** "i dont really care about meeting some 'quota'. i just want civs to be
 reactive and initiate when it makes sense like normal players. i want them to try to make deals that will help them
@@ -1741,7 +1741,7 @@ diplomacy can only be judged in long games** (Standard pace to a late turn, or s
      - Open borders cost it double, unless we need the passage ourselves.
      - What we'd buy from it is unchanged: taking its gold helps us.
    - **Measure:** items given to rivals that are ahead, before and after; strength no-worse; who wins long games.
-2. **`Spoiler`: if we can't win, help everyone against the civ we blame.** Definitions are the user's (10:35pm ET,
+2. **`Spoiler`: if we can't win, help everyone against the civ we blame.** Definitions are the user's (9:35pm ET,
    replacing my first draft):
    - **"Can't win":** "you have realized you are not going to be 1st place in this game, you have fallen too far
      behind." It's about standing, not CP's "not competing".
