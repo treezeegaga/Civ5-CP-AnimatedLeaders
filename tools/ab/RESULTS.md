@@ -7580,3 +7580,5 @@ form either).
 Kyzyl (171787CD) and Boston (17813E6E) are different failures: their cities were attack targets, and their ops formed.
 
 LEAD: the 17A1A659 fix (above) is **ai/war e6c5eb680** (on fef0ea98): the strike's target must be a land attack target an army can reach, held targets give way to a reachable one, and no declaration on an unreachable city. This is the trial head for 10pm. CI to follow.
+
+LEAD: Economy 0060 (0053's siege and more core only against a reachable target, using War's HaveStrikeLandAttackTarget) is on top: the trial head is now **ai/war acd891f95** (e6c5eb680 + 0060). CI to follow. (fef0ea98's run 391 compiled; only its release upload failed, a GitHub HTTP 500.)
