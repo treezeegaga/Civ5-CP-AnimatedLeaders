@@ -62,3 +62,12 @@ against this list. The list grows: every bug a review or a test game finds gets 
   something the civ can't build never holds a declaration.
 - **Unit scaling in combat math:** CP keeps damage and HP x100 in places. Mixing scaled and unscaled values made the
   take-the-city check 100x too strict (0cb5402). Check the units of every value fed into a comparison.
+- **Silent refusal after the caller acted:** a low-level gate refuses after the payments, force-peace flags or
+  UnitProcessed are already applied. Deal validity and unit selection must use the same check as the gate.
+- **No exit on losing:** every no-peace or no-retreat lock needs a release when we're losing (a city lost, the capital
+  in danger, a nearly-defeated war state), not only "capture or die".
+- **A state that outlives its purpose:** WAR keeping its ownership of production and gold until peace with everyone.
+- **Dead guard:** a new branch put behind a condition that already rules out its success.
+- **Mixed-team gates:** loops that skip humans but still block the human's own actions.
+- **Game mechanics through AI gates:** Lua, vassal liberation and independence wars reach declareWar/makePeace and are
+  swallowed. Gate on the originating player being the strike AI.
