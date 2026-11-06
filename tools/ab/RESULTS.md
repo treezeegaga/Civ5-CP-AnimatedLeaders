@@ -1882,6 +1882,51 @@ Patch 0034 is on ai/war `56e0cad` and is merged after the expert block.
   - `IsLateStrikeCiv` reads `GetStrikePlan().bLateStrike`, one source with War and Personality;
   - the beeline (the pre-build's tech, the core's, then the upgrade) and the saving run in BUILDUP, not from turns.
 
+### Build the strike army on time: spec (Economy, Nov 6, 6:12am ET; for the next block)
+The user (via the lead): "if they were 4 units short, they need to fix their start." So the answer is production,
+not gold.
+
+**The baseline**, from the expert block's 5 strike-book games (script `tools/ab/scripts/earlystrike/strike_army.py`):
+
+| Game | Plan (core + support) | Army at the build-up's open | Army at the declaration |
+|---|---|---|---|
+| Persia 13E9ECC9 | 5 + 3 | T40: 3 land (Immortal 2, Warrior 1) | T81: 16 land |
+| Persia 14A46460 | 5 + 3 | T26: 1 land (Warrior 1) | T83: 16 land |
+| Greece 1464B588 | 3 + 5 | T36: 2 land (Hoplite 1, Warrior 1) | T63: 7 land (Hoplite 3, Composite Bowman 3, Warrior 1) |
+| Persia 13A89116 | 5 + 3 | T81: 8 land | T119: 16 land |
+| Aztec 14849045 | 6 + 4 | T108: 9 land (Jaguars disbanded T42-52) | T108: 9 land |
+
+The plans want the army by about T33-46 (their declare-by turns). It came 30-50 turns later.
+
+**Where the turns went:**
+- The settler went first with no escort, and CP's fill-ins built a Monument, Granary, Barracks or Stonehenge.
+  Fixed by 0035.
+- The second city built buildings, not units.
+- Workers were built beyond the book's one.
+- The core's tech arrived only at T19-25, and the support's at T28-42.
+
+**Change** (under EarlyStrike, while the strike state is PREP or BUILDUP and the army is short of the plan's core or
+support count; empire-wide counts, units in training included):
+1. **The capital's fill-in is the army.** When the book's next step can't be trained yet, the capital trains:
+   - the core;
+   - or, before the core's tech, a unit that upgrades into it (a Warrior for a Spearman-class core: Hoplite,
+     Immortal, Pictish Warrior);
+   - or the support.
+
+   It doesn't hand the choice to CP.
+2. **The second city and any other city** train the plan's core and support (the same empire-wide counts) before
+   their Monument and anything else.
+3. **No buildings and no wonders** in any city while the army is short, unless the city is in danger.
+4. **No workers beyond one** while the army is short (the book's own worker step stays).
+5. **K stays Personality's for now.** The book's extra settlers already come after the core and support counts.
+   If the next block's numbers show the army still late, the next step is K - 1 before the strike.
+
+War owns the build-up's own unit requests (the window's weights). These rules are the book's and the sanity
+checks', and they stop when the counts are met or the strike state leaves BUILDUP.
+
+**Measure:** in ab-8f9b7f9's games and the next block's, the army against the plan at the BUILDUP open and at WAR,
+per civ (the same script).
+
 ### Expert block (ab-40203a3): the book side, summary (Economy, Nov 6, 4:49am ET)
 bullygreedy18 finished at 10 pairs (20 games). The table below is per pair; this is the summary for the user.
 
