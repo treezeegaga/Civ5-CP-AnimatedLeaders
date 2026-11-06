@@ -3501,6 +3501,19 @@ weights fill everything a plan doesn't name):
   by about T41, fall back about T45, Liberty, barbarian hunt first. Sensible as plans. **One thing to watch:** the
   aggressor picker puts early-spike civs ahead of warmongers, so Babylon, Egypt, India, Maya or Polynesia (not
   aggressive personalities) can draw the aggressor role when none of the five expert civs is in the game.
+- **Readiness, for the next block** (the user, via the lead, about 10:35pm ET: "because the ai is not a high level
+  player, some of the windows will be hard to hit"). The expert block keeps its turns. Next block, readiness triggers
+  the declaration and the turns become soft limits measured from the AI's own progress:
+  - **ready** = the upgrade tech known (or none); core units at `iCoreTarget` (pre-built units the upgrade turns into
+    core count); support at `iSupportTarget`; siege at `iSiegeTarget` when the plan always brings it (else only against
+    walls); gold for the upgrades still to do (`iUpgradeGoldPerUnit` each); and War's 2+ melee that can take a city;
+  - **declare** as soon as ready (and in reach of a target, rule 3), whatever the turn;
+  - **fall back** to the economy-first plan if not ready within `iReadyGraceTurns` of the strike becoming possible:
+    15 turns Standard for an early strike, 20 for a late one (more units to upgrade, a longer march). "Possible" is the
+    upgrade tech known, or the core trainable when there's no upgrade (the Huns). The DLL keeps no turn a tech was
+    learned, so War measures it from the turn its build-up opens (it opens once the core can be trained).
+  - `CvStrikePlan::iReadyGraceTurns` is in (`6d93f3b`); nothing reads it yet. War reads how often the window closed
+    before readiness in the expert block and designs the trigger with this.
 - **Status:** `221fb3e` and the Inca's Catapults (`0356f6b`) merged into `claude/ab-c1` (`03bbc90`); `221fb3e` compiles (CI run 274
   passed); `0356f6b` compiles (CI run 277 passed). Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
