@@ -4,26 +4,26 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "Army size is the missing piece: with BigArmy (the aggressor's army doubled, its costs waived) the aggressor took cities in 4 of its first 7 games (7 cities), against about 1 game in 9 to 21 before. Without it, in the same matches: 0. Both PCs play 20 BigArmy games each; then the job is to make that army affordable honestly.",
+   "detail": "Your game showed the plan: a military-first capital, a beeline to Construction, upgrade the archers, then declare. That is now coded as EarlyStrike (build ab-c337c77) and starts on PC 1 tonight. The current block (honest package, greedy civs) has captures in 2 of 7 pairs, both when the army reached about 13 units before the war.",
    "state": "running"
   },
   {
    "section": "tile",
    "order": 1,
    "name": "Testing now",
-   "value": "BigArmy: a doubled army, costs waived (7 games in: captures in 4)"
+   "value": "Honest package vs greedy civs: captures in 2 of 7 pairs (3 cities); EarlyStrike next"
   },
   {
    "section": "tile",
    "order": 2,
-   "name": "Wars, last block",
-   "value": "22 of 27 games (13 of 27 without our fixes)"
+   "name": "Your game",
+   "value": "Aztec took Marrakesh at T54 (declared T41-50): 6 Jaguars + 4 Composite Bowmen, no siege"
   },
   {
    "section": "tile",
    "order": 3,
-   "name": "Captures, last block",
-   "value": "3 of 27 games (2 without)"
+   "name": "Biggest lever",
+   "value": "Army size at the declaration: captures came with about 13 land units"
   },
   {
    "section": "funnel",
@@ -82,7 +82,7 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Read the last block across all games: attacks at the walls improved (damage per attempt about 3x), but armies are too small before the war. Its WindowUntilReady fix is the one change being tested.",
+   "detail": "Coded EarlyStrike's war half from your game: build-up on the book's army, gold saved for upgrades, declare after upgrade and go. Merged.",
    "chat": "Civ V AI: War session",
    "state": "waiting"
   },
@@ -90,7 +90,7 @@
    "section": "session",
    "order": 3,
    "name": "Diplomacy",
-   "detail": "GreedyWideDeals (a wide greedy civ out of room trades more) waits for a test.",
+   "detail": "Waits for the coalition block: in big-army games the others turned AFRAID of the aggressor instead of ganging up.",
    "chat": "Civ V AI: Diplomacy session",
    "state": "waiting"
   },
@@ -98,7 +98,7 @@
    "section": "session",
    "order": 4,
    "name": "Personality",
-   "detail": "Greedy wide and tall are built and wait for the trio and matchup tests.",
+   "detail": "Strike window set from your game (Quick: open T40, declare by T50) and names the upgrade tech the strike waits for. Merged.",
    "chat": "Civ V AI: Personality session",
    "state": "waiting"
   },
@@ -106,7 +106,7 @@
    "section": "session",
    "order": 5,
    "name": "Economy",
-   "detail": "WarGold and the war chest are in the test. LeanBuilders and WondersForVictory wait for a normal test after the attack work.",
+   "detail": "Coded EarlyStrike's build order: military-first capital, straight line to Construction, treasury saved for upgrades. Merged.",
    "chat": "Civ V AI: Economy & victory session",
    "state": "waiting"
   },
@@ -114,7 +114,7 @@
    "section": "session",
    "order": 6,
    "name": "PC runner",
-   "detail": "PC 1 (BOX): attack test vs normal civs on 850e142 (bullyabort12), 20 games.",
+   "detail": "PC 1 (BOX): back from your game. Fixed a restart loop (Set Up Game remembered Montezuma). Starting EarlyStrike (bullyabort16, ab-c337c77).",
    "chat": "Civ V AI optimization PC runner",
    "state": "running"
   },
@@ -122,27 +122,27 @@
    "section": "session",
    "order": 7,
    "name": "PC runner 2",
-   "detail": "PC 2 (TREEDESKTOP): attack test vs greedy civs on 850e142 (bullygreedy14), 20 games. Its Civ log archive now lives on D:.",
+   "detail": "PC 2 (TREEDESKTOP): honest package vs greedy civs (bullygreedy16), 7 of 10 pairs, done about 10:10pm. Then EarlyStrike (bullygreedy17).",
    "chat": "Civ V AI optimization PC runner 2",
    "state": "running"
   },
   {
    "section": "testflag",
    "order": 1,
-   "name": "WindowUntilReady",
-   "owner": "War",
-   "detail": "The build-up lasts until the army is ready (2 siege units, cities + 4 others), up to 2 build-up periods.",
-   "test": "Being tested now, both PCs.",
+   "name": "EarlyStrike",
+   "owner": "War, Economy, Personality",
+   "detail": "Your opening: military-first capital for warmongers with an early unique unit, beeline to the upgrade tech, save gold, upgrade and go.",
+   "test": "Starting now on PC 1; PC 2 after its block.",
    "state": "running"
   },
   {
    "section": "testflag",
    "order": 2,
-   "name": "SiegeFeed",
-   "owner": "War",
-   "detail": "No second attack is started on a city we're already besieging, so units join the fight.",
-   "test": "Built, off. Waits for a funnel-backed reason.",
-   "state": "waiting"
+   "name": "SiegeSlots / WarTradeRoutes",
+   "owner": "War, Economy",
+   "detail": "Siege no longer refused as over the army cap; small cities skip caravans while at war, so the army budget isn't starved.",
+   "test": "In the next blocks on both PCs.",
+   "state": "running"
   },
   {
    "section": "testflag",
@@ -192,15 +192,15 @@
   {
    "section": "queue",
    "order": 1,
-   "name": "BigArmy block (diagnostic)",
-   "detail": "Both PCs, 20 games each on 1750459. Does a big army take cities? So far yes: 4 of 7 games.",
+   "name": "EarlyStrike blocks",
+   "detail": "PC 1 now (vs normal civs), PC 2 from about 10:10pm (vs greedy civs), 20 games each on ab-c337c77.",
    "state": "running"
   },
   {
    "section": "queue",
    "order": 2,
-   "name": "Trio test, 20 games",
-   "detail": "One of our three styles on top in 90% of 6-civ games. Waits until attacks take cities.",
+   "name": "Coalition block",
+   "detail": "Big army plus the others' diplomacy fixes: do the other civs gang up on a conqueror? Waits for a free PC.",
    "state": "waiting"
   },
   {
@@ -221,7 +221,7 @@
    "section": "goal",
    "order": 1,
    "name": "Trio: one of our three styles wins",
-   "target": "In a 6-player game with our greedy, balanced and aggressive civs and 3 CP civs, one of ours wins ≥ 90% of full games (the user's aim: every game)",
+   "target": "In a 6-player game with our greedy, balanced and aggressive civs and 3 CP civs, one of ours wins \u2265 90% of full games (the user's aim: every game)",
    "detail": "Built. A first look (4 games to T150) had one of ours on top in 3 (75%), but our aggressor never attacked there. The real 20-game run waits until attacks take cities.",
    "state": "first look"
   },
@@ -229,7 +229,7 @@
    "section": "goal",
    "order": 2,
    "name": "Strength against CP",
-   "target": "≥ 60% strength share against CP's AI (a milestone; strength is now the guard and quick test for each change)",
+   "target": "\u2265 60% strength share against CP's AI (a milestone; strength is now the guard and quick test for each change)",
    "detail": "50.4% (C8, the 12 flags that passed, 6 pairs on PC 2). Economy and diplomacy fixes moved it only about half a point by T150; the big lever left is war, cities changing hands.",
    "state": "not met"
   },
@@ -238,7 +238,7 @@
    "order": 3,
    "name": "Attack: an aggressor takes cities",
    "target": "Against greedy civs (few units, no walls) several cities by T150; against balanced civs at most 1 per war",
-   "detail": "The war comes now: the aggressor declared in 22 of 27 games of the last block (13 of 27 without our fixes). Captures are still rare: 3 in 27 games, all against normal civs, none against greedy ones. The attack dies at the walls: the army is too small when it matters.",
+   "detail": "Captures now happen: the honest package took cities in 2 of 7 pairs vs greedy civs, BigArmy in 4 of 20 vs normal civs and 5 of 16 vs greedy. The wins came with about 13 land units at the declaration. Your game reached a capture at T54; ours come after T110. EarlyStrike aims at that gap.",
    "state": "focus now"
   },
   {
@@ -261,7 +261,7 @@
    "section": "goal",
    "order": 6,
    "name": "A lively world, no deal spam",
-   "target": "0.5–2 deals per civ per 10 turns",
+   "target": "0.5\u20132 deals per civ per 10 turns",
    "detail": "About 3 per civ per 10 turns, for B and C8 alike (12 C8 games; each deal counts once per side), so above the band. Diplomacy hasn't worked on deal frequency yet.",
    "state": "not met"
   },
@@ -269,7 +269,7 @@
    "section": "goal",
    "order": 8,
    "name": "AI turn speed",
-   "target": "AI turns ≤ 1.25× B's",
+   "target": "AI turns \u2264 1.25\u00d7 B's",
    "detail": "C8 games average 5.6 s per AI turn. In split games both groups share one turn, so this needs an all-C run against an all-B run; not run yet.",
    "state": "not measured"
   }
