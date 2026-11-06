@@ -5104,3 +5104,20 @@ flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
 - **No first capture by T100.** The captures came at T120-T130.
 - **Next:** the expert block (bullygreedy18 on `ab-40203a3`, started 10:39pm ET). It's judged by captures and how
   many fall before T100.
+
+### Overnight notes (lead, 11:15pm ET Nov 5)
+- **PC 1 build mismatch:** bullyabort16, bullyabort17 and the first bullyabort18 pair all ran `8fe8e0f`, not the builds
+  logged (c337c77, db638c3, 40203a3). The cause: `Run-ABTest.ps1` was piped into `Select-String -First 1`, which killed
+  the installer before the download. Their RoleFixes named flags that `8fe8e0f` doesn't know, and those were ignored
+  silently. **Treat those games as `8fe8e0f`, no EarlyStrike.** PC 1 reinstalled `ab-40203a3` at 10:54pm (14,012,928
+  bytes) and restarted bullyabort18 from scratch. `Run-ABTest.ps1` now hashes the installed DLL against the release and
+  stops on a mismatch (6e19c51).
+- **Expert block, PC 2 pair 1 (138A0F7F):** China was the aggressor (a late-strike civ; no early-spike civ was in the
+  lineup).
+  - China declared on Rome at T57 with 11 land units and took 1 city, by T60. The flipped game took none.
+  - Promotions at the declaration: 1. By the second war at T136: 12.
+  - BarbKill works: 44 lines.
+- **The next block is staged on `ai/next` (b2a6f75):** `claude/ab-c1` 40203a3 + ai/war 56e0cad (strike state,
+  LateStrike, the army line) + ai/personality 327a15b (late rows, China, readiness tests; one flag, LateStrike) +
+  Economy 0034 (books on the strike state). CI run 291 is building. It isn't merged into `claude/ab-c1` until the
+  expert block ends.
