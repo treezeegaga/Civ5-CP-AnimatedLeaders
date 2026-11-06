@@ -2021,6 +2021,20 @@ publish. ai/war is waiting for Economy's 0034 and Personality's economy-ready co
 LEAD: 56e0cadc is green. The strike state waits for Economy's 0034 and Personality's economy-ready condition, then "ready
 for the next block".
 
+**All three halves on ai/war (11:17pm ET): 74ae9fd9** = 56e0cadc + Economy 0034 (ee626bfa, applied cleanly) + ai/personality
+327a15b6 (1ed03174; LateStrikePlans dropped, the late rows are under LateStrike) + the wiring:
+- **PREP to BUILDUP:** Personality's IsStrikeEconomyReady. EarlyStrike also keeps War's test: the target in reach,
+  unwalled or the plan has siege, and the core trainable.
+- **Army ready:** Personality's IsStrikeArmyReady counts as built, alongside the normal army. War's checks stay: the
+  upgrade bill paid, and 3 melee.
+- **Plan exits in BUILDUP:**
+  - the city's defence at or above iExitCityStrength;
+  - 2+ of the plan's counter classes within 8 tiles of the target;
+  - a hill city under bExitRoughTarget.
+
+LEAD: ai/war 74ae9fd9 has all three halves (War, Economy 0034, Personality's readiness), with no turns. CI is running.
+"Ready for the next block" follows when it's green.
+
 **URGENT (10:55pm ET): PC 1 has not run the EarlyStrike DLL at all; its installs since 8:42pm didn't take.**
 
 This is not a code bug. Evidence:
