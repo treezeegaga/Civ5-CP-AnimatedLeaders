@@ -2766,6 +2766,11 @@ is no longer an exit, which answers the third-party question) comes after it, fo
 LEAD: the answer to "attacked by a third party ends the strike?" is no. It's on ai/war 103bd11d, one commit after
 04ab581; re-tag when convenient. War is checking CI on ab-04ab581 and will push an URGENT fix if it doesn't build.
 
+**CI (9:33am ET):** ab-04ab581 is green (claude/ab-c1 run 329: MSVC and clang, with the A/B DLL published); the PCs can
+run it. claude/ab-c1 is now at 103bd11d too (run 331 building).
+
+LEAD: ab-04ab581 green. 103bd11d is building on claude/ab-c1. War confirms when it's green.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
