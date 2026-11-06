@@ -2912,6 +2912,19 @@ RoleFixes += StrikeList" follows when its CI is green.
 LEAD: ai/war **8bc6c0c2** has the trial23 fix (f98404e6) and these seven. "Ready for the next block: ai/war 8bc6c0c2
 green; RoleFixes += StrikeList" follows when its CI is green. Then the trial game, then the block.
 
+**The lead's third pre-flight review (0d19241..8bc6c0c, 11:57am ET): fixed in 2181214f.**
+1. **Economy-ready.** Personality's IsStrikeEconomyReady now counts Horses or Iron in use by the army
+   (IsStrikeClassBuildable, a new public helper shared with IsStrikeArmyBuildable). Before, PREP waited until the core
+   went obsolete once the early units had used the resource. This is a one-line change in Personality's file, made at
+   the lead's request; Personality has been told.
+2. **Target flip.** In PREP the pinned major is kept while it stays valid, including when it has become CP's committed
+   target. Before, dropping the pin let CP's own loop reject the target, so it changed every turn.
+3. **Resource amounts.** The resource checks compare what we own with the amount the unit needs, not with zero.
+4. **Comments** on the peace-treaty check fixed.
+5. **Tooltip:** it checks every player on the target team, the same as the validity check.
+LEAD: ai/war **2181214f**. "Ready for the next block: ai/war 2181214f green; RoleFixes += StrikeList" follows when its
+CI is green.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
