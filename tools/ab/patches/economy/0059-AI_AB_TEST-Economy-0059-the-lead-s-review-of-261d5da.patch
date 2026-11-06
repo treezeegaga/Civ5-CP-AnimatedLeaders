@@ -1,0 +1,91 @@
+From 8b5d03b2f534520e8195bb29acf93b9c6a222320 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 22:35:52 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0059: the lead's review of
+ 261d5da..c89ed4a (0058's redirect, the policy fallback)
+
+2. 0058's WAR income brought back the every-city redirect that 0057 had removed. In WAR with
+   net gold below 0 and the army complete, every city returned a Market or Caravan, and
+   pushOrder swapped out CP's walls and defenders. Now the capital only.
+4. The policy order's fallback tree (0057) also fired when the next order tree was only
+   locked for now (an era gate), so it opened a tree outside the order. Now an order tree
+   that will be possible later sets bOrderWaiting: an era gate, an ideology not yet on
+   offer, or an open tree with nothing adoptable this turn. Then no tree outside the order
+   opens, NO_POLICY keeps the culture, and a policy from an already open tree is still
+   taken first. The fallback tree now comes only when every remaining order tree is
+   finished or permanently blocked (IsPolicyBranchBlocked, or an ideology other than ours
+   taken).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp   |  4 +++-
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp | 16 +++++++++++++++-
+ 2 files changed, 18 insertions(+), 2 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 623a0fb..07f89d0 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -35496,7 +35496,9 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	// (0058, the lead) in WAR with nothing more to train for the army: income while net gold is below 0 (a Market, else a
+ 	// Caravan where a route is free), then CP's picks (no wonders in WAR, IsStrikeNoWonders). A city in danger took its
+ 	// defender above
+-	if (GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR && GetTreasury()->CalculateBaseNetGold() < 0)
++	// (0059, the lead's review) the capital only: in every city the pushOrder redirect swapped CP's walls and defenders for
++	// Markets and Caravans
++	if (pCity->isCapital() && GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR && GetTreasury()->CalculateBaseNetGold() < 0)
+ 	{
+ 		const BuildingTypes eMarket = GetSpecificBuildingType("BUILDINGCLASS_MARKET", true);
+ 		if (eMarket != NO_BUILDING && pCity->canConstruct(eMarket))
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index ba1be02..99039fd 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -199,6 +199,9 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 		&pPlayer->GetGrandStrategyAI()->GetStrikePlan() : NULL;
+ 	if (!bMustChooseTenet && pOrderPlan && pOrderPlan->bValid && pOrderPlan->iNumPolicyBranches > 0)
+ 	{
++		// (0059, the lead's review) a tree in the order that will be possible later (an era gate, an ideology not yet on offer,
++		// an open tree with nothing adoptable this turn): no tree outside the order opens meanwhile, the culture is kept
++		bool bOrderWaiting = false;
+ 		for (int iOrder = 0; iOrder < pOrderPlan->iNumPolicyBranches; iOrder++)
+ 		{
+ 			const PolicyBranchTypes eTree = pOrderPlan->aePolicyBranches[iOrder];
+@@ -225,6 +228,7 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 					LogPolicyChoice((PolicyTypes)(iBest - GC.getNumPolicyBranchInfos()));
+ 					return iBest;
+ 				}
++				bOrderWaiting = true;
+ 				continue;	// open but nothing adoptable now: the next tree in the order
+ 			}
+ 			if (m_pCurrentPolicies->CanUnlockPolicyBranch(eTree))
+@@ -232,6 +236,13 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 				LogBranchChoice(eTree);
+ 				return (int)eTree;
+ 			}
++			// can't be opened now: permanently (blocked by a mutually exclusive tree, or an ideology other than ours taken) or for now
++			CvPolicyBranchEntry* pkTree = GC.getPolicyBranchInfo(eTree);
++			const bool bIdeology = pkTree && pkTree->IsPurchaseByLevel();
++			const PolicyBranchTypes eOurIdeology = m_pCurrentPolicies->GetLateGamePolicyTree();
++			const bool bPermanent = m_pCurrentPolicies->IsPolicyBranchBlocked(eTree) || (bIdeology && eOurIdeology != NO_POLICY_BRANCH_TYPE && eOurIdeology != eTree);
++			if (!bPermanent)
++				bOrderWaiting = true;
+ 		}
+ 		// nothing in the order can take a policy now: no tree outside the order; the policies of trees already open (CP's
+ 		// weights) are the only other choice, never one of the plan's never-list trees (Aesthetics, Piety)
+@@ -258,7 +269,10 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 			return iBest;
+ 		}
+ 		// (0057, the lead's review) every tree in the order done or locked: the best tree that can be opened (CP's branch weight),
+-		// never one on the never-list, rather than leave the culture unspent
++		// never one on the never-list, rather than leave the culture unspent. (0059: only when every remaining order tree is
++		// finished or permanently blocked; one that will be possible later keeps the culture)
++		if (bOrderWaiting)
++			return (int)NO_POLICY;
+ 		PolicyBranchTypes eBestTree = NO_POLICY_BRANCH_TYPE;
+ 		int iBestTreeWeight = INT_MIN;
+ 		for (int iBranch = 0; iBranch < GC.getNumPolicyBranchInfos(); iBranch++)
+-- 
+2.43.0
+

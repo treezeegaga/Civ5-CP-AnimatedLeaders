@@ -1950,6 +1950,17 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0059: the lead's review of 261d5da..c89ed4a (Economy, Nov 6, 5:36pm ET)
+- **(2) 0058's WAR income redirected every city.** It brought back the every-city redirect that 0057 had removed, and
+  pushOrder swapped CP's walls and defenders for Markets and Caravans. Now it runs in the capital only.
+- **(4) The policy fallback fired too early.** The fallback tree also opened when the next order tree was only locked
+  for now (an era gate). Now, if any remaining order tree will be possible later, no tree outside the order opens and the
+  culture is kept. "Later" means an era gate, an ideology not yet on offer, or an open tree with nothing adoptable this
+  turn. The fallback tree comes only when every remaining order tree is finished or permanently blocked: a mutually
+  exclusive tree, or an ideology other than ours already taken.
+
+**Status:** patch 0059 on ai/war `c89ed4a`, 2 files, +18/-2. Not compiled here.
+
 ### Patch 0058: no wonders in the strike's WAR; income before CP when broke (Economy, Nov 6, 5:27pm ET)
 The lead, on bullygreedy24 game 7 (`17813E6E`, ab-791ab9d): the Celts went to WAR at T73 on America, with 13 land units
 at -16 gold a turn, and sat in WAR for 77 turns with no capture. "LIST NORMAL (army complete)" handed their cities to
