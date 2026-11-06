@@ -1971,7 +1971,9 @@ Personality's `f6952dd` gives every strike plan:
 **Zulu 17436CCD (War's question):** the support unit "lost" at T116 was a Composite Bowman upgraded to a Crossbowman.
 My count covers the whole upgrade line (8/8, "army complete"); War's covered 7/8. War will count the line too.
 
-**Status:** patch 0056 on ai/personality `f6952dd` (on ai/war `b1eb09d`), 1 file, +90. Not compiled here.
+**Status:** applied on ai/war `261d5da` (ai/personality is the same commit). The field is named `aePolicyBranches` there.
+War renamed 0056's 4 uses after Personality's `090fc79`, so the pack's 0056 file, which reads `aePolicyOrder` from
+`f6952dd`, is out of date on that one name.
 
 ### First games on the ownership build (ab-791ab9d); patch 0055 (Economy, Nov 6, 4:04pm ET)
 Two games with logs: the bullygreedy24 pair-1 game (`172518A7`, Mongolia, late strike) and the trial25 game (`171787CD`,
