@@ -3440,6 +3440,33 @@ logged pair".
 | China (0) | Chu-Ko-Nu (Machinery) | strike at Machinery | Chu-Ko-Nus x4 with Pikemen | T103 / T113 | trebuchets if walled | escort | yes, late | Tradition |
 | Spain, America, Shoshone (2, 0, 0) | Tercio and Conquistador; Minuteman; Comanche Riders | after T120 Quick | none in a T150 test | T120+ | - | escort | too late for a T150 aggressor role | Liberty |
 
+- **Openings are priorities with conditions, not fixed queues** (the user, via the lead, about 9:40pm ET: a flexible,
+  not rigid, build order for each aggressive civ). The capital build lists in the tables are examples of what the rules
+  give on a typical map, not queues. CP's own weights fill everything the plan doesn't name. One rule set for every
+  early-spike civ, with per-civ numbers:
+  1. **Units first** while a barbarian camp or a neighbour's city is within reach (about 8 tiles), until N core units
+     are out.
+  2. **A settler** once N core units are out (a worker first if the capital has no worker and an improvable luxury or
+     bonus resource).
+  3. **At most K cities** before the strike; past K, no settlers until the strike is over.
+  4. **Support units** (ranged or the siege unit) up to the plan's mix once the core is out, and the upgrade tech
+     researched before the window opens.
+  5. **Fall back to the late plan** (the normal book, economy first) if no target is in reach by turn X, if the target
+     has walls and the plan has no siege, or if a war on us comes first.
+
+  | Civ | N core units before the first settler | K cities before the strike | Fall back by (Quick) | Notes |
+  |---|---|---|---|---|
+  | Aztec | 3 Jaguars (the user's) | 2 | T50 | Jaguars hunt barbarians in forest and jungle |
+  | Huns | 2 Horse Archers | 3 | T50 | Rams after the first settler; they start with Animal Husbandry |
+  | Inca | 2 Slingers | 3 | T50 | Slingers hunt with a Warrior in front |
+  | Greece | 2 Hoplites (Bronze Working first) | 3 | T50 | barbarian camps also free city-states' quests |
+  | Celts | 1 Pictish Warrior | 3 | T50 | a pantheon may come first (forest faith) |
+  | Persia | 2 Immortals (Bronze Working first) | 3 | T50 | |
+  | Assyria | 1 Archer, then a settler | 3 | T54 | Siege Towers after Mathematics |
+  | Carthage | 1 Warrior, then a settler | 3 | T54 | Forest Elephants after Horseback Riding |
+
+  Late-spike civs use the normal book with the same rules from their window's build-up (15 turns before it opens),
+  with K = no limit. These numbers are drafts until the lead's civfanatics research is in.
 - **What this means for the default.**
   1. **The split follows the spike turn the default already has** (`bMilitaryFirst`, a spike by Bronze Working or The
      Wheel, and units through Construction or Horseback Riding): early-spike civs get the EarlyStrike book and barb
@@ -3459,7 +3486,7 @@ logged pair".
 - **Next, once the lead agrees:** 1) the profile's "early spike" flag at about T47 Standard and the Huns' core-unit fix;
   2) a pre-war-use field (barb hunting, escort) from the trait and spike group; 3) check every row against
   StrategyProfile_Log.csv from a game on this build.
-- **Status:** spec, no code.
+- **Status:** spec, no code; the code waits for the lead's civfanatics research and the first EarlyStrike block.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
