@@ -2255,6 +2255,45 @@ What happened in the game:
   the highest XP from a kill was 14 (cap 45).
 
 LEAD: reading only, 11:30pm ET.
+
+**Read 2 (12:35am ET): 3 logged first games**, all from PC 2. PC 1's restarted bullyabort18 hasn't pushed yet.
+
+| civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
+|---|---|---|---|---|---|---|---|---|
+| China | 1 | 1 | 1 | 59 | 57 | 5 | 1 / 11 | captured 1 |
+| Persia | 1 | 0 | 0 | - | 119 | 10 | 10 / 16 | no capture |
+| Polynesia | 1 | 0 | 0 | - | 140 | 1 | - | no capture |
+
+1 of 3 captured. The first two games with an early-spike aggressor opened no EarlyStrike build-up. Both failures are mine:
+- **Polynesia (13CA9885): the EarlyStrikeAggressor picker chose a civ that isn't a warmonger.**
+  - Polynesia's profile has bMilitaryFirst, but the test's own warmonger test (IsABTestWarmongerCiv) says no: the CSV
+    Warmonger column is 0, and its grand strategy went Culture, then UN.
+  - IsCandidateWarmonger was therefore false. It played no TimingBuildup, no EarlyStrike book (the old opening:
+    Scout, Maori Warrior, Settler, Worker) and no war until T140.
+  - The picker ranked "early spike" above "warmonger", so a non-warmonger early-spike civ could take the role. Any game
+    like that is a wasted bully game.
+- **Persia (13A89116): no major in reach, and the peace cap shed the army.**
+  - Its nearest target was the city-state Jerusalem; no major was committed until America at T81 and the Maya at T107.
+  - From T57 to T77, TimingBuildup's peace cap (3 + 2) let an Archer, 2 Warriors and a Composite Bowman go.
+  - The window opened at T81 against America (10 turns, army not ready, 1 siege). It declared at T119 and took nothing.
+  - On 40203a3 the EarlyStrike window is turn-limited, so it couldn't open that late anyway. On ai/war the strike state
+    would hold PREP until the army is built with no target in reach (OVER). But the peace cap still sheds units in PREP
+    and BUILDUP, so the army is never built.
+  - BarbHunt ran (2 lines; 10 BarbKills, the most in the block so far).
+
+**Hypotheses (War, before code; for the next block, on ai/war, not the frozen block):**
+1. **EarlyStrikeAggressor picks an early-spike civ only among warmongers.** The score becomes early spike AND warmonger
+   first, then warmonger. Fixes the harness so the aggressor always plays the conquest plan. Expect 0 aggressors with
+   Warmonger 0 when the game has a warmonger.
+2. **The peace cap doesn't shed a strike civ's land units in PREP or BUILDUP.** Under EarlyStrike/LateStrike via the
+   strike state; no new flag, since it is the strike army itself. Expect "TimingBuildup: peace ... letting X go" lines
+   to stop for strike civs before the declaration, and more land units at the BUILDUP line.
+
+LEAD (12:35am): reading only. 1 of 3 games captured (China T59). Persia and Polynesia, both early-spike aggressors,
+opened no EarlyStrike build-up. **The harness wastes games:** EarlyStrikeAggressor can pick a non-warmonger early-spike
+civ (Polynesia: Warmonger 0, no conquest plan at all). For the rest of tonight's block, consider dropping
+EarlyStrikeAggressor from RoleFixes, or count those games as void. The fix (warmongers only) and the peace-cap fix for
+strike civs go on ai/war for the next block.
 - Expert block pair 1: China (no EarlyStrike civ in the game) captured 1 at T59. BarbKill works (44 lines).
 - **ai/next b2a6f75 lacks War's readiness wiring.** The wiring is ai/war 74ae9fd9 (CvMilitaryAI.cpp only, on top of
   the same three parts). Without it, the late strike's PREP to BUILDUP is still War's placeholder ("K cities, book
