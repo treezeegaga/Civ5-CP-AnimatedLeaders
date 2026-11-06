@@ -3118,6 +3118,26 @@ is the first full compile since b9dd1b77, with:
 - Economy 0049-0053.
 RoleFixes += StrikeList.
 
+**trial25 171787CD (ab-791ab9d, the lead, 3:27pm ET): why the city attack on Kyzyl couldn't be launched. Fix for the next
+block: b446678a.**
+- **The war.** The Aztecs declared on Kyzyl at T61 (confirmed at T62, WAR; "takes it in about 2 turns" at defence 14).
+  Gate 4 refused attacks on Bucharest and America all along.
+- **T64-T69, op 1612 on Kyzyl.** It gathered and moved (13% progress). At T69 MarchOn ended it as a success ("stalled near
+  the target at war, handing over") with the army 4-6 tiles out. The Kyzyl zone then held only 1-2 Aztec units ("too early
+  for attacking Kyzyl ... expected max damage per turn 0"). The rest went home to counter-attack postures.
+- **T70-T73, "lack of units".** A successful operation marks its units as recently deployed, which keeps them out of new
+  operations for 5 turns. The phase was neither WINDOW nor ATTACK, so every required slot needed a free unit. Each request
+  failed.
+- **T76 on, op 1780.** It formed and then waited in SiegeArmy's bar ("expected damage 33 a turn, Kyzyl needs 36"), although
+  the strike's own math said the army takes the city in about 2 turns.
+- **Answer.** No path, muster or operation-slot problem as such. The army was handed over short of the city, locked out of
+  re-forming for 5 turns, and then held by a second strength bar that disagrees with the strike's.
+- **Fix (next block).**
+  - An operation against the strike's target doesn't lock its units out.
+  - The strike's attack forms with slots still to be built.
+  - SiegeArmy's bar doesn't hold an attack on the strike's target while the strike's math says it's takeable.
+LEAD: on ai/war **b446678a** (791ab9d7 + this), for the NEXT block; the current block runs to 20 games. CI to follow.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
