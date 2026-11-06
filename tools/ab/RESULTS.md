@@ -3332,6 +3332,12 @@ logged pair".
     taken at T54. The Aztec on Quick: open T40, declare by T50, close T60 (`bed8e14`). History: the first draft
     (spike + 5 to + 35) closed the Aztec window at T23 Quick (War's catch); `b5432b5` (to + 85, declare by + 55) was
     held by the lead because the window is about the declaration, not the capture.
+  - **the upgrade the strike waits for** (the user, via the lead, 8:50pm ET: "i beelined to construction", "i upgraded 3
+    archers to composite archers. that was part of the timing attack. upgrade and go"): the earliest tech after the
+    spike, by the declare-by turn, that unlocks an upgrade of a land combat unit the civ can have when the window opens;
+    ranged first on a tie, since ranged units take cities without siege. The Aztec: Construction (Archer to Composite
+    Bowman), about T47 Standard, T31 Quick, ahead of the T41-50 Quick declaration. `eUpgradeTech` and `iUpgradeTurn` in
+    `CvStrikeWindow` and the profile, so War can time the declaration on it (`a55a585`).
 - **The draft table** (BNW's unique units, which CP keeps; turns are the estimate above, Standard speed; the real values
   are in StrategyProfile_Log.csv from the first logged game on this build):
 
@@ -3369,10 +3375,10 @@ logged pair".
 
   Also `GetStrikeWindow(start, end)` and `IsInStrikeWindow()` (in the turns and the spike's tech known). War builds
   StrikeWindow/EarlyStrike on top, behind its own flags.
-- **Status:** draft. `1173f7c` and War's fields (`d1d4063`) merged into `claude/ab-c1` by the lead; War agreed the
-  interface as built (EarlyStrike, `e4268e7`, one `FIX_EARLY_STRIKE` with Economy's book half). The window recalibrated
-  to the user's declaration: `bed8e14` (supersedes the held `b5432b5`), CI pending. The table needs checking against
-  the log.
+- **Status:** draft. `1173f7c`, War's fields (`d1d4063`) and the recalibrated window (`bed8e14`) merged into
+  `claude/ab-c1` (`ec78b0d`) by the lead. War's revised half (`3b0d6f0`) no longer calls `GetStrikeWindow` (its build-up
+  opens at the normal T40 Standard on Economy's book), so the window is in the profile and the logs only for now. The
+  upgrade tech: `a55a585`, CI pending. The table needs checking against the log.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
