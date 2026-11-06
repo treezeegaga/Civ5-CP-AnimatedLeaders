@@ -1830,7 +1830,7 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
-### EarlyStrike book as the expert openings (Economy, patch 0031, Nov 5, 9:54pm ET)
+### EarlyStrike book as the expert openings (Economy, patch 0031, Nov 5, 9:52pm ET)
 
 The user (via the lead, 9:58pm ET): "no, we dont need a baseline. use the experts ideas right away and we will know if
 they are good by if they take cities." So this replaces the plan above. It's under `EarlyStrike`, with no new flag.
