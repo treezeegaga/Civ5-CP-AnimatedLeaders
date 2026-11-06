@@ -1950,6 +1950,31 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0052: a civ that never fights stays banned (Economy, Nov 6, 2:32pm ET)
+The user: "a civ that never fights stays banned from wonders and gifts all game. an aggressive civ that doesn't fight is
+a failed state anyway."
+
+**The leak.** In bullygreedy23 game 7 (`16DAE4CC`, ab-0cb5402), the Aztecs' strike went OVER at T106 when its core went
+obsolete. They never declared a war that stood all game. Even so, they built:
+- the Artists' Guild (T112), the Writers' Guild (T116), the Statue of Zeus (T129) and Notre Dame (T145);
+- city-state gold to Ur (T118, T135) and Mogadishu (T135).
+
+The cause: from T48 to T71 they "declared" on Singapore every turn, and CP's city-state peace undid each one. War fixed
+that peace loop in `5fe900a1`. But each declaration had set `HasStrikeDeclared`, so after OVER the ban saw a civ that
+had declared.
+
+**0052** (CvMilitaryAI, CvDiplomacyAI; War's flag):
+- A declaration on a **major** counts at once.
+- A declaration on a **city-state** counts only if the war still stands at the next strike update. Otherwise it's
+  cleared. The tactical log shows "declaration on the city-state X confirmed / not counted".
+- `HasStrikeDeclared` means confirmed only.
+
+Every ban chokepoint reads it through `IsStrikeNoWonders`, 11 call sites. That covers canConstruct, the gift and
+gift-saving gates, buyout and marriage, the diplomacy loop, the production gates and the Great Engineer. The bans hold
+all game until a war of ours actually stands.
+
+**Status:** patch 0052 on ai/war `b0d7e1c`, 3 files, +30/-5. Not compiled here.
+
 ### First games on ab-0cb5402: the list, the bans, the strikes (Economy, Nov 6, 1:16pm ET)
 Two games: bullyabort23 game 1 (`15BE6EDA`, PC 1) and bullygreedy23 game 1 (`167DE984`, PC 2).
 

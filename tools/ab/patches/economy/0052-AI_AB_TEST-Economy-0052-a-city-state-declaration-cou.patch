@@ -1,0 +1,119 @@
+From 2b4d9aa8cf968df052822966507c3d62a9674229 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 19:32:37 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0052: a city-state declaration counts for
+ the bans only if the war stands
+
+The user: "a civ that never fights stays banned from wonders and gifts all game. an
+aggressive civ that doesn't fight is a failed state anyway."
+
+bullygreedy23 16DAE4CC (ab-0cb5402): the Aztecs "declared" on Singapore every turn from T48
+to T71. CP's city-state peace undid each one (War fixed that in 5fe900a1), but each one set
+HasStrikeDeclared. After the strike's OVER at T106 (the core obsolete), the bans
+(IsStrikeNoWonders after OVER) saw a civ that had declared. They lifted: the Artists' and
+Writers' Guilds, the Statue of Zeus, Notre Dame, and city-state gold to Ur and Mogadishu,
+with no war fought all game.
+
+Now SetStrikeDeclared(eTarget):
+- On a major, it counts at once (CP doesn't undo those).
+- On a city-state, it is pending (m_iStrikeDeclared = 2 + the city-state) and is confirmed
+  at the next UpdateStrikeState only if we are still at war with it; otherwise it is
+  cleared. Both outcomes are logged.
+HasStrikeDeclared means confirmed only. Every ban chokepoint (canConstruct, the gift and
+saving gates, buyout and marriage, the diplomacy loop, the production gates, the Great
+Engineer) reads it through IsStrikeNoWonders.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp |  2 +-
+ CvGameCoreDLL_Expansion2/CvMilitaryAI.cpp  | 29 ++++++++++++++++++++--
+ CvGameCoreDLL_Expansion2/CvMilitaryAI.h    |  4 +--
+ 3 files changed, 30 insertions(+), 5 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index addba96..c844d05 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -28461,7 +28461,7 @@ bool CvDiplomacyAI::DeclareWar(PlayerTypes ePlayer)
+ 		kMyTeam.declareWar(eTheirTeam, false, GetID());
+ 		// AI_AB_TEST (strike; Economy's bans): a declaration of ours (HasStrikeDeclared)
+ 		if (kMyTeam.isAtWar(eTheirTeam))
+-			m_pPlayer->GetMilitaryAI()->SetStrikeDeclared();
++			m_pPlayer->GetMilitaryAI()->SetStrikeDeclared(ePlayer);
+ 		m_pPlayer->GetCitySpecializationAI()->SetSpecializationsDirty(SPECIALIZATION_UPDATE_NOW_AT_WAR);
+ 
+ 		// Show scene to human
+diff --git a/CvGameCoreDLL_Expansion2/CvMilitaryAI.cpp b/CvGameCoreDLL_Expansion2/CvMilitaryAI.cpp
+index 4f6cb09..a7643c6 100644
+--- a/CvGameCoreDLL_Expansion2/CvMilitaryAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvMilitaryAI.cpp
+@@ -2634,6 +2634,18 @@ bool CvMilitaryAI::IsStrikeCoreUntrainable() const
+ 	return StrikeClassLacksResource(m_pPlayer, eCoreClass) && (kPlan.ePreBuildClass == NO_UNITCLASS || StrikeClassLacksResource(m_pPlayer, kPlan.ePreBuildClass));
+ }
+ 
++/// AI_AB_TEST (Economy 0052): a declaration of ours. On a major it counts at once (CP doesn't undo those). On a city-state it
++/// waits for the next strike update, and counts if the war still stands then. An earlier confirmed declaration is kept
++void CvMilitaryAI::SetStrikeDeclared(PlayerTypes eTarget)
++{
++	if (m_iStrikeDeclared == 1)
++		return;
++	if (eTarget != NO_PLAYER && eTarget >= 0 && eTarget < MAX_PLAYERS && GET_PLAYER(eTarget).isMinorCiv())
++		m_iStrikeDeclared = 2 + (int)eTarget;
++	else
++		m_iStrikeDeclared = 1;
++}
++
+ void CvMilitaryAI::UpdateStrikeState()
+ {
+ 	const bool bEarly = IsEarlyStrikeCiv();
+@@ -2642,8 +2654,21 @@ void CvMilitaryAI::UpdateStrikeState()
+ 	// Economy's request: an exact "we have declared" (its wonder and gift bans hold until then, also after an OVER). Our own
+ 	// declarations on majors (the game's counter), and every declaration of ours through CvDiplomacyAI::DeclareWar
+ 	// (SetStrikeDeclared). Not a city-state war as such: allied city-states declare on us with their major (the lead's review)
+-	if (m_iStrikeDeclared == 0 && GC.getGame().GetABTestCount(m_pPlayer->GetID(), AB_COUNT_WARS_DECLARED) > 0)
++	if (m_iStrikeDeclared != 1 && GC.getGame().GetABTestCount(m_pPlayer->GetID(), AB_COUNT_WARS_DECLARED) > 0)
+ 		m_iStrikeDeclared = 1;
++	// (Economy 0052; the user: "a civ that never fights stays banned from wonders and gifts all game") a declaration on a
++	// city-state counts only if the war still stands now. bullygreedy23 16DAE4CC (ab-0cb5402): the Aztecs "declared" on
++	// Singapore every turn T48-T71, CP's city-state peace undid each one (fixed in 5fe900a1), the flag was set anyway, and
++	// after the OVER at T106 the bans lifted: four wonders and city-state gold with no war fought all game
++	if (m_iStrikeDeclared >= 2)
++	{
++		const PlayerTypes eDeclared = (PlayerTypes)(m_iStrikeDeclared - 2);
++		const bool bStands = eDeclared >= 0 && eDeclared < MAX_PLAYERS && GET_TEAM(m_pPlayer->getTeam()).isAtWar(GET_PLAYER(eDeclared).getTeam());
++		m_iStrikeDeclared = bStands ? 1 : 0;
++		if (GC.getLogging() && GC.getAILogging() && eDeclared >= 0 && eDeclared < MAX_PLAYERS)
++			m_pPlayer->GetTacticalAI()->LogTacticalMessage(CvString::format("Strike: declaration on the city-state %s %s",
++				GET_PLAYER(eDeclared).getCivilizationShortDescription(), bStands ? "confirmed (the war stands)" : "not counted (no war a turn later)"));
++	}
+ 	if (!bEarly && !bLate)
+ 	{
+ 		if (eOld != STRIKE_OVER)
+@@ -2931,7 +2956,7 @@ void CvMilitaryAI::UpdateStrikeState()
+ 					GET_PLAYER(eCS).getCivilizationShortDescription(), bReady ? "the army ready" : "as ready as it gets"));
+ 			const bool bDeclared = m_pPlayer->GetDiplomacyAI()->DeclareWar(eCS);
+ 			if (bDeclared)
+-				m_iStrikeDeclared = 1;
++				SetStrikeDeclared(eCS);	// (0052: pending until the war still stands at the next update)
+ 			// the outcome (the lead: 22 "declaring" lines and no war in 167DE984)
+ 			if (GC.getLogging() && GC.getAILogging())
+ 				m_pPlayer->GetTacticalAI()->LogTacticalMessage(CvString::format("Strike: declaration on the city-state %s %s", GET_PLAYER(eCS).getCivilizationShortDescription(),
+diff --git a/CvGameCoreDLL_Expansion2/CvMilitaryAI.h b/CvGameCoreDLL_Expansion2/CvMilitaryAI.h
+index b55c881..a441631 100644
+--- a/CvGameCoreDLL_Expansion2/CvMilitaryAI.h
++++ b/CvGameCoreDLL_Expansion2/CvMilitaryAI.h
+@@ -255,8 +255,8 @@ public:
+ 	// strike's state, from game state only (no turns), worked out once a turn and saved. Economy's book reads it (patch 0034).
+ 	enum StrikeStateTypes { STRIKE_NONE, STRIKE_PREP, STRIKE_BUILDUP, STRIKE_WAR, STRIKE_OVER };
+ 	StrikeStateTypes GetStrikeState() const { return (StrikeStateTypes)m_iStrikeState; }
+-	void SetStrikeDeclared() { m_iStrikeDeclared = 1; }	// CvDiplomacyAI::DeclareWar: a declaration of ours (the lead's review: a city-state's war on us isn't one)
+-	bool HasStrikeDeclared() const { return m_iStrikeDeclared != 0; }	// we have declared a war: the strike's (BUILDUP -> WAR, its city-state) or any of our own since the game began (Economy's bans end here; public for CvPlayer, Economy 0045)
++	void SetStrikeDeclared(PlayerTypes eTarget = NO_PLAYER);	// CvDiplomacyAI::DeclareWar: a declaration of ours (the lead's review: a city-state's war on us isn't one). Economy 0052: on a city-state it counts once the war still stands at the next strike update
++	bool HasStrikeDeclared() const { return m_iStrikeDeclared == 1; }	// we have declared a war: the strike's (BUILDUP -> WAR, its city-state) or any of our own since the game began (Economy's bans end here; public for CvPlayer, Economy 0045) (0052: confirmed only; 2 + a city-state's index is a declaration waiting for confirmation)
+ 	bool IsStrikeArmyStrongEnough(const CvCity* pCity, int* piTurnsNeeded = NULL) const;	// can the plan's (upgraded) army take the city (the game's damage math)
+ 	bool IsStrikeTargetTakeableNow(int* piTurnsNeeded = NULL) const;	// can the army on hand take the strike target's nearest city
+ 	bool IsStrikeRefusingPeace(PlayerTypes eOther) const;	// ownership gate (2-4): no peace, approach WAR, no retreat aborts toward this player
+-- 
+2.43.0
+
