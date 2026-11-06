@@ -5121,3 +5121,25 @@ flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
   LateStrike, the army line) + ai/personality 327a15b (late rows, China, readiness tests; one flag, LateStrike) +
   Economy 0034 (books on the strike state). CI run 291 is building. It isn't merged into `claude/ab-c1` until the
   expert block ends.
+
+### Expert block done (bullygreedy18, PC 2, ab-40203a3, 10 pairs) and the next block (lead, early morning Nov 6)
+- **Captures:** 2 of 10 first games took a city (China in pair 1, by T60; Persia in pair 4, at T87). The flipped games
+  took none. Neither capture came from an EarlyStrike build-up.
+- **4 of 10 pairs were void.** EarlyStrikeAggressor picked early-spike civs that aren't warmonger personalities
+  (Polynesia, Maya, Celts, Inca). IsCandidateWarmonger then failed, so there was no conquest plan and no war.
+- **Where the strike failed** (War's and Economy's reads):
+  - the T44/T50/T60 turn limits ended the book before the build-up;
+  - the peace cap disbanded the strike army;
+  - CP built wonders (Stonehenge), and the strike civ gave city-state gifts while saving;
+  - the first settler had no escort;
+  - the army was tiny when the build-up opened, with idle gold, and the upgrades were held.
+- **The fixes, all on `claude/ab-c1` 8f9b7f9 (release `ab-8f9b7f9`):**
+  - War's strike state, with no turn windows (the user's rule);
+  - e10e2f3: EarlyStrikeAggressor picks warmongers only, and the peace cap keeps the strike army;
+  - bb2fa51/e865585: build-up purchases above the upgrade bill, and the upgrade hold lifts when the army is ready;
+  - Economy 0034-0036: the books follow the strike state; escort, no wonders and no gifts before a strike.
+- **Next block:** PC 2 runs bullygreedy19 on `ab-8f9b7f9` (RoleFixes + LateStrike); PC 1 runs bullyabort19 on the same.
+- **Open for the user:**
+  1. May a strike's build-up buy core or melee units with the gold above its upgrade bill, despite
+     WarmongerHurry/NoObsoleteHurry? The user's hurry rule refuses it today.
+  2. May a city-state be the early strike's target when no major civ is in reach?
