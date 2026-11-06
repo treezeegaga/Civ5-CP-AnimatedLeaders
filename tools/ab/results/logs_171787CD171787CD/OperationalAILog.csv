@@ -1,0 +1,707 @@
+023, America, OP_FOUND_CITY, 1144, found target for settler, score 97936 (q50)
+023, America, OP_FOUND_CITY, 1144, Skip recruiting, start with movement stage
+023, America, OP_FOUND_CITY, 1144, Found 0 potential units to recruit for operation 1144 at (25:11) with target at (27:7)
+023, America, OP_FOUND_CITY, 1144, Started Army 1145; Units Recruited 1; Max Formation Size 2; Moving To Target
+023, America, OP_FOUND_CITY, 1144, PRE Moving To Target with Army 1145; center (25:11); target (27:7); Progress 0 percent
+023, America, OP_FOUND_CITY, 1144, POST Moving To Target with Army 1145; center (27:10); target (27:7); Progress 20 percent
+024, America, OP_FOUND_CITY, 1144, PRE Moving To Target with Army 1145; center (27:10); target (27:7); Progress 20 percent
+024, America, OP_FOUND_CITY, 1144, POST Moving To Target with Army 1145; center (28:8); target (27:7); Progress 100 percent
+025, America, OP_FOUND_CITY, 1144, PRE Moving To Target with Army 1145; center (28:8); target (27:7); Progress 100 percent
+025, America, OP_FOUND_CITY, 1144, Transition to target stage
+025, America, OP_FOUND_CITY, 1144, City founded (New York) at (27:7), plot value 100078, q50
+025, America, OP_FOUND_CITY, 1144, Transition to finished stage
+025, America, OP_FOUND_CITY, 1144, POST Completed
+026, America, OP_FOUND_CITY, 1144, Ended: Success; Distance 5; Duration 3
+029, Poland, OP_FOUND_CITY, 1175, found target for settler, score 92440 (q50)
+029, Poland, OP_FOUND_CITY, 1175, Initial stage is recruiting
+029, Poland, OP_FOUND_CITY, 1175, Found 0 potential units to recruit for operation 1175 at (13:38) with target at (17:36)
+029, Poland, OP_FOUND_CITY, 1175, Started Army 1176; Units Recruited 1; Max Formation Size 2; Recruiting Units
+029, Poland, OP_FOUND_CITY, 1175, PRE Recruiting Units for army 1176; Settler 1174 at (13:38) - ETA -1; Open; 
+029, Poland, OP_FOUND_CITY, 1175, Found 0 potential units to recruit for operation 1175 at (13:38) with target at (17:36)
+029, Poland, OP_FOUND_CITY, 1175, POST Recruiting Units for army 1176; Settler 1174 at (13:38) - ETA 0; Open; 
+029, India, OP_FOUND_CITY, 1179, found target for settler, score 114185 (q50)
+029, India, OP_FOUND_CITY, 1179, Skip recruiting, start with movement stage
+029, India, OP_FOUND_CITY, 1179, Found 0 potential units to recruit for operation 1179 at (36:37) with target at (33:34)
+029, India, OP_FOUND_CITY, 1179, Started Army 1180; Units Recruited 1; Max Formation Size 2; Moving To Target
+029, India, OP_FOUND_CITY, 1179, PRE Moving To Target with Army 1180; center (36:37); target (33:34); Progress 0 percent
+029, India, OP_FOUND_CITY, 1179, POST Moving To Target with Army 1180; center (34:37); target (33:34); Progress 34 percent
+030, Poland, OP_FOUND_CITY, 1175, PRE Recruiting Units for army 1176; Settler 1174 at (13:38) - ETA 0; Open; 
+030, Poland, OP_FOUND_CITY, 1175, Found 0 potential units to recruit for operation 1175 at (13:38) with target at (17:36)
+030, Poland, OP_FOUND_CITY, 1175, POST Recruiting Units for army 1176; Settler 1174 at (13:38) - ETA 0; Open; 
+030, India, OP_FOUND_CITY, 1179, PRE Moving To Target with Army 1180; center (34:37); target (33:34); Progress 34 percent
+030, India, OP_FOUND_CITY, 1179, POST Moving To Target with Army 1180; center (33:35); target (33:34); Progress 100 percent
+031, Poland, OP_FOUND_CITY, 1175, PRE Recruiting Units for army 1176; Settler 1174 at (13:38) - ETA 0; Open; 
+031, Poland, OP_FOUND_CITY, 1175, Found 0 potential units to recruit for operation 1175 at (13:38) with target at (17:36)
+031, Poland, OP_FOUND_CITY, 1175, POST Recruiting Units for army 1176; Settler 1174 at (13:38) - ETA 0; Open; 
+031, India, OP_FOUND_CITY, 1179, PRE Moving To Target with Army 1180; center (33:35); target (33:34); Progress 100 percent
+031, India, OP_FOUND_CITY, 1179, Transition to target stage
+031, India, OP_FOUND_CITY, 1179, POST At Target
+032, Poland, OP_FOUND_CITY, 1175, PRE Recruiting Units for army 1176; Settler 1174 at (13:38) - ETA 0; Open; 
+032, Poland, OP_FOUND_CITY, 1175, Found 0 potential units to recruit for operation 1175 at (13:38) with target at (17:36)
+032, Poland, OP_FOUND_CITY, 1175, POST Recruiting Units for army 1176; Settler 1174 at (13:38) - ETA 0; Open; 
+032, Songhai, OP_FOUND_CITY, 1196, found target for settler, score 132057 (q50)
+032, Songhai, OP_FOUND_CITY, 1196, Initial stage is recruiting
+032, Songhai, OP_FOUND_CITY, 1196, Found 0 potential units to recruit for operation 1196 at (37:28) with target at (41:29)
+032, Songhai, OP_FOUND_CITY, 1196, Started Army 1197; Units Recruited 1; Max Formation Size 2; Recruiting Units
+032, Songhai, OP_FOUND_CITY, 1196, PRE Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA -1; Open; 
+032, Songhai, OP_FOUND_CITY, 1196, Found 0 potential units to recruit for operation 1196 at (37:28) with target at (41:29)
+032, Songhai, OP_FOUND_CITY, 1196, POST Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+032, India, OP_FOUND_CITY, 1179, PRE At Target
+032, India, OP_FOUND_CITY, 1179, City founded (Mumbai) at (33:34), plot value 96654, q50
+032, India, OP_FOUND_CITY, 1179, Transition to finished stage
+032, India, OP_FOUND_CITY, 1179, Ended: Success; Distance 6; Duration 3
+033, Poland, OP_FOUND_CITY, 1175, PRE Recruiting Units for army 1176; Settler 1174 at (13:38) - ETA 0; Open; 
+033, Poland, OP_FOUND_CITY, 1175, Found 1 potential units to recruit for operation 1175 at (13:38) with target at (17:36)
+033, Poland, OP_FOUND_CITY, 1175, Added Warrior 1202 to slot 1 in army 1176. ETA at (13:38) is 0 
+033, Poland, OP_FOUND_CITY, 1175, Transition to gathering stage
+033, Poland, OP_FOUND_CITY, 1175, POST Gathering Forces for army 1176; center (14:37); variance (0.00:0.00); free slots 0
+033, Songhai, OP_FOUND_CITY, 1196, PRE Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+033, Songhai, OP_FOUND_CITY, 1196, Found 0 potential units to recruit for operation 1196 at (37:28) with target at (41:29)
+033, Songhai, OP_FOUND_CITY, 1196, POST Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+034, Poland, OP_FOUND_CITY, 1175, PRE Gathering Forces for army 1176; center (14:37); variance (0.00:0.00); free slots 0
+034, Poland, OP_FOUND_CITY, 1175, Transition to movement stage
+034, Poland, OP_FOUND_CITY, 1175, POST Moving To Target with Army 1176; center (14:37); target (17:36); Progress 0 percent
+034, Songhai, OP_FOUND_CITY, 1196, PRE Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+034, Songhai, OP_FOUND_CITY, 1196, Found 0 potential units to recruit for operation 1196 at (37:28) with target at (41:29)
+034, Songhai, OP_FOUND_CITY, 1196, POST Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+035, Poland, OP_FOUND_CITY, 1175, PRE Moving To Target with Army 1176; center (16:36); target (17:36); Progress 100 percent
+035, Poland, OP_FOUND_CITY, 1175, POST Moving To Target with Army 1176; center (14:36); target (17:36); Progress 0 percent
+035, Songhai, OP_FOUND_CITY, 1196, PRE Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+035, Songhai, OP_FOUND_CITY, 1196, Found 0 potential units to recruit for operation 1196 at (37:28) with target at (41:29)
+035, Songhai, OP_FOUND_CITY, 1196, POST Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+036, Poland, OP_FOUND_CITY, 1175, PRE Moving To Target with Army 1176; center (14:36); target (17:36); Progress 0 percent
+036, Poland, OP_FOUND_CITY, 1175, POST Moving To Target with Army 1176; center (16:36); target (17:36); Progress 100 percent
+036, Songhai, OP_FOUND_CITY, 1196, PRE Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+036, Songhai, OP_FOUND_CITY, 1196, Found 0 potential units to recruit for operation 1196 at (37:28) with target at (41:29)
+036, Songhai, OP_FOUND_CITY, 1196, POST Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+037, Poland, OP_FOUND_CITY, 1175, PRE Moving To Target with Army 1176; center (16:36); target (17:36); Progress 100 percent
+037, Poland, OP_FOUND_CITY, 1175, Transition to target stage
+037, Poland, OP_FOUND_CITY, 1175, POST At Target
+037, The_Shoshone, OP_FOUND_CITY, 1229, found target for settler, score 101548 (q50)
+037, The_Shoshone, OP_FOUND_CITY, 1229, Initial stage is recruiting
+037, The_Shoshone, OP_FOUND_CITY, 1229, Found 0 potential units to recruit for operation 1229 at (28:39) with target at (31:41)
+037, The_Shoshone, OP_FOUND_CITY, 1229, Started Army 1230; Units Recruited 1; Max Formation Size 2; Recruiting Units
+037, The_Shoshone, OP_FOUND_CITY, 1229, PRE Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA -1; Open; 
+037, The_Shoshone, OP_FOUND_CITY, 1229, Found 0 potential units to recruit for operation 1229 at (28:39) with target at (31:41)
+037, The_Shoshone, OP_FOUND_CITY, 1229, POST Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+037, Songhai, OP_FOUND_CITY, 1196, PRE Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+037, Songhai, OP_FOUND_CITY, 1196, Found 0 potential units to recruit for operation 1196 at (37:28) with target at (41:29)
+037, Songhai, OP_FOUND_CITY, 1196, POST Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+038, Poland, OP_FOUND_CITY, 1175, PRE At Target
+038, Poland, OP_FOUND_CITY, 1175, City founded (Krakow) at (17:36), plot value 92395, q50
+038, Poland, OP_FOUND_CITY, 1175, Transition to finished stage
+038, Poland, OP_FOUND_CITY, 1175, Ended: Success; Distance 4; Duration 9
+038, The_Shoshone, OP_FOUND_CITY, 1229, PRE Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+038, The_Shoshone, OP_FOUND_CITY, 1229, Found 0 potential units to recruit for operation 1229 at (28:39) with target at (31:41)
+038, The_Shoshone, OP_FOUND_CITY, 1229, POST Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+038, Songhai, OP_FOUND_CITY, 1196, PRE Recruiting Units for army 1197; Settler 1195 at (37:28) - ETA 0; Open; 
+038, Songhai, OP_FOUND_CITY, 1196, Found 1 potential units to recruit for operation 1196 at (37:28) with target at (41:29)
+038, Songhai, OP_FOUND_CITY, 1196, Added Warrior 1253 to slot 1 in army 1197. ETA at (37:28) is 0 
+038, Songhai, OP_FOUND_CITY, 1196, Added Warrior 1014 to slot 1 in army 1197. ETA at (37:28) is 0 
+038, Songhai, OP_FOUND_CITY, 1196, Transition to gathering stage
+038, Songhai, OP_FOUND_CITY, 1196, Transition to movement stage
+038, Songhai, OP_FOUND_CITY, 1196, POST Moving To Target with Army 1197; center (37:28); target (41:29); Progress 0 percent
+039, The_Shoshone, OP_FOUND_CITY, 1229, PRE Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+039, The_Shoshone, OP_FOUND_CITY, 1229, Found 0 potential units to recruit for operation 1229 at (28:39) with target at (31:41)
+039, The_Shoshone, OP_FOUND_CITY, 1229, POST Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+039, Songhai, OP_FOUND_CITY, 1196, PRE Moving To Target with Army 1197; center (37:28); target (41:29); Progress 0 percent
+039, Songhai, OP_FOUND_CITY, 1196, POST Moving To Target with Army 1197; center (38:29); target (41:29); Progress 34 percent
+040, The_Shoshone, OP_FOUND_CITY, 1229, PRE Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+040, The_Shoshone, OP_FOUND_CITY, 1229, Found 0 potential units to recruit for operation 1229 at (28:39) with target at (31:41)
+040, The_Shoshone, OP_FOUND_CITY, 1229, POST Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+040, Songhai, OP_FOUND_CITY, 1196, PRE Moving To Target with Army 1197; center (38:29); target (41:29); Progress 34 percent
+040, Songhai, OP_FOUND_CITY, 1196, POST Moving To Target with Army 1197; center (40:29); target (41:29); Progress 100 percent
+041, The_Aztecs, OP_FOUND_CITY, 1280, found target for settler, score 95725 (q50)
+041, The_Aztecs, OP_FOUND_CITY, 1280, Skip recruiting, start with movement stage
+041, The_Aztecs, OP_FOUND_CITY, 1280, Found 3 potential units to recruit for operation 1280 at (23:21) with target at (19:22)
+041, The_Aztecs, OP_FOUND_CITY, 1280, Added Jaguar 1010 to slot 1 in army 1281. ETA at (23:21) is 0 
+041, The_Aztecs, OP_FOUND_CITY, 1280, Started Army 1281; Units Recruited 2; Max Formation Size 2; Moving To Target
+041, The_Aztecs, OP_FOUND_CITY, 1280, PRE Moving To Target with Army 1281; center (23:21); target (19:22); Progress 0 percent
+041, The_Aztecs, OP_FOUND_CITY, 1280, POST Moving To Target with Army 1281; center (22:21); target (19:22); Progress 17 percent
+041, The_Shoshone, OP_FOUND_CITY, 1229, PRE Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+041, The_Shoshone, OP_FOUND_CITY, 1229, Found 0 potential units to recruit for operation 1229 at (28:39) with target at (31:41)
+041, The_Shoshone, OP_FOUND_CITY, 1229, POST Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+041, Songhai, OP_FOUND_CITY, 1196, PRE Moving To Target with Army 1197; center (40:29); target (41:29); Progress 100 percent
+041, Songhai, OP_FOUND_CITY, 1196, Transition to target stage
+041, Songhai, OP_FOUND_CITY, 1196, City founded (Tombouctu) at (41:29), plot value 132057, q50
+041, Songhai, OP_FOUND_CITY, 1196, Transition to finished stage
+041, Songhai, OP_FOUND_CITY, 1196, POST Completed
+042, The_Iroquois, OP_FOUND_CITY, 1296, found target for settler, score 115437 (q50)
+042, The_Iroquois, OP_FOUND_CITY, 1296, Initial stage is recruiting
+042, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+042, The_Iroquois, OP_FOUND_CITY, 1296, Started Army 1297; Units Recruited 1; Max Formation Size 2; Recruiting Units
+042, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA -1; Open; 
+042, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+042, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+042, The_Aztecs, OP_FOUND_CITY, 1280, PRE Moving To Target with Army 1281; center (22:21); target (19:22); Progress 17 percent
+042, The_Aztecs, OP_FOUND_CITY, 1280, POST Moving To Target with Army 1281; center (20:21); target (19:22); Progress 50 percent
+042, The_Shoshone, OP_FOUND_CITY, 1229, PRE Recruiting Units for army 1230; Settler 1228 at (28:39) - ETA 0; Open; 
+042, The_Shoshone, OP_FOUND_CITY, 1229, Found 0 potential units to recruit for operation 1229 at (28:39) with target at (31:41)
+042, The_Shoshone, OP_FOUND_CITY, 1229, No escort yet and the trip looks safe, going alone
+042, The_Shoshone, OP_FOUND_CITY, 1229, Transition to gathering stage
+042, The_Shoshone, OP_FOUND_CITY, 1229, Transition to movement stage
+042, The_Shoshone, OP_FOUND_CITY, 1229, POST Moving To Target with Army 1230; center (28:39); target (31:41); Progress 0 percent
+042, Songhai, OP_FOUND_CITY, 1196, Ended: Success; Distance 6; Duration 10
+043, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+043, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+043, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+043, The_Aztecs, OP_FOUND_CITY, 1280, PRE Moving To Target with Army 1281; center (20:21); target (19:22); Progress 50 percent
+043, The_Aztecs, OP_FOUND_CITY, 1280, Transition to target stage
+043, The_Aztecs, OP_FOUND_CITY, 1280, POST At Target
+043, The_Shoshone, OP_FOUND_CITY, 1229, PRE Moving To Target with Army 1230; center (28:39); target (31:41); Progress 0 percent
+043, The_Shoshone, OP_FOUND_CITY, 1229, POST Moving To Target with Army 1230; center (30:40); target (31:41); Progress 40 percent
+044, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+044, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+044, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+044, The_Aztecs, OP_FOUND_CITY, 1280, PRE At Target
+044, The_Aztecs, OP_FOUND_CITY, 1280, City founded (Teotihuacan) at (19:22), plot value 95725, q50
+044, The_Aztecs, OP_FOUND_CITY, 1280, Transition to finished stage
+044, The_Aztecs, OP_FOUND_CITY, 1280, Ended: Success; Distance 6; Duration 3
+044, The_Shoshone, OP_FOUND_CITY, 1229, PRE Moving To Target with Army 1230; center (30:40); target (31:41); Progress 40 percent
+044, The_Shoshone, OP_FOUND_CITY, 1229, Transition to target stage
+044, The_Shoshone, OP_FOUND_CITY, 1229, POST At Target
+045, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+045, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+045, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+045, The_Shoshone, OP_FOUND_CITY, 1229, PRE At Target
+045, The_Shoshone, OP_FOUND_CITY, 1229, City founded (Te-Moak) at (31:41), plot value 101548, q50
+045, The_Shoshone, OP_FOUND_CITY, 1229, Transition to finished stage
+045, The_Shoshone, OP_FOUND_CITY, 1229, Ended: Success; Distance 5; Duration 8
+046, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+046, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+046, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+046, America, OP_FOUND_CITY, 1347, found target for settler, score 128280 (q50)
+046, America, OP_FOUND_CITY, 1347, Skip recruiting, start with movement stage
+046, America, OP_FOUND_CITY, 1347, Found 1 potential units to recruit for operation 1347 at (25:11) with target at (21:8)
+046, America, OP_FOUND_CITY, 1347, Added Warrior 1148 to slot 1 in army 1348. ETA at (25:11) is 1 
+046, America, OP_FOUND_CITY, 1347, Started Army 1348; Units Recruited 2; Max Formation Size 2; Moving To Target
+046, America, OP_FOUND_CITY, 1347, PRE Moving To Target with Army 1348; center (25:11); target (21:8); Progress 0 percent
+046, America, OP_FOUND_CITY, 1347, POST Moving To Target with Army 1348; center (27:8); target (21:8); Progress 0 percent
+047, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+047, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+047, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+047, America, OP_FOUND_CITY, 1347, PRE Moving To Target with Army 1348; center (27:8); target (21:8); Progress 0 percent
+047, America, OP_FOUND_CITY, 1347, POST Moving To Target with Army 1348; center (25:10); target (21:8); Progress 15 percent
+048, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+048, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+048, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+048, America, OP_FOUND_CITY, 1347, PRE Moving To Target with Army 1348; center (25:10); target (21:8); Progress 15 percent
+048, America, OP_FOUND_CITY, 1347, POST Moving To Target with Army 1348; center (23:9); target (21:8); Progress 43 percent
+049, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+049, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+049, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+049, America, OP_FOUND_CITY, 1347, PRE Moving To Target with Army 1348; center (23:9); target (21:8); Progress 43 percent
+049, America, OP_FOUND_CITY, 1347, POST Moving To Target with Army 1348; center (23:8); target (21:8); Progress 58 percent
+050, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+050, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+050, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+050, America, OP_FOUND_CITY, 1347, PRE Moving To Target with Army 1348; center (23:8); target (21:8); Progress 58 percent
+050, America, OP_FOUND_CITY, 1347, POST Moving To Target with Army 1348; center (22:8); target (21:8); Progress 100 percent
+051, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+051, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+051, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+051, America, OP_FOUND_CITY, 1347, PRE Moving To Target with Army 1348; center (22:8); target (21:8); Progress 100 percent
+051, America, OP_FOUND_CITY, 1347, Transition to target stage
+051, America, OP_FOUND_CITY, 1347, POST At Target
+052, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+052, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+052, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+052, America, OP_FOUND_CITY, 1347, PRE At Target
+052, America, OP_FOUND_CITY, 1347, City founded (Boston) at (21:8), plot value 128280, q50
+052, America, OP_FOUND_CITY, 1347, Transition to finished stage
+052, America, OP_FOUND_CITY, 1347, Ended: Success; Distance 7; Duration 6
+053, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+053, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+053, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+053, Songhai, OP_FOUND_CITY, 1450, found target for settler, score 90577 (q50)
+053, Songhai, OP_FOUND_CITY, 1450, Initial stage is recruiting
+053, Songhai, OP_FOUND_CITY, 1450, Found 1 potential units to recruit for operation 1450 at (37:28) with target at (41:24)
+053, Songhai, OP_FOUND_CITY, 1450, Added Warrior 1014 to slot 1 in army 1451. ETA at (37:28) is 1 
+053, Songhai, OP_FOUND_CITY, 1450, Transition to gathering stage
+053, Songhai, OP_FOUND_CITY, 1450, Started Army 1451; Units Recruited 2; Max Formation Size 2; Gathering Forces
+053, Songhai, OP_FOUND_CITY, 1450, PRE Gathering Forces for army 1451; center (41:29); variance (4.00:0.25); free slots 0
+053, Songhai, OP_FOUND_CITY, 1450, POST Gathering Forces for army 1451; center (40:29); variance (2.25:0.25); free slots 0
+054, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+054, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+054, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+054, Songhai, OP_FOUND_CITY, 1450, PRE Gathering Forces for army 1451; center (40:29); variance (2.25:0.25); free slots 0
+054, Songhai, OP_FOUND_CITY, 1450, Transition to movement stage
+054, Songhai, OP_FOUND_CITY, 1450, POST Moving To Target with Army 1451; center (38:29); target (41:24); Progress 15 percent
+055, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+055, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+055, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+055, Songhai, OP_FOUND_CITY, 1450, PRE Moving To Target with Army 1451; center (38:29); target (41:24); Progress 15 percent
+055, Songhai, OP_FOUND_CITY, 1450, POST Moving To Target with Army 1451; center (38:28); target (41:24); Progress 15 percent
+056, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+056, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+056, The_Iroquois, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+056, Venice, OP_MERCHANT, 1494, Skip recruiting, start with movement stage
+056, Venice, OP_MERCHANT, 1494, Found 0 potential units to recruit for operation 1494 at (46:36) with target at (45:43)
+056, Venice, OP_MERCHANT, 1494, Started Army 1495; Units Recruited 1; Max Formation Size 2; Moving To Target
+056, Venice, OP_MERCHANT, 1494, PRE Moving To Target with Army 1495; center (46:36); target (45:43); Progress 100 percent
+056, Venice, OP_MERCHANT, 1494, POST Moving To Target with Army 1495; center (46:38); target (45:43); Progress 100 percent
+056, Songhai, OP_FOUND_CITY, 1450, PRE Moving To Target with Army 1451; center (38:28); target (41:24); Progress 15 percent
+056, Songhai, OP_FOUND_CITY, 1450, POST Moving To Target with Army 1451; center (39:27); target (41:24); Progress 43 percent
+057, The_Iroquois, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (38:18) - ETA 0; Open; 
+057, The_Iroquois, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (38:18) with target at (41:22)
+057, The_Iroquois, OP_FOUND_CITY, 1296, No escort yet and the trip looks safe, going alone
+057, The_Iroquois, OP_FOUND_CITY, 1296, Transition to gathering stage
+057, The_Iroquois, OP_FOUND_CITY, 1296, Transition to movement stage
+057, The_Iroquois, OP_FOUND_CITY, 1296, POST Moving To Target with Army 1297; center (38:18); target (41:22); Progress 0 percent
+057, Venice, OP_MERCHANT, 1494, PRE Moving To Target with Army 1495; center (46:38); target (45:43); Progress 100 percent
+057, Venice, OP_MERCHANT, 1494, POST Moving To Target with Army 1495; center (45:41); target (45:43); Progress 100 percent
+057, Songhai, OP_FOUND_CITY, 1450, PRE Moving To Target with Army 1451; center (39:27); target (41:24); Progress 43 percent
+057, Songhai, OP_FOUND_CITY, 1450, POST Moving To Target with Army 1451; center (40:26); target (41:24); Progress 58 percent
+058, The_Iroquois, OP_FOUND_CITY, 1296, PRE Moving To Target with Army 1297; center (38:18); target (41:22); Progress 0 percent
+058, The_Iroquois, OP_FOUND_CITY, 1296, POST Moving To Target with Army 1297; center (39:19); target (41:22); Progress 34 percent
+058, Venice, OP_MERCHANT, 1494, PRE Moving To Target with Army 1495; center (45:41); target (45:43); Progress 100 percent
+058, Venice, OP_MERCHANT, 1494, Transition to target stage
+058, Venice, OP_MERCHANT, 1494, POST At Target
+058, The_Shoshone, OP_RAPID_RESPONSE, 1535, Initial stage is recruiting
+058, The_Shoshone, OP_RAPID_RESPONSE, 1535, Found 1 potential units to recruit for operation 1535 at (31:41) with target at (36:37)
+058, The_Shoshone, OP_RAPID_RESPONSE, 1535, Added Warrior 1500 to slot 0 in army 1536. ETA at (31:41) is 0 
+058, The_Shoshone, OP_RAPID_RESPONSE, 1535, Started Army 1536; Units Recruited 1; Max Formation Size 4; Recruiting Units
+058, The_Shoshone, OP_RAPID_RESPONSE, 1535, PRE Recruiting Units for army 1536; Warrior 1500 at (28:39) - ETA 0; Open; Open; Open; 
+058, The_Shoshone, OP_RAPID_RESPONSE, 1535, Found 0 potential units to recruit for operation 1535 at (31:41) with target at (36:37)
+058, The_Shoshone, OP_RAPID_RESPONSE, 1535, POST Recruiting Units for army 1536; Warrior 1500 at (29:39) - ETA 0; Open; Open; Open; 
+058, Songhai, OP_FOUND_CITY, 1450, PRE Moving To Target with Army 1451; center (40:26); target (41:24); Progress 58 percent
+058, Songhai, OP_FOUND_CITY, 1450, Transition to target stage
+058, Songhai, OP_FOUND_CITY, 1450, POST At Target
+059, Poland, OP_FOUND_CITY, 1549, found target for settler, score 49889 (q-6)
+059, Poland, OP_FOUND_CITY, 1549, Initial stage is recruiting
+059, Poland, OP_FOUND_CITY, 1549, Found 0 potential units to recruit for operation 1549 at (13:38) with target at (22:35)
+059, Poland, OP_FOUND_CITY, 1549, Started Army 1550; Units Recruited 1; Max Formation Size 2; Recruiting Units
+059, Poland, OP_FOUND_CITY, 1549, PRE Recruiting Units for army 1550; Settler 1531 at (13:38) - ETA -1; Open; 
+059, Poland, OP_FOUND_CITY, 1549, Found 0 potential units to recruit for operation 1549 at (13:38) with target at (22:35)
+059, Poland, OP_FOUND_CITY, 1549, POST Recruiting Units for army 1550; Settler 1531 at (13:38) - ETA 0; Open; 
+059, The_Iroquois, OP_FOUND_CITY, 1296, PRE Moving To Target with Army 1297; center (39:19); target (41:22); Progress 34 percent
+059, The_Iroquois, OP_FOUND_CITY, 1296, POST Moving To Target with Army 1297; center (40:21); target (41:22); Progress 100 percent
+059, Venice, OP_MERCHANT, 1494, PRE At Target
+059, Venice, OP_MERCHANT, 1494, Great Merchant buying city-state at (45:42)
+059, Venice, OP_MERCHANT, 1494, Transition to finished stage
+059, Venice, OP_MERCHANT, 1494, Ended: Success; Distance -1; Duration 3
+059, The_Shoshone, OP_RAPID_RESPONSE, 1535, Ended: NoTarget; Distance -1; Duration 1
+059, Songhai, OP_FOUND_CITY, 1450, PRE At Target
+059, Songhai, OP_FOUND_CITY, 1450, City founded (Jenne) at (41:24), plot value 88747, q50
+059, Songhai, OP_FOUND_CITY, 1450, Transition to finished stage
+059, Songhai, OP_FOUND_CITY, 1450, Ended: Success; Distance 7; Duration 6
+060, Poland, OP_FOUND_CITY, 1549, PRE Recruiting Units for army 1550; Settler 1531 at (13:38) - ETA 0; Open; 
+060, Poland, OP_FOUND_CITY, 1549, Found 0 potential units to recruit for operation 1549 at (13:38) with target at (22:35)
+060, Poland, OP_FOUND_CITY, 1549, POST Recruiting Units for army 1550; Settler 1531 at (13:38) - ETA 0; Open; 
+060, The_Iroquois, OP_FOUND_CITY, 1296, cannot found city at (41:22)
+060, The_Iroquois, OP_FOUND_CITY, 1296, found better target for settler, old score -1 (q-50), new score 91926 (q50)
+060, The_Iroquois, OP_FOUND_CITY, 1296, setting new target (42:19)
+060, The_Iroquois, OP_FOUND_CITY, 1296, PRE Moving To Target with Army 1297; center (40:21); target (42:19); Progress 34 percent
+060, The_Iroquois, OP_FOUND_CITY, 1296, POST Moving To Target with Army 1297; center (41:19); target (42:19); Progress 100 percent
+060, India, OP_FOUND_CITY, 1592, found target for settler, score 72649 (q37)
+060, India, OP_FOUND_CITY, 1592, Skip recruiting, start with movement stage
+060, India, OP_FOUND_CITY, 1592, Found 0 potential units to recruit for operation 1592 at (36:37) with target at (40:39)
+060, India, OP_FOUND_CITY, 1592, Started Army 1593; Units Recruited 1; Max Formation Size 2; Moving To Target
+060, India, OP_FOUND_CITY, 1592, PRE Moving To Target with Army 1593; center (36:37); target (40:39); Progress 0 percent
+060, India, OP_FOUND_CITY, 1592, POST Moving To Target with Army 1593; center (38:38); target (40:39); Progress 34 percent
+061, Poland, OP_FOUND_CITY, 1549, PRE Recruiting Units for army 1550; Settler 1531 at (13:38) - ETA 0; Open; 
+061, Poland, OP_FOUND_CITY, 1549, Found 1 potential units to recruit for operation 1549 at (13:38) with target at (22:35)
+061, Poland, OP_FOUND_CITY, 1549, Added Warrior 1294 to slot 1 in army 1550. ETA at (13:38) is 0 
+061, Poland, OP_FOUND_CITY, 1549, Transition to gathering stage
+061, Poland, OP_FOUND_CITY, 1549, POST Gathering Forces for army 1550; center (14:39); variance (0.25:0.25); free slots 0
+061, The_Iroquois, OP_FOUND_CITY, 1296, PRE Moving To Target with Army 1297; center (41:19); target (42:19); Progress 100 percent
+061, The_Iroquois, OP_FOUND_CITY, 1296, Transition to target stage
+061, The_Iroquois, OP_FOUND_CITY, 1296, POST At Target
+061, America, OP_FOUND_CITY, 1598, found target for settler, score 62654 (q18)
+061, America, OP_FOUND_CITY, 1598, Skip recruiting, start with movement stage
+061, America, OP_FOUND_CITY, 1598, Found 1 potential units to recruit for operation 1598 at (25:11) with target at (19:12)
+061, America, OP_FOUND_CITY, 1598, Added Warrior 1148 to slot 1 in army 1599. ETA at (21:8) is 0 
+061, America, OP_FOUND_CITY, 1598, Started Army 1599; Units Recruited 2; Max Formation Size 2; Moving To Target
+061, America, OP_FOUND_CITY, 1598, PRE Moving To Target with Army 1599; center (21:8); target (19:12); Progress 40 percent
+061, America, OP_FOUND_CITY, 1598, POST Moving To Target with Army 1599; center (25:10); target (19:12); Progress 0 percent
+061, India, OP_FOUND_CITY, 1592, PRE Moving To Target with Army 1593; center (38:38); target (40:39); Progress 34 percent
+061, India, OP_FOUND_CITY, 1592, POST Moving To Target with Army 1593; center (40:38); target (40:39); Progress 100 percent
+062, Poland, OP_FOUND_CITY, 1549, PRE Gathering Forces for army 1550; center (14:39); variance (0.25:0.25); free slots 0
+062, Poland, OP_FOUND_CITY, 1549, Transition to movement stage
+062, Poland, OP_FOUND_CITY, 1549, POST Moving To Target with Army 1550; center (13:38); target (22:35); Progress 0 percent
+062, The_Iroquois, OP_FOUND_CITY, 1296, PRE At Target
+062, The_Iroquois, OP_FOUND_CITY, 1296, City founded (Osininka) at (42:19), plot value 91926, q50
+062, The_Iroquois, OP_FOUND_CITY, 1296, Transition to finished stage
+062, The_Iroquois, OP_FOUND_CITY, 1296, Ended: Success; Distance 6; Duration 20
+062, America, OP_FOUND_CITY, 1598, PRE Moving To Target with Army 1599; center (25:10); target (19:12); Progress 0 percent
+062, America, OP_FOUND_CITY, 1598, POST Moving To Target with Army 1599; center (23:9); target (19:12); Progress 20 percent
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Initial stage is recruiting
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Found 5 potential units to recruit for operation 1612 at (23:21) with target at (17:17)
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Added Jaguar 1131 to slot 0 in army 1613. ETA at (23:21) is 0 
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Added Composite Bowman 1432 to slot 3 in army 1613. ETA at (23:21) is 0 
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Added Composite Bowman 1463 to slot 4 in army 1613. ETA at (23:21) is 0 
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Added Composite Bowman 1578 to slot 5 in army 1613. ETA at (23:21) is 0 
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Added Balamber (Great General) 1221 to slot 8 in army 1613. ETA at (23:21) is 0 
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Started Army 1613; Units Recruited 5; Max Formation Size 10; Recruiting Units
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, PRE Recruiting Units for army 1613; Jaguar 1131 at (22:23) - ETA 0; Open; Open; Composite Bowman 1432 at (23:20) - ETA 0; Composite Bowman 1463 at (23:19) - ETA 0; Composite Bowman 1578 at (22:19) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:21) - ETA 0; Open; 
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Found 1 potential units to recruit for operation 1612 at (23:21) with target at (17:17)
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Added Jaguar 1614 to slot 1 in army 1613. ETA at (23:21) is 0 
+062, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, POST Recruiting Units for army 1613; Jaguar 1131 at (22:23) - ETA 0; Jaguar 1614 at (24:22) - ETA 0; Open; Composite Bowman 1432 at (24:20) - ETA 0; Composite Bowman 1463 at (23:20) - ETA 0; Composite Bowman 1578 at (22:21) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:20) - ETA 0; Open; 
+062, India, OP_FOUND_CITY, 1592, PRE Moving To Target with Army 1593; center (40:38); target (40:39); Progress 100 percent
+062, India, OP_FOUND_CITY, 1592, Transition to target stage
+062, India, OP_FOUND_CITY, 1592, City founded (Vijayanagara) at (40:39), plot value 73832, q39
+062, India, OP_FOUND_CITY, 1592, Transition to finished stage
+062, India, OP_FOUND_CITY, 1592, POST Completed
+063, Poland, OP_FOUND_CITY, 1549, PRE Moving To Target with Army 1550; center (13:38); target (22:35); Progress 0 percent
+063, Poland, OP_FOUND_CITY, 1549, POST Moving To Target with Army 1550; center (14:36); target (22:35); Progress 17 percent
+063, America, OP_FOUND_CITY, 1598, PRE Moving To Target with Army 1599; center (23:9); target (19:12); Progress 20 percent
+063, America, OP_FOUND_CITY, 1598, POST Moving To Target with Army 1599; center (23:8); target (19:12); Progress 20 percent
+063, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, PRE Recruiting Units for army 1613; Jaguar 1131 at (22:23) - ETA 0; Jaguar 1614 at (24:22) - ETA 0; Open; Composite Bowman 1432 at (24:20) - ETA 0; Composite Bowman 1463 at (23:20) - ETA 0; Composite Bowman 1578 at (22:21) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:20) - ETA 0; Open; 
+063, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Found 0 potential units to recruit for operation 1612 at (23:21) with target at (17:17)
+063, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, POST Recruiting Units for army 1613; Jaguar 1131 at (23:24) - ETA 0; Jaguar 1614 at (22:21) - ETA 0; Open; Composite Bowman 1432 at (23:20) - ETA 0; Composite Bowman 1463 at (22:19) - ETA 0; Composite Bowman 1578 at (21:20) - ETA 0; Open; Open; Balamber (Great General) 1221 at (22:19) - ETA 0; Open; 
+063, India, OP_FOUND_CITY, 1592, Ended: Success; Distance 6; Duration 3
+064, Poland, OP_FOUND_CITY, 1549, PRE Moving To Target with Army 1550; center (14:36); target (22:35); Progress 17 percent
+064, Poland, OP_FOUND_CITY, 1549, POST Moving To Target with Army 1550; center (16:36); target (22:35); Progress 34 percent
+064, America, OP_FOUND_CITY, 1598, PRE Moving To Target with Army 1599; center (23:8); target (19:12); Progress 20 percent
+064, America, OP_FOUND_CITY, 1598, POST Moving To Target with Army 1599; center (22:8); target (19:12); Progress 30 percent
+064, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, PRE Recruiting Units for army 1613; Jaguar 1131 at (23:24) - ETA 0; Jaguar 1614 at (22:21) - ETA 0; Open; Composite Bowman 1432 at (23:20) - ETA 0; Composite Bowman 1463 at (22:19) - ETA 0; Composite Bowman 1578 at (21:20) - ETA 0; Open; Open; Balamber (Great General) 1221 at (22:19) - ETA 0; Open; 
+064, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Found 1 potential units to recruit for operation 1612 at (23:21) with target at (17:17)
+064, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Added Jaguar 1496 to slot 2 in army 1613. ETA at (23:21) is 3 
+064, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Transition to gathering stage
+064, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, POST Gathering Forces for army 1613; center (22:21); variance (0.41:4.20); free slots 3
+065, Poland, OP_FOUND_CITY, 1549, PRE Moving To Target with Army 1550; center (16:36); target (22:35); Progress 34 percent
+065, Poland, OP_FOUND_CITY, 1549, POST Moving To Target with Army 1550; center (18:36); target (22:35); Progress 50 percent
+065, America, OP_FOUND_CITY, 1598, PRE Moving To Target with Army 1599; center (22:8); target (19:12); Progress 30 percent
+065, America, OP_FOUND_CITY, 1598, POST Moving To Target with Army 1599; center (20:8); target (19:12); Progress 50 percent
+065, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, PRE Gathering Forces for army 1613; center (22:21); variance (0.41:4.20); free slots 3
+065, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, POST Gathering Forces for army 1613; center (23:21); variance (0.41:2.53); free slots 3
+065, Songhai, OP_RAPID_RESPONSE, 1652, Initial stage is recruiting
+065, Songhai, OP_RAPID_RESPONSE, 1652, Found 1 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+065, Songhai, OP_RAPID_RESPONSE, 1652, Added Warrior 1504 to slot 0 in army 1653. ETA at (41:29) is 1 
+065, Songhai, OP_RAPID_RESPONSE, 1652, Started Army 1653; Units Recruited 1; Max Formation Size 4; Recruiting Units
+065, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (37:28) - ETA 1; Open; Open; Open; 
+065, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+065, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (38:28) - ETA 1; Open; Open; Open; 
+066, Poland, OP_FOUND_CITY, 1549, PRE Moving To Target with Army 1550; center (18:36); target (22:35); Progress 50 percent
+066, Poland, OP_FOUND_CITY, 1549, POST Moving To Target with Army 1550; center (20:36); target (22:35); Progress 67 percent
+066, America, OP_FOUND_CITY, 1598, PRE Moving To Target with Army 1599; center (20:8); target (19:12); Progress 50 percent
+066, America, OP_FOUND_CITY, 1598, POST Moving To Target with Army 1599; center (20:10); target (19:12); Progress 70 percent
+066, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, PRE Gathering Forces for army 1613; center (23:21); variance (0.41:2.53); free slots 3
+066, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Transition to movement stage
+066, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, POST Moving To Target with Army 1613; center (22:21); target (17:17); Progress 0 percent
+066, The_Shoshone, OP_FOUND_CITY, 1668, found target for settler, score 110027 (q50)
+066, The_Shoshone, OP_FOUND_CITY, 1668, Initial stage is recruiting
+066, The_Shoshone, OP_FOUND_CITY, 1668, Found 0 potential units to recruit for operation 1668 at (28:39) with target at (24:36)
+066, The_Shoshone, OP_FOUND_CITY, 1668, Started Army 1669; Units Recruited 1; Max Formation Size 2; Recruiting Units
+066, The_Shoshone, OP_FOUND_CITY, 1668, PRE Recruiting Units for army 1669; Settler 1667 at (28:39) - ETA -1; Open; 
+066, The_Shoshone, OP_FOUND_CITY, 1668, Found 0 potential units to recruit for operation 1668 at (28:39) with target at (24:36)
+066, The_Shoshone, OP_FOUND_CITY, 1668, POST Recruiting Units for army 1669; Settler 1667 at (28:39) - ETA 0; Open; 
+066, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (38:28) - ETA 1; Open; Open; Open; 
+066, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+066, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (39:28) - ETA 0; Open; Open; Open; 
+067, Poland, OP_FOUND_CITY, 1549, PRE Moving To Target with Army 1550; center (20:36); target (22:35); Progress 67 percent
+067, Poland, OP_FOUND_CITY, 1549, POST Moving To Target with Army 1550; center (22:36); target (22:35); Progress 100 percent
+067, America, OP_FOUND_CITY, 1598, PRE Moving To Target with Army 1599; center (20:10); target (19:12); Progress 70 percent
+067, America, OP_FOUND_CITY, 1598, POST Moving To Target with Army 1599; center (19:11); target (19:12); Progress 100 percent
+067, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, PRE Moving To Target with Army 1613; center (22:21); target (17:17); Progress 0 percent
+067, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, POST Moving To Target with Army 1613; center (22:20); target (17:17); Progress 13 percent
+067, The_Shoshone, OP_FOUND_CITY, 1668, PRE Recruiting Units for army 1669; Settler 1667 at (28:39) - ETA 0; Open; 
+067, The_Shoshone, OP_FOUND_CITY, 1668, Found 0 potential units to recruit for operation 1668 at (28:39) with target at (24:36)
+067, The_Shoshone, OP_FOUND_CITY, 1668, POST Recruiting Units for army 1669; Settler 1667 at (28:39) - ETA 0; Open; 
+067, Songhai, OP_RAPID_RESPONSE, 1689, Initial stage is recruiting
+067, Songhai, OP_RAPID_RESPONSE, 1689, Found 1 potential units to recruit for operation 1689 at (41:29) with target at (41:29)
+067, Songhai, OP_RAPID_RESPONSE, 1689, Added Warrior 1253 to slot 0 in army 1690. ETA at (41:29) is 2 
+067, Songhai, OP_RAPID_RESPONSE, 1689, Started Army 1690; Units Recruited 1; Max Formation Size 4; Recruiting Units
+067, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (39:28) - ETA 0; Open; Open; Open; 
+067, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+067, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (40:29) - ETA 0; Open; Open; Open; 
+067, Songhai, OP_RAPID_RESPONSE, 1689, PRE Recruiting Units for army 1690; Warrior 1253 at (43:22) - ETA 2; Open; Open; Open; 
+067, Songhai, OP_RAPID_RESPONSE, 1689, Found 0 potential units to recruit for operation 1689 at (41:29) with target at (41:29)
+067, Songhai, OP_RAPID_RESPONSE, 1689, POST Recruiting Units for army 1690; Warrior 1253 at (43:22) - ETA 2; Open; Open; Open; 
+068, Poland, OP_FOUND_CITY, 1549, PRE Moving To Target with Army 1550; center (22:36); target (22:35); Progress 100 percent
+068, Poland, OP_FOUND_CITY, 1549, Transition to target stage
+068, Poland, OP_FOUND_CITY, 1549, POST At Target
+068, The_Iroquois, OP_FOUND_CITY, 1700, found target for settler, score 92057 (q50)
+068, The_Iroquois, OP_FOUND_CITY, 1700, Initial stage is recruiting
+068, The_Iroquois, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (38:18) with target at (34:21)
+068, The_Iroquois, OP_FOUND_CITY, 1700, Started Army 1701; Units Recruited 1; Max Formation Size 2; Recruiting Units
+068, The_Iroquois, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (38:18) - ETA -1; Open; 
+068, The_Iroquois, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (38:18) with target at (34:21)
+068, The_Iroquois, OP_FOUND_CITY, 1700, POST Recruiting Units for army 1701; Settler 1699 at (38:18) - ETA 0; Open; 
+068, America, OP_FOUND_CITY, 1598, PRE Moving To Target with Army 1599; center (19:11); target (19:12); Progress 100 percent
+068, America, OP_FOUND_CITY, 1598, Transition to target stage
+068, America, OP_FOUND_CITY, 1598, POST At Target
+068, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, PRE Moving To Target with Army 1613; center (22:20); target (17:17); Progress 13 percent
+068, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, POST Moving To Target with Army 1613; center (22:20); target (17:17); Progress 13 percent
+068, The_Shoshone, OP_FOUND_CITY, 1668, PRE Recruiting Units for army 1669; Settler 1667 at (28:39) - ETA 0; Open; 
+068, The_Shoshone, OP_FOUND_CITY, 1668, Found 0 potential units to recruit for operation 1668 at (28:39) with target at (24:36)
+068, The_Shoshone, OP_FOUND_CITY, 1668, POST Recruiting Units for army 1669; Settler 1667 at (28:39) - ETA 0; Open; 
+068, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (40:29) - ETA 0; Open; Open; Open; 
+068, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+068, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (41:29) - ETA 0; Open; Open; Open; 
+068, Songhai, OP_RAPID_RESPONSE, 1689, PRE Recruiting Units for army 1690; Warrior 1253 at (43:22) - ETA 2; Open; Open; Open; 
+068, Songhai, OP_RAPID_RESPONSE, 1689, Found 0 potential units to recruit for operation 1689 at (41:29) with target at (41:29)
+068, Songhai, OP_RAPID_RESPONSE, 1689, Removing Warrior 1253 from army 1690 because no progress to checkpoint (41:29). ETA 2; prev 2; prev 2
+068, Songhai, OP_RAPID_RESPONSE, 1689, Ended: LostPath; Distance 1; Duration 1
+069, Poland, OP_FOUND_CITY, 1549, PRE At Target
+069, Poland, OP_FOUND_CITY, 1549, City founded (Lodz) at (22:35), plot value 111050, q50
+069, Poland, OP_FOUND_CITY, 1549, Transition to finished stage
+069, Poland, OP_FOUND_CITY, 1549, Ended: Success; Distance 12; Duration 10
+069, The_Iroquois, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (38:18) - ETA 0; Open; 
+069, The_Iroquois, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (38:18) with target at (34:21)
+069, The_Iroquois, OP_FOUND_CITY, 1700, POST Recruiting Units for army 1701; Settler 1699 at (38:18) - ETA 0; Open; 
+069, America, OP_FOUND_CITY, 1598, PRE At Target
+069, America, OP_FOUND_CITY, 1598, City founded (Philadelphia) at (19:12), plot value 72122, q36
+069, America, OP_FOUND_CITY, 1598, Transition to finished stage
+069, America, OP_FOUND_CITY, 1598, Ended: Success; Distance 10; Duration 8
+069, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, PRE Moving To Target with Army 1613; center (22:20); target (17:17); Progress 13 percent
+069, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Contact with enemy!
+069, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, MarchOn: stalled near the target at war, handing over
+069, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Transition to finished stage; unit distance near 4; far 6
+069, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, POST Completed
+069, The_Shoshone, OP_FOUND_CITY, 1668, cannot found city at (24:36)
+069, The_Shoshone, OP_FOUND_CITY, 1668, found better target for settler, old score -1 (q-50), new score 80519 (q50)
+069, The_Shoshone, OP_FOUND_CITY, 1668, setting new target (28:44)
+069, The_Shoshone, OP_FOUND_CITY, 1668, PRE Recruiting Units for army 1669; Settler 1667 at (28:39) - ETA 0; Open; 
+069, The_Shoshone, OP_FOUND_CITY, 1668, Found 0 potential units to recruit for operation 1668 at (28:39) with target at (28:44)
+069, The_Shoshone, OP_FOUND_CITY, 1668, No escort yet and the trip looks safe, going alone
+069, The_Shoshone, OP_FOUND_CITY, 1668, Transition to gathering stage
+069, The_Shoshone, OP_FOUND_CITY, 1668, Transition to movement stage
+069, The_Shoshone, OP_FOUND_CITY, 1668, POST Moving To Target with Army 1669; center (28:39); target (28:44); Progress 0 percent
+069, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (41:29) - ETA 0; Open; Open; Open; 
+069, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+069, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (41:29) - ETA 0; Open; Open; Open; 
+070, The_Iroquois, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (38:18) - ETA 0; Open; 
+070, The_Iroquois, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (38:18) with target at (34:21)
+070, The_Iroquois, OP_FOUND_CITY, 1700, POST Recruiting Units for army 1701; Settler 1699 at (38:18) - ETA 0; Open; 
+070, The_Aztecs, OP_CITY_ATTACK_LAND, 1612, Ended: Success; Distance 8; Duration 8
+070, The_Shoshone, OP_FOUND_CITY, 1668, PRE Moving To Target with Army 1669; center (28:39); target (28:44); Progress 0 percent
+070, The_Shoshone, OP_FOUND_CITY, 1668, POST Moving To Target with Army 1669; center (28:41); target (28:44); Progress 34 percent
+070, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (41:29) - ETA 0; Open; Open; Open; 
+070, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+070, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (43:29) - ETA 0; Open; Open; Open; 
+071, The_Iroquois, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (38:18) - ETA 0; Open; 
+071, The_Iroquois, OP_FOUND_CITY, 1700, Found 1 potential units to recruit for operation 1700 at (38:18) with target at (34:21)
+071, The_Iroquois, OP_FOUND_CITY, 1700, Added Warrior 1737 to slot 1 in army 1701. ETA at (38:18) is 0 
+071, The_Iroquois, OP_FOUND_CITY, 1700, Added Warrior 1713 to slot 1 in army 1701. ETA at (38:18) is 0 
+071, The_Iroquois, OP_FOUND_CITY, 1700, Transition to gathering stage
+071, The_Iroquois, OP_FOUND_CITY, 1700, Transition to movement stage
+071, The_Iroquois, OP_FOUND_CITY, 1700, POST Moving To Target with Army 1701; center (38:18); target (34:21); Progress 0 percent
+071, The_Shoshone, OP_FOUND_CITY, 1668, PRE Moving To Target with Army 1669; center (28:41); target (28:44); Progress 34 percent
+071, The_Shoshone, OP_FOUND_CITY, 1668, POST Moving To Target with Army 1669; center (27:43); target (28:44); Progress 100 percent
+071, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (43:29) - ETA 0; Open; Open; Open; 
+071, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+071, Songhai, OP_RAPID_RESPONSE, 1652, Contact with enemy!
+071, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (44:29) - ETA 0; Open; Open; Open; 
+072, The_Iroquois, OP_FOUND_CITY, 1700, PRE Moving To Target with Army 1701; center (37:19); target (34:21); Progress 17 percent
+072, The_Iroquois, OP_FOUND_CITY, 1700, POST Moving To Target with Army 1701; center (36:19); target (34:21); Progress 34 percent
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, Initial stage is recruiting
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, Found 3 potential units to recruit for operation 1751 at (19:22) with target at (17:17)
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, Added Jaguar 1010 to slot 0 in army 1752. ETA at (19:22) is 0 
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, Added Jaguar 1664 to slot 1 in army 1752. ETA at (19:22) is 0 
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, Added Jaguar 1077 to slot 2 in army 1752. ETA at (19:22) is 1 
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, Transition to gathering stage
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, Started Army 1752; Units Recruited 3; Max Formation Size 4; Gathering Forces
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, PRE Gathering Forces for army 1752; center (19:22); variance (2.89:1.56); free slots 1
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, Transition to movement stage
+072, The_Aztecs, OP_RAPID_RESPONSE, 1751, POST Moving To Target with Army 1752; center (19:22); target (17:17); Progress 0 percent
+072, The_Shoshone, OP_FOUND_CITY, 1668, PRE Moving To Target with Army 1669; center (27:43); target (28:44); Progress 100 percent
+072, The_Shoshone, OP_FOUND_CITY, 1668, Transition to target stage
+072, The_Shoshone, OP_FOUND_CITY, 1668, City founded (Agaidika) at (28:44), plot value 78708, q48
+072, The_Shoshone, OP_FOUND_CITY, 1668, Transition to finished stage
+072, The_Shoshone, OP_FOUND_CITY, 1668, POST Completed
+072, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (44:29) - ETA 0; Open; Open; Open; 
+072, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+072, Songhai, OP_RAPID_RESPONSE, 1652, Contact with enemy!
+072, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (44:29) - ETA 0; Open; Open; Open; 
+073, The_Iroquois, OP_FOUND_CITY, 1700, PRE Moving To Target with Army 1701; center (36:19); target (34:21); Progress 34 percent
+073, The_Iroquois, OP_FOUND_CITY, 1700, POST Moving To Target with Army 1701; center (37:20); target (34:21); Progress 34 percent
+073, The_Aztecs, OP_RAPID_RESPONSE, 1751, Ended: NoTarget; Distance 7; Duration 1
+073, The_Shoshone, OP_FOUND_CITY, 1668, Ended: Success; Distance 6; Duration 7
+073, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (44:29) - ETA 0; Open; Open; Open; 
+073, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+073, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (45:30) - ETA 0; Open; Open; Open; 
+074, The_Iroquois, OP_RAPID_RESPONSE, 1777, Initial stage is recruiting
+074, The_Iroquois, OP_RAPID_RESPONSE, 1777, Found 1 potential units to recruit for operation 1777 at (42:19) with target at (41:24)
+074, The_Iroquois, OP_RAPID_RESPONSE, 1777, Added Warrior 1737 to slot 0 in army 1778. ETA at (42:19) is 0 
+074, The_Iroquois, OP_RAPID_RESPONSE, 1777, Started Army 1778; Units Recruited 1; Max Formation Size 4; Recruiting Units
+074, The_Iroquois, OP_FOUND_CITY, 1700, PRE Moving To Target with Army 1701; center (37:20); target (34:21); Progress 34 percent
+074, The_Iroquois, OP_FOUND_CITY, 1700, POST Moving To Target with Army 1701; center (35:21); target (34:21); Progress 100 percent
+074, The_Iroquois, OP_RAPID_RESPONSE, 1777, PRE Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+074, The_Iroquois, OP_RAPID_RESPONSE, 1777, Found 0 potential units to recruit for operation 1777 at (42:19) with target at (41:24)
+074, The_Iroquois, OP_RAPID_RESPONSE, 1777, POST Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Initial stage is recruiting
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 4 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Added Jaguar 1077 to slot 0 in army 1781. ETA at (23:21) is 0 
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Added Jaguar 1664 to slot 1 in army 1781. ETA at (23:21) is 0 
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Added Jaguar 1010 to slot 2 in army 1781. ETA at (23:21) is 1 
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Added Composite Bowman 1684 to slot 3 in army 1781. ETA at (23:21) is 0 
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Started Army 1781; Units Recruited 4; Max Formation Size 10; Recruiting Units
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, PRE Recruiting Units for army 1781; Jaguar 1077 at (24:21) - ETA 0; Jaguar 1664 at (20:22) - ETA 0; Jaguar 1010 at (19:22) - ETA 1; Composite Bowman 1684 at (23:20) - ETA 0; Open; Open; Open; Open; Open; Open; 
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 0 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+074, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, POST Recruiting Units for army 1781; Jaguar 1077 at (25:20) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (20:22) - ETA 1; Composite Bowman 1684 at (23:20) - ETA 0; Open; Open; Open; Open; Open; Open; 
+074, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (45:30) - ETA 0; Open; Open; Open; 
+074, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+074, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (45:30) - ETA 0; Open; Open; Open; 
+075, The_Iroquois, OP_FOUND_CITY, 1700, PRE Moving To Target with Army 1701; center (35:21); target (34:21); Progress 100 percent
+075, The_Iroquois, OP_FOUND_CITY, 1700, Transition to target stage
+075, The_Iroquois, OP_FOUND_CITY, 1700, POST At Target
+075, The_Iroquois, OP_RAPID_RESPONSE, 1777, PRE Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+075, The_Iroquois, OP_RAPID_RESPONSE, 1777, Found 0 potential units to recruit for operation 1777 at (42:19) with target at (41:24)
+075, The_Iroquois, OP_RAPID_RESPONSE, 1777, POST Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+075, America, OP_FOUND_CITY, 1791, found target for settler, score 63225 (q19)
+075, America, OP_FOUND_CITY, 1791, Skip recruiting, start with movement stage
+075, America, OP_FOUND_CITY, 1791, Found 0 potential units to recruit for operation 1791 at (25:11) with target at (25:16)
+075, America, OP_FOUND_CITY, 1791, Started Army 1792; Units Recruited 1; Max Formation Size 2; Moving To Target
+075, America, OP_FOUND_CITY, 1791, PRE Moving To Target with Army 1792; center (25:11); target (25:16); Progress 0 percent
+075, America, OP_FOUND_CITY, 1791, POST Moving To Target with Army 1792; center (25:12); target (25:16); Progress 17 percent
+075, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, PRE Recruiting Units for army 1781; Jaguar 1077 at (25:20) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (20:22) - ETA 1; Composite Bowman 1684 at (23:20) - ETA 0; Open; Open; Open; Open; Open; Open; 
+075, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 0 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+075, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, POST Recruiting Units for army 1781; Jaguar 1077 at (24:19) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:20) - ETA 0; Open; Open; Open; Open; Open; Open; 
+075, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (45:30) - ETA 0; Open; Open; Open; 
+075, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+075, Songhai, OP_RAPID_RESPONSE, 1652, Contact with enemy!
+075, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (45:31) - ETA 0; Open; Open; Open; 
+076, The_Iroquois, OP_FOUND_CITY, 1700, PRE At Target
+076, The_Iroquois, OP_FOUND_CITY, 1700, City founded (Grand River) at (34:21), plot value 103461, q50
+076, The_Iroquois, OP_FOUND_CITY, 1700, Transition to finished stage
+076, The_Iroquois, OP_RAPID_RESPONSE, 1777, PRE Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+076, The_Iroquois, OP_RAPID_RESPONSE, 1777, Found 0 potential units to recruit for operation 1777 at (42:19) with target at (41:24)
+076, The_Iroquois, OP_RAPID_RESPONSE, 1777, POST Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+076, The_Iroquois, OP_FOUND_CITY, 1700, Ended: Success; Distance 6; Duration 8
+076, America, OP_FOUND_CITY, 1791, PRE Moving To Target with Army 1792; center (25:12); target (25:16); Progress 17 percent
+076, America, OP_FOUND_CITY, 1791, POST Moving To Target with Army 1792; center (24:14); target (25:16); Progress 50 percent
+076, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, PRE Recruiting Units for army 1781; Jaguar 1077 at (24:19) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:20) - ETA 0; Open; Open; Open; Open; Open; Open; 
+076, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 3 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+076, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Added Composite Bowman 1463 to slot 4 in army 1781. ETA at (23:21) is 0 
+076, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Added Composite Bowman 1578 to slot 5 in army 1781. ETA at (23:21) is 1 
+076, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Added Balamber (Great General) 1221 to slot 8 in army 1781. ETA at (23:21) is 0 
+076, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, SiegeArmy: waiting for more units, expected damage 33 a turn, Kyzyl needs 36
+076, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, POST Recruiting Units for army 1781; Jaguar 1077 at (25:20) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:20) - ETA 0; Composite Bowman 1463 at (22:19) - ETA 0; Composite Bowman 1578 at (22:18) - ETA 1; Open; Open; Balamber (Great General) 1221 at (23:20) - ETA 0; Open; 
+076, The_Shoshone, OP_FOUND_CITY, 1856, found target for settler, score 74984 (q41)
+076, The_Shoshone, OP_FOUND_CITY, 1856, Initial stage is recruiting
+076, The_Shoshone, OP_FOUND_CITY, 1856, Found 0 potential units to recruit for operation 1856 at (28:39) with target at (26:35)
+076, The_Shoshone, OP_FOUND_CITY, 1856, Started Army 1857; Units Recruited 1; Max Formation Size 2; Recruiting Units
+076, The_Shoshone, OP_FOUND_CITY, 1856, PRE Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA -1; Open; 
+076, The_Shoshone, OP_FOUND_CITY, 1856, Found 0 potential units to recruit for operation 1856 at (28:39) with target at (26:35)
+076, The_Shoshone, OP_FOUND_CITY, 1856, POST Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+076, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (45:31) - ETA 0; Open; Open; Open; 
+076, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+076, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (45:31) - ETA 1; Open; Open; Open; 
+077, The_Iroquois, OP_FOUND_CITY, 1873, found target for settler, score 73657 (q39)
+077, The_Iroquois, OP_FOUND_CITY, 1873, Initial stage is recruiting
+077, The_Iroquois, OP_FOUND_CITY, 1873, Found 0 potential units to recruit for operation 1873 at (38:18) with target at (38:14)
+077, The_Iroquois, OP_FOUND_CITY, 1873, Started Army 1874; Units Recruited 1; Max Formation Size 2; Recruiting Units
+077, The_Iroquois, OP_RAPID_RESPONSE, 1777, PRE Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+077, The_Iroquois, OP_RAPID_RESPONSE, 1777, Found 0 potential units to recruit for operation 1777 at (42:19) with target at (41:24)
+077, The_Iroquois, OP_RAPID_RESPONSE, 1777, POST Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+077, The_Iroquois, OP_FOUND_CITY, 1873, PRE Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA -1; Open; 
+077, The_Iroquois, OP_FOUND_CITY, 1873, Found 0 potential units to recruit for operation 1873 at (38:18) with target at (38:14)
+077, The_Iroquois, OP_FOUND_CITY, 1873, POST Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+077, America, OP_FOUND_CITY, 1791, PRE Moving To Target with Army 1792; center (24:14); target (25:16); Progress 50 percent
+077, America, OP_FOUND_CITY, 1791, Transition to target stage
+077, America, OP_FOUND_CITY, 1791, POST At Target
+077, The_Aztecs, OP_RAPID_RESPONSE, 1877, Initial stage is recruiting
+077, The_Aztecs, OP_RAPID_RESPONSE, 1877, Found 2 potential units to recruit for operation 1877 at (19:22) with target at (17:17)
+077, The_Aztecs, OP_RAPID_RESPONSE, 1877, Added Jaguar 1131 to slot 0 in army 1878. ETA at (19:22) is 0 
+077, The_Aztecs, OP_RAPID_RESPONSE, 1877, Added Jaguar 1496 to slot 1 in army 1878. ETA at (19:22) is 1 
+077, The_Aztecs, OP_RAPID_RESPONSE, 1877, Transition to gathering stage
+077, The_Aztecs, OP_RAPID_RESPONSE, 1877, Started Army 1878; Units Recruited 2; Max Formation Size 4; Gathering Forces
+077, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, PRE Recruiting Units for army 1781; Jaguar 1077 at (25:20) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:20) - ETA 0; Composite Bowman 1463 at (22:19) - ETA 0; Composite Bowman 1578 at (22:18) - ETA 1; Open; Open; Balamber (Great General) 1221 at (23:20) - ETA 0; Open; 
+077, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 0 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+077, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, SiegeArmy: waiting for more units, expected damage 33 a turn, Kyzyl needs 36
+077, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, POST Recruiting Units for army 1781; Jaguar 1077 at (24:19) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:20) - ETA 0; Composite Bowman 1463 at (22:21) - ETA 0; Composite Bowman 1578 at (22:19) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:21) - ETA 0; Open; 
+077, The_Aztecs, OP_RAPID_RESPONSE, 1877, PRE Gathering Forces for army 1878; center (19:22); variance (4.00:0.25); free slots 2
+077, The_Aztecs, OP_RAPID_RESPONSE, 1877, Transition to movement stage
+077, The_Aztecs, OP_RAPID_RESPONSE, 1877, POST Moving To Target with Army 1878; center (22:23); target (17:17); Progress 0 percent
+077, The_Shoshone, OP_FOUND_CITY, 1856, PRE Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+077, The_Shoshone, OP_FOUND_CITY, 1856, Found 0 potential units to recruit for operation 1856 at (28:39) with target at (26:35)
+077, The_Shoshone, OP_FOUND_CITY, 1856, POST Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+077, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (45:31) - ETA 1; Open; Open; Open; 
+077, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+077, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (45:29) - ETA 1; Open; Open; Open; 
+078, The_Iroquois, OP_RAPID_RESPONSE, 1777, PRE Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+078, The_Iroquois, OP_RAPID_RESPONSE, 1777, Found 0 potential units to recruit for operation 1777 at (42:19) with target at (41:24)
+078, The_Iroquois, OP_RAPID_RESPONSE, 1777, POST Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+078, The_Iroquois, OP_FOUND_CITY, 1873, PRE Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+078, The_Iroquois, OP_FOUND_CITY, 1873, Found 0 potential units to recruit for operation 1873 at (38:18) with target at (38:14)
+078, The_Iroquois, OP_FOUND_CITY, 1873, POST Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+078, America, OP_FOUND_CITY, 1791, PRE At Target
+078, America, OP_FOUND_CITY, 1791, City founded (Atlanta) at (25:16), plot value 63225, q19
+078, America, OP_FOUND_CITY, 1791, Transition to finished stage
+078, America, OP_FOUND_CITY, 1791, Ended: Success; Distance 6; Duration 3
+078, The_Aztecs, OP_RAPID_RESPONSE, 1877, Ended: NoTarget; Distance 9; Duration 1
+078, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, PRE Recruiting Units for army 1781; Jaguar 1077 at (24:19) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:20) - ETA 0; Composite Bowman 1463 at (22:21) - ETA 0; Composite Bowman 1578 at (22:19) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:21) - ETA 0; Open; 
+078, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 0 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+078, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, SiegeArmy: waiting for more units, expected damage 33 a turn, Kyzyl needs 36
+078, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, POST Recruiting Units for army 1781; Jaguar 1077 at (25:20) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:21) - ETA 0; Composite Bowman 1463 at (22:21) - ETA 0; Composite Bowman 1578 at (23:20) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:20) - ETA 0; Open; 
+078, The_Shoshone, OP_FOUND_CITY, 1856, PRE Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+078, The_Shoshone, OP_FOUND_CITY, 1856, Found 0 potential units to recruit for operation 1856 at (28:39) with target at (26:35)
+078, The_Shoshone, OP_FOUND_CITY, 1856, POST Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+078, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (45:29) - ETA 1; Open; Open; Open; 
+078, Songhai, OP_RAPID_RESPONSE, 1652, Found 0 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+078, Songhai, OP_RAPID_RESPONSE, 1652, POST Recruiting Units for army 1653; Warrior 1504 at (44:29) - ETA 0; Open; Open; Open; 
+079, The_Iroquois, OP_RAPID_RESPONSE, 1777, PRE Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+079, The_Iroquois, OP_RAPID_RESPONSE, 1777, Found 0 potential units to recruit for operation 1777 at (42:19) with target at (41:24)
+079, The_Iroquois, OP_RAPID_RESPONSE, 1777, POST Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+079, The_Iroquois, OP_FOUND_CITY, 1873, PRE Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+079, The_Iroquois, OP_FOUND_CITY, 1873, Found 0 potential units to recruit for operation 1873 at (38:18) with target at (38:14)
+079, The_Iroquois, OP_FOUND_CITY, 1873, POST Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+079, The_Aztecs, OP_RAPID_RESPONSE, 1903, Initial stage is recruiting
+079, The_Aztecs, OP_RAPID_RESPONSE, 1903, Found 2 potential units to recruit for operation 1903 at (19:22) with target at (17:17)
+079, The_Aztecs, OP_RAPID_RESPONSE, 1903, Added Jaguar 1131 to slot 0 in army 1904. ETA at (19:22) is 0 
+079, The_Aztecs, OP_RAPID_RESPONSE, 1903, Added Jaguar 1496 to slot 1 in army 1904. ETA at (19:22) is 0 
+079, The_Aztecs, OP_RAPID_RESPONSE, 1903, Transition to gathering stage
+079, The_Aztecs, OP_RAPID_RESPONSE, 1903, Transition to movement stage
+079, The_Aztecs, OP_RAPID_RESPONSE, 1903, Started Army 1904; Units Recruited 2; Max Formation Size 4; Moving To Target
+079, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, PRE Recruiting Units for army 1781; Jaguar 1077 at (25:20) - ETA 0; Jaguar 1664 at (22:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:21) - ETA 0; Composite Bowman 1463 at (22:21) - ETA 0; Composite Bowman 1578 at (23:20) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:20) - ETA 0; Open; 
+079, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 0 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+079, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, SiegeArmy: waiting for more units, expected damage 33 a turn, Kyzyl needs 36
+079, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, POST Recruiting Units for army 1781; Jaguar 1077 at (24:19) - ETA 0; Jaguar 1664 at (24:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:21) - ETA 0; Composite Bowman 1463 at (22:21) - ETA 0; Composite Bowman 1578 at (24:20) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:21) - ETA 0; Open; 
+079, The_Aztecs, OP_RAPID_RESPONSE, 1903, PRE Moving To Target with Army 1904; center (19:22); target (17:17); Progress 0 percent
+079, The_Aztecs, OP_RAPID_RESPONSE, 1903, POST Moving To Target with Army 1904; center (22:22); target (17:17); Progress -14 percent
+079, The_Shoshone, OP_FOUND_CITY, 1856, PRE Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+079, The_Shoshone, OP_FOUND_CITY, 1856, Found 0 potential units to recruit for operation 1856 at (28:39) with target at (26:35)
+079, The_Shoshone, OP_FOUND_CITY, 1856, POST Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+079, Songhai, OP_RAPID_RESPONSE, 1652, PRE Recruiting Units for army 1653; Warrior 1504 at (44:29) - ETA 0; Open; Open; Open; 
+079, Songhai, OP_RAPID_RESPONSE, 1652, Found 1 potential units to recruit for operation 1652 at (41:29) with target at (41:29)
+079, Songhai, OP_RAPID_RESPONSE, 1652, Added Warrior 1014 to slot 1 in army 1653. ETA at (41:29) is 1 
+079, Songhai, OP_RAPID_RESPONSE, 1652, Transition to gathering stage
+079, Songhai, OP_RAPID_RESPONSE, 1652, POST Gathering Forces for army 1653; center (37:28); variance (9.00:0.25); free slots 2
+080, The_Iroquois, OP_RAPID_RESPONSE, 1777, PRE Recruiting Units for army 1778; Warrior 1737 at (42:19) - ETA 0; Open; Open; Open; 
+080, The_Iroquois, OP_RAPID_RESPONSE, 1777, Found 1 potential units to recruit for operation 1777 at (42:19) with target at (41:24)
+080, The_Iroquois, OP_RAPID_RESPONSE, 1777, Added Spearman 1913 to slot 1 in army 1778. ETA at (42:19) is 1 
+080, The_Iroquois, OP_RAPID_RESPONSE, 1777, Transition to gathering stage
+080, The_Iroquois, OP_RAPID_RESPONSE, 1777, POST Gathering Forces for army 1778; center (42:19); variance (4.00:0.00); free slots 2
+080, The_Iroquois, OP_FOUND_CITY, 1873, PRE Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+080, The_Iroquois, OP_FOUND_CITY, 1873, Found 0 potential units to recruit for operation 1873 at (38:18) with target at (38:14)
+080, The_Iroquois, OP_FOUND_CITY, 1873, POST Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+080, The_Aztecs, OP_RAPID_RESPONSE, 1903, Ended: NoTarget; Distance 7; Duration 1
+080, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, PRE Recruiting Units for army 1781; Jaguar 1077 at (24:19) - ETA 0; Jaguar 1664 at (24:22) - ETA 0; Jaguar 1010 at (21:21) - ETA 0; Composite Bowman 1684 at (23:21) - ETA 0; Composite Bowman 1463 at (22:21) - ETA 0; Composite Bowman 1578 at (24:20) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:21) - ETA 0; Open; 
+080, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 0 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+080, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, SiegeArmy: waiting for more units, expected damage 33 a turn, Kyzyl needs 36
+080, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, POST Recruiting Units for army 1781; Jaguar 1077 at (23:19) - ETA 0; Jaguar 1664 at (24:22) - ETA 0; Jaguar 1010 at (23:22) - ETA 0; Composite Bowman 1684 at (23:21) - ETA 0; Composite Bowman 1463 at (23:20) - ETA 0; Composite Bowman 1578 at (24:20) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:20) - ETA 0; Open; 
+080, The_Shoshone, OP_FOUND_CITY, 1856, PRE Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+080, The_Shoshone, OP_FOUND_CITY, 1856, Found 0 potential units to recruit for operation 1856 at (28:39) with target at (26:35)
+080, The_Shoshone, OP_FOUND_CITY, 1856, POST Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+080, Songhai, OP_RAPID_RESPONSE, 1652, PRE Gathering Forces for army 1653; center (37:28); variance (9.00:0.25); free slots 2
+080, Songhai, OP_RAPID_RESPONSE, 1652, Transition to movement stage
+080, Songhai, OP_RAPID_RESPONSE, 1652, POST Moving To Target with Army 1653; center (43:27); target (41:29); Progress -300 percent
+081, The_Iroquois, OP_RAPID_RESPONSE, 1777, PRE Gathering Forces for army 1778; center (42:19); variance (4.00:0.00); free slots 2
+081, The_Iroquois, OP_RAPID_RESPONSE, 1777, Transition to movement stage
+081, The_Iroquois, OP_RAPID_RESPONSE, 1777, POST Moving To Target with Army 1778; center (42:19); target (41:24); Progress 0 percent
+081, The_Iroquois, OP_FOUND_CITY, 1873, PRE Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+081, The_Iroquois, OP_FOUND_CITY, 1873, Found 0 potential units to recruit for operation 1873 at (38:18) with target at (38:14)
+081, The_Iroquois, OP_FOUND_CITY, 1873, POST Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+081, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, PRE Recruiting Units for army 1781; Jaguar 1077 at (23:19) - ETA 0; Jaguar 1664 at (24:22) - ETA 0; Jaguar 1010 at (23:22) - ETA 0; Composite Bowman 1684 at (23:21) - ETA 0; Composite Bowman 1463 at (23:20) - ETA 0; Composite Bowman 1578 at (24:20) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:20) - ETA 0; Open; 
+081, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 0 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+081, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, SiegeArmy: waiting for more units, expected damage 33 a turn, Kyzyl needs 36
+081, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, POST Recruiting Units for army 1781; Jaguar 1077 at (24:20) - ETA 0; Jaguar 1664 at (24:22) - ETA 0; Jaguar 1010 at (23:22) - ETA 0; Composite Bowman 1684 at (22:21) - ETA 0; Composite Bowman 1463 at (23:20) - ETA 0; Composite Bowman 1578 at (23:21) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:21) - ETA 0; Open; 
+081, The_Shoshone, OP_FOUND_CITY, 1856, PRE Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+081, The_Shoshone, OP_FOUND_CITY, 1856, Found 0 potential units to recruit for operation 1856 at (28:39) with target at (26:35)
+081, The_Shoshone, OP_FOUND_CITY, 1856, POST Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+081, Songhai, OP_RAPID_RESPONSE, 1652, PRE Moving To Target with Army 1653; center (43:27); target (41:29); Progress -300 percent
+081, Songhai, OP_RAPID_RESPONSE, 1652, Removing Warrior 1014 from army 1653 because no progress to checkpoint (43:27). ETA 2; prev 1; prev 1
+081, Songhai, OP_RAPID_RESPONSE, 1652, Ended: HalfStrength; Distance 1; Duration 16
+082, The_Iroquois, OP_RAPID_RESPONSE, 1777, PRE Moving To Target with Army 1778; center (42:19); target (41:24); Progress 0 percent
+082, The_Iroquois, OP_RAPID_RESPONSE, 1777, POST Moving To Target with Army 1778; center (42:19); target (41:24); Progress 0 percent
+082, The_Iroquois, OP_FOUND_CITY, 1873, PRE Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+082, The_Iroquois, OP_FOUND_CITY, 1873, Found 0 potential units to recruit for operation 1873 at (38:18) with target at (38:14)
+082, The_Iroquois, OP_FOUND_CITY, 1873, POST Recruiting Units for army 1874; Settler 1872 at (38:18) - ETA 0; Open; 
+082, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, PRE Recruiting Units for army 1781; Jaguar 1077 at (24:20) - ETA 0; Jaguar 1664 at (24:22) - ETA 0; Jaguar 1010 at (23:22) - ETA 0; Composite Bowman 1684 at (22:21) - ETA 0; Composite Bowman 1463 at (23:20) - ETA 0; Composite Bowman 1578 at (23:21) - ETA 0; Open; Open; Balamber (Great General) 1221 at (23:21) - ETA 0; Open; 
+082, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, Found 0 potential units to recruit for operation 1780 at (23:21) with target at (17:17)
+082, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, SiegeArmy: waiting for more units, expected damage 27 a turn, Kyzyl needs 40
+082, The_Aztecs, OP_CITY_ATTACK_LAND, 1780, POST Recruiting Units for army 1781; Jaguar 1077 at (24:20) - ETA 0; Jaguar 1664 at (24:22) - ETA 0; Jaguar 1010 at (23:22) - ETA 0; Composite Bowman 1684 at (23:21) - ETA 0; Composite Bowman 1463 at (22:21) - ETA 0; Composite Bowman 1578 at (23:20) - ETA 0; Open; Open; Balamber (Great General) 1221 at (24:20) - ETA 0; Open; 
+082, The_Shoshone, OP_FOUND_CITY, 1856, PRE Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
+082, The_Shoshone, OP_FOUND_CITY, 1856, Found 0 potential units to recruit for operation 1856 at (28:39) with target at (26:35)
+082, The_Shoshone, OP_FOUND_CITY, 1856, POST Recruiting Units for army 1857; Settler 1798 at (28:39) - ETA 0; Open; 
