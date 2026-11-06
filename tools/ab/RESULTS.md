@@ -2140,6 +2140,8 @@ cities in 32 first games (850e142 and later), 13 taken.
 LEAD: reading. Timing and walls agree with the user's game; siege isn't shown either way. Early strike proposed (not
 coded); say if you want it as a flag. Army XP logging on ai/war 8c361db1 (logging only).
 
+CI: the army XP logging (ai/war 8c361db1) is green, run 251. The lead merged it into claude/ab-c1 (ce7a93c).
+
 ### War: ArmyScrap in the package block fires only at war (Nov 5, about 6:40pm ET)
 The lead (6:39pm ET): in 128B4199 (Assyria), the army went from 11 land at the T83 declaration to 6 at the first capture
 attempt (T86). Is ArmyScrap scrapping units mid-war? Counted over the package block's first 5 games (bullyabort14 +
