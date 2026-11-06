@@ -3594,7 +3594,7 @@ weights fill everything a plan doesn't name):
 - **No wonders on any list** (Economy: the executor builds what the list says, and no wonder before a strike): the
   research's Pyramids (Zulu), Temple of Artemis and National College (Assyria, Japan) drop out.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
-  (the ruling, no wonders) CI pending. Economy's book needs to treat `bGenericRush` like an early strike.
+  (the ruling, no wonders) compiles (CI run 318; `da1a760` run 305, `184fe09` run 313). Economy's book needs to treat `bGenericRush` like an early strike.
 
 ### LateStrikePlans: expert rows for the late-strike civs (Personality, draft, 2026-11-05 10:27pm ET)
 - **The lead (about 10:30pm ET by its clock, overnight; the user asleep):** the expert block (`ab-40203a3`) is frozen. Draft expert rows
