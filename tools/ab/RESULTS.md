@@ -3032,6 +3032,34 @@ LEAD: the combined head is now **ai/war ece1822b** (33ef2159 + these fixes). "Re
 **Economy 0051** is applied on top (the strike tree's policy pick now runs; it was gated on a flag that's always true): **ai/war 75a70345**.
 LEAD: the combined head is **ai/war 75a70345**. "Ready" follows when CI is green. Reading only: no new expert-block games this hour.
 
+**167DE984 confirmed (Celts, Panama City), 1:45pm ET.** DiplomacyAI_Peace_Log has "The Celts VS. Panama City, This
+City-State is no longer our war target!" at T67, T68, T69 and T70. The city-state peace undid each declaration, as
+diagnosed. Fixed in 5fe900a1.
+
+**169CA418 (Aztec, Ur), the lead's question: which step broke between T58 and T77. Answer: the army never went to Ur.
+Fixed in f9245a1e.**
+- **Timeline:**
+  - **Target:** Ur pinned at T22 (no committed major in reach then).
+  - **BUILDUP** at T40.
+  - **Declaration:** "declaring war on the city-state Ur (the army ready)" at T57, BUILDUP -> WAR at T58.
+  - **T58-T67:** only "window paused, units unaffordable".
+- **Where the army went.** CP had committed to Morocco, with the WAR approach from T55 ("PREP Gathering"). Its sneak
+  operations 1257 and 1338 gathered every unit, Jaguars, Composite Bowmen and the Great General, at Teotihuacan against
+  Marrakech (op 1338: "SiegeArmy: waiting for more units ... Marrakech needs 60", T55-T73). Op 1257 timed out at T65.
+  **No operation ever targeted Ur.** It was only CP's fourth attack target (score about 2,500 against Marrakech's about
+  15,700), so nothing reached it and nothing attacked it. The city-state war itself held (no peace with Ur).
+- **T76:** op 1338's DeclareWhenGathered declared on Morocco. IsStrikeDeclarationBlocked allowed it, because it covered
+  only PREP and BUILDUP.
+- **Did the ownership gates cover it?** Not fully. Gate 4's attack request would have started an operation on Ur in WAR,
+  but CP's Marrakech operations would still have taken the army, and the T76 declaration would have gone through.
+- **Fix (f9245a1e):**
+  - With a city-state pinned, CP holds no major conquest target.
+  - RequestCityAttack refuses an attack on anyone but the strike's target, or a player at war with us, while the strike is
+    on (PREP, BUILDUP, or WAR before a capture).
+  - The declaration block now covers WAR before a capture.
+LEAD: both answered. The combined head is now **ai/war f9245a1e** (75a70345 + the army-target gate). "Ready" follows when
+CI is green.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
