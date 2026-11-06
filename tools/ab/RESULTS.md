@@ -2547,6 +2547,11 @@ LEAD (7:30am): reading only, plus a fix. ab-8f9b7f9's Aztec ran the full strike 
 The hold now lifts once the strike's upgrade tech is in (ai/war, CI to follow). It's on top of 2ffdafa1, so the next
 build would take it.
 
+**Coded: ai/war 8555f21b. CI green (run 311, 7:41am ET).**
+
+LEAD: 8555f21b green: upgrade and go (the hold lifts at the strike's upgrade tech). Ready for the next block on 8555f21b
+(2ffdafa1 + this); RoleFixes += StrikeList.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
