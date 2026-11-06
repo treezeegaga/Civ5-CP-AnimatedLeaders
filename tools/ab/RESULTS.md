@@ -1950,6 +1950,35 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0046: a late strike's PREP keeps its income (Economy, Nov 6, 10:31am ET)
+War found a deadlock in bullyabort22 game 1 (`15286C56`, ab-103bd11). Songhai's late strike (Knights at Chivalry,
+pre-build Horseman x6) stayed in PREP from T1 to T148. Its BUILDUP waits for half the upgrade bill saved (300 gold).
+The treasury peaked at 283 (T60) and was at 0 by T100. The bans held: no wonders, no gifts.
+
+**Where the gold went** (GoldBreakdown_Log). Unit upkeep, not purchases:
+
+| Turn | Units | Unit upkeep | Net | Treasury |
+|---|---|---|---|---|
+| 60 | 11 | 13 | -7 | 283 |
+| 80 | 17 | 22 | -11 | 188 |
+| 90 | 18 | 30 | -12 | 85 |
+| 100 | 15 | 27 | -8 | 0 |
+
+The strike list built the army in PREP: Horseman items 7, 9, 11, 12, 16 and 18, plus three Archers, from T42 to T88.
+Its Market (item 15) waited for Currency, near the end of the research list, from T75 to T110.
+
+**0046:**
+- **The list:** in a late strike's PREP, a combat item waits while net gold is under +2 a turn. The list goes on to its
+  economy items, logged `LIST HOLD: net gold N`.
+- **`IsLateStrikePrepSaving`:** a late strike's PREP with K cities and the upgrade tech in reach, below
+  iEconomyGoldTarget. Its treasury is kept like BUILDUP's (no hurries, purchases or tiles) until the target is saved.
+  The beeline and the pre-build still wait for BUILDUP.
+
+**For Personality:** a late list that puts the pre-build ahead of its Market, and Currency after the upgrade path,
+fights its own gold gate. Consider the Market and Currency earlier in late lists, or a smaller gold target.
+
+**Status:** patch 0046 on ai/war `103bd11`, 3 files, +34/-4. Not compiled here.
+
 ### Patch 0044: the bans at their chokepoints, held to the first declaration (Economy, Nov 6, 9:08am ET)
 PC 2 stopped bullygreedy21 game 1 (`15A7D14F`, ab-f939c50, a build that has 0042). Before its first declaration
 (T129, on Ethiopia), Persia:
