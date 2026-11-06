@@ -1924,6 +1924,43 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: LateStrike, the late-spike civs' timed strike (coded, ai/war 656a7ba9, off, not merged) (Nov 5, about 10:40pm ET)
+The lead (10:30pm ET, overnight): code the late-strike plans for the Zulu, Mongolia, Assyria, Japan and Songhai so the
+next block is ready by morning. The user: "every civ builds to its strengths". Personality: late-spike civs get
+"infrastructure first, then a timed strike with the unique unit".
+
+**Hypothesis.**
+- These civs were most of our bully aggressors (Mongols 17, Songhai 15, Assyria 12, Japan 11, Zulu 7 of 147). They
+  declare a median of 29 turns after the unique unit is buildable, often without it in the army.
+- Timing the build-up to the plan's window (the spike's tech known), building the unique unit as the army's core, saving
+  for its upgrade, and declaring by the plan's turn should take more cities than a war at T27 Quick with whatever the
+  army is.
+
+**What it does (FIX_LATE_STRIKE).** It reads Personality's CvStrikePlan; for these civs that's the data default:
+- open 5 turns after the later of the spike's tech and its upgrade tech;
+- declare within 10 turns;
+- fallback 5 turns after that;
+- core = the unique unit, 5; support = archers behind a melee core, spearmen in front of a ranged one, 3; a siege
+  unique unit is the siege (2) with archers as the core.
+
+| Step | Code |
+|---|---|
+| Infrastructure first | no build-up before the plan's window. TimingBuildup's peace phase (garrisons only) holds until the plan's open turn with the core unit trainable, or its fallback turn |
+| The army | field target at least core + support; core to its count (+4500), then support (+3500); the plan's siege always, 2 against a walled target; 3 melee for the capture |
+| Upgrade and go | the bill includes units waiting for the plan's upgrade tech; saved, purchases wait, the declaration waits (no hold before the window) |
+| Declare by | the window ends at the plan's declare-by turn |
+| Log | "LateStrike: build-up opens (plan open T, declare by T, fallback T), core X xN, support Y xN, siege xN, target walled/unwalled" |
+
+**Confirm and kill** (per civ, against the same civs on the RoleFixes builds):
+- Confirm: captures up for these civs, the declaration within the plan's window, the unique unit at least a third of
+  the army at the declaration.
+- Kill: captures down, or the delay costs them (cities lost before the window, or score behind at T100 with nothing
+  taken).
+- Risk: before the window the peace phase keeps only garrisons. A civ attacked early has CP's defence only.
+
+LEAD: LateStrike (ai/war 656a7ba9, off) is ready for the block after the expert block; not to merge into the frozen
+block. CI to follow.
+
 ### War: the read for the expert block (ab-40203a3, bullyabort18 + bullygreedy18), prepared (Nov 5, about 10:35pm ET)
 `tools/ab/expert_block.py [runs]` (default bullyabort18 bullygreedy18), run from a results worktree with walls.py and
 attack_funnel.py beside it. It was tested on the package block (bullygreedy16 + bullyabort14), where it gives the old
