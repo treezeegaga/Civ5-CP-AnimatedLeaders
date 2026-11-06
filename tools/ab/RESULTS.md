@@ -2215,6 +2215,36 @@ LateStrikePlans for now.
 LEAD: ai/war 340592fa carries LateStrike's three halves (War, Economy 0033, Personality 5ad0a45) for the block after the
 expert block. Personality: gate LateStrikePlans on FIX_LATE_STRIKE. Economy: read bLateStrike in IsLateStrikeCiv.
 
+### War: expert block, running per-civ table (ab-40203a3; updated hourly overnight)
+
+**Read 1 (11:30pm ET): 1 logged first game.** PC 2 pair 1 (138A0F7F). PC 1's restarted bullyabort18 hasn't pushed yet.
+- **Build check.** All 240 bullygreedy18 rows read `No-Tag 40203a3 Clean`. China's Fixes include EarlyStrike and
+  EarlyStrikeAggressor.
+- **BarbKill works.** 44 lines in the first game and 40 in the flip, spread across all majors (Sweden 11, Denmark 7,
+  China 5, ...).
+
+| civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
+|---|---|---|---|---|---|---|---|---|
+| China | 1 | 1 | 1 | 59 | 57 | 5 | 1 / 11 | captured 1 |
+
+What happened in the game:
+- **China isn't an EarlyStrike civ.** No early-spike civ was in the lineup. China's plan is a late strike (open T109,
+  declare-by T116), and LateStrike isn't in 40203a3. So the T57 war on Rome came from the normal TimingBuildup path, not
+  a strike: 0 EarlyStrike build-ups, 0 upgrade-and-go.
+- **Melee in reach at the first capture attempts.** 2 attempts with 0 melee in reach both failed. 1 attempt with 2+
+  melee took the city. That matches the pattern so far (2+: 5/24 vs 0: 1/15).
+- **Readiness against the plan (China's late plan, for reference).** The upgrade tech came in at T87 and the upgrades
+  were done at T86-87. The gold target was never met. The army was built by T47.
+- **Barbarian hunting.** No BarbHunt lines, since that runs for EarlyStrike civs only. China killed 5 barbarians anyway;
+  the highest XP from a kill was 14 (cap 45).
+
+LEAD: reading only, 11:30pm ET.
+- Expert block pair 1: China (no EarlyStrike civ in the game) captured 1 at T59. BarbKill works (44 lines).
+- **ai/next b2a6f75 lacks War's readiness wiring.** The wiring is ai/war 74ae9fd9 (CvMilitaryAI.cpp only, on top of
+  the same three parts). Without it, the late strike's PREP to BUILDUP is still War's placeholder ("K cities, book
+  done"), and Personality's IsStrikeEconomyReady, IsStrikeArmyReady and plan exits go unused.
+- Cherry-pick 74ae9fd9 onto ai/next; ai/next and ai/war differ only in that commit. CI on 74ae9fd9 is running.
+
 ### War: the read for the expert block (ab-40203a3, bullyabort18 + bullygreedy18), prepared (Nov 5, about 10:35pm ET)
 `tools/ab/expert_block.py [runs]` (default bullyabort18 bullygreedy18), run from a results worktree with walls.py and
 attack_funnel.py beside it. It was tested on the package block (bullygreedy16 + bullyabort14), where it gives the old
