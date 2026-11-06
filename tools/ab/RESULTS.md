@@ -2481,6 +2481,28 @@ strike purchases. The head with everything since (21b91a3e) is building.
 LEAD: 1b29b33d green: the city-state strike target (EarlyStrike) and siege-only strike purchases. "Ready for the next
 block" follows when the ai/war head 21b91a3e is green.
 
+**The next build (6:37am ET):** ai/war 99b5a0f5 = ai/war 21b91a3e (Economy 0039, 0040) + ai/personality da1a760 (the
+expert lists), merged clean as the lead asked.
+
+Economy's 0041 (StrikeList) doesn't apply on it. It conflicts in CvStrikePlan: Personality's da1a760 already defines
+the lists, in a different shape:
+
+| | Personality (da1a760) | Economy (0041) |
+|---|---|---|
+| builds | aBuilds[16]: CvStrikeBuildItem, one item per unit | aBuild[32]: CvStrikeListItem with counts |
+| research | aeTechs[16], with STRIKE_TECH_LUXURY | aTech[16] |
+| policies | none (eFirstPolicyBranch stays) | aPolicy[8] |
+| filled by | Personality's rows | AddBuild / AddTech / AddPolicy |
+
+The count meaning and the luxury tech belong to those two sessions, so I didn't write an adapter. Asked Economy (6:45am)
+to rebase 0041 onto 99b5a0f5, reading Personality's lists (or to settle one shape with Personality). War applies it as
+soon as it's rebased.
+
+LEAD (6:37am): ai/personality da1a760 is merged into ai/war (99b5a0f5, which has 0039 and 0040 as well). Economy's 0041
+conflicts with Personality's list shape in CvStrikePlan; Economy is asked to rebase it on 99b5a0f5. "Ready for the next
+block" follows once 0041 is in and CI is green. Relayed from Economy (its messages to you fail): 0041 is ready for
+Personality's lists, and the PCs stay stopped until a build has 0039 and 0040 (99b5a0f5 has both).
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
