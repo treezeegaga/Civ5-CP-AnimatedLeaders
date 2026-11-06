@@ -3103,6 +3103,21 @@ Untrainable siege still never holds the declaration (0cb5402b); it is only built
 LEAD: the full head is **ai/war 791ab9d7** (everything through the third review + Economy 0049-0053). "Ready for the trial" follows
 when CI is green.
 
+**16DAE4CC confirmed from the logs (3:01pm ET).** From T96, every turn: "target Sweden -> Singapore (the nearest city-state
+in reach; the build-up's target Sweden)", then "re-target from Singapore (defence 24, too strong) to Sweden (Stockholm,
+defence 16)". So the BUILDUP check rejected the window's own target, Sweden, even in its held-target form. The Aztecs and
+Sweden were FRIENDLY (a declaration of friendship, by the diplomacy logs), which IsStrikeTargetValid excludes and
+FindStrikeRetarget didn't. b0d7e1c1 makes the re-target use the same check, so the loop can't recur.
+
+LEAD (3:01pm ET): **ready for the trial and the next block: ai/war 791ab9d7 green** (MSVC and clang, run 42281569284). It
+is the first full compile since b9dd1b77, with:
+- the city-state fix (5fe900a1);
+- the ownership gates and their review fixes (b9dd1b77, ece1822b, 2c283300);
+- the army-target gate (f9245a1e);
+- the oscillation fix (b0d7e1c1);
+- Economy 0049-0053.
+RoleFixes += StrikeList.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
