@@ -2707,6 +2707,22 @@ assault.
   half with nothing taken. Next read: turns spent at the target city per strike, to see whether CP's city-attack
   operations (with SiegeStay/SiegeKeep) hold the siege that long.
 
+**The user: "having a turn limit is bad. just calculate if you can take the city or not."** There was no turn limit in
+the strike; the "5+ turns" above was only a read metric, and it's dropped. The 3x ratio is replaced by the calculation
+(ai/war ddf5412c). IsStrikeArmyStrongEnough runs the game's own damage math (CvUnitCombat::DoDamageMath, expected values)
+on the plan's core and support at their counts, as the units they become at the upgrade tech:
+- **Damage per turn.** Ranged units bombard every turn; melee attack every other turn and take the city's
+  counter-damage.
+- **Healing.** The city heals CITY_HIT_POINTS_HEALED_PER_TURN a turn. If our damage doesn't beat it, the city can't be
+  taken.
+- **Attrition.** Otherwise the turns it takes follow from the numbers, and over them the city's strike (one a turn) and
+  the melee counter-damage must cost less than the army's HP less one unit, which has to walk in.
+- **Decisions are unchanged:** takeable, go; not, a clearly easier takeable city; else siege. "Strike: not ready" now
+  says "the plan's army takes it in about N turns" or "can't take it".
+
+LEAD: the strike decides "can the army take the city" with the game's damage math (ddf5412c), not a ratio, and has no
+turn limit anywhere. CI to follow.
+
 **Persia's 73-turn BUILDUP (the lead; bullygreedy21 15A7D14F, ab-f939c50; logs not pushed yet, so this is from the
 code):** city-state targets only. BUILDUP opened at T56 against Wellington; no declaration until a war on Ethiopia at
 T129 with 7 land units.
