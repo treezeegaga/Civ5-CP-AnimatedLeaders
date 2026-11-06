@@ -1925,6 +1925,49 @@ The next logged war shows whether attacks happen. If they don't, the cause is in
 positions, set-up moves, or its scoring of attacks against cities.
 
 ### War: strike on readiness, not the calendar: a design for the next block (Nov 5, about 10:50pm ET; no code yet)
+
+**Revised (the user, via the lead, about 10:37pm ET: "dont have the ai judge itself based on the window during a game").
+No turns in the AI's decisions at all; turns only in our logs and analysis. This replaces the soft limits and grace
+below.**
+- **Open the build-up** on state: the strike's core unit (or the plan's pre-build) can be trained, the opening book is
+  done, and a target is in reach (Economy's IsEarlyStrikeTargetInReach for EarlyStrike; a major's city within reach for
+  LateStrike).
+- **Declare** on readiness:
+  - the plan's upgrade tech known (or none);
+  - core and support at the plan's counts;
+  - 3 melee that can take a city;
+  - the upgrade bill paid;
+  - siege per the plan.
+  Or on "as ready as it gets": the field army at least the normal target and nothing more coming (WarBudget's
+  affordable at 0 or below, and no unit in production for the strike).
+- **Exit** on game state, never a turn. Each one ends the strike and falls back to the late plan (the normal
+  TimingBuildup with siege):
+  1. the target's nearest city walls up, and the plan brings no siege;
+  2. the target fields the counter (units with a bonus against the core's combat class near its border: spearmen and
+     pikemen against horse, for example);
+  3. no flat, unwalled target in reach (the target choice finds none);
+  4. the core unit goes obsolete (its obsoleting tech known by us);
+  5. the strike failed: at war, the army fell below half its size at the declaration without a capture;
+  6. a threat at home: a major declares on us, or enemy units are in our cities' zones.
+- **Turns in today's strike code, each replaced by the state above:**
+  - the window's length and WindowUntilReady's 2 windows;
+  - Personality's declare-by, close and fallback turns (the build-up's limit, the target rule's limit, the barbarian
+    hunt's limit);
+  - EarlyStrike's T60 Standard build-up limit;
+  - Economy's T90 Standard small-empire limit (IsEarlyStrikeSmallEmpire) and T75 Standard fallback (the book's
+    fallback);
+  - LateStrike's open and fallback turns;
+  - the 8-turn "tech soon" in the upgrade bill, which becomes "the current research is the strike's upgrade tech".
+- **Personality's plan** carries conditions, not turns: eUpgradeTech, the counts, bSiegeOnlyIfWalled / bHardStopOnWalls,
+  the core's counter classes (or War derives them from the core's combat class), iMinFieldArmy. The turns stay in the
+  plan for the logs and the read only.
+- **Economy** (book half): the same, with no T75/T90 limits. The book ends on the strike's start or one of the exits.
+- **The read keeps the turns:** readiness against the plan's reference turns, as now in expert_block.py.
+
+LEAD: revised design, no turns in decisions. Open on state (core trainable, book done, target in reach). Declare on
+readiness, or "as ready as it gets". Exit on six game-state conditions. Turns are listed for removal across War, Economy
+and Personality. Say go and I'll code War's part on ai/war for the next block. Economy and Personality: the same in your
+halves (Economy's T75/T90; Personality's turns as references only).
 The user (via the lead): "because the ai is not a high level player, some of the windows will be hard to hit". The plans'
 turns are Deity players' turns, and our AI is slower.
 
