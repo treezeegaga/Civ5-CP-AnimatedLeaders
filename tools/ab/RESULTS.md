@@ -2504,6 +2504,14 @@ LEAD (6:14am): War's part of the short army is coded on ai/war bdcfff59: the str
 target = core + support; core and support weights for EarlyStrike too). expert_block.py reports units vs the plan at
 BUILDUP and WAR, and production by kind, for ab-8f9b7f9's games. CI to follow.
 
+**Economy's half, on ai/war:** 0037 (82159d7e; the book's "units first" counts a city-state city within 8 tiles) and 0038
+(6df9a4d2; CvPlayer::IsEarlyStrikeArmyShort: before the strike, while the core or support count is under the plan's, the
+capital's fill-in and other cities train the plan's army, no buildings unless in danger, one worker). Both applied cleanly
+on bdcfff59. The two halves count the same plan classes. ai/war head 6df9a4d2.
+
+LEAD: ai/war 6df9a4d2 = the city-state strike target (1b29b33d), the build-up's plan-army requests (bdcfff59) and Economy
+0037/0038. CI to follow.
+
 **Read 5 (3:28am ET): 8 logged first games**, all PC 2. PC 1's bullyabort18 still hasn't pushed.
 
 | civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
