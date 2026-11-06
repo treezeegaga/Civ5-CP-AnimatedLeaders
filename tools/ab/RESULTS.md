@@ -2342,6 +2342,29 @@ bill" in BUILDUP (CvMilitaryAI::GetEarlyStrikeUpgradeBill). War does the same in
 **Coded: ai/war bb2fa51c. CI green (run 297, 1:39am ET).**
 
 LEAD: bb2fa51c green; cherry-pick 74ae9fd9, e10e2f34 and bb2fa51c onto ai/next.
+
+**Read 4 (2:28am ET): 6 logged first games**, all PC 2. PC 1's bullyabort18 still hasn't pushed.
+
+| civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
+|---|---|---|---|---|---|---|---|---|
+| China | 1 | 1 | 1 | 59 | 57 | 5 | 1 / 11 | captured 1 |
+| Persia | 2 | 1 | 1 | 87 | 119, 81 | 10, 1 | 10 / 16, 12 / 16 | no capture 1, captured 1 |
+| Polynesia | 1 | 0 | 0 | - | 140 | 1 | - | no capture (Warmonger 0) |
+| Maya | 1 | 0 | 0 | - | never | 1 | - | no strike (Warmonger 0) |
+| Celts | 1 | 0 | 0 | - | never | 11 | - | no strike (Warmonger 0) |
+
+2 of 6 captured. **3 of the 6 games are the picker bug** (fixed on ai/war e10e2f34):
+- Maya (1408BFF3) and Celts (14283015) were picked as aggressors for bMilitaryFirst, but both read Warmonger 0.
+- Neither got the conquest plan: no TimingBuildup line, no war in 150 turns. Each ran the old economic book (Maya:
+  Scout, Monument, Pyramid, Warrior, Settler; Celts: Scout, Monument, Shrine, Warrior, Worker).
+- With Polynesia that makes half the block's bully games with an aggressor that never plays aggressor. They measure
+  nothing about the strike.
+
+LEAD (2:28am): reading only. 2 of 6 captured, and 3 of the 6 are void: Polynesia, Maya and Celts were picked as aggressors
+by EarlyStrikeAggressor but aren't warmongers (Warmonger 0), so they had no conquest plan. Recommend PC 2 drops
+EarlyStrikeAggressor from RoleFixes for the rest of the night. The default picker (the most offensive warmonger) still
+gives EarlyStrike to an early-spike warmonger when it's the top one. Otherwise count Warmonger-0 aggressor games as void.
+The fix (e10e2f34) is green on ai/war for the next block.
 - Expert block pair 1: China (no EarlyStrike civ in the game) captured 1 at T59. BarbKill works (44 lines).
 - **ai/next b2a6f75 lacks War's readiness wiring.** The wiring is ai/war 74ae9fd9 (CvMilitaryAI.cpp only, on top of
   the same three parts). Without it, the late strike's PREP to BUILDUP is still War's placeholder ("K cities, book
