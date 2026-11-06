@@ -2727,6 +2727,24 @@ turn limit anywhere. CI to follow.
 80% and the city's damage to us at 125%. A city counts as takeable only if it still falls with the dice against us,
 covering what expected values leave out: the garrison soaking damage, turns out of position, and bad rolls.
 
+**The user (9:09am ET): "only start the attack if the city is takeable. ... i dont think there should be any retreat once you
+commit. If you are strike civ and your first attack fails you probably lose the game anyway."** Design:
+1. **Declare only when takeable.**
+   - The strike counts as ready, or as ready as it gets, only if the army actually on hand can take the target's
+     nearest city. The test is the same damage math with the same buffer, on our land combat units as they are (siege
+     included).
+   - Until then it keeps building, re-targets to a clearly easier takeable city, or brings siege.
+   - If it can never take it, it stays in its build-up rather than attacking. "Strike: not ready" names why.
+2. **No retreat once committed** (the strike's war, until a city is taken from the target):
+   - the strike state's "army below half, nothing taken" exit is removed;
+   - peace with the strike's target is refused (DoUpdatePeaceTreatyWillingness);
+   - CP's operations against the strike's target don't abort at half strength (CvAIOperation).
+   - After the first capture, peace and operations go back to the normal rules, and peace ends the strike as before.
+
+LEAD (9:09am): the strike declares only when the army on hand can take the target (the damage math with the buffer), and
+doesn't retreat once committed: no OVER on losses, no peace with the target, no half-strength abort of its operations,
+until a city is taken. Coding on ai/war.
+
 **Persia's 73-turn BUILDUP (the lead; bullygreedy21 15A7D14F, ab-f939c50; logs not pushed yet, so this is from the
 code):** city-state targets only. BUILDUP opened at T56 against Wellington; no declaration until a war on Ethiopia at
 T129 with 7 land units.
