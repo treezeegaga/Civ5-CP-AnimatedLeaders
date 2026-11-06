@@ -1759,6 +1759,62 @@ and none of them comes close to 48 a turn.
   turns at 0 gold; units disbanded for debt.
 - **Status:** coded, patch 0025 on `claude/ab-c1` `0561379` (after ArmyQuality and ArmyScrap), not built. Waits for War's half.
 
+### EarlyStrike, the book half: a military-first capital (Economy, patch 0028, Nov 5, 8:37pm ET)
+
+**The user's game** (106F8550; the Aztec at King, Quick, against greedy AIs): the capital built Jaguar ×3, Worker,
+Settler, Archer ×4, Jaguar ×2. That's 9 military by about T50, 2 cities, no buildings and no gold trouble.
+Marrakesh fell at T54.
+
+**Ours** (War, 69 aggressor games): a median of 2 military in the capital by T50, after 2 settlers and 3 buildings.
+Captures in 5 of 25 games with 3+ early military, against 2 of 44 with fewer.
+
+The lead: EarlyStrike is go. The book is Economy's, the window and target War's; one flag (`EarlyStrike`, added here,
+off in the bundle).
+
+**Who:** a candidate warmonger whose power-spike unit comes by turn 30 Standard. That's Personality's profile,
+`bMilitaryFirst`: Aztec, Polynesia, Babylon, Inca, Maya, Greece, Persia, Celts, Huns, Egypt and India.
+
+**The capital's book**, in place of the warmonger and wide books:
+
+| Step | Builds |
+|---|---|
+| 1 | The spike unit ×3 (×4 when it's the warrior class, since the starting warrior counts) |
+| 2 | Worker |
+| 3 | Settler |
+| 4 | Support ×4: archers behind a melee spike unit; spearmen (warriors before Bronze Working) in front of a ranged one |
+| 5 | The spike unit ×2 |
+
+- A unit whose tech isn't in yet is skipped until it is.
+- Other cities keep the plan's Monument step and then the normal AI.
+
+**Research:** the spike unit's tech first, then the support's (Archery, or Bronze Working for a ranged spike), then
+the warmonger list.
+
+**Small empire:** no settler is built or bought past the book's one (2 cities) until a war with a major starts, to
+turn 90 Standard (T60 on Quick) at most. Captured cities don't count.
+
+**Gold stays positive:** a combat step waits while one more unit couldn't be kept for 10 turns. The test is WarBudget's
+`GetAffordableWarUnits(10) < 1`: treasury plus 10 turns of net income, the extra upkeep included. Then the capital
+builds the worker or settler, or what the normal AI picks.
+
+Why it should pay its way, from CP's upkeep formula:
+- a unit costs about 0.7 gold a turn at T30 and 1 at T50 on Quick;
+- so 11-12 units cost about 10-12 a turn by T50;
+- with 2 cities, no buildings to keep and the capital's connection, that's about the user's case;
+- the war-length upkeep that sank the BigArmy runs doesn't come up if the strike lands by about T55.
+
+**Hypothesis:** with War's half (a window that opens with the book's army and declares by about T60 on the nearest
+weak major's unwalled city), early-spike warmongers capture more often than the package block's aggressors, without
+going broke.
+
+**Measure:**
+- captures and strength share against the package block;
+- military in the capital by T50 (War's `capital_opening.py`);
+- turns at 0 gold, and net gold at the declaration (WarBudget's line);
+- cities and science at T100 (War's kill rule).
+
+**Status:** coded, patch 0028 on `claude/ab-c1` `ce7a93c`, not built. War's half reads the same flag.
+
 ### The honest package: why the aggressor's income is so small (Economy, first read, Nov 5, 6:27pm ET)
 
 The lead (6:07pm ET): WarBudget works, but the aggressor's income is tiny (Songhai +2 at the window's start, Assyria

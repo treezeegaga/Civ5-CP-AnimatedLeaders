@@ -1,0 +1,265 @@
+From 44ab6bbcedd63f678a3dd59d5abe9d40877a48c2 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 01:36:54 +0000
+Subject: [PATCH] AI_AB_TEST Economy: EarlyStrike flag, the book half (a
+ military-first capital for warmongers with an early spike, as the user's
+ Aztec)
+
+The user's Aztec game (106F8550): capital built Jaguar x3, Worker,
+Settler, Archer x4, Jaguar x2, kept 2 cities and no buildings, had no gold
+trouble, and took Marrakesh at T54. Ours built a median of 2 military by
+T50 (War, 69 games); captures went with early military.
+
+For a candidate warmonger whose spike unit comes by turn 30 Standard
+(Personality's profile, bMilitaryFirst; cached once per game in
+CvPlayer::GetEarlyStrikeCoreClass), under the flag:
+- capital book: the spike unit x3 (x4 if it's the warrior class, the
+  starting unit counting), Worker, Settler, support x4 (archers behind a
+  melee spike unit; spearmen, or warriors before Bronze Working, in front
+  of a ranged one), the spike unit x2;
+- research: the spike unit's tech, then the support's, then the
+  warmonger list;
+- small empire: no settler built or bought past the book's one (2 cities)
+  until a war with a major starts, to turn 90 Standard at most;
+- gold stays positive: a combat step waits while one more unit couldn't be
+  kept for 10 turns (GetAffordableWarUnits(10) < 1).
+War's half (the window, the declaration around T50-60, the target) reads
+the same flag. Off in the bundle. Written 8:36pm ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp     |   3 +
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 110 +++++++++++++++++-
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |   7 ++
+ .../CvUnitProductionAI.cpp                    |   4 +
+ 4 files changed, 123 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index 8889eff..8e8835b 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3128,6 +3128,9 @@ static bool GetWantedExpansionSettler(CvPlayer* pPlayer, UnitTypes& eSettler, Cv
+ 
+ 	if (pPlayer->GetTreasury()->CalculateBaseNetGold() < 0 || pPlayer->IsBoxedInForSettling())
+ 		return false;
++	// AI_AB_TEST candidate (EarlyStrike): no settler bought past the book's one until the strike
++	if (pPlayer->getNumCities() >= 2 && pPlayer->IsEarlyStrikeSmallEmpire())
++		return false;
+ 
+ 	UnitClassTypes eSettlerClass = (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_SETTLER", true);
+ 	if (eSettlerClass == NO_UNITCLASS)
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index ef3d4a7..6dfab53 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -2270,6 +2270,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
+ 	}
+ 
+ 	m_iNumUnitsSuppliedCached = -1;
++	m_iEarlyStrikeCoreClass = -2; // AI_AB_TEST (EarlyStrike): worked out again for the next game
+ 	m_iNumUnitsSuppliedCachedWarWeariness = -1;
+ 	m_bUnlockedGrowthAnywhereThisTurn = false;
+ 
+@@ -33447,6 +33448,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"VictoryTechPath", false},
+ 	{"SiegeSlots", false},
+ 	{"WarTradeRoutes", false},
++	{"EarlyStrike", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+@@ -33832,6 +33834,44 @@ static int GetOpeningBookFlavor(const CvPlayer& kPlayer, const char* szFlavor)
+ 	return kPlayer.GetFlavorManager()->GetPersonalityIndividualFlavor(eFlavor);
+ }
+ 
++/// AI_AB_TEST (EarlyStrike, Economy): the class of the civ's power-spike unit (Personality's strategy profile) when the
++/// spike comes by turn 30 Standard (bMilitaryFirst): Aztec, Polynesia, Babylon, Inca, Maya, Greece, Persia, Celts, Huns,
++/// Egypt, India. NO_UNITCLASS otherwise. The profile depends only on the civ and the game speed, so it's worked out once
++/// per game (after the first city, when the profile is in place).
++UnitClassTypes CvPlayer::GetEarlyStrikeCoreClass() const
++{
++	if (m_iEarlyStrikeCoreClass == -2)
++	{
++		if (!isMajorCiv() || getNumCities() == 0 || !GetGrandStrategyAI())
++			return NO_UNITCLASS;
++		m_iEarlyStrikeCoreClass = -1;
++		const CvStrategyProfile kProfile = GetGrandStrategyAI()->GetStrategyProfile();
++		CvUnitEntry* pkSpike = (kProfile.eSpikeUnit != NO_UNIT) ? GC.getUnitInfo(kProfile.eSpikeUnit) : NULL;
++		if (kProfile.bMilitaryFirst && pkSpike)
++			m_iEarlyStrikeCoreClass = pkSpike->GetUnitClassType();
++	}
++	return (UnitClassTypes)m_iEarlyStrikeCoreClass;
++}
++
++/// AI_AB_TEST candidate (EarlyStrike, the user's Aztec game, 106F8550): the user's capital built Jaguar x3, Worker,
++/// Settler, Archer x4, Jaguar x2 (9 military by about T50, 2 cities, no buildings, no gold trouble) and took Marrakesh at
++/// T54. Ours built a median of 2 military by T50 (War, 69 games), and captures went with early military (5 of 25 with 3+,
++/// 2 of 44 with fewer). A candidate warmonger with an early spike plays that opening.
++bool CvPlayer::IsEarlyStrikeBook() const
++{
++	return MOD_AI_AB_TEST && IsCandidateWarmonger(FIX_EARLY_STRIKE) && GetOpeningBook() != OPENING_BOOK_NONE &&
++		GetEarlyStrikeCoreClass() != NO_UNITCLASS;
++}
++
++/// EarlyStrike: a small empire until the strike. No settler past the book's one (2 cities) until a war with a major has
++/// started, or to turn 90 (Standard) at most; captured cities don't count against it.
++bool CvPlayer::IsEarlyStrikeSmallEmpire() const
++{
++	if (!IsEarlyStrikeBook() || IsAtWarAnyMajor())
++		return false;
++	return GC.getGame().getElapsedGameTurns() < 90 * GC.getGame().getGameSpeedInfo().getTrainPercent() / 100;
++}
++
+ OpeningBookType CvPlayer::GetOpeningBook() const
+ {
+ 	if (!UsesNewAI() || !isMajorCiv() || isHuman() || isBarbarian())
+@@ -34199,6 +34239,12 @@ bool CvPlayer::HasUnstartedBookSettlers() const
+ {
+ 	if (!isMajorCiv() || isHuman() || getNumCities() == 0)
+ 		return false;
++	// EarlyStrike: one book settler (two cities)
++	if (IsEarlyStrikeBook())
++	{
++		const UnitClassTypes eSettlerClass = (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_SETTLER", true);
++		return eSettlerClass != NO_UNITCLASS && getUnitClassCountPlusMaking(eSettlerClass) + getNumCities() - 1 < 1 && !IsBoxedInForSettling();
++	}
+ 	int iNumSteps = 0;
+ 	const OpeningBookStep* pSteps = GetOpeningBookCapitalSteps(*this, iNumSteps);
+ 	if (!pSteps)
+@@ -34257,8 +34303,48 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 	const OpeningBookStep* pSteps = NULL;
+ 	int iNumSteps = 0;
+ 	bool bCapital = pCity->isCapital();
++	// AI_AB_TEST candidate (EarlyStrike): the capital opens military first, as the user did: the spike unit x3, Worker,
++	// Settler, ranged support x4, the spike unit x2 (archers behind a melee spike unit; spearmen, or warriors before
++	// Bronze Working, in front of a ranged one). The starting warrior counts as one of a warrior-class spike unit's
++	// (the Jaguar, the Maori Warrior), so one more is asked for.
++	std::vector<OpeningBookStep> vEarlyStrike;
++	const bool bEarlyStrike = bCapital && IsEarlyStrikeBook();
++	if (bEarlyStrike)
++	{
++		const UnitClassTypes eCore = GetEarlyStrikeCoreClass();
++		CvUnitClassInfo* pkCoreClass = GC.getUnitClassInfo(eCore);
++		const UnitTypes eCoreUnit = GetSpecificUnitType(eCore);
++		CvUnitEntry* pkCoreUnit = (eCoreUnit != NO_UNIT) ? GC.getUnitInfo(eCoreUnit) : NULL;
++		if (pkCoreClass && pkCoreUnit)
++		{
++			const char* szCore = pkCoreClass->GetType();
++			const char* szSupport = "UNITCLASS_ARCHER";
++			if (pkCoreUnit->GetRangedCombat() > 0)
++			{
++				const UnitTypes eSpear = GetSpecificUnitType("UNITCLASS_SPEARMAN", true);
++				szSupport = (eSpear != NO_UNIT && pCity->canTrain(eSpear)) ? "UNITCLASS_SPEARMAN" : "UNITCLASS_WARRIOR";
++			}
++			const bool bWarriorCore = strcmp(szCore, "UNITCLASS_WARRIOR") == 0;
++			OpeningBookStep kCore = { true, szCore }, kSupport = { true, szSupport };
++			OpeningBookStep kWorker = { true, "UNITCLASS_WORKER" }, kSettler = { true, "UNITCLASS_SETTLER" };
++			for (int i = 0; i < (bWarriorCore ? 4 : 3); i++)
++				vEarlyStrike.push_back(kCore);
++			vEarlyStrike.push_back(kWorker);
++			vEarlyStrike.push_back(kSettler);
++			for (int i = 0; i < 4; i++)
++				vEarlyStrike.push_back(kSupport);
++			for (int i = 0; i < 2; i++)
++				vEarlyStrike.push_back(kCore);
++			pSteps = &vEarlyStrike[0];
++			iNumSteps = (int)vEarlyStrike.size();
++		}
++	}
++	if (pSteps)
++	{
++		// EarlyStrike's steps, above
++	}
+ 	// The siege book is checked before the plan, so it works without WidePlans too (with WidePlans every warmonger is wide)
+-	if (bCapital && eBook != OPENING_BOOK_NONE && IsCandidateWarmonger(FIX_SIEGE_BOOK))
++	else if (bCapital && eBook != OPENING_BOOK_NONE && IsCandidateWarmonger(FIX_SIEGE_BOOK))
+ 	{
+ 		pSteps = kOpeningWarmongerCapital;
+ 		iNumSteps = (int)(sizeof(kOpeningWarmongerCapital) / sizeof(OpeningBookStep));
+@@ -34379,6 +34465,11 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 			}
+ 			if (!pCity->canTrain(eUnit))
+ 				continue;
++			// EarlyStrike: gold stays positive. A combat step waits while one more unit couldn't be kept for 10 turns
++			// (WarBudget's measure: treasury + 10 turns of income, upkeep included)
++			if (bEarlyStrike && (pkUnitInfo->GetCombat() > 0 || pkUnitInfo->GetRangedCombat() > 0) &&
++				GetEconomicAI()->GetAffordableWarUnits(10) < 1)
++				continue;
+ 
+ 			eOrder = ORDER_TRAIN;
+ 			iData = eUnit;
+@@ -34532,6 +34623,23 @@ TechTypes CvPlayer::GetOpeningBookTech() const
+ 	// candidate warmongers: catapults (Mathematics needs only The Wheel) and the spearman class (hoplite, ram...)
+ 	static const char* const kWarmonger[] = { "TECH_POTTERY", "TECH_THE_WHEEL", "TECH_MATHEMATICS", "TECH_BRONZE_WORKING", "TECH_ARCHERY", "TECH_WRITING" };
+ 
++	// AI_AB_TEST candidate (EarlyStrike): the spike unit's tech first, then the support's (Archery behind a melee spike
++	// unit, Bronze Working in front of a ranged one), then the warmonger list
++	if (IsEarlyStrikeBook())
++	{
++		const UnitTypes eCoreUnit = GetSpecificUnitType(GetEarlyStrikeCoreClass());
++		CvUnitEntry* pkCoreUnit = (eCoreUnit != NO_UNIT) ? GC.getUnitInfo(eCoreUnit) : NULL;
++		if (pkCoreUnit)
++		{
++			TechTypes eStep = GetOpeningBookTechStep(*this, (TechTypes)pkCoreUnit->GetPrereqAndTech(), 0);
++			if (eStep != NO_TECH)
++				return eStep;
++			eStep = GetOpeningBookTechStep(*this, (TechTypes)GC.getInfoTypeForString(pkCoreUnit->GetRangedCombat() > 0 ? "TECH_BRONZE_WORKING" : "TECH_ARCHERY", true), 0);
++			if (eStep != NO_TECH)
++				return eStep;
++		}
++	}
++
+ 	const char* const* pTechs = kTall;
+ 	int iNumTechs = (int)(sizeof(kTall) / sizeof(kTall[0]));
+ 	OpeningBookType eBook = GetOpeningBook();
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 5008675..bff423d 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -292,6 +292,9 @@ enum CandidateFixTypes
+ 							// field target met in 16, siege in 5). Off in the bundle
+ 	FIX_WAR_TRADE_ROUTES,	// Economy (the lead's go): a timing attacker before its war trains caravans even in small cities until its trade
+ 							// slots are full, sends them on gold routes, and never to its war target. Off in the bundle
++	FIX_EARLY_STRIKE,		// Economy and War (the user's Aztec game): a warmonger whose unique unit comes by turn 30 (Standard) opens
++							// military first (UU x3, Worker, Settler, ranged x4, UU x2), keeps a small empire until its strike, and
++							// strikes early (War's half). Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+@@ -1890,6 +1893,9 @@ public:
+ 	TechTypes GetCandidateGrowthTech() const;
+ 	TechTypes GetTimingBuildupTech() const; // AI_AB_TEST War, flag TimingBuildup
+ 	TechTypes GetWarGoldTech() const; // AI_AB_TEST Economy, flag WarGold
++	UnitClassTypes GetEarlyStrikeCoreClass() const; // AI_AB_TEST Economy, flag EarlyStrike: the spike unit's class, if military first
++	bool IsEarlyStrikeBook() const; // AI_AB_TEST Economy, flag EarlyStrike
++	bool IsEarlyStrikeSmallEmpire() const; // AI_AB_TEST Economy, flag EarlyStrike: no settlers past the book's one until the strike
+ 	bool IsWarGoldShort() const; // AI_AB_TEST Economy, flag WarGold
+ 	PolicyBranchTypes GetOpeningBookPolicyBranch() const;
+ 
+@@ -4073,6 +4079,7 @@ protected:
+ 
+ 	mutable int m_iNumUnitsSuppliedCached; //not serialized
+ 	mutable int m_iNumUnitsSuppliedCachedWarWeariness; //not serialized
++	mutable int m_iEarlyStrikeCoreClass; // AI_AB_TEST (EarlyStrike), not serialized: -2 not worked out yet, -1 none
+ 
+ 	int m_iNumMilitarySeaUnits;
+ 	int m_iNumMilitaryAirUnits;
+diff --git a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+index f795b49..05c3e15 100644
+--- a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+@@ -214,6 +214,10 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 		return SR_STRATEGY;
+ 	}
+ 
++	// AI_AB_TEST candidate (EarlyStrike): a small empire until the strike (the book's settler is its only one)
++	if (!bFree && pkUnitEntry->IsFound() && kPlayer.getNumCities() >= 2 && kPlayer.IsEarlyStrikeSmallEmpire())
++		return SR_STRATEGY;
++
+ 	// Don't build units in underdeveloped cities
+ 	// AI_AB_TEST: settlers and workers are exempt for the new AI. The Palace doesn't count as a building,
+ 	// so the capital otherwise had to finish two buildings before its first settler or worker.
+-- 
+2.43.0
+
