@@ -1882,6 +1882,38 @@ Patch 0034 is on ai/war `56e0cad` and is merged after the expert block.
   - `IsLateStrikeCiv` reads `GetStrikePlan().bLateStrike`, one source with War and Personality;
   - the beeline (the pre-build's tech, the core's, then the upgrade) and the saving run in BUILDUP, not from turns.
 
+### Expert block (ab-40203a3): the book side, summary (Economy, Nov 6, 4:49am ET)
+bullygreedy18 finished at 10 pairs (20 games). The table below is per pair; this is the summary for the user.
+
+**Only 6 of 10 pairs tested the strike at all.**
+- Polynesia, the Maya, the Celts and the Inca have leaders who aren't warmongers. Every strike half needs a
+  candidate warmonger (`AggressivePlan` wasn't in the RoleFixes), so they played normal books.
+- War fixed the aggressor pick on ai/war (`e10e2f3`: early-spike warmongers only).
+- Of the 6 that ran (Persia x3, China, Greece, the Aztec), **2 took a city**: Persia `13E9ECC9` and China.
+
+**What followed the plan** (all 6):
+- **Army:** the book's army of core units and support, close to the plan's counts. The Aztec built the user's
+  opening almost exactly to T38: Worker, 4 Jaguars, Settler, 5 Archers.
+- **Policy:** the plan's first tree (Liberty for Persia and Greece, Honor for the Aztec).
+- **Research:** the upgrade tech (Construction) by T52-57.
+- **Gold:** nothing bought before the strike while the book was on.
+
+**What didn't, and the fix for the next block:**
+
+| Problem | Seen in | Fix |
+|---|---|---|
+| The first settler had no escort, and CP's fill-in built a Monument, Granary or Barracks; the first core unit came at T28-33 | all 5 strike-book games | 0035: a core unit before the first settler; the book builds the escort itself |
+| CP rushed Stonehenge | Persia `13A89116`, the Aztec | 0035: no world wonders before a strike |
+| The T50 fallback and the T60 small-empire limit ended the strike book; after it, 4-5 cities, settler and tile purchases | the Aztec, Persia `14A46460`, Persia `13A89116` | 0034: no turn limits; War's strike state ends the strike |
+| 500 gold saved for a city-state gift during the build-up | Greece (given at T46), the Aztec, Persia `14A46460` | 0036: no gifts while a strike civ saves |
+| Saved gold not spent on the upgrade before the declaration | Greece (289 gold at T63) | War: the upgrade hold lifts when the army is ready (`e865585`) |
+| Jaguars disbanded by the peace cap before the strike | the Aztec | War: the peace cap keeps a strike civ's army (`e10e2f3`) |
+
+**One question for the user** (not done): War would spend the gold above the upgrade bill on core and melee units
+in the build-up. Persia held 350 against a 165 bill while 5 units short. `WarmongerHurry` (warmongers buy only
+settlers and siege) refuses those purchases, and `NoObsoleteHurry` refuses any warrior-class unit (the Jaguar,
+the Maori Warrior). Exempt strike build-ups from either rule, or keep both?
+
 ### Expert block (ab-40203a3): the book check, running table (Economy, overnight from Nov 5, 10:30pm ET)
 The lead: overnight, the block is frozen; check the book on each pair as it lands. Script:
 `tools/ab/scripts/earlystrike/book_check.py`. The questions:
@@ -1901,6 +1933,7 @@ The lead: overnight, the block is frozen; check the book on each pair as it land
 | bullygreedy18 pair 7 (144733A5) | the Inca (early spike, Slinger; `Warmonger` 0) | **not tested**: the wide book (Scout, Warrior, Settler, Worker); no strike line | 6 at T150, no war declared | - | - | - | - | - |
 | bullygreedy18 pair 8 (1464B588) | Greece (warmonger; the expert plan: Hoplite x3, Archer x5, N 2, K 3, Liberty) | Hoplite x3 by T35 as planned, Archers only x2 by T48; again a lone Worker and Settler first, no escort, CP's Granary at T20; first Hoplite T28 | 2 (declared T63 on Songhai with 7 land units, no capture; first attempt on Gao T74) | Composite Bowman (Construction) T52, after Bronze Working T20 and Archery ~T42 | a plantation planned T10 | Liberty (the plan's) | 0 | **289 gold at the declaration, unspent**: 1 upgrade, at T99 (the upgrade and go didn't fire; War's side) |
 | bullygreedy18 pair 9 (14849045) | the Aztec (warmonger; the expert plan, the user's own: Jaguar x6, Archer x4, N 3, K 2, Honor) | **to T38 as the user played it**: Worker, Jaguar x4 (T7-17, the start unit making 5), Settler T20, Archer x5 (T28-38). Then the 0031 fallback at T50 (no target in reach, no war) ended the strike book: Shrine T51, Settler T53, and CP's Stonehenge (T47, rushed). War's peace cap disbanded Jaguars and a Composite Bowman (T42-52) | 5 (declared only at T108 on the Inca; no capture; first attempt T130) | Composite Bowman T57; Jaguar from the start; Archery by T28 | a pasture planned T7 | Honor (the plan's) | 0, but 500 gold saved for a gift to Ormus from T34 | 9 upgrades from T51; 261-267 gold at the declaration |
+| bullygreedy18 pair 10 (14A46460) | Persia (warmonger; Personality's default plan) | the book's army (Immortal x4, Archer x3 by T48) after a lone Worker and Settler: no escort at T25 again, CP's Monument and Granary; first Immortal T32 | 4 (build-up T26 and T58, declared T83 on Mongolia; no capture) | Composite Bowman T55 | a plantation planned T10 | Liberty (the plan's) | after the T60 Quick limit lifted: 3 tiles and a settler (370); 500 saved for a gift to Malacca from T48 | 1 upgrade at T59, then T138 on; 63 gold at the declaration |
 
 ### LateStrike, the book half (Economy, patch 0033, prepared for the next block, Nov 5, 10:29pm ET; not merged)
 The lead: prepare the late-strike civs' book half for the next block. Personality's late-spike table: Denmark, Mongolia,
