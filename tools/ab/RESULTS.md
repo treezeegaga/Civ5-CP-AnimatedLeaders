@@ -2512,6 +2512,22 @@ on bdcfff59. The two halves count the same plan classes. ai/war head 6df9a4d2.
 LEAD: ai/war 6df9a4d2 = the city-state strike target (1b29b33d), the build-up's plan-army requests (bdcfff59) and Economy
 0037/0038. CI to follow.
 
+**PC 1's STOP on ab-8f9b7f9 (bullyabort19 game 1, 1468D9F4, "wonder/gift before strike"), War's read (6:29am ET):**
+- **The strike stalled.** Japan (LateStrike; Samurai at Steel; pre-build Swordsman x7) was in PREP from T1 to T149.
+  Personality's economy-ready for a late strike needs half the upgrade bill saved (350 gold). Japan gave 1250 gold to
+  city-states (T44, T99) and built the Great Library (T50) and the Hanging Gardens (T90).
+- **Economy's blocks don't reach it.** 0035 (no wonders) and 0036 (no gifts) cover LateStrike only in BUILDUP
+  (IsLateStrikeSaving). Asked Economy to extend both to LateStrike's PREP.
+- **A war outside the strike.** Japan declared on Spain at T102 through CP's own war approach (Spain a weak neighbour),
+  while the strike stayed in PREP. BUILDUP then came at T149, mid-war.
+  - **Fix, ai/war a819f3d3:** a war we declare in PREP pre-empts the strike. It goes OVER ("we declared a war outside
+    the strike, before its build-up"), and the book, the city cap and the saving end with it.
+
+LEAD (6:29am): PC 1's STOP is an Economy coverage gap: 0035/0036 block wonders and gifts for LateStrike only in BUILDUP,
+and Japan was in PREP for 148 turns (its gifts also kept it from economy-ready). Asked Economy to cover LateStrike's
+PREP. War: a war of our own in PREP now ends the strike (a819f3d3). ab-8f9b7f9 isn't broken in War's code. CI to follow
+for the ai/war head.
+
 **Read 5 (3:28am ET): 8 logged first games**, all PC 2. PC 1's bullyabort18 still hasn't pushed.
 
 | civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
