@@ -1914,6 +1914,13 @@ in the build-up. Persia held 350 against a 165 bill while 5 units short. `Warmon
 settlers and siege) refuses those purchases, and `NoObsoleteHurry` refuses any warrior-class unit (the Jaguar,
 the Maori Warrior). Exempt strike build-ups from either rule, or keep both?
 
+**The user's ruling (via the lead, Nov 6, about 6:05am ET): no.**
+- `WarmongerHurry` and `NoObsoleteHurry` stand. A strike build-up's gold above the upgrade bill doesn't buy core or
+  melee units, and WarChest keeps its rules.
+- City-states are early-strike targets: yes (War codes the targeting).
+- Patch 0037 makes the book's units-first rule count a city-state's city within 8 tiles as a target in reach.
+- Patches 0035-0037 apply cleanly on ai/war `f9c16cd`.
+
 ### Expert block (ab-40203a3): the book check, running table (Economy, overnight from Nov 5, 10:30pm ET)
 The lead: overnight, the block is frozen; check the book on each pair as it lands. Script:
 `tools/ab/scripts/earlystrike/book_check.py`. The questions:

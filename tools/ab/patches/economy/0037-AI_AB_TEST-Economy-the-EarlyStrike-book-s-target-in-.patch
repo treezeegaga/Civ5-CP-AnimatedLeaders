@@ -1,0 +1,47 @@
+From 2c6a38d4cbc188a7769365ed9dc8cd72bef61486 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 11:07:38 +0000
+Subject: [PATCH] AI_AB_TEST Economy: the EarlyStrike book's "target in reach"
+ counts city-states too (the user's yes on city-state targets)
+
+The user (via the lead, Nov 6): city-states are early-strike targets (War
+codes the targeting). The book's units-first rule now counts a
+city-state's city within 8 tiles of the capital as a target in reach,
+besides barbarian camps and majors' cities. On top of 0035/0036 (ai/war
+e865585). Written 6:08am ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index e4792f9..22cc9e0 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33977,8 +33977,8 @@ bool CvPlayer::IsEarlyStrikeCityCapReached() const
+ 	return GetEarlyStrikePlan(kPlan) && getNumCities() >= kPlan.iMaxCities;
+ }
+ 
+-/// EarlyStrike: units first while a barbarian camp or another major's city is within 8 tiles of the capital (as far as
+-/// we've seen). Once a turn.
++/// EarlyStrike: units first while a barbarian camp, another major's city or a city-state's is within 8 tiles of the
++/// capital (as far as we've seen). Once a turn.
+ bool CvPlayer::IsEarlyStrikeTargetInReach() const
+ {
+ 	const int iTurn = GC.getGame().getGameTurn();
+@@ -34000,7 +34000,9 @@ bool CvPlayer::IsEarlyStrikeTargetInReach() const
+ 				continue;
+ 			if (eCamp != NO_IMPROVEMENT && pPlot->getRevealedImprovementType(getTeam(), false) == eCamp)
+ 				m_bEarlyStrikeReach = true;
+-			else if (pPlot->isCity() && pPlot->getOwner() != GetID() && GET_PLAYER(pPlot->getOwner()).isMajorCiv())
++			// a major's city, or a city-state's (the user, Nov 6: city-states are early-strike targets too; War picks them)
++			else if (pPlot->isCity() && pPlot->getOwner() != GetID() &&
++				(GET_PLAYER(pPlot->getOwner()).isMajorCiv() || GET_PLAYER(pPlot->getOwner()).isMinorCiv()))
+ 				m_bEarlyStrikeReach = true;
+ 		}
+ 	}
+-- 
+2.43.0
+
