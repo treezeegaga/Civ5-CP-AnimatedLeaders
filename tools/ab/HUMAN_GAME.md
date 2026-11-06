@@ -197,3 +197,16 @@ city-state keys), `GraphicsSettingsDX11.ini` has `FullScreen =1` (backup next to
 First steps for the player: start `CivilizationV_DX11.exe`, check the title bar says DX11, Options > Video > 3840x2160 full
 screen, Single Player > Set Up Game (Pangaea, Standard, 8 civs, Quick, King, Quick Combat and Quick Movement), start, then
 **Ctrl+Shift+O at once**. After the game: `Run-ABTest.ps1 -Restore` before any multiplayer.
+
+## How the user won (106F8550, the user's account, 2026-11-05 evening)
+
+The user played the Aztec and took Marrakesh, Morocco's capital and last city, at T54 (Quick). The results rows show
+the war was declared between T41 and T50.
+- **Tech:** a beeline to Construction. The user skipped Calendar too, so the Aztec citrus got no plantations.
+- **Capital builds:** Jaguar, Jaguar, Jaguar, Worker, Settler, Archer x4, Jaguar, Jaguar. The second city built no
+  units by T54.
+- **Upgrade and go:** the user saved gold and, at Construction, upgraded 3 Archers to Composite Bowmen right before
+  declaring. That's why the Aztec treasury fell from 263 to 31 between T40 and T50.
+- **The army that took the capital:** about 6 Jaguars and 4 Composite Bowmen. The Jaguars had hunted barbarians and had the
+  +33% ranged defence promotion. There was no siege, and the target had no walls.
+- **The user's ruling:** the Jaguar suits this opening, so it can't be generalised. Every civ should build to its own strengths.
