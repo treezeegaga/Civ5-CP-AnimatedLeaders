@@ -2552,6 +2552,25 @@ build would take it.
 LEAD: 8555f21b green: upgrade and go (the hold lifts at the strike's upgrade tech). Ready for the next block on 8555f21b
 (2ffdafa1 + this); RoleFixes += StrikeList.
 
+**The lead's STOP on ab-8555f21 (bullyabort20, 14BC6621; 8:16am ET):** LateStrike Germany's Munich built Heroic Epic and
+the Temple of Artemis in PREP.
+- **Economy's 0042** (no world or national wonder before a strike, on every pick path: the sanity check, the fallback,
+  the specialization pick, the Great Engineer) is applied: ai/war c03f98b1.
+- **Munich vetoed every unit at T61** ("badtimeorplace"), which sent it to the wonder fallback. One candidate is
+  War's: TimingBuildup's peace cap (garrisons + 1) applied to a strike civ in PREP, and it would also veto Economy's 0038
+  army.
+  - **Fix, ai/war 0225d198:** for a strike civ in PREP or BUILDUP, the peace cap is at least the plan's army (core +
+    support + the pre-build beyond the core).
+  - The other candidates aren't War's: the new AI's young-city rule (under 2 buildings) and Personality's style caps.
+- **For Personality: Germany's plan.** It's the data default: a late strike with core UNITCLASS_TANK x5, opening at T227.
+  LateStrike keeps it in PREP for the whole 150-turn game (it went OVER only when a major declared on it at T115), under
+  every PREP restriction. A plan whose core is that far off probably shouldn't count as a late strike (bLateStrike off,
+  or no plan).
+
+LEAD (8:16am): Economy's 0042 is on ai/war (c03f98b1), plus War's peace-cap fix for strike civs (0225d198); CI to follow,
+then "ready" on that head. Personality: Germany's data-default late plan (Tanks at T227) holds it in PREP all game; such
+plans shouldn't be late strikes.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
