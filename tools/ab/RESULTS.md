@@ -2605,6 +2605,14 @@ LEAD (8:28am): reading only. On the strike-state builds, 1 of 4 first games capt
 (16 military to 1 building before BUILDUP), declared at T50 with 7 of the plan's 8 (8 land units in all), captured at T59. The
 other three each failed on something the next block (f939c50c) fixes.
 
+**The user on Germany's T227 Tank plan (via Economy, 8:32am ET):** "you cant do a turn 227 timing attack. germany would
+either need to use normal units for an attack earlier or not be aggressive at all." Economy has sent Personality the
+plan change (pack 70ec5fc): for a spike past the game's reach, either the research's G1 Archer-to-Composite-Bowman
+timing at Construction (T55-70 Standard), or no strike plan. War's state machine is unchanged by it.
+
+LEAD: relayed from Economy, the user's ruling on Germany: no T227 Tank strike. Personality changes the plan (an early
+normal-unit timing at Construction, or no plan). Nothing changes in War's code.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
