@@ -1,34 +1,33 @@
-From 8b32e5c95e97cc65d4e4f9fa33876a2c826bbc8a Mon Sep 17 00:00:00 2001
+From 03a80cb4a153cf3f3968c42737202081dd1afe27 Mon Sep 17 00:00:00 2001
 From: Claude <noreply@anthropic.com>
-Date: Fri, 6 Nov 2026 11:35:05 +0000
+Date: Fri, 6 Nov 2026 11:37:42 +0000
 Subject: [PATCH] AI_AB_TEST Economy 0041: StrikeList, the strike book follows
- the expert list strictly (the user: "literally just follow the list")
+ the expert list strictly (on Personality's lists, da1a760)
 
-New flag StrikeList (off in the bundle). CvStrikePlan gets the expert lists, empty by
-default (Personality's rows fill them with AddBuild/AddTech/AddPolicy):
-aBuild[] (unit or building class + count, in order), aTech[], aPolicy[].
+The user (via the lead): "this is why we looked up expert build orders. literally just
+follow the list." New flag StrikeList (off in the bundle). Reads Personality's
+CvStrikePlan lists (aBuilds/iNumBuilds, aeTechs/iNumTechs with STRIKE_TECH_LUXURY).
 
-From strike state PREP to the declaration (IsStrikePending), the capital builds the first
-list item still short. Counts add up along the list and count built units (not the
-starting ones; upgraded ones and settlers that founded cities count), so a lost unit is
-rebuilt in its place. No settler holds, no gold check. Deviations: the city in danger (a
-melee defender from the plan), an item the game can't do yet (passed over, logged
-LIST WAIT). After the list and in the other cities: the plan's core/support/siege to the
-plan's counts (a worker first where a city has none in its area), then more core while
-affordable; a late strike in its economy-first PREP uses the regular book. Research and
-policies follow the plan's lists (CvTechAI, CvPolicyAI). City log: "STRIKE LIST - ...".
+From strike state PREP to the declaration (IsStrikePending), the capital builds the
+first list item still short. Each item is one build, and repeats add up per class. Counts
+are built units: not the starting ones; upgraded ones and settlers that founded cities
+count. So a lost unit is rebuilt in its place. No settler holds, no gold check.
+Deviations: the city in danger (a melee defender from the plan); an item the game can't
+do yet (passed over, logged LIST WAIT). After the list and in the other cities: the
+plan's core, support and siege to the plan's counts (a worker first where a city has
+none in its area), then more core while affordable. A late strike in its economy-first
+PREP uses the regular book after the list. Research follows aeTechs (prerequisites first;
+the luxury marker is the book's luxury pick, skipped once we have one); the first tree
+stays eFirstPolicyBranch. City log: "STRIKE LIST - ...".
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
 ---
- CvGameCoreDLL_Expansion2/CvCityAI.cpp         |   7 +-
- .../CvGrandStrategyAI.cpp                     |  35 +++
- CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h  |  24 ++
- CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 274 ++++++++++++++++++
- CvGameCoreDLL_Expansion2/CvPlayer.h           |   8 +
- CvGameCoreDLL_Expansion2/CvPolicyAI.cpp       |  11 +
- CvGameCoreDLL_Expansion2/CvTechAI.cpp         |   6 +
- 7 files changed, 364 insertions(+), 1 deletion(-)
+ CvGameCoreDLL_Expansion2/CvCityAI.cpp |   7 +-
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 260 ++++++++++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h   |   7 +
+ CvGameCoreDLL_Expansion2/CvTechAI.cpp |   6 +
+ 4 files changed, 279 insertions(+), 1 deletion(-)
 
 diff --git a/CvGameCoreDLL_Expansion2/CvCityAI.cpp b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
 index 7b613d7..4c70d08 100644
@@ -48,103 +47,8 @@ index 7b613d7..4c70d08 100644
  
  		// The book's later buildings (library and on) give way to the wonder this city is best placed for: over 7
  		// test games the new AI had a fifth of CP's wonders at turn 50, and CP's runaway civs were built on them.
-diff --git a/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.cpp b/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.cpp
-index 0dd48b0..8e30e53 100644
---- a/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.cpp
-+++ b/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.cpp
-@@ -2136,6 +2136,38 @@ const CvStrikePlan& CvGrandStrategyAI::GetStrikePlan() const
- /// common early aggressors; a data default for every other civ with a unique land combat unit. Turns are Standard here,
- /// scaled to the game speed at the end. The research's general rules: Archer to Composite Bowman "upgrade and go" at
- /// Construction with 70-80 gold saved per Archer; at least 2 melee units to take a city; 2-3 cities before the strike.
-+/// AI_AB_TEST (flag StrikeList, Economy): fill the strike plan's expert lists, in order
-+bool CvStrikePlan::AddBuild(const char* szClass, int iCount)
-+{
-+	if (!szClass || iNumBuild >= STRIKE_LIST_MAX_BUILD || iCount < 1)
-+		return false;
-+	const bool bUnit = strncmp(szClass, "UNITCLASS_", 10) == 0;
-+	const int iClass = GC.getInfoTypeForString(szClass, true);
-+	if (iClass < 0 || (!bUnit && strncmp(szClass, "BUILDINGCLASS_", 14) != 0))
-+		return false;
-+	aBuild[iNumBuild].bUnit = bUnit;
-+	aBuild[iNumBuild].iClass = iClass;
-+	aBuild[iNumBuild].iCount = bUnit ? iCount : 1;
-+	iNumBuild++;
-+	return true;
-+}
-+bool CvStrikePlan::AddTech(const char* szTech)
-+{
-+	const TechTypes eTech = szTech ? (TechTypes)GC.getInfoTypeForString(szTech, true) : NO_TECH;
-+	if (eTech == NO_TECH || iNumTech >= STRIKE_LIST_MAX_TECH)
-+		return false;
-+	aTech[iNumTech++] = eTech;
-+	return true;
-+}
-+bool CvStrikePlan::AddPolicy(const char* szPolicy)
-+{
-+	const PolicyTypes ePolicy = szPolicy ? (PolicyTypes)GC.getInfoTypeForString(szPolicy, true) : NO_POLICY;
-+	if (ePolicy == NO_POLICY || iNumPolicy >= STRIKE_LIST_MAX_POLICY)
-+		return false;
-+	aPolicy[iNumPolicy++] = ePolicy;
-+	return true;
-+}
-+
- void CvGrandStrategyAI::MakeStrikePlan(const CvStrategyProfile& kProfile, CvStrikePlan& kPlan) const
- {
- 	kPlan.bValid = false;
-@@ -2164,6 +2196,9 @@ void CvGrandStrategyAI::MakeStrikePlan(const CvStrategyProfile& kProfile, CvStri
- 	kPlan.eExitCounterClass1 = NO_UNITCLASS;
- 	kPlan.eExitCounterClass2 = NO_UNITCLASS;
- 	kPlan.bExitRoughTarget = false;
-+	kPlan.iNumBuild = 0;	// AI_AB_TEST (flag StrikeList): no lists unless a row adds them
-+	kPlan.iNumTech = 0;
-+	kPlan.iNumPolicy = 0;
- 	if (!m_pPlayer || !m_pPlayer->isMajorCiv() || kProfile.eSpikeUnit == NO_UNIT)
- 		return;
- 
-diff --git a/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h b/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h
-index babd4af..ca6492c 100644
---- a/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h
-+++ b/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h
-@@ -74,6 +74,19 @@ struct CvStrikeWindow
- // AI_AB_TEST (Personality, EarlyStrike; the user, 2026-11-06: "use the experts ideas right away and we will know if they
- // are good by if they take cities"): the civ's strike plan, from the civfanatics research (tools/ab/STRIKE_PLANS_RESEARCH.md
- // in the pack repo) for the researched civs, a data default for the rest. Economy's book and War's strike read it.
-+// AI_AB_TEST (flag StrikeList, Economy; the user: "this is why we looked up expert build orders. literally just follow the
-+// list."): the expert's ordered lists in the strike plan. Personality's rows fill them (AddBuild, AddTech, AddPolicy);
-+// empty for every other civ, and then nothing changes
-+#define STRIKE_LIST_MAX_BUILD 32
-+#define STRIKE_LIST_MAX_TECH 16
-+#define STRIKE_LIST_MAX_POLICY 8
-+struct CvStrikeListItem
-+{
-+	bool bUnit;		// a unit class (the civ's own unit through GetSpecificUnitType), else a building class
-+	int iClass;		// UnitClassTypes or BuildingClassTypes
-+	int iCount;		// units: how many of this class to build at this point of the list (the starting units don't count;
-+					// upgraded ones do). Buildings: 1, in the capital
-+};
- struct CvStrikePlan
- {
- 	bool bValid;				// false: no plan (no unique land combat unit)
-@@ -106,6 +119,17 @@ struct CvStrikePlan
- 	UnitClassTypes eExitCounterClass1;	// exit: these units seen near the target (the core's counters); NO_UNITCLASS: none
- 	UnitClassTypes eExitCounterClass2;
- 	bool bExitRoughTarget;		// exit: the target city is on a hill or behind rough ground
-+	// AI_AB_TEST (flag StrikeList): the expert lists, in order (see CvStrikeListItem). iNum* 0: no list
-+	CvStrikeListItem aBuild[STRIKE_LIST_MAX_BUILD];
-+	int iNumBuild;
-+	TechTypes aTech[STRIKE_LIST_MAX_TECH];
-+	int iNumTech;
-+	PolicyTypes aPolicy[STRIKE_LIST_MAX_POLICY];	// optional; the first tree is eFirstPolicyBranch
-+	int iNumPolicy;
-+	// "UNITCLASS_..." or "BUILDINGCLASS_...", e.g. AddBuild("UNITCLASS_WARRIOR", 3) for 3 Jaguars; false: unknown type or full
-+	bool AddBuild(const char* szClass, int iCount = 1);
-+	bool AddTech(const char* szTech);		// "TECH_ARCHERY"
-+	bool AddPolicy(const char* szPolicy);	// "POLICY_DISCIPLINE"
- };
- struct CvStrategyProfile
- {
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
-index fea2a25..727c245 100644
+index fea2a25..121ca69 100644
 --- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
 +++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
 @@ -33454,6 +33454,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
@@ -155,7 +59,7 @@ index fea2a25..727c245 100644
  };
  // one line per flag, and room in the masks
  typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
-@@ -35073,6 +35074,279 @@ PolicyBranchTypes CvPlayer::GetOpeningBookPolicyBranch() const
+@@ -35073,6 +35074,265 @@ PolicyBranchTypes CvPlayer::GetOpeningBookPolicyBranch() const
  	}
  }
  
@@ -281,7 +185,7 @@ index fea2a25..727c245 100644
 +{
 +	bListRuns = false;
 +	const CvStrikePlan* pPlan = GetStrikeListPlan();
-+	if (!pCity || pCity->IsPuppet() || !pPlan || pPlan->iNumBuild <= 0)
++	if (!pCity || pCity->IsPuppet() || !pPlan || pPlan->iNumBuilds <= 0)
 +		return false;
 +	const CvStrikePlan& kPlan = *pPlan;
 +	bListRuns = true;
@@ -311,13 +215,13 @@ index fea2a25..727c245 100644
 +	{
 +		std::map<int, int> unitsWanted;
 +		CvString strWait;
-+		for (int i = 0; i < kPlan.iNumBuild; i++)
++		for (int i = 0; i < kPlan.iNumBuilds; i++)
 +		{
-+			const CvStrikeListItem& kItem = kPlan.aBuild[i];
++			const CvStrikeBuildItem& kItem = kPlan.aBuilds[i];
 +			if (kItem.bUnit)
 +			{
 +				const UnitClassTypes eClass = (UnitClassTypes)kItem.iClass;
-+				const int iWanted = (unitsWanted[eClass] += std::max(1, kItem.iCount));
++				const int iWanted = ++unitsWanted[eClass]; // one item, one unit built; repeats add up
 +				if (CountStrikeListUnits(*this, eClass, true) >= iWanted)
 +					continue;
 +				const UnitTypes eUnit = GetSpecificUnitType(eClass);
@@ -333,7 +237,7 @@ index fea2a25..727c245 100644
 +				eOrder = ORDER_TRAIN;
 +				iData = eUnit;
 +				CvString strItem;
-+				strItem.Format("item %d/%d %s%s%s", i + 1, kPlan.iNumBuild, pkUnitInfo->GetDescription(), strWait.IsEmpty() ? "" : ", LIST WAIT ", strWait.c_str());
++				strItem.Format("item %d/%d %s%s%s", i + 1, kPlan.iNumBuilds, pkUnitInfo->GetDescription(), strWait.IsEmpty() ? "" : ", LIST WAIT ", strWait.c_str());
 +				LogStrikeList(*this, pCity, strItem.c_str(), NULL);
 +				return true;
 +			}
@@ -356,7 +260,7 @@ index fea2a25..727c245 100644
 +				eOrder = ORDER_CONSTRUCT;
 +				iData = eBuilding;
 +				CvString strItem;
-+				strItem.Format("item %d/%d %s%s%s", i + 1, kPlan.iNumBuild, pkBuildingInfo->GetDescription(), strWait.IsEmpty() ? "" : ", LIST WAIT ", strWait.c_str());
++				strItem.Format("item %d/%d %s%s%s", i + 1, kPlan.iNumBuilds, pkBuildingInfo->GetDescription(), strWait.IsEmpty() ? "" : ", LIST WAIT ", strWait.c_str());
 +				LogStrikeList(*this, pCity, strItem.c_str(), NULL);
 +				return true;
 +			}
@@ -407,36 +311,22 @@ index fea2a25..727c245 100644
 +TechTypes CvPlayer::GetStrikeListTech() const
 +{
 +	const CvStrikePlan* pPlan = GetStrikeListPlan();
-+	for (int i = 0; pPlan && i < pPlan->iNumTech; i++)
++	for (int i = 0; pPlan && i < pPlan->iNumTechs; i++)
 +	{
-+		const TechTypes eStep = GetOpeningBookTechStep(*this, pPlan->aTech[i], 0);
++		// STRIKE_TECH_LUXURY: one luxury tech, the book's pick (none needed: skipped)
++		const TechTypes eTarget = (pPlan->aeTechs[i] == STRIKE_TECH_LUXURY) ? GetEarlyStrikeLuxuryTech() : pPlan->aeTechs[i];
++		const TechTypes eStep = (eTarget != NO_TECH && eTarget >= 0) ? GetOpeningBookTechStep(*this, eTarget, 0) : NO_TECH;
 +		if (eStep != NO_TECH)
 +			return eStep;
 +	}
 +	return NO_TECH;
 +}
 +
-+/// StrikeList: the first policy on the plan's list we haven't adopted, when it can be adopted now (the first tree is
-+/// eFirstPolicyBranch, opened by the book)
-+PolicyTypes CvPlayer::GetStrikeListPolicy() const
-+{
-+	const CvStrikePlan* pPlan = GetStrikeListPlan();
-+	for (int i = 0; pPlan && i < pPlan->iNumPolicy; i++)
-+	{
-+		const PolicyTypes ePolicy = pPlan->aPolicy[i];
-+		if (ePolicy == NO_POLICY || GetPlayerPolicies()->HasPolicy(ePolicy))
-+			continue;
-+		if (GetPlayerPolicies()->CanAdoptPolicy(ePolicy))
-+			return ePolicy;
-+	}
-+	return NO_POLICY;
-+}
-+
  bool CvPlayer::IsVassalOfSomeone() const
  {
  	return GET_TEAM(getTeam()).IsVassalOfSomeone();
 diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
-index 46201be..381e461 100644
+index 46201be..90b051d 100644
 --- a/CvGameCoreDLL_Expansion2/CvPlayer.h
 +++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
 @@ -29,6 +29,7 @@ class CvMilitaryAI;
@@ -453,43 +343,20 @@ index 46201be..381e461 100644
  							// builds the plan's core, support and siege, and declares by the plan's turn. Off in the bundle
 +	FIX_STRIKE_LIST,		// Economy (the user: "literally just follow the list"): before its strike, a strike civ's capital builds the plan's
 +							// expert list item by item (a lost unit rebuilt in its place), then the plan's army; its other cities the army;
-+							// research and policies follow the plan's lists. Personality's rows carry the lists. Off in the bundle
++							// research follows the plan's list; the first tree is the plan's. Personality's rows carry the lists. Off in the bundle
  	NUM_CANDIDATE_FIXES
  };
  // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
-@@ -1930,6 +1934,10 @@ public:
+@@ -1930,6 +1934,9 @@ public:
  	bool IsLateStrikeCiv() const; // AI_AB_TEST Economy, flag LateStrike: a warmonger with a late spike and a strike plan
  	bool IsLateStrikeSaving() const; // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
  	bool IsStrikePending() const; // AI_AB_TEST Economy, flags EarlyStrike/LateStrike (0040): a strike civ before its strike (state PREP or BUILDUP) // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
 +	const CvStrikePlan* GetStrikeListPlan() const; // AI_AB_TEST Economy, flag StrikeList: the strike plan while its lists run
 +	bool GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& iData, bool& bListRuns); // flag StrikeList: the next list item
 +	TechTypes GetStrikeListTech() const; // flag StrikeList: the next tech on the plan's list
-+	PolicyTypes GetStrikeListPolicy() const; // flag StrikeList: the next policy on the plan's list
  	TechTypes GetLateStrikeTech() const; // AI_AB_TEST Economy, flag LateStrike: the spike's and the upgrade's techs before the window
  	bool IsWarGoldShort() const; // AI_AB_TEST Economy, flag WarGold
  	PolicyBranchTypes GetOpeningBookPolicyBranch() const;
-diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
-index 497ffff..da44c31 100644
---- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
-+++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
-@@ -197,6 +197,17 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
- 		}
- 	}
- 
-+	// AI_AB_TEST (flag StrikeList, Economy): then the expert's policies, in the list's order
-+	if (!bMustChooseTenet && !bNeedToFinish)
-+	{
-+		const PolicyTypes eListPolicy = pPlayer->GetStrikeListPolicy();
-+		if (eListPolicy != NO_POLICY)
-+		{
-+			LogPolicyChoice(eListPolicy);
-+			return (int)eListPolicy + GC.getNumPolicyBranchInfos();
-+		}
-+	}
-+
- 	// Loop though the branches adding each as another possibility
- 	if (!bMustChooseTenet && !bNeedToFinish)
- 	{
 diff --git a/CvGameCoreDLL_Expansion2/CvTechAI.cpp b/CvGameCoreDLL_Expansion2/CvTechAI.cpp
 index 500f133..2f63141 100644
 --- a/CvGameCoreDLL_Expansion2/CvTechAI.cpp
