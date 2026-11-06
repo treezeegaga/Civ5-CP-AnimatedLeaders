@@ -3506,7 +3506,8 @@ weights fill everything a plan doesn't name):
 
 ### LateStrikePlans: expert rows for the late-strike civs (Personality, draft, 2026-11-05 10:27pm ET)
 - **The lead (about 10:30pm ET by its clock, overnight; the user asleep):** the expert block (`ab-40203a3`) is frozen. Draft expert rows
-  for the late-strike civs (Zulu, Mongolia, Assyria, Japan, Songhai) from `STRIKE_PLANS_RESEARCH.md`, on
+  for the late-strike civs (Zulu, Mongolia, Assyria, Japan, Songhai) from `STRIKE_PLANS_RESEARCH.md`; China
+  added at the user's request, on
   `ai/personality`, off and not merged, for the next block.
 - **Hypothesis:** the researched plan for a late spike is "economy first, pre-build the units the unique unit
   upgrades from, save the gold, upgrade the turn the tech lands and strike", not the data default (which times the
@@ -3523,11 +3524,12 @@ weights fill everything a plan doesn't name):
   | Mongolia | Chariot Archer x8 | Keshik x8 | Horseman x2 (melee for the capture) | none (Khans) | Chivalry, 140 | 3 | T95 / T105 / T120 | Honor | barbarians with Chariot Archers, kept alive | good |
   | Assyria | (Archers are the core) | Composite Bowman x5 | Spearman x2 | Siege Tower x2 | Construction, 75 | 3 | T80 / T95 / T110 | Tradition | none | moderate |
   | Japan | Swordsman x7 | Samurai x7 | Crossbowman x4 | if walled | Steel, 100 | 3 | T100 / T105 / T120 | Tradition | barbarians with Swordsmen | low |
+  | China (the user, 10:30pm ET: "cho ko nu rush?") | Composite Bowman x6 | Chu-Ko-Nu x6 (two attacks a turn) | Swordsman x2 (to take the city) | none | Machinery, 90 | 3 | T85 / T95 / T115 | Honor (Great General bonus) | barbarians with the bowmen | moderate (not in the research file; BNW play knowledge) |
   | Songhai | Horseman x6 | Mandekalu x6 | Crossbowman x3 | none (Mandekalu take cities) | Chivalry, 100 | 2 | T85 / T95 / T115 | Honor | barbarian camps (triple gold) | low |
 
 - **Measure:** with these civs as the aggressor (bully games, late-strike block), declaration turn against the tech
   turn, unique units in the army at the declaration, and cities captured, against the data default.
-- **Build:** fork `ai/personality` `a80986e`. With the flag off nothing changes (the five early rows as before; the data
+- **Build:** fork `ai/personality` `a80986e`, China in `5ad0a45`. With the flag off nothing changes (the five early rows as before; the data
   default only gains `bLateStrike`). Economy and War read `ePreBuildClass`, `iPreBuildTarget` and `bLateStrike` next block.
 - **Status:** coded, off, not for this block; CI pending.
 
