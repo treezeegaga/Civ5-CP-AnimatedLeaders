@@ -1830,6 +1830,15 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
+**Expert block, pair 3 (12:36am ET): the strike never ran.**
+- The harness picked Polynesia as the early-spike aggressor (`EarlyStrikeAggressor`), and the RoleFixes include
+  `EarlyStrike` and `TimingBuildup`.
+- But every strike half is gated on `IsCandidateWarmonger`: a warmonger personality, `AggressivePlan`, or MetaDial
+  +50. Polynesia's leader isn't a warmonger (`Warmonger` 0), and `AggressivePlan` isn't in this block's RoleFixes.
+- So it played the wide book, with no build-up and no strike. The pair says nothing about the expert openings.
+- Fix (the lead's): add `AggressivePlan` to the bully RoleFixes, or have the harness pick only warmonger-personality
+  early-spike civs.
+
 ### Patch 0035: the strike book builds the settler's escort itself; no world wonders before a strike (Economy, Nov 5, 11:53pm ET; next block)
 **From the expert block's first EarlyStrike game** (Persia, bullygreedy18 pair 2, 13A89116):
 - With nothing in reach at T0, the book went Worker, Settler, with no combat unit.
@@ -1870,6 +1879,7 @@ The lead: overnight, the block is frozen; check the book on each pair as it land
 |---|---|---|---|---|---|---|---|---|
 | bullygreedy18 pair 1 (138A0F7F) | China (late spike: no EarlyStrike book on this build; the normal warmonger book) | n/a (Scout, Warrior, Settler T9) | 2 (declared T57) | Composite Bowman T89 | a mine planned T29 | Tradition | 0 | 6 over the game, the first at T86. **Took a city** (1) |
 | bullygreedy18 pair 2 (13A89116) | Persia (early spike; Personality's default plan: core Immortal, N 2, K 3, Liberty) | **off plan:** Worker, Settler first (nothing in reach at T0), then no escort for 14 turns (below); first Immortal T30-33 | 5 (declared T119; this build lifts the K cap at T60 Quick) | Composite Bowman (Construction) T57, after Bronze Working T19 and Archery T30 | a plantation planned T10 | Liberty (the plan's) | 0 | 1, at T117; gold 239-257 in the window (T81-87), 0 at T104-106 |
+| bullygreedy18 pair 3 (13CA9885) | Polynesia (early spike, Maori Warrior; **not a warmonger personality**, `Warmonger` 0) | **not tested:** the wide book (Scout, Maori Warrior, Settler, Worker, Shrine, Monument, Library); no EarlyStrike, no TimingBuildup line in the game | 6 at T150 (one war declared, no capture) | - | - | - | - | - |
 
 ### LateStrike, the book half (Economy, patch 0033, prepared for the next block, Nov 5, 10:29pm ET; not merged)
 The lead: prepare the late-strike civs' book half for the next block. Personality's late-spike table: Denmark, Mongolia,
