@@ -1978,10 +1978,13 @@ means more than 15 turns to build; it is the normal ChooseProduction path.
 
 **Side effect.** A strike civ whose strike ends OVER and that never declares a war builds no wonder all game. That
 matches the user's rule for warmongers. The city-state proxy has one gap: a city-state strike that captured nothing
-and made peace keeps the ban. A saved "the strike declared" flag on War's side would close it.
+and made peace keeps the ban. War's saved flag closes it (0045, below).
 
-**Status:** patch 0044 applies on ai/war `a524536`, 5 files, +31/-3. Not compiled here. Both PCs keep their STOP until
-a build has it.
+**Status:** patch 0044 is on ai/war (`9e59c9d`).
+
+**Patch 0045 (9:12am ET):** the proxy is replaced by War's exact, saved `CvMilitaryAI::HasStrikeDeclared` (`0e1b744`),
+which closes the city-state gap. The accessor moves to CvMilitaryAI's public section, because CvPlayer couldn't call
+it from the private one. The patch applies on ai/war `0e1b744`, 2 files, +5/-6. Not compiled here.
 
 ### The user's ruling on spikes that come too late (Nov 6, 8:31am ET)
 War found that Germany's data-default plan in 14BC6621 was a late strike built on the Tank (UNITCLASS_TANK), opening

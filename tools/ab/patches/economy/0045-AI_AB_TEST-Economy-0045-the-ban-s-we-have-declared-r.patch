@@ -1,0 +1,67 @@
+From f2f85d3e22a761eba497c2927a4db29c757fd371 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 14:12:32 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0045: the ban's "we have declared" reads
+ War's HasStrikeDeclared
+
+0044's proxy (AB_COUNT_WARS_DECLARED, city-states captured, IsAtWarAnyMinor) is replaced by
+War's exact, saved CvMilitaryAI::HasStrikeDeclared (0e1b744). It is set at the strike's
+declaration, its city-state's, or any war of our own since the game began.
+
+The accessor was declared in CvMilitaryAI's private section, so CvPlayer couldn't call it
+(War's CI passed because nothing outside CvMilitaryAI used it yet). It moves to the public
+section next to GetStrikeState. IsStrikeNoRetreat gets its comment back; it had been split
+onto the accessor's line.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvMilitaryAI.h | 4 ++--
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp   | 7 +++----
+ 2 files changed, 5 insertions(+), 6 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvMilitaryAI.h b/CvGameCoreDLL_Expansion2/CvMilitaryAI.h
+index cbd6c5c..e5862bc 100644
+--- a/CvGameCoreDLL_Expansion2/CvMilitaryAI.h
++++ b/CvGameCoreDLL_Expansion2/CvMilitaryAI.h
+@@ -255,6 +255,7 @@ public:
+ 	// strike's state, from game state only (no turns), worked out once a turn and saved. Economy's book reads it (patch 0034).
+ 	enum StrikeStateTypes { STRIKE_NONE, STRIKE_PREP, STRIKE_BUILDUP, STRIKE_WAR, STRIKE_OVER };
+ 	StrikeStateTypes GetStrikeState() const { return (StrikeStateTypes)m_iStrikeState; }
++	bool HasStrikeDeclared() const { return m_iStrikeDeclared != 0; }	// we have declared a war: the strike's (BUILDUP -> WAR, its city-state) or any of our own since the game began (Economy's bans end here; public for CvPlayer, Economy 0045)
+ 	bool IsStrikeArmyBuildable() const;	// the core, or the plan's pre-build, can be trained
+ 	bool IsStrikeAsReadyAsItGets() const;	// a normal army, 3 melee, and nothing more affordable
+ 	PlayerTypes GetStrikeCityStateTarget() const { return (PlayerTypes)m_iStrikeCityState; }	// EarlyStrike: a city-state when no major is in reach, or a re-target (major or city-state)
+@@ -419,8 +420,7 @@ private:
+ 	PlayerTypes FindStrikeRetarget(PlayerTypes eExclude, const CvCity* pCurrent) const;	// a clearly easier city in reach, a major's or a city-state's
+ 	bool IsStrikeArmyStrongEnough(const CvCity* pCity, int* piTurnsNeeded = NULL) const;	// can the plan's (upgraded) army take the city (the game's damage math)
+ 	bool IsStrikeTargetTakeableNow(int* piTurnsNeeded = NULL) const;	// can the army on hand take the strike target's nearest city
+-	bool IsStrikeNoRetreat(PlayerTypes eEnemy) const;
+-	bool HasStrikeDeclared() const { return m_iStrikeDeclared != 0; }	// we have declared a war: the strike's (BUILDUP -> WAR, its city-state) or any of our own since the game began (Economy's bans end here)	// the strike's war on this player, nothing taken yet: no peace, no abort
++	bool IsStrikeNoRetreat(PlayerTypes eEnemy) const;	// the strike's war on this player, nothing taken yet: no peace, no abort
+ 	int m_iStrikeDeclared;			// HasStrikeDeclared, saved
+ 	int m_iStrikeSiege;				// the build-up brings siege (the army too weak for the target, no easier city in reach), saved
+ 	mutable int m_iArmyQualityTurn;		// AI_AB_TEST ArmyQuality: the turn the floor was computed (not saved, recomputed)
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 9277f66..eb65547 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33966,12 +33966,11 @@ bool CvPlayer::IsStrikeNoWonders() const
+ 	// that ended OVER before we declared anything keeps the ban until our first declaration. bullygreedy21 15A7D14F: Persia's
+ 	// strike went OVER at T70 (a major declared on us first), then Persia built the Terracotta Army (T72), the Pyramids (T75),
+ 	// the Writers' Guild and Chichen Itza and saved for a city-state gift (T96) before its own first declaration at T129.
+-	// "Declared": a war we declared on a major (the AB count), a city-state captured, or a city-state war under way
++	// "Declared": War's saved CvMilitaryAI::HasStrikeDeclared (the strike's declaration, its city-state's, or any war of our
++	// own since the game began; Economy 0045, replacing 0044's proxy)
+ 	if (!isMajorCiv() || isHuman() || !GetMilitaryAI() || GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_OVER)
+ 		return false;
+-	const CvGame& kGame = GC.getGame();
+-	return kGame.GetABTestCount(GetID(), AB_COUNT_WARS_DECLARED) == 0 &&
+-		kGame.GetABTestCount(GetID(), AB_COUNT_CITY_STATES_CAPTURED) == 0 && !IsAtWarAnyMinor();
++	return !GetMilitaryAI()->HasStrikeDeclared();
+ }
+ 
+ bool CvPlayer::IsLateStrikeSaving() const
+-- 
+2.43.0
+
