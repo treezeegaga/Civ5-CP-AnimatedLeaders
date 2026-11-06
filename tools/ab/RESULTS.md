@@ -3029,6 +3029,8 @@ of 0cb5402..33ef2159. The Aztec 169CA418 read (Ur, T58-T77) follows when its log
   city-state strikes from bullygreedy23/bullyabort23 on would have been under-counted. LEAD: attack_funnel (your branch)
   could add CityStatesCaptured the same way.
 LEAD: the combined head is now **ai/war ece1822b** (33ef2159 + these fixes). "Ready" follows when CI is green.
+**Economy 0051** is applied on top (the strike tree's policy pick now runs; it was gated on a flag that's always true): **ai/war 75a70345**.
+LEAD: the combined head is **ai/war 75a70345**. "Ready" follows when CI is green. Reading only: no new expert-block games this hour.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
