@@ -3000,6 +3000,16 @@ LEAD: the ownership gates are on ai/war **b9dd1b77**, for the next block. CI to 
 declaring for pay, and the production redirect leaves appended operation units alone.
 LEAD: the next block's candidate is ai/war **7d011c38** (city-state fix 5fe900a1, ownership gates b9dd1b77, Economy
 0049). "Ready" follows when CI is green.
+**Economy 0050** (once the plan's counts are met, more core units only in WAR) is applied on top: **ai/war 33ef2159** is
+now the combined head.
+- **Economy's read of 167DE984 confirms the Celts' loop:** DiplomacyAI_War_Log has a WAR DECLARATION on Panama City at
+  T66, T67 and T68, but the state never moved to WAR. So each declaration was undone before the next update, which fits
+  the city-state peace. Fixed in 5fe900a1.
+- **bullyabort23 15BE6EDA:** the Aztecs reached WAR at T56 on the Netherlands, attacked Rotterdam T59-T62 (HP 161 -> 90)
+  with 4, then 3 units, and then nothing until T125. That is the "operation dropped" failure the ownership gate 4
+  (b9dd1b77) addresses: retreat aborts are refused, and a city attack is requested whenever none is running on the target.
+LEAD: the combined head is **ai/war 33ef2159** (5fe900a1, b9dd1b77, Economy 0049, Economy 0050), for your pre-flight review
+of 0cb5402..33ef2159. The Aztec 169CA418 read (Ur, T58-T77) follows when its logs land.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
