@@ -1652,6 +1652,52 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Diplomacy: flag `Spoiler` (the user's design; Diplomacy session, 2026-11-05 10:05pm ET)
+
+`ai/diplomacy` fe4f0f7, off and out of the bundle. The lead cleared coding it now (9:38pm ET), since with the user's
+definitions it can act in T150 games. It gets no test time until the attack blocks finish, then a gainer test.
+RivalTrade stays parked.
+
+**Hypothesis.** A civ that has fallen too far behind to be first stops trading as if it could still win. It works
+against the one civ it blames for its downfall by helping that civ's enemies. That makes the leader's lead harder
+to keep, and makes losing civs feel like players with memory rather than neutral merchants.
+
+**What it does (user's definitions, from "Deals with a purpose", point 2):**
+- **Can't win:**
+  - our score is under 60% of first place's, among the civs we've met;
+  - for 20+ turns, counted from turn 50;
+  - and we're not catching up: no more than 5 points above where the stretch began;
+  - checked once per game turn.
+- **The grudge:**
+  - **Candidates:** civs ahead of us and contending for first (80%+ of first place's score).
+  - **Blame:** cities it took from us ×30, wars it declared on us ×15, land dispute level ×8, wonder dispute ×5,
+    victory dispute ×8, denouncing us +10.
+  - **Who:** the candidate with the most blame, if it reaches 15 (falling behind on your own is nobody's fault).
+  - **No flip-flopping:** a grudge is kept unless another civ has a third more blame.
+- **While the grudge contends for first:**
+  - **The grudge gets nothing.** Outside peace deals, any deal where we give it something is invalid, renewals
+    included. Peace stays possible.
+  - **Its enemies get better terms.** That's anyone at war with it or denouncing it. What we hand them counts at 75%
+    of its value.
+  - **Joint wars against it:** +25 desire, and scaled like a war on a major competitor. CP's sanity and attack-target
+    checks still apply, so spoiling isn't suicide.
+  - **No League votes yet.** That would be the League half of `Sanctions`.
+- **Fair play:** it uses only what a human sees: scores, wars, denouncements, and our own history with that civ.
+- **Log** (`DiplomacyAI_Messages_Log.csv`), the line the lead asked for:
+  - "Spoiler: <civ> blames <grudge> (blame N; our score is R% of first place's)" when a grudge starts;
+  - "Spoiler: <civ> blames <grudge>, helping <enemies>" whenever the list of enemies changes;
+  - the same line with "(agreed to a joint war)" when it joins a war on the grudge;
+  - "drops its grudge" when the grudge ends.
+
+**Gainer test, after the attack blocks:**
+- **Does it fire?** Count Spoiler lines per game, and how often the grudge is the eventual leader.
+- **Does it work?** The grudge's trade (deals per 10 turns) and its share of all cities and score at the end, with
+  the flag vs without.
+- **Does it cost the spoiler?** Its own strength, no-worse.
+- **How often to expect it:** in T150 games, a civ under 60% of the leader for 20 turns should be common (median
+  scores spread widely by T100). A blame of 15+ needs a war, a city lost, a denouncement or a strong land dispute.
+  So I expect it in a minority of civ-games.
+
 ### Deals with a purpose: the user's direction, and a hypothesis (Diplomacy session, 2026-11-05 10:00pm ET)
 
 **The user (replacing the deal-count band):** "i dont really care about meeting some 'quota'. i just want civs to be
