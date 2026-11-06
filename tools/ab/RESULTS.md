@@ -3381,7 +3381,7 @@ logged pair".
   upgrade tech: `a55a585`, compiles (CI run 263 passed, 9:00pm ET; it also covers `d1d4063` and `bed8e14`, whose
   own runs were cancelled by later pushes), ready to merge. The table needs checking against the log.
 
-### Strike plans per civ: spec (Personality, spec only, 2026-11-05 9:20pm ET)
+### Strike plans per civ: spec (Personality, spec only, 2026-11-05 9:13pm ET)
 - **The user (via the lead, about 9:12pm ET):** "it's possible that all aggressive civs need completely individualized
   openings based on their own unique bonuses". Spec only, no code yet: a data-driven default (the power spike above)
   plus per-civ overrides only where the default is wrong.
