@@ -2510,6 +2510,16 @@ flags, 107 entries; StrikeList off in the bundle). CI is running.
 LEAD: the next build is ai/war 2ffdafa1. Its run needs RoleFixes += StrikeList, which is off in the bundle. "Ready for
 the next block" follows when CI is green.
 
+**CI (6:53am ET): green on ai/war 2ffdafa1** (run 309: MSVC and clang, debug and release; the A/B DLL published).
+
+LEAD: ready for the next block: ai/war 2ffdafa1 green. It has:
+- the city-state target, the plan-army requests and the PREP-war exit (War);
+- Economy 0037-0041;
+- Personality's expert lists.
+
+The run needs RoleFixes += StrikeList, which is off in the bundle. This replaces ab-8f9b7f9 as the PCs' build. Both PCs
+are stopped, and 2ffdafa1 has 0039 and 0040.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
