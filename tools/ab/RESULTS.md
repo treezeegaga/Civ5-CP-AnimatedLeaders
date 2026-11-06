@@ -7553,3 +7553,28 @@ LEAD: **ai/war e5dadc3a green** (run 389: c89ed4ac + War's 27b685d0 + Economy 00
   These logs don't show why the Boston siege failed.
 
 LEAD: the trial head is now **ai/war fef0ea98** (e5dadc3a + the gate-4 fix above). CI to follow (e5dadc3a was green).
+
+**bullygreedy24 17A1A659 (Aztecs vs Milan; the lead, 6:01pm ET): read from the logs, 6:25pm ET.**
+- Milan is never in the Aztecs' attack targets. Their MilitaryAILog lists Manila, Melbourne, Sofia, Medan, Batam, Kwadukuza,
+  Turfan and Nongoma all game, and Milan never (Mongolia, Indonesia and Arabia do list it). RequestCityAttack only looks at that
+  list (m_potentialAttackTargets: a land or sea army path within the trade-route range that CP scores), so with Milan missing it
+  returns false without logging anything. That's the "not possible this turn" every turn from T58. The tactical zone of Milan
+  has 0 Aztec units the whole war. Not slots, muster, units in another army or SiegeFeed: no army path at all.
+- Why the strike chose it: the city-state picker (FindStrikeCityState, T10) checks only plotDistance <= 12 ("9 tiles"); the
+  attack-target check in IsStrikeTargetValid applies to a new major only, and held targets skip it. Nothing before the
+  declaration asks whether an army can get there, so the take-the-city math ("takes it in about 2 turns") ran on a city no
+  army could reach.
+- **e5dadc3 doesn't fix it**: the picker and the readiness are the same there.
+
+**Design (one idea: the strike's target must be one an army can reach):** a target is in reach when one of its cities is a
+*land* attack target in CP's list (HaveStrikeLandAttackTarget; the strike's army is a land army, so a sea-only target can't
+form either).
+1. FindStrikeCityState and every new target (IsStrikeTargetValid's new-target check, so also FindStrikeMajorInReach and
+   FindStrikeRetarget) need it. The new-target check used any army type before; now it's land only.
+2. A held target (the PREP pin, BUILDUP's per-turn check) is kept while it's reachable. Unreachable, the next reachable target
+   in the usual order takes over. If none is reachable, the held one stays, so a one-turn drop-out from the list doesn't
+   re-target. There's no turn count.
+3. IsStrikeTargetTakeableNow is false for an unreachable target, so no declaration on a city the army can't reach (readiness
+   and as-ready-as-it-gets both need takeable).
+4. Log: the WAR branch's "not possible this turn" says when the target has no land attack target.
+Kyzyl (171787CD) and Boston (17813E6E) are different failures: their cities were attack targets, and their ops formed.
