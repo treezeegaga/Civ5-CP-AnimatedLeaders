@@ -2766,6 +2766,30 @@ is no longer an exit, which answers the third-party question) comes after it, fo
 LEAD: the answer to "attacked by a third party ends the strike?" is no. It's on ai/war 103bd11d, one commit after
 04ab581; re-tag when convenient. War is checking CI on ab-04ab581 and will push an URGENT fix if it doesn't build.
 
+**Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
+- **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
+  T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
+  ended.
+- **BUILDUP, T56-T70 (14 turns).** The army went 5 -> 6 land by T58 and stayed at 6 of the plan's 8 until T70 (4
+  Immortals, 1 Composite Bowman (upgraded at T59), 1 Warrior), with 375-420 gold idle.
+- **Production in that window: every city was on the plan's army** ("STRIKE LIST - the army (short of the plan):
+  Immortal/Archer" in Susa and Pasargadae; the capital finished its 11-item list at T57). The young cities simply took
+  many turns per unit. So the army was **production-bound**, not blocked by a rule. Gold can't buy core or melee under
+  WarmongerHurry (the user's rule).
+- **After the OVER (T70-T129):** 16 buildings and 3 wonders. That's the leak Economy's 0044 closes (the bans hold until
+  our first declaration).
+
+What fixes it on the next tags:
+- **103bd11d:** war on us no longer ends the strike. It would have stayed in BUILDUP and waited for home safety.
+- **27476943:** the declaration waits until the army on hand can take Wellington. Six units may already have been
+  enough for a city-state; the "Strike: not ready" line will say so.
+
+This build had none of the new log lines (f939c50 predates b281f681).
+
+LEAD (9:29am): reading only. Persia's BUILDUP was 14 turns (T56-70), not 73. It was production-bound at 6 of 8 (young
+cities, gold not usable for units), then ended by war on us at T70. Both are addressed on ai/war: 103bd11d (war on us not
+an exit) and 27476943 (declare when the army on hand can take the city). The wonders came after the OVER (Economy 0044).
+
 **Persia's 73-turn BUILDUP (the lead; bullygreedy21 15A7D14F, ab-f939c50; logs not pushed yet, so this is from the
 code):** city-state targets only. BUILDUP opened at T56 against Wellington; no declaration until a war on Ethiopia at
 T129 with 7 land units.
