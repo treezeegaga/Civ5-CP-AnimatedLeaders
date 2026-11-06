@@ -1961,6 +1961,20 @@ that need no tech, would move it.
 LEAD: EarlyStrike's War half is on ai/war 95fbcc26 (off), for a block after the package, with Economy's book. CI to
 follow.
 
+**Interface agreed with Personality (as built).** EarlyStrike sits on claude/ab-c1 ce7a93c and reads Personality's
+accessors as they are: CvGrandStrategyAI::GetStrikeWindow (start and end turns), IsInStrikeWindow (spike tech known) and
+the profile's eSpikeUnit. They are on CvGrandStrategyAI, not CvPlayer.
+- They cover what War needs: spike tech, spike unit, open turn and window end.
+- War keeps two things on its own side, so the profile needs no additions:
+  - the core share (the spike unit first until half the field target);
+  - "siege only if walled" (the target's nearest city, checked at the build-up).
+- The window end isn't used as a declare-by: the build-up runs its normal length.
+- One open point for Personality: the window ends for spikes that need no tech (the Aztec: T3 to T23 Quick, against the
+  user's strike at T54 Quick).
+
+LEAD: no profile additions needed for EarlyStrike; it reads Personality's accessors as merged in ce7a93c. Open point for
+Personality: early windows end very early (Aztec T23 Quick vs the user's T54).
+
 ### War: the unique unit at the declaration, and the strike-window interface for Personality (Nov 5, about 8:55pm ET)
 The lead (refining, from the user: "every civ needs to build to its strengths"): Personality drafts each civ's power
 spike, opening and strike window; TimingBuildup takes the window from the profile and builds the army from the civ's
