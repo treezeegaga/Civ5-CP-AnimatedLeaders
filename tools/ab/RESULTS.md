@@ -5192,3 +5192,23 @@ flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
   Plus a possible multiplayer desync (list order depended on HasTech) and 3 minor points.
 - **Fixes:** Economy 0048 (2, 5, 6); Personality 99d3ced (4, 7); War, coding (1, 3). The next block waits for them,
   then a T80 trial game.
+
+### Strike ownership: CP cut out of the strike's decisions (the user, about 1:10pm ET Nov 6)
+Nearly every bug today was CP's own systems overriding the strike: the wonder fallback, CP's own war declarations,
+city-state peace undoing our war, the target loop, the peace cap disbanding the army. The user approved a structural
+fix instead of symptom patches. While a strike is active (PREP, BUILDUP or WAR, until OVER), the strike OWNS these
+decisions, each gated at its lowest level. CP keeps everything else (tactics, other cities, other diplomacy, all play
+after OVER).
+
+| Decision | Owner of the audit |
+|---|---|
+| Declaring war; making peace (incl. deals, treaties, city-state diplomacy); approach toward the target | War |
+| The strike's target and army operations (CP's operation targets and aborts) | War |
+| Disbanding and upkeep cuts of strike units | War |
+| What strike cities produce (every path) | Economy |
+| Gold: purchases, gifts, gift saving, tiles, hurries, upgrades, annexing | Economy |
+| Research order; policy picks | Economy |
+
+**Step 1:** a read-only audit by War and Economy. Every code path that can make each decision for an AI player, whether
+our gate covers it, and the single lowest-level gate point. **Step 2:** the gates, in the next block's build. The
+running block (bullygreedy23 / bullyabort23, ab-0cb5402) is untouched.
