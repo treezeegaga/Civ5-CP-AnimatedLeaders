@@ -5143,3 +5143,10 @@ flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
   1. May a strike's build-up buy core or melee units with the gold above its upgrade bill, despite
      WarmongerHurry/NoObsoleteHurry? The user's hurry rule refuses it today.
   2. May a city-state be the early strike's target when no major civ is in reach?
+
+### The user's rulings (morning Nov 6)
+1. **Strike purchases: no.** A strike build-up doesn't buy core or melee units with the gold above its upgrade bill.
+   WarmongerHurry and NoObsoleteHurry stand. War's bb2fa51 purchase path must stay inside them (settlers and siege
+   only).
+2. **City-state targets: yes.** When no major civ is in reach, the early strike may target a city-state (War, next
+   block).

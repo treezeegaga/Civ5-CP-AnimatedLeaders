@@ -88,6 +88,10 @@ flag. Expected: wide out-grows tall while nobody attacks; once attacks take citi
 **Hurry rules, no test (the user, 2026-11-05 10:25am ET):** "I just never want to see a civ hurry a warrior again."
 - No civ of ours buys a Warrior with gold, ever: `NoObsoleteHurry`, in the bundle.
 - Warmongers buy only settlers and siege units with gold: `WarmongerHurry`, in the bundle.
+- **No exception for strikes (the user, 2026-11-06 morning):** a strike's build-up doesn't buy core or melee units with
+  the gold above its upgrade bill. That gold goes to upgrades, settlers and siege only.
+- **City-state targets allowed (the user, 2026-11-06 morning):** when no major civ is in reach, the early strike may
+  target a city-state.
 
 ### Priorities: competence first, then flavour and fun
 
