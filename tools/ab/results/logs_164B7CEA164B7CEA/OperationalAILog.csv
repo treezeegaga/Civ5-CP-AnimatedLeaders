@@ -1,0 +1,895 @@
+017, Persia, OP_FOUND_CITY, 1111, found target for settler, score 74162 (q50)
+017, Persia, OP_FOUND_CITY, 1111, Initial stage is recruiting
+017, Persia, OP_FOUND_CITY, 1111, Found 0 potential units to recruit for operation 1111 at (60:12) with target at (55:12)
+017, Persia, OP_FOUND_CITY, 1111, Started Army 1112; Units Recruited 1; Max Formation Size 2; Recruiting Units
+017, Persia, OP_FOUND_CITY, 1111, PRE Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA -1; Open; 
+017, Persia, OP_FOUND_CITY, 1111, Found 0 potential units to recruit for operation 1111 at (60:12) with target at (55:12)
+017, Persia, OP_FOUND_CITY, 1111, POST Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+018, Persia, OP_FOUND_CITY, 1111, found better target for settler, old score 56645 (q25), new score 75701 (q50)
+018, Persia, OP_FOUND_CITY, 1111, setting new target (63:18)
+018, Persia, OP_FOUND_CITY, 1111, PRE Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+018, Persia, OP_FOUND_CITY, 1111, Found 0 potential units to recruit for operation 1111 at (60:12) with target at (63:18)
+018, Persia, OP_FOUND_CITY, 1111, POST Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+019, Carthage, OP_FOUND_CITY, 1124, Ended: NoTarget; Distance -1; Duration 20
+019, Persia, OP_FOUND_CITY, 1111, PRE Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+019, Persia, OP_FOUND_CITY, 1111, Found 0 potential units to recruit for operation 1111 at (60:12) with target at (63:18)
+019, Persia, OP_FOUND_CITY, 1111, POST Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+020, Carthage, OP_FOUND_CITY, 1128, Ended: NoTarget; Distance -1; Duration 21
+020, Persia, OP_FOUND_CITY, 1111, PRE Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+020, Persia, OP_FOUND_CITY, 1111, Found 0 potential units to recruit for operation 1111 at (60:12) with target at (63:18)
+020, Persia, OP_FOUND_CITY, 1111, POST Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+021, Carthage, OP_FOUND_CITY, 1134, Ended: NoTarget; Distance -1; Duration 22
+021, Persia, OP_FOUND_CITY, 1111, PRE Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+021, Persia, OP_FOUND_CITY, 1111, Found 0 potential units to recruit for operation 1111 at (60:12) with target at (63:18)
+021, Persia, OP_FOUND_CITY, 1111, POST Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+022, The_Shoshone, OP_FOUND_CITY, 1138, Ended: NoTarget; Distance -1; Duration 23
+022, Carthage, OP_FOUND_CITY, 1139, Ended: NoTarget; Distance -1; Duration 23
+022, Persia, OP_FOUND_CITY, 1111, PRE Recruiting Units for army 1112; Settler 1110 at (60:12) - ETA 0; Open; 
+022, Persia, OP_FOUND_CITY, 1111, Found 1 potential units to recruit for operation 1111 at (60:12) with target at (63:18)
+022, Persia, OP_FOUND_CITY, 1111, Added Immortal 1140 to slot 1 in army 1112. ETA at (60:12) is 0 
+022, Persia, OP_FOUND_CITY, 1111, Transition to gathering stage
+022, Persia, OP_FOUND_CITY, 1111, POST Gathering Forces for army 1112; center (62:12); variance (1.00:1.00); free slots 0
+023, The_Shoshone, OP_FOUND_CITY, 1145, Ended: NoTarget; Distance -1; Duration 24
+023, Carthage, OP_FOUND_CITY, 1146, Ended: NoTarget; Distance -1; Duration 24
+023, Persia, OP_FOUND_CITY, 1111, PRE Gathering Forces for army 1112; center (62:12); variance (1.00:1.00); free slots 0
+023, Persia, OP_FOUND_CITY, 1111, Transition to movement stage
+023, Persia, OP_FOUND_CITY, 1111, POST Moving To Target with Army 1112; center (62:12); target (63:18); Progress 0 percent
+024, Ethiopia, OP_FOUND_CITY, 1150, found target for settler, score 92953 (q50)
+024, Ethiopia, OP_FOUND_CITY, 1150, Skip recruiting, start with movement stage
+024, Ethiopia, OP_FOUND_CITY, 1150, Found 0 potential units to recruit for operation 1150 at (42:16) with target at (46:17)
+024, Ethiopia, OP_FOUND_CITY, 1150, Started Army 1151; Units Recruited 1; Max Formation Size 2; Moving To Target
+024, Ethiopia, OP_FOUND_CITY, 1150, PRE Moving To Target with Army 1151; center (42:16); target (46:17); Progress 0 percent
+024, Ethiopia, OP_FOUND_CITY, 1150, POST Moving To Target with Army 1151; center (43:16); target (46:17); Progress 17 percent
+024, The_Shoshone, OP_FOUND_CITY, 1152, Ended: NoTarget; Distance -1; Duration 25
+024, Carthage, OP_FOUND_CITY, 1153, Ended: NoTarget; Distance -1; Duration 25
+024, Persia, OP_FOUND_CITY, 1111, PRE Moving To Target with Army 1112; center (63:13); target (63:18); Progress 25 percent
+024, Persia, OP_FOUND_CITY, 1111, POST Moving To Target with Army 1112; center (62:12); target (63:18); Progress 0 percent
+025, Ethiopia, OP_FOUND_CITY, 1150, PRE Moving To Target with Army 1151; center (43:16); target (46:17); Progress 17 percent
+025, Ethiopia, OP_FOUND_CITY, 1150, POST Moving To Target with Army 1151; center (44:16); target (46:17); Progress 34 percent
+025, The_Shoshone, OP_FOUND_CITY, 1158, Ended: NoTarget; Distance -1; Duration 26
+025, Carthage, OP_FOUND_CITY, 1160, Ended: NoTarget; Distance -1; Duration 26
+025, Persia, OP_FOUND_CITY, 1111, PRE Moving To Target with Army 1112; center (62:12); target (63:18); Progress 0 percent
+025, Persia, OP_FOUND_CITY, 1111, POST Moving To Target with Army 1112; center (60:13); target (63:18); Progress 13 percent
+026, Ethiopia, OP_FOUND_CITY, 1150, PRE Moving To Target with Army 1151; center (44:16); target (46:17); Progress 34 percent
+026, Ethiopia, OP_FOUND_CITY, 1150, POST Moving To Target with Army 1151; center (45:17); target (46:17); Progress 100 percent
+026, The_Shoshone, OP_FOUND_CITY, 1166, found target for settler, score 209147 (q50)
+026, The_Shoshone, OP_FOUND_CITY, 1166, Skip recruiting, start with movement stage
+026, The_Shoshone, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (49:11) with target at (47:16)
+026, The_Shoshone, OP_FOUND_CITY, 1166, Started Army 1167; Units Recruited 1; Max Formation Size 2; Moving To Target
+026, The_Shoshone, OP_FOUND_CITY, 1166, PRE Moving To Target with Army 1167; center (49:11); target (47:16); Progress 0 percent
+026, The_Shoshone, OP_FOUND_CITY, 1166, POST Moving To Target with Army 1167; center (48:13); target (47:16); Progress 34 percent
+026, Carthage, OP_FOUND_CITY, 1168, Ended: NoTarget; Distance -1; Duration 27
+026, Persia, OP_FOUND_CITY, 1111, PRE Moving To Target with Army 1112; center (60:13); target (63:18); Progress 13 percent
+026, Persia, OP_FOUND_CITY, 1111, POST Moving To Target with Army 1112; center (60:15); target (63:18); Progress 38 percent
+027, Ethiopia, OP_FOUND_CITY, 1150, PRE Moving To Target with Army 1151; center (45:17); target (46:17); Progress 100 percent
+027, Ethiopia, OP_FOUND_CITY, 1150, Transition to target stage
+027, Ethiopia, OP_FOUND_CITY, 1150, City founded (Harar) at (46:17), plot value 92953, q50
+027, Ethiopia, OP_FOUND_CITY, 1150, Transition to finished stage
+027, Ethiopia, OP_FOUND_CITY, 1150, POST Completed
+027, The_Shoshone, OP_FOUND_CITY, 1166, cannot found city at (47:16)
+027, The_Shoshone, OP_FOUND_CITY, 1166, no path to city site (47:16)
+027, The_Shoshone, OP_FOUND_CITY, 1166, found better target for settler, old score -1 (q-50), new score 108011 (q50)
+027, The_Shoshone, OP_FOUND_CITY, 1166, setting new target (51:15)
+027, The_Shoshone, OP_FOUND_CITY, 1166, PRE Moving To Target with Army 1167; center (48:13); target (51:15); Progress 0 percent
+027, The_Shoshone, OP_FOUND_CITY, 1166, POST Moving To Target with Army 1167; center (50:14); target (51:15); Progress 40 percent
+027, Carthage, OP_FOUND_CITY, 1176, Ended: NoTarget; Distance -1; Duration 28
+027, China, OP_FOUND_CITY, 1178, found target for settler, score 101868 (q50)
+027, China, OP_FOUND_CITY, 1178, Skip recruiting, start with movement stage
+027, China, OP_FOUND_CITY, 1178, Found 0 potential units to recruit for operation 1178 at (30:13) with target at (30:17)
+027, China, OP_FOUND_CITY, 1178, Started Army 1179; Units Recruited 1; Max Formation Size 2; Moving To Target
+027, China, OP_FOUND_CITY, 1178, PRE Moving To Target with Army 1179; center (30:13); target (30:17); Progress 0 percent
+027, China, OP_FOUND_CITY, 1178, POST Moving To Target with Army 1179; center (29:15); target (30:17); Progress 40 percent
+027, Persia, OP_FOUND_CITY, 1111, PRE Moving To Target with Army 1112; center (60:15); target (63:18); Progress 38 percent
+027, Persia, OP_FOUND_CITY, 1111, POST Moving To Target with Army 1112; center (61:17); target (63:18); Progress 63 percent
+028, Ethiopia, OP_FOUND_CITY, 1150, Ended: Success; Distance 6; Duration 4
+028, The_Shoshone, OP_FOUND_CITY, 1166, PRE Moving To Target with Army 1167; center (50:14); target (51:15); Progress 40 percent
+028, The_Shoshone, OP_FOUND_CITY, 1166, Transition to target stage
+028, The_Shoshone, OP_FOUND_CITY, 1166, POST At Target
+028, Carthage, OP_FOUND_CITY, 1185, Ended: NoTarget; Distance -1; Duration 29
+028, Songhai, OP_FOUND_CITY, 1187, found target for settler, score 116199 (q50)
+028, Songhai, OP_FOUND_CITY, 1187, Initial stage is recruiting
+028, Songhai, OP_FOUND_CITY, 1187, Found 0 potential units to recruit for operation 1187 at (27:23) with target at (29:18)
+028, Songhai, OP_FOUND_CITY, 1187, Started Army 1188; Units Recruited 1; Max Formation Size 2; Recruiting Units
+028, Songhai, OP_FOUND_CITY, 1187, PRE Recruiting Units for army 1188; Settler 1186 at (27:23) - ETA -1; Open; 
+028, Songhai, OP_FOUND_CITY, 1187, Found 0 potential units to recruit for operation 1187 at (27:23) with target at (29:18)
+028, Songhai, OP_FOUND_CITY, 1187, POST Recruiting Units for army 1188; Settler 1186 at (27:23) - ETA 0; Open; 
+028, China, OP_FOUND_CITY, 1178, PRE Moving To Target with Army 1179; center (29:15); target (30:17); Progress 40 percent
+028, China, OP_FOUND_CITY, 1178, Transition to target stage
+028, China, OP_FOUND_CITY, 1178, POST At Target
+028, Persia, OP_FOUND_CITY, 1111, PRE Moving To Target with Army 1112; center (61:17); target (63:18); Progress 63 percent
+028, Persia, OP_FOUND_CITY, 1111, POST Moving To Target with Army 1112; center (62:17); target (63:18); Progress 100 percent
+029, The_Shoshone, OP_FOUND_CITY, 1166, PRE At Target
+029, The_Shoshone, OP_FOUND_CITY, 1166, City founded (Te-Moak) at (51:15), plot value 108011, q50
+029, The_Shoshone, OP_FOUND_CITY, 1166, Transition to finished stage
+029, The_Shoshone, OP_FOUND_CITY, 1166, Ended: Success; Distance 5; Duration 3
+029, Carthage, OP_FOUND_CITY, 1194, Ended: NoTarget; Distance -1; Duration 30
+029, Songhai, OP_FOUND_CITY, 1187, PRE Recruiting Units for army 1188; Settler 1186 at (27:23) - ETA 0; Open; 
+029, Songhai, OP_FOUND_CITY, 1187, Found 0 potential units to recruit for operation 1187 at (27:23) with target at (29:18)
+029, Songhai, OP_FOUND_CITY, 1187, POST Recruiting Units for army 1188; Settler 1186 at (27:23) - ETA 0; Open; 
+029, China, OP_FOUND_CITY, 1178, PRE At Target
+029, China, OP_FOUND_CITY, 1178, City founded (Shanghai) at (30:17), plot value 79490, q50
+029, China, OP_FOUND_CITY, 1178, Transition to finished stage
+029, China, OP_FOUND_CITY, 1178, Ended: Success; Distance 5; Duration 2
+029, Persia, OP_FOUND_CITY, 1111, PRE Moving To Target with Army 1112; center (62:17); target (63:18); Progress 100 percent
+029, Persia, OP_FOUND_CITY, 1111, Transition to target stage
+029, Persia, OP_FOUND_CITY, 1111, City founded (Pasargadae) at (63:18), plot value 60253, q33
+029, Persia, OP_FOUND_CITY, 1111, Transition to finished stage
+029, Persia, OP_FOUND_CITY, 1111, POST Completed
+030, Carthage, OP_FOUND_CITY, 1199, Ended: NoTarget; Distance -1; Duration 31
+030, Songhai, OP_FOUND_CITY, 1187, cannot found city at (29:18)
+030, Songhai, OP_FOUND_CITY, 1187, found better target for settler, old score -1 (q-50), new score 51257 (q13)
+030, Songhai, OP_FOUND_CITY, 1187, setting new target (32:28)
+030, Songhai, OP_FOUND_CITY, 1187, PRE Recruiting Units for army 1188; Settler 1186 at (27:23) - ETA 0; Open; 
+030, Songhai, OP_FOUND_CITY, 1187, Found 0 potential units to recruit for operation 1187 at (27:23) with target at (32:28)
+030, Songhai, OP_FOUND_CITY, 1187, POST Recruiting Units for army 1188; Settler 1186 at (27:23) - ETA 0; Open; 
+030, Persia, OP_FOUND_CITY, 1111, Ended: Success; Distance 8; Duration 13
+031, Assyria, OP_FOUND_CITY, 1205, found target for settler, score 107627 (q50)
+031, Assyria, OP_FOUND_CITY, 1205, Initial stage is recruiting
+031, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (35:30)
+031, Assyria, OP_FOUND_CITY, 1205, Started Army 1206; Units Recruited 1; Max Formation Size 2; Recruiting Units
+031, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA -1; Open; 
+031, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (35:30)
+031, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+031, Carthage, OP_FOUND_CITY, 1207, Ended: NoTarget; Distance -1; Duration 32
+031, Songhai, OP_FOUND_CITY, 1187, PRE Recruiting Units for army 1188; Settler 1186 at (27:23) - ETA 0; Open; 
+031, Songhai, OP_FOUND_CITY, 1187, Found 0 potential units to recruit for operation 1187 at (27:23) with target at (32:28)
+031, Songhai, OP_FOUND_CITY, 1187, POST Recruiting Units for army 1188; Settler 1186 at (27:23) - ETA 0; Open; 
+032, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+032, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (35:30)
+032, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+032, Carthage, OP_FOUND_CITY, 1213, Ended: NoTarget; Distance -1; Duration 33
+032, Songhai, OP_FOUND_CITY, 1187, PRE Recruiting Units for army 1188; Settler 1186 at (27:23) - ETA 0; Open; 
+032, Songhai, OP_FOUND_CITY, 1187, Found 1 potential units to recruit for operation 1187 at (27:23) with target at (32:28)
+032, Songhai, OP_FOUND_CITY, 1187, Added Warrior 1214 to slot 1 in army 1188. ETA at (27:23) is 0 
+032, Songhai, OP_FOUND_CITY, 1187, Transition to gathering stage
+032, Songhai, OP_FOUND_CITY, 1187, POST Gathering Forces for army 1188; center (28:24); variance (0.00:0.00); free slots 0
+033, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+033, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (35:30)
+033, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+033, Carthage, OP_FOUND_CITY, 1221, Ended: NoTarget; Distance -1; Duration 34
+033, Songhai, OP_FOUND_CITY, 1187, PRE Gathering Forces for army 1188; center (28:24); variance (0.00:0.00); free slots 0
+033, Songhai, OP_FOUND_CITY, 1187, Transition to movement stage
+033, Songhai, OP_FOUND_CITY, 1187, POST Moving To Target with Army 1188; center (28:25); target (32:28); Progress 0 percent
+034, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+034, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (35:30)
+034, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+034, Carthage, OP_FOUND_CITY, 1225, Ended: NoTarget; Distance -1; Duration 35
+034, Denmark, OP_FOUND_CITY, 1228, found target for settler, score 106385 (q50)
+034, Denmark, OP_FOUND_CITY, 1228, Initial stage is recruiting
+034, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+034, Denmark, OP_FOUND_CITY, 1228, Started Army 1229; Units Recruited 1; Max Formation Size 2; Recruiting Units
+034, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA -1; Open; 
+034, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+034, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+034, Songhai, OP_FOUND_CITY, 1187, PRE Moving To Target with Army 1188; center (28:25); target (32:28); Progress 0 percent
+034, Songhai, OP_FOUND_CITY, 1187, POST Moving To Target with Army 1188; center (29:26); target (32:28); Progress 17 percent
+035, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+035, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (35:30)
+035, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+035, Carthage, OP_FOUND_CITY, 1239, Ended: NoTarget; Distance -1; Duration 36
+035, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+035, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+035, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+035, Songhai, OP_FOUND_CITY, 1187, PRE Moving To Target with Army 1188; center (29:26); target (32:28); Progress 17 percent
+035, Songhai, OP_FOUND_CITY, 1187, POST Moving To Target with Army 1188; center (30:26); target (32:28); Progress 34 percent
+035, Persia, OP_RAPID_RESPONSE, 1241, Initial stage is recruiting
+035, Persia, OP_RAPID_RESPONSE, 1241, Found 1 potential units to recruit for operation 1241 at (63:18) with target at (63:18)
+035, Persia, OP_RAPID_RESPONSE, 1241, Added Immortal 1231 to slot 0 in army 1242. ETA at (63:18) is 2 
+035, Persia, OP_RAPID_RESPONSE, 1241, Started Army 1242; Units Recruited 1; Max Formation Size 4; Recruiting Units
+035, Persia, OP_RAPID_RESPONSE, 1241, PRE Recruiting Units for army 1242; Immortal 1231 at (60:12) - ETA 2; Open; Open; Open; 
+035, Persia, OP_RAPID_RESPONSE, 1241, Found 0 potential units to recruit for operation 1241 at (63:18) with target at (63:18)
+035, Persia, OP_RAPID_RESPONSE, 1241, POST Recruiting Units for army 1242; Immortal 1231 at (60:13) - ETA 2; Open; Open; Open; 
+036, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+036, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (35:30)
+036, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+036, Carthage, OP_FOUND_CITY, 1253, Ended: NoTarget; Distance -1; Duration 37
+036, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+036, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+036, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+036, Songhai, OP_FOUND_CITY, 1187, PRE Moving To Target with Army 1188; center (30:26); target (32:28); Progress 34 percent
+036, Songhai, OP_FOUND_CITY, 1187, POST Moving To Target with Army 1188; center (30:27); target (32:28); Progress 50 percent
+036, Persia, OP_FOUND_CITY, 1256, found target for settler, score 78793 (q50)
+036, Persia, OP_FOUND_CITY, 1256, Initial stage is recruiting
+036, Persia, OP_FOUND_CITY, 1256, Found 1 potential units to recruit for operation 1256 at (60:12) with target at (62:22)
+036, Persia, OP_FOUND_CITY, 1256, Added Immortal 1140 to slot 1 in army 1257. ETA at (60:12) is 3 
+036, Persia, OP_FOUND_CITY, 1256, Transition to gathering stage
+036, Persia, OP_FOUND_CITY, 1256, Started Army 1257; Units Recruited 2; Max Formation Size 2; Gathering Forces
+036, Persia, OP_RAPID_RESPONSE, 1241, PRE Recruiting Units for army 1242; Immortal 1231 at (60:13) - ETA 2; Open; Open; Open; 
+036, Persia, OP_RAPID_RESPONSE, 1241, Found 0 potential units to recruit for operation 1241 at (63:18) with target at (63:18)
+036, Persia, OP_RAPID_RESPONSE, 1241, POST Recruiting Units for army 1242; Immortal 1231 at (60:14) - ETA 1; Open; Open; Open; 
+036, Persia, OP_FOUND_CITY, 1256, PRE Gathering Forces for army 1257; center (63:18); variance (2.25:9.00); free slots 0
+036, Persia, OP_FOUND_CITY, 1256, POST Gathering Forces for army 1257; center (62:17); variance (1.00:6.25); free slots 0
+037, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+037, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (35:30)
+037, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+037, Carthage, OP_FOUND_CITY, 1264, Ended: NoTarget; Distance -1; Duration 38
+037, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+037, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+037, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+037, Songhai, OP_FOUND_CITY, 1187, PRE Moving To Target with Army 1188; center (30:27); target (32:28); Progress 50 percent
+037, Songhai, OP_FOUND_CITY, 1187, Transition to target stage
+037, Songhai, OP_FOUND_CITY, 1187, POST At Target
+037, Persia, OP_RAPID_RESPONSE, 1241, Ended: NoTarget; Distance 1; Duration 2
+037, Persia, OP_FOUND_CITY, 1256, PRE Gathering Forces for army 1257; center (62:17); variance (1.00:6.25); free slots 0
+037, Persia, OP_FOUND_CITY, 1256, POST Gathering Forces for army 1257; center (61:16); variance (0.25:4.00); free slots 0
+038, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+038, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (35:30)
+038, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+038, Carthage, OP_FOUND_CITY, 1278, Ended: NoTarget; Distance -1; Duration 39
+038, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+038, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+038, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+038, Songhai, OP_FOUND_CITY, 1187, PRE At Target
+038, Songhai, OP_FOUND_CITY, 1187, City founded (Tombouctu) at (32:28), plot value 113384, q50
+038, Songhai, OP_FOUND_CITY, 1187, Transition to finished stage
+038, Songhai, OP_FOUND_CITY, 1187, Ended: Success; Distance 6; Duration 10
+038, Persia, OP_RAPID_RESPONSE, 1281, Initial stage is recruiting
+038, Persia, OP_RAPID_RESPONSE, 1281, Found 1 potential units to recruit for operation 1281 at (63:18) with target at (63:18)
+038, Persia, OP_RAPID_RESPONSE, 1281, Added Immortal 1231 to slot 0 in army 1282. ETA at (63:18) is 2 
+038, Persia, OP_RAPID_RESPONSE, 1281, Started Army 1282; Units Recruited 1; Max Formation Size 4; Recruiting Units
+038, Persia, OP_FOUND_CITY, 1256, PRE Gathering Forces for army 1257; center (61:16); variance (0.25:4.00); free slots 0
+038, Persia, OP_FOUND_CITY, 1256, POST Gathering Forces for army 1257; center (62:17); variance (1.00:6.25); free slots 0
+038, Persia, OP_RAPID_RESPONSE, 1281, PRE Recruiting Units for army 1282; Immortal 1231 at (60:12) - ETA 2; Open; Open; Open; 
+038, Persia, OP_RAPID_RESPONSE, 1281, Found 0 potential units to recruit for operation 1281 at (63:18) with target at (63:18)
+038, Persia, OP_RAPID_RESPONSE, 1281, POST Recruiting Units for army 1282; Immortal 1231 at (60:13) - ETA 2; Open; Open; Open; 
+039, Assyria, OP_FOUND_CITY, 1205, found better target for settler, old score 71396 (q50), new score 121864 (q50)
+039, Assyria, OP_FOUND_CITY, 1205, setting new target (41:22)
+039, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+039, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (41:22)
+039, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+039, Carthage, OP_FOUND_CITY, 1292, Ended: NoTarget; Distance -1; Duration 40
+039, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+039, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+039, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+039, Persia, OP_FOUND_CITY, 1256, PRE Gathering Forces for army 1257; center (62:17); variance (1.00:6.25); free slots 0
+039, Persia, OP_FOUND_CITY, 1256, Added Archer 1283 to slot 1 in army 1257. ETA at (60:12) is 0 
+039, Persia, OP_FOUND_CITY, 1256, Transition to movement stage
+039, Persia, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (60:13); target (62:22); Progress 10 percent
+039, Persia, OP_RAPID_RESPONSE, 1281, PRE Recruiting Units for army 1282; Immortal 1231 at (60:13) - ETA 2; Open; Open; Open; 
+039, Persia, OP_RAPID_RESPONSE, 1281, Found 0 potential units to recruit for operation 1281 at (63:18) with target at (63:18)
+039, Persia, OP_RAPID_RESPONSE, 1281, POST Recruiting Units for army 1282; Immortal 1231 at (61:14) - ETA 1; Open; Open; Open; 
+040, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+040, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (41:22)
+040, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+040, Carthage, OP_FOUND_CITY, 1299, Ended: NoTarget; Distance -1; Duration 41
+040, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+040, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+040, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+040, Persia, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (60:13); target (62:22); Progress 10 percent
+040, Persia, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (60:14); target (62:22); Progress 19 percent
+040, Persia, OP_RAPID_RESPONSE, 1281, PRE Recruiting Units for army 1282; Immortal 1231 at (61:14) - ETA 1; Open; Open; Open; 
+040, Persia, OP_RAPID_RESPONSE, 1281, Found 0 potential units to recruit for operation 1281 at (63:18) with target at (63:18)
+040, Persia, OP_RAPID_RESPONSE, 1281, POST Recruiting Units for army 1282; Immortal 1231 at (61:15) - ETA 1; Open; Open; Open; 
+041, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+041, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (41:22)
+041, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+041, Carthage, OP_FOUND_CITY, 1312, Ended: NoTarget; Distance -1; Duration 42
+041, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+041, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+041, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+041, Persia, OP_RAPID_RESPONSE, 1281, Ended: NoTarget; Distance 1; Duration 3
+041, Persia, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (60:14); target (62:22); Progress 19 percent
+041, Persia, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (60:15); target (62:22); Progress 28 percent
+042, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+042, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (41:22)
+042, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+042, Ethiopia, OP_FOUND_CITY, 1325, found target for settler, score 123849 (q50)
+042, Ethiopia, OP_FOUND_CITY, 1325, Skip recruiting, start with movement stage
+042, Ethiopia, OP_FOUND_CITY, 1325, Found 1 potential units to recruit for operation 1325 at (42:16) with target at (42:21)
+042, Ethiopia, OP_FOUND_CITY, 1325, Added Warrior 1173 to slot 1 in army 1326. ETA at (42:16) is 0 
+042, Ethiopia, OP_FOUND_CITY, 1325, Started Army 1326; Units Recruited 2; Max Formation Size 2; Moving To Target
+042, Ethiopia, OP_FOUND_CITY, 1325, PRE Moving To Target with Army 1326; center (42:16); target (42:21); Progress 0 percent
+042, Ethiopia, OP_FOUND_CITY, 1325, POST Moving To Target with Army 1326; center (42:18); target (42:21); Progress 34 percent
+042, Carthage, OP_FOUND_CITY, 1329, Ended: NoTarget; Distance -1; Duration 43
+042, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+042, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+042, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+042, Persia, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (60:15); target (62:22); Progress 28 percent
+042, Persia, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (61:17); target (62:22); Progress 46 percent
+043, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+043, Assyria, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (39:28) with target at (41:22)
+043, Assyria, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Open; 
+043, Ethiopia, OP_FOUND_CITY, 1325, PRE Moving To Target with Army 1326; center (42:18); target (42:21); Progress 34 percent
+043, Ethiopia, OP_FOUND_CITY, 1325, POST Moving To Target with Army 1326; center (42:19); target (42:21); Progress 50 percent
+043, Carthage, OP_FOUND_CITY, 1340, Ended: NoTarget; Distance -1; Duration 44
+043, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+043, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+043, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+043, Persia, OP_RAPID_RESPONSE, 1346, Initial stage is recruiting
+043, Persia, OP_RAPID_RESPONSE, 1346, Found 1 potential units to recruit for operation 1346 at (60:12) with target at (60:12)
+043, Persia, OP_RAPID_RESPONSE, 1346, Added Immortal 1140 to slot 0 in army 1347. ETA at (60:12) is 2 
+043, Persia, OP_RAPID_RESPONSE, 1346, Started Army 1347; Units Recruited 1; Max Formation Size 4; Recruiting Units
+043, Persia, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (61:17); target (62:22); Progress 46 percent
+043, Persia, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (62:18); target (62:22); Progress 55 percent
+043, Persia, OP_RAPID_RESPONSE, 1346, PRE Recruiting Units for army 1347; Immortal 1140 at (61:18) - ETA 2; Open; Open; Open; 
+043, Persia, OP_RAPID_RESPONSE, 1346, Found 1 potential units to recruit for operation 1346 at (60:12) with target at (60:12)
+043, Persia, OP_RAPID_RESPONSE, 1346, Added Immortal 1349 to slot 1 in army 1347. ETA at (60:12) is 3 
+043, Persia, OP_RAPID_RESPONSE, 1346, Transition to gathering stage
+043, Persia, OP_RAPID_RESPONSE, 1346, POST Gathering Forces for army 1347; center (63:18); variance (2.25:0.25); free slots 2
+044, Assyria, OP_FOUND_CITY, 1205, Added Warrior 1358 to slot 1 in army 1206. ETA at (39:28) is 0 
+044, Assyria, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (39:28) - ETA 0; Warrior 1358 at (39:27) - ETA 0; 
+044, Assyria, OP_FOUND_CITY, 1205, Added Warrior 1002 to slot 1 in army 1206. ETA at (39:28) is 0 
+044, Assyria, OP_FOUND_CITY, 1205, Transition to gathering stage
+044, Assyria, OP_FOUND_CITY, 1205, Transition to movement stage
+044, Assyria, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (39:28); target (41:22); Progress 0 percent
+044, Ethiopia, OP_FOUND_CITY, 1325, PRE Moving To Target with Army 1326; center (42:19); target (42:21); Progress 50 percent
+044, Ethiopia, OP_FOUND_CITY, 1325, POST Moving To Target with Army 1326; center (43:20); target (42:21); Progress 100 percent
+044, Carthage, OP_FOUND_CITY, 1361, Ended: NoTarget; Distance -1; Duration 45
+044, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+044, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+044, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+044, Persia, OP_RAPID_RESPONSE, 1346, Ended: NoTarget; Distance 1; Duration 1
+044, Persia, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (62:18); target (62:22); Progress 55 percent
+044, Persia, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (61:20); target (62:22); Progress 73 percent
+045, Assyria, OP_FOUND_CITY, 1205, PRE Moving To Target with Army 1206; center (39:28); target (41:22); Progress 0 percent
+045, Assyria, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (39:27); target (41:22); Progress 15 percent
+045, Ethiopia, OP_FOUND_CITY, 1325, PRE Moving To Target with Army 1326; center (43:20); target (42:21); Progress 100 percent
+045, Ethiopia, OP_FOUND_CITY, 1325, Transition to target stage
+045, Ethiopia, OP_FOUND_CITY, 1325, POST At Target
+045, Carthage, OP_FOUND_CITY, 1375, Ended: NoTarget; Distance -1; Duration 46
+045, Carthage, OP_FOUND_CITY, 1376, Ended: NoTarget; Distance -1; Duration 46
+045, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+045, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+045, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+045, Persia, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (61:20); target (62:22); Progress 73 percent
+045, Persia, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (61:21); target (62:22); Progress 100 percent
+046, Assyria, OP_FOUND_CITY, 1205, PRE Moving To Target with Army 1206; center (39:27); target (41:22); Progress 15 percent
+046, Assyria, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (41:26); target (41:22); Progress 29 percent
+046, Ethiopia, OP_FOUND_CITY, 1325, PRE At Target
+046, Ethiopia, OP_FOUND_CITY, 1325, City founded (Adwa) at (42:21), plot value 117447, q50
+046, Ethiopia, OP_FOUND_CITY, 1325, Transition to finished stage
+046, Ethiopia, OP_FOUND_CITY, 1325, Ended: Success; Distance 6; Duration 4
+046, Carthage, OP_FOUND_CITY, 1391, Ended: NoTarget; Distance -1; Duration 47
+046, Carthage, OP_FOUND_CITY, 1392, Ended: NoTarget; Distance -1; Duration 47
+046, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+046, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+046, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+046, Songhai, OP_RAPID_RESPONSE, 1395, Initial stage is recruiting
+046, Songhai, OP_RAPID_RESPONSE, 1395, Found 1 potential units to recruit for operation 1395 at (27:23) with target at (30:17)
+046, Songhai, OP_RAPID_RESPONSE, 1395, Added Warrior 1342 to slot 0 in army 1396. ETA at (27:23) is 0 
+046, Songhai, OP_RAPID_RESPONSE, 1395, Started Army 1396; Units Recruited 1; Max Formation Size 4; Recruiting Units
+046, Songhai, OP_RAPID_RESPONSE, 1395, PRE Recruiting Units for army 1396; Warrior 1342 at (27:23) - ETA 0; Open; Open; Open; 
+046, Songhai, OP_RAPID_RESPONSE, 1395, Found 0 potential units to recruit for operation 1395 at (27:23) with target at (30:17)
+046, Songhai, OP_RAPID_RESPONSE, 1395, POST Recruiting Units for army 1396; Warrior 1342 at (27:23) - ETA 0; Open; Open; Open; 
+046, China, OP_RAPID_RESPONSE, 1398, Initial stage is recruiting
+046, China, OP_RAPID_RESPONSE, 1398, Found 1 potential units to recruit for operation 1398 at (30:17) with target at (30:17)
+046, China, OP_RAPID_RESPONSE, 1398, Added Warrior 1344 to slot 0 in army 1399. ETA at (30:17) is 0 
+046, China, OP_RAPID_RESPONSE, 1398, Started Army 1399; Units Recruited 1; Max Formation Size 4; Recruiting Units
+046, China, OP_RAPID_RESPONSE, 1398, PRE Recruiting Units for army 1399; Warrior 1344 at (30:13) - ETA 0; Open; Open; Open; 
+046, China, OP_RAPID_RESPONSE, 1398, Found 0 potential units to recruit for operation 1398 at (30:17) with target at (30:17)
+046, China, OP_RAPID_RESPONSE, 1398, POST Recruiting Units for army 1399; Warrior 1344 at (29:15) - ETA 0; Open; Open; Open; 
+046, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Initial stage is recruiting
+046, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 3 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+046, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Added Immortal 1349 to slot 0 in army 1402. ETA at (63:18) is 0 
+046, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Added Immortal 1365 to slot 1 in army 1402. ETA at (63:18) is 0 
+046, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Added Archer 1316 to slot 3 in army 1402. ETA at (63:18) is 1 
+046, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Started Army 1402; Units Recruited 3; Max Formation Size 10; Recruiting Units
+046, Persia, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (61:21); target (62:22); Progress 100 percent
+046, Persia, OP_FOUND_CITY, 1256, Transition to target stage
+046, Persia, OP_FOUND_CITY, 1256, POST At Target
+046, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (63:18) - ETA 0; Immortal 1365 at (60:15) - ETA 0; Open; Archer 1316 at (60:12) - ETA 1; Open; Open; Open; Open; Open; Open; 
+046, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+046, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (63:18) - ETA 0; Immortal 1365 at (59:16) - ETA 0; Open; Archer 1316 at (61:14) - ETA 1; Open; Open; Open; Open; Open; Open; 
+047, Assyria, OP_FOUND_CITY, 1205, cannot found city at (41:22)
+047, Assyria, OP_FOUND_CITY, 1205, found better target for settler, old score -1 (q-50), new score 96180 (q50)
+047, Assyria, OP_FOUND_CITY, 1205, setting new target (42:32)
+047, Assyria, OP_FOUND_CITY, 1205, PRE Moving To Target with Army 1206; center (41:26); target (42:32); Progress -16 percent
+047, Assyria, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (39:27); target (42:32); Progress -16 percent
+047, The_Shoshone, OP_FOUND_CITY, 1409, found target for settler, score 100360 (q50)
+047, The_Shoshone, OP_FOUND_CITY, 1409, Initial stage is recruiting
+047, The_Shoshone, OP_FOUND_CITY, 1409, Found 1 potential units to recruit for operation 1409 at (49:11) with target at (45:13)
+047, The_Shoshone, OP_FOUND_CITY, 1409, Added Warrior 1250 to slot 1 in army 1410. ETA at (49:11) is 0 
+047, The_Shoshone, OP_FOUND_CITY, 1409, Transition to gathering stage
+047, The_Shoshone, OP_FOUND_CITY, 1409, Transition to movement stage
+047, The_Shoshone, OP_FOUND_CITY, 1409, Started Army 1410; Units Recruited 2; Max Formation Size 2; Moving To Target
+047, The_Shoshone, OP_FOUND_CITY, 1409, PRE Moving To Target with Army 1410; center (49:11); target (45:13); Progress 0 percent
+047, The_Shoshone, OP_FOUND_CITY, 1409, POST Moving To Target with Army 1410; center (48:12); target (45:13); Progress 34 percent
+047, Carthage, OP_FOUND_CITY, 1413, Ended: NoTarget; Distance -1; Duration 48
+047, Carthage, OP_FOUND_CITY, 1414, Ended: NoTarget; Distance -1; Duration 48
+047, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+047, Denmark, OP_FOUND_CITY, 1228, Found 0 potential units to recruit for operation 1228 at (66:25) with target at (62:23)
+047, Denmark, OP_FOUND_CITY, 1228, POST Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Open; 
+047, Songhai, OP_RAPID_RESPONSE, 1395, Ended: NoTarget; Distance -1; Duration 1
+047, China, OP_RAPID_RESPONSE, 1398, Ended: NoTarget; Distance 1; Duration 1
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Initial stage is recruiting
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 3 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Added Immortal 1231 to slot 0 in army 1419. ETA at (63:18) is 1 
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Added Immortal 1140 to slot 1 in army 1419. ETA at (63:18) is 1 
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Added Immortal 1162 to slot 2 in army 1419. ETA at (63:18) is 1 
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Started Army 1419; Units Recruited 3; Max Formation Size 10; Recruiting Units
+047, Persia, OP_FOUND_CITY, 1256, PRE At Target
+047, Persia, OP_FOUND_CITY, 1256, City founded (Susa) at (62:22), plot value 126528, q50
+047, Persia, OP_FOUND_CITY, 1256, Transition to finished stage
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (63:18) - ETA 0; Immortal 1365 at (59:16) - ETA 0; Open; Archer 1316 at (61:14) - ETA 1; Open; Open; Open; Open; Open; Open; 
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (63:19) - ETA 0; Immortal 1365 at (61:16) - ETA 1; Open; Archer 1316 at (61:15) - ETA 1; Open; Open; Open; Open; Open; Open; 
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (58:17) - ETA 1; Immortal 1140 at (58:18) - ETA 1; Immortal 1162 at (68:18) - ETA 1; Open; Open; Open; Open; Open; Open; Open; 
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+047, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (59:17) - ETA 1; Immortal 1140 at (58:18) - ETA 1; Immortal 1162 at (66:18) - ETA 1; Open; Open; Open; Open; Open; Open; Open; 
+047, Persia, OP_FOUND_CITY, 1256, Ended: Success; Distance 11; Duration 11
+048, Assyria, OP_FOUND_CITY, 1205, PRE Moving To Target with Army 1206; center (39:27); target (42:32); Progress -16 percent
+048, Assyria, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (38:29); target (42:32); Progress 0 percent
+048, The_Shoshone, OP_FOUND_CITY, 1409, PRE Moving To Target with Army 1410; center (48:12); target (45:13); Progress 34 percent
+048, The_Shoshone, OP_FOUND_CITY, 1409, POST Moving To Target with Army 1410; center (47:12); target (45:13); Progress 50 percent
+048, Carthage, OP_FOUND_CITY, 1434, Ended: NoTarget; Distance -1; Duration 49
+048, Carthage, OP_FOUND_CITY, 1435, Ended: NoTarget; Distance -1; Duration 49
+048, Denmark, OP_FOUND_CITY, 1228, Added Warrior 1437 to slot 1 in army 1229. ETA at (66:25) is 0 
+048, Denmark, OP_FOUND_CITY, 1228, cannot found city at (62:23)
+048, Denmark, OP_FOUND_CITY, 1228, no path to city site (62:23)
+048, Denmark, OP_FOUND_CITY, 1228, found better target for settler, old score -1 (q-50), new score 97667 (q50)
+048, Denmark, OP_FOUND_CITY, 1228, setting new target (67:29)
+048, Denmark, OP_FOUND_CITY, 1228, PRE Recruiting Units for army 1229; Settler 1227 at (66:25) - ETA 0; Warrior 1437 at (65:25) - ETA 0; 
+048, Denmark, OP_FOUND_CITY, 1228, Added Warrior 1010 to slot 1 in army 1229. ETA at (66:25) is 0 
+048, Denmark, OP_FOUND_CITY, 1228, Transition to gathering stage
+048, Denmark, OP_FOUND_CITY, 1228, Transition to movement stage
+048, Denmark, OP_FOUND_CITY, 1228, POST Moving To Target with Army 1229; center (66:25); target (67:29); Progress 0 percent
+048, Songhai, OP_FOUND_CITY, 1439, found target for settler, score 49046 (q9)
+048, Songhai, OP_FOUND_CITY, 1439, Initial stage is recruiting
+048, Songhai, OP_FOUND_CITY, 1439, Found 1 potential units to recruit for operation 1439 at (27:23) with target at (26:19)
+048, Songhai, OP_FOUND_CITY, 1439, Added Warrior 1342 to slot 1 in army 1440. ETA at (27:23) is 0 
+048, Songhai, OP_FOUND_CITY, 1439, Transition to gathering stage
+048, Songhai, OP_FOUND_CITY, 1439, Transition to movement stage
+048, Songhai, OP_FOUND_CITY, 1439, Started Army 1440; Units Recruited 2; Max Formation Size 2; Moving To Target
+048, Songhai, OP_FOUND_CITY, 1439, PRE Moving To Target with Army 1440; center (27:23); target (26:19); Progress 0 percent
+048, Songhai, OP_FOUND_CITY, 1439, POST Moving To Target with Army 1440; center (27:21); target (26:19); Progress 40 percent
+048, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (63:19) - ETA 0; Immortal 1365 at (61:16) - ETA 1; Open; Archer 1316 at (61:15) - ETA 1; Open; Open; Open; Open; Open; Open; 
+048, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+048, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (63:18) - ETA 0; Immortal 1365 at (62:17) - ETA 0; Open; Archer 1316 at (61:14) - ETA 0; Open; Open; Open; Open; Open; Open; 
+048, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (59:17) - ETA 1; Immortal 1140 at (58:18) - ETA 1; Immortal 1162 at (66:18) - ETA 1; Open; Open; Open; Open; Open; Open; Open; 
+048, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+048, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (60:17) - ETA 0; Immortal 1140 at (60:18) - ETA 1; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+049, Assyria, OP_FOUND_CITY, 1205, PRE Moving To Target with Army 1206; center (38:29); target (42:32); Progress 0 percent
+049, Assyria, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (39:31); target (42:32); Progress 34 percent
+049, The_Shoshone, OP_FOUND_CITY, 1409, PRE Moving To Target with Army 1410; center (47:12); target (45:13); Progress 50 percent
+049, The_Shoshone, OP_FOUND_CITY, 1409, Transition to target stage
+049, The_Shoshone, OP_FOUND_CITY, 1409, POST At Target
+049, Carthage, OP_FOUND_CITY, 1451, Ended: NoTarget; Distance -1; Duration 50
+049, Carthage, OP_FOUND_CITY, 1452, Ended: NoTarget; Distance -1; Duration 50
+049, Denmark, OP_FOUND_CITY, 1228, PRE Moving To Target with Army 1229; center (66:25); target (67:29); Progress 0 percent
+049, Denmark, OP_FOUND_CITY, 1228, POST Moving To Target with Army 1229; center (66:26); target (67:29); Progress 17 percent
+049, Songhai, OP_FOUND_CITY, 1439, PRE Moving To Target with Army 1440; center (27:21); target (26:19); Progress 40 percent
+049, Songhai, OP_FOUND_CITY, 1439, Transition to target stage
+049, Songhai, OP_FOUND_CITY, 1439, POST At Target
+049, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (63:18) - ETA 0; Immortal 1365 at (62:17) - ETA 0; Open; Archer 1316 at (61:14) - ETA 0; Open; Open; Open; Open; Open; Open; 
+049, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 1 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+049, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Added Composite Bowman 1460 to slot 4 in army 1402. ETA at (63:18) is 0 
+049, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (63:18) - ETA 0; Immortal 1365 at (63:16) - ETA 0; Open; Archer 1316 at (61:15) - ETA 1; Composite Bowman 1460 at (62:18) - ETA 0; Open; Open; Open; Open; Open; 
+049, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (60:17) - ETA 0; Immortal 1140 at (60:18) - ETA 1; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+049, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 1 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+049, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Added Archer 1459 to slot 3 in army 1419. ETA at (63:18) is 0 
+049, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (60:19) - ETA 0; Immortal 1140 at (60:20) - ETA 0; Immortal 1162 at (64:18) - ETA 0; Archer 1459 at (62:18) - ETA 0; Open; Open; Open; Open; Open; Open; 
+050, Assyria, OP_FOUND_CITY, 1205, PRE Moving To Target with Army 1206; center (39:31); target (42:32); Progress 34 percent
+050, Assyria, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (41:32); target (42:32); Progress 100 percent
+050, The_Shoshone, OP_FOUND_CITY, 1409, PRE At Target
+050, The_Shoshone, OP_FOUND_CITY, 1409, City founded (Agaidika) at (45:13), plot value 100360, q50
+050, The_Shoshone, OP_FOUND_CITY, 1409, Transition to finished stage
+050, The_Shoshone, OP_FOUND_CITY, 1409, Ended: Success; Distance 6; Duration 3
+050, Carthage, OP_FOUND_CITY, 1471, Ended: NoTarget; Distance -1; Duration 51
+050, Carthage, OP_FOUND_CITY, 1472, Ended: NoTarget; Distance -1; Duration 51
+050, Denmark, OP_FOUND_CITY, 1228, PRE Moving To Target with Army 1229; center (66:26); target (67:29); Progress 17 percent
+050, Denmark, OP_FOUND_CITY, 1228, POST Moving To Target with Army 1229; center (66:28); target (67:29); Progress 50 percent
+050, Songhai, OP_FOUND_CITY, 1439, PRE At Target
+050, Songhai, OP_FOUND_CITY, 1439, City founded (Jenne) at (26:19), plot value 48812, q8
+050, Songhai, OP_FOUND_CITY, 1439, Transition to finished stage
+050, Songhai, OP_FOUND_CITY, 1439, Ended: Success; Distance 5; Duration 2
+050, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (63:18) - ETA 0; Immortal 1365 at (63:16) - ETA 0; Open; Archer 1316 at (61:15) - ETA 1; Composite Bowman 1460 at (62:18) - ETA 0; Open; Open; Open; Open; Open; 
+050, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+050, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (63:19) - ETA 0; Immortal 1365 at (62:17) - ETA 0; Open; Archer 1316 at (62:16) - ETA 0; Composite Bowman 1460 at (62:20) - ETA 0; Open; Open; Open; Open; Open; 
+050, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (60:19) - ETA 0; Immortal 1140 at (60:20) - ETA 0; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+050, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+050, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (60:20) - ETA 0; Immortal 1140 at (60:21) - ETA 0; Immortal 1162 at (63:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+051, Assyria, OP_FOUND_CITY, 1205, PRE Moving To Target with Army 1206; center (41:32); target (42:32); Progress 100 percent
+051, Assyria, OP_FOUND_CITY, 1205, Transition to target stage
+051, Assyria, OP_FOUND_CITY, 1205, POST At Target
+051, Carthage, OP_FOUND_CITY, 1485, Ended: NoTarget; Distance -1; Duration 52
+051, Carthage, OP_FOUND_CITY, 1486, Ended: NoTarget; Distance -1; Duration 52
+051, Denmark, OP_FOUND_CITY, 1228, PRE Moving To Target with Army 1229; center (66:28); target (67:29); Progress 50 percent
+051, Denmark, OP_FOUND_CITY, 1228, Transition to target stage
+051, Denmark, OP_FOUND_CITY, 1228, POST At Target
+051, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (63:19) - ETA 0; Immortal 1365 at (62:17) - ETA 0; Open; Archer 1316 at (62:16) - ETA 0; Composite Bowman 1460 at (62:20) - ETA 0; Open; Open; Open; Open; Open; 
+051, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+051, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:20) - ETA 0; Immortal 1365 at (61:17) - ETA 0; Open; Archer 1316 at (61:16) - ETA 0; Composite Bowman 1460 at (61:21) - ETA 0; Open; Open; Open; Open; Open; 
+051, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (60:20) - ETA 0; Immortal 1140 at (60:21) - ETA 0; Immortal 1162 at (63:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+051, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+051, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Contact with enemy!
+051, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (60:20) - ETA 0; Immortal 1140 at (60:23) - ETA 0; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+052, Assyria, OP_FOUND_CITY, 1205, PRE At Target
+052, Assyria, OP_FOUND_CITY, 1205, City founded (Nineveh) at (42:32), plot value 96180, q50
+052, Assyria, OP_FOUND_CITY, 1205, Transition to finished stage
+052, Assyria, OP_FOUND_CITY, 1205, Ended: Success; Distance 6; Duration 21
+052, Carthage, OP_FOUND_CITY, 1499, Ended: NoTarget; Distance -1; Duration 53
+052, Carthage, OP_FOUND_CITY, 1500, Ended: NoTarget; Distance -1; Duration 53
+052, Denmark, OP_FOUND_CITY, 1228, PRE At Target
+052, Denmark, OP_FOUND_CITY, 1228, City founded (Aarhus) at (67:29), plot value 102102, q50
+052, Denmark, OP_FOUND_CITY, 1228, Transition to finished stage
+052, Denmark, OP_FOUND_CITY, 1228, Ended: Success; Distance 6; Duration 18
+052, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:20) - ETA 0; Immortal 1365 at (61:17) - ETA 0; Open; Archer 1316 at (61:16) - ETA 0; Composite Bowman 1460 at (61:21) - ETA 0; Open; Open; Open; Open; Open; 
+052, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+052, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (61:19) - ETA 0; Immortal 1365 at (61:17) - ETA 0; Open; Archer 1316 at (62:17) - ETA 0; Composite Bowman 1460 at (62:19) - ETA 0; Open; Open; Open; Open; Open; 
+052, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (60:20) - ETA 0; Immortal 1140 at (60:23) - ETA 0; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+052, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+052, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (59:22) - ETA 0; Immortal 1140 at (59:23) - ETA 1; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+053, Carthage, OP_FOUND_CITY, 1515, Ended: NoTarget; Distance -1; Duration 54
+053, Carthage, OP_FOUND_CITY, 1516, Ended: NoTarget; Distance -1; Duration 54
+053, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (61:19) - ETA 0; Immortal 1365 at (61:17) - ETA 0; Open; Archer 1316 at (62:17) - ETA 0; Composite Bowman 1460 at (62:19) - ETA 0; Open; Open; Open; Open; Open; 
+053, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+053, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (61:19) - ETA 0; Immortal 1365 at (61:17) - ETA 0; Open; Archer 1316 at (62:17) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+053, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (59:22) - ETA 0; Immortal 1140 at (59:23) - ETA 1; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+053, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+053, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Removing Immortal 1140 from army 1419 because no progress to checkpoint (63:18). ETA 2; prev 1; prev 0
+053, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (59:20) - ETA 1; Open; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+054, Carthage, OP_FOUND_CITY, 1528, Ended: NoTarget; Distance -1; Duration 55
+054, Carthage, OP_FOUND_CITY, 1529, Ended: NoTarget; Distance -1; Duration 55
+054, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (61:19) - ETA 0; Immortal 1365 at (61:17) - ETA 0; Open; Archer 1316 at (62:17) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+054, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+054, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (62:18) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+054, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (59:20) - ETA 1; Open; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+054, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+054, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (59:19) - ETA 1; Open; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+055, Carthage, OP_FOUND_CITY, 1548, Ended: NoTarget; Distance -1; Duration 56
+055, Carthage, OP_FOUND_CITY, 1549, Ended: NoTarget; Distance -1; Duration 56
+055, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (62:18) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+055, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+055, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (62:18) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+055, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (59:19) - ETA 1; Open; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+055, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+055, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (60:18) - ETA 0; Open; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+056, Carthage, OP_FOUND_CITY, 1562, Ended: NoTarget; Distance -1; Duration 57
+056, Carthage, OP_FOUND_CITY, 1563, Ended: NoTarget; Distance -1; Duration 57
+056, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (62:18) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+056, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+056, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (62:18) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+056, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (60:18) - ETA 0; Open; Immortal 1162 at (63:19) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+056, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+056, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (61:17) - ETA 0; Open; Immortal 1162 at (64:20) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+057, Carthage, OP_FOUND_CITY, 1579, Ended: NoTarget; Distance -1; Duration 58
+057, Carthage, OP_FOUND_CITY, 1580, Ended: NoTarget; Distance -1; Duration 58
+057, Denmark, OP_FOUND_CITY, 1584, found target for settler, score 74374 (q50)
+057, Denmark, OP_FOUND_CITY, 1584, Skip recruiting, start with movement stage
+057, Denmark, OP_FOUND_CITY, 1584, Found 0 potential units to recruit for operation 1584 at (66:25) with target at (67:21)
+057, Denmark, OP_FOUND_CITY, 1584, Started Army 1585; Units Recruited 1; Max Formation Size 2; Moving To Target
+057, Denmark, OP_FOUND_CITY, 1584, PRE Moving To Target with Army 1585; center (66:25); target (67:21); Progress 0 percent
+057, Denmark, OP_FOUND_CITY, 1584, POST Moving To Target with Army 1585; center (67:23); target (67:21); Progress 40 percent
+057, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (62:18) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+057, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+057, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:18) - ETA 0; Open; Archer 1316 at (63:19) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+057, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (61:17) - ETA 0; Open; Immortal 1162 at (64:20) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+057, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+057, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (63:20) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+058, Carthage, OP_FOUND_CITY, 1600, Ended: NoTarget; Distance -1; Duration 59
+058, Carthage, OP_FOUND_CITY, 1601, Ended: NoTarget; Distance -1; Duration 59
+058, Denmark, OP_FOUND_CITY, 1584, PRE Moving To Target with Army 1585; center (67:23); target (67:21); Progress 40 percent
+058, Denmark, OP_FOUND_CITY, 1584, Transition to target stage
+058, Denmark, OP_FOUND_CITY, 1584, POST At Target
+058, China, OP_FOUND_CITY, 1608, found target for settler, score 73497 (q50)
+058, China, OP_FOUND_CITY, 1608, Skip recruiting, start with movement stage
+058, China, OP_FOUND_CITY, 1608, Found 1 potential units to recruit for operation 1608 at (30:13) with target at (28:10)
+058, China, OP_FOUND_CITY, 1608, Added Warrior 1014 to slot 1 in army 1609. ETA at (30:13) is 0 
+058, China, OP_FOUND_CITY, 1608, Started Army 1609; Units Recruited 2; Max Formation Size 2; Moving To Target
+058, China, OP_FOUND_CITY, 1608, PRE Moving To Target with Army 1609; center (30:13); target (28:10); Progress 0 percent
+058, China, OP_FOUND_CITY, 1608, POST Moving To Target with Army 1609; center (29:15); target (28:10); Progress -40 percent
+058, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:18) - ETA 0; Open; Archer 1316 at (63:19) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+058, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+058, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:19) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+058, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (63:20) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+058, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+058, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+059, Carthage, OP_FOUND_CITY, 1624, Ended: NoTarget; Distance -1; Duration 60
+059, Carthage, OP_FOUND_CITY, 1625, Ended: NoTarget; Distance -1; Duration 60
+059, Denmark, OP_FOUND_CITY, 1584, PRE At Target
+059, Denmark, OP_FOUND_CITY, 1584, City founded (Kaupang) at (67:21), plot value 74374, q50
+059, Denmark, OP_FOUND_CITY, 1584, Transition to finished stage
+059, Denmark, OP_FOUND_CITY, 1584, Ended: Success; Distance 5; Duration 2
+059, China, OP_FOUND_CITY, 1608, PRE Moving To Target with Army 1609; center (29:15); target (28:10); Progress -40 percent
+059, China, OP_FOUND_CITY, 1608, POST Moving To Target with Army 1609; center (29:13); target (28:10); Progress 20 percent
+059, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:19) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+059, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+059, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (64:20) - ETA 0; Open; Archer 1316 at (63:19) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+059, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+059, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+059, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+060, Ethiopia, OP_FOUND_CITY, 1638, found target for settler, score 75548 (q50)
+060, Ethiopia, OP_FOUND_CITY, 1638, Initial stage is recruiting
+060, Ethiopia, OP_FOUND_CITY, 1638, Found 2 potential units to recruit for operation 1638 at (42:16) with target at (39:20)
+060, Ethiopia, OP_FOUND_CITY, 1638, Added Warrior 1106 to slot 1 in army 1639. ETA at (42:16) is 0 
+060, Ethiopia, OP_FOUND_CITY, 1638, Transition to gathering stage
+060, Ethiopia, OP_FOUND_CITY, 1638, Transition to movement stage
+060, Ethiopia, OP_FOUND_CITY, 1638, Started Army 1639; Units Recruited 2; Max Formation Size 2; Moving To Target
+060, Ethiopia, OP_FOUND_CITY, 1638, PRE Moving To Target with Army 1639; center (42:16); target (39:20); Progress 0 percent
+060, Ethiopia, OP_FOUND_CITY, 1638, POST Moving To Target with Army 1639; center (41:18); target (39:20); Progress 34 percent
+060, Carthage, OP_FOUND_CITY, 1641, Ended: NoTarget; Distance -1; Duration 61
+060, Carthage, OP_FOUND_CITY, 1642, Ended: NoTarget; Distance -1; Duration 61
+060, China, OP_FOUND_CITY, 1608, PRE Moving To Target with Army 1609; center (29:13); target (28:10); Progress 20 percent
+060, China, OP_FOUND_CITY, 1608, POST Moving To Target with Army 1609; center (29:11); target (28:10); Progress 40 percent
+060, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (64:20) - ETA 0; Open; Archer 1316 at (63:19) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+060, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+060, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:19) - ETA 0; Open; Archer 1316 at (63:17) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+060, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+060, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+060, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+061, Ethiopia, OP_FOUND_CITY, 1638, PRE Moving To Target with Army 1639; center (41:18); target (39:20); Progress 34 percent
+061, Ethiopia, OP_FOUND_CITY, 1638, POST Moving To Target with Army 1639; center (40:18); target (39:20); Progress 50 percent
+061, The_Shoshone, OP_FOUND_CITY, 1659, found target for settler, score 64929 (q44)
+061, The_Shoshone, OP_FOUND_CITY, 1659, Skip recruiting, start with movement stage
+061, The_Shoshone, OP_FOUND_CITY, 1659, Found 1 potential units to recruit for operation 1659 at (49:11) with target at (46:8)
+061, The_Shoshone, OP_FOUND_CITY, 1659, Added Warrior 1175 to slot 1 in army 1660. ETA at (49:11) is 0 
+061, The_Shoshone, OP_FOUND_CITY, 1659, Started Army 1660; Units Recruited 2; Max Formation Size 2; Moving To Target
+061, The_Shoshone, OP_FOUND_CITY, 1659, PRE Moving To Target with Army 1660; center (49:11); target (46:8); Progress 0 percent
+061, The_Shoshone, OP_FOUND_CITY, 1659, POST Moving To Target with Army 1660; center (49:10); target (46:8); Progress 17 percent
+061, Carthage, OP_FOUND_CITY, 1661, Ended: NoTarget; Distance -1; Duration 62
+061, Carthage, OP_FOUND_CITY, 1662, Ended: NoTarget; Distance -1; Duration 62
+061, China, OP_FOUND_CITY, 1608, PRE Moving To Target with Army 1609; center (29:11); target (28:10); Progress 40 percent
+061, China, OP_FOUND_CITY, 1608, Transition to target stage
+061, China, OP_FOUND_CITY, 1608, POST At Target
+061, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:19) - ETA 0; Open; Archer 1316 at (63:17) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+061, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+061, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (64:20) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:19) - ETA 0; Open; Open; Open; Open; Open; 
+061, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+061, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+061, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+062, Ethiopia, OP_FOUND_CITY, 1638, PRE Moving To Target with Army 1639; center (40:18); target (39:20); Progress 50 percent
+062, Ethiopia, OP_FOUND_CITY, 1638, Transition to target stage
+062, Ethiopia, OP_FOUND_CITY, 1638, POST At Target
+062, The_Shoshone, OP_FOUND_CITY, 1659, PRE Moving To Target with Army 1660; center (49:10); target (46:8); Progress 17 percent
+062, The_Shoshone, OP_FOUND_CITY, 1659, POST Moving To Target with Army 1660; center (47:9); target (46:8); Progress 50 percent
+062, Carthage, OP_FOUND_CITY, 1675, Ended: NoTarget; Distance -1; Duration 63
+062, Carthage, OP_FOUND_CITY, 1676, Ended: NoTarget; Distance -1; Duration 63
+062, Denmark, OP_FOUND_CITY, 1678, found target for settler, score 88659 (q50)
+062, Denmark, OP_FOUND_CITY, 1678, Initial stage is recruiting
+062, Denmark, OP_FOUND_CITY, 1678, Found 1 potential units to recruit for operation 1678 at (66:25) with target at (62:30)
+062, Denmark, OP_FOUND_CITY, 1678, Added Warrior 1010 to slot 1 in army 1679. ETA at (66:25) is 0 
+062, Denmark, OP_FOUND_CITY, 1678, Transition to gathering stage
+062, Denmark, OP_FOUND_CITY, 1678, Transition to movement stage
+062, Denmark, OP_FOUND_CITY, 1678, Started Army 1679; Units Recruited 2; Max Formation Size 2; Moving To Target
+062, Denmark, OP_FOUND_CITY, 1678, PRE Moving To Target with Army 1679; center (66:25); target (62:30); Progress 0 percent
+062, Denmark, OP_FOUND_CITY, 1678, POST Moving To Target with Army 1679; center (66:25); target (62:30); Progress 0 percent
+062, China, OP_FOUND_CITY, 1608, PRE At Target
+062, China, OP_FOUND_CITY, 1608, City founded (Guangzhou) at (28:10), plot value 73497, q50
+062, China, OP_FOUND_CITY, 1608, Transition to finished stage
+062, China, OP_FOUND_CITY, 1608, Ended: Success; Distance 5; Duration 4
+062, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (64:20) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:19) - ETA 0; Open; Open; Open; Open; Open; 
+062, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+062, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:19) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+062, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+062, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+062, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+063, Ethiopia, OP_FOUND_CITY, 1638, PRE At Target
+063, Ethiopia, OP_FOUND_CITY, 1638, City founded (Lalibela) at (39:20), plot value 64818, q44
+063, Ethiopia, OP_FOUND_CITY, 1638, Transition to finished stage
+063, Ethiopia, OP_FOUND_CITY, 1638, Ended: Success; Distance 6; Duration 3
+063, The_Shoshone, OP_FOUND_CITY, 1659, PRE Moving To Target with Army 1660; center (47:9); target (46:8); Progress 50 percent
+063, The_Shoshone, OP_FOUND_CITY, 1659, Transition to target stage
+063, The_Shoshone, OP_FOUND_CITY, 1659, POST At Target
+063, Carthage, OP_FOUND_CITY, 1695, Ended: NoTarget; Distance -1; Duration 64
+063, Carthage, OP_FOUND_CITY, 1696, Ended: NoTarget; Distance -1; Duration 64
+063, Denmark, OP_FOUND_CITY, 1678, PRE Moving To Target with Army 1679; center (66:25); target (62:30); Progress 0 percent
+063, Denmark, OP_FOUND_CITY, 1678, POST Moving To Target with Army 1679; center (66:26); target (62:30); Progress 13 percent
+063, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:19) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:17) - ETA 0; Open; Open; Open; Open; Open; 
+063, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+063, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (64:20) - ETA 0; Open; Archer 1316 at (63:19) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+063, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+063, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+063, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+064, The_Shoshone, OP_FOUND_CITY, 1659, PRE At Target
+064, The_Shoshone, OP_FOUND_CITY, 1659, City founded (Goshute) at (46:8), plot value 64929, q44
+064, The_Shoshone, OP_FOUND_CITY, 1659, Transition to finished stage
+064, The_Shoshone, OP_FOUND_CITY, 1659, Ended: Success; Distance 6; Duration 3
+064, Carthage, OP_FOUND_CITY, 1715, Ended: NoTarget; Distance -1; Duration 65
+064, Carthage, OP_FOUND_CITY, 1716, Ended: NoTarget; Distance -1; Duration 65
+064, Denmark, OP_FOUND_CITY, 1678, PRE Moving To Target with Army 1679; center (66:26); target (62:30); Progress 13 percent
+064, Denmark, OP_FOUND_CITY, 1678, POST Moving To Target with Army 1679; center (65:28); target (62:30); Progress 38 percent
+064, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (64:20) - ETA 0; Open; Archer 1316 at (63:19) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+064, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+064, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:19) - ETA 0; Open; Archer 1316 at (63:17) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+064, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+064, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+064, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+065, Carthage, OP_FOUND_CITY, 1734, Ended: NoTarget; Distance -1; Duration 66
+065, Carthage, OP_FOUND_CITY, 1735, Ended: NoTarget; Distance -1; Duration 66
+065, Denmark, OP_FOUND_CITY, 1678, PRE Moving To Target with Army 1679; center (65:28); target (62:30); Progress 38 percent
+065, Denmark, OP_FOUND_CITY, 1678, POST Moving To Target with Army 1679; center (65:30); target (62:30); Progress 50 percent
+065, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (63:19) - ETA 0; Open; Archer 1316 at (63:17) - ETA 0; Composite Bowman 1460 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+065, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+065, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (64:20) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:19) - ETA 0; Open; Open; Open; Open; Open; 
+065, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+065, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+065, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+066, Assyria, OP_FOUND_CITY, 1750, found target for settler, score 66398 (q47)
+066, Assyria, OP_FOUND_CITY, 1750, Initial stage is recruiting
+066, Assyria, OP_FOUND_CITY, 1750, Found 0 potential units to recruit for operation 1750 at (39:28) with target at (35:30)
+066, Assyria, OP_FOUND_CITY, 1750, Started Army 1751; Units Recruited 1; Max Formation Size 2; Recruiting Units
+066, Assyria, OP_FOUND_CITY, 1750, PRE Recruiting Units for army 1751; Settler 1749 at (39:28) - ETA -1; Open; 
+066, Assyria, OP_FOUND_CITY, 1750, Found 0 potential units to recruit for operation 1750 at (39:28) with target at (35:30)
+066, Assyria, OP_FOUND_CITY, 1750, POST Recruiting Units for army 1751; Settler 1749 at (39:28) - ETA 0; Open; 
+066, Carthage, OP_FOUND_CITY, 1755, Ended: NoTarget; Distance -1; Duration 67
+066, Carthage, OP_FOUND_CITY, 1756, Ended: NoTarget; Distance -1; Duration 67
+066, Denmark, OP_FOUND_CITY, 1678, PRE Moving To Target with Army 1679; center (65:30); target (62:30); Progress 50 percent
+066, Denmark, OP_FOUND_CITY, 1678, POST Moving To Target with Army 1679; center (63:31); target (62:30); Progress 63 percent
+066, China, OP_FOUND_CITY, 1764, found target for settler, score 50421 (q12)
+066, China, OP_FOUND_CITY, 1764, Skip recruiting, start with movement stage
+066, China, OP_FOUND_CITY, 1764, Found 0 potential units to recruit for operation 1764 at (30:13) with target at (24:11)
+066, China, OP_FOUND_CITY, 1764, Started Army 1765; Units Recruited 1; Max Formation Size 2; Moving To Target
+066, China, OP_FOUND_CITY, 1764, PRE Moving To Target with Army 1765; center (30:13); target (24:11); Progress 0 percent
+066, China, OP_FOUND_CITY, 1764, POST Moving To Target with Army 1765; center (29:14); target (24:11); Progress 23 percent
+066, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, PRE Recruiting Units for army 1402; Immortal 1349 at (62:19) - ETA 0; Immortal 1365 at (64:20) - ETA 0; Open; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1460 at (63:19) - ETA 0; Open; Open; Open; Open; Open; 
+066, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Found 0 potential units to recruit for operation 1401 at (63:18) with target at (66:25)
+066, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, SiegeArmy: still too weak after 20 turns, giving up
+066, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, POST Aborted: TimedOut
+066, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+066, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 0 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+066, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+067, Assyria, OP_FOUND_CITY, 1750, PRE Recruiting Units for army 1751; Settler 1749 at (39:28) - ETA 0; Open; 
+067, Assyria, OP_FOUND_CITY, 1750, Found 0 potential units to recruit for operation 1750 at (39:28) with target at (35:30)
+067, Assyria, OP_FOUND_CITY, 1750, POST Recruiting Units for army 1751; Settler 1749 at (39:28) - ETA 0; Open; 
+067, Carthage, OP_FOUND_CITY, 1772, Ended: NoTarget; Distance -1; Duration 68
+067, Carthage, OP_FOUND_CITY, 1773, Ended: NoTarget; Distance -1; Duration 68
+067, Denmark, OP_FOUND_CITY, 1678, PRE Moving To Target with Army 1679; center (63:31); target (62:30); Progress 63 percent
+067, Denmark, OP_FOUND_CITY, 1678, Transition to target stage
+067, Denmark, OP_FOUND_CITY, 1678, POST At Target
+067, China, OP_FOUND_CITY, 1764, PRE Moving To Target with Army 1765; center (29:14); target (24:11); Progress 23 percent
+067, China, OP_FOUND_CITY, 1764, POST Moving To Target with Army 1765; center (27:14); target (24:11); Progress 45 percent
+067, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1401, Ended: TimedOut; Distance 8; Duration 21
+067, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, PRE Recruiting Units for army 1419; Immortal 1231 at (62:17) - ETA 0; Open; Immortal 1162 at (64:18) - ETA 0; Open; Open; Open; Open; Open; Open; Open; 
+067, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Found 3 potential units to recruit for operation 1418 at (63:18) with target at (66:25)
+067, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Added Immortal 1349 to slot 1 in army 1419. ETA at (63:18) is 0 
+067, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Added Composite Bowman 1460 to slot 3 in army 1419. ETA at (63:18) is 0 
+067, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, SiegeArmy: still too weak after 20 turns, giving up
+067, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, POST Aborted: TimedOut
+068, Assyria, OP_FOUND_CITY, 1750, PRE Recruiting Units for army 1751; Settler 1749 at (39:28) - ETA 0; Open; 
+068, Assyria, OP_FOUND_CITY, 1750, Found 0 potential units to recruit for operation 1750 at (39:28) with target at (35:30)
+068, Assyria, OP_FOUND_CITY, 1750, POST Recruiting Units for army 1751; Settler 1749 at (39:28) - ETA 0; Open; 
+068, The_Shoshone, OP_FOUND_CITY, 1786, found target for settler, score 67848 (q50)
+068, The_Shoshone, OP_FOUND_CITY, 1786, Initial stage is recruiting
+068, The_Shoshone, OP_FOUND_CITY, 1786, Found 0 potential units to recruit for operation 1786 at (49:11) with target at (54:11)
+068, The_Shoshone, OP_FOUND_CITY, 1786, Started Army 1787; Units Recruited 1; Max Formation Size 2; Recruiting Units
+068, The_Shoshone, OP_FOUND_CITY, 1786, PRE Recruiting Units for army 1787; Settler 1785 at (49:11) - ETA -1; Open; 
+068, The_Shoshone, OP_FOUND_CITY, 1786, Found 0 potential units to recruit for operation 1786 at (49:11) with target at (54:11)
+068, The_Shoshone, OP_FOUND_CITY, 1786, POST Recruiting Units for army 1787; Settler 1785 at (49:11) - ETA 0; Open; 
+068, Carthage, OP_FOUND_CITY, 1788, Ended: NoTarget; Distance -1; Duration 69
+068, Carthage, OP_FOUND_CITY, 1789, Ended: NoTarget; Distance -1; Duration 69
+068, Denmark, OP_FOUND_CITY, 1678, PRE At Target
+068, Denmark, OP_FOUND_CITY, 1678, City founded (Ribe) at (62:30), plot value 88659, q50
+068, Denmark, OP_FOUND_CITY, 1678, Transition to finished stage
+068, Denmark, OP_FOUND_CITY, 1678, Ended: Success; Distance 8; Duration 6
+068, China, OP_FOUND_CITY, 1764, PRE Moving To Target with Army 1765; center (27:14); target (24:11); Progress 45 percent
+068, China, OP_FOUND_CITY, 1764, POST Moving To Target with Army 1765; center (25:13); target (24:11); Progress 67 percent
+068, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1418, Ended: TimedOut; Distance 8; Duration 21
+069, Assyria, OP_FOUND_CITY, 1750, PRE Recruiting Units for army 1751; Settler 1749 at (39:28) - ETA 0; Open; 
+069, Assyria, OP_FOUND_CITY, 1750, Found 1 potential units to recruit for operation 1750 at (39:28) with target at (35:30)
+069, Assyria, OP_FOUND_CITY, 1750, Added Spearman 1801 to slot 1 in army 1751. ETA at (39:28) is 0 
+069, Assyria, OP_FOUND_CITY, 1750, Added Warrior 1002 to slot 1 in army 1751. ETA at (39:28) is 0 
+069, Assyria, OP_FOUND_CITY, 1750, Transition to gathering stage
+069, Assyria, OP_FOUND_CITY, 1750, Transition to movement stage
+069, Assyria, OP_FOUND_CITY, 1750, POST Moving To Target with Army 1751; center (39:28); target (35:30); Progress 0 percent
+069, The_Shoshone, OP_FOUND_CITY, 1786, PRE Recruiting Units for army 1787; Settler 1785 at (49:11) - ETA 0; Open; 
+069, The_Shoshone, OP_FOUND_CITY, 1786, Found 0 potential units to recruit for operation 1786 at (49:11) with target at (54:11)
+069, The_Shoshone, OP_FOUND_CITY, 1786, POST Recruiting Units for army 1787; Settler 1785 at (49:11) - ETA 0; Open; 
+069, Carthage, OP_FOUND_CITY, 1802, Ended: NoTarget; Distance -1; Duration 70
+069, Carthage, OP_FOUND_CITY, 1803, Ended: NoTarget; Distance -1; Duration 70
+069, China, OP_FOUND_CITY, 1764, PRE Moving To Target with Army 1765; center (25:13); target (24:11); Progress 67 percent
+069, China, OP_FOUND_CITY, 1764, POST Moving To Target with Army 1765; center (25:12); target (24:11); Progress 100 percent
+070, Assyria, OP_FOUND_CITY, 1750, PRE Moving To Target with Army 1751; center (39:28); target (35:30); Progress 0 percent
+070, Assyria, OP_FOUND_CITY, 1750, POST Moving To Target with Army 1751; center (38:28); target (35:30); Progress 17 percent
+070, The_Shoshone, OP_FOUND_CITY, 1786, PRE Recruiting Units for army 1787; Settler 1785 at (49:11) - ETA 0; Open; 
+070, The_Shoshone, OP_FOUND_CITY, 1786, Found 1 potential units to recruit for operation 1786 at (49:11) with target at (54:11)
+070, The_Shoshone, OP_FOUND_CITY, 1786, Added Warrior 1175 to slot 1 in army 1787. ETA at (49:11) is 0 
+070, The_Shoshone, OP_FOUND_CITY, 1786, Transition to gathering stage
+070, The_Shoshone, OP_FOUND_CITY, 1786, POST Gathering Forces for army 1787; center (49:11); variance (1.00:0.00); free slots 0
+070, Carthage, OP_FOUND_CITY, 1817, Ended: NoTarget; Distance -1; Duration 71
+070, Carthage, OP_FOUND_CITY, 1818, Ended: NoTarget; Distance -1; Duration 71
+070, China, OP_FOUND_CITY, 1764, PRE Moving To Target with Army 1765; center (25:12); target (24:11); Progress 100 percent
+070, China, OP_FOUND_CITY, 1764, Transition to target stage
+070, China, OP_FOUND_CITY, 1764, City founded (Nanjing) at (24:11), plot value 48291, q7
+070, China, OP_FOUND_CITY, 1764, Transition to finished stage
+070, China, OP_FOUND_CITY, 1764, POST Completed
+071, Assyria, OP_FOUND_CITY, 1750, PRE Moving To Target with Army 1751; center (38:28); target (35:30); Progress 17 percent
+071, Assyria, OP_FOUND_CITY, 1750, POST Moving To Target with Army 1751; center (37:27); target (35:30); Progress 17 percent
+071, The_Shoshone, OP_FOUND_CITY, 1786, PRE Gathering Forces for army 1787; center (49:11); variance (1.00:0.00); free slots 0
+071, The_Shoshone, OP_FOUND_CITY, 1786, Transition to movement stage
+071, The_Shoshone, OP_FOUND_CITY, 1786, POST Moving To Target with Army 1787; center (49:11); target (54:11); Progress 0 percent
+071, Carthage, OP_FOUND_CITY, 1833, Ended: NoTarget; Distance -1; Duration 72
+071, Carthage, OP_FOUND_CITY, 1834, Ended: NoTarget; Distance -1; Duration 72
+071, China, OP_FOUND_CITY, 1764, Ended: Success; Distance 9; Duration 5
+072, Assyria, OP_FOUND_CITY, 1750, PRE Moving To Target with Army 1751; center (37:27); target (35:30); Progress 17 percent
+072, Assyria, OP_FOUND_CITY, 1750, POST Moving To Target with Army 1751; center (37:28); target (35:30); Progress 34 percent
+072, The_Shoshone, OP_FOUND_CITY, 1786, PRE Moving To Target with Army 1787; center (49:11); target (54:11); Progress 0 percent
+072, The_Shoshone, OP_FOUND_CITY, 1786, POST Moving To Target with Army 1787; center (51:11); target (54:11); Progress 34 percent
+072, Carthage, OP_FOUND_CITY, 1850, Ended: NoTarget; Distance -1; Duration 73
+072, Carthage, OP_FOUND_CITY, 1851, Ended: NoTarget; Distance -1; Duration 73
+073, Assyria, OP_FOUND_CITY, 1750, PRE Moving To Target with Army 1751; center (37:28); target (35:30); Progress 34 percent
+073, Assyria, OP_FOUND_CITY, 1750, POST Moving To Target with Army 1751; center (36:28); target (35:30); Progress 34 percent
+073, The_Shoshone, OP_FOUND_CITY, 1786, PRE Moving To Target with Army 1787; center (51:11); target (54:11); Progress 34 percent
+073, The_Shoshone, OP_FOUND_CITY, 1786, POST Moving To Target with Army 1787; center (52:11); target (54:11); Progress 50 percent
+073, Carthage, OP_FOUND_CITY, 1864, Ended: NoTarget; Distance -1; Duration 74
+073, Carthage, OP_FOUND_CITY, 1865, Ended: NoTarget; Distance -1; Duration 74
+074, Assyria, OP_FOUND_CITY, 1750, PRE Moving To Target with Army 1751; center (36:28); target (35:30); Progress 34 percent
+074, Assyria, OP_FOUND_CITY, 1750, POST Moving To Target with Army 1751; center (35:28); target (35:30); Progress 50 percent
+074, The_Shoshone, OP_FOUND_CITY, 1786, PRE Moving To Target with Army 1787; center (52:11); target (54:11); Progress 50 percent
+074, The_Shoshone, OP_FOUND_CITY, 1786, Transition to target stage
+074, The_Shoshone, OP_FOUND_CITY, 1786, POST At Target
+074, Carthage, OP_FOUND_CITY, 1881, Ended: NoTarget; Distance -1; Duration 75
+074, Carthage, OP_FOUND_CITY, 1882, Ended: NoTarget; Distance -1; Duration 75
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Initial stage is recruiting
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Found 5 potential units to recruit for operation 1889 at (60:12) with target at (55:17)
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Added Immortal 1444 to slot 0 in army 1890. ETA at (60:12) is 0 
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Added Immortal 1162 to slot 1 in army 1890. ETA at (60:12) is 0 
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Added Immortal 1349 to slot 2 in army 1890. ETA at (60:12) is 1 
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Added Archer 1316 to slot 3 in army 1890. ETA at (60:12) is 0 
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Added Composite Bowman 1461 to slot 4 in army 1890. ETA at (60:12) is 3 
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Started Army 1890; Units Recruited 5; Max Formation Size 10; Recruiting Units
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, PRE Recruiting Units for army 1890; Immortal 1444 at (60:12) - ETA 0; Immortal 1162 at (58:11) - ETA 0; Immortal 1349 at (61:17) - ETA 1; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1461 at (62:22) - ETA 3; Open; Open; Open; Open; Open; 
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Found 0 potential units to recruit for operation 1889 at (60:12) with target at (55:17)
+074, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, POST Recruiting Units for army 1890; Immortal 1444 at (60:14) - ETA 0; Immortal 1162 at (59:11) - ETA 0; Immortal 1349 at (61:16) - ETA 1; Archer 1316 at (61:14) - ETA 0; Composite Bowman 1461 at (61:21) - ETA 2; Open; Open; Open; Open; Open; 
+075, Assyria, OP_FOUND_CITY, 1750, PRE Moving To Target with Army 1751; center (35:28); target (35:30); Progress 50 percent
+075, Assyria, OP_FOUND_CITY, 1750, Transition to target stage
+075, Assyria, OP_FOUND_CITY, 1750, POST At Target
+075, The_Shoshone, OP_FOUND_CITY, 1786, PRE At Target
+075, The_Shoshone, OP_FOUND_CITY, 1786, City founded (Pohokwi) at (54:11), plot value 65740, q46
+075, The_Shoshone, OP_FOUND_CITY, 1786, Transition to finished stage
+075, The_Shoshone, OP_FOUND_CITY, 1786, Ended: Success; Distance 6; Duration 7
+075, Carthage, OP_FOUND_CITY, 1899, Ended: NoTarget; Distance -1; Duration 76
+075, Carthage, OP_FOUND_CITY, 1900, Ended: NoTarget; Distance -1; Duration 76
+075, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, War goal changed, probably another war is more important
+075, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1889, Ended: DiploOpinionChange; Distance 8; Duration 1
+076, Assyria, OP_FOUND_CITY, 1750, PRE At Target
+076, Assyria, OP_FOUND_CITY, 1750, City founded (Nimrud) at (35:30), plot value 66125, q47
+076, Assyria, OP_FOUND_CITY, 1750, Transition to finished stage
+076, Assyria, OP_FOUND_CITY, 1750, Ended: Success; Distance 6; Duration 10
+076, Carthage, OP_FOUND_CITY, 1917, Ended: NoTarget; Distance -1; Duration 77
+076, Carthage, OP_FOUND_CITY, 1918, Ended: NoTarget; Distance -1; Duration 77
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Initial stage is recruiting
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Found 7 potential units to recruit for operation 1927 at (63:18) with target at (66:25)
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Added Immortal 1140 to slot 0 in army 1928. ETA at (63:18) is 0 
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Added Immortal 1162 to slot 1 in army 1928. ETA at (63:18) is 0 
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Added Immortal 1349 to slot 2 in army 1928. ETA at (63:18) is 0 
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Added Archer 1316 to slot 3 in army 1928. ETA at (63:18) is 0 
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Added Composite Bowman 1461 to slot 4 in army 1928. ETA at (63:18) is 1 
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Started Army 1928; Units Recruited 5; Max Formation Size 10; Recruiting Units
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, PRE Recruiting Units for army 1928; Immortal 1140 at (60:12) - ETA 0; Immortal 1162 at (61:14) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (63:18) - ETA 0; Composite Bowman 1461 at (61:22) - ETA 1; Open; Open; Open; Open; Open; 
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Found 0 potential units to recruit for operation 1927 at (63:18) with target at (66:25)
+076, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, POST Recruiting Units for army 1928; Immortal 1140 at (62:16) - ETA 0; Immortal 1162 at (63:17) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (62:19) - ETA 0; Composite Bowman 1461 at (61:21) - ETA 1; Open; Open; Open; Open; Open; 
+077, Carthage, OP_FOUND_CITY, 1940, Ended: NoTarget; Distance -1; Duration 78
+077, Carthage, OP_FOUND_CITY, 1941, Ended: NoTarget; Distance -1; Duration 78
+077, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, PRE Recruiting Units for army 1928; Immortal 1140 at (62:16) - ETA 0; Immortal 1162 at (63:17) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (62:19) - ETA 0; Composite Bowman 1461 at (61:21) - ETA 1; Open; Open; Open; Open; Open; 
+077, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Found 0 potential units to recruit for operation 1927 at (63:18) with target at (66:25)
+077, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, POST Recruiting Units for army 1928; Immortal 1140 at (63:18) - ETA 0; Immortal 1162 at (63:17) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (62:19) - ETA 0; Composite Bowman 1461 at (62:18) - ETA 0; Open; Open; Open; Open; Open; 
+078, Carthage, OP_FOUND_CITY, 1961, Ended: NoTarget; Distance -1; Duration 79
+078, Carthage, OP_FOUND_CITY, 1962, Ended: NoTarget; Distance -1; Duration 79
+078, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, PRE Recruiting Units for army 1928; Immortal 1140 at (63:18) - ETA 0; Immortal 1162 at (63:17) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (62:19) - ETA 0; Composite Bowman 1461 at (62:18) - ETA 0; Open; Open; Open; Open; Open; 
+078, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Found 0 potential units to recruit for operation 1927 at (63:18) with target at (66:25)
+078, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, POST Recruiting Units for army 1928; Immortal 1140 at (63:19) - ETA 0; Immortal 1162 at (63:17) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (62:19) - ETA 0; Composite Bowman 1461 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+079, Carthage, OP_FOUND_CITY, 1986, Ended: NoTarget; Distance -1; Duration 80
+079, Carthage, OP_FOUND_CITY, 1987, Ended: NoTarget; Distance -1; Duration 80
+079, Persia, OP_FOUND_CITY, 2001, found target for settler, score 74347 (q50)
+079, Persia, OP_FOUND_CITY, 2001, Skip recruiting, start with movement stage
+079, Persia, OP_FOUND_CITY, 2001, Found 1 potential units to recruit for operation 2001 at (63:18) with target at (64:12)
+079, Persia, OP_FOUND_CITY, 2001, Added Immortal 1231 to slot 1 in army 2002. ETA at (63:18) is 0 
+079, Persia, OP_FOUND_CITY, 2001, Started Army 2002; Units Recruited 2; Max Formation Size 2; Moving To Target
+079, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, PRE Recruiting Units for army 1928; Immortal 1140 at (63:19) - ETA 0; Immortal 1162 at (63:17) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (62:19) - ETA 0; Composite Bowman 1461 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+079, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Found 0 potential units to recruit for operation 1927 at (63:18) with target at (66:25)
+079, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, POST Recruiting Units for army 1928; Immortal 1140 at (63:18) - ETA 0; Immortal 1162 at (63:17) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (62:19) - ETA 0; Composite Bowman 1461 at (62:18) - ETA 0; Open; Open; Open; Open; Open; 
+079, Persia, OP_FOUND_CITY, 2001, PRE Moving To Target with Army 2002; center (63:18); target (64:12); Progress 0 percent
+079, Persia, OP_FOUND_CITY, 2001, POST Moving To Target with Army 2002; center (61:13); target (64:12); Progress 43 percent
+080, Carthage, OP_FOUND_CITY, 2063, Ended: NoTarget; Distance -1; Duration 81
+080, Carthage, OP_FOUND_CITY, 2064, Ended: NoTarget; Distance -1; Duration 81
+080, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, PRE Recruiting Units for army 1928; Immortal 1140 at (63:18) - ETA 0; Immortal 1162 at (63:17) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (62:19) - ETA 0; Composite Bowman 1461 at (62:18) - ETA 0; Open; Open; Open; Open; Open; 
+080, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, Found 0 potential units to recruit for operation 1927 at (63:18) with target at (66:25)
+080, Persia, OP_CITY_ATTACK_LAND_SNEAKY, 1927, POST Recruiting Units for army 1928; Immortal 1140 at (63:19) - ETA 0; Immortal 1162 at (63:17) - ETA 0; Immortal 1349 at (62:17) - ETA 0; Archer 1316 at (62:19) - ETA 0; Composite Bowman 1461 at (63:18) - ETA 0; Open; Open; Open; Open; Open; 
+080, Persia, OP_FOUND_CITY, 2001, PRE Moving To Target with Army 2002; center (61:13); target (64:12); Progress 43 percent
+080, Persia, OP_FOUND_CITY, 2001, Transition to target stage
+080, Persia, OP_FOUND_CITY, 2001, POST At Target
+081, Assyria, OP_FOUND_CITY, 2092, found target for settler, score 49177 (q9)
+081, Assyria, OP_FOUND_CITY, 2092, Initial stage is recruiting
+081, Assyria, OP_FOUND_CITY, 2092, Found 0 potential units to recruit for operation 2092 at (39:28) with target at (37:24)
+081, Assyria, OP_FOUND_CITY, 2092, Started Army 2093; Units Recruited 1; Max Formation Size 2; Recruiting Units
+081, Assyria, OP_FOUND_CITY, 2092, PRE Recruiting Units for army 2093; Settler 2091 at (39:28) - ETA -1; Open; 
+081, Assyria, OP_FOUND_CITY, 2092, Found 0 potential units to recruit for operation 2092 at (39:28) with target at (37:24)
+081, Assyria, OP_FOUND_CITY, 2092, POST Recruiting Units for army 2093; Settler 2091 at (39:28) - ETA 0; Open; 
+081, Carthage, OP_FOUND_CITY, 2096, Ended: NoTarget; Distance -1; Duration 82
+081, Carthage, OP_FOUND_CITY, 2097, Ended: NoTarget; Distance -1; Duration 82
+081, China, OP_FOUND_CITY, 2105, found target for settler, score 50617 (q12)
+081, China, OP_FOUND_CITY, 2105, Initial stage is recruiting
+081, China, OP_FOUND_CITY, 2105, Found 1 potential units to recruit for operation 2105 at (30:17) with target at (33:23)
+081, China, OP_FOUND_CITY, 2105, Added Warrior 1014 to slot 1 in army 2106. ETA at (30:17) is 2 
+081, China, OP_FOUND_CITY, 2105, Transition to gathering stage
+081, China, OP_FOUND_CITY, 2105, Started Army 2106; Units Recruited 2; Max Formation Size 2; Gathering Forces
