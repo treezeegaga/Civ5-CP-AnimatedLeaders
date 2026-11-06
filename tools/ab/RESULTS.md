@@ -7582,3 +7582,5 @@ Kyzyl (171787CD) and Boston (17813E6E) are different failures: their cities were
 LEAD: the 17A1A659 fix (above) is **ai/war e6c5eb680** (on fef0ea98): the strike's target must be a land attack target an army can reach, held targets give way to a reachable one, and no declaration on an unreachable city. This is the trial head for 10pm. CI to follow.
 
 LEAD: Economy 0060 (0053's siege and more core only against a reachable target, using War's HaveStrikeLandAttackTarget) is on top: the trial head is now **ai/war acd891f95** (e6c5eb680 + 0060). CI to follow. (fef0ea98's run 391 compiled; only its release upload failed, a GitHub HTTP 500.)
+
+LEAD: **ai/war acd891f95 green** (run 393), the trial head for 10pm (e6c5eb680 green too, run 392). It holds all of your review of 261d5da..c89ed4a (War's 27b685d0, Economy 0059), the gate-4 TOO_DANGEROUS change (fef0ea98; 17813E6E's stuck pillage op), the strike's reach (e6c5eb680; 17A1A659's Milan), and Economy 0060.
