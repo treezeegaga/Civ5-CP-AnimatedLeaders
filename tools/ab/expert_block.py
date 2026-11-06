@@ -1,6 +1,6 @@
 """The expert strike block (EarlyStrike + EarlyStrikeAggressor, ab-40203a3 and later): judged by captures per civ.
 
-    python3 tools/ab/expert_block.py [run ...]      (default: bullyabort18 bullygreedy18)
+    python3 tools/ab/expert_block.py [run ...]      (default: bullyabort18 bullygreedy18 bullyabort19 bullygreedy19)
 
 Per aggressor (first games): captures and the first capture turn, the declaration turn, the plan (Personality's strike
 plan line in StrategyProfile_Log), the build-up ("EarlyStrike: build-up opens"), upgrade and go, barbarian hunting
@@ -13,7 +13,7 @@ capture attempt, and where the strike exits:
 """
 import sys, os, glob, re, csv, collections, statistics as st
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-RUNS = sys.argv[1:] or ['bullyabort18', 'bullygreedy18']
+RUNS = sys.argv[1:] or ['bullyabort18', 'bullygreedy18', 'bullyabort19', 'bullygreedy19']
 sys.argv = sys.argv[:1]
 import attack_funnel as af, walls
 
