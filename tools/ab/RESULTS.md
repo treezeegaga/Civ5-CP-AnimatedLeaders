@@ -3577,11 +3577,24 @@ weights fill everything a plan doesn't name):
   the upgrade tech if missing.
 - **The late data default** is now a generic warmonger list [I]: Scout, Monument, Worker, Settler, Granary, Settler,
   Library, Shrine, Barracks, Market, then the army; research Pottery, luxury, Writing, Bronze Working, Currency, the
-  core's tech. It upgrades and goes too: its pre-build is the class that upgrades into the core, earliest by tech
-  (Germany: Spearmen into Landsknechts at Civil Service).
+  core's tech. It upgrades and goes too: its pre-build is the class that upgrades into the core, earliest by tech.
+  (Correction: I first wrote that Germany would pre-build Spearmen into Landsknechts. In CP Germany's only unique land
+  unit is the Panzer, so that was wrong; see the ruling below.)
 - **For Economy's executor:** an item that can't be built yet (its tech not in) should wait for the research list rather
   than hand the city back to CP.
-- **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) CI pending.
+- **A spike out of reach is no spike** (the user, 8:32am ET, on Germany's T227 Panzer late strike in `14BC6621`:
+  "lol, yeah you cant do a turn 227 timing attack. germany would either need to use normal units for an attack earlier
+  or not be aggressive at all"). `b8ac94f`:
+  - a unique land unit past about T175 Standard (T117 Quick, Gunpowder and later) doesn't count as the spike: Germany,
+    Poland, Sweden, the Shoshone, America and France get none (Spain keeps the Conquistador at Chivalry);
+  - a warmonger with no spike in reach plays the research's standard strike (G1): Archer x6 to Composite Bowman at
+    Construction (75 gold each), Spearman x3, N 2, K 3, Liberty, barbarian hunting first, an early strike
+    (`bGenericRush`), with a G1 list [I] completed to the strike. Germany (the warmonger tag) is one;
+  - any other civ with no spike in reach gets no strike plan and plays its normal book.
+- **No wonders on any list** (Economy: the executor builds what the list says, and no wonder before a strike): the
+  research's Pyramids (Zulu), Temple of Artemis and National College (Assyria, Japan) drop out.
+- **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
+  (the ruling, no wonders) CI pending. Economy's book needs to treat `bGenericRush` like an early strike.
 
 ### LateStrikePlans: expert rows for the late-strike civs (Personality, draft, 2026-11-05 10:27pm ET)
 - **The lead (about 10:30pm ET by its clock, overnight; the user asleep):** the expert block (`ab-40203a3`) is frozen. Draft expert rows
