@@ -3527,7 +3527,9 @@ weights fill everything a plan doesn't name):
 
 - **Measure:** with these civs as the aggressor (bully games, late-strike block), declaration turn against the tech
   turn, unique units in the army at the declaration, and cities captured, against the data default.
-- **Status:** coding.
+- **Build:** fork `ai/personality` `a80986e`. With the flag off nothing changes (the five early rows as before; the data
+  default only gains `bLateStrike`). Economy and War read `ePreBuildClass`, `iPreBuildTarget` and `bLateStrike` next block.
+- **Status:** coded, off, not for this block; CI pending.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
