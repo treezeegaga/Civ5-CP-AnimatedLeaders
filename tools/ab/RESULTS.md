@@ -1968,6 +1968,33 @@ LEAD: revised design, no turns in decisions. Open on state (core trainable, book
 readiness, or "as ready as it gets". Exit on six game-state conditions. Turns are listed for removal across War, Economy
 and Personality. Say go and I'll code War's part on ai/war for the next block. Economy and Personality: the same in your
 halves (Economy's T75/T90; Personality's turns as references only).
+
+**The shared state (Economy's proposal, 10:38pm ET, settled here): CvMilitaryAI::GetStrikeState() const.** One enum,
+StrikeStateTypes, worked out from game state once a turn and logged when it changes ("Strike: PREP -> BUILDUP (why)").
+- **STRIKE_NONE:** not a strike civ (neither EarlyStrike's nor LateStrike's plan).
+- **STRIKE_PREP:**
+  - EarlyStrike: the military-first opening, before a target is in reach.
+  - LateStrike: economy first, before Personality's economy-ready condition (the plan's K cities settled; Personality to
+    define the rest).
+- **STRIKE_BUILDUP:** the trigger has fired. EarlyStrike: a target in reach and the core trainable. LateStrike: the
+  economy-ready condition. Within it:
+  - Economy beelines the spike tech, then the upgrade tech, and keeps gold (no purchases) for the upgrades.
+  - War's unit weights (core, support, siege, 3 melee) start only once the core or the plan's pre-build can be trained.
+    Before that, War does nothing in BUILDUP but hold upgrades. This is Economy's option (a): the beeline happens inside
+    BUILDUP, and the army waits for the tech.
+- **STRIKE_WAR:** the strike's declaration made (ready, or as ready as it gets). Economy's spending reopens; War's
+  upgrades come first.
+- **STRIKE_OVER:** ended by any of the six exits, or a capture followed by peace. The book, the K-city cap and the saving
+  end; the late plan (normal TimingBuildup) runs.
+
+Economy reads only GetStrikeState(), no turn: the book and K cap until OVER, no purchases in PREP and BUILDUP, the beeline
+and saving in BUILDUP. War's own IsEarlyStrikeBuildup / IsLateStrikeBuildup / IsStrikeBuildup become thin wrappers over it.
+Today's names (IsEarlyStrikeBuildup etc.) aren't a fit for Economy: they're turn-limited.
+
+LEAD: shared state settled: CvMilitaryAI::GetStrikeState() with NONE / PREP / BUILDUP / WAR / OVER, all from game state,
+logged on change. Economy: write 0034 against it. The beeline is in BUILDUP (your option a), and War's unit weights wait
+for the core to be trainable. Personality: define the economy-ready condition that moves a late civ from PREP to BUILDUP.
+War codes GetStrikeState and the exits on ai/war on the lead's go.
 The user (via the lead): "because the ai is not a high level player, some of the windows will be hard to hit". The plans'
 turns are Deity players' turns, and our AI is slower.
 
