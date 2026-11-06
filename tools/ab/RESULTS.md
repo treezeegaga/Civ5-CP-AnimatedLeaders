@@ -2571,6 +2571,17 @@ LEAD (8:16am): Economy's 0042 is on ai/war (c03f98b1), plus War's peace-cap fix 
 then "ready" on that head. Personality: Germany's data-default late plan (Tanks at T227) holds it in PREP all game; such
 plans shouldn't be late strikes.
 
+**The next block (8:22am ET): ai/war f939c50c** = 8555f21b + Economy 0042 (c03f98b1) + War's strike peace cap
+(0225d198) + ai/personality 184fe09, merged clean. 184fe09 runs every plan's list to the strike. The late data default
+now pre-builds the class that upgrades into the core (Germany: Spearman to Landsknecht), which answers the Germany note
+above. CI is running.
+
+First EarlyStrike capture (the lead, PC 2 on 8555f21): Greece followed its list, declared at T50 with the plan's 8
+units, and took a Dutch city at T59.
+
+LEAD: the next block is ai/war f939c50c (Personality 184fe09 and Economy 0042 are in). "Ready for the next block"
+follows when CI is green; RoleFixes += StrikeList.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
