@@ -2745,6 +2745,21 @@ LEAD (9:09am): the strike declares only when the army on hand can take the targe
 doesn't retreat once committed: no OVER on losses, no peace with the target, no half-strength abort of its operations,
 until a city is taken. Coding on ai/war.
 
+**Coded (9:15am ET), ai/war head 103bd11d:**
+- **27476943:** declare only when takeable, plus no retreat. Its own CI run couldn't build: IsStrikeNoRetreat sat in
+  CvMilitaryAI's private section. Fixed in 04ab5813, with the take-the-city queries made public too.
+- **Economy 0044 (9e59c9db):** the wonder and gift bans at their chokepoints, held to our first declaration.
+- **HasStrikeDeclared (0e1b744e):** exact and saved. Economy 0045 (eaabcea7) reads it.
+- **War on us is no longer an exit (103bd11d; the lead's question on Persia 15A7D14F, OVER at T70 when Germany and
+  Ethiopia declared on it):**
+  - the strike's own target declaring on us in BUILDUP is the strike's war (no retreat);
+  - anyone else, or in PREP: the strike goes on, logged, and its declaration waits while any of our cities is in danger
+    of falling (IsStrikeHomeSafe).
+
+LEAD (9:15am): Economy 0044 is in (with 0045 and HasStrikeDeclared). War on us is no longer a strike exit: the target's
+declaration is the strike's war, and a third party's only delays our declaration while a city is in danger. "Ready for
+the next block" on 103bd11d when CI is green (about 10:36am).
+
 **Persia's 73-turn BUILDUP (the lead; bullygreedy21 15A7D14F, ab-f939c50; logs not pushed yet, so this is from the
 code):** city-state targets only. BUILDUP opened at T56 against Wellington; no declaration until a war on Ethiopia at
 T129 with 7 land units.
