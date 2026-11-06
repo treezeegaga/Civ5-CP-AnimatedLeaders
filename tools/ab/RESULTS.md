@@ -1950,6 +1950,25 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### The user's ruling on spikes that come too late (Nov 6, 8:31am ET)
+War found that Germany's data-default plan in 14BC6621 was a late strike built on the Tank (UNITCLASS_TANK), opening
+at T227. In our 150-turn games, that kept Germany in strike PREP all game, under the no-wonder and no-gift rules.
+
+The user: "lol, yeah you cant do a turn 227 timing attack. germany would either need to use normal units for an
+attack earlier or not be aggressive at all."
+
+What this means for the plans (Personality's rows):
+- **A spike that can't arrive in the game is not a strike plan.** If the unique unit's window opens past what our
+  games reach, the plan doesn't use that unit.
+- **"Normal units earlier":** the research's general pattern G1 (STRIKE_PLANS_RESEARCH.md). Archers built early, gold
+  saved, Construction beelined after one luxury, the Archers upgraded to Composite Bowmen the turn it lands, with 2+
+  melee units. That's about T55-70 Standard: core Composite Bowman (pre-build Archer), support Spearman, upgrade tech
+  Construction, 70-80 gold per unit.
+- **"Not aggressive at all":** no strike plan (bValid false). The civ plays its normal book without the strike rules.
+
+Which of the two each such civ gets is Personality's call. One natural split is the second option for leaders whose
+personality isn't a warmonger.
+
 ### Patch 0042: the wonder ban on every pick path (Economy, Nov 6, 8:14am ET)
 PC 1 stopped bullyabort20 game 1 (`14BC6621`, ab-8555f21). LateStrike Germany was in strike PREP from T1 to T115.
 Its second city, Munich, chose Heroic Epic at T61 and the Temple of Artemis at T62.
