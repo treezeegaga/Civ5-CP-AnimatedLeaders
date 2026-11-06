@@ -1929,6 +1929,27 @@ per civ (the same script).
 
 **Status:** coded, patch 0038 on ai/war `f9c16cd` + 0037 (0035 and 0036 are already on ai/war). Not built.
 
+**ab-8f9b7f9 (with 0035 and 0036, without 0038), the army against the plan** (Economy, Nov 6, 6:58am ET; script
+`strike_army.py` on the two strike games with logs pushed; the PCs stopped after pair 1 on each):
+
+| Game | Civ (strike) | Plan (core + support) | Army at BUILDUP | Army at the strike's declaration | Result |
+|---|---|---|---|---|---|
+| 152231C3 (bullygreedy19) | Aztecs (early) | Jaguar 6 + Archer 4 | T44: Jaguar 4 + Archer 1 (5 of 10) | T77: Jaguar 7 + Composite Bowman 3 (10 of 10) | first capture attempt on Memphis at T79, no capture; OVER at T101 (the army fell below half) |
+| 1468D9F4 (bullyabort19) | Japan (late) | Longswordsman 7 + Archer 4 | T149 (one turn before the end) | none: its T102 war on Spain came in PREP, with 5 land units (CB, Scout, Spearman, Swordsman, Warrior) | 0 captures |
+
+What this shows:
+- **The Aztecs filled the plan by the declaration,** with core 7 of 6 and support 3 of 4. But the build-up took 33 turns
+  (T44-T77), against about 10 in the user's game.
+- **The Aztec gold ran down during the build-up:** income fell from +4 to -10 a turn, and the treasury from 283 to 16
+  by T79. A barbarian took a worker at T68.
+- **The Aztecs were clean on the lead's check:** no world wonder before the declaration, and no city-state gift
+  either. The only gift was Ormus, 500 gold at T136.
+- **Japan never reached its strike.** That's the 0040 leak (1,250 gold to city-states in PREP) plus a CP war in PREP,
+  which a819f3d on ai/war now turns into OVER.
+- **Both games predate 0038, 0041 and StrikeList.** The next build (ai/war `2ffdafa1`) has all three. With StrikeList,
+  the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
+  army at BUILDUP should be near full instead of 5 of 10.
+
 ### StrikeList: the strike book follows the expert list, strictly (Economy, Nov 6, 6:30am ET; design)
 The user (via the lead): "this is why we looked up expert build orders. literally just follow the list." New flag
 **StrikeList** (Economy). It replaces the priorities-with-conditions book (0031) for a strike civ whose plan carries a
