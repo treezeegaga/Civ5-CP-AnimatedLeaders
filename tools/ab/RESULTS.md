@@ -1695,21 +1695,31 @@ diplomacy can only be judged in long games** (Standard pace to a late turn, or s
      - Open borders cost it double, unless we need the passage ourselves.
      - What we'd buy from it is unchanged: taking its gold helps us.
    - **Measure:** items given to rivals that are ahead, before and after; strength no-worse; who wins long games.
-2. **`Spoiler`: if we can't win, deny the civ we hold a grudge against.**
-   - **When we can't win:** CP's "not competing", or our best victory progress is under half the leader's, from the
-     era when victory competition starts.
-   - **What counts as a grudge:**
-     - opinion Competitor or worse;
-     - it took one of our cities;
-     - it denounced us;
-     - it's a victory rival.
-   - **What changes, while that civ is the closest to any victory:**
-     - We sell it nothing that helps it (as in 1, for every item).
-     - We price deals with its open enemies more kindly (a smaller margin).
-     - We vote for League proposals that hurt it. That's the League half of `Sanctions`, which stays off for testing.
-   - **What doesn't change:** no war, no breaking existing deals. The user ruled out hard rules about war on trade
-     partners. Cicero's lesson: be the partner others can rely on.
-   - **Measure:** whether the leader's trade dries up when a grudge-holder can't win; whether it changes who wins.
+2. **`Spoiler`: if we can't win, help everyone against the civ we blame.** Definitions are the user's (10:35pm ET,
+   replacing my first draft):
+   - **"Can't win":** "you have realized you are not going to be 1st place in this game, you have fallen too far
+     behind." It's about standing, not CP's "not competing".
+     - **Proposed test:** our score is far behind first place and not closing. For example, under 60% of the leader's
+       for 20+ turns while the gap grows. Or the same using our best victory progress, once that means anything.
+     - **Fair play:** scores and the victory screen are what a human sees.
+   - **"Grudge":** "a specific player you blame for your downfall". One civ, not everyone we dislike.
+     - **Proposed blame score:** cities it took from us (heavy); wars it declared on us; land it settled that we
+       claimed; wonders it beat us to; denouncing us; being the victory rival who passed us. The civ with the highest
+       blame becomes the grudge target. It's kept until it's no longer a contender, so the AI doesn't flip.
+   - **What it does:** "help all of their enemies to prevent them from being 1st place".
+     - **While the grudge target is first, or contending for first:**
+       - Deals with anyone at war with it, or denouncing it, get friendlier terms: lower margins, sales of luxuries,
+         strategic resources and gold.
+       - Joint wars against it are accepted readily.
+       - Open borders are granted to armies marching on it.
+       - We vote for League proposals that hurt it.
+       - The target itself gets nothing from us that helps it.
+     - **Limits:**
+       - Our own wars follow our own strength. Spoiling isn't suicide.
+       - Existing deals aren't broken (Cicero's lesson).
+3. **Testing (changes with the user's definitions):** `Spoiler` doesn't depend on CP's victory rivalry, so it could
+   fire in T150 Quick games through score standing. `RivalTrade` still needs long games. Both stay parked until the
+   full-games stage (lead, 9:31pm ET).
 
 **Before code:** the long-game test has to exist, or the flags can't be judged (lead's call). In T150 Quick games
 neither flag would ever fire. Flag 1 would need the turn-150 gate lifted to fire at all. Flag 2 could use our own
