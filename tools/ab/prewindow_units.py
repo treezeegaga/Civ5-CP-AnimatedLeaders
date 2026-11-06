@@ -18,6 +18,10 @@ for gdir in sorted(glob.glob('tools/ab/results/logs_*')):
         if 'Trying to remove barbarian camp' in r: c['camp attempts']+=1
         elif 'opportunity attack' in r: c['opportunity attacks']+=1
         elif r.startswith('KilledInCombat'): c['own units killed']+=1
+        elif r.startswith('BarbKill:'):   # logged from ai/war 728495a5 on
+            c['barbarian kills']+=1
+            m=re.search(r'level (\d+)',r)
+            if m: c['kills by a unit already promoted']+=int(m.group(1))>1
     for t,r in walls.our_lines(os.path.join(gdir,'PlayerHomelandAILog.csv'),ours):
         if t>=w0: break
         if re.match(r'(\w[\w ]*?) Explored to target',r) and not r.startswith('Scout'): c['military unit-turns exploring']+=1

@@ -1924,6 +1924,63 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: BarbHunt, a proposal: early-spike units hunt barbarians for promotions before the strike (Nov 5, about 9:45pm ET)
+The user asked for the kill logging and a written plan. Not coded: the lead holds hunt code until the EarlyStrike block
+(ab-db638c3) gives the baseline.
+
+**Why.** The user's Aztec "pushed out 3 quick jaguars and went barb hunting", with Honor ("honor instead of liberty
+because of the barb hunting"). The Jaguars struck at T54 Quick as veterans (+33% ranged defence). Ours, before the
+window (35 early-spike aggressor games, entry below):
+- 48 military unit-turns exploring and 12 garrison moves;
+- 13 camp attempts, but 0.8 opportunity attacks a game;
+- 0.1 own units lost.
+
+They don't fight, so they don't earn XP. A camp taken empty gives gold, not XP.
+
+**What the code already does:**
+- Visible barbarian units are tactical targets (AI_TACTICAL_TARGET_ENEMY_COMBAT_UNIT, CvTacticalAI target list), but
+  only units already nearby attack them.
+- CvTacticalAI::PlotGrabGoodyMoves sends up to 3 units at camps within 11 tiles at peace (6 at war), occupied or not.
+- The first military units are homeland explorers or garrisons, so nothing sends them toward barbarians.
+- Vox Populi caps barbarian XP at 45 (BARBARIAN_MAX_XP_VALUE): past that, hunting earns nothing.
+- Economy's 0030 opens Honor under EarlyStrike (bonus against barbarians, culture from kills).
+
+**The proposal (one flag, BarbHunt; or inside EarlyStrike if the lead prefers, since it serves the same strike).**
+- **Who:** an EarlyStrike civ's spike units (the core class) beyond one garrison per city, before the strike.
+  - "Before the strike" is CvPlayer::IsEarlyStrikeSmallEmpire: not at war with a major, before T90 Standard.
+  - Not the support units (archers) or the garrisons.
+- **What:**
+  1. A homeland move for those units: go toward the nearest visible barbarian unit or occupied camp within 8 tiles of
+     one of our cities, instead of exploring. Tactical then attacks it on arrival, as for any visible enemy unit.
+  2. In PlotGrabGoodyMoves, for those units, camps with a guard count as targets at the same range.
+- **When to stop (the strike must not slip):**
+  - A unit at the barbarian XP cap (45 in VP) stops hunting and garrisons or musters.
+  - Every hunter stops when the build-up opens. CvMilitaryAI::IsTimingBuildupArmyBuilt etc. take over, and hunters go to
+    the muster and heal.
+- **Safety:**
+  - Attack only when the tactical sim expects to win without dropping below half health.
+  - A hunter below half health heals in our territory before hunting again.
+  - No hunting more than 8 tiles from our cities.
+- **Logs:** the BarbKill line (below), plus a "BarbHunt: <unit> heads for <target> at (x:y)" line.
+
+**How it's judged (EarlyStrike games, BarbHunt on against off, read per civ):**
+
+| Measure | Now | Confirm | Kill |
+|---|---|---|---|
+| Promotions per land unit at the declaration (army line, 8c361db) | baseline from ab-db638c3 | clearly up (at least +1 promoted unit in 4) | no change |
+| Barbarian kills before the window (BarbKill) | baseline from the next build | up | no change |
+| Own units lost before the window | 0.1 a game | at most 0.5 a game | above 1 a game |
+| Declaration turn | EarlyStrike's | no later | 5+ turns later |
+| Captures per civ | the EarlyStrike block's | up | down |
+
+**Logging added now (ai/war 728495a5, logging only):** CvUnitCombat::ApplyPostKillTraitEffects, every kill path, writes
+"BarbKill: <winner> killed a barbarian <unit> at (x:y)[, a camp's guard]; level L, XP X" in the winner's tactical log.
+`tools/ab/prewindow_units.py` counts kills before the window (and kills by units already promoted).
+
+LEAD: BarbKill logging is on ai/war 728495a5 (logging only, on ab-c1 db638c3) for the next build. The BarbHunt proposal
+above waits for the EarlyStrike block's baseline (promotions at the declaration), then one flag. Say go when the
+baseline is in.
+
 ### War: what an early-spike aggressor's units do before the window (barbarian hunting?) (Nov 5, about 9:25pm ET)
 The user (via the lead): "i pushed out 3 quick jaguars and went barb hunting". The Jaguars had +33% ranged defence by
 the strike. Counted over logged bully first games, from the game's start to the first "window opens" turn (homeland
