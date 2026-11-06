@@ -587,7 +587,8 @@ entry is in RESULTS.md, and the scoreboard is at its top.
 When the user says **"avengers assemble"**, the lead checks on every session and reports back in one
 summary. A scheduled task (`trig_011XWTtRZXtTjdt9KBqEG31m`) was meant to run the same check-in on its own, but it has been
 off since 2026-11-04: its runs into the lead's session fail with access denied. Scheduled reminders into this session fail the
-same way. Check-ins run when the user says "aa".
+same way. Since 2026-11-05 10:25pm ET an in-session hourly job (/loop, at about :17 past the hour) runs the check-in instead.
+It lives only as long as the lead's session and expires after 7 days. The user can also say "aa" at any time.
 
 **Updates for the user** (the user's choice, 2026-11-03):
 - **The dashboard** (https://claude.ai/artifact/SyxMyA8FPt5MMxegEKtjiq) is refreshed at every check-in:
