@@ -2365,6 +2365,33 @@ by EarlyStrikeAggressor but aren't warmongers (Warmonger 0), so they had no conq
 EarlyStrikeAggressor from RoleFixes for the rest of the night. The default picker (the most offensive warmonger) still
 gives EarlyStrike to an early-spike warmonger when it's the top one. Otherwise count Warmonger-0 aggressor games as void.
 The fix (e10e2f34) is green on ai/war for the next block.
+
+**Greece, pair 8 (1464B588), from Economy's 3:25am note (3:26am ET): upgrades held past the declaration, and 500 gold
+gifted to a city-state mid-build-up.**
+- **Build-up.** EarlyStrike's build-up opened at T36 against Songhai (unwalled), with **2 land units** (Hoplite,
+  Warrior). It had 4 by T50 (an Archer at T49).
+- **Gold.** It rose from 309 to 494, then **Greece gave 500 gold to Jerusalem at T46** (the Diplomacy log: "Gold Gift:
+  500"; Monaco was being saved for too). The strike's gold went to a city-state.
+- **Upgrades.** Construction came at T52, when the strike window (turn-limited on 40203a3) had already passed.
+  - 40203a3's hold (IsEarlyStrikeHoldingUpgrades) lifts only inside a live strike build-up. After T50 it held every
+    upgrade until the war at T63 (IsEarlyStrikeSmallEmpire ends at war), with 289 gold in the treasury.
+  - At war the Archers were in the field and couldn't upgrade; the first upgrade came at T99.
+  - Declared at T63 with 7 land, 0 promotions. First attempt on Gao at T74, no capture.
+
+On ai/war the hold has no turn limit, but it lifts only when the normal army is built. The declaration can also come from
+Personality's plan army (IsStrikeArmyReady) or "as ready as it gets", and then the units march unupgraded while the hold
+still blocks them.
+
+**Hypothesis 4 (War, before code):** the hold lifts as soon as the army is ready by any measure the declaration uses: the
+normal army, Personality's plan army, or as ready as it gets. Then the upgrades happen at home before the units muster.
+Expect the first upgrade at or before the declaration in every strike that has gold and an upgradable unit.
+
+**Proposal for Economy:** no city-state gold gifts for a strike civ in PREP or BUILDUP. The gold is the upgrade bill and
+the army.
+
+LEAD (3:26am): reading only. Greece (1464B588): its upgrades were held past the declaration, and it gave 500 gold to Jerusalem
+at T46 during its strike build-up. War's fix: the upgrade hold lifts whenever the army is ready by any measure (coded on
+ai/war). Economy: block city-state gold gifts for a strike civ in PREP or BUILDUP.
 - Expert block pair 1: China (no EarlyStrike civ in the game) captured 1 at T59. BarbKill works (44 lines).
 - **ai/next b2a6f75 lacks War's readiness wiring.** The wiring is ai/war 74ae9fd9 (CvMilitaryAI.cpp only, on top of
   the same three parts). Without it, the late strike's PREP to BUILDUP is still War's placeholder ("K cities, book
