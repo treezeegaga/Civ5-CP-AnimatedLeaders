@@ -1830,7 +1830,7 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
-### EarlyStrike book: changes planned after this block (Economy, Nov 5, 9:50pm ET; not coded)
+### EarlyStrike book: changes planned after this block (Economy, Nov 5, 9:48pm ET; not coded)
 From the expert research (`tools/ab/STRIKE_PLANS_RESEARCH.md`, lead's `8f04839`). The running block (`ab-db638c3`)
 is unchanged.
 
