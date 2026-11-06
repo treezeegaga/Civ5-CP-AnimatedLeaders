@@ -2294,6 +2294,10 @@ opened no EarlyStrike build-up. **The harness wastes games:** EarlyStrikeAggress
 civ (Polynesia: Warmonger 0, no conquest plan at all). For the rest of tonight's block, consider dropping
 EarlyStrikeAggressor from RoleFixes, or count those games as void. The fix (warmongers only) and the peace-cap fix for
 strike civs go on ai/war for the next block.
+
+**Coded: ai/war e10e2f34. CI green (run 295, 12:42am ET).**
+
+LEAD: e10e2f34 green; cherry-pick 74ae9fd9 and e10e2f34 onto ai/next.
 - Expert block pair 1: China (no EarlyStrike civ in the game) captured 1 at T59. BarbKill works (44 lines).
 - **ai/next b2a6f75 lacks War's readiness wiring.** The wiring is ai/war 74ae9fd9 (CvMilitaryAI.cpp only, on top of
   the same three parts). Without it, the late strike's PREP to BUILDUP is still War's placeholder ("K cities, book
