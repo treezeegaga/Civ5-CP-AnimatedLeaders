@@ -3081,6 +3081,22 @@ the flag.
 LEAD: the full head for the pre-flight review and trial is **ai/war c288d09c** (b0d7e1c1 + Economy 0052). "Ready" follows
 when CI is green.
 
+**The lead's third pre-flight review (7d011c3..c288d09, 2:36pm ET): findings 2-7 fixed in 2c283300.** (Economy has #1, a
+BUILDUP deadlock in 0050.)
+- **2. PREP prefers a major.** A city-state pin gives way to a major that comes in reach.
+- **3. No CP target during a city-state war.** In WAR on the strike's city-state, before a capture, CP holds no major
+  conquest target.
+- **4. Captures from the target only.** The strike counts only our cities whose previous owner is the strike's target. A
+  counter-attack on a third party no longer ends the strike's war.
+- **5. Bullying.** RequestBullyingOperation goes through gate 4.
+- **6. Peace gate.** It applies only when the originator's own strike refuses. Vassal liberation and Lua's Teams:DeclareWar
+  / MakePeace pass NO_PLAYER; the Lua bindings are now written out, with an optional originator argument.
+- **7. Losses and danger.** No-retreat also releases when our city count falls below its count at the strike's war (a loss
+  to a city-state or barbarians), or when any of our cities is in danger of falling (DEFENSIVE with a city in danger, as
+  the lead suggested). The deal-item peace refusal keeps no human exclusion on purpose: a human target is refused like an
+  AI one, which IsPeaceBlocked already did for majors.
+LEAD: the head is **ai/war 2c283300** (c288d09c + these fixes); Economy's #1 goes on top. "Ready" follows when CI is green.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
