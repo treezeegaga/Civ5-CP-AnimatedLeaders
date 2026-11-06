@@ -2445,6 +2445,36 @@ WarmongerHurry; (2) hypothesis 5, a city-state as the early strike's target when
 LEAD: f9c16cd9 green; add it to the ai/next list. ai/war = ai/next + 74ae9fd9, e10e2f34, bb2fa51c, e8655858, Economy
 0035/0036 (cf9d2a91, 9d40bb28), f9c16cd9.
 
+**The user's rulings (via the lead, morning of Nov 6), and War's plan (6:08am ET):**
+1. **Strike purchases: no.**
+   - Checked: bb2fa51c's purchase path (in ab-8f9b7f9) goes through CvCity::IsCanPurchase, and PurchaseUnit re-checks
+     it. IsCanPurchase calls CvEconomicAI::IsGoldPurchaseAllowed, so under WarmongerHurry a warmonger can buy only
+     settlers and siege, and under NoObsoleteHurry no Warrior class. Every EarlyStrike/LateStrike civ is a candidate
+     warmonger, so it can't buy core or melee units today.
+   - To keep it so even if WarmongerHurry were off for a civ, the strike path now tries siege only (up to the plan's
+     siege target) and never asks for a core or melee unit.
+2. **City-state targets: yes, under EarlyStrike.**
+   - **Hypothesis 5, coded:** when no major's city is in reach (12 tiles of our capital), the early strike targets the
+     nearest city-state whose city is. Conditions:
+     - war can be declared;
+     - its ally is nobody, or a major we're at war with;
+     - no major at peace with us protects it;
+     - no recent peace with it;
+     - not a walled hill city.
+   - **Log:** "Strike: city-state target <name> (<city>, N tiles from our capital; no major in reach)".
+   - **Wiring:**
+     - The strike state treats that city as the target: the reach, walls, counter and plan exits all apply.
+     - GetNewAIConquestTarget opens the build-up window against the city-state.
+     - Once the army is ready (or as ready as it gets), the approach to that city-state is WAR, so the normal city-state
+       war machinery declares.
+     - The strike counts the city-state war as its WAR, and peace or the city-state's end as its end.
+   - **Expected:** Persia 13A89116 (Jerusalem) and Aztec 14849045 (Lhasa) would strike at the city-state around T40-60
+     instead of idling to T100+.
+
+LEAD (6:08am): (1) checked: bb2fa51c can't buy core or melee for a warmonger (IsCanPurchase applies WarmongerHurry), and
+the path is now siege-only regardless. (2) The city-state strike target is being coded under EarlyStrike on ai/war; LEAD
+line when CI is green.
+
 **Read 5 (3:28am ET): 8 logged first games**, all PC 2. PC 1's bullyabort18 still hasn't pushed.
 
 | civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
