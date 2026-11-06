@@ -1924,6 +1924,62 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: strike on readiness, not the calendar: a design for the next block (Nov 5, about 10:50pm ET; no code yet)
+The user (via the lead): "because the ai is not a high level player, some of the windows will be hard to hit". The plans'
+turns are Deity players' turns, and our AI is slower.
+
+**(1) The read, now (tools/ab/expert_block.py, readiness section).** Per game, the turn each condition was met:
+- the strike's upgrade tech in (the upgrade unit first buildable);
+- the army built (land minus siege at the plan's core + support, from the window army line);
+- the upgrade gold saved (gold at the bill, from the "upgrade and go" line);
+- the first upgrade done;
+- the declaration.
+
+These are set against the plan's open, declare-by and fallback turns (Personality's "strike plan" line), with a count of
+conditions met after the declare-by turn and of declarations before the army was built.
+
+On the package block (no plan lines, the RoleFixes build) the shape is already visible: the first strike-relevant upgrade
+came at a median of about T93 and the declaration at about T75 (Quick). The war came before the upgrades every time.
+
+**(2) The design: declare on readiness; the plan's turns become soft limits.**
+- **Ready** (the trigger) is all of:
+  - the plan's upgrade tech known (or none);
+  - core and support built to the plan's counts;
+  - 3 melee that can take a city;
+  - the upgrade bill paid: upgrades done, so gold is no longer short;
+  - siege per the plan (only against walls when bSiegeOnlyIfWalled).
+  When ready, the build-up ends and the attack phase declares on the committed target. This is today's ready test plus
+  the plan's counts, with the clocks below removed.
+- **Soft limits, relative to the AI's pace:**
+  - Opens: when the core (or the plan's pre-build) can be trained and the book or economy phase is done. The plan's open
+    turn is only the earliest.
+  - Grace: if not ready N turns after the upgrade tech lands (N = 10 Standard; 15 when there's no upgrade tech, counted
+    from the window's opening), declare with what's there if the field army is at least the normal target (cities + 4).
+    Otherwise end the strike and fall back to the late plan.
+  - The plan's declare-by and fallback turns become logging references, plus one far stop: the plan's fallback turn +
+    30 Standard, past which the strike plan is dropped whatever the pace.
+- **Hard stops** (end the strike, fall back):
+  - the target's nearest city walls up while the plan has no siege (bSiegeOnlyIfWalled);
+  - the core unit goes obsolete (its obsoleting tech known by us);
+  - the target's army outgrows ours (the build-up's CanWin sketch fails twice in a row);
+  - we are attacked by a major (defend first).
+- **What the plan should carry (Personality), conditions not just turns:**
+  - eUpgradeTech;
+  - core, support and siege counts (there now);
+  - iGraceTurns (N);
+  - bHardStopOnWalls (the bSiegeOnlyIfWalled plans);
+  - an optional iMinFieldArmy for the grace rule.
+  The turns stay, as references.
+- **Code (War, behind EarlyStrike and LateStrike, for the next block):**
+  - CvMilitaryAI::IsInTimingBuildupWindow loses the window length, WindowUntilReady's 2 windows and the declare-by cut
+    for a strike's build-up. It ends on ready, grace, or a hard stop.
+  - IsTimingBuildupArmyReady adds the plan's counts.
+  - A strike-state log line each turn of the build-up: "Strike: waiting on tech / army n of m / gold g of b / melee k".
+
+LEAD: (1) the expert block's read now has readiness per game against the plan's turns. (2) Design above (strike on
+readiness, the plan's turns soft, grace after the upgrade tech, hard stops). Say go and I'll code it on ai/war for the
+next block. Personality: the plan would carry iGraceTurns, bHardStopOnWalls and optionally iMinFieldArmy.
+
 ### War: LateStrike, the late-spike civs' timed strike (coded, ai/war 656a7ba9, off, not merged) (Nov 5, about 10:40pm ET)
 The lead (10:30pm ET, overnight): code the late-strike plans for the Zulu, Mongolia, Assyria, Japan and Songhai so the
 next block is ready by morning. The user: "every civ builds to its strengths". Personality: late-spike civs get

@@ -23,7 +23,13 @@ CAPTURER = re.compile(r"^(Warrior|Spearman|Pikeman|Swordsman|Longswordsman|Jagua
 ARMY = re.compile(r"(?:BigArmy|WarBudget|EarlyStrike): army (at the declaration on .+?|at the first capture attempt on (\S+) \(in reach: ([^)]*)\)|in the window \(turn \d+\)): "
                   r"(\d+) land(?:.*?promoted (\d+) \((\d+) promotions, (\d+) XP\))?")
 PLAN = re.compile(r"strike plan .*?open T(\d+), declare by T(\d+), fallback T(\d+)")
+PLANFULL = re.compile(r"strike plan \w+: core (\S+) x(\d+), support (\S+) x(\d+), siege (\S+) x(\d+), upgrade (\S+) \((\d+) gold each\)")
 med = lambda v: st.median(v) if v else '-'
+# the plan's upgrade tech -> the units it upgrades into (to find the strike's own upgrade among CP's others)
+UPGRADE_UNITS = {'TECH_CONSTRUCTION': ('Composite Bowman',), 'TECH_MACHINERY': ('Crossbowman', 'Chu-Ko-Nu'),
+                 'TECH_CHIVALRY': ('Knight', 'Keshik', 'Mandekalu Cavalry', 'Camel Archer'), 'TECH_STEEL': ('Longswordsman', 'Samurai'),
+                 'TECH_CIVIL_SERVICE': ('Pikeman', 'Impi'), 'TECH_METAL_CASTING': ('Swordsman', 'Berserker'), 'TECH_IRON_WORKING': ('Swordsman', 'Legion'),
+                 'TECH_MATHEMATICS': ('Catapult', 'Ballista'), 'TECH_HORSEBACK_RIDING': ('Horseman',)}
 
 games = af.games_from_csvs()
 CSVROWS = collections.defaultdict(dict)
@@ -44,14 +50,32 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
     ours = af.log_name_matches(info['civ'])
     g = dict(gid=gid[:8], civ=info['civ'].title(), run=info['build'], capt=info['captured'], first_capt=None, decl=None,
              open=None, walled=None, upgrades=[], hunts=0, kills=0, kill_xp=[], decl_land=None, decl_promoted=None,
-             decl_promotions=None, reach=[], plan=None)
+             decl_promotions=None, reach=[], plan=None, need_field=None, upgrade_tech=None,
+             t_tech=None, t_gold=None, t_army=None, t_upgraded=None)
     for t, r in walls.our_lines(os.path.join(gdir, 'StrategyProfile_Log.csv'), ours):
         m = PLAN.search(r)
         if m:
             g['plan'] = tuple(map(int, m.groups()))
+        m = PLANFULL.search(r)
+        if m:
+            g['need_field'] = int(m.group(2)) + int(m.group(4))
+            g['upgrade_tech'] = None if m.group(7) == 'none' else m.group(7)
     for t, r in walls.our_lines(os.path.join(gdir, 'CitySpecializationLog.csv'), ours):
         if 'Update: Enemy city captured' in r and g['first_capt'] is None:
             g['first_capt'] = t
+    # readiness (the lead, 10:35pm ET): when each condition was met, against the plan's turns
+    upgraded_to = None
+    for t, r in walls.our_lines(os.path.join(gdir, 'PlayerHomelandAILog.csv'), ours):
+        m = re.search(r'Upgrading unit from type (.+?) to type (.+?), X:', r)
+        want = UPGRADE_UNITS.get(g['upgrade_tech'] or '', None)
+        if m and g['t_upgraded'] is None and (want is None or m.group(2) in want):
+            g['t_upgraded'], upgraded_to = t, m.group(2)
+    if upgraded_to:
+        for l in open(os.path.join(gdir, 'CityStrategyAIProductionLog.csv'), errors='replace'):
+            p = l.split(', ')
+            if len(p) > 4 and p[3].startswith('PRE: Unit') and p[4] == upgraded_to and ours(p[1]):
+                g['t_tech'] = int(p[0])
+                break
     capt_cities = set()
     lines = list(walls.our_lines(os.path.join(gdir, 'PlayerTacticalAILog.csv'), ours))
     for t, r in lines:
@@ -63,9 +87,11 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
             g['open'] = t
             g['walled'] = 'unwalled' not in r
         elif r.startswith('EarlyStrike: upgrade and go'):
-            m = re.search(r'(\d+) units to upgrade for (\d+) gold', r)
+            m = re.search(r'(\d+) units to upgrade for (\d+) gold \(gold (-?\d+)\)', r)
             if m:
                 g['upgrades'].append((t, int(m.group(1)), int(m.group(2))))
+                if g['t_gold'] is None and int(m.group(3)) >= int(m.group(2)):
+                    g['t_gold'] = t
         elif r.startswith('BarbHunt:') and (g['open'] is None or t < g['open']):
             g['hunts'] += 1
         elif r.startswith('BarbKill:') and (g['open'] is None or t < g['open']):
@@ -79,6 +105,10 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
                 g['decl'], g['decl_land'] = t, int(m.group(4))
                 if m.group(5):
                     g['decl_promoted'], g['decl_promotions'] = int(m.group(5)), int(m.group(6))
+            elif m.group(1).startswith('in the window') and g['t_army'] is None and g['need_field'] is not None:
+                sm = re.search(r'\((\d+) siege', r)
+                if sm and int(m.group(4)) - int(sm.group(1)) >= g['need_field']:
+                    g['t_army'] = t
             elif m.group(2):
                 units = [u.strip() for u in m.group(3).split(',') if u.strip()]
                 g['reach'].append((m.group(2), sum(1 for u in units if CAPTURER.match(u)), m.group(2) in capt_cities))
@@ -120,6 +150,23 @@ R = [x for g in rows for x in g['reach']]
 for lo, hi, lab in ((0, 1, '0'), (1, 2, '1'), (2, 99, '2+')):
     S = [x for x in R if lo <= x[1] < hi]
     print('  melee in reach %-2s at a first capture attempt: %d attempts, taken by a CAPTURED attempt %d' % (lab, len(S), sum(x[2] for x in S)))
+print('\nReadiness against the plan (the AI\'s pace; a dash: not met or not logged):')
+print('  %-8s %-9s %5s %5s %5s | %6s %6s %6s %6s %6s %6s' % ('game', 'civ', 'open', 'decl-by', 'fallbk', 'window', 'tech', 'army', 'gold', 'upgr', 'decl'))
+late = collections.Counter()
+for g in rows:
+    pl = g['plan'] or ('-', '-', '-')
+    print('  %-8s %-9s %5s %5s %5s | %6s %6s %6s %6s %6s %6s' % (g['gid'], g['civ'], pl[0], pl[1], pl[2], g['open'] or '-', g['t_tech'] or '-',
+          g['t_army'] or '-', g['t_gold'] or '-', g['t_upgraded'] or '-', g['decl'] or '-'))
+    if g['plan']:
+        for k in ('t_tech', 't_army', 't_gold', 't_upgraded'):
+            if g[k] is None or g[k] > g['plan'][1]:
+                late[k] += 1
+        if g['decl'] is not None and (g['t_army'] is None or g['decl'] < g['t_army']):
+            late['declared before the army was built'] += 1
+P = sum(1 for g in rows if g['plan'])
+if P:
+    print('  of %d games with a plan line, met after the declare-by turn (or never): %s' % (P, dict(late)))
+
 print('\nGames:')
 for g in rows:
     print('  %s %-9s %-13s capt %d (T%s) decl T%s open T%s %s plan %s kills %d upgrades %s exit %s' % (
