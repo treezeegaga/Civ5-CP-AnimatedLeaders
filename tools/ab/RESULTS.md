@@ -3466,7 +3466,7 @@ weights fill everything a plan doesn't name):
   |---|---|---|---|---|---|---|---|---|
   | Huns | Horse Archer x5 | Warrior x1 | Battering Ram x2 | none | 2 | 2 | T30 / T50 / T55 (Quick T20 / T33 / T36) | Honor |
   | Aztec | Jaguar x6 | Archer x4 | if walled | Construction | 3 | 2 | T52 / T70 / T75 (Quick T34 / T46 / T50) | Honor |
-  | Inca | Slinger x6 | Spearman x2 | if walled | Construction | 2 | 3 | T60 / T70 / T75 (Quick T40 / T46 / T50) | Liberty (low confidence) |
+  | Inca | Slinger x5 | Spearman x2 | Catapult x2, always (the user, 9:55pm ET: "if inca dont have a rush source they should just use catapults") | Construction | 2 | 3 | T60 / T70 / T75 (Quick T40 / T46 / T50) | Liberty (low confidence) |
   | Greece | Hoplite x3 | Archer x5 | if walled | Construction | 2 | 3 | T50 / T65 / T75 (Quick T33 / T43 / T50) | Liberty |
   | Celts | Pictish Warrior x5 | Archer x3 | if walled | Construction | 2 | 3 | T52 / T67 / T75 (Quick T34 / T44 / T50) | Honor |
 
@@ -3474,7 +3474,7 @@ weights fill everything a plan doesn't name):
   is the siege, with Archers as the core); support ranged or melee to balance; the profile's upgrade tech; N 2, K 3;
   open when the later of the spike and the upgrade lands, + 5; declare within 10; fall back 5 later; Liberty for an
   early spike, CP's choice otherwise. Economy's book and War's strike read it next (the lead's order of work).
-- **Status:** `221fb3e` pushed, CI pending. Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
+- **Status:** `221fb3e`, then the Inca's Catapults in `0356f6b`, CI pending. Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
