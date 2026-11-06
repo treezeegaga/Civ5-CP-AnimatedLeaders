@@ -3150,6 +3150,14 @@ Yes. Fixed in bf212f7e.**
   strikes are unchanged. A late strike whose tech never comes still exits by the existing rules (core obsolete, no
   target), and Economy's research puts the plan's techs first.
 LEAD: the next block's head is **ai/war bf212f7e** (791ab9d7 + the Kyzyl fix b446678a + Economy 0054 + this). CI to follow.
+**Revised (4:00pm ET), reverted in 06fd0b87.** The lead pointed out that Mongolia's T123 capture, the first strike capture
+we have, came from exactly that early declaration. The suggested middle way (wait for the tech only while it's close and
+the army can't take the target) needs no gate. Both readiness paths already require IsStrikeTargetTakeableNow, so while
+the army can't take the target nothing is declared, the build-up keeps building (0053), and research goes to the plan's
+techs (0054). Once it can take the target, it goes, spike or not. A "few turns away" test would be a turn horizon, which
+the user ruled out.
+LEAD: the next block's head is **ai/war 06fd0b87**, the same code as a24c5408 (791ab9d7 + the Kyzyl fix b446678a + Economy
+0054). CI to follow.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
