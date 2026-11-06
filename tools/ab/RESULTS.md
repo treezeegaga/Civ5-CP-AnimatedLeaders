@@ -2493,14 +2493,14 @@ production by kind. The expert block (40203a3):
   wonders alongside 5-14 military.
 - **The window asked for the wrong army.** It asked for 12 field units (WarBudget's affordable army), not the plan's 8.
 
-**Hypothesis 6, coded (ai/war 1d7f4d0e):**
+**Hypothesis 6, coded (ai/war bdcfff59):**
 - An EarlyStrike build-up's field target is the plan's core + support (at least 3 melee).
 - The core and support production weights (core to its count, +4500; support to its count, +3500) apply to both
   strikes; they were LateStrike's only.
 - Expect the window's army to fill toward the plan's 8 rather than 12, and BUILDUP-to-WAR production to go to the plan's
   classes first.
 
-LEAD (6:14am): War's part of the short army is coded on ai/war 1d7f4d0e: the strike build-up asks for the plan's army (field
+LEAD (6:14am): War's part of the short army is coded on ai/war bdcfff59: the strike build-up asks for the plan's army (field
 target = core + support; core and support weights for EarlyStrike too). expert_block.py reports units vs the plan at
 BUILDUP and WAR, and production by kind, for ab-8f9b7f9's games. CI to follow.
 
