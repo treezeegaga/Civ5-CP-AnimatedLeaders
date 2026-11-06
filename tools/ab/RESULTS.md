@@ -2018,6 +2018,11 @@ Each is gated at the lowest level, so CP's systems can't override it. "Today" me
 | Later picks | ChooseNextPolicy (CP's weights) | CP | Finish the first tree before opening a second while strike active |
 | Ideology | CvPolicyAI::DoChooseIdeology | n/a this early | none |
 
+**Patch 0051** (1:27pm ET, the lead's review of the ownership build): the policy block that finishes the strike's tree
+first was dead code. It was gated on CP's `bNeedToFinish`, which is true whenever an open branch can still be continued,
+so CP picked from any open branch. That gate is dropped. The pushOrder comment is also corrected: units ChooseProduction
+picks for operations replace the queue, so they are redirected too, by design. 2 files, on ai/war `33ef215`.
+
 **Patch 0049** (1:14pm ET) does everything marked New or proposed above. It applies on ai/war `5fe900a`, 8 files,
 +111/-7, not compiled here. War keeps war, peace, approach, targets, disbanding and upgrades.
 

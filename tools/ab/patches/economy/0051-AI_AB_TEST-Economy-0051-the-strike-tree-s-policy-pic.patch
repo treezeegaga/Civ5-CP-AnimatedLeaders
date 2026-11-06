@@ -1,0 +1,58 @@
+From 113dcd8e6957367b278191e8746a60517bafb2a2 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 18:27:20 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0051: the strike tree's policy pick runs
+ (the lead's review of the ownership build)
+
+(5) The 0049 block that finishes the plan's first tree before a second was gated on
+!bNeedToFinish. That flag is true whenever an open branch (the strike's included) can still
+be continued, and it only keeps CP from opening a new branch. CP then picked from any open
+branch, so the block never ran. It is now gated on !bMustChooseTenet only.
+Minor: the CvCity::pushOrder comment said operation units pass unchanged. Units that
+ChooseProduction picks for an operation replace the queue and are redirected too, by
+design. Comment corrected.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvCity.cpp     | 6 ++++--
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp | 6 ++++--
+ 2 files changed, 8 insertions(+), 4 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvCity.cpp b/CvGameCoreDLL_Expansion2/CvCity.cpp
+index 9555f53..1a65ed6 100644
+--- a/CvGameCoreDLL_Expansion2/CvCity.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCity.cpp
+@@ -29336,8 +29336,10 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
+ 
+ 	// AI_AB_TEST (Economy 0049; the user's structural fix: the strike owns production while it's active). Every new
+ 	// production choice of an AI strike city (a push that replaces the queue) becomes the strike executor's pick whenever the
+-	// executor has one, whatever path chose it. Appends (CP's operation units, War's strike ops), re-pushes of a saved order
+-	// and humans pass unchanged
++	// executor has one, whatever path chose it. Appended orders (CvCity::CheckForOperationUnits), re-pushes of a saved
++	// order and humans pass unchanged. A unit ChooseProduction picks for an operation (CITY_BUILDABLE_UNIT_FOR_OPERATION)
++	// replaces the queue, so it is redirected too, by design: the strike owns production. (0051: comment corrected; the
++	// settler-skip count ChooseProduction keeps then refers to its own pick, which is harmless)
+ 	if (MOD_AI_AB_TEST && bPop && !bAppend && !bSave && !GET_PLAYER(getOwner()).isHuman() && GET_PLAYER(getOwner()).IsStrikeActive())
+ 	{
+ 		OrderTypes eStrikeOrder = ORDER_TRAIN;
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index 86cd7b5..ef92a99 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -198,8 +198,10 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 	}
+ 
+ 	// AI_AB_TEST (Economy 0049): while the strike is active, the plan's first tree is finished before a second opens: its best
+-	// adoptable policy (CP's weights) comes first
+-	if (!bMustChooseTenet && !bNeedToFinish && pPlayer->IsStrikeActive())
++	// adoptable policy (CP's weights) comes first. (0051: not gated on bNeedToFinish, which is true whenever an open branch,
++	// the strike's included, can still be continued; it only keeps CP from opening a new branch, and CP then picked from
++	// any open branch, so this block never ran)
++	if (!bMustChooseTenet && pPlayer->IsStrikeActive())
+ 	{
+ 		const PolicyBranchTypes eStrikeBranch = pPlayer->GetOpeningBookPolicyBranch();
+ 		if (eStrikeBranch != NO_POLICY_BRANCH_TYPE && m_pCurrentPolicies->IsPolicyBranchUnlocked(eStrikeBranch) && !m_pCurrentPolicies->IsPolicyBranchFinished(eStrikeBranch))
+-- 
+2.43.0
+
