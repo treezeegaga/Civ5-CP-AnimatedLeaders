@@ -5079,3 +5079,17 @@ civ per 10 turns anyway: renewals and embassy swaps made up the old 3.0. The new
 civ it holds a grudge against from winning (`RivalTrade`, `Spoiler`, Diplomacy's hypothesis). **Parked until full
 games:** CP's victory rivalry starts after T150 and in the Renaissance, so T150 Quick games can't show it. It goes with
 the "full games to a winner" stage, after the attack work and the matchup test. No code until then.
+
+### Expert strike plans now, no baseline (the user, about 9:57pm ET Nov 5)
+"no, we dont need a baseline. use the experts ideas right away and we will know if they are good by if they take
+cities." The CivFanatics per-civ plans (`STRIKE_PLANS_RESEARCH.md`) are being coded now under `EarlyStrike` (no new
+flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
+- **Personality:** a per-civ plan in the profile: core and support units, the upgrade tech, units before the first settler,
+  cities before the strike, the fallback turn, the first policy tree, and siege.
+- **Economy:** the book: builds as priorities with conditions, research to the upgrade tech after one luxury, the policy
+  tree, the gold reserve.
+- **War:** the strike: 2+ melee at the capture, 70-80 gold per unit for upgrades, a flat unwalled target, BarbHunt
+  before the window, and the fallback.
+
+**Verdict:** captures by the aggressor against greedy and normal civs. Until the build is out, both PCs play
+`ab-db638c3` as filler, not as a baseline, and switch at the next pair boundary once it lands.
