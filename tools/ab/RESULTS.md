@@ -2015,6 +2015,46 @@ Specifics:
 LEAD: the strike state is coded on ai/war 56e0cadc, no turns in strike decisions. Economy: 0034 against GetStrikeState
 (drop the T75/T90 and IsLateStrikeSaving turns). Personality: the economy-ready condition (a function War calls in place
 of the K-cities placeholder in CvMilitaryAI::UpdateStrikeState). CI to follow.
+
+**URGENT (10:55pm ET): PC 1 has not run the EarlyStrike DLL at all; its installs since 8:42pm didn't take.**
+
+This is not a code bug. Evidence:
+- **The Build column.** bullyabort16 (said to be on ab-c337c77) and bullyabort17 (ab-db638c3, 480 rows) both read
+  `No-Tag 8fe8e0f Clean`, and so does humangame106F8550. 8fe8e0f is the human-game build: none of the EarlyStrike
+  commits are in it (`git log 8fe8e0f..40203a3c` is 36 commits).
+- **The flags.** The runner passed EarlyStrike and EarlyStrikeAggressor in RoleFixes (Run-Games.log), but the CSV
+  Fixes column has 43 flags and neither of those. An old DLL drops flag names it doesn't know.
+- **The releases are right.** I downloaded both and read their strings:
+  - ab-db638c3: `No-Tag db638c3 Clean`, the EarlyStrike/EarlyStrikeAggressor names and the "build-up opens" line,
+    sha256 9be76e48...
+  - ab-40203a3: `No-Tag 40203a3 Clean`, the same lines, sha256 3dbd9cd0...
+- **The downloads ran.** Each release shows download_count 1. The DLL was downloaded, but the copy the game loads is
+  still 8fe8e0f.
+- **PC 2's installs do take.** bullygreedy16 shows abc78a6, then 5b7333c.
+- **Game 1 (129103E3) had no EarlyStrike civ anyway.** Its civs were France, Iroquois, Morocco, Carthage, Austria,
+  Korea, Russia and America, so Carthage was a correct aggressor with or without the picker.
+- **Game 2's Aztec ran the old book.** Its opening was Scout, Jaguar, Settler, Worker, Monument, Settler, Shrine, with
+  WarBudget lines and no EarlyStrike line. That is 8fe8e0f's behaviour.
+
+So bullyabort16 and 17 are not EarlyStrike data: drop them from the expert block. bullyabort18 ("installed
+ab-40203a3 at 10:28pm") is likely the same until its first row shows `No-Tag 40203a3 Clean`.
+
+What PC 1 should check, with Civ closed:
+1. Find every `CvGameCore_Expansion2.dll` under the Civ install (`Assets\DLC\*`) and `My Games\...\MODS`.
+   Check each one's version string, e.g.
+   `Select-String -Path <dll> -Pattern 'No-Tag [0-9a-f]{7}' -Encoding ascii`. A second pack folder or a MODS copy
+   holding 8fe8e0f is the likely winner.
+2. Check that `Assets\DLC\<test pack>\Mods\(1) Community Patch\CvGameCore_Expansion2.dll` has the release's
+   sha256 (`Get-FileHash`). If not, the builder's Remove/Copy failed: was a Civ process still alive, or did the
+   build throw?
+3. Re-run `Run-ABTest.ps1 -Release ab-40203a3 -NoLaunch` (or a later build) and read its output to the end.
+4. Before counting a game, check that the first CSV row's Build matches the release and that Fixes contains
+   EarlyStrike.
+
+LEAD: URGENT. PC 1's bullyabort16 and 17 ran DLL 8fe8e0f (CSV Build `No-Tag 8fe8e0f Clean`; EarlyStrike and
+EarlyStrikeAggressor missing from Fixes). The install didn't replace the loaded DLL. The release DLLs are correct (I
+checked their strings), so no code fix is needed. Drop those games, have PC 1 find the stale DLL (steps above), and
+check bullyabort18's Build column before it counts. PC 2's bullygreedy18 check follows when its first pair lands.
 The user (via the lead): "because the ai is not a high level player, some of the windows will be hard to hit". The plans'
 turns are Deity players' turns, and our AI is slower.
 
