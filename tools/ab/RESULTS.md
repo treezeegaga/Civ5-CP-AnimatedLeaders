@@ -7537,3 +7537,19 @@ LEAD: War's 1, 3, 5, 6, 7 from your review of 261d5da..c89ed4a are **ai/war 27b6
 LEAD: Economy 0059 (your review's 2 and 4: WAR income in the capital only; the policy fallback only when every remaining order tree is finished or permanently blocked) is on top: **ai/war e5dadc3a** = c89ed4ac + War's 27b685d0 + 0059. This is the trial head with all of your review of 261d5da..c89ed4a in. CI to follow.
 
 LEAD: **ai/war e5dadc3a green** (run 389: c89ed4ac + War's 27b685d0 + Economy 0059), the trial head. 17813E6E's logs have landed; the abort-12 read follows.
+
+**17813E6E read from the logs (Celts vs America, 6:05pm ET):**
+- Abort reason 12 kept a dead operation alive. Op 3358 is an OP_PILLAGE with 2 Pictish Warriors, started T137. From T143 the
+  tactical log has "operation 3358 against America keeps going (gate 4: abort reason 12 refused, no retreat)" every turn to T149,
+  while the army bounced between (14:28), (15:27) and (16:29)/(16:30), progress 23% / 45% / 34%, with "No progress to target" at
+  T145 and T148. TOO_DANGEROUS is a route problem (the army's next step within 3 tiles of another enemy city), not a retreat.
+  **Fix: ai/war fef0ea98** (on e5dadc3a) lets TOO_DANGEROUS through gate 4. The other refused reasons stay, and in WAR the strike
+  requests a new city attack when none is under way.
+- Boston at T70-77: the attack was launched. CP's sneak attack op 1320 marched on Boston T70-72 ("MarchOn: declaring") and ended
+  "Success" at T73, the turn the strike went BUILDUP -> WAR, handing its army to the tactical siege ("SiegeFeed: Boston is under
+  siege (4-6 units in the zone), no new army for it", T73-75). The strike's T74 "city attack requested (not possible this turn)"
+  and the T70 "not possible for lack of units" came while those units were already committed to Boston: no units were missing.
+  824f1db's readiness change wouldn't have changed this. Boston wasn't taken, and from T82 the Celts' zone focus is New York.
+  These logs don't show why the Boston siege failed.
+
+LEAD: the trial head is now **ai/war fef0ea98** (e5dadc3a + the gate-4 fix above). CI to follow (e5dadc3a was green).
