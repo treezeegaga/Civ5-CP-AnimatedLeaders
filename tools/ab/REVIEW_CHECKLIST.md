@@ -71,3 +71,10 @@ against this list. The list grows: every bug a review or a test game finds gets 
 - **Mixed-team gates:** loops that skip humans but still block the human's own actions.
 - **Game mechanics through AI gates:** Lua, vassal liberation and independence wars reach declareWar/makePeace and are
   swallowed. Gate on the originating player being the strike AI.
+- **A clear that kills another branch:** clearing CP's state that another of our rules reads (the committed target)
+  silently disables that rule.
+- **Capture counts that aren't per-target:** any capture ends the strike or releases its lock.
+- **Lua's missing arguments become 0:** an omitted player from Lua arrives as player 0, not NO_PLAYER.
+- **Operations created outside RequestCityAttack:** show-of-force and bully operations skip the operations gate.
+- **A wait that removes its own way forward:** the build-up stops building units while it waits for the city to become
+  takeable.
