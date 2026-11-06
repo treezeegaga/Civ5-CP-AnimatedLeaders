@@ -3513,8 +3513,8 @@ weights fill everything a plan doesn't name):
   upgrades from, save the gold, upgrade the turn the tech lands and strike", not the data default (which times the
   strike on the unique unit with nothing pre-built). Expected: late-spike aggressors declare near the tech with the
   unique units in the army, and take cities more often than the data default.
-- **Flag** `LateStrikePlans` (`FIX_LATE_STRIKE_PLANS`, off): `GetStrikePlan` returns these rows for the five civs when
-  the flag is on; the data default otherwise. New plan fields: the pre-build class and count (what upgrades into the
+- **Flag:** War and Economy's `LateStrike` (`FIX_LATE_STRIKE`, off; the lead, 10:33pm ET: one flag for the late strike;
+  my own `LateStrikePlans` flag is gone). `GetStrikePlan` returns these rows when the flag is on; the data default otherwise. New plan fields: the pre-build class and count (what upgrades into the
   core), and "late strike" (economy first: no units before the first settler, more cities).
 - **Rows** (Standard turns; Quick x0.67; confidence from the research):
 
@@ -3529,9 +3529,14 @@ weights fill everything a plan doesn't name):
 
 - **Measure:** with these civs as the aggressor (bully games, late-strike block), declaration turn against the tech
   turn, unique units in the army at the declaration, and cities captured, against the data default.
+- **Who reads what** (`f55b07f`, the merge with War's `da91238` and Economy's 0033): Economy's `IsLateStrikeCiv` needs the
+  plan's `bLateStrike`; Economy researches the spike and upgrade techs and keeps the treasury (`IsLateStrikeSaving`,
+  from 15 turns Standard before the window); in that saving phase, before the upgrade tech, unit production builds the
+  plan's pre-build class up to its count (my hook in `CvUnitProductionAI`); War's build-up opens once the core can be
+  trained, upgrades and builds the core, support and siege, and declares by the plan's turn.
 - **Build:** fork `ai/personality` `a80986e`, China in `5ad0a45`. With the flag off nothing changes (the five early rows as before; the data
   default only gains `bLateStrike`). Economy and War read `ePreBuildClass`, `iPreBuildTarget` and `bLateStrike` next block.
-- **Status:** coded, off, not for this block; CI pending.
+- **Status:** coded, off, for the next block; aligned with War and Economy in `f55b07f`, CI pending.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
