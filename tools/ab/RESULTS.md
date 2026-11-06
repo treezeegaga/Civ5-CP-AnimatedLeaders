@@ -1924,6 +1924,43 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: EarlyStrike, War's half (coded, ai/war 95fbcc26, off) (Nov 5, about 9:10pm ET)
+The lead's go: "every civ builds to its strengths". It uses Personality's per-civ strike window, which is already in
+ab-c1 (CvGrandStrategyAI::GetStrikeWindow / IsInStrikeWindow, the profile's eSpikeUnit), not a stand-in gate.
+
+**Hypothesis.** Wars declared earlier take more cities, unwalled cities fall twice as often, siege at the declaration
+predicts nothing, and early capital military goes with captures (entries below). A civ whose power spike comes early
+should strike in its spike's window, with the spike unit as the army's core and no siege against an unwalled city.
+
+**What it does (FIX_EARLY_STRIKE), for a timing attacker whose strike window starts before turn 40 (Standard):**
+- The build-up window opens in the strike window instead of at turn 40 (CvDiplomacyAI::GetNewAIConquestTarget; the
+  target is still chosen from turn 25). Civs with a later spike keep the normal timing.
+- In a build-up opened in the strike window:
+  - no siege target when the target's city nearest our capital has no walls;
+  - at least 8 field units (the user's strike had about 10, from 2 cities);
+  - the spike unit gets +4500 in the window (above siege +4000 and the others +3000) until it makes up half the field
+    target.
+- Log: "EarlyStrike: build-up opens in the strike window (Ta-b), spike unit X, target's nearest city unwalled (no
+  siege) / walled".
+- The opening (UU first, a small empire) is Economy's EarlyStrike book; test the two together.
+
+**Confirm:**
+- EarlyStrike civs declare by about T60 (Quick), against our median of T80+;
+- they capture in more than the package block's rate, and at least BigArmy's 8 of 20 for those civs;
+- the army at the declaration is mostly the spike unit, with promotions logged.
+
+**Kill:**
+- captures below the package block for the EarlyStrike civs;
+- or the strike is spent and the civ falls behind by T100 (cities, science) with nothing taken.
+
+**Note for Personality.** The Aztec window ends at T23 Quick ((0 + 35) x 0.67), while the user struck at T54 Quick.
+EarlyStrike uses the window only to open the build-up (which then runs its normal 10 to 20 Quick turns, so a declaration
+around T30 to T40 Quick). If the user's T54 is the better reference, a later window end, or a later start for spikes
+that need no tech, would move it.
+
+LEAD: EarlyStrike's War half is on ai/war 95fbcc26 (off), for a block after the package, with Economy's book. CI to
+follow.
+
 ### War: the unique unit at the declaration, and the strike-window interface for Personality (Nov 5, about 8:55pm ET)
 The lead (refining, from the user: "every civ needs to build to its strengths"): Personality drafts each civ's power
 spike, opening and strike window; TimingBuildup takes the window from the profile and builds the army from the civ's
