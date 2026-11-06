@@ -2401,6 +2401,44 @@ e10e2f34 (aggressor picker and peace cap), bb2fa51c (strike purchases; Warmonger
 (upgrade hold) and Economy's 0035 and 0036 (cf9d2a91, 9d40bb28). Or build the next block from ai/war, which is ai/next
 plus exactly these.
 
+**Read 6, block complete (4:29am ET): 10 first games** (PC 2's bullygreedy18; PC 1's bullyabort18 never pushed).
+
+| civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
+|---|---|---|---|---|---|---|---|---|
+| China | 1 | 1 | 1 | 59 | 57 | 5 | 1 / 11 | captured (normal TimingBuildup; China's plan is a late strike) |
+| Persia | 3 | 1 | 1 | 87 | 119, 81, 83 | 10, 1, 0 | 10/16, 12/16, 1/16 | captured 1 (second window), no capture 2 |
+| Greece | 1 | 0 | 0 | - | 63 | 1 | 0 / 7 | no capture |
+| Aztec | 1 | 0 | 0 | - | 108 | 4 | 1 / 9 | no capture |
+| Polynesia, Maya, Celts, Inca | 4 | 0 | 0 | - | 140, never x3 | 1, 1, 11, 2 | - | void (Warmonger 0) |
+
+**Verdict on 40203a3's EarlyStrike: 0 captures from a strike.** 2 of 10 games captured, both by the ordinary path.
+4 of 10 are void (the picker bug, fixed in e10e2f34). The other 6 failed in four ways, each one now addressed on
+ai/war:
+
+| failure | games | on ai/war |
+|---|---|---|
+| The build-up opened with 1-3 land units, and production couldn't fill 10-12 by the turn-limited close | Persia 13E9ECC9 (3 at T40, 7 by T50), Persia 14A46460 (**1 at T26**, 1 at T36), Greece (2 at T36, 4 at T50) | no turn limits (56e0cadc); BUILDUP only on Personality's economy-ready (N core out, K cities; 74ae9fd9) |
+| The only neighbour in reach was a city-state, so no major was committed for 60+ turns, and the peace cap shed the book's units | Persia 13A89116 (Jerusalem; shed 4), Aztec 14849045 (Lhasa; 4 Jaguars by T17, shed from T42) | peace cap off in PREP and BUILDUP (e10e2f34); the target question is open (below) |
+| Gold idle or gone: 350 unspent against a 165 bill (Persia); 500 gifted to a city-state (Greece) | 2 | purchases above the bill (bb2fa51c; WarmongerHurry limits them to siege); no city-state gifts (Economy 0036) |
+| Upgrades held past the declaration (Greece: 289 gold, first upgrade at T99) | 1 | the hold lifts on any readiness (e8655858) |
+
+Also:
+- **Barbarian hunt.** BarbHunt sent one Jaguar after the same Brute 7 tiles out for 15 turns (Aztec, T18-T33), and 4
+  kills came of it. A lone unit at distance doesn't finish a barbarian. Next: send 2, or only within 5 tiles.
+- **Melee in reach at the first capture attempts.** 2+ melee took 2 of 4; 0 melee took 0 of 3. That's consistent with
+  every block so far.
+
+**Hypothesis 5 (War, for discussion, not coded):** when an early-strike civ has no major in reach but a city-state is
+(Persia: Jerusalem; Aztec: Lhasa), the strike's target is the city-state. CSConquest is already in the bundle; the
+strike state would accept a city-state's nearest city as "in reach". Experts take a neighbouring city-state early with
+the spike unit. Risk: the city-state's allies, and the warmonger penalty.
+
+LEAD (4:29am): reading only. The expert block is complete: 2 of 10 captured, both by the ordinary path; 0 captures from an
+EarlyStrike build-up; 4 of 10 void (non-warmonger aggressors). The six real failures were tiny armies at the open, a
+city-state as the only neighbour with the peace cap shedding units, idle or gifted gold, and upgrades held. All four are
+addressed on ai/war 9d40bb28 (green). Open questions for the user: (1) strike purchases of core and melee despite
+WarmongerHurry; (2) hypothesis 5, a city-state as the early strike's target when no major is in reach.
+
 **Read 5 (3:28am ET): 8 logged first games**, all PC 2. PC 1's bullyabort18 still hasn't pushed.
 
 | civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
