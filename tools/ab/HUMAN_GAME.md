@@ -210,3 +210,8 @@ the war was declared between T41 and T50.
 - **The army that took the capital:** about 6 Jaguars and 4 Composite Bowmen. The Jaguars had hunted barbarians and had the
   +33% ranged defence promotion. There was no siege, and the target had no walls.
 - **The user's ruling:** the Jaguar suits this opening, so it can't be generalised. Every civ should build to its own strengths.
+- **Before the war:** the first 3 Jaguars hunted barbarians for experience and promotions. The user opened **Honor**, not
+  Liberty, "because of the barb hunting".
+- **The user on other warmongers:** a late-spike civ like the Zulu should build infrastructure first, then time an Impi strike.
+  So the aggressors split into early-spike civs (EarlyStrike) and late-spike civs (a timed strike). Personality's per-civ
+  strike table will put each civ in one group.
