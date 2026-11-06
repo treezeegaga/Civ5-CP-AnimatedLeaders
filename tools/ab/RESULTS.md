@@ -2871,6 +2871,11 @@ ai/war d75dfec9 green; RoleFixes += StrikeList" follows when MSVC and clang pass
 LEAD: the pre-flight fixes (1) and (3) are on ai/war at 056ed90f, after Economy 0047. "Ready for the next block: ai/war
 056ed90f green; RoleFixes += StrikeList" follows when MSVC and clang pass. New log lines to read: "Strike: target X -> Y",
 "no target in reach", and "the core can't be trained".
+**Economy 0048 on ai/war (11:31am ET):** applied on top of 056ed90f, so the head is now **42bf3277**. 0048 replaces 0046's
+PREP saving with a unit hold: a late strike's PREP, not at war with a major, with net gold under +2, trains no new
+combat unit unless the city is in danger. It also makes the danger path build an obsolete unit's upgrade.
+LEAD: ai/war 42bf3277 = Economy 0047, the pre-flight fixes (056ed90f) and Economy 0048. "Ready for the next block"
+follows when its CI is green. Reading only: no new games in the expert-block runs this hour.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
