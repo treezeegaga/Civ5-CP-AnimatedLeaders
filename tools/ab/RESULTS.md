@@ -1924,6 +1924,27 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: who qualifies for EarlyStrike, and a harness option to make it the aggressor (Nov 5, about 9:15pm ET)
+The lead: bully mode picks the most aggressive personality as aggressor. If few civs qualify for EarlyStrike, the block
+won't exercise it.
+- **Who qualifies** (CvPlayer::IsEarlyStrikeBook: a candidate warmonger with Personality's bMilitaryFirst, a spike by T30
+  Standard; Personality's draft table, to be checked against StrategyProfile_Log on ab-c337c77): the Aztec, Polynesia,
+  Babylon, Inca, Maya, Greece, Persia, Celts, Huns, Egypt and India.
+- **How often it was the bully aggressor** (147 logged bully first games, all runs): 48 (33%): Huns 18, Aztec 14, Inca 6,
+  Greece 6, Celts 5.
+  - The most frequent aggressors otherwise: the Mongols 17, Songhai 15, Assyria 12, Japan 11, Denmark 10.
+  - A 20-pair block would exercise EarlyStrike in about 7.
+  - 142 of the 147 games had a qualifying civ among their 8 majors.
+- **Option (ai/war 70f901e9, harness): EarlyStrikeAggressor in RoleFixes.**
+  - Bully mode then scores an early-spike civ above every other for the aggressor role: early spike first, then
+    warmongers, then offense flavor.
+  - It reads the strategy profile (game data), so both games of a pair agree.
+  - Without the bit, nothing changes.
+  - Caveat: it changes who the aggressor is, so read EarlyStrike per civ, or against the same civs.
+
+LEAD: about a third of bully aggressors qualify for EarlyStrike (48 of 147). Add EarlyStrikeAggressor to RoleFixes and
+about 97% of games get a qualifying aggressor (ai/war 70f901e9, on ab-c1 c337c77). CI to follow.
+
 ### War: EarlyStrike, upgrade and go (ai/war e7572b43) (Nov 5, about 9:00pm ET)
 The user, relayed by the lead: "i upgraded 3 archers to composite archers. that was part of the timing attack. upgrade
 and go", and "i beelined to construction". The treasury fell from 263 at T40 to 31 at T50 (Quick): saved for the
