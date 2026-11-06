@@ -2298,6 +2298,46 @@ strike civs go on ai/war for the next block.
 **Coded: ai/war e10e2f34. CI green (run 295, 12:42am ET).**
 
 LEAD: e10e2f34 green; cherry-pick 74ae9fd9 and e10e2f34 onto ai/next.
+
+**Read 3 (1:35am ET): 4 logged first games**, all PC 2. PC 1's bullyabort18 hasn't pushed yet.
+
+| civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
+|---|---|---|---|---|---|---|---|---|
+| China | 1 | 1 | 1 | 59 | 57 | 5 | 1 / 11 | captured 1 |
+| Persia | 2 | 1 | 1 | 87 | 119, 81 | 10, 1 | 10 / 16, 12 / 16 | no capture 1, captured 1 |
+| Polynesia | 1 | 0 | 0 | - | 140 | 1 | - | no capture (non-warmonger aggressor, fixed in e10e2f34) |
+
+2 of 4 captured. Melee in reach at the first capture attempts: 2+ melee took 2 of 4; 0 melee took 0 of 2.
+
+**The first EarlyStrike build-up: Persia, 13E9ECC9.** It missed its window, and the capture came from the ordinary second
+window.
+- **Opening and window.** The book opened Worker, Settler (held to size 1 until T12), then Immortal x3 from T28 and an
+  Archer at T37. The build-up opened at T40 against Morocco ("unwalled, no siege"), with **3 land units** against a
+  target of 12 others.
+- **Army.** Production added about 1 unit every 2 turns: 7 land by T50, when the strike window closed (40203a3 is
+  turn-limited).
+- **Gold.** It went from 210 to 350, unspent. The upgrade bill (Archers to Composite Bowmen at Construction) was 55 to
+  165, "upgrade tech a few turns off", from T41 to T50. Construction came at T56.
+- **Purchases.** None. The window buys only on a turn with no upgrade bill, so a bill for a tech still being researched
+  blocks every purchase. WarChest was also on in RoleFixes, so Economy owned the gold, and 0034 would forbid EarlyStrike
+  purchases in PREP and BUILDUP outright.
+- **What came after.** The "no war 3 windows" reset at T71, a normal window at T72, and war at T81 (2 paused turns).
+  Morocco's city was captured at T87 with 12 of 16 land units promoted.
+
+On ai/war (no turn limits) the build-up would have waited for Construction (T56) and the 12-unit army, and declared
+then. The idle gold is still idle there, and that is the lever: 185 gold over the bill bought nothing while the army
+was 5 units short.
+
+**Hypothesis 3 (War, with Economy; before code):** in a strike's build-up, keep the upgrade bill in reserve and buy with
+the gold above it: one core or melee unit a turn, nearest the target, while gold minus bill covers the price. This
+replaces "no purchase while any bill". Expect 13E9ECC9-like games to field the army by about T45 instead of T56+, with
+gold near the bill at the declaration (the user's 263 at T40 to 31 at T50). War codes its own purchase path (used when
+WarChest is off) on ai/war.
+
+LEAD (1:35am): reading only. 2 of 4 captured. The first EarlyStrike build-up (Persia) opened at T40 with 3 units and
+missed its window: 7 of 12 land by T50, and 350 gold unspent against a bill of 165. Economy: 0034's "EarlyStrike buys
+nothing in PREP and BUILDUP" (and WarChest's buys) should become "buy core or melee with the gold above War's upgrade
+bill" in BUILDUP (CvMilitaryAI::GetEarlyStrikeUpgradeBill). War does the same in its own path on ai/war.
 - Expert block pair 1: China (no EarlyStrike civ in the game) captured 1 at T59. BarbKill works (44 lines).
 - **ai/next b2a6f75 lacks War's readiness wiring.** The wiring is ai/war 74ae9fd9 (CvMilitaryAI.cpp only, on top of
   the same three parts). Without it, the late strike's PREP to BUILDUP is still War's placeholder ("K cities, book
