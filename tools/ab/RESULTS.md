@@ -1950,7 +1950,7 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
-### Patch 0058: no wonders in the strike's WAR; income before CP when broke (Economy, Nov 6, 5:29pm ET)
+### Patch 0058: no wonders in the strike's WAR; income before CP when broke (Economy, Nov 6, 5:27pm ET)
 The lead, on bullygreedy24 game 7 (`17813E6E`, ab-791ab9d): the Celts went to WAR at T73 on America, with 13 land units
 at -16 gold a turn, and sat in WAR for 77 turns with no capture. "LIST NORMAL (army complete)" handed their cities to
 CP, which chose the Terracotta Army (T77), the Mausoleum (T78), the Statue of Zeus (T94) and Circus Maximus (T108) as
