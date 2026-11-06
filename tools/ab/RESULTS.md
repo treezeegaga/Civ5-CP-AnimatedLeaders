@@ -3323,18 +3323,22 @@ logged pair".
     3, at T48; Physics at T138): 0, 15, 30, 47, 75, 105, 135, 160, 185, 210, then +25 a column; scaled to the game
     speed. Whether it fights better in forest or jungle (a free promotion with a feature bonus);
   - **opening:** military first and a small empire when the spike comes by T30 (Standard), else expansion first;
-  - **strike window:** from 5 turns after the spike (the first units out) to 35 turns after, cut short when the unit
-    goes obsolete. Past that the neighbours have walls, counters and castles.
+  - **strike window:** from 5 turns after the spike (the first units out) to 85 turns after; declare by 55 turns after.
+    About 25 turns build the army (6-10 units in 1-3 cities), 10-15 march it and 10-15 take a city. An obsolete unit
+    can't be built but the ones out still fight, so the window closes 20 turns after the obsoleting tech usually comes,
+    never before 60 turns after the spike. (First draft: 5 to 35 turns after. War pointed out that the Aztec window then
+    closed at T23 Quick while the user took Marrakesh at T54 Quick: a window that closes before the army can be built and
+    marched can't fire. Fixed in `b5432b5`; the Aztec on Quick is now open T3, declare by T36, close T56.)
 - **The draft table** (BNW's unique units, which CP keeps; turns are the estimate above, Standard speed; the real values
   are in StrategyProfile_Log.csv from the first logged game on this build):
 
-  | Spike | Civs (unit) | Spike turn | Opening | Strike window |
+  | Spike | Civs (unit) | Spike turn | Opening | Strike window (declare by) |
   |---|---|---|---|---|
-  | start | Aztec (Jaguar, forest/jungle), Polynesia (Maori Warrior) | 0 | military first | T5-35 |
-  | Archery | Babylon (Bowman), Inca (Slinger), Maya (Atlatlist) | 15 | military first | T20-50 |
-  | Bronze Working, The Wheel | Greece (Hoplite), Persia (Immortal), Celts (Pictish Warrior), Huns (Battering Ram, Horse Archer), Egypt (War Chariot), India (War Elephant) | 30 | military first | T35-65 |
-  | Iron Working, Mathematics, Horseback Riding | Rome (Legion, Ballista), Assyria (Siege Tower), Iroquois (Mohawk, forest/jungle), Indonesia (Kris Swordsman), Byzantium (Cataphract), Carthage (Forest Elephant) | 47 | expansion first | T52-82 |
-  | Civil Service, Chivalry, Machinery, Steel (medieval) | Germany (Landsknecht), Zulu (Impi), Arabia (Camel Archer), Mongolia (Keshik), Siam (Naresuan's Elephant), Songhai (Mandekalu), Ottoman (Sipahi), China (Chu-Ko-Nu), England (Longbowman), Korea (Hwacha), Japan (Samurai), Denmark (Berserker) | 105-160 | expansion first | spike +5 to +35 |
+  | start | Aztec (Jaguar, forest/jungle), Polynesia (Maori Warrior) | 0 | military first | T5-85 (T55) |
+  | Archery | Babylon (Bowman), Inca (Slinger), Maya (Atlatlist) | 15 | military first | T20-100 (T70) |
+  | Bronze Working, The Wheel | Greece (Hoplite), Persia (Immortal), Celts (Pictish Warrior), Huns (Battering Ram, Horse Archer), Egypt (War Chariot), India (War Elephant) | 30 | military first | T35-115 (T85) |
+  | Iron Working, Mathematics, Horseback Riding | Rome (Legion, Ballista), Assyria (Siege Tower), Iroquois (Mohawk, forest/jungle), Indonesia (Kris Swordsman), Byzantium (Cataphract), Carthage (Forest Elephant) | 47 | expansion first | T52-132 (T102) |
+  | Civil Service, Chivalry, Machinery, Steel (medieval) | Germany (Landsknecht), Zulu (Impi), Arabia (Camel Archer), Mongolia (Keshik), Siam (Naresuan's Elephant), Songhai (Mandekalu), Ottoman (Sipahi), China (Chu-Ko-Nu), England (Longbowman), Korea (Hwacha), Japan (Samurai), Denmark (Berserker) | 105-160 | expansion first | spike +5 to +85 (+55) |
   | Gunpowder and later | France (Musketeer), Spain (Tercio), America (Minuteman), Poland (Winged Hussar), Sweden (Hakkapeliitta), Austria (Hussar), Morocco (Berber Cavalry), Russia (Cossack), Shoshone (Comanche Riders), Ethiopia (Mehal Sefari), Brazil (Pracinha) | 185+ | expansion first | after T150 |
   | none (naval or civilian only) | Venice, Portugal, Netherlands | - | expansion first | none |
 
@@ -3352,7 +3356,8 @@ logged pair".
   - `eCoreUnitClass`: the unique unit's class (build it through `GetSpecificUnitType`), and `iCoreSharePercent`: the
     share of the attack army's land units that should be that unit (50%, 33% when it's a siege unit);
   - `iOpenTurn`, `iDeclareByTurn`, `iCloseTurn` (elapsed turns, this game's speed): opens at spike + 5, declare by
-    spike + 15 (never later than 10 turns before it closes), closes at spike + 35 or when the unit goes obsolete.
+    spike + 55 (at least 15 turns before it closes), closes at spike + 85 (sooner when the unit goes obsolete, never
+    before + 60).
     War's data: declarations come a median 29 turns after the unique unit is available, often without it in the army,
     so timing the strike to the spike is the untested lever;
   - `bSiegeOnlyIfWalled`: true for an early spike (military first, by T30 Standard, before catapults); the user's Aztec
@@ -3361,8 +3366,9 @@ logged pair".
 
   Also `GetStrikeWindow(start, end)` and `IsInStrikeWindow()` (in the turns and the spike's tech known). War builds
   StrikeWindow/EarlyStrike on top, behind its own flags.
-- **Status:** draft. `1173f7c` merged into `claude/ab-c1` (`ce7a93c`) by the lead; War's fields in `d1d4063`, CI
-  pending. The table needs checking against the log.
+- **Status:** draft. `1173f7c` and War's fields (`d1d4063`) merged into `claude/ab-c1` by the lead; War agreed the
+  interface as built (EarlyStrike, `e4268e7`, one `FIX_EARLY_STRIKE` with Economy's book half). The window-end fix
+  `b5432b5`, CI pending. The table needs checking against the log.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
