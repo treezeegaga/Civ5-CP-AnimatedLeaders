@@ -1,0 +1,44 @@
+From f852eecf05ab0dbe12022db925e15bbd4d0fd808 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 13:35:24 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0043: Personality's generic rush (G1)
+ plays as an early strike
+
+The user: "germany would either need to use normal units for an attack earlier or not be
+aggressive at all." Personality's b8ac94f gives a warmonger with no unique unit in reach a
+generic rush plan (bGenericRush: Archers, Composite Bowmen at Construction, an early
+strike). But GetEarlyStrikeCoreClass needed the profile's bMilitaryFirst spike, so for
+those civs it returned NO_UNITCLASS. IsEarlyStrikeBook, GetEarlyStrikePlan and War's
+IsEarlyStrikeCiv (the strike state) all key off it, so the rush would never have run.
+Now a valid, non-late bGenericRush plan's core (the Archer) is the early strike's core.
+Nothing changes for any other plan.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 1a4462b..d9b153f 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33868,6 +33868,15 @@ UnitClassTypes CvPlayer::GetEarlyStrikeCoreClass() const
+ 			const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
+ 			m_iEarlyStrikeCoreClass = (kStrike.bValid && kStrike.eCoreClass != NO_UNITCLASS) ? kStrike.eCoreClass : pkSpike->GetUnitClassType();
+ 		}
++		else
++		{
++			// AI_AB_TEST (Economy 0043; the user: "germany would either need to use normal units for an attack earlier or not
++			// be aggressive at all"): a warmonger with no unique unit in reach plays Personality's generic rush (the research's
++			// G1: Archers, upgraded to Composite Bowmen at Construction) as an early strike. Its core is the plan's (the Archer)
++			const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
++			if (kStrike.bValid && kStrike.bGenericRush && !kStrike.bLateStrike && kStrike.eCoreClass != NO_UNITCLASS)
++				m_iEarlyStrikeCoreClass = kStrike.eCoreClass;
++		}
+ 	}
+ 	return (UnitClassTypes)m_iEarlyStrikeCoreClass;
+ }
+-- 
+2.43.0
+

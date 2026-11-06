@@ -1969,6 +1969,21 @@ What this means for the plans (Personality's rows):
 Which of the two each such civ gets is Personality's call. One natural split is the second option for leaders whose
 personality isn't a warmonger.
 
+**Done (Personality, ai/personality `b8ac94f`; Economy patch 0043, 8:35am ET).**
+- **Spikes past about T175 Standard (T117 Quick) are ignored.** That covers Germany, Poland, Sweden, the Shoshone,
+  America and France.
+- **Warmongers among them get `bGenericRush`, the G1 plan:**
+  - Archer x6, upgraded to Composite Bowman at Construction, 75 gold each;
+  - Spearman x3, N 2, K 3, Liberty, barbarian hunt;
+  - an early strike with a G1 list completed to the strike.
+- **Everyone else among them gets no plan.**
+- **Every plan's list now runs to the strike.** STRIKE_LIST_MAX is 32. The lists include the K-1 settlers, and Granary,
+  Library and Market for a late strike, then the army. No list holds any kind of wonder.
+- **Patch 0043:** `GetEarlyStrikeCoreClass` needed the profile's bMilitaryFirst spike, so a G1 civ got NO_UNITCLASS.
+  The book, the plan and War's `IsEarlyStrikeCiv` (and with it the strike state) would never have run the rush. A
+  valid, non-late bGenericRush plan's core, the Archer, is now the early strike's core. It is 9 lines in CvPlayer.cpp,
+  on ai/war `f939c50` merged with ai/personality `b8ac94f` (a clean merge). Not compiled here.
+
 ### Patch 0042: the wonder ban on every pick path (Economy, Nov 6, 8:14am ET)
 PC 1 stopped bullyabort20 game 1 (`14BC6621`, ab-8555f21). LateStrike Germany was in strike PREP from T1 to T115.
 Its second city, Munich, chose Heroic Epic at T61 and the Temple of Artemis at T62.
