@@ -1830,6 +1830,20 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
+### Patch 0035: the strike book builds the settler's escort itself; no world wonders before a strike (Economy, Nov 5, 11:53pm ET; next block)
+**From the expert block's first EarlyStrike game** (Persia, bullygreedy18 pair 2, 13A89116):
+- With nothing in reach at T0, the book went Worker, Settler, with no combat unit.
+- The found-city operation found nobody to recruit ("Found 0 potential units", T19-21+), and the book stands aside
+  while an operation waits for units.
+- CP's own choices then built a Monument (T19), a Granary (T24) and Stonehenge (T39, "best to construct" from T26).
+  The first Immortal came at T30-33.
+
+**Fix** (on top of 0034; for the next block):
+- With nothing in reach, one core unit comes before the worker and the first settler (the escort).
+- While the capital's settler waits for an escort, the strike book builds it: the core unit, or a warrior while the
+  core's tech is out. It no longer hands the choice to CP.
+- No world wonder before a strike: EarlyStrike's PREP and BUILDUP, LateStrike's BUILDUP.
+
 ### Patch 0034: the strike books read War's strike state, no turn limits (Economy, Nov 5, 11:03pm ET; next block)
 The user: "dont have the ai judge itself based on the window during a game". The lead settled option (a). War's
 `CvMilitaryAI::GetStrikeState()` (ai/war `56e0cad`) drives every strike decision; Personality defines economy-ready.
@@ -1854,7 +1868,8 @@ The lead: overnight, the block is frozen; check the book on each pair as it land
 
 | Pair (game) | Aggressor | N before the 1st settler (plan) | Cities at the declaration (K) | Upgrade tech buildable from | Luxury tech | First tree | Bought before the declaration | Upgrades at the declaration |
 |---|---|---|---|---|---|---|---|---|
-| (none yet at 11:05pm ET: PC 1's bullyabort16-18 ran on 8fe8e0f, not ab-40203a3; their logs don't test the book) | | | | | | | | |
+| bullygreedy18 pair 1 (138A0F7F) | China (late spike: no EarlyStrike book on this build; the normal warmonger book) | n/a (Scout, Warrior, Settler T9) | 2 (declared T57) | Composite Bowman T89 | a mine planned T29 | Tradition | 0 | 6 over the game, the first at T86. **Took a city** (1) |
+| bullygreedy18 pair 2 (13A89116) | Persia (early spike; Personality's default plan: core Immortal, N 2, K 3, Liberty) | **off plan:** Worker, Settler first (nothing in reach at T0), then no escort for 14 turns (below); first Immortal T30-33 | 5 (declared T119; this build lifts the K cap at T60 Quick) | Composite Bowman (Construction) T57, after Bronze Working T19 and Archery T30 | a plantation planned T10 | Liberty (the plan's) | 0 | 1, at T117; gold 239-257 in the window (T81-87), 0 at T104-106 |
 
 ### LateStrike, the book half (Economy, patch 0033, prepared for the next block, Nov 5, 10:29pm ET; not merged)
 The lead: prepare the late-strike civs' book half for the next block. Personality's late-spike table: Denmark, Mongolia,

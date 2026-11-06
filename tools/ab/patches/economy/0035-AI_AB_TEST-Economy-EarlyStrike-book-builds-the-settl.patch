@@ -1,0 +1,97 @@
+From 96d82498662b4353448145dadf800dab796ec0a6 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 04:53:51 +0000
+Subject: [PATCH] AI_AB_TEST Economy: EarlyStrike book builds the settler's
+ escort itself; no world wonders before a strike
+
+From the expert block's first EarlyStrike game (Persia, 13A89116,
+ab-40203a3): with nothing in reach the book went Worker, Settler with no
+combat unit; the found-city operation found nobody to recruit (T19), the
+book stood aside for it, and CP's own choices built a Monument, a Granary
+and Stonehenge before the first Immortal at T30-33.
+- With nothing in reach, one core unit comes before the worker and the
+  first settler (the escort).
+- While the capital's settler waits for an escort, the strike book builds
+  it (the core unit, or a warrior while the core's tech is out) instead of
+  handing the choice to CP.
+- No world wonder before the strike: EarlyStrike's PREP and BUILDUP,
+  LateStrike's BUILDUP (CvBuildingProductionAI).
+On top of patch 0034 (ai/war 56e0cad). Written 11:53pm ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuildingProductionAI.cpp                |  5 ++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 25 ++++++++++++++++++-
+ 2 files changed, 29 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index 688302e..7ccc1a7 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -267,6 +267,11 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 			iBonus += 500;
+ 	}
+ 
++	// AI_AB_TEST candidates (EarlyStrike, LateStrike): no world wonder before the strike (EarlyStrike's PREP and BUILDUP,
++	// LateStrike's BUILDUP). The expert block's Persia (13A89116) started Stonehenge at T39 while its book waited
++	if (isWorldWonderClass(kBuildingClassInfo) && (kPlayer.IsEarlyStrikeSmallEmpire() || kPlayer.IsLateStrikeSaving()))
++		return SR_STRATEGY;
++
+ 	// AI_AB_TEST candidate (WarGold, the lead's): a warmonger at peace keeps its income at 0 or more. While it's losing gold,
+ 	// no new building with upkeep (unless it makes gold, defends, or gets the army ready: production or experience) and no
+ 	// world wonder
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index ab5c7d7..983674d 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -34485,8 +34485,10 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 		return false;
+ 
+ 	// A settler waiting for its escort comes first: let the normal production choice build units for operations
++	// (AI_AB_TEST candidate EarlyStrike: the strike book builds the escort itself, a core unit, below)
+ 	CvAIOperation* pFoundCityOp = getFirstAIOperationOfType(AI_OPERATION_FOUND_CITY);
+-	if (pFoundCityOp && pFoundCityOp->GetNumUnitsNeededToBeBuilt() > 0)
++	const bool bStrikeEscort = pFoundCityOp && pFoundCityOp->GetNumUnitsNeededToBeBuilt() > 0 && pCity->isCapital() && IsEarlyStrikeBook();
++	if (pFoundCityOp && pFoundCityOp->GetNumUnitsNeededToBeBuilt() > 0 && !bStrikeEscort)
+ 		return false;
+ 
+ 	// So does an attack being gathered (see CvDiplomacyAI::GetNewAIConquestTarget): its army gets built first
+@@ -34533,6 +34535,12 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 			const bool bReach = IsEarlyStrikeTargetInReach();
+ 			if (!bReach)
+ 			{
++				// one core unit first even with nothing in reach: it's the settler's escort. In the expert block's Persia game
++				// (13A89116) the book went Worker, Settler with no combat unit; the found-city operation found nobody to
++				// recruit (T19), the book stood aside for it, and CP's own choices built a Monument, a Granary and Stonehenge
++				// before an Immortal came at T30-33
++				for (int i = 0; i < 1 + iCoreStart; i++)
++					vEarlyStrike.push_back(kCore);
+ 				vEarlyStrike.push_back(kWorker);
+ 				vEarlyStrike.push_back(kSettler);
+ 			}
+@@ -34561,6 +34569,21 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 				vEarlyStrike.push_back(kSettler);
+ 			pSteps = &vEarlyStrike[0];
+ 			iNumSteps = (int)vEarlyStrike.size();
++
++			// the settler is waiting for its escort: build it now, the core unit, or a warrior while the core's tech is out
++			if (bStrikeEscort)
++			{
++				UnitTypes eEscort = GetSpecificUnitType(kPlan.eCore);
++				if (eEscort == NO_UNIT || !pCity->canTrain(eEscort))
++					eEscort = GetSpecificUnitType("UNITCLASS_WARRIOR", true);
++				if (eEscort != NO_UNIT && pCity->canTrain(eEscort))
++				{
++					eOrder = ORDER_TRAIN;
++					iData = eEscort;
++					LogOpeningBookSettlerHeld(*this, pCity, "escort", GC.getUnitInfo(eEscort)->GetDescription());
++					return true;
++				}
++			}
+ 		}
+ 	}
+ 	if (pSteps)
+-- 
+2.43.0
+
