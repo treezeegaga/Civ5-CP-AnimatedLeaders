@@ -3096,6 +3096,12 @@ BUILDUP deadlock in 0050.)
   the lead suggested). The deal-item peace refusal keeps no human exclusion on purpose: a human target is refused like an
   AI one, which IsPeaceBlocked already did for majors.
 LEAD: the head is **ai/war 2c283300** (c288d09c + these fixes); Economy's #1 goes on top. "Ready" follows when CI is green.
+**Economy 0053** (the review's #1, the 0050 BUILDUP deadlock) is applied on top. In BUILDUP the list builds the siege War asks
+for (GetTimingBuildupSiegeTarget, with its tech moved ahead in research if missing), and keeps building core while
+IsStrikeTargetTakeableNow is false. Checked: the siege count comes from War's own function, which is the right source.
+Untrainable siege still never holds the declaration (0cb5402b); it is only built while BUILDUP waits.
+LEAD: the full head is **ai/war 791ab9d7** (everything through the third review + Economy 0049-0053). "Ready for the trial" follows
+when CI is green.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
