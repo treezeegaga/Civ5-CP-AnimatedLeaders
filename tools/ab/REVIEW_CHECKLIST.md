@@ -78,3 +78,14 @@ against this list. The list grows: every bug a review or a test game finds gets 
 - **Operations created outside RequestCityAttack:** show-of-force and bully operations skip the operations gate.
 - **A wait that removes its own way forward:** the build-up stops building units while it waits for the city to become
   takeable.
+- **"Plan valid" isn't "strike civ":** bValid is set for any civ with a unique unit or an expert row. Gates must use the
+  strike-civ test.
+- **One flag, several readers:** clearing a marker to unlock one path (the deploy turn for recruitment) also turns off
+  tactical behaviour that reads it.
+- **An empire-wide check approving a local decision:** the take-the-city check counts garrisons and the whole empire,
+  and is used to clear one operation's army.
+- **A new hold losing its predecessor's exemption:** 0055 widened 0048 but dropped the at-war exemption.
+- **A rule placed before the scope check:** income-first sits ahead of the capital-only check and, through the pushOrder
+  redirect, reaches every city.
+- **An exit that ignores the upgrade line:** "core obsolete" ended a strike whose plan was to upgrade that core
+  (Assyria, Archer to Composite Bowman).
