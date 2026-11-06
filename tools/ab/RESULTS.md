@@ -1970,6 +1970,21 @@ applied as 6db12aa6.
 
 LEAD: LateStrike's two halves are on ai/war da912386 (carries Economy 0033), off, for the block after the expert block.
 
+**One flag, one source (the lead, 10:33pm ET; ai/war 340592fa).** ai/personality (a80986e, 5ad0a45) is merged into ai/war:
+the late-strike rows (Zulu, Mongolia, Assyria, Japan, Songhai, and China's Chu-Ko-Nu rush) in CvStrikePlan, under
+LateStrikePlans for now.
+- War's half now reads the plan:
+  - only plans with bLateStrike;
+  - at the plan's open turn the window opens once the core, or the plan's pre-build class, can be trained;
+  - the pre-build first, to its count, while the core can't be trained;
+  - the upgrade into the core at the plan's upgrade tech holds the declaration.
+- To finish the one-flag setup:
+  - Personality switches LateStrikePlans' gate to FIX_LATE_STRIKE once it's on claude/ab-c1;
+  - Economy's CvPlayer::IsLateStrikeCiv reads bLateStrike too.
+
+LEAD: ai/war 340592fa carries LateStrike's three halves (War, Economy 0033, Personality 5ad0a45) for the block after the
+expert block. Personality: gate LateStrikePlans on FIX_LATE_STRIKE. Economy: read bLateStrike in IsLateStrikeCiv.
+
 ### War: the read for the expert block (ab-40203a3, bullyabort18 + bullygreedy18), prepared (Nov 5, about 10:35pm ET)
 `tools/ab/expert_block.py [runs]` (default bullyabort18 bullygreedy18), run from a results worktree with walls.py and
 attack_funnel.py beside it. It was tested on the package block (bullygreedy16 + bullyabort14), where it gives the old
