@@ -1925,6 +1925,20 @@ The next logged war shows whether attacks happen. If they don't, the cause is in
 positions, set-up moves, or its scoring of attacks against cities.
 
 ### War: EarlyStrike, War's half (coded, ai/war 95fbcc26, off) (Nov 5, about 9:10pm ET)
+
+**Revised the same evening (ai/war 6c073d69, on Economy's book, patch 0028 applied as 73af5241): one flag, Economy's
+API, the build-up at the normal turn 40.**
+- Economy's book half (CvPlayer::IsEarlyStrikeBook, GetEarlyStrikeCoreClass, IsEarlyStrikeSmallEmpire) defines the
+  same flag. War's half now keys on IsEarlyStrikeBook (a warmonger with Personality's bMilitaryFirst, on a book) and the
+  core class.
+- The build-up no longer opens in Personality's strike window. Economy's point: the Aztec window (T3 to 23 Quick) ends
+  before the book's army can exist. It opens at the normal turn 40 (Standard; T27 Quick) with the book's army already
+  built. It declares when the army is ready, at the latest about T47 Quick.
+- In a strike's build-up (opened by turn 60 Standard):
+  - no siege against an unwalled nearest target city;
+  - 8+ field units;
+  - the core class first until half the field target.
+- The text below describes the first version; where they differ, this paragraph holds.
 The lead's go: "every civ builds to its strengths". It uses Personality's per-civ strike window, which is already in
 ab-c1 (CvGrandStrategyAI::GetStrikeWindow / IsInStrikeWindow, the profile's eSpikeUnit), not a stand-in gate.
 
