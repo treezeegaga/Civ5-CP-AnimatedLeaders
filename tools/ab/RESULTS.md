@@ -2842,6 +2842,30 @@ whose tech isn't in yet still waits. My only change was moving a doc comment bac
 LEAD: Economy 0047 is on ai/war (d75dfec9, after bde35e2), and its CI replaces bde35e28's. "Ready for the next block:
 ai/war d75dfec9 green; RoleFixes += StrikeList" follows when MSVC and clang pass (check about 11:50am).
 
+**Design: the lead's pre-flight findings on d75dfec (11:30am ET), before code.**
+- **(1) Deadlock.** After e1d4d07, the only declaration a strike civ may make in PREP/BUILDUP is the strike's own, on
+  m_eTimingBuildupTarget. That target never changes once the window is open, so it can go stale: a defensive pact, the
+  committed target changing, the target killed. A late civ with no major in reach never opens a window. An early civ whose
+  core needs a missing resource stays in PREP forever. All three block every declaration for good. The fix uses game state
+  only:
+  - **Each BUILDUP turn the strike's target is checked** (IsStrikeTargetValid: alive, met, declarable or at war, nearest
+    city revealed and within 12 tiles, an attack target, no defensive allies for a major, no protector/ally/recent peace for
+    a city-state). The first valid target in this order is used: the window's target, the current target, the committed
+    target, the nearest major in reach, the nearest city-state in reach. A change is pinned (m_iStrikeCityState: the
+    diplomacy takes a major there as its target), the window follows, siege and the takeable cache are reset, and it is
+    logged "Strike: target X -> Y (...)". **No valid target: OVER** ("no target in reach").
+  - **The core can't be trained with its tech in** (a missing resource; IsStrikeArmyBuildable false with the core's and
+    the pre-build's techs known), in PREP or BUILDUP: OVER.
+  - **A third party's war no longer closes the strike's window** (DoTimingBuildup closed it at any major war, and the
+    block needs an open window). That was the same deadlock while a war on us lasted.
+- **(3) Deals.** A human could pay a strike AI to declare war, and the payment and penalties applied while the
+  declaration was refused. Now TRADE_ITEM_THIRD_PARTY_WAR is invalid for a giving team with a blocked strike civ, a
+  co-op war target is invalid when we'd have to declare and it's blocked, and a human's move-troops request answers
+  neutral instead of "war" when the block would refuse. The AI-to-AI move-troops path already falls back to a promise
+  when the declaration fails.
+- **Expected:** no strike civ stays in PREP/BUILDUP with no valid target. "Strike: target" and "no target in reach"
+  lines will show in games where the old target went stale. Captures should not drop.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
