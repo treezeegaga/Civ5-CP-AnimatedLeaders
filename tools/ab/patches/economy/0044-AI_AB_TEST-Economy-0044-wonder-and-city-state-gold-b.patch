@@ -1,0 +1,136 @@
+From 324a7f92d8e17a76924b7ecf1737a8ef35f28212 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 14:08:21 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0044: wonder and city-state gold bans at
+ their chokepoints, held to the first declaration
+
+bullygreedy21 15A7D14F (ab-f939c50, which has 0042) stopped: Persia built the Terracotta
+Army (T72), the Pyramids (T75), the Writers' Guild (T118) and Chichen Itza (T125), and saved
+for a gift to Lhasa (T96), all before its first declaration (T129). No gate leaked: Persia's
+strike went BUILDUP -> OVER at T70 (Germany and Ethiopia declared on it at T69), and every
+ban ended with the strike. Then Susa's options were all vetoed (wonders by WarGold, at -4
+gold a turn) and the fallback, now outside the strike ban, took the Terracotta Army.
+
+The lead's check is "before its first declaration", so:
+- IsStrikeNoWonders also holds after a strike that ended OVER while we had declared
+  nothing: no war declared on a major (AB count), no city-state captured, no city-state
+  war under way. The first declaration lifts it.
+- The bans sit at their chokepoints, so no path can bypass them:
+  - CvCity::canConstruct (both overloads end there): an AI civ under the ban can't
+    construct or continue a world or national wonder. This covers the choice, its
+    fallback, the specialization, a Great Engineer and a strike list. Humans are never
+    affected.
+  - CvMinorCivAI::DoGoldGiftFromMajor: every gold gift.
+  - CvEconomicAI::StartSaveForPurchase: no MINOR_CIV_GIFT saving.
+- The gift loop's own gate (CvDiplomacyAI, 0036/0040) uses the same IsStrikeNoWonders, so the
+  log shows no gift the chokepoint would refuse.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvCity.cpp        | 10 ++++++++++
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp |  4 ++--
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp  |  4 ++++
+ CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp  |  3 +++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      | 13 ++++++++++++-
+ 5 files changed, 31 insertions(+), 3 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvCity.cpp b/CvGameCoreDLL_Expansion2/CvCity.cpp
+index ea8aab3..4e28bf6 100644
+--- a/CvGameCoreDLL_Expansion2/CvCity.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCity.cpp
+@@ -8860,6 +8860,16 @@ bool CvCity::canConstruct(BuildingTypes eBuilding, const std::vector<int>& vPreE
+ 		}
+ 	}
+ 
++	// AI_AB_TEST (Economy 0044; the user: "no wonders before a strike"): the one place every AI path asks, so no pick path
++	// (the production choice, its fallback, the specialization, a Great Engineer, a strike list) can start or continue a
++	// world or national wonder while a strike civ is before its strike. Humans are never affected
++	if (MOD_AI_AB_TEST && !GET_PLAYER(m_eOwner).isHuman() &&
++		(isWorldWonderClass(pkBuildingInfo->GetBuildingClassInfo()) || isNationalWonderClass(pkBuildingInfo->GetBuildingClassInfo())) &&
++		GET_PLAYER(m_eOwner).IsStrikeNoWonders())
++	{
++		return false;
++	}
++
+ 	if (!(GET_PLAYER(getOwner()).canConstruct(eBuilding, vPreExistingBuildings, bContinue, bTestVisible, bIgnoreCost, toolTipSink)))
+ 	{
+ 		return false;
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index 846cbe5..d43561c 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -37684,7 +37684,7 @@ void CvDiplomacyAI::DoContactMinorCivs()
+ 
+ 	// AI_AB_TEST candidate (EarlyStrike, Economy 0039): before the strike, no gold to city-states by any path.
+ 	// Drop a gift saving started earlier, and skip buyouts and marriages too.
+-	if (GetPlayer()->IsEarlyStrikeSmallEmpire() || GetPlayer()->IsLateStrikeSaving() || GetPlayer()->IsStrikePending())
++	if (GetPlayer()->IsStrikeNoWonders())
+ 	{
+ 		if (GetPlayer()->GetEconomicAI()->IsSavingForThisPurchase(PURCHASE_TYPE_MINOR_CIV_GIFT))
+ 			GetPlayer()->GetEconomicAI()->CancelSaveForPurchase(PURCHASE_TYPE_MINOR_CIV_GIFT);
+@@ -37773,7 +37773,7 @@ void CvDiplomacyAI::DoContactMinorCivs()
+ 	// AI_AB_TEST candidates (EarlyStrike, LateStrike; Economy): nor while a strike civ saves for its upgrades (War's expert-block
+ 	// read: Greece, 1464B588, gave 500 gold to a city-state at T46 in its build-up)
+ 	const bool bSavingForSettler = GetPlayer()->GetEconomicAI()->IsSavingForExpansionSettler() ||
+-		GetPlayer()->IsEarlyStrikeSmallEmpire() || GetPlayer()->IsLateStrikeSaving() || GetPlayer()->IsStrikePending();
++		GetPlayer()->IsStrikeNoWonders();
+ 	veMinorsToGiveGold.StableSortItems(); // Sort from highest desirability to lowest
+ 	for (int i = 0; i < veMinorsToGiveGold.size() && !bSavingForSettler; i++)
+ 	{
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index e463037..ea347c0 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -1219,6 +1219,10 @@ int EconomicAIHelpers::GetExtraExploreValue(const CvPlot* pPlot, int iRange, Tea
+ /// Request that the AI set aside this much money
+ void CvEconomicAI::StartSaveForPurchase(PurchaseType ePurchase, int iAmount, int iPriority)
+ {
++	// AI_AB_TEST (Economy 0044): no saving for a city-state gift while a strike civ is before its strike (every request goes
++	// through here)
++	if (MOD_AI_AB_TEST && ePurchase == PURCHASE_TYPE_MINOR_CIV_GIFT && m_pPlayer && !m_pPlayer->isHuman() && m_pPlayer->IsStrikeNoWonders())
++		return;
+ 	int iIndex = (int)ePurchase;
+ 	CvPurchaseRequest request;
+ 	request.m_eType = ePurchase;
+diff --git a/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp b/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp
+index 24dac94..9e07a30 100644
+--- a/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp
+@@ -15548,6 +15548,9 @@ void CvMinorCivAI::ChangeNumGoldGifted(PlayerTypes ePlayer, int iChange)
+ /// Major Civ gifted some Gold to this Minor
+ void CvMinorCivAI::DoGoldGiftFromMajor(PlayerTypes ePlayer, int iGold)
+ {
++	// AI_AB_TEST (Economy 0044; the user: no city-state gold before a strike): every AI gold gift goes through here
++	if (MOD_AI_AB_TEST && ePlayer != NO_PLAYER && !GET_PLAYER(ePlayer).isHuman() && GET_PLAYER(ePlayer).IsStrikeNoWonders())
++		return;
+ 	if(GET_PLAYER(ePlayer).GetTreasury()->GetGold() >= iGold)
+ 	{
+ 		int iFriendshipChange = GetFriendshipFromGoldGift(ePlayer, iGold);
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index d9b153f..9277f66 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33960,7 +33960,18 @@ bool CvPlayer::IsStrikePending() const
+ /// Germany's Munich took Heroic Epic (T61) and the Temple of Artemis (T62) in PREP, through the fallback
+ bool CvPlayer::IsStrikeNoWonders() const
+ {
+-	return IsStrikePending() || IsEarlyStrikeSmallEmpire() || IsLateStrikeSaving();
++	if (IsStrikePending() || IsEarlyStrikeSmallEmpire() || IsLateStrikeSaving())
++		return true;
++	// AI_AB_TEST (Economy 0044; the lead's check: no wonder and no city-state gold "before its first declaration"): a strike
++	// that ended OVER before we declared anything keeps the ban until our first declaration. bullygreedy21 15A7D14F: Persia's
++	// strike went OVER at T70 (a major declared on us first), then Persia built the Terracotta Army (T72), the Pyramids (T75),
++	// the Writers' Guild and Chichen Itza and saved for a city-state gift (T96) before its own first declaration at T129.
++	// "Declared": a war we declared on a major (the AB count), a city-state captured, or a city-state war under way
++	if (!isMajorCiv() || isHuman() || !GetMilitaryAI() || GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_OVER)
++		return false;
++	const CvGame& kGame = GC.getGame();
++	return kGame.GetABTestCount(GetID(), AB_COUNT_WARS_DECLARED) == 0 &&
++		kGame.GetABTestCount(GetID(), AB_COUNT_CITY_STATES_CAPTURED) == 0 && !IsAtWarAnyMinor();
+ }
+ 
+ bool CvPlayer::IsLateStrikeSaving() const
+-- 
+2.43.0
+

@@ -1950,6 +1950,39 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0044: the bans at their chokepoints, held to the first declaration (Economy, Nov 6, 9:08am ET)
+PC 2 stopped bullygreedy21 game 1 (`15A7D14F`, ab-f939c50, a build that has 0042). Before its first declaration
+(T129, on Ethiopia), Persia:
+- built the Terracotta Army (Susa, T72), the Pyramids (Persepolis, T75), the Writers' Guild (T118) and Chichen Itza
+  (T125);
+- saved for a 500-gold gift to Lhasa (T96).
+
+**What happened.** No gate leaked. Persia's strike went PREP → BUILDUP at T56, then **BUILDUP → OVER at T70**,
+because Germany and Ethiopia declared war on it at T69 (War's exit: "a major declared war on us first"). Every ban
+ended with the strike. At T72 Susa's sanity check vetoed every option. The wonders were vetoed by WarGold, at -4 gold a
+turn, and the fallback (outside the strike ban by then) took the Terracotta Army. The "Rush" in the CHOSEN line only
+means more than 15 turns to build; it is the normal ChooseProduction path.
+
+**0044, two changes:**
+1. **The ban lasts until the first declaration** (the lead's own check). `IsStrikeNoWonders` also holds after a strike
+   that ended OVER while we had declared nothing: no war on a major (the AB count), no city-state captured and no
+   city-state war under way. Our first declaration lifts it. For Persia, that means T70 to T129.
+2. **The bans sit at their chokepoints:**
+   - `CvCity::canConstruct`: both overloads end there, and every AI path asks it before starting or continuing a
+     building. An AI civ under the ban can't build a world or national wonder.
+   - `CvMinorCivAI::DoGoldGiftFromMajor`: every gold gift goes through it.
+   - `CvEconomicAI::StartSaveForPurchase`: no city-state gift saving.
+
+   The diplomacy gift loop uses the same check, so the log shows no gift the chokepoint would refuse. Humans are never
+   affected.
+
+**Side effect.** A strike civ whose strike ends OVER and that never declares a war builds no wonder all game. That
+matches the user's rule for warmongers. The city-state proxy has one gap: a city-state strike that captured nothing
+and made peace keeps the ban. A saved "the strike declared" flag on War's side would close it.
+
+**Status:** patch 0044 applies on ai/war `a524536`, 5 files, +31/-3. Not compiled here. Both PCs keep their STOP until
+a build has it.
+
 ### The user's ruling on spikes that come too late (Nov 6, 8:31am ET)
 War found that Germany's data-default plan in 14BC6621 was a late strike built on the Tank (UNITCLASS_TANK), opening
 at T227. In our 150-turn games, that kept Germany in strike PREP all game, under the no-wonder and no-gift rules.
