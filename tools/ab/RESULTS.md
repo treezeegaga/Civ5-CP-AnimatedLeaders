@@ -2835,6 +2835,13 @@ trained, and to count it toward the item.
 LEAD: bde35e28 already has Personality's head after e1d4d076 and Economy 0046. "Ready for the next block" comes when
 its CI is green (check due about 11:31am). Zulu's Archer wait is passed to Economy (executor).
 
+**Economy 0047 on ai/war (11:14am ET).** Applied after bde35e28, so the head is now **d75dfec9**. With 0047, an obsolete
+list item or army class trains the first trainable unit on its upgrade line, logged "X (for Y, obsolete)". That fixes the
+Zulu's Archer LIST WAIT (162667AE, T80-T106) and the generic rush's Archer core going obsolete at Construction. An item
+whose tech isn't in yet still waits. My only change was moving a doc comment back above its function.
+LEAD: Economy 0047 is on ai/war (d75dfec9, after bde35e2), and its CI replaces bde35e28's. "Ready for the next block:
+ai/war d75dfec9 green; RoleFixes += StrikeList" follows when MSVC and clang pass (check about 11:50am).
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
