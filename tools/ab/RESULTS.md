@@ -2876,6 +2876,11 @@ PREP saving with a unit hold: a late strike's PREP, not at war with a major, wit
 combat unit unless the city is in danger. It also makes the danger path build an obsolete unit's upgrade.
 LEAD: ai/war 42bf3277 = Economy 0047, the pre-flight fixes (056ed90f) and Economy 0048. "Ready for the next block"
 follows when its CI is green. Reading only: no new games in the expert-block runs this hour.
+LEAD (11:36am ET): ai/personality 99d3ced is merged after 42bf327, and **the head is now 0d19241c**. It has Economy
+0047, the pre-flight fixes 056ed90f, Economy 0048 and Personality 99d3ced (list ordering from game data only, and the
+Market rule guard). For your pre-flight review of d75dfec..0d19241c, 056ed90f holds the new logic (the design entry
+above). "Ready for the next block: ai/war 0d19241c green; RoleFixes += StrikeList" follows when its CI is green
+(check about 12:15pm).
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
