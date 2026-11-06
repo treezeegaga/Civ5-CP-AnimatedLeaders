@@ -3158,6 +3158,13 @@ techs (0054). Once it can take the target, it goes, spike or not. A "few turns a
 the user ruled out.
 LEAD: the next block's head is **ai/war 06fd0b87**, the same code as a24c5408 (791ab9d7 + the Kyzyl fix b446678a + Economy
 0054). CI to follow.
+**Economy 0055** (the strike adds no combat unit it can't afford, the counterpart to IsStrikeKeepingUnit) is applied on top:
+**ai/war 698525b1**.
+- **Why.** In the ab-791ab9d games the strike civs went broke in BUILDUP. Mongolia 172518A7: 14 -> 27 units, net -30,
+  treasury 0 from T110 to T120. Aztecs 171787CD: net -11, treasury 183 -> 14. With the army no longer scrapped for
+  deficit, the brake has to be on building.
+- **Also from Economy:** 0 REDIRECT lines, no ban hits, and Mongolia's capture at T123 in those games.
+LEAD: the next block's head is **ai/war 698525b1** (791ab9d7 + the Kyzyl fix b446678a + Economy 0054, 0055). CI to follow.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
