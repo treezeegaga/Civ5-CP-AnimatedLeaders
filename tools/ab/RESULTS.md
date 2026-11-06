@@ -1950,6 +1950,24 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0048: the lead's pre-flight review of d75dfec (Economy, Nov 6, 11:24am ET)
+- **(2) 0046's PREP saving never took effect.** Since Personality's `553dfdc`, BUILDUP needs no gold, so
+  `IsLateStrikePrepSaving` equalled the PREP → BUILDUP condition and held for a turn at most. It is removed, and BUILDUP
+  does the saving.
+- **(5) The danger path** ("a defender first") now builds an obsolete defender class as its upgrade, the same way as
+  0047.
+- **(6) The late-PREP combat hold leaked.** Scouts counted as combat units. And once every list item was held, the city
+  fell to the regular book and CP, which still trained combat units. One helper, `IsLateStrikeUnitHold`, now applies on
+  every path:
+  - the strike list;
+  - the regular book's unit steps;
+  - CP's unit sanity check, which vetoes the unit unless the city is in danger.
+
+  The hold applies to a late strike in PREP, not at war with a major, with net gold under +2. Scouts are exempt. The
+  war exemption matters since War's `103bd11`, under which a war on us no longer ends PREP.
+
+**Status:** patch 0048 on ai/war `d75dfec`, 4 files, +36/-23. Not compiled here.
+
 ### Patch 0047: an obsolete list item is built as its upgrade (Economy, Nov 6, 11:10am ET)
 The lead, via War: in the Zulu's `162667AE` (ab-103bd11), the strike list lost units and went back to its earlier Archer
 items. From T80 to T106 it logged `LIST WAIT, nothing on the list can be done now`. An Archer can't be trained once the

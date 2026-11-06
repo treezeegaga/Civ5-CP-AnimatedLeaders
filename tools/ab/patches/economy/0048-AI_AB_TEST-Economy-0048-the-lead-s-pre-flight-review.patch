@@ -1,0 +1,168 @@
+From e87981246ff03a443ce2d7b5a0869032313da43e Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 16:24:19 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0048: the lead's pre-flight review of
+ d75dfec (0046, 0047)
+
+(2) 0046's PREP saving never took effect. Personality's 553dfdc made BUILDUP need no gold,
+    so IsLateStrikePrepSaving equalled the PREP -> BUILDUP condition, true for a turn at
+    most. Removed with its two uses in CvEconomicAI; BUILDUP does the saving.
+(5) The danger path ("a defender first") now builds an obsolete defender class as its
+    upgrade, through GetStrikeListTrainableOnLine like 0047's.
+(6) The late-PREP combat hold leaked. Scouts counted as combat units, and once every item
+    was held the city fell to the regular book and CP, which still trained combat units.
+    One helper, CvPlayer::IsLateStrikeUnitHold (late strike, PREP, not at war with a
+    major, net gold under +2), now applies on every path:
+    - the strike list;
+    - the regular book's unit steps;
+    - CP's unit sanity check (SR_STRATEGY unless the city is in danger).
+    Scouts (UNITAI_EXPLORE) are exempt. The strike state is checked first, since this runs
+    for every unit in every city.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp     |  8 ++--
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 43 +++++++++++--------
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  2 +-
+ .../CvUnitProductionAI.cpp                    |  6 +++
+ 4 files changed, 36 insertions(+), 23 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index fcd3535..ea347c0 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3450,8 +3450,8 @@ void CvEconomicAI::DoHurry()
+ 	DoWarChest(m_pPlayer);
+ 
+ 	// AI_AB_TEST candidate (LateStrike): from the build-up to the declaration, the treasury is for the upgrades; only
+-	// WarChest's siege purchases (above) spend it. (0046: also a late strike's PREP saving for its BUILDUP)
+-	if (m_pPlayer->IsLateStrikeSaving() || m_pPlayer->IsLateStrikePrepSaving())
++	// WarChest's siege purchases (above) spend it
++	if (m_pPlayer->IsLateStrikeSaving())
+ 		return;
+ 
+ 	if (m_pPlayer->UsesNewAI())
+@@ -3816,8 +3816,8 @@ void CvEconomicAI::DoPlotPurchases()
+ 	// AI_AB_TEST candidate (EarlyStrike): no tiles bought before the strike, the gold is for the upgrades
+ 	if (m_pPlayer->IsEarlyStrikeSmallEmpire())
+ 		return;
+-	// AI_AB_TEST candidate (LateStrike): nor in a late strike's build-up (0046: nor while its PREP saves for the build-up)
+-	if (m_pPlayer->IsLateStrikeSaving() || m_pPlayer->IsLateStrikePrepSaving())
++	// AI_AB_TEST candidate (LateStrike): nor in a late strike's build-up
++	if (m_pPlayer->IsLateStrikeSaving())
+ 		return;
+ 
+ 	// AI_AB_TEST: CP never cancels a tile savings request, so after one unaffordable plot the amount stays
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index f7b8aae..422242a 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33973,22 +33973,26 @@ bool CvPlayer::IsStrikeNoWonders() const
+ 	return !GetMilitaryAI()->HasStrikeDeclared();
+ }
+ 
+-/// AI_AB_TEST (flag LateStrike; Economy 0046). A late strike's PREP once all but the gold of Personality's BUILDUP condition
+-/// (CvGrandStrategyAI::IsStrikeEconomyReady: K cities, the upgrade tech in reach, iEconomyGoldTarget saved) is met: the
+-/// treasury is kept, like BUILDUP's, until the target is saved. bullyabort22 15286C56: Songhai's gold peaked at 283 of its
+-/// 300 (T60), then drained to 0 (T100), and the strike stayed in PREP to the end. Purchases only: the beeline and the
+-/// pre-build (IsLateStrikeSaving) still wait for BUILDUP
+-bool CvPlayer::IsLateStrikePrepSaving() const
+-{
+-	if (!IsLateStrikeCiv() || IsAtWarAnyMajor() || !GetMilitaryAI() || GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_PREP)
++/// AI_AB_TEST (flag LateStrike; Economy 0046, 0048): a late strike's PREP is economy first. No new combat unit (beyond a
++/// scout, or a defender for a city in danger) while net gold is under +2 a turn, on every path: the strike list, the regular
++/// book after it, and CP's choice (CvUnitProductionAI). bullyabort22 15286C56: Songhai's list built 6 Horsemen and 3 Archers
++/// in PREP (T42-T88), its upkeep went from 13 to 30 a turn, net -7 to -12, and the treasury drained to 0. (0048: the PREP
++/// saving 0046 also had is gone, since Personality's 553dfdc made BUILDUP need no gold; BUILDUP does the saving)
++bool CvPlayer::IsLateStrikeUnitHold() const
++{
++	// cheapest first: this runs in CP's unit sanity check (every unit, every city)
++	if (!GetMilitaryAI() || GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_PREP || !IsLateStrikeCiv())
+ 		return false;
+-	const CvStrikePlan& kPlan = GetGrandStrategyAI()->GetStrikePlan();
+-	if (kPlan.iEconomyGoldTarget <= 0 || GetTreasury()->GetGold() >= kPlan.iEconomyGoldTarget)
+-		return false;
+-	if (getNumCities() < kPlan.iMaxCitiesBeforeStrike && !IsBoxedInForSettling())
++	// a war on us during PREP (War's 103bd11: not a strike exit) needs units whatever the income
++	if (IsAtWarAnyMajor())
+ 		return false;
+-	return kPlan.eUpgradeTech == NO_TECH || GET_TEAM(getTeam()).GetTeamTechs()->HasTech(kPlan.eUpgradeTech) ||
+-		GetPlayerTechs()->CanResearch(kPlan.eUpgradeTech);
++	return GetTreasury()->CalculateBaseNetGold() < 2;
++}
++
++/// StrikeList and the books (0048): a unit the late-strike hold applies to: a combat unit that isn't a scout
++static bool IsLateStrikeHeldUnit(const CvUnitEntry* pkUnitInfo)
++{
++	return pkUnitInfo && (pkUnitInfo->GetCombat() > 0 || pkUnitInfo->GetRangedCombat() > 0) && pkUnitInfo->GetDefaultUnitAIType() != UNITAI_EXPLORE;
+ }
+ 
+ bool CvPlayer::IsLateStrikeSaving() const
+@@ -34846,6 +34850,9 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 			if (bEarlyStrike && (pkUnitInfo->GetCombat() > 0 || pkUnitInfo->GetRangedCombat() > 0) &&
+ 				GetEconomicAI()->GetAffordableWarUnits(10) < 1)
+ 				continue;
++			// AI_AB_TEST (LateStrike, Economy 0048): a late strike's PREP holds combat units while net gold is under +2
++			if (IsLateStrikeHeldUnit(pkUnitInfo) && IsLateStrikeUnitHold())
++				continue;
+ 
+ 			eOrder = ORDER_TRAIN;
+ 			iData = eUnit;
+@@ -35270,10 +35277,11 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 		const UnitClassTypes aeClass[2] = { kPlan.eCoreClass, kPlan.eSupportClass };
+ 		for (int i = 0; i < 2; i++)
+ 		{
+-			const UnitTypes eUnit = (aeClass[i] != NO_UNITCLASS) ? GetSpecificUnitType(aeClass[i]) : NO_UNIT;
++			// the class, or its upgrade once it's obsolete (0048, as 0047)
++			const UnitTypes eUnit = (aeClass[i] != NO_UNITCLASS) ? GetStrikeListTrainableOnLine(*this, aeClass[i], pCity) : NO_UNIT;
+ 			CvUnitEntry* pkUnitInfo = (eUnit != NO_UNIT) ? GC.getUnitInfo(eUnit) : NULL;
+ 			if (pkUnitInfo && pkUnitInfo->GetDomainType() == DOMAIN_LAND && pkUnitInfo->GetCombat() > 0 &&
+-				pkUnitInfo->GetRangedCombat() == 0 && pCity->canTrain(eUnit))
++				pkUnitInfo->GetRangedCombat() == 0)
+ 			{
+ 				eOrder = ORDER_TRAIN;
+ 				iData = eUnit;
+@@ -35306,8 +35314,7 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 				// (net under +2 a turn) and the list goes on to its economy items. bullyabort22 15286C56: Songhai's list built
+ 				// 6 Horsemen and 3 Archers in PREP (T42-T88), its upkeep went from 13 to 30 a turn, net -7 to -12, and the
+ 				// treasury never reached the 300 its BUILDUP waits for
+-				if (kPlan.bLateStrike && GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_PREP &&
+-					(pkUnitInfo->GetCombat() > 0 || pkUnitInfo->GetRangedCombat() > 0) && GetTreasury()->CalculateBaseNetGold() < 2)
++				if (IsLateStrikeHeldUnit(pkUnitInfo) && IsLateStrikeUnitHold())
+ 				{
+ 					if (strWait.IsEmpty())
+ 						strWait.Format("(item %d %s, LIST HOLD: net gold %d)", i + 1, pkUnitInfo->GetDescription(), GetTreasury()->CalculateBaseNetGold());
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 172111e..f57c892 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -1934,7 +1934,7 @@ public:
+ 	bool IsLateStrikeCiv() const; // AI_AB_TEST Economy, flag LateStrike: a warmonger with a late spike and a strike plan
+ 	bool IsLateStrikeSaving() const; // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
+ 	bool IsStrikePending() const; // AI_AB_TEST Economy, flags EarlyStrike/LateStrike (0040): a strike civ before its strike (state PREP or BUILDUP) // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
+-	bool IsLateStrikePrepSaving() const; // AI_AB_TEST Economy 0046: a late strike's PREP with all but the gold of its BUILDUP condition met
++	bool IsLateStrikeUnitHold() const; // AI_AB_TEST Economy 0046/0048: a late strike's PREP with net gold under +2: no new combat unit
+ 	bool IsStrikeNoWonders() const; // AI_AB_TEST Economy 0042: no world or national wonder now (a strike civ before its strike)
+ 	const CvStrikePlan* GetStrikeListPlan() const; // AI_AB_TEST Economy, flag StrikeList: the strike plan while its lists run
+ 	bool GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& iData, bool& bListRuns); // flag StrikeList: the next list item
+diff --git a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+index a6429b2..b978d1c 100644
+--- a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+@@ -207,6 +207,12 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 	// AI_AB_TEST (candidate, flag ArmyQuality, War): a timing attacker builds no land combat unit (not scouts or siege) weaker
+ 	// than 70% of the best one it can train, unless the city is under siege; such units no longer count toward the army
+ 	// (CvMilitaryAI::IsArmyQualityUnit). 22% of BigArmy's first-declaration armies were Warriors and Scouts.
++	// AI_AB_TEST (LateStrike, Economy 0048): a late strike's PREP is economy first. No new combat unit while net gold is under
++	// +2 a turn, unless the city is in danger (CvPlayer::IsLateStrikeUnitHold)
++	if (bCombat && !bFree && !bDesperate && pkUnitEntry->GetDefaultUnitAIType() != UNITAI_EXPLORE &&
++		kPlayer.IsLateStrikeUnitHold() && !m_pCity->isInDangerOfFalling())
++		return SR_STRATEGY;
++
+ 	if (bCombat && !bFree && !bDesperate && pkUnitEntry->GetDomainType() == DOMAIN_LAND && pkUnitEntry->GetDefaultUnitAIType() != UNITAI_EXPLORE &&
+ 		pkUnitEntry->GetDefaultUnitAIType() != UNITAI_CITY_BOMBARD && kPlayer.UsesCandidateAI(FIX_ARMY_QUALITY) &&
+ 		kPlayer.GetMilitaryAI()->IsTimingBuildupPlayer() && !kPlayer.GetMilitaryAI()->IsArmyQualityUnit(pkUnitEntry))
+-- 
+2.43.0
+
