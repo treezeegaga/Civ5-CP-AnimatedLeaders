@@ -2695,6 +2695,31 @@ on the real exits. Coding it on ai/war now (replaces dd375b2a's walled logic).
 Not changed: the target choice's own preference against walled hill cities (GetNewAIConquestTarget) and the city-state
 pick's walled-hill skip. They only rank or choose; they don't end anything. CI is running.
 
+**The user's anchor (via the lead):** Marrakesh, about 19 defence with walls and a Warrior inside, fell to 6 promoted
+Jaguars and 4 Composite Bowmen, no siege, by about T54 Quick. Under the check that's about 92 attack against 19, nearly
+5x: comfortably "go". The 3x line holds, with room for a weaker army.
+
+**Persia's 73-turn BUILDUP (the lead; bullygreedy21 15A7D14F, ab-f939c50; logs not pushed yet, so this is from the
+code):** city-state targets only. BUILDUP opened at T56 against Wellington; no declaration until a war on Ethiopia at
+T129 with 7 land units.
+- **What most likely held it.** On f939c50 the walled rule gave an early strike a 2-siege target, and the plan wanted 9
+  others. With 7 land and no siege trainable (no Mathematics on its list), neither the normal army nor Personality's
+  plan army could count as built. "As ready as it gets" needs the affordable count at 0, which an income-supported army
+  rarely hits. So the city-state approach (WAR only once ready) never came.
+- **Fixes, ai/war b281f681:**
+  1. **Declare on the city-state.** A city-state strike target is declared on directly (DeclareWar) once the army is
+     ready or as ready as it gets.
+  2. **Untrainable siege doesn't block.** A siege target we can't train yet doesn't hold "built".
+  3. **"Strike: not ready (...)"** is logged in BUILDUP whenever the blockers change: normal army field and siege, plan
+     army core and support lines, upgrade tech and bill, gold, melee, affordable. The next long BUILDUP reports its own
+     game-state cause.
+  - With the strength check, the 2-siege target only appears when the plan's army is too weak for the city.
+
+LEAD (8:53am): (1) a city-state strike target is declared on when the army is ready (b281f681). (2) Persia's long BUILDUP
+was most likely an unreachable 2-siege target (the old walled rule, no Mathematics) with 7 of 9 land. Fixed by the
+strength check plus "untrainable siege doesn't block". The new "Strike: not ready" line will name the blocker in the
+next games. CI to follow on b281f681.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
