@@ -1,0 +1,145 @@
+From 18dd4821990d819fc937d81674105504d1743c34 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 13:13:58 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0042: no world or national wonder before a
+ strike, on every pick path
+
+bullyabort20 game 1 (14BC6621, ab-8555f21) stopped: LateStrike Germany's Munich took
+Heroic Epic (T61) and the Temple of Artemis (T62) in strike PREP. The sanity check did
+veto both ("SKIPPED ... badtimeorplace"), but it vetoed every other option too, and
+CvCityStrategyAI::ChooseProduction then falls back to the unchecked list
+(m_Buildables = m_BuildablesPrecheck), wonders and all.
+
+New CvPlayer::IsStrikeNoWonders (IsStrikePending, or the EarlyStrike book window, or
+LateStrike BUILDUP) is used on every path a city picks a wonder:
+- the sanity check (CvBuildingProductionAI), now for national wonders too;
+- the everything-vetoed fallback (CvCityStrategyAI), which drops world and national
+  wonders (logged SKIPPED);
+- the city specialization's pick (CvCityAI);
+- a Great Engineer's wonder (CvHomelandAI), so the engineer is kept.
+The strike list's own items are pushed directly and are not filtered.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuildingProductionAI.cpp                |  3 ++-
+ CvGameCoreDLL_Expansion2/CvCityAI.cpp         |  2 +-
+ CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp | 24 +++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvHomelandAI.cpp     |  3 +++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         |  9 +++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  1 +
+ 6 files changed, 40 insertions(+), 2 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index 3b8e8ff..a3b2f2a 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -274,7 +274,8 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 
+ 	// AI_AB_TEST candidates (EarlyStrike, LateStrike): no world wonder before the strike (EarlyStrike's PREP and BUILDUP,
+ 	// LateStrike's BUILDUP). The expert block's Persia (13A89116) started Stonehenge at T39 while its book waited
+-	if (isWorldWonderClass(kBuildingClassInfo) && (kPlayer.IsEarlyStrikeSmallEmpire() || kPlayer.IsLateStrikeSaving() || kPlayer.IsStrikePending()))
++	// (0042: national wonders too)
++	if ((isWorldWonderClass(kBuildingClassInfo) || isNationalWonderClass(kBuildingClassInfo)) && kPlayer.IsStrikeNoWonders())
+ 		return SR_STRATEGY;
+ 
+ 	// AI_AB_TEST candidate (WarGold, the lead's): a warmonger at peace keeps its income at 0 or more. While it's losing gold,
+diff --git a/CvGameCoreDLL_Expansion2/CvCityAI.cpp b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+index 4c70d08..7304344 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+@@ -135,7 +135,7 @@ void CvCityAI::AI_chooseProduction(bool bInterruptWonders, bool bInterruptBuildi
+ 		eNextWonder = NO_BUILDING;
+ 
+ 	// AI_AB_TEST candidate (EarlyStrike, Economy 0039): no world wonder before the strike, even one picked earlier
+-	if (eNextWonder != NO_BUILDING && (kOwner.IsEarlyStrikeSmallEmpire() || kOwner.IsLateStrikeSaving() || kOwner.IsStrikePending()))
++	if (eNextWonder != NO_BUILDING && kOwner.IsStrikeNoWonders())
+ 		eNextWonder = NO_BUILDING;
+ 
+ 	if (!bAlreadyBuildingWonder && bInterruptWonders && eNextWonder != NO_BUILDING)
+diff --git a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp
+index 67f2866..242a815 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCityStrategyAI.cpp
+@@ -993,8 +993,32 @@ void CvCityStrategyAI::ChooseProduction(BuildingTypes eIgnoreBldg, UnitTypes eIg
+ 	LogPossibleBuilds(m_Buildables,"POST");
+ 
+ 	if (m_Buildables.size() <= 0)
++	{
+ 		m_Buildables = m_BuildablesPrecheck;
+ 
++		// AI_AB_TEST (Economy 0042): the fallback keeps the strike's wonder ban. When the sanity check vetoed everything, the
++		// unchecked list came back with its wonders (bullyabort20 14BC6621: Munich's Heroic Epic and Temple of Artemis in PREP)
++		if (GET_PLAYER(m_pCity->getOwner()).IsStrikeNoWonders())
++		{
++			CvWeightedVector<CvCityBuildable> vKept;
++			for (int iI = 0; iI < m_Buildables.size(); iI++)
++			{
++				const CvCityBuildable& kItem = m_Buildables.GetElement(iI);
++				if (kItem.m_eBuildableType == CITY_BUILDABLE_BUILDING)
++				{
++					CvBuildingEntry* pkItemInfo = GC.getBuildingInfo((BuildingTypes)kItem.m_iIndex);
++					if (pkItemInfo && (isWorldWonderClass(pkItemInfo->GetBuildingClassInfo()) || isNationalWonderClass(pkItemInfo->GetBuildingClassInfo())))
++					{
++						LogInvalidItem(kItem, SR_STRATEGY);
++						continue;
++					}
++				}
++				vKept.push_back(kItem, m_Buildables.GetWeight(iI));
++			}
++			m_Buildables = vKept;
++		}
++	}
++
+ 	bool bPushedOrderForSettler = false;
+ 	if (m_Buildables.size() > 0)
+ 	{
+diff --git a/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp b/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
+index 47113af..87b5627 100644
+--- a/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvHomelandAI.cpp
+@@ -4681,6 +4681,9 @@ void CvHomelandAI::ExecuteEngineerMoves()
+ 			//int iNextWonderWeight;
+ 			CvCity* pCityToBuildAt = 0;
+ 			BuildingTypes eNextWonderDesired = m_pPlayer->GetCitySpecializationAI()->GetNextWonderDesired();
++			// AI_AB_TEST (Economy 0042): no wonder before a strike (a Great Engineer keeps; see CvPlayer::IsStrikeNoWonders)
++			if (m_pPlayer->IsStrikeNoWonders())
++				eNextWonderDesired = NO_BUILDING;
+ 
+ 			// No?  Just move to safety...
+ 			if(eNextWonderDesired == NO_BUILDING)
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 121ca69..1a4462b 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33945,6 +33945,15 @@ bool CvPlayer::IsStrikePending() const
+ 	return eState == CvMilitaryAI::STRIKE_PREP || eState == CvMilitaryAI::STRIKE_BUILDUP;
+ }
+ 
++/// AI_AB_TEST (flags EarlyStrike, LateStrike; Economy 0042; the user: "no wonders before a strike"): no world wonder and no
++/// national wonder while a strike civ is before its strike, on every path a city picks one (the sanity check, its
++/// everything-vetoed fallback, the city specialization's pick, a Great Engineer). bullyabort20 game 1 (14BC6621): LateStrike
++/// Germany's Munich took Heroic Epic (T61) and the Temple of Artemis (T62) in PREP, through the fallback
++bool CvPlayer::IsStrikeNoWonders() const
++{
++	return IsStrikePending() || IsEarlyStrikeSmallEmpire() || IsLateStrikeSaving();
++}
++
+ bool CvPlayer::IsLateStrikeSaving() const
+ {
+ 	// War's strike state BUILDUP (Personality's economy-ready condition fired), to the declaration; no turns
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 90b051d..83d5c34 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -1934,6 +1934,7 @@ public:
+ 	bool IsLateStrikeCiv() const; // AI_AB_TEST Economy, flag LateStrike: a warmonger with a late spike and a strike plan
+ 	bool IsLateStrikeSaving() const; // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
+ 	bool IsStrikePending() const; // AI_AB_TEST Economy, flags EarlyStrike/LateStrike (0040): a strike civ before its strike (state PREP or BUILDUP) // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
++	bool IsStrikeNoWonders() const; // AI_AB_TEST Economy 0042: no world or national wonder now (a strike civ before its strike)
+ 	const CvStrikePlan* GetStrikeListPlan() const; // AI_AB_TEST Economy, flag StrikeList: the strike plan while its lists run
+ 	bool GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& iData, bool& bListRuns); // flag StrikeList: the next list item
+ 	TechTypes GetStrikeListTech() const; // flag StrikeList: the next tech on the plan's list
+-- 
+2.43.0
+

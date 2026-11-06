@@ -1950,6 +1950,32 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0042: the wonder ban on every pick path (Economy, Nov 6, 8:21am ET)
+PC 1 stopped bullyabort20 game 1 (`14BC6621`, ab-8555f21). LateStrike Germany was in strike PREP from T1 to T115.
+Its second city, Munich, chose Heroic Epic at T61 and the Temple of Artemis at T62.
+
+**The path.** The sanity check vetoed both wonders: the production log reads `SKIPPED: Building 55, Heroic Epic,
+badtimeorplace`. But it vetoed every other option in Munich too, units included. When nothing passes,
+`CvCityStrategyAI::ChooseProduction` falls back to the unchecked list (`m_Buildables = m_BuildablesPrecheck`), and
+the wonders came back with it. So 0040's gate held; the fallback went around it.
+
+**0042.** New `CvPlayer::IsStrikeNoWonders()`: IsStrikePending, or the EarlyStrike book window, or LateStrike
+BUILDUP. It is used on every path a city picks a wonder:
+- the sanity check (CvBuildingProductionAI), now for **national wonders too**, as the user ruled;
+- the everything-vetoed fallback (CvCityStrategyAI), which drops world and national wonders and logs them SKIPPED;
+- the city specialization's pick (CvCityAI);
+- a Great Engineer's wonder (CvHomelandAI), so the engineer is kept for after the strike.
+
+Purchases can't buy wonders in CP, and the strike list's own items are pushed directly. If a city's fallback held only
+wonders, it queues nothing that turn and chooses again next turn. No game has shown that case.
+
+**Germany's list.** It was Personality's 4-item data default (Monument, Worker, Settler, Settler, done by T28). After
+that, CP chose Berlin's builds: Barracks, Caravan, Water Mill, Market, Circus, Colosseum. I've asked Personality for
+late lists that run to BUILDUP: about 32 items, the K-1 settlers, the pre-build and support units, and no wonders.
+
+**Status:** patch 0042 on ai/war `8555f21` (which has 0041). Not compiled here. The PCs keep their STOP until a build
+has 0042.
+
 ### StrikeList: the strike book follows the expert list, strictly (Economy, Nov 6, 6:30am ET; design)
 The user (via the lead): "this is why we looked up expert build orders. literally just follow the list." New flag
 **StrikeList** (Economy). It replaces the priorities-with-conditions book (0031) for a strike civ whose plan carries a
