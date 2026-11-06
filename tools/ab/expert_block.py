@@ -25,6 +25,23 @@ ARMY = re.compile(r"(?:BigArmy|WarBudget|EarlyStrike): army (at the declaration 
 PLAN = re.compile(r"strike plan .*?open T(\d+), declare by T(\d+), fallback T(\d+)")
 PLANFULL = re.compile(r"strike plan \w+: core (\S+) x(\d+), support (\S+) x(\d+), siege (\S+) x(\d+), upgrade (\S+) \((\d+) gold each\)")
 med = lambda v: st.median(v) if v else '-'
+# the lead (Nov 6, the user: "if they were 4 units short, they need to fix their start"): units on hand against the plan's
+# counts at BUILDUP and WAR, and where the capital's and second city's production went before the war
+CLASS_UNITS = {'SPEARMAN': ('Spearman', 'Hoplite', 'Immortal', 'Impi', 'Pikeman', 'Landsknecht'), 'ARCHER': ('Archer', 'Composite Bowman', 'Bowman'),
+               'WARRIOR': ('Warrior', 'Jaguar', 'Maori Warrior', 'Pictish Warrior', 'Brute'), 'HORSEMAN': ('Horseman', 'Companion Cavalry', 'Knight', 'Keshik'),
+               'CHARIOT_ARCHER': ('Chariot Archer', 'War Chariot', 'Hand-Axe'), 'CATAPULT': ('Catapult', 'Ballista'),
+               'COMPOSITE_BOWMAN': ('Composite Bowman', 'Crossbowman', 'Chu-Ko-Nu'), 'SWORDSMAN': ('Swordsman', 'Legion', 'Berserker', 'Mohawk Warrior', 'Longswordsman', 'Samurai'),
+               'CROSSBOWMAN': ('Crossbowman', 'Chu-Ko-Nu'), 'KNIGHT': ('Knight', 'Keshik', 'Mandekalu Cavalry', 'Camel Archer'), 'TREBUCHET': ('Trebuchet', 'Hwacha'),
+               'SLINGER': ('Slinger', 'Archer', 'Composite Bowman')}
+CIVILIAN = {'Worker', 'Settler', 'Work Boat', 'Scout', 'Caravan', 'Cargo Ship', 'Missionary', 'Inquisitor', 'Great Prophet', 'Pioneer', 'Colonist'}
+MILITARY_EXTRA = re.compile(r"^(Archer|Composite Bowman|Slinger|Chariot Archer|War Chariot|Catapult|Ballista|Crossbowman|Chu-Ko-Nu|Trebuchet|Galley|Trireme|Bowman)$")
+UNITLIST = re.compile(r"([A-Z][A-Za-z' -]+?) (\d+)(?:, |$)")
+def army_units(r):
+    tail = r.rsplit('): ', 1)[-1] if '): ' in r else r.rsplit(': ', 1)[-1]
+    return {n.strip(): int(c) for n, c in UNITLIST.findall(tail)}
+def class_count(units, cls):
+    names = CLASS_UNITS.get(cls.replace('UNITCLASS_', ''), (cls.replace('UNITCLASS_', '').replace('_', ' ').title(),))
+    return sum(c for n, c in units.items() if n in names)
 # the plan's upgrade tech -> the units it upgrades into (to find the strike's own upgrade among CP's others)
 UPGRADE_UNITS = {'TECH_CONSTRUCTION': ('Composite Bowman',), 'TECH_MACHINERY': ('Crossbowman', 'Chu-Ko-Nu'),
                  'TECH_CHIVALRY': ('Knight', 'Keshik', 'Mandekalu Cavalry', 'Camel Archer'), 'TECH_STEEL': ('Longswordsman', 'Samurai'),
@@ -51,7 +68,7 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
     g = dict(gid=gid[:8], civ=info['civ'].title(), run=info['build'], capt=info['captured'], first_capt=None, decl=None,
              open=None, walled=None, upgrades=[], hunts=0, kills=0, kill_xp=[], decl_land=None, decl_promoted=None,
              decl_promotions=None, reach=[], plan=None, need_field=None, upgrade_tech=None,
-             t_tech=None, t_gold=None, t_army=None, t_upgraded=None, states=[])
+             t_tech=None, t_gold=None, t_army=None, t_upgraded=None, states=[], plan_counts=None, armies=[], prod=None)
     for t, r in walls.our_lines(os.path.join(gdir, 'StrategyProfile_Log.csv'), ours):
         m = PLAN.search(r)
         if m:
@@ -59,6 +76,7 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
         m = PLANFULL.search(r)
         if m:
             g['need_field'] = int(m.group(2)) + int(m.group(4))
+            g['plan_counts'] = [(m.group(1), int(m.group(2))), (m.group(3), int(m.group(4))), (m.group(5), int(m.group(6)))]
             g['upgrade_tech'] = None if m.group(7) == 'none' else m.group(7)
     for t, r in walls.our_lines(os.path.join(gdir, 'CitySpecializationLog.csv'), ours):
         if 'Update: Enemy city captured' in r and g['first_capt'] is None:
@@ -105,6 +123,7 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
                 g['kill_xp'].append(int(m.group(1)))
         m = ARMY.search(r)
         if m:
+            g['armies'].append((t, int(m.group(4)), army_units(r)))
             if m.group(1).startswith('at the declaration') and g['decl'] is None:
                 g['decl'], g['decl_land'] = t, int(m.group(4))
                 if m.group(5):
@@ -120,6 +139,31 @@ for gdir in sorted(glob.glob(os.path.join(af.RESULTS, 'logs_*'))):
         T = CSVROWS.get(gid, {})
         wt = [t for t in sorted(T) if (T[t].get('WarsDeclared') or '0') not in ('', '0')]
         g['decl'] = wt[0] if wt else None
+    # production of the capital and the second city (the book's "Started" lines and CP's CHOSEN lines), up to the war
+    t_build = next((x[0] for x in g['states'] if x[1] == 'BUILDUP'), g['open'])
+    t_war = next((x[0] for x in g['states'] if x[1] == 'WAR'), g['decl'])
+    cities, prod = [], collections.defaultdict(collections.Counter)
+    def note(t, city, kind, name):
+        if city not in cities:
+            cities.append(city)
+        if cities.index(city) > 1 or (t_war is not None and t > t_war) or (t_war is None and t > 100):
+            return
+        phase = 'to BUILDUP' if t_build is None or t < t_build else 'BUILDUP to WAR'
+        if kind == 'book':
+            kind = 'Civilian' if name in CIVILIAN else 'Military' if (CAPTURER.match(name) or MILITARY_EXTRA.match(name)) else 'Building'
+        if kind == 'Civilian':
+            kind = name if name in ('Worker', 'Settler') else 'Civilian other'
+        prod[phase][kind.replace('MilitaryMelee', 'Military').replace('MilitaryRanged', 'Military')] += 1
+    for t, r in walls.our_lines(os.path.join(gdir, 'CitySpecializationLog.csv'), ours):
+        m = re.match(r'(\S+), OPENING BOOK - Started (.+)$', r)
+        if m:
+            note(t, m.group(1), 'book', m.group(2).strip())
+    for l in open(os.path.join(gdir, 'CityStrategyAIProductionLog.csv'), errors='replace'):
+        p = l.rstrip('\n').split(', ')
+        if len(p) > 6 and ours(p[1]) and p[4].startswith('CHOSEN: '):
+            note(int(p[0]), p[2], p[4][8:], p[5])
+    g['prod'] = prod
+    g['t_build'], g['t_war'] = t_build, t_war
     fallback = g['plan'][2] if g['plan'] else 75
     g['exit'] = ('captured' if g['capt'] > 0 else 'no capture' if g['decl'] is not None else
                  'no strike' if g['open'] is None else 'fell back')
@@ -173,6 +217,26 @@ for g in rows:
 P = sum(1 for g in rows if g['plan'])
 if P:
     print('  of %d games with a plan line, met after the declare-by turn (or never): %s' % (P, dict(late)))
+
+print('\nUnits on hand against the plan (the army line nearest at or after BUILDUP and WAR; plan core/support/siege):')
+for g in rows:
+    if not g['plan_counts']:
+        continue
+    out = []
+    for lab, tt in (('BUILDUP', g['t_build']), ('WAR', g['t_war'])):
+        A = [a for a in g['armies'] if tt is not None and tt <= a[0] <= tt + 2]
+        if not A:
+            out.append('%s -' % lab)
+            continue
+        t, land, units = A[0]
+        out.append('%s T%d: %d land, %s' % (lab, t, land, ', '.join('%s %d/%d' % (c.replace('UNITCLASS_', '').title(), class_count(units, c), n)
+                                                                     for c, n in g['plan_counts'] if n > 0)))
+    print('  %s %-9s %s' % (g['gid'], g['civ'], ' | '.join(out)))
+print('\nProduction of the capital and second city (before BUILDUP; BUILDUP to WAR), by kind:')
+for g in rows:
+    if g['prod']:
+        print('  %s %-9s %s' % (g['gid'], g['civ'], ' | '.join('%s: %s' % (ph, ', '.join('%s %d' % kv for kv in sorted(g['prod'][ph].items())))
+                                                         for ph in ('to BUILDUP', 'BUILDUP to WAR') if g['prod'].get(ph))))
 
 S = [g for g in rows if g['states']]
 if S:
