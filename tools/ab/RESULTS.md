@@ -5176,3 +5176,19 @@ flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
 - **Next block: `ab-f939c50`** (bullygreedy21, bullyabort21) adds 0042 (no world or national wonders on every pick
   path), War's strike peace cap, and Personality's 184fe09 (every list runs to the strike; Germany's late default is
   Spearman to Landsknecht).
+
+### bullygreedy22 (ab-103bd11, PC 2, 3 pairs, stopped) and the first pre-flight review (lead, 11:28am ET Nov 6)
+- **No wonder/gift STOPs.** All three aggressors were late-strike civs (Denmark, America, Zulu); PC 1 had Songhai.
+  - Denmark, Zulu and Songhai lost their strike in PREP when CP declared a war of its own. Denmark still took a city at
+    T90.
+  - America's core (Musketman, Gunpowder) was too late, and it never declared.
+  - Fixed on ai/war: e1d4d07 (no own wars before the strike), Economy 0046/0047, Personality 553dfdc, d43fece and
+    f8f2de7.
+- **The pre-flight review of d75dfec** (the new routine, AGENTS rule 0a) found no compile, save or crash issues. It
+  found 3 confirmed bugs:
+  1. BUILDUP/PREP deadlock: the target is frozen once the window opens, and PREP has no exit since e1d4d07.
+  2. Economy 0046's PREP saving cancelled by 553dfdc.
+  3. A human could pay a strike AI to declare war, and the AI took the payment without declaring (deals, co-op wars).
+  Plus a possible multiplayer desync (list order depended on HasTech) and 3 minor points.
+- **Fixes:** Economy 0048 (2, 5, 6); Personality 99d3ced (4, 7); War, coding (1, 3). The next block waits for them,
+  then a T80 trial game.
