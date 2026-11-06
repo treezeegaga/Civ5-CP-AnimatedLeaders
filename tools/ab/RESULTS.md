@@ -2602,7 +2602,7 @@ Japan and Germany are the two late-strike STOPs, both covered in the next block.
 fixed in 8555f21b.
 
 LEAD (8:28am): reading only. On the strike-state builds, 1 of 4 first games captured: Greece on 8555f21, list-built
-(16 military to 1 building before BUILDUP), declared at T50 with 8 of the plan's 8 counted units, captured at T59. The
+(16 military to 1 building before BUILDUP), declared at T50 with 7 of the plan's 8 (8 land units in all), captured at T59. The
 other three each failed on something the next block (f939c50c) fixes.
 
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
