@@ -60,3 +60,5 @@ against this list. The list grows: every bug a review or a test game finds gets 
   defence-11 cities, so it waited 39 turns for siege it couldn't train (trial24). Calibrate every readiness check
   against the user's game: 6 Jaguars + 4 Composite Bowmen took a walled defence-19 capital without siege. Make sure
   something the civ can't build never holds a declaration.
+- **Unit scaling in combat math:** CP keeps damage and HP x100 in places. Mixing scaled and unscaled values made the
+  take-the-city check 100x too strict (0cb5402). Check the units of every value fed into a comparison.
