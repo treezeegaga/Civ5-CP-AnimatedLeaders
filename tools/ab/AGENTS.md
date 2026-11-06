@@ -90,6 +90,9 @@ flag. Expected: wide out-grows tall while nobody attacks; once attacks take citi
 - Warmongers buy only settlers and siege units with gold: `WarmongerHurry`, in the bundle.
 - **No exception for strikes (the user, 2026-11-06 morning):** a strike's build-up doesn't buy core or melee units with
   the gold above its upgrade bill. That gold goes to upgrades, settlers and siege only.
+- **No strike around a spike out of reach (the user, 2026-11-06 morning):** "you cant do a turn 227 timing attack. germany
+  would either need to use normal units for an attack earlier or not be aggressive at all." A civ whose unique spike
+  comes too late gets the generic Archer-to-Composite-Bowman timing at Construction, or no strike plan.
 - **City-state targets allowed (the user, 2026-11-06 morning):** when no major civ is in reach, the early strike may
   target a city-state.
 
