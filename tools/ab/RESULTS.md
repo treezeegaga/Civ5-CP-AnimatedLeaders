@@ -3492,6 +3492,15 @@ weights fill everything a plan doesn't name):
     take the city);
   - Celts: N 1 (plan 2: the research's Pictish Warrior x2 for barbarians, then a settler), core x4 and Archer x2 (plan
     x5 and x3).
+- **Live** in `ab-40203a3` (the lead, 10:23pm ET; Economy's 0032 reads `GetStrikePlan`); both PCs run it, with
+  EarlyStrikeAggressor picking from the early-spike civs. **What the data default gives the other early-spike civs**
+  (worked out from the code; StrategyProfile_Log.csv will confirm): Polynesia (Maori Warrior core, Archer support),
+  Babylon (Bowman core, Spearman support), Maya (Atlatlist core, Spearman support), Persia (Immortal core, Archer
+  support), Egypt and India (War Chariot or War Elephant core, Spearman support). All: core x5, support x3, no siege
+  unless walled, upgrade at Construction (Archer or Bowman to Composite Bowman), N 2, K 3, open about T35 Quick, declare
+  by about T41, fall back about T45, Liberty, barbarian hunt first. Sensible as plans. **One thing to watch:** the
+  aggressor picker puts early-spike civs ahead of warmongers, so Babylon, Egypt, India, Maya or Polynesia (not
+  aggressive personalities) can draw the aggressor role when none of the five expert civs is in the game.
 - **Status:** `221fb3e` and the Inca's Catapults (`0356f6b`) merged into `claude/ab-c1` (`03bbc90`); `221fb3e` compiles (CI run 274
   passed); `0356f6b` compiles (CI run 277 passed). Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
