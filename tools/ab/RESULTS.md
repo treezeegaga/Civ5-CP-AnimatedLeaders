@@ -3311,6 +3311,48 @@ logged pair".
 - **Status:** compiles (CI run 175 passed on `35272f9`, 2026-11-04 3:00pm ET); merged into `claude/ab-c1` (`b06d504`) by
   the lead. In the greedy style set.
 
+### Power spike: each civ's opening and strike window from its own strengths (Personality, draft, 2026-11-05 8:35pm ET)
+- **The user (via the lead):** the user took Marrakesh at T54 as the Aztec with a military-first capital (Jaguar x3,
+  Worker, Settler, Archer x4, Jaguar x2), 2 cities, no siege: "I think the jaguar specifically helps this opening. I
+  don't know if you can generalize it. Every civ needs to build to its strengths." So a warmonger's plan should come
+  from its own power spike, not one timing for everyone.
+- **In the strategy profile** (fork `ai/personality` `1173f7c`; logged only, no flag, nothing acts on it yet), for every
+  civ, from game data:
+  - **spike:** its earliest unique land combat unit (scouts don't count), the unit's tech, and the turn that tech
+    usually comes. Standard turns by tech-tree column, calibrated to the logged games (warmongers' Mathematics, column
+    3, at T48; Physics at T138): 0, 15, 30, 47, 75, 105, 135, 160, 185, 210, then +25 a column; scaled to the game
+    speed. Whether it fights better in forest or jungle (a free promotion with a feature bonus);
+  - **opening:** military first and a small empire when the spike comes by T30 (Standard), else expansion first;
+  - **strike window:** from 5 turns after the spike (the first units out) to 35 turns after, cut short when the unit
+    goes obsolete. Past that the neighbours have walls, counters and castles.
+- **The draft table** (BNW's unique units, which CP keeps; turns are the estimate above, Standard speed; the real values
+  are in StrategyProfile_Log.csv from the first logged game on this build):
+
+  | Spike | Civs (unit) | Spike turn | Opening | Strike window |
+  |---|---|---|---|---|
+  | start | Aztec (Jaguar, forest/jungle), Polynesia (Maori Warrior) | 0 | military first | T5-35 |
+  | Archery | Babylon (Bowman), Inca (Slinger), Maya (Atlatlist) | 15 | military first | T20-50 |
+  | Bronze Working, The Wheel | Greece (Hoplite), Persia (Immortal), Celts (Pictish Warrior), Huns (Battering Ram, Horse Archer), Egypt (War Chariot), India (War Elephant) | 30 | military first | T35-65 |
+  | Iron Working, Mathematics, Horseback Riding | Rome (Legion, Ballista), Assyria (Siege Tower), Iroquois (Mohawk, forest/jungle), Indonesia (Kris Swordsman), Byzantium (Cataphract), Carthage (Forest Elephant) | 47 | expansion first | T52-82 |
+  | Civil Service, Chivalry, Machinery, Steel (medieval) | Germany (Landsknecht), Zulu (Impi), Arabia (Camel Archer), Mongolia (Keshik), Siam (Naresuan's Elephant), Songhai (Mandekalu), Ottoman (Sipahi), China (Chu-Ko-Nu), England (Longbowman), Korea (Hwacha), Japan (Samurai), Denmark (Berserker) | 105-160 | expansion first | spike +5 to +35 |
+  | Gunpowder and later | France (Musketeer), Spain (Tercio), America (Minuteman), Poland (Winged Hussar), Sweden (Hakkapeliitta), Austria (Hussar), Morocco (Berber Cavalry), Russia (Cossack), Shoshone (Comanche Riders), Ethiopia (Mehal Sefari), Brazil (Pracinha) | 185+ | expansion first | after T150 |
+  | none (naval or civilian only) | Venice, Portugal, Netherlands | - | expansion first | none |
+
+  Combat bonuses from the civ ability (Zulu, Mongolia, Huns, Aztec) don't move the spike yet; a later step could add
+  them. Naval unique units (Carthage's Quinquereme, England's Ship of the Line) are left out, since cities fall to
+  land units.
+- **Pattern over the logged games** (1,904 civ-games to T149-150, last row per civ-game): captures are too rare to tell
+  whether an early spike captures more. Only 15 of 43 civs ever took a city, at 0.02-0.06 a game, and no warmonger with
+  an early spike did better than any other civ. Early-spike warmongers do declare more wars (Aztec 1.57 a game, Huns
+  1.14, Germany 1.09, against about 0.5 for peaceful civs) and take nothing. That's the attack problem War is on, not a
+  timing one, so the pattern question waits for games where attacks take cities.
+- **For War (interface proposal):** `CvGrandStrategyAI::GetStrikeWindow(int& iStartTurn, int& iEndTurn)` (elapsed turns,
+  this game's speed; false without a land unique unit) and `IsInStrikeWindow()` (in those turns, and the spike's tech
+  known, so a late tech shifts the window). TimingBuildup could start its 15-turn build-up 15 turns before the window
+  opens and attack inside it; a military-first civ (`bMilitaryFirst`) would skip the book's extra settlers. War decides
+  how; tell me if you need other fields (the spike unit, its tech).
+- **Status:** draft, code compiles pending CI (`1173f7c`). The table needs checking against the log.
+
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
   138 logged games, tech turns read from the first unlock in a build list): after the opening book, research follows
