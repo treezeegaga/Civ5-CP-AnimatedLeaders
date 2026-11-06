@@ -1924,6 +1924,67 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: an early strike? Walls, siege and timing over our games (Nov 5, about 8:30pm ET)
+The lead, relaying the user's human game (106F8550, King, Quick, the Aztec against greedy AIs): Marrakesh taken at T54,
+eliminating Morocco, with about 6 Jaguars and 4 Composite Bowmen and no siege. The Jaguars were promoted from barbarian
+hunting. Three questions, counted across our games. Script: `tools/ab/early_strike.py`; the CSV counts run inline.
+
+**1. Walls and siege.** One row per city our aggressor attacked, with the city's defence logged at the attempt: 59
+cities in 32 first games (850e142 and later), 13 taken.
+
+| | No siege in any capture plan | Siege in a plan |
+|---|---|---|
+| Unwalled | 1 of 7 | 8 of 24 |
+| Walled | 0 of 2 | 4 of 26 |
+
+- Unwalled cities fell twice as often (9 of 31, against 4 of 28). The city strength at the first attempt was a median
+  13 for the cities taken and 16.5 for the rest.
+- **Siege at the declaration doesn't predict captures** (games with the army line, cities taken): 0 siege 1 of 6, 1
+  siege 4 of 12, 2 siege 5 of 23, 3+ siege 2 of 8.
+- Siege is in nearly every plan (50 of 59), so the "no siege" column is too small to say siege isn't needed.
+
+**2. Experience.** Not answerable from our logs: no unit XP or promotions are recorded.
+- The tactical AI already goes after barbarian camps: "Trying to remove barbarian camp" lines before the first
+  declaration have a median of 36 a game (122 logged first games). Captures don't rise with them: 2 of 11 games with
+  under 10, 9 of 76 with 30+.
+- Logging added (ai/war 8c361db1): the army line now carries "promoted N (P promotions, X XP)" in the window, at the
+  declaration and at the first capture attempt on each city.
+
+**3. Timing: the clearest signal.** 150 aggressor first games, all builds, CSV every 10 turns:
+
+| First declaration seen | Games | With a capture | Cities |
+|---|---|---|---|
+| T60–79 | 19 | 6 (31%) | 8 |
+| T80–99 | 37 | 5 (13%) | 7 |
+| T100–119 | 31 | 2 (6%) | 3 |
+| T120+ | 24 | 2 (8%) | 3 |
+
+- Before T60: 3 games, none captured.
+- Inside BigArmy, where the army size is the same:
+  - the captured games declared at a median of T69 (T50 to T91), the rest at T90 (T68 to T114);
+  - 4 of the 5 that declared by T69 took a city.
+- By the first attempt on each city (the 59 cities): before T70, 4 of 7 taken and all 4 unwalled ones fell. From T70
+  to T130, 8 of 39. After T130, 1 of 13.
+
+**Read:**
+- The data agrees with the user's game on timing: the earlier the war, the more it takes, and unwalled cities fall more
+  often.
+- It doesn't show that siege is needed; it doesn't show that it isn't, either (siege was almost always there).
+- The current direction (SiegeSlots, the 4-siege BigArmy target, WarBudget's longer windows) pushes the declaration
+  later. In BigArmy the median window ran 30+ turns past Mathematics.
+- **Design proposal for the lead and the user (not coded): an early strike.**
+  - The TimingBuildup window opens around T35 to T45 and declares by about T70.
+  - Its target is an unwalled city.
+  - No siege requirement while the target has no walls; the army is the civ's UU or best melee plus composite bows,
+    sized by WarBudget.
+  - Siege comes in for later wars, or a walled target (SiegeSlots then).
+- Promotions and barbarian hunting: measure first (the new log line), then decide.
+- Caveats: small numbers before T70 (19 games), and early declarers may differ in other ways (which leader, which map
+  position).
+
+LEAD: reading. Timing and walls agree with the user's game; siege isn't shown either way. Early strike proposed (not
+coded); say if you want it as a flag. Army XP logging on ai/war 8c361db1 (logging only).
+
 ### War: ArmyScrap in the package block fires only at war (Nov 5, about 6:40pm ET)
 The lead (6:39pm ET): in 128B4199 (Assyria), the army went from 11 land at the T83 declaration to 6 at the first capture
 attempt (T86). Is ArmyScrap scrapping units mid-war? Counted over the package block's first 5 games (bullyabort14 +
