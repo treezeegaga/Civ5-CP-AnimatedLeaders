@@ -56,3 +56,7 @@ against this list. The list grows: every bug a review or a test game finds gets 
 - **Exits that end a working strike:** a resource exit firing after the army used its own resources; "attacked by
   anyone" ending a strike.
 - **The game's own war logic:** CP declares during PREP or BUILDUP and ends the strike.
+- **A readiness check that never passes:** the strength check said a ready plan army "can't take" defence-19 and
+  defence-11 cities, so it waited 39 turns for siege it couldn't train (trial24). Calibrate every readiness check
+  against the user's game: 6 Jaguars + 4 Composite Bowmen took a walled defence-19 capital without siege. Make sure
+  something the civ can't build never holds a declaration.
