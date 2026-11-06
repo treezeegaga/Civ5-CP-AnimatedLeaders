@@ -1950,7 +1950,7 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
-### Strike ownership audit: production, gold, research, policy (Economy, Nov 6, 1:20pm ET; read on ai/war `5fe900a`)
+### Strike ownership audit: production, gold, research, policy (Economy, Nov 6, 1:12pm ET; read on ai/war `5fe900a`)
 The user's structural fix: while a strike is active (PREP, BUILDUP, WAR, until OVER), the strike owns these decisions.
 Each is gated at the lowest level, so CP's systems can't override it. "Today" means the gates on ai/war `5fe900a`.
 "Strike active" means War's strike state is PREP, BUILDUP or WAR. Today's gates mostly key on PREP and BUILDUP only
@@ -1975,7 +1975,7 @@ Each is gated at the lowest level, so CP's systems can't override it. "Today" me
 
 | Path (AI) | Function | Today | Proposed lowest gate |
 |---|---|---|---|
-| Every gold purchase or hurry (DoHurry, WarChest, BuyExpansionSettler, CheckForOperationUnits, military emergency buys) | CvCity::IsCanPurchase → CvEconomicAI::IsGoldPurchaseAllowed | WarmongerHurry (settlers, siege), NoObsoleteHurry. Early-strike book: no hurries (CvEconomicAI ~3447). Late BUILDUP: none (~3454) | IsGoldPurchaseAllowed: one rule for strike active. Settlers, siege and the plan's core, support and siege units only. Nothing else |
+| Every gold purchase or hurry (DoHurry, WarChest, BuyExpansionSettler, CheckForOperationUnits, military emergency buys) | CvCity::IsCanPurchase → CvEconomicAI::IsGoldPurchaseAllowed | WarmongerHurry (settlers, siege), NoObsoleteHurry. Early-strike book: no hurries (CvEconomicAI ~3447). Late BUILDUP: none (~3454) | IsGoldPurchaseAllowed: WarmongerHurry's settlers-and-siege rule for any strike civ while active, whatever its role's flags. The user ruled no strike purchases beyond the hurry rules, so no plan units |
 | Tiles | CvCity::BuyPlot via CvEconomicAI::DoPlotPurchases | EarlyStrikeSmallEmpire, LateStrikeSaving (in DoPlotPurchases) | **CvCity::CanBuyPlot**: no paid tile while strike active |
 | City-state gifts | CvMinorCivAI::DoGoldGiftFromMajor | Gated (0044) | done |
 | Gift saving | CvEconomicAI::StartSaveForPurchase(MINOR_CIV_GIFT) | Gated (0044) | done |
@@ -2000,8 +2000,13 @@ Each is gated at the lowest level, so CP's systems can't override it. "Today" me
 | Later picks | ChooseNextPolicy (CP's weights) | CP | Finish the first tree before opening a second while strike active |
 | Ideology | CvPolicyAI::DoChooseIdeology | n/a this early | none |
 
-**Patch 0049** (next) does everything marked New or proposed above. War keeps war, peace, approach, targets,
-disbanding and upgrades.
+**Patch 0049** (1:14pm ET) does everything marked New or proposed above. It applies on ai/war `5fe900a`, 8 files,
++111/-7, not compiled here. War keeps war, peace, approach, targets, disbanding and upgrades.
+
+Each city log line shows which path decided:
+- `STRIKE LIST - REDIRECT: <what CP chose> -> <the executor's pick>`: the pushOrder gate overrode another path. Any
+  such line is a path the audit should know about.
+- `STRIKE LIST - item / the army / DANGER / LIST WAIT / LIST HOLD`: the executor's own picks.
 
 ### Patch 0048: the lead's pre-flight review of d75dfec (Economy, Nov 6, 11:24am ET)
 - **(2) 0046's PREP saving never took effect.** Since Personality's `553dfdc`, BUILDUP needs no gold, so

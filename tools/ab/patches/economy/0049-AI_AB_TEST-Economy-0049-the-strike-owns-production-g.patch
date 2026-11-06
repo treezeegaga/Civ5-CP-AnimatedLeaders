@@ -1,0 +1,309 @@
+From 9086a87b204ff6ab60bbed02f298bc529650c0b1 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 18:13:58 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0049: the strike owns production, gold,
+ research and policy while it's active
+
+The user's structural fix, via the lead: while a strike is active (PREP, BUILDUP or WAR,
+until OVER), it owns these decisions, gated at the lowest level, with CP cut out.
+New CvPlayer::IsStrikeActive. Per the ownership audit in RESULTS:
+- Production:
+  - The executor runs in WAR too: every city builds the army, and the capital's list
+    stays in PREP and BUILDUP.
+  - CvCity::pushOrder: every new choice of an AI strike city (a push that replaces the
+    queue) becomes the executor's pick whenever it has one, logged "STRIKE LIST -
+    REDIRECT". Appends (operation units), saved re-pushes and humans pass.
+- Gold:
+  - CvCity::CanBuyPlot: no paid tile.
+  - CvMinorCivAI::CanMajorBuyout and CanMajorDiploMarriage: no, while the ban holds
+    (IsStrikeNoWonders).
+  - CvDeal::IsPossibleToTradeItem: no gold, gold per turn or research agreement from an
+    AI strike civ. Peace deals stay War's.
+  - IsGoldPurchaseAllowed: WarmongerHurry's settlers-and-siege rule applies to any strike
+    civ while active, whatever its role's flags (the user: "NO on strike purchases
+    beyond the hurry rules").
+- Research: the plan's list in CvTechAI::ChooseNextTech for a free tech too.
+- Policy: the plan's first tree while active, even after the book ends at war, and that
+  tree is finished (its best adoptable policy first) before a second opens.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvCity.cpp        | 27 ++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvDealClasses.cpp |  6 ++++
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp  |  4 ++-
+ CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp  |  6 ++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp      | 37 +++++++++++++++++++---
+ CvGameCoreDLL_Expansion2/CvPlayer.h        |  2 ++
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp    | 29 +++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvTechAI.cpp      |  7 ++--
+ 8 files changed, 111 insertions(+), 7 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvCity.cpp b/CvGameCoreDLL_Expansion2/CvCity.cpp
+index 4e28bf6..9555f53 100644
+--- a/CvGameCoreDLL_Expansion2/CvCity.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCity.cpp
+@@ -27975,6 +27975,10 @@ bool CvCity::CanBuyPlot(int iPlotX, int iPlotY, bool bIgnoreCost) const
+ {
+ 	VALIDATE_OBJECT();
+ 
++	// AI_AB_TEST (Economy 0049): an AI strike civ buys no tile while its strike is active (the gold is the strike's)
++	if (MOD_AI_AB_TEST && !bIgnoreCost && !GET_PLAYER(getOwner()).isHuman() && GET_PLAYER(getOwner()).IsStrikeActive())
++		return false;
++
+ 	if (/*0*/ GD_INT_GET(BUY_PLOTS_DISABLED) > 0)
+ 		return false;
+ 
+@@ -29330,6 +29334,29 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
+ 	OrderData order;
+ 	bool bValid = false;
+ 
++	// AI_AB_TEST (Economy 0049; the user's structural fix: the strike owns production while it's active). Every new
++	// production choice of an AI strike city (a push that replaces the queue) becomes the strike executor's pick whenever the
++	// executor has one, whatever path chose it. Appends (CP's operation units, War's strike ops), re-pushes of a saved order
++	// and humans pass unchanged
++	if (MOD_AI_AB_TEST && bPop && !bAppend && !bSave && !GET_PLAYER(getOwner()).isHuman() && GET_PLAYER(getOwner()).IsStrikeActive())
++	{
++		OrderTypes eStrikeOrder = ORDER_TRAIN;
++		int iStrikeData = -1;
++		if (GET_PLAYER(getOwner()).GetStrikeListProductionQuiet(this, eStrikeOrder, iStrikeData) && (eStrikeOrder != eOrder || iStrikeData != iData1))
++		{
++			if (GC.getLogging() && GC.getAILogging())
++			{
++				CvString strOut;
++				strOut.Format("%s, STRIKE LIST - REDIRECT: %s %d -> %s", getName().GetCString(), eOrder == ORDER_TRAIN ? "unit" : eOrder == ORDER_CONSTRUCT ? "building" : "order", iData1,
++					eStrikeOrder == ORDER_TRAIN ? GC.getUnitInfo((UnitTypes)iStrikeData)->GetDescription() : GC.getBuildingInfo((BuildingTypes)iStrikeData)->GetDescription());
++				GET_PLAYER(getOwner()).GetCitySpecializationAI()->LogMsg(strOut);
++			}
++			eOrder = eStrikeOrder;
++			iData1 = iStrikeData;
++			iData2 = -1;
++		}
++	}
++
+ 	if (bPop)
+ 	{
+ 		clearOrderQueue();
+diff --git a/CvGameCoreDLL_Expansion2/CvDealClasses.cpp b/CvGameCoreDLL_Expansion2/CvDealClasses.cpp
+index 95bba65..f9013d1 100644
+--- a/CvGameCoreDLL_Expansion2/CvDealClasses.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDealClasses.cpp
+@@ -369,6 +369,12 @@ bool CvDeal::IsPossibleToTradeItem(PlayerTypes ePlayer, PlayerTypes eToPlayer, T
+ 	if (!GET_PLAYER(ePlayer).isAlive() || !GET_PLAYER(eToPlayer).isAlive())
+ 		return false;
+ 
++	// AI_AB_TEST (Economy 0049; the strike owns the gold while it's active): an AI strike civ gives no gold, no gold per turn
++	// and makes no research agreement. Peace deals stay War's
++	if (MOD_AI_AB_TEST && (eItem == TRADE_ITEM_GOLD || eItem == TRADE_ITEM_GOLD_PER_TURN || eItem == TRADE_ITEM_RESEARCH_AGREEMENT) &&
++		!GET_PLAYER(ePlayer).isHuman() && GET_PLAYER(ePlayer).IsStrikeActive() && !IsPeaceTreatyTrade(ePlayer) && !IsPeaceTreatyTrade(eToPlayer))
++		return false;
++
+ 	CvPlayer* pFromPlayer = &GET_PLAYER(ePlayer);
+ 	CvPlayer* pToPlayer = &GET_PLAYER(eToPlayer);
+ 	TeamTypes eFromTeam = pFromPlayer->getTeam();
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index ea347c0..e6a31e4 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3229,7 +3229,9 @@ bool CvEconomicAI::IsGoldPurchaseAllowed(const CvCity* pCity, UnitTypes eUnit, B
+ 	}
+ 
+ 	// WarmongerHurry (the user's rule): a warmonger buys settlers and siege units only
+-	if (bAllowed && kPlayer.IsCandidateWarmonger(FIX_WARMONGER_HURRY))
++	// (0049: and any AI strike civ while its strike is active, whatever its role's flags; the user: "NO on strike purchases
++	// beyond the hurry rules")
++	if (bAllowed && (kPlayer.IsCandidateWarmonger(FIX_WARMONGER_HURRY) || kPlayer.IsStrikeActive()))
+ 	{
+ 		bAllowed = false;
+ 		if (pkUnitInfo)
+diff --git a/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp b/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp
+index 9e07a30..b72b786 100644
+--- a/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvMinorCivAI.cpp
+@@ -13666,6 +13666,9 @@ bool CvMinorCivAI::CanMajorDiploMarriage(PlayerTypes eMajor)
+ 	ASSERT(eMajor >= 0 && eMajor < MAX_MAJOR_CIVS, "Invalid eMajor index");
+ 	if (eMajor < 0 || eMajor >= MAX_MAJOR_CIVS)
+ 		return false;
++	// AI_AB_TEST (Economy 0049): nor a marriage
++	if (MOD_AI_AB_TEST && !GET_PLAYER(eMajor).isHuman() && GET_PLAYER(eMajor).IsStrikeNoWonders())
++		return false;
+ 
+ 	// Can't be already married
+ 	if (IsMarried(eMajor))
+@@ -13703,6 +13706,9 @@ bool CvMinorCivAI::CanMajorBuyout(PlayerTypes eMajor)
+ {
+ 	if (eMajor < 0 || eMajor >= MAX_MAJOR_CIVS)
+ 		return false;
++	// AI_AB_TEST (Economy 0049): no city-state gold, buyouts included, before an AI strike civ's first declaration
++	if (MOD_AI_AB_TEST && !GET_PLAYER(eMajor).isHuman() && GET_PLAYER(eMajor).IsStrikeNoWonders())
++		return false;
+ 
+ 	// We must both be alive and they must have a capital
+ 	if (!GET_PLAYER(eMajor).isAlive() || !GetPlayer()->isAlive() || GET_PLAYER(eMajor).getCapitalCity() == NULL)
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 422242a..f88ca3b 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -35099,6 +35099,11 @@ TechTypes CvPlayer::GetOpeningBookTech() const
+ /// The first policy branch the opening book wants opened
+ PolicyBranchTypes CvPlayer::GetOpeningBookPolicyBranch() const
+ {
++	// AI_AB_TEST (Economy 0049): while the strike is active, the plan's first tree, whether or not the book is (the book
++	// ends at war with any major)
++	if (IsStrikeActive() && GetGrandStrategyAI() && GetGrandStrategyAI()->GetStrikePlan().bValid &&
++		GetGrandStrategyAI()->GetStrikePlan().eFirstPolicyBranch != NO_POLICY_BRANCH_TYPE)
++		return GetGrandStrategyAI()->GetStrikePlan().eFirstPolicyBranch;
+ 	if (!IsOpeningBookActive())
+ 		return NO_POLICY_BRANCH_TYPE;
+ 
+@@ -35130,9 +35135,20 @@ PolicyBranchTypes CvPlayer::GetOpeningBookPolicyBranch() const
+ /// AI_AB_TEST (flag StrikeList, Economy; the user, via the lead: "this is why we looked up expert build orders. literally
+ /// just follow the list."). The strike plan while its lists run: a StrikeList civ from PREP to its declaration (no turn
+ /// limit, and an unrelated war doesn't stop it). NULL otherwise
++/// AI_AB_TEST (Economy 0049; the user's structural fix, via the lead: the strike owns a fixed set of decisions while it's
++/// active, gated at the lowest level, CP cut out). PREP, BUILDUP or WAR, until OVER
++bool CvPlayer::IsStrikeActive() const
++{
++	if (!MOD_AI_AB_TEST || !isMajorCiv() || isHuman() || !GetMilitaryAI())
++		return false;
++	const CvMilitaryAI::StrikeStateTypes eState = GetMilitaryAI()->GetStrikeState();
++	return eState == CvMilitaryAI::STRIKE_PREP || eState == CvMilitaryAI::STRIKE_BUILDUP || eState == CvMilitaryAI::STRIKE_WAR;
++}
++
+ const CvStrikePlan* CvPlayer::GetStrikeListPlan() const
+ {
+-	if (!MOD_AI_AB_TEST || !isMajorCiv() || isHuman() || !UsesCandidateAI(FIX_STRIKE_LIST) || !IsStrikePending())
++	// (0049: WAR too; the capital's list itself runs in PREP and BUILDUP only, WAR builds the army)
++	if (!MOD_AI_AB_TEST || !isMajorCiv() || isHuman() || !UsesCandidateAI(FIX_STRIKE_LIST) || !IsStrikeActive())
+ 		return NULL;
+ 	const CvStrikePlan& kPlan = GetGrandStrategyAI()->GetStrikePlan();
+ 	return kPlan.bValid ? &kPlan : NULL;
+@@ -35246,9 +35262,10 @@ static UnitTypes GetStrikeListArmyUnit(const CvPlayer& kPlayer, const CvStrikePl
+ 	return eFirstTrainable;
+ }
+ 
++static bool s_bStrikeListQuiet = false;	// 0049: the pushOrder gate asks the executor without logging
+ static void LogStrikeList(CvPlayer& kPlayer, const CvCity* pCity, const char* szWhat, const char* szDetail)
+ {
+-	if (!GC.getLogging() || !GC.getAILogging() || !pCity)
++	if (s_bStrikeListQuiet || !GC.getLogging() || !GC.getAILogging() || !pCity)
+ 		return;
+ 	CvString strOut;
+ 	strOut.Format("%s, STRIKE LIST - %s%s%s", pCity->getName().GetCString(), szWhat, szDetail ? " " : "", szDetail ? szDetail : "");
+@@ -35293,7 +35310,8 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 		return false;
+ 	}
+ 
+-	if (pCity->isCapital())
++	// the capital's list in PREP and BUILDUP; in WAR every city builds the army (0049)
++	if (pCity->isCapital() && GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_WAR)
+ 	{
+ 		std::map<int, int> unitsWanted;
+ 		CvString strWait;
+@@ -35367,7 +35385,7 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	}
+ 
+ 	// after the list, and the other cities: a late strike's PREP is economy first (the regular book)
+-	if (kPlan.bLateStrike && GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_BUILDUP)
++	if (kPlan.bLateStrike && GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_PREP)
+ 	{
+ 		bListRuns = false;
+ 		return false;
+@@ -35403,6 +35421,17 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	return false;
+ }
+ 
++/// StrikeList (0049): the executor's pick without logging, for CvCity::pushOrder's gate. False: no pick (the executor
++/// defers, or isn't running)
++bool CvPlayer::GetStrikeListProductionQuiet(CvCity* pCity, OrderTypes& eOrder, int& iData)
++{
++	bool bListRuns = false;
++	s_bStrikeListQuiet = true;
++	const bool bPick = GetStrikeListProduction(pCity, eOrder, iData, bListRuns);
++	s_bStrikeListQuiet = false;
++	return bPick;
++}
++
+ /// StrikeList: research follows the plan's list in order (a prerequisite first when a tech isn't researchable yet). After
+ /// the list, the book's straight line (GetOpeningBookTech)
+ TechTypes CvPlayer::GetStrikeListTech() const
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index f57c892..2884914 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -1936,6 +1936,8 @@ public:
+ 	bool IsStrikePending() const; // AI_AB_TEST Economy, flags EarlyStrike/LateStrike (0040): a strike civ before its strike (state PREP or BUILDUP) // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
+ 	bool IsLateStrikeUnitHold() const; // AI_AB_TEST Economy 0046/0048: a late strike's PREP with net gold under +2: no new combat unit
+ 	bool IsStrikeNoWonders() const; // AI_AB_TEST Economy 0042: no world or national wonder now (a strike civ before its strike)
++	bool IsStrikeActive() const; // AI_AB_TEST Economy 0049: an AI strike civ with its strike under way (PREP, BUILDUP or WAR): the strike owns production, gold, research and policy
++	bool GetStrikeListProductionQuiet(CvCity* pCity, OrderTypes& eOrder, int& iData); // 0049: the executor's pick, unlogged (CvCity::pushOrder's gate)
+ 	const CvStrikePlan* GetStrikeListPlan() const; // AI_AB_TEST Economy, flag StrikeList: the strike plan while its lists run
+ 	bool GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& iData, bool& bListRuns); // flag StrikeList: the next list item
+ 	TechTypes GetStrikeListTech() const; // flag StrikeList: the next tech on the plan's list
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index 497ffff..86cd7b5 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -197,6 +197,35 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 		}
+ 	}
+ 
++	// AI_AB_TEST (Economy 0049): while the strike is active, the plan's first tree is finished before a second opens: its best
++	// adoptable policy (CP's weights) comes first
++	if (!bMustChooseTenet && !bNeedToFinish && pPlayer->IsStrikeActive())
++	{
++		const PolicyBranchTypes eStrikeBranch = pPlayer->GetOpeningBookPolicyBranch();
++		if (eStrikeBranch != NO_POLICY_BRANCH_TYPE && m_pCurrentPolicies->IsPolicyBranchUnlocked(eStrikeBranch) && !m_pCurrentPolicies->IsPolicyBranchFinished(eStrikeBranch))
++		{
++			int iBest = -1;
++			int iBestWeight = INT_MIN;
++			for (int i = 0; i < m_AdoptablePolicies.size(); i++)
++			{
++				const int iElement = m_AdoptablePolicies.GetElement(i);
++				if (iElement < GC.getNumPolicyBranchInfos())
++					continue;
++				CvPolicyEntry* pkPolicy = m_pCurrentPolicies->GetPolicies()->GetPolicyEntry(iElement - GC.getNumPolicyBranchInfos());
++				if (pkPolicy && pkPolicy->GetPolicyBranchType() == (int)eStrikeBranch && m_AdoptablePolicies.GetWeight(i) > iBestWeight)
++				{
++					iBest = iElement;
++					iBestWeight = m_AdoptablePolicies.GetWeight(i);
++				}
++			}
++			if (iBest >= 0)
++			{
++				LogPolicyChoice((PolicyTypes)(iBest - GC.getNumPolicyBranchInfos()));
++				return iBest;
++			}
++		}
++	}
++
+ 	// Loop though the branches adding each as another possibility
+ 	if (!bMustChooseTenet && !bNeedToFinish)
+ 	{
+diff --git a/CvGameCoreDLL_Expansion2/CvTechAI.cpp b/CvGameCoreDLL_Expansion2/CvTechAI.cpp
+index 2f63141..6d5bc19 100644
+--- a/CvGameCoreDLL_Expansion2/CvTechAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvTechAI.cpp
+@@ -213,14 +213,17 @@ TechTypes CvTechAI::ChooseNextTech(CvPlayer *pPlayer, bool bFreeTech)
+ 		return NO_TECH;
+ 
+ 	// AI_AB_TEST: the new AI follows its opening book's tech path early in the game
+-	if (!bFreeTech)
++	// AI_AB_TEST Economy, flag StrikeList: the expert's tech list first (0049: for a free tech too)
+ 	{
+-		TechTypes eListTech = pPlayer->GetStrikeListTech(); // AI_AB_TEST Economy, flag StrikeList: the expert's tech list first
++		TechTypes eListTech = pPlayer->GetStrikeListTech();
+ 		if (eListTech != NO_TECH)
+ 		{
+ 			LogResearchChoice(eListTech);
+ 			return eListTech;
+ 		}
++	}
++	if (!bFreeTech)
++	{
+ 		TechTypes eBookTech = pPlayer->GetOpeningBookTech();
+ 		if (eBookTech != NO_TECH)
+ 		{
+-- 
+2.43.0
+
