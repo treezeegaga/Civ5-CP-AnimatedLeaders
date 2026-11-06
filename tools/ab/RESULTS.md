@@ -3194,7 +3194,10 @@ LEAD: the next block's head is **ai/war b1eb09de** (698525b1 + this). CI to foll
 - **A rename fix** (261d5da8). Personality renamed the field aePolicyOrder -> aePolicyBranches after 0056 was written, so
   0056's four uses wouldn't have compiled.
 698525b1 is green (run 42293781599).
-LEAD: the next block's head is **ai/war 261d5da8**. CI to follow.
+LEAD (4:46pm ET): the combined head the lead asked for is **ai/war 261d5da8**: b1eb09de, Personality's policy-tree order and
+whole-line count, and Economy 0056. ai/personality now equals it (Personality dropped 444151c, its rename back to
+aePolicyOrder), and the final field name is aePolicyBranches. It's ready for your pre-flight review of 791ab9d..261d5da8.
+CI to follow.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
