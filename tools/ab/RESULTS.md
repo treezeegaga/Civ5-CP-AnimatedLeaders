@@ -2882,6 +2882,19 @@ Market rule guard). For your pre-flight review of d75dfec..0d19241c, 056ed90f ho
 above). "Ready for the next block: ai/war 0d19241c green; RoleFixes += StrikeList" follows when its CI is green
 (check about 12:15pm).
 
+**trial23 164B7CEA (ab-d75dfec, the lead's T80 trial), 11:48am ET: Persia's PREP ended with no target. Fixed in f98404e6.**
+- **What happened.** Persia (EarlyStrike) picked the city-state Budapest at T5 and Sydney at T19, built the plan's army,
+  then logged "PREP -> OVER (the army is built and no target is in reach)" at T45. CP opened a window against Denmark,
+  in reach, at T46.
+- **Cause.** Sydney stopped qualifying, most likely when Carthage became its ally (Carthage "gained friend" at T38), and
+  was dropped without a log line. The PREP picker kept a city-state only while FindStrikeCityState still returned it, and
+  never considered majors CP hadn't committed to. So "in reach" for the exit was narrower than the picker.
+- **Fix.** PREP now uses the same targets, in the same order, as BUILDUP's per-turn check: the pinned target while
+  IsStrikeTargetValid, else the nearest major in reach, else the nearest city-state. Drops are logged ("Strike: target X
+  dropped (why)"). BUILDUP's city-state fallback now uses the picker's definition. A DoF partner is not a target.
+LEAD: the trial23 fix is on ai/war at **f98404e6** (after 0d19241c). "Ready for the next block: ai/war f98404e6 green;
+RoleFixes += StrikeList" follows when its CI is green.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
