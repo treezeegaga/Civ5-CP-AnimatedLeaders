@@ -3381,112 +3381,81 @@ logged pair".
   upgrade tech: `a55a585`, compiles (CI run 263 passed, 9:00pm ET; it also covers `d1d4063` and `bed8e14`, whose
   own runs were cancelled by later pushes), ready to merge. The table needs checking against the log.
 
-### Strike plans per civ: spec (Personality, spec only, 2026-11-05 9:11pm ET; revised 9:12pm ET by this machine's clock, a few minutes behind the lead's)
-- **The user (via the lead, about 9:10pm ET):** "it's possible that all aggressive civs need completely individualized
-  openings based on their own unique bonuses". Then (about 9:16pm ET): "like with aztecs i pushed out 3 quick jaguars
-  and went barb hunting. with other warmonger civs like zulu, maybe you build up more of an infrastructure and then try
-  to time an impi attack". Spec only, no code yet: a data-driven default (the power spike above) plus per-civ overrides
-  only where the default is wrong.
-- **Two groups of aggressors:**
-  - **Early spike (EarlyStrike):** the strength comes by about Construction. A military-first capital, the first units
-    hunt barbarians for XP and promotions until the window opens (the user's Jaguars had the +33% ranged defence
-    promotion by the strike), then strike. The opening is Economy's EarlyStrike book; the timing War's.
-  - **Late spike (economy first, strike at a tech):** the strength comes at Metal Casting or later. The normal expansion
-    book and infrastructure first, then a timed build-up for the unique unit and the trait, with its own window. Not the
-    early-strike opening.
-- **Who to start with.** Aggressors in our 80 logged bully games (game and flip, `Role = aggressor`): Denmark 12, Huns 10
-  (the only aggressor with 2 captures), Mongolia 10, Songhai 8, Aztec 6, Inca 6 (1 capture), Japan 4, Ottoman 4,
-  Assyria 4, Celts 4, then Carthage, Greece, England, Zulu, Spain and Germany 2 each. The first six are 52 of the 80.
-  Other civs that can draw the role (warmonger trait, or offence 8 with some leaders): China, Persia, America,
-  Shoshone; Rome only with a high-offence leader.
-- **Quick timing** is the default window (`max(T60, spike + 20)` to declare-by + 15, Standard, x0.67): T40/T50 for a
-  spike by Bronze Working or The Wheel; T44/T54 at Iron Working, Mathematics, Construction or Horseback Riding; T63/T73
-  at Metal Casting; T83/T93 at Chivalry or Civil Service; T103/T113 at Machinery or Steel. The tech columns are my
-  estimates of the CP tech tree; StrategyProfile_Log.csv will give the real ones.
-- **First policy tree:** the user opened Honor, not Liberty, "because of the barb hunting" (Honor: bonus against
-  barbarians, culture from kills). So Honor for every barbarian-hunting early-spike civ; for late-spike civs whatever
-  fits the economy-first plan (Liberty to settle, Tradition to build tall), with Honor first where barbarian camps are
-  part of the trait (Songhai, Germany) or the first units hunt (Mongolia). Economy owns the policy code.
-- **Pre-war use of the first units:** "barb hunting" (XP and promotions, and busy until the window opens), "escort"
-  (settlers and workers), or "none".
-- **Default right?** "yes": the earliest unique land unit is the strength and its timing is good. "partly": right unit
-  and timing, but something else matters too. "wrong core": the default may name the wrong unit as the core.
+### Strike plans per civ: spec (Personality, spec only, 2026-11-05 9:11pm ET; revised 9:50pm ET with the civfanatics research)
+- **Asks** (the user, via the lead, 9:10-9:40pm ET): "it's possible that all aggressive civs need completely
+  individualized openings based on their own unique bonuses"; "like with aztecs i pushed out 3 quick jaguars and went
+  barb hunting. with other warmonger civs like zulu, maybe you build up more of an infrastructure and then try to time
+  an impi attack"; the user opened Honor "because of the barb hunting"; a flexible, not rigid, build order per civ.
+  The plan: a data-driven default (the power spike above) plus per-civ overrides only where it's wrong.
+- **Research:** the lead's civfanatics pass, `tools/ab/STRIKE_PLANS_RESEARCH.md` on `claude/sleepy-hopper-x77moh`
+  (`8f04839`): 10 civs, mostly BNW Deity/Immortal threads at Standard pace, a source per claim, [I] for inference. Turns
+  below are Quick (Standard x0.67). Confidence: good (Huns, Zulu, Mongolia, the generic CB rush), moderate (Aztec,
+  Assyria, Celts, Greece), **low** (Inca, Japan, Songhai). Civs it doesn't cover (Denmark, Ottoman, Carthage, Persia,
+  England, China, Germany, Spain) keep my draft rows, marked "not researched".
+- **Who to start with.** Aggressors in our 80 logged bully games: Denmark 12, Huns 10 (the only aggressor with 2
+  captures), Mongolia 10, Songhai 8, Aztec 6, Inca 6 (1 capture), Japan 4, Ottoman 4, Assyria 4, Celts 4, then Carthage,
+  Greece, England, Zulu, Spain and Germany 2 each.
 
-**Early spike (EarlyStrike)**
+**Rules every strike plan follows** (the research's general patterns, written as priorities with conditions; CP's own
+weights fill everything a plan doesn't name):
+1. **The standard strike is "Archer to Composite Bowman, upgrade and go"** (G1): Archers early, a luxury tech, then
+   Construction; save 70-80 gold per Archer and upgrade the turn Construction lands; 5-7 Composite Bowmen move in. A
+   unique unit replaces part of this (Jaguars as the melee, Slingers as the Archers), not all of it.
+2. **At least 2 melee units** go with every strike, so losing one doesn't stall the capture (G2).
+3. **Target:** the nearest flat, unwalled city within about 8-10 tiles; retarget if it's on a hill, walled and above
+   about 20 defence at arrival (the Inca may take hill cities: they move freely on hills) (G3).
+4. **Cities:** 2-3 before the strike, then annex conquests rather than settle (G4).
+5. **Before the war:** the first units hunt barbarians for XP (and culture or faith where the civ gets it from kills).
+   Stealing a worker by an early declaration is a human trick with a lasting diplomatic cost (G5, G6), so not by
+   default.
+6. **Fall back** to the economy-first plan when no target is in reach by the declare-by turn, when the target walls up
+   and the plan has no siege, when fewer than 2 melee units are left, or when a war on us comes first.
+7. **Policy:** Honor where kills pay (Aztec, Celts) or for the Huns; Liberty for a plain Composite Bowman rush (faster);
+   Tradition for the economy-first civs (G7).
 
-| Civ (bully games) | Strength | Core army; support (upgrade and go) | Quick: open / declare by | Siege | Capital's first ~10 builds | Pre-war use of the first units | Default right? | First policy tree |
-|---|---|---|---|---|---|---|---|---|
-| Huns (10) | Horse Archer (The Wheel; they start with Animal Husbandry), Battering Ram (Bronze Working, the siege); trait: raze at double speed | Horse Archers x3-4 with Battering Rams x2 and a Spearman | T40 / T50 | the Rams are the siege | Warrior, Horse Archer x2, Settler, Worker, Battering Ram x2, Horse Archer, Archer, Settler | barb hunting (Horse Archers) | wrong core: the Ram comes in the same tech column and may be named core with a 33% share; the core is the Horse Archer, the Ram the siege | Honor |
-| Aztec (6) | Jaguar (from the start; forest and jungle bonus, heals on kills) | Jaguars x5 with Archers x4; Archer to Composite Bowman (Construction, about T31) | T40 / T50 | none unless walled | Jaguar x3, Worker, Settler, Archer x4, Jaguar x2 (the user's) | barb hunting (the first 3 Jaguars) | yes (calibrated on the user's game) | Honor |
-| Inca (6) | Slinger (Archery; ranged, withdraws from melee) | Slingers x4-5 with a Warrior or Spearman; Slinger to Composite Bowman (Construction) | T40 / T50 | none unless walled | Warrior, Slinger x2, Settler, Worker, Slinger x2, Spearman, Settler, Slinger | barb hunting (Slingers with the Warrior) | yes | Honor |
-| Assyria (4) | Siege Tower (Mathematics); trait: a tech from each captured city | Siege Towers x2, Composite Bowmen x3, Spearmen or Swordsmen x2; Archer to Composite Bowman (Construction) | T44 / T54 | the Towers are the siege | Warrior, Settler, Worker, Settler, Archer x3, Siege Tower x2, Spearman | barb hunting (Archers) | yes; 33% core share (siege) is right | Honor |
-| Celts (4) | Pictish Warrior (Bronze Working; a Spearman with pillage faith); trait faith from forests | Pictish Warriors x3 with Archers x2; Archer to Composite Bowman (Construction) | T40 / T50 | none unless walled | Warrior, Settler, Worker, Pictish Warrior x3, Archer x2, Settler, Pictish Warrior | barb hunting (Pictish Warriors) | partly: unit right, but a religion civ that is the aggressor only with a high-offence leader | Honor (Tradition with an early pantheon) |
-| Carthage (2) | African Forest Elephant (Horseback Riding); trait: free harbours, crossing mountains | Forest Elephants x3 with Composite Bowmen | T44 / T54 | catapults if walled | Warrior, Settler, Worker, Settler, Forest Elephant x3, Archer x2, Settler | barb hunting (Elephants) | yes | Honor |
-| Greece (2) | Hoplite (Bronze Working), Companion Cavalry (Chivalry); trait city-state influence | Hoplites x3 with Archers x2; Archer to Composite Bowman (Construction) | T40 / T50 | none unless walled | Warrior, Settler, Worker, Hoplite x3, Archer x2, Settler, Hoplite | barb hunting (Hoplites), which also frees city-states' quests | yes | Honor |
-| Persia (0) | Immortal (Bronze Working; heals faster); trait golden ages | Immortals x3 with Archers x2; Archer to Composite Bowman (Construction) | T40 / T50 | none unless walled | like Greece, Immortals for Hoplites | barb hunting (Immortals heal fast) | yes | Honor |
+**Early strike (EarlyStrike book)**
 
-**Late spike (economy first, strike at a tech)**
+| Civ (bully games) | Strength | Opening priorities (flexible) | Strike: core and support (upgrade and go) | Quick: open / declare by | Siege | Policy | Pre-war use | Default right? | Confidence |
+|---|---|---|---|---|---|---|---|---|---|
+| Huns (10) | Horse Archer (The Wheel, no Horses), Battering Ram (Bronze Working, the siege); start with Animal Husbandry | Scout, Monument, then Horse Archers continuously once The Wheel is in, a Warrior or Ram as needed; 1-2 cities, then annex | 5 Horse Archers + 1-3 Rams + 1 melee; no upgrades | T20 / T34 (army ~T30, capitals T40-50 Standard) | the Rams | Honor | barbarians; city-states with Rams if no civ is met | **wrong**: timing too late (T40/T50) and the Ram may be named core | good |
+| Aztec (6) | Jaguar (no tech; forest/jungle, heals on kills); culture per kill | 2-3 Jaguars first (they replace the Scout), then Monument or Granary, Settler, Archers; 2-3 cities | ~6 Jaguars + 3-4 Composite Bowmen (Construction), or 2 Catapults | T35 / T45 (the user declared T41-50) | none unless walled | Honor | barbarians in groups of 2-3 (XP and culture) | partly: the window is right; the plan waits for Construction, not just the Jaguar | moderate |
+| Celts (4) | Pictish Warrior (Bronze Working; +20% outside own land, faith per kill) | Scout, Monument, Pictish Warrior x2 for barbarians, Settler, then Pictish Warriors and Archers; 2-3 cities | 4-6 Pictish Warriors + 2-3 Archers or Composite Bowmen, fighting on enemy soil | T35 / T45 | none early | Honor (contested; Tradition or Liberty common) | barbarians for faith (pantheon) | yes | moderate |
+| Greece (2) | Hoplite (Bronze Working), Companion Cavalry (Horseback Riding) | Monuments, then units; Bronze Working and Archery, Horseback Riding, Construction; 2-3 cities | Composite Bowmen to drop the walls, Hoplites to take the city, Companions against units in the field | T34 / T44 | none unless walled | Honor if rushing, else Tradition | city-state quests (barbarians, undefended city-states) | yes | moderate |
+| Inca (6) | Slinger (Archery; withdraws before melee, kept as a Composite Bowman); free hill movement | Scout, Monument or Scout, Granary, Settler, then Slingers; 2-3 cities | 5-7 Composite Bowmen (upgraded Slingers) + 2 melee; hill targets allowed | T40 / T47 | none unless walled | Tradition | barbarians with clear tiles behind | partly: an economy civ by nature; fall back to economy at Construction + 10 turns | **low** (no Inca rush source) |
 
-| Civ (bully games) | Strength | Plan: economy first, strike at | Core army; support | Quick: open / declare by | Siege | Pre-war use of the first units | Default right? | First policy tree |
-|---|---|---|---|---|---|---|---|---|
-| Denmark (12) | trait: embarking and landing cost no moves, pillage for free (a raider); Berserker (Metal Casting) | strike at Metal Casting, from the sea | Berserkers and Swordsmen landing next to the target; Composite Bowmen (Construction) to Crossbowmen (Machinery) | T63 / T73 | catapults if walled | escort, then pillage raids (the raider's loot) | partly: unit and timing right; the coastal landing isn't modelled | Liberty (settle the coast), Honor second |
-| Mongolia (10) | trait: mounted units +1 move, +30% against city-states; Keshik (Chivalry), Khan | strike at Chivalry (Keshiks); before that, city-states with Horsemen | Keshiks x4 with a Khan and Pikemen; Horseman to Knight or Keshik | T83 / T93 (city-states earlier) | none for city-states, trebuchets against majors | barb hunting (Horsemen), then city-states | partly: the Keshik timing is right; the trait's city-state targets aren't modelled | Honor (barb hunting, then city-states) |
-| Songhai (8) | trait: triple gold from barbarian camps and from capturing cities; Mandekalu Cavalry (Chivalry; no penalty attacking cities) | strike at Chivalry (Mandekalu) | Mandekalu x4 with Pikemen | T83 / T93 | none (Mandekalu take cities) | barb hunting (Horsemen; the camps pay triple gold) | partly: the strike is right; the camp gold is the trait's early game | Honor (the camps pay triple gold) |
-| Japan (4) | trait: units fight at full strength when damaged; Samurai (Steel), Zero | strike at Steel (Samurai) | Samurai x3-4 with Crossbowmen (Machinery) and Trebuchets | T103 / T113 | trebuchets if walled | barb hunting (damaged units still fight at full strength) | partly: right unit; the trait would let an earlier army work too | Tradition, Honor second |
-| Ottoman (4) | Sipahi (Chivalry), Janissary (Gunpowder); trait naval | strike at Chivalry (Sipahis) | Sipahis x3 with Pikemen and Crossbowmen (Machinery) | T83 / T93 | trebuchets if walled | escort | yes | Liberty |
-| Zulu (2) | trait: melee upkeep halved, faster promotions; Impi (Civil Service), Ikanda | strike at Civil Service (Impi), the user's example | Impis x4-5 (cheap upkeep, Ikanda promotions) with Composite Bowmen; Spearman to Impi | T83 / T93 | catapults if walled | barb hunting (faster promotions) | yes (the user: infrastructure, then time the Impi) | Tradition (infrastructure first), Honor second |
-| Germany (2) | trait: barbarian camp units may join, land unit upkeep cut; Landsknecht (Civil Service) | strike at Civil Service (Landsknechts, bought) | Landsknechts and Pikemen with Crossbowmen | T83 / T93 | catapults if walled | barb hunting (camps can join the army) | partly: unit and timing right; the camp conversion is the trait's early game | Honor (camps can join the army) |
-| England (2) | Longbowman (Machinery; range 3), Ship of the Line | strike at Machinery | Longbowmen x4 with Pikemen | T103 / T113 | none needed (Longbows outrange the city) | escort | yes, late | Liberty |
-| China (0) | Chu-Ko-Nu (Machinery) | strike at Machinery | Chu-Ko-Nus x4 with Pikemen | T103 / T113 | trebuchets if walled | escort | yes, late | Tradition |
-| Spain, America, Shoshone (2, 0, 0) | Tercio and Conquistador; Minuteman; Comanche Riders | after T120 Quick | none in a T150 test | T120+ | - | escort | too late for a T150 aggressor role | Liberty |
+**Late, timed strike (economy first, units pre-built, upgrade and go at the tech)**
 
-- **Openings are priorities with conditions, not fixed queues** (the user, via the lead, about 9:40pm ET: a flexible,
-  not rigid, build order for each aggressive civ). The capital build lists in the tables are examples of what the rules
-  give on a typical map, not queues. CP's own weights fill everything the plan doesn't name. One rule set for every
-  early-spike civ, with per-civ numbers:
-  1. **Units first** while a barbarian camp or a neighbour's city is within reach (about 8 tiles), until N core units
-     are out.
-  2. **A settler** once N core units are out (a worker first if the capital has no worker and an improvable luxury or
-     bonus resource).
-  3. **At most K cities** before the strike; past K, no settlers until the strike is over.
-  4. **Support units** (ranged or the siege unit) up to the plan's mix once the core is out, and the upgrade tech
-     researched before the window opens.
-  5. **Fall back to the late plan** (the normal book, economy first) if no target is in reach by turn X, if the target
-     has walls and the plan has no siege, or if a war on us comes first.
+| Civ (bully games) | Strength | Before the strike | Strike: core and support | Quick: open / declare by | Siege | Policy | Pre-war use | Default right? | Confidence |
+|---|---|---|---|---|---|---|---|---|---|
+| Mongolia (10) | Keshik (Chivalry), Khan; mounted +1 move, +30% against city-states | Scout, Scout, Granary, Shrine, Chariot Archers, Settlers; 2-3 cities; pre-build Chariot Archers to upgrade | 8+ Keshiks (upgraded Chariot Archers) + 2 melee | T62 / T70 (Chivalry T92-105 Standard) | Khans; Trebuchets optional | Honor (or Tradition then Honor) | barbarians with Chariot Archers, kept alive for promotions | partly: the window should open **at** Chivalry (units pre-built), not 20 turns after | good |
+| Songhai (8) | Mandekalu Cavalry (Chivalry; no city-attack penalty); triple gold from camps and captures | Scout, Warriors, Settler; Horsemen clear camps and the gold buys workers and upgrades; 2 cities | 5-8 Mandekalu (upgraded Horsemen) + 2-3 Crossbowmen; 2 defenders stay home | T54-57 / T64 | optional | Honor (or Liberty) | barbarian camps (triple gold) | partly: open at Chivalry; the camp gold is the pre-war plan | **low** (main source vanilla) |
+| Zulu (2) | Impi (Civil Service), Ikanda; melee upkeep -50%, faster promotions | Scout, Monument, Scout, Granary, Archers x3, Worker, Pyramids, Settlers, Ikanda; 3-4 cities. An XP war before T40 without taking cities | wave 1 at T60-67: 6-10 Composite Bowmen or Crossbowmen + 3-8 Spearmen or Impi; Spearmen to Impi at Civil Service (~T77) | T60 / T67 | usually none | Liberty (3-4 cities) or Tradition | XP war on the target's units or a city-state | partly: the first wave is ranged-led before the Impi (default T83/T93 is late) | good |
+| Assyria (4) | Siege Tower (Mathematics; +50% to adjacent units against the city); a tech per captured city | Scout, Scout, Temple of Artemis, Archer, Settler, Granary, Composite Bowmen, Siege Tower, Royal Libraries; 2 cities | Composite Bowmen + 1-2 Siege Towers + 1-2 melee; more Composite Bowmen against strong melee defenders | T54 / T74 (T80-110 Standard) | the Towers | Tradition | none to speak of | **wrong**: a late strike (after Temple of Artemis and Royal Libraries), not T44/T54 | moderate |
+| Japan (4) | Samurai (Steel); fight at full strength when damaged | Tradition, 3 cities, National College; pre-build Swordsmen (Iron) and save 100 gold each | 6-8 Samurai (upgraded Swordsmen) + 3-4 Crossbowmen + 1-2 Trebuchets if walled | T64 / T70 (Steel T95-105 Standard) | Trebuchets if walled | Tradition | barbarians with Swordsmen | partly: open at Steel; my Steel estimate (T90 Quick) may be late | **low** |
+| Denmark (12) | Berserker (Metal Casting; amphibious); landing and pillage cost no moves | normal book; pre-build Swordsmen | Berserkers and Swordsmen landing from the sea + Composite Bowmen | T63 / T73 | catapults if walled | Liberty, Honor second | escort, then pillage raids | partly (landing not modelled) | not researched |
+| Ottoman (4), England (2), China (0) | Sipahi (Chivalry); Longbowman, Chu-Ko-Nu (Machinery) | normal book | Sipahis + Pikemen + Crossbowmen; Longbowmen or Chu-Ko-Nus + Pikemen | at the tech | Trebuchets if walled (Longbows outrange) | Liberty; Liberty; Tradition | escort | yes, late | not researched |
+| Germany (2) | Landsknecht (Civil Service, bought); barbarian camps may join, lower upkeep | normal book | Landsknechts + Pikemen + Crossbowmen | at the tech | Catapults if walled | Honor (camps) | barbarian camps | partly | not researched |
+| Carthage (2), Persia (0) | Forest Elephant (Horseback Riding); Immortal (Bronze Working) | Composite Bowman timing (rule 1) with the unique unit as the melee | the unit + Composite Bowmen | T35 / T45 | none unless walled | Liberty or Honor | barbarians | yes | not researched |
+| Spain, America, Shoshone | Tercio and Conquistador; Minuteman; Comanche Riders | - | - | after T120 | - | - | escort | too late for a T150 aggressor | not researched |
 
-  | Civ | N core units before the first settler | K cities before the strike | Fall back by (Quick) | Notes |
-  |---|---|---|---|---|
-  | Aztec | 3 Jaguars (the user's) | 2 | T50 | Jaguars hunt barbarians in forest and jungle |
-  | Huns | 2 Horse Archers | 3 | T50 | Rams after the first settler; they start with Animal Husbandry |
-  | Inca | 2 Slingers | 3 | T50 | Slingers hunt with a Warrior in front |
-  | Greece | 2 Hoplites (Bronze Working first) | 3 | T50 | barbarian camps also free city-states' quests |
-  | Celts | 1 Pictish Warrior | 3 | T50 | a pantheon may come first (forest faith) |
-  | Persia | 2 Immortals (Bronze Working first) | 3 | T50 | |
-  | Assyria | 1 Archer, then a settler | 3 | T54 | Siege Towers after Mathematics |
-  | Carthage | 1 Warrior, then a settler | 3 | T54 | Forest Elephants after Horseback Riding |
-
-  Late-spike civs use the normal book with the same rules from their window's build-up (15 turns before it opens),
-  with K = no limit. These numbers are drafts until the lead's civfanatics research is in.
-- **What this means for the default.**
-  1. **The split follows the spike turn the default already has** (`bMilitaryFirst`, a spike by Bronze Working or The
-     Wheel, and units through Construction or Horseback Riding): early-spike civs get the EarlyStrike book and barb
-     hunting; late-spike civs keep the normal book and get a timed window at their tech. This needs only a flag on the
-     profile, "early spike" (spike by about T47 Standard), in place of today's `bMilitaryFirst` cut at T30.
-  2. **One wrong core (Huns):** prefer a non-siege unique unit as the core when two come in the same tech column, and
-     mark the siege one as the siege.
-  3. **Trait early games** (Songhai's camp gold, Germany's camp conversion, Mongolia's city-states, Denmark's raids):
-     these change the pre-war use of the first units, not the strike timing. They're overrides in the pre-war column.
-  4. **Too late for T150** (Spain, America, Shoshone): the aggressor role in a T150 test should go to a civ with a spike
-     by Civil Service or Chivalry.
-- **For War, through the lead:** barb hunting before the war, for every early-spike civ (Huns, Aztec, Inca, Assyria,
-  Celts, Carthage, Greece, Persia) and for these late-spike civs: Mongolia, Songhai, Japan, Zulu and Germany. Escorts
-  for Denmark, Ottoman, England, China.
-- **For Economy, through the lead:** the build orders in the early-spike table, for its EarlyStrike book, and the
-  first policy tree column (Honor for early-spike civs).
-- **Next, once the lead agrees:** 1) the profile's "early spike" flag at about T47 Standard and the Huns' core-unit fix;
-  2) a pre-war-use field (barb hunting, escort) from the trait and spike group; 3) check every row against
-  StrategyProfile_Log.csv from a game on this build.
-- **Status:** spec, no code; the code waits for the lead's civfanatics research and the first EarlyStrike block.
+- **What this changes in the data-driven default** (when the code comes):
+  1. **The window opens at the upgrade, not 20 turns after the spike.** Every researched plan pre-builds the units and
+     strikes on the turn the key tech lands: Construction for the Composite Bowman timing (Aztec, Celts, Greece, Inca),
+     Chivalry (Mongolia, Songhai), Civil Service (Zulu's Impi), Steel (Japan). So: open at the later of the spike and the
+     upgrade tech (`iUpgradeTurn` already exists), declare within about 10 turns. The T60 Standard floor goes.
+  2. **No-upgrade early civs strike sooner**: the Huns' army is ready about T20 Quick; open at the spike + 5.
+  3. **A siege unique unit isn't the core** (Huns' Ram, Assyria's Siege Tower): the core is the other unit or the
+     Composite Bowmen, and the siege unit is the siege.
+  4. **Assyria and Zulu are late civs** in practice, though their unique units come early (Mathematics) or the trait
+     helps early: overrides.
+  5. **Policy per civ** (column above), not Honor for every early civ.
+- **Check against the draft N/K/X numbers:** the research confirms 2-3 cities before the strike for every civ (K = 2 for
+  the Huns and the Aztec, 3 otherwise) and 2-3 core units first for the Aztec (N = 3); the Huns build Horse Archers
+  continuously after Scout and Monument (N = 2 is fine); the fall-back turn moves with the declare-by turn above.
+- **For War, through the lead:** rules 2, 3 and 6 (two melee, target choice, fall-back), the pre-war use column, and
+  the window change (open at the upgrade tech). **For Economy:** the opening priorities and policy columns, and gold
+  saved for upgrades (rule 1).
+- **Status:** spec, no code. The code split with War and Economy comes after the first EarlyStrike block is in.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
