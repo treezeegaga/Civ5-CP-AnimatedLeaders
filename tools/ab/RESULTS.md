@@ -1950,7 +1950,7 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
-### Patch 0059: the lead's review of 261d5da..c89ed4a (Economy, Nov 6, 5:36pm ET)
+### Patch 0059: the lead's review of 261d5da..c89ed4a (Economy, Nov 6, 5:35pm ET)
 - **(2) 0058's WAR income redirected every city.** It brought back the every-city redirect that 0057 had removed, and
   pushOrder swapped CP's walls and defenders for Markets and Caravans. Now it runs in the capital only.
 - **(4) The policy fallback fired too early.** The fallback tree also opened when the next order tree was only locked
