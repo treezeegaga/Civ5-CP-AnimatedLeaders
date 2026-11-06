@@ -3474,7 +3474,26 @@ weights fill everything a plan doesn't name):
   is the siege, with Archers as the core); support ranged or melee to balance; the profile's upgrade tech; N 2, K 3;
   open when the later of the spike and the upgrade lands, + 5; declare within 10; fall back 5 later; Liberty for an
   early spike, CP's choice otherwise. Economy's book and War's strike read it next (the lead's order of work).
-- **Status:** `221fb3e`, then the Inca's Catapults in `0356f6b`, CI pending. Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
+- **The five expert rows are final** (checked against the research, 10:00pm ET). The live code reads Economy's
+  `CvPlayer::GetEarlyStrikePlan`, whose own rows came from my first draft; the lead has asked Economy to read
+  `GetStrikePlan` instead. Field by field, `CvEarlyStrikePlan` from `CvStrikePlan`: `eCore` = `eCoreClass`, `iCoreTotal` =
+  `iCoreTarget` (all core units, the N before the settler included), `iCoreBeforeSettler` = `iCoreBeforeSettler`,
+  `eSupport` = `eSupportClass`, `iSupportTotal` = `iSupportTarget`, `eSiege` = `eSiegeClass` (a siege the plan always
+  brings; otherwise siege only against walls, `bSiegeOnlyIfWalled`), `iSiegeTotal` = `iSiegeTarget`, `iMaxCities` =
+  `iMaxCitiesBeforeStrike`, `iFallbackTurn` = `iFallbackTurn`, `eFirstTree` = `eFirstPolicyBranch` (NO_POLICY_BRANCH_TYPE:
+  CP's choice). `CvStrikePlan` adds the upgrade tech and gold per unit, the open and declare-by turns, and barbarian
+  hunting. Where Economy's rows differ today:
+  - Huns: core Horse Archer x4 (plan x5), support Archer x1 (plan Warrior x1: Horse Archers are ranged, and a city needs
+    melee to take it), K 3 (plan 2: the research's 1-2 cities, then annex);
+  - Aztec: core x5 (plan x6, the research's ~6 Jaguars);
+  - Inca: support Spearman x1 (plan x2, two melee), no siege (plan Catapult x2 always, the user's call), Honor (plan
+    Liberty);
+  - Greece: Honor (plan Liberty), core x4 (plan Hoplite x3 with Archer x5: Composite Bowmen drop the walls, Hoplites
+    take the city);
+  - Celts: N 1 (plan 2: the research's Pictish Warrior x2 for barbarians, then a settler), core x4 and Archer x2 (plan
+    x5 and x3).
+- **Status:** `221fb3e` and the Inca's Catapults (`0356f6b`) merged into `claude/ab-c1` (`03bbc90`); CI pending on
+  `0356f6b`. Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
