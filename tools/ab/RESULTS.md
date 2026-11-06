@@ -3609,6 +3609,23 @@ weights fill everything a plan doesn't name):
   and another after the AI's tech arrives would have seen different lists (a possible multiplayer desync). And the
   Market rule is skipped when the Market's tech couldn't go on a full research list (it would have pushed every combat
   unit to the end). Compile: `553dfdc` run 332, `d43fece` run 335, `f8f2de7` run 336, `99d3ced` run 340.
+- **A full policy-tree order** (the user, watching PC 1's Aztec aggressor in `168C0544`: "the aztecs (the aggressor)
+  went aesthetics? wtf"; the plan set only the first tree). `f6952dd`: every strike plan has `aePolicyOrder` (the
+  ideology slot included) and a never-list, `aeNeverBranches`: Aesthetics and Piety, since no research source names
+  either for any of these civs. First trees from the research; the rest [I], a war economy:
+
+  | Plans | Tree order |
+  |---|---|
+  | Huns, Aztec, Celts, Mongolia | Honor, Tradition, Commerce, Rationalism, Exploration, Autocracy |
+  | Greece | Liberty, Honor, Patronage, Commerce, Rationalism, Autocracy |
+  | Inca, Zulu | Liberty, Honor, Commerce, Rationalism, Exploration, Autocracy |
+  | Assyria, China | Tradition, Honor, Rationalism, Commerce, Exploration, Autocracy |
+  | Japan | Tradition, Honor, Commerce, Rationalism, Exploration, Autocracy |
+  | Songhai | Honor, Liberty, Commerce, Rationalism, Exploration, Autocracy |
+  | generic rush, early defaults [I] | Liberty, Honor, Commerce, Rationalism, Exploration, Autocracy |
+  | late defaults [I] | Tradition, Honor, Commerce, Rationalism, Exploration, Autocracy |
+
+  Economy's policy gate takes the trees in this order and never opens a never-list tree.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
   (the ruling, no wonders) compiles (CI run 318; `da1a760` run 305, `184fe09` run 313). Economy's book needs to treat `bGenericRush` like an early strike.
 
