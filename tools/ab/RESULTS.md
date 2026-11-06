@@ -1950,6 +1950,59 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Strike ownership audit: production, gold, research, policy (Economy, Nov 6, 1:20pm ET; read on ai/war `5fe900a`)
+The user's structural fix: while a strike is active (PREP, BUILDUP, WAR, until OVER), the strike owns these decisions.
+Each is gated at the lowest level, so CP's systems can't override it. "Today" means the gates on ai/war `5fe900a`.
+"Strike active" means War's strike state is PREP, BUILDUP or WAR. Today's gates mostly key on PREP and BUILDUP only
+(`IsStrikePending`), or on the ban held until the first declaration (`IsStrikeNoWonders`).
+
+**(6) What strike cities produce**
+
+| Path (AI) | Function | Today | Proposed lowest gate |
+|---|---|---|---|
+| City's production choice | CvCityAI::AI_chooseProduction → StrikeList executor (0041), then the book, then CvCityStrategyAI::ChooseProduction | Executor first in PREP and BUILDUP only. In WAR, CP chooses | Executor active in WAR too: army only (core, support, siege), plus a defender for a city in danger |
+| ChooseProduction's everything-vetoed fallback | CvCityStrategyAI.cpp ~997 | Wonders filtered (0042) | Covered by canConstruct (0044) and the pushOrder gate below |
+| City specialization's wonder | CvCityAI ~110-220 (GetNextWonderDesired) | Gated (0039/0042), and canConstruct (0044) | canConstruct (done) |
+| Great Engineer's wonder | CvHomelandAI ~4683-4783 | Gated (0042), and canConstruct | canConstruct (done) |
+| Units for CP operations | CvCity::CheckForOperationUnits (append, or purchase) | **Ungated** | Leave the appends (War's strike ops use them). Purchases go through IsCanPurchase |
+| Queue re-push | CvCity::popOrder → pushOrder(bSave) | n/a (repeats an order already chosen) | none |
+| Purchase into production | CvCity::PurchaseUnit / PurchaseBuilding → pushOrder | IsCanPurchase gate | IsCanPurchase (done) |
+| Spaceship / Utopia | CvPlayerAI::AI_doSpaceshipAndUtopiaProduction | n/a this early | none |
+| **Any new choice** | **CvCity::pushOrder with bPop** (a new production choice) | **none** | **New:** an AI strike civ's new choice is redirected to the executor's pick whenever the executor has one. Appends (operations) and re-pushes pass |
+| Wonders, any path | CvCity::canConstruct | Gated (0044, until the first declaration) | done |
+
+**(7) Gold**
+
+| Path (AI) | Function | Today | Proposed lowest gate |
+|---|---|---|---|
+| Every gold purchase or hurry (DoHurry, WarChest, BuyExpansionSettler, CheckForOperationUnits, military emergency buys) | CvCity::IsCanPurchase → CvEconomicAI::IsGoldPurchaseAllowed | WarmongerHurry (settlers, siege), NoObsoleteHurry. Early-strike book: no hurries (CvEconomicAI ~3447). Late BUILDUP: none (~3454) | IsGoldPurchaseAllowed: one rule for strike active. Settlers, siege and the plan's core, support and siege units only. Nothing else |
+| Tiles | CvCity::BuyPlot via CvEconomicAI::DoPlotPurchases | EarlyStrikeSmallEmpire, LateStrikeSaving (in DoPlotPurchases) | **CvCity::CanBuyPlot**: no paid tile while strike active |
+| City-state gifts | CvMinorCivAI::DoGoldGiftFromMajor | Gated (0044) | done |
+| Gift saving | CvEconomicAI::StartSaveForPurchase(MINOR_CIV_GIFT) | Gated (0044) | done |
+| Buyout and marriage (Austria) | CvGame::DoMinorBuyout, CvMinorCivAI::DoBuyout | Diplomacy loop only (0039) | **CvMinorCivAI::CanMajorBuyout**: no while the ban holds |
+| Gold given in deals (lump sum, per turn, research agreements) | CvDeal::IsPossibleToTradeItem | **Ungated** | **New:** a strike AI gives no gold or GPT and makes no research agreement while strike active. Peace deals stay with War |
+| Unit upgrades | CvUnit::DoUpgrade via Homeland, Tactical, Army | War's upgrade hold | War's (upgrade and go) |
+| Faith purchases | CvReligionClasses | n/a (faith, not gold) | none |
+
+**(8) Research**
+
+| Path (AI) | Function | Today | Proposed lowest gate |
+|---|---|---|---|
+| Normal research | CvPlayerAI::AI_chooseResearch → CvTechAI::ChooseNextTech | StrikeList techs (0041) in PREP and BUILDUP; then the book line (0029) | ChooseNextTech: plan list while strike active |
+| **Free techs** (policies, religion, Great Scientist, ruins, team) | CvPlayerAI::AI_chooseFreeTech → ChooseNextTech(bFreeTech) | **Ungated**: the list is skipped when bFreeTech | ChooseNextTech: the same list for a free tech |
+| A teammate's research | CvPlayerAI::AI_chooseResearch (~600) | n/a (no teams in our games) | none |
+
+**(9) Policy**
+
+| Path (AI) | Function | Today | Proposed lowest gate |
+|---|---|---|---|
+| First tree | CvPlayerPolicies ~6256 → CvPolicyAI::ChooseNextPolicy → GetOpeningBookPolicyBranch | Only while the opening book is active, which turns false at war with any major | ChooseNextPolicy: plan's eFirstPolicyBranch while strike active, whatever the book |
+| Later picks | ChooseNextPolicy (CP's weights) | CP | Finish the first tree before opening a second while strike active |
+| Ideology | CvPolicyAI::DoChooseIdeology | n/a this early | none |
+
+**Patch 0049** (next) does everything marked New or proposed above. War keeps war, peace, approach, targets,
+disbanding and upgrades.
+
 ### Patch 0048: the lead's pre-flight review of d75dfec (Economy, Nov 6, 11:24am ET)
 - **(2) 0046's PREP saving never took effect.** Since Personality's `553dfdc`, BUILDUP needs no gold, so
   `IsLateStrikePrepSaving` equalled the PREP → BUILDUP condition and held for a turn at most. It is removed, and BUILDUP
