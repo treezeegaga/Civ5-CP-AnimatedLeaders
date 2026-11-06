@@ -3011,6 +3011,23 @@ now the combined head.
 LEAD: the combined head is **ai/war 33ef2159** (5fe900a1, b9dd1b77, Economy 0049, Economy 0050), for your pre-flight review
 of 0cb5402..33ef2159. The Aztec 169CA418 read (Ur, T58-T77) follows when its logs land.
 
+**The lead's pre-flight review of the ownership gates (1:26pm ET): War's findings fixed in ece1822b.**
+1. **No fight to the death.** No-retreat now releases when a city of ours is lost since the war began, our capital is in
+   danger of falling, or the war state is NEARLY_DEFEATED. DEFENSIVE is left out on purpose: it is the abort gate 4
+   refuses. No-retreat also requires the target alive and at war with us (finding 6).
+2. **Deals.** The peace-treaty and third-party-peace items are refused when CvTeam::IsStrikePeaceRefusedWith holds, so no
+   gold moves and setForcePeace isn't set for a peace that makePeace would refuse.
+3. **WAR ends with its purpose:** OVER once a city is taken (the war goes on as CP's), or at peace with the target, or
+   with the target gone.
+4. **Only an AI's own call is gated** (the originating player). Lua, human teammates, vassal liberation and the
+   independence war pass.
+7. **Homeland's gifts** skip strike units.
+- **Also found:** AB_COUNT_CITIES_CAPTURED counts captures from majors only, so a city-state strike's capture (Ur,
+  Panama City) never registered for no-retreat or the exits. GetStrikeCaptureCount now adds the city-state captures.
+  **The expert_block "captured" column reads the same counter**, so city-state captures may be missing from the per-civ
+  tables; I'll check the script.
+LEAD: the combined head is now **ai/war ece1822b** (33ef2159 + these fixes). "Ready" follows when CI is green.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
