@@ -2723,6 +2723,10 @@ on the plan's core and support at their counts, as the units they become at the 
 LEAD: the strike decides "can the army take the city" with the game's damage math (ddf5412c), not a ratio, and has no
 turn limit anywhere. CI to follow.
 
+**With a buffer (the user: "you probably want a little buffer"; ai/war a5245367):** the calculation counts our damage at
+80% and the city's damage to us at 125%. A city counts as takeable only if it still falls with the dice against us,
+covering what expected values leave out: the garrison soaking damage, turns out of position, and bad rolls.
+
 **Persia's 73-turn BUILDUP (the lead; bullygreedy21 15A7D14F, ab-f939c50; logs not pushed yet, so this is from the
 code):** city-state targets only. BUILDUP opened at T56 against Wellington; no declaration until a war on Ethiopia at
 T129 with 7 land units.
