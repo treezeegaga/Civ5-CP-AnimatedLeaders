@@ -3199,6 +3199,17 @@ whole-line count, and Economy 0056. ai/personality now equals it (Personality dr
 aePolicyOrder), and the final field name is aePolicyBranches. It's ready for your pre-flight review of 791ab9d..261d5da8.
 CI to follow.
 
+**bullygreedy24 1762140E (Assyria, LateStrike; the lead, 4:59pm ET): PREP -> OVER at T61, "the core unit is obsolete". Fixed
+in c7eed909.**
+- **What happened.** The core is the Archer and the upgrade tech is Construction, which obsoletes the Archer. That is the
+  plan (upgrade and go to Composite Bowmen), but the exit read it as the end. The generic rush (core Archer) had the same
+  risk. After the OVER, CP's own wars (T74, T142) ran instead of the strike.
+- **Was it still in 261d5da8?** Yes: one check, in UpdateStrikeState. The profile's window estimate in CvGrandStrategyAI
+  only shortens a planning window.
+- **Fix.** IsStrikeCoreLineObsolete walks the core's whole upgrade line, as Economy 0047 and Personality's whole-line count
+  do. The strike ends only once every unit on the line is obsolete.
+LEAD: the head for the pre-flight review and trial is now **ai/war c7eed909** (261d5da8 + this). CI to follow.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
