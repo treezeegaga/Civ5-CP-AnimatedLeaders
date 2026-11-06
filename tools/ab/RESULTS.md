@@ -2624,6 +2624,17 @@ CI is running.
 LEAD: the next block is now ai/war 32e152c4 (adds Personality b8ac94f and Economy 0043). "Ready for the next block"
 follows when CI is green; RoleFixes += StrikeList. The PCs keep the STOP until then.
 
+**The generic rush as an early striker (the lead's check, 8:39am ET).** A bGenericRush civ (no spike in reach) plays the
+early strike:
+- IsEarlyStrikeCiv keys off GetEarlyStrikeCoreClass, which 0043 makes the rush's Archer.
+- The state machine, the army counts and the upgrade hold read the strike plan.
+- **Fix, ai/war b2657046:** the upgrade bill took the strike's upgrade tech only from Personality's spike window, which
+  a generic rush lacks. It now falls back to the plan's eUpgradeTech (Construction: Archers to Composite Bowmen).
+- The core share defaults to 50% without a window.
+
+LEAD: the generic rush is an early striker on ai/war b2657046 (32e152c4 + the bill's fallback to the plan's upgrade
+tech). "Ready for the next block" follows on b2657046 when CI is green.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
