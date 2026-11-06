@@ -1924,6 +1924,53 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: checks for the first EarlyStrike block, from the strike-plans research (Nov 5, about 10:00pm ET)
+The lead, from tools/ab/STRIKE_PLANS_RESEARCH.md (8f04839). No new code before the block's results; these are what to
+read in it.
+
+**1. Two melee units at the city ("bring two in case one dies").**
+- Over the 57 logged first capture attempts with an in-reach list (BigArmy and WarBudget army lines), capture-capable
+  melee in reach (infantry and mounted melee, not ranged or siege) against the city being taken later by a CAPTURED
+  attempt:
+  - 0 melee: 1 of 15;
+  - 1 melee: 2 of 18;
+  - 2 or more: 5 of 24.
+  - Small numbers, same direction as the research.
+- The Inca game the lead named (12E9456A, bullygreedy16) wasn't an early strike. Its first window (T55) passed without a
+  war; it declared at T119 with 17 land units, 8 of them melee (Spearman 4, Swordsman 3, Warrior 1). But in reach at
+  the first attempts:
+  - Warsaw: 1 Spearman, 3 Composite Bowmen, a Catapult;
+  - Krakow: 2 Composite Bowmen and no melee.
+  - Krakow (unwalled, no garrison) fell at T126 to a later attempt.
+- **Check in the block:** melee in reach at each first capture attempt (the army line's in-reach list), and captures by
+  that count.
+- EarlyStrike's army has no melee minimum: the core class is half the field target, but for a ranged spike (the Inca's
+  Slinger) that core is ranged.
+- If captures go with 2+ melee in the block too, a follow-up would make the capture plan wait for 2 melee in reach, or
+  set a melee floor in the army, for ranged-spike civs especially.
+
+**2. The gold reserve for the Archer to Composite Bowman upgrade (research: 70 to 80 gold each).**
+- EarlyStrike's bill is CP's own upgradePrice per unit (exact, not an estimate), summed over the units waiting.
+- In 12E9456A the Inca upgraded 2 Slingers at T70 and the treasury fell from 220 to 117 (with -7 a turn): about 50 each.
+- **Check in the block:** the "EarlyStrike: upgrade and go, N units to upgrade for G gold" line gives G / N per game,
+  against 70 to 80, and whether the declaration waited for it.
+
+**3. Target choice: a flat, unwalled city ("a walled hill city without siege is sometimes impossible").**
+- EarlyStrike checks walls only: no siege when the target's city nearest our capital has no walls. Hills aren't
+  checked, and the target civ is chosen first (CP's and the timing attack's target), not the city.
+- **Check in the block:**
+  - for each EarlyStrike war, the first attacked city: walled or not (the attempt line's walls +W), and on a hill or not
+    (needs the plot, from the attempt's coordinates in the logs);
+  - captures by those two.
+- If walled or hill cities hold, the exit condition would be: strike only a target whose nearest city is flat and
+  unwalled; otherwise fall back to the normal build-up with siege.
+
+LEAD: three checks for the EarlyStrike block's read, no code:
+- melee in reach at the first attempt (0: 1/15, 1: 2/18, 2+: 5/24 so far);
+- gold per upgrade against 70 to 80 (the bill is CP's own price);
+- walled and hill targets.
+The Inca game wasn't an early strike, and at Krakow it had no melee in reach.
+
 ### War: BarbHunt, a proposal: early-spike units hunt barbarians for promotions before the strike (Nov 5, about 9:45pm ET)
 The user asked for the kill logging and a written plan. Not coded: the lead holds hunt code until the EarlyStrike block
 (ab-db638c3) gives the baseline.
