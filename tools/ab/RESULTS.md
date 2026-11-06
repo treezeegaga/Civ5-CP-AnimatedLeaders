@@ -2925,6 +2925,31 @@ green; RoleFixes += StrikeList" follows when its CI is green. Then the trial gam
 LEAD: ai/war **2181214f**. "Ready for the next block: ai/war 2181214f green; RoleFixes += StrikeList" follows when its
 CI is green.
 
+**trial24 1664FF61 (ab-8bc6c0c, 12:10pm ET): the take-the-city check was 100 times too strict. Fixed in 0cb5402b.**
+- **What happened.** Persia spent 39 turns in BUILDUP without declaring. The plan army was ready from T58, but the log
+  said it "can't take" Kuala Lumpur (defence 19), and then Utrecht (defence 11) with 7 field units.
+- **Cause.** CvUnitCombat::DoDamageMath returns hit points x100, and the game divides by 100 to get HP.
+  StrikeArmyTakesCity divided by 100 and then compared the result, as if it were still x100, with the city's healing
+  x100. So every army's damage was 100 times too small, and no city ever read as takeable. A scaling bug, not just a
+  buffer that was too strict.
+- **Fix.** Damage is kept x100. The buffer is recalibrated to 90% of our damage and 110% of the city's damage to us
+  (was 80% and 125%). For a strike, the plan's core and support at their counts now count as a built army, so missing or
+  untrainable siege never holds the declaration; taking the city decides.
+- **What the check returns now** (VP expected values: base damage 2400 + 1200/2, healing 8 a turn, 250 HP, walls
+  about +100):
+
+  | army | city | result |
+  |---|---|---|
+  | 6 Jaguars + 4 Composite Bowmen | Marrakesh, defence 19 + walls (about 350 HP) | **GO** in about 4 turns (the user took about 5) |
+  | 7 Immortals + 3 Archers | Utrecht, defence 11 | **GO** in 2 turns |
+  | 7 Immortals + 3 Archers | Kuala Lumpur, defence 19 | **GO** in 3 turns |
+  | 3 Warriors | defence 19 | still no |
+  | 3 Spearmen + 2 Archers | defence 19 | still no |
+  | 4 Warriors + 2 Archers | defence 12 | still no |
+
+LEAD: ai/war **0cb5402b** has the calibrated check. "Ready for the next block: ai/war 0cb5402b green; RoleFixes +=
+StrikeList" follows when its CI is green.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
