@@ -1961,6 +1961,18 @@ LEAD: upgrade and go is in EarlyStrike (ai/war e7572b43, on ab-c1 ec78b0d): gold
 waits for them, ArmyScrap spares units about to upgrade, and WarmongerHurry doesn't touch upgrades. Economy: Construction
 after Archery in the EarlyStrike research list. CI to follow.
 
+**Then (ai/war cc979539): upgrades are held until the army is built.**
+- Economy's patch 0029 keeps the treasury until the strike: no hurries, WarChest purchases or tile buys, and Construction
+  after the support tech in research.
+- CP upgrades whenever it can pay, so the reserve would have gone on early Warrior to Spearman upgrades. Now an
+  EarlyStrike civ in its small-empire phase holds every AI upgrade (CvUnit::CanUpgradeRightNow) until the strike's army
+  is built or its window is over.
+- Then it upgrades, the bill reaches 0, and it declares.
+- At war, or past T90 Standard, CP upgrades as usual.
+
+LEAD: cc979539 holds an EarlyStrike civ's upgrades until its army is built, then upgrade and go. Economy's ask is done on
+War's side.
+
 ### War: EarlyStrike, War's half (coded, ai/war 95fbcc26, off) (Nov 5, about 9:10pm ET)
 
 **Revised the same evening (ai/war 6c073d69, on Economy's book, patch 0028 applied as 73af5241): one flag, Economy's
