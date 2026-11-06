@@ -1,0 +1,2247 @@
+013, Ife, The Iroquois, RECEIVED_UNIT_GIFT, Warrior
+019, Jerusalem, Austria, RECEIVED_UNIT_GIFT, Warrior
+020, Cahokia, Venice, RECEIVED_UNIT_GIFT, Warrior
+021, La Venta, Russia, RECEIVED_UNIT_GIFT, Warrior
+024, Riga, The Zulus, RECEIVED_UNIT_GIFT, Warrior
+025, Korea, Kabul, SENT OUT QUEST, Type, 1
+025, Korea, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+025, The Zulus, La Venta, SENT OUT QUEST, Type, 2
+025, The Zulus, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+025, Cahokia, Korea, RECEIVED_UNIT_GIFT, Warrior
+025, Korea, Cahokia, SENT OUT QUEST, Type, 1
+025, Korea, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 3 to 3, MINOR_CIV_CAHOKIA
+025, Denmark, Cahokia, SENT OUT QUEST, Type, 1
+025, Denmark, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+025, Venice, Cahokia, SENT OUT QUEST, Type, 1
+025, Venice, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+025, Korea, Cahokia, SENT OUT QUEST, Type, 2
+025, Korea, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 3 to 3, MINOR_CIV_CAHOKIA
+025, The Iroquois, Cape Town, SENT OUT QUEST, Type, 1
+025, The Iroquois, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+025, Austria, Cape Town, SENT OUT QUEST, Type, 1
+025, Austria, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+025, The Zulus, Jerusalem, SENT OUT QUEST, Type, 2
+025, The Zulus, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+025, Austria, Jerusalem, SENT OUT QUEST, Type, 7
+025, Austria, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+026, Egypt, Bogota, SENT OUT QUEST, Type, 1
+026, Egypt, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+026, The Zulus, Almaty, SENT OUT QUEST, Type, 1
+026, The Zulus, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+026, Korea, Almaty, SENT OUT QUEST, Type, 1
+026, Korea, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+026, Venice, Almaty, SENT OUT QUEST, Type, 1
+026, Venice, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+026, Egypt, Jerusalem, SENT OUT QUEST, Type, 2
+026, Egypt, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+027, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+027, The Iroquois, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+027, Austria, Ife, SENT OUT QUEST, Type, 2
+027, Austria, Ife, RECEIVED QUEST, Connect Resource, Friendship: 4 to 4, MINOR_CIV_IFE
+027, Korea, Kabul, SENT OUT QUEST, Type, 2
+027, Korea, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+027, The Zulus, Almaty, SENT OUT QUEST, Type, 3
+027, The Zulus, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+027, Russia, Jerusalem, SENT OUT QUEST, Type, 2
+027, Russia, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+028, Venice, Melbourne, SENT OUT QUEST, Type, 3
+028, Venice, Melbourne, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+028, Egypt, Vatican City, SENT OUT QUEST, Type, 1
+028, Egypt, Vatican City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+028, Austria, Cape Town, SENT OUT QUEST, Type, 2
+028, Austria, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+028, Korea, Sidon, SENT OUT QUEST, Type, 1
+028, Korea, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+028, Denmark, Sidon, SENT OUT QUEST, Type, 1
+028, Denmark, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+028, Venice, Sidon, SENT OUT QUEST, Type, 1
+028, Venice, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+028, Venice, Sidon, SENT OUT QUEST, Type, 7
+028, Venice, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SIDON
+029, Denmark, Kabul, SENT OUT QUEST, Type, 1
+029, Denmark, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+029, The Zulus, Riga, SENT OUT QUEST, Type, 2
+029, The Zulus, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+029, Denmark, Geneva, SENT OUT QUEST, Type, 1
+029, Denmark, Geneva, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENEVA
+029, Russia, La Venta, SENT OUT QUEST, Type, 17
+029, Russia, La Venta, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+030, Egypt, Valletta, SENT OUT QUEST, Type, 1
+030, Egypt, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+030, The Zulus, La Venta, SENT OUT QUEST, Type, 1
+030, The Zulus, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+030, Russia, La Venta, SENT OUT QUEST, Type, 1
+030, Russia, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+031, The Iroquois, Sidon, SENT OUT QUEST, Type, 1
+031, The Iroquois, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+031, Austria, Cape Town, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_CAPE_TOWN, (SAVING) 
+031, Egypt, Vatican City, SENT OUT QUEST, Type, 7
+031, Egypt, Vatican City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+031, The Zulus, Jerusalem, SENT OUT QUEST, Type, 1
+031, The Zulus, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+031, Russia, Jerusalem, SENT OUT QUEST, Type, 1
+031, Russia, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+031, Egypt, Jerusalem, SENT OUT QUEST, Type, 1
+031, Egypt, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+031, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 1
+031, The Iroquois, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+031, Austria, Jerusalem, SENT OUT QUEST, Type, 1
+031, Austria, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+032, Egypt, Riga, SENT OUT QUEST, Type, 2
+032, Egypt, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+032, The Iroquois, Ife, SENT OUT QUEST, Type, 13
+032, The Iroquois, Ife, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_IFE
+032, Austria, Ife, SENT OUT QUEST, Type, 13
+032, Austria, Ife, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_IFE
+032, Prague, Venice, RECEIVED_UNIT_GIFT, Warrior
+032, Denmark, Geneva, SENT OUT QUEST, Type, 7
+032, Denmark, Geneva, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_GENEVA
+032, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 2
+032, The Iroquois, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+033, Russia, Almaty, SENT OUT QUEST, Type, 1
+033, Russia, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+033, Korea, Jerusalem, SENT OUT QUEST, Type, 1
+033, Korea, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+034, Egypt, Bogota, SENT OUT QUEST, Type, 2
+034, Egypt, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+034, Egypt, Valletta, SENT OUT QUEST, Type, 2
+034, Egypt, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+034, The Iroquois, Cape Town, SENT OUT QUEST, Type, 2
+034, The Iroquois, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+034, Korea, Sidon, SENT OUT QUEST, Type, 7
+034, Korea, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SIDON
+035, The Iroquois, Valletta, SENT OUT QUEST, Type, 1
+035, The Iroquois, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+035, The Zulus, Prague, SENT OUT QUEST, Type, 10
+035, The Zulus, Prague, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+035, Russia, Prague, SENT OUT QUEST, Type, 10
+035, Russia, Prague, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+035, Venice, Prague, SENT OUT QUEST, Type, 10
+035, Venice, Prague, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+036, Korea, Riga, era change yield update
+036, Korea, Bogota, era change yield update
+036, Korea, Valletta, era change yield update
+036, Korea, Ife, era change yield update
+036, Korea, Prague, era change yield update
+036, Korea, Melbourne, era change yield update
+036, Korea, Kabul, era change yield update
+036, Korea, Geneva, era change yield update
+036, Korea, La Venta, era change yield update
+036, Korea, Almaty, era change yield update
+036, Korea, Vatican City, era change yield update
+036, Korea, Malacca, era change yield update
+036, Korea, Cahokia, era change yield update
+036, Korea, Cape Town, era change yield update
+036, Korea, Jerusalem, era change yield update
+036, Korea, Sidon, era change yield update
+036, Korea, Kabul, SENT OUT QUEST, Type, 1
+036, Korea, Kabul, SENT OUT QUEST, Type, 2
+036, Korea, Almaty, SENT OUT QUEST, Type, 1
+036, Korea, Cahokia, SENT OUT QUEST, Type, 1
+036, Korea, Cahokia, SENT OUT QUEST, Type, 2
+036, Korea, Jerusalem, SENT OUT QUEST, Type, 1
+036, Korea, Sidon, SENT OUT QUEST, Type, 1
+036, Korea, Sidon, SENT OUT QUEST, Type, 7
+036, Venice, Riga, era change yield update
+036, Venice, Bogota, era change yield update
+036, Venice, Valletta, era change yield update
+036, Venice, Ife, era change yield update
+036, Venice, Prague, era change yield update
+036, Venice, Melbourne, era change yield update
+036, Venice, Kabul, era change yield update
+036, Venice, Geneva, era change yield update
+036, Venice, La Venta, era change yield update
+036, Venice, Almaty, era change yield update
+036, Venice, Vatican City, era change yield update
+036, Venice, Malacca, era change yield update
+036, Venice, Cahokia, era change yield update
+036, Venice, Cape Town, era change yield update
+036, Venice, Jerusalem, era change yield update
+036, Venice, Sidon, era change yield update
+036, Venice, Prague, SENT OUT QUEST, Type, 10
+036, Venice, Melbourne, SENT OUT QUEST, Type, 3
+036, Venice, Almaty, SENT OUT QUEST, Type, 1
+036, Venice, Cahokia, SENT OUT QUEST, Type, 1
+036, Venice, Sidon, SENT OUT QUEST, Type, 1
+036, Venice, Sidon, SENT OUT QUEST, Type, 7
+036, The Zulus, Riga, SENT OUT QUEST, Type, 1
+036, The Zulus, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+036, Russia, Riga, SENT OUT QUEST, Type, 1
+036, Russia, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+036, Egypt, Riga, SENT OUT QUEST, Type, 1
+036, Egypt, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+036, Cahokia, Korea, RECEIVED_UNIT_GIFT, Warrior
+036, Denmark, Cahokia, SENT OUT QUEST, Type, 7
+036, Denmark, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+037, Austria, Riga, era change yield update
+037, Austria, Bogota, era change yield update
+037, Austria, Valletta, era change yield update
+037, Austria, Ife, era change yield update
+037, Austria, Prague, era change yield update
+037, Austria, Melbourne, era change yield update
+037, Austria, Kabul, era change yield update
+037, Austria, Geneva, era change yield update
+037, Austria, La Venta, era change yield update
+037, Austria, Almaty, era change yield update
+037, Austria, Vatican City, era change yield update
+037, Austria, Malacca, era change yield update
+037, Austria, Cahokia, era change yield update
+037, Austria, Cape Town, era change yield update
+037, Austria, Jerusalem, era change yield update
+037, Austria, Sidon, era change yield update
+037, Austria, Ife, SENT OUT QUEST, Type, 2
+037, Austria, Ife, SENT OUT QUEST, Type, 13
+037, Austria, Cape Town, SENT OUT QUEST, Type, 1
+037, Austria, Cape Town, SENT OUT QUEST, Type, 2
+037, Austria, Jerusalem, SENT OUT QUEST, Type, 7
+037, Austria, Jerusalem, SENT OUT QUEST, Type, 1
+037, Austria, La Venta, SENT OUT QUEST, Type, 1
+037, Austria, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+037, Russia, Riga, SENT OUT QUEST, Type, 2
+037, Russia, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+037, Venice, Cahokia, SENT OUT QUEST, Type, 3
+037, Venice, Cahokia, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+037, Denmark, Sidon, SENT OUT QUEST, Type, 2
+037, Denmark, Sidon, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SIDON
+038, Egypt, Riga, era change yield update
+038, Egypt, Bogota, era change yield update
+038, Egypt, Valletta, era change yield update
+038, Egypt, Ife, era change yield update
+038, Egypt, Prague, era change yield update
+038, Egypt, Melbourne, era change yield update
+038, Egypt, Kabul, era change yield update
+038, Egypt, Geneva, era change yield update
+038, Egypt, La Venta, era change yield update
+038, Egypt, Almaty, era change yield update
+038, Egypt, Vatican City, era change yield update
+038, Egypt, Malacca, era change yield update
+038, Egypt, Cahokia, era change yield update
+038, Egypt, Cape Town, era change yield update
+038, Egypt, Jerusalem, era change yield update
+038, Egypt, Sidon, era change yield update
+038, Egypt, Riga, SENT OUT QUEST, Type, 2
+038, Egypt, Riga, SENT OUT QUEST, Type, 1
+038, Egypt, Bogota, SENT OUT QUEST, Type, 1
+038, Egypt, Bogota, SENT OUT QUEST, Type, 2
+038, Egypt, Valletta, SENT OUT QUEST, Type, 1
+038, Egypt, Valletta, SENT OUT QUEST, Type, 2
+038, Egypt, Vatican City, SENT OUT QUEST, Type, 1
+038, Egypt, Vatican City, SENT OUT QUEST, Type, 7
+038, Egypt, Jerusalem, SENT OUT QUEST, Type, 2
+038, Egypt, Jerusalem, SENT OUT QUEST, Type, 1
+038, Austria, La Venta, SENT OUT QUEST, Type, 1
+038, Venice, Melbourne, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+038, The Zulus, Almaty, cancelled, Construct Wonder, Friendship: -4 to -4, MINOR_CIV_ALMATY
+039, The Iroquois, Kabul, SENT OUT QUEST, Type, 1
+039, The Iroquois, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+039, Prague, Russia, RECEIVED_UNIT_GIFT, Warrior
+039, Cahokia, Korea, RECEIVED_UNIT_GIFT, Warrior
+040, The Zulus, Riga, era change yield update
+040, The Zulus, Bogota, era change yield update
+040, The Zulus, Valletta, era change yield update
+040, The Zulus, Ife, era change yield update
+040, The Zulus, Prague, era change yield update
+040, The Zulus, Melbourne, era change yield update
+040, The Zulus, Kabul, era change yield update
+040, The Zulus, Geneva, era change yield update
+040, The Zulus, La Venta, era change yield update
+040, The Zulus, Almaty, era change yield update
+040, The Zulus, Vatican City, era change yield update
+040, The Zulus, Malacca, era change yield update
+040, The Zulus, Cahokia, era change yield update
+040, The Zulus, Cape Town, era change yield update
+040, The Zulus, Jerusalem, era change yield update
+040, The Zulus, Sidon, era change yield update
+040, The Zulus, Riga, SENT OUT QUEST, Type, 2
+040, The Zulus, Riga, SENT OUT QUEST, Type, 1
+040, The Zulus, Prague, SENT OUT QUEST, Type, 10
+040, The Zulus, La Venta, SENT OUT QUEST, Type, 2
+040, The Zulus, La Venta, SENT OUT QUEST, Type, 1
+040, The Zulus, Almaty, SENT OUT QUEST, Type, 1
+040, The Zulus, Jerusalem, SENT OUT QUEST, Type, 2
+040, The Zulus, Jerusalem, SENT OUT QUEST, Type, 1
+041, Austria, Jerusalem, SENT OUT QUEST, Type, 3
+041, Austria, Jerusalem, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+042, The Zulus, Bogota, SENT OUT QUEST, Type, 1
+042, The Zulus, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+042, Venice, Melbourne, SENT OUT QUEST, Type, 2
+042, Venice, Melbourne, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+042, The Zulus, La Venta, SENT OUT QUEST, Type, 6
+042, The Zulus, La Venta, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+042, Egypt, La Venta, SENT OUT QUEST, Type, 1
+042, Egypt, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+043, Denmark, Riga, SENT OUT QUEST, Type, 1
+043, Denmark, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+043, Austria, Valletta, SENT OUT QUEST, Type, 1
+043, Austria, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+043, Russia, La Venta, SENT OUT QUEST, Type, 7
+043, Russia, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+043, Korea, Cahokia, SENT OUT QUEST, Type, 7
+043, Korea, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+043, Venice, Sidon, SENT OUT QUEST, Type, 3
+043, Venice, Sidon, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SIDON
+044, Austria, Valletta, SENT OUT QUEST, Type, 1
+045, The Iroquois, Riga, era change yield update
+045, The Iroquois, Bogota, era change yield update
+045, The Iroquois, Valletta, era change yield update
+045, The Iroquois, Ife, era change yield update
+045, The Iroquois, Prague, era change yield update
+045, The Iroquois, Melbourne, era change yield update
+045, The Iroquois, Kabul, era change yield update
+045, The Iroquois, Geneva, era change yield update
+045, The Iroquois, La Venta, era change yield update
+045, The Iroquois, Almaty, era change yield update
+045, The Iroquois, Vatican City, era change yield update
+045, The Iroquois, Malacca, era change yield update
+045, The Iroquois, Cahokia, era change yield update
+045, The Iroquois, Cape Town, era change yield update
+045, The Iroquois, Jerusalem, era change yield update
+045, The Iroquois, Sidon, era change yield update
+045, The Iroquois, Valletta, SENT OUT QUEST, Type, 1
+045, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+045, The Iroquois, Ife, SENT OUT QUEST, Type, 13
+045, The Iroquois, Kabul, SENT OUT QUEST, Type, 1
+045, The Iroquois, Cape Town, SENT OUT QUEST, Type, 1
+045, The Iroquois, Cape Town, SENT OUT QUEST, Type, 2
+045, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 1
+045, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 2
+045, The Iroquois, Sidon, SENT OUT QUEST, Type, 1
+045, Korea, Valletta, SENT OUT QUEST, Type, 1
+045, Korea, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+045, Egypt, Riga, SENT OUT QUEST, Type, 7
+045, Egypt, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+045, Austria, Jerusalem, gained friend
+045, Austria, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_JERUSALEM
+046, Austria, Vatican City, SENT OUT QUEST, Type, 1
+046, Austria, Vatican City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+046, Prague, Venice, RECEIVED_UNIT_GIFT, Warrior
+046, Denmark, Geneva, SENT OUT QUEST, Type, 17
+046, Denmark, Geneva, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_GENEVA
+046, The Iroquois, Sidon, SENT OUT QUEST, Type, 2
+046, The Iroquois, Sidon, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SIDON
+047, The Zulus, Prague, Gold Gift: 500, Friendship: 0 to 0, Conquest, MINOR_CIV_PRAGUE, (SAVING) 
+047, Russia, Riga, Gold Gift: 500, Friendship: 0 to 0, Culture, MINOR_CIV_RIGA, (SAVING) 
+047, The Zulus, Riga, SENT OUT QUEST, Type, 2
+047, The Zulus, Riga, SENT OUT QUEST, Type, 1
+047, The Zulus, Prague, SENT OUT QUEST, Type, 10
+047, The Zulus, Almaty, SENT OUT QUEST, Type, 1
+047, Russia, Riga, SENT OUT QUEST, Type, 1
+047, Russia, Riga, SENT OUT QUEST, Type, 2
+047, Austria, Vatican City, SENT OUT QUEST, Type, 1
+047, The Iroquois, Ife, SENT OUT QUEST, Type, 16
+047, The Iroquois, Ife, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_IFE
+047, Korea, Cahokia, gained friend
+047, Korea, Cahokia, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+047, Korea, Sidon, gained friend
+047, Korea, Sidon, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SIDON
+048, The Zulus, Vatican City, SENT OUT QUEST, Type, 1
+048, The Zulus, Vatican City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+048, The Zulus, Valletta, SENT OUT QUEST, Type, 1
+048, The Zulus, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+048, Russia, Riga, era change yield update
+048, Russia, Bogota, era change yield update
+048, Russia, Valletta, era change yield update
+048, Russia, Ife, era change yield update
+048, Russia, Prague, era change yield update
+048, Russia, Melbourne, era change yield update
+048, Russia, Kabul, era change yield update
+048, Russia, Geneva, era change yield update
+048, Russia, La Venta, era change yield update
+048, Russia, Almaty, era change yield update
+048, Russia, Vatican City, era change yield update
+048, Russia, Malacca, era change yield update
+048, Russia, Cahokia, era change yield update
+048, Russia, Cape Town, era change yield update
+048, Russia, Jerusalem, era change yield update
+048, Russia, Sidon, era change yield update
+048, Russia, Riga, SENT OUT QUEST, Type, 1
+048, Russia, Riga, SENT OUT QUEST, Type, 2
+048, Russia, Prague, SENT OUT QUEST, Type, 10
+048, Russia, La Venta, SENT OUT QUEST, Type, 17
+048, Russia, La Venta, SENT OUT QUEST, Type, 1
+048, Russia, La Venta, SENT OUT QUEST, Type, 7
+048, Russia, Almaty, SENT OUT QUEST, Type, 1
+048, Russia, Jerusalem, SENT OUT QUEST, Type, 2
+048, Russia, Jerusalem, SENT OUT QUEST, Type, 1
+048, The Iroquois, Ife, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_IFE, (SAVING) 
+048, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+048, The Iroquois, Ife, SENT OUT QUEST, Type, 13
+048, The Iroquois, Ife, SENT OUT QUEST, Type, 16
+048, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 1
+048, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 2
+048, Korea, Cahokia, SENT OUT QUEST, Type, 1
+048, Korea, Cahokia, SENT OUT QUEST, Type, 2
+048, Korea, Sidon, SENT OUT QUEST, Type, 1
+048, Korea, Vatican City, SENT OUT QUEST, Type, 1
+048, Korea, Vatican City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+048, Korea, Prague, SENT OUT QUEST, Type, 10
+048, Korea, Prague, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+048, Russia, Jerusalem, SENT OUT QUEST, Type, 7
+048, Russia, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+049, Korea, Prague, SENT OUT QUEST, Type, 10
+049, Denmark, Riga, era change yield update
+049, Denmark, Bogota, era change yield update
+049, Denmark, Valletta, era change yield update
+049, Denmark, Ife, era change yield update
+049, Denmark, Prague, era change yield update
+049, Denmark, Melbourne, era change yield update
+049, Denmark, Kabul, era change yield update
+049, Denmark, Geneva, era change yield update
+049, Denmark, La Venta, era change yield update
+049, Denmark, Almaty, era change yield update
+049, Denmark, Vatican City, era change yield update
+049, Denmark, Malacca, era change yield update
+049, Denmark, Cahokia, era change yield update
+049, Denmark, Cape Town, era change yield update
+049, Denmark, Jerusalem, era change yield update
+049, Denmark, Sidon, era change yield update
+049, Denmark, Riga, SENT OUT QUEST, Type, 1
+049, Denmark, Kabul, SENT OUT QUEST, Type, 1
+049, Denmark, Geneva, SENT OUT QUEST, Type, 1
+049, Denmark, Geneva, SENT OUT QUEST, Type, 7
+049, Denmark, Geneva, SENT OUT QUEST, Type, 17
+049, Denmark, Cahokia, SENT OUT QUEST, Type, 1
+049, Denmark, Cahokia, SENT OUT QUEST, Type, 7
+049, Denmark, Sidon, SENT OUT QUEST, Type, 1
+049, Denmark, Sidon, SENT OUT QUEST, Type, 2
+049, Venice, Melbourne, Gold Gift: 500, Friendship: -6 to -6, Culture, MINOR_CIV_MELBOURNE, (SAVING) 
+049, Venice, Prague, SENT OUT QUEST, Type, 10
+049, Venice, Almaty, SENT OUT QUEST, Type, 1
+049, Venice, Cahokia, SENT OUT QUEST, Type, 1
+049, Venice, Cahokia, SENT OUT QUEST, Type, 3
+049, Venice, Sidon, SENT OUT QUEST, Type, 1
+049, Venice, Sidon, SENT OUT QUEST, Type, 7
+049, Venice, Sidon, SENT OUT QUEST, Type, 3
+049, Venice, Cape Town, SENT OUT QUEST, Type, 1
+049, Venice, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+049, Venice, Jerusalem, SENT OUT QUEST, Type, 1
+049, Venice, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+049, Russia, Prague, SENT OUT QUEST, Type, 2
+049, Russia, Prague, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+049, Egypt, Vatican City, SENT OUT QUEST, Type, 2
+049, Egypt, Vatican City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+049, The Iroquois, Cape Town, SENT OUT QUEST, Type, 17
+049, The Iroquois, Cape Town, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+050, Korea, Cahokia, Gold Gift: 250, Friendship: 37 to 37, Diplomacy, MINOR_CIV_CAHOKIA, (SAVING) , Boost! , Passing Venice
+050, Venice, Cape Town, SENT OUT QUEST, Type, 1
+050, The Zulus, Prague, SENT OUT QUEST, Type, 6
+050, The Zulus, Prague, RECEIVED QUEST, Find Player, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+050, Austria, Cape Town, SENT OUT QUEST, Type, 4
+050, Austria, Cape Town, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+051, The Zulus, Riga, SENT OUT QUEST, Type, 6
+051, The Zulus, Riga, RECEIVED QUEST, Find Player, Friendship: 5 to 5, MINOR_CIV_RIGA
+051, The Iroquois, Kabul, SENT OUT QUEST, Type, 2
+051, The Iroquois, Kabul, RECEIVED QUEST, Connect Resource, Friendship: -4 to -4, MINOR_CIV_KABUL
+051, Korea, Almaty, SENT OUT QUEST, Type, 2
+051, Korea, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ALMATY
+051, Venice, Almaty, SENT OUT QUEST, Type, 7
+051, Venice, Almaty, RECEIVED QUEST, Find Natural Wonder, Friendship: 4 to 4, MINOR_CIV_ALMATY
+051, Denmark, Cahokia, SENT OUT QUEST, Type, 6
+051, Denmark, Cahokia, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+052, Venice, Melbourne, cancelled, Connect Resource, Friendship: -1 to -1, MINOR_CIV_MELBOURNE
+052, The Zulus, Riga, cancelled, Connect Resource, Friendship: 5 to 5, MINOR_CIV_RIGA
+052, Austria, Bogota, SENT OUT QUEST, Type, 1
+052, Austria, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+052, The Iroquois, Ife, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_IFE
+052, Austria, Ife, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_IFE
+052, Austria, Ife, cancelled, Connect Resource, Friendship: 5 to 5, MINOR_CIV_IFE
+052, Venice, Almaty, gained friend
+052, Venice, Almaty, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_ALMATY
+052, The Zulus, Almaty, SENT OUT QUEST, Type, 6
+052, The Zulus, Almaty, RECEIVED QUEST, Find Player, Friendship: 5 to 5, MINOR_CIV_ALMATY
+052, The Iroquois, Jerusalem, cancelled, Connect Resource, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+052, Venice, Sidon, gained friend
+052, Venice, Sidon, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SIDON
+052, Denmark, Sidon, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SIDON
+053, Austria, Bogota, SENT OUT QUEST, Type, 1
+054, Austria, Riga, SENT OUT QUEST, Type, 1
+054, Austria, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+054, Austria, Ife, SENT OUT QUEST, Type, 2
+054, Austria, Ife, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_IFE
+054, Prague, Venice, RECEIVED_UNIT_GIFT, Warrior
+054, Korea, Kabul, SENT OUT QUEST, Type, 3
+054, Korea, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+054, Denmark, Geneva, gained friend
+054, Denmark, Geneva, FINISHED QUEST, Find Natural Wonder, Friendship: 4 to 44, MINOR_CIV_GENEVA
+054, Korea, Cahokia, lost friend
+054, Denmark, Cahokia, gained friend
+054, Denmark, Cahokia, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+054, The Zulus, Jerusalem, SENT OUT QUEST, Type, 6
+054, The Zulus, Jerusalem, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+054, Korea, Sidon, lost friend
+054, Korea, Sidon, SENT OUT QUEST, Type, 0
+054, Korea, Sidon, RECEIVED QUEST, Route, Friendship: 29 to 29, MINOR_CIV_SIDON
+055, Austria, Riga, SENT OUT QUEST, Type, 1
+055, Austria, Valletta, SENT OUT QUEST, Type, 6
+055, Austria, Valletta, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+055, The Zulus, Prague, gained friend
+055, The Zulus, Prague, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_PRAGUE
+055, Russia, Prague, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+055, Korea, Prague, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+055, Venice, Prague, cancelled, Contest Culture, Friendship: 7 to 7, MINOR_CIV_PRAGUE
+055, Venice, Prague, SENT OUT QUEST, Type, 2
+055, Venice, Prague, RECEIVED QUEST, Connect Resource, Friendship: 7 to 7, MINOR_CIV_PRAGUE
+055, Almaty, Venice, RECEIVED_UNIT_GIFT, Warrior
+055, Egypt, Jerusalem, SENT OUT QUEST, Type, 3
+055, Egypt, Jerusalem, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+056, The Iroquois, Valletta, SENT OUT QUEST, Type, 17
+056, The Iroquois, Valletta, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+056, The Zulus, Cahokia, SENT OUT QUEST, Type, 1
+056, The Zulus, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+056, Austria, Jerusalem, lost friend
+056, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 16
+056, The Iroquois, Jerusalem, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+056, Sidon, Venice, RECEIVED_UNIT_GIFT, Warrior
+057, Egypt, Bogota, SENT OUT QUEST, Type, 3
+057, Egypt, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+057, Prague, Venice, RECEIVED_UNIT_GIFT, Warrior
+057, The Iroquois, Cape Town, gained friend
+057, The Iroquois, Cape Town, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_CAPE_TOWN
+057, Korea, Jerusalem, SENT OUT QUEST, Type, 2
+057, Korea, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+058, Denmark, Cahokia, gained ally
+058, Denmark, Cahokia, FINISHED QUEST, Find Player, Friendship: 34 to 69, MINOR_CIV_CAHOKIA
+058, Venice, Cahokia, SENT OUT QUEST, Type, 2
+058, Venice, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+058, Denmark, Sidon, SENT OUT QUEST, Type, 7
+058, Denmark, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SIDON
+059, Korea, Cahokia, SENT OUT QUEST, Type, 1
+059, Korea, Cahokia, SENT OUT QUEST, Type, 2
+059, Denmark, Cahokia, SENT OUT QUEST, Type, 1
+060, Russia, Almaty, SENT OUT QUEST, Type, 2
+060, Russia, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ALMATY
+060, Austria, Vatican City, SENT OUT QUEST, Type, 6
+060, Austria, Vatican City, RECEIVED QUEST, Find Player, Friendship: 5 to 5, MINOR_CIV_VATICAN_CITY
+060, Denmark, Jerusalem, SENT OUT QUEST, Type, 1
+060, Denmark, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+061, Russia, Cahokia, SENT OUT QUEST, Type, 1
+061, Russia, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+061, Korea, Prague, SENT OUT QUEST, Type, 2
+061, Korea, Prague, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+062, The Zulus, Bogota, SENT OUT QUEST, Type, 3
+062, The Zulus, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+062, The Iroquois, Ife, gained friend
+062, The Iroquois, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_IFE
+062, Venice, Geneva, SENT OUT QUEST, Type, 1
+062, Venice, Geneva, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENEVA
+062, Austria, La Venta, SENT OUT QUEST, Type, 7
+062, Austria, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+063, Russia, Sidon, SENT OUT QUEST, Type, 1
+063, Russia, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+064, The Iroquois, Cape Town, lost friend
+065, Denmark, Cahokia, lost ally
+065, Venice, Sidon, SENT OUT QUEST, Type, 7
+065, Venice, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 30 to 30, MINOR_CIV_SIDON
+066, The Zulus, Cahokia, SENT OUT QUEST, Type, 1
+066, Russia, Riga, SENT OUT QUEST, Type, 6
+066, Russia, Riga, RECEIVED QUEST, Find Player, Friendship: 5 to 5, MINOR_CIV_RIGA
+066, Austria, Valletta, gained friend
+066, Austria, Valletta, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_VALLETTA
+066, The Zulus, Prague, lost friend
+066, The Zulus, Prague, SENT OUT QUEST, Type, 7
+066, The Zulus, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 28 to 28, MINOR_CIV_PRAGUE
+066, Venice, Almaty, lost friend
+066, Austria, Vatican City, gained friend
+066, Austria, Vatican City, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_VATICAN_CITY
+066, Venice, Sidon, lost friend
+067, The Zulus, Cape Town, SENT OUT QUEST, Type, 1
+067, The Zulus, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+067, The Zulus, Riga, gained friend
+067, The Zulus, Riga, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_RIGA
+067, Russia, Riga, gained friend
+067, Russia, Riga, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_RIGA
+067, The Zulus, Prague, gained friend
+067, The Zulus, Prague, gained ally
+067, The Zulus, Prague, FINISHED QUEST, Find Player, Friendship: 27 to 62, MINOR_CIV_PRAGUE
+067, Denmark, Kabul, SENT OUT QUEST, Type, 17
+067, Denmark, Kabul, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KABUL
+067, The Zulus, La Venta, gained friend
+067, The Zulus, La Venta, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_LA_VENTA
+067, Egypt, La Venta, SENT OUT QUEST, Type, 7
+067, Egypt, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+067, The Zulus, Almaty, gained friend
+067, The Zulus, Almaty, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_ALMATY
+067, Venice, Cape Town, SENT OUT QUEST, Type, 2
+067, Venice, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+067, The Zulus, Jerusalem, gained friend
+067, The Zulus, Jerusalem, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_JERUSALEM
+067, Venice, Jerusalem, SENT OUT QUEST, Type, 7
+067, Venice, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+068, The Zulus, Prague, Gold Gift: 250, Friendship: 62 to 87, Conquest, MINOR_CIV_PRAGUE, Boost! , Passing Venice
+068, The Zulus, Cahokia, Gold Gift: 500, Friendship: 2 to 2, Conquest, MINOR_CIV_CAHOKIA, (SAVING) 
+068, Egypt, Almaty, SENT OUT QUEST, Type, 1
+068, Egypt, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+068, The Iroquois, Ife, gained ally
+068, The Iroquois, Ife, Gold Gift: 250, Friendship: 37 to 62, Diplomacy, MINOR_CIV_IFE, Boost! , Passing Austria
+068, The Iroquois, Jerusalem, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_JERUSALEM, (SAVING) 
+068, Venice, Geneva, SENT OUT QUEST, Type, 1
+068, Venice, Jerusalem, SENT OUT QUEST, Type, 1
+068, Venice, Jerusalem, SENT OUT QUEST, Type, 7
+068, Austria, Bogota, SENT OUT QUEST, Type, 16
+068, Austria, Bogota, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+068, Denmark, Geneva, SENT OUT QUEST, Type, 7
+068, Denmark, Geneva, RECEIVED QUEST, Find Natural Wonder, Friendship: 47 to 47, MINOR_CIV_GENEVA
+068, Austria, Jerusalem, SENT OUT QUEST, Type, 0
+068, Austria, Jerusalem, RECEIVED QUEST, Route, Friendship: 10 to 10, MINOR_CIV_JERUSALEM
+069, Denmark, Cahokia, SENT OUT QUEST, Type, 1
+069, Denmark, Riga, SENT OUT QUEST, Type, 2
+069, Denmark, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+069, The Iroquois, Ife, lost ally
+069, The Zulus, Prague, FINISHED QUEST, Find Natural Wonder, Friendship: 84 to 124, MINOR_CIV_PRAGUE
+069, Venice, Prague, SENT OUT QUEST, Type, 16
+069, Venice, Prague, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+070, Egypt, Bogota, SENT OUT QUEST, Type, 1
+070, Egypt, Bogota, SENT OUT QUEST, Type, 2
+070, Egypt, Bogota, SENT OUT QUEST, Type, 3
+070, Egypt, Valletta, SENT OUT QUEST, Type, 14
+070, Egypt, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+070, Prague, Russia, RECEIVED_UNIT_GIFT, Warrior
+070, Russia, La Venta, gained friend
+070, Russia, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+070, Russia, Jerusalem, gained friend
+070, Russia, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+070, The Iroquois, Sidon, SENT OUT QUEST, Type, 7
+070, The Iroquois, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SIDON
+071, Russia, La Venta, SENT OUT QUEST, Type, 17
+071, Russia, La Venta, SENT OUT QUEST, Type, 1
+071, Austria, Valletta, lost friend
+071, Russia, Prague, SENT OUT QUEST, Type, 4
+071, Russia, Prague, RECEIVED QUEST, Great Person, Friendship: 2 to 2, MINOR_CIV_PRAGUE
+071, The Iroquois, Kabul, gained friend
+071, The Iroquois, Kabul, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KABUL
+071, The Zulus, La Venta, lost friend
+071, The Zulus, Vatican City, SENT OUT QUEST, Type, 2
+071, The Zulus, Vatican City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+071, The Zulus, Jerusalem, lost friend
+072, Austria, Vatican City, Gold Gift: 250, Friendship: 32 to 57, Diplomacy, MINOR_CIV_VATICAN_CITY, Boost! 
+072, Austria, Riga, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_RIGA, (SAVING) 
+072, The Zulus, Cahokia, SENT OUT QUEST, Type, 3
+072, The Zulus, Cahokia, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_CAHOKIA
+072, Korea, Cahokia, SENT OUT QUEST, Type, 7
+072, Korea, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 2 to 2, MINOR_CIV_CAHOKIA
+072, Korea, Sidon, SENT OUT QUEST, Type, 17
+072, Korea, Sidon, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SIDON
+073, Egypt, Bogota, Gold Gift: 500, Friendship: 4 to 4, Spaceship, MINOR_CIV_BOGOTA, (SAVING) 
+073, Egypt, La Venta, SENT OUT QUEST, Type, 1
+073, Egypt, La Venta, SENT OUT QUEST, Type, 7
+073, Egypt, Vatican City, SENT OUT QUEST, Type, 1
+073, Egypt, Vatican City, SENT OUT QUEST, Type, 7
+073, Egypt, Vatican City, SENT OUT QUEST, Type, 2
+073, Egypt, Jerusalem, SENT OUT QUEST, Type, 2
+073, Egypt, Jerusalem, SENT OUT QUEST, Type, 1
+073, Egypt, Jerusalem, SENT OUT QUEST, Type, 3
+073, Venice, Riga, era change yield update
+073, Venice, Bogota, era change yield update
+073, Venice, Valletta, era change yield update
+073, Venice, Ife, era change yield update
+073, Venice, Prague, era change yield update
+073, Venice, Kabul, era change yield update
+073, Venice, Geneva, era change yield update
+073, Venice, La Venta, era change yield update
+073, Venice, Almaty, era change yield update
+073, Venice, Vatican City, era change yield update
+073, Venice, Malacca, era change yield update
+073, Venice, Cahokia, era change yield update
+073, Venice, Cape Town, era change yield update
+073, Venice, Jerusalem, era change yield update
+073, Venice, Sidon, era change yield update
+073, Venice, Prague, SENT OUT QUEST, Type, 2
+073, Venice, Prague, SENT OUT QUEST, Type, 16
+073, Venice, Geneva, SENT OUT QUEST, Type, 1
+073, Venice, Almaty, SENT OUT QUEST, Type, 1
+073, Venice, Cahokia, SENT OUT QUEST, Type, 1
+073, Venice, Cahokia, SENT OUT QUEST, Type, 3
+073, Venice, Cahokia, SENT OUT QUEST, Type, 2
+073, Venice, Cape Town, SENT OUT QUEST, Type, 1
+073, Venice, Cape Town, SENT OUT QUEST, Type, 2
+073, Venice, Jerusalem, SENT OUT QUEST, Type, 1
+073, Venice, Jerusalem, SENT OUT QUEST, Type, 7
+073, Venice, Sidon, SENT OUT QUEST, Type, 1
+073, Venice, Sidon, SENT OUT QUEST, Type, 3
+073, Venice, Sidon, SENT OUT QUEST, Type, 7
+073, Egypt, Valletta, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+073, Korea, Vatican City, SENT OUT QUEST, Type, 2
+073, Korea, Vatican City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+074, Denmark, Valletta, SENT OUT QUEST, Type, 1
+074, Denmark, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+074, The Zulus, Riga, lost friend
+074, Russia, Riga, lost friend
+074, The Zulus, Riga, SENT OUT QUEST, Type, 17
+074, The Zulus, Riga, RECEIVED QUEST, Trade Route, Friendship: 29 to 29, MINOR_CIV_RIGA
+074, Korea, Prague, SENT OUT QUEST, Type, 7
+074, Korea, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+074, The Zulus, Almaty, lost friend
+074, Korea, Jerusalem, SENT OUT QUEST, Type, 7
+074, Korea, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+074, Denmark, Jerusalem, SENT OUT QUEST, Type, 4
+074, Denmark, Jerusalem, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+075, Korea, Riga, era change yield update
+075, Korea, Bogota, era change yield update
+075, Korea, Valletta, era change yield update
+075, Korea, Ife, era change yield update
+075, Korea, Prague, era change yield update
+075, Korea, Kabul, era change yield update
+075, Korea, Geneva, era change yield update
+075, Korea, La Venta, era change yield update
+075, Korea, Almaty, era change yield update
+075, Korea, Vatican City, era change yield update
+075, Korea, Malacca, era change yield update
+075, Korea, Cahokia, era change yield update
+075, Korea, Cape Town, era change yield update
+075, Korea, Jerusalem, era change yield update
+075, Korea, Sidon, era change yield update
+075, Korea, Valletta, SENT OUT QUEST, Type, 1
+075, Korea, Prague, SENT OUT QUEST, Type, 2
+075, Korea, Prague, SENT OUT QUEST, Type, 7
+075, Korea, Kabul, SENT OUT QUEST, Type, 1
+075, Korea, Kabul, SENT OUT QUEST, Type, 2
+075, Korea, Kabul, SENT OUT QUEST, Type, 3
+075, Korea, Almaty, SENT OUT QUEST, Type, 1
+075, Korea, Almaty, SENT OUT QUEST, Type, 2
+075, Korea, Vatican City, SENT OUT QUEST, Type, 1
+075, Korea, Vatican City, SENT OUT QUEST, Type, 2
+075, Korea, Cahokia, SENT OUT QUEST, Type, 1
+075, Korea, Cahokia, SENT OUT QUEST, Type, 2
+075, Korea, Cahokia, SENT OUT QUEST, Type, 7
+075, Korea, Jerusalem, SENT OUT QUEST, Type, 1
+075, Korea, Jerusalem, SENT OUT QUEST, Type, 2
+075, Korea, Jerusalem, SENT OUT QUEST, Type, 7
+075, Korea, Sidon, SENT OUT QUEST, Type, 1
+075, Korea, Sidon, SENT OUT QUEST, Type, 0
+075, Korea, Sidon, SENT OUT QUEST, Type, 17
+076, The Iroquois, Kabul, lost friend
+076, Russia, Sidon, SENT OUT QUEST, Type, 14
+076, Russia, Sidon, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SIDON
+077, Denmark, Riga, gained friend
+077, Denmark, Riga, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_RIGA
+077, Denmark, Geneva, gained ally
+077, Denmark, Geneva, FINISHED QUEST, Find Natural Wonder, Friendship: 34 to 74, MINOR_CIV_GENEVA
+077, Russia, La Venta, lost friend
+077, Russia, Cahokia, SENT OUT QUEST, Type, 4
+077, Russia, Cahokia, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+077, Russia, Jerusalem, lost friend
+077, Denmark, Sidon, gained friend
+077, Denmark, Sidon, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SIDON
+078, Egypt, Cahokia, SENT OUT QUEST, Type, 1
+078, Egypt, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+078, Denmark, Geneva, SENT OUT QUEST, Type, 1
+078, Denmark, Geneva, SENT OUT QUEST, Type, 17
+078, Denmark, Sidon, SENT OUT QUEST, Type, 1
+078, Denmark, Vatican City, SENT OUT QUEST, Type, 1
+078, Denmark, Vatican City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+079, Russia, Jerusalem, SENT OUT QUEST, Type, 2
+079, Russia, Jerusalem, SENT OUT QUEST, Type, 1
+079, Vatican City, Austria, RECEIVED_UNIT_GIFT, Warrior
+080, The Zulus, La Venta, SENT OUT QUEST, Type, 2
+080, The Zulus, La Venta, SENT OUT QUEST, Type, 1
+080, The Zulus, Jerusalem, SENT OUT QUEST, Type, 2
+080, The Zulus, Jerusalem, SENT OUT QUEST, Type, 1
+080, Egypt, Riga, era change yield update
+080, Egypt, Bogota, era change yield update
+080, Egypt, Valletta, era change yield update
+080, Egypt, Ife, era change yield update
+080, Egypt, Prague, era change yield update
+080, Egypt, Kabul, era change yield update
+080, Egypt, Geneva, era change yield update
+080, Egypt, La Venta, era change yield update
+080, Egypt, Almaty, era change yield update
+080, Egypt, Vatican City, era change yield update
+080, Egypt, Malacca, era change yield update
+080, Egypt, Cahokia, era change yield update
+080, Egypt, Cape Town, era change yield update
+080, Egypt, Jerusalem, era change yield update
+080, Egypt, Sidon, era change yield update
+080, Egypt, Riga, SENT OUT QUEST, Type, 2
+080, Egypt, Riga, SENT OUT QUEST, Type, 1
+080, Egypt, Riga, SENT OUT QUEST, Type, 7
+080, Egypt, Bogota, SENT OUT QUEST, Type, 1
+080, Egypt, Bogota, SENT OUT QUEST, Type, 2
+080, Egypt, Bogota, SENT OUT QUEST, Type, 3
+080, Egypt, Valletta, SENT OUT QUEST, Type, 1
+080, Egypt, Valletta, SENT OUT QUEST, Type, 2
+080, Egypt, La Venta, SENT OUT QUEST, Type, 1
+080, Egypt, La Venta, SENT OUT QUEST, Type, 7
+080, Egypt, Almaty, SENT OUT QUEST, Type, 1
+080, Egypt, Vatican City, SENT OUT QUEST, Type, 1
+080, Egypt, Vatican City, SENT OUT QUEST, Type, 7
+080, Egypt, Vatican City, SENT OUT QUEST, Type, 2
+080, Egypt, Cahokia, SENT OUT QUEST, Type, 1
+080, Egypt, Jerusalem, SENT OUT QUEST, Type, 2
+080, Egypt, Jerusalem, SENT OUT QUEST, Type, 1
+080, Egypt, Jerusalem, SENT OUT QUEST, Type, 3
+080, Austria, Ife, SENT OUT QUEST, Type, 16
+080, Austria, Ife, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_IFE
+080, The Zulus, Prague, SENT OUT QUEST, Type, 7
+080, The Zulus, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 107 to 107, MINOR_CIV_PRAGUE
+080, The Zulus, Almaty, SENT OUT QUEST, Type, 14
+080, The Zulus, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 20 to 20, MINOR_CIV_ALMATY
+080, Korea, Almaty, SENT OUT QUEST, Type, 7
+080, Korea, Almaty, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+080, Venice, Almaty, SENT OUT QUEST, Type, 16
+080, Venice, Almaty, RECEIVED QUEST, Spread Religion, Friendship: 8 to 8, MINOR_CIV_ALMATY
+080, Austria, Vatican City, SENT OUT QUEST, Type, 2
+080, Austria, Vatican City, RECEIVED QUEST, Connect Resource, Friendship: 49 to 49, MINOR_CIV_VATICAN_CITY
+080, Austria, Cape Town, gained friend
+080, Austria, Cape Town, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_CAPE_TOWN
+080, The Iroquois, Cape Town, SENT OUT QUEST, Type, 2
+080, The Iroquois, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+080, Denmark, Sidon, SENT OUT QUEST, Type, 14
+080, Denmark, Sidon, RECEIVED QUEST, Bully City-State, Friendship: 35 to 35, MINOR_CIV_SIDON
+081, Venice, Valletta, SENT OUT QUEST, Type, 1
+081, Venice, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+081, Austria, Riga, SENT OUT QUEST, Type, 2
+081, Austria, Riga, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_RIGA
+081, The Iroquois, Kabul, SENT OUT QUEST, Type, 2
+081, The Iroquois, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 17 to 17, MINOR_CIV_KABUL
+081, Denmark, Cahokia, SENT OUT QUEST, Type, 2
+081, Denmark, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 34 to 34, MINOR_CIV_CAHOKIA
+081, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 17
+081, The Iroquois, Jerusalem, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+082, The Zulus, Sidon, SENT OUT QUEST, Type, 1
+082, The Zulus, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+082, Russia, Cape Town, SENT OUT QUEST, Type, 1
+082, Russia, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+082, Prague, Russia, RECEIVED_UNIT_GIFT, Warrior
+082, Venice, Geneva, SENT OUT QUEST, Type, 7
+082, Venice, Geneva, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_GENEVA
+082, Korea, Geneva, SENT OUT QUEST, Type, 1
+082, Korea, Geneva, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENEVA
+083, The Zulus, Bogota, SENT OUT QUEST, Type, 2
+083, The Zulus, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+083, The Iroquois, Ife, SENT OUT QUEST, Type, 11
+083, The Iroquois, Ife, RECEIVED QUEST, Contest Faith, Friendship: 38 to 38, MINOR_CIV_IFE
+083, Denmark, Ife, SENT OUT QUEST, Type, 11
+083, Denmark, Ife, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+083, Venice, Ife, SENT OUT QUEST, Type, 11
+083, Venice, Ife, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_IFE
+083, Austria, Ife, SENT OUT QUEST, Type, 11
+083, Austria, Ife, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_IFE
+083, Denmark, Kabul, gained friend
+083, Denmark, Kabul, FINISHED QUEST, Trade Route, Friendship: 0 to 40, MINOR_CIV_KABUL
+083, Venice, Cape Town, SENT OUT QUEST, Type, 3
+083, Venice, Cape Town, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+083, The Zulus, Jerusalem, SENT OUT QUEST, Type, 0
+083, The Zulus, Jerusalem, RECEIVED QUEST, Route, Friendship: 11 to 11, MINOR_CIV_JERUSALEM
+083, Venice, Jerusalem, SENT OUT QUEST, Type, 2
+083, Venice, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+084, Denmark, Riga, lost friend
+084, The Zulus, Bogota, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+084, Egypt, Bogota, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+084, Korea, Valletta, SENT OUT QUEST, Type, 14
+084, Korea, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+084, Venice, Ife, SENT OUT QUEST, Type, 3
+084, Venice, Ife, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_IFE
+084, Denmark, Kabul, gained ally
+084, Denmark, Kabul, FINISHED QUEST, Kill Camp, Friendship: 37 to 87, MINOR_CIV_KABUL
+084, Denmark, Geneva, FINISHED QUEST, Kill Camp, Friendship: 63 to 113, MINOR_CIV_GENEVA
+084, Venice, Geneva, gained friend
+084, Venice, Geneva, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_GENEVA
+084, The Zulus, Cahokia, gained friend
+084, The Zulus, Cahokia, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_CAHOKIA
+084, Venice, Cahokia, gained friend
+084, Venice, Cahokia, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_CAHOKIA
+084, Venice, Jerusalem, gained friend
+084, Venice, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_JERUSALEM
+084, Egypt, Jerusalem, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+084, Austria, Jerusalem, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+084, Denmark, Sidon, lost friend
+084, Venice, Sidon, gained friend
+084, Venice, Sidon, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_SIDON
+084, Venice, Sidon, gained ally
+084, Venice, Sidon, FINISHED QUEST, Find Natural Wonder, Friendship: 45 to 85, MINOR_CIV_SIDON
+085, Venice, Vatican City, SENT OUT QUEST, Type, 1
+085, Venice, Vatican City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+085, Austria, Riga, era change yield update
+085, Austria, Bogota, era change yield update
+085, Austria, Valletta, era change yield update
+085, Austria, Ife, era change yield update
+085, Austria, Prague, era change yield update
+085, Austria, Kabul, era change yield update
+085, Austria, Geneva, era change yield update
+085, Austria, La Venta, era change yield update
+085, Austria, Almaty, era change yield update
+085, Austria, Vatican City, era change yield update
+085, Austria, Malacca, era change yield update
+085, Austria, Cahokia, era change yield update
+085, Austria, Cape Town, era change yield update
+085, Austria, Jerusalem, era change yield update
+085, Austria, Sidon, era change yield update
+085, Austria, Riga, SENT OUT QUEST, Type, 1
+085, Austria, Riga, SENT OUT QUEST, Type, 2
+085, Austria, Bogota, SENT OUT QUEST, Type, 1
+085, Austria, Bogota, SENT OUT QUEST, Type, 16
+085, Austria, Valletta, SENT OUT QUEST, Type, 1
+085, Austria, Ife, SENT OUT QUEST, Type, 2
+085, Austria, Ife, SENT OUT QUEST, Type, 16
+085, Austria, Ife, SENT OUT QUEST, Type, 11
+085, Austria, La Venta, SENT OUT QUEST, Type, 1
+085, Austria, La Venta, SENT OUT QUEST, Type, 7
+085, Austria, Vatican City, SENT OUT QUEST, Type, 1
+085, Austria, Vatican City, SENT OUT QUEST, Type, 2
+085, Austria, Cape Town, SENT OUT QUEST, Type, 1
+085, Austria, Cape Town, SENT OUT QUEST, Type, 4
+085, Austria, Jerusalem, SENT OUT QUEST, Type, 1
+085, Austria, Jerusalem, SENT OUT QUEST, Type, 0
+085, Denmark, Prague, SENT OUT QUEST, Type, 7
+085, Denmark, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+085, The Iroquois, Kabul, cancelled, Kill Camp, Friendship: 8 to 8, MINOR_CIV_KABUL
+085, Korea, Kabul, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+085, Korea, Geneva, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENEVA
+085, Venice, Geneva, cancelled, Kill Camp, Friendship: 51 to 51, MINOR_CIV_GENEVA
+085, Denmark, Cahokia, lost friend
+085, Venice, Cahokia, gained ally
+085, Venice, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 43 to 83, MINOR_CIV_CAHOKIA
+086, The Zulus, Cahokia, SENT OUT QUEST, Type, 1
+086, Venice, Vatican City, SENT OUT QUEST, Type, 1
+086, Russia, Riga, SENT OUT QUEST, Type, 17
+086, Russia, Riga, RECEIVED QUEST, Trade Route, Friendship: 11 to 11, MINOR_CIV_RIGA
+086, The Zulus, Valletta, SENT OUT QUEST, Type, 14
+086, The Zulus, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+086, The Zulus, Prague, FINISHED QUEST, Find Natural Wonder, Friendship: 98 to 138, MINOR_CIV_PRAGUE
+086, Venice, Prague, gained friend
+086, Venice, Prague, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_PRAGUE
+087, The Iroquois, Ife, SENT OUT QUEST, Type, 2
+087, The Iroquois, Ife, RECEIVED QUEST, Connect Resource, Friendship: 32 to 32, MINOR_CIV_IFE
+087, Egypt, Almaty, SENT OUT QUEST, Type, 2
+087, Egypt, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ALMATY
+087, The Zulus, Cahokia, SENT OUT QUEST, Type, 14
+087, The Zulus, Cahokia, RECEIVED QUEST, Bully City-State, Friendship: 40 to 40, MINOR_CIV_CAHOKIA
+087, The Zulus, Jerusalem, gained friend
+087, The Zulus, Jerusalem, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_JERUSALEM
+088, Denmark, Sidon, SENT OUT QUEST, Type, 1
+088, Denmark, Sidon, SENT OUT QUEST, Type, 14
+088, The Zulus, Prague, SENT OUT QUEST, Type, 13
+088, The Zulus, Prague, RECEIVED QUEST, Invest, Friendship: 135 to 135, MINOR_CIV_PRAGUE
+088, Russia, Prague, SENT OUT QUEST, Type, 13
+088, Russia, Prague, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+088, Egypt, Prague, SENT OUT QUEST, Type, 13
+088, Egypt, Prague, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+088, The Iroquois, Prague, SENT OUT QUEST, Type, 13
+088, The Iroquois, Prague, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+088, Korea, Prague, SENT OUT QUEST, Type, 13
+088, Korea, Prague, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+088, Denmark, Prague, SENT OUT QUEST, Type, 13
+088, Denmark, Prague, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+088, Venice, Prague, SENT OUT QUEST, Type, 13
+088, Venice, Prague, RECEIVED QUEST, Invest, Friendship: 42 to 42, MINOR_CIV_PRAGUE
+088, The Iroquois, Prague, SENT OUT QUEST, Type, 4
+088, The Iroquois, Prague, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+088, The Zulus, La Venta, SENT OUT QUEST, Type, 14
+088, The Zulus, La Venta, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+088, Austria, La Venta, SENT OUT QUEST, Type, 16
+088, Austria, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+089, Egypt, Bogota, gained friend
+089, Egypt, Bogota, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_BOGOTA
+089, Egypt, Valletta, gained friend
+089, Egypt, Valletta, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_VALLETTA
+089, The Iroquois, Ife, lost friend
+089, Russia, Prague, gained friend
+089, Russia, Prague, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+089, Russia, Almaty, SENT OUT QUEST, Type, 3
+089, Russia, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+089, Egypt, Vatican City, gained friend
+089, Egypt, Vatican City, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_VATICAN_CITY
+089, Venice, Cape Town, gained friend
+089, Venice, Cape Town, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_CAPE_TOWN
+090, Venice, Jerusalem, gained ally
+090, Venice, Jerusalem, Gold Gift: 250, Friendship: 37 to 62, Culture, MINOR_CIV_JERUSALEM, Boost! , Passing Austria
+090, Venice, Ife, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_IFE, (SAVING) 
+090, The Zulus, Bogota, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+090, Austria, Bogota, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+090, The Zulus, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+090, The Iroquois, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+090, Korea, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+090, Denmark, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+090, Venice, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+090, Austria, Valletta, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+090, The Iroquois, Valletta, SENT OUT QUEST, Type, 2
+090, The Iroquois, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+090, The Zulus, Vatican City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+090, Korea, Vatican City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+090, Denmark, Vatican City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+090, Venice, Vatican City, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VATICAN_CITY
+090, Austria, Vatican City, cancelled, Kill Camp, Friendship: 34 to 34, MINOR_CIV_VATICAN_CITY
+090, Russia, Sidon, SENT OUT QUEST, Type, 4
+090, Russia, Sidon, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SIDON
+091, Egypt, Cape Town, SENT OUT QUEST, Type, 1
+091, Egypt, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+091, Denmark, Cape Town, SENT OUT QUEST, Type, 1
+091, Denmark, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+091, Denmark, Kabul, SENT OUT QUEST, Type, 14
+091, Denmark, Kabul, RECEIVED QUEST, Bully City-State, Friendship: 72 to 72, MINOR_CIV_KABUL
+091, Russia, Cahokia, SENT OUT QUEST, Type, 2
+091, Russia, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+091, Austria, Cape Town, lost friend
+091, Venice, Jerusalem, lost ally
+092, Denmark, Ife, SENT OUT QUEST, Type, 2
+092, Denmark, Ife, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+093, Austria, Valletta, SENT OUT QUEST, Type, 4
+093, Austria, Valletta, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+093, Egypt, Prague, SENT OUT QUEST, Type, 4
+093, Egypt, Prague, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+093, Egypt, La Venta, SENT OUT QUEST, Type, 2
+093, Egypt, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+093, The Zulus, Almaty, SENT OUT QUEST, Type, 7
+093, The Zulus, Almaty, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_ALMATY
+093, Austria, Vatican City, lost friend
+093, The Zulus, Cape Town, SENT OUT QUEST, Type, 14
+093, The Zulus, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+094, Denmark, Jerusalem, gained friend
+094, Denmark, Jerusalem, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+094, Egypt, Riga, gained friend
+094, Egypt, Riga, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_RIGA
+094, Austria, Bogota, SENT OUT QUEST, Type, 7
+094, Austria, Bogota, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+094, Denmark, Prague, gained friend
+094, Denmark, Prague, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+094, Egypt, La Venta, gained friend
+094, Egypt, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+094, Egypt, Vatican City, gained ally
+094, Egypt, Vatican City, FINISHED QUEST, Find Natural Wonder, Friendship: 47 to 87, MINOR_CIV_VATICAN_CITY
+094, Denmark, Vatican City, SENT OUT QUEST, Type, 7
+094, Denmark, Vatican City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+094, Cahokia, Russia, RECEIVED_UNIT_GIFT, Warrior
+094, The Zulus, Sidon, SENT OUT QUEST, Type, 16
+094, The Zulus, Sidon, RECEIVED QUEST, Spread Religion, Friendship: -4 to -4, MINOR_CIV_SIDON
+095, Egypt, Riga, SENT OUT QUEST, Type, 2
+095, Egypt, Riga, SENT OUT QUEST, Type, 1
+095, The Iroquois, Prague, gained friend
+095, The Iroquois, Prague, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+095, Venice, Cape Town, gained ally
+095, Venice, Cape Town, Gold Gift: 250, Friendship: 37 to 62, Culture, MINOR_CIV_CAPE_TOWN, Boost! , Passing Austria
+095, Venice, Prague, Gold Gift: 250, Friendship: 33 to 33, Culture, MINOR_CIV_PRAGUE, (SAVING) , Boost! , Passing Korea
+095, Denmark, Valletta, SENT OUT QUEST, Type, 2
+095, Denmark, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+095, Korea, Kabul, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+095, Venice, Geneva, SENT OUT QUEST, Type, 16
+095, Venice, Geneva, RECEIVED QUEST, Spread Religion, Friendship: 36 to 36, MINOR_CIV_GENEVA
+095, The Zulus, Vatican City, SENT OUT QUEST, Type, 16
+095, The Zulus, Vatican City, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+095, Venice, Malacca, SENT OUT QUEST, Type, 4
+095, Venice, Malacca, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MALACCA
+095, The Zulus, Cahokia, lost friend
+095, Venice, Cape Town, cancelled, Construct Wonder, Friendship: 61 to 61, MINOR_CIV_CAPE_TOWN
+096, Russia, Prague, lost friend
+096, Russia, Almaty, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+096, Korea, Vatican City, SENT OUT QUEST, Type, 4
+096, Korea, Vatican City, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+096, Austria, Vatican City, SENT OUT QUEST, Type, 16
+096, Austria, Vatican City, RECEIVED QUEST, Spread Religion, Friendship: 25 to 25, MINOR_CIV_VATICAN_CITY
+096, Venice, Cape Town, lost ally
+096, Russia, Jerusalem, SENT OUT QUEST, Type, 7
+096, Russia, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+096, Denmark, Jerusalem, SENT OUT QUEST, Type, 7
+096, Denmark, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 35 to 35, MINOR_CIV_JERUSALEM
+096, The Iroquois, Sidon, gained friend
+096, The Iroquois, Sidon, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SIDON
+096, Russia, Sidon, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SIDON
+097, Egypt, Riga, gained ally
+097, Egypt, Riga, Gold Gift: 250, Friendship: 37 to 62, Spaceship, MINOR_CIV_RIGA, Boost! , Passing Austria
+097, Egypt, Jerusalem, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_JERUSALEM, (SAVING) 
+097, Denmark, Riga, SENT OUT QUEST, Type, 2
+097, Denmark, Riga, RECEIVED QUEST, Connect Resource, Friendship: 10 to 10, MINOR_CIV_RIGA
+097, Egypt, Ife, SENT OUT QUEST, Type, 11
+097, Egypt, Ife, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+097, Venice, Prague, lost friend
+097, Denmark, Kabul, lost ally
+097, Russia, La Venta, SENT OUT QUEST, Type, 2
+097, Russia, La Venta, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+097, Cahokia, Russia, RECEIVED_UNIT_GIFT, Swordsman
+098, Venice, Malacca, gained friend
+098, Venice, Malacca, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MALACCA
+098, Egypt, Riga, lost ally
+098, The Zulus, Riga, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RIGA
+098, Russia, Riga, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RIGA
+098, Egypt, Riga, cancelled, Kill Camp, Friendship: 59 to 59, MINOR_CIV_RIGA
+098, Denmark, Riga, cancelled, Kill Camp, Friendship: 8 to 8, MINOR_CIV_RIGA
+098, Austria, Riga, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RIGA
+098, Egypt, Valletta, lost friend
+098, Korea, La Venta, SENT OUT QUEST, Type, 1
+098, Korea, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+098, The Zulus, Jerusalem, lost friend
+098, Venice, Jerusalem, SENT OUT QUEST, Type, 7
+098, Venice, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 49 to 49, MINOR_CIV_JERUSALEM
+099, The Iroquois, Cahokia, SENT OUT QUEST, Type, 1
+099, The Iroquois, Cahokia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+099, Denmark, Kabul, SENT OUT QUEST, Type, 14
+099, Austria, Riga, SENT OUT QUEST, Type, 7
+099, Austria, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_RIGA
+099, Egypt, Bogota, SENT OUT QUEST, Type, 4
+099, Egypt, Bogota, RECEIVED QUEST, Great Person, Friendship: 40 to 40, MINOR_CIV_BOGOTA
+100, Denmark, Riga, era change yield update
+100, Denmark, Bogota, era change yield update
+100, Denmark, Valletta, era change yield update
+100, Denmark, Ife, era change yield update
+100, Denmark, Prague, era change yield update
+100, Denmark, Kabul, era change yield update
+100, Denmark, Geneva, era change yield update
+100, Denmark, La Venta, era change yield update
+100, Denmark, Almaty, era change yield update
+100, Denmark, Vatican City, era change yield update
+100, Denmark, Malacca, era change yield update
+100, Denmark, Cahokia, era change yield update
+100, Denmark, Cape Town, era change yield update
+100, Denmark, Jerusalem, era change yield update
+100, Denmark, Sidon, era change yield update
+100, Denmark, Riga, SENT OUT QUEST, Type, 2
+100, Denmark, Valletta, SENT OUT QUEST, Type, 2
+100, Denmark, Ife, SENT OUT QUEST, Type, 11
+100, Denmark, Ife, SENT OUT QUEST, Type, 2
+100, Denmark, Prague, SENT OUT QUEST, Type, 13
+100, Denmark, Kabul, SENT OUT QUEST, Type, 14
+100, Denmark, Geneva, SENT OUT QUEST, Type, 17
+100, Denmark, Vatican City, SENT OUT QUEST, Type, 7
+100, Denmark, Cahokia, SENT OUT QUEST, Type, 1
+100, Denmark, Cahokia, SENT OUT QUEST, Type, 2
+100, Denmark, Cape Town, SENT OUT QUEST, Type, 1
+100, Denmark, Jerusalem, SENT OUT QUEST, Type, 1
+100, Denmark, Jerusalem, SENT OUT QUEST, Type, 7
+100, Denmark, Sidon, SENT OUT QUEST, Type, 1
+100, Denmark, Sidon, SENT OUT QUEST, Type, 14
+100, The Zulus, Prague, SENT OUT QUEST, Type, 17
+100, The Zulus, Prague, RECEIVED QUEST, Trade Route, Friendship: 117 to 117, MINOR_CIV_PRAGUE
+100, Venice, Geneva, lost friend
+100, The Zulus, Almaty, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_ALMATY
+100, Vatican City, Austria, RECEIVED_UNIT_GIFT, Warrior
+100, Denmark, Jerusalem, lost friend
+100, Denmark, Sidon, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_SIDON
+100, Venice, Sidon, SENT OUT QUEST, Type, 14
+100, Venice, Sidon, RECEIVED QUEST, Bully City-State, Friendship: 61 to 61, MINOR_CIV_SIDON
+101, Korea, Vatican City, gained friend
+101, Korea, Vatican City, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VATICAN_CITY
+101, Russia, Riga, gained friend
+101, Russia, Riga, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_RIGA
+101, The Iroquois, Prague, lost friend
+101, Denmark, Prague, lost friend
+101, Denmark, Prague, SENT OUT QUEST, Type, 4
+101, Denmark, Prague, RECEIVED QUEST, Great Person, Friendship: 29 to 29, MINOR_CIV_PRAGUE
+101, Russia, Almaty, gained friend
+101, Russia, Almaty, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ALMATY
+101, Venice, Cahokia, lost ally
+101, The Zulus, Cahokia, SENT OUT QUEST, Type, 2
+101, The Zulus, Cahokia, RECEIVED QUEST, Connect Resource, Friendship: 19 to 19, MINOR_CIV_CAHOKIA
+101, Russia, Jerusalem, gained friend
+101, Russia, Jerusalem, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_JERUSALEM
+101, Venice, Sidon, lost ally
+102, Russia, Almaty, SENT OUT QUEST, Type, 1
+102, The Zulus, Riga, SENT OUT QUEST, Type, 7
+102, The Zulus, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_RIGA
+102, Venice, Almaty, SENT OUT QUEST, Type, 2
+102, Venice, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ALMATY
+102, Venice, Vatican City, SENT OUT QUEST, Type, 4
+102, Venice, Vatican City, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_VATICAN_CITY
+102, Venice, Malacca, lost friend
+102, The Zulus, Jerusalem, SENT OUT QUEST, Type, 16
+102, The Zulus, Jerusalem, RECEIVED QUEST, Spread Religion, Friendship: 22 to 22, MINOR_CIV_JERUSALEM
+102, Austria, Jerusalem, SENT OUT QUEST, Type, 3
+102, Austria, Jerusalem, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+102, Denmark, Sidon, SENT OUT QUEST, Type, 2
+102, Denmark, Sidon, RECEIVED QUEST, Connect Resource, Friendship: 2 to 2, MINOR_CIV_SIDON
+103, The Zulus, Riga, era change yield update
+103, The Zulus, Bogota, era change yield update
+103, The Zulus, Valletta, era change yield update
+103, The Zulus, Ife, era change yield update
+103, The Zulus, Prague, era change yield update
+103, The Zulus, Kabul, era change yield update
+103, The Zulus, Geneva, era change yield update
+103, The Zulus, La Venta, era change yield update
+103, The Zulus, Almaty, era change yield update
+103, The Zulus, Vatican City, era change yield update
+103, The Zulus, Malacca, era change yield update
+103, The Zulus, Cahokia, era change yield update
+103, The Zulus, Cape Town, era change yield update
+103, The Zulus, Jerusalem, era change yield update
+103, The Zulus, Sidon, era change yield update
+103, The Zulus, Riga, SENT OUT QUEST, Type, 17
+103, The Zulus, Riga, SENT OUT QUEST, Type, 7
+103, The Zulus, Bogota, SENT OUT QUEST, Type, 2
+103, The Zulus, Valletta, SENT OUT QUEST, Type, 14
+103, The Zulus, Prague, SENT OUT QUEST, Type, 13
+103, The Zulus, Prague, SENT OUT QUEST, Type, 17
+103, The Zulus, La Venta, SENT OUT QUEST, Type, 2
+103, The Zulus, La Venta, SENT OUT QUEST, Type, 1
+103, The Zulus, La Venta, SENT OUT QUEST, Type, 14
+103, The Zulus, Almaty, SENT OUT QUEST, Type, 1
+103, The Zulus, Almaty, SENT OUT QUEST, Type, 7
+103, The Zulus, Vatican City, SENT OUT QUEST, Type, 2
+103, The Zulus, Vatican City, SENT OUT QUEST, Type, 16
+103, The Zulus, Cahokia, SENT OUT QUEST, Type, 1
+103, The Zulus, Cahokia, SENT OUT QUEST, Type, 14
+103, The Zulus, Cahokia, SENT OUT QUEST, Type, 2
+103, The Zulus, Cape Town, SENT OUT QUEST, Type, 1
+103, The Zulus, Cape Town, SENT OUT QUEST, Type, 14
+103, The Zulus, Jerusalem, SENT OUT QUEST, Type, 1
+103, The Zulus, Jerusalem, SENT OUT QUEST, Type, 0
+103, The Zulus, Jerusalem, SENT OUT QUEST, Type, 16
+103, The Zulus, Sidon, SENT OUT QUEST, Type, 1
+103, The Zulus, Sidon, SENT OUT QUEST, Type, 16
+103, The Iroquois, Riga, era change yield update
+103, The Iroquois, Bogota, era change yield update
+103, The Iroquois, Valletta, era change yield update
+103, The Iroquois, Ife, era change yield update
+103, The Iroquois, Prague, era change yield update
+103, The Iroquois, Kabul, era change yield update
+103, The Iroquois, Geneva, era change yield update
+103, The Iroquois, La Venta, era change yield update
+103, The Iroquois, Almaty, era change yield update
+103, The Iroquois, Vatican City, era change yield update
+103, The Iroquois, Malacca, era change yield update
+103, The Iroquois, Cahokia, era change yield update
+103, The Iroquois, Cape Town, era change yield update
+103, The Iroquois, Jerusalem, era change yield update
+103, The Iroquois, Sidon, era change yield update
+103, The Iroquois, Valletta, SENT OUT QUEST, Type, 17
+103, The Iroquois, Valletta, SENT OUT QUEST, Type, 2
+103, The Iroquois, Ife, SENT OUT QUEST, Type, 16
+103, The Iroquois, Ife, SENT OUT QUEST, Type, 11
+103, The Iroquois, Ife, SENT OUT QUEST, Type, 2
+103, The Iroquois, Prague, SENT OUT QUEST, Type, 13
+103, The Iroquois, Kabul, SENT OUT QUEST, Type, 2
+103, The Iroquois, Cahokia, SENT OUT QUEST, Type, 1
+103, The Iroquois, Cape Town, SENT OUT QUEST, Type, 1
+103, The Iroquois, Cape Town, SENT OUT QUEST, Type, 17
+103, The Iroquois, Cape Town, SENT OUT QUEST, Type, 2
+103, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 1
+103, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 16
+103, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 17
+103, The Iroquois, Sidon, SENT OUT QUEST, Type, 1
+103, The Iroquois, Sidon, SENT OUT QUEST, Type, 7
+103, The Zulus, Riga, gained friend
+103, The Zulus, Riga, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_RIGA
+103, Venice, Ife, gained friend
+103, Venice, Ife, FINISHED QUEST, Contest Faith, Friendship: 5 to 45, MINOR_CIV_IFE
+103, Egypt, Ife, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+103, The Iroquois, Ife, cancelled, Contest Faith, Friendship: 8 to 8, MINOR_CIV_IFE
+103, Denmark, Ife, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_IFE
+103, Austria, Ife, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_IFE
+103, Denmark, Geneva, SENT OUT QUEST, Type, 4
+103, Denmark, Geneva, RECEIVED QUEST, Great Person, Friendship: 85 to 85, MINOR_CIV_GENEVA
+103, The Zulus, Almaty, gained friend
+103, The Zulus, Almaty, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_ALMATY
+103, Russia, Cahokia, gained friend
+103, Russia, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+103, Egypt, Jerusalem, SENT OUT QUEST, Type, 17
+103, Egypt, Jerusalem, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+103, The Iroquois, Sidon, lost friend
+104, Russia, Riga, era change yield update
+104, Russia, Bogota, era change yield update
+104, Russia, Valletta, era change yield update
+104, Russia, Ife, era change yield update
+104, Russia, Prague, era change yield update
+104, Russia, Kabul, era change yield update
+104, Russia, Geneva, era change yield update
+104, Russia, La Venta, era change yield update
+104, Russia, Almaty, era change yield update
+104, Russia, Vatican City, era change yield update
+104, Russia, Malacca, era change yield update
+104, Russia, Cahokia, era change yield update
+104, Russia, Cape Town, era change yield update
+104, Russia, Jerusalem, era change yield update
+104, Russia, Sidon, era change yield update
+104, Russia, Riga, SENT OUT QUEST, Type, 17
+104, Russia, Prague, SENT OUT QUEST, Type, 4
+104, Russia, Prague, SENT OUT QUEST, Type, 13
+104, Russia, La Venta, SENT OUT QUEST, Type, 17
+104, Russia, La Venta, SENT OUT QUEST, Type, 1
+104, Russia, La Venta, SENT OUT QUEST, Type, 2
+104, Russia, Almaty, SENT OUT QUEST, Type, 1
+104, Russia, Cahokia, SENT OUT QUEST, Type, 1
+104, Russia, Cahokia, SENT OUT QUEST, Type, 4
+104, Russia, Cape Town, SENT OUT QUEST, Type, 1
+104, Russia, Jerusalem, SENT OUT QUEST, Type, 1
+104, Russia, Jerusalem, SENT OUT QUEST, Type, 7
+104, Russia, Sidon, SENT OUT QUEST, Type, 1
+104, Russia, Sidon, SENT OUT QUEST, Type, 4
+104, Egypt, Bogota, gained ally
+104, Egypt, Bogota, FINISHED QUEST, Great Person, Friendship: 34 to 74, MINOR_CIV_BOGOTA
+104, Egypt, Prague, gained friend
+104, Egypt, Prague, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+104, Korea, Valletta, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+104, Geneva, Venice, RECEIVED_UNIT_GIFT, Warrior
+104, Korea, Geneva, SENT OUT QUEST, Type, 4
+104, Korea, Geneva, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_GENEVA
+104, Egypt, Cahokia, SENT OUT QUEST, Type, 4
+104, Egypt, Cahokia, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+104, Russia, Cape Town, SENT OUT QUEST, Type, 3
+104, Russia, Cape Town, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+105, Egypt, La Venta, lost friend
+105, Denmark, Malacca, SENT OUT QUEST, Type, 13
+105, Denmark, Malacca, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
+105, Venice, Malacca, SENT OUT QUEST, Type, 13
+105, Venice, Malacca, RECEIVED QUEST, Invest, Friendship: 22 to 22, MINOR_CIV_MALACCA
+105, Austria, Cape Town, SENT OUT QUEST, Type, 17
+105, Austria, Cape Town, RECEIVED QUEST, Trade Route, Friendship: 7 to 7, MINOR_CIV_CAPE_TOWN
+105, The Zulus, Jerusalem, cancelled, Kill Camp, Friendship: 18 to 18, MINOR_CIV_JERUSALEM
+105, Russia, Jerusalem, cancelled, Kill Camp, Friendship: 39 to 39, MINOR_CIV_JERUSALEM
+105, Egypt, Jerusalem, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+105, The Iroquois, Jerusalem, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+105, Korea, Jerusalem, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+105, Denmark, Jerusalem, cancelled, Kill Camp, Friendship: 22 to 22, MINOR_CIV_JERUSALEM
+105, Venice, Jerusalem, cancelled, Kill Camp, Friendship: 38 to 38, MINOR_CIV_JERUSALEM
+105, Austria, Jerusalem, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+106, Austria, Valletta, gained friend
+106, Austria, Valletta, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_VALLETTA
+106, Austria, Cape Town, gained friend
+106, Austria, Cape Town, FINISHED QUEST, Great Person, Friendship: 7 to 47, MINOR_CIV_CAPE_TOWN
+106, The Zulus, Valletta, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+106, Denmark, Geneva, FINISHED QUEST, Trade Route, Friendship: 81 to 121, MINOR_CIV_GENEVA
+107, Austria, Riga, gained friend
+107, Austria, Riga, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_RIGA
+107, Korea, Prague, gained friend
+107, Korea, Prague, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_PRAGUE
+107, Russia, Prague, SENT OUT QUEST, Type, 3
+107, Russia, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 13 to 13, MINOR_CIV_PRAGUE
+107, Korea, Kabul, gained friend
+107, Korea, Kabul, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KABUL
+107, Denmark, Kabul, SENT OUT QUEST, Type, 17
+107, Denmark, Kabul, RECEIVED QUEST, Trade Route, Friendship: 36 to 36, MINOR_CIV_KABUL
+107, Korea, Vatican City, lost friend
+107, The Zulus, Cahokia, cancelled, Bully City-State, Friendship: 10 to 10, MINOR_CIV_CAHOKIA
+108, The Iroquois, Almaty, SENT OUT QUEST, Type, 1
+108, The Iroquois, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+108, Korea, Bogota, SENT OUT QUEST, Type, 4
+108, Korea, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+108, The Zulus, Prague, FINISHED QUEST, Invest, Friendship: 106 to 106, MINOR_CIV_PRAGUE
+108, Korea, Prague, FINISHED QUEST, Invest, Friendship: 43 to 43, MINOR_CIV_PRAGUE
+108, Egypt, Prague, FINISHED QUEST, Invest, Friendship: 32 to 32, MINOR_CIV_PRAGUE
+108, The Iroquois, Prague, FINISHED QUEST, Invest, Friendship: 19 to 19, MINOR_CIV_PRAGUE
+108, Denmark, Prague, FINISHED QUEST, Invest, Friendship: 19 to 19, MINOR_CIV_PRAGUE
+108, Venice, Prague, FINISHED QUEST, Invest, Friendship: 12 to 12, MINOR_CIV_PRAGUE
+108, Russia, Prague, FINISHED QUEST, Invest, Friendship: 11 to 11, MINOR_CIV_PRAGUE
+108, The Zulus, La Venta, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_LA_VENTA
+108, Russia, Almaty, lost friend
+108, Venice, Almaty, gained friend
+108, Venice, Almaty, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_ALMATY
+108, Denmark, Vatican City, gained friend
+108, Denmark, Vatican City, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VATICAN_CITY
+108, Denmark, Cahokia, SENT OUT QUEST, Type, 7
+108, Denmark, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+108, Denmark, Jerusalem, gained friend
+108, Denmark, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 17 to 57, MINOR_CIV_JERUSALEM
+109, The Zulus, Riga, gained ally
+109, The Zulus, Riga, Gold Gift: 250, Friendship: 37 to 62, Conquest, MINOR_CIV_RIGA, Boost! , Passing Russia
+109, The Zulus, Almaty, Gold Gift: 250, Friendship: 37 to 37, Conquest, MINOR_CIV_ALMATY, (SAVING) , Boost! , Passing Russia
+109, Egypt, Riga, SENT OUT QUEST, Type, 2
+109, Russia, Almaty, SENT OUT QUEST, Type, 14
+109, Russia, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 28 to 28, MINOR_CIV_ALMATY
+109, Egypt, Almaty, SENT OUT QUEST, Type, 16
+109, Egypt, Almaty, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_ALMATY
+109, Vatican City, Venice, RECEIVED_UNIT_GIFT, Warrior
+110, The Iroquois, Jerusalem, gained friend
+110, The Iroquois, Jerusalem, Gold Gift: 500, Friendship: 5 to 55, Diplomacy, MINOR_CIV_JERUSALEM
+110, The Iroquois, Ife, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_IFE, (SAVING) 
+110, Venice, Ife, gained ally
+110, Venice, Ife, Gold Gift: 250, Friendship: 36 to 61, Spaceship, MINOR_CIV_IFE, Boost! , Passing Austria
+110, Venice, Jerusalem, Gold Gift: 250, Friendship: 32 to 32, Spaceship, MINOR_CIV_JERUSALEM, (SAVING) , Boost! , Passing Austria
+110, Venice, Geneva, SENT OUT QUEST, Type, 16
+110, Venice, Vatican City, SENT OUT QUEST, Type, 4
+110, Austria, Valletta, gained ally
+110, Austria, Valletta, Gold Gift: 250, Friendship: 36 to 61, Diplomacy, MINOR_CIV_VALLETTA, Boost! , Passing Egypt
+110, Austria, La Venta, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_LA_VENTA, (SAVING) 
+110, Austria, Almaty, SENT OUT QUEST, Type, 1
+110, Austria, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+110, The Zulus, Riga, lost ally
+110, Denmark, Riga, SENT OUT QUEST, Type, 4
+110, Denmark, Riga, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_RIGA
+110, Austria, Valletta, lost ally
+110, Venice, Ife, lost ally
+110, The Iroquois, Ife, gained friend
+110, The Iroquois, Ife, FINISHED QUEST, Spread Religion, Friendship: 5 to 45, MINOR_CIV_IFE
+110, Denmark, Ife, SENT OUT QUEST, Type, 4
+110, Denmark, Ife, RECEIVED QUEST, Great Person, Friendship: -9 to -9, MINOR_CIV_IFE
+110, Egypt, Prague, lost friend
+110, Denmark, Kabul, lost friend
+110, Korea, Kabul, SENT OUT QUEST, Type, 4
+110, Korea, Kabul, RECEIVED QUEST, Great Person, Friendship: 33 to 33, MINOR_CIV_KABUL
+110, Egypt, Vatican City, SENT OUT QUEST, Type, 14
+110, Egypt, Vatican City, RECEIVED QUEST, Bully City-State, Friendship: 63 to 63, MINOR_CIV_VATICAN_CITY
+110, Russia, Cahokia, lost friend
+110, Denmark, Cahokia, gained friend
+110, Denmark, Cahokia, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_CAHOKIA
+110, The Iroquois, Sidon, gained friend
+110, The Iroquois, Sidon, FINISHED QUEST, Find Natural Wonder, Friendship: 19 to 59, MINOR_CIV_SIDON
+111, The Iroquois, La Venta, SENT OUT QUEST, Type, 1
+111, The Iroquois, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+111, Denmark, Cahokia, SENT OUT QUEST, Type, 1
+111, Denmark, Cahokia, SENT OUT QUEST, Type, 7
+111, Austria, Almaty, SENT OUT QUEST, Type, 1
+111, Denmark, Riga, gained friend
+111, Denmark, Riga, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_RIGA
+111, The Zulus, Bogota, SENT OUT QUEST, Type, 3
+111, The Zulus, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+111, Venice, Ife, SENT OUT QUEST, Type, 16
+111, Venice, Ife, RECEIVED QUEST, Spread Religion, Friendship: 58 to 58, MINOR_CIV_IFE
+111, Prague, Venice, RECEIVED_UNIT_GIFT, Warrior
+111, Denmark, Kabul, cancelled, Bully City-State, Friendship: 27 to 27, MINOR_CIV_KABUL
+111, Egypt, Cape Town, SENT OUT QUEST, Type, 14
+111, Egypt, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+111, Venice, Cape Town, SENT OUT QUEST, Type, 3
+111, Venice, Cape Town, RECEIVED QUEST, Construct Wonder, Friendship: 37 to 37, MINOR_CIV_CAPE_TOWN
+111, Venice, Jerusalem, lost friend
+111, Denmark, Sidon, FINISHED QUEST, Connect Resource, Friendship: -21 to 18, MINOR_CIV_SIDON
+112, Russia, Riga, lost friend
+112, Prague, Russia, RECEIVED_UNIT_GIFT, Archer
+112, Korea, Kabul, lost friend
+112, Korea, Geneva, SENT OUT QUEST, Type, 11
+112, Korea, Geneva, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_GENEVA
+112, Denmark, Geneva, SENT OUT QUEST, Type, 11
+112, Denmark, Geneva, RECEIVED QUEST, Contest Faith, Friendship: 112 to 112, MINOR_CIV_GENEVA
+112, Venice, Geneva, SENT OUT QUEST, Type, 11
+112, Venice, Geneva, RECEIVED QUEST, Contest Faith, Friendship: 15 to 15, MINOR_CIV_GENEVA
+112, Venice, Cahokia, SENT OUT QUEST, Type, 7
+112, Venice, Cahokia, RECEIVED QUEST, Find Natural Wonder, Friendship: 43 to 43, MINOR_CIV_CAHOKIA
+112, Russia, Jerusalem, lost friend
+113, Austria, Cape Town, gained ally
+113, Austria, Cape Town, Gold Gift: 250, Friendship: 37 to 62, Diplomacy, MINOR_CIV_CAPE_TOWN, Boost! , Passing Venice
+113, Austria, Riga, Gold Gift: 250, Friendship: 37 to 37, Diplomacy, MINOR_CIV_RIGA, (SAVING) , Boost! , Passing Russia
+113, Austria, Ife, gained friend
+113, Austria, Ife, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_IFE
+113, Venice, Prague, SENT OUT QUEST, Type, 2
+113, Venice, Prague, RECEIVED QUEST, Connect Resource, Friendship: 9 to 9, MINOR_CIV_PRAGUE
+113, Venice, Kabul, SENT OUT QUEST, Type, 3
+113, Venice, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+113, Egypt, Vatican City, lost ally
+113, Austria, Vatican City, gained friend
+113, Austria, Vatican City, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_VATICAN_CITY
+113, The Iroquois, Cahokia, SENT OUT QUEST, Type, 16
+113, The Iroquois, Cahokia, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+113, The Zulus, Cape Town, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+114, Korea, Valletta, SENT OUT QUEST, Type, 14
+114, Korea, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+114, Russia, Prague, gained friend
+114, Russia, Prague, FINISHED QUEST, Construct Wonder, Friendship: 7 to 47, MINOR_CIV_PRAGUE
+114, The Iroquois, Prague, SENT OUT QUEST, Type, 7
+114, The Iroquois, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 10 to 10, MINOR_CIV_PRAGUE
+114, Korea, La Venta, SENT OUT QUEST, Type, 7
+114, Korea, La Venta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+114, The Zulus, Almaty, lost friend
+114, Denmark, Vatican City, SENT OUT QUEST, Type, 7
+114, Denmark, Vatican City, RECEIVED QUEST, Find Natural Wonder, Friendship: 31 to 31, MINOR_CIV_VATICAN_CITY
+114, Austria, Cape Town, lost ally
+114, Russia, Jerusalem, SENT OUT QUEST, Type, 2
+114, Russia, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 25 to 25, MINOR_CIV_JERUSALEM
+115, Venice, Cape Town, Gold Gift: 250, Friendship: 32 to 52, Spaceship, MINOR_CIV_CAPE_TOWN, Boost! 
+115, Venice, Almaty, Gold Gift: 250, Friendship: 36 to 36, Spaceship, MINOR_CIV_ALMATY, (SAVING) , Boost! , Passing Austria
+115, Egypt, Riga, SENT OUT QUEST, Type, 7
+115, Egypt, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 33 to 33, MINOR_CIV_RIGA
+115, Egypt, Bogota, lost ally
+115, The Zulus, Valletta, SENT OUT QUEST, Type, 3
+115, The Zulus, Valletta, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+115, Denmark, Vatican City, lost friend
+115, The Iroquois, Jerusalem, gained ally
+115, The Iroquois, Jerusalem, FINISHED QUEST, Spread Religion, Friendship: 46 to 86, MINOR_CIV_JERUSALEM
+116, Korea, Bogota, gained friend
+116, Korea, Bogota, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+116, Korea, Kabul, gained friend
+116, Korea, Kabul, gained ally
+116, Korea, Kabul, FINISHED QUEST, Great Person, Friendship: 22 to 62, MINOR_CIV_KABUL
+116, Korea, Geneva, gained friend
+116, Korea, Geneva, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_GENEVA
+116, Korea, Kabul, lost ally
+116, Egypt, La Venta, SENT OUT QUEST, Type, 4
+116, Egypt, La Venta, RECEIVED QUEST, Great Person, Friendship: 12 to 12, MINOR_CIV_LA_VENTA
+116, Korea, Vatican City, SENT OUT QUEST, Type, 7
+116, Korea, Vatican City, RECEIVED QUEST, Find Natural Wonder, Friendship: 16 to 16, MINOR_CIV_VATICAN_CITY
+116, Denmark, Jerusalem, SENT OUT QUEST, Type, 4
+116, Denmark, Jerusalem, RECEIVED QUEST, Great Person, Friendship: 45 to 45, MINOR_CIV_JERUSALEM
+117, The Zulus, Cahokia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+117, The Zulus, Cahokia, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+117, Russia, Cahokia, cancelled, Kill Camp, Friendship: 20 to 20, MINOR_CIV_CAHOKIA
+117, Russia, Cahokia, cancelled, Great Person, Friendship: 20 to 20, MINOR_CIV_CAHOKIA
+117, Egypt, Cahokia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+117, Egypt, Cahokia, cancelled, Great Person, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+117, The Iroquois, Cahokia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+117, The Iroquois, Cahokia, cancelled, Spread Religion, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+117, Korea, Cahokia, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+117, Korea, Cahokia, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+117, Korea, Cahokia, cancelled, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAHOKIA
+117, Denmark, Cahokia, cancelled, Kill Camp, Friendship: 31 to 31, MINOR_CIV_CAHOKIA
+117, Denmark, Cahokia, cancelled, Find Natural Wonder, Friendship: 31 to 31, MINOR_CIV_CAHOKIA
+117, Venice, Cahokia, cancelled, Kill Camp, Friendship: 37 to 37, MINOR_CIV_CAHOKIA
+117, Venice, Cahokia, cancelled, Find Natural Wonder, Friendship: 37 to 37, MINOR_CIV_CAHOKIA
+117, Denmark, Cahokia, lost friend
+117, Venice, Cahokia, lost friend
+117, The Zulus, Bogota, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+117, The Iroquois, Valletta, cancelled, Connect Resource, Friendship: -3 to -3, MINOR_CIV_VALLETTA
+117, Denmark, Valletta, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+117, Egypt, Valletta, SENT OUT QUEST, Type, 4
+117, Egypt, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+117, The Iroquois, Ife, cancelled, Connect Resource, Friendship: 37 to 37, MINOR_CIV_IFE
+117, Denmark, Ife, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+117, Egypt, Ife, SENT OUT QUEST, Type, 16
+117, Egypt, Ife, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_IFE
+117, The Iroquois, Prague, gained friend
+117, The Iroquois, Prague, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_PRAGUE
+117, Venice, Prague, cancelled, Connect Resource, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+117, The Iroquois, Kabul, SENT OUT QUEST, Type, 14
+117, The Iroquois, Kabul, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+117, Venice, Geneva, SENT OUT QUEST, Type, 3
+117, Venice, Geneva, RECEIVED QUEST, Construct Wonder, Friendship: 8 to 8, MINOR_CIV_GENEVA
+117, La Venta, Russia, RECEIVED_UNIT_GIFT, Pikeman
+117, Russia, Almaty, cancelled, Bully City-State, Friendship: 16 to 16, MINOR_CIV_ALMATY
+117, Korea, Almaty, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ALMATY
+117, The Zulus, Cape Town, SENT OUT QUEST, Type, 2
+117, The Zulus, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+117, Venice, Jerusalem, gained friend
+117, Venice, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 20 to 60, MINOR_CIV_JERUSALEM
+117, Egypt, Jerusalem, cancelled, Connect Resource, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+118, Russia, Jerusalem, SENT OUT QUEST, Type, 7
+118, Russia, Jerusalem, SENT OUT QUEST, Type, 2
+118, Denmark, Almaty, SENT OUT QUEST, Type, 1
+118, Denmark, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+118, Egypt, Riga, lost friend
+118, Denmark, Riga, lost friend
+118, Austria, Riga, lost friend
+118, Denmark, Valletta, SENT OUT QUEST, Type, 14
+118, Denmark, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+118, Korea, Prague, lost friend
+118, Venice, Almaty, gained ally
+118, Venice, Almaty, FINISHED QUEST, Kill Camp, Friendship: 30 to 80, MINOR_CIV_ALMATY
+118, The Zulus, Almaty, SENT OUT QUEST, Type, 17
+118, The Zulus, Almaty, RECEIVED QUEST, Trade Route, Friendship: 22 to 22, MINOR_CIV_ALMATY
+118, Jerusalem, Austria, RECEIVED_UNIT_GIFT, Spearman
+119, Egypt, Prague, SENT OUT QUEST, Type, 3
+119, Egypt, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 16 to 16, MINOR_CIV_PRAGUE
+119, The Zulus, Almaty, cancelled, Kill Camp, Friendship: 21 to 21, MINOR_CIV_ALMATY
+119, Russia, Almaty, cancelled, Kill Camp, Friendship: 13 to 13, MINOR_CIV_ALMATY
+119, Egypt, Almaty, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+119, The Iroquois, Almaty, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+119, Korea, Almaty, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+119, Denmark, Almaty, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+119, Austria, Almaty, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_ALMATY
+119, Denmark, Cape Town, SENT OUT QUEST, Type, 14
+119, Denmark, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+119, Russia, Jerusalem, gained friend
+119, Russia, Jerusalem, FINISHED QUEST, Connect Resource, Friendship: 18 to 58, MINOR_CIV_JERUSALEM
+120, Austria, Riga, SENT OUT QUEST, Type, 3
+120, Austria, Riga, RECEIVED QUEST, Construct Wonder, Friendship: 25 to 25, MINOR_CIV_RIGA
+120, Venice, Valletta, SENT OUT QUEST, Type, 16
+120, Venice, Valletta, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+120, Prague, Venice, RECEIVED_UNIT_GIFT, Warrior
+120, Venice, Sidon, cancelled, Bully City-State, Friendship: 31 to 31, MINOR_CIV_SIDON
+121, Egypt, Jerusalem, SENT OUT QUEST, Type, 17
+121, Egypt, Jerusalem, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_JERUSALEM
+121, Venice, Sidon, Gold Gift: 250, Friendship: 31 to 51, Spaceship, MINOR_CIV_SIDON, Boost! , Passing Korea
+121, Korea, Prague, SENT OUT QUEST, Type, 4
+121, Korea, Prague, RECEIVED QUEST, Great Person, Friendship: 6 to 6, MINOR_CIV_PRAGUE
+121, Geneva, Venice, RECEIVED_UNIT_GIFT, Warrior
+121, Jerusalem, Russia, RECEIVED_UNIT_GIFT, Archer
+121, Russia, Sidon, SENT OUT QUEST, Type, 2
+121, Russia, Sidon, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SIDON
+121, The Iroquois, Sidon, SENT OUT QUEST, Type, 2
+121, The Iroquois, Sidon, RECEIVED QUEST, Connect Resource, Friendship: 42 to 42, MINOR_CIV_SIDON
+121, Denmark, Sidon, SENT OUT QUEST, Type, 17
+121, Denmark, Sidon, RECEIVED QUEST, Trade Route, Friendship: -2 to -2, MINOR_CIV_SIDON
+122, Korea, Bogota, lost friend
+122, Egypt, Bogota, SENT OUT QUEST, Type, 4
+122, Egypt, Bogota, RECEIVED QUEST, Great Person, Friendship: 51 to 51, MINOR_CIV_BOGOTA
+122, The Zulus, Valletta, gained friend
+122, The Zulus, Valletta, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+122, Ife, Venice, RECEIVED_UNIT_GIFT, Warrior
+122, The Zulus, Prague, SENT OUT QUEST, Type, 14
+122, The Zulus, Prague, RECEIVED QUEST, Bully City-State, Friendship: 85 to 85, MINOR_CIV_PRAGUE
+122, Korea, Geneva, lost friend
+122, Venice, Malacca, SENT OUT QUEST, Type, 3
+122, Venice, Malacca, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MALACCA
+122, Russia, Cape Town, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+123, Russia, Riga, SENT OUT QUEST, Type, 4
+123, Russia, Riga, RECEIVED QUEST, Great Person, Friendship: 12 to 12, MINOR_CIV_RIGA
+123, The Zulus, Bogota, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+123, Austria, Valletta, lost friend
+123, Venice, Ife, cancelled, Construct Wonder, Friendship: 45 to 45, MINOR_CIV_IFE
+123, Prague, Venice, RECEIVED_UNIT_GIFT, Swordsman
+123, Denmark, Geneva, SENT OUT QUEST, Type, 14
+123, Denmark, Geneva, RECEIVED QUEST, Bully City-State, Friendship: 95 to 95, MINOR_CIV_GENEVA
+123, Austria, Jerusalem, gained friend
+123, Austria, Jerusalem, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_JERUSALEM
+123, The Zulus, Sidon, SENT OUT QUEST, Type, 14
+123, The Zulus, Sidon, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SIDON
+124, Austria, Vatican City, Gold Gift: 250, Friendship: 30 to 50, Diplomacy, MINOR_CIV_VATICAN_CITY, Boost! , Passing Denmark
+124, Austria, Ife, Gold Gift: 250, Friendship: 30 to 30, Diplomacy, MINOR_CIV_IFE, (SAVING) , Boost! 
+124, The Zulus, Riga, SENT OUT QUEST, Type, 11
+124, The Zulus, Riga, RECEIVED QUEST, Contest Faith, Friendship: 38 to 38, MINOR_CIV_RIGA
+124, Russia, Riga, SENT OUT QUEST, Type, 11
+124, Russia, Riga, RECEIVED QUEST, Contest Faith, Friendship: 10 to 10, MINOR_CIV_RIGA
+124, Egypt, Riga, SENT OUT QUEST, Type, 11
+124, Egypt, Riga, RECEIVED QUEST, Contest Faith, Friendship: 20 to 20, MINOR_CIV_RIGA
+124, Denmark, Riga, SENT OUT QUEST, Type, 11
+124, Denmark, Riga, RECEIVED QUEST, Contest Faith, Friendship: 20 to 20, MINOR_CIV_RIGA
+124, Austria, Riga, SENT OUT QUEST, Type, 11
+124, Austria, Riga, RECEIVED QUEST, Contest Faith, Friendship: 19 to 19, MINOR_CIV_RIGA
+124, Denmark, Riga, SENT OUT QUEST, Type, 7
+124, Denmark, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 20 to 20, MINOR_CIV_RIGA
+124, The Iroquois, Ife, lost friend
+124, Austria, Ife, lost friend
+124, Korea, Kabul, SENT OUT QUEST, Type, 17
+124, Korea, Kabul, RECEIVED QUEST, Trade Route, Friendship: 42 to 42, MINOR_CIV_KABUL
+124, Geneva, Venice, RECEIVED_UNIT_GIFT, Swordsman
+124, Venice, Vatican City, SENT OUT QUEST, Type, 2
+124, Venice, Vatican City, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+125, Venice, Cape Town, Gold Gift: 250, Friendship: 37 to 37, Spaceship, MINOR_CIV_CAPE_TOWN, (SAVING) , Boost! 
+125, The Zulus, Riga, SENT OUT QUEST, Type, 4
+125, The Zulus, Riga, RECEIVED QUEST, Great Person, Friendship: 37 to 37, MINOR_CIV_RIGA
+125, Ife, Venice, RECEIVED_UNIT_GIFT, Swordsman
+125, Denmark, Prague, SENT OUT QUEST, Type, 7
+125, Denmark, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+125, Denmark, Malacca, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
+125, Venice, Malacca, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
+125, Venice, Cape Town, SENT OUT QUEST, Type, 4
+125, Venice, Cape Town, RECEIVED QUEST, Great Person, Friendship: 36 to 36, MINOR_CIV_CAPE_TOWN
+126, Prague, Venice, RECEIVED_UNIT_GIFT, Swordsman
+126, Prague, Austria, RECEIVED_UNIT_GIFT, Spearman
+126, Russia, Prague, lost friend
+126, Venice, Sidon, SENT OUT QUEST, Type, 3
+126, Venice, Sidon, RECEIVED QUEST, Construct Wonder, Friendship: 42 to 42, MINOR_CIV_SIDON
+127, Egypt, Bogota, gained ally
+127, Egypt, Bogota, FINISHED QUEST, Great Person, Friendship: 47 to 87, MINOR_CIV_BOGOTA
+127, Venice, Cape Town, gained ally
+127, Venice, Cape Town, FINISHED QUEST, Great Person, Friendship: 34 to 74, MINOR_CIV_CAPE_TOWN
+127, The Zulus, Valletta, lost friend
+127, Russia, Ife, SENT OUT QUEST, Type, 4
+127, Russia, Ife, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_IFE
+127, Geneva, Venice, RECEIVED_UNIT_GIFT, Swordsman
+127, Venice, Geneva, gained friend
+127, Venice, Geneva, FINISHED QUEST, Construct Wonder, Friendship: 8 to 48, MINOR_CIV_GENEVA
+127, Russia, Cape Town, SENT OUT QUEST, Type, 14
+127, Russia, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+127, Austria, Cape Town, SENT OUT QUEST, Type, 2
+127, Austria, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 39 to 39, MINOR_CIV_CAPE_TOWN
+127, Denmark, Jerusalem, lost friend
+128, Ife, Venice, RECEIVED_UNIT_GIFT, Swordsman
+128, The Iroquois, Prague, lost friend
+128, Korea, Geneva, SENT OUT QUEST, Type, 14
+128, Korea, Geneva, RECEIVED QUEST, Bully City-State, Friendship: 20 to 20, MINOR_CIV_GENEVA
+129, Egypt, La Venta, gained friend
+129, Egypt, La Venta, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+129, Venice, Almaty, Gold Gift: 250, Friendship: 65 to 85, Spaceship, MINOR_CIV_ALMATY, Boost! , Passing Austria
+129, The Zulus, Bogota, SENT OUT QUEST, Type, 10
+129, The Zulus, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+129, Egypt, Bogota, SENT OUT QUEST, Type, 10
+129, Egypt, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 83 to 83, MINOR_CIV_BOGOTA
+129, Korea, Bogota, SENT OUT QUEST, Type, 10
+129, Korea, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 19 to 19, MINOR_CIV_BOGOTA
+129, Austria, Bogota, SENT OUT QUEST, Type, 10
+129, Austria, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BOGOTA
+129, Austria, Ife, SENT OUT QUEST, Type, 7
+129, Austria, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 21 to 21, MINOR_CIV_IFE
+129, Prague, Venice, RECEIVED_UNIT_GIFT, Swordsman
+129, The Zulus, La Venta, gained friend
+129, The Zulus, La Venta, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+129, The Zulus, Vatican City, gained friend
+129, The Zulus, Vatican City, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VATICAN_CITY
+129, The Zulus, Vatican City, SENT OUT QUEST, Type, 11
+129, The Zulus, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 40 to 40, MINOR_CIV_VATICAN_CITY
+129, Egypt, Vatican City, SENT OUT QUEST, Type, 11
+129, Egypt, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 35 to 35, MINOR_CIV_VATICAN_CITY
+129, The Iroquois, Vatican City, SENT OUT QUEST, Type, 11
+129, The Iroquois, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_VATICAN_CITY
+129, Korea, Vatican City, SENT OUT QUEST, Type, 11
+129, Korea, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+129, Denmark, Vatican City, SENT OUT QUEST, Type, 11
+129, Denmark, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 8 to 8, MINOR_CIV_VATICAN_CITY
+129, Venice, Vatican City, SENT OUT QUEST, Type, 11
+129, Venice, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+129, Austria, Vatican City, SENT OUT QUEST, Type, 11
+129, Austria, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 41 to 41, MINOR_CIV_VATICAN_CITY
+129, Denmark, Jerusalem, SENT OUT QUEST, Type, 2
+129, Denmark, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 26 to 26, MINOR_CIV_JERUSALEM
+130, Venice, Sidon, Gold Gift: 250, Friendship: 37 to 37, Spaceship, MINOR_CIV_SIDON, (SAVING) , Boost! , Passing Denmark
+130, The Zulus, Riga, lost friend
+130, Austria, Riga, gained friend
+130, Austria, Riga, FINISHED QUEST, Construct Wonder, Friendship: 10 to 50, MINOR_CIV_RIGA
+130, Bogota, Korea, RECEIVED_UNIT_GIFT, Warrior
+130, The Zulus, Bogota, SENT OUT QUEST, Type, 4
+130, The Zulus, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+130, Egypt, Prague, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+130, The Iroquois, Prague, SENT OUT QUEST, Type, 7
+130, The Iroquois, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 26 to 26, MINOR_CIV_PRAGUE
+130, Venice, Prague, SENT OUT QUEST, Type, 3
+130, Venice, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 8 to 8, MINOR_CIV_PRAGUE
+130, Korea, Kabul, lost friend
+130, Venice, Kabul, cancelled, Construct Wonder, Friendship: -9 to -9, MINOR_CIV_KABUL
+130, Almaty, Venice, RECEIVED_UNIT_GIFT, Swordsman
+130, The Iroquois, Almaty, SENT OUT QUEST, Type, 4
+130, The Iroquois, Almaty, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ALMATY
+130, Egypt, Vatican City, cancelled, Bully City-State, Friendship: 33 to 33, MINOR_CIV_VATICAN_CITY
+130, Venice, Malacca, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MALACCA
+130, Venice, Cape Town, lost ally
+130, Austria, Cape Town, gained ally
+130, Austria, Cape Town, FINISHED QUEST, Connect Resource, Friendship: 35 to 75, MINOR_CIV_CAPE_TOWN
+130, Venice, Cape Town, cancelled, Construct Wonder, Friendship: 68 to 68, MINOR_CIV_CAPE_TOWN
+130, The Iroquois, Jerusalem, FINISHED QUEST, Trade Route, Friendship: 69 to 109, MINOR_CIV_JERUSALEM
+130, The Iroquois, Sidon, lost friend
+131, Korea, Almaty, SENT OUT QUEST, Type, 7
+131, Korea, Bogota, SENT OUT QUEST, Type, 3
+131, Korea, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 21 to 21, MINOR_CIV_BOGOTA
+131, Ife, Venice, RECEIVED_UNIT_GIFT, Swordsman
+131, Prague, Austria, RECEIVED_UNIT_GIFT, Spearman
+131, The Zulus, La Venta, SENT OUT QUEST, Type, 16
+131, The Zulus, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 42 to 42, MINOR_CIV_LA_VENTA
+131, Russia, Almaty, SENT OUT QUEST, Type, 4
+131, Russia, Almaty, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_ALMATY
+131, Venice, Almaty, SENT OUT QUEST, Type, 3
+131, Venice, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 85 to 85, MINOR_CIV_ALMATY
+131, The Zulus, Cape Town, gained friend
+131, The Zulus, Cape Town, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_CAPE_TOWN
+131, Egypt, Cape Town, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+132, Venice, Geneva, FINISHED QUEST, Contest Faith, Friendship: 40 to 80, MINOR_CIV_GENEVA
+132, Korea, Geneva, cancelled, Contest Faith, Friendship: 14 to 14, MINOR_CIV_GENEVA
+132, Denmark, Geneva, cancelled, Contest Faith, Friendship: 82 to 82, MINOR_CIV_GENEVA
+132, The Iroquois, Vatican City, SENT OUT QUEST, Type, 16
+132, The Iroquois, Vatican City, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_VATICAN_CITY
+132, The Zulus, Jerusalem, SENT OUT QUEST, Type, 1
+132, The Zulus, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+132, Russia, Jerusalem, SENT OUT QUEST, Type, 1
+132, Russia, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 43 to 43, MINOR_CIV_JERUSALEM
+132, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 1
+132, The Iroquois, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 107 to 107, MINOR_CIV_JERUSALEM
+132, Korea, Jerusalem, SENT OUT QUEST, Type, 1
+132, Korea, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+132, Denmark, Jerusalem, SENT OUT QUEST, Type, 1
+132, Denmark, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 21 to 21, MINOR_CIV_JERUSALEM
+132, Venice, Jerusalem, SENT OUT QUEST, Type, 1
+132, Venice, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 38 to 38, MINOR_CIV_JERUSALEM
+132, Austria, Jerusalem, SENT OUT QUEST, Type, 1
+132, Austria, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 31 to 31, MINOR_CIV_JERUSALEM
+133, Venice, Prague, SENT OUT QUEST, Type, 16
+133, Venice, Prague, SENT OUT QUEST, Type, 3
+133, Venice, Prague, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_PRAGUE
+133, Venice, Prague, cancelled, Construct Wonder, Friendship: -60 to -60, MINOR_CIV_PRAGUE
+133, The Zulus, Almaty, SENT OUT QUEST, Type, 17
+133, The Zulus, Almaty, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_ALMATY
+133, The Iroquois, Almaty, gained friend
+133, The Iroquois, Almaty, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ALMATY
+133, Venice, Sidon, Gold Gift: 250, Friendship: 34 to 54, Spaceship, MINOR_CIV_SIDON, Boost! , Passing Korea
+133, Austria, Sidon, SENT OUT QUEST, Type, 1
+133, Austria, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+133, Prague, Egypt, RECEIVED_UNIT_GIFT, Swordsman
+133, Egypt, Vatican City, lost friend
+134, Venice, Jerusalem, Gold Gift: 250, Friendship: 36 to 36, Spaceship, MINOR_CIV_JERUSALEM, (SAVING) , Boost! , Passing Austria
+134, Austria, Sidon, SENT OUT QUEST, Type, 1
+134, The Iroquois, Valletta, gained friend
+134, The Iroquois, Valletta, FINISHED QUEST, Trade Route, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+134, Korea, Valletta, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+134, Austria, Valletta, SENT OUT QUEST, Type, 3
+134, Austria, Valletta, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+134, Austria, Almaty, SENT OUT QUEST, Type, 4
+134, Austria, Almaty, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_ALMATY
+134, Austria, Jerusalem, lost friend
+135, The Zulus, Valletta, SENT OUT QUEST, Type, 3
+135, The Zulus, Valletta, RECEIVED QUEST, Construct Wonder, Friendship: 11 to 11, MINOR_CIV_VALLETTA
+135, The Iroquois, Ife, SENT OUT QUEST, Type, 7
+135, The Iroquois, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 17 to 17, MINOR_CIV_IFE
+135, Russia, Jerusalem, SENT OUT QUEST, Type, 4
+135, Russia, Jerusalem, RECEIVED QUEST, Great Person, Friendship: 39 to 39, MINOR_CIV_JERUSALEM
+136, Russia, Bogota, SENT OUT QUEST, Type, 10
+136, Russia, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+136, Venice, Jerusalem, Gold Gift: 250, Friendship: 34 to 54, Spaceship, MINOR_CIV_JERUSALEM, Boost! , Passing Austria
+136, Korea, La Venta, SENT OUT QUEST, Type, 4
+136, Korea, La Venta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+136, The Zulus, Vatican City, lost friend
+136, Denmark, Vatican City, SENT OUT QUEST, Type, 4
+136, Denmark, Vatican City, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+136, Austria, Vatican City, SENT OUT QUEST, Type, 4
+136, Austria, Vatican City, RECEIVED QUEST, Great Person, Friendship: 30 to 30, MINOR_CIV_VATICAN_CITY
+137, Denmark, Valletta, SENT OUT QUEST, Type, 2
+137, Denmark, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+137, Korea, Prague, gained friend
+137, Korea, Prague, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_PRAGUE
+137, Austria, Prague, SENT OUT QUEST, Type, 4
+137, Austria, Prague, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+137, The Iroquois, Kabul, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+137, Korea, La Venta, gained friend
+137, Korea, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_LA_VENTA
+137, Korea, Almaty, gained friend
+137, Korea, Almaty, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_ALMATY
+137, Korea, Almaty, SENT OUT QUEST, Type, 7
+137, Korea, Almaty, RECEIVED QUEST, Find Natural Wonder, Friendship: 45 to 45, MINOR_CIV_ALMATY
+137, Austria, Vatican City, lost friend
+137, Korea, Vatican City, gained friend
+137, Korea, Vatican City, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VATICAN_CITY
+137, Korea, Jerusalem, gained friend
+137, Korea, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+138, Denmark, Riga, gained friend
+138, Denmark, Riga, FINISHED QUEST, Great Person, Friendship: 1 to 41, MINOR_CIV_RIGA
+138, Denmark, Ife, gained friend
+138, Denmark, Ife, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_IFE
+138, Denmark, Prague, gained friend
+138, Denmark, Prague, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+138, Denmark, Geneva, FINISHED QUEST, Great Person, Friendship: 74 to 114, MINOR_CIV_GENEVA
+138, Denmark, Jerusalem, gained friend
+138, Denmark, Jerusalem, FINISHED QUEST, Great Person, Friendship: 14 to 54, MINOR_CIV_JERUSALEM
+138, Austria, Riga, gained ally
+138, Austria, Riga, FINISHED QUEST, Find Natural Wonder, Friendship: 40 to 80, MINOR_CIV_RIGA
+138, Austria, Bogota, gained friend
+138, Austria, Bogota, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_BOGOTA
+138, Denmark, Valletta, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+138, Austria, Ife, gained friend
+138, Austria, Ife, FINISHED QUEST, Find Natural Wonder, Friendship: 7 to 47, MINOR_CIV_IFE
+138, The Zulus, Kabul, SENT OUT QUEST, Type, 12
+138, The Zulus, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+138, The Iroquois, Kabul, SENT OUT QUEST, Type, 12
+138, The Iroquois, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+138, Korea, Kabul, SENT OUT QUEST, Type, 12
+138, Korea, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 10 to 10, MINOR_CIV_KABUL
+138, Denmark, Kabul, SENT OUT QUEST, Type, 12
+138, Denmark, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+138, Venice, Kabul, SENT OUT QUEST, Type, 12
+138, Venice, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+138, Austria, La Venta, gained friend
+138, Austria, La Venta, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_LA_VENTA
+138, The Zulus, Cape Town, lost friend
+138, Egypt, Cape Town, SENT OUT QUEST, Type, 16
+138, Egypt, Cape Town, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+138, Venice, Jerusalem, SENT OUT QUEST, Type, 3
+138, Venice, Jerusalem, RECEIVED QUEST, Construct Wonder, Friendship: 49 to 49, MINOR_CIV_JERUSALEM
+139, The Zulus, Prague, lost ally
+139, Korea, Prague, gained ally
+139, Korea, Prague, FINISHED QUEST, Great Person, Friendship: 43 to 83, MINOR_CIV_PRAGUE
+139, Korea, La Venta, gained ally
+139, Korea, La Venta, FINISHED QUEST, Great Person, Friendship: 38 to 78, MINOR_CIV_LA_VENTA
+139, Venice, Ife, Gold Gift: 250, Friendship: 37 to 57, Spaceship, MINOR_CIV_IFE, Boost! , Passing The Iroquois
+139, Venice, Prague, Gold Gift: 500, Friendship: -5 to -5, Spaceship, MINOR_CIV_PRAGUE, (SAVING) 
+139, Venice, Riga, era change yield update
+139, Venice, Bogota, era change yield update
+139, Venice, Valletta, era change yield update
+139, Venice, Ife, era change yield update
+139, Venice, Prague, era change yield update
+139, Venice, Kabul, era change yield update
+139, Venice, Geneva, era change yield update
+139, Venice, La Venta, era change yield update
+139, Venice, Almaty, era change yield update
+139, Venice, Vatican City, era change yield update
+139, Venice, Malacca, era change yield update
+139, Venice, Cape Town, era change yield update
+139, Venice, Jerusalem, era change yield update
+139, Venice, Sidon, era change yield update
+139, Venice, Valletta, SENT OUT QUEST, Type, 16
+139, Venice, Ife, SENT OUT QUEST, Type, 16
+139, Venice, Kabul, SENT OUT QUEST, Type, 12
+139, Venice, Geneva, SENT OUT QUEST, Type, 16
+139, Venice, Almaty, SENT OUT QUEST, Type, 16
+139, Venice, Almaty, SENT OUT QUEST, Type, 3
+139, Venice, Vatican City, SENT OUT QUEST, Type, 4
+139, Venice, Vatican City, SENT OUT QUEST, Type, 2
+139, Venice, Vatican City, SENT OUT QUEST, Type, 11
+139, Venice, Cape Town, SENT OUT QUEST, Type, 1
+139, Venice, Jerusalem, SENT OUT QUEST, Type, 2
+139, Venice, Jerusalem, SENT OUT QUEST, Type, 1
+139, Venice, Jerusalem, SENT OUT QUEST, Type, 3
+139, Venice, Sidon, SENT OUT QUEST, Type, 1
+139, Venice, Sidon, SENT OUT QUEST, Type, 3
+139, Venice, Bogota, SENT OUT QUEST, Type, 10
+139, Venice, Bogota, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+139, The Zulus, Valletta, SENT OUT QUEST, Type, 12
+139, The Zulus, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 2 to 2, MINOR_CIV_VALLETTA
+139, Russia, Valletta, SENT OUT QUEST, Type, 12
+139, Russia, Valletta, RECEIVED QUEST, Contest Techs, Friendship: -6 to -6, MINOR_CIV_VALLETTA
+139, Egypt, Valletta, SENT OUT QUEST, Type, 12
+139, Egypt, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+139, The Iroquois, Valletta, SENT OUT QUEST, Type, 12
+139, The Iroquois, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 31 to 31, MINOR_CIV_VALLETTA
+139, Korea, Valletta, SENT OUT QUEST, Type, 12
+139, Korea, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+139, Denmark, Valletta, SENT OUT QUEST, Type, 12
+139, Denmark, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+139, Venice, Valletta, SENT OUT QUEST, Type, 12
+139, Venice, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+139, Austria, Valletta, SENT OUT QUEST, Type, 12
+139, Austria, Valletta, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+139, The Iroquois, La Venta, SENT OUT QUEST, Type, 16
+139, The Iroquois, La Venta, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+139, The Iroquois, Almaty, lost friend
+139, Korea, Vatican City, gained ally
+139, Korea, Vatican City, FINISHED QUEST, Connect Resource, Friendship: 37 to 77, MINOR_CIV_VATICAN_CITY
+139, Denmark, Cape Town, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+139, Korea, Jerusalem, FINISHED QUEST, Connect Resource, Friendship: 37 to 77, MINOR_CIV_JERUSALEM
+139, Russia, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 33 to 73, MINOR_CIV_JERUSALEM
+139, The Iroquois, Jerusalem, SENT OUT QUEST, Type, 4
+139, The Iroquois, Jerusalem, RECEIVED QUEST, Great Person, Friendship: 99 to 99, MINOR_CIV_JERUSALEM
+139, Denmark, Sidon, SENT OUT QUEST, Type, 4
+139, Denmark, Sidon, RECEIVED QUEST, Great Person, Friendship: -18 to -18, MINOR_CIV_SIDON
+140, The Zulus, Cape Town, gained friend
+140, Russia, Vatican City, SENT OUT QUEST, Type, 11
+140, Russia, Vatican City, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+140, Korea, La Venta, SENT OUT QUEST, Type, 1
+140, Korea, Vatican City, SENT OUT QUEST, Type, 11
+140, Austria, Prague, gained friend
+140, Austria, Prague, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_PRAGUE
+140, Austria, Almaty, gained friend
+140, Austria, Almaty, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_ALMATY
+140, Austria, Vatican City, gained friend
+140, Austria, Vatican City, FINISHED QUEST, Great Person, Friendship: 26 to 66, MINOR_CIV_VATICAN_CITY
+140, The Iroquois, Valletta, lost friend
+140, The Iroquois, Valletta, SENT OUT QUEST, Type, 2
+140, The Iroquois, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 29 to 29, MINOR_CIV_VALLETTA
+140, Venice, Ife, SENT OUT QUEST, Type, 4
+140, Venice, Ife, RECEIVED QUEST, Great Person, Friendship: 54 to 54, MINOR_CIV_IFE
+140, Russia, Prague, SENT OUT QUEST, Type, 2
+140, Russia, Prague, RECEIVED QUEST, Connect Resource, Friendship: 9 to 9, MINOR_CIV_PRAGUE
+140, The Zulus, La Venta, lost friend
+140, Austria, Cape Town, lost ally
+140, The Zulus, Cape Town, gained ally
+140, Venice, Cape Town, lost friend
+140, Venice, Cape Town, SENT OUT QUEST, Type, 1
+140, Venice, Cape Town, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_CAPE_TOWN
+140, The Zulus, Cape Town, FINISHED QUEST, Kill Camp, Friendship: 38 to 88, MINOR_CIV_CAPE_TOWN
+140, The Zulus, Jerusalem, gained friend
+140, The Zulus, Jerusalem, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_JERUSALEM
+140, Austria, Jerusalem, SENT OUT QUEST, Type, 17
+140, Austria, Jerusalem, RECEIVED QUEST, Trade Route, Friendship: 19 to 19, MINOR_CIV_JERUSALEM
+141, Russia, Riga, era change yield update
+141, Russia, Bogota, era change yield update
+141, Russia, Valletta, era change yield update
+141, Russia, Ife, era change yield update
+141, Russia, Prague, era change yield update
+141, Russia, Kabul, era change yield update
+141, Russia, Geneva, era change yield update
+141, Russia, La Venta, era change yield update
+141, Russia, Almaty, era change yield update
+141, Russia, Vatican City, era change yield update
+141, Russia, Malacca, era change yield update
+141, Russia, Cape Town, era change yield update
+141, Russia, Jerusalem, era change yield update
+141, Russia, Sidon, era change yield update
+141, Russia, Riga, SENT OUT QUEST, Type, 17
+141, Russia, Riga, SENT OUT QUEST, Type, 4
+141, Russia, Riga, SENT OUT QUEST, Type, 11
+141, Russia, Bogota, SENT OUT QUEST, Type, 10
+141, Russia, Valletta, SENT OUT QUEST, Type, 12
+141, Russia, Ife, SENT OUT QUEST, Type, 4
+141, Russia, Prague, SENT OUT QUEST, Type, 4
+141, Russia, Prague, SENT OUT QUEST, Type, 2
+141, Russia, La Venta, SENT OUT QUEST, Type, 17
+141, Russia, La Venta, SENT OUT QUEST, Type, 1
+141, Russia, La Venta, SENT OUT QUEST, Type, 2
+141, Russia, Almaty, SENT OUT QUEST, Type, 4
+141, Russia, Vatican City, SENT OUT QUEST, Type, 11
+141, Russia, Cape Town, SENT OUT QUEST, Type, 1
+141, Russia, Cape Town, SENT OUT QUEST, Type, 14
+141, Russia, Jerusalem, SENT OUT QUEST, Type, 1
+141, Russia, Jerusalem, SENT OUT QUEST, Type, 4
+141, Russia, Sidon, SENT OUT QUEST, Type, 1
+141, Russia, Sidon, SENT OUT QUEST, Type, 4
+141, Russia, Sidon, SENT OUT QUEST, Type, 2
+141, Egypt, Prague, SENT OUT QUEST, Type, 7
+141, Egypt, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+141, Egypt, La Venta, lost friend
+141, Denmark, Almaty, SENT OUT QUEST, Type, 4
+141, Denmark, Almaty, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ALMATY
+141, Russia, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+141, Egypt, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+141, The Iroquois, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+141, Denmark, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+141, Austria, Cape Town, cancelled, Kill Camp, Friendship: 59 to 59, MINOR_CIV_CAPE_TOWN
+141, Denmark, Cape Town, SENT OUT QUEST, Type, 4
+141, Denmark, Cape Town, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+141, Russia, Jerusalem, cancelled, Kill Camp, Friendship: 70 to 70, MINOR_CIV_JERUSALEM
+141, The Iroquois, Jerusalem, cancelled, Kill Camp, Friendship: 97 to 97, MINOR_CIV_JERUSALEM
+141, Korea, Jerusalem, cancelled, Kill Camp, Friendship: 74 to 74, MINOR_CIV_JERUSALEM
+141, Denmark, Jerusalem, cancelled, Kill Camp, Friendship: 48 to 48, MINOR_CIV_JERUSALEM
+141, Venice, Jerusalem, cancelled, Kill Camp, Friendship: 45 to 45, MINOR_CIV_JERUSALEM
+141, Austria, Jerusalem, cancelled, Kill Camp, Friendship: 18 to 18, MINOR_CIV_JERUSALEM
+142, Russia, Riga, gained friend
+142, Russia, Riga, Gold Gift: 500, Friendship: 5 to 50, Spaceship, MINOR_CIV_RIGA
+142, Russia, La Venta, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_LA_VENTA, (SAVING) 
+142, Venice, Prague, gained friend
+142, Venice, Prague, Gold Gift: 500, Friendship: 0 to 44, Diplomacy, MINOR_CIV_PRAGUE
+142, Russia, Ife, SENT OUT QUEST, Type, 1
+142, Russia, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+142, Egypt, Ife, SENT OUT QUEST, Type, 1
+142, Egypt, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+142, The Iroquois, Ife, SENT OUT QUEST, Type, 1
+142, The Iroquois, Ife, RECEIVED QUEST, Kill Camp, Friendship: 9 to 9, MINOR_CIV_IFE
+142, Korea, Ife, SENT OUT QUEST, Type, 1
+142, Korea, Ife, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_IFE
+142, Denmark, Ife, SENT OUT QUEST, Type, 1
+142, Denmark, Ife, RECEIVED QUEST, Kill Camp, Friendship: 32 to 32, MINOR_CIV_IFE
+142, Venice, Ife, SENT OUT QUEST, Type, 1
+142, Venice, Ife, RECEIVED QUEST, Kill Camp, Friendship: 51 to 51, MINOR_CIV_IFE
+142, Austria, Ife, SENT OUT QUEST, Type, 1
+142, Austria, Ife, RECEIVED QUEST, Kill Camp, Friendship: 41 to 41, MINOR_CIV_IFE
+142, The Zulus, Prague, cancelled, Bully City-State, Friendship: 55 to 55, MINOR_CIV_PRAGUE
+143, Korea, Vatican City, lost ally
+143, Austria, Vatican City, gained ally
+143, Austria, Riga, SENT OUT QUEST, Type, 17
+143, Austria, Riga, RECEIVED QUEST, Trade Route, Friendship: 74 to 74, MINOR_CIV_RIGA
+143, Denmark, Geneva, cancelled, Bully City-State, Friendship: 105 to 105, MINOR_CIV_GENEVA
+143, The Zulus, Sidon, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SIDON
+144, The Zulus, Riga, era change yield update
+144, The Zulus, Bogota, era change yield update
+144, The Zulus, Valletta, era change yield update
+144, The Zulus, Ife, era change yield update
+144, The Zulus, Prague, era change yield update
+144, The Zulus, Kabul, era change yield update
+144, The Zulus, Geneva, era change yield update
+144, The Zulus, La Venta, era change yield update
+144, The Zulus, Almaty, era change yield update
+144, The Zulus, Vatican City, era change yield update
+144, The Zulus, Malacca, era change yield update
+144, The Zulus, Cape Town, era change yield update
+144, The Zulus, Jerusalem, era change yield update
+144, The Zulus, Sidon, era change yield update
+144, The Zulus, Riga, SENT OUT QUEST, Type, 17
+144, The Zulus, Riga, SENT OUT QUEST, Type, 11
+144, The Zulus, Riga, SENT OUT QUEST, Type, 4
+144, The Zulus, Bogota, SENT OUT QUEST, Type, 10
+144, The Zulus, Bogota, SENT OUT QUEST, Type, 4
+144, The Zulus, Valletta, SENT OUT QUEST, Type, 3
+144, The Zulus, Valletta, SENT OUT QUEST, Type, 12
+144, The Zulus, Prague, SENT OUT QUEST, Type, 17
+144, The Zulus, Kabul, SENT OUT QUEST, Type, 12
+144, The Zulus, La Venta, SENT OUT QUEST, Type, 1
+144, The Zulus, La Venta, SENT OUT QUEST, Type, 16
+144, The Zulus, Vatican City, SENT OUT QUEST, Type, 16
+144, The Zulus, Vatican City, SENT OUT QUEST, Type, 11
+144, The Zulus, Jerusalem, SENT OUT QUEST, Type, 0
+144, The Zulus, Jerusalem, SENT OUT QUEST, Type, 16
+144, The Zulus, Sidon, SENT OUT QUEST, Type, 1
+144, The Zulus, Sidon, SENT OUT QUEST, Type, 16
+144, Korea, Jerusalem, lost friend
+144, Venice, Almaty, Gold Gift: 250, Friendship: 67 to 67, Diplomacy, MINOR_CIV_ALMATY, (SAVING) , Boost! , Passing Austria
+144, Austria, La Venta, Gold Gift: 250, Friendship: 37 to 57, Diplomacy, MINOR_CIV_LA_VENTA, Boost! , Passing Egypt
+144, Austria, Bogota, Gold Gift: 250, Friendship: 37 to 37, Diplomacy, MINOR_CIV_BOGOTA, (SAVING) , Boost! , Passing Korea
+144, Austria, Riga, FINISHED QUEST, Contest Faith, Friendship: 73 to 113, MINOR_CIV_RIGA
+144, The Zulus, Riga, cancelled, Contest Faith, Friendship: 8 to 8, MINOR_CIV_RIGA
+144, Russia, Riga, cancelled, Contest Faith, Friendship: 45 to 45, MINOR_CIV_RIGA
+144, Egypt, Riga, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_RIGA
+144, Denmark, Riga, cancelled, Contest Faith, Friendship: 30 to 30, MINOR_CIV_RIGA
+144, Denmark, Ife, lost friend
+144, Denmark, Prague, lost friend
+144, Russia, Prague, gained friend
+144, Russia, Prague, FINISHED QUEST, Connect Resource, Friendship: 3 to 43, MINOR_CIV_PRAGUE
+144, Venice, Geneva, FINISHED QUEST, Spread Religion, Friendship: 63 to 103, MINOR_CIV_GENEVA
+144, Venice, Geneva, SENT OUT QUEST, Type, 3
+144, Venice, Geneva, RECEIVED QUEST, Construct Wonder, Friendship: 103 to 103, MINOR_CIV_GENEVA
+144, Vatican City, Denmark, RECEIVED_UNIT_GIFT, Composite Bowman
+144, The Zulus, Cape Town, SENT OUT QUEST, Type, 17
+144, The Zulus, Cape Town, RECEIVED QUEST, Trade Route, Friendship: 82 to 82, MINOR_CIV_CAPE_TOWN
+144, Russia, Sidon, gained friend
+144, Russia, Sidon, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SIDON
+145, The Zulus, Prague, lost friend
+145, Denmark, Riga, era change yield update
+145, Denmark, Bogota, era change yield update
+145, Denmark, Valletta, era change yield update
+145, Denmark, Ife, era change yield update
+145, Denmark, Prague, era change yield update
+145, Denmark, Kabul, era change yield update
+145, Denmark, Geneva, era change yield update
+145, Denmark, La Venta, era change yield update
+145, Denmark, Almaty, era change yield update
+145, Denmark, Vatican City, era change yield update
+145, Denmark, Malacca, era change yield update
+145, Denmark, Cape Town, era change yield update
+145, Denmark, Jerusalem, era change yield update
+145, Denmark, Sidon, era change yield update
+145, Denmark, Riga, SENT OUT QUEST, Type, 7
+145, Denmark, Valletta, SENT OUT QUEST, Type, 2
+145, Denmark, Valletta, SENT OUT QUEST, Type, 12
+145, Denmark, Ife, SENT OUT QUEST, Type, 1
+145, Denmark, Prague, SENT OUT QUEST, Type, 7
+145, Denmark, Kabul, SENT OUT QUEST, Type, 17
+145, Denmark, Kabul, SENT OUT QUEST, Type, 12
+145, Denmark, Almaty, SENT OUT QUEST, Type, 4
+145, Denmark, Vatican City, SENT OUT QUEST, Type, 7
+145, Denmark, Vatican City, SENT OUT QUEST, Type, 11
+145, Denmark, Vatican City, SENT OUT QUEST, Type, 4
+145, Denmark, Cape Town, SENT OUT QUEST, Type, 4
+145, Denmark, Jerusalem, SENT OUT QUEST, Type, 2
+145, Denmark, Sidon, SENT OUT QUEST, Type, 1
+145, Denmark, Sidon, SENT OUT QUEST, Type, 17
+145, Denmark, Sidon, SENT OUT QUEST, Type, 4
+145, Denmark, La Venta, SENT OUT QUEST, Type, 1
+145, Denmark, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+145, Venice, Almaty, Gold Gift: 250, Friendship: 66 to 86, Diplomacy, MINOR_CIV_ALMATY, Boost! , Passing Austria
+145, Venice, La Venta, SENT OUT QUEST, Type, 1
+145, Venice, La Venta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LA_VENTA
+145, Austria, Riga, era change yield update
+145, Austria, Bogota, era change yield update
+145, Austria, Valletta, era change yield update
+145, Austria, Ife, era change yield update
+145, Austria, Prague, era change yield update
+145, Austria, Kabul, era change yield update
+145, Austria, Geneva, era change yield update
+145, Austria, La Venta, era change yield update
+145, Austria, Almaty, era change yield update
+145, Austria, Vatican City, era change yield update
+145, Austria, Malacca, era change yield update
+145, Austria, Cape Town, era change yield update
+145, Austria, Jerusalem, era change yield update
+145, Austria, Sidon, era change yield update
+145, Austria, Riga, SENT OUT QUEST, Type, 17
+145, Austria, Bogota, SENT OUT QUEST, Type, 16
+145, Austria, Bogota, SENT OUT QUEST, Type, 10
+145, Austria, Valletta, SENT OUT QUEST, Type, 3
+145, Austria, Valletta, SENT OUT QUEST, Type, 12
+145, Austria, Ife, SENT OUT QUEST, Type, 16
+145, Austria, Ife, SENT OUT QUEST, Type, 1
+145, Austria, La Venta, SENT OUT QUEST, Type, 1
+145, Austria, La Venta, SENT OUT QUEST, Type, 16
+145, Austria, Vatican City, SENT OUT QUEST, Type, 16
+145, Austria, Vatican City, SENT OUT QUEST, Type, 11
+145, Austria, Cape Town, SENT OUT QUEST, Type, 17
+145, Austria, Jerusalem, SENT OUT QUEST, Type, 0
+145, Austria, Jerusalem, SENT OUT QUEST, Type, 17
+145, Austria, Sidon, SENT OUT QUEST, Type, 1
+145, Denmark, Riga, lost friend
+145, Denmark, Valletta, gained friend
+145, Denmark, Valletta, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+145, Denmark, Ife, SENT OUT QUEST, Type, 4
+145, Denmark, Ife, RECEIVED QUEST, Great Person, Friendship: 28 to 28, MINOR_CIV_IFE
+145, Venice, Kabul, SENT OUT QUEST, Type, 2
+145, Venice, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+145, Almaty, Denmark, RECEIVED_UNIT_GIFT, Chariot Archer
+145, Denmark, Jerusalem, FINISHED QUEST, Connect Resource, Friendship: 42 to 82, MINOR_CIV_JERUSALEM
+146, The Zulus, Prague, SENT OUT QUEST, Type, 17
+146, Denmark, Prague, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_PRAGUE
+146, Denmark, La Venta, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_LA_VENTA
+146, Korea, Geneva, cancelled, Bully City-State, Friendship: -60 to -60, MINOR_CIV_GENEVA
+146, Egypt, Ife, SENT OUT QUEST, Type, 7
+146, Egypt, Ife, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_IFE
+146, The Zulus, Kabul, SENT OUT QUEST, Type, 3
+146, The Zulus, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+146, La Venta, Russia, RECEIVED_UNIT_GIFT, Warrior
+146, La Venta, Egypt, RECEIVED_UNIT_GIFT, Trebuchet
+146, Egypt, La Venta, gained friend
+146, Egypt, La Venta, lost friend
+146, Cape Town, Denmark, RECEIVED_UNIT_GIFT, Composite Bowman
+147, Korea, Riga, era change yield update
+147, Korea, Bogota, era change yield update
+147, Korea, Valletta, era change yield update
+147, Korea, Ife, era change yield update
+147, Korea, Prague, era change yield update
+147, Korea, Kabul, era change yield update
+147, Korea, Geneva, era change yield update
+147, Korea, La Venta, era change yield update
+147, Korea, Almaty, era change yield update
+147, Korea, Vatican City, era change yield update
+147, Korea, Malacca, era change yield update
+147, Korea, Cape Town, era change yield update
+147, Korea, Jerusalem, era change yield update
+147, Korea, Sidon, era change yield update
+147, Korea, Bogota, SENT OUT QUEST, Type, 10
+147, Korea, Bogota, SENT OUT QUEST, Type, 3
+147, Korea, Valletta, SENT OUT QUEST, Type, 12
+147, Korea, Ife, SENT OUT QUEST, Type, 1
+147, Korea, Kabul, SENT OUT QUEST, Type, 17
+147, Korea, Kabul, SENT OUT QUEST, Type, 12
+147, Korea, La Venta, SENT OUT QUEST, Type, 1
+147, Korea, Almaty, SENT OUT QUEST, Type, 7
+147, Korea, Vatican City, SENT OUT QUEST, Type, 11
+147, Korea, Sidon, SENT OUT QUEST, Type, 1
+147, Korea, Sidon, SENT OUT QUEST, Type, 0
+147, Korea, Sidon, SENT OUT QUEST, Type, 17
+147, Korea, Sidon, SENT OUT QUEST, Type, 1
+147, Korea, Sidon, SENT OUT QUEST, Type, 0
+147, Korea, Sidon, SENT OUT QUEST, Type, 17
+147, Venice, Prague, Gold Gift: 250, Friendship: 36 to 56, Diplomacy, MINOR_CIV_PRAGUE, Boost! , Passing Austria
+147, Venice, Jerusalem, Gold Gift: 250, Friendship: 37 to 37, Diplomacy, MINOR_CIV_JERUSALEM, (SAVING) , Boost! , Passing Austria
+147, Korea, Valletta, SENT OUT QUEST, Type, 4
+147, Korea, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+147, Russia, Ife, SENT OUT QUEST, Type, 2
+147, Russia, Ife, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_IFE
+147, Prague, Denmark, RECEIVED_UNIT_GIFT, Composite Bowman
+147, The Zulus, Prague, SENT OUT QUEST, Type, 1
+147, The Zulus, Prague, RECEIVED QUEST, Kill Camp, Friendship: -5 to -5, MINOR_CIV_PRAGUE
+147, Russia, Prague, SENT OUT QUEST, Type, 1
+147, Russia, Prague, RECEIVED QUEST, Kill Camp, Friendship: 38 to 38, MINOR_CIV_PRAGUE
+147, Egypt, Prague, SENT OUT QUEST, Type, 1
+147, Egypt, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+147, The Iroquois, Prague, SENT OUT QUEST, Type, 1
+147, The Iroquois, Prague, RECEIVED QUEST, Kill Camp, Friendship: 1 to 1, MINOR_CIV_PRAGUE
+147, Korea, Prague, SENT OUT QUEST, Type, 1
+147, Korea, Prague, RECEIVED QUEST, Kill Camp, Friendship: 70 to 70, MINOR_CIV_PRAGUE
+147, Venice, Prague, SENT OUT QUEST, Type, 1
+147, Venice, Prague, RECEIVED QUEST, Kill Camp, Friendship: 55 to 55, MINOR_CIV_PRAGUE
+147, Austria, Prague, SENT OUT QUEST, Type, 1
+147, Austria, Prague, RECEIVED QUEST, Kill Camp, Friendship: 33 to 33, MINOR_CIV_PRAGUE
+147, Denmark, Geneva, lost ally
+147, Venice, Geneva, gained ally
+147, Almaty, Russia, RECEIVED_UNIT_GIFT, Swordsman
+147, Russia, Cape Town, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+147, Jerusalem, Austria, RECEIVED_UNIT_GIFT, Pikeman
+147, Austria, Sidon, SENT OUT QUEST, Type, 7
+147, Austria, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SIDON
+148, Egypt, Riga, era change yield update
+148, Egypt, Bogota, era change yield update
+148, Egypt, Valletta, era change yield update
+148, Egypt, Ife, era change yield update
+148, Egypt, Prague, era change yield update
+148, Egypt, Kabul, era change yield update
+148, Egypt, Geneva, era change yield update
+148, Egypt, La Venta, era change yield update
+148, Egypt, Almaty, era change yield update
+148, Egypt, Vatican City, era change yield update
+148, Egypt, Malacca, era change yield update
+148, Egypt, Cape Town, era change yield update
+148, Egypt, Jerusalem, era change yield update
+148, Egypt, Sidon, era change yield update
+148, Egypt, Riga, SENT OUT QUEST, Type, 2
+148, Egypt, Riga, SENT OUT QUEST, Type, 7
+148, Egypt, Bogota, SENT OUT QUEST, Type, 2
+148, Egypt, Bogota, SENT OUT QUEST, Type, 10
+148, Egypt, Valletta, SENT OUT QUEST, Type, 2
+148, Egypt, Valletta, SENT OUT QUEST, Type, 4
+148, Egypt, Valletta, SENT OUT QUEST, Type, 12
+148, Egypt, Ife, SENT OUT QUEST, Type, 16
+148, Egypt, Ife, SENT OUT QUEST, Type, 1
+148, Egypt, Ife, SENT OUT QUEST, Type, 7
+148, Egypt, Prague, SENT OUT QUEST, Type, 7
+148, Egypt, Prague, SENT OUT QUEST, Type, 1
+148, Egypt, La Venta, SENT OUT QUEST, Type, 1
+148, Egypt, La Venta, SENT OUT QUEST, Type, 2
+148, Egypt, Almaty, SENT OUT QUEST, Type, 2
+148, Egypt, Almaty, SENT OUT QUEST, Type, 16
+148, Egypt, Vatican City, SENT OUT QUEST, Type, 2
+148, Egypt, Vatican City, SENT OUT QUEST, Type, 11
+148, Egypt, Cape Town, SENT OUT QUEST, Type, 16
+148, Venice, Jerusalem, Gold Gift: 250, Friendship: 36 to 56, Diplomacy, MINOR_CIV_JERUSALEM, Boost! , Passing Austria
+148, Venice, Sidon, Gold Gift: 250, Friendship: 37 to 37, Diplomacy, MINOR_CIV_SIDON, (SAVING) , Boost! , Passing Austria
+148, Venice, Geneva, SENT OUT QUEST, Type, 3
+148, Denmark, Kabul, SENT OUT QUEST, Type, 2
+148, Denmark, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+148, Korea, Almaty, lost friend
+148, Vatican City, Denmark, RECEIVED_UNIT_GIFT, Pikeman
+149, Austria, Vatican City, Gold Gift: 250, Friendship: 63 to 83, Diplomacy, MINOR_CIV_VATICAN_CITY, Boost! , Passing Denmark
+149, Austria, Ife, Gold Gift: 250, Friendship: 32 to 32, Diplomacy, MINOR_CIV_IFE, (SAVING) , Boost! , Passing Denmark
+149, Austria, Bogota, lost friend
+149, Egypt, Bogota, FINISHED QUEST, Contest Culture, Friendship: 61 to 101, MINOR_CIV_BOGOTA
+149, The Zulus, Bogota, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+149, Russia, Bogota, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+149, Korea, Bogota, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+149, Venice, Bogota, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+149, Austria, Bogota, cancelled, Contest Culture, Friendship: 28 to 28, MINOR_CIV_BOGOTA
+149, Russia, Bogota, SENT OUT QUEST, Type, 3
+149, Russia, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+149, The Iroquois, Bogota, SENT OUT QUEST, Type, 16
+149, The Iroquois, Bogota, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+149, Korea, Bogota, SENT OUT QUEST, Type, 4
+149, Korea, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+149, The Iroquois, Almaty, SENT OUT QUEST, Type, 2
+149, The Iroquois, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 14 to 14, MINOR_CIV_ALMATY
+149, The Iroquois, Vatican City, gained friend
+149, The Iroquois, Vatican City, FINISHED QUEST, Contest Faith, Friendship: 5 to 45, MINOR_CIV_VATICAN_CITY
+149, The Zulus, Vatican City, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+149, Russia, Vatican City, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+149, Egypt, Vatican City, cancelled, Contest Faith, Friendship: 15 to 15, MINOR_CIV_VATICAN_CITY
+149, Korea, Vatican City, cancelled, Contest Faith, Friendship: 31 to 31, MINOR_CIV_VATICAN_CITY
+149, Denmark, Vatican City, cancelled, Contest Faith, Friendship: 2 to 2, MINOR_CIV_VATICAN_CITY
+149, Venice, Vatican City, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_VATICAN_CITY
+149, Austria, Vatican City, cancelled, Contest Faith, Friendship: 82 to 82, MINOR_CIV_VATICAN_CITY
+149, Denmark, Malacca, SENT OUT QUEST, Type, 2
+149, Denmark, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MALACCA
+149, Egypt, Jerusalem, SENT OUT QUEST, Type, 16
+149, Egypt, Jerusalem, RECEIVED QUEST, Spread Religion, Friendship: -51 to -51, MINOR_CIV_JERUSALEM
+150, Denmark, Valletta, lost friend
+150, Austria, Ife, lost friend
+150, Austria, Prague, lost friend
+150, Korea, Kabul, SENT OUT QUEST, Type, 3
+150, Korea, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+150, Korea, Vatican City, lost friend
+150, Russia, Sidon, lost friend
+150, The Iroquois, Sidon, SENT OUT QUEST, Type, 14
+150, The Iroquois, Sidon, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SIDON
+150, Venice, Sidon, SENT OUT QUEST, Type, 0
+150, Venice, Sidon, RECEIVED QUEST, Route, Friendship: 54 to 54, MINOR_CIV_SIDON
+151, Russia, Riga, Gold Gift: 250, Friendship: 36 to 56, Spaceship, MINOR_CIV_RIGA, Boost! , Passing Denmark
+151, Russia, La Venta, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_LA_VENTA, (SAVING) 

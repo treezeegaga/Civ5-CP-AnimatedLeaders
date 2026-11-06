@@ -1,0 +1,1367 @@
+022, The_Iroquois, OP_FOUND_CITY, 1126, found target for settler, score 124419 (q50)
+022, The_Iroquois, OP_FOUND_CITY, 1126, Skip recruiting, start with movement stage
+022, The_Iroquois, OP_FOUND_CITY, 1126, Found 0 potential units to recruit for operation 1126 at (27:34) with target at (23:36)
+022, The_Iroquois, OP_FOUND_CITY, 1126, Started Army 1127; Units Recruited 1; Max Formation Size 2; Moving To Target
+022, The_Iroquois, OP_FOUND_CITY, 1126, PRE Moving To Target with Army 1127; center (27:34); target (23:36); Progress 0 percent
+022, The_Iroquois, OP_FOUND_CITY, 1126, POST Moving To Target with Army 1127; center (25:34); target (23:36); Progress 34 percent
+023, Egypt, OP_FOUND_CITY, 1132, found target for settler, score 135380 (q50)
+023, Egypt, OP_FOUND_CITY, 1132, Skip recruiting, start with movement stage
+023, Egypt, OP_FOUND_CITY, 1132, Found 1 potential units to recruit for operation 1132 at (19:32) with target at (21:36)
+023, Egypt, OP_FOUND_CITY, 1132, Added Warrior 1105 to slot 1 in army 1133. ETA at (19:32) is 0 
+023, Egypt, OP_FOUND_CITY, 1132, Started Army 1133; Units Recruited 2; Max Formation Size 2; Moving To Target
+023, Egypt, OP_FOUND_CITY, 1132, PRE Moving To Target with Army 1133; center (19:32); target (21:36); Progress 0 percent
+023, Egypt, OP_FOUND_CITY, 1132, POST Moving To Target with Army 1133; center (20:34); target (21:36); Progress 40 percent
+023, The_Iroquois, OP_FOUND_CITY, 1126, PRE Moving To Target with Army 1127; center (25:34); target (23:36); Progress 34 percent
+023, The_Iroquois, OP_FOUND_CITY, 1126, POST Moving To Target with Army 1127; center (23:35); target (23:36); Progress 100 percent
+024, Egypt, OP_FOUND_CITY, 1132, PRE Moving To Target with Army 1133; center (20:34); target (21:36); Progress 40 percent
+024, Egypt, OP_FOUND_CITY, 1132, POST Moving To Target with Army 1133; center (20:35); target (21:36); Progress 100 percent
+024, The_Iroquois, OP_FOUND_CITY, 1126, PRE Moving To Target with Army 1127; center (23:35); target (23:36); Progress 100 percent
+024, The_Iroquois, OP_FOUND_CITY, 1126, Transition to target stage
+024, The_Iroquois, OP_FOUND_CITY, 1126, City founded (Osininka) at (23:36), plot value 125117, q50
+024, The_Iroquois, OP_FOUND_CITY, 1126, Transition to finished stage
+024, The_Iroquois, OP_FOUND_CITY, 1126, POST Completed
+024, Austria, OP_FOUND_CITY, 1137, found target for settler, score 101196 (q50)
+024, Austria, OP_FOUND_CITY, 1137, Initial stage is recruiting
+024, Austria, OP_FOUND_CITY, 1137, Found 0 potential units to recruit for operation 1137 at (23:23) with target at (25:18)
+024, Austria, OP_FOUND_CITY, 1137, Started Army 1138; Units Recruited 1; Max Formation Size 2; Recruiting Units
+024, Austria, OP_FOUND_CITY, 1137, PRE Recruiting Units for army 1138; Settler 1136 at (23:23) - ETA -1; Open; 
+024, Austria, OP_FOUND_CITY, 1137, Found 0 potential units to recruit for operation 1137 at (23:23) with target at (25:18)
+024, Austria, OP_FOUND_CITY, 1137, POST Recruiting Units for army 1138; Settler 1136 at (23:23) - ETA 0; Open; 
+025, Egypt, OP_FOUND_CITY, 1132, cannot found city at (21:36)
+025, Egypt, OP_FOUND_CITY, 1132, found better target for settler, old score -1 (q-50), new score 105383 (q50)
+025, Egypt, OP_FOUND_CITY, 1132, setting new target (22:29)
+025, Egypt, OP_FOUND_CITY, 1132, PRE Moving To Target with Army 1133; center (20:35); target (22:29); Progress -16 percent
+025, Egypt, OP_FOUND_CITY, 1132, POST Moving To Target with Army 1133; center (20:33); target (22:29); Progress 17 percent
+025, The_Iroquois, OP_FOUND_CITY, 1126, Ended: Success; Distance 6; Duration 3
+025, Austria, OP_FOUND_CITY, 1137, PRE Recruiting Units for army 1138; Settler 1136 at (23:23) - ETA 0; Open; 
+025, Austria, OP_FOUND_CITY, 1137, Found 0 potential units to recruit for operation 1137 at (23:23) with target at (25:18)
+025, Austria, OP_FOUND_CITY, 1137, POST Recruiting Units for army 1138; Settler 1136 at (23:23) - ETA 0; Open; 
+026, Egypt, OP_FOUND_CITY, 1132, PRE Moving To Target with Army 1133; center (20:33); target (22:29); Progress 17 percent
+026, Egypt, OP_FOUND_CITY, 1132, POST Moving To Target with Army 1133; center (21:31); target (22:29); Progress 50 percent
+026, Austria, OP_FOUND_CITY, 1137, PRE Recruiting Units for army 1138; Settler 1136 at (23:23) - ETA 0; Open; 
+026, Austria, OP_FOUND_CITY, 1137, Found 0 potential units to recruit for operation 1137 at (23:23) with target at (25:18)
+026, Austria, OP_FOUND_CITY, 1137, POST Recruiting Units for army 1138; Settler 1136 at (23:23) - ETA 0; Open; 
+027, Russia, OP_FOUND_CITY, 1156, found target for settler, score 152375 (q50)
+027, Russia, OP_FOUND_CITY, 1156, Initial stage is recruiting
+027, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+027, Russia, OP_FOUND_CITY, 1156, Started Army 1157; Units Recruited 1; Max Formation Size 2; Recruiting Units
+027, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA -1; Open; 
+027, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+027, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+027, Egypt, OP_FOUND_CITY, 1132, PRE Moving To Target with Army 1133; center (21:31); target (22:29); Progress 50 percent
+027, Egypt, OP_FOUND_CITY, 1132, Transition to target stage
+027, Egypt, OP_FOUND_CITY, 1132, POST At Target
+027, Austria, OP_FOUND_CITY, 1137, PRE Recruiting Units for army 1138; Settler 1136 at (23:23) - ETA 0; Open; 
+027, Austria, OP_FOUND_CITY, 1137, Found 0 potential units to recruit for operation 1137 at (23:23) with target at (25:18)
+027, Austria, OP_FOUND_CITY, 1137, POST Recruiting Units for army 1138; Settler 1136 at (23:23) - ETA 0; Open; 
+028, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+028, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+028, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+028, Egypt, OP_FOUND_CITY, 1132, PRE At Target
+028, Egypt, OP_FOUND_CITY, 1132, City founded (Memphis) at (22:29), plot value 106181, q50
+028, Egypt, OP_FOUND_CITY, 1132, Transition to finished stage
+028, Egypt, OP_FOUND_CITY, 1132, Ended: Success; Distance 6; Duration 5
+028, Austria, OP_FOUND_CITY, 1137, PRE Recruiting Units for army 1138; Settler 1136 at (23:23) - ETA 0; Open; 
+028, Austria, OP_FOUND_CITY, 1137, Found 1 potential units to recruit for operation 1137 at (23:23) with target at (25:18)
+028, Austria, OP_FOUND_CITY, 1137, Added Warrior 1161 to slot 1 in army 1138. ETA at (23:23) is 0 
+028, Austria, OP_FOUND_CITY, 1137, Transition to gathering stage
+028, Austria, OP_FOUND_CITY, 1137, POST Gathering Forces for army 1138; center (23:21); variance (0.00:0.00); free slots 0
+029, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+029, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+029, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+029, Austria, OP_FOUND_CITY, 1137, PRE Gathering Forces for army 1138; center (23:21); variance (0.00:0.00); free slots 0
+029, Austria, OP_FOUND_CITY, 1137, Transition to movement stage
+029, Austria, OP_FOUND_CITY, 1137, POST Moving To Target with Army 1138; center (24:19); target (25:18); Progress 100 percent
+030, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+030, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+030, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+030, Denmark, OP_RAPID_RESPONSE, 1174, Initial stage is recruiting
+030, Denmark, OP_RAPID_RESPONSE, 1174, Found 1 potential units to recruit for operation 1174 at (59:35) with target at (62:27)
+030, Denmark, OP_RAPID_RESPONSE, 1174, Added Warrior 1111 to slot 0 in army 1175. ETA at (59:35) is 0 
+030, Denmark, OP_RAPID_RESPONSE, 1174, Started Army 1175; Units Recruited 1; Max Formation Size 4; Recruiting Units
+030, Denmark, OP_FOUND_CITY, 1177, found target for settler, score 114526 (q50)
+030, Denmark, OP_FOUND_CITY, 1177, Skip recruiting, start with movement stage
+030, Denmark, OP_FOUND_CITY, 1177, Found 0 potential units to recruit for operation 1177 at (59:35) with target at (55:33)
+030, Denmark, OP_FOUND_CITY, 1177, Started Army 1178; Units Recruited 1; Max Formation Size 2; Moving To Target
+030, Denmark, OP_RAPID_RESPONSE, 1174, PRE Recruiting Units for army 1175; Warrior 1111 at (59:35) - ETA 0; Open; Open; Open; 
+030, Denmark, OP_RAPID_RESPONSE, 1174, Found 0 potential units to recruit for operation 1174 at (59:35) with target at (62:27)
+030, Denmark, OP_RAPID_RESPONSE, 1174, POST Recruiting Units for army 1175; Warrior 1111 at (59:35) - ETA 0; Open; Open; Open; 
+030, Denmark, OP_FOUND_CITY, 1177, PRE Moving To Target with Army 1178; center (59:35); target (55:33); Progress 0 percent
+030, Denmark, OP_FOUND_CITY, 1177, POST Moving To Target with Army 1178; center (58:34); target (55:33); Progress 34 percent
+030, Austria, OP_FOUND_CITY, 1137, PRE Moving To Target with Army 1138; center (24:19); target (25:18); Progress 100 percent
+030, Austria, OP_FOUND_CITY, 1137, Transition to target stage
+030, Austria, OP_FOUND_CITY, 1137, POST At Target
+031, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+031, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+031, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+031, Korea, OP_FOUND_CITY, 1182, Ended: NoTarget; Distance -1; Duration 32
+031, Denmark, OP_RAPID_RESPONSE, 1174, Ended: NoTarget; Distance 9; Duration 1
+031, Denmark, OP_FOUND_CITY, 1177, PRE Moving To Target with Army 1178; center (58:34); target (55:33); Progress 34 percent
+031, Denmark, OP_FOUND_CITY, 1177, POST Moving To Target with Army 1178; center (56:33); target (55:33); Progress 100 percent
+031, Austria, OP_FOUND_CITY, 1137, PRE At Target
+031, Austria, OP_FOUND_CITY, 1137, City founded (Salzburg) at (25:18), plot value 101196, q50
+031, Austria, OP_FOUND_CITY, 1137, Transition to finished stage
+031, Austria, OP_FOUND_CITY, 1137, Ended: Success; Distance 2; Duration 7
+032, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+032, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+032, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+032, Korea, OP_FOUND_CITY, 1188, found target for settler, score 61380 (q7)
+032, Korea, OP_FOUND_CITY, 1188, Initial stage is recruiting
+032, Korea, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (54:25) with target at (52:20)
+032, Korea, OP_FOUND_CITY, 1188, Started Army 1189; Units Recruited 1; Max Formation Size 2; Recruiting Units
+032, Korea, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1181 at (54:25) - ETA -1; Open; 
+032, Korea, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (54:25) with target at (52:20)
+032, Korea, OP_FOUND_CITY, 1188, POST Recruiting Units for army 1189; Settler 1181 at (54:25) - ETA 0; Open; 
+032, Denmark, OP_FOUND_CITY, 1177, PRE Moving To Target with Army 1178; center (56:33); target (55:33); Progress 100 percent
+032, Denmark, OP_FOUND_CITY, 1177, Transition to target stage
+032, Denmark, OP_FOUND_CITY, 1177, POST At Target
+033, The_Zulus, OP_FOUND_CITY, 1197, found target for settler, score 103426 (q50)
+033, The_Zulus, OP_FOUND_CITY, 1197, Initial stage is recruiting
+033, The_Zulus, OP_FOUND_CITY, 1197, Found 0 potential units to recruit for operation 1197 at (36:21) with target at (31:21)
+033, The_Zulus, OP_FOUND_CITY, 1197, Started Army 1198; Units Recruited 1; Max Formation Size 2; Recruiting Units
+033, The_Zulus, OP_FOUND_CITY, 1197, PRE Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA -1; Open; 
+033, The_Zulus, OP_FOUND_CITY, 1197, Found 0 potential units to recruit for operation 1197 at (36:21) with target at (31:21)
+033, The_Zulus, OP_FOUND_CITY, 1197, POST Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+033, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+033, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+033, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+033, Korea, OP_FOUND_CITY, 1188, found better target for settler, old score 61380 (q7), new score 105363 (q50)
+033, Korea, OP_FOUND_CITY, 1188, setting new target (53:19)
+033, Korea, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1181 at (54:25) - ETA 0; Open; 
+033, Korea, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (54:25) with target at (53:19)
+033, Korea, OP_FOUND_CITY, 1188, POST Recruiting Units for army 1189; Settler 1181 at (54:25) - ETA 0; Open; 
+033, Denmark, OP_FOUND_CITY, 1177, PRE At Target
+033, Denmark, OP_FOUND_CITY, 1177, City founded (Aarhus) at (55:33), plot value 114526, q50
+033, Denmark, OP_FOUND_CITY, 1177, Transition to finished stage
+033, Denmark, OP_FOUND_CITY, 1177, Ended: Success; Distance 6; Duration 3
+034, The_Zulus, OP_FOUND_CITY, 1197, PRE Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+034, The_Zulus, OP_FOUND_CITY, 1197, Found 0 potential units to recruit for operation 1197 at (36:21) with target at (31:21)
+034, The_Zulus, OP_FOUND_CITY, 1197, POST Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+034, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+034, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+034, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+034, Korea, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1181 at (54:25) - ETA 0; Open; 
+034, Korea, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (54:25) with target at (53:19)
+034, Korea, OP_FOUND_CITY, 1188, POST Recruiting Units for army 1189; Settler 1181 at (54:25) - ETA 0; Open; 
+034, Denmark, OP_RAPID_RESPONSE, 1208, Initial stage is recruiting
+034, Denmark, OP_RAPID_RESPONSE, 1208, Found 1 potential units to recruit for operation 1208 at (59:35) with target at (62:27)
+034, Denmark, OP_RAPID_RESPONSE, 1208, Added Warrior 1111 to slot 0 in army 1209. ETA at (59:35) is 0 
+034, Denmark, OP_RAPID_RESPONSE, 1208, Started Army 1209; Units Recruited 1; Max Formation Size 4; Recruiting Units
+034, Denmark, OP_RAPID_RESPONSE, 1208, PRE Recruiting Units for army 1209; Warrior 1111 at (59:35) - ETA 0; Open; Open; Open; 
+034, Denmark, OP_RAPID_RESPONSE, 1208, Found 0 potential units to recruit for operation 1208 at (59:35) with target at (62:27)
+034, Denmark, OP_RAPID_RESPONSE, 1208, POST Recruiting Units for army 1209; Warrior 1111 at (59:35) - ETA 0; Open; Open; Open; 
+035, The_Zulus, OP_FOUND_CITY, 1197, PRE Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+035, The_Zulus, OP_FOUND_CITY, 1197, Found 0 potential units to recruit for operation 1197 at (36:21) with target at (31:21)
+035, The_Zulus, OP_FOUND_CITY, 1197, POST Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+035, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+035, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+035, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+035, Korea, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1181 at (54:25) - ETA 0; Open; 
+035, Korea, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (54:25) with target at (53:19)
+035, Korea, OP_FOUND_CITY, 1188, POST Recruiting Units for army 1189; Settler 1181 at (54:25) - ETA 0; Open; 
+035, Denmark, OP_RAPID_RESPONSE, 1208, Added Warrior 1214 to slot 1 in army 1209. ETA at (59:35) is 0 
+035, Denmark, OP_RAPID_RESPONSE, 1208, PRE Recruiting Units for army 1209; Warrior 1111 at (59:35) - ETA 0; Warrior 1214 at (59:34) - ETA 0; Open; Open; 
+035, Denmark, OP_RAPID_RESPONSE, 1208, Found 0 potential units to recruit for operation 1208 at (59:35) with target at (62:27)
+035, Denmark, OP_RAPID_RESPONSE, 1208, Transition to gathering stage
+035, Denmark, OP_RAPID_RESPONSE, 1208, POST Gathering Forces for army 1209; center (59:35); variance (0.00:0.25); free slots 2
+036, The_Zulus, OP_FOUND_CITY, 1197, PRE Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+036, The_Zulus, OP_FOUND_CITY, 1197, Found 0 potential units to recruit for operation 1197 at (36:21) with target at (31:21)
+036, The_Zulus, OP_FOUND_CITY, 1197, POST Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+036, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+036, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+036, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+036, Korea, OP_FOUND_CITY, 1188, PRE Recruiting Units for army 1189; Settler 1181 at (54:25) - ETA 0; Open; 
+036, Korea, OP_FOUND_CITY, 1188, Found 1 potential units to recruit for operation 1188 at (54:25) with target at (53:19)
+036, Korea, OP_FOUND_CITY, 1188, Added Warrior 1221 to slot 1 in army 1189. ETA at (54:25) is 0 
+036, Korea, OP_FOUND_CITY, 1188, Transition to gathering stage
+036, Korea, OP_FOUND_CITY, 1188, POST Gathering Forces for army 1189; center (53:23); variance (0.25:1.00); free slots 0
+036, Denmark, OP_RAPID_RESPONSE, 1208, PRE Gathering Forces for army 1209; center (59:35); variance (0.00:0.25); free slots 2
+036, Denmark, OP_RAPID_RESPONSE, 1208, Transition to movement stage
+036, Denmark, OP_RAPID_RESPONSE, 1208, POST Moving To Target with Army 1209; center (59:35); target (62:27); Progress 100 percent
+037, The_Zulus, OP_FOUND_CITY, 1197, PRE Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+037, The_Zulus, OP_FOUND_CITY, 1197, Found 0 potential units to recruit for operation 1197 at (36:21) with target at (31:21)
+037, The_Zulus, OP_FOUND_CITY, 1197, POST Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+037, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+037, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+037, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+037, Korea, OP_FOUND_CITY, 1188, PRE Gathering Forces for army 1189; center (53:23); variance (0.25:1.00); free slots 0
+037, Korea, OP_FOUND_CITY, 1188, Transition to movement stage
+037, Korea, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (54:25); target (53:19); Progress 0 percent
+037, Denmark, OP_RAPID_RESPONSE, 1208, Ended: NoTarget; Distance -1; Duration 3
+038, The_Zulus, OP_FOUND_CITY, 1197, PRE Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+038, The_Zulus, OP_FOUND_CITY, 1197, Found 0 potential units to recruit for operation 1197 at (36:21) with target at (31:21)
+038, The_Zulus, OP_FOUND_CITY, 1197, POST Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+038, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+038, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+038, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+038, Korea, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (54:25); target (53:19); Progress 0 percent
+038, Korea, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (53:24); target (53:19); Progress 15 percent
+039, The_Zulus, OP_FOUND_CITY, 1197, PRE Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+039, The_Zulus, OP_FOUND_CITY, 1197, Found 0 potential units to recruit for operation 1197 at (36:21) with target at (31:21)
+039, The_Zulus, OP_FOUND_CITY, 1197, POST Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+039, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+039, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+039, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+039, The_Iroquois, OP_FOUND_CITY, 1236, found target for settler, score 99174 (q50)
+039, The_Iroquois, OP_FOUND_CITY, 1236, Skip recruiting, start with movement stage
+039, The_Iroquois, OP_FOUND_CITY, 1236, Found 0 potential units to recruit for operation 1236 at (27:34) with target at (31:33)
+039, The_Iroquois, OP_FOUND_CITY, 1236, Started Army 1237; Units Recruited 1; Max Formation Size 2; Moving To Target
+039, The_Iroquois, OP_FOUND_CITY, 1236, PRE Moving To Target with Army 1237; center (27:34); target (31:33); Progress 0 percent
+039, The_Iroquois, OP_FOUND_CITY, 1236, POST Moving To Target with Army 1237; center (28:34); target (31:33); Progress 17 percent
+039, Korea, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (53:24); target (53:19); Progress 15 percent
+039, Korea, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (52:24); target (53:19); Progress 15 percent
+040, The_Zulus, OP_FOUND_CITY, 1197, PRE Recruiting Units for army 1198; Settler 1196 at (36:21) - ETA 0; Open; 
+040, The_Zulus, OP_FOUND_CITY, 1197, Found 0 potential units to recruit for operation 1197 at (36:21) with target at (31:21)
+040, The_Zulus, OP_FOUND_CITY, 1197, No escort yet and the trip looks safe, going alone
+040, The_Zulus, OP_FOUND_CITY, 1197, Transition to gathering stage
+040, The_Zulus, OP_FOUND_CITY, 1197, Transition to movement stage
+040, The_Zulus, OP_FOUND_CITY, 1197, POST Moving To Target with Army 1198; center (36:21); target (31:21); Progress 0 percent
+040, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+040, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+040, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+040, The_Iroquois, OP_FOUND_CITY, 1236, PRE Moving To Target with Army 1237; center (28:34); target (31:33); Progress 17 percent
+040, The_Iroquois, OP_FOUND_CITY, 1236, POST Moving To Target with Army 1237; center (30:34); target (31:33); Progress 50 percent
+040, Korea, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (52:24); target (53:19); Progress 15 percent
+040, Korea, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (53:24); target (53:19); Progress 15 percent
+041, The_Zulus, OP_FOUND_CITY, 1197, PRE Moving To Target with Army 1198; center (36:21); target (31:21); Progress 0 percent
+041, The_Zulus, OP_FOUND_CITY, 1197, POST Moving To Target with Army 1198; center (35:20); target (31:21); Progress 17 percent
+041, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+041, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+041, Russia, OP_FOUND_CITY, 1156, POST Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+041, The_Iroquois, OP_FOUND_CITY, 1236, PRE Moving To Target with Army 1237; center (30:34); target (31:33); Progress 50 percent
+041, The_Iroquois, OP_FOUND_CITY, 1236, Transition to target stage
+041, The_Iroquois, OP_FOUND_CITY, 1236, POST At Target
+041, Korea, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (53:24); target (53:19); Progress 15 percent
+041, Korea, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (53:22); target (53:19); Progress 43 percent
+042, The_Zulus, OP_FOUND_CITY, 1197, PRE Moving To Target with Army 1198; center (35:20); target (31:21); Progress 17 percent
+042, The_Zulus, OP_FOUND_CITY, 1197, POST Moving To Target with Army 1198; center (34:18); target (31:21); Progress 17 percent
+042, Russia, OP_FOUND_CITY, 1156, PRE Recruiting Units for army 1157; Settler 1155 at (21:14) - ETA 0; Open; 
+042, Russia, OP_FOUND_CITY, 1156, Found 0 potential units to recruit for operation 1156 at (21:14) with target at (25:12)
+042, Russia, OP_FOUND_CITY, 1156, No escort yet and the trip looks safe, going alone
+042, Russia, OP_FOUND_CITY, 1156, Transition to gathering stage
+042, Russia, OP_FOUND_CITY, 1156, Transition to movement stage
+042, Russia, OP_FOUND_CITY, 1156, POST Moving To Target with Army 1157; center (21:14); target (25:12); Progress 0 percent
+042, The_Iroquois, OP_FOUND_CITY, 1236, PRE At Target
+042, The_Iroquois, OP_FOUND_CITY, 1236, City founded (Grand River) at (31:33), plot value 98955, q50
+042, The_Iroquois, OP_FOUND_CITY, 1236, Transition to finished stage
+042, The_Iroquois, OP_FOUND_CITY, 1236, Ended: Success; Distance 6; Duration 3
+042, Korea, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (53:22); target (53:19); Progress 43 percent
+042, Korea, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (54:20); target (53:19); Progress 100 percent
+043, The_Zulus, OP_FOUND_CITY, 1197, PRE Moving To Target with Army 1198; center (34:18); target (31:21); Progress 17 percent
+043, The_Zulus, OP_FOUND_CITY, 1197, POST Moving To Target with Army 1198; center (32:19); target (31:21); Progress 50 percent
+043, Russia, OP_FOUND_CITY, 1156, PRE Moving To Target with Army 1157; center (21:14); target (25:12); Progress 0 percent
+043, Russia, OP_FOUND_CITY, 1156, POST Moving To Target with Army 1157; center (22:15); target (25:12); Progress 17 percent
+043, Korea, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (54:20); target (53:19); Progress 100 percent
+043, Korea, OP_FOUND_CITY, 1188, Transition to target stage
+043, Korea, OP_FOUND_CITY, 1188, POST At Target
+044, The_Zulus, OP_FOUND_CITY, 1197, PRE Moving To Target with Army 1198; center (32:19); target (31:21); Progress 50 percent
+044, The_Zulus, OP_FOUND_CITY, 1197, POST Moving To Target with Army 1198; center (31:20); target (31:21); Progress 100 percent
+044, Russia, OP_FOUND_CITY, 1156, PRE Moving To Target with Army 1157; center (22:15); target (25:12); Progress 17 percent
+044, Russia, OP_FOUND_CITY, 1156, POST Moving To Target with Army 1157; center (24:14); target (25:12); Progress 50 percent
+044, Korea, OP_FOUND_CITY, 1188, PRE At Target
+044, Korea, OP_FOUND_CITY, 1188, City founded (Busan) at (53:19), plot value 110973, q50
+044, Korea, OP_FOUND_CITY, 1188, Transition to finished stage
+044, Korea, OP_FOUND_CITY, 1188, Ended: Success; Distance 7; Duration 12
+045, The_Zulus, OP_FOUND_CITY, 1197, PRE Moving To Target with Army 1198; center (31:20); target (31:21); Progress 100 percent
+045, The_Zulus, OP_FOUND_CITY, 1197, Transition to target stage
+045, The_Zulus, OP_FOUND_CITY, 1197, City founded (Umgungundlovu) at (31:21), plot value 101147, q50
+045, The_Zulus, OP_FOUND_CITY, 1197, Transition to finished stage
+045, The_Zulus, OP_FOUND_CITY, 1197, POST Completed
+045, Russia, OP_FOUND_CITY, 1156, PRE Moving To Target with Army 1157; center (24:14); target (25:12); Progress 50 percent
+045, Russia, OP_FOUND_CITY, 1156, Transition to target stage
+045, Russia, OP_FOUND_CITY, 1156, POST At Target
+046, The_Zulus, OP_FOUND_CITY, 1197, Ended: Success; Distance 6; Duration 13
+046, Russia, OP_FOUND_CITY, 1156, PRE At Target
+046, Russia, OP_FOUND_CITY, 1156, City founded (St. Petersburg) at (25:12), plot value 153005, q50
+046, Russia, OP_FOUND_CITY, 1156, Transition to finished stage
+046, Russia, OP_FOUND_CITY, 1156, Ended: Success; Distance 6; Duration 19
+049, Venice, OP_MERCHANT, 1316, Skip recruiting, start with movement stage
+049, Venice, OP_MERCHANT, 1316, Found 0 potential units to recruit for operation 1316 at (43:35) with target at (47:42)
+049, Venice, OP_MERCHANT, 1316, Started Army 1317; Units Recruited 1; Max Formation Size 2; Moving To Target
+049, Venice, OP_MERCHANT, 1316, PRE Moving To Target with Army 1317; center (43:35); target (47:42); Progress 100 percent
+049, Venice, OP_MERCHANT, 1316, POST Moving To Target with Army 1317; center (44:37); target (47:42); Progress 100 percent
+050, Venice, OP_MERCHANT, 1316, PRE Moving To Target with Army 1317; center (44:37); target (47:42); Progress 100 percent
+050, Venice, OP_MERCHANT, 1316, POST Moving To Target with Army 1317; center (45:39); target (47:42); Progress 100 percent
+051, Venice, OP_MERCHANT, 1316, PRE Moving To Target with Army 1317; center (45:39); target (47:42); Progress 100 percent
+051, Venice, OP_MERCHANT, 1316, Transition to target stage
+051, Venice, OP_MERCHANT, 1316, POST At Target
+052, Venice, OP_MERCHANT, 1316, PRE At Target
+052, Venice, OP_MERCHANT, 1316, Great Merchant buying city-state at (46:41)
+052, Venice, OP_MERCHANT, 1316, Transition to finished stage
+052, Venice, OP_MERCHANT, 1316, Ended: Success; Distance -1; Duration 3
+054, Russia, OP_FOUND_CITY, 1350, found target for settler, score 76165 (q33)
+054, Russia, OP_FOUND_CITY, 1350, Initial stage is recruiting
+054, Russia, OP_FOUND_CITY, 1350, Found 1 potential units to recruit for operation 1350 at (21:14) with target at (17:11)
+054, Russia, OP_FOUND_CITY, 1350, Added Warrior 1315 to slot 1 in army 1351. ETA at (21:14) is 0 
+054, Russia, OP_FOUND_CITY, 1350, Transition to gathering stage
+054, Russia, OP_FOUND_CITY, 1350, Transition to movement stage
+054, Russia, OP_FOUND_CITY, 1350, Started Army 1351; Units Recruited 2; Max Formation Size 2; Moving To Target
+054, Russia, OP_FOUND_CITY, 1350, PRE Moving To Target with Army 1351; center (21:14); target (17:11); Progress 0 percent
+054, Russia, OP_FOUND_CITY, 1350, POST Moving To Target with Army 1351; center (20:12); target (17:11); Progress 34 percent
+055, Russia, OP_FOUND_CITY, 1350, PRE Moving To Target with Army 1351; center (20:12); target (17:11); Progress 34 percent
+055, Russia, OP_FOUND_CITY, 1350, POST Moving To Target with Army 1351; center (18:11); target (17:11); Progress 100 percent
+055, Austria, OP_FOUND_CITY, 1356, found target for settler, score 79896 (q39)
+055, Austria, OP_FOUND_CITY, 1356, Initial stage is recruiting
+055, Austria, OP_FOUND_CITY, 1356, Found 0 potential units to recruit for operation 1356 at (23:23) with target at (19:24)
+055, Austria, OP_FOUND_CITY, 1356, Started Army 1357; Units Recruited 1; Max Formation Size 2; Recruiting Units
+055, Austria, OP_FOUND_CITY, 1356, PRE Recruiting Units for army 1357; Settler 1355 at (23:23) - ETA -1; Open; 
+055, Austria, OP_FOUND_CITY, 1356, Found 0 potential units to recruit for operation 1356 at (23:23) with target at (19:24)
+055, Austria, OP_FOUND_CITY, 1356, POST Recruiting Units for army 1357; Settler 1355 at (23:23) - ETA 0; Open; 
+056, Russia, OP_FOUND_CITY, 1350, PRE Moving To Target with Army 1351; center (18:11); target (17:11); Progress 100 percent
+056, Russia, OP_FOUND_CITY, 1350, Transition to target stage
+056, Russia, OP_FOUND_CITY, 1350, POST At Target
+056, Austria, OP_FOUND_CITY, 1356, PRE Recruiting Units for army 1357; Settler 1355 at (23:23) - ETA 0; Open; 
+056, Austria, OP_FOUND_CITY, 1356, Found 0 potential units to recruit for operation 1356 at (23:23) with target at (19:24)
+056, Austria, OP_FOUND_CITY, 1356, POST Recruiting Units for army 1357; Settler 1355 at (23:23) - ETA 0; Open; 
+057, Russia, OP_FOUND_CITY, 1350, PRE At Target
+057, Russia, OP_FOUND_CITY, 1350, City founded (Novgorod) at (17:11), plot value 85391, q49
+057, Russia, OP_FOUND_CITY, 1350, Transition to finished stage
+057, Russia, OP_FOUND_CITY, 1350, Ended: Success; Distance 6; Duration 3
+057, Egypt, OP_FOUND_CITY, 1367, found target for settler, score 88130 (q50)
+057, Egypt, OP_FOUND_CITY, 1367, Skip recruiting, start with movement stage
+057, Egypt, OP_FOUND_CITY, 1367, Found 2 potential units to recruit for operation 1367 at (19:32) with target at (18:27)
+057, Egypt, OP_FOUND_CITY, 1367, Added Warrior 1207 to slot 1 in army 1368. ETA at (19:32) is 0 
+057, Egypt, OP_FOUND_CITY, 1367, Started Army 1368; Units Recruited 2; Max Formation Size 2; Moving To Target
+057, Egypt, OP_FOUND_CITY, 1367, PRE Moving To Target with Army 1368; center (19:32); target (18:27); Progress 0 percent
+057, Egypt, OP_FOUND_CITY, 1367, POST Moving To Target with Army 1368; center (18:31); target (18:27); Progress 17 percent
+057, Denmark, OP_FOUND_CITY, 1370, found target for settler, score 101656 (q50)
+057, Denmark, OP_FOUND_CITY, 1370, Skip recruiting, start with movement stage
+057, Denmark, OP_FOUND_CITY, 1370, Found 2 potential units to recruit for operation 1370 at (59:35) with target at (63:37)
+057, Denmark, OP_FOUND_CITY, 1370, Added Warrior 1111 to slot 1 in army 1371. ETA at (59:35) is 0 
+057, Denmark, OP_FOUND_CITY, 1370, Started Army 1371; Units Recruited 2; Max Formation Size 2; Moving To Target
+057, Denmark, OP_FOUND_CITY, 1370, PRE Moving To Target with Army 1371; center (59:35); target (63:37); Progress 0 percent
+057, Denmark, OP_FOUND_CITY, 1370, POST Moving To Target with Army 1371; center (61:36); target (63:37); Progress 34 percent
+057, Austria, OP_FOUND_CITY, 1356, PRE Recruiting Units for army 1357; Settler 1355 at (23:23) - ETA 0; Open; 
+057, Austria, OP_FOUND_CITY, 1356, Found 0 potential units to recruit for operation 1356 at (23:23) with target at (19:24)
+057, Austria, OP_FOUND_CITY, 1356, POST Recruiting Units for army 1357; Settler 1355 at (23:23) - ETA 0; Open; 
+058, Egypt, OP_FOUND_CITY, 1367, PRE Moving To Target with Army 1368; center (18:31); target (18:27); Progress 17 percent
+058, Egypt, OP_FOUND_CITY, 1367, POST Moving To Target with Army 1368; center (18:29); target (18:27); Progress 50 percent
+058, Denmark, OP_FOUND_CITY, 1370, PRE Moving To Target with Army 1371; center (61:36); target (63:37); Progress 34 percent
+058, Denmark, OP_FOUND_CITY, 1370, POST Moving To Target with Army 1371; center (62:37); target (63:37); Progress 100 percent
+058, Austria, OP_FOUND_CITY, 1356, PRE Recruiting Units for army 1357; Settler 1355 at (23:23) - ETA 0; Open; 
+058, Austria, OP_FOUND_CITY, 1356, Found 1 potential units to recruit for operation 1356 at (23:23) with target at (19:24)
+058, Austria, OP_FOUND_CITY, 1356, Added Warrior 1375 to slot 1 in army 1357. ETA at (23:23) is 0 
+058, Austria, OP_FOUND_CITY, 1356, Transition to gathering stage
+058, Austria, OP_FOUND_CITY, 1356, POST Gathering Forces for army 1357; center (22:24); variance (0.25:0.25); free slots 0
+059, Egypt, OP_FOUND_CITY, 1367, PRE Moving To Target with Army 1368; center (18:29); target (18:27); Progress 50 percent
+059, Egypt, OP_FOUND_CITY, 1367, POST Moving To Target with Army 1368; center (18:28); target (18:27); Progress 100 percent
+059, Denmark, OP_FOUND_CITY, 1370, PRE Moving To Target with Army 1371; center (62:37); target (63:37); Progress 100 percent
+059, Denmark, OP_FOUND_CITY, 1370, Transition to target stage
+059, Denmark, OP_FOUND_CITY, 1370, POST At Target
+059, Austria, OP_FOUND_CITY, 1356, PRE Gathering Forces for army 1357; center (22:24); variance (0.25:0.25); free slots 0
+059, Austria, OP_FOUND_CITY, 1356, Transition to movement stage
+059, Austria, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (22:24); target (19:24); Progress 0 percent
+060, Egypt, OP_FOUND_CITY, 1367, PRE Moving To Target with Army 1368; center (18:28); target (18:27); Progress 100 percent
+060, Egypt, OP_FOUND_CITY, 1367, Transition to target stage
+060, Egypt, OP_FOUND_CITY, 1367, POST At Target
+060, Denmark, OP_FOUND_CITY, 1370, PRE At Target
+060, Denmark, OP_FOUND_CITY, 1370, City founded (Kaupang) at (63:37), plot value 100206, q50
+060, Denmark, OP_FOUND_CITY, 1370, Transition to finished stage
+060, Denmark, OP_FOUND_CITY, 1370, Ended: Success; Distance 6; Duration 3
+060, Austria, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (22:24); target (19:24); Progress 0 percent
+060, Austria, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (21:24); target (19:24); Progress 25 percent
+061, Egypt, OP_FOUND_CITY, 1367, PRE At Target
+061, Egypt, OP_FOUND_CITY, 1367, City founded (Heliopolis) at (18:27), plot value 91380, q50
+061, Egypt, OP_FOUND_CITY, 1367, Transition to finished stage
+061, Egypt, OP_FOUND_CITY, 1367, Ended: Success; Distance 6; Duration 4
+061, Austria, OP_FOUND_CITY, 1356, cannot found city at (19:24)
+061, Austria, OP_FOUND_CITY, 1356, found better target for settler, old score -1 (q-50), new score 75389 (q31)
+061, Austria, OP_FOUND_CITY, 1356, setting new target (27:26)
+061, Austria, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (21:24); target (27:26); Progress -12 percent
+061, Austria, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (22:23); target (27:26); Progress 13 percent
+062, Austria, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (22:23); target (27:26); Progress 13 percent
+062, Austria, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (24:24); target (27:26); Progress 38 percent
+063, Venice, OP_RAPID_RESPONSE, 1405, Initial stage is recruiting
+063, Venice, OP_RAPID_RESPONSE, 1405, Found 1 potential units to recruit for operation 1405 at (43:35) with target at (43:35)
+063, Venice, OP_RAPID_RESPONSE, 1405, Added Warrior 1337 to slot 0 in army 1406. ETA at (43:35) is 2 
+063, Venice, OP_RAPID_RESPONSE, 1405, Started Army 1406; Units Recruited 1; Max Formation Size 4; Recruiting Units
+063, Venice, OP_RAPID_RESPONSE, 1405, PRE Recruiting Units for army 1406; Warrior 1337 at (47:42) - ETA 2; Open; Open; Open; 
+063, Venice, OP_RAPID_RESPONSE, 1405, Found 0 potential units to recruit for operation 1405 at (43:35) with target at (43:35)
+063, Venice, OP_RAPID_RESPONSE, 1405, POST Recruiting Units for army 1406; Warrior 1337 at (47:41) - ETA 2; Open; Open; Open; 
+063, Austria, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (24:24); target (27:26); Progress 38 percent
+063, Austria, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (24:25); target (27:26); Progress 50 percent
+064, Venice, OP_RAPID_RESPONSE, 1405, Ended: NoTarget; Distance 1; Duration 1
+064, Austria, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (24:25); target (27:26); Progress 50 percent
+064, Austria, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (25:26); target (27:26); Progress 63 percent
+065, Austria, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (25:26); target (27:26); Progress 63 percent
+065, Austria, OP_FOUND_CITY, 1356, POST Moving To Target with Army 1357; center (26:26); target (27:26); Progress 100 percent
+066, Austria, OP_FOUND_CITY, 1356, PRE Moving To Target with Army 1357; center (26:26); target (27:26); Progress 100 percent
+066, Austria, OP_FOUND_CITY, 1356, Transition to target stage
+066, Austria, OP_FOUND_CITY, 1356, POST At Target
+067, Austria, OP_FOUND_CITY, 1356, PRE At Target
+067, Austria, OP_FOUND_CITY, 1356, City founded (Graz) at (27:26), plot value 75389, q31
+067, Austria, OP_FOUND_CITY, 1356, Transition to finished stage
+067, Austria, OP_FOUND_CITY, 1356, Ended: Success; Distance 8; Duration 12
+068, The_Zulus, OP_FOUND_CITY, 1421, found target for settler, score 69906 (q22)
+068, The_Zulus, OP_FOUND_CITY, 1421, Initial stage is recruiting
+068, The_Zulus, OP_FOUND_CITY, 1421, Found 1 potential units to recruit for operation 1421 at (36:21) with target at (39:27)
+068, The_Zulus, OP_FOUND_CITY, 1421, Added Warrior 1002 to slot 1 in army 1422. ETA at (36:21) is 1 
+068, The_Zulus, OP_FOUND_CITY, 1421, Transition to gathering stage
+068, The_Zulus, OP_FOUND_CITY, 1421, Started Army 1422; Units Recruited 2; Max Formation Size 2; Gathering Forces
+068, The_Zulus, OP_FOUND_CITY, 1421, PRE Gathering Forces for army 1422; center (36:21); variance (6.25:0.00); free slots 0
+068, The_Zulus, OP_FOUND_CITY, 1421, Added Warrior 1275 to slot 1 in army 1422. ETA at (36:21) is 0 
+068, The_Zulus, OP_FOUND_CITY, 1421, Transition to movement stage
+068, The_Zulus, OP_FOUND_CITY, 1421, POST Moving To Target with Army 1422; center (36:21); target (39:27); Progress 0 percent
+069, The_Zulus, OP_FOUND_CITY, 1421, PRE Moving To Target with Army 1422; center (36:21); target (39:27); Progress 0 percent
+069, The_Zulus, OP_FOUND_CITY, 1421, POST Moving To Target with Army 1422; center (36:21); target (39:27); Progress 0 percent
+070, The_Zulus, OP_FOUND_CITY, 1421, PRE Moving To Target with Army 1422; center (36:21); target (39:27); Progress 0 percent
+070, The_Zulus, OP_FOUND_CITY, 1421, POST Moving To Target with Army 1422; center (38:22); target (39:27); Progress 15 percent
+071, The_Zulus, OP_FOUND_CITY, 1421, PRE Moving To Target with Army 1422; center (38:22); target (39:27); Progress 15 percent
+071, The_Zulus, OP_FOUND_CITY, 1421, POST Moving To Target with Army 1422; center (39:23); target (39:27); Progress 29 percent
+072, The_Zulus, OP_FOUND_CITY, 1421, PRE Moving To Target with Army 1422; center (39:23); target (39:27); Progress 29 percent
+072, The_Zulus, OP_FOUND_CITY, 1421, POST Moving To Target with Army 1422; center (39:25); target (39:27); Progress 58 percent
+073, The_Zulus, OP_FOUND_CITY, 1421, PRE Moving To Target with Army 1422; center (39:25); target (39:27); Progress 58 percent
+073, The_Zulus, OP_FOUND_CITY, 1421, POST Moving To Target with Army 1422; center (39:26); target (39:27); Progress 100 percent
+074, The_Zulus, OP_FOUND_CITY, 1421, PRE Moving To Target with Army 1422; center (39:26); target (39:27); Progress 100 percent
+074, The_Zulus, OP_FOUND_CITY, 1421, Transition to target stage
+074, The_Zulus, OP_FOUND_CITY, 1421, City founded (Nobamba) at (39:27), plot value 63904, q11
+074, The_Zulus, OP_FOUND_CITY, 1421, Transition to finished stage
+074, The_Zulus, OP_FOUND_CITY, 1421, POST Completed
+075, The_Zulus, OP_FOUND_CITY, 1421, Ended: Success; Distance 7; Duration 7
+075, Egypt, OP_FOUND_CITY, 1449, found target for settler, score 66301 (q15)
+075, Egypt, OP_FOUND_CITY, 1449, Initial stage is recruiting
+075, Egypt, OP_FOUND_CITY, 1449, Found 3 potential units to recruit for operation 1449 at (19:32) with target at (14:31)
+075, Egypt, OP_FOUND_CITY, 1449, Added Warrior 1006 to slot 1 in army 1450. ETA at (19:32) is 0 
+075, Egypt, OP_FOUND_CITY, 1449, Transition to gathering stage
+075, Egypt, OP_FOUND_CITY, 1449, Transition to movement stage
+075, Egypt, OP_FOUND_CITY, 1449, Started Army 1450; Units Recruited 2; Max Formation Size 2; Moving To Target
+075, Egypt, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (19:32); target (14:31); Progress 0 percent
+075, Egypt, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (18:32); target (14:31); Progress 13 percent
+076, Egypt, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (18:32); target (14:31); Progress 13 percent
+076, Egypt, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (17:31); target (14:31); Progress 25 percent
+077, Egypt, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (17:31); target (14:31); Progress 25 percent
+077, Egypt, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (17:30); target (14:31); Progress 38 percent
+078, Egypt, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (17:30); target (14:31); Progress 38 percent
+078, Egypt, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (16:29); target (14:31); Progress 50 percent
+078, The_Iroquois, OP_FOUND_CITY, 1504, found target for settler, score 65564 (q14)
+078, The_Iroquois, OP_FOUND_CITY, 1504, Skip recruiting, start with movement stage
+078, The_Iroquois, OP_FOUND_CITY, 1504, Found 1 potential units to recruit for operation 1504 at (27:34) with target at (26:40)
+078, The_Iroquois, OP_FOUND_CITY, 1504, Added Warrior 1146 to slot 1 in army 1505. ETA at (27:34) is 0 
+078, The_Iroquois, OP_FOUND_CITY, 1504, Started Army 1505; Units Recruited 2; Max Formation Size 2; Moving To Target
+078, The_Iroquois, OP_FOUND_CITY, 1504, PRE Moving To Target with Army 1505; center (27:34); target (26:40); Progress 0 percent
+078, The_Iroquois, OP_FOUND_CITY, 1504, POST Moving To Target with Army 1505; center (26:36); target (26:40); Progress 29 percent
+079, Egypt, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (16:29); target (14:31); Progress 50 percent
+079, Egypt, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (15:30); target (14:31); Progress 100 percent
+079, The_Iroquois, OP_FOUND_CITY, 1504, PRE Moving To Target with Army 1505; center (26:36); target (26:40); Progress 29 percent
+079, The_Iroquois, OP_FOUND_CITY, 1504, POST Moving To Target with Army 1505; center (25:37); target (26:40); Progress 43 percent
+079, Denmark, OP_FOUND_CITY, 1516, found target for settler, score 75546 (q31)
+079, Denmark, OP_FOUND_CITY, 1516, Initial stage is recruiting
+079, Denmark, OP_FOUND_CITY, 1516, Found 1 potential units to recruit for operation 1516 at (59:35) with target at (60:30)
+079, Denmark, OP_FOUND_CITY, 1516, Added Warrior 1012 to slot 1 in army 1517. ETA at (59:35) is 2 
+079, Denmark, OP_FOUND_CITY, 1516, Transition to gathering stage
+079, Denmark, OP_FOUND_CITY, 1516, Started Army 1517; Units Recruited 2; Max Formation Size 2; Gathering Forces
+079, Denmark, OP_FOUND_CITY, 1516, PRE Gathering Forces for army 1517; center (59:35); variance (6.25:4.00); free slots 0
+079, Denmark, OP_FOUND_CITY, 1516, POST Gathering Forces for army 1517; center (58:33); variance (2.25:0.25); free slots 0
+080, Egypt, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (15:30); target (14:31); Progress 100 percent
+080, Egypt, OP_FOUND_CITY, 1449, Transition to target stage
+080, Egypt, OP_FOUND_CITY, 1449, POST At Target
+080, The_Iroquois, OP_FOUND_CITY, 1504, PRE Moving To Target with Army 1505; center (25:37); target (26:40); Progress 43 percent
+080, The_Iroquois, OP_FOUND_CITY, 1504, POST Moving To Target with Army 1505; center (25:39); target (26:40); Progress 100 percent
+080, Denmark, OP_FOUND_CITY, 1516, PRE Gathering Forces for army 1517; center (58:33); variance (2.25:0.25); free slots 0
+080, Denmark, OP_FOUND_CITY, 1516, Transition to movement stage
+080, Denmark, OP_FOUND_CITY, 1516, POST Moving To Target with Army 1517; center (58:33); target (60:30); Progress 0 percent
+080, Austria, OP_FOUND_CITY, 1529, found target for settler, score 60107 (q4)
+080, Austria, OP_FOUND_CITY, 1529, Skip recruiting, start with movement stage
+080, Austria, OP_FOUND_CITY, 1529, Found 1 potential units to recruit for operation 1529 at (23:23) with target at (28:20)
+080, Austria, OP_FOUND_CITY, 1529, Added Warrior 1375 to slot 1 in army 1530. ETA at (27:26) is 0 
+080, Austria, OP_FOUND_CITY, 1529, Started Army 1530; Units Recruited 2; Max Formation Size 2; Moving To Target
+080, Austria, OP_FOUND_CITY, 1529, PRE Moving To Target with Army 1530; center (27:26); target (28:20); Progress 0 percent
+080, Austria, OP_FOUND_CITY, 1529, POST Moving To Target with Army 1530; center (26:26); target (28:20); Progress -14 percent
+081, Russia, OP_FOUND_CITY, 1538, found target for settler, score 74730 (q30)
+081, Russia, OP_FOUND_CITY, 1538, Skip recruiting, start with movement stage
+081, Russia, OP_FOUND_CITY, 1538, Found 0 potential units to recruit for operation 1538 at (21:14) with target at (28:11)
+081, Russia, OP_FOUND_CITY, 1538, Started Army 1539; Units Recruited 1; Max Formation Size 2; Moving To Target
+081, Russia, OP_FOUND_CITY, 1538, PRE Moving To Target with Army 1539; center (21:14); target (28:11); Progress 0 percent
+081, Russia, OP_FOUND_CITY, 1538, POST Moving To Target with Army 1539; center (24:12); target (28:11); Progress 40 percent
+081, Egypt, OP_FOUND_CITY, 1449, PRE At Target
+081, Egypt, OP_FOUND_CITY, 1449, City founded (Elephantine) at (14:31), plot value 62423, q9
+081, Egypt, OP_FOUND_CITY, 1449, Transition to finished stage
+081, Egypt, OP_FOUND_CITY, 1449, Ended: Success; Distance 8; Duration 6
+081, The_Iroquois, OP_FOUND_CITY, 1504, PRE Moving To Target with Army 1505; center (25:39); target (26:40); Progress 100 percent
+081, The_Iroquois, OP_FOUND_CITY, 1504, Transition to target stage
+081, The_Iroquois, OP_FOUND_CITY, 1504, POST At Target
+081, Korea, OP_FOUND_CITY, 1542, found target for settler, score 122135 (q50)
+081, Korea, OP_FOUND_CITY, 1542, Initial stage is recruiting
+081, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+081, Korea, OP_FOUND_CITY, 1542, Started Army 1543; Units Recruited 1; Max Formation Size 2; Recruiting Units
+081, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA -1; Open; 
+081, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+081, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+081, Denmark, OP_FOUND_CITY, 1516, PRE Moving To Target with Army 1517; center (59:31); target (60:30); Progress 100 percent
+081, Denmark, OP_FOUND_CITY, 1516, POST Moving To Target with Army 1517; center (58:32); target (60:30); Progress 0 percent
+081, Austria, OP_FOUND_CITY, 1529, PRE Moving To Target with Army 1530; center (26:26); target (28:20); Progress -14 percent
+081, Austria, OP_FOUND_CITY, 1529, POST Moving To Target with Army 1530; center (25:26); target (28:20); Progress -14 percent
+082, Russia, OP_FOUND_CITY, 1538, PRE Moving To Target with Army 1539; center (24:12); target (28:11); Progress 40 percent
+082, Russia, OP_FOUND_CITY, 1538, POST Moving To Target with Army 1539; center (26:12); target (28:11); Progress 60 percent
+082, The_Iroquois, OP_FOUND_CITY, 1504, PRE At Target
+082, The_Iroquois, OP_FOUND_CITY, 1504, City founded (Akwesasme) at (26:40), plot value 68400, q19
+082, The_Iroquois, OP_FOUND_CITY, 1504, Transition to finished stage
+082, The_Iroquois, OP_FOUND_CITY, 1504, Ended: Success; Distance 7; Duration 4
+082, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+082, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+082, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+082, Denmark, OP_FOUND_CITY, 1516, PRE Moving To Target with Army 1517; center (58:32); target (60:30); Progress 0 percent
+082, Denmark, OP_FOUND_CITY, 1516, POST Moving To Target with Army 1517; center (59:31); target (60:30); Progress 100 percent
+082, Austria, OP_FOUND_CITY, 1529, PRE Moving To Target with Army 1530; center (25:26); target (28:20); Progress -14 percent
+082, Austria, OP_FOUND_CITY, 1529, POST Moving To Target with Army 1530; center (24:25); target (28:20); Progress 0 percent
+083, Russia, OP_FOUND_CITY, 1538, PRE Moving To Target with Army 1539; center (26:12); target (28:11); Progress 60 percent
+083, Russia, OP_FOUND_CITY, 1538, POST Moving To Target with Army 1539; center (28:12); target (28:11); Progress 100 percent
+083, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+083, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+083, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+083, Denmark, OP_FOUND_CITY, 1516, PRE Moving To Target with Army 1517; center (59:31); target (60:30); Progress 100 percent
+083, Denmark, OP_FOUND_CITY, 1516, Transition to target stage
+083, Denmark, OP_FOUND_CITY, 1516, POST At Target
+083, Austria, OP_FOUND_CITY, 1529, PRE Moving To Target with Army 1530; center (24:25); target (28:20); Progress 0 percent
+083, Austria, OP_FOUND_CITY, 1529, POST Moving To Target with Army 1530; center (25:23); target (28:20); Progress 29 percent
+084, Russia, OP_FOUND_CITY, 1538, PRE Moving To Target with Army 1539; center (28:12); target (28:11); Progress 100 percent
+084, Russia, OP_FOUND_CITY, 1538, Transition to target stage
+084, Russia, OP_FOUND_CITY, 1538, City founded (Rostov) at (28:11), plot value 70574, q23
+084, Russia, OP_FOUND_CITY, 1538, Transition to finished stage
+084, Russia, OP_FOUND_CITY, 1538, POST Completed
+084, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+084, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+084, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+084, Denmark, OP_FOUND_CITY, 1516, PRE At Target
+084, Denmark, OP_FOUND_CITY, 1516, City founded (Ribe) at (60:30), plot value 74349, q29
+084, Denmark, OP_FOUND_CITY, 1516, Transition to finished stage
+084, Denmark, OP_FOUND_CITY, 1516, Ended: Success; Distance 4; Duration 5
+084, Austria, OP_FOUND_CITY, 1529, PRE Moving To Target with Army 1530; center (25:23); target (28:20); Progress 29 percent
+084, Austria, OP_FOUND_CITY, 1529, POST Moving To Target with Army 1530; center (26:21); target (28:20); Progress 58 percent
+085, The_Zulus, OP_FOUND_CITY, 1578, found target for settler, score 63796 (q11)
+085, The_Zulus, OP_FOUND_CITY, 1578, Initial stage is recruiting
+085, The_Zulus, OP_FOUND_CITY, 1578, Found 1 potential units to recruit for operation 1578 at (36:21) with target at (28:20)
+085, The_Zulus, OP_FOUND_CITY, 1578, Added Warrior 1002 to slot 1 in army 1579. ETA at (36:21) is 1 
+085, The_Zulus, OP_FOUND_CITY, 1578, Transition to gathering stage
+085, The_Zulus, OP_FOUND_CITY, 1578, Started Army 1579; Units Recruited 2; Max Formation Size 2; Gathering Forces
+085, The_Zulus, OP_FOUND_CITY, 1578, PRE Gathering Forces for army 1579; center (36:21); variance (6.25:0.00); free slots 0
+085, The_Zulus, OP_FOUND_CITY, 1578, Added Archer 1459 to slot 1 in army 1579. ETA at (36:21) is 0 
+085, The_Zulus, OP_FOUND_CITY, 1578, Transition to movement stage
+085, The_Zulus, OP_FOUND_CITY, 1578, POST Moving To Target with Army 1579; center (34:21); target (28:20); Progress 20 percent
+085, Russia, OP_FOUND_CITY, 1538, Ended: Success; Distance 10; Duration 4
+085, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+085, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+085, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+085, Austria, OP_FOUND_CITY, 1529, PRE Moving To Target with Army 1530; center (26:21); target (28:20); Progress 58 percent
+085, Austria, OP_FOUND_CITY, 1529, POST Moving To Target with Army 1530; center (27:20); target (28:20); Progress 100 percent
+086, The_Zulus, OP_FOUND_CITY, 1578, PRE Moving To Target with Army 1579; center (34:21); target (28:20); Progress 20 percent
+086, The_Zulus, OP_FOUND_CITY, 1578, POST Moving To Target with Army 1579; center (34:21); target (28:20); Progress 20 percent
+086, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+086, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+086, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+086, Austria, OP_FOUND_CITY, 1529, PRE Moving To Target with Army 1530; center (27:20); target (28:20); Progress 100 percent
+086, Austria, OP_FOUND_CITY, 1529, Transition to target stage
+086, Austria, OP_FOUND_CITY, 1529, City founded (Linz) at (28:20), plot value 60107, q4
+086, Austria, OP_FOUND_CITY, 1529, Transition to finished stage
+086, Austria, OP_FOUND_CITY, 1529, POST Completed
+087, The_Zulus, OP_FOUND_CITY, 1578, cannot found city at (28:20)
+087, The_Zulus, OP_FOUND_CITY, 1578, no path to city site (28:20)
+087, The_Zulus, OP_FOUND_CITY, 1578, found no suitable target in area 6
+087, The_Zulus, OP_FOUND_CITY, 1578, Ended: NoTarget; Distance 10; Duration 2
+087, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+087, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+087, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+087, Austria, OP_FOUND_CITY, 1529, Ended: Success; Distance 7; Duration 7
+088, The_Zulus, OP_FOUND_CITY, 1598, Ended: NoTarget; Distance -1; Duration 89
+088, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+088, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+088, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+089, The_Zulus, OP_FOUND_CITY, 1607, Ended: NoTarget; Distance -1; Duration 90
+089, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+089, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+089, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+090, The_Zulus, OP_FOUND_CITY, 1618, Ended: NoTarget; Distance -1; Duration 91
+090, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+090, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+090, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+091, The_Zulus, OP_FOUND_CITY, 1628, Ended: NoTarget; Distance -1; Duration 92
+091, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+091, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+091, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+092, The_Zulus, OP_FOUND_CITY, 1647, Ended: NoTarget; Distance -1; Duration 93
+092, Russia, OP_FOUND_CITY, 1648, found target for settler, score 43653 (q-24)
+092, Russia, OP_FOUND_CITY, 1648, Skip recruiting, start with movement stage
+092, Russia, OP_FOUND_CITY, 1648, Found 1 potential units to recruit for operation 1648 at (21:14) with target at (21:9)
+092, Russia, OP_FOUND_CITY, 1648, Added Spearman 1558 to slot 1 in army 1649. ETA at (21:14) is 0 
+092, Russia, OP_FOUND_CITY, 1648, Started Army 1649; Units Recruited 2; Max Formation Size 2; Moving To Target
+092, Russia, OP_FOUND_CITY, 1648, PRE Moving To Target with Army 1649; center (21:14); target (21:9); Progress 0 percent
+092, Russia, OP_FOUND_CITY, 1648, POST Moving To Target with Army 1649; center (20:11); target (21:9); Progress 50 percent
+092, Egypt, OP_FOUND_CITY, 1651, found target for settler, score 79604 (q39)
+092, Egypt, OP_FOUND_CITY, 1651, Initial stage is recruiting
+092, Egypt, OP_FOUND_CITY, 1651, Found 2 potential units to recruit for operation 1651 at (19:32) with target at (12:38)
+092, Egypt, OP_FOUND_CITY, 1651, Added Warrior 1207 to slot 1 in army 1652. ETA at (19:32) is 1 
+092, Egypt, OP_FOUND_CITY, 1651, Transition to gathering stage
+092, Egypt, OP_FOUND_CITY, 1651, Started Army 1652; Units Recruited 2; Max Formation Size 2; Gathering Forces
+092, Egypt, OP_FOUND_CITY, 1651, PRE Gathering Forces for army 1652; center (19:32); variance (0.25:6.25); free slots 0
+092, Egypt, OP_FOUND_CITY, 1651, POST Gathering Forces for army 1652; center (19:32); variance (0.00:4.00); free slots 0
+092, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+092, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+092, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+093, The_Zulus, OP_FOUND_CITY, 1668, Ended: NoTarget; Distance -1; Duration 94
+093, Russia, OP_FOUND_CITY, 1648, PRE Moving To Target with Army 1649; center (20:11); target (21:9); Progress 50 percent
+093, Russia, OP_FOUND_CITY, 1648, Transition to target stage
+093, Russia, OP_FOUND_CITY, 1648, POST At Target
+093, Egypt, OP_FOUND_CITY, 1651, no valid city site target found (with escort)!
+093, Egypt, OP_FOUND_CITY, 1651, Ended: NoTarget; Distance 11; Duration 1
+093, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+093, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+093, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+093, Austria, OP_FOUND_CITY, 1674, Ended: NoTarget; Distance -1; Duration 94
+094, The_Zulus, OP_FOUND_CITY, 1683, Ended: NoTarget; Distance -1; Duration 95
+094, Russia, OP_FOUND_CITY, 1648, PRE At Target
+094, Russia, OP_FOUND_CITY, 1648, City founded (Yaroslavl') at (21:9), plot value 43653, q-24
+094, Russia, OP_FOUND_CITY, 1648, Transition to finished stage
+094, Russia, OP_FOUND_CITY, 1648, Ended: Success; Distance 6; Duration 2
+094, Egypt, OP_FOUND_CITY, 1686, Ended: NoTarget; Distance -1; Duration 95
+094, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+094, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+094, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+094, Austria, OP_FOUND_CITY, 1689, Ended: NoTarget; Distance -1; Duration 95
+095, The_Zulus, OP_FOUND_CITY, 1697, Ended: NoTarget; Distance -1; Duration 96
+095, Russia, OP_FOUND_CITY, 1700, Ended: NoTarget; Distance -1; Duration 96
+095, Egypt, OP_FOUND_CITY, 1701, Ended: NoTarget; Distance -1; Duration 96
+095, The_Iroquois, OP_FOUND_CITY, 1704, found target for settler, score 75138 (q31)
+095, The_Iroquois, OP_FOUND_CITY, 1704, Skip recruiting, start with movement stage
+095, The_Iroquois, OP_FOUND_CITY, 1704, Found 0 potential units to recruit for operation 1704 at (27:34) with target at (31:40)
+095, The_Iroquois, OP_FOUND_CITY, 1704, Started Army 1705; Units Recruited 1; Max Formation Size 2; Moving To Target
+095, The_Iroquois, OP_FOUND_CITY, 1704, PRE Moving To Target with Army 1705; center (27:34); target (31:40); Progress 0 percent
+095, The_Iroquois, OP_FOUND_CITY, 1704, POST Moving To Target with Army 1705; center (27:35); target (31:40); Progress 13 percent
+095, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+095, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+095, Korea, OP_FOUND_CITY, 1542, POST Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+095, Austria, OP_FOUND_CITY, 1707, Ended: NoTarget; Distance -1; Duration 96
+096, The_Zulus, OP_FOUND_CITY, 1719, Ended: NoTarget; Distance -1; Duration 97
+096, Russia, OP_FOUND_CITY, 1720, Ended: NoTarget; Distance -1; Duration 97
+096, Egypt, OP_FOUND_CITY, 1722, Ended: NoTarget; Distance -1; Duration 97
+096, The_Iroquois, OP_FOUND_CITY, 1704, PRE Moving To Target with Army 1705; center (27:35); target (31:40); Progress 13 percent
+096, The_Iroquois, OP_FOUND_CITY, 1704, POST Moving To Target with Army 1705; center (28:37); target (31:40); Progress 38 percent
+096, Korea, OP_FOUND_CITY, 1542, PRE Recruiting Units for army 1543; Settler 1541 at (53:19) - ETA 0; Open; 
+096, Korea, OP_FOUND_CITY, 1542, Found 0 potential units to recruit for operation 1542 at (53:19) with target at (58:20)
+096, Korea, OP_FOUND_CITY, 1542, No escort yet and the trip looks safe, going alone
+096, Korea, OP_FOUND_CITY, 1542, Transition to gathering stage
+096, Korea, OP_FOUND_CITY, 1542, Transition to movement stage
+096, Korea, OP_FOUND_CITY, 1542, POST Moving To Target with Army 1543; center (53:19); target (58:20); Progress 100 percent
+096, Denmark, OP_FOUND_CITY, 1726, found target for settler, score 75102 (q31)
+096, Denmark, OP_FOUND_CITY, 1726, Initial stage is recruiting
+096, Denmark, OP_FOUND_CITY, 1726, Found 1 potential units to recruit for operation 1726 at (59:35) with target at (51:34)
+096, Denmark, OP_FOUND_CITY, 1726, Added Warrior 1012 to slot 1 in army 1727. ETA at (59:35) is 1 
+096, Denmark, OP_FOUND_CITY, 1726, Transition to gathering stage
+096, Denmark, OP_FOUND_CITY, 1726, Started Army 1727; Units Recruited 2; Max Formation Size 2; Gathering Forces
+096, Denmark, OP_FOUND_CITY, 1726, PRE Gathering Forces for army 1727; center (59:35); variance (0.25:6.25); free slots 0
+096, Denmark, OP_FOUND_CITY, 1726, Transition to movement stage
+096, Denmark, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (59:35); target (51:34); Progress 0 percent
+096, Austria, OP_FOUND_CITY, 1728, Ended: NoTarget; Distance -1; Duration 97
+097, The_Zulus, OP_FOUND_CITY, 1734, Ended: NoTarget; Distance -1; Duration 98
+097, Russia, OP_FOUND_CITY, 1735, Ended: NoTarget; Distance -1; Duration 98
+097, Egypt, OP_FOUND_CITY, 1736, Ended: NoTarget; Distance -1; Duration 98
+097, The_Iroquois, OP_FOUND_CITY, 1704, PRE Moving To Target with Army 1705; center (28:37); target (31:40); Progress 38 percent
+097, The_Iroquois, OP_FOUND_CITY, 1704, POST Moving To Target with Army 1705; center (29:39); target (31:40); Progress 63 percent
+097, Korea, OP_FOUND_CITY, 1542, PRE Moving To Target with Army 1543; center (53:19); target (58:20); Progress 100 percent
+097, Korea, OP_FOUND_CITY, 1542, POST Moving To Target with Army 1543; center (54:19); target (58:20); Progress 100 percent
+097, Denmark, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (59:35); target (51:34); Progress 0 percent
+097, Denmark, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (58:33); target (51:34); Progress 19 percent
+097, Austria, OP_FOUND_CITY, 1741, Ended: NoTarget; Distance -1; Duration 98
+098, The_Zulus, OP_FOUND_CITY, 1748, Ended: NoTarget; Distance -1; Duration 99
+098, Russia, OP_FOUND_CITY, 1749, Ended: NoTarget; Distance -1; Duration 99
+098, Egypt, OP_FOUND_CITY, 1751, Ended: NoTarget; Distance -1; Duration 99
+098, The_Iroquois, OP_FOUND_CITY, 1704, PRE Moving To Target with Army 1705; center (29:39); target (31:40); Progress 63 percent
+098, The_Iroquois, OP_FOUND_CITY, 1704, Transition to target stage
+098, The_Iroquois, OP_FOUND_CITY, 1704, POST At Target
+098, Korea, OP_FOUND_CITY, 1542, PRE Moving To Target with Army 1543; center (54:19); target (58:20); Progress 100 percent
+098, Korea, OP_FOUND_CITY, 1542, POST Moving To Target with Army 1543; center (56:20); target (58:20); Progress 100 percent
+098, Denmark, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (58:33); target (51:34); Progress 19 percent
+098, Denmark, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (56:33); target (51:34); Progress 37 percent
+098, Austria, OP_FOUND_CITY, 1758, Ended: NoTarget; Distance -1; Duration 99
+099, The_Zulus, OP_FOUND_CITY, 1764, Ended: NoTarget; Distance -1; Duration 100
+099, Russia, OP_FOUND_CITY, 1765, Ended: NoTarget; Distance -1; Duration 100
+099, Egypt, OP_FOUND_CITY, 1767, Ended: NoTarget; Distance -1; Duration 100
+099, The_Iroquois, OP_FOUND_CITY, 1704, PRE At Target
+099, The_Iroquois, OP_FOUND_CITY, 1704, City founded (Buffalo Creek) at (31:40), plot value 75138, q31
+099, The_Iroquois, OP_FOUND_CITY, 1704, Transition to finished stage
+099, The_Iroquois, OP_FOUND_CITY, 1704, Ended: Success; Distance 8; Duration 4
+099, Korea, OP_FOUND_CITY, 1542, PRE Moving To Target with Army 1543; center (56:20); target (58:20); Progress 100 percent
+099, Korea, OP_FOUND_CITY, 1542, POST Moving To Target with Army 1543; center (57:21); target (58:20); Progress 100 percent
+099, Denmark, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (56:33); target (51:34); Progress 37 percent
+099, Denmark, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (54:33); target (51:34); Progress 55 percent
+099, Austria, OP_FOUND_CITY, 1771, Ended: NoTarget; Distance -1; Duration 100
+100, The_Zulus, OP_FOUND_CITY, 1776, Ended: NoTarget; Distance -1; Duration 101
+100, Russia, OP_FOUND_CITY, 1778, Ended: NoTarget; Distance -1; Duration 101
+100, Egypt, OP_FOUND_CITY, 1780, Ended: NoTarget; Distance -1; Duration 101
+100, Korea, OP_FOUND_CITY, 1542, PRE Moving To Target with Army 1543; center (57:21); target (58:20); Progress 100 percent
+100, Korea, OP_FOUND_CITY, 1542, no path to city site (58:20)
+100, Korea, OP_FOUND_CITY, 1542, POST Moving To Target with Army 1543; center (58:21); target (58:20); Progress 100 percent
+100, Denmark, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (54:33); target (51:34); Progress 55 percent
+100, Denmark, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (53:34); target (51:34); Progress 73 percent
+100, Austria, OP_FOUND_CITY, 1784, Ended: NoTarget; Distance -1; Duration 101
+101, The_Zulus, OP_FOUND_CITY, 1789, Ended: NoTarget; Distance -1; Duration 102
+101, Russia, OP_FOUND_CITY, 1790, Ended: NoTarget; Distance -1; Duration 102
+101, Egypt, OP_FOUND_CITY, 1792, Ended: NoTarget; Distance -1; Duration 102
+101, Korea, OP_FOUND_CITY, 1795, found target for settler, score 124216 (q50)
+101, Korea, OP_FOUND_CITY, 1795, Initial stage is recruiting
+101, Korea, OP_FOUND_CITY, 1795, Found 0 potential units to recruit for operation 1795 at (54:25) with target at (49:17)
+101, Korea, OP_FOUND_CITY, 1795, Started Army 1796; Units Recruited 1; Max Formation Size 2; Recruiting Units
+101, Korea, OP_FOUND_CITY, 1542, Ended: LostCivilian; Distance -1; Duration 20
+101, Korea, OP_FOUND_CITY, 1795, PRE Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA -1; Open; 
+101, Korea, OP_FOUND_CITY, 1795, Found 0 potential units to recruit for operation 1795 at (54:25) with target at (49:17)
+101, Korea, OP_FOUND_CITY, 1795, POST Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+101, Denmark, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (53:34); target (51:34); Progress 73 percent
+101, Denmark, OP_FOUND_CITY, 1726, Transition to target stage
+101, Denmark, OP_FOUND_CITY, 1726, POST At Target
+101, Austria, OP_FOUND_CITY, 1798, Ended: NoTarget; Distance -1; Duration 102
+102, The_Zulus, OP_FOUND_CITY, 1802, Ended: NoTarget; Distance -1; Duration 103
+102, Russia, OP_FOUND_CITY, 1803, Ended: NoTarget; Distance -1; Duration 103
+102, Egypt, OP_FOUND_CITY, 1806, Ended: NoTarget; Distance -1; Duration 103
+102, Korea, OP_FOUND_CITY, 1795, PRE Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+102, Korea, OP_FOUND_CITY, 1795, Found 0 potential units to recruit for operation 1795 at (54:25) with target at (49:17)
+102, Korea, OP_FOUND_CITY, 1795, POST Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+102, Denmark, OP_FOUND_CITY, 1726, PRE At Target
+102, Denmark, OP_FOUND_CITY, 1726, City founded (Viborg) at (51:34), plot value 75102, q31
+102, Denmark, OP_FOUND_CITY, 1726, Transition to finished stage
+102, Denmark, OP_FOUND_CITY, 1726, Ended: Success; Distance 11; Duration 6
+102, Austria, OP_FOUND_CITY, 1810, Ended: NoTarget; Distance -1; Duration 103
+103, The_Zulus, OP_FOUND_CITY, 1814, Ended: NoTarget; Distance -1; Duration 104
+103, Russia, OP_FOUND_CITY, 1816, Ended: NoTarget; Distance -1; Duration 104
+103, Egypt, OP_FOUND_CITY, 1819, Ended: NoTarget; Distance -1; Duration 104
+103, Korea, OP_FOUND_CITY, 1795, PRE Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+103, Korea, OP_FOUND_CITY, 1795, Found 0 potential units to recruit for operation 1795 at (54:25) with target at (49:17)
+103, Korea, OP_FOUND_CITY, 1795, POST Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+103, Austria, OP_FOUND_CITY, 1824, Ended: NoTarget; Distance -1; Duration 104
+104, The_Zulus, OP_FOUND_CITY, 1827, Ended: NoTarget; Distance -1; Duration 105
+104, Russia, OP_FOUND_CITY, 1828, Ended: NoTarget; Distance -1; Duration 105
+104, Egypt, OP_FOUND_CITY, 1829, Ended: NoTarget; Distance -1; Duration 105
+104, The_Iroquois, OP_FOUND_CITY, 1832, found target for settler, score 53258 (q-7)
+104, The_Iroquois, OP_FOUND_CITY, 1832, Skip recruiting, start with movement stage
+104, The_Iroquois, OP_FOUND_CITY, 1832, Found 1 potential units to recruit for operation 1832 at (27:34) with target at (19:37)
+104, The_Iroquois, OP_FOUND_CITY, 1832, Added Mohawk Warrior 1822 to slot 1 in army 1833. ETA at (26:35) is 0 
+104, The_Iroquois, OP_FOUND_CITY, 1832, Started Army 1833; Units Recruited 2; Max Formation Size 2; Moving To Target
+104, The_Iroquois, OP_FOUND_CITY, 1832, PRE Moving To Target with Army 1833; center (26:35); target (19:37); Progress 10 percent
+104, The_Iroquois, OP_FOUND_CITY, 1832, POST Moving To Target with Army 1833; center (23:35); target (19:37); Progress 40 percent
+104, Korea, OP_FOUND_CITY, 1795, PRE Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+104, Korea, OP_FOUND_CITY, 1795, Found 0 potential units to recruit for operation 1795 at (54:25) with target at (49:17)
+104, Korea, OP_FOUND_CITY, 1795, POST Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+104, Austria, OP_FOUND_CITY, 1834, Ended: NoTarget; Distance -1; Duration 105
+105, The_Zulus, OP_FOUND_CITY, 1837, Ended: NoTarget; Distance -1; Duration 106
+105, Russia, OP_FOUND_CITY, 1838, Ended: NoTarget; Distance -1; Duration 106
+105, Egypt, OP_FOUND_CITY, 1839, Ended: NoTarget; Distance -1; Duration 106
+105, The_Iroquois, OP_FOUND_CITY, 1832, PRE Moving To Target with Army 1833; center (23:35); target (19:37); Progress 40 percent
+105, The_Iroquois, OP_FOUND_CITY, 1832, POST Moving To Target with Army 1833; center (21:36); target (19:37); Progress 70 percent
+105, Korea, OP_FOUND_CITY, 1795, PRE Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+105, Korea, OP_FOUND_CITY, 1795, Found 0 potential units to recruit for operation 1795 at (54:25) with target at (49:17)
+105, Korea, OP_FOUND_CITY, 1795, POST Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+105, Austria, OP_FOUND_CITY, 1848, Ended: NoTarget; Distance -1; Duration 106
+106, The_Zulus, OP_FOUND_CITY, 1852, Ended: NoTarget; Distance -1; Duration 107
+106, Russia, OP_FOUND_CITY, 1853, Ended: NoTarget; Distance -1; Duration 107
+106, Egypt, OP_FOUND_CITY, 1854, Ended: NoTarget; Distance -1; Duration 107
+106, The_Iroquois, OP_FOUND_CITY, 1832, PRE Moving To Target with Army 1833; center (21:36); target (19:37); Progress 70 percent
+106, The_Iroquois, OP_FOUND_CITY, 1832, POST Moving To Target with Army 1833; center (20:36); target (19:37); Progress 100 percent
+106, Korea, OP_FOUND_CITY, 1795, PRE Recruiting Units for army 1796; Settler 1794 at (54:25) - ETA 0; Open; 
+106, Korea, OP_FOUND_CITY, 1795, Found 0 potential units to recruit for operation 1795 at (54:25) with target at (49:17)
+106, Korea, OP_FOUND_CITY, 1795, No escort yet and the trip looks safe, going alone
+106, Korea, OP_FOUND_CITY, 1795, Transition to gathering stage
+106, Korea, OP_FOUND_CITY, 1795, Transition to movement stage
+106, Korea, OP_FOUND_CITY, 1795, POST Moving To Target with Army 1796; center (54:25); target (49:17); Progress 0 percent
+106, Austria, OP_FOUND_CITY, 1859, Ended: NoTarget; Distance -1; Duration 107
+107, The_Zulus, OP_FOUND_CITY, 1866, Ended: NoTarget; Distance -1; Duration 108
+107, Russia, OP_FOUND_CITY, 1867, Ended: NoTarget; Distance -1; Duration 108
+107, Egypt, OP_FOUND_CITY, 1870, Ended: NoTarget; Distance -1; Duration 108
+107, The_Iroquois, OP_FOUND_CITY, 1832, PRE Moving To Target with Army 1833; center (20:36); target (19:37); Progress 100 percent
+107, The_Iroquois, OP_FOUND_CITY, 1832, Transition to target stage
+107, The_Iroquois, OP_FOUND_CITY, 1832, City founded (Brantford) at (19:37), plot value 53258, q-7
+107, The_Iroquois, OP_FOUND_CITY, 1832, Transition to finished stage
+107, The_Iroquois, OP_FOUND_CITY, 1832, POST Completed
+107, Korea, OP_FOUND_CITY, 1795, PRE Moving To Target with Army 1796; center (54:25); target (49:17); Progress 0 percent
+107, Korea, OP_FOUND_CITY, 1795, POST Moving To Target with Army 1796; center (53:23); target (49:17); Progress 16 percent
+107, Denmark, OP_FOUND_CITY, 1875, Ended: NoTarget; Distance -1; Duration 108
+107, Austria, OP_FOUND_CITY, 1876, Ended: NoTarget; Distance -1; Duration 108
+108, The_Zulus, OP_FOUND_CITY, 1880, Ended: NoTarget; Distance -1; Duration 109
+108, Russia, OP_FOUND_CITY, 1881, Ended: NoTarget; Distance -1; Duration 109
+108, The_Iroquois, OP_FOUND_CITY, 1832, Ended: Success; Distance 10; Duration 4
+108, Korea, OP_FOUND_CITY, 1795, PRE Moving To Target with Army 1796; center (53:23); target (49:17); Progress 16 percent
+108, Korea, OP_FOUND_CITY, 1795, POST Moving To Target with Army 1796; center (53:21); target (49:17); Progress 31 percent
+108, Denmark, OP_FOUND_CITY, 1889, Ended: NoTarget; Distance -1; Duration 109
+108, Austria, OP_FOUND_CITY, 1890, Ended: NoTarget; Distance -1; Duration 109
+109, The_Zulus, OP_FOUND_CITY, 1894, Ended: NoTarget; Distance -1; Duration 110
+109, Russia, OP_FOUND_CITY, 1895, Ended: NoTarget; Distance -1; Duration 110
+109, Korea, OP_FOUND_CITY, 1795, found better target for settler, old score 123133 (q50), new score 116921 (q50)
+109, Korea, OP_FOUND_CITY, 1795, setting new target (51:15)
+109, Korea, OP_FOUND_CITY, 1795, PRE Moving To Target with Army 1796; center (53:21); target (51:15); Progress 37 percent
+109, Korea, OP_FOUND_CITY, 1795, POST Moving To Target with Army 1796; center (52:19); target (51:15); Progress 55 percent
+109, Denmark, OP_FOUND_CITY, 1905, Ended: NoTarget; Distance -1; Duration 110
+109, Austria, OP_FOUND_CITY, 1906, Ended: NoTarget; Distance -1; Duration 110
+110, The_Zulus, OP_FOUND_CITY, 1909, Ended: NoTarget; Distance -1; Duration 111
+110, Russia, OP_FOUND_CITY, 1910, Ended: NoTarget; Distance -1; Duration 111
+110, Korea, OP_FOUND_CITY, 1795, PRE Moving To Target with Army 1796; center (52:19); target (51:15); Progress 55 percent
+110, Korea, OP_FOUND_CITY, 1795, POST Moving To Target with Army 1796; center (51:17); target (51:15); Progress 73 percent
+110, Denmark, OP_FOUND_CITY, 1917, Ended: NoTarget; Distance -1; Duration 111
+110, Austria, OP_FOUND_CITY, 1918, Ended: NoTarget; Distance -1; Duration 111
+111, The_Zulus, OP_FOUND_CITY, 1924, Ended: NoTarget; Distance -1; Duration 112
+111, Russia, OP_FOUND_CITY, 1925, Ended: NoTarget; Distance -1; Duration 112
+111, Korea, OP_FOUND_CITY, 1795, PRE Moving To Target with Army 1796; center (51:17); target (51:15); Progress 73 percent
+111, Korea, OP_FOUND_CITY, 1795, Transition to target stage
+111, Korea, OP_FOUND_CITY, 1795, POST At Target
+111, Denmark, OP_FOUND_CITY, 1935, Ended: NoTarget; Distance -1; Duration 112
+111, Austria, OP_FOUND_CITY, 1937, Ended: NoTarget; Distance -1; Duration 112
+112, The_Zulus, OP_FOUND_CITY, 1940, Ended: NoTarget; Distance -1; Duration 113
+112, Russia, OP_FOUND_CITY, 1941, Ended: NoTarget; Distance -1; Duration 113
+112, Korea, OP_FOUND_CITY, 1795, PRE At Target
+112, Korea, OP_FOUND_CITY, 1795, City founded (Jeonju) at (51:15), plot value 116375, q50
+112, Korea, OP_FOUND_CITY, 1795, Transition to finished stage
+112, Korea, OP_FOUND_CITY, 1795, Ended: Success; Distance 11; Duration 11
+112, Denmark, OP_FOUND_CITY, 1953, Ended: NoTarget; Distance -1; Duration 113
+112, Austria, OP_FOUND_CITY, 1955, Ended: NoTarget; Distance -1; Duration 113
+113, The_Zulus, OP_FOUND_CITY, 1958, Ended: NoTarget; Distance -1; Duration 114
+113, Russia, OP_FOUND_CITY, 1960, Ended: NoTarget; Distance -1; Duration 114
+113, Denmark, OP_FOUND_CITY, 1968, Ended: NoTarget; Distance -1; Duration 114
+113, Austria, OP_FOUND_CITY, 1970, Ended: NoTarget; Distance -1; Duration 114
+114, The_Zulus, OP_FOUND_CITY, 1973, Ended: NoTarget; Distance -1; Duration 115
+114, Russia, OP_FOUND_CITY, 1974, Ended: NoTarget; Distance -1; Duration 115
+114, Denmark, OP_FOUND_CITY, 1986, Ended: NoTarget; Distance -1; Duration 115
+114, Austria, OP_FOUND_CITY, 1987, Ended: NoTarget; Distance -1; Duration 115
+115, The_Zulus, OP_FOUND_CITY, 1990, Ended: NoTarget; Distance -1; Duration 116
+115, Russia, OP_FOUND_CITY, 1991, Ended: NoTarget; Distance -1; Duration 116
+115, Denmark, OP_FOUND_CITY, 2001, Ended: NoTarget; Distance -1; Duration 116
+115, Austria, OP_FOUND_CITY, 2003, Ended: NoTarget; Distance -1; Duration 116
+116, The_Zulus, OP_FOUND_CITY, 2006, Ended: NoTarget; Distance -1; Duration 117
+116, Russia, OP_FOUND_CITY, 2007, Ended: NoTarget; Distance -1; Duration 117
+116, Korea, OP_FOUND_CITY, 2016, found target for settler, score 109922 (q50)
+116, Korea, OP_FOUND_CITY, 2016, Initial stage is recruiting
+116, Korea, OP_FOUND_CITY, 2016, Found 0 potential units to recruit for operation 2016 at (54:25) with target at (58:20)
+116, Korea, OP_FOUND_CITY, 2016, Started Army 2017; Units Recruited 1; Max Formation Size 2; Recruiting Units
+116, Korea, OP_FOUND_CITY, 2016, PRE Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA -1; Open; 
+116, Korea, OP_FOUND_CITY, 2016, Found 0 potential units to recruit for operation 2016 at (54:25) with target at (58:20)
+116, Korea, OP_FOUND_CITY, 2016, POST Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+116, Denmark, OP_FOUND_CITY, 2018, Ended: NoTarget; Distance -1; Duration 117
+116, Austria, OP_FOUND_CITY, 2019, Ended: NoTarget; Distance -1; Duration 117
+117, The_Zulus, OP_FOUND_CITY, 2023, Ended: NoTarget; Distance -1; Duration 118
+117, Russia, OP_FOUND_CITY, 2024, Ended: NoTarget; Distance -1; Duration 118
+117, Korea, OP_FOUND_CITY, 2016, PRE Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+117, Korea, OP_FOUND_CITY, 2016, Found 0 potential units to recruit for operation 2016 at (54:25) with target at (58:20)
+117, Korea, OP_FOUND_CITY, 2016, POST Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+117, Denmark, OP_FOUND_CITY, 2036, Ended: NoTarget; Distance -1; Duration 118
+117, Austria, OP_FOUND_CITY, 2037, Ended: NoTarget; Distance -1; Duration 118
+118, The_Zulus, OP_FOUND_CITY, 2043, Ended: NoTarget; Distance -1; Duration 119
+118, Russia, OP_FOUND_CITY, 2045, Ended: NoTarget; Distance -1; Duration 119
+118, Korea, OP_FOUND_CITY, 2016, PRE Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+118, Korea, OP_FOUND_CITY, 2016, Found 0 potential units to recruit for operation 2016 at (54:25) with target at (58:20)
+118, Korea, OP_FOUND_CITY, 2016, POST Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+118, Denmark, OP_FOUND_CITY, 2056, Ended: NoTarget; Distance -1; Duration 119
+118, Austria, OP_FOUND_CITY, 2059, Ended: NoTarget; Distance -1; Duration 119
+119, The_Zulus, OP_FOUND_CITY, 2066, Ended: NoTarget; Distance -1; Duration 120
+119, Russia, OP_FOUND_CITY, 2067, Ended: NoTarget; Distance -1; Duration 120
+119, The_Iroquois, OP_FOUND_CITY, 2077, Ended: NoTarget; Distance -1; Duration 120
+119, Korea, OP_FOUND_CITY, 2016, PRE Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+119, Korea, OP_FOUND_CITY, 2016, Found 0 potential units to recruit for operation 2016 at (54:25) with target at (58:20)
+119, Korea, OP_FOUND_CITY, 2016, POST Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+119, Denmark, OP_FOUND_CITY, 2081, Ended: NoTarget; Distance -1; Duration 120
+119, Austria, OP_FOUND_CITY, 2083, Ended: NoTarget; Distance -1; Duration 120
+120, The_Zulus, OP_FOUND_CITY, 2089, Ended: NoTarget; Distance -1; Duration 121
+120, Russia, OP_FOUND_CITY, 2091, Ended: NoTarget; Distance -1; Duration 121
+120, The_Iroquois, OP_FOUND_CITY, 2099, Ended: NoTarget; Distance -1; Duration 121
+120, Korea, OP_FOUND_CITY, 2016, PRE Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+120, Korea, OP_FOUND_CITY, 2016, Found 0 potential units to recruit for operation 2016 at (54:25) with target at (58:20)
+120, Korea, OP_FOUND_CITY, 2016, POST Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+120, Denmark, OP_FOUND_CITY, 2102, Ended: NoTarget; Distance -1; Duration 121
+120, Austria, OP_FOUND_CITY, 2106, Ended: NoTarget; Distance -1; Duration 121
+121, The_Zulus, OP_FOUND_CITY, 2110, Ended: NoTarget; Distance -1; Duration 122
+121, Russia, OP_FOUND_CITY, 2111, Ended: NoTarget; Distance -1; Duration 122
+121, The_Iroquois, OP_FOUND_CITY, 2119, Ended: NoTarget; Distance -1; Duration 122
+121, Korea, OP_FOUND_CITY, 2016, PRE Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+121, Korea, OP_FOUND_CITY, 2016, Found 0 potential units to recruit for operation 2016 at (54:25) with target at (58:20)
+121, Korea, OP_FOUND_CITY, 2016, POST Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+121, Denmark, OP_FOUND_CITY, 2122, Ended: NoTarget; Distance -1; Duration 122
+121, Austria, OP_FOUND_CITY, 2125, Ended: NoTarget; Distance -1; Duration 122
+122, The_Zulus, OP_FOUND_CITY, 2129, Ended: NoTarget; Distance -1; Duration 123
+122, Russia, OP_FOUND_CITY, 2130, Ended: NoTarget; Distance -1; Duration 123
+122, The_Iroquois, OP_FOUND_CITY, 2138, Ended: NoTarget; Distance -1; Duration 123
+122, Korea, OP_FOUND_CITY, 2016, PRE Recruiting Units for army 2017; Settler 2015 at (54:25) - ETA 0; Open; 
+122, Korea, OP_FOUND_CITY, 2016, Found 1 potential units to recruit for operation 2016 at (54:25) with target at (58:20)
+122, Korea, OP_FOUND_CITY, 2016, Added Warrior 1305 to slot 1 in army 2017. ETA at (54:25) is 2 
+122, Korea, OP_FOUND_CITY, 2016, Transition to gathering stage
+122, Korea, OP_FOUND_CITY, 2016, POST Gathering Forces for army 2017; center (54:25); variance (0.25:6.25); free slots 0
+122, Denmark, OP_FOUND_CITY, 2140, Ended: NoTarget; Distance -1; Duration 123
+122, Austria, OP_FOUND_CITY, 2141, Ended: NoTarget; Distance -1; Duration 123
+123, The_Zulus, OP_FOUND_CITY, 2145, Ended: NoTarget; Distance -1; Duration 124
+123, Russia, OP_FOUND_CITY, 2146, Ended: NoTarget; Distance -1; Duration 124
+123, The_Iroquois, OP_FOUND_CITY, 2155, Ended: NoTarget; Distance -1; Duration 124
+123, Korea, OP_FOUND_CITY, 2016, PRE Gathering Forces for army 2017; center (54:25); variance (0.25:6.25); free slots 0
+123, Korea, OP_FOUND_CITY, 2016, Transition to movement stage
+123, Korea, OP_FOUND_CITY, 2016, POST Moving To Target with Army 2017; center (54:25); target (58:20); Progress 100 percent
+123, Denmark, OP_FOUND_CITY, 2156, Ended: NoTarget; Distance -1; Duration 124
+123, Austria, OP_FOUND_CITY, 2159, Ended: NoTarget; Distance -1; Duration 124
+124, The_Zulus, OP_FOUND_CITY, 2162, Ended: NoTarget; Distance -1; Duration 125
+124, Russia, OP_FOUND_CITY, 2163, Ended: NoTarget; Distance -1; Duration 125
+124, Korea, OP_FOUND_CITY, 2016, PRE Moving To Target with Army 2017; center (54:25); target (58:20); Progress 100 percent
+124, Korea, OP_FOUND_CITY, 2016, POST Moving To Target with Army 2017; center (54:23); target (58:20); Progress 100 percent
+124, Denmark, OP_FOUND_CITY, 2172, Ended: NoTarget; Distance -1; Duration 125
+124, Austria, OP_FOUND_CITY, 2175, Ended: NoTarget; Distance -1; Duration 125
+125, The_Zulus, OP_FOUND_CITY, 2178, Ended: NoTarget; Distance -1; Duration 126
+125, Russia, OP_FOUND_CITY, 2179, Ended: NoTarget; Distance -1; Duration 126
+125, Korea, OP_FOUND_CITY, 2016, PRE Moving To Target with Army 2017; center (54:23); target (58:20); Progress 100 percent
+125, Korea, OP_FOUND_CITY, 2016, POST Moving To Target with Army 2017; center (55:23); target (58:20); Progress 100 percent
+125, Denmark, OP_FOUND_CITY, 2185, Ended: NoTarget; Distance -1; Duration 126
+125, Austria, OP_FOUND_CITY, 2191, Ended: NoTarget; Distance -1; Duration 126
+126, The_Zulus, OP_FOUND_CITY, 2194, Ended: NoTarget; Distance -1; Duration 127
+126, Russia, OP_FOUND_CITY, 2195, Ended: NoTarget; Distance -1; Duration 127
+126, Korea, OP_FOUND_CITY, 2016, PRE Moving To Target with Army 2017; center (55:23); target (58:20); Progress 100 percent
+126, Korea, OP_FOUND_CITY, 2016, POST Moving To Target with Army 2017; center (57:22); target (58:20); Progress -300 percent
+126, Denmark, OP_FOUND_CITY, 2200, Ended: NoTarget; Distance -1; Duration 127
+126, Austria, OP_FOUND_CITY, 2202, Ended: NoTarget; Distance -1; Duration 127
+127, The_Zulus, OP_FOUND_CITY, 2208, Ended: NoTarget; Distance -1; Duration 128
+127, Russia, OP_FOUND_CITY, 2209, Ended: NoTarget; Distance -1; Duration 128
+127, Korea, OP_FOUND_CITY, 2016, PRE Moving To Target with Army 2017; center (57:22); target (58:20); Progress -300 percent
+127, Korea, OP_FOUND_CITY, 2016, Transition to target stage
+127, Korea, OP_FOUND_CITY, 2016, POST At Target
+127, Denmark, OP_FOUND_CITY, 2217, Ended: NoTarget; Distance -1; Duration 128
+127, Venice, OP_MERCHANT, 2219, Skip recruiting, start with movement stage
+127, Venice, OP_MERCHANT, 2219, Found 1 potential units to recruit for operation 2219 at (43:35) with target at (50:30)
+127, Venice, OP_MERCHANT, 2219, Added Warrior 1014 to slot 1 in army 2220. ETA at (47:42) is 0 
+127, Venice, OP_MERCHANT, 2219, Started Army 2220; Units Recruited 2; Max Formation Size 2; Moving To Target
+127, Venice, OP_MERCHANT, 2219, PRE Moving To Target with Army 2220; center (47:42); target (50:30); Progress -30 percent
+127, Venice, OP_MERCHANT, 2219, POST Moving To Target with Army 2220; center (46:38); target (50:30); Progress 10 percent
+127, Austria, OP_FOUND_CITY, 2221, Ended: NoTarget; Distance -1; Duration 128
+128, The_Zulus, OP_FOUND_CITY, 2228, Ended: NoTarget; Distance -1; Duration 129
+128, Russia, OP_FOUND_CITY, 2231, Ended: NoTarget; Distance -1; Duration 129
+128, Korea, OP_FOUND_CITY, 2016, PRE At Target
+128, Korea, OP_FOUND_CITY, 2016, City founded (Daegu) at (58:20), plot value 109922, q50
+128, Korea, OP_FOUND_CITY, 2016, Transition to finished stage
+128, Korea, OP_FOUND_CITY, 2016, Ended: Success; Distance -1; Duration 12
+128, Denmark, OP_FOUND_CITY, 2239, found target for settler, score 47499 (q-18)
+128, Denmark, OP_FOUND_CITY, 2239, Skip recruiting, start with movement stage
+128, Denmark, OP_FOUND_CITY, 2239, Found 2 potential units to recruit for operation 2239 at (63:37) with target at (63:42)
+128, Denmark, OP_FOUND_CITY, 2239, Added Swordsman 1797 to slot 1 in army 2240. ETA at (59:31) is 0 
+128, Denmark, OP_FOUND_CITY, 2239, Started Army 2240; Units Recruited 2; Max Formation Size 2; Moving To Target
+128, Denmark, OP_FOUND_CITY, 2239, PRE Moving To Target with Army 2240; center (59:31); target (63:42); Progress -133 percent
+128, Denmark, OP_FOUND_CITY, 2239, POST Moving To Target with Army 2240; center (60:35); target (63:42); Progress -50 percent
+128, Venice, OP_MERCHANT, 2219, PRE Moving To Target with Army 2220; center (46:38); target (50:30); Progress 10 percent
+128, Venice, OP_MERCHANT, 2219, POST Moving To Target with Army 2220; center (46:35); target (50:30); Progress 30 percent
+128, Austria, OP_FOUND_CITY, 2242, Ended: NoTarget; Distance -1; Duration 129
+129, The_Zulus, OP_FOUND_CITY, 2246, Ended: NoTarget; Distance -1; Duration 130
+129, Russia, OP_FOUND_CITY, 2247, Ended: NoTarget; Distance -1; Duration 130
+129, Denmark, OP_FOUND_CITY, 2239, PRE Moving To Target with Army 2240; center (60:35); target (63:42); Progress -50 percent
+129, Denmark, OP_FOUND_CITY, 2239, POST Moving To Target with Army 2240; center (62:37); target (63:42); Progress 0 percent
+129, Venice, OP_MERCHANT, 2219, PRE Moving To Target with Army 2220; center (46:35); target (50:30); Progress 30 percent
+129, Venice, OP_MERCHANT, 2219, POST Moving To Target with Army 2220; center (48:34); target (50:30); Progress 50 percent
+129, Austria, OP_FOUND_CITY, 2255, Ended: NoTarget; Distance -1; Duration 130
+130, The_Zulus, OP_FOUND_CITY, 2259, Ended: NoTarget; Distance -1; Duration 131
+130, Russia, OP_FOUND_CITY, 2261, Ended: NoTarget; Distance -1; Duration 131
+130, Korea, OP_FOUND_CITY, 2270, found target for settler, score 65669 (q14)
+130, Korea, OP_FOUND_CITY, 2270, Initial stage is recruiting
+130, Korea, OP_FOUND_CITY, 2270, Found 0 potential units to recruit for operation 2270 at (54:25) with target at (47:12)
+130, Korea, OP_FOUND_CITY, 2270, Started Army 2271; Units Recruited 1; Max Formation Size 2; Recruiting Units
+130, Korea, OP_FOUND_CITY, 2270, PRE Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA -1; Open; 
+130, Korea, OP_FOUND_CITY, 2270, Found 0 potential units to recruit for operation 2270 at (54:25) with target at (47:12)
+130, Korea, OP_FOUND_CITY, 2270, POST Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+130, Denmark, OP_FOUND_CITY, 2239, PRE Moving To Target with Army 2240; center (62:37); target (63:42); Progress 0 percent
+130, Denmark, OP_FOUND_CITY, 2239, POST Moving To Target with Army 2240; center (62:38); target (63:42); Progress 17 percent
+130, Venice, OP_MERCHANT, 2219, PRE Moving To Target with Army 2220; center (48:34); target (50:30); Progress 50 percent
+130, Venice, OP_MERCHANT, 2219, Transition to target stage
+130, Venice, OP_MERCHANT, 2219, POST At Target
+130, Austria, OP_FOUND_CITY, 2274, Ended: NoTarget; Distance -1; Duration 131
+131, The_Zulus, OP_FOUND_CITY, 2278, Ended: NoTarget; Distance -1; Duration 132
+131, Russia, OP_FOUND_CITY, 2279, Ended: NoTarget; Distance -1; Duration 132
+131, The_Iroquois, OP_FOUND_CITY, 2289, Ended: NoTarget; Distance -1; Duration 132
+131, Korea, OP_FOUND_CITY, 2270, PRE Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+131, Korea, OP_FOUND_CITY, 2270, Found 0 potential units to recruit for operation 2270 at (54:25) with target at (47:12)
+131, Korea, OP_FOUND_CITY, 2270, POST Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+131, Denmark, OP_FOUND_CITY, 2239, PRE Moving To Target with Army 2240; center (62:38); target (63:42); Progress 17 percent
+131, Denmark, OP_FOUND_CITY, 2239, POST Moving To Target with Army 2240; center (62:40); target (63:42); Progress 34 percent
+131, Venice, OP_MERCHANT, 2219, PRE At Target
+131, Venice, OP_MERCHANT, 2219, Great Merchant buying city-state at (49:32)
+131, Venice, OP_MERCHANT, 2219, Transition to finished stage
+131, Venice, OP_MERCHANT, 2219, Ended: Success; Distance 10; Duration 4
+131, Austria, OP_FOUND_CITY, 2297, Ended: NoTarget; Distance -1; Duration 132
+132, The_Zulus, OP_FOUND_CITY, 2303, Ended: NoTarget; Distance -1; Duration 133
+132, The_Iroquois, OP_FOUND_CITY, 2311, Ended: NoTarget; Distance -1; Duration 133
+132, Korea, OP_FOUND_CITY, 2270, found better target for settler, old score 70897 (q23), new score 71748 (q25)
+132, Korea, OP_FOUND_CITY, 2270, setting new target (48:9)
+132, Korea, OP_FOUND_CITY, 2270, PRE Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+132, Korea, OP_FOUND_CITY, 2270, Found 0 potential units to recruit for operation 2270 at (54:25) with target at (48:9)
+132, Korea, OP_FOUND_CITY, 2270, POST Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+132, Denmark, OP_FOUND_CITY, 2239, PRE Moving To Target with Army 2240; center (62:40); target (63:42); Progress 34 percent
+132, Denmark, OP_FOUND_CITY, 2239, Transition to target stage
+132, Denmark, OP_FOUND_CITY, 2239, POST At Target
+132, Venice, OP_RAPID_RESPONSE, 2320, Initial stage is recruiting
+132, Venice, OP_RAPID_RESPONSE, 2320, Found 4 potential units to recruit for operation 2320 at (43:35) with target at (43:35)
+132, Venice, OP_RAPID_RESPONSE, 2320, Added Swordsman 2290 to slot 0 in army 2321. ETA at (43:35) is 0 
+132, Venice, OP_RAPID_RESPONSE, 2320, Added Swordsman 2294 to slot 1 in army 2321. ETA at (43:35) is 0 
+132, Venice, OP_RAPID_RESPONSE, 2320, Added Swordsman 2292 to slot 2 in army 2321. ETA at (43:35) is 2 
+132, Venice, OP_RAPID_RESPONSE, 2320, Added Swordsman 2293 to slot 3 in army 2321. ETA at (43:35) is 3 
+132, Venice, OP_RAPID_RESPONSE, 2320, Transition to gathering stage
+132, Venice, OP_RAPID_RESPONSE, 2320, Started Army 2321; Units Recruited 4; Max Formation Size 4; Gathering Forces
+132, Austria, OP_FOUND_CITY, 2326, Ended: NoTarget; Distance -1; Duration 133
+133, The_Zulus, OP_FOUND_CITY, 2330, Ended: NoTarget; Distance -1; Duration 134
+133, The_Iroquois, OP_FOUND_CITY, 2339, Ended: NoTarget; Distance -1; Duration 134
+133, Korea, OP_FOUND_CITY, 2270, PRE Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+133, Korea, OP_FOUND_CITY, 2270, Found 0 potential units to recruit for operation 2270 at (54:25) with target at (48:9)
+133, Korea, OP_FOUND_CITY, 2270, POST Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+133, Denmark, OP_FOUND_CITY, 2239, PRE At Target
+133, Denmark, OP_FOUND_CITY, 2239, City founded (Tunsberg) at (63:42), plot value 47499, q-18
+133, Denmark, OP_FOUND_CITY, 2239, Transition to finished stage
+133, Denmark, OP_FOUND_CITY, 2239, Ended: Success; Distance 6; Duration 5
+133, Venice, OP_RAPID_RESPONSE, 2320, Ended: NoTarget; Distance 5; Duration 1
+133, Austria, OP_FOUND_CITY, 2352, Ended: NoTarget; Distance -1; Duration 134
+134, The_Zulus, OP_FOUND_CITY, 2356, Ended: NoTarget; Distance -1; Duration 135
+134, The_Iroquois, OP_FOUND_CITY, 2365, Ended: NoTarget; Distance -1; Duration 135
+134, Korea, OP_FOUND_CITY, 2270, PRE Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+134, Korea, OP_FOUND_CITY, 2270, Found 0 potential units to recruit for operation 2270 at (54:25) with target at (48:9)
+134, Korea, OP_FOUND_CITY, 2270, POST Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+134, Denmark, OP_RAPID_RESPONSE, 2370, Initial stage is recruiting
+134, Denmark, OP_RAPID_RESPONSE, 2370, Found 1 potential units to recruit for operation 2370 at (51:34) with target at (50:30)
+134, Denmark, OP_RAPID_RESPONSE, 2370, Added Berserker 2218 to slot 0 in army 2371. ETA at (51:34) is 0 
+134, Denmark, OP_RAPID_RESPONSE, 2370, Started Army 2371; Units Recruited 1; Max Formation Size 4; Recruiting Units
+134, Denmark, OP_RAPID_RESPONSE, 2370, PRE Recruiting Units for army 2371; Berserker 2218 at (52:34) - ETA 0; Open; Open; Open; 
+134, Denmark, OP_RAPID_RESPONSE, 2370, Found 0 potential units to recruit for operation 2370 at (51:34) with target at (50:30)
+134, Denmark, OP_RAPID_RESPONSE, 2370, POST Recruiting Units for army 2371; Berserker 2218 at (51:34) - ETA 0; Open; Open; Open; 
+134, Venice, OP_RAPID_RESPONSE, 2378, Initial stage is recruiting
+134, Venice, OP_RAPID_RESPONSE, 2378, Found 1 potential units to recruit for operation 2378 at (50:30) with target at (50:30)
+134, Venice, OP_RAPID_RESPONSE, 2378, Added Swordsman 2290 to slot 0 in army 2379. ETA at (50:30) is 1 
+134, Venice, OP_RAPID_RESPONSE, 2378, Started Army 2379; Units Recruited 1; Max Formation Size 4; Recruiting Units
+134, Venice, OP_RAPID_RESPONSE, 2378, PRE Recruiting Units for army 2379; Swordsman 2290 at (46:32) - ETA 1; Open; Open; Open; 
+134, Venice, OP_RAPID_RESPONSE, 2378, Found 0 potential units to recruit for operation 2378 at (50:30) with target at (50:30)
+134, Venice, OP_RAPID_RESPONSE, 2378, POST Recruiting Units for army 2379; Swordsman 2290 at (47:32) - ETA 1; Open; Open; Open; 
+134, Austria, OP_FOUND_CITY, 2384, Ended: NoTarget; Distance -1; Duration 135
+135, The_Zulus, OP_FOUND_CITY, 2391, Ended: NoTarget; Distance -1; Duration 136
+135, The_Iroquois, OP_FOUND_CITY, 2401, Ended: NoTarget; Distance -1; Duration 136
+135, Korea, OP_FOUND_CITY, 2270, PRE Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+135, Korea, OP_FOUND_CITY, 2270, Found 0 potential units to recruit for operation 2270 at (54:25) with target at (48:9)
+135, Korea, OP_FOUND_CITY, 2270, POST Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+135, Denmark, OP_RAPID_RESPONSE, 2370, PRE Recruiting Units for army 2371; Berserker 2218 at (51:34) - ETA 0; Open; Open; Open; 
+135, Denmark, OP_RAPID_RESPONSE, 2370, Found 0 potential units to recruit for operation 2370 at (51:34) with target at (50:30)
+135, Denmark, OP_RAPID_RESPONSE, 2370, POST Recruiting Units for army 2371; Berserker 2218 at (49:34) - ETA 0; Open; Open; Open; 
+135, Venice, OP_RAPID_RESPONSE, 2409, Initial stage is recruiting
+135, Venice, OP_RAPID_RESPONSE, 2409, Found 2 potential units to recruit for operation 2409 at (50:30) with target at (51:34)
+135, Venice, OP_RAPID_RESPONSE, 2409, Added Swordsman 2292 to slot 0 in army 2410. ETA at (50:30) is 0 
+135, Venice, OP_RAPID_RESPONSE, 2409, Added Warrior 1337 to slot 1 in army 2410. ETA at (50:30) is 4 
+135, Venice, OP_RAPID_RESPONSE, 2409, Transition to gathering stage
+135, Venice, OP_RAPID_RESPONSE, 2409, Started Army 2410; Units Recruited 2; Max Formation Size 4; Gathering Forces
+135, Venice, OP_RAPID_RESPONSE, 2378, PRE Recruiting Units for army 2379; Swordsman 2290 at (47:32) - ETA 1; Open; Open; Open; 
+135, Venice, OP_RAPID_RESPONSE, 2378, Found 0 potential units to recruit for operation 2378 at (50:30) with target at (50:30)
+135, Venice, OP_RAPID_RESPONSE, 2378, Contact with enemy!
+135, Venice, OP_RAPID_RESPONSE, 2378, POST Recruiting Units for army 2379; Swordsman 2290 at (48:34) - ETA 0; Open; Open; Open; 
+135, Venice, OP_RAPID_RESPONSE, 2409, PRE Gathering Forces for army 2410; center (50:30); variance (2.25:36.00); free slots 2
+135, Venice, OP_RAPID_RESPONSE, 2409, POST Gathering Forces for army 2410; center (49:33); variance (2.25:6.25); free slots 2
+135, Austria, OP_FOUND_CITY, 2414, Ended: NoTarget; Distance -1; Duration 136
+136, The_Zulus, OP_FOUND_CITY, 2420, Ended: NoTarget; Distance -1; Duration 137
+136, The_Iroquois, OP_FOUND_CITY, 2430, Ended: NoTarget; Distance -1; Duration 137
+136, Korea, OP_FOUND_CITY, 2270, PRE Recruiting Units for army 2271; Settler 2269 at (54:25) - ETA 0; Open; 
+136, Korea, OP_FOUND_CITY, 2270, Found 1 potential units to recruit for operation 2270 at (54:25) with target at (48:9)
+136, Korea, OP_FOUND_CITY, 2270, Added Pikeman 2368 to slot 1 in army 2271. ETA at (54:25) is 0 
+136, Korea, OP_FOUND_CITY, 2270, Transition to gathering stage
+136, Korea, OP_FOUND_CITY, 2270, POST Gathering Forces for army 2271; center (53:22); variance (0.00:0.00); free slots 0
+136, Denmark, OP_RAPID_RESPONSE, 2370, PRE Recruiting Units for army 2371; Berserker 2218 at (49:34) - ETA 0; Open; Open; Open; 
+136, Denmark, OP_RAPID_RESPONSE, 2370, Found 0 potential units to recruit for operation 2370 at (51:34) with target at (50:30)
+136, Denmark, OP_RAPID_RESPONSE, 2370, Contact with enemy!
+136, Denmark, OP_RAPID_RESPONSE, 2370, POST Recruiting Units for army 2371; Berserker 2218 at (49:34) - ETA 0; Open; Open; Open; 
+136, Venice, OP_RAPID_RESPONSE, 2409, Ended: HalfStrength; Distance 5; Duration 1
+136, Venice, OP_RAPID_RESPONSE, 2378, PRE Recruiting Units for army 2379; Swordsman 2290 at (48:34) - ETA 0; Open; Open; Open; 
+136, Venice, OP_RAPID_RESPONSE, 2378, Found 1 potential units to recruit for operation 2378 at (50:30) with target at (50:30)
+136, Venice, OP_RAPID_RESPONSE, 2378, Added Swordsman 2440 to slot 1 in army 2379. ETA at (50:30) is 4 
+136, Venice, OP_RAPID_RESPONSE, 2378, Transition to gathering stage
+136, Venice, OP_RAPID_RESPONSE, 2378, POST Gathering Forces for army 2379; center (48:35); variance (1.00:2.25); free slots 2
+136, Austria, OP_FOUND_CITY, 2442, Ended: NoTarget; Distance -1; Duration 137
+137, The_Zulus, OP_FOUND_CITY, 2448, Ended: NoTarget; Distance -1; Duration 138
+137, The_Iroquois, OP_FOUND_CITY, 2457, Ended: NoTarget; Distance -1; Duration 138
+137, Korea, OP_FOUND_CITY, 2270, PRE Gathering Forces for army 2271; center (53:22); variance (0.00:0.00); free slots 0
+137, Korea, OP_FOUND_CITY, 2270, Transition to movement stage
+137, Korea, OP_FOUND_CITY, 2270, POST Moving To Target with Army 2271; center (54:20); target (48:9); Progress 0 percent
+137, Denmark, OP_RAPID_RESPONSE, 2370, Ended: NoTarget; Distance 5; Duration 3
+137, Venice, OP_RAPID_RESPONSE, 2378, Ended: HalfStrength; Distance 1; Duration 3
+137, Austria, OP_FOUND_CITY, 2470, Ended: NoTarget; Distance -1; Duration 138
+138, The_Zulus, OP_FOUND_CITY, 2476, Ended: NoTarget; Distance -1; Duration 139
+138, The_Iroquois, OP_FOUND_CITY, 2487, Ended: NoTarget; Distance -1; Duration 139
+138, Korea, OP_FOUND_CITY, 2270, PRE Moving To Target with Army 2271; center (54:20); target (48:9); Progress 0 percent
+138, Korea, OP_FOUND_CITY, 2270, POST Moving To Target with Army 2271; center (53:18); target (48:9); Progress 15 percent
+138, Austria, OP_FOUND_CITY, 2497, Ended: NoTarget; Distance -1; Duration 139
+139, The_Zulus, OP_FOUND_CITY, 2498, Ended: NoTarget; Distance -1; Duration 140
+139, The_Iroquois, OP_FOUND_CITY, 2507, Ended: NoTarget; Distance -1; Duration 140
+139, Korea, OP_FOUND_CITY, 2270, PRE Moving To Target with Army 2271; center (53:18); target (48:9); Progress 15 percent
+139, Korea, OP_FOUND_CITY, 2270, POST Moving To Target with Army 2271; center (52:16); target (48:9); Progress 29 percent
+139, Venice, OP_RAPID_RESPONSE, 2512, Initial stage is recruiting
+139, Venice, OP_RAPID_RESPONSE, 2512, Found 1 potential units to recruit for operation 2512 at (43:35) with target at (43:35)
+139, Venice, OP_RAPID_RESPONSE, 2512, Added Swordsman 2440 to slot 0 in army 2513. ETA at (43:35) is 0 
+139, Venice, OP_RAPID_RESPONSE, 2512, Started Army 2513; Units Recruited 1; Max Formation Size 4; Recruiting Units
+139, Venice, OP_RAPID_RESPONSE, 2512, PRE Recruiting Units for army 2513; Swordsman 2440 at (47:36) - ETA 0; Open; Open; Open; 
+139, Venice, OP_RAPID_RESPONSE, 2512, Found 0 potential units to recruit for operation 2512 at (43:35) with target at (43:35)
+139, Venice, OP_RAPID_RESPONSE, 2512, POST Recruiting Units for army 2513; Swordsman 2440 at (46:34) - ETA 0; Open; Open; Open; 
+139, Austria, OP_FOUND_CITY, 2518, Ended: NoTarget; Distance -1; Duration 140
+140, The_Zulus, OP_FOUND_CITY, 2519, Ended: NoTarget; Distance -1; Duration 141
+140, Russia, OP_FOUND_CITY, 2520, found target for settler, score 64140 (q12)
+140, Russia, OP_FOUND_CITY, 2520, Initial stage is recruiting
+140, Russia, OP_FOUND_CITY, 2520, Found 1 potential units to recruit for operation 2520 at (21:14) with target at (42:11)
+140, Russia, OP_FOUND_CITY, 2520, Added Warrior 1004 to slot 1 in army 2521. ETA at (21:14) is 0 
+140, Russia, OP_FOUND_CITY, 2520, Transition to gathering stage
+140, Russia, OP_FOUND_CITY, 2520, Started Army 2521; Units Recruited 2; Max Formation Size 2; Gathering Forces
+140, Russia, OP_FOUND_CITY, 2520, PRE Gathering Forces for army 2521; center (21:14); variance (4.00:2.25); free slots 0
+140, Russia, OP_FOUND_CITY, 2520, Added Composite Bowman 1750 to slot 1 in army 2521. ETA at (21:14) is 0 
+140, Russia, OP_FOUND_CITY, 2520, Transition to movement stage
+140, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (21:12); target (42:11); Progress 0 percent
+140, The_Iroquois, OP_FOUND_CITY, 2530, Ended: NoTarget; Distance -1; Duration 141
+140, Korea, OP_FOUND_CITY, 2270, cannot found city at (48:9)
+140, Korea, OP_FOUND_CITY, 2270, no path to city site (48:9)
+140, Korea, OP_FOUND_CITY, 2270, found better target for settler, old score 106632 (q50), new score 77290 (q34)
+140, Korea, OP_FOUND_CITY, 2270, setting new target (47:13)
+140, Korea, OP_FOUND_CITY, 2270, PRE Moving To Target with Army 2271; center (52:16); target (47:13); Progress 37 percent
+140, Korea, OP_FOUND_CITY, 2270, POST Moving To Target with Army 2271; center (50:15); target (47:13); Progress 55 percent
+140, Venice, OP_RAPID_RESPONSE, 2512, Ended: NoTarget; Distance 1; Duration 1
+140, Austria, OP_FOUND_CITY, 2543, Ended: NoTarget; Distance -1; Duration 141
+141, The_Zulus, OP_FOUND_CITY, 2544, Ended: NoTarget; Distance -1; Duration 142
+141, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (21:12); target (42:11); Progress 0 percent
+141, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (21:14); target (42:11); Progress 0 percent
+141, The_Iroquois, OP_FOUND_CITY, 2556, Ended: NoTarget; Distance -1; Duration 142
+141, Korea, OP_FOUND_CITY, 2559, found target for settler, score 106632 (q50)
+141, Korea, OP_FOUND_CITY, 2559, Initial stage is recruiting
+141, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+141, Korea, OP_FOUND_CITY, 2559, Started Army 2560; Units Recruited 1; Max Formation Size 2; Recruiting Units
+141, Korea, OP_FOUND_CITY, 2270, PRE Moving To Target with Army 2271; center (50:15); target (47:13); Progress 55 percent
+141, Korea, OP_FOUND_CITY, 2270, POST Moving To Target with Army 2271; center (49:14); target (47:13); Progress 73 percent
+141, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA -1; Open; 
+141, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+141, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+141, Venice, OP_RAPID_RESPONSE, 2567, Initial stage is recruiting
+141, Venice, OP_RAPID_RESPONSE, 2567, Found 3 potential units to recruit for operation 2567 at (50:30) with target at (54:25)
+141, Venice, OP_RAPID_RESPONSE, 2567, Added Swordsman 2294 to slot 0 in army 2568. ETA at (50:30) is 0 
+141, Venice, OP_RAPID_RESPONSE, 2567, Added Pikeman 2541 to slot 1 in army 2568. ETA at (50:30) is 2 
+141, Venice, OP_RAPID_RESPONSE, 2567, Added Swordsman 2440 to slot 2 in army 2568. ETA at (50:30) is 1 
+141, Venice, OP_RAPID_RESPONSE, 2567, Transition to gathering stage
+141, Venice, OP_RAPID_RESPONSE, 2567, Started Army 2568; Units Recruited 3; Max Formation Size 4; Gathering Forces
+141, Venice, OP_RAPID_RESPONSE, 2567, PRE Gathering Forces for army 2568; center (46:33); variance (8.22:4.22); free slots 1
+141, Venice, OP_RAPID_RESPONSE, 2567, POST Gathering Forces for army 2568; center (48:34); variance (4.22:2.89); free slots 1
+141, Austria, OP_FOUND_CITY, 2572, Ended: NoTarget; Distance -1; Duration 142
+142, The_Zulus, OP_FOUND_CITY, 2573, Ended: NoTarget; Distance -1; Duration 143
+142, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (21:14); target (42:11); Progress 0 percent
+142, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (24:12); target (42:11); Progress 14 percent
+142, The_Iroquois, OP_FOUND_CITY, 2583, Ended: NoTarget; Distance -1; Duration 143
+142, Korea, OP_FOUND_CITY, 2270, PRE Moving To Target with Army 2271; center (49:14); target (47:13); Progress 73 percent
+142, Korea, OP_FOUND_CITY, 2270, Transition to target stage
+142, Korea, OP_FOUND_CITY, 2270, POST At Target
+142, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+142, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+142, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+142, Venice, OP_RAPID_RESPONSE, 2567, Ended: NoTarget; Distance 8; Duration 1
+142, Austria, OP_FOUND_CITY, 2594, Ended: NoTarget; Distance -1; Duration 143
+143, The_Zulus, OP_FOUND_CITY, 2598, Ended: NoTarget; Distance -1; Duration 144
+143, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (24:12); target (42:11); Progress 14 percent
+143, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (28:12); target (42:11); Progress 27 percent
+143, The_Iroquois, OP_FOUND_CITY, 2609, Ended: NoTarget; Distance -1; Duration 144
+143, Korea, OP_FOUND_CITY, 2270, PRE At Target
+143, Korea, OP_FOUND_CITY, 2270, City founded (Pyongyang) at (47:13), plot value 77290, q34
+143, Korea, OP_FOUND_CITY, 2270, Transition to finished stage
+143, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+143, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+143, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+143, Korea, OP_FOUND_CITY, 2270, Ended: Success; Distance 11; Duration 13
+143, Venice, OP_RAPID_RESPONSE, 2617, Initial stage is recruiting
+143, Venice, OP_RAPID_RESPONSE, 2617, Found 1 potential units to recruit for operation 2617 at (50:30) with target at (51:34)
+143, Venice, OP_RAPID_RESPONSE, 2617, Added Pikeman 2541 to slot 0 in army 2618. ETA at (50:30) is 0 
+143, Venice, OP_RAPID_RESPONSE, 2617, Started Army 2618; Units Recruited 1; Max Formation Size 4; Recruiting Units
+143, Venice, OP_RAPID_RESPONSE, 2617, PRE Recruiting Units for army 2618; Pikeman 2541 at (47:33) - ETA 0; Open; Open; Open; 
+143, Venice, OP_RAPID_RESPONSE, 2617, Found 0 potential units to recruit for operation 2617 at (50:30) with target at (51:34)
+143, Venice, OP_RAPID_RESPONSE, 2617, Contact with enemy!
+143, Venice, OP_RAPID_RESPONSE, 2617, POST Recruiting Units for army 2618; Pikeman 2541 at (49:33) - ETA -1; Open; Open; Open; 
+143, Austria, OP_FOUND_CITY, 2622, Ended: NoTarget; Distance -1; Duration 144
+144, The_Zulus, OP_FOUND_CITY, 2625, Ended: NoTarget; Distance -1; Duration 145
+144, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (28:12); target (42:11); Progress 27 percent
+144, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (29:13); target (42:11); Progress 34 percent
+144, The_Iroquois, OP_FOUND_CITY, 2634, Ended: NoTarget; Distance -1; Duration 145
+144, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+144, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+144, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+144, Venice, OP_RAPID_RESPONSE, 2642, Initial stage is recruiting
+144, Venice, OP_RAPID_RESPONSE, 2642, Found 1 potential units to recruit for operation 2642 at (50:30) with target at (51:34)
+144, Venice, OP_RAPID_RESPONSE, 2642, Added Swordsman 2294 to slot 0 in army 2643. ETA at (50:30) is 0 
+144, Venice, OP_RAPID_RESPONSE, 2642, Started Army 2643; Units Recruited 1; Max Formation Size 4; Recruiting Units
+144, Venice, OP_RAPID_RESPONSE, 2617, PRE Recruiting Units for army 2618; Pikeman 2541 at (49:33) - ETA -1; Open; Open; Open; 
+144, Venice, OP_RAPID_RESPONSE, 2617, Found 0 potential units to recruit for operation 2617 at (49:33) with target at (51:34)
+144, Venice, OP_RAPID_RESPONSE, 2617, POST Recruiting Units for army 2618; Pikeman 2541 at (49:33) - ETA 0; Open; Open; Open; 
+144, Venice, OP_RAPID_RESPONSE, 2642, PRE Recruiting Units for army 2643; Swordsman 2294 at (50:30) - ETA 0; Open; Open; Open; 
+144, Venice, OP_RAPID_RESPONSE, 2642, Found 0 potential units to recruit for operation 2642 at (50:30) with target at (51:34)
+144, Venice, OP_RAPID_RESPONSE, 2642, POST Recruiting Units for army 2643; Swordsman 2294 at (50:30) - ETA 0; Open; Open; Open; 
+144, Austria, OP_FOUND_CITY, 2647, Ended: NoTarget; Distance -1; Duration 145
+145, The_Zulus, OP_FOUND_CITY, 2657, Ended: NoTarget; Distance -1; Duration 146
+145, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (29:13); target (42:11); Progress 34 percent
+145, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (32:13); target (42:11); Progress 34 percent
+145, The_Iroquois, OP_FOUND_CITY, 2665, Ended: NoTarget; Distance -1; Duration 146
+145, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+145, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+145, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+145, Denmark, OP_RAPID_RESPONSE, 2667, Initial stage is recruiting
+145, Denmark, OP_RAPID_RESPONSE, 2667, Found 1 potential units to recruit for operation 2667 at (51:34) with target at (50:30)
+145, Denmark, OP_RAPID_RESPONSE, 2667, Added Pikeman 2375 to slot 0 in army 2668. ETA at (51:34) is 1 
+145, Denmark, OP_RAPID_RESPONSE, 2667, Started Army 2668; Units Recruited 1; Max Formation Size 4; Recruiting Units
+145, Denmark, OP_RAPID_RESPONSE, 2667, PRE Recruiting Units for army 2668; Pikeman 2375 at (59:31) - ETA 1; Open; Open; Open; 
+145, Denmark, OP_RAPID_RESPONSE, 2667, Found 0 potential units to recruit for operation 2667 at (51:34) with target at (50:30)
+145, Denmark, OP_RAPID_RESPONSE, 2667, POST Recruiting Units for army 2668; Pikeman 2375 at (57:32) - ETA 1; Open; Open; Open; 
+145, Venice, OP_RAPID_RESPONSE, 2617, PRE Recruiting Units for army 2618; Pikeman 2541 at (49:33) - ETA 0; Open; Open; Open; 
+145, Venice, OP_RAPID_RESPONSE, 2617, Found 0 potential units to recruit for operation 2617 at (49:33) with target at (51:34)
+145, Venice, OP_RAPID_RESPONSE, 2642, PRE Recruiting Units for army 2643; Swordsman 2294 at (50:30) - ETA 0; Open; Open; Open; 
+145, Venice, OP_RAPID_RESPONSE, 2642, Found 0 potential units to recruit for operation 2642 at (50:30) with target at (51:34)
+145, Venice, OP_RAPID_RESPONSE, 2642, POST Recruiting Units for army 2643; Swordsman 2294 at (50:30) - ETA 0; Open; Open; Open; 
+145, Venice, OP_RAPID_RESPONSE, 2617, Ended: LostPath; Distance 3; Duration 2
+145, Austria, OP_FOUND_CITY, 2674, Ended: NoTarget; Distance -1; Duration 146
+146, The_Zulus, OP_FOUND_CITY, 2676, Ended: NoTarget; Distance -1; Duration 147
+146, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (32:13); target (42:11); Progress 34 percent
+146, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (30:15); target (42:11); Progress 40 percent
+146, The_Iroquois, OP_FOUND_CITY, 2687, Ended: NoTarget; Distance -1; Duration 147
+146, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+146, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+146, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+146, Denmark, OP_RAPID_RESPONSE, 2667, Ended: NoTarget; Distance 5; Duration 1
+146, Venice, OP_RAPID_RESPONSE, 2642, PRE Recruiting Units for army 2643; Swordsman 2294 at (50:30) - ETA 0; Open; Open; Open; 
+146, Venice, OP_RAPID_RESPONSE, 2642, Found 0 potential units to recruit for operation 2642 at (50:30) with target at (51:34)
+146, Venice, OP_RAPID_RESPONSE, 2642, POST Recruiting Units for army 2643; Swordsman 2294 at (50:30) - ETA 0; Open; Open; Open; 
+146, Austria, OP_FOUND_CITY, 2697, Ended: NoTarget; Distance -1; Duration 147
+147, The_Zulus, OP_FOUND_CITY, 2700, Ended: NoTarget; Distance -1; Duration 148
+147, Russia, OP_FOUND_CITY, 2703, found target for settler, score 42347 (q-27)
+147, Russia, OP_FOUND_CITY, 2703, Initial stage is recruiting
+147, Russia, OP_FOUND_CITY, 2703, Found 0 potential units to recruit for operation 2703 at (17:11) with target at (43:16)
+147, Russia, OP_FOUND_CITY, 2703, Started Army 2704; Units Recruited 1; Max Formation Size 2; Recruiting Units
+147, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (30:15); target (42:11); Progress 40 percent
+147, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (31:17); target (42:11); Progress 47 percent
+147, Russia, OP_FOUND_CITY, 2703, PRE Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA -1; Open; 
+147, Russia, OP_FOUND_CITY, 2703, Found 0 potential units to recruit for operation 2703 at (17:11) with target at (43:16)
+147, Russia, OP_FOUND_CITY, 2703, POST Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+147, The_Iroquois, OP_FOUND_CITY, 2715, Ended: NoTarget; Distance -1; Duration 148
+147, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+147, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+147, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Initial stage is recruiting
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Found 7 potential units to recruit for operation 2719 at (51:34) with target at (50:30)
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Added Pikeman 2375 to slot 0 in army 2720. ETA at (51:34) is 1 
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Added Berserker 2347 to slot 1 in army 2720. ETA at (51:34) is 4 
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Added Chariot Archer 2406 to slot 3 in army 2720. ETA at (51:34) is 0 
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Added Catapult 2492 to slot 4 in army 2720. ETA at (51:34) is 2 
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Added Catapult 2316 to slot 5 in army 2720. ETA at (51:34) is 2 
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Added Chariot Archer 2493 to slot 6 in army 2720. ETA at (51:34) is 1 
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Added Chariot Archer 2436 to slot 7 in army 2720. ETA at (51:34) is 2 
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Transition to gathering stage
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, Started Army 2720; Units Recruited 7; Max Formation Size 10; Gathering Forces
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, PRE Gathering Forces for army 2720; center (59:34); variance (10.78:27.92); free slots 3
+147, Denmark, OP_CITY_ATTACK_LAND, 2719, POST Gathering Forces for army 2720; center (56:32); variance (6.53:11.67); free slots 3
+147, Venice, OP_RAPID_RESPONSE, 2722, Initial stage is recruiting
+147, Venice, OP_RAPID_RESPONSE, 2722, Found 1 potential units to recruit for operation 2722 at (50:30) with target at (51:34)
+147, Venice, OP_RAPID_RESPONSE, 2722, Added Swordsman 2291 to slot 0 in army 2723. ETA at (50:30) is 0 
+147, Venice, OP_RAPID_RESPONSE, 2722, Started Army 2723; Units Recruited 1; Max Formation Size 4; Recruiting Units
+147, Venice, OP_RAPID_RESPONSE, 2642, PRE Recruiting Units for army 2643; Swordsman 2294 at (50:30) - ETA 0; Open; Open; Open; 
+147, Venice, OP_RAPID_RESPONSE, 2642, Found 1 potential units to recruit for operation 2642 at (50:30) with target at (51:34)
+147, Venice, OP_RAPID_RESPONSE, 2642, Added Pikeman 2726 to slot 1 in army 2643. ETA at (50:30) is 1 
+147, Venice, OP_RAPID_RESPONSE, 2642, Transition to gathering stage
+147, Venice, OP_RAPID_RESPONSE, 2642, POST Gathering Forces for army 2643; center (50:30); variance (4.00:1.00); free slots 2
+147, Venice, OP_RAPID_RESPONSE, 2722, PRE Recruiting Units for army 2723; Swordsman 2291 at (51:29) - ETA 0; Open; Open; Open; 
+147, Venice, OP_RAPID_RESPONSE, 2722, Found 0 potential units to recruit for operation 2722 at (50:30) with target at (51:34)
+147, Venice, OP_RAPID_RESPONSE, 2722, POST Recruiting Units for army 2723; Swordsman 2291 at (49:31) - ETA 0; Open; Open; Open; 
+147, Austria, OP_FOUND_CITY, 2728, Ended: NoTarget; Distance -1; Duration 148
+148, The_Zulus, OP_FOUND_CITY, 2736, Ended: NoTarget; Distance -1; Duration 149
+148, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (31:17); target (42:11); Progress 47 percent
+148, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (33:17); target (42:11); Progress 54 percent
+148, Russia, OP_FOUND_CITY, 2703, PRE Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+148, Russia, OP_FOUND_CITY, 2703, Found 0 potential units to recruit for operation 2703 at (17:11) with target at (43:16)
+148, Russia, OP_FOUND_CITY, 2703, POST Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+148, The_Iroquois, OP_FOUND_CITY, 2745, Ended: NoTarget; Distance -1; Duration 149
+148, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+148, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+148, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+148, Denmark, OP_CITY_ATTACK_LAND, 2719, PRE Gathering Forces for army 2720; center (59:32); variance (6.47:13.58); free slots 4
+148, Denmark, OP_CITY_ATTACK_LAND, 2719, POST Gathering Forces for army 2720; center (59:34); variance (5.14:7.14); free slots 4
+148, Venice, OP_RAPID_RESPONSE, 2642, PRE Gathering Forces for army 2643; center (50:30); variance (4.00:1.00); free slots 2
+148, Venice, OP_RAPID_RESPONSE, 2642, Transition to movement stage
+148, Venice, OP_RAPID_RESPONSE, 2642, POST Moving To Target with Army 2643; center (49:34); target (51:34); Progress 40 percent
+148, Venice, OP_RAPID_RESPONSE, 2722, PRE Recruiting Units for army 2723; Swordsman 2291 at (49:31) - ETA 0; Open; Open; Open; 
+148, Venice, OP_RAPID_RESPONSE, 2722, Found 0 potential units to recruit for operation 2722 at (50:30) with target at (51:34)
+148, Venice, OP_RAPID_RESPONSE, 2722, POST Recruiting Units for army 2723; Swordsman 2291 at (49:31) - ETA 0; Open; Open; Open; 
+148, Austria, OP_FOUND_CITY, 2750, Ended: NoTarget; Distance -1; Duration 149
+149, The_Zulus, OP_FOUND_CITY, 2753, Ended: NoTarget; Distance -1; Duration 150
+149, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (33:17); target (42:11); Progress 54 percent
+149, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (35:17); target (42:11); Progress 60 percent
+149, Russia, OP_FOUND_CITY, 2703, PRE Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+149, Russia, OP_FOUND_CITY, 2703, Found 0 potential units to recruit for operation 2703 at (17:11) with target at (43:16)
+149, Russia, OP_FOUND_CITY, 2703, POST Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+149, The_Iroquois, OP_FOUND_CITY, 2762, Ended: NoTarget; Distance -1; Duration 150
+149, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+149, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+149, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+149, Denmark, OP_CITY_ATTACK_LAND, 2719, PRE Gathering Forces for army 2720; center (59:34); variance (3.76:6.64); free slots 5
+149, Denmark, OP_CITY_ATTACK_LAND, 2719, Removing Pikeman 2375 from army 2720 because no progress to checkpoint (51:34). ETA 2; prev 1; prev 1
+149, Denmark, OP_CITY_ATTACK_LAND, 2719, Transition to movement stage
+149, Denmark, OP_CITY_ATTACK_LAND, 2719, POST Moving To Target with Army 2720; center (58:33); target (50:30); Progress 0 percent
+149, Venice, OP_RAPID_RESPONSE, 2642, Ended: HalfStrength; Distance 5; Duration 5
+149, Venice, OP_RAPID_RESPONSE, 2722, PRE Recruiting Units for army 2723; Swordsman 2291 at (49:31) - ETA 0; Open; Open; Open; 
+149, Venice, OP_RAPID_RESPONSE, 2722, Found 1 potential units to recruit for operation 2722 at (50:30) with target at (51:34)
+149, Venice, OP_RAPID_RESPONSE, 2722, Added Swordsman 2294 to slot 1 in army 2723. ETA at (50:30) is 0 
+149, Venice, OP_RAPID_RESPONSE, 2722, Transition to gathering stage
+149, Venice, OP_RAPID_RESPONSE, 2722, POST Gathering Forces for army 2723; center (49:31); variance (0.25:0.25); free slots 2
+149, Austria, OP_FOUND_CITY, 2767, Ended: NoTarget; Distance -1; Duration 150
+150, The_Zulus, OP_FOUND_CITY, 2769, Ended: NoTarget; Distance -1; Duration 151
+150, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (35:17); target (42:11); Progress 60 percent
+150, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (37:17); target (42:11); Progress 67 percent
+150, Russia, OP_FOUND_CITY, 2703, PRE Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+150, Russia, OP_FOUND_CITY, 2703, Found 0 potential units to recruit for operation 2703 at (17:11) with target at (43:16)
+150, Russia, OP_FOUND_CITY, 2703, POST Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+150, The_Iroquois, OP_FOUND_CITY, 2773, Ended: NoTarget; Distance -1; Duration 151
+150, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+150, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+150, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+150, Denmark, OP_CITY_ATTACK_LAND, 2719, PRE Moving To Target with Army 2720; center (58:33); target (50:30); Progress 0 percent
+150, Denmark, OP_CITY_ATTACK_LAND, 2719, POST Moving To Target with Army 2720; center (55:32); target (50:30); Progress 42 percent
+150, Venice, OP_RAPID_RESPONSE, 2722, PRE Gathering Forces for army 2723; center (49:31); variance (0.25:0.25); free slots 2
+150, Venice, OP_RAPID_RESPONSE, 2722, Transition to movement stage
+150, Venice, OP_RAPID_RESPONSE, 2722, POST Moving To Target with Army 2723; center (49:31); target (51:34); Progress 0 percent
+150, Austria, OP_FOUND_CITY, 2782, Ended: NoTarget; Distance -1; Duration 151
+151, The_Zulus, OP_FOUND_CITY, 2784, Ended: NoTarget; Distance -1; Duration 152
+151, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (37:17); target (42:11); Progress 67 percent
+151, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (39:16); target (42:11); Progress 74 percent
+151, Russia, OP_FOUND_CITY, 2703, PRE Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+151, Russia, OP_FOUND_CITY, 2703, Found 0 potential units to recruit for operation 2703 at (17:11) with target at (43:16)
+151, Russia, OP_FOUND_CITY, 2703, POST Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+151, The_Iroquois, OP_FOUND_CITY, 2789, Ended: NoTarget; Distance -1; Duration 152
+151, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+151, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (48:9)
+151, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+151, Denmark, OP_RAPID_RESPONSE, 2790, Initial stage is recruiting
+151, Denmark, OP_RAPID_RESPONSE, 2790, Found 1 potential units to recruit for operation 2790 at (55:33) with target at (54:25)
+151, Denmark, OP_RAPID_RESPONSE, 2790, Added Knight 2778 to slot 0 in army 2791. ETA at (55:33) is 1 
+151, Denmark, OP_RAPID_RESPONSE, 2790, Started Army 2791; Units Recruited 1; Max Formation Size 4; Recruiting Units
+151, Denmark, OP_CITY_ATTACK_LAND, 2719, PRE Moving To Target with Army 2720; center (55:32); target (50:30); Progress 42 percent
+151, Denmark, OP_CITY_ATTACK_LAND, 2719, POST Moving To Target with Army 2720; center (53:31); target (50:30); Progress 59 percent
+151, Denmark, OP_RAPID_RESPONSE, 2790, PRE Recruiting Units for army 2791; Knight 2778 at (62:39) - ETA 1; Open; Open; Open; 
+151, Denmark, OP_RAPID_RESPONSE, 2790, Found 1 potential units to recruit for operation 2790 at (55:33) with target at (54:25)
+151, Denmark, OP_RAPID_RESPONSE, 2790, Added Pikeman 2795 to slot 1 in army 2791. ETA at (55:33) is 1 
+151, Denmark, OP_RAPID_RESPONSE, 2790, Transition to gathering stage
+151, Denmark, OP_RAPID_RESPONSE, 2790, POST Gathering Forces for army 2791; center (60:36); variance (0.00:0.25); free slots 2
+151, Denmark, OP_CITY_ATTACK_LAND, 2719, Added Knight 2797 to slot 7 in army 2720. ETA at (53:31) is 0 
+151, Venice, OP_RAPID_RESPONSE, 2722, PRE Moving To Target with Army 2723; center (49:31); target (51:34); Progress 0 percent
+151, Venice, OP_RAPID_RESPONSE, 2722, Transition to finished stage; unit distance near 2; far 2
+151, Venice, OP_RAPID_RESPONSE, 2722, POST Completed
+151, Austria, OP_FOUND_CITY, 2802, Ended: NoTarget; Distance -1; Duration 152
+152, The_Zulus, OP_FOUND_CITY, 2811, Ended: NoTarget; Distance -1; Duration 153
+152, Russia, OP_FOUND_CITY, 2520, PRE Moving To Target with Army 2521; center (39:16); target (42:11); Progress 74 percent
+152, Russia, OP_FOUND_CITY, 2520, POST Moving To Target with Army 2521; center (39:14); target (42:11); Progress 80 percent
+152, Russia, OP_FOUND_CITY, 2703, PRE Recruiting Units for army 2704; Settler 2702 at (17:11) - ETA 0; Open; 
+152, Russia, OP_FOUND_CITY, 2703, Found 0 potential units to recruit for operation 2703 at (17:11) with target at (43:16)
+152, Russia, OP_FOUND_CITY, 2703, No escort yet and the trip looks safe, going alone
+152, Russia, OP_FOUND_CITY, 2703, Transition to gathering stage
+152, Russia, OP_FOUND_CITY, 2703, Transition to movement stage
+152, Russia, OP_FOUND_CITY, 2703, POST Moving To Target with Army 2704; center (17:11); target (43:16); Progress 0 percent
+152, The_Iroquois, OP_FOUND_CITY, 2818, Ended: NoTarget; Distance -1; Duration 153
+152, Korea, OP_FOUND_CITY, 2559, found better target for settler, old score 77364 (q35), new score 87366 (q50)
+152, Korea, OP_FOUND_CITY, 2559, setting new target (50:8)
+152, Korea, OP_FOUND_CITY, 2559, PRE Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+152, Korea, OP_FOUND_CITY, 2559, Found 0 potential units to recruit for operation 2559 at (54:25) with target at (50:8)
+152, Korea, OP_FOUND_CITY, 2559, POST Recruiting Units for army 2560; Settler 2558 at (54:25) - ETA 0; Open; 
+152, Denmark, OP_RAPID_RESPONSE, 2820, Initial stage is recruiting
+152, Denmark, OP_RAPID_RESPONSE, 2820, Found 1 potential units to recruit for operation 2820 at (51:34) with target at (50:30)
+152, Denmark, OP_RAPID_RESPONSE, 2820, Added Berserker 2158 to slot 0 in army 2821. ETA at (51:34) is 4 
+152, Denmark, OP_RAPID_RESPONSE, 2820, Started Army 2821; Units Recruited 1; Max Formation Size 4; Recruiting Units
+152, Denmark, OP_CITY_ATTACK_LAND, 2719, PRE Moving To Target with Army 2720; center (53:31); target (50:30); Progress 59 percent
+152, Denmark, OP_CITY_ATTACK_LAND, 2719, Contact with enemy!
+152, Denmark, OP_RAPID_RESPONSE, 2790, PRE Gathering Forces for army 2791; center (60:36); variance (0.00:0.25); free slots 2
+152, Denmark, OP_RAPID_RESPONSE, 2790, Transition to movement stage
+152, Denmark, OP_RAPID_RESPONSE, 2790, POST Moving To Target with Army 2791; center (58:33); target (54:25); Progress 0 percent
+152, Denmark, OP_RAPID_RESPONSE, 2820, PRE Recruiting Units for army 2821; Berserker 2158 at (54:16) - ETA 4; Open; Open; Open; 
+152, Denmark, OP_RAPID_RESPONSE, 2820, Found 2 potential units to recruit for operation 2820 at (51:34) with target at (50:30)
+152, Denmark, OP_RAPID_RESPONSE, 2820, Added Pikeman 2375 to slot 1 in army 2821. ETA at (51:34) is 2 
+152, Denmark, OP_RAPID_RESPONSE, 2820, Added Berserker 2347 to slot 2 in army 2821. ETA at (51:34) is 2 
+152, Denmark, OP_RAPID_RESPONSE, 2820, Transition to gathering stage
+152, Denmark, OP_RAPID_RESPONSE, 2820, POST Gathering Forces for army 2821; center (54:29); variance (1.56:27.56); free slots 1
+152, Denmark, OP_CITY_ATTACK_LAND, 2719, Ended: HalfStrength; Distance 12; Duration 5
+152, Venice, OP_RAPID_RESPONSE, 2722, Ended: Success; Distance 5; Duration 5
+152, Austria, OP_FOUND_CITY, 2832, Ended: NoTarget; Distance -1; Duration 153
