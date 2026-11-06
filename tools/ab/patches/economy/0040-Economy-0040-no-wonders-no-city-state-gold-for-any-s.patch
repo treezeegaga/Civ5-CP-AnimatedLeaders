@@ -1,0 +1,110 @@
+From 3ec1a450aef34aef74138f1cae783234fb2ffbd5 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 11:26:35 +0000
+Subject: [PATCH] Economy 0040: no wonders, no city-state gold for any strike
+ civ before its strike (LateStrike PREP too)
+
+bullyabort19 game 1 (1468D9F4) stopped: LateStrike Japan sat in strike state PREP
+T1-T149 (economy first), which no gate covered (0035/0036/0039 gate the EarlyStrike
+book and LateStrike BUILDUP only). It built the Great Library (T50) and Hanging
+Gardens (T90) and gave 1,250 gold to city-states (T44, T99) before its first
+declaration (T102). New CvPlayer::IsStrikePending (state PREP or BUILDUP, early or
+late) joins every wonder and gift gate. NONE when the strike flags are off.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp |  2 +-
+ CvGameCoreDLL_Expansion2/CvCityAI.cpp               |  2 +-
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp          |  4 ++--
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp               | 13 +++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h                 |  1 +
+ 5 files changed, 18 insertions(+), 4 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index cfc37b4..3b8e8ff 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -274,7 +274,7 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 
+ 	// AI_AB_TEST candidates (EarlyStrike, LateStrike): no world wonder before the strike (EarlyStrike's PREP and BUILDUP,
+ 	// LateStrike's BUILDUP). The expert block's Persia (13A89116) started Stonehenge at T39 while its book waited
+-	if (isWorldWonderClass(kBuildingClassInfo) && (kPlayer.IsEarlyStrikeSmallEmpire() || kPlayer.IsLateStrikeSaving()))
++	if (isWorldWonderClass(kBuildingClassInfo) && (kPlayer.IsEarlyStrikeSmallEmpire() || kPlayer.IsLateStrikeSaving() || kPlayer.IsStrikePending()))
+ 		return SR_STRATEGY;
+ 
+ 	// AI_AB_TEST candidate (WarGold, the lead's): a warmonger at peace keeps its income at 0 or more. While it's losing gold,
+diff --git a/CvGameCoreDLL_Expansion2/CvCityAI.cpp b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+index 8f9412a..7b613d7 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+@@ -135,7 +135,7 @@ void CvCityAI::AI_chooseProduction(bool bInterruptWonders, bool bInterruptBuildi
+ 		eNextWonder = NO_BUILDING;
+ 
+ 	// AI_AB_TEST candidate (EarlyStrike, Economy 0039): no world wonder before the strike, even one picked earlier
+-	if (eNextWonder != NO_BUILDING && (kOwner.IsEarlyStrikeSmallEmpire() || kOwner.IsLateStrikeSaving()))
++	if (eNextWonder != NO_BUILDING && (kOwner.IsEarlyStrikeSmallEmpire() || kOwner.IsLateStrikeSaving() || kOwner.IsStrikePending()))
+ 		eNextWonder = NO_BUILDING;
+ 
+ 	if (!bAlreadyBuildingWonder && bInterruptWonders && eNextWonder != NO_BUILDING)
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index 7027765..9b95a9c 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -37675,7 +37675,7 @@ void CvDiplomacyAI::DoContactMinorCivs()
+ 
+ 	// AI_AB_TEST candidate (EarlyStrike, Economy 0039): before the strike, no gold to city-states by any path.
+ 	// Drop a gift saving started earlier, and skip buyouts and marriages too.
+-	if (GetPlayer()->IsEarlyStrikeSmallEmpire() || GetPlayer()->IsLateStrikeSaving())
++	if (GetPlayer()->IsEarlyStrikeSmallEmpire() || GetPlayer()->IsLateStrikeSaving() || GetPlayer()->IsStrikePending())
+ 	{
+ 		if (GetPlayer()->GetEconomicAI()->IsSavingForThisPurchase(PURCHASE_TYPE_MINOR_CIV_GIFT))
+ 			GetPlayer()->GetEconomicAI()->CancelSaveForPurchase(PURCHASE_TYPE_MINOR_CIV_GIFT);
+@@ -37764,7 +37764,7 @@ void CvDiplomacyAI::DoContactMinorCivs()
+ 	// AI_AB_TEST candidates (EarlyStrike, LateStrike; Economy): nor while a strike civ saves for its upgrades (War's expert-block
+ 	// read: Greece, 1464B588, gave 500 gold to a city-state at T46 in its build-up)
+ 	const bool bSavingForSettler = GetPlayer()->GetEconomicAI()->IsSavingForExpansionSettler() ||
+-		GetPlayer()->IsEarlyStrikeSmallEmpire() || GetPlayer()->IsLateStrikeSaving();
++		GetPlayer()->IsEarlyStrikeSmallEmpire() || GetPlayer()->IsLateStrikeSaving() || GetPlayer()->IsStrikePending();
+ 	veMinorsToGiveGold.StableSortItems(); // Sort from highest desirability to lowest
+ 	for (int i = 0; i < veMinorsToGiveGold.size() && !bSavingForSettler; i++)
+ 	{
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index b7ae1e3..fea2a25 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33931,6 +33931,19 @@ bool CvPlayer::IsLateStrikeCiv() const
+ 
+ /// LateStrike: from the build-up (15 turns Standard before the window opens) to the declaration (or the plan's
+ /// declare-by turn), no hurries and no tiles: the treasury pays for the upgrade and go (the research: 70-80 gold per unit)
++/// AI_AB_TEST (flags EarlyStrike, LateStrike; Economy 0040; the user: "if civs are stopping to build wonders and donate to
++/// citystates before an early strike, the test needs to stop and code has to be rewritten"). Any strike civ, early or late,
++/// from PREP to its declaration: no world wonders and no gold to city-states. bullyabort19 game 1 (1468D9F4): LateStrike
++/// Japan sat in PREP T1-T149, built the Great Library and Hanging Gardens and gave 1,250 gold to city-states, which also
++/// held back the upgrade bill its own BUILDUP trigger waits for
++bool CvPlayer::IsStrikePending() const
++{
++	if (!isMajorCiv() || !GetMilitaryAI())
++		return false;
++	const CvMilitaryAI::StrikeStateTypes eState = GetMilitaryAI()->GetStrikeState();
++	return eState == CvMilitaryAI::STRIKE_PREP || eState == CvMilitaryAI::STRIKE_BUILDUP;
++}
++
+ bool CvPlayer::IsLateStrikeSaving() const
+ {
+ 	// War's strike state BUILDUP (Personality's economy-ready condition fired), to the declaration; no turns
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index db21205..46201be 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -1929,6 +1929,7 @@ public:
+ 	TechTypes GetEarlyStrikeLuxuryTech() const; // AI_AB_TEST Economy, flag EarlyStrike: the one luxury tech before the upgrade
+ 	bool IsLateStrikeCiv() const; // AI_AB_TEST Economy, flag LateStrike: a warmonger with a late spike and a strike plan
+ 	bool IsLateStrikeSaving() const; // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
++	bool IsStrikePending() const; // AI_AB_TEST Economy, flags EarlyStrike/LateStrike (0040): a strike civ before its strike (state PREP or BUILDUP) // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
+ 	TechTypes GetLateStrikeTech() const; // AI_AB_TEST Economy, flag LateStrike: the spike's and the upgrade's techs before the window
+ 	bool IsWarGoldShort() const; // AI_AB_TEST Economy, flag WarGold
+ 	PolicyBranchTypes GetOpeningBookPolicyBranch() const;
+-- 
+2.43.0
+

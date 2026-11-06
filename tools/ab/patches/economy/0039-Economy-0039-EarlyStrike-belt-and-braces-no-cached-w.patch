@@ -1,0 +1,57 @@
+From 39d202e0a4f494b698427909771c9a27bad519ae Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 11:24:47 +0000
+Subject: [PATCH 39/40] Economy 0039: EarlyStrike belt-and-braces: no cached
+ wonder pick, no gift saving, buyout or marriage before the strike
+
+The city AI's own wonder path (GetNextWonderDesired) is now dropped while
+IsEarlyStrikeSmallEmpire or IsLateStrikeSaving, so a pick cached before PREP
+cannot start. In the minor-civ gold loop, a gift saving started earlier is
+cancelled and Austria-style buyout and marriage are skipped in the same window.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvCityAI.cpp      |  4 ++++
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 10 ++++++++++
+ 2 files changed, 14 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvCityAI.cpp b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+index 5cee433..8f9412a 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+@@ -134,6 +134,10 @@ void CvCityAI::AI_chooseProduction(bool bInterruptWonders, bool bInterruptBuildi
+ 	if (eNextWonder != NO_BUILDING && !CityStrategyAIHelpers::IsWonderForOurVictory(kOwner, eNextWonder))
+ 		eNextWonder = NO_BUILDING;
+ 
++	// AI_AB_TEST candidate (EarlyStrike, Economy 0039): no world wonder before the strike, even one picked earlier
++	if (eNextWonder != NO_BUILDING && (kOwner.IsEarlyStrikeSmallEmpire() || kOwner.IsLateStrikeSaving()))
++		eNextWonder = NO_BUILDING;
++
+ 	if (!bAlreadyBuildingWonder && bInterruptWonders && eNextWonder != NO_BUILDING)
+ 	{		
+ 		CvBuildingEntry* pkBuilding = GC.getBuildingInfo(eNextWonder);
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index d37a7b3..7027765 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -37673,6 +37673,16 @@ void CvDiplomacyAI::DoContactMinorCivs()
+ 
+ 	int iGoldReserve = GetPlayer()->GetTreasury()->GetGold();
+ 
++	// AI_AB_TEST candidate (EarlyStrike, Economy 0039): before the strike, no gold to city-states by any path.
++	// Drop a gift saving started earlier, and skip buyouts and marriages too.
++	if (GetPlayer()->IsEarlyStrikeSmallEmpire() || GetPlayer()->IsLateStrikeSaving())
++	{
++		if (GetPlayer()->GetEconomicAI()->IsSavingForThisPurchase(PURCHASE_TYPE_MINOR_CIV_GIFT))
++			GetPlayer()->GetEconomicAI()->CancelSaveForPurchase(PURCHASE_TYPE_MINOR_CIV_GIFT);
++		veMinorsToBuyout.clear();
++		veMinorsToMarry.clear();
++	}
++
+ 	// Do we want to buyout a minor?
+ 	veMinorsToBuyout.StableSortItems();
+ 	int iGoldLeft = GetPlayer()->GetTreasury()->GetGold();
+-- 
+2.43.0
+

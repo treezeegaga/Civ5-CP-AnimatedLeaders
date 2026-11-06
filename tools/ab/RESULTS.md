@@ -1929,6 +1929,40 @@ per civ (the same script).
 
 **Status:** coded, patch 0038 on ai/war `f9c16cd` + 0037 (0035 and 0036 are already on ai/war). Not built.
 
+### Patches 0039 and 0040: the leak audit, and the late strike's gap (Economy, Nov 6, 6:27am ET)
+The lead asked: in the first bullyabort19 game (ab-8f9b7f9), does the strike civ build a world wonder or give gold to
+a city-state before its first declaration? It does. PC 1 stopped on game 1 (`1468D9F4`).
+
+**What leaked.** Japan (aggressor, LateStrike) built the Great Library (T50) and the Hanging Gardens (T90). It also gave
+1,250 gold to city-states: Antananarivo 500 (T44), Hong Kong 250 and Malacca 500 (T99). Its first declaration came at
+T102 (on Spain).
+
+**Why.** A LateStrike's PREP is "economy first" (War's state machine). Japan stayed in PREP from T1 to T149. The
+wonder and gift gates (0035, 0036) cover only the EarlyStrike book window and LateStrike BUILDUP. No gate covered a
+late strike's PREP. The gifts also hurt the strike itself: its BUILDUP trigger waits for half the upgrade bill saved.
+
+**The audit of every path.** EarlyStrike had no leak in ab-8f9b7f9:
+- Wonders: CvWonderProductionAI runs through CheckBuildingBuildSanity, where the 0035 rule applies.
+- Gifts: the 0036 loop skip covers gifts and the saving for them.
+- Quests: they only count gifts that happen.
+
+Three back doors remained, which 0039 closes:
+- The city AI's own wonder pick (CvCityAI, `GetNextWonderDesired`, cached by city specialization) is dropped.
+- A gift saving that started before the window is cancelled.
+- Austria-type buyouts and marriages are skipped.
+
+**0040.** A new `CvPlayer::IsStrikePending()` is true for any strike civ, early or late, while its state is PREP or
+BUILDUP. It joins every wonder and gift gate. The state is NONE when the strike flags are off, so the baseline is
+unchanged. A non-strike war during PREP (Japan on Spain at T102) does not lift the ban; the strike's own declaration
+or OVER does.
+
+**Open for the user.** The user's rule names the early strike. 0040 extends it to a late strike's whole economy phase:
+Japan would have built no wonder at all to T149. If that is too strict for late strikes, the narrower option keeps
+the gift ban for both and allows wonders in a late strike's PREP.
+
+**Status:** patches 0039 and 0040 apply on ab-c1 `8f9b7f9` and on ai/war `6df9a4d` (which has 0037 and 0038). Not
+built.
+
 ### Expert block (ab-40203a3): the book side, summary (Economy, Nov 6, 4:49am ET)
 bullygreedy18 finished at 10 pairs (20 games). The table below is per pair; this is the summary for the user.
 
