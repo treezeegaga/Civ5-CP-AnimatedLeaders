@@ -3060,6 +3060,21 @@ Fixed in f9245a1e.**
 LEAD: both answered. The combined head is now **ai/war f9245a1e** (75a70345 + the army-target gate). "Ready" follows when
 CI is green.
 
+**16DAE4CC (Aztec, bullygreedy23 game 7), the lead at 2:30pm ET: a target oscillation every turn from T96 to T106. Fixed in
+b0d7e1c1.**
+- **What happened.** "re-target from Singapore (defence 24, too strong) to Sweden" and then "target Sweden -> Singapore
+  (the nearest city-state in reach)", 11 times, until the core went obsolete at T106. It never declared. (The T48-T71
+  "declaring war on Singapore" loop is the city-state peace, fixed in 5fe900a1.)
+- **Cause.** FindStrikeRetarget had its own validity checks. It missed IsStrikeTargetValid's: a declared friend, and the
+  attack-target check. So it picked Sweden, the next turn's BUILDUP target check rejected Sweden, fell back to the nearest
+  city-state, and the strength check sent it back to Sweden.
+- **Fix.** The re-target skips any candidate IsStrikeTargetValid rejects, so it only goes to a target the next turn's check
+  keeps. With none, the existing path holds: no easier city, so the build-up brings siege. A too-strong city-state stays the
+  siege target and isn't picked again by nearness.
+LEAD: the full head is now **ai/war b0d7e1c1** (75a70345, ece1822b, f9245a1e, b0d7e1c1). It covers the 16DAE4CC
+oscillation, and f9245a1e's army-target ownership covers the rest. "Ready" follows when CI is green. No ai/war build since
+b9dd1b77 has finished yet (each was replaced by the next push), so this CI run is the first compile of the gates.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
