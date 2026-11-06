@@ -1652,6 +1652,69 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Deals with a purpose: the user's direction, and a hypothesis (Diplomacy session, 2026-11-05 10:00pm ET)
+
+**The user (replacing the deal-count band):** "i dont really care about meeting some 'quota'. i just want civs to be
+reactive and initiate when it makes sense like normal players. i want them to try to make deals that will help them
+win, or if they cant win, will prevent someone they have a grudge against from winning."
+
+So deals are judged by purpose, not count. The 0.5-2 band in "Deal frequency: hypothesis" is dropped as a goal.
+
+**What CP already does about victory in deals:**
+- **Refusals:** it won't sell uranium to a civ close to world conquest, or aluminum to one close to a science win.
+- **Who it avoids:** it won't trade with civs it denounced or that denounced it, that show a HOSTILE approach, or
+  that it plans a war against (`AvoidExchangesWithPlayer`).
+- **War bribes:** asking someone to declare on its biggest competitor costs less.
+- **Culture:** a culture civ seeks open borders with the civs it needs influence on, and refuses them to a
+  popular, fierce victory rival.
+- **Opinion:** it tracks victory rivals (`VictoryDispute` / `VictoryBlock` levels), which lower opinion.
+- **Can't win:** "not competing" is CP's word for it. It covers only vassals, resurrected civs and civs that lost
+  their capital, and it switches the rivalry **off**.
+
+**Gap 1: the deal AI ignores who a trade helps win.** Apart from uranium and aluminum, a luxury, strategic resource,
+open-borders grant or research agreement is priced the same for a fierce victory rival as for anyone else.
+
+**Gap 2: no spoiler.** A civ that can't win never acts to stop a rival it hates from winning. In the logs, civs
+whose opinion of a partner was Competitor, ENEMY or UNFORGIVABLE still gave it about 2,400 items (luxuries, GPT,
+open borders): 8% of all trade. 936 of those went to a partner already ahead of them on score. Script:
+`tools/ab/scripts/diplo/grudge_trade.py`.
+
+**Why our tests never show any of this:** CP's victory rivalry doesn't start before turn 150
+(`DoUpdateVictoryDisputeLevels`, `DoUpdateVictoryBlockLevels`). It also needs "serious about victory": a grand strategy
+with priority over 500, and the Renaissance era unless going for conquest. Our games stop at T150 on Quick, so in
+every logged game no AI ever had a victory rival. This is L1 from Economy's victory-push audit again: **goal-driven
+diplomacy can only be judged in long games** (Standard pace to a late turn, or saves from the Industrial era on).
+
+**Hypothesis, as two flags (one idea each), both off in the bundle until a long-game test exists:**
+1. **`RivalTrade`: don't sell a victory rival what helps it win.**
+   - **Who counts:** CP's victory dispute or block toward the partner is STRONG or worse, or the partner is our
+     biggest competitor, **and** it's closer to its victory than we are to ours. Victory progress comes from CP's
+     `Get*VictoryProgress`, which a human can read on the victory screen.
+   - **What changes:**
+     - We won't sell it luxuries, strategic resources or research agreements.
+     - Open borders cost it double, unless we need the passage ourselves.
+     - What we'd buy from it is unchanged: taking its gold helps us.
+   - **Measure:** items given to rivals that are ahead, before and after; strength no-worse; who wins long games.
+2. **`Spoiler`: if we can't win, deny the civ we hold a grudge against.**
+   - **When we can't win:** CP's "not competing", or our best victory progress is under half the leader's, from the
+     era when victory competition starts.
+   - **What counts as a grudge:**
+     - opinion Competitor or worse;
+     - it took one of our cities;
+     - it denounced us;
+     - it's a victory rival.
+   - **What changes, while that civ is the closest to any victory:**
+     - We sell it nothing that helps it (as in 1, for every item).
+     - We price deals with its open enemies more kindly (a smaller margin).
+     - We vote for League proposals that hurt it. That's the League half of `Sanctions`, which stays off for testing.
+   - **What doesn't change:** no war, no breaking existing deals. The user ruled out hard rules about war on trade
+     partners. Cicero's lesson: be the partner others can rely on.
+   - **Measure:** whether the leader's trade dries up when a grudge-holder can't win; whether it changes who wins.
+
+**Before code:** the long-game test has to exist, or the flags can't be judged (lead's call). In T150 Quick games
+neither flag would ever fire. Flag 1 would need the turn-150 gate lifted to fire at all. Flag 2 could use our own
+"can't win" test from mid-game on, but without long games we'd see only its trade effects, not its effect on who wins.
+
 ### Deal frequency: hypothesis (Diplomacy session, 2026-11-05 9:30pm ET)
 
 The lively-world goal is 0.5-2 deals per civ per 10 turns. We measured about 3. Before any test time, which deals
