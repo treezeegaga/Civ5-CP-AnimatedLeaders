@@ -1950,6 +1950,19 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0047: an obsolete list item is built as its upgrade (Economy, Nov 6, 11:10am ET)
+The lead, via War: in the Zulu's `162667AE` (ab-103bd11), the strike list lost units and went back to its earlier Archer
+items. From T80 to T106 it logged `LIST WAIT, nothing on the list can be done now`. An Archer can't be trained once the
+Composite Bowman can.
+
+**0047.** An item, or the army's core, support or siege class, that can't be trained is built as the first trainable
+class on its upgrade line. The upgraded unit already counts toward the item (`CountStrikeListUnits`), and the log reads
+`X (for Y, obsolete)`. This matters most for the generic rush: its core is the Archer, which goes obsolete at
+Construction, the rush's own upgrade tech. An item whose tech isn't in yet still waits, because nothing on its line can
+be trained.
+
+**Status:** patch 0047 on ai/war `bde35e2` (with Personality's f8f2de7 merged), 1 file, +28/-6. Not compiled here.
+
 ### Patch 0046: a late strike's PREP keeps its income (Economy, Nov 6, 10:31am ET)
 War found a deadlock in bullyabort22 game 1 (`15286C56`, ab-103bd11). Songhai's late strike (Knights at Chivalry,
 pre-build Horseman x6) stayed in PREP from T1 to T148. Its BUILDUP waits for half the upgrade bill saved (300 gold).
@@ -1977,7 +1990,8 @@ Its Market (item 15) waited for Currency, near the end of the research list, fro
 **For Personality:** a late list that puts the pre-build ahead of its Market, and Currency after the upgrade path,
 fights its own gold gate. Consider the Market and Currency earlier in late lists, or a smaller gold target.
 
-**Status:** patch 0046 on ai/war `103bd11`, 3 files, +34/-4. Not compiled here.
+**Status:** patch 0046 is on ai/war (`4cc694d`). Personality's `553dfdc` then dropped the gold condition from a late
+strike's BUILDUP, so the PREP saving is now nearly inert. The combat-item hold stays.
 
 ### Patch 0044: the bans at their chokepoints, held to the first declaration (Economy, Nov 6, 9:08am ET)
 PC 2 stopped bullygreedy21 game 1 (`15A7D14F`, ab-f939c50, a build that has 0042). Before its first declaration
