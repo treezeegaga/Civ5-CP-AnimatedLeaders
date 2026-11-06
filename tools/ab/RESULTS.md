@@ -3501,19 +3501,33 @@ weights fill everything a plan doesn't name):
   by about T41, fall back about T45, Liberty, barbarian hunt first. Sensible as plans. **One thing to watch:** the
   aggressor picker puts early-spike civs ahead of warmongers, so Babylon, Egypt, India, Maya or Polynesia (not
   aggressive personalities) can draw the aggressor role when none of the five expert civs is in the game.
-- **Readiness, for the next block** (the user, via the lead, about 10:35pm ET: "because the ai is not a high level
-  player, some of the windows will be hard to hit"). The expert block keeps its turns. Next block, readiness triggers
-  the declaration and the turns become soft limits measured from the AI's own progress:
-  - **ready** = the upgrade tech known (or none); core units at `iCoreTarget` (pre-built units the upgrade turns into
-    core count); support at `iSupportTarget`; siege at `iSiegeTarget` when the plan always brings it (else only against
-    walls); gold for the upgrades still to do (`iUpgradeGoldPerUnit` each); and War's 2+ melee that can take a city;
-  - **declare** as soon as ready (and in reach of a target, rule 3), whatever the turn;
-  - **fall back** to the economy-first plan if not ready within `iReadyGraceTurns` of the strike becoming possible:
-    15 turns Standard for an early strike, 20 for a late one (more units to upgrade, a longer march). "Possible" is the
-    upgrade tech known, or the core trainable when there's no upgrade (the Huns). The DLL keeps no turn a tech was
-    learned, so War measures it from the turn its build-up opens (it opens once the core can be trained).
-  - `CvStrikePlan::iReadyGraceTurns` is in (`6d93f3b`); nothing reads it yet. War reads how often the window closed
-    before readiness in the expert block and designs the trigger with this.
+- **Readiness and game-state exits, for the next block** (the user, via the lead, about 10:35-10:37pm ET: "because the
+  ai is not a high level player, some of the windows will be hard to hit"; "dont have the ai judge itself based on the
+  window during a game"). The expert block keeps its turns. Next block the AI acts on no turn window. Spec, before code,
+  to design with War:
+  1. **Ready, then declare.** Ready = the upgrade tech known (or the plan has none); core units at `iCoreTarget` (pre-built
+     units the upgrade turns into core count); support at `iSupportTarget`; siege at `iSiegeTarget` when the plan always
+     brings it; gold for the upgrades still to do (`iUpgradeGoldPerUnit` each); 2+ melee that can take a city. Declare
+     as soon as it's ready and a target is in reach (rule 3), whatever the turn.
+  2. **Game-state exits** (any one drops the strike for the economy-first plan, or ends a war that's going nowhere):
+     - **the target walls up** and the plan has no siege: build the siege first (2, as CP does) or retarget to an
+       unwalled city in reach; drop only when neither is possible;
+     - **the target gets the counter**: its visible defenders near the target city outclass the core (best defender
+       strength at least the core's, or a unit type with a bonus against the core's combat class: Spearmen and Pikemen
+       against mounted, for example): retarget, else drop;
+     - **no target in reach**: no major's city within about 8-10 tiles' path of our cities (barbarian camps don't count
+       for the strike, only for the hunting before it): drop;
+     - **the core goes obsolete**: our core unit can no longer be built (its obsolete tech known, or its upgrade path
+       passed it by) before the army is ready: drop, or wait for the next plan if the civ has one;
+     - **the army is lost**: after the declaration, fewer than 2 melee units that can take a city, or core and support
+       below half their targets, with no capture: make peace when offered and drop.
+  3. **Turn fields:** `iOpenTurn`, `iDeclareByTurn`, `iFallbackTurn` and `iReadyGraceTurns` become logged expectations for
+     our analysis only (did the AI hit the experts' pace?); no code reads them for a decision. I'd keep them in the log
+     rather than delete them, since they're the comparison with the expert timings. `iReadyGraceTurns` (`6d93f3b`) goes
+     back out of the plan, as it was a turn limit.
+  4. **Who does what:** War's trigger and exits read the plan's counts, tech, gold and siege; the plan (Personality)
+     keeps per-civ inputs only. If War wants per-civ exit inputs (the core's combat class for the counter check, a
+     smaller army-lost threshold for a civ whose units heal on kills like the Aztec's Jaguars), I add them as plan fields.
 - **Status:** `221fb3e` and the Inca's Catapults (`0356f6b`) merged into `claude/ab-c1` (`03bbc90`); `221fb3e` compiles (CI run 274
   passed); `0356f6b` compiles (CI run 277 passed). Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
