@@ -2635,6 +2635,24 @@ early strike:
 LEAD: the generic rush is an early striker on ai/war b2657046 (32e152c4 + the bill's fallback to the plan's upgrade
 tech). "Ready for the next block" follows on b2657046 when CI is green.
 
+**The walled exit (the lead, 8:46am ET; ab-f939c50 bullyabort21, 14E7F3A0).** The Aztec followed their 12-item list,
+opened BUILDUP at T43 against the city-state Ur, and went OVER at T60 ("target walled, no siege") with 5 land units, 3
+promoted. They returned to normal play: a wonder at T90, a war at T93.
+
+**Coded, ai/war dd375b2a.** In BUILDUP, a walled target with no siege in the plan now goes:
+1. **Re-target** to the nearest other unwalled city within 12 tiles of our capital, a major's or a city-state's. A major
+   must be one we can declare on with no defensive allies to pull in, or one we're already at war with. Logged
+   "Strike: re-target from X (city walled) to Y (city, unwalled, N tiles...)".
+   - The window's target moves with it.
+   - A major becomes the committed conquest target, and the normal flow declares on it. A city-state takes the
+     city-state path.
+2. **Else bring siege,** if the plan allows siege against walls (bSiegeOnlyIfWalled): the siege target becomes the
+   larger of 2 and the plan's. Logged.
+3. **Else OVER.**
+
+LEAD: the walled exit now re-targets, then switches to siege, then goes OVER (ai/war dd375b2a, after b2657046). "Ready
+for the next block" follows on dd375b2a when CI is green.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
