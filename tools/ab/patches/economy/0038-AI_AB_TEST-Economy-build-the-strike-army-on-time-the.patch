@@ -1,0 +1,182 @@
+From 5063e8ecaef2206a1643f829a300989813a2fad7 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 11:10:47 +0000
+Subject: [PATCH] AI_AB_TEST Economy: build the strike army on time (the user:
+ "if they were 4 units short, they need to fix their start")
+
+The expert block's 5 strike-book games had 1-3 land units when the
+build-up opened (T26-40) against plans of 8, and met the plan only at the
+declaration (T63-83). Under EarlyStrike, before the strike (PREP,
+BUILDUP), while the army is short of the plan's core or support count
+(CvPlayer::IsEarlyStrikeArmyShort; empire-wide, in training included):
+- the capital's fill-in is the army (GetEarlyStrikeArmyUnit: the core, or
+  a unit that upgrades into it before the core's tech, e.g. a Warrior for
+  a Spearman-class core, or the support), not CP's choice;
+- the second city and the others train the army first, before their
+  Monument and the normal AI;
+- no building in any city unless it's in danger;
+- no worker beyond one.
+Both keep WarBudget's gold guard (GetAffordableWarUnits(10) >= 1). K stays
+Personality's. On ai/war f9c16cd + patch 0037. Written 6:10am ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ .../CvBuildingProductionAI.cpp                |  5 ++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 80 +++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |  2 +
+ .../CvUnitProductionAI.cpp                    |  4 +
+ 4 files changed, 91 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+index 7ccc1a7..cfc37b4 100644
+--- a/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvBuildingProductionAI.cpp
+@@ -267,6 +267,11 @@ int CvBuildingProductionAI::CheckBuildingBuildSanity(BuildingTypes eBuilding, in
+ 			iBonus += 500;
+ 	}
+ 
++	// AI_AB_TEST candidate (EarlyStrike; the user: "fix their start"): no building while the strike army is short of the
++	// plan, unless the city is in danger
++	if (kPlayer.IsEarlyStrikeArmyShort() && !m_pCity->isInDangerOfFalling() && !m_pCity->isUnderSiege())
++		return SR_STRATEGY;
++
+ 	// AI_AB_TEST candidates (EarlyStrike, LateStrike): no world wonder before the strike (EarlyStrike's PREP and BUILDUP,
+ 	// LateStrike's BUILDUP). The expert block's Persia (13A89116) started Stonehenge at T39 while its book waited
+ 	if (isWorldWonderClass(kBuildingClassInfo) && (kPlayer.IsEarlyStrikeSmallEmpire() || kPlayer.IsLateStrikeSaving()))
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 22cc9e0..b7ae1e3 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33977,6 +33977,60 @@ bool CvPlayer::IsEarlyStrikeCityCapReached() const
+ 	return GetEarlyStrikePlan(kPlan) && getNumCities() >= kPlan.iMaxCities;
+ }
+ 
++/// AI_AB_TEST (EarlyStrike; the user: "if they were 4 units short, they need to fix their start"): before the strike (PREP,
++/// BUILDUP), the army is short of the plan's core or support count (empire-wide, units in training included; the starting
++/// warrior counts toward a warrior-class core). The expert block's strike civs had 1-3 land units when their build-up
++/// opened (T26-40) against plans of 8, and met the plan only at the declaration, 30-50 turns late.
++bool CvPlayer::IsEarlyStrikeArmyShort() const
++{
++	if (!IsEarlyStrikeSmallEmpire())
++		return false;
++	CvEarlyStrikePlan kPlan;
++	if (!GetEarlyStrikePlan(kPlan) || kPlan.eCore == NO_UNITCLASS)
++		return false;
++	CvUnitClassInfo* pkCore = GC.getUnitClassInfo(kPlan.eCore);
++	const int iCoreStart = (pkCore && strcmp(pkCore->GetType(), "UNITCLASS_WARRIOR") == 0) ? 1 : 0;
++	if (getUnitClassCountPlusMaking(kPlan.eCore) < kPlan.iCoreTotal + iCoreStart)
++		return true;
++	return kPlan.eSupport != NO_UNITCLASS && getUnitClassCountPlusMaking(kPlan.eSupport) < kPlan.iSupportTotal;
++}
++
++/// EarlyStrike: the army unit a city trains while the army is short. The core; before the core's tech, a unit that
++/// upgrades into it (a Warrior for a Spearman-class core: Hoplite, Immortal, Pictish Warrior); then the support.
++/// NO_UNIT when none can be trained here
++UnitTypes CvPlayer::GetEarlyStrikeArmyUnit(const CvCity* pCity) const
++{
++	CvEarlyStrikePlan kPlan;
++	if (!pCity || !GetEarlyStrikePlan(kPlan) || kPlan.eCore == NO_UNITCLASS)
++		return NO_UNIT;
++	CvUnitClassInfo* pkCore = GC.getUnitClassInfo(kPlan.eCore);
++	const int iCoreStart = (pkCore && strcmp(pkCore->GetType(), "UNITCLASS_WARRIOR") == 0) ? 1 : 0;
++	const bool bCoreShort = getUnitClassCountPlusMaking(kPlan.eCore) < kPlan.iCoreTotal + iCoreStart;
++	const bool bSupportShort = kPlan.eSupport != NO_UNITCLASS && getUnitClassCountPlusMaking(kPlan.eSupport) < kPlan.iSupportTotal;
++	if (bCoreShort)
++	{
++		const UnitTypes eCore = GetSpecificUnitType(kPlan.eCore);
++		if (eCore != NO_UNIT && pCity->canTrain(eCore))
++			return eCore;
++		// a unit that upgrades into the core, counted as part of it once it does (only while the core can't be trained)
++		for (int iClass = 0; iClass < GC.getNumUnitClassInfos(); iClass++)
++		{
++			const UnitTypes eLower = GetSpecificUnitType((UnitClassTypes)iClass);
++			CvUnitEntry* pkLower = (eLower != NO_UNIT) ? GC.getUnitInfo(eLower) : NULL;
++			if (pkLower && pkLower->GetUpgradeUnitClass(kPlan.eCore) && (pkLower->GetCombat() > 0 || pkLower->GetRangedCombat() > 0) &&
++				pCity->canTrain(eLower))
++				return eLower;
++		}
++	}
++	if (bSupportShort)
++	{
++		const UnitTypes eSupport = GetSpecificUnitType(kPlan.eSupport);
++		if (eSupport != NO_UNIT && pCity->canTrain(eSupport))
++			return eSupport;
++	}
++	return NO_UNIT;
++}
++
+ /// EarlyStrike: units first while a barbarian camp, another major's city or a city-state's is within 8 tiles of the
+ /// capital (as far as we've seen). Once a turn.
+ bool CvPlayer::IsEarlyStrikeTargetInReach() const
+@@ -34589,6 +34643,18 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 			}
+ 		}
+ 	}
++	// AI_AB_TEST candidate (EarlyStrike): the second city and the others train the plan's army first while it's short (the
++	// expert block's second cities built buildings); their Monument and the normal AI come once the counts are met
++	if (!pSteps && !bCapital && IsEarlyStrikeBook() && IsEarlyStrikeArmyShort())
++	{
++		const UnitTypes eArmy = GetEarlyStrikeArmyUnit(pCity);
++		if (eArmy != NO_UNIT && GetEconomicAI()->GetAffordableWarUnits(10) >= 1)
++		{
++			eOrder = ORDER_TRAIN;
++			iData = eArmy;
++			return true;
++		}
++	}
+ 	if (pSteps)
+ 	{
+ 		// EarlyStrike's steps, above
+@@ -34743,6 +34809,20 @@ bool CvPlayer::GetOpeningBookProduction(CvCity* pCity, OrderTypes& eOrder, int&
+ 		}
+ 	}
+ 
++	// AI_AB_TEST candidate (EarlyStrike): when none of the steps can be done now, the capital's fill-in is the army while
++	// it's short, not CP's choice (the expert block's fill-ins were Monuments, Granaries, Barracks and Stonehenge)
++	if (bEarlyStrike && IsEarlyStrikeArmyShort() && GetEconomicAI()->GetAffordableWarUnits(10) >= 1)
++	{
++		const UnitTypes eArmy = GetEarlyStrikeArmyUnit(pCity);
++		if (eArmy != NO_UNIT)
++		{
++			eOrder = ORDER_TRAIN;
++			iData = eArmy;
++			LogOpeningBookSettlerHeld(*this, pCity, szSettlerHeld, GC.getUnitInfo(eArmy)->GetDescription());
++			return true;
++		}
++	}
++
+ 	LogOpeningBookSettlerHeld(*this, pCity, szSettlerHeld, "the normal AI choice");
+ 	return false;
+ }
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index b0c9946..db21205 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -1923,6 +1923,8 @@ public:
+ 	bool IsEarlyStrikeSmallEmpire() const; // AI_AB_TEST Economy, flag EarlyStrike: before the strike (no war with a major, to T90 Standard)
+ 	bool GetEarlyStrikePlan(CvEarlyStrikePlan& kPlan) const; // AI_AB_TEST Economy, flag EarlyStrike: the civ's opening plan
+ 	bool IsEarlyStrikeCityCapReached() const; // AI_AB_TEST Economy, flag EarlyStrike: K cities before the strike
++	bool IsEarlyStrikeArmyShort() const; // AI_AB_TEST Economy, flag EarlyStrike: before the strike, short of the plan's core or support
++	UnitTypes GetEarlyStrikeArmyUnit(const CvCity* pCity) const; // AI_AB_TEST Economy, flag EarlyStrike: the next army unit this city can train
+ 	bool IsEarlyStrikeTargetInReach() const; // AI_AB_TEST Economy, flag EarlyStrike: a barbarian camp or a major's city near the capital
+ 	TechTypes GetEarlyStrikeLuxuryTech() const; // AI_AB_TEST Economy, flag EarlyStrike: the one luxury tech before the upgrade
+ 	bool IsLateStrikeCiv() const; // AI_AB_TEST Economy, flag LateStrike: a warmonger with a late spike and a strike plan
+diff --git a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+index 4f30704..cdd2a30 100644
+--- a/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvUnitProductionAI.cpp
+@@ -221,6 +221,10 @@ int CvUnitProductionAI::CheckUnitBuildSanity(UnitTypes eUnit, bool bForOperation
+ 	// Don't build units in underdeveloped cities
+ 	// AI_AB_TEST: settlers and workers are exempt for the new AI. The Palace doesn't count as a building,
+ 	// so the capital otherwise had to finish two buildings before its first settler or worker.
++	// AI_AB_TEST candidate (EarlyStrike): no worker beyond one while the strike army is short of the plan
++	if (!bFree && pkUnitEntry->GetWorkRate() > 0 && !pkUnitEntry->IsFound() && kPlayer.IsEarlyStrikeArmyShort() &&
++		kPlayer.GetNumUnitsWithUnitAI(UNITAI_WORKER, true) >= 1)
++		return SR_STRATEGY;
+ 	bool bExemptCivilian = kPlayer.UsesNewAI() && (pkUnitEntry->IsFound() || pkUnitEntry->IsFoundAbroad() || pkUnitEntry->GetWorkRate() > 0);
+ 	//AI_AB_TEST (diagnostic flag BigArmy): in the build-up window, until the doubled army is ready, its land combat units skip
+ 	//the window's build caps (young cities, the upkeep guard); test only
+-- 
+2.43.0
+

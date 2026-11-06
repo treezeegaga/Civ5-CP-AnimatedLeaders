@@ -1927,6 +1927,8 @@ checks', and they stop when the counts are met or the strike state leaves BUILDU
 **Measure:** in ab-8f9b7f9's games and the next block's, the army against the plan at the BUILDUP open and at WAR,
 per civ (the same script).
 
+**Status:** coded, patch 0038 on ai/war `f9c16cd` + 0037 (0035 and 0036 are already on ai/war). Not built.
+
 ### Expert block (ab-40203a3): the book side, summary (Economy, Nov 6, 4:49am ET)
 bullygreedy18 finished at 10 pairs (20 games). The table below is per pair; this is the summary for the user.
 
