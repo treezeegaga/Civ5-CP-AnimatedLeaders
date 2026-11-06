@@ -1961,6 +1961,15 @@ next block is ready by morning. The user: "every civ builds to its strengths". P
 LEAD: LateStrike (ai/war 656a7ba9, off) is ready for the block after the expert block; not to merge into the frozen
 block. CI to follow.
 
+**On Economy's book half (ai/war da912386).** Economy's patch 0033 (the late-strike book) defines the same flag; it is
+applied as 6db12aa6.
+- Economy's half: economy first; from 30 turns (Standard) before the window, the spike's tech then the upgrade tech; no
+  hurries or tiles from 15 turns before the window to the declaration.
+- War's half now keys on Economy's CvPlayer::IsLateStrikeCiv, and holds every AI upgrade while Economy saves
+  (IsLateStrikeSaving) until the late strike's army is built. Then it upgrades and declares.
+
+LEAD: LateStrike's two halves are on ai/war da912386 (carries Economy 0033), off, for the block after the expert block.
+
 ### War: the read for the expert block (ab-40203a3, bullyabort18 + bullygreedy18), prepared (Nov 5, about 10:35pm ET)
 `tools/ab/expert_block.py [runs]` (default bullyabort18 bullygreedy18), run from a results worktree with walls.py and
 attack_funnel.py beside it. It was tested on the package block (bullygreedy16 + bullyabort14), where it gives the old
