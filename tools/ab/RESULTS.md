@@ -2520,6 +2520,33 @@ LEAD: ready for the next block: ai/war 2ffdafa1 green. It has:
 The run needs RoleFixes += StrikeList, which is off in the bundle. This replaces ab-8f9b7f9 as the PCs' build. Both PCs
 are stopped, and 2ffdafa1 has 0039 and 0040.
 
+**Read, ab-8f9b7f9's two games (7:30am ET; both PCs stopped after pair 1):**
+
+| game | civ | strike states | BUILDUP army vs plan | WAR army vs plan | result |
+|---|---|---|---|---|---|
+| 1468D9F4 | Japan (late) | PREP T1, BUILDUP T149 | - | T102: 5 land, Longswordsman 0/7, Archer 1/4 (the war wasn't the strike's) | no capture (the STOP game) |
+| 152231C3 | Aztec (early) | PREP T1, BUILDUP T44 (Memphis in reach), WAR T77, OVER T101 (army below half, nothing taken) | T45: 5 land, Warrior-line 4/6, Archer 1/4 | T77: 10 land, 7/6, 3/4 | no capture |
+
+The strike state ran as designed for the Aztec, from target in reach to the plan's army at the declaration, but it failed
+on **upgrade and go**:
+- **Upgrades held.** From T50 the bill was 2 Archers for 110 gold, with about 300 gold in the treasury. The homeland
+  logged "Need gold for Archer upgrade" every turn (that's what it logs when CanUpgradeRightNow is false: War's hold).
+- **Why the hold stayed.** It waited for the full army: WarBudget's 12 on this build, and the plan army wasn't met
+  either.
+- **How the bill hit 0.** At T72 a sneak-attack operation mustered the units outside our territory. The bill counts home
+  units only, so it fell to 0, readiness passed, and it declared at T77 with nothing upgraded. The first upgrade came at
+  T125.
+
+**Hypothesis 7, coded (ai/war, below):** in BUILDUP the hold keeps the gold only until the strike's own upgrade tech
+(the plan's eUpgradeTech, else the window's) is known; then it lifts, and CP's homeland upgrades at home before the
+muster. PREP is unchanged (EarlyStrike holds through the book). Expect "Upgrading unit" lines within a turn or two of the
+upgrade tech, before the declaration.
+
+LEAD (7:30am): reading only, plus a fix. ab-8f9b7f9's Aztec ran the full strike (BUILDUP T44, WAR T77 with 10 of the plan's
+10) but never upgraded: War's hold waited for the full army, and the muster took the units out of our territory first.
+The hold now lifts once the strike's upgrade tech is in (ai/war, CI to follow). It's on top of 2ffdafa1, so the next
+build would take it.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
