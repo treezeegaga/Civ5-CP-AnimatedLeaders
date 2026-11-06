@@ -1,0 +1,1619 @@
+017, Brazil, OP_FOUND_CITY, 1113, Ended: NoTarget; Distance -1; Duration 18
+018, Brazil, OP_FOUND_CITY, 1118, Ended: NoTarget; Distance -1; Duration 19
+019, America, OP_FOUND_CITY, 1127, found target for settler, score 106637 (q50)
+019, America, OP_FOUND_CITY, 1127, Initial stage is recruiting
+019, America, OP_FOUND_CITY, 1127, Found 0 potential units to recruit for operation 1127 at (30:11) with target at (26:10)
+019, America, OP_FOUND_CITY, 1127, Started Army 1128; Units Recruited 1; Max Formation Size 2; Recruiting Units
+019, America, OP_FOUND_CITY, 1127, PRE Recruiting Units for army 1128; Settler 1126 at (30:11) - ETA -1; Open; 
+019, America, OP_FOUND_CITY, 1127, Found 0 potential units to recruit for operation 1127 at (30:11) with target at (26:10)
+019, America, OP_FOUND_CITY, 1127, POST Recruiting Units for army 1128; Settler 1126 at (30:11) - ETA 0; Open; 
+019, Brazil, OP_FOUND_CITY, 1129, Ended: NoTarget; Distance -1; Duration 20
+020, America, OP_FOUND_CITY, 1127, Added Warrior 1132 to slot 1 in army 1128. ETA at (30:11) is 0 
+020, America, OP_FOUND_CITY, 1127, PRE Recruiting Units for army 1128; Settler 1126 at (30:11) - ETA 0; Warrior 1132 at (30:11) - ETA 0; 
+020, America, OP_FOUND_CITY, 1127, Transition to gathering stage
+020, America, OP_FOUND_CITY, 1127, POST Gathering Forces for army 1128; center (30:11); variance (0.25:0.25); free slots 0
+020, Brazil, OP_FOUND_CITY, 1133, found target for settler, score 162833 (q50)
+020, Brazil, OP_FOUND_CITY, 1133, Initial stage is recruiting
+020, Brazil, OP_FOUND_CITY, 1133, Found 0 potential units to recruit for operation 1133 at (21:26) with target at (26:27)
+020, Brazil, OP_FOUND_CITY, 1133, Started Army 1134; Units Recruited 1; Max Formation Size 2; Recruiting Units
+020, Brazil, OP_FOUND_CITY, 1133, PRE Recruiting Units for army 1134; Settler 1108 at (21:26) - ETA -1; Open; 
+020, Brazil, OP_FOUND_CITY, 1133, Found 0 potential units to recruit for operation 1133 at (21:26) with target at (26:27)
+020, Brazil, OP_FOUND_CITY, 1133, POST Recruiting Units for army 1134; Settler 1108 at (21:26) - ETA 0; Open; 
+021, America, OP_FOUND_CITY, 1127, PRE Gathering Forces for army 1128; center (30:11); variance (0.25:0.25); free slots 0
+021, America, OP_FOUND_CITY, 1127, Transition to movement stage
+021, America, OP_FOUND_CITY, 1127, POST Moving To Target with Army 1128; center (29:10); target (26:10); Progress 0 percent
+021, Brazil, OP_FOUND_CITY, 1133, PRE Recruiting Units for army 1134; Settler 1108 at (21:26) - ETA 0; Open; 
+021, Brazil, OP_FOUND_CITY, 1133, Found 0 potential units to recruit for operation 1133 at (21:26) with target at (26:27)
+021, Brazil, OP_FOUND_CITY, 1133, POST Recruiting Units for army 1134; Settler 1108 at (21:26) - ETA 0; Open; 
+022, America, OP_FOUND_CITY, 1127, PRE Moving To Target with Army 1128; center (29:10); target (26:10); Progress 0 percent
+022, America, OP_FOUND_CITY, 1127, POST Moving To Target with Army 1128; center (27:10); target (26:10); Progress 100 percent
+022, Brazil, OP_FOUND_CITY, 1133, PRE Recruiting Units for army 1134; Settler 1108 at (21:26) - ETA 0; Open; 
+022, Brazil, OP_FOUND_CITY, 1133, Found 0 potential units to recruit for operation 1133 at (21:26) with target at (26:27)
+022, Brazil, OP_FOUND_CITY, 1133, POST Recruiting Units for army 1134; Settler 1108 at (21:26) - ETA 0; Open; 
+023, America, OP_FOUND_CITY, 1127, cannot found city at (26:10)
+023, America, OP_FOUND_CITY, 1127, no path to city site (26:10)
+023, America, OP_FOUND_CITY, 1127, found better target for settler, old score 105054 (q50), new score 133875 (q50)
+023, America, OP_FOUND_CITY, 1127, setting new target (25:13)
+023, America, OP_FOUND_CITY, 1127, PRE Moving To Target with Army 1128; center (27:10); target (25:13); Progress 17 percent
+023, America, OP_FOUND_CITY, 1127, POST Moving To Target with Army 1128; center (27:12); target (25:13); Progress 50 percent
+023, Brazil, OP_FOUND_CITY, 1133, PRE Recruiting Units for army 1134; Settler 1108 at (21:26) - ETA 0; Open; 
+023, Brazil, OP_FOUND_CITY, 1133, Found 0 potential units to recruit for operation 1133 at (21:26) with target at (26:27)
+023, Brazil, OP_FOUND_CITY, 1133, POST Recruiting Units for army 1134; Settler 1108 at (21:26) - ETA 0; Open; 
+024, America, OP_FOUND_CITY, 1127, PRE Moving To Target with Army 1128; center (27:12); target (25:13); Progress 50 percent
+024, America, OP_FOUND_CITY, 1127, Transition to target stage
+024, America, OP_FOUND_CITY, 1127, POST At Target
+024, Brazil, OP_FOUND_CITY, 1133, PRE Recruiting Units for army 1134; Settler 1108 at (21:26) - ETA 0; Open; 
+024, Brazil, OP_FOUND_CITY, 1133, Found 1 potential units to recruit for operation 1133 at (21:26) with target at (26:27)
+024, Brazil, OP_FOUND_CITY, 1133, Added Warrior 1144 to slot 1 in army 1134. ETA at (21:26) is 0 
+024, Brazil, OP_FOUND_CITY, 1133, Transition to gathering stage
+024, Brazil, OP_FOUND_CITY, 1133, POST Gathering Forces for army 1134; center (22:26); variance (0.00:0.00); free slots 0
+025, America, OP_FOUND_CITY, 1127, PRE At Target
+025, America, OP_FOUND_CITY, 1127, City founded (New York) at (25:13), plot value 135564, q50
+025, America, OP_FOUND_CITY, 1127, Transition to finished stage
+025, America, OP_FOUND_CITY, 1127, Ended: Success; Distance 6; Duration 6
+025, Korea, OP_FOUND_CITY, 1149, found target for settler, score 121294 (q50)
+025, Korea, OP_FOUND_CITY, 1149, Skip recruiting, start with movement stage
+025, Korea, OP_FOUND_CITY, 1149, Found 1 potential units to recruit for operation 1149 at (31:38) with target at (28:36)
+025, Korea, OP_FOUND_CITY, 1149, Added Warrior 1090 to slot 1 in army 1150. ETA at (31:38) is 0 
+025, Korea, OP_FOUND_CITY, 1149, Started Army 1150; Units Recruited 2; Max Formation Size 2; Moving To Target
+025, Korea, OP_FOUND_CITY, 1149, PRE Moving To Target with Army 1150; center (31:38); target (28:36); Progress 0 percent
+025, Korea, OP_FOUND_CITY, 1149, POST Moving To Target with Army 1150; center (30:36); target (28:36); Progress 40 percent
+025, Brazil, OP_FOUND_CITY, 1133, PRE Gathering Forces for army 1134; center (22:26); variance (0.00:0.00); free slots 0
+025, Brazil, OP_FOUND_CITY, 1133, Transition to movement stage
+025, Brazil, OP_FOUND_CITY, 1133, POST Moving To Target with Army 1134; center (23:26); target (26:27); Progress 0 percent
+026, Korea, OP_FOUND_CITY, 1149, PRE Moving To Target with Army 1150; center (30:36); target (28:36); Progress 40 percent
+026, Korea, OP_FOUND_CITY, 1149, Transition to target stage
+026, Korea, OP_FOUND_CITY, 1149, POST At Target
+026, Morocco, OP_FOUND_CITY, 1160, found target for settler, score 167979 (q50)
+026, Morocco, OP_FOUND_CITY, 1160, Initial stage is recruiting
+026, Morocco, OP_FOUND_CITY, 1160, Found 0 potential units to recruit for operation 1160 at (39:40) with target at (42:37)
+026, Morocco, OP_FOUND_CITY, 1160, Started Army 1161; Units Recruited 1; Max Formation Size 2; Recruiting Units
+026, Morocco, OP_FOUND_CITY, 1160, PRE Recruiting Units for army 1161; Settler 1159 at (39:40) - ETA -1; Open; 
+026, Morocco, OP_FOUND_CITY, 1160, Found 0 potential units to recruit for operation 1160 at (39:40) with target at (42:37)
+026, Morocco, OP_FOUND_CITY, 1160, POST Recruiting Units for army 1161; Settler 1159 at (39:40) - ETA 0; Open; 
+026, Brazil, OP_FOUND_CITY, 1133, PRE Moving To Target with Army 1134; center (23:26); target (26:27); Progress 0 percent
+026, Brazil, OP_FOUND_CITY, 1133, POST Moving To Target with Army 1134; center (23:27); target (26:27); Progress 20 percent
+027, Korea, OP_FOUND_CITY, 1149, PRE At Target
+027, Korea, OP_FOUND_CITY, 1149, City founded (Busan) at (28:36), plot value 130167, q50
+027, Korea, OP_FOUND_CITY, 1149, Transition to finished stage
+027, Korea, OP_FOUND_CITY, 1149, Ended: Success; Distance 5; Duration 2
+027, Ethiopia, OP_FOUND_CITY, 1168, found target for settler, score 104392 (q50)
+027, Ethiopia, OP_FOUND_CITY, 1168, Initial stage is recruiting
+027, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+027, Ethiopia, OP_FOUND_CITY, 1168, Started Army 1169; Units Recruited 1; Max Formation Size 2; Recruiting Units
+027, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA -1; Open; 
+027, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+027, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+027, Morocco, OP_FOUND_CITY, 1160, PRE Recruiting Units for army 1161; Settler 1159 at (39:40) - ETA 0; Open; 
+027, Morocco, OP_FOUND_CITY, 1160, Found 0 potential units to recruit for operation 1160 at (39:40) with target at (42:37)
+027, Morocco, OP_FOUND_CITY, 1160, POST Recruiting Units for army 1161; Settler 1159 at (39:40) - ETA 0; Open; 
+027, Brazil, OP_FOUND_CITY, 1133, found better target for settler, old score 162833 (q50), new score 156471 (q50)
+027, Brazil, OP_FOUND_CITY, 1133, setting new target (25:28)
+027, Brazil, OP_FOUND_CITY, 1133, PRE Moving To Target with Army 1134; center (23:27); target (25:28); Progress 25 percent
+027, Brazil, OP_FOUND_CITY, 1133, POST Moving To Target with Army 1134; center (24:27); target (25:28); Progress 100 percent
+028, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+028, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+028, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+028, Morocco, OP_FOUND_CITY, 1160, PRE Recruiting Units for army 1161; Settler 1159 at (39:40) - ETA 0; Open; 
+028, Morocco, OP_FOUND_CITY, 1160, Found 0 potential units to recruit for operation 1160 at (39:40) with target at (42:37)
+028, Morocco, OP_FOUND_CITY, 1160, POST Recruiting Units for army 1161; Settler 1159 at (39:40) - ETA 0; Open; 
+028, Brazil, OP_FOUND_CITY, 1133, PRE Moving To Target with Army 1134; center (24:27); target (25:28); Progress 100 percent
+028, Brazil, OP_FOUND_CITY, 1133, Transition to target stage
+028, Brazil, OP_FOUND_CITY, 1133, POST At Target
+029, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+029, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+029, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+029, Morocco, OP_FOUND_CITY, 1160, PRE Recruiting Units for army 1161; Settler 1159 at (39:40) - ETA 0; Open; 
+029, Morocco, OP_FOUND_CITY, 1160, Found 0 potential units to recruit for operation 1160 at (39:40) with target at (42:37)
+029, Morocco, OP_FOUND_CITY, 1160, POST Recruiting Units for army 1161; Settler 1159 at (39:40) - ETA 0; Open; 
+029, Brazil, OP_FOUND_CITY, 1133, PRE At Target
+029, Brazil, OP_FOUND_CITY, 1133, City founded (Sao Paulo) at (25:28), plot value 169864, q50
+029, Brazil, OP_FOUND_CITY, 1133, Transition to finished stage
+029, Brazil, OP_FOUND_CITY, 1133, Ended: Success; Distance 4; Duration 9
+030, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+030, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+030, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+030, Babylon, OP_FOUND_CITY, 1188, found target for settler, score 85279 (q50)
+030, Babylon, OP_FOUND_CITY, 1188, Skip recruiting, start with movement stage
+030, Babylon, OP_FOUND_CITY, 1188, Found 0 potential units to recruit for operation 1188 at (17:16) with target at (21:18)
+030, Babylon, OP_FOUND_CITY, 1188, Started Army 1189; Units Recruited 1; Max Formation Size 2; Moving To Target
+030, Babylon, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (17:16); target (21:18); Progress 0 percent
+030, Babylon, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (18:16); target (21:18); Progress 17 percent
+030, Morocco, OP_FOUND_CITY, 1160, PRE Recruiting Units for army 1161; Settler 1159 at (39:40) - ETA 0; Open; 
+030, Morocco, OP_FOUND_CITY, 1160, Found 1 potential units to recruit for operation 1160 at (39:40) with target at (42:37)
+030, Morocco, OP_FOUND_CITY, 1160, Added Warrior 1190 to slot 1 in army 1161. ETA at (39:40) is 0 
+030, Morocco, OP_FOUND_CITY, 1160, Transition to gathering stage
+030, Morocco, OP_FOUND_CITY, 1160, POST Gathering Forces for army 1161; center (39:39); variance (0.00:0.00); free slots 0
+031, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+031, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+031, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+031, Babylon, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (18:16); target (21:18); Progress 17 percent
+031, Babylon, OP_FOUND_CITY, 1188, POST Moving To Target with Army 1189; center (19:17); target (21:18); Progress 50 percent
+031, Morocco, OP_FOUND_CITY, 1160, PRE Gathering Forces for army 1161; center (39:39); variance (0.00:0.00); free slots 0
+031, Morocco, OP_FOUND_CITY, 1160, Transition to movement stage
+031, Morocco, OP_FOUND_CITY, 1160, POST Moving To Target with Army 1161; center (40:38); target (42:37); Progress 0 percent
+032, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+032, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+032, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+032, Babylon, OP_FOUND_CITY, 1188, PRE Moving To Target with Army 1189; center (19:17); target (21:18); Progress 50 percent
+032, Babylon, OP_FOUND_CITY, 1188, Transition to target stage
+032, Babylon, OP_FOUND_CITY, 1188, POST At Target
+032, Morocco, OP_FOUND_CITY, 1160, PRE Moving To Target with Army 1161; center (40:38); target (42:37); Progress 0 percent
+032, Morocco, OP_FOUND_CITY, 1160, POST Moving To Target with Army 1161; center (41:37); target (42:37); Progress 100 percent
+032, The_Zulus, OP_FOUND_CITY, 1195, found target for settler, score 132545 (q50)
+032, The_Zulus, OP_FOUND_CITY, 1195, Skip recruiting, start with movement stage
+032, The_Zulus, OP_FOUND_CITY, 1195, Found 0 potential units to recruit for operation 1195 at (37:17) with target at (40:22)
+032, The_Zulus, OP_FOUND_CITY, 1195, Started Army 1196; Units Recruited 1; Max Formation Size 2; Moving To Target
+032, The_Zulus, OP_FOUND_CITY, 1195, PRE Moving To Target with Army 1196; center (37:17); target (40:22); Progress 0 percent
+032, The_Zulus, OP_FOUND_CITY, 1195, POST Moving To Target with Army 1196; center (38:19); target (40:22); Progress 34 percent
+033, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+033, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+033, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+033, Babylon, OP_FOUND_CITY, 1188, PRE At Target
+033, Babylon, OP_FOUND_CITY, 1188, City founded (Akkad) at (21:18), plot value 85279, q50
+033, Babylon, OP_FOUND_CITY, 1188, Transition to finished stage
+033, Babylon, OP_FOUND_CITY, 1188, Ended: Success; Distance 6; Duration 3
+033, Morocco, OP_FOUND_CITY, 1160, PRE Moving To Target with Army 1161; center (41:37); target (42:37); Progress 100 percent
+033, Morocco, OP_FOUND_CITY, 1160, Transition to target stage
+033, Morocco, OP_FOUND_CITY, 1160, City founded (Rabat) at (42:37), plot value 167979, q50
+033, Morocco, OP_FOUND_CITY, 1160, Transition to finished stage
+033, Morocco, OP_FOUND_CITY, 1160, POST Completed
+033, The_Zulus, OP_FOUND_CITY, 1195, PRE Moving To Target with Army 1196; center (38:19); target (40:22); Progress 34 percent
+033, The_Zulus, OP_FOUND_CITY, 1195, POST Moving To Target with Army 1196; center (39:21); target (40:22); Progress 100 percent
+034, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+034, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+034, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+034, Morocco, OP_FOUND_CITY, 1160, Ended: Success; Distance 4; Duration 8
+034, The_Zulus, OP_FOUND_CITY, 1195, PRE Moving To Target with Army 1196; center (39:21); target (40:22); Progress 100 percent
+034, The_Zulus, OP_FOUND_CITY, 1195, Transition to target stage
+034, The_Zulus, OP_FOUND_CITY, 1195, City founded (Umgungundlovu) at (40:22), plot value 132545, q50
+034, The_Zulus, OP_FOUND_CITY, 1195, Transition to finished stage
+034, The_Zulus, OP_FOUND_CITY, 1195, POST Completed
+035, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+035, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+035, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+035, Arabia, OP_FOUND_CITY, 1210, found target for settler, score 60044 (q10)
+035, Arabia, OP_FOUND_CITY, 1210, Initial stage is recruiting
+035, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (51:32)
+035, Arabia, OP_FOUND_CITY, 1210, Started Army 1211; Units Recruited 1; Max Formation Size 2; Recruiting Units
+035, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA -1; Open; 
+035, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (51:32)
+035, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+035, The_Zulus, OP_FOUND_CITY, 1195, Ended: Success; Distance 6; Duration 3
+036, Korea, OP_FOUND_CITY, 1216, found target for settler, score 96792 (q50)
+036, Korea, OP_FOUND_CITY, 1216, Initial stage is recruiting
+036, Korea, OP_FOUND_CITY, 1216, Found 1 potential units to recruit for operation 1216 at (31:38) with target at (34:36)
+036, Korea, OP_FOUND_CITY, 1216, Added Warrior 1090 to slot 1 in army 1217. ETA at (31:38) is 0 
+036, Korea, OP_FOUND_CITY, 1216, Transition to gathering stage
+036, Korea, OP_FOUND_CITY, 1216, Started Army 1217; Units Recruited 2; Max Formation Size 2; Gathering Forces
+036, Korea, OP_FOUND_CITY, 1216, PRE Gathering Forces for army 1217; center (31:38); variance (2.25:1.00); free slots 0
+036, Korea, OP_FOUND_CITY, 1216, Transition to movement stage
+036, Korea, OP_FOUND_CITY, 1216, POST Moving To Target with Army 1217; center (31:38); target (34:36); Progress 0 percent
+036, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+036, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+036, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+036, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+036, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (51:32)
+036, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+037, Korea, OP_FOUND_CITY, 1216, PRE Moving To Target with Army 1217; center (31:38); target (34:36); Progress 0 percent
+037, Korea, OP_FOUND_CITY, 1216, POST Moving To Target with Army 1217; center (32:36); target (34:36); Progress 20 percent
+037, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+037, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+037, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+037, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+037, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (51:32)
+037, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+037, The_Zulus, OP_FOUND_CITY, 1221, found target for settler, score 127333 (q50)
+037, The_Zulus, OP_FOUND_CITY, 1221, Initial stage is recruiting
+037, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+037, The_Zulus, OP_FOUND_CITY, 1221, Started Army 1222; Units Recruited 1; Max Formation Size 2; Recruiting Units
+037, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA -1; Open; 
+037, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+037, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+038, Korea, OP_FOUND_CITY, 1216, PRE Moving To Target with Army 1217; center (32:36); target (34:36); Progress 20 percent
+038, Korea, OP_FOUND_CITY, 1216, POST Moving To Target with Army 1217; center (33:35); target (34:36); Progress 100 percent
+038, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+038, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+038, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+038, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+038, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (51:32)
+038, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+038, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+038, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+038, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+039, Korea, OP_FOUND_CITY, 1216, PRE Moving To Target with Army 1217; center (33:35); target (34:36); Progress 100 percent
+039, Korea, OP_FOUND_CITY, 1216, Transition to target stage
+039, Korea, OP_FOUND_CITY, 1216, City founded (Jeonju) at (34:36), plot value 96792, q50
+039, Korea, OP_FOUND_CITY, 1216, Transition to finished stage
+039, Korea, OP_FOUND_CITY, 1216, POST Completed
+039, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+039, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+039, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+039, Arabia, OP_FOUND_CITY, 1210, found better target for settler, old score 60044 (q10), new score 64928 (q19)
+039, Arabia, OP_FOUND_CITY, 1210, setting new target (48:29)
+039, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+039, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (48:29)
+039, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+039, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+039, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+039, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+040, Korea, OP_FOUND_CITY, 1216, Ended: Success; Distance 5; Duration 4
+040, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+040, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+040, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+040, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+040, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (48:29)
+040, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+040, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+040, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+040, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+041, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+041, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+041, Ethiopia, OP_FOUND_CITY, 1168, POST Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+041, Arabia, OP_FOUND_CITY, 1210, found better target for settler, old score 64928 (q19), new score 62037 (q14)
+041, Arabia, OP_FOUND_CITY, 1210, setting new target (50:31)
+041, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+041, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (50:31)
+041, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+041, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+041, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+041, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+042, Ethiopia, OP_FOUND_CITY, 1168, PRE Recruiting Units for army 1169; Settler 1167 at (49:16) - ETA 0; Open; 
+042, Ethiopia, OP_FOUND_CITY, 1168, Found 0 potential units to recruit for operation 1168 at (49:16) with target at (51:19)
+042, Ethiopia, OP_FOUND_CITY, 1168, No escort yet and the trip looks safe, going alone
+042, Ethiopia, OP_FOUND_CITY, 1168, Transition to gathering stage
+042, Ethiopia, OP_FOUND_CITY, 1168, Transition to movement stage
+042, Ethiopia, OP_FOUND_CITY, 1168, POST Moving To Target with Army 1169; center (49:16); target (51:19); Progress 0 percent
+042, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+042, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (50:31)
+042, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+042, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+042, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+042, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+043, Ethiopia, OP_FOUND_CITY, 1168, PRE Moving To Target with Army 1169; center (49:16); target (51:19); Progress 0 percent
+043, Ethiopia, OP_FOUND_CITY, 1168, Added Warrior 1006 to slot 1 in army 1169. ETA at (49:17) is 0 
+043, Ethiopia, OP_FOUND_CITY, 1168, POST Moving To Target with Army 1169; center (49:17); target (51:19); Progress 20 percent
+043, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+043, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (50:31)
+043, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+043, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+043, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+043, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+044, Ethiopia, OP_FOUND_CITY, 1168, PRE Moving To Target with Army 1169; center (50:17); target (51:19); Progress 40 percent
+044, Ethiopia, OP_FOUND_CITY, 1168, POST Moving To Target with Army 1169; center (50:18); target (51:19); Progress 40 percent
+044, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+044, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (50:31)
+044, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+044, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+044, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+044, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+045, Ethiopia, OP_FOUND_CITY, 1168, PRE Moving To Target with Army 1169; center (50:18); target (51:19); Progress 40 percent
+045, Ethiopia, OP_FOUND_CITY, 1168, Transition to target stage
+045, Ethiopia, OP_FOUND_CITY, 1168, POST At Target
+045, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+045, Arabia, OP_FOUND_CITY, 1210, Found 0 potential units to recruit for operation 1210 at (46:33) with target at (50:31)
+045, Arabia, OP_FOUND_CITY, 1210, POST Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+045, The_Zulus, OP_FOUND_CITY, 1277, found target for settler, score 119296 (q50)
+045, The_Zulus, OP_FOUND_CITY, 1277, Initial stage is recruiting
+045, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+045, The_Zulus, OP_FOUND_CITY, 1277, Started Army 1278; Units Recruited 1; Max Formation Size 2; Recruiting Units
+045, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+045, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+045, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+045, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA -1; Open; 
+045, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+045, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+046, Ethiopia, OP_FOUND_CITY, 1168, PRE At Target
+046, Ethiopia, OP_FOUND_CITY, 1168, City founded (Harar) at (51:19), plot value 113485, q50
+046, Ethiopia, OP_FOUND_CITY, 1168, Transition to finished stage
+046, Ethiopia, OP_FOUND_CITY, 1168, Ended: Success; Distance 5; Duration 19
+046, Arabia, OP_FOUND_CITY, 1210, PRE Recruiting Units for army 1211; Settler 1209 at (46:33) - ETA 0; Open; 
+046, Arabia, OP_FOUND_CITY, 1210, Found 1 potential units to recruit for operation 1210 at (46:33) with target at (50:31)
+046, Arabia, OP_FOUND_CITY, 1210, Added Warrior 1267 to slot 1 in army 1211. ETA at (46:33) is 0 
+046, Arabia, OP_FOUND_CITY, 1210, Transition to gathering stage
+046, Arabia, OP_FOUND_CITY, 1210, POST Gathering Forces for army 1211; center (48:32); variance (1.00:0.25); free slots 0
+046, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+046, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+046, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+046, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+046, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+046, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+047, Arabia, OP_FOUND_CITY, 1210, PRE Gathering Forces for army 1211; center (48:32); variance (1.00:0.25); free slots 0
+047, Arabia, OP_FOUND_CITY, 1210, Transition to movement stage
+047, Arabia, OP_FOUND_CITY, 1210, POST Moving To Target with Army 1211; center (46:33); target (50:31); Progress 0 percent
+047, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+047, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+047, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+047, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+047, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+047, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+048, Arabia, OP_FOUND_CITY, 1210, PRE Moving To Target with Army 1211; center (46:33); target (50:31); Progress 0 percent
+048, Arabia, OP_FOUND_CITY, 1210, POST Moving To Target with Army 1211; center (48:32); target (50:31); Progress 34 percent
+048, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+048, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+048, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+048, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+048, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+048, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+049, Arabia, OP_FOUND_CITY, 1210, PRE Moving To Target with Army 1211; center (48:32); target (50:31); Progress 34 percent
+049, Arabia, OP_FOUND_CITY, 1210, POST Moving To Target with Army 1211; center (48:33); target (50:31); Progress 34 percent
+049, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+049, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+049, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+049, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+049, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+049, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+050, Arabia, OP_FOUND_CITY, 1210, PRE Moving To Target with Army 1211; center (48:33); target (50:31); Progress 34 percent
+050, Arabia, OP_FOUND_CITY, 1210, cannot found city at (50:31)
+050, Arabia, OP_FOUND_CITY, 1210, no path to city site (50:31)
+050, Arabia, OP_FOUND_CITY, 1210, found better target for settler, old score 62037 (q14), new score 60044 (q10)
+050, Arabia, OP_FOUND_CITY, 1210, setting new target (51:32)
+050, Arabia, OP_FOUND_CITY, 1210, POST Moving To Target with Army 1211; center (49:33); target (51:32); Progress 50 percent
+050, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+050, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+050, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+050, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+050, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+050, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+051, Arabia, OP_FOUND_CITY, 1210, PRE Moving To Target with Army 1211; center (49:33); target (51:32); Progress 50 percent
+051, Arabia, OP_FOUND_CITY, 1210, POST Moving To Target with Army 1211; center (48:33); target (51:32); Progress 34 percent
+051, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+051, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+051, The_Zulus, OP_FOUND_CITY, 1221, POST Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+051, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+051, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+051, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+052, Arabia, OP_FOUND_CITY, 1210, PRE Moving To Target with Army 1211; center (48:33); target (51:32); Progress 34 percent
+052, Arabia, OP_FOUND_CITY, 1210, POST Moving To Target with Army 1211; center (48:32); target (51:32); Progress 34 percent
+052, The_Zulus, OP_FOUND_CITY, 1221, PRE Recruiting Units for army 1222; Settler 1220 at (37:17) - ETA 0; Open; 
+052, The_Zulus, OP_FOUND_CITY, 1221, Found 0 potential units to recruit for operation 1221 at (37:17) with target at (34:14)
+052, The_Zulus, OP_FOUND_CITY, 1221, No escort yet and the trip looks safe, going alone
+052, The_Zulus, OP_FOUND_CITY, 1221, Transition to gathering stage
+052, The_Zulus, OP_FOUND_CITY, 1221, Transition to movement stage
+052, The_Zulus, OP_FOUND_CITY, 1221, POST Moving To Target with Army 1222; center (37:17); target (34:14); Progress 0 percent
+052, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+052, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+052, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+053, Arabia, OP_FOUND_CITY, 1210, PRE Moving To Target with Army 1211; center (48:32); target (51:32); Progress 34 percent
+053, Arabia, OP_FOUND_CITY, 1210, POST Moving To Target with Army 1211; center (48:33); target (51:32); Progress 34 percent
+053, The_Zulus, OP_FOUND_CITY, 1221, PRE Moving To Target with Army 1222; center (37:17); target (34:14); Progress 0 percent
+053, The_Zulus, OP_FOUND_CITY, 1221, POST Moving To Target with Army 1222; center (37:16); target (34:14); Progress 17 percent
+053, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+053, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+053, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+054, Arabia, OP_FOUND_CITY, 1210, PRE Moving To Target with Army 1211; center (48:33); target (51:32); Progress 34 percent
+054, Arabia, OP_FOUND_CITY, 1210, POST Moving To Target with Army 1211; center (49:32); target (51:32); Progress 50 percent
+054, The_Zulus, OP_FOUND_CITY, 1221, PRE Moving To Target with Army 1222; center (37:16); target (34:14); Progress 17 percent
+054, The_Zulus, OP_FOUND_CITY, 1221, POST Moving To Target with Army 1222; center (35:16); target (34:14); Progress 50 percent
+054, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+054, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+054, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+055, Arabia, OP_FOUND_CITY, 1210, PRE Moving To Target with Army 1211; center (49:32); target (51:32); Progress 50 percent
+055, Arabia, OP_FOUND_CITY, 1210, POST Moving To Target with Army 1211; center (49:31); target (51:32); Progress 50 percent
+055, The_Zulus, OP_FOUND_CITY, 1221, PRE Moving To Target with Army 1222; center (35:16); target (34:14); Progress 50 percent
+055, The_Zulus, OP_FOUND_CITY, 1221, Transition to target stage
+055, The_Zulus, OP_FOUND_CITY, 1221, POST At Target
+055, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+055, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+055, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+056, Arabia, OP_FOUND_CITY, 1210, cannot found city at (51:32)
+056, Arabia, OP_FOUND_CITY, 1210, no path to city site (51:32)
+056, Arabia, OP_FOUND_CITY, 1210, found better target for settler, old score 60044 (q10), new score 62037 (q14)
+056, Arabia, OP_FOUND_CITY, 1210, setting new target (50:31)
+056, Arabia, OP_FOUND_CITY, 1210, PRE Moving To Target with Army 1211; center (49:31); target (50:31); Progress 100 percent
+056, Arabia, OP_FOUND_CITY, 1210, Transition to target stage
+056, Arabia, OP_FOUND_CITY, 1210, POST At Target
+056, The_Zulus, OP_FOUND_CITY, 1221, PRE At Target
+056, The_Zulus, OP_FOUND_CITY, 1221, City founded (Nobamba) at (34:14), plot value 152607, q50
+056, The_Zulus, OP_FOUND_CITY, 1221, Transition to finished stage
+056, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+056, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (33:18)
+056, The_Zulus, OP_FOUND_CITY, 1277, found better target for settler, old score 119296 (q50), new score 127560 (q50)
+056, The_Zulus, OP_FOUND_CITY, 1277, setting new target (30:17)
+056, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+056, The_Zulus, OP_FOUND_CITY, 1221, Ended: Success; Distance 6; Duration 19
+057, Arabia, OP_FOUND_CITY, 1210, PRE At Target
+057, Arabia, OP_FOUND_CITY, 1210, City founded (Medina) at (50:31), plot value 62037, q14
+057, Arabia, OP_FOUND_CITY, 1210, Transition to finished stage
+057, Arabia, OP_FOUND_CITY, 1210, Ended: Success; Distance 6; Duration 22
+057, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+057, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (30:17)
+057, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+058, Ethiopia, OP_FOUND_CITY, 1351, found target for settler, score 85383 (q50)
+058, Ethiopia, OP_FOUND_CITY, 1351, Initial stage is recruiting
+058, Ethiopia, OP_FOUND_CITY, 1351, Found 1 potential units to recruit for operation 1351 at (49:16) with target at (44:17)
+058, Ethiopia, OP_FOUND_CITY, 1351, Added Warrior 1321 to slot 1 in army 1352. ETA at (49:16) is 0 
+058, Ethiopia, OP_FOUND_CITY, 1351, Transition to gathering stage
+058, Ethiopia, OP_FOUND_CITY, 1351, Transition to movement stage
+058, Ethiopia, OP_FOUND_CITY, 1351, Started Army 1352; Units Recruited 2; Max Formation Size 2; Moving To Target
+058, Ethiopia, OP_FOUND_CITY, 1351, PRE Moving To Target with Army 1352; center (49:16); target (44:17); Progress 0 percent
+058, Ethiopia, OP_FOUND_CITY, 1351, POST Moving To Target with Army 1352; center (47:16); target (44:17); Progress 34 percent
+058, Babylon, OP_FOUND_CITY, 1354, found target for settler, score 64000 (q17)
+058, Babylon, OP_FOUND_CITY, 1354, Initial stage is recruiting
+058, Babylon, OP_FOUND_CITY, 1354, Found 1 potential units to recruit for operation 1354 at (17:16) with target at (13:19)
+058, Babylon, OP_FOUND_CITY, 1354, Added Warrior 1239 to slot 1 in army 1355. ETA at (17:16) is 0 
+058, Babylon, OP_FOUND_CITY, 1354, Transition to gathering stage
+058, Babylon, OP_FOUND_CITY, 1354, Transition to movement stage
+058, Babylon, OP_FOUND_CITY, 1354, Started Army 1355; Units Recruited 2; Max Formation Size 2; Moving To Target
+058, Babylon, OP_FOUND_CITY, 1354, PRE Moving To Target with Army 1355; center (17:16); target (13:19); Progress 0 percent
+058, Babylon, OP_FOUND_CITY, 1354, POST Moving To Target with Army 1355; center (17:18); target (13:19); Progress 17 percent
+058, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+058, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (30:17)
+058, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+059, Ethiopia, OP_FOUND_CITY, 1351, PRE Moving To Target with Army 1352; center (47:16); target (44:17); Progress 34 percent
+059, Ethiopia, OP_FOUND_CITY, 1351, POST Moving To Target with Army 1352; center (45:17); target (44:17); Progress 100 percent
+059, Babylon, OP_FOUND_CITY, 1354, PRE Moving To Target with Army 1355; center (17:18); target (13:19); Progress 17 percent
+059, Babylon, OP_FOUND_CITY, 1354, POST Moving To Target with Army 1355; center (16:18); target (13:19); Progress 34 percent
+059, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+059, The_Zulus, OP_FOUND_CITY, 1277, Found 0 potential units to recruit for operation 1277 at (37:17) with target at (30:17)
+059, The_Zulus, OP_FOUND_CITY, 1277, POST Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+060, Ethiopia, OP_FOUND_CITY, 1351, PRE Moving To Target with Army 1352; center (45:17); target (44:17); Progress 100 percent
+060, Ethiopia, OP_FOUND_CITY, 1351, Transition to target stage
+060, Ethiopia, OP_FOUND_CITY, 1351, POST At Target
+060, Babylon, OP_FOUND_CITY, 1354, PRE Moving To Target with Army 1355; center (16:18); target (13:19); Progress 34 percent
+060, Babylon, OP_FOUND_CITY, 1354, POST Moving To Target with Army 1355; center (14:18); target (13:19); Progress 100 percent
+060, The_Zulus, OP_FOUND_CITY, 1277, PRE Recruiting Units for army 1278; Settler 1276 at (37:17) - ETA 0; Open; 
+060, The_Zulus, OP_FOUND_CITY, 1277, Found 1 potential units to recruit for operation 1277 at (37:17) with target at (30:17)
+060, The_Zulus, OP_FOUND_CITY, 1277, Added Spearman 1379 to slot 1 in army 1278. ETA at (37:17) is 0 
+060, The_Zulus, OP_FOUND_CITY, 1277, Added Composite Bowman 1368 to slot 1 in army 1278. ETA at (37:17) is 0 
+060, The_Zulus, OP_FOUND_CITY, 1277, Transition to gathering stage
+060, The_Zulus, OP_FOUND_CITY, 1277, Transition to movement stage
+060, The_Zulus, OP_FOUND_CITY, 1277, POST Moving To Target with Army 1278; center (37:17); target (30:17); Progress 0 percent
+061, Ethiopia, OP_FOUND_CITY, 1351, PRE At Target
+061, Ethiopia, OP_FOUND_CITY, 1351, City founded (Adwa) at (44:17), plot value 77012, q41
+061, Ethiopia, OP_FOUND_CITY, 1351, Transition to finished stage
+061, Ethiopia, OP_FOUND_CITY, 1351, Ended: Success; Distance 6; Duration 3
+061, Babylon, OP_FOUND_CITY, 1354, PRE Moving To Target with Army 1355; center (14:18); target (13:19); Progress 100 percent
+061, Babylon, OP_FOUND_CITY, 1354, Transition to target stage
+061, Babylon, OP_FOUND_CITY, 1354, City founded (Dur-Kurigalzu) at (13:19), plot value 61180, q12
+061, Babylon, OP_FOUND_CITY, 1354, Transition to finished stage
+061, Babylon, OP_FOUND_CITY, 1354, POST Completed
+061, The_Zulus, OP_FOUND_CITY, 1390, found target for settler, score 102693 (q50)
+061, The_Zulus, OP_FOUND_CITY, 1390, Initial stage is recruiting
+061, The_Zulus, OP_FOUND_CITY, 1390, Found 1 potential units to recruit for operation 1390 at (37:17) with target at (41:14)
+061, The_Zulus, OP_FOUND_CITY, 1390, Added Spearman 1379 to slot 1 in army 1391. ETA at (37:17) is 0 
+061, The_Zulus, OP_FOUND_CITY, 1390, Transition to gathering stage
+061, The_Zulus, OP_FOUND_CITY, 1390, Transition to movement stage
+061, The_Zulus, OP_FOUND_CITY, 1390, Started Army 1391; Units Recruited 2; Max Formation Size 2; Moving To Target
+061, The_Zulus, OP_FOUND_CITY, 1277, PRE Moving To Target with Army 1278; center (37:17); target (30:17); Progress 0 percent
+061, The_Zulus, OP_FOUND_CITY, 1277, POST Moving To Target with Army 1278; center (38:16); target (30:17); Progress 0 percent
+061, The_Zulus, OP_FOUND_CITY, 1390, PRE Moving To Target with Army 1391; center (37:17); target (41:14); Progress 0 percent
+061, The_Zulus, OP_FOUND_CITY, 1390, POST Moving To Target with Army 1391; center (37:17); target (41:14); Progress 0 percent
+062, Babylon, OP_FOUND_CITY, 1354, Ended: Success; Distance 6; Duration 4
+062, The_Zulus, OP_FOUND_CITY, 1277, PRE Moving To Target with Army 1278; center (37:16); target (30:17); Progress 12 percent
+062, The_Zulus, OP_FOUND_CITY, 1277, POST Moving To Target with Army 1278; center (35:15); target (30:17); Progress 23 percent
+062, The_Zulus, OP_FOUND_CITY, 1390, PRE Moving To Target with Army 1391; center (37:17); target (41:14); Progress 0 percent
+062, The_Zulus, OP_FOUND_CITY, 1390, POST Moving To Target with Army 1391; center (38:16); target (41:14); Progress 17 percent
+063, Korea, OP_RAPID_RESPONSE, 1410, Initial stage is recruiting
+063, Korea, OP_RAPID_RESPONSE, 1410, Found 1 potential units to recruit for operation 1410 at (31:38) with target at (31:38)
+063, Korea, OP_RAPID_RESPONSE, 1410, Added Warrior 1090 to slot 0 in army 1411. ETA at (31:38) is 0 
+063, Korea, OP_RAPID_RESPONSE, 1410, Started Army 1411; Units Recruited 1; Max Formation Size 4; Recruiting Units
+063, Korea, OP_RAPID_RESPONSE, 1410, Added Spearman 1413 to slot 1 in army 1411. ETA at (31:38) is 0 
+063, Korea, OP_RAPID_RESPONSE, 1410, Transition to gathering stage
+063, Korea, OP_RAPID_RESPONSE, 1410, PRE Gathering Forces for army 1411; center (34:36); variance (2.25:1.00); free slots 2
+063, Korea, OP_RAPID_RESPONSE, 1410, Transition to movement stage
+063, Korea, OP_RAPID_RESPONSE, 1410, POST Moving To Target with Army 1411; center (31:38); target (31:38); Progress 100 percent
+063, The_Zulus, OP_FOUND_CITY, 1277, PRE Moving To Target with Army 1278; center (35:15); target (30:17); Progress 23 percent
+063, The_Zulus, OP_FOUND_CITY, 1277, POST Moving To Target with Army 1278; center (33:15); target (30:17); Progress 45 percent
+063, The_Zulus, OP_FOUND_CITY, 1390, PRE Moving To Target with Army 1391; center (38:16); target (41:14); Progress 17 percent
+063, The_Zulus, OP_FOUND_CITY, 1390, POST Moving To Target with Army 1391; center (38:15); target (41:14); Progress 34 percent
+064, Korea, OP_RAPID_RESPONSE, 1410, PRE Moving To Target with Army 1411; center (31:38); target (31:38); Progress 100 percent
+064, Korea, OP_RAPID_RESPONSE, 1410, Transition to finished stage; unit distance near 1; far 3
+064, Korea, OP_RAPID_RESPONSE, 1410, POST Completed
+064, The_Zulus, OP_FOUND_CITY, 1277, PRE Moving To Target with Army 1278; center (33:15); target (30:17); Progress 45 percent
+064, The_Zulus, OP_FOUND_CITY, 1277, POST Moving To Target with Army 1278; center (32:16); target (30:17); Progress 67 percent
+064, The_Zulus, OP_FOUND_CITY, 1390, PRE Moving To Target with Army 1391; center (38:15); target (41:14); Progress 34 percent
+064, The_Zulus, OP_FOUND_CITY, 1390, POST Moving To Target with Army 1391; center (40:14); target (41:14); Progress 100 percent
+065, Korea, OP_RAPID_RESPONSE, 1410, Ended: Success; Distance 1; Duration 2
+065, The_Zulus, OP_FOUND_CITY, 1277, PRE Moving To Target with Army 1278; center (32:16); target (30:17); Progress 67 percent
+065, The_Zulus, OP_FOUND_CITY, 1277, POST Moving To Target with Army 1278; center (31:17); target (30:17); Progress 100 percent
+065, The_Zulus, OP_FOUND_CITY, 1390, PRE Moving To Target with Army 1391; center (40:14); target (41:14); Progress 100 percent
+065, The_Zulus, OP_FOUND_CITY, 1390, Transition to target stage
+065, The_Zulus, OP_FOUND_CITY, 1390, City founded (Bulawayo) at (41:14), plot value 99302, q50
+065, The_Zulus, OP_FOUND_CITY, 1390, Transition to finished stage
+065, The_Zulus, OP_FOUND_CITY, 1390, POST Completed
+066, Ethiopia, OP_FOUND_CITY, 1443, found target for settler, score 87395 (q50)
+066, Ethiopia, OP_FOUND_CITY, 1443, Initial stage is recruiting
+066, Ethiopia, OP_FOUND_CITY, 1443, Found 0 potential units to recruit for operation 1443 at (49:16) with target at (53:24)
+066, Ethiopia, OP_FOUND_CITY, 1443, Started Army 1444; Units Recruited 1; Max Formation Size 2; Recruiting Units
+066, Ethiopia, OP_FOUND_CITY, 1443, PRE Recruiting Units for army 1444; Settler 1432 at (49:16) - ETA -1; Open; 
+066, Ethiopia, OP_FOUND_CITY, 1443, Found 0 potential units to recruit for operation 1443 at (49:16) with target at (53:24)
+066, Ethiopia, OP_FOUND_CITY, 1443, POST Recruiting Units for army 1444; Settler 1432 at (49:16) - ETA 0; Open; 
+066, Brazil, OP_FOUND_CITY, 1449, found target for settler, score 75550 (q39)
+066, Brazil, OP_FOUND_CITY, 1449, Initial stage is recruiting
+066, Brazil, OP_FOUND_CITY, 1449, Found 0 potential units to recruit for operation 1449 at (21:26) with target at (27:31)
+066, Brazil, OP_FOUND_CITY, 1449, Started Army 1450; Units Recruited 1; Max Formation Size 2; Recruiting Units
+066, Brazil, OP_FOUND_CITY, 1449, PRE Recruiting Units for army 1450; Settler 1448 at (21:26) - ETA -1; Open; 
+066, Brazil, OP_FOUND_CITY, 1449, Found 0 potential units to recruit for operation 1449 at (21:26) with target at (27:31)
+066, Brazil, OP_FOUND_CITY, 1449, POST Recruiting Units for army 1450; Settler 1448 at (21:26) - ETA 0; Open; 
+066, The_Zulus, OP_FOUND_CITY, 1277, cannot found city at (30:17)
+066, The_Zulus, OP_FOUND_CITY, 1277, no path to city site (30:17)
+066, The_Zulus, OP_FOUND_CITY, 1277, found better target for settler, old score 121117 (q50), new score 101450 (q50)
+066, The_Zulus, OP_FOUND_CITY, 1277, setting new target (31:17)
+066, The_Zulus, OP_FOUND_CITY, 1390, Ended: Success; Distance 6; Duration 5
+066, The_Zulus, OP_FOUND_CITY, 1277, PRE Moving To Target with Army 1278; center (31:17); target (31:17); Progress 100 percent
+066, The_Zulus, OP_FOUND_CITY, 1277, Transition to target stage
+066, The_Zulus, OP_FOUND_CITY, 1277, City founded (Kwadukuza) at (31:17), plot value 101450, q50
+066, The_Zulus, OP_FOUND_CITY, 1277, Transition to finished stage
+066, The_Zulus, OP_FOUND_CITY, 1277, Ended: Success; Distance 8; Duration 21
+067, Ethiopia, OP_FOUND_CITY, 1443, PRE Recruiting Units for army 1444; Settler 1432 at (49:16) - ETA 0; Open; 
+067, Ethiopia, OP_FOUND_CITY, 1443, Found 1 potential units to recruit for operation 1443 at (49:16) with target at (53:24)
+067, Ethiopia, OP_FOUND_CITY, 1443, Added Warrior 1321 to slot 1 in army 1444. ETA at (49:16) is 1 
+067, Ethiopia, OP_FOUND_CITY, 1443, Transition to gathering stage
+067, Ethiopia, OP_FOUND_CITY, 1443, POST Gathering Forces for army 1444; center (49:16); variance (4.00:0.25); free slots 0
+067, Brazil, OP_FOUND_CITY, 1449, PRE Recruiting Units for army 1450; Settler 1448 at (21:26) - ETA 0; Open; 
+067, Brazil, OP_FOUND_CITY, 1449, Found 1 potential units to recruit for operation 1449 at (21:26) with target at (27:31)
+067, Brazil, OP_FOUND_CITY, 1449, Added Warrior 1458 to slot 1 in army 1450. ETA at (21:26) is 0 
+067, Brazil, OP_FOUND_CITY, 1449, Transition to gathering stage
+067, Brazil, OP_FOUND_CITY, 1449, POST Gathering Forces for army 1450; center (22:26); variance (0.00:0.00); free slots 0
+068, Ethiopia, OP_FOUND_CITY, 1443, PRE Gathering Forces for army 1444; center (49:16); variance (4.00:0.25); free slots 0
+068, Ethiopia, OP_FOUND_CITY, 1443, Transition to movement stage
+068, Ethiopia, OP_FOUND_CITY, 1443, POST Moving To Target with Army 1444; center (49:16); target (53:24); Progress 0 percent
+068, Brazil, OP_FOUND_CITY, 1449, found better target for settler, old score 58735 (q8), new score 70043 (q29)
+068, Brazil, OP_FOUND_CITY, 1449, setting new target (29:27)
+068, Brazil, OP_FOUND_CITY, 1449, PRE Gathering Forces for army 1450; center (22:26); variance (0.00:0.00); free slots 0
+068, Brazil, OP_FOUND_CITY, 1449, Transition to movement stage
+068, Brazil, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (23:26); target (29:27); Progress 0 percent
+069, Ethiopia, OP_FOUND_CITY, 1443, PRE Moving To Target with Army 1444; center (49:16); target (53:24); Progress 0 percent
+069, Ethiopia, OP_FOUND_CITY, 1443, POST Moving To Target with Army 1444; center (49:16); target (53:24); Progress 0 percent
+069, Brazil, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (23:26); target (29:27); Progress 0 percent
+069, Brazil, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (23:27); target (29:27); Progress 13 percent
+070, America, OP_FOUND_CITY, 1481, found target for settler, score 65902 (q21)
+070, America, OP_FOUND_CITY, 1481, Skip recruiting, start with movement stage
+070, America, OP_FOUND_CITY, 1481, Found 1 potential units to recruit for operation 1481 at (25:13) with target at (22:14)
+070, America, OP_FOUND_CITY, 1481, Added Warrior 1132 to slot 1 in army 1482. ETA at (25:13) is 0 
+070, America, OP_FOUND_CITY, 1481, Started Army 1482; Units Recruited 2; Max Formation Size 2; Moving To Target
+070, America, OP_FOUND_CITY, 1481, PRE Moving To Target with Army 1482; center (25:13); target (22:14); Progress 0 percent
+070, America, OP_FOUND_CITY, 1481, POST Moving To Target with Army 1482; center (24:14); target (22:14); Progress 40 percent
+070, Ethiopia, OP_FOUND_CITY, 1443, PRE Moving To Target with Army 1444; center (49:16); target (53:24); Progress 0 percent
+070, Ethiopia, OP_FOUND_CITY, 1443, POST Moving To Target with Army 1444; center (49:17); target (53:24); Progress 10 percent
+070, Brazil, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (23:27); target (29:27); Progress 13 percent
+070, Brazil, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (24:27); target (29:27); Progress 25 percent
+071, America, OP_FOUND_CITY, 1481, PRE Moving To Target with Army 1482; center (24:14); target (22:14); Progress 40 percent
+071, America, OP_FOUND_CITY, 1481, Transition to target stage
+071, America, OP_FOUND_CITY, 1481, POST At Target
+071, Ethiopia, OP_FOUND_CITY, 1443, PRE Moving To Target with Army 1444; center (49:17); target (53:24); Progress 10 percent
+071, Ethiopia, OP_FOUND_CITY, 1443, POST Moving To Target with Army 1444; center (50:18); target (53:24); Progress 20 percent
+071, Brazil, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (24:27); target (29:27); Progress 25 percent
+071, Brazil, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (25:27); target (29:27); Progress 38 percent
+072, America, OP_FOUND_CITY, 1481, PRE At Target
+072, America, OP_FOUND_CITY, 1481, City founded (Boston) at (22:14), plot value 55425, q2
+072, America, OP_FOUND_CITY, 1481, Transition to finished stage
+072, America, OP_FOUND_CITY, 1481, Ended: Success; Distance 5; Duration 2
+072, Korea, OP_FOUND_CITY, 1507, found target for settler, score 116002 (q50)
+072, Korea, OP_FOUND_CITY, 1507, Skip recruiting, start with movement stage
+072, Korea, OP_FOUND_CITY, 1507, Found 1 potential units to recruit for operation 1507 at (28:36) with target at (24:38)
+072, Korea, OP_FOUND_CITY, 1507, Added Spearman 1413 to slot 1 in army 1508. ETA at (28:36) is 0 
+072, Korea, OP_FOUND_CITY, 1507, Started Army 1508; Units Recruited 2; Max Formation Size 2; Moving To Target
+072, Korea, OP_FOUND_CITY, 1507, PRE Moving To Target with Army 1508; center (28:36); target (24:38); Progress 0 percent
+072, Korea, OP_FOUND_CITY, 1507, POST Moving To Target with Army 1508; center (27:37); target (24:38); Progress -16 percent
+072, Ethiopia, OP_FOUND_CITY, 1443, PRE Moving To Target with Army 1444; center (50:18); target (53:24); Progress 20 percent
+072, Ethiopia, OP_FOUND_CITY, 1443, POST Moving To Target with Army 1444; center (51:20); target (53:24); Progress 40 percent
+072, Brazil, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (25:27); target (29:27); Progress 38 percent
+072, Brazil, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (26:27); target (29:27); Progress 50 percent
+073, Korea, OP_FOUND_CITY, 1507, PRE Moving To Target with Army 1508; center (27:37); target (24:38); Progress -16 percent
+073, Korea, OP_FOUND_CITY, 1507, POST Moving To Target with Army 1508; center (26:38); target (24:38); Progress 34 percent
+073, Ethiopia, OP_FOUND_CITY, 1443, PRE Moving To Target with Army 1444; center (51:20); target (53:24); Progress 40 percent
+073, Ethiopia, OP_FOUND_CITY, 1443, POST Moving To Target with Army 1444; center (51:21); target (53:24); Progress 50 percent
+073, Morocco, OP_FOUND_CITY, 1520, found target for settler, score 106322 (q50)
+073, Morocco, OP_FOUND_CITY, 1520, Initial stage is recruiting
+073, Morocco, OP_FOUND_CITY, 1520, Found 1 potential units to recruit for operation 1520 at (39:40) with target at (44:42)
+073, Morocco, OP_FOUND_CITY, 1520, Added Warrior 1010 to slot 1 in army 1521. ETA at (39:40) is 0 
+073, Morocco, OP_FOUND_CITY, 1520, Transition to gathering stage
+073, Morocco, OP_FOUND_CITY, 1520, Transition to movement stage
+073, Morocco, OP_FOUND_CITY, 1520, Started Army 1521; Units Recruited 2; Max Formation Size 2; Moving To Target
+073, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (39:40); target (44:42); Progress 0 percent
+073, Morocco, OP_FOUND_CITY, 1520, POST Moving To Target with Army 1521; center (41:40); target (44:42); Progress 29 percent
+073, Brazil, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (26:27); target (29:27); Progress 50 percent
+073, Brazil, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (27:27); target (29:27); Progress 63 percent
+074, Korea, OP_FOUND_CITY, 1507, PRE Moving To Target with Army 1508; center (26:38); target (24:38); Progress 34 percent
+074, Korea, OP_FOUND_CITY, 1507, Transition to target stage
+074, Korea, OP_FOUND_CITY, 1507, POST At Target
+074, Ethiopia, OP_FOUND_CITY, 1443, PRE Moving To Target with Army 1444; center (51:21); target (53:24); Progress 50 percent
+074, Ethiopia, OP_FOUND_CITY, 1443, POST Moving To Target with Army 1444; center (52:22); target (53:24); Progress 60 percent
+074, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (41:40); target (44:42); Progress 29 percent
+074, Morocco, OP_FOUND_CITY, 1520, cannot found city at (44:42)
+074, Morocco, OP_FOUND_CITY, 1520, no path to city site (44:42)
+074, Morocco, OP_FOUND_CITY, 1520, found better target for settler, old score 106322 (q50), new score 94224 (q50)
+074, Morocco, OP_FOUND_CITY, 1520, setting new target (43:43)
+074, Morocco, OP_FOUND_CITY, 1520, POST Moving To Target with Army 1521; center (42:41); target (43:43); Progress 58 percent
+074, Brazil, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (27:27); target (29:27); Progress 63 percent
+074, Brazil, OP_FOUND_CITY, 1449, POST Moving To Target with Army 1450; center (28:27); target (29:27); Progress 100 percent
+074, The_Zulus, OP_FOUND_CITY, 1584, found target for settler, score 73533 (q35)
+074, The_Zulus, OP_FOUND_CITY, 1584, Initial stage is recruiting
+074, The_Zulus, OP_FOUND_CITY, 1584, Found 1 potential units to recruit for operation 1584 at (37:17) with target at (45:12)
+074, The_Zulus, OP_FOUND_CITY, 1584, Added Spearman 1379 to slot 1 in army 1585. ETA at (37:17) is 1 
+074, The_Zulus, OP_FOUND_CITY, 1584, Transition to gathering stage
+074, The_Zulus, OP_FOUND_CITY, 1584, Started Army 1585; Units Recruited 2; Max Formation Size 2; Gathering Forces
+074, The_Zulus, OP_FOUND_CITY, 1584, PRE Gathering Forces for army 1585; center (37:17); variance (4.00:2.25); free slots 0
+074, The_Zulus, OP_FOUND_CITY, 1584, Added Composite Bowman 1417 to slot 1 in army 1585. ETA at (37:17) is 0 
+074, The_Zulus, OP_FOUND_CITY, 1584, Transition to movement stage
+074, The_Zulus, OP_FOUND_CITY, 1584, POST Moving To Target with Army 1585; center (38:15); target (45:12); Progress 19 percent
+075, Korea, OP_FOUND_CITY, 1507, PRE At Target
+075, Korea, OP_FOUND_CITY, 1507, City founded (Daegu) at (24:38), plot value 116002, q50
+075, Korea, OP_FOUND_CITY, 1507, Transition to finished stage
+075, Korea, OP_FOUND_CITY, 1507, Ended: Success; Distance 6; Duration 3
+075, Ethiopia, OP_FOUND_CITY, 1443, PRE Moving To Target with Army 1444; center (52:22); target (53:24); Progress 60 percent
+075, Ethiopia, OP_FOUND_CITY, 1443, POST Moving To Target with Army 1444; center (51:23); target (53:24); Progress 70 percent
+075, Morocco, OP_FOUND_CITY, 1520, found better target for settler, old score 94224 (q50), new score 106322 (q50)
+075, Morocco, OP_FOUND_CITY, 1520, setting new target (44:42)
+075, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (42:41); target (44:42); Progress 58 percent
+075, Morocco, OP_FOUND_CITY, 1520, POST Moving To Target with Army 1521; center (41:42); target (44:42); Progress 43 percent
+075, Brazil, OP_FOUND_CITY, 1449, PRE Moving To Target with Army 1450; center (28:27); target (29:27); Progress 100 percent
+075, Brazil, OP_FOUND_CITY, 1449, Transition to target stage
+075, Brazil, OP_FOUND_CITY, 1449, POST At Target
+075, The_Zulus, OP_FOUND_CITY, 1584, PRE Moving To Target with Army 1585; center (38:15); target (45:12); Progress 19 percent
+075, The_Zulus, OP_FOUND_CITY, 1584, POST Moving To Target with Army 1585; center (38:16); target (45:12); Progress 10 percent
+076, Ethiopia, OP_FOUND_CITY, 1443, PRE Moving To Target with Army 1444; center (51:23); target (53:24); Progress 70 percent
+076, Ethiopia, OP_FOUND_CITY, 1443, POST Moving To Target with Army 1444; center (52:24); target (53:24); Progress 100 percent
+076, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (41:42); target (44:42); Progress 43 percent
+076, Morocco, OP_FOUND_CITY, 1520, POST Moving To Target with Army 1521; center (41:43); target (44:42); Progress 43 percent
+076, Brazil, OP_FOUND_CITY, 1449, PRE At Target
+076, Brazil, OP_FOUND_CITY, 1449, City founded (Salvador) at (29:27), plot value 67402, q24
+076, Brazil, OP_FOUND_CITY, 1449, Transition to finished stage
+076, Brazil, OP_FOUND_CITY, 1449, Ended: Success; Distance 8; Duration 10
+076, The_Zulus, OP_FOUND_CITY, 1584, PRE Moving To Target with Army 1585; center (38:16); target (45:12); Progress 10 percent
+076, The_Zulus, OP_FOUND_CITY, 1584, POST Moving To Target with Army 1585; center (38:15); target (45:12); Progress 19 percent
+077, Ethiopia, OP_FOUND_CITY, 1443, PRE Moving To Target with Army 1444; center (52:24); target (53:24); Progress 100 percent
+077, Ethiopia, OP_FOUND_CITY, 1443, Transition to target stage
+077, Ethiopia, OP_FOUND_CITY, 1443, POST At Target
+077, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (41:43); target (44:42); Progress 43 percent
+077, Morocco, OP_FOUND_CITY, 1520, POST Moving To Target with Army 1521; center (41:42); target (44:42); Progress 43 percent
+077, The_Zulus, OP_FOUND_CITY, 1584, PRE Moving To Target with Army 1585; center (38:15); target (45:12); Progress 19 percent
+077, The_Zulus, OP_FOUND_CITY, 1584, POST Moving To Target with Army 1585; center (39:13); target (45:12); Progress 28 percent
+078, Ethiopia, OP_FOUND_CITY, 1443, PRE At Target
+078, Ethiopia, OP_FOUND_CITY, 1443, City founded (Lalibela) at (53:24), plot value 86728, q50
+078, Ethiopia, OP_FOUND_CITY, 1443, Transition to finished stage
+078, Ethiopia, OP_FOUND_CITY, 1443, Ended: Success; Distance 10; Duration 12
+078, Babylon, OP_FOUND_CITY, 1642, found target for settler, score 44999 (q-18)
+078, Babylon, OP_FOUND_CITY, 1642, Skip recruiting, start with movement stage
+078, Babylon, OP_FOUND_CITY, 1642, Found 1 potential units to recruit for operation 1642 at (21:18) with target at (23:22)
+078, Babylon, OP_FOUND_CITY, 1642, Added Warrior 1239 to slot 1 in army 1643. ETA at (21:18) is 3 
+078, Babylon, OP_FOUND_CITY, 1642, Started Army 1643; Units Recruited 2; Max Formation Size 2; Moving To Target
+078, Babylon, OP_FOUND_CITY, 1642, PRE Moving To Target with Army 1643; center (21:18); target (23:22); Progress 0 percent
+078, Babylon, OP_FOUND_CITY, 1642, POST Moving To Target with Army 1643; center (19:18); target (23:22); Progress -40 percent
+078, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (41:42); target (44:42); Progress 43 percent
+078, Morocco, OP_FOUND_CITY, 1520, POST Moving To Target with Army 1521; center (41:40); target (44:42); Progress 29 percent
+078, The_Zulus, OP_FOUND_CITY, 1584, PRE Moving To Target with Army 1585; center (39:13); target (45:12); Progress 28 percent
+078, The_Zulus, OP_FOUND_CITY, 1584, POST Moving To Target with Army 1585; center (41:12); target (45:12); Progress 55 percent
+079, Babylon, OP_FOUND_CITY, 1642, PRE Moving To Target with Army 1643; center (19:18); target (23:22); Progress -40 percent
+079, Babylon, OP_FOUND_CITY, 1642, POST Moving To Target with Army 1643; center (17:18); target (23:22); Progress -80 percent
+079, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (41:40); target (44:42); Progress 29 percent
+079, Morocco, OP_FOUND_CITY, 1520, POST Moving To Target with Army 1521; center (41:39); target (44:42); Progress 29 percent
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Initial stage is recruiting
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Found 7 potential units to recruit for operation 1665 at (31:17) with target at (30:11)
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Added Spearman 1629 to slot 0 in army 1666. ETA at (31:17) is 2 
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Added Spearman 1379 to slot 1 in army 1666. ETA at (31:17) is 3 
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Added Composite Bowman 1368 to slot 3 in army 1666. ETA at (31:17) is 0 
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Added Composite Bowman 1601 to slot 4 in army 1666. ETA at (31:17) is 2 
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Added Composite Bowman 1282 to slot 5 in army 1666. ETA at (31:17) is 3 
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Added Composite Bowman 1289 to slot 6 in army 1666. ETA at (31:17) is 3 
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Added Cyrus the Great (Great General) 1515 to slot 8 in army 1666. ETA at (31:17) is 4 
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, SiegeArmy: waiting for more units, expected damage 48 a turn, Washington needs 60
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Started Army 1666; Units Recruited 7; Max Formation Size 10; Recruiting Units
+079, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1665, Ended: NoUnits; Distance 7; Duration 0
+079, The_Zulus, OP_FOUND_CITY, 1584, PRE Moving To Target with Army 1585; center (41:12); target (45:12); Progress 55 percent
+079, The_Zulus, OP_FOUND_CITY, 1584, POST Moving To Target with Army 1585; center (42:11); target (45:12); Progress 64 percent
+080, Babylon, OP_FOUND_CITY, 1642, PRE Moving To Target with Army 1643; center (17:18); target (23:22); Progress -80 percent
+080, Babylon, OP_FOUND_CITY, 1642, POST Moving To Target with Army 1643; center (18:18); target (23:22); Progress -60 percent
+080, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (41:39); target (44:42); Progress 29 percent
+080, Morocco, OP_FOUND_CITY, 1520, POST Moving To Target with Army 1521; center (41:40); target (44:42); Progress 29 percent
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Initial stage is recruiting
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Found 7 potential units to recruit for operation 1679 at (31:17) with target at (30:11)
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Added Spearman 1629 to slot 0 in army 1680. ETA at (31:17) is 2 
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Added Warrior 1016 to slot 1 in army 1680. ETA at (31:17) is 1 
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Added Composite Bowman 1368 to slot 3 in army 1680. ETA at (31:17) is 0 
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Added Composite Bowman 1601 to slot 4 in army 1680. ETA at (31:17) is 2 
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Added Composite Bowman 1289 to slot 5 in army 1680. ETA at (31:17) is 3 
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Added Composite Bowman 1282 to slot 6 in army 1680. ETA at (31:17) is 3 
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Added Cyrus the Great (Great General) 1515 to slot 8 in army 1680. ETA at (31:17) is 4 
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, SiegeArmy: waiting for more units, expected damage 48 a turn, Washington needs 60
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Started Army 1680; Units Recruited 7; Max Formation Size 10; Recruiting Units
+080, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1679, Ended: NoUnits; Distance 7; Duration 0
+080, The_Zulus, OP_FOUND_CITY, 1584, PRE Moving To Target with Army 1585; center (42:11); target (45:12); Progress 64 percent
+080, The_Zulus, OP_FOUND_CITY, 1584, POST Moving To Target with Army 1585; center (44:12); target (45:12); Progress 100 percent
+081, Babylon, OP_FOUND_CITY, 1642, PRE Moving To Target with Army 1643; center (18:18); target (23:22); Progress -60 percent
+081, Babylon, OP_FOUND_CITY, 1642, POST Moving To Target with Army 1643; center (19:18); target (23:22); Progress -40 percent
+081, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (41:40); target (44:42); Progress 29 percent
+081, Morocco, OP_FOUND_CITY, 1520, POST Moving To Target with Army 1521; center (42:41); target (44:42); Progress 58 percent
+081, The_Zulus, OP_FOUND_CITY, 1584, PRE Moving To Target with Army 1585; center (44:12); target (45:12); Progress 100 percent
+081, The_Zulus, OP_FOUND_CITY, 1584, Transition to target stage
+081, The_Zulus, OP_FOUND_CITY, 1584, POST At Target
+082, Ethiopia, OP_FOUND_CITY, 1706, found target for settler, score 81668 (q50)
+082, Ethiopia, OP_FOUND_CITY, 1706, Initial stage is recruiting
+082, Ethiopia, OP_FOUND_CITY, 1706, Found 0 potential units to recruit for operation 1706 at (49:16) with target at (48:10)
+082, Ethiopia, OP_FOUND_CITY, 1706, Started Army 1707; Units Recruited 1; Max Formation Size 2; Recruiting Units
+082, Ethiopia, OP_FOUND_CITY, 1706, PRE Recruiting Units for army 1707; Settler 1689 at (49:16) - ETA -1; Open; 
+082, Ethiopia, OP_FOUND_CITY, 1706, Found 0 potential units to recruit for operation 1706 at (49:16) with target at (48:10)
+082, Ethiopia, OP_FOUND_CITY, 1706, POST Recruiting Units for army 1707; Settler 1689 at (49:16) - ETA 0; Open; 
+082, Babylon, OP_FOUND_CITY, 1642, PRE Moving To Target with Army 1643; center (19:18); target (23:22); Progress -40 percent
+082, Babylon, OP_FOUND_CITY, 1642, POST Moving To Target with Army 1643; center (21:18); target (23:22); Progress 0 percent
+082, Morocco, OP_FOUND_CITY, 1520, PRE Moving To Target with Army 1521; center (42:41); target (44:42); Progress 58 percent
+082, Morocco, OP_FOUND_CITY, 1520, Transition to target stage
+082, Morocco, OP_FOUND_CITY, 1520, POST At Target
+082, The_Zulus, OP_FOUND_CITY, 1584, PRE At Target
+082, The_Zulus, OP_FOUND_CITY, 1584, City founded (Nongoma) at (45:12), plot value 68503, q26
+082, The_Zulus, OP_FOUND_CITY, 1584, Transition to finished stage
+082, The_Zulus, OP_FOUND_CITY, 1584, Ended: Success; Distance 11; Duration 8
+083, Ethiopia, OP_FOUND_CITY, 1706, PRE Recruiting Units for army 1707; Settler 1689 at (49:16) - ETA 0; Open; 
+083, Ethiopia, OP_FOUND_CITY, 1706, Found 0 potential units to recruit for operation 1706 at (49:16) with target at (48:10)
+083, Ethiopia, OP_FOUND_CITY, 1706, POST Recruiting Units for army 1707; Settler 1689 at (49:16) - ETA 0; Open; 
+083, Babylon, OP_FOUND_CITY, 1642, PRE Moving To Target with Army 1643; center (21:18); target (23:22); Progress 0 percent
+083, Babylon, OP_FOUND_CITY, 1642, POST Moving To Target with Army 1643; center (21:19); target (23:22); Progress 20 percent
+083, Morocco, OP_FOUND_CITY, 1520, PRE At Target
+083, Morocco, OP_FOUND_CITY, 1520, City founded (Fes) at (44:42), plot value 104135, q50
+083, Morocco, OP_FOUND_CITY, 1520, Transition to finished stage
+083, Morocco, OP_FOUND_CITY, 1520, Ended: Success; Distance 7; Duration 10
+083, Arabia, OP_FOUND_CITY, 1728, found target for settler, score 76133 (q40)
+083, Arabia, OP_FOUND_CITY, 1728, Skip recruiting, start with movement stage
+083, Arabia, OP_FOUND_CITY, 1728, Found 1 potential units to recruit for operation 1728 at (50:31) with target at (48:27)
+083, Arabia, OP_FOUND_CITY, 1728, Added Warrior 1726 to slot 1 in army 1729. ETA at (46:33) is 0 
+083, Arabia, OP_FOUND_CITY, 1728, Started Army 1729; Units Recruited 2; Max Formation Size 2; Moving To Target
+083, Arabia, OP_FOUND_CITY, 1728, PRE Moving To Target with Army 1729; center (46:33); target (48:27); Progress -16 percent
+083, Arabia, OP_FOUND_CITY, 1728, POST Moving To Target with Army 1729; center (49:31); target (48:27); Progress 17 percent
+083, The_Zulus, OP_FOUND_CITY, 1734, found target for settler, score 63223 (q16)
+083, The_Zulus, OP_FOUND_CITY, 1734, Skip recruiting, start with movement stage
+083, The_Zulus, OP_FOUND_CITY, 1734, Found 1 potential units to recruit for operation 1734 at (37:17) with target at (35:22)
+083, The_Zulus, OP_FOUND_CITY, 1734, Added Warrior 1016 to slot 1 in army 1735. ETA at (37:17) is 2 
+083, The_Zulus, OP_FOUND_CITY, 1734, Started Army 1735; Units Recruited 2; Max Formation Size 2; Moving To Target
+083, The_Zulus, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (37:17); target (35:22); Progress 0 percent
+083, The_Zulus, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (37:18); target (35:22); Progress 29 percent
+084, Korea, OP_RAPID_RESPONSE, 1740, Initial stage is recruiting
+084, Korea, OP_RAPID_RESPONSE, 1740, Found 1 potential units to recruit for operation 1740 at (28:36) with target at (25:28)
+084, Korea, OP_RAPID_RESPONSE, 1740, Added Spearman 1576 to slot 0 in army 1741. ETA at (28:36) is 0 
+084, Korea, OP_RAPID_RESPONSE, 1740, Started Army 1741; Units Recruited 1; Max Formation Size 4; Recruiting Units
+084, Korea, OP_RAPID_RESPONSE, 1740, PRE Recruiting Units for army 1741; Spearman 1576 at (31:38) - ETA 0; Open; Open; Open; 
+084, Korea, OP_RAPID_RESPONSE, 1740, Found 0 potential units to recruit for operation 1740 at (28:36) with target at (25:28)
+084, Korea, OP_RAPID_RESPONSE, 1740, POST Recruiting Units for army 1741; Spearman 1576 at (30:37) - ETA 0; Open; Open; Open; 
+084, Ethiopia, OP_FOUND_CITY, 1706, PRE Recruiting Units for army 1707; Settler 1689 at (49:16) - ETA 0; Open; 
+084, Ethiopia, OP_FOUND_CITY, 1706, Found 2 potential units to recruit for operation 1706 at (49:16) with target at (48:10)
+084, Ethiopia, OP_FOUND_CITY, 1706, Added Swordsman 1744 to slot 1 in army 1707. ETA at (49:16) is 0 
+084, Ethiopia, OP_FOUND_CITY, 1706, Transition to gathering stage
+084, Ethiopia, OP_FOUND_CITY, 1706, POST Gathering Forces for army 1707; center (49:14); variance (0.00:0.00); free slots 0
+084, Babylon, OP_FOUND_CITY, 1642, PRE Moving To Target with Army 1643; center (21:19); target (23:22); Progress 20 percent
+084, Babylon, OP_FOUND_CITY, 1642, POST Moving To Target with Army 1643; center (22:20); target (23:22); Progress 40 percent
+084, Arabia, OP_FOUND_CITY, 1728, PRE Moving To Target with Army 1729; center (49:31); target (48:27); Progress 17 percent
+084, Arabia, OP_FOUND_CITY, 1728, POST Moving To Target with Army 1729; center (49:30); target (48:27); Progress 34 percent
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Initial stage is recruiting
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Found 8 potential units to recruit for operation 1749 at (31:17) with target at (30:11)
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Added Spearman 1402 to slot 0 in army 1750. ETA at (31:17) is 0 
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Added Spearman 1379 to slot 1 in army 1750. ETA at (31:17) is 3 
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Added Composite Bowman 1368 to slot 3 in army 1750. ETA at (31:17) is 0 
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Added Composite Bowman 1601 to slot 4 in army 1750. ETA at (31:17) is 2 
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Added Composite Bowman 1282 to slot 5 in army 1750. ETA at (31:17) is 3 
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Added Composite Bowman 1289 to slot 6 in army 1750. ETA at (31:17) is 4 
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Added Cyrus the Great (Great General) 1515 to slot 8 in army 1750. ETA at (31:17) is 4 
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, SiegeArmy: waiting for more units, expected damage 48 a turn, Washington needs 60
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Started Army 1750; Units Recruited 7; Max Formation Size 10; Recruiting Units
+084, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1749, Ended: NoUnits; Distance 7; Duration 0
+084, The_Zulus, OP_FOUND_CITY, 1734, found better target for settler, old score 63223 (q16), new score 131283 (q50)
+084, The_Zulus, OP_FOUND_CITY, 1734, setting new target (38:30)
+084, The_Zulus, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (37:18); target (38:30); Progress 8 percent
+084, The_Zulus, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (35:19); target (38:30); Progress 15 percent
+085, Korea, OP_RAPID_RESPONSE, 1740, Added Spearman 1756 to slot 1 in army 1741. ETA at (28:36) is 0 
+085, Korea, OP_RAPID_RESPONSE, 1740, Transition to gathering stage
+085, Korea, OP_RAPID_RESPONSE, 1740, PRE Gathering Forces for army 1741; center (30:37); variance (1.00:0.25); free slots 2
+085, Korea, OP_RAPID_RESPONSE, 1740, Transition to movement stage
+085, Korea, OP_RAPID_RESPONSE, 1740, POST Moving To Target with Army 1741; center (28:36); target (25:28); Progress 100 percent
+085, Ethiopia, OP_FOUND_CITY, 1706, PRE Gathering Forces for army 1707; center (49:14); variance (0.00:0.00); free slots 0
+085, Ethiopia, OP_FOUND_CITY, 1706, Transition to movement stage
+085, Ethiopia, OP_FOUND_CITY, 1706, POST Moving To Target with Army 1707; center (48:12); target (48:10); Progress 25 percent
+085, Babylon, OP_FOUND_CITY, 1642, PRE Moving To Target with Army 1643; center (22:20); target (23:22); Progress 40 percent
+085, Babylon, OP_FOUND_CITY, 1642, POST Moving To Target with Army 1643; center (22:21); target (23:22); Progress 100 percent
+085, Arabia, OP_FOUND_CITY, 1728, PRE Moving To Target with Army 1729; center (49:30); target (48:27); Progress 34 percent
+085, Arabia, OP_FOUND_CITY, 1728, POST Moving To Target with Army 1729; center (48:29); target (48:27); Progress 50 percent
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Initial stage is recruiting
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Found 7 potential units to recruit for operation 1767 at (31:17) with target at (30:11)
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Added Spearman 1402 to slot 0 in army 1768. ETA at (31:17) is 0 
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Added Spearman 1379 to slot 1 in army 1768. ETA at (31:17) is 2 
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Added Composite Bowman 1368 to slot 3 in army 1768. ETA at (31:17) is 0 
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Added Composite Bowman 1601 to slot 4 in army 1768. ETA at (31:17) is 2 
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Added Composite Bowman 1282 to slot 5 in army 1768. ETA at (31:17) is 3 
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Added Composite Bowman 1289 to slot 6 in army 1768. ETA at (31:17) is 4 
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Added Cyrus the Great (Great General) 1515 to slot 8 in army 1768. ETA at (31:17) is 5 
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, SiegeArmy: waiting for more units, expected damage 48 a turn, Washington needs 60
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Started Army 1768; Units Recruited 7; Max Formation Size 10; Recruiting Units
+085, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1767, Ended: NoUnits; Distance 7; Duration 0
+085, The_Zulus, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (35:19); target (38:30); Progress 15 percent
+085, The_Zulus, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (35:21); target (38:30); Progress 29 percent
+086, Korea, OP_FOUND_CITY, 1779, found target for settler, score 93871 (q50)
+086, Korea, OP_FOUND_CITY, 1779, Skip recruiting, start with movement stage
+086, Korea, OP_FOUND_CITY, 1779, Found 0 potential units to recruit for operation 1779 at (34:36) with target at (34:45)
+086, Korea, OP_FOUND_CITY, 1779, Started Army 1780; Units Recruited 1; Max Formation Size 2; Moving To Target
+086, Korea, OP_RAPID_RESPONSE, 1740, PRE Moving To Target with Army 1741; center (28:36); target (25:28); Progress 100 percent
+086, Korea, OP_FOUND_CITY, 1779, PRE Moving To Target with Army 1780; center (34:36); target (34:45); Progress 0 percent
+086, Korea, OP_FOUND_CITY, 1779, POST Moving To Target with Army 1780; center (33:38); target (34:45); Progress 20 percent
+086, Korea, OP_RAPID_RESPONSE, 1740, Ended: LostPath; Distance -1; Duration 2
+086, Ethiopia, OP_FOUND_CITY, 1706, PRE Moving To Target with Army 1707; center (48:12); target (48:10); Progress 25 percent
+086, Ethiopia, OP_FOUND_CITY, 1706, POST Moving To Target with Army 1707; center (49:13); target (48:10); Progress 0 percent
+086, Babylon, OP_FOUND_CITY, 1642, PRE Moving To Target with Army 1643; center (22:21); target (23:22); Progress 100 percent
+086, Babylon, OP_FOUND_CITY, 1642, Transition to target stage
+086, Babylon, OP_FOUND_CITY, 1642, City founded (Nippur) at (23:22), plot value 44999, q-18
+086, Babylon, OP_FOUND_CITY, 1642, Transition to finished stage
+086, Babylon, OP_FOUND_CITY, 1642, POST Completed
+086, Arabia, OP_FOUND_CITY, 1728, PRE Moving To Target with Army 1729; center (48:29); target (48:27); Progress 50 percent
+086, Arabia, OP_FOUND_CITY, 1728, POST Moving To Target with Army 1729; center (48:28); target (48:27); Progress 100 percent
+086, The_Zulus, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (35:21); target (38:30); Progress 29 percent
+086, The_Zulus, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (35:23); target (38:30); Progress 43 percent
+087, Korea, OP_FOUND_CITY, 1779, PRE Moving To Target with Army 1780; center (33:38); target (34:45); Progress 20 percent
+087, Korea, OP_FOUND_CITY, 1779, POST Moving To Target with Army 1780; center (33:40); target (34:45); Progress 40 percent
+087, Ethiopia, OP_FOUND_CITY, 1706, PRE Moving To Target with Army 1707; center (49:13); target (48:10); Progress 0 percent
+087, Ethiopia, OP_FOUND_CITY, 1706, POST Moving To Target with Army 1707; center (48:11); target (48:10); Progress 100 percent
+087, Babylon, OP_FOUND_CITY, 1642, Ended: Success; Distance 5; Duration 9
+087, Arabia, OP_FOUND_CITY, 1728, PRE Moving To Target with Army 1729; center (48:28); target (48:27); Progress 100 percent
+087, Arabia, OP_FOUND_CITY, 1728, Transition to target stage
+087, Arabia, OP_FOUND_CITY, 1728, POST At Target
+087, The_Zulus, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (35:23); target (38:30); Progress 43 percent
+087, The_Zulus, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (36:25); target (38:30); Progress 58 percent
+088, Korea, OP_FOUND_CITY, 1779, PRE Moving To Target with Army 1780; center (33:40); target (34:45); Progress 40 percent
+088, Korea, OP_FOUND_CITY, 1779, Added Scout 1777 to slot 1 in army 1780. ETA at (33:42) is 0 
+088, Korea, OP_FOUND_CITY, 1779, POST Moving To Target with Army 1780; center (33:42); target (34:45); Progress 60 percent
+088, Ethiopia, OP_FOUND_CITY, 1706, PRE Moving To Target with Army 1707; center (48:11); target (48:10); Progress 100 percent
+088, Ethiopia, OP_FOUND_CITY, 1706, Transition to target stage
+088, Ethiopia, OP_FOUND_CITY, 1706, POST At Target
+088, Arabia, OP_FOUND_CITY, 1728, PRE At Target
+088, Arabia, OP_FOUND_CITY, 1728, City founded (Damascus) at (48:27), plot value 66442, q22
+088, Arabia, OP_FOUND_CITY, 1728, Transition to finished stage
+088, Arabia, OP_FOUND_CITY, 1728, Ended: Success; Distance 6; Duration 5
+088, The_Zulus, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (36:25); target (38:30); Progress 58 percent
+088, The_Zulus, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (37:26); target (38:30); Progress 65 percent
+089, Korea, OP_FOUND_CITY, 1779, PRE Moving To Target with Army 1780; center (34:44); target (34:45); Progress 100 percent
+089, Korea, OP_FOUND_CITY, 1779, POST Moving To Target with Army 1780; center (33:43); target (34:45); Progress 70 percent
+089, Ethiopia, OP_FOUND_CITY, 1706, PRE At Target
+089, Ethiopia, OP_FOUND_CITY, 1706, City founded (Gondar) at (48:10), plot value 78889, q45
+089, Ethiopia, OP_FOUND_CITY, 1706, Transition to finished stage
+089, Ethiopia, OP_FOUND_CITY, 1706, Ended: Success; Distance 4; Duration 7
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Initial stage is recruiting
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Found 10 potential units to recruit for operation 1843 at (31:17) with target at (30:11)
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Added Spearman 1379 to slot 0 in army 1844. ETA at (31:17) is 0 
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Added Spearman 1402 to slot 1 in army 1844. ETA at (31:17) is 0 
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Added Composite Bowman 1368 to slot 3 in army 1844. ETA at (31:17) is 0 
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Added Composite Bowman 1601 to slot 4 in army 1844. ETA at (31:17) is 2 
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Added Composite Bowman 1808 to slot 5 in army 1844. ETA at (31:17) is 2 
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Added Composite Bowman 1289 to slot 6 in army 1844. ETA at (31:17) is 3 
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Added Composite Bowman 1282 to slot 7 in army 1844. ETA at (31:17) is 3 
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Added Cyrus the Great (Great General) 1515 to slot 8 in army 1844. ETA at (31:17) is 4 
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Transition to gathering stage
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Started Army 1844; Units Recruited 8; Max Formation Size 10; Gathering Forces
+089, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1843, Ended: NoUnits; Distance 7; Duration 0
+089, The_Zulus, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (37:26); target (38:30); Progress 65 percent
+089, The_Zulus, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (37:28); target (38:30); Progress 79 percent
+090, Korea, OP_FOUND_CITY, 1779, PRE Moving To Target with Army 1780; center (33:43); target (34:45); Progress 70 percent
+090, Korea, OP_FOUND_CITY, 1779, POST Moving To Target with Army 1780; center (34:44); target (34:45); Progress 100 percent
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Initial stage is recruiting
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Found 11 potential units to recruit for operation 1862 at (31:17) with target at (30:11)
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Added Spearman 1379 to slot 0 in army 1863. ETA at (31:17) is 0 
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Added Spearman 1402 to slot 1 in army 1863. ETA at (31:17) is 0 
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Added Composite Bowman 1368 to slot 3 in army 1863. ETA at (31:17) is 0 
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Added Composite Bowman 1601 to slot 4 in army 1863. ETA at (31:17) is 1 
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Added Composite Bowman 1289 to slot 5 in army 1863. ETA at (31:17) is 2 
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Added Composite Bowman 1808 to slot 6 in army 1863. ETA at (31:17) is 2 
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Added Composite Bowman 1282 to slot 7 in army 1863. ETA at (31:17) is 3 
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Added Cyrus the Great (Great General) 1515 to slot 8 in army 1863. ETA at (31:17) is 4 
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Transition to gathering stage
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Started Army 1863; Units Recruited 8; Max Formation Size 10; Gathering Forces
+090, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1862, Ended: NoUnits; Distance 7; Duration 0
+090, The_Zulus, OP_FOUND_CITY, 1865, found target for settler, score 63223 (q16)
+090, The_Zulus, OP_FOUND_CITY, 1865, Skip recruiting, start with movement stage
+090, The_Zulus, OP_FOUND_CITY, 1865, Found 3 potential units to recruit for operation 1865 at (37:17) with target at (35:22)
+090, The_Zulus, OP_FOUND_CITY, 1865, Added Spearman 1379 to slot 1 in army 1866. ETA at (37:17) is 0 
+090, The_Zulus, OP_FOUND_CITY, 1865, Started Army 1866; Units Recruited 2; Max Formation Size 2; Moving To Target
+090, The_Zulus, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (37:28); target (38:30); Progress 79 percent
+090, The_Zulus, OP_FOUND_CITY, 1734, Transition to target stage
+090, The_Zulus, OP_FOUND_CITY, 1734, POST At Target
+090, The_Zulus, OP_FOUND_CITY, 1865, PRE Moving To Target with Army 1866; center (37:17); target (35:22); Progress 0 percent
+090, The_Zulus, OP_FOUND_CITY, 1865, POST Moving To Target with Army 1866; center (35:16); target (35:22); Progress -42 percent
+091, America, OP_FOUND_CITY, 1877, found target for settler, score 54866 (q1)
+091, America, OP_FOUND_CITY, 1877, Skip recruiting, start with movement stage
+091, America, OP_FOUND_CITY, 1877, Found 1 potential units to recruit for operation 1877 at (30:11) with target at (28:6)
+091, America, OP_FOUND_CITY, 1877, Added Warrior 1002 to slot 1 in army 1878. ETA at (30:11) is 0 
+091, America, OP_FOUND_CITY, 1877, Started Army 1878; Units Recruited 2; Max Formation Size 2; Moving To Target
+091, America, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (30:11); target (28:6); Progress 0 percent
+091, America, OP_FOUND_CITY, 1877, POST Moving To Target with Army 1878; center (29:10); target (28:6); Progress 17 percent
+091, Korea, OP_FOUND_CITY, 1779, PRE Moving To Target with Army 1780; center (34:44); target (34:45); Progress 100 percent
+091, Korea, OP_FOUND_CITY, 1779, Transition to target stage
+091, Korea, OP_FOUND_CITY, 1779, POST At Target
+091, Ethiopia, OP_FOUND_CITY, 1885, found target for settler, score 66539 (q22)
+091, Ethiopia, OP_FOUND_CITY, 1885, Initial stage is recruiting
+091, Ethiopia, OP_FOUND_CITY, 1885, Found 0 potential units to recruit for operation 1885 at (44:17) with target at (56:23)
+091, Ethiopia, OP_FOUND_CITY, 1885, Started Army 1886; Units Recruited 1; Max Formation Size 2; Recruiting Units
+091, Ethiopia, OP_FOUND_CITY, 1885, PRE Recruiting Units for army 1886; Settler 1884 at (44:17) - ETA -1; Open; 
+091, Ethiopia, OP_FOUND_CITY, 1885, Found 0 potential units to recruit for operation 1885 at (44:17) with target at (56:23)
+091, Ethiopia, OP_FOUND_CITY, 1885, POST Recruiting Units for army 1886; Settler 1884 at (44:17) - ETA 0; Open; 
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Initial stage is recruiting
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Found 10 potential units to recruit for operation 1891 at (31:17) with target at (30:11)
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Added Spearman 1402 to slot 0 in army 1892. ETA at (31:17) is 0 
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Added Spearman 1629 to slot 1 in army 1892. ETA at (31:17) is 0 
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Added Composite Bowman 1368 to slot 3 in army 1892. ETA at (31:17) is 0 
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Added Composite Bowman 1601 to slot 4 in army 1892. ETA at (31:17) is 1 
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Added Composite Bowman 1808 to slot 5 in army 1892. ETA at (31:17) is 1 
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Added Composite Bowman 1289 to slot 6 in army 1892. ETA at (31:17) is 2 
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Added Composite Bowman 1282 to slot 7 in army 1892. ETA at (31:17) is 3 
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Added Cyrus the Great (Great General) 1515 to slot 8 in army 1892. ETA at (31:17) is 4 
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Transition to gathering stage
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Started Army 1892; Units Recruited 8; Max Formation Size 10; Gathering Forces
+091, The_Zulus, OP_CITY_ATTACK_LAND_SNEAKY, 1891, Ended: NoUnits; Distance 7; Duration 0
+091, The_Zulus, OP_FOUND_CITY, 1734, PRE At Target
+091, The_Zulus, OP_FOUND_CITY, 1734, City founded (Ondini) at (38:30), plot value 142524, q50
+091, The_Zulus, OP_FOUND_CITY, 1734, Transition to finished stage
+091, The_Zulus, OP_FOUND_CITY, 1865, PRE Moving To Target with Army 1866; center (35:16); target (35:22); Progress -42 percent
+091, The_Zulus, OP_FOUND_CITY, 1865, POST Moving To Target with Army 1866; center (35:17); target (35:22); Progress 15 percent
+091, The_Zulus, OP_FOUND_CITY, 1734, Ended: Success; Distance 14; Duration 8
+092, America, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (29:10); target (28:6); Progress 17 percent
+092, America, OP_FOUND_CITY, 1877, POST Moving To Target with Army 1878; center (28:8); target (28:6); Progress 50 percent
+092, Korea, OP_FOUND_CITY, 1779, PRE At Target
+092, Korea, OP_FOUND_CITY, 1779, City founded (Pyongyang) at (34:45), plot value 81665, q50
+092, Korea, OP_FOUND_CITY, 1779, Transition to finished stage
+092, Korea, OP_FOUND_CITY, 1779, Ended: Success; Distance 10; Duration 6
+092, Ethiopia, OP_FOUND_CITY, 1885, Added Swordsman 1904 to slot 1 in army 1886. ETA at (44:17) is 0 
+092, Ethiopia, OP_FOUND_CITY, 1885, Transition to gathering stage
+092, Ethiopia, OP_FOUND_CITY, 1885, PRE Gathering Forces for army 1886; center (44:17); variance (0.00:0.00); free slots 0
+092, Ethiopia, OP_FOUND_CITY, 1885, Transition to movement stage
+092, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (45:17); target (56:23); Progress 0 percent
+092, The_Zulus, OP_FOUND_CITY, 1865, PRE Moving To Target with Army 1866; center (35:17); target (35:22); Progress 15 percent
+092, The_Zulus, OP_FOUND_CITY, 1865, POST Moving To Target with Army 1866; center (36:18); target (35:22); Progress 29 percent
+093, America, OP_FOUND_CITY, 1877, PRE Moving To Target with Army 1878; center (28:8); target (28:6); Progress 50 percent
+093, America, OP_FOUND_CITY, 1877, Transition to target stage
+093, America, OP_FOUND_CITY, 1877, POST At Target
+093, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (45:17); target (56:23); Progress 0 percent
+093, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (45:17); target (56:23); Progress 0 percent
+093, The_Zulus, OP_FOUND_CITY, 1865, PRE Moving To Target with Army 1866; center (36:18); target (35:22); Progress 29 percent
+093, The_Zulus, OP_FOUND_CITY, 1865, POST Moving To Target with Army 1866; center (35:20); target (35:22); Progress 58 percent
+094, America, OP_FOUND_CITY, 1877, PRE At Target
+094, America, OP_FOUND_CITY, 1877, City founded (Philadelphia) at (28:6), plot value 54866, q1
+094, America, OP_FOUND_CITY, 1877, Transition to finished stage
+094, America, OP_FOUND_CITY, 1877, Ended: Success; Distance 6; Duration 3
+094, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (45:17); target (56:23); Progress 0 percent
+094, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (47:17); target (56:23); Progress 13 percent
+094, Babylon, OP_FOUND_CITY, 1948, Ended: NoTarget; Distance -1; Duration 95
+094, The_Zulus, OP_FOUND_CITY, 1865, PRE Moving To Target with Army 1866; center (35:20); target (35:22); Progress 58 percent
+094, The_Zulus, OP_FOUND_CITY, 1865, POST Moving To Target with Army 1866; center (34:21); target (35:22); Progress 100 percent
+095, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (47:17); target (56:23); Progress 13 percent
+095, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (48:15); target (56:23); Progress 19 percent
+095, Babylon, OP_FOUND_CITY, 1968, Ended: NoTarget; Distance -1; Duration 96
+095, The_Zulus, OP_FOUND_CITY, 1865, PRE Moving To Target with Army 1866; center (34:21); target (35:22); Progress 100 percent
+095, The_Zulus, OP_FOUND_CITY, 1865, Transition to target stage
+095, The_Zulus, OP_FOUND_CITY, 1865, POST At Target
+096, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (48:15); target (56:23); Progress 19 percent
+096, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (49:17); target (56:23); Progress 32 percent
+096, Babylon, OP_FOUND_CITY, 1984, Ended: NoTarget; Distance -1; Duration 97
+096, The_Zulus, OP_FOUND_CITY, 1865, PRE At Target
+096, The_Zulus, OP_FOUND_CITY, 1865, City founded (Nodwengu) at (35:22), plot value 63223, q16
+096, The_Zulus, OP_FOUND_CITY, 1865, Transition to finished stage
+096, The_Zulus, OP_FOUND_CITY, 1865, Ended: Success; Distance 7; Duration 6
+097, Ethiopia, OP_FOUND_CITY, 2002, Ended: NoTarget; Distance -1; Duration 98
+097, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (49:17); target (56:23); Progress 32 percent
+097, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (50:18); target (56:23); Progress 38 percent
+097, Babylon, OP_FOUND_CITY, 2003, Ended: NoTarget; Distance -1; Duration 98
+098, Korea, OP_FOUND_CITY, 2017, found target for settler, score 131581 (q50)
+098, Korea, OP_FOUND_CITY, 2017, Initial stage is recruiting
+098, Korea, OP_FOUND_CITY, 2017, Found 3 potential units to recruit for operation 2017 at (31:38) with target at (19:40)
+098, Korea, OP_FOUND_CITY, 2017, Added Spearman 1576 to slot 1 in army 2018. ETA at (31:38) is 0 
+098, Korea, OP_FOUND_CITY, 2017, Transition to gathering stage
+098, Korea, OP_FOUND_CITY, 2017, Started Army 2018; Units Recruited 2; Max Formation Size 2; Gathering Forces
+098, Korea, OP_FOUND_CITY, 2017, PRE Gathering Forces for army 2018; center (34:36); variance (2.25:1.00); free slots 0
+098, Korea, OP_FOUND_CITY, 2017, Added Warrior 1923 to slot 1 in army 2018. ETA at (31:38) is 0 
+098, Korea, OP_FOUND_CITY, 2017, Transition to movement stage
+098, Korea, OP_FOUND_CITY, 2017, POST Moving To Target with Army 2018; center (31:38); target (19:40); Progress 0 percent
+098, Ethiopia, OP_FOUND_CITY, 2022, Ended: NoTarget; Distance -1; Duration 99
+098, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (50:18); target (56:23); Progress 38 percent
+098, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (51:19); target (56:23); Progress 50 percent
+098, Babylon, OP_FOUND_CITY, 2025, Ended: NoTarget; Distance -1; Duration 99
+098, Arabia, OP_FOUND_CITY, 2032, found target for settler, score 57761 (q6)
+098, Arabia, OP_FOUND_CITY, 2032, Initial stage is recruiting
+098, Arabia, OP_FOUND_CITY, 2032, Found 2 potential units to recruit for operation 2032 at (50:31) with target at (54:29)
+098, Arabia, OP_FOUND_CITY, 2032, Added Warrior 1726 to slot 1 in army 2033. ETA at (50:31) is 1 
+098, Arabia, OP_FOUND_CITY, 2032, Transition to gathering stage
+098, Arabia, OP_FOUND_CITY, 2032, Started Army 2033; Units Recruited 2; Max Formation Size 2; Gathering Forces
+098, Arabia, OP_FOUND_CITY, 2032, PRE Gathering Forces for army 2033; center (50:31); variance (1.00:4.00); free slots 0
+098, Arabia, OP_FOUND_CITY, 2032, Transition to movement stage
+098, Arabia, OP_FOUND_CITY, 2032, POST Moving To Target with Army 2033; center (50:31); target (54:29); Progress 0 percent
+099, Korea, OP_FOUND_CITY, 2017, PRE Moving To Target with Army 2018; center (32:37); target (19:40); Progress -6 percent
+099, Korea, OP_FOUND_CITY, 2017, Ended: HalfStrength; Distance 16; Duration 1
+099, Ethiopia, OP_FOUND_CITY, 2043, found target for settler, score 62057 (q14)
+099, Ethiopia, OP_FOUND_CITY, 2043, Initial stage is recruiting
+099, Ethiopia, OP_FOUND_CITY, 2043, Found 0 potential units to recruit for operation 2043 at (49:16) with target at (55:29)
+099, Ethiopia, OP_FOUND_CITY, 2043, Started Army 2044; Units Recruited 1; Max Formation Size 2; Recruiting Units
+099, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (51:19); target (56:23); Progress 50 percent
+099, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (52:19); target (56:23); Progress 50 percent
+099, Ethiopia, OP_FOUND_CITY, 2043, PRE Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA -1; Open; 
+099, Ethiopia, OP_FOUND_CITY, 2043, Found 0 potential units to recruit for operation 2043 at (49:16) with target at (55:29)
+099, Ethiopia, OP_FOUND_CITY, 2043, POST Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+099, Babylon, OP_FOUND_CITY, 2045, Ended: NoTarget; Distance -1; Duration 100
+099, Morocco, OP_RAPID_RESPONSE, 2048, Initial stage is recruiting
+099, Morocco, OP_RAPID_RESPONSE, 2048, Found 1 potential units to recruit for operation 2048 at (42:37) with target at (42:37)
+099, Morocco, OP_RAPID_RESPONSE, 2048, Added Warrior 1010 to slot 0 in army 2049. ETA at (42:37) is 4 
+099, Morocco, OP_RAPID_RESPONSE, 2048, Started Army 2049; Units Recruited 1; Max Formation Size 4; Recruiting Units
+099, Morocco, OP_FOUND_CITY, 2051, found target for settler, score 52517 (q-4)
+099, Morocco, OP_FOUND_CITY, 2051, Skip recruiting, start with movement stage
+099, Morocco, OP_FOUND_CITY, 2051, Found 0 potential units to recruit for operation 2051 at (42:37) with target at (40:33)
+099, Morocco, OP_FOUND_CITY, 2051, Started Army 2052; Units Recruited 1; Max Formation Size 2; Moving To Target
+099, Morocco, OP_RAPID_RESPONSE, 2048, PRE Recruiting Units for army 2049; Warrior 1010 at (43:45) - ETA 4; Open; Open; Open; 
+099, Morocco, OP_RAPID_RESPONSE, 2048, Found 0 potential units to recruit for operation 2048 at (42:37) with target at (42:37)
+099, Morocco, OP_RAPID_RESPONSE, 2048, POST Recruiting Units for army 2049; Warrior 1010 at (44:44) - ETA 4; Open; Open; Open; 
+099, Morocco, OP_FOUND_CITY, 2051, PRE Moving To Target with Army 2052; center (42:37); target (40:33); Progress 0 percent
+099, Morocco, OP_FOUND_CITY, 2051, POST Moving To Target with Army 2052; center (41:35); target (40:33); Progress 40 percent
+099, Arabia, OP_FOUND_CITY, 2032, PRE Moving To Target with Army 2033; center (50:31); target (54:29); Progress 0 percent
+099, Arabia, OP_FOUND_CITY, 2032, POST Moving To Target with Army 2033; center (50:30); target (54:29); Progress -14 percent
+100, America, OP_FOUND_CITY, 2064, Ended: NoTarget; Distance -1; Duration 101
+100, Korea, OP_FOUND_CITY, 2065, found target for settler, score 131581 (q50)
+100, Korea, OP_FOUND_CITY, 2065, Initial stage is recruiting
+100, Korea, OP_FOUND_CITY, 2065, Found 3 potential units to recruit for operation 2065 at (31:36) with target at (19:40)
+100, Korea, OP_FOUND_CITY, 2065, Added Swordsman 2039 to slot 1 in army 2066. ETA at (31:36) is 0 
+100, Korea, OP_FOUND_CITY, 2065, Transition to gathering stage
+100, Korea, OP_FOUND_CITY, 2065, Transition to movement stage
+100, Korea, OP_FOUND_CITY, 2065, Started Army 2066; Units Recruited 2; Max Formation Size 2; Moving To Target
+100, Korea, OP_FOUND_CITY, 2065, PRE Moving To Target with Army 2066; center (31:36); target (19:40); Progress 0 percent
+100, Korea, OP_FOUND_CITY, 2065, POST Moving To Target with Army 2066; center (29:36); target (19:40); Progress 14 percent
+100, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (52:19); target (56:23); Progress 50 percent
+100, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (53:19); target (56:23); Progress 44 percent
+100, Ethiopia, OP_FOUND_CITY, 2043, PRE Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+100, Ethiopia, OP_FOUND_CITY, 2043, Found 0 potential units to recruit for operation 2043 at (49:16) with target at (55:29)
+100, Ethiopia, OP_FOUND_CITY, 2043, POST Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+100, Babylon, OP_FOUND_CITY, 2070, Ended: NoTarget; Distance -1; Duration 101
+100, Morocco, OP_RAPID_RESPONSE, 2048, PRE Recruiting Units for army 2049; Warrior 1010 at (44:44) - ETA 4; Open; Open; Open; 
+100, Morocco, OP_RAPID_RESPONSE, 2048, Found 0 potential units to recruit for operation 2048 at (42:37) with target at (42:37)
+100, Morocco, OP_RAPID_RESPONSE, 2048, POST Recruiting Units for army 2049; Warrior 1010 at (43:43) - ETA 3; Open; Open; Open; 
+100, Morocco, OP_FOUND_CITY, 2051, PRE Moving To Target with Army 2052; center (41:35); target (40:33); Progress 40 percent
+100, Morocco, OP_FOUND_CITY, 2051, Transition to target stage
+100, Morocco, OP_FOUND_CITY, 2051, POST At Target
+100, Arabia, OP_FOUND_CITY, 2032, PRE Moving To Target with Army 2033; center (50:30); target (54:29); Progress -14 percent
+100, Arabia, OP_FOUND_CITY, 2032, POST Moving To Target with Army 2033; center (50:30); target (54:29); Progress -14 percent
+101, America, OP_FOUND_CITY, 2087, Ended: NoTarget; Distance -1; Duration 102
+101, Korea, OP_FOUND_CITY, 2065, PRE Moving To Target with Army 2066; center (29:36); target (19:40); Progress 14 percent
+101, Korea, OP_FOUND_CITY, 2065, POST Moving To Target with Army 2066; center (27:37); target (19:40); Progress 14 percent
+101, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (53:19); target (56:23); Progress 44 percent
+101, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (54:21); target (56:23); Progress 75 percent
+101, Ethiopia, OP_FOUND_CITY, 2043, PRE Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+101, Ethiopia, OP_FOUND_CITY, 2043, Found 0 potential units to recruit for operation 2043 at (49:16) with target at (55:29)
+101, Ethiopia, OP_FOUND_CITY, 2043, POST Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+101, Babylon, OP_FOUND_CITY, 2091, Ended: NoTarget; Distance -1; Duration 102
+101, Morocco, OP_FOUND_CITY, 2051, Ended: LostCivilian; Distance 5; Duration 2
+101, Morocco, OP_RAPID_RESPONSE, 2048, PRE Recruiting Units for army 2049; Warrior 1010 at (43:43) - ETA 3; Open; Open; Open; 
+101, Morocco, OP_RAPID_RESPONSE, 2048, Found 0 potential units to recruit for operation 2048 at (42:37) with target at (42:37)
+101, Morocco, OP_RAPID_RESPONSE, 2048, POST Recruiting Units for army 2049; Warrior 1010 at (43:42) - ETA 2; Open; Open; Open; 
+101, Arabia, OP_FOUND_CITY, 2032, PRE Moving To Target with Army 2033; center (50:30); target (54:29); Progress -14 percent
+101, Arabia, OP_FOUND_CITY, 2032, POST Moving To Target with Army 2033; center (51:31); target (54:29); Progress 15 percent
+101, Brazil, OP_FOUND_CITY, 2098, Ended: NoTarget; Distance -1; Duration 102
+102, America, OP_FOUND_CITY, 2105, Ended: NoTarget; Distance -1; Duration 103
+102, Korea, OP_FOUND_CITY, 2065, PRE Moving To Target with Army 2066; center (27:37); target (19:40); Progress 14 percent
+102, Korea, OP_FOUND_CITY, 2065, POST Moving To Target with Army 2066; center (25:37); target (19:40); Progress 40 percent
+102, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (54:21); target (56:23); Progress 75 percent
+102, Ethiopia, OP_FOUND_CITY, 1885, POST Moving To Target with Army 1886; center (55:22); target (56:23); Progress 82 percent
+102, Ethiopia, OP_FOUND_CITY, 2043, PRE Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+102, Ethiopia, OP_FOUND_CITY, 2043, Found 0 potential units to recruit for operation 2043 at (49:16) with target at (55:29)
+102, Ethiopia, OP_FOUND_CITY, 2043, POST Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+102, Babylon, OP_FOUND_CITY, 2109, Ended: NoTarget; Distance -1; Duration 103
+102, Morocco, OP_RAPID_RESPONSE, 2048, PRE Recruiting Units for army 2049; Warrior 1010 at (43:42) - ETA 2; Open; Open; Open; 
+102, Morocco, OP_RAPID_RESPONSE, 2048, Found 0 potential units to recruit for operation 2048 at (42:37) with target at (42:37)
+102, Morocco, OP_RAPID_RESPONSE, 2048, POST Recruiting Units for army 2049; Warrior 1010 at (43:42) - ETA 2; Open; Open; Open; 
+102, Arabia, OP_FOUND_CITY, 2032, PRE Moving To Target with Army 2033; center (51:31); target (54:29); Progress 15 percent
+102, Arabia, OP_FOUND_CITY, 2032, POST Moving To Target with Army 2033; center (53:30); target (54:29); Progress 58 percent
+102, Brazil, OP_FOUND_CITY, 2115, Ended: NoTarget; Distance -1; Duration 103
+103, America, OP_FOUND_CITY, 2123, Ended: NoTarget; Distance -1; Duration 104
+103, Korea, OP_FOUND_CITY, 2065, PRE Moving To Target with Army 2066; center (25:37); target (19:40); Progress 40 percent
+103, Korea, OP_FOUND_CITY, 2065, POST Moving To Target with Army 2066; center (24:37); target (19:40); Progress 47 percent
+103, Ethiopia, OP_FOUND_CITY, 1885, PRE Moving To Target with Army 1886; center (55:22); target (56:23); Progress 82 percent
+103, Ethiopia, OP_FOUND_CITY, 1885, Transition to target stage
+103, Ethiopia, OP_FOUND_CITY, 1885, POST At Target
+103, Ethiopia, OP_FOUND_CITY, 2043, PRE Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+103, Ethiopia, OP_FOUND_CITY, 2043, Found 0 potential units to recruit for operation 2043 at (49:16) with target at (55:29)
+103, Ethiopia, OP_FOUND_CITY, 2043, POST Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+103, Babylon, OP_FOUND_CITY, 2128, Ended: NoTarget; Distance -1; Duration 104
+103, Morocco, OP_RAPID_RESPONSE, 2048, PRE Recruiting Units for army 2049; Warrior 1010 at (43:42) - ETA 2; Open; Open; Open; 
+103, Morocco, OP_RAPID_RESPONSE, 2048, Found 0 potential units to recruit for operation 2048 at (42:37) with target at (42:37)
+103, Morocco, OP_RAPID_RESPONSE, 2048, Removing Warrior 1010 from army 2049 because no progress to checkpoint (42:37). ETA 2; prev 2; prev 2
+103, Morocco, OP_RAPID_RESPONSE, 2048, Ended: LostPath; Distance 1; Duration 4
+103, Arabia, OP_FOUND_CITY, 2032, PRE Moving To Target with Army 2033; center (53:30); target (54:29); Progress 58 percent
+103, Arabia, OP_FOUND_CITY, 2032, POST Moving To Target with Army 2033; center (53:29); target (54:29); Progress 100 percent
+103, Brazil, OP_FOUND_CITY, 2135, Ended: NoTarget; Distance -1; Duration 104
+104, America, OP_FOUND_CITY, 2143, Ended: NoTarget; Distance -1; Duration 105
+104, Korea, OP_FOUND_CITY, 2065, PRE Moving To Target with Army 2066; center (24:37); target (19:40); Progress 47 percent
+104, Korea, OP_FOUND_CITY, 2065, POST Moving To Target with Army 2066; center (23:38); target (19:40); Progress 60 percent
+104, Ethiopia, OP_FOUND_CITY, 1885, PRE At Target
+104, Ethiopia, OP_FOUND_CITY, 1885, City founded (Axum) at (56:23), plot value 66539, q22
+104, Ethiopia, OP_FOUND_CITY, 1885, Transition to finished stage
+104, Ethiopia, OP_FOUND_CITY, 2043, PRE Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+104, Ethiopia, OP_FOUND_CITY, 2043, Found 0 potential units to recruit for operation 2043 at (49:16) with target at (55:29)
+104, Ethiopia, OP_FOUND_CITY, 2043, POST Recruiting Units for army 2044; Settler 2001 at (49:16) - ETA 0; Open; 
+104, Ethiopia, OP_FOUND_CITY, 1885, Ended: Success; Distance 16; Duration 13
+104, Babylon, OP_FOUND_CITY, 2150, Ended: NoTarget; Distance -1; Duration 105
+104, Arabia, OP_FOUND_CITY, 2032, PRE Moving To Target with Army 2033; center (53:29); target (54:29); Progress 100 percent
+104, Arabia, OP_FOUND_CITY, 2032, Transition to target stage
+104, Arabia, OP_FOUND_CITY, 2032, City founded (Baghdad) at (54:29), plot value 63176, q16
+104, Arabia, OP_FOUND_CITY, 2032, Transition to finished stage
+104, Arabia, OP_FOUND_CITY, 2032, POST Completed
+104, Brazil, OP_FOUND_CITY, 2161, Ended: NoTarget; Distance -1; Duration 105
+104, Brazil, OP_RAPID_RESPONSE, 2162, Initial stage is recruiting
+104, Brazil, OP_RAPID_RESPONSE, 2162, Found 1 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+104, Brazil, OP_RAPID_RESPONSE, 2162, Added Warrior 1730 to slot 0 in army 2163. ETA at (25:28) is 2 
+104, Brazil, OP_RAPID_RESPONSE, 2162, Started Army 2163; Units Recruited 1; Max Formation Size 4; Recruiting Units
+104, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (21:26) - ETA 2; Open; Open; Open; 
+104, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+104, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (22:26) - ETA 2; Open; Open; Open; 
+105, America, OP_FOUND_CITY, 2168, Ended: NoTarget; Distance -1; Duration 106
+105, Korea, OP_FOUND_CITY, 2065, PRE Moving To Target with Army 2066; center (23:38); target (19:40); Progress 60 percent
+105, Korea, OP_FOUND_CITY, 2065, POST Moving To Target with Army 2066; center (21:38); target (19:40); Progress 74 percent
+105, Ethiopia, OP_FOUND_CITY, 2043, cannot found city at (55:29)
+105, Ethiopia, OP_FOUND_CITY, 2043, no path to city site (55:29)
+105, Ethiopia, OP_FOUND_CITY, 2043, found no suitable target in area 1
+105, Ethiopia, OP_FOUND_CITY, 2043, Ended: NoTarget; Distance 15; Duration 6
+105, Babylon, OP_FOUND_CITY, 2176, Ended: NoTarget; Distance -1; Duration 106
+105, Morocco, OP_RAPID_RESPONSE, 2178, Initial stage is recruiting
+105, Morocco, OP_RAPID_RESPONSE, 2178, Found 2 potential units to recruit for operation 2178 at (42:37) with target at (46:33)
+105, Morocco, OP_RAPID_RESPONSE, 2178, Added Warrior 1010 to slot 0 in army 2179. ETA at (42:37) is 0 
+105, Morocco, OP_RAPID_RESPONSE, 2178, Added Warrior 1190 to slot 1 in army 2179. ETA at (42:37) is 0 
+105, Morocco, OP_RAPID_RESPONSE, 2178, Transition to gathering stage
+105, Morocco, OP_RAPID_RESPONSE, 2178, Transition to movement stage
+105, Morocco, OP_RAPID_RESPONSE, 2178, Started Army 2179; Units Recruited 2; Max Formation Size 4; Moving To Target
+105, Morocco, OP_RAPID_RESPONSE, 2178, PRE Moving To Target with Army 2179; center (42:40); target (46:33); Progress 100 percent
+105, Morocco, OP_RAPID_RESPONSE, 2178, Ended: LostPath; Distance -1; Duration 0
+105, Arabia, OP_FOUND_CITY, 2182, Ended: NoTarget; Distance -1; Duration 106
+105, Arabia, OP_FOUND_CITY, 2032, Ended: Success; Distance 7; Duration 7
+105, Brazil, OP_FOUND_CITY, 2184, Ended: NoTarget; Distance -1; Duration 106
+105, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (22:26) - ETA 2; Open; Open; Open; 
+105, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+105, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (23:26) - ETA 1; Open; Open; Open; 
+106, America, OP_FOUND_CITY, 2190, Ended: NoTarget; Distance -1; Duration 107
+106, Korea, OP_FOUND_CITY, 2065, PRE Moving To Target with Army 2066; center (21:38); target (19:40); Progress 74 percent
+106, Korea, OP_FOUND_CITY, 2065, POST Moving To Target with Army 2066; center (20:38); target (19:40); Progress 80 percent
+106, Ethiopia, OP_FOUND_CITY, 2196, Ended: NoTarget; Distance -1; Duration 107
+106, Babylon, OP_FOUND_CITY, 2198, Ended: NoTarget; Distance -1; Duration 107
+106, Arabia, OP_FOUND_CITY, 2203, Ended: NoTarget; Distance -1; Duration 107
+106, Brazil, OP_FOUND_CITY, 2205, Ended: NoTarget; Distance -1; Duration 107
+106, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (23:26) - ETA 1; Open; Open; Open; 
+106, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+106, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (23:27) - ETA 0; Open; Open; Open; 
+107, America, OP_FOUND_CITY, 2212, Ended: NoTarget; Distance -1; Duration 108
+107, Korea, OP_FOUND_CITY, 2216, found target for settler, score 64491 (q18)
+107, Korea, OP_FOUND_CITY, 2216, Initial stage is recruiting
+107, Korea, OP_FOUND_CITY, 2216, Found 3 potential units to recruit for operation 2216 at (28:36) with target at (38:46)
+107, Korea, OP_FOUND_CITY, 2216, Added Spearman 1756 to slot 1 in army 2217. ETA at (28:36) is 0 
+107, Korea, OP_FOUND_CITY, 2216, Transition to gathering stage
+107, Korea, OP_FOUND_CITY, 2216, Transition to movement stage
+107, Korea, OP_FOUND_CITY, 2216, Started Army 2217; Units Recruited 2; Max Formation Size 2; Moving To Target
+107, Korea, OP_FOUND_CITY, 2065, PRE Moving To Target with Army 2066; center (20:38); target (19:40); Progress 80 percent
+107, Korea, OP_FOUND_CITY, 2065, Transition to target stage
+107, Korea, OP_FOUND_CITY, 2065, POST At Target
+107, Korea, OP_FOUND_CITY, 2216, PRE Moving To Target with Army 2217; center (28:36); target (38:46); Progress 0 percent
+107, Korea, OP_FOUND_CITY, 2216, POST Moving To Target with Army 2217; center (30:36); target (38:46); Progress 13 percent
+107, Ethiopia, OP_FOUND_CITY, 2221, Ended: NoTarget; Distance -1; Duration 108
+107, Babylon, OP_FOUND_CITY, 2223, Ended: NoTarget; Distance -1; Duration 108
+107, Arabia, OP_FOUND_CITY, 2226, Ended: NoTarget; Distance -1; Duration 108
+107, Brazil, OP_FOUND_CITY, 2228, Ended: NoTarget; Distance -1; Duration 108
+107, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (23:27) - ETA 0; Open; Open; Open; 
+107, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+107, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+108, America, OP_FOUND_CITY, 2230, Ended: NoTarget; Distance -1; Duration 109
+108, Korea, OP_FOUND_CITY, 2065, PRE At Target
+108, Korea, OP_FOUND_CITY, 2065, City founded (Kaesong) at (19:40), plot value 131581, q50
+108, Korea, OP_FOUND_CITY, 2065, Transition to finished stage
+108, Korea, OP_FOUND_CITY, 2216, PRE Moving To Target with Army 2217; center (30:36); target (38:46); Progress 13 percent
+108, Korea, OP_FOUND_CITY, 2216, POST Moving To Target with Army 2217; center (32:36); target (38:46); Progress 25 percent
+108, Korea, OP_FOUND_CITY, 2065, Ended: Success; Distance 15; Duration 8
+108, Ethiopia, OP_FOUND_CITY, 2236, Ended: NoTarget; Distance -1; Duration 109
+108, Babylon, OP_FOUND_CITY, 2237, Ended: NoTarget; Distance -1; Duration 109
+108, Arabia, OP_FOUND_CITY, 2241, Ended: NoTarget; Distance -1; Duration 109
+108, Brazil, OP_FOUND_CITY, 2242, Ended: NoTarget; Distance -1; Duration 109
+108, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+108, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+108, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+109, America, OP_FOUND_CITY, 2245, Ended: NoTarget; Distance -1; Duration 110
+109, Korea, OP_FOUND_CITY, 2216, PRE Moving To Target with Army 2217; center (32:36); target (38:46); Progress 25 percent
+109, Korea, OP_FOUND_CITY, 2216, Added Swordsman 2249 to slot 1 in army 2217. ETA at (33:37) is 0 
+109, Korea, OP_FOUND_CITY, 2216, POST Moving To Target with Army 2217; center (33:37); target (38:46); Progress 38 percent
+109, Ethiopia, OP_FOUND_CITY, 2253, Ended: NoTarget; Distance -1; Duration 110
+109, Babylon, OP_FOUND_CITY, 2256, Ended: NoTarget; Distance -1; Duration 110
+109, Arabia, OP_FOUND_CITY, 2260, Ended: NoTarget; Distance -1; Duration 110
+109, Brazil, OP_FOUND_CITY, 2262, Ended: NoTarget; Distance -1; Duration 110
+109, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+109, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+109, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+110, America, OP_FOUND_CITY, 2270, Ended: NoTarget; Distance -1; Duration 111
+110, Korea, OP_FOUND_CITY, 2216, PRE Moving To Target with Army 2217; center (33:37); target (38:46); Progress 38 percent
+110, Korea, OP_FOUND_CITY, 2216, POST Moving To Target with Army 2217; center (34:39); target (38:46); Progress 50 percent
+110, Ethiopia, OP_FOUND_CITY, 2275, Ended: NoTarget; Distance -1; Duration 111
+110, Babylon, OP_FOUND_CITY, 2277, Ended: NoTarget; Distance -1; Duration 111
+110, Arabia, OP_FOUND_CITY, 2281, Ended: NoTarget; Distance -1; Duration 111
+110, Brazil, OP_FOUND_CITY, 2282, Ended: NoTarget; Distance -1; Duration 111
+110, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+110, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+110, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+111, America, OP_FOUND_CITY, 2289, Ended: NoTarget; Distance -1; Duration 112
+111, Korea, OP_FOUND_CITY, 2216, PRE Moving To Target with Army 2217; center (34:39); target (38:46); Progress 50 percent
+111, Korea, OP_FOUND_CITY, 2216, POST Moving To Target with Army 2217; center (35:41); target (38:46); Progress 63 percent
+111, Ethiopia, OP_FOUND_CITY, 2294, Ended: NoTarget; Distance -1; Duration 112
+111, Babylon, OP_FOUND_CITY, 2295, Ended: NoTarget; Distance -1; Duration 112
+111, Arabia, OP_FOUND_CITY, 2299, Ended: NoTarget; Distance -1; Duration 112
+111, Brazil, OP_FOUND_CITY, 2301, Ended: NoTarget; Distance -1; Duration 112
+111, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+111, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+111, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+112, America, OP_FOUND_CITY, 2307, Ended: NoTarget; Distance -1; Duration 113
+112, Korea, OP_FOUND_CITY, 2216, PRE Moving To Target with Army 2217; center (35:41); target (38:46); Progress 63 percent
+112, Korea, OP_FOUND_CITY, 2216, POST Moving To Target with Army 2217; center (35:43); target (38:46); Progress 69 percent
+112, Ethiopia, OP_FOUND_CITY, 2314, Ended: NoTarget; Distance -1; Duration 113
+112, Babylon, OP_FOUND_CITY, 2316, Ended: NoTarget; Distance -1; Duration 113
+112, Arabia, OP_FOUND_CITY, 2321, Ended: NoTarget; Distance -1; Duration 113
+112, Brazil, OP_FOUND_CITY, 2322, Ended: NoTarget; Distance -1; Duration 113
+112, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+112, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+112, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+113, America, OP_FOUND_CITY, 2336, Ended: NoTarget; Distance -1; Duration 114
+113, Korea, OP_FOUND_CITY, 2216, PRE Moving To Target with Army 2217; center (35:43); target (38:46); Progress 69 percent
+113, Korea, OP_FOUND_CITY, 2216, POST Moving To Target with Army 2217; center (37:44); target (38:46); Progress 82 percent
+113, Ethiopia, OP_FOUND_CITY, 2343, Ended: NoTarget; Distance -1; Duration 114
+113, Babylon, OP_FOUND_CITY, 2345, Ended: NoTarget; Distance -1; Duration 114
+113, Arabia, OP_FOUND_CITY, 2349, Ended: NoTarget; Distance -1; Duration 114
+113, Brazil, OP_FOUND_CITY, 2351, Ended: NoTarget; Distance -1; Duration 114
+113, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+113, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+113, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+114, America, OP_FOUND_CITY, 2357, Ended: NoTarget; Distance -1; Duration 115
+114, Korea, OP_FOUND_CITY, 2216, PRE Moving To Target with Army 2217; center (37:44); target (38:46); Progress 82 percent
+114, Korea, OP_FOUND_CITY, 2216, Transition to target stage
+114, Korea, OP_FOUND_CITY, 2216, POST At Target
+114, Ethiopia, OP_FOUND_CITY, 2362, Ended: NoTarget; Distance -1; Duration 115
+114, Babylon, OP_FOUND_CITY, 2363, Ended: NoTarget; Distance -1; Duration 115
+114, Arabia, OP_FOUND_CITY, 2366, Ended: NoTarget; Distance -1; Duration 115
+114, Brazil, OP_FOUND_CITY, 2367, Ended: NoTarget; Distance -1; Duration 115
+114, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+114, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+114, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+115, America, OP_FOUND_CITY, 2373, Ended: NoTarget; Distance -1; Duration 116
+115, Korea, OP_FOUND_CITY, 2216, PRE At Target
+115, Korea, OP_FOUND_CITY, 2216, City founded (Suwon) at (38:46), plot value 52402, q-4
+115, Korea, OP_FOUND_CITY, 2216, Transition to finished stage
+115, Korea, OP_FOUND_CITY, 2216, Ended: Success; Distance 16; Duration 8
+115, Ethiopia, OP_FOUND_CITY, 2378, Ended: NoTarget; Distance -1; Duration 116
+115, Babylon, OP_FOUND_CITY, 2380, Ended: NoTarget; Distance -1; Duration 116
+115, Arabia, OP_FOUND_CITY, 2385, Ended: NoTarget; Distance -1; Duration 116
+115, Brazil, OP_FOUND_CITY, 2387, Ended: NoTarget; Distance -1; Duration 116
+115, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+115, Brazil, OP_RAPID_RESPONSE, 2162, Found 0 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+115, Brazil, OP_RAPID_RESPONSE, 2162, POST Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+116, America, OP_FOUND_CITY, 2396, Ended: NoTarget; Distance -1; Duration 117
+116, Ethiopia, OP_FOUND_CITY, 2400, Ended: NoTarget; Distance -1; Duration 117
+116, Babylon, OP_FOUND_CITY, 2403, Ended: NoTarget; Distance -1; Duration 117
+116, Morocco, OP_FOUND_CITY, 2406, found target for settler, score 47443 (q-13)
+116, Morocco, OP_FOUND_CITY, 2406, Skip recruiting, start with movement stage
+116, Morocco, OP_FOUND_CITY, 2406, Found 2 potential units to recruit for operation 2406 at (42:37) with target at (40:33)
+116, Morocco, OP_FOUND_CITY, 2406, Added Warrior 1190 to slot 1 in army 2407. ETA at (42:37) is 0 
+116, Morocco, OP_FOUND_CITY, 2406, Started Army 2407; Units Recruited 2; Max Formation Size 2; Moving To Target
+116, Morocco, OP_FOUND_CITY, 2406, PRE Moving To Target with Army 2407; center (42:37); target (40:33); Progress 0 percent
+116, Morocco, OP_FOUND_CITY, 2406, POST Moving To Target with Army 2407; center (41:35); target (40:33); Progress 40 percent
+116, Arabia, OP_FOUND_CITY, 2410, Ended: NoTarget; Distance -1; Duration 117
+116, Brazil, OP_FOUND_CITY, 2412, Ended: NoTarget; Distance -1; Duration 117
+116, Brazil, OP_RAPID_RESPONSE, 2162, PRE Recruiting Units for army 2163; Warrior 1730 at (25:28) - ETA 0; Open; Open; Open; 
+116, Brazil, OP_RAPID_RESPONSE, 2162, Found 1 potential units to recruit for operation 2162 at (25:28) with target at (25:28)
+116, Brazil, OP_RAPID_RESPONSE, 2162, Added Spearman 2415 to slot 1 in army 2163. ETA at (25:28) is 0 
+116, Brazil, OP_RAPID_RESPONSE, 2162, Transition to gathering stage
+116, Brazil, OP_RAPID_RESPONSE, 2162, POST Gathering Forces for army 2163; center (25:28); variance (1.00:1.00); free slots 2
+117, America, OP_FOUND_CITY, 2420, Ended: NoTarget; Distance -1; Duration 118
+117, Ethiopia, OP_FOUND_CITY, 2424, Ended: NoTarget; Distance -1; Duration 118
+117, Babylon, OP_FOUND_CITY, 2428, Ended: NoTarget; Distance -1; Duration 118
+117, Morocco, OP_FOUND_CITY, 2406, PRE Moving To Target with Army 2407; center (41:35); target (40:33); Progress 40 percent
+117, Morocco, OP_FOUND_CITY, 2406, Transition to target stage
+117, Morocco, OP_FOUND_CITY, 2406, POST At Target
+117, Arabia, OP_FOUND_CITY, 2431, Ended: NoTarget; Distance -1; Duration 118
+117, Brazil, OP_FOUND_CITY, 2432, Ended: NoTarget; Distance -1; Duration 118
+117, Brazil, OP_RAPID_RESPONSE, 2162, PRE Gathering Forces for army 2163; center (25:28); variance (1.00:1.00); free slots 2
+117, Brazil, OP_RAPID_RESPONSE, 2162, Transition to movement stage
+117, Brazil, OP_RAPID_RESPONSE, 2162, POST Moving To Target with Army 2163; center (25:29); target (25:28); Progress 100 percent
+118, America, OP_FOUND_CITY, 2439, Ended: NoTarget; Distance -1; Duration 119
+118, Ethiopia, OP_FOUND_CITY, 2445, Ended: NoTarget; Distance -1; Duration 119
+118, Babylon, OP_FOUND_CITY, 2448, Ended: NoTarget; Distance -1; Duration 119
+118, Morocco, OP_FOUND_CITY, 2406, PRE At Target
+118, Morocco, OP_FOUND_CITY, 2406, City founded (Casablanca) at (40:33), plot value 46690, q-14
+118, Morocco, OP_FOUND_CITY, 2406, Transition to finished stage
+118, Morocco, OP_FOUND_CITY, 2406, Ended: Success; Distance 5; Duration 2
+118, Arabia, OP_FOUND_CITY, 2452, Ended: NoTarget; Distance -1; Duration 119
+118, Brazil, OP_FOUND_CITY, 2453, Ended: NoTarget; Distance -1; Duration 119
+118, Brazil, OP_RAPID_RESPONSE, 2162, PRE Moving To Target with Army 2163; center (25:29); target (25:28); Progress 100 percent
+118, Brazil, OP_RAPID_RESPONSE, 2162, Transition to finished stage; unit distance near 0; far 3
+118, Brazil, OP_RAPID_RESPONSE, 2162, POST Completed
+119, America, OP_FOUND_CITY, 2459, Ended: NoTarget; Distance -1; Duration 120
+119, Ethiopia, OP_FOUND_CITY, 2466, Ended: NoTarget; Distance -1; Duration 120
+119, Babylon, OP_FOUND_CITY, 2469, Ended: NoTarget; Distance -1; Duration 120
+119, Arabia, OP_FOUND_CITY, 2474, Ended: NoTarget; Distance -1; Duration 120
+119, Brazil, OP_FOUND_CITY, 2475, Ended: NoTarget; Distance -1; Duration 120
+119, Brazil, OP_RAPID_RESPONSE, 2162, Ended: Success; Distance 2; Duration 15
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, Initial stage is recruiting
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, Found 4 potential units to recruit for operation 2477 at (45:12) with target at (48:10)
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, Added Impi 2352 to slot 0 in army 2478. ETA at (45:12) is 1 
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, Added Impi 2454 to slot 1 in army 2478. ETA at (45:12) is 2 
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, Added Spearman 1629 to slot 2 in army 2478. ETA at (45:12) is 2 
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, Added Spearman 2056 to slot 3 in army 2478. ETA at (45:12) is 3 
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, Transition to gathering stage
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, Started Army 2478; Units Recruited 4; Max Formation Size 4; Gathering Forces
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, PRE Gathering Forces for army 2478; center (40:23); variance (25.25:37.50); free slots 0
+119, The_Zulus, OP_RAPID_RESPONSE, 2477, POST Gathering Forces for army 2478; center (40:20); variance (12.19:22.19); free slots 0
+120, America, OP_FOUND_CITY, 2486, Ended: NoTarget; Distance -1; Duration 121
+120, Ethiopia, OP_FOUND_CITY, 2491, Ended: NoTarget; Distance -1; Duration 121
+120, Babylon, OP_FOUND_CITY, 2492, Ended: NoTarget; Distance -1; Duration 121
+120, Arabia, OP_FOUND_CITY, 2497, Ended: NoTarget; Distance -1; Duration 121
+120, Brazil, OP_FOUND_CITY, 2498, Ended: NoTarget; Distance -1; Duration 121
+120, The_Zulus, OP_RAPID_RESPONSE, 2477, Ended: NoTarget; Distance -1; Duration 1
+121, America, OP_FOUND_CITY, 2505, Ended: NoTarget; Distance -1; Duration 122
+121, Ethiopia, OP_FOUND_CITY, 2509, Ended: NoTarget; Distance -1; Duration 122
+121, Babylon, OP_FOUND_CITY, 2510, found target for settler, score 46568 (q-15)
+121, Babylon, OP_FOUND_CITY, 2510, Skip recruiting, start with movement stage
+121, Babylon, OP_FOUND_CITY, 2510, Found 0 potential units to recruit for operation 2510 at (21:18) with target at (24:9)
+121, Babylon, OP_FOUND_CITY, 2510, Started Army 2511; Units Recruited 1; Max Formation Size 2; Moving To Target
+121, Babylon, OP_FOUND_CITY, 2510, PRE Moving To Target with Army 2511; center (21:18); target (24:9); Progress 0 percent
+121, Babylon, OP_FOUND_CITY, 2510, POST Moving To Target with Army 2511; center (20:15); target (24:9); Progress 28 percent
+121, Arabia, OP_FOUND_CITY, 2516, Ended: NoTarget; Distance -1; Duration 122
+121, Brazil, OP_FOUND_CITY, 2517, Ended: NoTarget; Distance -1; Duration 122
+122, America, OP_FOUND_CITY, 2523, Ended: NoTarget; Distance -1; Duration 123
+122, Ethiopia, OP_FOUND_CITY, 2527, Ended: NoTarget; Distance -1; Duration 123
+122, Babylon, OP_FOUND_CITY, 2510, PRE Moving To Target with Army 2511; center (20:15); target (24:9); Progress 28 percent
+122, Babylon, OP_FOUND_CITY, 2510, POST Moving To Target with Army 2511; center (22:13); target (24:9); Progress 55 percent
+122, Arabia, OP_FOUND_CITY, 2538, Ended: NoTarget; Distance -1; Duration 123
+122, Brazil, OP_FOUND_CITY, 2540, Ended: NoTarget; Distance -1; Duration 123
+123, America, OP_FOUND_CITY, 2552, Ended: NoTarget; Distance -1; Duration 124
+123, Ethiopia, OP_FOUND_CITY, 2558, Ended: NoTarget; Distance -1; Duration 124
+123, Babylon, OP_FOUND_CITY, 2510, PRE Moving To Target with Army 2511; center (22:13); target (24:9); Progress 55 percent
+123, Babylon, OP_FOUND_CITY, 2510, POST Moving To Target with Army 2511; center (23:11); target (24:9); Progress 73 percent
+123, Arabia, OP_FOUND_CITY, 2571, Ended: NoTarget; Distance -1; Duration 124
+123, Brazil, OP_FOUND_CITY, 2572, Ended: NoTarget; Distance -1; Duration 124
+124, America, OP_FOUND_CITY, 2579, Ended: NoTarget; Distance -1; Duration 125
+124, Ethiopia, OP_FOUND_CITY, 2584, Ended: NoTarget; Distance -1; Duration 125
+124, Babylon, OP_FOUND_CITY, 2510, PRE Moving To Target with Army 2511; center (23:11); target (24:9); Progress 73 percent
+124, Babylon, OP_FOUND_CITY, 2510, Transition to target stage
+124, Babylon, OP_FOUND_CITY, 2510, POST At Target
+124, Arabia, OP_FOUND_CITY, 2594, Ended: NoTarget; Distance -1; Duration 125
+124, Brazil, OP_FOUND_CITY, 2597, Ended: NoTarget; Distance -1; Duration 125
+125, America, OP_FOUND_CITY, 2607, Ended: NoTarget; Distance -1; Duration 126
+125, Ethiopia, OP_FOUND_CITY, 2611, Ended: NoTarget; Distance -1; Duration 126
+125, Babylon, OP_FOUND_CITY, 2510, no valid city site target found (no escort)!
+125, Babylon, OP_FOUND_CITY, 2510, Ended: NoTarget; Distance 11; Duration 4
+125, Arabia, OP_FOUND_CITY, 2623, Ended: NoTarget; Distance -1; Duration 126
+125, Brazil, OP_FOUND_CITY, 2624, Ended: NoTarget; Distance -1; Duration 126
+126, America, OP_FOUND_CITY, 2632, Ended: NoTarget; Distance -1; Duration 127
+126, Ethiopia, OP_FOUND_CITY, 2637, Ended: NoTarget; Distance -1; Duration 127
+126, Babylon, OP_FOUND_CITY, 2640, Ended: NoTarget; Distance -1; Duration 127
+126, Arabia, OP_FOUND_CITY, 2650, Ended: NoTarget; Distance -1; Duration 127
+126, Brazil, OP_FOUND_CITY, 2651, Ended: NoTarget; Distance -1; Duration 127
+127, America, OP_FOUND_CITY, 2658, Ended: NoTarget; Distance -1; Duration 128
+127, Ethiopia, OP_FOUND_CITY, 2663, Ended: NoTarget; Distance -1; Duration 128
+127, Babylon, OP_FOUND_CITY, 2664, Ended: NoTarget; Distance -1; Duration 128
+127, Arabia, OP_FOUND_CITY, 2670, Ended: NoTarget; Distance -1; Duration 128
+127, Brazil, OP_FOUND_CITY, 2671, Ended: NoTarget; Distance -1; Duration 128
+128, America, OP_FOUND_CITY, 2676, Ended: NoTarget; Distance -1; Duration 129
+128, Ethiopia, OP_FOUND_CITY, 2681, Ended: NoTarget; Distance -1; Duration 129
+128, Babylon, OP_FOUND_CITY, 2682, Ended: NoTarget; Distance -1; Duration 129
+128, Babylon, OP_FOUND_CITY, 2684, Ended: NoTarget; Distance -1; Duration 129
+128, Babylon, OP_FOUND_CITY, 2685, Ended: NoTarget; Distance -1; Duration 129
+128, Arabia, OP_FOUND_CITY, 2693, Ended: NoTarget; Distance -1; Duration 129
+128, Brazil, OP_FOUND_CITY, 2695, Ended: NoTarget; Distance -1; Duration 129
+129, America, OP_FOUND_CITY, 2702, Ended: NoTarget; Distance -1; Duration 130
+129, Ethiopia, OP_FOUND_CITY, 2709, Ended: NoTarget; Distance -1; Duration 130
+129, Babylon, OP_FOUND_CITY, 2710, Ended: NoTarget; Distance -1; Duration 130
+129, Babylon, OP_FOUND_CITY, 2711, Ended: NoTarget; Distance -1; Duration 130
+129, Arabia, OP_FOUND_CITY, 2718, Ended: NoTarget; Distance -1; Duration 130
+129, Brazil, OP_FOUND_CITY, 2719, Ended: NoTarget; Distance -1; Duration 130
+130, America, OP_FOUND_CITY, 2725, Ended: NoTarget; Distance -1; Duration 131
+130, Ethiopia, OP_FOUND_CITY, 2730, Ended: NoTarget; Distance -1; Duration 131
+130, Babylon, OP_FOUND_CITY, 2731, Ended: NoTarget; Distance -1; Duration 131
+130, Babylon, OP_FOUND_CITY, 2732, Ended: NoTarget; Distance -1; Duration 131
+130, Arabia, OP_FOUND_CITY, 2740, Ended: NoTarget; Distance -1; Duration 131
+130, Brazil, OP_FOUND_CITY, 2741, Ended: NoTarget; Distance -1; Duration 131
+131, America, OP_FOUND_CITY, 2748, Ended: NoTarget; Distance -1; Duration 132
+131, Ethiopia, OP_FOUND_CITY, 2754, Ended: NoTarget; Distance -1; Duration 132
+131, Babylon, OP_FOUND_CITY, 2755, Ended: NoTarget; Distance -1; Duration 132
+131, Babylon, OP_FOUND_CITY, 2756, Ended: NoTarget; Distance -1; Duration 132
+131, Arabia, OP_FOUND_CITY, 2763, Ended: NoTarget; Distance -1; Duration 132
+131, Brazil, OP_FOUND_CITY, 2764, Ended: NoTarget; Distance -1; Duration 132
+132, America, OP_FOUND_CITY, 2823, Ended: NoTarget; Distance -1; Duration 133
+132, Ethiopia, OP_FOUND_CITY, 2829, Ended: NoTarget; Distance -1; Duration 133
+132, Babylon, OP_FOUND_CITY, 2830, Ended: NoTarget; Distance -1; Duration 133
+132, Babylon, OP_FOUND_CITY, 2831, Ended: NoTarget; Distance -1; Duration 133
+132, Morocco, OP_FOUND_CITY, 2836, Ended: NoTarget; Distance -1; Duration 133
+132, Arabia, OP_FOUND_CITY, 2840, Ended: NoTarget; Distance -1; Duration 133
+132, Brazil, OP_FOUND_CITY, 2844, Ended: NoTarget; Distance -1; Duration 133
+133, America, OP_FOUND_CITY, 2851, Ended: NoTarget; Distance -1; Duration 134
+133, Ethiopia, OP_FOUND_CITY, 2858, Ended: NoTarget; Distance -1; Duration 134
+133, Babylon, OP_FOUND_CITY, 2859, Ended: NoTarget; Distance -1; Duration 134
+133, Babylon, OP_FOUND_CITY, 2860, Ended: NoTarget; Distance -1; Duration 134
+133, Morocco, OP_FOUND_CITY, 2864, Ended: NoTarget; Distance -1; Duration 134
+133, Arabia, OP_FOUND_CITY, 2868, Ended: NoTarget; Distance -1; Duration 134
+133, Brazil, OP_FOUND_CITY, 2869, Ended: NoTarget; Distance -1; Duration 134
+134, America, OP_FOUND_CITY, 2878, Ended: NoTarget; Distance -1; Duration 135
+134, Ethiopia, OP_FOUND_CITY, 2885, Ended: NoTarget; Distance -1; Duration 135
+134, Babylon, OP_FOUND_CITY, 2887, Ended: NoTarget; Distance -1; Duration 135
+134, Babylon, OP_FOUND_CITY, 2888, Ended: NoTarget; Distance -1; Duration 135
+134, Morocco, OP_FOUND_CITY, 2892, Ended: NoTarget; Distance -1; Duration 135
+134, Arabia, OP_FOUND_CITY, 2899, Ended: NoTarget; Distance -1; Duration 135
+134, Brazil, OP_FOUND_CITY, 2900, Ended: NoTarget; Distance -1; Duration 135
+135, America, OP_FOUND_CITY, 2907, Ended: NoTarget; Distance -1; Duration 136
+135, Ethiopia, OP_FOUND_CITY, 2914, Ended: NoTarget; Distance -1; Duration 136
+135, Babylon, OP_FOUND_CITY, 2915, Ended: NoTarget; Distance -1; Duration 136
+135, Babylon, OP_FOUND_CITY, 2916, Ended: NoTarget; Distance -1; Duration 136
+135, Morocco, OP_FOUND_CITY, 2919, Ended: NoTarget; Distance -1; Duration 136
+135, Arabia, OP_FOUND_CITY, 2924, Ended: NoTarget; Distance -1; Duration 136
+135, Brazil, OP_FOUND_CITY, 2926, Ended: NoTarget; Distance -1; Duration 136
+136, America, OP_FOUND_CITY, 2934, Ended: NoTarget; Distance -1; Duration 137
+136, Ethiopia, OP_FOUND_CITY, 2939, Ended: NoTarget; Distance -1; Duration 137
+136, Babylon, OP_FOUND_CITY, 2941, Ended: NoTarget; Distance -1; Duration 137
+136, Babylon, OP_FOUND_CITY, 2942, Ended: NoTarget; Distance -1; Duration 137
+136, Morocco, OP_FOUND_CITY, 2946, Ended: NoTarget; Distance -1; Duration 137
+136, Arabia, OP_FOUND_CITY, 2950, Ended: NoTarget; Distance -1; Duration 137
+136, Brazil, OP_FOUND_CITY, 2952, Ended: NoTarget; Distance -1; Duration 137
+137, America, OP_FOUND_CITY, 2958, Ended: NoTarget; Distance -1; Duration 138
+137, Morocco, OP_RAPID_RESPONSE, 2970, Initial stage is recruiting
+137, Morocco, OP_RAPID_RESPONSE, 2970, Found 2 potential units to recruit for operation 2970 at (40:33) with target at (40:33)
+137, Morocco, OP_RAPID_RESPONSE, 2970, Added Swordsman 2972 to slot 0 in army 2971. ETA at (40:33) is 1 
+137, Morocco, OP_RAPID_RESPONSE, 2970, Added Swordsman 2973 to slot 1 in army 2971. ETA at (40:33) is 3 
+137, Morocco, OP_RAPID_RESPONSE, 2970, Transition to gathering stage
+137, Morocco, OP_RAPID_RESPONSE, 2970, Started Army 2971; Units Recruited 2; Max Formation Size 4; Gathering Forces
+137, Babylon, OP_FOUND_CITY, 2995, Ended: NoTarget; Distance -1; Duration 138
+137, Babylon, OP_FOUND_CITY, 2996, Ended: NoTarget; Distance -1; Duration 138
+137, Morocco, OP_FOUND_CITY, 2999, Ended: NoTarget; Distance -1; Duration 138
+137, Morocco, OP_RAPID_RESPONSE, 2970, Ended: NoTarget; Distance 5; Duration 0
+137, Arabia, OP_FOUND_CITY, 3004, Ended: NoTarget; Distance -1; Duration 138
+137, Arabia, OP_RAPID_RESPONSE, 3005, Initial stage is recruiting
+137, Arabia, OP_RAPID_RESPONSE, 3005, Found 1 potential units to recruit for operation 3005 at (54:29) with target at (53:24)
+137, Arabia, OP_RAPID_RESPONSE, 3005, Added Warrior 2030 to slot 0 in army 3006. ETA at (54:29) is 0 
+137, Arabia, OP_RAPID_RESPONSE, 3005, Started Army 3006; Units Recruited 1; Max Formation Size 4; Recruiting Units
+137, Arabia, OP_RAPID_RESPONSE, 3005, PRE Recruiting Units for army 3006; Warrior 2030 at (51:32) - ETA 0; Open; Open; Open; 
+137, Arabia, OP_RAPID_RESPONSE, 3005, Found 0 potential units to recruit for operation 3005 at (54:29) with target at (53:24)
+137, Arabia, OP_RAPID_RESPONSE, 3005, POST Recruiting Units for army 3006; Warrior 2030 at (54:30) - ETA 0; Open; Open; Open; 
+137, Brazil, OP_FOUND_CITY, 3016, Ended: NoTarget; Distance -1; Duration 138
+138, America, OP_FOUND_CITY, 3023, Ended: NoTarget; Distance -1; Duration 139
+138, Ethiopia, OP_FOUND_CITY, 3024, Ended: NoTarget; Distance -1; Duration 139
+138, Ethiopia, OP_RAPID_RESPONSE, 3025, Initial stage is recruiting
+138, Ethiopia, OP_RAPID_RESPONSE, 3025, Found 1 potential units to recruit for operation 3025 at (49:16) with target at (49:16)
+138, Ethiopia, OP_RAPID_RESPONSE, 3025, Added Swordsman 1904 to slot 0 in army 3026. ETA at (49:16) is 2 
+138, Ethiopia, OP_RAPID_RESPONSE, 3025, Started Army 3026; Units Recruited 1; Max Formation Size 4; Recruiting Units
+138, Ethiopia, OP_RAPID_RESPONSE, 3025, Ended: NoTarget; Distance 1; Duration 0
+138, Babylon, OP_FOUND_CITY, 3033, Ended: NoTarget; Distance -1; Duration 139
+138, Babylon, OP_FOUND_CITY, 3034, Ended: NoTarget; Distance -1; Duration 139
+138, Morocco, OP_FOUND_CITY, 3035, Ended: NoTarget; Distance -1; Duration 139
+138, Arabia, OP_FOUND_CITY, 3039, Ended: NoTarget; Distance -1; Duration 139
+138, Arabia, OP_RAPID_RESPONSE, 3005, Ended: NoTarget; Distance 6; Duration 1
+138, Brazil, OP_FOUND_CITY, 3046, Ended: NoTarget; Distance -1; Duration 139
+139, America, OP_FOUND_CITY, 3053, Ended: NoTarget; Distance -1; Duration 140
+139, Ethiopia, OP_FOUND_CITY, 3054, Ended: NoTarget; Distance -1; Duration 140
+139, Babylon, OP_FOUND_CITY, 3063, Ended: NoTarget; Distance -1; Duration 140
+139, Babylon, OP_FOUND_CITY, 3064, Ended: NoTarget; Distance -1; Duration 140
+139, Morocco, OP_FOUND_CITY, 3067, Ended: NoTarget; Distance -1; Duration 140
+139, Arabia, OP_FOUND_CITY, 3072, Ended: NoTarget; Distance -1; Duration 140
+139, Brazil, OP_FOUND_CITY, 3080, Ended: NoTarget; Distance -1; Duration 140
+140, America, OP_FOUND_CITY, 3089, Ended: NoTarget; Distance -1; Duration 141
+140, Ethiopia, OP_FOUND_CITY, 3092, Ended: NoTarget; Distance -1; Duration 141
+140, Ethiopia, OP_RAPID_RESPONSE, 3093, Initial stage is recruiting
+140, Ethiopia, OP_RAPID_RESPONSE, 3093, Found 1 potential units to recruit for operation 3093 at (49:16) with target at (49:16)
+140, Ethiopia, OP_RAPID_RESPONSE, 3093, Added Swordsman 1904 to slot 0 in army 3094. ETA at (49:16) is 2 
+140, Ethiopia, OP_RAPID_RESPONSE, 3093, Started Army 3094; Units Recruited 1; Max Formation Size 4; Recruiting Units
+140, Ethiopia, OP_RAPID_RESPONSE, 3093, Ended: NoTarget; Distance 1; Duration 0
+140, Babylon, OP_FOUND_CITY, 3100, Ended: NoTarget; Distance -1; Duration 141
+140, Babylon, OP_FOUND_CITY, 3101, Ended: NoTarget; Distance -1; Duration 141
+140, Morocco, OP_FOUND_CITY, 3102, Ended: NoTarget; Distance -1; Duration 141
+140, Arabia, OP_FOUND_CITY, 3106, Ended: NoTarget; Distance -1; Duration 141
+140, Arabia, OP_PILLAGE, 3110, Initial stage is recruiting
+140, Arabia, OP_PILLAGE, 3110, Found 3 potential units to recruit for operation 3110 at (54:29) with target at (53:24)
+140, Arabia, OP_PILLAGE, 3110, Added Camel Archer 2841 to slot 0 in army 3111. ETA at (54:29) is 1 
+140, Arabia, OP_PILLAGE, 3110, Added Warrior 1267 to slot 1 in army 3111. ETA at (54:29) is 0 
+140, Arabia, OP_PILLAGE, 3110, Added Warrior 1726 to slot 2 in army 3111. ETA at (54:29) is 0 
+140, Arabia, OP_PILLAGE, 3110, Transition to gathering stage
+140, Arabia, OP_PILLAGE, 3110, Started Army 3111; Units Recruited 3; Max Formation Size 3; Gathering Forces
+140, Arabia, OP_PILLAGE, 3110, PRE Gathering Forces for army 3111; center (50:31); variance (10.67:2.67); free slots 0
+140, Arabia, OP_PILLAGE, 3110, Transition to movement stage
+140, Arabia, OP_PILLAGE, 3110, POST Moving To Target with Army 3111; center (52:31); target (53:24); Progress 0 percent
+140, Brazil, OP_FOUND_CITY, 3113, Ended: NoTarget; Distance -1; Duration 141
+141, America, OP_FOUND_CITY, 3118, Ended: NoTarget; Distance -1; Duration 142
+141, Ethiopia, OP_FOUND_CITY, 3120, Ended: NoTarget; Distance -1; Duration 142
+141, Babylon, OP_FOUND_CITY, 3126, Ended: NoTarget; Distance -1; Duration 142
+141, Babylon, OP_FOUND_CITY, 3127, Ended: NoTarget; Distance -1; Duration 142
+141, Morocco, OP_FOUND_CITY, 3128, Ended: NoTarget; Distance -1; Duration 142
+141, Arabia, OP_PILLAGE, 3110, PRE Moving To Target with Army 3111; center (52:31); target (53:24); Progress 0 percent
+141, Arabia, OP_PILLAGE, 3110, POST Moving To Target with Army 3111; center (54:31); target (53:24); Progress 12 percent
+141, Brazil, OP_FOUND_CITY, 3134, Ended: NoTarget; Distance -1; Duration 142
+142, America, OP_FOUND_CITY, 3140, Ended: NoTarget; Distance -1; Duration 143
+142, Ethiopia, OP_FOUND_CITY, 3141, Ended: NoTarget; Distance -1; Duration 143
+142, Babylon, OP_FOUND_CITY, 3147, Ended: NoTarget; Distance -1; Duration 143
+142, Babylon, OP_FOUND_CITY, 3148, Ended: NoTarget; Distance -1; Duration 143
+142, Morocco, OP_FOUND_CITY, 3149, Ended: NoTarget; Distance -1; Duration 143
+142, Arabia, OP_PILLAGE, 3110, PRE Moving To Target with Army 3111; center (54:31); target (53:24); Progress 12 percent
+142, Arabia, OP_PILLAGE, 3110, POST Moving To Target with Army 3111; center (54:28); target (53:24); Progress 45 percent
+142, Brazil, OP_FOUND_CITY, 3154, Ended: NoTarget; Distance -1; Duration 143
+143, America, OP_FOUND_CITY, 3159, Ended: NoTarget; Distance -1; Duration 144
+143, Ethiopia, OP_FOUND_CITY, 3161, Ended: NoTarget; Distance -1; Duration 144
+143, Babylon, OP_FOUND_CITY, 3168, Ended: NoTarget; Distance -1; Duration 144
+143, Babylon, OP_FOUND_CITY, 3169, Ended: NoTarget; Distance -1; Duration 144
+143, Morocco, OP_FOUND_CITY, 3170, Ended: NoTarget; Distance -1; Duration 144
+143, Arabia, OP_PILLAGE, 3110, setting new target (56:23)
+143, Arabia, OP_PILLAGE, 3110, PRE Moving To Target with Army 3111; center (54:28); target (56:23); Progress 40 percent
+143, Arabia, OP_PILLAGE, 3110, Transition to finished stage; unit distance near 2; far 4
+143, Arabia, OP_PILLAGE, 3110, POST Completed
+143, Brazil, OP_FOUND_CITY, 3177, Ended: NoTarget; Distance -1; Duration 144
+144, America, OP_FOUND_CITY, 3188, Ended: NoTarget; Distance -1; Duration 145
+144, Ethiopia, OP_FOUND_CITY, 3190, Ended: NoTarget; Distance -1; Duration 145
+144, Babylon, OP_FOUND_CITY, 3203, Ended: NoTarget; Distance -1; Duration 145
+144, Babylon, OP_FOUND_CITY, 3204, Ended: NoTarget; Distance -1; Duration 145
+144, Morocco, OP_FOUND_CITY, 3205, Ended: NoTarget; Distance -1; Duration 145
+144, Arabia, OP_PILLAGE, 3110, Ended: Success; Distance 10; Duration 4
+144, Brazil, OP_FOUND_CITY, 3211, Ended: NoTarget; Distance -1; Duration 145
+145, America, OP_FOUND_CITY, 3275, Ended: NoTarget; Distance -1; Duration 146
+145, Ethiopia, OP_FOUND_CITY, 3282, Ended: NoTarget; Distance -1; Duration 146
+145, Babylon, OP_FOUND_CITY, 3292, Ended: NoTarget; Distance -1; Duration 146
+145, Babylon, OP_FOUND_CITY, 3293, Ended: NoTarget; Distance -1; Duration 146
+145, Morocco, OP_FOUND_CITY, 3295, Ended: NoTarget; Distance -1; Duration 146
+146, America, OP_FOUND_CITY, 3319, Ended: NoTarget; Distance -1; Duration 147
+146, Ethiopia, OP_FOUND_CITY, 3324, Ended: NoTarget; Distance -1; Duration 147
+146, Babylon, OP_FOUND_CITY, 3332, Ended: NoTarget; Distance -1; Duration 147
+146, Babylon, OP_FOUND_CITY, 3333, Ended: NoTarget; Distance -1; Duration 147
+146, Morocco, OP_FOUND_CITY, 3334, Ended: NoTarget; Distance -1; Duration 147
+147, America, OP_FOUND_CITY, 3354, Ended: NoTarget; Distance -1; Duration 148
+147, Ethiopia, OP_FOUND_CITY, 3360, Ended: NoTarget; Distance -1; Duration 148
+147, Ethiopia, OP_RAPID_RESPONSE, 3361, Initial stage is recruiting
+147, Ethiopia, OP_RAPID_RESPONSE, 3361, Found 3 potential units to recruit for operation 3361 at (53:24) with target at (54:29)
+147, Ethiopia, OP_RAPID_RESPONSE, 3361, Added Swordsman 1904 to slot 0 in army 3362. ETA at (53:24) is 0 
+147, Ethiopia, OP_RAPID_RESPONSE, 3361, Added Swordsman 2148 to slot 1 in army 3362. ETA at (53:24) is 1 
+147, Ethiopia, OP_RAPID_RESPONSE, 3361, Added Swordsman 1800 to slot 2 in army 3362. ETA at (53:24) is 3 
+147, Ethiopia, OP_RAPID_RESPONSE, 3361, Transition to gathering stage
+147, Ethiopia, OP_RAPID_RESPONSE, 3361, Started Army 3362; Units Recruited 3; Max Formation Size 4; Gathering Forces
+147, Ethiopia, OP_RAPID_RESPONSE, 3361, PRE Gathering Forces for army 3362; center (49:16); variance (13.56:12.67); free slots 1
+147, Ethiopia, OP_RAPID_RESPONSE, 3361, POST Gathering Forces for army 3362; center (50:17); variance (0.89:4.67); free slots 1
+147, Babylon, OP_FOUND_CITY, 3368, Ended: NoTarget; Distance -1; Duration 148
+147, Babylon, OP_FOUND_CITY, 3369, Ended: NoTarget; Distance -1; Duration 148
+147, Morocco, OP_FOUND_CITY, 3370, Ended: NoTarget; Distance -1; Duration 148
+148, America, OP_FOUND_CITY, 3388, Ended: NoTarget; Distance -1; Duration 149
+148, Ethiopia, OP_FOUND_CITY, 3390, Ended: NoTarget; Distance -1; Duration 149
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, Initial stage is recruiting
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, Found 1 potential units to recruit for operation 3391 at (53:24) with target at (53:24)
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, Added Swordsman 1744 to slot 0 in army 3392. ETA at (53:24) is 3 
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, Started Army 3392; Units Recruited 1; Max Formation Size 4; Recruiting Units
+148, Ethiopia, OP_RAPID_RESPONSE, 3361, PRE Gathering Forces for army 3362; center (50:17); variance (0.89:4.67); free slots 1
+148, Ethiopia, OP_RAPID_RESPONSE, 3361, Transition to movement stage
+148, Ethiopia, OP_RAPID_RESPONSE, 3361, POST Moving To Target with Army 3362; center (51:19); target (54:29); Progress 0 percent
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, PRE Recruiting Units for army 3392; Swordsman 1744 at (48:10) - ETA 3; Open; Open; Open; 
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, Found 2 potential units to recruit for operation 3391 at (53:24) with target at (53:24)
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, Added Longswordsman 3398 to slot 1 in army 3392. ETA at (53:24) is 1 
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, Added Swordsman 1904 to slot 2 in army 3392. ETA at (53:24) is 0 
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, Transition to gathering stage
+148, Ethiopia, OP_RAPID_RESPONSE, 3391, POST Gathering Forces for army 3392; center (50:21); variance (0.89:10.89); free slots 1
+148, Babylon, OP_FOUND_CITY, 3400, Ended: NoTarget; Distance -1; Duration 149
+148, Babylon, OP_FOUND_CITY, 3401, Ended: NoTarget; Distance -1; Duration 149
+148, Morocco, OP_FOUND_CITY, 3402, Ended: NoTarget; Distance -1; Duration 149
+148, The_Zulus, OP_FOUND_CITY, 3419, Ended: NoTarget; Distance -1; Duration 149
+149, America, OP_FOUND_CITY, 3427, Ended: NoTarget; Distance -1; Duration 150
+149, Ethiopia, OP_FOUND_CITY, 3431, Ended: NoTarget; Distance -1; Duration 150
+149, Ethiopia, OP_RAPID_RESPONSE, 3361, PRE Moving To Target with Army 3362; center (51:19); target (54:29); Progress 0 percent
+149, Ethiopia, OP_RAPID_RESPONSE, 3361, POST Moving To Target with Army 3362; center (51:22); target (54:29); Progress 25 percent
+149, Ethiopia, OP_RAPID_RESPONSE, 3391, PRE Gathering Forces for army 3392; center (50:21); variance (1.00:12.25); free slots 2
+149, Ethiopia, OP_RAPID_RESPONSE, 3391, POST Gathering Forces for army 3392; center (53:24); variance (2.25:12.25); free slots 2
+149, Babylon, OP_FOUND_CITY, 3432, Ended: NoTarget; Distance -1; Duration 150
+149, Babylon, OP_FOUND_CITY, 3433, Ended: NoTarget; Distance -1; Duration 150
+149, Morocco, OP_FOUND_CITY, 3434, Ended: NoTarget; Distance -1; Duration 150
+149, The_Zulus, OP_FOUND_CITY, 3454, Ended: NoTarget; Distance -1; Duration 150
+150, America, OP_FOUND_CITY, 3465, Ended: NoTarget; Distance -1; Duration 151
+150, Ethiopia, OP_FOUND_CITY, 3470, Ended: NoTarget; Distance -1; Duration 151
+150, Ethiopia, OP_RAPID_RESPONSE, 3361, PRE Moving To Target with Army 3362; center (51:22); target (54:29); Progress 25 percent
+150, Ethiopia, OP_RAPID_RESPONSE, 3361, POST Moving To Target with Army 3362; center (52:24); target (54:29); Progress 42 percent
+150, Ethiopia, OP_RAPID_RESPONSE, 3391, PRE Gathering Forces for army 3392; center (53:24); variance (2.25:12.25); free slots 2
+150, Ethiopia, OP_RAPID_RESPONSE, 3391, POST Gathering Forces for army 3392; center (53:24); variance (1.00:6.25); free slots 2
+150, Ethiopia, OP_RAPID_RESPONSE, 3361, Added Longswordsman 3480 to slot 1 in army 3362. ETA at (52:24) is 0 
+150, Ethiopia, OP_RAPID_RESPONSE, 3391, Added Longswordsman 3481 to slot 0 in army 3392. ETA at (53:24) is 1 
+150, Babylon, OP_FOUND_CITY, 3482, Ended: NoTarget; Distance -1; Duration 151
+150, Babylon, OP_FOUND_CITY, 3483, Ended: NoTarget; Distance -1; Duration 151
+150, Morocco, OP_FOUND_CITY, 3484, Ended: NoTarget; Distance -1; Duration 151
+150, The_Zulus, OP_FOUND_CITY, 3501, Ended: NoTarget; Distance -1; Duration 151
+151, America, OP_FOUND_CITY, 3509, Ended: NoTarget; Distance -1; Duration 152
+151, Ethiopia, OP_FOUND_CITY, 3513, Ended: NoTarget; Distance -1; Duration 152
+151, Ethiopia, OP_RAPID_RESPONSE, 3361, PRE Moving To Target with Army 3362; center (52:24); target (54:29); Progress 42 percent
+151, Ethiopia, OP_RAPID_RESPONSE, 3361, POST Moving To Target with Army 3362; center (54:25); target (54:29); Progress 59 percent
+151, Ethiopia, OP_RAPID_RESPONSE, 3391, PRE Gathering Forces for army 3392; center (53:24); variance (1.00:6.25); free slots 2
+151, Ethiopia, OP_RAPID_RESPONSE, 3391, Transition to movement stage
+151, Ethiopia, OP_RAPID_RESPONSE, 3391, POST Moving To Target with Army 3392; center (53:24); target (53:24); Progress 100 percent
+151, Babylon, OP_FOUND_CITY, 3515, Ended: NoTarget; Distance -1; Duration 152
+151, Babylon, OP_FOUND_CITY, 3516, Ended: NoTarget; Distance -1; Duration 152
+151, Morocco, OP_FOUND_CITY, 3519, Ended: NoTarget; Distance -1; Duration 152
+151, The_Zulus, OP_FOUND_CITY, 3537, Ended: NoTarget; Distance -1; Duration 152
+152, America, OP_FOUND_CITY, 3546, Ended: NoTarget; Distance -1; Duration 153
+152, Ethiopia, OP_FOUND_CITY, 3551, Ended: NoTarget; Distance -1; Duration 153
+152, Ethiopia, OP_RAPID_RESPONSE, 3361, Ended: NoTarget; Distance 12; Duration 5
+152, Ethiopia, OP_RAPID_RESPONSE, 3391, Ended: NoTarget; Distance 1; Duration 4
+152, Babylon, OP_FOUND_CITY, 3559, Ended: NoTarget; Distance -1; Duration 153
+152, Babylon, OP_FOUND_CITY, 3560, Ended: NoTarget; Distance -1; Duration 153
+152, Morocco, OP_FOUND_CITY, 3564, Ended: NoTarget; Distance -1; Duration 153
