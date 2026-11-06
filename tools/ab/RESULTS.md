@@ -1953,6 +1953,12 @@ turn, promotions at the declaration, barbarian kills and own losses before the w
 LEAD: the expert strike is on ai/war 94e55acf (three commits on db638c3 + BarbKill logging), all under EarlyStrike. CI
 to follow; merge once green.
 
+CI:
+- the BarbKill logging 728495a5 is green (run 271);
+- the three expert-strike pieces at 94e55acf are green (run 275);
+- 10b87a45 (Economy 0031 applied as 0bc12aa4, and the core from Economy's plan; the Huns lead with Horse Archers) was
+  still building at 10:16pm ET (run 276).
+
 ### War: checks for the first EarlyStrike block, from the strike-plans research (Nov 5, about 10:00pm ET)
 The lead, from tools/ab/STRIKE_PLANS_RESEARCH.md (8f04839). No new code before the block's results; these are what to
 read in it.
