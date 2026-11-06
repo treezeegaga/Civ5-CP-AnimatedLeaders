@@ -1,0 +1,30 @@
+020, America, Japan, DISPUTE_LEVEL_STRONG, score 0
+021, America, Japan, DISPUTE_LEVEL_NONE, score 0
+024, Japan, America, DISPUTE_LEVEL_STRONG, score 5
+025, Russia, America, DISPUTE_LEVEL_WEAK, score 0
+025, America, Japan, DISPUTE_LEVEL_STRONG, score 5
+026, Russia, America, DISPUTE_LEVEL_NONE, score 0
+030, Egypt, Samarkand, DISPUTE_LEVEL_WEAK, score 2
+034, Korea, Malacca, DISPUTE_LEVEL_STRONG, score 6
+036, America, Japan, DISPUTE_LEVEL_FIERCE, score 10
+054, Japan, America, DISPUTE_LEVEL_FIERCE, score 8
+081, Carthage, Cape Town, DISPUTE_LEVEL_WEAK, score 3
+087, Egypt, Denmark, DISPUTE_LEVEL_WEAK, score 3
+101, Korea, Malacca, DISPUTE_LEVEL_WEAK, score 3
+106, Carthage, Cape Town, DISPUTE_LEVEL_STRONG, score 5
+106, Carthage, Malacca, DISPUTE_LEVEL_STRONG, score 7
+118, Egypt, Japan, DISPUTE_LEVEL_WEAK, score 0
+118, Japan, Egypt, DISPUTE_LEVEL_WEAK, score 3
+118, Japan, Sydney, DISPUTE_LEVEL_STRONG, score 5
+119, Egypt, Japan, DISPUTE_LEVEL_NONE, score 0
+123, Egypt, Riga, DISPUTE_LEVEL_WEAK, score 1
+123, Japan, Egypt, DISPUTE_LEVEL_STRONG, score 5
+126, Egypt, Japan, DISPUTE_LEVEL_WEAK, score 1
+126, Egypt, Samarkand, DISPUTE_LEVEL_STRONG, score 5
+129, America, Carthage, DISPUTE_LEVEL_STRONG, score 0
+130, America, Carthage, DISPUTE_LEVEL_NONE, score 0
+134, Egypt, Denmark, DISPUTE_LEVEL_STRONG, score 6
+134, Japan, Egypt, DISPUTE_LEVEL_FIERCE, score 8
+139, Denmark, Egypt, DISPUTE_LEVEL_WEAK, score 2
+145, Egypt, Denmark, DISPUTE_LEVEL_FIERCE, score 10
+150, Korea, Buenos Aires, DISPUTE_LEVEL_WEAK, score 1
