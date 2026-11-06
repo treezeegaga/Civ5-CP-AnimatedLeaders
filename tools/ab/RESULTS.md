@@ -1950,6 +1950,26 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0053: BUILDUP builds what the target needs until it's takeable (Economy, Nov 6, 2:41pm ET)
+The lead's pre-flight review confirmed a deadlock in 0050:
+- The plan's army is too weak for the target, and no easier city is in reach.
+- War asks for siege (`m_iStrikeSiege`, `GetTimingBuildupSiegeTarget`), but the strike list only built the plan's own
+  siege count, which is none without a siege class.
+- Since 0050, no extra core was built before WAR.
+
+So the target never became takeable, the strike never declared, and every city fell to CP's picks before the strike.
+
+**0053, in BUILDUP:**
+- **Siege first** while War's siege target exceeds the siege on hand: the plan's class, else the Catapult line. Its tech
+  goes ahead of the rest of the research list if it isn't known yet.
+- **More core** while the army can't take the target (`IsStrikeTargetTakeableNow`), as far as it's affordable.
+- **Then wait**, once it can take the city.
+
+0050's rule stays for an army that is complete *and* able to take its target. City log lines: "the siege (the army too
+weak for the target)" and "the army (too weak for the target, more core)".
+
+**Status:** patch 0053 on ai/war `c288d09`, 1 file, +37/-3. Not compiled here.
+
 ### Patch 0052: a civ that never fights stays banned (Economy, Nov 6, 2:32pm ET)
 The user: "a civ that never fights stays banned from wonders and gifts all game. an aggressive civ that doesn't fight is
 a failed state anyway."

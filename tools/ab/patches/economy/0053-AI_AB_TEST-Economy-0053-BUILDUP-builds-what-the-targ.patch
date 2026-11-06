@@ -1,0 +1,97 @@
+From 303e42839574cf8441538eef040a1575b4c3532c Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 19:37:37 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0053: BUILDUP builds what the target needs
+ (siege, more core) until it's takeable
+
+The lead's review of 0050 (confirmed deadlock). When the plan's army was too weak for its
+target and no easier city was in reach, War set m_iStrikeSiege. But the siege only came
+through GetTimingBuildupSiegeTarget, which the strike list never read (it builds the plan's
+own siege count, none without a siege class). And since 0050 there was no extra core before
+WAR. So the target never became takeable, both readiness checks failed for good, and every
+city went LIST NORMAL to CP's picks before the strike.
+
+In BUILDUP:
+- While GetTimingBuildupSiegeTarget exceeds the siege on hand (UNITAI_CITY_BOMBARD, built and
+  in production), cities build siege first: the plan's class, else the Catapult line,
+  through GetStrikeListTrainableOnLine. Logged "the siege (the army too weak for the
+  target)".
+- While !IsStrikeTargetTakeableNow, more core continues (affordability permitting). Logged
+  "too weak for the target, more core". The army waits only once it can take the city.
+- If that siege can't be trained yet, its tech comes before the rest of the research list.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 40 +++++++++++++++++++++++++--
+ 1 file changed, 37 insertions(+), 3 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 78b0a22..fd42b90 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -35408,17 +35408,41 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 		}
+ 	}
+ 
++	const CvMilitaryAI::StrikeStateTypes eStrikeState = GetMilitaryAI()->GetStrikeState();
++	// (0053, the lead's review of 0050) BUILDUP with the plan's army too weak for its target and no easier city: War asks for
++	// siege (GetTimingBuildupSiegeTarget, from its m_iStrikeSiege). The list only knew the plan's own siege count, so the
++	// siege never came. Now the siege comes first, the plan's class or else the Catapult line
++	if (eStrikeState == CvMilitaryAI::STRIKE_BUILDUP)
++	{
++		const int iSiegeWanted = GetMilitaryAI()->GetTimingBuildupSiegeTarget();
++		if (iSiegeWanted > 0 && GetNumUnitsWithUnitAI(UNITAI_CITY_BOMBARD, true) < iSiegeWanted)
++		{
++			const UnitClassTypes eSiegeClass = (kPlan.eSiegeClass != NO_UNITCLASS) ? kPlan.eSiegeClass : (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_CATAPULT", true);
++			const UnitTypes eSiege = (eSiegeClass != NO_UNITCLASS) ? GetStrikeListTrainableOnLine(*this, eSiegeClass, pCity) : NO_UNIT;
++			if (eSiege != NO_UNIT)
++			{
++				eOrder = ORDER_TRAIN;
++				iData = eSiege;
++				LogStrikeList(*this, pCity, "the siege (the army too weak for the target):", GC.getUnitInfo(eSiege)->GetDescription());
++				return true;
++			}
++		}
++	}
++
+ 	bool bShort = false;
+ 	const UnitTypes eArmy = GetStrikeListArmyUnit(*this, kPlan, pCity, bShort);
+ 	// (0050) the plan's counts met: more core only in WAR (its losses). Before the declaration a complete army waits; extra
+ 	// units only cost upkeep. bullygreedy23 167DE984: the Celts met their counts at T63, built 6 more Pictish Warriors
+-	// while BUILDUP waited, and net gold went from -9 to -14 a turn
+-	const bool bMoreCore = GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR && GetEconomicAI()->GetAffordableWarUnits(10) >= 1;
++	// while BUILDUP waited, and net gold went from -9 to -14 a turn.
++	// (0053) Unless the army can't take the target yet: then BUILDUP keeps building core until it can (the lead's review: a
++	// too-weak army and no easier city waited forever, and its cities fell to CP's picks before the strike)
++	const bool bTooWeak = eStrikeState == CvMilitaryAI::STRIKE_BUILDUP && !GetMilitaryAI()->IsStrikeTargetTakeableNow();
++	const bool bMoreCore = (eStrikeState == CvMilitaryAI::STRIKE_WAR || bTooWeak) && GetEconomicAI()->GetAffordableWarUnits(10) >= 1;
+ 	if (eArmy != NO_UNIT && (bShort || bMoreCore))
+ 	{
+ 		eOrder = ORDER_TRAIN;
+ 		iData = eArmy;
+-		LogStrikeList(*this, pCity, bShort ? "the army (short of the plan):" : "the army (the plan's counts met, more core):", GC.getUnitInfo(eArmy)->GetDescription());
++		LogStrikeList(*this, pCity, bShort ? "the army (short of the plan):" : (bTooWeak ? "the army (too weak for the target, more core):" : "the army (the plan's counts met, more core):"), GC.getUnitInfo(eArmy)->GetDescription());
+ 		return true;
+ 	}
+ 	LogStrikeList(*this, pCity, eArmy == NO_UNIT ? "LIST NORMAL (no army unit trainable)" :
+@@ -35442,6 +35466,16 @@ bool CvPlayer::GetStrikeListProductionQuiet(CvCity* pCity, OrderTypes& eOrder, i
+ TechTypes CvPlayer::GetStrikeListTech() const
+ {
+ 	const CvStrikePlan* pPlan = GetStrikeListPlan();
++	// (0053) BUILDUP asking for siege the civ can't train yet: its tech comes before the rest of the list
++	if (pPlan && GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_BUILDUP && GetMilitaryAI()->GetTimingBuildupSiegeTarget() > 0)
++	{
++		const UnitClassTypes eSiegeClass = (pPlan->eSiegeClass != NO_UNITCLASS) ? pPlan->eSiegeClass : (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_CATAPULT", true);
++		const UnitTypes eSiege = (eSiegeClass != NO_UNITCLASS) ? GetSpecificUnitType(eSiegeClass) : NO_UNIT;
++		const TechTypes eSiegeTech = (eSiege != NO_UNIT) ? (TechTypes)GC.getUnitInfo(eSiege)->GetPrereqAndTech() : NO_TECH;
++		const TechTypes eStep = (eSiegeTech != NO_TECH) ? GetOpeningBookTechStep(*this, eSiegeTech, 0) : NO_TECH;
++		if (eStep != NO_TECH)
++			return eStep;
++	}
+ 	for (int i = 0; pPlan && i < pPlan->iNumTechs; i++)
+ 	{
+ 		// STRIKE_TECH_LUXURY: one luxury tech, the book's pick (none needed: skipped)
+-- 
+2.43.0
+
