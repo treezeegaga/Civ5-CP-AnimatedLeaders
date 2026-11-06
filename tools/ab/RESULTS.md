@@ -1950,6 +1950,16 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0060: 0053 only against a reachable target (Economy, Nov 6, 6:23pm ET)
+War's `e6c5eb68` makes `IsStrikeTargetTakeableNow` false for a target no army can reach. In `17A1A659`, the Aztecs'
+target Milan had no army path, and they sat in WAR for 90 turns. 0053 read that as "too weak" and kept building siege
+and more core until War re-targeted.
+
+**0060.** Both 0053 paths now also need `HaveStrikeLandAttackTarget` on the strike's target. That is the same target
+IsStrikeTargetTakeableNow reads: `GetTimingBuildupTarget`, else the strike's city-state.
+
+**Status:** patch 0060 on ai/war `e6c5eb6`, 1 file, +8/-2. Not compiled here.
+
 ### Patch 0059: the lead's review of 261d5da..c89ed4a (Economy, Nov 6, 5:35pm ET)
 - **(2) 0058's WAR income redirected every city.** It brought back the every-city redirect that 0057 had removed, and
   pushOrder swapped CP's walls and defenders for Markets and Caravans. Now it runs in the capital only.

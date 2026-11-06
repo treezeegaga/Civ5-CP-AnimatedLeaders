@@ -1,0 +1,49 @@
+From 355d2d5e77ea68d6dba3bd372ad2b09110c24790 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 23:23:45 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0060: 0053's siege and more core only
+ against a reachable target
+
+War's e6c5eb68 makes IsStrikeTargetTakeableNow false for a target no army can reach (17A1A659:
+the Aztecs' Milan, no army path, 90 turns in WAR). 0053 read that as "too weak" and built
+siege and more core until War's per-turn check re-targeted. Both 0053 paths now also need
+CvMilitaryAI::HaveStrikeLandAttackTarget on the strike's target: GetTimingBuildupTarget,
+else the strike's city-state target, the same one IsStrikeTargetTakeableNow reads.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 07f89d0..bf9a972 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -35459,7 +35459,13 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	// (0053, the lead's review of 0050) BUILDUP with the plan's army too weak for its target and no easier city: War asks for
+ 	// siege (GetTimingBuildupSiegeTarget, from its m_iStrikeSiege). The list only knew the plan's own siege count, so the
+ 	// siege never came. Now the siege comes first, the plan's class or else the Catapult line
+-	if (eStrikeState == CvMilitaryAI::STRIKE_BUILDUP)
++	// (0060) only against a target the army can reach: an unreachable one (17A1A659: the Aztecs' Milan, no army path) isn't
++	// helped by more units; War's per-turn check re-targets it. The same target IsStrikeTargetTakeableNow reads
++	PlayerTypes eStrikeTarget = GetMilitaryAI()->GetTimingBuildupTarget();
++	if (eStrikeTarget == NO_PLAYER)
++		eStrikeTarget = GetMilitaryAI()->GetStrikeCityStateTarget();
++	const bool bTargetReachable = eStrikeTarget != NO_PLAYER && GetMilitaryAI()->HaveStrikeLandAttackTarget(eStrikeTarget);
++	if (eStrikeState == CvMilitaryAI::STRIKE_BUILDUP && bTargetReachable)
+ 	{
+ 		const int iSiegeWanted = GetMilitaryAI()->GetTimingBuildupSiegeTarget();
+ 		if (iSiegeWanted > 0 && GetNumUnitsWithUnitAI(UNITAI_CITY_BOMBARD, true) < iSiegeWanted && !IsStrikeUnitHold())	// (0055) affordable
+@@ -35483,7 +35489,7 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	// while BUILDUP waited, and net gold went from -9 to -14 a turn.
+ 	// (0053) Unless the army can't take the target yet: then BUILDUP keeps building core until it can (the lead's review: a
+ 	// too-weak army and no easier city waited forever, and its cities fell to CP's picks before the strike)
+-	const bool bTooWeak = eStrikeState == CvMilitaryAI::STRIKE_BUILDUP && !GetMilitaryAI()->IsStrikeTargetTakeableNow();
++	const bool bTooWeak = eStrikeState == CvMilitaryAI::STRIKE_BUILDUP && bTargetReachable && !GetMilitaryAI()->IsStrikeTargetTakeableNow();	// (0060) reachable
+ 	const bool bMoreCore = (eStrikeState == CvMilitaryAI::STRIKE_WAR || bTooWeak) && GetEconomicAI()->GetAffordableWarUnits(10) >= 1;
+ 	// (0055) the army short of the plan too only while one more unit is affordable (IsStrikeUnitHold)
+ 	if (eArmy != NO_UNIT && ((bShort && !IsStrikeUnitHold()) || bMoreCore))
+-- 
+2.43.0
+
