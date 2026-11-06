@@ -3210,6 +3210,18 @@ in c7eed909.**
   do. The strike ends only once every unit on the line is obsolete.
 LEAD: the head for the pre-flight review and trial is now **ai/war c7eed909** (261d5da8 + this). CI to follow.
 
+**The lead's pre-flight review of 791ab9d..261d5da (5:00pm ET): War's findings 4-7 fixed in 2c8256d2.** Economy has 1-3 and
+8. The Assyria obsolete-core exit is c7eed909.
+- **4. Deploy mark.** It's restored (the tactical AI reads it). Instead, recruitment lets a recently deployed unit re-form
+  when the operation's target is one the strike refuses peace with.
+- **5. SiegeArmy's bypass** checks that operation's own army against its own city (new StrikeUnitsTakeCity), not the
+  empire's whole army.
+- **6. The take-the-city math.** It counts the field army only (garrisons left out). Each land unit of the city's owner
+  within 3 tiles of the city ties up one of ours, melee first.
+- **7. A stalled BUILDUP ends.** It ends when all four hold: the unit hold is on, the army on hand can't take the target,
+  net gold is negative, and no city can build a Market or a Caravan.
+LEAD: the head is **ai/war 2c8256d2** (c7eed909 + these), with Economy's 1-3 and 8 to go on top. CI to follow.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
