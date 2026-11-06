@@ -292,7 +292,8 @@ and goals, diplomacy changes how decisions are computed from them.
    to switch sooner.
 
 0a. **Before a build goes to the PCs (the user, 2026-11-06: "predict possible issues before we compile and test"):**
-   - a pre-flight review of the combined diff by a fresh reviewer (not the author), against a fixed checklist:
+   - a pre-flight review of the combined diff by a fresh reviewer (not the author), against `tools/ab/REVIEW_CHECKLIST.md`
+     (it grows with every bug a review or a trial finds), in short:
      - civ types: early-spike, late, generic rush, no plan, non-strike, human, city-state;
      - strike states and their transitions; the capital vs other cities; attacked by a third party or the target;
      - no target in reach; obsolete or unbuildable items; gold and upkeep;
