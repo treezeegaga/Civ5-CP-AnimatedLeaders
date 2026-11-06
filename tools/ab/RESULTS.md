@@ -3024,8 +3024,10 @@ of 0cb5402..33ef2159. The Aztec 169CA418 read (Ur, T58-T77) follows when its log
 7. **Homeland's gifts** skip strike units.
 - **Also found:** AB_COUNT_CITIES_CAPTURED counts captures from majors only, so a city-state strike's capture (Ur,
   Panama City) never registered for no-retreat or the exits. GetStrikeCaptureCount now adds the city-state captures.
-  **The expert_block "captured" column reads the same counter**, so city-state captures may be missing from the per-civ
-  tables; I'll check the script.
+  **Checked the read scripts:** attack_funnel's "captured" is the CSV's CitiesCaptured (majors only). expert_block now
+  adds the CSV's CityStatesCaptured. The overnight table doesn't change (no city-state captures in those 22 games), but
+  city-state strikes from bullygreedy23/bullyabort23 on would have been under-counted. LEAD: attack_funnel (your branch)
+  could add CityStatesCaptured the same way.
 LEAD: the combined head is now **ai/war ece1822b** (33ef2159 + these fixes). "Ready" follows when CI is green.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".

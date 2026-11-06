@@ -49,6 +49,20 @@ UPGRADE_UNITS = {'TECH_CONSTRUCTION': ('Composite Bowman',), 'TECH_MACHINERY': (
                  'TECH_MATHEMATICS': ('Catapult', 'Ballista'), 'TECH_HORSEBACK_RIDING': ('Horseman',)}
 
 games = af.games_from_csvs()
+# city-state captures (the CSV's CityStatesCaptured; attack_funnel counts CitiesCaptured, majors only): a city-state strike's
+# capture counts as a capture here (War, Nov 6: GetStrikeCaptureCount in the DLL does the same)
+def _cs_captures():
+    out = {}
+    for f in glob.glob(os.path.join(af.RESULTS, "AIABTest_*.csv")):
+        with open(f, encoding="utf-8-sig", newline="") as fh:
+            for r in csv.DictReader(fh):
+                if r.get("Role") == "aggressor":
+                    g = r["GameId"]
+                    out[g] = max(out.get(g, 0), int(r.get("CityStatesCaptured") or 0))
+    return out
+for _g, _n in _cs_captures().items():
+    if _g in games:
+        games[_g]['captured'] = games[_g]['captured'] + _n
 CSVROWS = collections.defaultdict(dict)
 for f in glob.glob(os.path.join(af.RESULTS, 'AIABTest_*.csv')):
     run = os.path.basename(f)[9:-4].split('@')[0]
