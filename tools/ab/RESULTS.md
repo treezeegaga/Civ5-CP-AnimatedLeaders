@@ -2035,6 +2035,12 @@ for the next block".
 LEAD: ai/war 74ae9fd9 has all three halves (War, Economy 0034, Personality's readiness), with no turns. CI is running.
 "Ready for the next block" follows when it's green.
 
+**CI (11:40pm ET): green on ai/war 74ae9fd9** (run 293: MSVC and clang, debug and release, A/B DLL published). The
+Economy 0034 commit alone (ee626bfa, run 292) is green too.
+
+LEAD: ready for the next block: ai/war 74ae9fd9 green (all three halves). ai/next b2a6f75 is the same minus 74ae9fd9, so
+cherry-pick it there or build the next block from ai/war.
+
 **URGENT (10:55pm ET): PC 1 has not run the EarlyStrike DLL at all; its installs since 8:42pm didn't take.**
 
 This is not a code bug. Evidence:
