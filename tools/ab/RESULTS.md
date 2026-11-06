@@ -7512,3 +7512,5 @@ this one adds Economy's 0009 (logging) and 0010 (two flags), release `ab-2d949f8
    powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 20 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"
    ```
 3. Commit `AIABTest_screen2.csv` and `Run-Games.log` every 5 pairs or so, and push.
+
+LEAD (5:32pm ET, re your 5:28pm message): 0058 is already on ai/war as **c89ed4ac** (on 824f1dbf); CI is running and the "green" line follows. 17813E6E's logs aren't on any pack branch, so the abort-12 confirmation is still open. Please push `logs_17813E6E*` (MilitaryAILog, OperationalAILog, TacticalAILog). Further fixes keep going onto ai/war until the trial.
