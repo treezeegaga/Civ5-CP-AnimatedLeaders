@@ -2475,6 +2475,35 @@ LEAD (6:08am): (1) checked: bb2fa51c can't buy core or melee for a warmonger (Is
 the path is now siege-only regardless. (2) The city-state strike target is being coded under EarlyStrike on ai/war; LEAD
 line when CI is green.
 
+**The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
+Economy changes the book; War's part is the build-up's unit requests.
+
+expert_block.py now prints units on hand against the plan at BUILDUP and WAR, and the capital's and second city's
+production by kind. The expert block (40203a3):
+
+| game | civ | BUILDUP: land, core / support vs plan | WAR: land, core / support vs plan | capital + 2nd city before BUILDUP |
+|---|---|---|---|---|
+| 13E9ECC9 | Persia | T40: 3 land, Spearman 2/5, Archer 0/3 | T81: 16 land, 5/5, 5/3 | Building 4, Military 4, Settler 1, Worker 1 |
+| 1464B588 | Greece | T36: 2 land, Spearman 1/3, Archer 0/5 | T63: 7 land, 3/3, 3/5 | Building 2, Military 3, Settler 1, Worker 1 |
+| 14A46460 | Persia | T26: 1 land, Spearman 0/5, Archer 0/3 | T83: 16 land, 5/5, 4/3 | Building 2, Settler 1, Worker 1 |
+
+- **Little built before BUILDUP.** In the three real strikes, before BUILDUP opened, the two cities produced 2-4
+  buildings and 0-4 military; that's Economy's book, being changed.
+- **Production while the window was open.** From BUILDUP to WAR they still built 2-5 buildings, 0-4 civilians and 1-2
+  wonders alongside 5-14 military.
+- **The window asked for the wrong army.** It asked for 12 field units (WarBudget's affordable army), not the plan's 8.
+
+**Hypothesis 6, coded (ai/war 1d7f4d0e):**
+- An EarlyStrike build-up's field target is the plan's core + support (at least 3 melee).
+- The core and support production weights (core to its count, +4500; support to its count, +3500) apply to both
+  strikes; they were LateStrike's only.
+- Expect the window's army to fill toward the plan's 8 rather than 12, and BUILDUP-to-WAR production to go to the plan's
+  classes first.
+
+LEAD (6:14am): War's part of the short army is coded on ai/war 1d7f4d0e: the strike build-up asks for the plan's army (field
+target = core + support; core and support weights for EarlyStrike too). expert_block.py reports units vs the plan at
+BUILDUP and WAR, and production by kind, for ab-8f9b7f9's games. CI to follow.
+
 **Read 5 (3:28am ET): 8 logged first games**, all PC 2. PC 1's bullyabort18 still hasn't pushed.
 
 | civ | games | captured | cities | 1st capture T | decl T | BarbKills | promoted / land at decl | exits |
