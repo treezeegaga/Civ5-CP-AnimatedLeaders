@@ -89,3 +89,8 @@ against this list. The list grows: every bug a review or a test game finds gets 
   redirect, reaches every city.
 - **An exit that ignores the upgrade line:** "core obsolete" ended a strike whose plan was to upgrade that core
   (Assyria, Archer to Composite Bowman).
+- **A widened exit that the entry gates don't match:** the exit follows the upgrade line, but the buildable and window
+  gates check only the base class, so the old exit turns into a deadlock.
+- **A temporary block taken as a dead end:** an era gate triggering a fallback meant for a finished order.
+- **An exit testing one blocker while another holds:** the stall exit checks "not takeable", but readiness can also be
+  held by the upgrade bill or the field count.
