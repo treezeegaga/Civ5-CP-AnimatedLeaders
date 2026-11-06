@@ -1,0 +1,32 @@
+001, France, LEADER_NAPOLEON, tags TS, pursuits 0/2, Tourism, home meta -35, weights dom 42 sci 6 cul 48 dip 4, risk high, expansion tall, greedy tall
+001, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 2/1, Expansionist, home meta -20, weights dom 10 sci 10 cul 50 dip 30, risk low, expansion wide, greedy wide
+001, Morocco, LEADER_AHMAD_ALMANSUR, tags SD, pursuits 1/2, Diplomat, home meta -35, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion tall, greedy tall
+001, Carthage, LEADER_DIDO, tags , pursuits 3/0, Scientist, home meta -40, weights dom 22 sci 68 cul 4 dip 6, risk medium, expansion medium, greedy wide
+001, Austria, LEADER_MARIA, tags D, pursuits 1/2, Diplomat, home meta -20, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy tall
+001, Korea, LEADER_SEJONG, tags NS, pursuits 3/2, Scientist, home meta -70, weights dom 2 sci 68 cul 24 dip 6, risk medium, expansion tall, greedy tall
+001, Russia, LEADER_CATHERINE, tags , pursuits 3/0, Scientist, home meta -60, weights dom 22 sci 68 cul 4 dip 6, risk medium, expansion tall, greedy tall
+001, America, LEADER_WASHINGTON, tags WE, pursuits 0/3, Conqueror, home meta 80, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy wide
+050, France, LEADER_NAPOLEON, tags RTS, pursuits 0/2, Zealot, home meta 25, weights dom 46 sci 6 cul 40 dip 8, risk high, expansion medium, greedy tall
+050, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 2/1, Expansionist, home meta -20, weights dom 10 sci 10 cul 50 dip 30, risk low, expansion wide, greedy wide
+050, Morocco, LEADER_AHMAD_ALMANSUR, tags RSD, pursuits 1/2, Diplomat, home meta -35, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion tall, greedy tall
+050, Carthage, LEADER_DIDO, tags , pursuits 3/0, Scientist, home meta -40, weights dom 22 sci 68 cul 4 dip 6, risk medium, expansion medium, greedy wide
+050, Austria, LEADER_MARIA, tags RD, pursuits 1/2, Diplomat, home meta -20, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy tall
+050, Korea, LEADER_SEJONG, tags RNS, pursuits 3/2, Scientist, home meta -70, weights dom 2 sci 68 cul 24 dip 6, risk medium, expansion tall, greedy tall
+050, Russia, LEADER_CATHERINE, tags R, pursuits 3/0, Zealot, home meta 0, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion medium, greedy tall
+050, America, LEADER_WASHINGTON, tags WE, pursuits 0/3, Conqueror, home meta 80, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy wide
+100, France, LEADER_NAPOLEON, tags RTS, pursuits 0/2, Zealot, home meta 25, weights dom 46 sci 6 cul 40 dip 8, risk high, expansion medium, greedy tall
+100, The Iroquois, LEADER_HIAWATHA, tags RE, pursuits 2/1, Zealot, home meta -30, weights dom 6 sci 6 cul 60 dip 28, risk low, expansion wide, greedy wide
+100, Morocco, LEADER_AHMAD_ALMANSUR, tags RSD, pursuits 1/2, Diplomat, home meta -35, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion tall, greedy tall
+100, Carthage, LEADER_DIDO, tags R, pursuits 3/0, Zealot, home meta 20, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion wide, greedy wide
+100, Austria, LEADER_MARIA, tags RD, pursuits 1/2, Diplomat, home meta -20, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy tall
+100, Korea, LEADER_SEJONG, tags RNS, pursuits 3/2, Scientist, home meta -70, weights dom 2 sci 68 cul 24 dip 6, risk medium, expansion tall, greedy tall
+100, Russia, LEADER_CATHERINE, tags R, pursuits 3/0, Zealot, home meta 0, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion medium, greedy tall
+100, America, LEADER_WASHINGTON, tags WRE, pursuits 0/3, Conqueror, home meta 80, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy wide
+150, France, LEADER_NAPOLEON, tags RTS, pursuits 0/2, Zealot, home meta 25, weights dom 46 sci 6 cul 40 dip 8, risk high, expansion medium, greedy tall
+150, The Iroquois, LEADER_HIAWATHA, tags E, pursuits 2/1, Expansionist, home meta -20, weights dom 10 sci 10 cul 50 dip 30, risk low, expansion wide, greedy wide
+150, Morocco, LEADER_AHMAD_ALMANSUR, tags RSD, pursuits 1/2, Diplomat, home meta -35, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion tall, greedy tall
+150, Carthage, LEADER_DIDO, tags R, pursuits 3/0, Zealot, home meta 20, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion wide, greedy wide
+150, Austria, LEADER_MARIA, tags RD, pursuits 1/2, Diplomat, home meta -20, weights dom 4 sci 6 cul 26 dip 64, risk medium, expansion medium, greedy tall
+150, Korea, LEADER_SEJONG, tags NS, pursuits 3/2, Scientist, home meta -70, weights dom 2 sci 68 cul 24 dip 6, risk medium, expansion tall, greedy tall
+150, Russia, LEADER_CATHERINE, tags R, pursuits 3/0, Zealot, home meta 0, weights dom 26 sci 46 cul 20 dip 8, risk medium, expansion medium, greedy tall
+150, America, LEADER_WASHINGTON, tags WRE, pursuits 0/3, Conqueror, home meta 80, weights dom 68 sci 24 cul 4 dip 4, risk high, expansion conquest, greedy wide
