@@ -5066,3 +5066,9 @@ this one adds Economy's 0009 (logging) and 0010 (two flags), release `ab-2d949f8
   - A second war (on Byzantium, T146) came with 19 land units and "affordable 0 more" and took no city.
 - **Reading:** captures come when the window runs long enough for the army to reach about 13. That is the lever EarlyStrike (`c337c77`: the book's army, then upgrade and go) attacks from the other side.
 - **PC 1:** bullyabort15 is stuck in setup retries after the human game's graphics change. The runner logs "Set Up Game never showed" while the setup screen is open. PC 1 is restoring the DX9 settings from its 8:50pm backup.
+
+### Goal removed: coalitions against a runaway (the user, 9:24pm ET Nov 5)
+"i think we can remove coalitions against runaway." Goal 2 in AGENTS.md is struck out. The scoreboard's coalition column
+and the dashboard's coalition goal row are no longer tracked, and the coalition block is dropped. The coalition flags
+already in the bundle (`CoalitionStrength`, `CoalitionCoop`, `CoalitionPact`) stay as they are. Diplomacy's next work
+is deal frequency (the lively-world goal), after the attack work.

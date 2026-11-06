@@ -90,7 +90,7 @@
    "section": "session",
    "order": 3,
    "name": "Diplomacy",
-   "detail": "Waits for the coalition block: in big-army games the others turned AFRAID of the aggressor instead of ganging up.",
+   "detail": "Coalitions removed as a goal (your call). Waits for the lively-world work (deal frequency) after the attack work.",
    "chat": "Civ V AI: Diplomacy session",
    "state": "waiting"
   },
@@ -199,8 +199,8 @@
   {
    "section": "queue",
    "order": 2,
-   "name": "Coalition block",
-   "detail": "Big army plus the others' diplomacy fixes: do the other civs gang up on a conqueror? Waits for a free PC.",
+   "name": "Per-civ strike plans",
+   "detail": "Personality's table: early-spike civs strike early (EarlyStrike, Honor, barbarian hunting); late-spike civs like the Zulu build up, then time their unique unit. Overrides only where the default is wrong.",
    "state": "waiting"
   },
   {
@@ -247,14 +247,6 @@
    "name": "Matchup triangle",
    "target": "Greedy beats balanced, aggressive beats greedy, balanced beats aggressive; no style wins overall",
    "detail": "The three styles are coded (Personality). The matchup test waits until attacks reliably take cities.",
-   "state": "waits"
-  },
-  {
-   "section": "goal",
-   "order": 5,
-   "name": "Coalition against a runaway",
-   "target": "2+ civs at war with the aggressor within 20 turns of its first conquest",
-   "detail": "One case so far: the Huns' first capture came about T120, and 4 civs were at war with them by T140.",
    "state": "waits"
   },
   {

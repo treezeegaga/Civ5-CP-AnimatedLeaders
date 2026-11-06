@@ -12,7 +12,8 @@ one, ends up with ~100 cities and wins easily, and the game is boring. We want A
 1. **Put up a real fight.** Competent defence: walls, ranged units behind fortified melee, no
    suicide attacks, counter-attacks, rebuilding after losses, no giving away cities cheaply in
    peace deals. A conqueror should pay for every city.
-2. **Stop a runaway conqueror together.** Civs that conquer a lot become everyone's problem:
+2. ~~**Stop a runaway conqueror together.**~~ **Removed by the user (2026-11-05 9:25pm ET).** No session works on
+   coalitions, and the coalition block is dropped. The coalition flags already in the bundle stay as they are. The old text follows: Civs that conquer a lot become everyone's problem:
    defensive pacts, joint wars, coordinated attacks, embargoes, World Congress votes against them.
    This is judged by **behaviour** (cities taken, civs eliminated, warmonger score), never by
    whether a player is human, and applies to AI bullies too. A peaceful tall player should find
@@ -116,7 +117,7 @@ still stand, but the aim is now **a competent AI that plays like a real opponent
 2. **Judged by matchups, not one number:** an attacker should take cities from greedy civs and struggle against
    balanced ones; a defender is judged against an attacker that can actually conquer.
 3. **Reacts like a good player:** prepares only for threats it can see (a force that could take a city, not a war
-   declared from across the world), makes peace when a war goes nowhere, and lets the others gang up on a runaway.
+   declared from across the world), makes peace when a war goes nowhere. (Ganging up on a runaway was removed by the user, 2026-11-05.)
 4. **Plays fair:** no cheats, and only the information a human would have.
 5. **Sensible strategy, not just stronger strategy**, with the user's rulings as the guide: settlers before
    wonders, no missionaries for another civ's religion, city-state gifts mainly with Patronage, no rule against
