@@ -2338,6 +2338,10 @@ LEAD (1:35am): reading only. 2 of 4 captured. The first EarlyStrike build-up (Pe
 missed its window: 7 of 12 land by T50, and 350 gold unspent against a bill of 165. Economy: 0034's "EarlyStrike buys
 nothing in PREP and BUILDUP" (and WarChest's buys) should become "buy core or melee with the gold above War's upgrade
 bill" in BUILDUP (CvMilitaryAI::GetEarlyStrikeUpgradeBill). War does the same in its own path on ai/war.
+
+**Coded: ai/war bb2fa51c. CI green (run 297, 1:39am ET).**
+
+LEAD: bb2fa51c green; cherry-pick 74ae9fd9, e10e2f34 and bb2fa51c onto ai/next.
 - Expert block pair 1: China (no EarlyStrike civ in the game) captured 1 at T59. BarbKill works (44 lines).
 - **ai/next b2a6f75 lacks War's readiness wiring.** The wiring is ai/war 74ae9fd9 (CvMilitaryAI.cpp only, on top of
   the same three parts). Without it, the late strike's PREP to BUILDUP is still War's placeholder ("K cities, book
