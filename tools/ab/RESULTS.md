@@ -3593,6 +3593,17 @@ weights fill everything a plan doesn't name):
   - any other civ with no spike in reach gets no strike plan and plays its normal book.
 - **No wonders on any list** (Economy: the executor builds what the list says, and no wonder before a strike): the
   research's Pyramids (Zulu), Temple of Artemis and National College (Assyria, Japan) drop out.
+- **From the ab-103bd11 games** (next block, not the running one):
+  - **Late PREP needs no gold** (War, Songhai in `15286C56`: PREP from T1 to T148, the treasury never held the half
+    upgrade bill because Economy saves only from BUILDUP): `553dfdc`, PREP to BUILDUP is the upgrade tech in reach and
+    K cities; the gold is BUILDUP's job.
+  - **Lists ordered by when items can be built** (the lead: America's list waited 45 turns on a Longswordsman whose
+    tech wasn't in; Economy: Songhai's late list built Horsemen before its Market and upkeep drained the treasury):
+    `d43fece`, `f8f2de7`. Every build's tech goes on the research list if missing. Lists I wrote ([I]) are ordered so
+    each build comes after the research item that brings its tech; late ones get Currency third and the Market before any
+    combat unit. Lists straight from a source (the user's Aztec, Zulu, Mongolia, Assyria) keep their order.
+  - **Spikes past T150 Standard (T100 Quick) are out of reach** (America's Musketman core reached BUILDUP at T128 and
+    never declared by T150): with no spike in reach, a warmonger gets the generic rush.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
   (the ruling, no wonders) compiles (CI run 318; `da1a760` run 305, `184fe09` run 313). Economy's book needs to treat `bGenericRush` like an early strike.
 
