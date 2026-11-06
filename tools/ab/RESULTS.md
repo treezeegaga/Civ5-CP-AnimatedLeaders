@@ -3528,6 +3528,19 @@ weights fill everything a plan doesn't name):
   4. **Who does what:** War's trigger and exits read the plan's counts, tech, gold and siege; the plan (Personality)
      keeps per-civ inputs only. If War wants per-civ exit inputs (the core's combat class for the counter check, a
      smaller army-lost threshold for a civ whose units heal on kills like the Aztec's Jaguars), I add them as plan fields.
+- **Coded for the next block** (`327a15b`; the lead, 10:41pm ET: War's `CvMilitaryAI::GetStrikeState`, NONE / PREP /
+  BUILDUP / WAR / OVER, on game state only, Economy's proposal `c8ba79e`):
+  - `CvGrandStrategyAI::IsStrikeEconomyReady()`, PREP to BUILDUP. Early strike: the core trainable, N core units out,
+    K cities founded (or boxed in). Late strike: the upgrade tech known or researchable now, K cities (or boxed in), and
+    half the upgrade bill in the treasury (`iEconomyGoldTarget`).
+  - `CvGrandStrategyAI::IsStrikeArmyReady(int* piUpgradeBill)`, BUILDUP to WAR: the upgrade tech known; core (with the
+    pre-built units) at `iCoreTarget`; support and always-brought siege at their targets (upgraded units count:
+    Archers that became Composite Bowmen are still support); the treasury covers the upgrades still to do. War adds 2+
+    melee and a target in reach.
+  - Plan exits: `iExitCityStrength`, `eExitCounterClass1/2`, `bExitRoughTarget`; China's from the research (25,
+    Knight and Musketman, rough ground). The army-lost exit is War's, for every plan.
+  - `iReadyGraceTurns` is gone (a turn limit). `iOpenTurn`, `iDeclareByTurn`, `iFallbackTurn` stay in the log only; the
+    live expert block still reads them, the next block won't.
 - **Status:** `221fb3e` and the Inca's Catapults (`0356f6b`) merged into `claude/ab-c1` (`03bbc90`); `221fb3e` compiles (CI run 274
   passed); `0356f6b` compiles (CI run 277 passed). Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
