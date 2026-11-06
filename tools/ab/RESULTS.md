@@ -2015,6 +2015,11 @@ Specifics:
 LEAD: the strike state is coded on ai/war 56e0cadc, no turns in strike decisions. Economy: 0034 against GetStrikeState
 (drop the T75/T90 and IsLateStrikeSaving turns). Personality: the economy-ready condition (a function War calls in place
 of the K-cities placeholder in CvMilitaryAI::UpdateStrikeState). CI to follow.
+**CI (11:15pm ET): green on ai/war 56e0cadc** (run 290): MSVC and clang debug and release builds, plus the A/B DLL
+publish. ai/war is waiting for Economy's 0034 and Personality's economy-ready condition before "ready for the next block".
+
+LEAD: 56e0cadc is green. The strike state waits for Economy's 0034 and Personality's economy-ready condition, then "ready
+for the next block".
 
 **URGENT (10:55pm ET): PC 1 has not run the EarlyStrike DLL at all; its installs since 8:42pm didn't take.**
 
