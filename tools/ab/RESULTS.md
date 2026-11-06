@@ -5212,3 +5212,22 @@ after OVER).
 **Step 1:** a read-only audit by War and Economy. Every code path that can make each decision for an AI player, whether
 our gate covers it, and the single lowest-level gate point. **Step 2:** the gates, in the next block's build. The
 running block (bullygreedy23 / bullyabort23, ab-0cb5402) is untouched.
+
+### The ownership build reaches a block (lead, 3:34pm ET Nov 6)
+- **bullygreedy23 (ab-0cb5402, 4 pairs, stopped):** lists followed, the strength math sane, no aggressor capture.
+  Found by these games:
+  - city-state declarations undone by CP's own city-state peace (5fe900a);
+  - CP's operations gathering the army on another city (f9245a1);
+  - a city-state/major re-target oscillation (b0d7e1c);
+  - bans lifting after a never-fought strike, now held all game per the user's ruling (Economy 0052).
+- **The strike ownership** (the user's call): War's five gates and Economy 0049-0053 cut CP out of the strike's war,
+  peace, approach, targets, disbanding, production, gold, research and policy. Three pre-flight reviews caught about
+  20 bugs before any games, among them a fight to the death, paid peace that never happened, a never-ending WAR stage
+  and BUILDUP deadlocks.
+- **trial25 (ab-791ab9d, T80): clean.**
+  - The list was followed, and gate 4 refused every attack on a non-target.
+  - The city-state war on Kyzyl was declared once and stood (T62).
+  - No wonder or gift before it.
+  - Gap: the attack on Kyzyl couldn't re-form (a 5-turn deploy lock, SiegeArmy's bar). Fixed on ai/war b446678 for the
+    next block.
+- **bullygreedy24 (ab-791ab9d, PC 2, 20 games) started at 3:27pm.** PC 1 waits for its disk (Windows Search).
