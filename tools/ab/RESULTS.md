@@ -5057,3 +5057,12 @@ this one adds Economy's 0009 (logging) and 0010 (two flags), release `ab-2d949f8
    powershell -ExecutionPolicy Bypass -File tools\ab\Run-Games.ps1 -Fixes none -MaxGames 20 -Screen "WidePlans, BoxedIn, BoxedInWar, TimingAttack, SiegeTechs, SiegeBook, DeclareTiming, GrowthTech, AqueductValue, GreedyBook, GreedyTarget, CanWin, ClosedBorders, SettlersFirst, SettlerOverlap, DiploPolicyValue, PolicyPrereqDepth, LosingWarBuildings, CultureRivalValue, SettlersBeforeWonders, BookFinishesSettlers, SiegeStay, SiegePosture, DeclareAtBorder, UpgradeSaveCancel, EasyTarget, DiploBugs, LuxuryAsk, DealExploits, DealReputation"
    ```
 3. Commit `AIABTest_screen2.csv` and `Run-Games.log` every 5 pairs or so, and push.
+
+### Honest package, bullygreedy16 after 7 pairs (lead, 8:55pm ET Nov 5)
+- **Score so far:** 2 capture games in 7 pairs, 3 cities. Pair 7 (1307FB83, Japan) took 1 city from Indonesia; the flipped game took none.
+- **Japan's build-up, the same pattern as the first capture game:**
+  - Window T54 to T118, 64 turns. At the declaration: 13 land units, 3 siege (the target was 2), and +20 gold a turn.
+  - Over the window the army grew from 4 land units to 12 while gold fell from 240 to 39.
+  - A second war (on Byzantium, T146) came with 19 land units and "affordable 0 more" and took no city.
+- **Reading:** captures come when the window runs long enough for the army to reach about 13. That is the lever EarlyStrike (`c337c77`: the book's army, then upgrade and go) attacks from the other side.
+- **PC 1:** bullyabort15 is stuck in setup retries after the human game's graphics change. The runner logs "Set Up Game never showed" while the setup screen is open. PC 1 is restoring the DX9 settings from its 8:50pm backup.
