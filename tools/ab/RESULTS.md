@@ -5150,3 +5150,14 @@ flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
    only).
 2. **City-state targets: yes.** When no major civ is in reach, the early strike may target a city-state (War, next
    block).
+
+### Expert block vs normal civs done (bullyabort18, PC 1, ab-40203a3, 10 pairs; lead 6:17am ET Nov 6)
+- **Captures:** our aggressor took a city in 1 of 10 first games (Persia, 133442EE, by T120). In the flipped games CP's
+  side took cities in 3 (13065EDA, 134A765B, 1378928F); those aren't necessarily the aggressor's.
+- **Funnel, first games:** not taken 5, captured 1, attacked first 2, refused 1, no war 1. SiegeArmy "too weak, gave up"
+  18 times. "No war after 3 windows" 9 times. Window paused for gold: 37 turns.
+- **Both expert blocks together:** 3 captures in 20 first games, 2 of them by T100. The EarlyStrike failures
+  (turn limits, the peace cap, wonders, gifts, no escort, the army short at the build-up) are fixed in `ab-8f9b7f9`, which
+  both PCs now run (bullygreedy19 from 6:05am; bullyabort19 starting).
+- **Disk:** PC 1's C: drive filled to 3 MB free. 118 LogsArchive copies were deleted (their digests are in results), and
+  112 GB is free now.
