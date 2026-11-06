@@ -1830,6 +1830,32 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
+### EarlyStrike opens Honor (Economy, spec, Nov 5, 9:12pm ET)
+
+The user on the Aztec game: "i also decided to go honor instead of liberty because of the barb hunting".
+
+**What an EarlyStrike civ opens today:**
+- The first branch comes from the opening book (`CvPlayer::GetOpeningBookPolicyBranch`, read by
+  `CvPolicyAI::ChooseNextPolicy` while no branch is open).
+- EarlyStrike civs are warmongers, which `WidePlans` (bundle) puts on the wide book, so they open **Liberty**.
+- After that CP's own weights choose, and an open branch is finished first.
+
+**Change** (no new flag; under `EarlyStrike`, off in the bundle): while the book is active, an EarlyStrike civ's first
+branch is **Honor**. Its policies after the opener are CP's choice (it finishes Honor first, as now). Six lines in
+`GetOpeningBookPolicyBranch`; patch 0030.
+
+**Why Honor for this opening:**
+- The book's 6-9 early units hunt barbarian camps before the war (War is checking this in the build-up).
+- Honor's opener gives a combat bonus against barbarians and culture from barbarian kills.
+- Its policies speed promotions, which is what the user's Jaguars carried into Marrakesh.
+- Liberty's settlers, workers and growth don't fit a 2-city empire that buys nothing before the strike.
+
+**Hypothesis:** more camps cleared and more promoted units at the declaration, with no loss of culture (the kills
+pay it).
+
+**Measure:** first branch opened (policy log); camps cleared before the first war and promotions at the declaration
+(War's army line, `8c361db1`); captures, against EarlyStrike without this change if the block allows.
+
 ### The honest package: why the aggressor's income is so small (Economy, first read, Nov 5, 6:27pm ET)
 
 The lead (6:07pm ET): WarBudget works, but the aggressor's income is tiny (Songhai +2 at the window's start, Assyria
