@@ -3180,6 +3180,11 @@ for the next block in b1eb09de.**
   hold. The list's army phase should have rebuilt it (support short of the plan). Asked Economy to check the Zulu
   production lines from T116 when the pair-2 logs land (about 4:30pm). With b1eb09de it no longer blocks the declaration
   either way.
+  **Economy's answer (4:41pm ET):** it wasn't lost, it was upgraded. A Composite Bowman became a Crossbowman at T116.
+  Personality's CountStrikeClassLine counts only one upgrade step, so the Crossbowman (two steps from Archer) dropped out
+  and support read 7/8. Economy's own count walks the whole line and read 8/8, so the army phase never asked for a
+  replacement. b1eb09de removes these counts from War's readiness. Asked Personality to make CountStrikeClassLine walk
+  the full line, since its IsStrikeArmyReady and IsStrikeEconomyReady still use it.
 LEAD: the next block's head is **ai/war b1eb09de** (698525b1 + this). CI to follow.
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
