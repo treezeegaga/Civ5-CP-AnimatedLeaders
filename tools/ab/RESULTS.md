@@ -2865,6 +2865,12 @@ ai/war d75dfec9 green; RoleFixes += StrikeList" follows when MSVC and clang pass
   when the declaration fails.
 - **Expected:** no strike civ stays in PREP/BUILDUP with no valid target. "Strike: target" and "no target in reach"
   lines will show in games where the old target went stale. Captures should not drop.
+- **Code: ai/war 056ed90f** (after d75dfec9), 4 files, +192/-2, as designed. One refinement: the attack-target check
+  applies only to a new target, since CP's list can drop a city for a turn, and a held target stays. Siege and the
+  takeable cache restart only when the city changes.
+LEAD: the pre-flight fixes (1) and (3) are on ai/war at 056ed90f, after Economy 0047. "Ready for the next block: ai/war
+056ed90f green; RoleFixes += StrikeList" follows when MSVC and clang pass. New log lines to read: "Strike: target X -> Y",
+"no target in reach", and "the core can't be trained".
 
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
