@@ -1,0 +1,38 @@
+From 09a35d588fec1804b96b42908e3e4ceaf085ef82 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 08:27:25 +0000
+Subject: [PATCH] AI_AB_TEST Economy: no city-state gold gifts while a strike
+ civ saves for its upgrades
+
+War's expert-block read: Greece (1464B588) gave 500 gold to Jerusalem at
+T46, in its build-up, and declared without its upgrades. Under EarlyStrike
+(PREP and BUILDUP, before the war) and LateStrike (BUILDUP), the gift loop
+in CvDiplomacyAI treats the civ as saving, as it does for a settler. One
+condition in Diplomacy's file. On ai/war e865585 + patch 0035.
+Written 3:29am ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+index 816d27c..ad3f05f 100644
+--- a/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvDiplomacyAI.cpp
+@@ -37722,7 +37722,10 @@ void CvDiplomacyAI::DoContactMinorCivs()
+ 
+ 	// Do we want to give someone Gold enough to actually do it?
+ 	// AI_AB_TEST: not while the new AI is saving for its next settler
+-	const bool bSavingForSettler = GetPlayer()->GetEconomicAI()->IsSavingForExpansionSettler();
++	// AI_AB_TEST candidates (EarlyStrike, LateStrike; Economy): nor while a strike civ saves for its upgrades (War's expert-block
++	// read: Greece, 1464B588, gave 500 gold to a city-state at T46 in its build-up)
++	const bool bSavingForSettler = GetPlayer()->GetEconomicAI()->IsSavingForExpansionSettler() ||
++		GetPlayer()->IsEarlyStrikeSmallEmpire() || GetPlayer()->IsLateStrikeSaving();
+ 	veMinorsToGiveGold.StableSortItems(); // Sort from highest desirability to lowest
+ 	for (int i = 0; i < veMinorsToGiveGold.size() && !bSavingForSettler; i++)
+ 	{
+-- 
+2.43.0
+

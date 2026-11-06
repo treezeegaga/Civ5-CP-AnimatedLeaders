@@ -1839,6 +1839,21 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - Fix (the lead's): add `AggressivePlan` to the bully RoleFixes, or have the harness pick only warmonger-personality
   early-spike civs.
 
+### Patch 0036: no city-state gold gifts while a strike civ saves (Economy, Nov 6, 3:29am ET; next block)
+War's read of the expert block: Greece (1464B588) gave 500 gold to Jerusalem at T46, in its build-up. The upgrade
+hold (War's, fixed on ai/war `e865585`) then kept 289 gold unspent at the T63 declaration.
+- **Change:** under EarlyStrike (PREP and BUILDUP, before the war) and LateStrike (BUILDUP), the gift loop in
+  `CvDiplomacyAI` treats the civ as saving, as it does for a settler. One condition in Diplomacy's file.
+- **Base:** patches 0035 and 0036 apply on ai/war `e865585`. 0034 is already there (`ee626bf`).
+
+**Not done, for the user to decide:** War proposes buying core or melee units in the build-up with the gold above
+the upgrade bill (Persia, 13E9ECC9, held 350 gold against a 165 bill while 5 units short). War's own purchase path
+does this on ai/war (`bb2fa51`). Both run through the gold-purchase check, where `WarmongerHurry` (the user's rule,
+in the bundle) lets a warmonger buy only settlers and siege units. So those purchases are refused today. For the
+Aztec and Polynesia the core is warrior-class (the Jaguar, the Maori Warrior), which `NoObsoleteHurry` also blocks
+("I just never want to see a civ hurry a warrior again"). Lifting either rule for strike build-ups is the user's
+call.
+
 ### Patch 0035: the strike book builds the settler's escort itself; no world wonders before a strike (Economy, Nov 5, 11:53pm ET; next block)
 **From the expert block's first EarlyStrike game** (Persia, bullygreedy18 pair 2, 13A89116):
 - With nothing in reach at T0, the book went Worker, Settler, with no combat unit.
