@@ -1924,6 +1924,42 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: what an early-spike aggressor's units do before the window (barbarian hunting?) (Nov 5, about 9:25pm ET)
+The user (via the lead): "i pushed out 3 quick jaguars and went barb hunting". The Jaguars had +33% ranged defence by
+the strike. Counted over logged bully first games, from the game's start to the first "window opens" turn (homeland
+and tactical logs). Script: `tools/ab/prewindow_units.py`.
+
+| Before the window (median a game; games with any) | Early-spike aggressors (35) | Other aggressors (65) |
+|---|---|---|
+| Window opens | T45 | T43 |
+| Military unit-turns exploring (not Scouts) | 48 (35) | 46 (65) |
+| Garrison moves | 12 (35) | 12 (63) |
+| Barbarian camp attempts ("Trying to remove barbarian camp") | 13 (28) | 12 (56) |
+| Opportunity attacks | 0 (12; mean 0.8) | 0 (27; mean 0.8) |
+| Own units killed | 0 (2) | 0 (8) |
+
+**Read:**
+- They don't sit fortified, but they don't hunt either. The first military units spend the build-up exploring (CP sends
+  the starting Warrior or UU out as an explorer) and garrisoning.
+- They go after camps (CP's PlotGrabGoodyMoves sends units at camps within 11 tiles at peace), but they almost never
+  attack: under one opportunity attack a game before the window. A camp taken empty gives gold, not experience.
+- So little XP, unlike the user's veteran Jaguars. The promotions logging on ab-70f901e (8c361db) will show it on the army
+  line at the declaration.
+
+**Is a "hunt barbarians in the build-up" gate cheap? Yes, as one gate under EarlyStrike, in two places:**
+1. CvTacticalAI::PlotGrabGoodyMoves (camps): for an EarlyStrike civ before its strike, a longer reach and more units on
+   occupied camps. It is already a loop with a range (11) and a unit count (3).
+2. Barbarian units near our land as targets for the units not garrisoning: a priority raise for barbarian unit targets
+   in the tactical target list, when not at war with a major.
+- Both are a few lines behind IsEarlyStrikeCiv and IsEarlyStrikeSmallEmpire. Risk: units lost to barbarians, measured
+  by own units killed before the window, now 0 to 0.1 a game.
+- Not coded (the lead: harness unchanged today). The first ab-70f901e games give the baseline promotions at the
+  declaration.
+
+LEAD: reading. Early units explore and garrison and go after camps but rarely fight (0.8 opportunity attacks a game
+before the window), so little XP. A barbarian-hunt gate under EarlyStrike is cheap (camps and barbarian unit targets in
+CvTacticalAI), not coded; the promotions on the new army line give the baseline first.
+
 ### War: who qualifies for EarlyStrike, and a harness option to make it the aggressor (Nov 5, about 9:15pm ET)
 The lead: bully mode picks the most aggressive personality as aggressor. If few civs qualify for EarlyStrike, the block
 won't exercise it.
