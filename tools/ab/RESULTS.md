@@ -2099,6 +2099,16 @@ have them.
 LEAD: (1) BarbKill is ungated and is in the 40203a3 DLL. It writes to PlayerTacticalAILog.csv, not MilitaryAILog. No
 saved game has run it yet. Check 138A0F7F's saved PlayerTacticalAILog.csv; 0 there means broken. (2) The Aztec game ran
 8fe8e0f, so no strike plan existed; it isn't EarlyStrike data.
+
+**URGENT closed (11:31pm ET).**
+- **PC 1:** the cause is confirmed. The installer was killed by a pipe; PC 1 reinstalled at 10:54pm, and Run-ABTest now
+  checks the installed DLL byte for byte (6e19c51). The restarted bullyabort18 hasn't pushed rows yet.
+- **PC 2's pair 138A0F7F is clean.** Build `No-Tag 40203a3 Clean` in all 240 rows, China's Fixes include EarlyStrike
+  and EarlyStrikeAggressor, and BarbKill has 44 lines in the saved PlayerTacticalAILog.csv (40 in the flip). No code
+  fix is needed.
+
+LEAD: URGENT closed. PC 2's 40203a3 games are correct (build, flags, BarbKill 44). PC 1 has reinstalled; I'll check its
+first bullyabort18 rows for build 40203a3 when they land.
 The user (via the lead): "because the ai is not a high level player, some of the windows will be hard to hit". The plans'
 turns are Deity players' turns, and our AI is slower.
 
