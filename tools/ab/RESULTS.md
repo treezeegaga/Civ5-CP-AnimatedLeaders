@@ -3493,7 +3493,7 @@ weights fill everything a plan doesn't name):
   - Celts: N 1 (plan 2: the research's Pictish Warrior x2 for barbarians, then a settler), core x4 and Archer x2 (plan
     x5 and x3).
 - **Status:** `221fb3e` and the Inca's Catapults (`0356f6b`) merged into `claude/ab-c1` (`03bbc90`); `221fb3e` compiles (CI run 274
-  passed); CI pending on `0356f6b`. Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
+  passed); `0356f6b` compiles (CI run 277 passed). Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
