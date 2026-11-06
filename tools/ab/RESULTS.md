@@ -1950,6 +1950,28 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0054: income first under the hold; research serves the build list (Economy, Nov 6, 3:50pm ET)
+The first strike capture on the ownership build: in the trial (ab-791ab9d, PC 2, `172518A7`), Mongolia's late strike
+declared at T120 on Ethiopia and took cities at T123 and T146, with no ban hits. The lead's notes for the next block:
+- **The hold stalled the list.** Karakorum's list sat behind item 6 (Chariot Archer) from T29 to T85 under 0048's
+  late-PREP hold, which logged "LIST HOLD: net gold 0" 13 times.
+- **Late research.** Horseback Riding came late.
+- **No core.** The core (Knight x8) was never built: the core line stayed at 0/8, and the strike declared "as ready as
+  it got" with Chariot Archers. That part is War's readiness.
+
+**0054:**
+- **Income first.** While the hold is on (a late strike in PREP with net gold under +2), a city's first pick is an
+  income item: a Market, else a Caravan where a trade route is free. The hold now lifts itself instead of waiting.
+  Logged as `income first (net gold N)`.
+- **Research serves the build list.** Research goes first to the first unfinished build item, in list order, whose
+  tech we lack: the pre-build's Horseback Riding, or a Market's Currency. This runs after 0053's siege tech and before
+  the plan's research list, and not in WAR.
+
+The logs for 172518A7 weren't pushed yet, so this follows the lead's description. I'll check against the logs when they
+land.
+
+**Status:** patch 0054 on ai/war `b446678`, 1 file, +58. Not compiled here.
+
 ### Patch 0053: BUILDUP builds what the target needs until it's takeable (Economy, Nov 6, 2:37pm ET)
 The lead's pre-flight review confirmed a deadlock in 0050:
 - The plan's army is too weak for the target, and no easier city is in reach.
