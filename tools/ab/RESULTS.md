@@ -3604,6 +3604,11 @@ weights fill everything a plan doesn't name):
     combat unit. Lists straight from a source (the user's Aztec, Zulu, Mongolia, Assyria) keep their order.
   - **Spikes past T150 Standard (T100 Quick) are out of reach** (America's Musketman core reached BUILDUP at T128 and
     never declared by T150): with no spike in reach, a warmonger gets the generic rush.
+- **The lead's pre-flight review of `d75dfec`** (`99d3ced`): the list ordering reads the tech tree only, never the civ's
+  current techs. The plan is cached once per turn and the UI can reach it for an AI city, so a client building it before
+  and another after the AI's tech arrives would have seen different lists (a possible multiplayer desync). And the
+  Market rule is skipped when the Market's tech couldn't go on a full research list (it would have pushed every combat
+  unit to the end). Compile: `553dfdc` run 332, `d43fece` run 335, `f8f2de7` run 336, `99d3ced` run 340.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
   (the ruling, no wonders) compiles (CI run 318; `da1a760` run 305, `184fe09` run 313). Economy's book needs to treat `bGenericRush` like an early strike.
 
