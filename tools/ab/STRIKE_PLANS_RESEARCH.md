@@ -451,3 +451,120 @@
 - **S33** Deity Challenge #33 Songhai (BNW): https://forums.civfanatics.com/threads/the-deity-challenge-line-up-33-songhai.549108/
 
 **Not reachable from this session:** carlsguides.com and civilization.fandom.com (DNS blocked). The unit stats marked [I] should be checked against the CP unit tables.
+
+---
+
+## China (Chu-Ko-Nu rush)
+
+**Sources are thin.** CivFanatics has no BNW China rush guide. The one full guide is "The Heroic Chu-Ko-Nu Rush" (S34, March 2011). It is vanilla: Paper Maker for 380 gold, research agreements, blocked techs. The BNW evidence is game reports from Deity Challenge #16 (S35) and Immortal Challenge #26 (S36), plus a few short advice threads (S37-S42). Carl's guide and StrategyWiki were not reachable (DNS blocked). Carl's guide is used only as a search snippet (S43).
+
+**Strength [S][I]**
+- Chu-Ko-Nu: replaces the Crossbowman at **Machinery**, attacks twice per turn [S41][S42], and upgrades from Archer and Composite Bowman [S43 snippet][S36].
+- It keeps the double attack when upgraded [S42]. Because it fires twice, it "earn[s] promotions twice as quickly" (consentient) [S39].
+- consentient rates it 5/5: "XB rushes are the most reliable Domination strategy and it becomes even easier with these guys" [S39].
+- BNW stats from memory, to check against the CP unit table [I]: 13 combat, a lower ranged strength than the Crossbowman, 120 production. S38/S43 give 120 production.
+- Trait (Art of War): Great Generals come 50% faster and give a double combat bonus [S39]. Ninakoru: "+30% boost from generals + chu-ko-nu is quite fearsome" [S37]. The vanilla guide gives 35% [S34].
+- Paper Maker: a Library that also gives +2 gold [S39]. In this plan it is upgrade gold [I].
+- Spike: Machinery until Knights and gunpowder.
+  - Vanilla Deity: the window holds to about Standard T120-130 [S34].
+  - BNW: city defense was "in the 40s" by the T170s, with AI Muskets and Cannons (budweiser) [S35].
+
+**Type.** A **"wait for the UU" timed strike**, like Zulu (section 6) and Mongolia (section 7).
+- Pre-build ranged units, upgrade them on the turn Machinery lands, then declare war. mbbcam: "conquer as much as possible before it is superseded" [S37].
+- Standard-pace timings disagree by source:
+
+| Source | Machinery / CKNs | Strike |
+|---|---|---|
+| Vanilla guide (snarzberry) [S34] | about T80 | attack by T90 on Deity, or "you'll struggle to take out more than one Civ" |
+| elthrasher, Deity, same thread [S34] | | T98, a failure |
+| Fluphen Azine, BNW Deity [S35] | T118 | France's city fell in two turns; Gao at T142 |
+| bison21, BNW Immortal [S36] | | declared at T98 on Attila; Osaka with CBs, then Kyoto with CKNs |
+| Bimblecrumbs, BNW Immortal [S36] | | Tokyo around T107 |
+| Shark Diver, BNW Deity [S35] | | Paris T150-156 with 6 CKNs |
+
+- So BNW Machinery tends to come around Standard T95-120. Strikes run T98-156, which is about Quick T65-80 for Machinery and Quick T65-105 for the strike [I].
+
+**Opening (flexible) [S34][S36][S37][S38][S40][S43]**
+- **Research.** No BNW source gives a full order. The fragments:
+  - Bimblecrumbs: "Philosophy ---> Construction ---> Machinery ---> Civil Service" [S36].
+  - Gustavus Rex at T50: Pottery, Archery, Mining, Masonry, Sailing, Trapping, Calendar, Philosophy [S36].
+  - lerrocco: "beeline Machinery" [S38]. b7fanatix: "Make Machinery a priority tech" (G&K) [S40].
+  - sebtanic: Writing, luxuries, National College, then CKNs [S38].
+  - mbbcam: Tradition science reaches Machinery "early enough to wreak a bit of havoc" [S37].
+  - The pattern [I]: Archery, a luxury tech or two, Writing/Philosophy for the National College, Construction (Composite Bowmen), then a beeline to Machinery. Bronze Working is only for melee and is not needed early. Check Machinery's prerequisites against the CP tech tree [I].
+- **Archers or CBs?** Both are seen. Everyone upgrades at Machinery.
+  - Carl's guide (snippet): "producing plenty of archers/composite bowmen in the early game and saving gold to upgrade them" [S43].
+  - Bimblecrumbs built 5 Archers, then 2 more, used them as Archers and then CBs, and upgraded them to CKNs [S36].
+  - Plumfairy: "all those Composite Bowmen you built while waiting for Machinery" [S37].
+  - lerrocco: 4-5 Archers farming XP on a city-state, which "should be composite bows by the first attack" [S38].
+  - The units are used before Machinery: bison21 took Osaka with CBs before the upgrade [S36]. Bimblecrumbs took Mongolia's capital with archers around T70 [S36]. Fluphen used early declarations to steal workers [S35].
+- **Gold for the upgrades.**
+  - No BNW source gives a CB-to-CKN figure. Fluphen paid with "fail gold" from lost wonder races [S35]. Nigel_Tufnel2 was "very short on gold" heading for Machinery [S36].
+  - Generic CB-rush rates are 70-80 gold per Archer-to-CB upgrade [S1][S2]. CB to CKN costs more [I]: plan on about 100 gold per unit before discounts, and check the CP upgrade formula.
+  - Honor's Professional Army makes upgrades cheaper (Plumfairy) [S37].
+- **Policy. Contested:**
+  - Liberty then Honor: snarzberry (vanilla) [S34], Gustavus Rex [S36], lerrocco ("left-side Honor ... most useful" for quick rushes) [S38].
+  - Tradition then Honor: bison21 [S36], Shark Diver [S35].
+  - Full Honor: Bimblecrumbs (Immortal) [S36].
+  - Honor's +XP is "pretty amazing ... especially for your cho-ko-nu, who get 2 attacks/turn" (Plumfairy) [S37]. The G&K-era b7fanatix agrees [S40].
+  - Against: Aaron90495 says Honor for the free general is not worth it for a CB rush, "not even if you're China" [S2]. Plumfairy: "Choosing Honor kinda locks you into a Domination victory" [S37].
+- **Cities:** 2-4 before the strike. Bimblecrumbs had a 1-city National College around T80 [S36]. Bol and sebtanic planned a 4-city turtle plus the rush [S38].
+
+**Strike [S34][S35][S36][S40]**
+- **Army: 6-8 ranged units plus 2-3 melee is the norm.**
+  - Bimblecrumbs: "7 archers/comps/CKNs, 1-2 spears/pikes, 1 warrior/sword" [S36].
+  - Shark Diver: "6 CKN's with a Spearman and Warrior" took Paris [S35].
+  - Benzy19: "10-12 cho-ko-nu" with 3 Swordsmen, 25-30 turns to grind down India, Delhi at T187 [S35].
+  - snarzberry (vanilla): 4 promoted CKNs, 1 Horseman as city-taker and medic, and the GG [S34].
+  - Too few fails: stormtrooper412 "hit them with only 5-6 CKNs whereas I should have brought twice as many" [S36].
+- **Siege: none.** The double attack does the siege's job.
+  - Shark Diver's Trebuchets "mostly stayed home" [S35].
+  - snarzberry gives every CKN the Siege promotion second [S34].
+  - Against 40+ defense, CKNs do little. bison21 did about 7 damage a turn to Athens, a 14-turn siege [S36].
+- **Great General: it matters, but players use it loosely.**
+  - consentient: "the double combat bonus that the GGs give is huge" [S39].
+  - snarzberry keeps the GG within two tiles of the CKNs [S34].
+  - In BNW reports, generals are mostly spent on citadel land grabs or Petra (bison21, lerrocco, Shark Diver) [S35][S36][S38]. Shark Diver's first GG came only after the opening shots on Paris [S35].
+  - For the AI [I]: bring a GG if one exists. Don't wait for one. In BNW, Honor's Warrior Code gives a free GG (from memory; check it in CP).
+- **Upgrades:** all Archers/CBs on the Machinery turn, then declare [S34][S36][S37]. Spearmen to Pikemen and Warriors to Swordsmen as gold allows [S36].
+- **Tactics [S34]:**
+  - Fire from range, and use leftover moves for the second shot.
+  - The melee unit waits back and enters only when the city is at 0-1 HP.
+  - Rotate damaged CKNs out. "You do not want to lose a CKN, _ever_."
+
+**Target [S34][S35][S36][S38]**
+- Warmongers first (lerrocco) [S38].
+- A civ whose own unique unit is about to arrive: Bimblecrumbs killed Japan and America "before Samurai and Minutemen" [S36].
+- Forward settlers and near neighbors: France had settled next to Fluphen's capital; Attila had forward-settled on bison21 [S35][S36].
+- Easy terrain: Shark Diver judged "Gandhi would be the easier first target due to easy terrain" [S35].
+- A civ holding the Great Wall, hit early [S34].
+- Avoid rough or hilly targets. Fluphen stalled in France's "difficult" terrain [S35]. Mods: hills "can make early war infeasible" [S38].
+- Order for the AI [I]: the nearest flatland capital or border city that has no walls or Great Wall, preferring a warmonger or a civ about to get its unique unit.
+
+**Exit [S34][S35][S36]**
+- **City defense too high.**
+  - Vanilla Deity: at about 25 defense, CKNs did "1 damage" each (elthrasher, T98) [S34].
+  - BNW: 40+ defense (bison21, Athens) or 50 defense (Gerrard Capashen, who considered giving up) means stop or wait for Artillery [S36].
+- **The window closes:**
+  - Knights and gunpowder end it (snarzberry) [S34].
+  - stormtrooper412 quit around T170: "his knights kept coming" [S36].
+  - budweiser at T170s: defense in the 40s with Muskets and Cannons [S35].
+- **Terrain or a forced war:** Fluphen went passive when France's terrain stalled him and France refused peace [S35].
+- **After the strike:** consolidate. Fluphen took peace after T142 because France was the tech leader [S35]. One Deity #16 poster: China allows "a peaceful turtle game after you expand thru war to 6 or 7 cities" [S35].
+- **AI rule [I]:**
+  - Abort or retarget if the target's city strength at arrival is above about 25-30.
+  - Abort or retarget if fewer than 2 melee units or fewer than 5 ranged units are alive.
+  - Abort or retarget if the target fields Knights or Musketmen in numbers.
+  - Make peace after 1-2 captures if the next city is on a hill or walled.
+
+**Sources for this section**
+- **S34** The Heroic Chu-Ko-Nu Rush Strategy, snarzberry (March 2011, vanilla, Standard): https://forums.civfanatics.com/threads/the-heroic-chu-ko-nu-rush-strategy.416938
+- **S35** Deity Challenge Line-up #16, China (BNW, Deity, Standard, Pangaea): https://forums.civfanatics.com/threads/the-deity-challenge-line-up-16-china.541394/ (and /page-2)
+- **S36** Immortal Challenge Lineup #26, China (BNW, Immortal, Standard): https://forums.civfanatics.com/threads/the-immortal-challenge-lineup-game-26-china.547629 (and /page-2)
+- **S37** China Strategy Help (Jan 2016; version not stated, likely BNW, one poster links non-VP balance mods): https://forums.civfanatics.com/threads/china-strategy-help.561682/
+- **S38** TSG 271 announcement (2025, BNW 1.0.3.279, Deity, Epic, Large Fractal; advice only, no results): https://forums.civfanatics.com/threads/tsg-271-annoucement.699449/
+- **S39** An alternative Deity Tier List, "Don't Forget About Conquest", consentient (March 2015, BNW): https://forums.civfanatics.com/threads/an-alternative-deity-tier-list-a-k-a-dont-forget-about-conquest.544761/
+- **S40** Newbie question (July 2013, G&K): https://forums.civfanatics.com/threads/newbie-question.504666/
+- **S41** Do you find the Chinese UA boring? (Jan 2014, BNW): https://forums.civfanatics.com/threads/do-you-find-chinese-ua-boring.520034/
+- **S42** Questions about China (Aug 2015, BNW): https://forums.civfanatics.com/threads/questions-about-china.551103
+- **S43** Carl's Civ 5 Guide, China (search snippet only; host DNS blocked): https://www.carlsguides.com/strategy/civilization5/civs-leaders/china.php
