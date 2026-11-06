@@ -1654,7 +1654,7 @@ named, and reload the save before every try.
 
 ### Diplomacy: flag `Spoiler` (the user's design; Diplomacy session, 2026-11-05 9:40pm ET)
 
-`ai/diplomacy` fe4f0f7, off and out of the bundle. The lead cleared coding it now (9:38pm ET), since with the user's
+`ai/diplomacy` fe4f0f7 (CI run 270 green), off and out of the bundle. The lead cleared coding it now (9:38pm ET), since with the user's
 definitions it can act in T150 games. It gets no test time until the attack blocks finish, then a gainer test.
 RivalTrade stays parked.
 
