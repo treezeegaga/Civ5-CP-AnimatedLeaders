@@ -2895,6 +2895,23 @@ above). "Ready for the next block: ai/war 0d19241c green; RoleFixes += StrikeLis
 LEAD: the trial23 fix is on ai/war at **f98404e6** (after 0d19241c). "Ready for the next block: ai/war f98404e6 green;
 RoleFixes += StrikeList" follows when its CI is green.
 
+**The lead's second pre-flight review (d75dfec..0d19241, 11:48am ET): all seven findings handled in 8bc6c0c2.**
+1. **Resource exit.** "The core can't be trained" now means the tech is known and we own none of a resource it needs
+   (imports count). The free count no longer decides it: an army built from Horses or Iron spends them. The same fix
+   applies to IsStrikeArmyBuildable, so PREP -> BUILDUP and the window don't stall once the army has used its resources.
+2. **Third party's war.** GetNewAIConquestTarget returned nothing during any major war. A strike in BUILDUP with a
+   pinned target now gets past that return, skips the search, and uses the pinned target. The strike pins its target
+   whenever we're at war with a major.
+3. **HasStrikeDeclared** is set only by our own declarations (the majors counter and CvDiplomacyAI::DeclareWar), not by
+   a city-state's war on us.
+4. **No defensive pact, and no voluntary vassalage,** for a strike AI in PREP or BUILDUP. Capitulation in a peace deal
+   is still allowed.
+5. **No peace-treaty turns** in the target checks (the user's no-turn rule). canDeclareWar enforces the treaty.
+6. **Already in f98404e6** (PREP looks at majors in reach, then city-states).
+7. **The war item's tooltip** says "A special game rule prevents this action." when the strike block refuses it.
+LEAD: ai/war **8bc6c0c2** has the trial23 fix (f98404e6) and these seven. "Ready for the next block: ai/war 8bc6c0c2
+green; RoleFixes += StrikeList" follows when its CI is green. Then the trial game, then the block.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
