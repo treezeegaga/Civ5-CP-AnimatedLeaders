@@ -2760,6 +2760,12 @@ LEAD (9:15am): Economy 0044 is in (with 0045 and HasStrikeDeclared). War on us i
 declaration is the strike's war, and a third party's only delays our declaration while a city is in danger. "Ready for
 the next block" on 103bd11d when CI is green (about 10:36am).
 
+**Update:** the lead tagged ab-04ab581 (claude/ab-c1 fast-forwarded to ai/war 04ab5813) for the PCs. 103bd11d (war on us
+is no longer an exit, which answers the third-party question) comes after it, for the next tag.
+
+LEAD: the answer to "attacked by a third party ends the strike?" is no. It's on ai/war 103bd11d, one commit after
+04ab581; re-tag when convenient. War is checking CI on ab-04ab581 and will push an URGENT fix if it doesn't build.
+
 **Persia's 73-turn BUILDUP (the lead; bullygreedy21 15A7D14F, ab-f939c50; logs not pushed yet, so this is from the
 code):** city-state targets only. BUILDUP opened at T56 against Wellington; no declaration until a war on Ethiopia at
 T129 with 7 land units.
