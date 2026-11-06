@@ -2475,6 +2475,12 @@ LEAD (6:08am): (1) checked: bb2fa51c can't buy core or melee for a warmonger (Is
 the path is now siege-only regardless. (2) The city-state strike target is being coded under EarlyStrike on ai/war; LEAD
 line when CI is green.
 
+**Coded: ai/war 1b29b33d, CI green (run 302, 6:22am ET):** the city-state strike target (EarlyStrike) and siege-only
+strike purchases. The head with everything since (21b91a3e) is building.
+
+LEAD: 1b29b33d green: the city-state strike target (EarlyStrike) and siege-only strike purchases. "Ready for the next
+block" follows when the ai/war head 21b91a3e is green.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
