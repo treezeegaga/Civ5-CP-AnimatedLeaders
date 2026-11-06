@@ -2682,6 +2682,19 @@ upgraded army vs the city's defence: counted units >= 40% of it, total >= 3x, 2+
 re-target only to a clearly easier city (at most 75% of the defence, takeable); bring siege only when too weak; OVER only
 on the real exits. Coding it on ai/war now (replaces dd375b2a's walled logic).
 
+**Coded: ai/war 890aa037** (replaces dd375b2a's walled logic):
+- **The check:** IsStrikeArmyStrongEnough, as designed above.
+- **Re-target:** FindStrikeRetarget picks the weakest clearly easier city in reach, a major's or a city-state's.
+- **Siege:** m_iStrikeSiege, only when the army is too weak for the city.
+- **Removed:** the walls exit and the walls condition on PREP -> BUILDUP.
+- **Siege target:** an early strike's siege target follows the strength check, and a late strike's walled +2 uses the
+  same flag.
+- **Logs:** "Strike: re-target from X (city, defence D, too strong...) to Y (city, defence d, N tiles...)" and "Strike:
+  target X (defence D) too strong..., the build-up brings siege".
+
+Not changed: the target choice's own preference against walled hill cities (GetNewAIConquestTarget) and the city-state
+pick's walled-hill skip. They only rank or choose; they don't end anything. CI is running.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
