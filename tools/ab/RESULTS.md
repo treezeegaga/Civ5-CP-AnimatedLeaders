@@ -3311,7 +3311,7 @@ logged pair".
 - **Status:** compiles (CI run 175 passed on `35272f9`, 2026-11-04 3:00pm ET); merged into `claude/ab-c1` (`b06d504`) by
   the lead. In the greedy style set.
 
-### Power spike: each civ's opening and strike window from its own strengths (Personality, draft, 2026-11-05 8:35pm ET)
+### Power spike: each civ's opening and strike window from its own strengths (Personality, draft, 2026-11-05 8:30pm ET)
 - **The user (via the lead):** the user took Marrakesh at T54 as the Aztec with a military-first capital (Jaguar x3,
   Worker, Settler, Archer x4, Jaguar x2), 2 cities, no siege: "I think the jaguar specifically helps this opening. I
   don't know if you can generalize it. Every civ needs to build to its strengths." So a warmonger's plan should come
@@ -3346,12 +3346,23 @@ logged pair".
   an early spike did better than any other civ. Early-spike warmongers do declare more wars (Aztec 1.57 a game, Huns
   1.14, Germany 1.09, against about 0.5 for peaceful civs) and take nothing. That's the attack problem War is on, not a
   timing one, so the pattern question waits for games where attacks take cities.
-- **For War (interface proposal):** `CvGrandStrategyAI::GetStrikeWindow(int& iStartTurn, int& iEndTurn)` (elapsed turns,
-  this game's speed; false without a land unique unit) and `IsInStrikeWindow()` (in those turns, and the spike's tech
-  known, so a late tech shifts the window). TimingBuildup could start its 15-turn build-up 15 turns before the window
-  opens and attack inside it; a military-first civ (`bMilitaryFirst`) would skip the book's extra settlers. War decides
-  how; tell me if you need other fields (the spike unit, its tech).
-- **Status:** draft, code compiles pending CI (`1173f7c`). The table needs checking against the log.
+- **For War (the interface, after War's proposal relayed by the lead, 8:30pm ET):**
+  `CvGrandStrategyAI::GetStrikeWindow(CvStrikeWindow&)`, false without a land unique unit:
+  - `eSpikeTech`: the tech that unlocks the core unit (`NO_TECH`: from the start);
+  - `eCoreUnitClass`: the unique unit's class (build it through `GetSpecificUnitType`), and `iCoreSharePercent`: the
+    share of the attack army's land units that should be that unit (50%, 33% when it's a siege unit);
+  - `iOpenTurn`, `iDeclareByTurn`, `iCloseTurn` (elapsed turns, this game's speed): opens at spike + 5, declare by
+    spike + 15 (never later than 10 turns before it closes), closes at spike + 35 or when the unit goes obsolete.
+    War's data: declarations come a median 29 turns after the unique unit is available, often without it in the army,
+    so timing the strike to the spike is the untested lever;
+  - `bSiegeOnlyIfWalled`: true for an early spike (military first, by T30 Standard, before catapults); the user's Aztec
+    took Marrakesh at T54 with no siege;
+  - `bMilitaryFirst`: the opening that serves the spike.
+
+  Also `GetStrikeWindow(start, end)` and `IsInStrikeWindow()` (in the turns and the spike's tech known). War builds
+  StrikeWindow/EarlyStrike on top, behind its own flags.
+- **Status:** draft. `1173f7c` merged into `claude/ab-c1` (`ce7a93c`) by the lead; War's fields in `d1d4063`, CI
+  pending. The table needs checking against the log.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
