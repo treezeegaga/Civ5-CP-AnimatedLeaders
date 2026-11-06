@@ -3551,7 +3551,7 @@ weights fill everything a plan doesn't name):
   | Mongolia | Chariot Archer x8 | Keshik x8 | Horseman x2 (melee for the capture) | none (Khans) | Chivalry, 140 | 3 | T95 / T105 / T120 | Honor | barbarians with Chariot Archers, kept alive | good |
   | Assyria | (Archers are the core) | Composite Bowman x5 | Spearman x2 | Siege Tower x2 | Construction, 75 | 3 | T80 / T95 / T110 | Tradition | none | moderate |
   | Japan | Swordsman x7 | Samurai x7 | Crossbowman x4 | if walled | Steel, 100 | 3 | T100 / T105 / T120 | Tradition | barbarians with Swordsmen | low |
-  | China (the user, 10:30pm ET: "cho ko nu rush?") | Composite Bowman x6 | Chu-Ko-Nu x6 (two attacks a turn) | Swordsman x2 (to take the city) | none | Machinery, 90 | 3 | T85 / T95 / T115 | Honor (Great General bonus) | barbarians with the bowmen | moderate (not in the research file; BNW play knowledge) |
+  | China (the user, 10:30pm ET: "cho ko nu rush?"; the lead's research, "China (Chu-Ko-Nu rush)") | Composite Bowman x8 | Chu-Ko-Nu x8 (two attacks a turn), a Great General if there is one | Swordsman x3 (to take the city) | none | Machinery, 100 (an estimate) | 3 | logged only (no window) | Tradition into Honor (Liberty is the other common start) | barbarians with the bowmen | low (thin BNW sources). Exits: target city strength about 25-30+, Knights or gunpowder units, Chu-Ko-Nus lost, rough terrain |
   | Songhai | Horseman x6 | Mandekalu x6 | Crossbowman x3 | none (Mandekalu take cities) | Chivalry, 100 | 2 | T85 / T95 / T115 | Honor | barbarian camps (triple gold) | low |
 
 - **Measure:** with these civs as the aggressor (bully games, late-strike block), declaration turn against the tech
