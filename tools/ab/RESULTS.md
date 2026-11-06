@@ -3504,6 +3504,31 @@ weights fill everything a plan doesn't name):
 - **Status:** `221fb3e` and the Inca's Catapults (`0356f6b`) merged into `claude/ab-c1` (`03bbc90`); `221fb3e` compiles (CI run 274
   passed); `0356f6b` compiles (CI run 277 passed). Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
+### LateStrikePlans: expert rows for the late-strike civs (Personality, draft, 2026-11-05 10:32pm ET)
+- **The lead (10:30pm ET, overnight; the user asleep):** the expert block (`ab-40203a3`) is frozen. Draft expert rows
+  for the late-strike civs (Zulu, Mongolia, Assyria, Japan, Songhai) from `STRIKE_PLANS_RESEARCH.md`, on
+  `ai/personality`, off and not merged, for the next block.
+- **Hypothesis:** the researched plan for a late spike is "economy first, pre-build the units the unique unit
+  upgrades from, save the gold, upgrade the turn the tech lands and strike", not the data default (which times the
+  strike on the unique unit with nothing pre-built). Expected: late-spike aggressors declare near the tech with the
+  unique units in the army, and take cities more often than the data default.
+- **Flag** `LateStrikePlans` (`FIX_LATE_STRIKE_PLANS`, off): `GetStrikePlan` returns these rows for the five civs when
+  the flag is on; the data default otherwise. New plan fields: the pre-build class and count (what upgrades into the
+  core), and "late strike" (economy first: no units before the first settler, more cities).
+- **Rows** (Standard turns; Quick x0.67; confidence from the research):
+
+  | Civ | Pre-build (upgrades into the core) | Core at the strike | Support | Siege | Upgrade tech, gold each | K | Open / declare by / fall back | Policy | Before the war | Confidence |
+  |---|---|---|---|---|---|---|---|---|---|---|
+  | Zulu | Spearman x5 | Impi x5 | Composite Bowman / Crossbowman x8 | none | Civil Service, 90 | 4 | T90 / T100 / T120 | Liberty | an XP war or barbarians (faster promotions) | good |
+  | Mongolia | Chariot Archer x8 | Keshik x8 | Horseman x2 (melee for the capture) | none (Khans) | Chivalry, 140 | 3 | T95 / T105 / T120 | Honor | barbarians with Chariot Archers, kept alive | good |
+  | Assyria | (Archers are the core) | Composite Bowman x5 | Spearman x2 | Siege Tower x2 | Construction, 75 | 3 | T80 / T95 / T110 | Tradition | none | moderate |
+  | Japan | Swordsman x7 | Samurai x7 | Crossbowman x4 | if walled | Steel, 100 | 3 | T100 / T105 / T120 | Tradition | barbarians with Swordsmen | low |
+  | Songhai | Horseman x6 | Mandekalu x6 | Crossbowman x3 | none (Mandekalu take cities) | Chivalry, 100 | 2 | T85 / T95 / T115 | Honor | barbarian camps (triple gold) | low |
+
+- **Measure:** with these civs as the aggressor (bully games, late-strike block), declaration turn against the tech
+  turn, unique units in the army at the declaration, and cities captured, against the data default.
+- **Status:** coding.
+
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
   138 logged games, tech turns read from the first unlock in a build list): after the opening book, research follows
