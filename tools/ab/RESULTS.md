@@ -1924,6 +1924,43 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: EarlyStrike, upgrade and go (ai/war e7572b43) (Nov 5, about 9:00pm ET)
+The user, relayed by the lead: "i upgraded 3 archers to composite archers. that was part of the timing attack. upgrade
+and go", and "i beelined to construction". The treasury fell from 263 at T40 to 31 at T50 (Quick): saved for the
+upgrades, spent just before the declaration.
+
+**The lead's checks, as the code stood:**
+- (a) Gold reserved for the upgrades, and the declaration waiting for them? No.
+  - CP saves for an upgrade only once its tech is known (CvHomelandAI::PlotUpgradeMoves).
+  - Nothing waited for the upgrades.
+  - The window spent spare gold on one unit purchase a turn.
+- (b) ArmyQuality never scraps. It refuses to build Archers once Composite Bowmen are trainable and doesn't count them
+  as army, which is right while they wait. ArmyScrap (window only, since dc4290cf) could drop an Archer waiting for its
+  upgrade.
+- (c) WarmongerHurry limits purchases only; upgrades aren't purchases. CvUnit::CanUpgradeTo checks gold >= price, not
+  reserves, so gold saved in any bucket is there for the upgrade.
+
+**Change (under FIX_EARLY_STRIKE, in a strike's build-up):**
+- The upgrade bill counts our land units at home whose upgrade tech is known, or is the current research with 8 or
+  fewer turns (Standard) left.
+- The window saves that bill (plus siege gold only if siege is wanted).
+- The window's unit purchase waits while the bill is unpaid.
+- The ready test waits for the upgrades before the declaration, bounded by WindowUntilReady.
+- Log: "EarlyStrike: upgrade and go, N units to upgrade for G gold (gold H)".
+- Under FIX_ARMY_SCRAP: no unit that can upgrade now, or whose upgrade's tech is being researched.
+
+**Not here:**
+- The Construction beeline is Economy's research list. Suggested: Construction right after Archery under EarlyStrike.
+- With WarChest on, the window's savings are Economy's.
+- Personality's calibrated window (open T40, declare by T50 Quick, bed8e14) isn't read by War's code yet. EarlyStrike's
+  build-up opens at T27 Quick and declares when ready (now including the upgrades), at the latest about T47.
+  - If blocks show it declaring before the book's army and Construction, wiring Personality's open turn in is the next
+    step.
+
+LEAD: upgrade and go is in EarlyStrike (ai/war e7572b43, on ab-c1 ec78b0d): gold saved for the upgrades, the declaration
+waits for them, ArmyScrap spares units about to upgrade, and WarmongerHurry doesn't touch upgrades. Economy: Construction
+after Archery in the EarlyStrike research list. CI to follow.
+
 ### War: EarlyStrike, War's half (coded, ai/war 95fbcc26, off) (Nov 5, about 9:10pm ET)
 
 **Revised the same evening (ai/war 6c073d69, on Economy's book, patch 0028 applied as 73af5241): one flag, Economy's
