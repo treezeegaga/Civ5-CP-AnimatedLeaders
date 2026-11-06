@@ -7578,3 +7578,5 @@ form either).
    and as-ready-as-it-gets both need takeable).
 4. Log: the WAR branch's "not possible this turn" says when the target has no land attack target.
 Kyzyl (171787CD) and Boston (17813E6E) are different failures: their cities were attack targets, and their ops formed.
+
+LEAD: the 17A1A659 fix (above) is **ai/war e6c5eb680** (on fef0ea98): the strike's target must be a land attack target an army can reach, held targets give way to a reachable one, and no declaration on an unreachable city. This is the trial head for 10pm. CI to follow.
