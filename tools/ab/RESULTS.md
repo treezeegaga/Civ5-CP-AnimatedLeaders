@@ -1924,6 +1924,52 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the unique unit at the declaration, and the strike-window interface for Personality (Nov 5, about 8:55pm ET)
+The lead (refining, from the user: "every civ needs to build to its strengths"): Personality drafts each civ's power
+spike, opening and strike window; TimingBuildup takes the window from the profile and builds the army from the civ's
+strong units. One more cut first: captures by whether the aggressor's unique unit was available at the declaration.
+Script: `tools/ab/uu_at_declaration.py`.
+- A unique unit is a unit only one civ ever lists as buildable in the production logs, for example Jaguar, Impi,
+  Keshik, Horse Archer, Battering Ram, Slinger (Inca), Hwach'a.
+- "Available" means the UU was in the capital's buildable list by the first-war CSV sample.
+
+| 100 aggressor first games at war, with logs | Games | With a capture |
+|---|---|---|
+| UU buildable by the first declaration | 62 | 10 (16%) |
+| UU not yet buildable | 38 | 5 (13%) |
+| UU in the army at the declaration (games with the army line) | 14 | 4 |
+| No UU in that army | 12 | 4 |
+
+- **No difference: availability alone isn't the lever.** Our declaration comes a median of 29 turns after the UU becomes
+  buildable, and the army is whatever CP built, often without it.
+- Only 9 games declared within 20 turns of the UU (1 captured), so the user's pattern (strike at the spike, with the UU
+  as the core) is untested in our games, not refuted. That is the case for a per-civ strike window: we have never really
+  tried it.
+
+**Interface proposal for Personality (War's side reads it; Personality owns the data):**
+- `CvPlayer::GetStrikeWindow()` returns a small struct, or empty when the civ has no strike window:
+  - `eSpikeTech`: the tech that unlocks the spike unit (the UU or the civ's power unit);
+  - `iOpenTurn` / `iDeclareBy`: Standard-speed turns, scaled by game speed on War's side. The window opens at the later
+    of iOpenTurn and eSpikeTech known; War declares by iDeclareBy if the army is at its target, else at the window's
+    end as now;
+  - `eCoreUnitClass` (and optionally a second, e.g. the ranged support): the classes the window builds first;
+  - `iCoreShare`: the share of the field target they should make up (e.g. 60%);
+  - `bSiegeOnlyIfWalled`: siege is required only when the target has walls (the early-strike finding: unwalled cities
+    fall twice as often, and siege at the declaration predicts nothing).
+- **War's half, behind one flag (StrikeWindow), when the profile returns a window:**
+  - TimingBuildup takes the window's turns from the profile instead of its single timing;
+  - the window weights eCoreUnitClass first (the window's +3000 goes to the core class until its share is met);
+  - the siege half of the ready test is waived when bSiegeOnlyIfWalled and the target city has no walls;
+  - the target choice prefers an unwalled city of the nearest weak major.
+  - It logs the window, the core share and the promotions (8c361db1) at the declaration.
+- The opening that feeds it (UU first, as the user's Jaguar opening) is the book's: Economy and Personality.
+
+LEAD: reading plus an interface proposal. The UU being available at the declaration makes no difference (16% vs 13%),
+because we declare a median of 29 turns after it and often without it in the army. The spike strike is untested, not
+refuted. Personality: the interface above is what War would read (GetStrikeWindow: spike tech, open/declare turns, core
+unit class and share, siege only if walled); change it as you like. I'll code War's half behind StrikeWindow once the
+accessor exists.
+
 ### War: our aggressors' capital opening through T50, against the user's (Nov 5, about 8:45pm ET)
 The user's reference (106F8550, the Aztec): the capital built Jaguar, Jaguar, Jaguar, Worker, Settler, Archer x4, Jaguar,
 Jaguar. That is 9 military, 1 settler, 1 worker and no buildings by about T50, in 2 cities (the second built no units).
