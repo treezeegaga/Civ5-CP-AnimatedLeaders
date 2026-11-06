@@ -2503,6 +2503,13 @@ conflicts with Personality's list shape in CvStrikePlan; Economy is asked to reb
 block" follows once 0041 is in and CI is green. Relayed from Economy (its messages to you fail): 0041 is ready for
 Personality's lists, and the PCs stay stopped until a build has 0039 and 0040 (99b5a0f5 has both).
 
+**Update (6:40am ET):** Economy redid 0041 on Personality's lists (pack af6591f). It applied cleanly. The next build is
+**ai/war 2ffdafa1**: the war head + ai/personality da1a760 + Economy 0041 StrikeList. The flag table checks out (107
+flags, 107 entries; StrikeList off in the bundle). CI is running.
+
+LEAD: the next build is ai/war 2ffdafa1. Its run needs RoleFixes += StrikeList, which is off in the bundle. "Ready for
+the next block" follows when CI is green.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
