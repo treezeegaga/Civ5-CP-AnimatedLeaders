@@ -142,7 +142,9 @@ at the top of RESULTS.md):
   the user (2026-11-04 2:55pm ET): "if we achieve the other things that will follow naturally".** The bully test stays as a tool: an aggressor role for testing the attack code
   and the matchups. The attack is judged by matchups (the user): against greedy civs with few units and no walls the
   aggressor should take several cities, against balanced ones it should struggle.
-- a lively world without spam: **0.5–2 deals per civ per 10 turns**
+- ~~a lively world without spam: 0.5–2 deals per civ per 10 turns~~ **replaced by the user (2026-11-05, evening): "i dont
+  really care about meeting some quota".** Deals should have a purpose: help the civ win, or, if it can't, keep a civ it
+  holds a grudge against from winning. Judged in full games (Diplomacy's `RivalTrade`, `Spoiler`), not by a count
 - AI turns **no more than 25% slower** than B's (the banned-behaviours goal, 0 per game, was **removed by the user,
   2026-11-04 9:55pm ET**)
 - most tricks on the exploit checklist no longer work

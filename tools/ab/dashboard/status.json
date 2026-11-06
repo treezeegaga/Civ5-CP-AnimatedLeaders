@@ -90,7 +90,7 @@
    "section": "session",
    "order": 3,
    "name": "Diplomacy",
-   "detail": "Coalitions removed as a goal (your call). Waits for the lively-world work (deal frequency) after the attack work.",
+   "detail": "Deals with a purpose (RivalTrade, Spoiler): planned, waits for full games past T150.",
    "chat": "Civ V AI: Diplomacy session",
    "state": "waiting"
   },
@@ -252,10 +252,10 @@
   {
    "section": "goal",
    "order": 6,
-   "name": "A lively world, no deal spam",
-   "target": "0.5\u20132 deals per civ per 10 turns",
-   "detail": "About 3 per civ per 10 turns, for B and C8 alike (12 C8 games; each deal counts once per side), so above the band. Diplomacy hasn't worked on deal frequency yet.",
-   "state": "not met"
+   "name": "Deals with a purpose",
+   "target": "Deals help the civ win, or stop a civ it holds a grudge against from winning (your call: no deal quota)",
+   "detail": "The old count was fine anyway (1.7 new deals per civ per 10 turns). CP's victory rivalry only starts after T150, so this waits for full games.",
+   "state": "waits"
   },
   {
    "section": "goal",

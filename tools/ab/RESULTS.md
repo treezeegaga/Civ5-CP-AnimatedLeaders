@@ -5072,3 +5072,10 @@ this one adds Economy's 0009 (logging) and 0010 (two flags), release `ab-2d949f8
 and the dashboard's coalition goal row are no longer tracked, and the coalition block is dropped. The coalition flags
 already in the bundle (`CoalitionStrength`, `CoalitionCoop`, `CoalitionPact`) stay as they are. Diplomacy's next work
 is deal frequency (the lively-world goal), after the attack work.
+
+### Goal changed: deals with a purpose, not a quota (the user, evening Nov 5; lead 9:31pm ET)
+The 0.5–2 deals band is gone ("i dont really care about meeting some quota"). Diplomacy's count found 1.7 new deals per
+civ per 10 turns anyway: renewals and embassy swaps made up the old 3.0. The new aim: deals help the civ win, or keep a
+civ it holds a grudge against from winning (`RivalTrade`, `Spoiler`, Diplomacy's hypothesis). **Parked until full
+games:** CP's victory rivalry starts after T150 and in the Renaissance, so T150 Quick games can't show it. It goes with
+the "full games to a winner" stage, after the attack work and the matchup test. No code until then.
