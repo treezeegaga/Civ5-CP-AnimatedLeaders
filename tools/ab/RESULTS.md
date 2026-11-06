@@ -1652,6 +1652,68 @@ named, and reload the save before every try.
   agreed. As War said, the logged games first need to show it happening. I'll take it once they're in: the
   joint-war path (`DoStartCoopWar`) is the one that matters for coalitions.
 
+### Deal frequency: hypothesis (Diplomacy session, 2026-11-05 9:30pm ET)
+
+The lively-world goal is 0.5-2 deals per civ per 10 turns. We measured about 3. Before any test time, which deals
+inflate the count, and is it spam or healthy trade?
+
+**What the `Deals` column counts.** Every deal between two major civs when it takes effect
+(`CvGameDeals::ActivateDeal`, counted for both civs): embassy swaps, peace treaties, and a renewed deal as a new one.
+Data: all 23,200 deals in the 133 logged games (`DiplomacyAI_TradeAgreements_Log.csv`), which reproduce the
+measurement (2.99 per civ per 10 turns; per game 1.6-3.9, median 3.0). Scripts: `tools/ab/scripts/diplo/
+deal_frequency*.py` and `proposals.py`, run in a folder holding the `logs_*` folders after `deal_parse.py` (which writes `deals.json`).
+
+**Composition** (per civ per 10 turns; deals last 25 turns on Quick, and a renewal is the same trade again at 24-26
+turns):
+
+| Type | Rate | Share | Renewals |
+|---|---|---|---|
+| Luxury sold for GPT | 1.20 | 40% | 35% |
+| Embassy swap | 0.48 | 16% | 0% |
+| Open borders for GPT | 0.42 | 14% | 28% |
+| Open borders swap | 0.34 | 11% | 46% |
+| Luxury for luxury | 0.16 | 5% | 47% |
+| Help requests, gifts, strategic, pacts, peace, research agreements | 0.39 | 13% | 0-11% |
+| **All** | **2.99** | | **27% (0.80)** |
+
+**By turn,** the rate climbs from about 1 before T75 to 6.2 in T125-149. In that last stretch, 2.9 of the 6.2 are
+renewals: by then most trades in force are being renewed.
+
+**The hypothesis: the count is high because of what it counts, not because of spam.**
+1. **Three things inflate it without being new trade.**
+   - **Renewals (0.80):** the same trade continuing.
+   - **Embassy swaps (0.48):** a one-time setup between each pair, nearly all before T75.
+   - **One luxury per deal:** CP asks for luxuries one at a time, so 98% of luxury sales hold a single luxury. 45% of
+     them were made while the same pair already had another luxury deal running.
+   - **Without renewals and embassies:** 1.71 new deals per civ per 10 turns. Counting all of a pair's trades
+     within 5 turns as one: 1.52. Both are inside the band.
+2. **The trade itself looks healthy** (see "Do AIs make deals that don't help them win?"):
+   - prices are ordinary (3-4 GPT in 62% of all GPT payments);
+   - 0.1% duplicate imports;
+   - no trading with soon-to-be enemies;
+   - a trading pair makes a median of 6 deals in a game (p90 11), which is about one trade relationship refreshed
+     every 25 turns.
+3. **What a human would actually see** is proposals, not deals.
+   - **Total:** an AI sends 1.95 proposals per 10 turns, spread over all the other civs, so a human would receive
+     roughly 2 per 10 turns from all AIs combined.
+   - **The largest kinds:** luxury requests 0.45, friendship offers 0.42 ("Wanna team up?" is CP's log text for the
+     Declaration of Friendship statement), renewal requests 0.39, embassy swaps 0.23.
+   - **Judgement:** that's lively, not spam.
+
+**What this predicts, and how to check it without test time:**
+- **Split the measure.** The band should apply to new deals (no renewals, no embassies), or the band should move
+  to about 2-4 for all deals. Either way it's a judgement for the user and the lead, not a code change.
+- **Optional logging, no gameplay change:** split `AB_COUNT_DEALS` into new, renewal and embassy at
+  `ActivateDeal`. Renewals are deals the renewal statement started. Until then, the scripts above recompute the split
+  from any logged game.
+- **No flag proposed.**
+  - Cutting deals would cut trade that helps both sides.
+  - Bundling a pair's luxuries into one deal would only change the count.
+  - `LuxuryAsk` (more luxury swaps) stays off unless the band is redefined.
+
+**To decide (user/lead):** do we measure the lively world by new deals (1.7, in band) or by proposals received
+(about 2 per 10 turns)? Then the goal is met as it stands and needs no test time.
+
 ### Diplomacy: the BigArmy block, split by "close to world conquest" (Diplomacy session, 2026-11-05 5:00pm ET)
 
 Follow-up to point 4 of "the 850e142 bully games". The block: build `ab-1750459`, 20 pairs across both PCs
