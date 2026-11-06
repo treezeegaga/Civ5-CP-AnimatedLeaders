@@ -1,0 +1,128 @@
+From 2e5346304acd58f50a05ac00bda8203ed1562c5b Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 22:00:15 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0057: the lead's review of
+ 791ab9d..261d5da (0055, 0056)
+
+1. The policy order (0056) and its ideology reached every AI with a land unique unit,
+   because they checked only the plan's bValid, which data defaults set with no warmonger
+   test (a greedy-tall China, a balanced Japan). Now strike civs only: a strike state other
+   than NONE. CvPolicyAI includes CvMilitaryAI.h for it.
+2. 0055's affordability hold blocked defenders, replacements and CP's emergency purchases in
+   any war. Its affordability arm is now off while at war with a major, as 0048's hold
+   already was, and CP's gate keeps its city-in-danger exemption.
+3. Income first (0054) took over every city, in WAR too, and the pushOrder redirect put
+   Markets and Caravans in place of walls, settlers and defence. Now the capital only, not
+   in WAR and not at war with a major.
+8. The policy order's dead end returned NO_POLICY when every tree in the order was done or
+   locked, leaving culture unspent. Now it opens the best tree that can be opened (CP's
+   branch weight), never one on the never-list, not mutually exclusive with an open one,
+   and not an ideology.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp   |  9 ++++--
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp | 38 +++++++++++++++++++++++--
+ 2 files changed, 43 insertions(+), 4 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 4f0b738..5a3175f 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33988,7 +33988,9 @@ bool CvPlayer::IsStrikeUnitHold() const
+ {
+ 	if (IsLateStrikeUnitHold())
+ 		return true;
+-	return IsStrikeActive() && GetEconomicAI() && GetEconomicAI()->GetAffordableWarUnits(10) < 1;
++	// (0057, the lead's review) not while at war with a major: defenders, replacements and CP's emergency buys come first, as
++	// 0048's hold already did
++	return IsStrikeActive() && !IsAtWarAnyMajor() && GetEconomicAI() && GetEconomicAI()->GetAffordableWarUnits(10) < 1;
+ }
+ 
+ bool CvPlayer::IsLateStrikeUnitHold() const
+@@ -35326,7 +35328,10 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	// (0054) a late strike's PREP held for income (net gold under +2, IsLateStrikeUnitHold): an income item comes first, a
+ 	// Market, else a Caravan where a trade route is free, so the hold lifts. Trial ab-791ab9d 172518A7: Karakorum's list
+ 	// waited on its held Chariot Archer from T29 to T85 with net gold at 0
+-	if (IsStrikeUnitHold())	// (0055: the general hold too)
++	// (0057, the lead's review) the capital only, and not in WAR or at war with a major: the pushOrder redirect had put Markets
++	// and Caravans in place of walls, settlers and defence in every city
++	if (pCity->isCapital() && GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_WAR && !IsAtWarAnyMajor() &&
++		IsStrikeUnitHold())	// (0055: the general hold too)
+ 	{
+ 		const BuildingTypes eMarket = GetSpecificBuildingType("BUILDINGCLASS_MARKET", true);
+ 		if (eMarket != NO_BUILDING && pCity->canConstruct(eMarket))
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index 27cbdff..ba1be02 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -9,6 +9,7 @@
+ #include "CvGameCoreDLLUtil.h"
+ #include "CvPolicyAI.h"
+ #include "CvGrandStrategyAI.h"
++#include "CvMilitaryAI.h"	// AI_AB_TEST (Economy 0057): the strike state
+ #include "CvInfosSerializationHelper.h"
+ #include "CvTypes.h"
+ #include "CvEconomicAI.h"
+@@ -191,7 +192,10 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 	// is the first in the order that isn't finished: its best adoptable policy (CP's weights) if it's open, else it's opened.
+ 	// A tree that can't be opened yet (an era gate) or has nothing adoptable now gives way to the next in the order. A tree
+ 	// that isn't in the order is never opened. Ideology tenets stay CP's
+-	const CvStrikePlan* pOrderPlan = (MOD_AI_AB_TEST && !pPlayer->isHuman() && pPlayer->UsesCandidateAI(FIX_STRIKE_LIST) && pPlayer->GetGrandStrategyAI()) ?
++	// (0057, the lead's review) a strike civ only: a strike state other than NONE. bValid alone is every civ with a land unique
++	// unit (a greedy-tall China, a balanced Japan)
++	const CvStrikePlan* pOrderPlan = (MOD_AI_AB_TEST && !pPlayer->isHuman() && pPlayer->UsesCandidateAI(FIX_STRIKE_LIST) && pPlayer->GetGrandStrategyAI() &&
++		pPlayer->GetMilitaryAI() && pPlayer->GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_NONE) ?
+ 		&pPlayer->GetGrandStrategyAI()->GetStrikePlan() : NULL;
+ 	if (!bMustChooseTenet && pOrderPlan && pOrderPlan->bValid && pOrderPlan->iNumPolicyBranches > 0)
+ 	{
+@@ -253,6 +257,35 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 			LogPolicyChoice((PolicyTypes)(iBest - GC.getNumPolicyBranchInfos()));
+ 			return iBest;
+ 		}
++		// (0057, the lead's review) every tree in the order done or locked: the best tree that can be opened (CP's branch weight),
++		// never one on the never-list, rather than leave the culture unspent
++		PolicyBranchTypes eBestTree = NO_POLICY_BRANCH_TYPE;
++		int iBestTreeWeight = INT_MIN;
++		for (int iBranch = 0; iBranch < GC.getNumPolicyBranchInfos(); iBranch++)
++		{
++			const PolicyBranchTypes eBranch = (PolicyBranchTypes)iBranch;
++			CvPolicyBranchEntry* pkBranch = GC.getPolicyBranchInfo(eBranch);
++			if (!pkBranch || pkBranch->IsPurchaseByLevel() || m_pCurrentPolicies->IsPolicyBranchUnlocked(eBranch) || !m_pCurrentPolicies->CanUnlockPolicyBranch(eBranch))
++				continue;
++			if (bStartedAMutuallyExclusiveBranch && pkBranch->IsMutuallyExclusive())
++				continue;
++			bool bNever = false;
++			for (int iNever = 0; iNever < pOrderPlan->iNumNeverBranches; iNever++)
++				bNever = bNever || pOrderPlan->aeNeverBranches[iNever] == eBranch;
++			if (bNever)
++				continue;
++			const int iWeight = WeighBranch(pPlayer, eBranch);
++			if (iWeight > iBestTreeWeight)
++			{
++				iBestTreeWeight = iWeight;
++				eBestTree = eBranch;
++			}
++		}
++		if (eBestTree != NO_POLICY_BRANCH_TYPE)
++		{
++			LogBranchChoice(eBestTree);
++			return (int)eBestTree;
++		}
+ 		return (int)NO_POLICY;
+ 	}
+ 
+@@ -733,7 +766,8 @@ void CvPolicyAI::DoChooseIdeology(CvPlayer *pPlayer)
+ 	}
+ 	// AI_AB_TEST (Economy 0056): a strike civ takes the ideology in its plan's policy-tree order (Personality's aePolicyBranches),
+ 	// when it's one of those on offer
+-	if (MOD_AI_AB_TEST && !pPlayer->isHuman() && pPlayer->UsesCandidateAI(FIX_STRIKE_LIST) && pPlayer->GetGrandStrategyAI())
++	if (MOD_AI_AB_TEST && !pPlayer->isHuman() && pPlayer->UsesCandidateAI(FIX_STRIKE_LIST) && pPlayer->GetGrandStrategyAI() &&
++		pPlayer->GetMilitaryAI() && pPlayer->GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_NONE)	// (0057) strike civs only
+ 	{
+ 		const CvStrikePlan& kOrderPlan = pPlayer->GetGrandStrategyAI()->GetStrikePlan();
+ 		for (int iOrder = 0; kOrderPlan.bValid && iOrder < kOrderPlan.iNumPolicyBranches; iOrder++)
+-- 
+2.43.0
+

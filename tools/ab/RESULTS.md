@@ -1950,6 +1950,22 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0057: the lead's review of 791ab9d..261d5da (Economy, Nov 6, 5:00pm ET)
+1. **The policy order reached non-strike civs.** It, and its ideology, checked only the plan's `bValid`, which every civ
+   with a land unique unit has, so a greedy-tall China or a balanced Japan was locked into a warmonger order. It now
+   applies to strike civs only (a strike state other than NONE).
+2. **0055's hold blocked defence in a war.** The affordability hold blocked defenders, replacements and CP's emergency
+   purchases in any war. It is now off while at war with a major (as 0048's was). CP's gate keeps its city-in-danger
+   exemption.
+3. **Income-first took over every city.** It ran in every city, in WAR too, and replaced walls, settlers and defence. It
+   is now the capital only, not in WAR and not at war with a major.
+4. **The policy order's dead end** (review item 8). When every tree in the order was done or locked, culture went
+   unspent. Now the best tree that can be opened is taken, by CP's branch weight. It's never a never-list tree, never
+   one mutually exclusive with an open one, and never an ideology.
+
+**Status:** patch 0057 on ai/war `261d5da`, 2 files, +43/-4 (CvPlayer, CvPolicyAI). CvPolicyAI now includes
+CvMilitaryAI.h, which the strike state needs; without it the build would not have compiled. Not compiled here.
+
 ### Patch 0056: the plan's policy-tree order, the whole game (Economy, Nov 6, 4:39pm ET)
 The user caught the Aztec aggressor taking Aesthetics (PC 1, `168C0544`). The lead: follow the plan's whole tree order
 for the whole game, not only while the strike is active and not only the first tree. CP picks individual policies only
