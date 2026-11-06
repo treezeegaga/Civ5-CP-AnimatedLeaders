@@ -110,6 +110,19 @@ Write-Host "Saved $dll ($([math]::Round((Get-Item $dll).Length / 1MB, 1)) MB)"
 Write-Step "Building and installing the test pack"
 & $builder -CivDir $CivDir -MyGames $MyGames -Dll $dll -ABTest -Install
 
+# Check the install took (2026-11-05: PC 1 reported installing ab-db638c3 and ab-40203a3 but kept playing 8fe8e0f).
+# Every copy of the DLL in the pack's DLC folder must match the download byte for byte (not the base game's own
+# DLL in Assets\DLC\Expansion2).
+$want = (Get-FileHash $dll -Algorithm SHA256).Hash
+$packDir = Join-Path $CivDir "Assets\DLC\MP_CPLeaderheads"
+$installed = @(Get-ChildItem $packDir -Recurse -Filter "CvGameCore_Expansion2.dll" -File -ErrorAction SilentlyContinue)
+if ($installed.Count -eq 0) { throw "No CvGameCore_Expansion2.dll under $packDir after the install." }
+$bad = @($installed | Where-Object { (Get-FileHash $_.FullName -Algorithm SHA256).Hash -ne $want })
+if ($bad.Count) {
+    throw ("The installed DLL isn't $Release" + ": " + (($bad | ForEach-Object { "$($_.FullName) ($($_.Length) bytes)" }) -join "; ") + ". Close Civ V and run this again.")
+}
+Write-Host ("Installed DLL checked: {0} cop{1} match {2} ({3} bytes)" -f $installed.Count, $(if ($installed.Count -eq 1) { "y" } else { "ies" }), $Release, (Get-Item $dll).Length) -ForegroundColor Green
+
 Start-Civ
 
 Write-Step "In Civ V"
