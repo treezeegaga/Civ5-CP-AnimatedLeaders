@@ -12,7 +12,7 @@ one, ends up with ~100 cities and wins easily, and the game is boring. We want A
 1. **Put up a real fight.** Competent defence: walls, ranged units behind fortified melee, no
    suicide attacks, counter-attacks, rebuilding after losses, no giving away cities cheaply in
    peace deals. A conqueror should pay for every city.
-2. ~~**Stop a runaway conqueror together.**~~ **Removed by the user (2026-11-05 9:25pm ET).** No session works on
+2. ~~**Stop a runaway conqueror together.**~~ **Removed by the user (2026-11-05 9:20pm ET).** No session works on
    coalitions, and the coalition block is dropped. The coalition flags already in the bundle stay as they are. The old text follows: Civs that conquer a lot become everyone's problem:
    defensive pacts, joint wars, coordinated attacks, embargoes, World Congress votes against them.
    This is judged by **behaviour** (cities taken, civs eliminated, warmonger score), never by
