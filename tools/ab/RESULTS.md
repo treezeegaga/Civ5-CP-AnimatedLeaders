@@ -3504,8 +3504,8 @@ weights fill everything a plan doesn't name):
 - **Status:** `221fb3e` and the Inca's Catapults (`0356f6b`) merged into `claude/ab-c1` (`03bbc90`); `221fb3e` compiles (CI run 274
   passed); `0356f6b` compiles (CI run 277 passed). Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
-### LateStrikePlans: expert rows for the late-strike civs (Personality, draft, 2026-11-05 10:32pm ET)
-- **The lead (10:30pm ET, overnight; the user asleep):** the expert block (`ab-40203a3`) is frozen. Draft expert rows
+### LateStrikePlans: expert rows for the late-strike civs (Personality, draft, 2026-11-05 10:27pm ET)
+- **The lead (about 10:30pm ET by its clock, overnight; the user asleep):** the expert block (`ab-40203a3`) is frozen. Draft expert rows
   for the late-strike civs (Zulu, Mongolia, Assyria, Japan, Songhai) from `STRIKE_PLANS_RESEARCH.md`, on
   `ai/personality`, off and not merged, for the next block.
 - **Hypothesis:** the researched plan for a late spike is "economy first, pre-build the units the unique unit
