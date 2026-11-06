@@ -1950,6 +1950,24 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### First games on ab-0cb5402: the list, the bans, the strikes (Economy, Nov 6, 1:16pm ET)
+Two games: bullyabort23 game 1 (`15BE6EDA`, PC 1) and bullygreedy23 game 1 (`167DE984`, PC 2).
+
+| | Aztecs (15BE6EDA, early) | Celts (167DE984, early, city-state target) |
+|---|---|---|
+| List followed in order | yes: items 2-11 of 12, Jaguar x2, Worker, Settler, Archer x4, Jaguar (T9-T53) | yes: items 1-12, Scout, Monument, Settler x2, Pictish Warrior x5, Archer x2, then a Composite Bowman (T11-T58). 0047 worked: "Composite Bowman (for Archer, obsolete)" at T58 |
+| Other cities | army (Jaguar) from T46 | army from T48 |
+| Strike | PREP T3, BUILDUP T47 (Utrecht), WAR T56 on the Netherlands | PREP T4, BUILDUP T52 (Panama City). "Declaring war on the city-state" every turn from T66; **never reached WAR** |
+| Capture | attempts on Rotterdam T59-T62 (HP 161 → 90, strength 9, no walls), then nothing until T125, when it had strength 21 and walls. **No capture** | none. The zone shows 0 of our units near Panama City ("P_WITHDRAW") |
+| Wonders and gifts before the first own declaration | **none**. The Terracotta Army (T62) and the later guilds came after the T56 declaration | **none**. The Writers' Guild (T111), Statue of Zeus (T129), and gifts to Ragusa and Cape Town (T89-90) came after the T66 declaration |
+
+**For War:** the Celts' city-state strike logged a WAR DECLARATION on Panama City at T66, T67 and T68 but stayed in
+BUILDUP. The army didn't move to the city, and the units piled up (12 → 19, net gold -9 → -14 a turn).
+
+**Patch 0050 (mine):** with the plan's counts met, more core is built only in WAR. Before that, the executor makes no
+pick ("army complete, waiting for the declaration"). The Celts built 6 extra Pictish Warriors after T63 while BUILDUP
+waited. The patch is on 0049 (ai/war `5fe900a` + 0049), 1 file. Not compiled here.
+
 ### Strike ownership audit: production, gold, research, policy (Economy, Nov 6, 1:12pm ET; read on ai/war `5fe900a`)
 The user's structural fix: while a strike is active (PREP, BUILDUP, WAR, until OVER), the strike owns these decisions.
 Each is gated at the lowest level, so CP's systems can't override it. "Today" means the gates on ai/war `5fe900a`.

@@ -1,0 +1,48 @@
+From eb1eff78ae6e7eddacfe3677eabacd52871e8f1b Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 18:16:17 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0050: a complete strike army waits; more
+ core only in WAR
+
+bullygreedy23 167DE984 (ab-0cb5402): the Celts met their plan's counts at T63. The army
+phase then kept building "more core" (6 more Pictish Warriors) while BUILDUP waited to
+declare, until the unit supply cap stopped it. Units went 12 -> 19 and net gold -9 -> -14 a
+turn. Now, with the counts met, more core is built only in WAR, to replace losses. Before
+the declaration the executor makes no pick (logged "army complete, waiting for the
+declaration"), so the city's normal choice runs with the bans in force.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index f88ca3b..545e4dc 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -35410,14 +35410,19 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 
+ 	bool bShort = false;
+ 	const UnitTypes eArmy = GetStrikeListArmyUnit(*this, kPlan, pCity, bShort);
+-	if (eArmy != NO_UNIT && (bShort || GetEconomicAI()->GetAffordableWarUnits(10) >= 1))
++	// (0050) the plan's counts met: more core only in WAR (its losses). Before the declaration a complete army waits; extra
++	// units only cost upkeep. bullygreedy23 167DE984: the Celts met their counts at T63, built 6 more Pictish Warriors
++	// while BUILDUP waited, and net gold went from -9 to -14 a turn
++	const bool bMoreCore = GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR && GetEconomicAI()->GetAffordableWarUnits(10) >= 1;
++	if (eArmy != NO_UNIT && (bShort || bMoreCore))
+ 	{
+ 		eOrder = ORDER_TRAIN;
+ 		iData = eArmy;
+ 		LogStrikeList(*this, pCity, bShort ? "the army (short of the plan):" : "the army (the plan's counts met, more core):", GC.getUnitInfo(eArmy)->GetDescription());
+ 		return true;
+ 	}
+-	LogStrikeList(*this, pCity, eArmy == NO_UNIT ? "LIST NORMAL (no army unit trainable)" : "LIST NORMAL (army complete, no more affordable)", NULL);
++	LogStrikeList(*this, pCity, eArmy == NO_UNIT ? "LIST NORMAL (no army unit trainable)" :
++		(GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR ? "LIST NORMAL (army complete, no more affordable)" : "LIST NORMAL (army complete, waiting for the declaration)"), NULL);
+ 	return false;
+ }
+ 
+-- 
+2.43.0
+
