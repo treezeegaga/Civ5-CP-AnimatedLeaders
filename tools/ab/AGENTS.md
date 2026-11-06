@@ -291,6 +291,15 @@ and goals, diplomacy changes how decisions are computed from them.
    8, both PCs) before the next merge, so each block measures one build. A crash or a broken build is the only reason
    to switch sooner.
 
+0a. **Before a build goes to the PCs (the user, 2026-11-06: "predict possible issues before we compile and test"):**
+   - a pre-flight review of the combined diff by a fresh reviewer (not the author), against a fixed checklist:
+     - civ types: early-spike, late, generic rush, no plan, non-strike, human, city-state;
+     - strike states and their transitions; the capital vs other cities; attacked by a third party or the target;
+     - no target in reach; obsolete or unbuildable items; gold and upkeep;
+     - VC9 compile rules (no C++11, private access, const), save/load, multiplayer safety;
+   - then one trial game to T80 on one PC (-Unpaired -MaxGames 1 -StopTurn 80) with the wonder/gift, LIST and Strike checks.
+   - The block starts only after both are clean.
+
 1. **One idea per fix.** Each fix gets its own flag (`FIX_18`, `FIX_OPENING_BOOK`, ...). Never bundle. Adding a
    flag (from fork commit `27437f0`):
    - append it to `CandidateFixTypes` in `CvPlayer.h`;
