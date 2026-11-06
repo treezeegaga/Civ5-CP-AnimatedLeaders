@@ -7514,3 +7514,20 @@ this one adds Economy's 0009 (logging) and 0010 (two flags), release `ab-2d949f8
 3. Commit `AIABTest_screen2.csv` and `Run-Games.log` every 5 pairs or so, and push.
 
 LEAD (5:32pm ET, re your 5:28pm message): 0058 is already on ai/war as **c89ed4ac** (on 824f1dbf); CI is running and the "green" line follows. 17813E6E's logs aren't on any pack branch, so the abort-12 confirmation is still open. Please push `logs_17813E6E*` (MilitaryAILog, OperationalAILog, TacticalAILog). Further fixes keep going onto ai/war until the trial.
+
+**The lead's pre-flight review of 261d5da..c89ed4a, War's findings 1, 3, 5, 6, 7 (5:45pm ET). Design before code:**
+1. (severe) **The core's line ends at the plan's upgrade.** c7eed909's whole-line walk (Archer -> Composite Bowman -> Crossbow -> ...)
+   is never obsolete in practice, and the buildable checks looked at the core class alone, so Assyria's Archer reads unbuildable
+   once Construction lands: the late window never opens, and with c7eed909 nothing ends it. New: the strike's line is the core's class
+   up to the class whose unit needs the plan's upgrade tech (Assyria: Archer, Composite Bowman; the rule line 2984 of
+   CvGrandStrategyAI already uses). With no upgrade tech, or none on the line, the line is the core alone (the pre-c7eed909 rule).
+   The obsolete exit reads this line. IsStrikeClassBuildable (and with it IsStrikeArmyBuildable, the late window, and Personality's
+   early economy-ready test) accepts any class on it that we can train now, or could but for resources in use.
+3. **WAR ends on a lasting loss.** Still at war with the target, nothing taken, and no-retreat released by a city lost or
+   NEARLY_DEFEATED: WAR -> OVER ("no-retreat released: the war goes on as CP's"). Production ownership and 0058's wonder ban go with it.
+   A city merely in danger also releases no-retreat, but that passes, so it doesn't end the strike: OVER waits until home is safe
+   again and the lasting release still holds.
+5. **The stall exit's income test is the capital only** (0057 made income-first capital-only).
+6. **The stall exit's army test is "not ready and not as ready as it gets"** in place of "not takeable" (takeable but never ready:
+   the upgrade bill unpaid, the field short).
+7. **The defender count skips units on the city's plot** (the garrison is already in the city's strength).
