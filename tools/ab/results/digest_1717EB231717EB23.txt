@@ -1,0 +1,43 @@
+﻿Game 1717EB231717EB23 (AIABTest_c8e.csv), last logged turn 150
+c    Denmark      wide      cities 4
+  builds to T80 (capital Copenhagen; other cities named): T0 Scout* | T4 Warrior* | T8 Settler* | T18 Worker* | T20 Monument* (Aarhus) | T25 Shrine* | T28 Settler* | T34 Shrine (Aarhus) | T35 Great Library | T38 Granary (Kaupang) | T44 Worker (Aarhus) | T49 Monument* | T50 Monument* (Kaupang) | T51 Library* | T57 Worker | T58 Shrine (Kaupang) | T58 Archer (Aarhus) | T58 Archer | T60 Market | T65 Scout (Kaupang) | T65 Work Boat (Aarhus) | T67 Circus | T68 Work Boat (Ribe) | T69 Work Boat (Ribe) | T69 Scout (Kaupang) | T71 Granary | T74 Warrior (Kaupang) | T75 Settler | T76 Worker (Aarhus) | T77 Worker (Ribe) | T78 Worker | T79 Library (Kaupang)
+  settlers ordered T: 8,28,75   found-city ops started T: 18,35,66   cities founded T: 20,38,68
+  ops aborted: T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget
+  book SETTLER HELD to T80: 4 (unhappy 4)   built instead: the normal AI choice 3, Library 1   first: T051 Copenhagen size 3 next Library | T057 Copenhagen size 3 next the normal AI choice | T058 Copenhagen size 3 next the normal AI choice
+  IDLE SETTLER turns: 3 (first T28)
+  military ops ended (whole game): NoUnits 48, NoTarget 1, WarStateChange 1
+  settler timeline to T80: T8 settler (book) in Copenhagen | T18 op started | T20 FOUNDED | T28 settler (book) in Copenhagen | T35 op started | T38 FOUNDED | T66 op started | T68 FOUNDED | T75 settler (AI) in Copenhagen
+  saving gold for a settler: 24 turns (T5-T30)
+c    England      tall      cities 6
+  builds to T80 (capital London; other cities named): T2 Scout* | T6 Monument* | T11 Shrine* | T15 Warrior* | T19 Settler* | T28 Worker* | T31 Monument* (York) | T32 Stonehenge | T37 Library* (York) | T48 Great Library | T50 Library* | T55 Settler (York) | T57 Work Boat | T61 Granary | T65 Granary (York) | T66 Hanging Gardens | T71 Shrine (York) | T75 Temple (York) | T75 Temple of Artemis
+  settlers ordered T: 19,55,82,83,93,94,118,119,149   found-city ops started T: 28,65,86,96,121   cities founded T: 31,86,98,99,127
+  book SETTLER HELD to T80: 3 (unhappy 3)   built instead: Library 3   first: T032 London size 3 next Library | T048 London size 3 next Library | T050 London size 3 next Library
+  IDLE SETTLER turns: 4 (first T56)
+  military ops ended (whole game): NoTarget 2, Success 1, NoUnits 1
+  settler timeline to T80: T19 settler (book) in London | T28 op started | T31 FOUNDED | T55 settler (AI) in York | T65 op started
+  saving gold for a settler: 37 turns (T8-T65)
+c    Ethiopia     tall      cities 5
+  builds to T80 (capital Addis Ababa; other cities named): T0 Scout* | T4 Stele* | T11 Shrine* | T17 Warrior* | T22 Settler* | T34 Worker* | T37 Stele* (Harar) | T38 Library* (Harar) | T38 Settler* | T48 Worker* | T51 Stele* (Adwa) | T51 Library* | T52 Library* (Adwa) | T58 Worker | T60 Worker (Harar) | T61 Worker (Harar) | T61 Warrior | T62 Worker (Harar) | T63 Shrine (Harar) | T65 Warrior | T68 Granary | T70 Work Boat (Adwa) | T71 Work Boat (Adwa) | T71 Settler (Harar) | T72 Work Boat (Adwa) | T72 Settler (Harar) | T72 Worker | T73 Work Boat (Adwa) | T73 Worker (Harar) | T74 Work Boat (Adwa) | T75 Work Boat (Adwa) | T76 Work Boat (Adwa) | T77 Work Boat (Adwa) | T77 Worker (Harar) | T78 Worker (Harar) | T78 Writers' Guild
+  settlers ordered T: 22,38,71,72,96   found-city ops started T: 34,48,74,103   cities founded T: 37,51,81,105
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T051 Addis Ababa size 3 next Library
+  IDLE SETTLER turns: 5 (first T38)
+  military ops ended (whole game): NoTarget 2, WarStateChange 1, Success 1
+  settler timeline to T80: T22 settler (book) in Addis Ababa | T34 op started | T37 FOUNDED | T38 settler (book) in Addis Ababa | T48 op started | T51 FOUNDED | T71 settler (AI) in Harar | T72 settler (AI) in Harar | T73 BOUGHT in Harar. Cost: 370 | T74 op started
+  saving gold for a settler: 54 turns (T6-T72)
+c    Germany      tall      cities 7
+  builds to T80 (capital Berlin; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T19 Settler* | T30 Worker* | T33 Monument* (Hamburg) | T34 Stonehenge | T34 Library* (Hamburg) | T47 Settler* | T48 Library* | T48 Worker* | T54 Granary (Munich) | T55 Worker | T59 Archer | T63 Hanging Gardens | T68 Settler (Hamburg) | T72 Shrine (Munich) | T74 Spearman | T75 Spearman | T78 Warrior (Munich) | T78 Worker
+  settlers ordered T: 19,47,68,91,102,111,152   found-city ops started T: 30,49,85,95,106,112   cities founded T: 33,54,95,108,122,123
+  book SETTLER HELD to T80: 2 (one at a time 1, growth due 1)   built instead: Library 2   first: T034 Berlin size 3 next Library | T048 Berlin size 4 next Library
+  IDLE SETTLER turns: 6 (first T47)
+  military ops ended (whole game): NoUnits 6, NoTarget 2, HalfStrength 1, Success 1, WarStateChange 1
+  settler timeline to T80: T19 settler (book) in Berlin | T30 op started | T33 FOUNDED | T47 settler (book) in Berlin | T48 BOUGHT in Berlin. Cost: 370 | T49 op started | T54 FOUNDED | T68 settler (AI) in Hamburg
+  saving gold for a settler: 62 turns (T6-T80)
+c    Spain        wide      cities 8
+  builds to T80 (capital Madrid; other cities named): T0 Scout* | T4 Warrior* | T10 Settler* | T22 Worker* | T27 Monument* (Barcelona) | T28 Shrine* | T32 Settler* | T36 Monument* | T39 Settler* | T41 Great Library | T45 Worker (Barcelona) | T46 Monument* (Seville) | T50 Settler* | T51 Library* | T56 Water Mill (Barcelona) | T56 Settler* | T57 Chariot Archer | T59 Shrine (Seville) | T60 Worker | T61 Settler | T64 Work Boat (Barcelona) | T65 Monument* (Cordoba) | T67 Worker | T68 Scout (Seville) | T68 Scout (Barcelona) | T69 Spearman | T70 Granary (Toledo) | T70 Worker (Barcelona) | T74 Warrior (Seville) | T74 Settler | T75 Granary (Barcelona) | T77 Shrine (Cordoba) | T78 Worker (Barcelona) | T79 Monument (Toledo)
+  settlers ordered T: 10,32,39,50,56,61,74,113,146   found-city ops started T: 22,42,57,67,77,82,119,148,151   cities founded T: 27,46,65,70,84,86,121
+  ops aborted: T150 NoTarget
+  book SETTLER HELD to T80: 5 (one at a time 5)   built instead: the normal AI choice 3, Library 2   first: T041 Madrid size 3 next Library | T051 Madrid size 3 next Library | T057 Madrid size 3 next the normal AI choice
+  IDLE SETTLER turns: 9 (first T32)
+  military ops ended (whole game): NoUnits 4, HalfStrength 3, Success 1, LostPath 1
+  settler timeline to T80: T10 settler (book) in Madrid | T22 op started | T27 FOUNDED | T32 settler (book) in Madrid | T39 settler (book) in Madrid | T41 BOUGHT in Madrid. Cost: 370 | T42 op started | T46 FOUNDED | T50 settler (book) in Madrid | T56 settler (book) in Madrid | T57 op started | T61 settler (AI) in Madrid | T65 FOUNDED | T67 op started | T70 FOUNDED | T74 settler (AI) in Madrid | T77 op started
+  saving gold for a settler: 41 turns (T6-T57)
