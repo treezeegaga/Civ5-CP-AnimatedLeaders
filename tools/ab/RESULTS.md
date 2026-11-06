@@ -3381,6 +3381,62 @@ logged pair".
   upgrade tech: `a55a585`, compiles (CI run 263 passed, 9:00pm ET; it also covers `d1d4063` and `bed8e14`, whose
   own runs were cancelled by later pushes), ready to merge. The table needs checking against the log.
 
+### Strike plans per civ: spec (Personality, spec only, 2026-11-05 9:20pm ET)
+- **The user (via the lead, about 9:12pm ET):** "it's possible that all aggressive civs need completely individualized
+  openings based on their own unique bonuses". Spec only, no code yet: a data-driven default (the power spike above)
+  plus per-civ overrides only where the default is wrong.
+- **Who to start with.** Aggressors in our 80 logged bully games (game and flip, `Role = aggressor`): Denmark 12, Huns 10
+  (the only aggressor with 2 captures), Mongolia 10, Songhai 8, Aztec 6, Inca 6 (1 capture), Japan 4, Ottoman 4,
+  Assyria 4, Celts 4, then Carthage, Greece, England, Zulu, Spain and Germany 2 each. The first six are 52 of the 80, so
+  those rows come first. Other civs that can draw the role (warmonger trait, or offence 8 with some leaders): China,
+  Persia, America, Shoshone; Rome only with a high-offence leader.
+- **Quick timing** is the default window (`max(T60, spike + 20)` to declare-by + 15, Standard, x0.67): T40/T50 for a
+  spike by Bronze Working or The Wheel; T44/T54 for one at Iron Working, Mathematics, Construction or Horseback Riding;
+  T63/T73 at Metal Casting; T83/T93 at Chivalry or Civil Service; T103/T113 at Machinery or Steel. The tech columns
+  are my estimates of the CP tech tree; StrategyProfile_Log.csv will give the real ones.
+- **Default right?** "yes": the earliest unique land unit is the strength and its timing is good. "trait": the strength
+  is the civ's ability, so the default times the wrong unit. "late": the unit comes after T100 Quick, too late for the
+  T150 tests, and an earlier plan is needed. "partly": the unit is right but something else matters too.
+
+| Civ (bully games) | Strength | Core army; support (upgrade and go) | Quick: open / declare by | Siege | Capital's first ~10 builds | Default right? |
+|---|---|---|---|---|---|---|
+| Denmark (12) | trait: embarking and landing cost no moves, pillage for free (a raider); Berserker (Metal Casting, Longswordsman with the amphibious promotion) | Berserkers and Swordsmen from the sea; Composite Bowmen (Construction) | T63 / T73 | catapults if walled | Warrior, Settler, Worker, Settler, Archer x2, Swordsman x2, Settler, Catapult (then Berserkers) | partly: unit and timing right; the coastal landing isn't modelled |
+| Huns (10) | Horse Archer (The Wheel; they start with Animal Husbandry), Battering Ram (Bronze Working, the siege); trait: raze at double speed | Horse Archers x3-4 with Battering Rams x2 and a Spearman; Horse Archer upgrades late (Chivalry) | T40 / T50 | the Rams are the siege | Warrior, Horse Archer x2, Settler, Worker, Battering Ram x2, Horse Archer, Archer, Settler | partly: the timing is right, but the default may name the Ram (same tech column) as core and set core share 33%; the core is the Horse Archer, with the Ram as siege |
+| Mongolia (10) | trait: mounted units +1 move, +30% against city-states; Keshik (Chivalry), Khan | Horsemen x4 with Composite Bowmen; city-states first; Horseman to Knight or Keshik (Chivalry) | override T44 / T54 (Horseback Riding), Keshik wave T83 / T93 | catapults against majors, none against city-states | Warrior, Settler, Worker, Horseman x3, Settler, Archer x2, Horseman | trait + late: the default waits for the Keshik at T83 Quick; the early strength is the trait on plain Horsemen |
+| Songhai (8) | trait: triple gold from barbarian camps and from capturing cities; Mandekalu Cavalry (Chivalry; no penalty attacking cities) | early: Horsemen clearing camps; strike: Mandekalu x4 with Pikemen; Horseman to Mandekalu | T83 / T93 | none (Mandekalu takes cities) | Warrior, Settler, Horseman x2 (camps), Worker, Settler, Archer x2, Settler, Monument | partly: the strike timing is right; the early camp-clearing gold game is the trait and isn't modelled |
+| Aztec (6) | Jaguar (from the start; forest and jungle bonus, heals on kills) | Jaguars x5 with Archers x4; Archer to Composite Bowman (Construction, about T31 Quick) | T40 / T50 | none unless walled | Jaguar x3, Worker, Settler, Archer x4, Jaguar x2 (the user's) | yes (calibrated on the user's game) |
+| Inca (6) | Slinger (Archery; ranged, withdraws from melee) | Slingers x4-5 with a Warrior or Spearman; Slinger to Composite Bowman (Construction) | T40 / T50 | none unless walled | Warrior, Slinger x2, Settler, Worker, Slinger x2, Spearman, Settler, Slinger | yes |
+| Japan (4) | trait: units fight at full strength when damaged; Samurai (Steel), Zero | Swordsmen x3 (Iron Working) and Composite Bowmen x3 (Construction), any army benefits | override T44 / T54 | catapults if walled | Warrior, Settler, Worker, Settler, Archer x3, Swordsman x3 | trait + late: the default waits for the Samurai (T103 Quick); the trait helps every army from the start |
+| Ottoman (4) | Sipahi (Chivalry), Janissary (Gunpowder); trait naval (corsairs) | Sipahis x3 with Pikemen and Crossbowmen (Machinery) | T83 / T93 | trebuchets if walled | default expansion book | yes (late but right; not an early aggressor) |
+| Assyria (4) | Siege Tower (Mathematics); trait: a tech from each captured city | Siege Towers x2, Composite Bowmen x3, Spearmen or Swordsmen x2; Archer to Composite Bowman (Construction) | T44 / T54 | the Towers are the siege | Warrior, Settler, Worker, Settler, Archer x3, Siege Tower x2, Spearman | yes; core share 33% (siege) is right |
+| Celts (4) | Pictish Warrior (Bronze Working; a Spearman with pillage faith); trait faith from forests (religion) | Pictish Warriors x3 with Archers x2; Archer to Composite Bowman (Construction) | T40 / T50 | none unless walled | Warrior, Settler, Worker, Pictish Warrior x3, Archer x2, Settler, Pictish Warrior | partly: unit right, but the Celts are a religion civ and play the aggressor only with a high-offence leader |
+| Carthage (2) | African Forest Elephant (Horseback Riding); Quinquereme; trait: free harbours, crossing mountains | Forest Elephants x3 with Composite Bowmen | T44 / T54 | catapults if walled | Warrior, Settler, Worker, Settler, Forest Elephant x3, Archer x2, Settler | yes |
+| Greece (2) | Hoplite (Bronze Working), Companion Cavalry (Chivalry); trait city-state influence | Hoplites x3 with Archers x2; Archer to Composite Bowman (Construction); Companions later | T40 / T50 | none unless walled | Warrior, Settler, Worker, Hoplite x3, Archer x2, Settler, Hoplite | yes |
+| England (2) | Longbowman (Machinery; range 3), Ship of the Line | Longbowmen x4 with Pikemen | T103 / T113 | none needed (Longbows outrange the city) | default expansion book | late: right unit, after the T150 tests' useful range |
+| Zulu (2) | trait: melee upkeep halved, faster promotions; Impi (Civil Service), Ikanda | Spearmen and Swordsmen x5-6 (cheap upkeep) with Composite Bowmen; Spearman to Impi (Civil Service) | override T44 / T54 | catapults if walled | Warrior, Settler, Worker, Spearman x3, Settler, Archer x2, Spearman x2 | trait + late: the default waits for the Impi (T83 Quick); the trait makes a big early melee army cheap |
+| Spain (2) | Tercio (Gunpowder), Conquistador; trait natural wonders | none early | T120+ | - | default expansion book | late: Spain shouldn't take the aggressor role in a T150 test |
+| Germany (2) | trait: barbarian camp units may join, land unit upkeep cut; Landsknecht (Civil Service) | early: Warriors and Archers to convert camps; strike: Swordsmen and Pikemen with Landsknechts | override T44 / T54 | catapults if walled | Warrior x2, Settler, Worker, Archer x2, Settler, Spearman x2, Swordsman | trait + late: the default waits for the Landsknecht; the trait is about an early, cheap army |
+| China, Persia, America, Shoshone (0) | Chu-Ko-Nu (Machinery); Immortal (Bronze Working; heals faster); Minuteman (Gunpowder); Comanche Riders (Military Science) | China: Chu-Ko-Nus; Persia: Immortals with Archers; America and Shoshone: none early | China T103/T113; Persia T40/T50; America, Shoshone T120+ | - | Persia like Greece; the others the default book | China late, Persia yes, America and Shoshone late |
+
+- **What this means for the default.** It's right for the unique units that are the strength and come early or
+  mid-game: Aztec, Inca, Huns (timing), Assyria, Carthage, Greece, Celts, Persia, and late but right for Ottoman,
+  England and China. It misses three ways:
+  1. **Trait-based strength** (Mongolia, Japan, Zulu, Germany; partly Denmark and Songhai): the default times a late
+     unique unit, while the trait favours an early army of ordinary units. Override: the strike times on the early
+     army's techs (Horseback Riding, Iron Working, Bronze Working, Construction; open about T44 Quick).
+  2. **A unique unit that isn't the core** (Huns: the Ram is siege, the Horse Archer is the army). Fix in the default:
+     prefer a non-siege unique unit as the core when two come in the same tech column, and mark the siege one as the
+     siege.
+  3. **A late spike** (Spain, America, Shoshone; England, Ottoman, China later): the aggressor role in a T150 test
+     should go to a civ with a spike by Chivalry, or these civs need an early plan of ordinary units.
+- **Build orders** are drafts in the spirit of the user's Aztec order: about 3 core units, a worker and a settler, then
+  the support units and the rest of the core. Economy owns the opening books (the EarlyStrike book, patch 0028), so the
+  build orders go to Economy; the timing and army composition go to War through the strike window.
+- **Next, once the lead agrees:** 1) the Huns' core-unit fix in the default (game data); 2) per-civ overrides for the
+  four trait civs (Mongolia, Japan, Zulu, Germany) as profile data: an override spike tech and core class; 3) check
+  every row against StrategyProfile_Log.csv from a game on this build.
+- **Status:** spec, no code.
+
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
   138 logged games, tech turns read from the first unlock in a build list): after the opening book, research follows
