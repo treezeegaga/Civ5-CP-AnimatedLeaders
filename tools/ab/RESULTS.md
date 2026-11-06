@@ -1924,6 +1924,35 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: the expert strike, coded under EarlyStrike (ai/war c87e8a29, d0fbd91f, 94e55acf) (Nov 5, about 10:10pm ET)
+The user, via the lead (9:58pm ET): "no, we dont need a baseline. use the experts ideas right away and we will know if
+they are good by if they take cities." All under FIX_EARLY_STRIKE, no new flag. It reads Personality's per-civ plan
+(CvGrandStrategyAI::GetStrikeWindow(CvStrikeWindow&)): core class and share, open, declare-by and close turns, the upgrade
+tech. Built for the Huns, Aztec, Inca, Greece and Celts first, and it works for any civ whose plan says military first.
+
+| Expert point | Code |
+|---|---|
+| Army: the core unit plus support; 5-7 Composite Bowmen plus melee for CB civs | the core class first up to Personality's iCoreSharePercent of the field target (50%, 33% for a siege core), the rest support (c87e8a29) |
+| At least 2 melee at the capture | the strike's ready test wants 3 melee units that can take a city (2 at the city, 1 spare); melee get +5000 in the window until there are 3 (c87e8a29) |
+| Gold: 70-80 per unit saved; upgrade and go when the upgrade tech lands | the bill includes units whose upgrade is the strike's own tech (eUpgradeTech) at any distance, saved from the start of the build-up; upgrades are held until the army is built; the declaration waits for the bill (c87e8a29, on e7572b43/cc979539). The price is CP's own per unit |
+| Target: a flat, unwalled city; a walled hill city means another target or the fallback | until the close turn, a target civ whose nearest city is walled and on a hill is skipped; walled or hill ranks below every flat, unwalled one (d0fbd91f, CvDiplomacyAI::GetNewAIConquestTarget) |
+| Barbarian hunting before the window | spike units (core class), half health or better, under the 45 barbarian XP cap, not needed garrisons, go after visible barbarian units within 8 tiles of our cities until the build-up opens (94e55acf, CvTacticalAI::PlotEarlyStrikeBarbHuntMoves) |
+| Exit: the late plan by Personality's turn X | the strike's build-up is one opened by iCloseTurn; the window ends at iDeclareByTurn; past the close turn the target and hunt rules are off and the normal TimingBuildup (siege) runs (c87e8a29, d0fbd91f) |
+
+Not done:
+- the Huns' Horse Archers + Battering Rams pairing as such. The core class and share come from Personality's plan; a
+  siege core gets 33%. If Personality's per-civ fields name a second class, War can weight it next.
+- a capture-time rule that waits for 2 melee in reach (the army has 3).
+
+**Logs to read in the block:** "EarlyStrike: build-up opens", "EarlyStrike: upgrade and go", "BarbHunt:", "BarbKill:"
+(728495a5), the army line's promotions (8c361db) and in-reach list. The checks in the entry below still apply.
+
+**Judged by captures** (the user's measure), per civ, against the earlier blocks for the same civs. Also: declaration
+turn, promotions at the declaration, barbarian kills and own losses before the window.
+
+LEAD: the expert strike is on ai/war 94e55acf (three commits on db638c3 + BarbKill logging), all under EarlyStrike. CI
+to follow; merge once green.
+
 ### War: checks for the first EarlyStrike block, from the strike-plans research (Nov 5, about 10:00pm ET)
 The lead, from tools/ab/STRIKE_PLANS_RESEARCH.md (8f04839). No new code before the block's results; these are what to
 read in it.
