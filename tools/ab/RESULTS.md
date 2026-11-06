@@ -2613,6 +2613,17 @@ timing at Construction (T55-70 Standard), or no strike plan. War's state machine
 LEAD: relayed from Economy, the user's ruling on Germany: no T227 Tank strike. Personality changes the plan (an early
 normal-unit timing at Construction, or no plan). Nothing changes in War's code.
 
+**The next block, updated (8:37am ET): ai/war 32e152c4** = f939c50c + ai/personality b8ac94f + Economy 0043:
+- **b8ac94f (the user's late-spike ruling):** a spike out of reach is no spike, warmongers without one play the generic
+  Composite Bowman rush (G1), and the lists hold no wonders.
+- **0043:** the generic rush plays as an early strike. GetEarlyStrikeCoreClass returns its Archer core, so War's
+  IsEarlyStrikeCiv and the strike state pick those civs up; without it they would stay NONE.
+
+CI is running.
+
+LEAD: the next block is now ai/war 32e152c4 (adds Personality b8ac94f and Economy 0043). "Ready for the next block"
+follows when CI is green; RoleFixes += StrikeList. The PCs keep the STOP until then.
+
 **The short army (the user: "if they were 4 units short, they need to fix their start"; 6:14am ET).** Production, not purchases.
 Economy changes the book; War's part is the build-up's unit requests.
 
