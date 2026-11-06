@@ -1,0 +1,512 @@
+From 8b32e5c95e97cc65d4e4f9fa33876a2c826bbc8a Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 11:35:05 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0041: StrikeList, the strike book follows
+ the expert list strictly (the user: "literally just follow the list")
+
+New flag StrikeList (off in the bundle). CvStrikePlan gets the expert lists, empty by
+default (Personality's rows fill them with AddBuild/AddTech/AddPolicy):
+aBuild[] (unit or building class + count, in order), aTech[], aPolicy[].
+
+From strike state PREP to the declaration (IsStrikePending), the capital builds the first
+list item still short. Counts add up along the list and count built units (not the
+starting ones; upgraded ones and settlers that founded cities count), so a lost unit is
+rebuilt in its place. No settler holds, no gold check. Deviations: the city in danger (a
+melee defender from the plan), an item the game can't do yet (passed over, logged
+LIST WAIT). After the list and in the other cities: the plan's core/support/siege to the
+plan's counts (a worker first where a city has none in its area), then more core while
+affordable; a late strike in its economy-first PREP uses the regular book. Research and
+policies follow the plan's lists (CvTechAI, CvPolicyAI). City log: "STRIKE LIST - ...".
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvCityAI.cpp         |   7 +-
+ .../CvGrandStrategyAI.cpp                     |  35 +++
+ CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h  |  24 ++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp         | 274 ++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h           |   8 +
+ CvGameCoreDLL_Expansion2/CvPolicyAI.cpp       |  11 +
+ CvGameCoreDLL_Expansion2/CvTechAI.cpp         |   6 +
+ 7 files changed, 364 insertions(+), 1 deletion(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvCityAI.cpp b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+index 7b613d7..4c70d08 100644
+--- a/CvGameCoreDLL_Expansion2/CvCityAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvCityAI.cpp
+@@ -156,7 +156,12 @@ void CvCityAI::AI_chooseProduction(bool bInterruptWonders, bool bInterruptBuildi
+ 	{
+ 		OrderTypes eBookOrder = ORDER_TRAIN;
+ 		int iBookData = -1;
+-		bool bBookPick = kOwner.GetOpeningBookProduction(this, eBookOrder, iBookData);
++		// AI_AB_TEST (flag StrikeList, Economy): a strike civ's expert list comes first; while it owns the choice, its
++		// fall-through is CP's choice below, not the regular book
++		bool bListRuns = false;
++		bool bBookPick = kOwner.GetStrikeListProduction(this, eBookOrder, iBookData, bListRuns);
++		if (!bBookPick && !bListRuns)
++			bBookPick = kOwner.GetOpeningBookProduction(this, eBookOrder, iBookData);
+ 
+ 		// The book's later buildings (library and on) give way to the wonder this city is best placed for: over 7
+ 		// test games the new AI had a fifth of CP's wonders at turn 50, and CP's runaway civs were built on them.
+diff --git a/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.cpp b/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.cpp
+index 0dd48b0..8e30e53 100644
+--- a/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.cpp
+@@ -2136,6 +2136,38 @@ const CvStrikePlan& CvGrandStrategyAI::GetStrikePlan() const
+ /// common early aggressors; a data default for every other civ with a unique land combat unit. Turns are Standard here,
+ /// scaled to the game speed at the end. The research's general rules: Archer to Composite Bowman "upgrade and go" at
+ /// Construction with 70-80 gold saved per Archer; at least 2 melee units to take a city; 2-3 cities before the strike.
++/// AI_AB_TEST (flag StrikeList, Economy): fill the strike plan's expert lists, in order
++bool CvStrikePlan::AddBuild(const char* szClass, int iCount)
++{
++	if (!szClass || iNumBuild >= STRIKE_LIST_MAX_BUILD || iCount < 1)
++		return false;
++	const bool bUnit = strncmp(szClass, "UNITCLASS_", 10) == 0;
++	const int iClass = GC.getInfoTypeForString(szClass, true);
++	if (iClass < 0 || (!bUnit && strncmp(szClass, "BUILDINGCLASS_", 14) != 0))
++		return false;
++	aBuild[iNumBuild].bUnit = bUnit;
++	aBuild[iNumBuild].iClass = iClass;
++	aBuild[iNumBuild].iCount = bUnit ? iCount : 1;
++	iNumBuild++;
++	return true;
++}
++bool CvStrikePlan::AddTech(const char* szTech)
++{
++	const TechTypes eTech = szTech ? (TechTypes)GC.getInfoTypeForString(szTech, true) : NO_TECH;
++	if (eTech == NO_TECH || iNumTech >= STRIKE_LIST_MAX_TECH)
++		return false;
++	aTech[iNumTech++] = eTech;
++	return true;
++}
++bool CvStrikePlan::AddPolicy(const char* szPolicy)
++{
++	const PolicyTypes ePolicy = szPolicy ? (PolicyTypes)GC.getInfoTypeForString(szPolicy, true) : NO_POLICY;
++	if (ePolicy == NO_POLICY || iNumPolicy >= STRIKE_LIST_MAX_POLICY)
++		return false;
++	aPolicy[iNumPolicy++] = ePolicy;
++	return true;
++}
++
+ void CvGrandStrategyAI::MakeStrikePlan(const CvStrategyProfile& kProfile, CvStrikePlan& kPlan) const
+ {
+ 	kPlan.bValid = false;
+@@ -2164,6 +2196,9 @@ void CvGrandStrategyAI::MakeStrikePlan(const CvStrategyProfile& kProfile, CvStri
+ 	kPlan.eExitCounterClass1 = NO_UNITCLASS;
+ 	kPlan.eExitCounterClass2 = NO_UNITCLASS;
+ 	kPlan.bExitRoughTarget = false;
++	kPlan.iNumBuild = 0;	// AI_AB_TEST (flag StrikeList): no lists unless a row adds them
++	kPlan.iNumTech = 0;
++	kPlan.iNumPolicy = 0;
+ 	if (!m_pPlayer || !m_pPlayer->isMajorCiv() || kProfile.eSpikeUnit == NO_UNIT)
+ 		return;
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h b/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h
+index babd4af..ca6492c 100644
+--- a/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h
++++ b/CvGameCoreDLL_Expansion2/CvGrandStrategyAI.h
+@@ -74,6 +74,19 @@ struct CvStrikeWindow
+ // AI_AB_TEST (Personality, EarlyStrike; the user, 2026-11-06: "use the experts ideas right away and we will know if they
+ // are good by if they take cities"): the civ's strike plan, from the civfanatics research (tools/ab/STRIKE_PLANS_RESEARCH.md
+ // in the pack repo) for the researched civs, a data default for the rest. Economy's book and War's strike read it.
++// AI_AB_TEST (flag StrikeList, Economy; the user: "this is why we looked up expert build orders. literally just follow the
++// list."): the expert's ordered lists in the strike plan. Personality's rows fill them (AddBuild, AddTech, AddPolicy);
++// empty for every other civ, and then nothing changes
++#define STRIKE_LIST_MAX_BUILD 32
++#define STRIKE_LIST_MAX_TECH 16
++#define STRIKE_LIST_MAX_POLICY 8
++struct CvStrikeListItem
++{
++	bool bUnit;		// a unit class (the civ's own unit through GetSpecificUnitType), else a building class
++	int iClass;		// UnitClassTypes or BuildingClassTypes
++	int iCount;		// units: how many of this class to build at this point of the list (the starting units don't count;
++					// upgraded ones do). Buildings: 1, in the capital
++};
+ struct CvStrikePlan
+ {
+ 	bool bValid;				// false: no plan (no unique land combat unit)
+@@ -106,6 +119,17 @@ struct CvStrikePlan
+ 	UnitClassTypes eExitCounterClass1;	// exit: these units seen near the target (the core's counters); NO_UNITCLASS: none
+ 	UnitClassTypes eExitCounterClass2;
+ 	bool bExitRoughTarget;		// exit: the target city is on a hill or behind rough ground
++	// AI_AB_TEST (flag StrikeList): the expert lists, in order (see CvStrikeListItem). iNum* 0: no list
++	CvStrikeListItem aBuild[STRIKE_LIST_MAX_BUILD];
++	int iNumBuild;
++	TechTypes aTech[STRIKE_LIST_MAX_TECH];
++	int iNumTech;
++	PolicyTypes aPolicy[STRIKE_LIST_MAX_POLICY];	// optional; the first tree is eFirstPolicyBranch
++	int iNumPolicy;
++	// "UNITCLASS_..." or "BUILDINGCLASS_...", e.g. AddBuild("UNITCLASS_WARRIOR", 3) for 3 Jaguars; false: unknown type or full
++	bool AddBuild(const char* szClass, int iCount = 1);
++	bool AddTech(const char* szTech);		// "TECH_ARCHERY"
++	bool AddPolicy(const char* szPolicy);	// "POLICY_DISCIPLINE"
+ };
+ struct CvStrategyProfile
+ {
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index fea2a25..727c245 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33454,6 +33454,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"EarlyStrikeAggressor", false},
+ 	{"Spoiler", false},
+ 	{"LateStrike", false},
++	{"StrikeList", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+@@ -35073,6 +35074,279 @@ PolicyBranchTypes CvPlayer::GetOpeningBookPolicyBranch() const
+ 	}
+ }
+ 
++/// AI_AB_TEST (flag StrikeList, Economy; the user, via the lead: "this is why we looked up expert build orders. literally
++/// just follow the list."). The strike plan while its lists run: a StrikeList civ from PREP to its declaration (no turn
++/// limit, and an unrelated war doesn't stop it). NULL otherwise
++const CvStrikePlan* CvPlayer::GetStrikeListPlan() const
++{
++	if (!MOD_AI_AB_TEST || !isMajorCiv() || isHuman() || !UsesCandidateAI(FIX_STRIKE_LIST) || !IsStrikePending())
++		return NULL;
++	const CvStrikePlan& kPlan = GetGrandStrategyAI()->GetStrikePlan();
++	return kPlan.bValid ? &kPlan : NULL;
++}
++
++/// StrikeList: eClass and every class it upgrades into, for this civ
++static void AddStrikeListUpgradeClasses(const CvPlayer& kPlayer, UnitClassTypes eClass, std::vector<UnitClassTypes>& vClasses)
++{
++	if (eClass == NO_UNITCLASS || vClasses.size() > 16 || std::find(vClasses.begin(), vClasses.end(), eClass) != vClasses.end())
++		return;
++	vClasses.push_back(eClass);
++	const UnitTypes eUnit = kPlayer.GetSpecificUnitType(eClass);
++	CvUnitEntry* pkUnitInfo = (eUnit != NO_UNIT) ? GC.getUnitInfo(eUnit) : NULL;
++	for (int iClass = 0; pkUnitInfo && iClass < GC.getNumUnitClassInfos(); iClass++)
++	{
++		if (pkUnitInfo->GetUpgradeUnitClass(iClass))
++			AddStrikeListUpgradeClasses(kPlayer, (UnitClassTypes)iClass, vClasses);
++	}
++}
++
++/// StrikeList: units of eClass we have, counting the ones that upgraded since and the ones in production. bBuiltOnly:
++/// not the starting units (created on the start turn; an upgrade keeps the turn), the list's counts are builds. A
++/// settler that founded a city still counts (cities founded after the first turns; the capital's settler is a start unit)
++static int CountStrikeListUnits(const CvPlayer& kPlayer, UnitClassTypes eClass, bool bBuiltOnly)
++{
++	std::vector<UnitClassTypes> vClasses;
++	AddStrikeListUpgradeClasses(kPlayer, eClass, vClasses);
++	const int iStartTurn = GC.getGame().getStartTurn();
++	int iCount = 0;
++	int iLoop = 0;
++	for (const CvUnit* pUnit = kPlayer.firstUnit(&iLoop); pUnit != NULL; pUnit = kPlayer.nextUnit(&iLoop))
++	{
++		if (bBuiltOnly && pUnit->getGameTurnCreated() <= iStartTurn)
++			continue;
++		if (std::find(vClasses.begin(), vClasses.end(), pUnit->getUnitClassType()) != vClasses.end())
++			iCount++;
++	}
++	for (size_t i = 0; i < vClasses.size(); i++)
++		iCount += kPlayer.getUnitClassMaking(vClasses[i]);
++
++	const UnitTypes eUnit = kPlayer.GetSpecificUnitType(eClass);
++	CvUnitEntry* pkUnitInfo = (eUnit != NO_UNIT) ? GC.getUnitInfo(eUnit) : NULL;
++	if (pkUnitInfo && pkUnitInfo->IsFound())
++	{
++		for (const CvCity* pCity = kPlayer.firstCity(&iLoop); pCity != NULL; pCity = kPlayer.nextCity(&iLoop))
++		{
++			if (pCity->getOriginalOwner() == kPlayer.GetID() && pCity->getGameTurnFounded() > iStartTurn + 5)
++				iCount++;
++		}
++	}
++	return iCount;
++}
++
++/// StrikeList: the plan's army unit this city should train next: the core, support and siege below the plan's counts (the
++/// core first, then the support, then the siege), then more core. A class the city can't train yet gives way to a unit
++/// that upgrades into it (the late strike's pre-build). NO_UNIT: nothing trainable
++static UnitTypes GetStrikeListArmyUnit(const CvPlayer& kPlayer, const CvStrikePlan& kPlan, const CvCity* pCity, bool& bShort)
++{
++	const UnitClassTypes aeClass[3] = { kPlan.eCoreClass, kPlan.eSupportClass, kPlan.eSiegeClass };
++	const int aiTarget[3] = { kPlan.iCoreTarget, kPlan.iSupportTarget, kPlan.iSiegeTarget };
++	bShort = false;
++	UnitTypes eFirstTrainable = NO_UNIT;
++	for (int iPass = 0; iPass < 2; iPass++)
++	{
++		for (int i = 0; i < 3; i++)
++		{
++			if (aeClass[i] == NO_UNITCLASS || (iPass == 0 && CountStrikeListUnits(kPlayer, aeClass[i], false) >= aiTarget[i]))
++				continue;
++			if (iPass == 0)
++				bShort = true;
++			UnitTypes eUnit = kPlayer.GetSpecificUnitType(aeClass[i]);
++			if (eUnit == NO_UNIT || !pCity->canTrain(eUnit))
++			{
++				// the pre-build: a unit that upgrades into this class
++				eUnit = NO_UNIT;
++				if (i == 0 && kPlan.ePreBuildClass != NO_UNITCLASS)
++				{
++					const UnitTypes ePre = kPlayer.GetSpecificUnitType(kPlan.ePreBuildClass);
++					if (ePre != NO_UNIT && pCity->canTrain(ePre))
++						eUnit = ePre;
++				}
++			}
++			if (eUnit == NO_UNIT)
++				continue;
++			if (iPass == 0)
++				return eUnit;
++			if (eFirstTrainable == NO_UNIT)
++				eFirstTrainable = eUnit;
++		}
++		if (iPass == 1)
++			break;
++	}
++	// the counts are met: more core (the war's losses), else what the city can train of the plan
++	return eFirstTrainable;
++}
++
++static void LogStrikeList(CvPlayer& kPlayer, const CvCity* pCity, const char* szWhat, const char* szDetail)
++{
++	if (!GC.getLogging() || !GC.getAILogging() || !pCity)
++		return;
++	CvString strOut;
++	strOut.Format("%s, STRIKE LIST - %s%s%s", pCity->getName().GetCString(), szWhat, szDetail ? " " : "", szDetail ? szDetail : "");
++	kPlayer.GetCitySpecializationAI()->LogMsg(strOut);
++}
++
++/// StrikeList: the capital builds the plan's list in order. The first item still short is next (counts add up along the
++/// list, so a unit lost later makes its item short again and it's rebuilt in its place). No settler holds and no gold
++/// check: the experts' lists come with their own economy. The only deviations are game events: the city in danger (a
++/// defender first) and an item the game can't do yet (passed over for the next one, logged LIST WAIT; research follows
++/// the list too). After the list, and in the other cities: the plan's army (a worker first where a city has none near),
++/// and for a late strike in its economy-first PREP, the regular book. bListRuns: the list owns this choice, so a false
++/// return goes straight to CP's choice (logged), not to the regular book
++bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& iData, bool& bListRuns)
++{
++	bListRuns = false;
++	const CvStrikePlan* pPlan = GetStrikeListPlan();
++	if (!pCity || pCity->IsPuppet() || !pPlan || pPlan->iNumBuild <= 0)
++		return false;
++	const CvStrikePlan& kPlan = *pPlan;
++	bListRuns = true;
++
++	// danger: a defender first, the plan's melee unit
++	if (pCity->isUnderSiege() || pCity->isInDangerOfFalling())
++	{
++		const UnitClassTypes aeClass[2] = { kPlan.eCoreClass, kPlan.eSupportClass };
++		for (int i = 0; i < 2; i++)
++		{
++			const UnitTypes eUnit = (aeClass[i] != NO_UNITCLASS) ? GetSpecificUnitType(aeClass[i]) : NO_UNIT;
++			CvUnitEntry* pkUnitInfo = (eUnit != NO_UNIT) ? GC.getUnitInfo(eUnit) : NULL;
++			if (pkUnitInfo && pkUnitInfo->GetDomainType() == DOMAIN_LAND && pkUnitInfo->GetCombat() > 0 &&
++				pkUnitInfo->GetRangedCombat() == 0 && pCity->canTrain(eUnit))
++			{
++				eOrder = ORDER_TRAIN;
++				iData = eUnit;
++				LogStrikeList(*this, pCity, "DANGER, a defender:", pkUnitInfo->GetDescription());
++				return true;
++			}
++		}
++		LogStrikeList(*this, pCity, "DANGER, CP's defence", NULL);
++		return false;
++	}
++
++	if (pCity->isCapital())
++	{
++		std::map<int, int> unitsWanted;
++		CvString strWait;
++		for (int i = 0; i < kPlan.iNumBuild; i++)
++		{
++			const CvStrikeListItem& kItem = kPlan.aBuild[i];
++			if (kItem.bUnit)
++			{
++				const UnitClassTypes eClass = (UnitClassTypes)kItem.iClass;
++				const int iWanted = (unitsWanted[eClass] += std::max(1, kItem.iCount));
++				if (CountStrikeListUnits(*this, eClass, true) >= iWanted)
++					continue;
++				const UnitTypes eUnit = GetSpecificUnitType(eClass);
++				CvUnitEntry* pkUnitInfo = (eUnit != NO_UNIT) ? GC.getUnitInfo(eUnit) : NULL;
++				if (!pkUnitInfo)
++					continue;
++				if (!pCity->canTrain(eUnit))
++				{
++					if (strWait.IsEmpty())
++						strWait.Format("(item %d %s)", i + 1, pkUnitInfo->GetDescription());
++					continue;
++				}
++				eOrder = ORDER_TRAIN;
++				iData = eUnit;
++				CvString strItem;
++				strItem.Format("item %d/%d %s%s%s", i + 1, kPlan.iNumBuild, pkUnitInfo->GetDescription(), strWait.IsEmpty() ? "" : ", LIST WAIT ", strWait.c_str());
++				LogStrikeList(*this, pCity, strItem.c_str(), NULL);
++				return true;
++			}
++			else
++			{
++				const BuildingClassTypes eClass = (BuildingClassTypes)kItem.iClass;
++				CvBuildingClassInfo* pkClassInfo = GC.getBuildingClassInfo(eClass);
++				if (!pkClassInfo || pCity->GetCityBuildings()->HasBuildingClass(eClass))
++					continue;
++				const BuildingTypes eBuilding = GetSpecificBuildingType(pkClassInfo->GetType(), true);
++				CvBuildingEntry* pkBuildingInfo = (eBuilding != NO_BUILDING) ? GC.getBuildingInfo(eBuilding) : NULL;
++				if (!pkBuildingInfo)
++					continue;
++				if (!pCity->canConstruct(eBuilding))
++				{
++					if (strWait.IsEmpty())
++						strWait.Format("(item %d %s)", i + 1, pkBuildingInfo->GetDescription());
++					continue;
++				}
++				eOrder = ORDER_CONSTRUCT;
++				iData = eBuilding;
++				CvString strItem;
++				strItem.Format("item %d/%d %s%s%s", i + 1, kPlan.iNumBuild, pkBuildingInfo->GetDescription(), strWait.IsEmpty() ? "" : ", LIST WAIT ", strWait.c_str());
++				LogStrikeList(*this, pCity, strItem.c_str(), NULL);
++				return true;
++			}
++		}
++		if (!strWait.IsEmpty())
++			LogStrikeList(*this, pCity, "LIST WAIT, nothing on the list can be done now", strWait.c_str());
++	}
++
++	// after the list, and the other cities: a late strike's PREP is economy first (the regular book)
++	if (kPlan.bLateStrike && GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_BUILDUP)
++	{
++		bListRuns = false;
++		return false;
++	}
++
++	// a worker where a city has none in its area
++	if (!pCity->isCapital())
++	{
++		bool bWorker = false;
++		int iLoop = 0;
++		for (const CvUnit* pUnit = firstUnit(&iLoop); pUnit != NULL && !bWorker; pUnit = nextUnit(&iLoop))
++			bWorker = pUnit->AI_getUnitAIType() == UNITAI_WORKER && pUnit->plot() && pUnit->plot()->getArea() == pCity->plot()->getArea();
++		const UnitTypes eWorker = bWorker ? NO_UNIT : GetSpecificUnitType("UNITCLASS_WORKER", true);
++		if (eWorker != NO_UNIT && pCity->canTrain(eWorker) && getUnitClassMaking((UnitClassTypes)GC.getUnitInfo(eWorker)->GetUnitClassType()) == 0)
++		{
++			eOrder = ORDER_TRAIN;
++			iData = eWorker;
++			LogStrikeList(*this, pCity, "a worker (none in this area)", NULL);
++			return true;
++		}
++	}
++
++	bool bShort = false;
++	const UnitTypes eArmy = GetStrikeListArmyUnit(*this, kPlan, pCity, bShort);
++	if (eArmy != NO_UNIT && (bShort || GetEconomicAI()->GetAffordableWarUnits(10) >= 1))
++	{
++		eOrder = ORDER_TRAIN;
++		iData = eArmy;
++		LogStrikeList(*this, pCity, bShort ? "the army (short of the plan):" : "the army (the plan's counts met, more core):", GC.getUnitInfo(eArmy)->GetDescription());
++		return true;
++	}
++	LogStrikeList(*this, pCity, eArmy == NO_UNIT ? "LIST NORMAL (no army unit trainable)" : "LIST NORMAL (army complete, no more affordable)", NULL);
++	return false;
++}
++
++/// StrikeList: research follows the plan's list in order (a prerequisite first when a tech isn't researchable yet). After
++/// the list, the book's straight line (GetOpeningBookTech)
++TechTypes CvPlayer::GetStrikeListTech() const
++{
++	const CvStrikePlan* pPlan = GetStrikeListPlan();
++	for (int i = 0; pPlan && i < pPlan->iNumTech; i++)
++	{
++		const TechTypes eStep = GetOpeningBookTechStep(*this, pPlan->aTech[i], 0);
++		if (eStep != NO_TECH)
++			return eStep;
++	}
++	return NO_TECH;
++}
++
++/// StrikeList: the first policy on the plan's list we haven't adopted, when it can be adopted now (the first tree is
++/// eFirstPolicyBranch, opened by the book)
++PolicyTypes CvPlayer::GetStrikeListPolicy() const
++{
++	const CvStrikePlan* pPlan = GetStrikeListPlan();
++	for (int i = 0; pPlan && i < pPlan->iNumPolicy; i++)
++	{
++		const PolicyTypes ePolicy = pPlan->aPolicy[i];
++		if (ePolicy == NO_POLICY || GetPlayerPolicies()->HasPolicy(ePolicy))
++			continue;
++		if (GetPlayerPolicies()->CanAdoptPolicy(ePolicy))
++			return ePolicy;
++	}
++	return NO_POLICY;
++}
++
+ bool CvPlayer::IsVassalOfSomeone() const
+ {
+ 	return GET_TEAM(getTeam()).IsVassalOfSomeone();
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 46201be..381e461 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -29,6 +29,7 @@ class CvMilitaryAI;
+ class CvCitySpecializationAI;
+ class CvWonderProductionAI;
+ class CvGrandStrategyAI;
++struct CvStrikePlan;
+ class CvDiplomacyAI;
+ class CvPlayerReligions;
+ class CvReligionAI;
+@@ -320,6 +321,9 @@ enum CandidateFixTypes
+ 	FIX_LATE_STRIKE,		// Economy (the book) and War (the window): a warmonger whose spike comes late (not bMilitaryFirst) plays economy first,
+ 							// researches its spike and upgrade techs and saves for the upgrades; its build-up opens at Personality's strike plan,
+ 							// builds the plan's core, support and siege, and declares by the plan's turn. Off in the bundle
++	FIX_STRIKE_LIST,		// Economy (the user: "literally just follow the list"): before its strike, a strike civ's capital builds the plan's
++							// expert list item by item (a lost unit rebuilt in its place), then the plan's army; its other cities the army;
++							// research and policies follow the plan's lists. Personality's rows carry the lists. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+@@ -1930,6 +1934,10 @@ public:
+ 	bool IsLateStrikeCiv() const; // AI_AB_TEST Economy, flag LateStrike: a warmonger with a late spike and a strike plan
+ 	bool IsLateStrikeSaving() const; // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
+ 	bool IsStrikePending() const; // AI_AB_TEST Economy, flags EarlyStrike/LateStrike (0040): a strike civ before its strike (state PREP or BUILDUP) // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
++	const CvStrikePlan* GetStrikeListPlan() const; // AI_AB_TEST Economy, flag StrikeList: the strike plan while its lists run
++	bool GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& iData, bool& bListRuns); // flag StrikeList: the next list item
++	TechTypes GetStrikeListTech() const; // flag StrikeList: the next tech on the plan's list
++	PolicyTypes GetStrikeListPolicy() const; // flag StrikeList: the next policy on the plan's list
+ 	TechTypes GetLateStrikeTech() const; // AI_AB_TEST Economy, flag LateStrike: the spike's and the upgrade's techs before the window
+ 	bool IsWarGoldShort() const; // AI_AB_TEST Economy, flag WarGold
+ 	PolicyBranchTypes GetOpeningBookPolicyBranch() const;
+diff --git a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+index 497ffff..da44c31 100644
+--- a/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPolicyAI.cpp
+@@ -197,6 +197,17 @@ int CvPolicyAI::ChooseNextPolicy(CvPlayer* pPlayer)
+ 		}
+ 	}
+ 
++	// AI_AB_TEST (flag StrikeList, Economy): then the expert's policies, in the list's order
++	if (!bMustChooseTenet && !bNeedToFinish)
++	{
++		const PolicyTypes eListPolicy = pPlayer->GetStrikeListPolicy();
++		if (eListPolicy != NO_POLICY)
++		{
++			LogPolicyChoice(eListPolicy);
++			return (int)eListPolicy + GC.getNumPolicyBranchInfos();
++		}
++	}
++
+ 	// Loop though the branches adding each as another possibility
+ 	if (!bMustChooseTenet && !bNeedToFinish)
+ 	{
+diff --git a/CvGameCoreDLL_Expansion2/CvTechAI.cpp b/CvGameCoreDLL_Expansion2/CvTechAI.cpp
+index 500f133..2f63141 100644
+--- a/CvGameCoreDLL_Expansion2/CvTechAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvTechAI.cpp
+@@ -215,6 +215,12 @@ TechTypes CvTechAI::ChooseNextTech(CvPlayer *pPlayer, bool bFreeTech)
+ 	// AI_AB_TEST: the new AI follows its opening book's tech path early in the game
+ 	if (!bFreeTech)
+ 	{
++		TechTypes eListTech = pPlayer->GetStrikeListTech(); // AI_AB_TEST Economy, flag StrikeList: the expert's tech list first
++		if (eListTech != NO_TECH)
++		{
++			LogResearchChoice(eListTech);
++			return eListTech;
++		}
+ 		TechTypes eBookTech = pPlayer->GetOpeningBookTech();
+ 		if (eBookTech != NO_TECH)
+ 		{
+-- 
+2.43.0
+

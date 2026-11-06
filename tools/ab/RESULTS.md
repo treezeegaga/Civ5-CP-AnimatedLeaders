@@ -1982,7 +1982,20 @@ book switch-off from an unrelated war.
 The measure is captures per strike game. The check is `tools/ab/scripts/earlystrike/book_check.py`, extended for
 list-vs-built.
 
-**Status:** design. The patch comes next, on ai/war `6df9a4d` + 0039 + 0040. Personality fills the lists.
+**Status:** patch 0041 (6:35am ET). It applies on ai/war `6df9a4d` + 0039 + 0040, and on ab-c1 `8f9b7f9` + 0039 +
+0040. Not built. It does nothing until Personality's rows fill the lists and the run turns StrikeList on. As built,
+it differs from the design above in one point: a late strike in its economy-first PREP falls back to the regular book
+after the list, not to CP's choice. The city log line is `STRIKE LIST - item i/n X`, plus `LIST WAIT (item ...)`,
+`DANGER`, `the army (...)` and `LIST NORMAL (...)`.
+
+**For Personality, filling the lists:**
+- Call `kPlan.AddBuild("UNITCLASS_WARRIOR", 3)` for 3 Jaguars, `AddBuild("BUILDINGCLASS_MONUMENT")`,
+  `AddTech("TECH_ARCHERY")` and `AddPolicy("POLICY_DISCIPLINE")`. Each returns false on an unknown type.
+- A count is **units built at that point**. Starting units don't count (a unit created on the start turn, which an
+  upgrade keeps). Counts add up per class along the list: Warrior x3 ... Warrior x2 means 5 built by the second item.
+- Settlers count the cities they founded.
+- Keep each list consistent with the plan's N and K. War's PREP to BUILDUP (`IsStrikeEconomyReady`) still needs N core
+  units and K cities, so a list with fewer than K-1 settlers never reaches BUILDUP unless the civ is boxed in.
 
 ### Patches 0039 and 0040: the leak audit, and the late strike's gap (Economy, Nov 6, 6:27am ET)
 The lead asked: in the first bullyabort19 game (ab-8f9b7f9), does the strike civ build a world wonder or give gold to
