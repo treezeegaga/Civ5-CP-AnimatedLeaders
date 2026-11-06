@@ -5161,3 +5161,18 @@ flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
   both PCs now run (bullygreedy19 from 6:05am; bullyabort19 starting).
 - **Disk:** PC 1's C: drive filled to 3 MB free. 118 LogsArchive copies were deleted (their digests are in results), and
   112 GB is free now.
+
+### Morning of Nov 6: three short runs, each stopped by the user's wonder/gift rule or a fix (lead, 8:27am ET)
+- **bullygreedy19 / bullyabort19 (`ab-8f9b7f9`), 1 pair each.** PC 2 Aztec: clean, but no upgrades (the upgrade hold),
+  no capture. PC 1 Japan (LateStrike): Great Library, Hanging Gardens and 1,250 gold to city-states before its war.
+  That's a STOP, fixed by Economy 0039/0040.
+- **bullygreedy20 / bullyabort20 (`ab-8555f21`: StrikeList, upgrade and go), 1 pair each.**
+  - **PC 2 Greece:** followed its expert list in order and noted a city-state target (Ur) at T18. BUILDUP at T41,
+    declared at T50 with the plan's 8 units, **took a Dutch city at T59. This is the first EarlyStrike capture.** The
+    flipped game took none.
+  - **PC 1 Germany:** the late data-default plan aimed at the Panzer, so PREP lasted all game. Munich built Heroic Epic
+    and Temple of Artemis through the production fallback, which picks from the unchecked list. That's a STOP, fixed by
+    Economy 0042.
+- **Next block: `ab-f939c50`** (bullygreedy21, bullyabort21) adds 0042 (no world or national wonders on every pick
+  path), War's strike peace cap, and Personality's 184fe09 (every list runs to the strike; Germany's late default is
+  Spearman to Landsknecht).
