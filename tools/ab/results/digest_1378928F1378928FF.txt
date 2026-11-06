@@ -1,0 +1,49 @@
+﻿Game 1378928F1378928FF (AIABTest_c8e.csv), last logged turn 150
+b    America      wide      cities 8
+  builds to T80 (capital Washington; other cities named): T2 Scout* | T6 Warrior* | T13 Worker* | T24 Settler* | T34 Shrine* | T36 Monument* | T37 Monument* (New York) | T40 Settler* | T49 Library* | T54 Monument* (Boston) | T56 Settler* | T58 Settler | T60 Shrine (New York) | T61 Shrine (Boston) | T62 Warrior | T65 Archer | T68 Granary (Boston) | T69 Granary | T70 Settler (New York) | T72 Granary (Philadelphia) | T73 Scout | T74 Library (Boston) | T74 Archer | T78 Worker | T79 Barracks (Boston)
+  settlers ordered T: 24,40,56,58,70,92,107,109,110,119   found-city ops started T: 34,49,62,83,83,99,113,124   cities founded T: 37,54,72,87,88,107,117
+  ops aborted: T121 NoTarget, T122 NoTarget, T123 NoTarget, T126 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget
+  book SETTLER HELD to T80: 5 (one at a time 3, unhappy 1, growth due 1)   built instead: the normal AI choice 2, Worker 1, Library 1, Monument 1   first: T013 Washington size 2 next Worker | T036 Washington size 3 next Monument | T049 Washington size 4 next Library
+  IDLE SETTLER turns: 7 (first T40)
+  military ops ended (whole game): NoTarget 6, Success 1, LostPath 1
+  settler timeline to T80: T24 settler (book) in Washington | T34 op started | T37 FOUNDED | T40 settler (book) in Washington | T49 op started | T54 FOUNDED | T56 settler (book) in Washington | T58 settler (AI) in Washington | T62 op started | T70 settler (AI) in New York | T72 FOUNDED
+  saving gold for a settler: 46 turns (T8-T79)
+b    France       tall      cities 7
+  builds to T80 (capital Paris; other cities named): T1 Scout* | T4 Monument* | T8 Warrior* | T13 Shrine* | T16 Settler* | T25 Worker* | T27 Monument* (Orleans) | T28 Settler* | T34 Library* (Orleans) | T36 Warrior | T41 Worker | T46 Great Library | T49 Temple | T55 Granary (Lyon) | T56 Settler | T61 Granary | T64 Worker (Orleans) | T64 Settler | T69 Monument (Troyes) | T69 Warrior | T70 Shrine (Troyes) | T72 Monument (Tours) | T72 Scout | T73 Shrine (Lyon) | T73 Warrior | T75 Granary (Orleans) | T75 Worker | T76 Worker (Tours) | T79 Warrior | T80 Warrior (Lyon)
+  settlers ordered T: 16,28,56,64   found-city ops started T: 25,36,61,69   cities founded T: 27,55,69,72
+  IDLE SETTLER turns: 2 (first T29)
+  military ops ended (whole game): NoTarget 3, Success 2, HalfStrength 2
+  settler timeline to T80: T16 settler (book) in Paris | T25 op started | T27 FOUNDED | T28 settler (book) in Paris | T36 op started | T55 FOUNDED | T56 settler (AI) in Paris | T61 op started | T64 settler (AI) in Paris | T69 FOUNDED | T69 op started | T72 FOUNDED
+  saving gold for a settler: 29 turns (T12-T76)
+b    Persia       tall      cities 4
+  builds to T80 (capital Persepolis; other cities named): T1 Scout* | T4 Monument* | T8 Warrior* | T13 Shrine* | T17 Settler* | T27 Worker* | T32 Monument* (Pasargadae) | T33 Library* (Pasargadae) | T33 Settler* | T41 Worker* | T43 Settler* | T45 Library* | T51 Warrior | T56 Granary (Susa) | T56 Granary | T62 Archer | T66 Settler (Pasargadae) | T66 Immortal | T72 Worker | T76 Shrine (Susa) | T79 Granary (Pasargadae) | T80 Temple
+  settlers ordered T: 17,33,43,66,93   found-city ops started T: 27,45,79   cities founded T: 32,56,84
+  ops aborted: T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 1, one at a time 1)   built instead: the normal AI choice 1, Library 1   first: T045 Persepolis size 2 next Library | T051 Persepolis size 3 next the normal AI choice
+  IDLE SETTLER turns: 4 (first T33)
+  military ops ended (whole game): LostPath 2, Success 2, NoTarget 2
+  settler timeline to T80: T17 settler (book) in Persepolis | T27 op started | T32 FOUNDED | T33 settler (book) in Persepolis | T43 settler (book) in Persepolis | T45 op started | T56 FOUNDED | T66 settler (AI) in Pasargadae | T79 op started
+  saving gold for a settler: 45 turns (T12-T79)
+b    Portugal     tall      cities 8
+  builds to T80 (capital Lisbon; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T15 Warrior* | T19 Settler* | T28 Worker* | T31 Monument* (Porto) | T32 Library* (Porto) | T32 Settler* | T40 Worker* | T43 Stonehenge | T44 Library* | T46 Monument* (Braga) | T47 Library* (Braga) | T48 Shrine (Porto) | T49 Settler* | T54 Worker | T57 Warrior (Porto) | T60 Work Boat | T64 Settler | T65 Warrior (Porto) | T69 Lighthouse | T71 Granary (Braga) | T72 Monument (Coimbra) | T73 Shrine (Coimbra) | T74 Scout | T76 Settler | T78 Warrior (Porto) | T80 Worker (Coimbra) | T80 Spearman
+  settlers ordered T: 19,32,49,64,76,91,99,110,133   found-city ops started T: 28,40,54,69,80,95,103,114   cities founded T: 31,46,72,88,103,122,125
+  ops aborted: T59 LostCivilian
+  book SETTLER HELD to T80: 2 (one at a time 1, growth due 1)   built instead: Library 2   first: T043 Lisbon size 3 next Library | T044 Lisbon size 4 next Library
+  IDLE SETTLER turns: 7 (first T33)
+  military ops ended (whole game): NoTarget 3, Success 1, WarStateChange 1, HalfStrength 1
+  settler timeline to T80: T19 settler (book) in Lisbon | T28 op started | T31 FOUNDED | T32 settler (book) in Lisbon | T40 op started | T46 FOUNDED | T49 settler (book) in Lisbon | T54 op started | T59 op ended: LostCivilian | T64 settler (AI) in Lisbon | T69 op started | T72 FOUNDED | T76 settler (AI) in Lisbon | T80 op started
+  saving gold for a settler: 56 turns (T5-T80)
+b    Spain        wide      cities 1
+  builds to T80 (capital Madrid; other cities named): T0 Scout* | T4 Warrior* | T10 Settler* | T22 Worker* | T24 Monument* (Barcelona) | T25 Shrine* | T29 Shrine (Barcelona) | T29 Monument* | T35 Settler* | T40 Great Library | T49 Library* | T53 Archer (Barcelona) | T57 Worker* | T58 Monument* (Seville) | T59 Archer | T60 Worker* | T61 Worker | T62 Worker | T63 Spearman | T63 Worker | T64 Warrior (Barcelona) | T64 Worker | T65 Worker | T66 Spearman | T68 Granary (Seville) | T70 Market | T73 Worker (Barcelona) | T77 Colosseum | T80 Warrior (Seville)
+  settlers ordered T: 10,35   found-city ops started T: 22,50   cities founded T: 24,58
+  ops aborted: T80 NoTarget, T81 NoTarget, T82 NoTarget, T83 NoTarget, T84 NoTarget, T85 NoTarget, T86 NoTarget, T87 NoTarget, T88 NoTarget, T89 NoTarget, T90 NoTarget, T91 NoTarget, T92 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget
+  book SETTLER HELD to T80: 11 (unhappy 9, one at a time 2)   built instead: the normal AI choice 8, Library 2, Monument 1   first: T029 Madrid size 2 next Monument | T040 Madrid size 3 next Library | T049 Madrid size 4 next Library
+  IDLE SETTLER turns: 2 (first T35)
+  military ops ended (whole game): NoTarget 4, WarStateChange 2, Success 1, LostPath 1
+  settler timeline to T80: T10 settler (book) in Madrid | T22 op started | T24 FOUNDED | T35 settler (book) in Madrid | T49 BOUGHT in Madrid. Cost: 370 | T50 op started | T58 FOUNDED | T80 op ended: NoTarget
+  saving gold for a settler: 40 turns (T6-T79)
+b    Venice       tall      cities 3
+  builds to T80 (capital Venice; other cities named): T0 Scout* | T3 Monument* | T7 Warrior* | T12 Shrine* | T16 Worker* | T24 Library* | T32 Stonehenge | T44 National College* | T56 Lighthouse (Jerusalem) | T56 Great Lighthouse (Jerusalem) | T59 Work Boat | T62 Cargo Ship (Jerusalem) | T62 Work Boat | T65 Work Boat | T67 Work Boat | T68 Cargo Ship (Jerusalem) | T69 Work Boat | T71 Work Boat | T73 Work Boat | T74 Cargo Ship (Jerusalem) | T75 Great Lighthouse | T79 Cargo Ship (Jerusalem)
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  book SETTLER HELD to T80: 2 (growth due 2)   built instead: National College 1, Library 1   first: T024 Venice size 3 next Library | T044 Venice size 4 next National College
+  military ops ended (whole game): NoUnits 9, HalfStrength 4, Success 2, NoTarget 1

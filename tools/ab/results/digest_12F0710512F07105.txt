@@ -1,0 +1,18 @@
+﻿Game 12F0710512F07105 (AIABTest_c8e.csv), last logged turn 150
+b    Babylon      tall      cities 5
+  builds to T80 (capital Babylon; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T22 Settler* | T32 Worker* | T34 Monument* (Akkad) | T35 Great Library | T35 Library* (Akkad) | T39 Library* | T48 Worker* | T50 Bowman | T57 Worker | T61 Settler | T70 Hanging Gardens | T70 Settler | T71 Work Boat (Akkad) | T72 Monument (Dur-Kurigalzu) | T73 Shrine (Dur-Kurigalzu)
+  settlers ordered T: 22,61,70,87,101,106,107,114,136   found-city ops started T: 32,70,107,120   cities founded T: 34,72,110,126
+  ops aborted: T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 3 (unhappy 3)   built instead: Library 2, the normal AI choice 1   first: T035 Babylon size 4 next Library | T039 Babylon size 4 next Library | T050 Babylon size 4 next the normal AI choice
+  IDLE SETTLER turns: 5 (first T61)
+  military ops ended (whole game): NoTarget 2
+  settler timeline to T80: T22 settler (book) in Babylon | T32 op started | T34 FOUNDED | T61 settler (AI) in Babylon | T70 op started | T70 settler (AI) in Babylon | T72 FOUNDED
+  saving gold for a settler: 46 turns (T5-T80)
+c    Sweden       tall      cities 5
+  builds to T80 (capital Stockholm; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T18 Settler* | T30 Worker* | T33 Monument* (Sigtuna) | T34 Library* (Sigtuna) | T34 Settler* | T35 Worker* | T36 Settler* | T41 Worker* | T42 Settler* | T44 Worker* | T45 Settler* | T49 Warrior | T50 Warrior | T51 Warrior | T53 Stonehenge | T54 Settler | T59 Spearman | T60 Monument (Helsinki) | T61 Shrine (Helsinki) | T63 Granary (Sigtuna) | T64 Granary | T66 Granary (Birka) | T69 Scout | T70 Worker | T74 Warrior | T76 Temple (Helsinki) | T77 Scout | T79 Spearman
+  settlers ordered T: 18,34,36,42,45,54,81,100   found-city ops started T: 30,49,59,93   cities founded T: 33,60,66,102
+  ops aborted: T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  IDLE SETTLER turns: 4 (first T34)
+  military ops ended (whole game): HalfStrength 2, NoTarget 1
+  settler timeline to T80: T18 settler (book) in Stockholm | T30 op started | T33 FOUNDED | T34 settler (book) in Stockholm | T36 settler (book) in Stockholm | T42 settler (book) in Stockholm | T45 settler (book) in Stockholm | T49 op started | T54 settler (AI) in Stockholm | T59 op started | T60 FOUNDED | T66 FOUNDED
+  saving gold for a settler: 40 turns (T11-T80)
