@@ -3455,7 +3455,26 @@ weights fill everything a plan doesn't name):
 - **For War, through the lead:** rules 2, 3 and 6 (two melee, target choice, fall-back), the pre-war use column, and
   the window change (open at the upgrade tech). **For Economy:** the opening priorities and policy columns, and gold
   saved for upgrades (rule 1).
-- **Status:** spec, no code. The code split with War and Economy comes after the first EarlyStrike block is in.
+- **Code** (the user, via the lead, about 9:58pm ET: "no, we dont need a baseline. use the experts ideas right away and
+  we will know if they are good by if they take cities"): under `EarlyStrike`, no new flag. Personality's part first,
+  `CvGrandStrategyAI::GetStrikePlan()` (`221fb3e`), a `CvStrikePlan` per civ, logged in StrategyProfile_Log.csv:
+  core, support and siege unit classes with target counts; the upgrade tech and gold per unit (75); N core units before
+  the first settler; K cities before the strike; open, declare-by and fallback turns; the first policy branch; siege
+  only if walled; barbarian hunting before the window. Expert rows (Standard turns, Quick x0.67):
+
+  | Civ | Core | Support | Siege | Upgrade | N | K | Open / declare by / fall back | Policy |
+  |---|---|---|---|---|---|---|---|---|
+  | Huns | Horse Archer x5 | Warrior x1 | Battering Ram x2 | none | 2 | 2 | T30 / T50 / T55 (Quick T20 / T33 / T36) | Honor |
+  | Aztec | Jaguar x6 | Archer x4 | if walled | Construction | 3 | 2 | T52 / T70 / T75 (Quick T34 / T46 / T50) | Honor |
+  | Inca | Slinger x6 | Spearman x2 | if walled | Construction | 2 | 3 | T60 / T70 / T75 (Quick T40 / T46 / T50) | Liberty (low confidence) |
+  | Greece | Hoplite x3 | Archer x5 | if walled | Construction | 2 | 3 | T50 / T65 / T75 (Quick T33 / T43 / T50) | Liberty |
+  | Celts | Pictish Warrior x5 | Archer x3 | if walled | Construction | 2 | 3 | T52 / T67 / T75 (Quick T34 / T44 / T50) | Honor |
+
+  The data default for every other civ with a unique land combat unit: the spike unit is the core (a siege unique unit
+  is the siege, with Archers as the core); support ranged or melee to balance; the profile's upgrade tech; N 2, K 3;
+  open when the later of the spike and the upgrade lands, + 5; declare within 10; fall back 5 later; Liberty for an
+  early spike, CP's choice otherwise. Economy's book and War's strike read it next (the lead's order of work).
+- **Status:** `221fb3e` pushed, CI pending. Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
