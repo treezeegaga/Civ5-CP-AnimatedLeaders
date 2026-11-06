@@ -1924,6 +1924,50 @@ logging only, after each city capture attempt: "capture attempt on X done: city 
 The next logged war shows whether attacks happen. If they don't, the cause is in the combat simulation's choice:
 positions, set-up moves, or its scoring of attacks against cities.
 
+### War: our aggressors' capital opening through T50, against the user's (Nov 5, about 8:45pm ET)
+The user's reference (106F8550, the Aztec): the capital built Jaguar, Jaguar, Jaguar, Worker, Settler, Archer x4, Jaguar,
+Jaguar. That is 9 military, 1 settler, 1 worker and no buildings by about T50, in 2 cities (the second built no units).
+Marrakesh fell at T54. Ours, from the opening book's "Started" lines (CitySpecializationLog) and CP's choices after it
+(CityStrategyAIProductionLog): 69 aggressor first games with a complete book log. Script: `tools/ab/capital_opening.py`.
+
+| Capital, through T50 | The user | Ours (median, range) |
+|---|---|---|
+| Military units started | 9 | 2 (1 to 9) |
+| Settlers | 1 | 2 (1 to 6); first at T16 |
+| Buildings | 0 | 3 (0 to 5): Shrine, Monument, Granary |
+| Workers / Scouts | 1 / 0 | 1 / 1 |
+| Military before the first settler | 3 | 1 (the book's Warrior or UU) |
+| Cities at T50 | 2 | 2 (1 to 4) |
+
+- **Our opening is economic.** The book's typical line is Scout, Warrior, Worker, Settler, Shrine, Settler, Monument, and
+  military starts after T30 when CP's own choices take over. The city count at T50 is the same as the user's; the
+  difference is what the capital builds.
+- **More early military, more captures** (capital military by T50, games with a capture):
+  - 0 to 2: 2 of 44 (5%);
+  - 3 to 4: 2 of 15 (13%);
+  - 5 to 7: 2 of 7;
+  - 8+: 1 of 3.
+  - 5 of 25 (20%) with 3 or more, against 2 of 44 with fewer. Small numbers, but the same direction as the timing
+    result below (declaring at T60 to 79: 31%).
+- Even the 8 capitals with 6+ military by T50 didn't strike early (2 captured). The army was built, then the window
+  waited (TimingBuildup opens at a median of T41 and waits for the siege train).
+
+**Design proposal: EarlyStrike (not coded; the opening book is Economy's).** For warmongers with an early UU (melee or
+ranged: Aztec, Zulu, Huns, Mongols, Songhai, Assyria, Inca, Celts, ...):
+- Book: 3 UU, Worker, 1 Settler, 4 ranged (Archers, upgraded to Composite Bowmen), 2 more UU; no Shrine, Monument or
+  Granary before them.
+- War side (mine): a TimingBuildup window that opens with the book's army, around T35 to T45, and declares by about T60.
+  - The target is the nearest weak major's unwalled city. No siege requirement while the target has no walls.
+  - Units not in the army hunt barbarian camps in the build-up (CP already tries camps, a median of 36 times before the
+    first war; promotions are now logged on the army line, ai/war 8c361db1).
+- One flag for each half (book: Economy; window and target: War), tested together.
+- Kill: captures below the package block's rate, or the attacker falling behind on cities and science by T100 without
+  a capture.
+
+LEAD: reading. Ours builds about 2 military in the capital by T50 against the user's 9, with 2 settlers and 3 buildings
+first. More early military goes with more captures (20% with 3+, against 5%). EarlyStrike proposed (book with Economy,
+window and target with War); say go and I'll code War's half behind a flag.
+
 ### War: an early strike? Walls, siege and timing over our games (Nov 5, about 8:30pm ET)
 The lead, relaying the user's human game (106F8550, King, Quick, the Aztec against greedy AIs): Marrakesh taken at T54,
 eliminating Morocco, with about 6 Jaguars and 4 Composite Bowmen and no siege. The Jaguars were promoted from barbarian
