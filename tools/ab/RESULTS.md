@@ -3230,6 +3230,22 @@ LEAD: the head is **ai/war 2c8256d2** (c7eed909 + these), with Economy's 1-3 and
 LEAD: the head for the trial and next block is **ai/war 824f1dbf**. CI to follow.
 LEAD (5:26pm ET): **ai/war 824f1dbf green, ready for the trial and next block**. MSVC and clang: run 42301553189 on ai/war, and run 42302277577 on claude/ab-c1 for the same SHA. c7eed909 is also green (run 42301186413). RoleFixes += StrikeList.
 
+**bullygreedy24 17813E6E (Celts vs America; the lead, 5:27pm ET): first read from the code. The logs aren't in the pack
+yet; I'll confirm from them.**
+- **Abort reason 12 is AI_ABORT_TOO_DANGEROUS** (enum order: SUCCESS 0 ... TARGET_NOT_VALID 11, TOO_DANGEROUS 12).
+- **Where it comes from.** For a city attack, only from CvTacticalAI::PlotArmyMovesCombat: while the army is moving, its
+  next waypoint is within 3 tiles of a city of *another* enemy we're at war with (not the operation's target). That is a
+  route problem, not a retreat.
+- **Was refusing it right?** Refusing it from T143 to T149 every turn likely kept a stuck army alive at the same waypoint,
+  since the condition held each turn. My next step is to stop refusing TOO_DANGEROUS: it gets aborted, and the strike's
+  attack request (which since b446678/2c8256d2 can always re-form) starts a fresh operation next turn, possibly from
+  another muster point. I'll confirm the stall from OperationalAILog before changing it.
+- **"Not possible" at T74-T77 and T112.** If those were "for lack of units" (the 5-turn deploy lock, as in 171787CD),
+  824f1dbf would have launched the attack: recently deployed units can re-form against the strike's target, and the
+  attack may form with slots still to fill. If the cause was Boston missing from the attack-target list (no path or a
+  low approach score), it wouldn't. MilitaryAILog will say which.
+LEAD: answer partly from the code. The confirmation and any change follow when 17813E6E's logs land.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
