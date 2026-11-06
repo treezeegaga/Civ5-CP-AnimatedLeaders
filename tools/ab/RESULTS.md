@@ -2698,6 +2698,14 @@ pick's walled-hill skip. They only rank or choose; they don't end anything. CI i
 **The user's anchor (via the lead):** Marrakesh, about 19 defence with walls and a Warrior inside, fell to 6 promoted
 Jaguars and 4 Composite Bowmen, no siege, by about T54 Quick. Under the check that's about 92 attack against 19, nearly
 5x: comfortably "go". The 3x line holds, with room for a weaker army.
+The user, directly: "i think it took me 5 turns to take the city." So at about 5x the defence it still took 5 turns of
+assault.
+- **The 3x line answers "can it be taken", not "how fast".** A 3x army would take longer and lose more units to city
+  strikes and healing. Keep 3x for now, and read the first strikes the check sends at 3-4x. If they stall, raise it to
+  4x (one number in IsStrikeArmyStrongEnough).
+- **The army has to stay 5+ turns.** War's strike state has no turn limit at war: OVER only on peace, or the army below
+  half with nothing taken. Next read: turns spent at the target city per strike, to see whether CP's city-attack
+  operations (with SiegeStay/SiegeKeep) hold the siege that long.
 
 **Persia's 73-turn BUILDUP (the lead; bullygreedy21 15A7D14F, ab-f939c50; logs not pushed yet, so this is from the
 code):** city-state targets only. BUILDUP opened at T56 against Wellington; no declaration until a war on Ethiopia at
