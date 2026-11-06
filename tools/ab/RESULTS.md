@@ -1865,6 +1865,20 @@ tech, K = no limit.
 - **Measure:** captures; the spike tech turn against the plan's open turn; gold at the declaration; cities and
   science at T100.
 - **Status:** patch 0033 on `claude/ab-c1` `40203a3`, not merged (the lead).
+- **No turn limits for the next block** (the user, 10:37pm ET: "dont have the ai judge itself based on the window
+  during a game"). These turn limits go:
+  - EarlyStrike's T90 cap on the small empire;
+  - EarlyStrike's fallback turn;
+  - LateStrike's "30 turns before the window" research start, and its build-up saving.
+
+  They become game-state triggers. Proposed to War (10:38pm ET), for War and Personality to settle: one state,
+  `CvMilitaryAI::GetStrikeState()` (PREP, BUILDUP, WAR, OVER, NONE). Economy would read it as follows:
+  - the K-city cap and the EarlyStrike book hold until OVER;
+  - nothing is bought during PREP and BUILDUP;
+  - LateStrike beelines the spike and upgrade techs from the readiness trigger (BUILDUP).
+
+  Patch 0034 will follow whatever they agree, and adjusts 0033 to read Personality's late-strike rows (`a80986e`,
+  not yet pushed).
 
 ### EarlyStrike book as the expert openings (Economy, patch 0031, Nov 5, 9:52pm ET)
 
