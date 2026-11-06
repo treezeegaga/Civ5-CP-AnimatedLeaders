@@ -5080,7 +5080,7 @@ civ it holds a grudge against from winning (`RivalTrade`, `Spoiler`, Diplomacy's
 games:** CP's victory rivalry starts after T150 and in the Renaissance, so T150 Quick games can't show it. It goes with
 the "full games to a winner" stage, after the attack work and the matchup test. No code until then.
 
-### Expert strike plans now, no baseline (the user, about 9:57pm ET Nov 5)
+### Expert strike plans now, no baseline (the user, about 9:47pm ET Nov 5)
 "no, we dont need a baseline. use the experts ideas right away and we will know if they are good by if they take
 cities." The CivFanatics per-civ plans (`STRIKE_PLANS_RESEARCH.md`) are being coded now under `EarlyStrike` (no new
 flag), for the Huns, Aztec, Inca, Greece and Celts first. Who does what:
