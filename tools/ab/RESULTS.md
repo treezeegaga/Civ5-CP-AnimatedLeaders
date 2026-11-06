@@ -1982,7 +1982,7 @@ LEAD: about a third of bully aggressors qualify for EarlyStrike (48 of 147). Add
 about 97% of games get a qualifying aggressor (ai/war 70f901e9, on ab-c1 c337c77). CI to follow.
 
 CI: 70f901e9 green on ai/war (run 267) and claude/ab-c1 (run 268). Earlier, cc979539 (run 265), e7572b43 (run 264) and
-c337c77 (run 266) were green. db638c3 (Economy 0030 on top, run 269) was still building at 9:24pm ET.
+c337c77 (run 266) were green. db638c3 (Economy 0030 on top, the build both PCs run) is green too (run 269, 9:31pm ET).
 
 ### War: EarlyStrike, upgrade and go (ai/war e7572b43) (Nov 5, about 9:00pm ET)
 The user, relayed by the lead: "i upgraded 3 archers to composite archers. that was part of the timing attack. upgrade
