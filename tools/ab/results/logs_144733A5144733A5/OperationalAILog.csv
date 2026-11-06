@@ -1,0 +1,1815 @@
+018, The_Inca, OP_FOUND_CITY, 1108, found target for settler, score 76933 (q33)
+018, The_Inca, OP_FOUND_CITY, 1108, Initial stage is recruiting
+018, The_Inca, OP_FOUND_CITY, 1108, Found 1 potential units to recruit for operation 1108 at (32:9) with target at (33:14)
+018, The_Inca, OP_FOUND_CITY, 1108, Added Warrior 1075 to slot 1 in army 1109. ETA at (32:9) is 0 
+018, The_Inca, OP_FOUND_CITY, 1108, Transition to gathering stage
+018, The_Inca, OP_FOUND_CITY, 1108, Transition to movement stage
+018, The_Inca, OP_FOUND_CITY, 1108, Started Army 1109; Units Recruited 2; Max Formation Size 2; Moving To Target
+018, The_Inca, OP_FOUND_CITY, 1108, PRE Moving To Target with Army 1109; center (32:9); target (33:14); Progress 0 percent
+018, The_Inca, OP_FOUND_CITY, 1108, POST Moving To Target with Army 1109; center (32:11); target (33:14); Progress 34 percent
+019, The_Inca, OP_FOUND_CITY, 1108, PRE Moving To Target with Army 1109; center (32:11); target (33:14); Progress 34 percent
+019, The_Inca, OP_FOUND_CITY, 1108, POST Moving To Target with Army 1109; center (32:13); target (33:14); Progress 100 percent
+020, The_Inca, OP_FOUND_CITY, 1108, PRE Moving To Target with Army 1109; center (32:13); target (33:14); Progress 100 percent
+020, The_Inca, OP_FOUND_CITY, 1108, Transition to target stage
+020, The_Inca, OP_FOUND_CITY, 1108, City founded (Tiwanaku) at (33:14), plot value 76960, q33
+020, The_Inca, OP_FOUND_CITY, 1108, Transition to finished stage
+020, The_Inca, OP_FOUND_CITY, 1108, POST Completed
+021, Portugal, OP_FOUND_CITY, 1124, found target for settler, score 207655 (q50)
+021, Portugal, OP_FOUND_CITY, 1124, Initial stage is recruiting
+021, Portugal, OP_FOUND_CITY, 1124, Found 0 potential units to recruit for operation 1124 at (23:29) with target at (20:26)
+021, Portugal, OP_FOUND_CITY, 1124, Started Army 1125; Units Recruited 1; Max Formation Size 2; Recruiting Units
+021, Portugal, OP_FOUND_CITY, 1124, PRE Recruiting Units for army 1125; Settler 1123 at (23:29) - ETA -1; Open; 
+021, Portugal, OP_FOUND_CITY, 1124, Found 0 potential units to recruit for operation 1124 at (23:29) with target at (20:26)
+021, Portugal, OP_FOUND_CITY, 1124, POST Recruiting Units for army 1125; Settler 1123 at (23:29) - ETA 0; Open; 
+021, The_Inca, OP_FOUND_CITY, 1108, Ended: Success; Distance 6; Duration 3
+022, Portugal, OP_FOUND_CITY, 1124, Added Warrior 1131 to slot 1 in army 1125. ETA at (23:29) is 0 
+022, Portugal, OP_FOUND_CITY, 1124, PRE Recruiting Units for army 1125; Settler 1123 at (23:29) - ETA 0; Warrior 1131 at (23:29) - ETA 0; 
+022, Portugal, OP_FOUND_CITY, 1124, Transition to gathering stage
+022, Portugal, OP_FOUND_CITY, 1124, POST Gathering Forces for army 1125; center (23:29); variance (0.25:0.25); free slots 0
+023, Portugal, OP_FOUND_CITY, 1124, PRE Gathering Forces for army 1125; center (23:29); variance (0.25:0.25); free slots 0
+023, Portugal, OP_FOUND_CITY, 1124, Transition to movement stage
+023, Portugal, OP_FOUND_CITY, 1124, POST Moving To Target with Army 1125; center (22:28); target (20:26); Progress 0 percent
+024, Portugal, OP_FOUND_CITY, 1124, PRE Moving To Target with Army 1125; center (22:28); target (20:26); Progress 0 percent
+024, Portugal, OP_FOUND_CITY, 1124, POST Moving To Target with Army 1125; center (20:27); target (20:26); Progress 100 percent
+025, Portugal, OP_FOUND_CITY, 1124, cannot found city at (20:26)
+025, Portugal, OP_FOUND_CITY, 1124, no path to city site (20:26)
+025, Portugal, OP_FOUND_CITY, 1124, found better target for settler, old score 207655 (q50), new score 129300 (q50)
+025, Portugal, OP_FOUND_CITY, 1124, setting new target (22:33)
+025, Portugal, OP_FOUND_CITY, 1124, PRE Moving To Target with Army 1125; center (20:27); target (22:33); Progress -16 percent
+025, Portugal, OP_FOUND_CITY, 1124, POST Moving To Target with Army 1125; center (21:29); target (22:33); Progress 17 percent
+026, Portugal, OP_FOUND_CITY, 1124, found better target for settler, old score 130530 (q50), new score 207655 (q50)
+026, Portugal, OP_FOUND_CITY, 1124, setting new target (20:26)
+026, Portugal, OP_FOUND_CITY, 1124, PRE Moving To Target with Army 1125; center (21:29); target (20:26); Progress 0 percent
+026, Portugal, OP_FOUND_CITY, 1124, cannot found city at (20:26)
+026, Portugal, OP_FOUND_CITY, 1124, no path to city site (20:26)
+026, Portugal, OP_FOUND_CITY, 1124, found better target for settler, old score 207655 (q50), new score 141202 (q50)
+026, Portugal, OP_FOUND_CITY, 1124, setting new target (24:34)
+026, Portugal, OP_FOUND_CITY, 1124, POST Moving To Target with Army 1125; center (20:27); target (24:34); Progress -12 percent
+027, Portugal, OP_FOUND_CITY, 1124, found better target for settler, old score 141202 (q50), new score 207655 (q50)
+027, Portugal, OP_FOUND_CITY, 1124, setting new target (20:26)
+027, Portugal, OP_FOUND_CITY, 1124, PRE Moving To Target with Army 1125; center (20:27); target (20:26); Progress 100 percent
+027, Portugal, OP_FOUND_CITY, 1124, Transition to target stage
+027, Portugal, OP_FOUND_CITY, 1124, POST At Target
+028, Portugal, OP_FOUND_CITY, 1124, PRE At Target
+028, Portugal, OP_FOUND_CITY, 1124, City founded (Porto) at (20:26), plot value 207655, q50
+028, Portugal, OP_FOUND_CITY, 1124, Transition to finished stage
+028, Portugal, OP_FOUND_CITY, 1124, Ended: Success; Distance 4; Duration 7
+028, Austria, OP_FOUND_CITY, 1159, found target for settler, score 136407 (q50)
+028, Austria, OP_FOUND_CITY, 1159, Skip recruiting, start with movement stage
+028, Austria, OP_FOUND_CITY, 1159, Found 0 potential units to recruit for operation 1159 at (34:28) with target at (31:31)
+028, Austria, OP_FOUND_CITY, 1159, Started Army 1160; Units Recruited 1; Max Formation Size 2; Moving To Target
+028, Austria, OP_FOUND_CITY, 1159, PRE Moving To Target with Army 1160; center (34:28); target (31:31); Progress 0 percent
+028, Austria, OP_FOUND_CITY, 1159, POST Moving To Target with Army 1160; center (32:29); target (31:31); Progress 40 percent
+029, Poland, OP_FOUND_CITY, 1165, found target for settler, score 143466 (q50)
+029, Poland, OP_FOUND_CITY, 1165, Initial stage is recruiting
+029, Poland, OP_FOUND_CITY, 1165, Found 0 potential units to recruit for operation 1165 at (45:10) with target at (48:13)
+029, Poland, OP_FOUND_CITY, 1165, Started Army 1166; Units Recruited 1; Max Formation Size 2; Recruiting Units
+029, Poland, OP_FOUND_CITY, 1165, PRE Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA -1; Open; 
+029, Poland, OP_FOUND_CITY, 1165, Found 0 potential units to recruit for operation 1165 at (45:10) with target at (48:13)
+029, Poland, OP_FOUND_CITY, 1165, POST Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+029, Austria, OP_FOUND_CITY, 1159, PRE Moving To Target with Army 1160; center (32:29); target (31:31); Progress 40 percent
+029, Austria, OP_FOUND_CITY, 1159, Transition to target stage
+029, Austria, OP_FOUND_CITY, 1159, POST At Target
+030, Poland, OP_FOUND_CITY, 1165, PRE Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+030, Poland, OP_FOUND_CITY, 1165, Found 0 potential units to recruit for operation 1165 at (45:10) with target at (48:13)
+030, Poland, OP_FOUND_CITY, 1165, POST Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+030, Austria, OP_FOUND_CITY, 1159, PRE At Target
+030, Austria, OP_FOUND_CITY, 1159, City founded (Salzburg) at (31:31), plot value 137236, q50
+030, Austria, OP_FOUND_CITY, 1159, Transition to finished stage
+030, Austria, OP_FOUND_CITY, 1159, Ended: Success; Distance 5; Duration 2
+031, Denmark, OP_FOUND_CITY, 1182, found target for settler, score 119244 (q50)
+031, Denmark, OP_FOUND_CITY, 1182, Skip recruiting, start with movement stage
+031, Denmark, OP_FOUND_CITY, 1182, Found 0 potential units to recruit for operation 1182 at (59:13) with target at (61:9)
+031, Denmark, OP_FOUND_CITY, 1182, Started Army 1183; Units Recruited 1; Max Formation Size 2; Moving To Target
+031, Denmark, OP_FOUND_CITY, 1182, PRE Moving To Target with Army 1183; center (59:13); target (61:9); Progress 0 percent
+031, Denmark, OP_FOUND_CITY, 1182, POST Moving To Target with Army 1183; center (59:11); target (61:9); Progress 34 percent
+031, Poland, OP_FOUND_CITY, 1165, PRE Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+031, Poland, OP_FOUND_CITY, 1165, Found 0 potential units to recruit for operation 1165 at (45:10) with target at (48:13)
+031, Poland, OP_FOUND_CITY, 1165, POST Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+032, Denmark, OP_FOUND_CITY, 1182, PRE Moving To Target with Army 1183; center (59:11); target (61:9); Progress 34 percent
+032, Denmark, OP_FOUND_CITY, 1182, POST Moving To Target with Army 1183; center (60:9); target (61:9); Progress 100 percent
+032, Poland, OP_FOUND_CITY, 1165, PRE Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+032, Poland, OP_FOUND_CITY, 1165, Found 0 potential units to recruit for operation 1165 at (45:10) with target at (48:13)
+032, Poland, OP_FOUND_CITY, 1165, POST Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+033, Denmark, OP_FOUND_CITY, 1182, PRE Moving To Target with Army 1183; center (60:9); target (61:9); Progress 100 percent
+033, Denmark, OP_FOUND_CITY, 1182, Transition to target stage
+033, Denmark, OP_FOUND_CITY, 1182, City founded (Aarhus) at (61:9), plot value 119244, q50
+033, Denmark, OP_FOUND_CITY, 1182, Transition to finished stage
+033, Denmark, OP_FOUND_CITY, 1182, POST Completed
+033, Poland, OP_FOUND_CITY, 1165, PRE Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+033, Poland, OP_FOUND_CITY, 1165, Found 0 potential units to recruit for operation 1165 at (45:10) with target at (48:13)
+033, Poland, OP_FOUND_CITY, 1165, POST Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+034, Denmark, OP_FOUND_CITY, 1182, Ended: Success; Distance 6; Duration 3
+034, Poland, OP_FOUND_CITY, 1165, PRE Recruiting Units for army 1166; Settler 1164 at (45:10) - ETA 0; Open; 
+034, Poland, OP_FOUND_CITY, 1165, Found 1 potential units to recruit for operation 1165 at (45:10) with target at (48:13)
+034, Poland, OP_FOUND_CITY, 1165, Added Warrior 1195 to slot 1 in army 1166. ETA at (45:10) is 0 
+034, Poland, OP_FOUND_CITY, 1165, Transition to gathering stage
+034, Poland, OP_FOUND_CITY, 1165, POST Gathering Forces for army 1166; center (46:12); variance (0.00:0.00); free slots 0
+034, Egypt, OP_FOUND_CITY, 1204, found target for settler, score 90062 (q50)
+034, Egypt, OP_FOUND_CITY, 1204, Initial stage is recruiting
+034, Egypt, OP_FOUND_CITY, 1204, Found 1 potential units to recruit for operation 1204 at (34:20) with target at (30:18)
+034, Egypt, OP_FOUND_CITY, 1204, Added Warrior 1132 to slot 1 in army 1205. ETA at (34:20) is 0 
+034, Egypt, OP_FOUND_CITY, 1204, Transition to gathering stage
+034, Egypt, OP_FOUND_CITY, 1204, Transition to movement stage
+034, Egypt, OP_FOUND_CITY, 1204, Started Army 1205; Units Recruited 2; Max Formation Size 2; Moving To Target
+034, Egypt, OP_FOUND_CITY, 1204, PRE Moving To Target with Army 1205; center (34:20); target (30:18); Progress 0 percent
+034, Egypt, OP_FOUND_CITY, 1204, POST Moving To Target with Army 1205; center (32:20); target (30:18); Progress 34 percent
+035, Poland, OP_FOUND_CITY, 1165, PRE Gathering Forces for army 1166; center (46:12); variance (0.00:0.00); free slots 0
+035, Poland, OP_FOUND_CITY, 1165, Transition to movement stage
+035, Poland, OP_FOUND_CITY, 1165, POST Moving To Target with Army 1166; center (46:12); target (48:13); Progress 0 percent
+035, Egypt, OP_FOUND_CITY, 1204, PRE Moving To Target with Army 1205; center (32:20); target (30:18); Progress 34 percent
+035, Egypt, OP_FOUND_CITY, 1204, POST Moving To Target with Army 1205; center (31:18); target (30:18); Progress 100 percent
+036, China, OP_FOUND_CITY, 1220, found target for settler, score 101970 (q50)
+036, China, OP_FOUND_CITY, 1220, Initial stage is recruiting
+036, China, OP_FOUND_CITY, 1220, Found 0 potential units to recruit for operation 1220 at (47:24) with target at (45:28)
+036, China, OP_FOUND_CITY, 1220, Started Army 1221; Units Recruited 1; Max Formation Size 2; Recruiting Units
+036, China, OP_FOUND_CITY, 1220, PRE Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA -1; Open; 
+036, China, OP_FOUND_CITY, 1220, Found 0 potential units to recruit for operation 1220 at (47:24) with target at (45:28)
+036, China, OP_FOUND_CITY, 1220, POST Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+036, Poland, OP_FOUND_CITY, 1165, cannot found city at (48:13)
+036, Poland, OP_FOUND_CITY, 1165, no path to city site (48:13)
+036, Poland, OP_FOUND_CITY, 1165, found better target for settler, old score 143466 (q50), new score 161594 (q50)
+036, Poland, OP_FOUND_CITY, 1165, setting new target (49:13)
+036, Poland, OP_FOUND_CITY, 1165, PRE Moving To Target with Army 1166; center (48:12); target (49:13); Progress 40 percent
+036, Poland, OP_FOUND_CITY, 1165, POST Moving To Target with Army 1166; center (47:10); target (49:13); Progress 0 percent
+036, Egypt, OP_FOUND_CITY, 1204, PRE Moving To Target with Army 1205; center (31:18); target (30:18); Progress 100 percent
+036, Egypt, OP_FOUND_CITY, 1204, Transition to target stage
+036, Egypt, OP_FOUND_CITY, 1204, City founded (Memphis) at (30:18), plot value 90062, q50
+036, Egypt, OP_FOUND_CITY, 1204, Transition to finished stage
+036, Egypt, OP_FOUND_CITY, 1204, POST Completed
+036, Japan, OP_FOUND_CITY, 1224, found target for settler, score 102388 (q50)
+036, Japan, OP_FOUND_CITY, 1224, Initial stage is recruiting
+036, Japan, OP_FOUND_CITY, 1224, Found 0 potential units to recruit for operation 1224 at (60:22) with target at (63:19)
+036, Japan, OP_FOUND_CITY, 1224, Started Army 1225; Units Recruited 1; Max Formation Size 2; Recruiting Units
+036, Japan, OP_FOUND_CITY, 1224, PRE Recruiting Units for army 1225; Settler 1223 at (60:22) - ETA -1; Open; 
+036, Japan, OP_FOUND_CITY, 1224, Found 0 potential units to recruit for operation 1224 at (60:22) with target at (63:19)
+036, Japan, OP_FOUND_CITY, 1224, POST Recruiting Units for army 1225; Settler 1223 at (60:22) - ETA 0; Open; 
+037, China, OP_FOUND_CITY, 1220, PRE Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+037, China, OP_FOUND_CITY, 1220, Found 0 potential units to recruit for operation 1220 at (47:24) with target at (45:28)
+037, China, OP_FOUND_CITY, 1220, POST Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+037, Poland, OP_FOUND_CITY, 1165, PRE Moving To Target with Army 1166; center (47:10); target (49:13); Progress 0 percent
+037, Poland, OP_FOUND_CITY, 1165, POST Moving To Target with Army 1166; center (48:9); target (49:13); Progress 0 percent
+037, Egypt, OP_FOUND_CITY, 1204, Ended: Success; Distance 6; Duration 3
+037, Japan, OP_FOUND_CITY, 1224, Added Warrior 1232 to slot 1 in army 1225. ETA at (60:22) is 0 
+037, Japan, OP_FOUND_CITY, 1224, PRE Recruiting Units for army 1225; Settler 1223 at (60:22) - ETA 0; Warrior 1232 at (60:22) - ETA 0; 
+037, Japan, OP_FOUND_CITY, 1224, Transition to gathering stage
+037, Japan, OP_FOUND_CITY, 1224, POST Gathering Forces for army 1225; center (61:21); variance (0.25:0.25); free slots 0
+038, China, OP_FOUND_CITY, 1220, PRE Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+038, China, OP_FOUND_CITY, 1220, Found 0 potential units to recruit for operation 1220 at (47:24) with target at (45:28)
+038, China, OP_FOUND_CITY, 1220, POST Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+038, Poland, OP_FOUND_CITY, 1165, PRE Moving To Target with Army 1166; center (48:9); target (49:13); Progress 0 percent
+038, Poland, OP_FOUND_CITY, 1165, POST Moving To Target with Army 1166; center (50:8); target (49:13); Progress -20 percent
+038, Japan, OP_FOUND_CITY, 1224, PRE Gathering Forces for army 1225; center (61:21); variance (0.25:0.25); free slots 0
+038, Japan, OP_FOUND_CITY, 1224, Transition to movement stage
+038, Japan, OP_FOUND_CITY, 1224, POST Moving To Target with Army 1225; center (60:22); target (63:19); Progress -50 percent
+039, China, OP_FOUND_CITY, 1220, PRE Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+039, China, OP_FOUND_CITY, 1220, Found 0 potential units to recruit for operation 1220 at (47:24) with target at (45:28)
+039, China, OP_FOUND_CITY, 1220, POST Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+039, Poland, OP_FOUND_CITY, 1165, PRE Moving To Target with Army 1166; center (50:8); target (49:13); Progress -20 percent
+039, Poland, OP_FOUND_CITY, 1165, POST Moving To Target with Army 1166; center (50:10); target (49:13); Progress 20 percent
+039, Japan, OP_FOUND_CITY, 1224, PRE Moving To Target with Army 1225; center (61:21); target (63:19); Progress 0 percent
+039, Japan, OP_FOUND_CITY, 1224, POST Moving To Target with Army 1225; center (60:21); target (63:19); Progress -25 percent
+040, China, OP_FOUND_CITY, 1220, PRE Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+040, China, OP_FOUND_CITY, 1220, Found 0 potential units to recruit for operation 1220 at (47:24) with target at (45:28)
+040, China, OP_FOUND_CITY, 1220, POST Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+040, Poland, OP_FOUND_CITY, 1165, PRE Moving To Target with Army 1166; center (50:10); target (49:13); Progress 20 percent
+040, Poland, OP_FOUND_CITY, 1165, POST Moving To Target with Army 1166; center (51:12); target (49:13); Progress 40 percent
+040, Japan, OP_FOUND_CITY, 1224, PRE Moving To Target with Army 1225; center (60:21); target (63:19); Progress -25 percent
+040, Japan, OP_FOUND_CITY, 1224, POST Moving To Target with Army 1225; center (62:21); target (63:19); Progress 25 percent
+041, Portugal, OP_FOUND_CITY, 1256, found target for settler, score 108920 (q50)
+041, Portugal, OP_FOUND_CITY, 1256, Skip recruiting, start with movement stage
+041, Portugal, OP_FOUND_CITY, 1256, Found 1 potential units to recruit for operation 1256 at (23:29) with target at (24:34)
+041, Portugal, OP_FOUND_CITY, 1256, Added Warrior 1131 to slot 1 in army 1257. ETA at (23:29) is 1 
+041, Portugal, OP_FOUND_CITY, 1256, Started Army 1257; Units Recruited 2; Max Formation Size 2; Moving To Target
+041, Portugal, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (23:29); target (24:34); Progress 0 percent
+041, Portugal, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (21:27); target (24:34); Progress -28 percent
+041, China, OP_FOUND_CITY, 1220, PRE Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+041, China, OP_FOUND_CITY, 1220, Found 0 potential units to recruit for operation 1220 at (47:24) with target at (45:28)
+041, China, OP_FOUND_CITY, 1220, POST Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+041, Poland, OP_FOUND_CITY, 1165, PRE Moving To Target with Army 1166; center (51:12); target (49:13); Progress 40 percent
+041, Poland, OP_FOUND_CITY, 1165, POST Moving To Target with Army 1166; center (50:13); target (49:13); Progress 100 percent
+041, Japan, OP_FOUND_CITY, 1224, PRE Moving To Target with Army 1225; center (62:21); target (63:19); Progress 25 percent
+041, Japan, OP_FOUND_CITY, 1224, Transition to target stage
+041, Japan, OP_FOUND_CITY, 1224, POST At Target
+042, Portugal, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (21:27); target (24:34); Progress -28 percent
+042, Portugal, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (20:27); target (24:34); Progress -28 percent
+042, China, OP_FOUND_CITY, 1220, PRE Recruiting Units for army 1221; Settler 1219 at (47:24) - ETA 0; Open; 
+042, China, OP_FOUND_CITY, 1220, Found 1 potential units to recruit for operation 1220 at (47:24) with target at (45:28)
+042, China, OP_FOUND_CITY, 1220, Added Warrior 1271 to slot 1 in army 1221. ETA at (47:24) is 0 
+042, China, OP_FOUND_CITY, 1220, Transition to gathering stage
+042, China, OP_FOUND_CITY, 1220, POST Gathering Forces for army 1221; center (46:25); variance (0.00:0.00); free slots 0
+042, Poland, OP_FOUND_CITY, 1165, PRE Moving To Target with Army 1166; center (50:13); target (49:13); Progress 100 percent
+042, Poland, OP_FOUND_CITY, 1165, Transition to target stage
+042, Poland, OP_FOUND_CITY, 1165, POST At Target
+042, Japan, OP_FOUND_CITY, 1224, PRE At Target
+042, Japan, OP_FOUND_CITY, 1224, City founded (Osaka) at (63:19), plot value 142660, q50
+042, Japan, OP_FOUND_CITY, 1224, Transition to finished stage
+042, Japan, OP_FOUND_CITY, 1224, Ended: Success; Distance 4; Duration 6
+043, Portugal, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (20:27); target (24:34); Progress -28 percent
+043, Portugal, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (21:29); target (24:34); Progress 0 percent
+043, China, OP_FOUND_CITY, 1220, PRE Gathering Forces for army 1221; center (46:25); variance (0.00:0.00); free slots 0
+043, China, OP_FOUND_CITY, 1220, Transition to movement stage
+043, China, OP_FOUND_CITY, 1220, POST Moving To Target with Army 1221; center (45:27); target (45:28); Progress 100 percent
+043, Poland, OP_FOUND_CITY, 1165, PRE At Target
+043, Poland, OP_FOUND_CITY, 1165, City founded (Krakow) at (49:13), plot value 161594, q50
+043, Poland, OP_FOUND_CITY, 1165, Transition to finished stage
+043, Poland, OP_FOUND_CITY, 1165, Ended: Success; Distance 5; Duration 14
+044, Portugal, OP_FOUND_CITY, 1256, no path to city site (24:34)
+044, Portugal, OP_FOUND_CITY, 1256, found better target for settler, old score 108920 (q50), new score 104633 (q50)
+044, Portugal, OP_FOUND_CITY, 1256, setting new target (19:21)
+044, Portugal, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (21:29); target (19:21); Progress 0 percent
+044, Portugal, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (20:27); target (19:21); Progress 23 percent
+044, China, OP_FOUND_CITY, 1220, PRE Moving To Target with Army 1221; center (45:27); target (45:28); Progress 100 percent
+044, China, OP_FOUND_CITY, 1220, Transition to target stage
+044, China, OP_FOUND_CITY, 1220, POST At Target
+045, Portugal, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (20:27); target (19:21); Progress 23 percent
+045, Portugal, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (20:25); target (19:21); Progress 45 percent
+045, China, OP_FOUND_CITY, 1220, PRE At Target
+045, China, OP_FOUND_CITY, 1220, City founded (Shanghai) at (45:28), plot value 100920, q50
+045, China, OP_FOUND_CITY, 1220, Transition to finished stage
+045, China, OP_FOUND_CITY, 1220, Ended: Success; Distance 2; Duration 9
+045, Poland, OP_RAPID_RESPONSE, 1292, Initial stage is recruiting
+045, Poland, OP_RAPID_RESPONSE, 1292, Found 1 potential units to recruit for operation 1292 at (49:13) with target at (49:13)
+045, Poland, OP_RAPID_RESPONSE, 1292, Added Warrior 1276 to slot 0 in army 1293. ETA at (49:13) is 1 
+045, Poland, OP_RAPID_RESPONSE, 1292, Started Army 1293; Units Recruited 1; Max Formation Size 4; Recruiting Units
+045, Poland, OP_RAPID_RESPONSE, 1292, PRE Recruiting Units for army 1293; Warrior 1276 at (45:10) - ETA 1; Open; Open; Open; 
+045, Poland, OP_RAPID_RESPONSE, 1292, Found 0 potential units to recruit for operation 1292 at (49:13) with target at (49:13)
+045, Poland, OP_RAPID_RESPONSE, 1292, POST Recruiting Units for army 1293; Warrior 1276 at (46:11) - ETA 1; Open; Open; Open; 
+045, Austria, OP_FOUND_CITY, 1296, found target for settler, score 52741 (q-9)
+045, Austria, OP_FOUND_CITY, 1296, Initial stage is recruiting
+045, Austria, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (34:28) with target at (35:33)
+045, Austria, OP_FOUND_CITY, 1296, Started Army 1297; Units Recruited 1; Max Formation Size 2; Recruiting Units
+045, Austria, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (34:28) - ETA -1; Open; 
+045, Austria, OP_FOUND_CITY, 1296, Found 0 potential units to recruit for operation 1296 at (34:28) with target at (35:33)
+045, Austria, OP_FOUND_CITY, 1296, POST Recruiting Units for army 1297; Settler 1295 at (34:28) - ETA 0; Open; 
+046, Portugal, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (20:25); target (19:21); Progress 45 percent
+046, Portugal, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (21:24); target (19:21); Progress 56 percent
+046, Poland, OP_RAPID_RESPONSE, 1292, Ended: NoTarget; Distance 1; Duration 1
+046, Austria, OP_FOUND_CITY, 1296, PRE Recruiting Units for army 1297; Settler 1295 at (34:28) - ETA 0; Open; 
+046, Austria, OP_FOUND_CITY, 1296, Found 1 potential units to recruit for operation 1296 at (34:28) with target at (35:33)
+046, Austria, OP_FOUND_CITY, 1296, Added Warrior 1306 to slot 1 in army 1297. ETA at (34:28) is 0 
+046, Austria, OP_FOUND_CITY, 1296, Transition to gathering stage
+046, Austria, OP_FOUND_CITY, 1296, POST Gathering Forces for army 1297; center (35:30); variance (0.00:0.00); free slots 0
+047, Portugal, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (21:24); target (19:21); Progress 56 percent
+047, Portugal, OP_FOUND_CITY, 1256, POST Moving To Target with Army 1257; center (20:22); target (19:21); Progress 100 percent
+047, Austria, OP_FOUND_CITY, 1296, PRE Gathering Forces for army 1297; center (35:30); variance (0.00:0.00); free slots 0
+047, Austria, OP_FOUND_CITY, 1296, Transition to movement stage
+047, Austria, OP_FOUND_CITY, 1296, POST Moving To Target with Army 1297; center (35:31); target (35:33); Progress 25 percent
+048, Portugal, OP_FOUND_CITY, 1256, PRE Moving To Target with Army 1257; center (20:22); target (19:21); Progress 100 percent
+048, Portugal, OP_FOUND_CITY, 1256, Transition to target stage
+048, Portugal, OP_FOUND_CITY, 1256, POST At Target
+048, Egypt, OP_FOUND_CITY, 1321, found target for settler, score 98894 (q50)
+048, Egypt, OP_FOUND_CITY, 1321, Skip recruiting, start with movement stage
+048, Egypt, OP_FOUND_CITY, 1321, Found 0 potential units to recruit for operation 1321 at (34:20) with target at (38:22)
+048, Egypt, OP_FOUND_CITY, 1321, Started Army 1322; Units Recruited 1; Max Formation Size 2; Moving To Target
+048, Egypt, OP_FOUND_CITY, 1321, PRE Moving To Target with Army 1322; center (34:20); target (38:22); Progress 0 percent
+048, Egypt, OP_FOUND_CITY, 1321, POST Moving To Target with Army 1322; center (35:20); target (38:22); Progress 17 percent
+048, Austria, OP_FOUND_CITY, 1296, PRE Moving To Target with Army 1297; center (35:31); target (35:33); Progress 25 percent
+048, Austria, OP_FOUND_CITY, 1296, POST Moving To Target with Army 1297; center (34:31); target (35:33); Progress 0 percent
+049, Portugal, OP_FOUND_CITY, 1256, PRE At Target
+049, Portugal, OP_FOUND_CITY, 1256, City founded (Braga) at (19:21), plot value 104633, q50
+049, Portugal, OP_FOUND_CITY, 1256, Transition to finished stage
+049, Portugal, OP_FOUND_CITY, 1256, Ended: Success; Distance 9; Duration 8
+049, Egypt, OP_FOUND_CITY, 1321, PRE Moving To Target with Army 1322; center (35:20); target (38:22); Progress 17 percent
+049, Egypt, OP_FOUND_CITY, 1321, POST Moving To Target with Army 1322; center (36:21); target (38:22); Progress 50 percent
+049, Austria, OP_FOUND_CITY, 1296, PRE Moving To Target with Army 1297; center (34:31); target (35:33); Progress 0 percent
+049, Austria, OP_FOUND_CITY, 1296, POST Moving To Target with Army 1297; center (34:32); target (35:33); Progress 25 percent
+049, The_Inca, OP_FOUND_CITY, 1336, found target for settler, score 58507 (q1)
+049, The_Inca, OP_FOUND_CITY, 1336, Initial stage is recruiting
+049, The_Inca, OP_FOUND_CITY, 1336, Found 1 potential units to recruit for operation 1336 at (32:9) with target at (37:10)
+049, The_Inca, OP_FOUND_CITY, 1336, Added Warrior 1075 to slot 1 in army 1337. ETA at (32:9) is 0 
+049, The_Inca, OP_FOUND_CITY, 1336, Transition to gathering stage
+049, The_Inca, OP_FOUND_CITY, 1336, Transition to movement stage
+049, The_Inca, OP_FOUND_CITY, 1336, Started Army 1337; Units Recruited 2; Max Formation Size 2; Moving To Target
+049, The_Inca, OP_FOUND_CITY, 1336, PRE Moving To Target with Army 1337; center (32:9); target (37:10); Progress 0 percent
+049, The_Inca, OP_FOUND_CITY, 1336, POST Moving To Target with Army 1337; center (34:10); target (37:10); Progress 34 percent
+050, China, OP_FOUND_CITY, 1344, found target for settler, score 79214 (q37)
+050, China, OP_FOUND_CITY, 1344, Initial stage is recruiting
+050, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+050, China, OP_FOUND_CITY, 1344, Started Army 1345; Units Recruited 1; Max Formation Size 2; Recruiting Units
+050, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA -1; Open; 
+050, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+050, China, OP_FOUND_CITY, 1344, POST Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+050, Egypt, OP_FOUND_CITY, 1321, PRE Moving To Target with Army 1322; center (36:21); target (38:22); Progress 50 percent
+050, Egypt, OP_FOUND_CITY, 1321, Transition to target stage
+050, Egypt, OP_FOUND_CITY, 1321, POST At Target
+050, Austria, OP_FOUND_CITY, 1296, PRE Moving To Target with Army 1297; center (34:32); target (35:33); Progress 25 percent
+050, Austria, OP_FOUND_CITY, 1296, POST Moving To Target with Army 1297; center (33:33); target (35:33); Progress 25 percent
+050, The_Inca, OP_FOUND_CITY, 1336, PRE Moving To Target with Army 1337; center (34:10); target (37:10); Progress 34 percent
+050, The_Inca, OP_FOUND_CITY, 1336, POST Moving To Target with Army 1337; center (36:10); target (37:10); Progress 100 percent
+050, Japan, OP_RAPID_RESPONSE, 1348, Initial stage is recruiting
+050, Japan, OP_RAPID_RESPONSE, 1348, Found 1 potential units to recruit for operation 1348 at (60:22) with target at (60:22)
+050, Japan, OP_RAPID_RESPONSE, 1348, Added Warrior 1232 to slot 0 in army 1349. ETA at (60:22) is 1 
+050, Japan, OP_RAPID_RESPONSE, 1348, Started Army 1349; Units Recruited 1; Max Formation Size 4; Recruiting Units
+050, Japan, OP_RAPID_RESPONSE, 1348, PRE Recruiting Units for army 1349; Warrior 1232 at (63:19) - ETA 1; Open; Open; Open; 
+050, Japan, OP_RAPID_RESPONSE, 1348, Found 0 potential units to recruit for operation 1348 at (60:22) with target at (60:22)
+050, Japan, OP_RAPID_RESPONSE, 1348, POST Recruiting Units for army 1349; Warrior 1232 at (63:20) - ETA 1; Open; Open; Open; 
+051, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+051, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+051, China, OP_FOUND_CITY, 1344, POST Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+051, Egypt, OP_FOUND_CITY, 1321, Ended: LostCivilian; Distance 6; Duration 3
+051, Austria, OP_FOUND_CITY, 1296, found better target for settler, old score 55496 (q-4), new score 58718 (q1)
+051, Austria, OP_FOUND_CITY, 1296, setting new target (34:34)
+051, Austria, OP_FOUND_CITY, 1296, PRE Moving To Target with Army 1297; center (33:33); target (34:34); Progress 100 percent
+051, Austria, OP_FOUND_CITY, 1296, Transition to target stage
+051, Austria, OP_FOUND_CITY, 1296, POST At Target
+051, The_Inca, OP_FOUND_CITY, 1336, PRE Moving To Target with Army 1337; center (36:10); target (37:10); Progress 100 percent
+051, The_Inca, OP_FOUND_CITY, 1336, Transition to target stage
+051, The_Inca, OP_FOUND_CITY, 1336, City founded (Machu) at (37:10), plot value 58507, q1
+051, The_Inca, OP_FOUND_CITY, 1336, Transition to finished stage
+051, The_Inca, OP_FOUND_CITY, 1336, POST Completed
+051, Japan, OP_RAPID_RESPONSE, 1348, PRE Recruiting Units for army 1349; Warrior 1232 at (63:20) - ETA 1; Open; Open; Open; 
+051, Japan, OP_RAPID_RESPONSE, 1348, Found 0 potential units to recruit for operation 1348 at (60:22) with target at (60:22)
+051, Japan, OP_RAPID_RESPONSE, 1348, POST Recruiting Units for army 1349; Warrior 1232 at (62:20) - ETA 0; Open; Open; Open; 
+052, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+052, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+052, China, OP_FOUND_CITY, 1344, POST Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+052, Austria, OP_FOUND_CITY, 1296, PRE At Target
+052, Austria, OP_FOUND_CITY, 1296, City founded (Graz) at (34:34), plot value 58718, q1
+052, Austria, OP_FOUND_CITY, 1296, Transition to finished stage
+052, Austria, OP_FOUND_CITY, 1296, Ended: Success; Distance 4; Duration 7
+052, The_Inca, OP_FOUND_CITY, 1336, Ended: Success; Distance 6; Duration 3
+052, Japan, OP_FOUND_CITY, 1371, found target for settler, score 122021 (q50)
+052, Japan, OP_FOUND_CITY, 1371, Initial stage is recruiting
+052, Japan, OP_FOUND_CITY, 1371, Found 0 potential units to recruit for operation 1371 at (60:22) with target at (56:25)
+052, Japan, OP_FOUND_CITY, 1371, Started Army 1372; Units Recruited 1; Max Formation Size 2; Recruiting Units
+052, Japan, OP_RAPID_RESPONSE, 1348, PRE Recruiting Units for army 1349; Warrior 1232 at (62:20) - ETA 0; Open; Open; Open; 
+052, Japan, OP_RAPID_RESPONSE, 1348, Found 0 potential units to recruit for operation 1348 at (60:22) with target at (60:22)
+052, Japan, OP_RAPID_RESPONSE, 1348, Contact with enemy!
+052, Japan, OP_RAPID_RESPONSE, 1348, POST Recruiting Units for army 1349; Warrior 1232 at (62:20) - ETA 0; Open; Open; Open; 
+052, Japan, OP_FOUND_CITY, 1371, PRE Recruiting Units for army 1372; Settler 1370 at (60:22) - ETA -1; Open; 
+052, Japan, OP_FOUND_CITY, 1371, Found 0 potential units to recruit for operation 1371 at (60:22) with target at (56:25)
+052, Japan, OP_FOUND_CITY, 1371, POST Recruiting Units for army 1372; Settler 1370 at (60:22) - ETA 0; Open; 
+053, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+053, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+053, China, OP_FOUND_CITY, 1344, POST Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+053, Japan, OP_RAPID_RESPONSE, 1348, PRE Recruiting Units for army 1349; Warrior 1232 at (62:20) - ETA 0; Open; Open; Open; 
+053, Japan, OP_RAPID_RESPONSE, 1348, Found 0 potential units to recruit for operation 1348 at (60:22) with target at (60:22)
+053, Japan, OP_RAPID_RESPONSE, 1348, POST Recruiting Units for army 1349; Warrior 1232 at (62:20) - ETA 0; Open; Open; Open; 
+053, Japan, OP_FOUND_CITY, 1371, PRE Recruiting Units for army 1372; Settler 1370 at (60:22) - ETA 0; Open; 
+053, Japan, OP_FOUND_CITY, 1371, Found 0 potential units to recruit for operation 1371 at (60:22) with target at (56:25)
+053, Japan, OP_FOUND_CITY, 1371, POST Recruiting Units for army 1372; Settler 1370 at (60:22) - ETA 0; Open; 
+054, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+054, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+054, China, OP_FOUND_CITY, 1344, POST Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+054, Japan, OP_RAPID_RESPONSE, 1348, PRE Recruiting Units for army 1349; Warrior 1232 at (62:20) - ETA 0; Open; Open; Open; 
+054, Japan, OP_RAPID_RESPONSE, 1348, Found 0 potential units to recruit for operation 1348 at (60:22) with target at (60:22)
+054, Japan, OP_RAPID_RESPONSE, 1348, POST Recruiting Units for army 1349; Warrior 1232 at (62:20) - ETA 0; Open; Open; Open; 
+054, Japan, OP_FOUND_CITY, 1371, PRE Recruiting Units for army 1372; Settler 1370 at (60:22) - ETA 0; Open; 
+054, Japan, OP_FOUND_CITY, 1371, Found 0 potential units to recruit for operation 1371 at (60:22) with target at (56:25)
+054, Japan, OP_FOUND_CITY, 1371, POST Recruiting Units for army 1372; Settler 1370 at (60:22) - ETA 0; Open; 
+055, Denmark, OP_FOUND_CITY, 1407, found target for settler, score 56972 (q-2)
+055, Denmark, OP_FOUND_CITY, 1407, Initial stage is recruiting
+055, Denmark, OP_FOUND_CITY, 1407, Found 0 potential units to recruit for operation 1407 at (59:13) with target at (56:17)
+055, Denmark, OP_FOUND_CITY, 1407, Started Army 1408; Units Recruited 1; Max Formation Size 2; Recruiting Units
+055, Denmark, OP_FOUND_CITY, 1407, PRE Recruiting Units for army 1408; Settler 1396 at (38:21) - ETA -1; Open; 
+055, Denmark, OP_FOUND_CITY, 1407, Found 0 potential units to recruit for operation 1407 at (59:13) with target at (56:17)
+055, Denmark, OP_FOUND_CITY, 1407, POST Recruiting Units for army 1408; Settler 1396 at (38:21) - ETA 2147483647; Open; 
+055, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+055, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+055, China, OP_FOUND_CITY, 1344, POST Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+055, Japan, OP_RAPID_RESPONSE, 1348, PRE Recruiting Units for army 1349; Warrior 1232 at (62:20) - ETA 0; Open; Open; Open; 
+055, Japan, OP_RAPID_RESPONSE, 1348, Found 0 potential units to recruit for operation 1348 at (60:22) with target at (60:22)
+055, Japan, OP_RAPID_RESPONSE, 1348, Contact with enemy!
+055, Japan, OP_RAPID_RESPONSE, 1348, POST Recruiting Units for army 1349; Warrior 1232 at (61:22) - ETA 0; Open; Open; Open; 
+055, Japan, OP_FOUND_CITY, 1371, PRE Recruiting Units for army 1372; Settler 1370 at (60:22) - ETA 0; Open; 
+055, Japan, OP_FOUND_CITY, 1371, Found 0 potential units to recruit for operation 1371 at (60:22) with target at (56:25)
+055, Japan, OP_FOUND_CITY, 1371, POST Recruiting Units for army 1372; Settler 1370 at (60:22) - ETA 0; Open; 
+056, Denmark, OP_FOUND_CITY, 1407, PRE Recruiting Units for army 1408; Settler 1396 at (38:21) - ETA 2147483647; Open; 
+056, Denmark, OP_FOUND_CITY, 1407, Found 0 potential units to recruit for operation 1407 at (59:13) with target at (56:17)
+056, Denmark, OP_FOUND_CITY, 1407, POST Recruiting Units for army 1408; Settler 1396 at (38:21) - ETA 2147483647; Open; 
+056, Portugal, OP_FOUND_CITY, 1424, found target for settler, score 106346 (q50)
+056, Portugal, OP_FOUND_CITY, 1424, Skip recruiting, start with movement stage
+056, Portugal, OP_FOUND_CITY, 1424, Found 1 potential units to recruit for operation 1424 at (23:29) with target at (24:34)
+056, Portugal, OP_FOUND_CITY, 1424, Added Warrior 1131 to slot 1 in army 1425. ETA at (23:29) is 3 
+056, Portugal, OP_FOUND_CITY, 1424, Started Army 1425; Units Recruited 2; Max Formation Size 2; Moving To Target
+056, Portugal, OP_FOUND_CITY, 1424, PRE Moving To Target with Army 1425; center (23:29); target (24:34); Progress 0 percent
+056, Portugal, OP_FOUND_CITY, 1424, POST Moving To Target with Army 1425; center (21:25); target (24:34); Progress -57 percent
+056, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+056, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+056, China, OP_FOUND_CITY, 1344, POST Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+056, Austria, OP_FOUND_CITY, 1426, found target for settler, score 56127 (q-3)
+056, Austria, OP_FOUND_CITY, 1426, Initial stage is recruiting
+056, Austria, OP_FOUND_CITY, 1426, Found 0 potential units to recruit for operation 1426 at (34:28) with target at (40:28)
+056, Austria, OP_FOUND_CITY, 1426, Started Army 1427; Units Recruited 1; Max Formation Size 2; Recruiting Units
+056, Austria, OP_FOUND_CITY, 1426, PRE Recruiting Units for army 1427; Settler 1411 at (34:28) - ETA -1; Open; 
+056, Austria, OP_FOUND_CITY, 1426, Found 0 potential units to recruit for operation 1426 at (34:28) with target at (40:28)
+056, Austria, OP_FOUND_CITY, 1426, POST Recruiting Units for army 1427; Settler 1411 at (34:28) - ETA 0; Open; 
+056, Japan, OP_RAPID_RESPONSE, 1348, Ended: NoTarget; Distance 1; Duration 6
+056, Japan, OP_FOUND_CITY, 1371, PRE Recruiting Units for army 1372; Settler 1370 at (60:22) - ETA 0; Open; 
+056, Japan, OP_FOUND_CITY, 1371, Found 1 potential units to recruit for operation 1371 at (60:22) with target at (56:25)
+056, Japan, OP_FOUND_CITY, 1371, Added Warrior 1232 to slot 1 in army 1372. ETA at (60:22) is 0 
+056, Japan, OP_FOUND_CITY, 1371, Added Warrior 1415 to slot 1 in army 1372. ETA at (60:22) is 0 
+056, Japan, OP_FOUND_CITY, 1371, Transition to gathering stage
+056, Japan, OP_FOUND_CITY, 1371, Transition to movement stage
+056, Japan, OP_FOUND_CITY, 1371, POST Moving To Target with Army 1372; center (60:22); target (56:25); Progress 0 percent
+057, Denmark, OP_FOUND_CITY, 1407, PRE Recruiting Units for army 1408; Settler 1396 at (38:21) - ETA 2147483647; Open; 
+057, Denmark, OP_FOUND_CITY, 1407, Found 0 potential units to recruit for operation 1407 at (59:13) with target at (56:17)
+057, Denmark, OP_FOUND_CITY, 1407, Removing Settler 1396 from army 1408 because no progress to checkpoint (59:13). ETA 2147483647; prev 2147483647; prev 2147483647
+057, Denmark, OP_FOUND_CITY, 1407, Ended: LostCivilian; Distance 6; Duration 2
+057, Portugal, OP_FOUND_CITY, 1424, PRE Moving To Target with Army 1425; center (21:25); target (24:34); Progress -57 percent
+057, Portugal, OP_FOUND_CITY, 1424, POST Moving To Target with Army 1425; center (20:25); target (24:34); Progress -71 percent
+057, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+057, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+057, China, OP_FOUND_CITY, 1344, POST Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+057, Austria, OP_FOUND_CITY, 1426, PRE Recruiting Units for army 1427; Settler 1411 at (34:28) - ETA 0; Open; 
+057, Austria, OP_FOUND_CITY, 1426, Found 0 potential units to recruit for operation 1426 at (34:28) with target at (40:28)
+057, Austria, OP_FOUND_CITY, 1426, POST Recruiting Units for army 1427; Settler 1411 at (34:28) - ETA 0; Open; 
+057, Japan, OP_FOUND_CITY, 1371, PRE Moving To Target with Army 1372; center (60:22); target (56:25); Progress 0 percent
+057, Japan, OP_FOUND_CITY, 1371, POST Moving To Target with Army 1372; center (59:22); target (56:25); Progress 17 percent
+058, Denmark, OP_FOUND_CITY, 1447, found target for settler, score 56972 (q-2)
+058, Denmark, OP_FOUND_CITY, 1447, Initial stage is recruiting
+058, Denmark, OP_FOUND_CITY, 1447, Found 0 potential units to recruit for operation 1447 at (59:13) with target at (56:17)
+058, Denmark, OP_FOUND_CITY, 1447, Started Army 1448; Units Recruited 1; Max Formation Size 2; Recruiting Units
+058, Denmark, OP_FOUND_CITY, 1447, PRE Recruiting Units for army 1448; Settler 1396 at (37:19) - ETA -1; Open; 
+058, Denmark, OP_FOUND_CITY, 1447, Found 0 potential units to recruit for operation 1447 at (59:13) with target at (56:17)
+058, Denmark, OP_FOUND_CITY, 1447, POST Recruiting Units for army 1448; Settler 1396 at (39:19) - ETA 2147483647; Open; 
+058, Portugal, OP_FOUND_CITY, 1424, PRE Moving To Target with Army 1425; center (20:25); target (24:34); Progress -71 percent
+058, Portugal, OP_FOUND_CITY, 1424, POST Moving To Target with Army 1425; center (21:25); target (24:34); Progress -57 percent
+058, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+058, China, OP_FOUND_CITY, 1344, Found 0 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+058, China, OP_FOUND_CITY, 1344, POST Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+058, Austria, OP_FOUND_CITY, 1426, PRE Recruiting Units for army 1427; Settler 1411 at (34:28) - ETA 0; Open; 
+058, Austria, OP_FOUND_CITY, 1426, Found 1 potential units to recruit for operation 1426 at (34:28) with target at (40:28)
+058, Austria, OP_FOUND_CITY, 1426, Added Warrior 1306 to slot 1 in army 1427. ETA at (34:28) is 0 
+058, Austria, OP_FOUND_CITY, 1426, Transition to gathering stage
+058, Austria, OP_FOUND_CITY, 1426, POST Gathering Forces for army 1427; center (36:28); variance (0.25:0.25); free slots 0
+058, Japan, OP_FOUND_CITY, 1371, PRE Moving To Target with Army 1372; center (59:22); target (56:25); Progress 17 percent
+058, Japan, OP_FOUND_CITY, 1371, POST Moving To Target with Army 1372; center (58:24); target (56:25); Progress 50 percent
+059, Denmark, OP_FOUND_CITY, 1447, PRE Recruiting Units for army 1448; Settler 1396 at (39:19) - ETA 2147483647; Open; 
+059, Denmark, OP_FOUND_CITY, 1447, Found 0 potential units to recruit for operation 1447 at (59:13) with target at (56:17)
+059, Denmark, OP_FOUND_CITY, 1447, POST Recruiting Units for army 1448; Settler 1396 at (41:20) - ETA 2147483647; Open; 
+059, Portugal, OP_FOUND_CITY, 1424, PRE Moving To Target with Army 1425; center (21:25); target (24:34); Progress -57 percent
+059, Portugal, OP_FOUND_CITY, 1424, POST Moving To Target with Army 1425; center (22:26); target (24:34); Progress -42 percent
+059, China, OP_FOUND_CITY, 1344, PRE Recruiting Units for army 1345; Settler 1332 at (47:24) - ETA 0; Open; 
+059, China, OP_FOUND_CITY, 1344, Found 1 potential units to recruit for operation 1344 at (47:24) with target at (40:28)
+059, China, OP_FOUND_CITY, 1344, Added Warrior 1461 to slot 1 in army 1345. ETA at (47:24) is 0 
+059, China, OP_FOUND_CITY, 1344, Transition to gathering stage
+059, China, OP_FOUND_CITY, 1344, POST Gathering Forces for army 1345; center (46:25); variance (0.00:0.25); free slots 0
+059, Poland, OP_FOUND_CITY, 1463, found target for settler, score 81383 (q40)
+059, Poland, OP_FOUND_CITY, 1463, Skip recruiting, start with movement stage
+059, Poland, OP_FOUND_CITY, 1463, Found 1 potential units to recruit for operation 1463 at (45:10) with target at (42:5)
+059, Poland, OP_FOUND_CITY, 1463, Added Warrior 1276 to slot 1 in army 1464. ETA at (45:10) is 0 
+059, Poland, OP_FOUND_CITY, 1463, Started Army 1464; Units Recruited 2; Max Formation Size 2; Moving To Target
+059, Poland, OP_FOUND_CITY, 1463, PRE Moving To Target with Army 1464; center (45:10); target (42:5); Progress 0 percent
+059, Poland, OP_FOUND_CITY, 1463, POST Moving To Target with Army 1464; center (43:9); target (42:5); Progress 17 percent
+059, Austria, OP_FOUND_CITY, 1426, PRE Gathering Forces for army 1427; center (36:28); variance (0.25:0.25); free slots 0
+059, Austria, OP_FOUND_CITY, 1426, Transition to movement stage
+059, Austria, OP_FOUND_CITY, 1426, POST Moving To Target with Army 1427; center (35:29); target (40:28); Progress 0 percent
+059, Japan, OP_RAPID_RESPONSE, 1470, Initial stage is recruiting
+059, Japan, OP_RAPID_RESPONSE, 1470, Found 1 potential units to recruit for operation 1470 at (60:22) with target at (60:22)
+059, Japan, OP_RAPID_RESPONSE, 1470, Added Warrior 1232 to slot 0 in army 1471. ETA at (60:22) is 1 
+059, Japan, OP_RAPID_RESPONSE, 1470, Started Army 1471; Units Recruited 1; Max Formation Size 4; Recruiting Units
+059, Japan, OP_FOUND_CITY, 1371, PRE Moving To Target with Army 1372; center (58:24); target (56:25); Progress 50 percent
+059, Japan, OP_FOUND_CITY, 1371, Transition to target stage
+059, Japan, OP_FOUND_CITY, 1371, POST At Target
+059, Japan, OP_RAPID_RESPONSE, 1470, PRE Recruiting Units for army 1471; Warrior 1232 at (63:19) - ETA 1; Open; Open; Open; 
+059, Japan, OP_RAPID_RESPONSE, 1470, Found 0 potential units to recruit for operation 1470 at (60:22) with target at (60:22)
+059, Japan, OP_RAPID_RESPONSE, 1470, POST Recruiting Units for army 1471; Warrior 1232 at (63:20) - ETA 1; Open; Open; Open; 
+060, Denmark, OP_FOUND_CITY, 1447, PRE Recruiting Units for army 1448; Settler 1396 at (41:20) - ETA 2147483647; Open; 
+060, Denmark, OP_FOUND_CITY, 1447, Found 0 potential units to recruit for operation 1447 at (59:13) with target at (56:17)
+060, Denmark, OP_FOUND_CITY, 1447, Removing Settler 1396 from army 1448 because no progress to checkpoint (59:13). ETA 2147483647; prev 2147483647; prev 2147483647
+060, Denmark, OP_FOUND_CITY, 1447, Ended: LostCivilian; Distance 6; Duration 2
+060, Portugal, OP_FOUND_CITY, 1424, PRE Moving To Target with Army 1425; center (22:26); target (24:34); Progress -42 percent
+060, Portugal, OP_FOUND_CITY, 1424, POST Moving To Target with Army 1425; center (23:30); target (24:34); Progress 15 percent
+060, China, OP_FOUND_CITY, 1344, PRE Gathering Forces for army 1345; center (46:25); variance (0.00:0.25); free slots 0
+060, China, OP_FOUND_CITY, 1344, Transition to movement stage
+060, China, OP_FOUND_CITY, 1344, POST Moving To Target with Army 1345; center (46:25); target (40:28); Progress 0 percent
+060, Poland, OP_FOUND_CITY, 1463, PRE Moving To Target with Army 1464; center (43:9); target (42:5); Progress 17 percent
+060, Poland, OP_FOUND_CITY, 1463, POST Moving To Target with Army 1464; center (42:7); target (42:5); Progress 50 percent
+060, Austria, OP_FOUND_CITY, 1426, no valid city site target found (with escort)!
+060, Austria, OP_FOUND_CITY, 1426, Ended: NoTarget; Distance 7; Duration 4
+060, Japan, OP_RAPID_RESPONSE, 1470, Ended: NoTarget; Distance 1; Duration 1
+060, Japan, OP_FOUND_CITY, 1371, PRE At Target
+060, Japan, OP_FOUND_CITY, 1371, City founded (Tokyo) at (56:25), plot value 132852, q50
+060, Japan, OP_FOUND_CITY, 1371, Transition to finished stage
+060, Japan, OP_FOUND_CITY, 1371, Ended: Success; Distance 6; Duration 8
+061, Denmark, OP_FOUND_CITY, 1485, found target for settler, score 56972 (q-2)
+061, Denmark, OP_FOUND_CITY, 1485, Initial stage is recruiting
+061, Denmark, OP_FOUND_CITY, 1485, Found 0 potential units to recruit for operation 1485 at (59:13) with target at (56:17)
+061, Denmark, OP_FOUND_CITY, 1485, Started Army 1486; Units Recruited 1; Max Formation Size 2; Recruiting Units
+061, Denmark, OP_FOUND_CITY, 1485, PRE Recruiting Units for army 1486; Settler 1396 at (41:21) - ETA -1; Open; 
+061, Denmark, OP_FOUND_CITY, 1485, Found 0 potential units to recruit for operation 1485 at (59:13) with target at (56:17)
+061, Denmark, OP_FOUND_CITY, 1485, POST Recruiting Units for army 1486; Settler 1396 at (43:22) - ETA 2147483647; Open; 
+061, Portugal, OP_FOUND_CITY, 1424, PRE Moving To Target with Army 1425; center (23:30); target (24:34); Progress 15 percent
+061, Portugal, OP_FOUND_CITY, 1424, POST Moving To Target with Army 1425; center (22:32); target (24:34); Progress 43 percent
+061, China, OP_FOUND_CITY, 1344, PRE Moving To Target with Army 1345; center (45:27); target (40:28); Progress 23 percent
+061, China, OP_FOUND_CITY, 1344, POST Moving To Target with Army 1345; center (45:27); target (40:28); Progress 23 percent
+061, Poland, OP_FOUND_CITY, 1463, PRE Moving To Target with Army 1464; center (42:7); target (42:5); Progress 50 percent
+061, Poland, OP_FOUND_CITY, 1463, POST Moving To Target with Army 1464; center (42:6); target (42:5); Progress 100 percent
+061, Austria, OP_FOUND_CITY, 1492, found target for settler, score 76156 (q31)
+061, Austria, OP_FOUND_CITY, 1492, Initial stage is recruiting
+061, Austria, OP_FOUND_CITY, 1492, Found 2 potential units to recruit for operation 1492 at (34:28) with target at (38:22)
+061, Austria, OP_FOUND_CITY, 1492, Added Spearman 1465 to slot 1 in army 1493. ETA at (34:28) is 0 
+061, Austria, OP_FOUND_CITY, 1492, Transition to gathering stage
+061, Austria, OP_FOUND_CITY, 1492, Transition to movement stage
+061, Austria, OP_FOUND_CITY, 1492, Started Army 1493; Units Recruited 2; Max Formation Size 2; Moving To Target
+061, Austria, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (34:28); target (38:22); Progress 0 percent
+061, Austria, OP_FOUND_CITY, 1492, POST Moving To Target with Army 1493; center (36:28); target (38:22); Progress 15 percent
+062, Denmark, OP_PILLAGE, 1499, Initial stage is recruiting
+062, Denmark, OP_PILLAGE, 1499, Found 2 potential units to recruit for operation 1499 at (59:13) with target at (60:22)
+062, Denmark, OP_PILLAGE, 1499, Added Warrior 1002 to slot 0 in army 1500. ETA at (59:13) is 0 
+062, Denmark, OP_PILLAGE, 1499, Added Warrior 1231 to slot 1 in army 1500. ETA at (59:13) is 1 
+062, Denmark, OP_PILLAGE, 1499, Transition to gathering stage
+062, Denmark, OP_PILLAGE, 1499, Transition to movement stage
+062, Denmark, OP_PILLAGE, 1499, Started Army 1500; Units Recruited 2; Max Formation Size 3; Moving To Target
+062, Denmark, OP_FOUND_CITY, 1485, PRE Recruiting Units for army 1486; Settler 1396 at (43:22) - ETA 2147483647; Open; 
+062, Denmark, OP_FOUND_CITY, 1485, Found 0 potential units to recruit for operation 1485 at (59:13) with target at (56:17)
+062, Denmark, OP_FOUND_CITY, 1485, POST Recruiting Units for army 1486; Settler 1396 at (44:21) - ETA 2147483647; Open; 
+062, Denmark, OP_PILLAGE, 1499, PRE Moving To Target with Army 1500; center (59:13); target (60:22); Progress 0 percent
+062, Denmark, OP_PILLAGE, 1499, POST Moving To Target with Army 1500; center (59:14); target (60:22); Progress 10 percent
+062, Portugal, OP_FOUND_CITY, 1424, PRE Moving To Target with Army 1425; center (22:32); target (24:34); Progress 43 percent
+062, Portugal, OP_FOUND_CITY, 1424, POST Moving To Target with Army 1425; center (23:33); target (24:34); Progress 100 percent
+062, China, OP_FOUND_CITY, 1344, PRE Moving To Target with Army 1345; center (45:27); target (40:28); Progress 23 percent
+062, China, OP_FOUND_CITY, 1344, POST Moving To Target with Army 1345; center (44:28); target (40:28); Progress 45 percent
+062, Poland, OP_FOUND_CITY, 1463, PRE Moving To Target with Army 1464; center (42:6); target (42:5); Progress 100 percent
+062, Poland, OP_FOUND_CITY, 1463, Transition to target stage
+062, Poland, OP_FOUND_CITY, 1463, City founded (Lodz) at (42:5), plot value 81383, q40
+062, Poland, OP_FOUND_CITY, 1463, Transition to finished stage
+062, Poland, OP_FOUND_CITY, 1463, POST Completed
+062, Austria, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (36:28); target (38:22); Progress 15 percent
+062, Austria, OP_FOUND_CITY, 1492, POST Moving To Target with Army 1493; center (37:30); target (38:22); Progress 29 percent
+063, Denmark, OP_FOUND_CITY, 1485, PRE Recruiting Units for army 1486; Settler 1396 at (44:21) - ETA 2147483647; Open; 
+063, Denmark, OP_FOUND_CITY, 1485, Found 0 potential units to recruit for operation 1485 at (59:13) with target at (56:17)
+063, Denmark, OP_FOUND_CITY, 1485, Removing Settler 1396 from army 1486 because no progress to checkpoint (59:13). ETA 2147483647; prev 2147483647; prev 2147483647
+063, Denmark, OP_PILLAGE, 1499, PRE Moving To Target with Army 1500; center (59:14); target (60:22); Progress 10 percent
+063, Denmark, OP_PILLAGE, 1499, POST Moving To Target with Army 1500; center (58:15); target (60:22); Progress 20 percent
+063, Denmark, OP_FOUND_CITY, 1485, Ended: LostCivilian; Distance 6; Duration 2
+063, Portugal, OP_FOUND_CITY, 1424, PRE Moving To Target with Army 1425; center (23:33); target (24:34); Progress 100 percent
+063, Portugal, OP_FOUND_CITY, 1424, Transition to target stage
+063, Portugal, OP_FOUND_CITY, 1424, POST At Target
+063, China, OP_FOUND_CITY, 1344, PRE Moving To Target with Army 1345; center (44:28); target (40:28); Progress 45 percent
+063, China, OP_FOUND_CITY, 1344, POST Moving To Target with Army 1345; center (43:28); target (40:28); Progress 56 percent
+063, Poland, OP_FOUND_CITY, 1463, Ended: Success; Distance 6; Duration 4
+063, Austria, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (37:30); target (38:22); Progress 29 percent
+063, Austria, OP_FOUND_CITY, 1492, POST Moving To Target with Army 1493; center (38:30); target (38:22); Progress 36 percent
+064, Denmark, OP_FOUND_CITY, 1510, found target for settler, score 61539 (q6)
+064, Denmark, OP_FOUND_CITY, 1510, Initial stage is recruiting
+064, Denmark, OP_FOUND_CITY, 1510, Found 0 potential units to recruit for operation 1510 at (59:13) with target at (56:17)
+064, Denmark, OP_FOUND_CITY, 1510, Started Army 1511; Units Recruited 1; Max Formation Size 2; Recruiting Units
+064, Denmark, OP_PILLAGE, 1499, PRE Moving To Target with Army 1500; center (58:15); target (60:22); Progress 20 percent
+064, Denmark, OP_PILLAGE, 1499, POST Moving To Target with Army 1500; center (60:14); target (60:22); Progress 10 percent
+064, Denmark, OP_FOUND_CITY, 1510, PRE Recruiting Units for army 1511; Settler 1396 at (45:21) - ETA -1; Open; 
+064, Denmark, OP_FOUND_CITY, 1510, Found 0 potential units to recruit for operation 1510 at (59:13) with target at (56:17)
+064, Denmark, OP_FOUND_CITY, 1510, POST Recruiting Units for army 1511; Settler 1396 at (47:21) - ETA 2147483647; Open; 
+064, Portugal, OP_FOUND_CITY, 1424, PRE At Target
+064, Portugal, OP_FOUND_CITY, 1424, City founded (Coimbra) at (24:34), plot value 109275, q50
+064, Portugal, OP_FOUND_CITY, 1424, Transition to finished stage
+064, Portugal, OP_FOUND_CITY, 1424, Ended: Success; Distance 7; Duration 8
+064, China, OP_FOUND_CITY, 1344, PRE Moving To Target with Army 1345; center (43:28); target (40:28); Progress 56 percent
+064, China, OP_FOUND_CITY, 1344, POST Moving To Target with Army 1345; center (41:28); target (40:28); Progress 100 percent
+064, Austria, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (38:30); target (38:22); Progress 36 percent
+064, Austria, OP_FOUND_CITY, 1492, POST Moving To Target with Army 1493; center (39:30); target (38:22); Progress 36 percent
+065, Denmark, OP_PILLAGE, 1499, PRE Moving To Target with Army 1500; center (60:14); target (60:22); Progress 10 percent
+065, Denmark, OP_PILLAGE, 1499, POST Moving To Target with Army 1500; center (60:16); target (60:22); Progress 30 percent
+065, Denmark, OP_FOUND_CITY, 1510, PRE Recruiting Units for army 1511; Settler 1396 at (47:21) - ETA 2147483647; Open; 
+065, Denmark, OP_FOUND_CITY, 1510, Found 0 potential units to recruit for operation 1510 at (59:13) with target at (56:17)
+065, Denmark, OP_FOUND_CITY, 1510, POST Recruiting Units for army 1511; Settler 1396 at (49:21) - ETA 2147483647; Open; 
+065, China, OP_FOUND_CITY, 1344, PRE Moving To Target with Army 1345; center (41:28); target (40:28); Progress 100 percent
+065, China, OP_FOUND_CITY, 1344, Transition to target stage
+065, China, OP_FOUND_CITY, 1344, POST At Target
+065, Austria, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (39:30); target (38:22); Progress 36 percent
+065, Austria, OP_FOUND_CITY, 1492, POST Moving To Target with Army 1493; center (39:29); target (38:22); Progress 43 percent
+065, Japan, OP_FOUND_CITY, 1521, found target for settler, score 77927 (q34)
+065, Japan, OP_FOUND_CITY, 1521, Skip recruiting, start with movement stage
+065, Japan, OP_FOUND_CITY, 1521, Found 0 potential units to recruit for operation 1521 at (60:22) with target at (57:19)
+065, Japan, OP_FOUND_CITY, 1521, Started Army 1522; Units Recruited 1; Max Formation Size 2; Moving To Target
+065, Japan, OP_FOUND_CITY, 1521, PRE Moving To Target with Army 1522; center (60:22); target (57:19); Progress 0 percent
+065, Japan, OP_FOUND_CITY, 1521, POST Moving To Target with Army 1522; center (59:21); target (57:19); Progress 20 percent
+066, Denmark, OP_PILLAGE, 1499, PRE Moving To Target with Army 1500; center (60:16); target (60:22); Progress 30 percent
+066, Denmark, OP_PILLAGE, 1499, POST Moving To Target with Army 1500; center (59:18); target (60:22); Progress 50 percent
+066, Denmark, OP_FOUND_CITY, 1510, PRE Recruiting Units for army 1511; Settler 1396 at (49:21) - ETA 2147483647; Open; 
+066, Denmark, OP_FOUND_CITY, 1510, Found 0 potential units to recruit for operation 1510 at (59:13) with target at (56:17)
+066, Denmark, OP_FOUND_CITY, 1510, POST Recruiting Units for army 1511; Settler 1396 at (51:20) - ETA 5; Open; 
+066, China, OP_FOUND_CITY, 1344, PRE At Target
+066, China, OP_FOUND_CITY, 1344, City founded (Guangzhou) at (40:28), plot value 79067, q36
+066, China, OP_FOUND_CITY, 1344, Transition to finished stage
+066, China, OP_FOUND_CITY, 1344, Ended: Success; Distance 9; Duration 16
+066, Austria, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (39:30); target (38:22); Progress 100 percent
+066, Austria, OP_FOUND_CITY, 1492, Removing Settler 1411 from army 1493 because no progress to checkpoint (39:30). ETA 2147483647; prev 0; prev 0
+066, Austria, OP_FOUND_CITY, 1492, cannot found city at (38:22)
+066, Austria, OP_FOUND_CITY, 1492, found no suitable target in area 1
+066, Austria, OP_FOUND_CITY, 1492, Ended: LostCivilian; Distance 14; Duration 5
+066, Japan, OP_FOUND_CITY, 1521, PRE Moving To Target with Army 1522; center (59:21); target (57:19); Progress 20 percent
+066, Japan, OP_FOUND_CITY, 1521, POST Moving To Target with Army 1522; center (58:22); target (57:19); Progress 20 percent
+067, Denmark, OP_PILLAGE, 1499, PRE Moving To Target with Army 1500; center (59:18); target (60:22); Progress 50 percent
+067, Denmark, OP_PILLAGE, 1499, Transition to finished stage; unit distance near 3; far 4
+067, Denmark, OP_PILLAGE, 1499, POST Completed
+067, Denmark, OP_FOUND_CITY, 1510, PRE Recruiting Units for army 1511; Settler 1396 at (51:20) - ETA 5; Open; 
+067, Denmark, OP_FOUND_CITY, 1510, Found 0 potential units to recruit for operation 1510 at (59:13) with target at (56:17)
+067, Denmark, OP_FOUND_CITY, 1510, No escort yet and the trip looks safe, going alone
+067, Denmark, OP_FOUND_CITY, 1510, Transition to gathering stage
+067, Denmark, OP_FOUND_CITY, 1510, POST Gathering Forces for army 1511; center (53:20); variance (0.00:0.00); free slots 1
+067, Austria, OP_FOUND_CITY, 1531, found target for settler, score 76156 (q31)
+067, Austria, OP_FOUND_CITY, 1531, Skip recruiting, start with movement stage
+067, Austria, OP_FOUND_CITY, 1531, Found 1 potential units to recruit for operation 1531 at (42:23) with target at (38:22)
+067, Austria, OP_FOUND_CITY, 1531, Added Warrior 1012 to slot 1 in army 1532. ETA at (42:23) is 0 
+067, Austria, OP_FOUND_CITY, 1531, Started Army 1532; Units Recruited 2; Max Formation Size 2; Moving To Target
+067, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (42:23); target (38:22); Progress 0 percent
+067, Austria, OP_FOUND_CITY, 1531, POST Moving To Target with Army 1532; center (42:22); target (38:22); Progress 0 percent
+067, Japan, OP_FOUND_CITY, 1521, PRE Moving To Target with Army 1522; center (58:22); target (57:19); Progress 20 percent
+067, Japan, OP_FOUND_CITY, 1521, POST Moving To Target with Army 1522; center (57:20); target (57:19); Progress 100 percent
+068, Denmark, OP_PILLAGE, 1499, Ended: Success; Distance 10; Duration 6
+068, Denmark, OP_FOUND_CITY, 1510, PRE Gathering Forces for army 1511; center (53:20); variance (0.00:0.00); free slots 1
+068, Denmark, OP_FOUND_CITY, 1510, Transition to movement stage
+068, Denmark, OP_FOUND_CITY, 1510, POST Moving To Target with Army 1511; center (54:19); target (56:17); Progress 34 percent
+068, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (42:22); target (38:22); Progress 0 percent
+068, Austria, OP_FOUND_CITY, 1531, POST Moving To Target with Army 1532; center (40:21); target (38:22); Progress 34 percent
+068, Japan, OP_FOUND_CITY, 1521, PRE Moving To Target with Army 1522; center (57:20); target (57:19); Progress 100 percent
+068, Japan, OP_FOUND_CITY, 1521, Transition to target stage
+068, Japan, OP_FOUND_CITY, 1521, City founded (Satsuma) at (57:19), plot value 77927, q34
+068, Japan, OP_FOUND_CITY, 1521, Transition to finished stage
+068, Japan, OP_FOUND_CITY, 1521, POST Completed
+069, Denmark, OP_FOUND_CITY, 1510, cannot found city at (56:17)
+069, Denmark, OP_FOUND_CITY, 1510, found better target for settler, old score -1 (q-50), new score 53803 (q-7)
+069, Denmark, OP_FOUND_CITY, 1510, setting new target (55:10)
+069, Denmark, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (54:19); target (55:10); Progress -37 percent
+069, Denmark, OP_FOUND_CITY, 1510, POST Moving To Target with Army 1511; center (54:18); target (55:10); Progress -25 percent
+069, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (40:21); target (38:22); Progress 34 percent
+069, Austria, OP_FOUND_CITY, 1531, cannot found city at (38:22)
+069, Austria, OP_FOUND_CITY, 1531, no path to city site (38:22)
+069, Austria, OP_FOUND_CITY, 1531, found better target for settler, old score 76156 (q31), new score 73847 (q27)
+069, Austria, OP_FOUND_CITY, 1531, setting new target (38:23)
+069, Austria, OP_FOUND_CITY, 1531, POST Moving To Target with Army 1532; center (39:22); target (38:23); Progress 100 percent
+069, Japan, OP_FOUND_CITY, 1521, Ended: Success; Distance 5; Duration 4
+070, Denmark, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (54:18); target (55:10); Progress -25 percent
+070, Denmark, OP_FOUND_CITY, 1510, POST Moving To Target with Army 1511; center (53:16); target (55:10); Progress 0 percent
+070, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (39:22); target (38:23); Progress 100 percent
+070, Austria, OP_FOUND_CITY, 1531, Transition to target stage
+070, Austria, OP_FOUND_CITY, 1531, City founded (Linz) at (38:23), plot value 73847, q27
+070, Austria, OP_FOUND_CITY, 1531, Transition to finished stage
+070, Austria, OP_FOUND_CITY, 1531, POST Completed
+071, Denmark, OP_RAPID_RESPONSE, 1568, Initial stage is recruiting
+071, Denmark, OP_RAPID_RESPONSE, 1568, Found 1 potential units to recruit for operation 1568 at (59:13) with target at (63:19)
+071, Denmark, OP_RAPID_RESPONSE, 1568, Added Spearman 1562 to slot 0 in army 1569. ETA at (59:13) is 0 
+071, Denmark, OP_RAPID_RESPONSE, 1568, Started Army 1569; Units Recruited 1; Max Formation Size 4; Recruiting Units
+071, Denmark, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (53:16); target (55:10); Progress 0 percent
+071, Denmark, OP_FOUND_CITY, 1510, POST Moving To Target with Army 1511; center (53:14); target (55:10); Progress 38 percent
+071, Denmark, OP_RAPID_RESPONSE, 1568, PRE Recruiting Units for army 1569; Spearman 1562 at (59:13) - ETA 0; Open; Open; Open; 
+071, Denmark, OP_RAPID_RESPONSE, 1568, Found 0 potential units to recruit for operation 1568 at (59:13) with target at (63:19)
+071, Denmark, OP_RAPID_RESPONSE, 1568, POST Recruiting Units for army 1569; Spearman 1562 at (59:13) - ETA 0; Open; Open; Open; 
+071, Poland, OP_FOUND_CITY, 1571, found target for settler, score 52301 (q-10)
+071, Poland, OP_FOUND_CITY, 1571, Skip recruiting, start with movement stage
+071, Poland, OP_FOUND_CITY, 1571, Found 2 potential units to recruit for operation 1571 at (45:10) with target at (47:6)
+071, Poland, OP_FOUND_CITY, 1571, Added Spearman 1539 to slot 1 in army 1572. ETA at (45:10) is 0 
+071, Poland, OP_FOUND_CITY, 1571, Started Army 1572; Units Recruited 2; Max Formation Size 2; Moving To Target
+071, Poland, OP_FOUND_CITY, 1571, PRE Moving To Target with Army 1572; center (45:10); target (47:6); Progress 0 percent
+071, Poland, OP_FOUND_CITY, 1571, POST Moving To Target with Army 1572; center (46:8); target (47:6); Progress 40 percent
+071, Austria, OP_FOUND_CITY, 1531, Ended: Success; Distance 5; Duration 4
+072, Denmark, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (53:14); target (55:10); Progress 38 percent
+072, Denmark, OP_FOUND_CITY, 1510, POST Moving To Target with Army 1511; center (54:12); target (55:10); Progress 63 percent
+072, Denmark, OP_RAPID_RESPONSE, 1568, PRE Recruiting Units for army 1569; Spearman 1562 at (59:13) - ETA 0; Open; Open; Open; 
+072, Denmark, OP_RAPID_RESPONSE, 1568, Found 0 potential units to recruit for operation 1568 at (59:13) with target at (63:19)
+072, Denmark, OP_RAPID_RESPONSE, 1568, POST Recruiting Units for army 1569; Spearman 1562 at (59:13) - ETA 0; Open; Open; Open; 
+072, Poland, OP_FOUND_CITY, 1571, PRE Moving To Target with Army 1572; center (46:8); target (47:6); Progress 40 percent
+072, Poland, OP_FOUND_CITY, 1571, Transition to target stage
+072, Poland, OP_FOUND_CITY, 1571, POST At Target
+073, Denmark, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (54:12); target (55:10); Progress 63 percent
+073, Denmark, OP_FOUND_CITY, 1510, Transition to target stage
+073, Denmark, OP_FOUND_CITY, 1510, POST At Target
+073, Denmark, OP_RAPID_RESPONSE, 1568, PRE Recruiting Units for army 1569; Spearman 1562 at (59:13) - ETA 0; Open; Open; Open; 
+073, Denmark, OP_RAPID_RESPONSE, 1568, Found 0 potential units to recruit for operation 1568 at (59:13) with target at (63:19)
+073, Denmark, OP_RAPID_RESPONSE, 1568, POST Recruiting Units for army 1569; Spearman 1562 at (59:13) - ETA 0; Open; Open; Open; 
+073, Poland, OP_FOUND_CITY, 1571, PRE At Target
+073, Poland, OP_FOUND_CITY, 1571, City founded (Wroclaw) at (47:6), plot value 52301, q-10
+073, Poland, OP_FOUND_CITY, 1571, Transition to finished stage
+073, Poland, OP_FOUND_CITY, 1571, Ended: Success; Distance 5; Duration 2
+073, The_Inca, OP_FOUND_CITY, 1595, Ended: NoTarget; Distance -1; Duration 74
+074, Denmark, OP_RAPID_RESPONSE, 1568, Ended: NoTarget; Distance 8; Duration 3
+074, Denmark, OP_FOUND_CITY, 1510, PRE At Target
+074, Denmark, OP_FOUND_CITY, 1510, City founded (Kaupang) at (55:10), plot value 51903, q-11
+074, Denmark, OP_FOUND_CITY, 1510, Transition to finished stage
+074, Denmark, OP_FOUND_CITY, 1510, Ended: Success; Distance 8; Duration 10
+074, The_Inca, OP_FOUND_CITY, 1647, Ended: NoTarget; Distance -1; Duration 75
+074, The_Inca, OP_FOUND_CITY, 1648, Ended: NoTarget; Distance -1; Duration 75
+075, The_Inca, OP_FOUND_CITY, 1668, Ended: NoTarget; Distance -1; Duration 76
+075, The_Inca, OP_FOUND_CITY, 1669, Ended: NoTarget; Distance -1; Duration 76
+076, The_Inca, OP_FOUND_CITY, 1686, Ended: NoTarget; Distance -1; Duration 77
+076, The_Inca, OP_FOUND_CITY, 1687, Ended: NoTarget; Distance -1; Duration 77
+077, Portugal, OP_FOUND_CITY, 1696, found target for settler, score 52999 (q-9)
+077, Portugal, OP_FOUND_CITY, 1696, Initial stage is recruiting
+077, Portugal, OP_FOUND_CITY, 1696, Found 0 potential units to recruit for operation 1696 at (23:29) with target at (26:24)
+077, Portugal, OP_FOUND_CITY, 1696, Started Army 1697; Units Recruited 1; Max Formation Size 2; Recruiting Units
+077, Portugal, OP_FOUND_CITY, 1696, PRE Recruiting Units for army 1697; Settler 1684 at (23:29) - ETA -1; Open; 
+077, Portugal, OP_FOUND_CITY, 1696, Found 0 potential units to recruit for operation 1696 at (23:29) with target at (26:24)
+077, Portugal, OP_FOUND_CITY, 1696, POST Recruiting Units for army 1697; Settler 1684 at (23:29) - ETA 0; Open; 
+077, Egypt, OP_FOUND_CITY, 1700, found target for settler, score 64168 (q11)
+077, Egypt, OP_FOUND_CITY, 1700, Initial stage is recruiting
+077, Egypt, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (34:20) with target at (25:17)
+077, Egypt, OP_FOUND_CITY, 1700, Started Army 1701; Units Recruited 1; Max Formation Size 2; Recruiting Units
+077, Egypt, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA -1; Open; 
+077, Egypt, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (34:20) with target at (25:17)
+077, Egypt, OP_FOUND_CITY, 1700, POST Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+077, The_Inca, OP_FOUND_CITY, 1702, Ended: NoTarget; Distance -1; Duration 78
+077, The_Inca, OP_FOUND_CITY, 1703, Ended: NoTarget; Distance -1; Duration 78
+077, The_Inca, OP_RAPID_RESPONSE, 1704, Initial stage is recruiting
+077, The_Inca, OP_RAPID_RESPONSE, 1704, Found 1 potential units to recruit for operation 1704 at (37:10) with target at (37:10)
+077, The_Inca, OP_RAPID_RESPONSE, 1704, Added Warrior 1398 to slot 0 in army 1705. ETA at (37:10) is 1 
+077, The_Inca, OP_RAPID_RESPONSE, 1704, Started Army 1705; Units Recruited 1; Max Formation Size 4; Recruiting Units
+077, The_Inca, OP_RAPID_RESPONSE, 1704, PRE Recruiting Units for army 1705; Warrior 1398 at (32:9) - ETA 1; Open; Open; Open; 
+077, The_Inca, OP_RAPID_RESPONSE, 1704, Found 0 potential units to recruit for operation 1704 at (37:10) with target at (37:10)
+077, The_Inca, OP_RAPID_RESPONSE, 1704, POST Recruiting Units for army 1705; Warrior 1398 at (34:8) - ETA 1; Open; Open; Open; 
+077, Japan, OP_FOUND_CITY, 1706, Ended: NoTarget; Distance -1; Duration 78
+078, Portugal, OP_FOUND_CITY, 1711, found target for settler, score 55948 (q-4)
+078, Portugal, OP_FOUND_CITY, 1711, Initial stage is recruiting
+078, Portugal, OP_FOUND_CITY, 1711, Found 0 potential units to recruit for operation 1711 at (23:29) with target at (22:16)
+078, Portugal, OP_FOUND_CITY, 1711, Started Army 1712; Units Recruited 1; Max Formation Size 2; Recruiting Units
+078, Portugal, OP_FOUND_CITY, 1696, PRE Recruiting Units for army 1697; Settler 1684 at (23:29) - ETA 0; Open; 
+078, Portugal, OP_FOUND_CITY, 1696, Found 0 potential units to recruit for operation 1696 at (23:29) with target at (26:24)
+078, Portugal, OP_FOUND_CITY, 1696, POST Recruiting Units for army 1697; Settler 1684 at (23:29) - ETA 0; Open; 
+078, Portugal, OP_FOUND_CITY, 1711, PRE Recruiting Units for army 1712; Settler 1710 at (23:29) - ETA -1; Open; 
+078, Portugal, OP_FOUND_CITY, 1711, Found 0 potential units to recruit for operation 1711 at (23:29) with target at (22:16)
+078, Portugal, OP_FOUND_CITY, 1711, POST Recruiting Units for army 1712; Settler 1710 at (23:29) - ETA 0; Open; 
+078, Egypt, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+078, Egypt, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (34:20) with target at (25:17)
+078, Egypt, OP_FOUND_CITY, 1700, POST Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+078, The_Inca, OP_FOUND_CITY, 1714, Ended: NoTarget; Distance -1; Duration 79
+078, The_Inca, OP_FOUND_CITY, 1715, Ended: NoTarget; Distance -1; Duration 79
+078, The_Inca, OP_RAPID_RESPONSE, 1704, PRE Recruiting Units for army 1705; Warrior 1398 at (34:8) - ETA 1; Open; Open; Open; 
+078, The_Inca, OP_RAPID_RESPONSE, 1704, Found 1 potential units to recruit for operation 1704 at (37:10) with target at (37:10)
+078, The_Inca, OP_RAPID_RESPONSE, 1704, Added Warrior 1385 to slot 1 in army 1705. ETA at (37:10) is 2 
+078, The_Inca, OP_RAPID_RESPONSE, 1704, Transition to gathering stage
+078, The_Inca, OP_RAPID_RESPONSE, 1704, POST Gathering Forces for army 1705; center (32:9); variance (0.25:4.00); free slots 2
+078, Japan, OP_FOUND_CITY, 1716, Ended: NoTarget; Distance -1; Duration 79
+079, Portugal, OP_FOUND_CITY, 1696, no valid city site target found (with escort)!
+079, Portugal, OP_FOUND_CITY, 1711, no valid city site target found (with escort)!
+079, Portugal, OP_FOUND_CITY, 1696, Ended: NoTarget; Distance 7; Duration 2
+079, Portugal, OP_FOUND_CITY, 1711, Ended: NoTarget; Distance 14; Duration 1
+079, Egypt, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+079, Egypt, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (34:20) with target at (25:17)
+079, Egypt, OP_FOUND_CITY, 1700, POST Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+079, The_Inca, OP_FOUND_CITY, 1720, Ended: NoTarget; Distance -1; Duration 80
+079, The_Inca, OP_FOUND_CITY, 1721, Ended: NoTarget; Distance -1; Duration 80
+079, The_Inca, OP_RAPID_RESPONSE, 1704, Ended: NoTarget; Distance 1; Duration 2
+079, Japan, OP_FOUND_CITY, 1724, Ended: NoTarget; Distance -1; Duration 80
+080, Portugal, OP_FOUND_CITY, 1726, found target for settler, score 62141 (q7)
+080, Portugal, OP_FOUND_CITY, 1726, Initial stage is recruiting
+080, Portugal, OP_FOUND_CITY, 1726, Found 0 potential units to recruit for operation 1726 at (23:29) with target at (14:20)
+080, Portugal, OP_FOUND_CITY, 1726, Started Army 1727; Units Recruited 1; Max Formation Size 2; Recruiting Units
+080, Portugal, OP_FOUND_CITY, 1728, found target for settler, score 52999 (q-9)
+080, Portugal, OP_FOUND_CITY, 1728, Initial stage is recruiting
+080, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+080, Portugal, OP_FOUND_CITY, 1728, Started Army 1729; Units Recruited 1; Max Formation Size 2; Recruiting Units
+080, Portugal, OP_FOUND_CITY, 1726, PRE Recruiting Units for army 1727; Settler 1684 at (23:29) - ETA -1; Open; 
+080, Portugal, OP_FOUND_CITY, 1726, Found 0 potential units to recruit for operation 1726 at (23:29) with target at (14:20)
+080, Portugal, OP_FOUND_CITY, 1726, POST Recruiting Units for army 1727; Settler 1684 at (23:29) - ETA 0; Open; 
+080, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA -1; Open; 
+080, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+080, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+080, Egypt, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+080, Egypt, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (34:20) with target at (25:17)
+080, Egypt, OP_FOUND_CITY, 1700, POST Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+080, The_Inca, OP_FOUND_CITY, 1732, found target for settler, score 54828 (q-6)
+080, The_Inca, OP_FOUND_CITY, 1732, Skip recruiting, start with movement stage
+080, The_Inca, OP_FOUND_CITY, 1732, Found 2 potential units to recruit for operation 1732 at (32:9) with target at (28:10)
+080, The_Inca, OP_FOUND_CITY, 1732, Added Swordsman 1722 to slot 1 in army 1733. ETA at (32:9) is 0 
+080, The_Inca, OP_FOUND_CITY, 1732, Started Army 1733; Units Recruited 2; Max Formation Size 2; Moving To Target
+080, The_Inca, OP_FOUND_CITY, 1734, found target for settler, score 56030 (q-3)
+080, The_Inca, OP_FOUND_CITY, 1734, Initial stage is recruiting
+080, The_Inca, OP_FOUND_CITY, 1734, Found 1 potential units to recruit for operation 1734 at (32:9) with target at (40:12)
+080, The_Inca, OP_FOUND_CITY, 1734, Added Warrior 1385 to slot 1 in army 1735. ETA at (32:9) is 1 
+080, The_Inca, OP_FOUND_CITY, 1734, Transition to gathering stage
+080, The_Inca, OP_FOUND_CITY, 1734, Started Army 1735; Units Recruited 2; Max Formation Size 2; Gathering Forces
+080, The_Inca, OP_FOUND_CITY, 1732, PRE Moving To Target with Army 1733; center (32:9); target (28:10); Progress 0 percent
+080, The_Inca, OP_FOUND_CITY, 1732, POST Moving To Target with Army 1733; center (31:10); target (28:10); Progress 34 percent
+080, The_Inca, OP_FOUND_CITY, 1734, PRE Gathering Forces for army 1735; center (32:14); variance (0.00:6.25); free slots 0
+080, The_Inca, OP_FOUND_CITY, 1734, Transition to movement stage
+080, The_Inca, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (32:12); target (40:12); Progress 0 percent
+080, Japan, OP_FOUND_CITY, 1738, Ended: NoTarget; Distance -1; Duration 81
+081, Portugal, OP_FOUND_CITY, 1726, PRE Recruiting Units for army 1727; Settler 1684 at (23:29) - ETA 0; Open; 
+081, Portugal, OP_FOUND_CITY, 1726, Found 0 potential units to recruit for operation 1726 at (23:29) with target at (14:20)
+081, Portugal, OP_FOUND_CITY, 1726, POST Recruiting Units for army 1727; Settler 1684 at (23:29) - ETA 0; Open; 
+081, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+081, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+081, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+081, Poland, OP_RAPID_RESPONSE, 1746, Initial stage is recruiting
+081, Poland, OP_RAPID_RESPONSE, 1746, Found 1 potential units to recruit for operation 1746 at (45:10) with target at (45:10)
+081, Poland, OP_RAPID_RESPONSE, 1746, Added Spearman 1698 to slot 0 in army 1747. ETA at (45:10) is 0 
+081, Poland, OP_RAPID_RESPONSE, 1746, Started Army 1747; Units Recruited 1; Max Formation Size 4; Recruiting Units
+081, Poland, OP_RAPID_RESPONSE, 1746, PRE Recruiting Units for army 1747; Spearman 1698 at (47:6) - ETA 0; Open; Open; Open; 
+081, Poland, OP_RAPID_RESPONSE, 1746, Found 0 potential units to recruit for operation 1746 at (45:10) with target at (45:10)
+081, Poland, OP_RAPID_RESPONSE, 1746, POST Recruiting Units for army 1747; Spearman 1698 at (45:7) - ETA 0; Open; Open; Open; 
+081, Egypt, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+081, Egypt, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (34:20) with target at (25:17)
+081, Egypt, OP_FOUND_CITY, 1700, POST Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+081, The_Inca, OP_FOUND_CITY, 1732, PRE Moving To Target with Army 1733; center (31:10); target (28:10); Progress 34 percent
+081, The_Inca, OP_FOUND_CITY, 1732, POST Moving To Target with Army 1733; center (29:10); target (28:10); Progress 100 percent
+081, The_Inca, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (32:12); target (40:12); Progress 0 percent
+081, The_Inca, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (33:10); target (40:12); Progress 10 percent
+081, Japan, OP_FOUND_CITY, 1749, Ended: NoTarget; Distance -1; Duration 82
+082, Portugal, OP_FOUND_CITY, 1726, PRE Recruiting Units for army 1727; Settler 1684 at (23:29) - ETA 0; Open; 
+082, Portugal, OP_FOUND_CITY, 1726, Found 0 potential units to recruit for operation 1726 at (23:29) with target at (14:20)
+082, Portugal, OP_FOUND_CITY, 1726, POST Recruiting Units for army 1727; Settler 1684 at (23:29) - ETA 0; Open; 
+082, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+082, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+082, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+082, Poland, OP_RAPID_RESPONSE, 1746, PRE Recruiting Units for army 1747; Spearman 1698 at (45:7) - ETA 0; Open; Open; Open; 
+082, Poland, OP_RAPID_RESPONSE, 1746, Found 0 potential units to recruit for operation 1746 at (45:10) with target at (45:10)
+082, Poland, OP_RAPID_RESPONSE, 1746, POST Recruiting Units for army 1747; Spearman 1698 at (45:8) - ETA 0; Open; Open; Open; 
+082, Egypt, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+082, Egypt, OP_FOUND_CITY, 1700, Found 0 potential units to recruit for operation 1700 at (34:20) with target at (25:17)
+082, Egypt, OP_FOUND_CITY, 1700, POST Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+082, The_Inca, OP_FOUND_CITY, 1732, PRE Moving To Target with Army 1733; center (29:10); target (28:10); Progress 100 percent
+082, The_Inca, OP_FOUND_CITY, 1732, Transition to target stage
+082, The_Inca, OP_FOUND_CITY, 1732, City founded (Ollantaytambo) at (28:10), plot value 54828, q-6
+082, The_Inca, OP_FOUND_CITY, 1732, Transition to finished stage
+082, The_Inca, OP_FOUND_CITY, 1732, POST Completed
+082, The_Inca, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (33:10); target (40:12); Progress 10 percent
+082, The_Inca, OP_FOUND_CITY, 1734, found better target for settler, old score 56030 (q-3), new score 64060 (q10)
+082, The_Inca, OP_FOUND_CITY, 1734, setting new target (25:8)
+082, The_Inca, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (31:10); target (25:8); Progress 12 percent
+082, Japan, OP_FOUND_CITY, 1757, Ended: NoTarget; Distance -1; Duration 83
+083, Portugal, OP_FOUND_CITY, 1726, PRE Recruiting Units for army 1727; Settler 1684 at (23:29) - ETA 0; Open; 
+083, Portugal, OP_FOUND_CITY, 1726, Found 1 potential units to recruit for operation 1726 at (23:29) with target at (14:20)
+083, Portugal, OP_FOUND_CITY, 1726, Added Spearman 1753 to slot 1 in army 1727. ETA at (23:29) is 0 
+083, Portugal, OP_FOUND_CITY, 1726, Transition to gathering stage
+083, Portugal, OP_FOUND_CITY, 1726, POST Gathering Forces for army 1727; center (23:29); variance (0.00:0.25); free slots 0
+083, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+083, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+083, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+083, Poland, OP_RAPID_RESPONSE, 1746, Ended: NoTarget; Distance 1; Duration 2
+083, Egypt, OP_FOUND_CITY, 1700, PRE Recruiting Units for army 1701; Settler 1699 at (34:20) - ETA 0; Open; 
+083, Egypt, OP_FOUND_CITY, 1700, Found 1 potential units to recruit for operation 1700 at (34:20) with target at (25:17)
+083, Egypt, OP_FOUND_CITY, 1700, Added Warrior 1010 to slot 1 in army 1701. ETA at (34:20) is 1 
+083, Egypt, OP_FOUND_CITY, 1700, Added Composite Bowman 1665 to slot 1 in army 1701. ETA at (34:20) is 0 
+083, Egypt, OP_FOUND_CITY, 1700, Transition to gathering stage
+083, Egypt, OP_FOUND_CITY, 1700, Transition to movement stage
+083, Egypt, OP_FOUND_CITY, 1700, POST Moving To Target with Army 1701; center (34:20); target (25:17); Progress 0 percent
+083, The_Inca, OP_FOUND_CITY, 1732, Ended: Success; Distance 6; Duration 3
+083, The_Inca, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (31:10); target (25:8); Progress 12 percent
+083, The_Inca, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (29:10); target (25:8); Progress 34 percent
+083, Japan, OP_FOUND_CITY, 1763, Ended: NoTarget; Distance -1; Duration 84
+084, Portugal, OP_FOUND_CITY, 1726, PRE Gathering Forces for army 1727; center (23:29); variance (0.00:0.25); free slots 0
+084, Portugal, OP_FOUND_CITY, 1726, Transition to movement stage
+084, Portugal, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (23:29); target (14:20); Progress 0 percent
+084, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+084, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+084, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+084, Egypt, OP_FOUND_CITY, 1700, PRE Moving To Target with Army 1701; center (34:20); target (25:17); Progress 0 percent
+084, Egypt, OP_FOUND_CITY, 1700, POST Moving To Target with Army 1701; center (32:19); target (25:17); Progress 19 percent
+084, Austria, OP_FOUND_CITY, 1768, Ended: NoTarget; Distance -1; Duration 85
+084, The_Inca, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (29:10); target (25:8); Progress 34 percent
+084, The_Inca, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (27:9); target (25:8); Progress 56 percent
+084, Japan, OP_FOUND_CITY, 1769, Ended: NoTarget; Distance -1; Duration 85
+085, Portugal, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (23:29); target (14:20); Progress 0 percent
+085, Portugal, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (21:26); target (14:20); Progress 25 percent
+085, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+085, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+085, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+085, Egypt, OP_FOUND_CITY, 1700, PRE Moving To Target with Army 1701; center (32:19); target (25:17); Progress 19 percent
+085, Egypt, OP_FOUND_CITY, 1700, POST Moving To Target with Army 1701; center (30:19); target (25:17); Progress 37 percent
+085, Austria, OP_FOUND_CITY, 1777, Ended: NoTarget; Distance -1; Duration 86
+085, The_Inca, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (27:9); target (25:8); Progress 56 percent
+085, The_Inca, OP_FOUND_CITY, 1734, POST Moving To Target with Army 1735; center (26:8); target (25:8); Progress 100 percent
+085, Japan, OP_FOUND_CITY, 1778, Ended: NoTarget; Distance -1; Duration 86
+086, Portugal, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (21:26); target (14:20); Progress 25 percent
+086, Portugal, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (19:24); target (14:20); Progress 44 percent
+086, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+086, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+086, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+086, Egypt, OP_FOUND_CITY, 1700, no valid city site target found (with escort)!
+086, Egypt, OP_FOUND_CITY, 1700, Ended: NoTarget; Distance 11; Duration 9
+086, Austria, OP_FOUND_CITY, 1784, Ended: NoTarget; Distance -1; Duration 87
+086, The_Inca, OP_FOUND_CITY, 1734, PRE Moving To Target with Army 1735; center (26:8); target (25:8); Progress 100 percent
+086, The_Inca, OP_FOUND_CITY, 1734, Transition to target stage
+086, The_Inca, OP_FOUND_CITY, 1734, POST At Target
+086, Japan, OP_FOUND_CITY, 1785, Ended: NoTarget; Distance -1; Duration 87
+087, Portugal, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (19:24); target (14:20); Progress 44 percent
+087, Portugal, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (18:22); target (14:20); Progress 57 percent
+087, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+087, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+087, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+087, Poland, OP_FOUND_CITY, 1788, Ended: NoTarget; Distance -1; Duration 88
+087, Egypt, OP_FOUND_CITY, 1789, Ended: NoTarget; Distance -1; Duration 88
+087, Austria, OP_FOUND_CITY, 1790, Ended: NoTarget; Distance -1; Duration 88
+087, The_Inca, OP_FOUND_CITY, 1734, PRE At Target
+087, The_Inca, OP_FOUND_CITY, 1734, City founded (Corihuayrachina) at (25:8), plot value 52833, q-9
+087, The_Inca, OP_FOUND_CITY, 1734, Transition to finished stage
+087, The_Inca, OP_FOUND_CITY, 1734, Ended: Success; Distance 9; Duration 7
+087, Japan, OP_FOUND_CITY, 1792, Ended: NoTarget; Distance -1; Duration 88
+087, Japan, OP_RAPID_RESPONSE, 1793, Initial stage is recruiting
+087, Japan, OP_RAPID_RESPONSE, 1793, Found 1 potential units to recruit for operation 1793 at (60:22) with target at (60:22)
+087, Japan, OP_RAPID_RESPONSE, 1793, Added Spearman 1585 to slot 0 in army 1794. ETA at (60:22) is 1 
+087, Japan, OP_RAPID_RESPONSE, 1793, Started Army 1794; Units Recruited 1; Max Formation Size 4; Recruiting Units
+087, Japan, OP_RAPID_RESPONSE, 1793, PRE Recruiting Units for army 1794; Spearman 1585 at (57:19) - ETA 1; Open; Open; Open; 
+087, Japan, OP_RAPID_RESPONSE, 1793, Found 0 potential units to recruit for operation 1793 at (60:22) with target at (60:22)
+087, Japan, OP_RAPID_RESPONSE, 1793, POST Recruiting Units for army 1794; Spearman 1585 at (58:19) - ETA 1; Open; Open; Open; 
+088, Portugal, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (18:22); target (14:20); Progress 57 percent
+088, Portugal, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (17:20); target (14:20); Progress 69 percent
+088, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+088, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+088, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+088, Poland, OP_FOUND_CITY, 1798, Ended: NoTarget; Distance -1; Duration 89
+088, Egypt, OP_FOUND_CITY, 1800, Ended: NoTarget; Distance -1; Duration 89
+088, Austria, OP_FOUND_CITY, 1801, Ended: NoTarget; Distance -1; Duration 89
+088, Japan, OP_FOUND_CITY, 1803, Ended: NoTarget; Distance -1; Duration 89
+088, Japan, OP_RAPID_RESPONSE, 1793, PRE Recruiting Units for army 1794; Spearman 1585 at (58:19) - ETA 1; Open; Open; Open; 
+088, Japan, OP_RAPID_RESPONSE, 1793, Found 0 potential units to recruit for operation 1793 at (60:22) with target at (60:22)
+088, Japan, OP_RAPID_RESPONSE, 1793, POST Recruiting Units for army 1794; Spearman 1585 at (59:20) - ETA 0; Open; Open; Open; 
+089, Portugal, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (17:20); target (14:20); Progress 69 percent
+089, Portugal, OP_FOUND_CITY, 1726, POST Moving To Target with Army 1727; center (15:19); target (14:20); Progress 82 percent
+089, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+089, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+089, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+089, Poland, OP_FOUND_CITY, 1813, Ended: NoTarget; Distance -1; Duration 90
+089, Egypt, OP_FOUND_CITY, 1814, Ended: NoTarget; Distance -1; Duration 90
+089, Austria, OP_FOUND_CITY, 1815, Ended: NoTarget; Distance -1; Duration 90
+089, Japan, OP_FOUND_CITY, 1816, Ended: NoTarget; Distance -1; Duration 90
+089, Japan, OP_RAPID_RESPONSE, 1793, PRE Recruiting Units for army 1794; Spearman 1585 at (59:20) - ETA 0; Open; Open; Open; 
+089, Japan, OP_RAPID_RESPONSE, 1793, Found 0 potential units to recruit for operation 1793 at (60:22) with target at (60:22)
+089, Japan, OP_RAPID_RESPONSE, 1793, POST Recruiting Units for army 1794; Spearman 1585 at (59:21) - ETA 0; Open; Open; Open; 
+090, Portugal, OP_FOUND_CITY, 1726, PRE Moving To Target with Army 1727; center (15:19); target (14:20); Progress 82 percent
+090, Portugal, OP_FOUND_CITY, 1726, Transition to target stage
+090, Portugal, OP_FOUND_CITY, 1726, POST At Target
+090, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+090, Portugal, OP_FOUND_CITY, 1728, Found 0 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+090, Portugal, OP_FOUND_CITY, 1728, POST Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+090, Poland, OP_FOUND_CITY, 1825, Ended: NoTarget; Distance -1; Duration 91
+090, Egypt, OP_FOUND_CITY, 1826, Ended: NoTarget; Distance -1; Duration 91
+090, Austria, OP_FOUND_CITY, 1827, Ended: NoTarget; Distance -1; Duration 91
+090, Japan, OP_FOUND_CITY, 1829, Ended: NoTarget; Distance -1; Duration 91
+090, Japan, OP_RAPID_RESPONSE, 1830, Initial stage is recruiting
+090, Japan, OP_RAPID_RESPONSE, 1830, Found 0 potential units to recruit for operation 1830 at (60:22) with target at (60:22)
+090, Japan, OP_RAPID_RESPONSE, 1830, Ended: NoUnits; Distance 1; Duration 0
+090, Japan, OP_RAPID_RESPONSE, 1832, Initial stage is recruiting
+090, Japan, OP_RAPID_RESPONSE, 1832, Found 0 potential units to recruit for operation 1832 at (60:22) with target at (60:22)
+090, Japan, OP_RAPID_RESPONSE, 1832, Ended: NoUnits; Distance 1; Duration 0
+090, Japan, OP_RAPID_RESPONSE, 1793, PRE Recruiting Units for army 1794; Spearman 1585 at (59:21) - ETA 0; Open; Open; Open; 
+090, Japan, OP_RAPID_RESPONSE, 1793, Found 0 potential units to recruit for operation 1793 at (60:22) with target at (60:22)
+090, Japan, OP_RAPID_RESPONSE, 1793, POST Recruiting Units for army 1794; Spearman 1585 at (60:22) - ETA 0; Open; Open; Open; 
+091, Denmark, OP_FOUND_CITY, 1839, Ended: NoTarget; Distance -1; Duration 92
+091, Portugal, OP_FOUND_CITY, 1726, PRE At Target
+091, Portugal, OP_FOUND_CITY, 1726, City founded (Funchal) at (14:20), plot value 92263, q50
+091, Portugal, OP_FOUND_CITY, 1726, Transition to finished stage
+091, Portugal, OP_FOUND_CITY, 1728, PRE Recruiting Units for army 1729; Settler 1710 at (23:29) - ETA 0; Open; 
+091, Portugal, OP_FOUND_CITY, 1728, Found 1 potential units to recruit for operation 1728 at (23:29) with target at (26:24)
+091, Portugal, OP_FOUND_CITY, 1728, Added Swordsman 1840 to slot 1 in army 1729. ETA at (23:29) is 0 
+091, Portugal, OP_FOUND_CITY, 1728, Transition to gathering stage
+091, Portugal, OP_FOUND_CITY, 1728, POST Gathering Forces for army 1729; center (23:29); variance (0.00:0.25); free slots 0
+091, Portugal, OP_FOUND_CITY, 1726, Ended: Success; Distance 16; Duration 11
+091, Poland, OP_FOUND_CITY, 1843, Ended: NoTarget; Distance -1; Duration 92
+091, Egypt, OP_FOUND_CITY, 1845, Ended: NoTarget; Distance -1; Duration 92
+091, Austria, OP_FOUND_CITY, 1846, Ended: NoTarget; Distance -1; Duration 92
+091, Japan, OP_FOUND_CITY, 1848, Ended: NoTarget; Distance -1; Duration 92
+091, Japan, OP_RAPID_RESPONSE, 1849, Initial stage is recruiting
+091, Japan, OP_RAPID_RESPONSE, 1849, Found 0 potential units to recruit for operation 1849 at (60:22) with target at (60:22)
+091, Japan, OP_RAPID_RESPONSE, 1849, Ended: NoUnits; Distance 1; Duration 0
+091, Japan, OP_RAPID_RESPONSE, 1793, PRE Recruiting Units for army 1794; Spearman 1585 at (60:22) - ETA 0; Open; Open; Open; 
+091, Japan, OP_RAPID_RESPONSE, 1793, Found 0 potential units to recruit for operation 1793 at (60:22) with target at (60:22)
+091, Japan, OP_RAPID_RESPONSE, 1793, Contact with enemy!
+091, Japan, OP_RAPID_RESPONSE, 1793, POST Recruiting Units for army 1794; Spearman 1585 at (60:22) - ETA 0; Open; Open; Open; 
+092, Denmark, OP_FOUND_CITY, 1857, Ended: NoTarget; Distance -1; Duration 93
+092, Portugal, OP_FOUND_CITY, 1728, PRE Gathering Forces for army 1729; center (23:29); variance (0.00:0.25); free slots 0
+092, Portugal, OP_FOUND_CITY, 1728, Transition to movement stage
+092, Portugal, OP_FOUND_CITY, 1728, POST Moving To Target with Army 1729; center (23:29); target (26:24); Progress 0 percent
+092, Poland, OP_FOUND_CITY, 1860, Ended: NoTarget; Distance -1; Duration 93
+092, Egypt, OP_FOUND_CITY, 1862, Ended: NoTarget; Distance -1; Duration 93
+092, Austria, OP_FOUND_CITY, 1863, Ended: NoTarget; Distance -1; Duration 93
+092, Japan, OP_FOUND_CITY, 1864, Ended: NoTarget; Distance -1; Duration 93
+092, Japan, OP_RAPID_RESPONSE, 1793, PRE Recruiting Units for army 1794; Spearman 1585 at (60:22) - ETA 0; Open; Open; Open; 
+092, Japan, OP_RAPID_RESPONSE, 1793, Found 0 potential units to recruit for operation 1793 at (60:22) with target at (60:22)
+092, Japan, OP_RAPID_RESPONSE, 1793, POST Recruiting Units for army 1794; Spearman 1585 at (60:22) - ETA 0; Open; Open; Open; 
+093, Denmark, OP_FOUND_CITY, 1869, Ended: NoTarget; Distance -1; Duration 94
+093, Portugal, OP_FOUND_CITY, 1728, PRE Moving To Target with Army 1729; center (23:29); target (26:24); Progress 0 percent
+093, Portugal, OP_FOUND_CITY, 1728, POST Moving To Target with Army 1729; center (24:27); target (26:24); Progress 43 percent
+093, Poland, OP_FOUND_CITY, 1872, Ended: NoTarget; Distance -1; Duration 94
+093, Egypt, OP_FOUND_CITY, 1873, Ended: NoTarget; Distance -1; Duration 94
+093, Austria, OP_FOUND_CITY, 1874, Ended: NoTarget; Distance -1; Duration 94
+093, Japan, OP_FOUND_CITY, 1876, Ended: NoTarget; Distance -1; Duration 94
+093, Japan, OP_RAPID_RESPONSE, 1793, PRE Recruiting Units for army 1794; Spearman 1585 at (60:22) - ETA 0; Open; Open; Open; 
+093, Japan, OP_RAPID_RESPONSE, 1793, Found 1 potential units to recruit for operation 1793 at (60:22) with target at (60:22)
+093, Japan, OP_RAPID_RESPONSE, 1793, Added Warrior 1153 to slot 1 in army 1794. ETA at (60:22) is 2 
+093, Japan, OP_RAPID_RESPONSE, 1793, Transition to gathering stage
+093, Japan, OP_RAPID_RESPONSE, 1793, POST Gathering Forces for army 1794; center (60:22); variance (1.00:6.25); free slots 2
+094, Denmark, OP_FOUND_CITY, 1881, Ended: NoTarget; Distance -1; Duration 95
+094, Portugal, OP_FOUND_CITY, 1728, PRE Moving To Target with Army 1729; center (24:27); target (26:24); Progress 43 percent
+094, Portugal, OP_FOUND_CITY, 1728, POST Moving To Target with Army 1729; center (25:26); target (26:24); Progress 58 percent
+094, Poland, OP_FOUND_CITY, 1884, Ended: NoTarget; Distance -1; Duration 95
+094, Egypt, OP_FOUND_CITY, 1885, Ended: NoTarget; Distance -1; Duration 95
+094, Austria, OP_FOUND_CITY, 1887, Ended: NoTarget; Distance -1; Duration 95
+094, Japan, OP_FOUND_CITY, 1891, Ended: NoTarget; Distance -1; Duration 95
+094, Japan, OP_RAPID_RESPONSE, 1793, PRE Gathering Forces for army 1794; center (60:22); variance (1.00:6.25); free slots 2
+094, Japan, OP_RAPID_RESPONSE, 1793, Transition to movement stage
+094, Japan, OP_RAPID_RESPONSE, 1793, POST Moving To Target with Army 1794; center (60:22); target (60:22); Progress 100 percent
+095, Denmark, OP_FOUND_CITY, 1898, Ended: NoTarget; Distance -1; Duration 96
+095, Portugal, OP_FOUND_CITY, 1728, PRE Moving To Target with Army 1729; center (25:26); target (26:24); Progress 58 percent
+095, Portugal, OP_FOUND_CITY, 1728, POST Moving To Target with Army 1729; center (25:25); target (26:24); Progress 100 percent
+095, Poland, OP_FOUND_CITY, 1900, Ended: NoTarget; Distance -1; Duration 96
+095, Egypt, OP_FOUND_CITY, 1901, Ended: NoTarget; Distance -1; Duration 96
+095, Austria, OP_FOUND_CITY, 1903, Ended: NoTarget; Distance -1; Duration 96
+095, Japan, OP_FOUND_CITY, 1905, Ended: NoTarget; Distance -1; Duration 96
+095, Japan, OP_RAPID_RESPONSE, 1906, Initial stage is recruiting
+095, Japan, OP_RAPID_RESPONSE, 1906, Found 1 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+095, Japan, OP_RAPID_RESPONSE, 1906, Added Swordsman 1586 to slot 0 in army 1907. ETA at (60:22) is 2 
+095, Japan, OP_RAPID_RESPONSE, 1906, Started Army 1907; Units Recruited 1; Max Formation Size 4; Recruiting Units
+095, Japan, OP_RAPID_RESPONSE, 1793, PRE Moving To Target with Army 1794; center (60:22); target (60:22); Progress 100 percent
+095, Japan, OP_RAPID_RESPONSE, 1793, Contact with enemy!
+095, Japan, OP_RAPID_RESPONSE, 1793, Transition to finished stage; unit distance near 1; far 3
+095, Japan, OP_RAPID_RESPONSE, 1793, POST Completed
+095, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (62:15) - ETA 2; Open; Open; Open; 
+095, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+095, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (62:17) - ETA 2; Open; Open; Open; 
+096, Denmark, OP_FOUND_CITY, 1911, Ended: NoTarget; Distance -1; Duration 97
+096, Portugal, OP_FOUND_CITY, 1728, PRE Moving To Target with Army 1729; center (25:25); target (26:24); Progress 100 percent
+096, Portugal, OP_FOUND_CITY, 1728, Transition to target stage
+096, Portugal, OP_FOUND_CITY, 1728, City founded (Leiria) at (26:24), plot value 54354, q-6
+096, Portugal, OP_FOUND_CITY, 1728, Transition to finished stage
+096, Portugal, OP_FOUND_CITY, 1728, POST Completed
+096, Poland, OP_FOUND_CITY, 1915, Ended: NoTarget; Distance -1; Duration 97
+096, Egypt, OP_FOUND_CITY, 1916, Ended: NoTarget; Distance -1; Duration 97
+096, Austria, OP_FOUND_CITY, 1917, Ended: NoTarget; Distance -1; Duration 97
+096, Japan, OP_FOUND_CITY, 1919, Ended: NoTarget; Distance -1; Duration 97
+096, Japan, OP_RAPID_RESPONSE, 1793, Ended: Success; Distance 1; Duration 9
+096, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (62:17) - ETA 2; Open; Open; Open; 
+096, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+096, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (63:19) - ETA 1; Open; Open; Open; 
+097, Denmark, OP_FOUND_CITY, 1928, Ended: NoTarget; Distance -1; Duration 98
+097, Portugal, OP_FOUND_CITY, 1728, Ended: Success; Distance 7; Duration 17
+097, Poland, OP_FOUND_CITY, 1931, Ended: NoTarget; Distance -1; Duration 98
+097, Egypt, OP_FOUND_CITY, 1932, Ended: NoTarget; Distance -1; Duration 98
+097, Austria, OP_FOUND_CITY, 1934, Ended: NoTarget; Distance -1; Duration 98
+097, Japan, OP_FOUND_CITY, 1937, Ended: NoTarget; Distance -1; Duration 98
+097, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (63:19) - ETA 1; Open; Open; Open; 
+097, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+097, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (63:20) - ETA 0; Open; Open; Open; 
+098, Denmark, OP_FOUND_CITY, 1946, Ended: NoTarget; Distance -1; Duration 99
+098, Portugal, OP_FOUND_CITY, 1949, found target for settler, score 55948 (q-4)
+098, Portugal, OP_FOUND_CITY, 1949, Initial stage is recruiting
+098, Portugal, OP_FOUND_CITY, 1949, Found 0 potential units to recruit for operation 1949 at (20:26) with target at (22:16)
+098, Portugal, OP_FOUND_CITY, 1949, Started Army 1950; Units Recruited 1; Max Formation Size 2; Recruiting Units
+098, Portugal, OP_FOUND_CITY, 1949, PRE Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA -1; Open; 
+098, Portugal, OP_FOUND_CITY, 1949, Found 0 potential units to recruit for operation 1949 at (20:26) with target at (22:16)
+098, Portugal, OP_FOUND_CITY, 1949, POST Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+098, Poland, OP_FOUND_CITY, 1954, Ended: NoTarget; Distance -1; Duration 99
+098, Egypt, OP_FOUND_CITY, 1955, Ended: NoTarget; Distance -1; Duration 99
+098, Austria, OP_FOUND_CITY, 1957, Ended: NoTarget; Distance -1; Duration 99
+098, Japan, OP_FOUND_CITY, 1959, Ended: NoTarget; Distance -1; Duration 99
+098, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (63:20) - ETA 0; Open; Open; Open; 
+098, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+098, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (62:20) - ETA 0; Open; Open; Open; 
+099, Denmark, OP_FOUND_CITY, 1967, Ended: NoTarget; Distance -1; Duration 100
+099, Portugal, OP_FOUND_CITY, 1949, PRE Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+099, Portugal, OP_FOUND_CITY, 1949, Found 0 potential units to recruit for operation 1949 at (20:26) with target at (22:16)
+099, Portugal, OP_FOUND_CITY, 1949, POST Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+099, Poland, OP_FOUND_CITY, 1972, Ended: NoTarget; Distance -1; Duration 100
+099, Egypt, OP_FOUND_CITY, 1973, Ended: NoTarget; Distance -1; Duration 100
+099, Austria, OP_FOUND_CITY, 1974, Ended: NoTarget; Distance -1; Duration 100
+099, Japan, OP_FOUND_CITY, 1976, Ended: NoTarget; Distance -1; Duration 100
+099, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (62:20) - ETA 0; Open; Open; Open; 
+099, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+099, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+100, Denmark, OP_FOUND_CITY, 1984, Ended: NoTarget; Distance -1; Duration 101
+100, Portugal, OP_FOUND_CITY, 1949, PRE Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+100, Portugal, OP_FOUND_CITY, 1949, Found 0 potential units to recruit for operation 1949 at (20:26) with target at (22:16)
+100, Portugal, OP_FOUND_CITY, 1949, POST Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+100, Poland, OP_FOUND_CITY, 1988, Ended: NoTarget; Distance -1; Duration 101
+100, Egypt, OP_FOUND_CITY, 1989, Ended: NoTarget; Distance -1; Duration 101
+100, Austria, OP_FOUND_CITY, 1990, Ended: NoTarget; Distance -1; Duration 101
+100, Japan, OP_FOUND_CITY, 1993, Ended: NoTarget; Distance -1; Duration 101
+100, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+100, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+100, Japan, OP_RAPID_RESPONSE, 1906, Contact with enemy!
+100, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (61:23) - ETA 0; Open; Open; Open; 
+101, Denmark, OP_FOUND_CITY, 1998, Ended: NoTarget; Distance -1; Duration 102
+101, Portugal, OP_FOUND_CITY, 2002, Ended: NoTarget; Distance -1; Duration 102
+101, Portugal, OP_FOUND_CITY, 1949, PRE Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+101, Portugal, OP_FOUND_CITY, 1949, Found 0 potential units to recruit for operation 1949 at (20:26) with target at (22:16)
+101, Portugal, OP_FOUND_CITY, 1949, POST Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+101, Poland, OP_FOUND_CITY, 2006, Ended: NoTarget; Distance -1; Duration 102
+101, Egypt, OP_FOUND_CITY, 2007, Ended: NoTarget; Distance -1; Duration 102
+101, Austria, OP_FOUND_CITY, 2008, Ended: NoTarget; Distance -1; Duration 102
+101, Japan, OP_FOUND_CITY, 2015, Ended: NoTarget; Distance -1; Duration 102
+101, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (61:23) - ETA 0; Open; Open; Open; 
+101, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+101, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (61:23) - ETA 0; Open; Open; Open; 
+102, Denmark, OP_FOUND_CITY, 2021, Ended: NoTarget; Distance -1; Duration 103
+102, Portugal, OP_FOUND_CITY, 2023, Ended: NoTarget; Distance -1; Duration 103
+102, Portugal, OP_FOUND_CITY, 1949, PRE Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+102, Portugal, OP_FOUND_CITY, 1949, Found 0 potential units to recruit for operation 1949 at (20:26) with target at (22:16)
+102, Portugal, OP_FOUND_CITY, 1949, POST Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+102, China, OP_FOUND_CITY, 2026, Ended: NoTarget; Distance -1; Duration 103
+102, Poland, OP_FOUND_CITY, 2027, Ended: NoTarget; Distance -1; Duration 103
+102, Egypt, OP_FOUND_CITY, 2029, Ended: NoTarget; Distance -1; Duration 103
+102, Austria, OP_FOUND_CITY, 2030, Ended: NoTarget; Distance -1; Duration 103
+102, Japan, OP_FOUND_CITY, 2032, found target for settler, score 54372 (q-6)
+102, Japan, OP_FOUND_CITY, 2032, Initial stage is recruiting
+102, Japan, OP_FOUND_CITY, 2032, Found 0 potential units to recruit for operation 2032 at (60:22) with target at (53:16)
+102, Japan, OP_FOUND_CITY, 2032, Started Army 2033; Units Recruited 1; Max Formation Size 2; Recruiting Units
+102, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (61:23) - ETA 0; Open; Open; Open; 
+102, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+102, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+102, Japan, OP_FOUND_CITY, 2032, PRE Recruiting Units for army 2033; Settler 1673 at (60:22) - ETA -1; Open; 
+102, Japan, OP_FOUND_CITY, 2032, Found 0 potential units to recruit for operation 2032 at (60:22) with target at (53:16)
+102, Japan, OP_FOUND_CITY, 2032, POST Recruiting Units for army 2033; Settler 1673 at (60:22) - ETA 0; Open; 
+103, Denmark, OP_FOUND_CITY, 2036, Ended: NoTarget; Distance -1; Duration 104
+103, Portugal, OP_FOUND_CITY, 2038, Ended: NoTarget; Distance -1; Duration 104
+103, Portugal, OP_FOUND_CITY, 1949, PRE Recruiting Units for army 1950; Settler 1948 at (20:26) - ETA 0; Open; 
+103, Portugal, OP_FOUND_CITY, 1949, Found 2 potential units to recruit for operation 1949 at (20:26) with target at (22:16)
+103, Portugal, OP_FOUND_CITY, 1949, Added Swordsman 2040 to slot 1 in army 1950. ETA at (20:26) is 0 
+103, Portugal, OP_FOUND_CITY, 1949, Transition to gathering stage
+103, Portugal, OP_FOUND_CITY, 1949, POST Gathering Forces for army 1950; center (19:24); variance (0.00:0.00); free slots 0
+103, China, OP_FOUND_CITY, 2042, Ended: NoTarget; Distance -1; Duration 104
+103, Poland, OP_FOUND_CITY, 2043, Ended: NoTarget; Distance -1; Duration 104
+103, Egypt, OP_FOUND_CITY, 2045, Ended: NoTarget; Distance -1; Duration 104
+103, Austria, OP_FOUND_CITY, 2046, Ended: NoTarget; Distance -1; Duration 104
+103, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+103, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+103, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+103, Japan, OP_FOUND_CITY, 2032, PRE Recruiting Units for army 2033; Settler 1673 at (60:22) - ETA 0; Open; 
+103, Japan, OP_FOUND_CITY, 2032, Found 1 potential units to recruit for operation 2032 at (60:22) with target at (53:16)
+103, Japan, OP_FOUND_CITY, 2032, Added Spearman 2048 to slot 1 in army 2033. ETA at (60:22) is 0 
+103, Japan, OP_FOUND_CITY, 2032, Transition to gathering stage
+103, Japan, OP_FOUND_CITY, 2032, POST Gathering Forces for army 2033; center (60:18); variance (0.00:0.00); free slots 0
+104, Denmark, OP_FOUND_CITY, 2052, Ended: NoTarget; Distance -1; Duration 105
+104, Portugal, OP_FOUND_CITY, 2053, Ended: NoTarget; Distance -1; Duration 105
+104, Portugal, OP_FOUND_CITY, 1949, PRE Gathering Forces for army 1950; center (19:24); variance (0.00:0.00); free slots 0
+104, Portugal, OP_FOUND_CITY, 1949, Transition to movement stage
+104, Portugal, OP_FOUND_CITY, 1949, POST Moving To Target with Army 1950; center (19:22); target (22:16); Progress 0 percent
+104, China, OP_FOUND_CITY, 2056, Ended: NoTarget; Distance -1; Duration 105
+104, Poland, OP_FOUND_CITY, 2057, Ended: NoTarget; Distance -1; Duration 105
+104, Egypt, OP_FOUND_CITY, 2058, Ended: NoTarget; Distance -1; Duration 105
+104, Austria, OP_FOUND_CITY, 2059, Ended: NoTarget; Distance -1; Duration 105
+104, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+104, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+104, Japan, OP_RAPID_RESPONSE, 1906, Contact with enemy!
+104, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (61:23) - ETA 0; Open; Open; Open; 
+104, Japan, OP_FOUND_CITY, 2032, PRE Gathering Forces for army 2033; center (60:18); variance (0.00:0.00); free slots 0
+104, Japan, OP_FOUND_CITY, 2032, Transition to movement stage
+104, Japan, OP_FOUND_CITY, 2032, POST Moving To Target with Army 2033; center (57:18); target (53:16); Progress 0 percent
+105, Denmark, OP_FOUND_CITY, 2068, Ended: NoTarget; Distance -1; Duration 106
+105, Portugal, OP_FOUND_CITY, 2069, Ended: NoTarget; Distance -1; Duration 106
+105, Portugal, OP_FOUND_CITY, 1949, PRE Moving To Target with Army 1950; center (19:22); target (22:16); Progress 0 percent
+105, Portugal, OP_FOUND_CITY, 1949, POST Moving To Target with Army 1950; center (20:21); target (22:16); Progress 15 percent
+105, China, OP_FOUND_CITY, 2071, Ended: NoTarget; Distance -1; Duration 106
+105, Poland, OP_FOUND_CITY, 2072, Ended: NoTarget; Distance -1; Duration 106
+105, Egypt, OP_FOUND_CITY, 2074, Ended: NoTarget; Distance -1; Duration 106
+105, Austria, OP_FOUND_CITY, 2075, Ended: NoTarget; Distance -1; Duration 106
+105, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (61:23) - ETA 0; Open; Open; Open; 
+105, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+105, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+105, Japan, OP_FOUND_CITY, 2032, PRE Moving To Target with Army 2033; center (57:18); target (53:16); Progress 0 percent
+105, Japan, OP_FOUND_CITY, 2032, POST Moving To Target with Army 2033; center (55:18); target (53:16); Progress 34 percent
+106, Denmark, OP_FOUND_CITY, 2088, Ended: NoTarget; Distance -1; Duration 107
+106, Portugal, OP_FOUND_CITY, 2089, Ended: NoTarget; Distance -1; Duration 107
+106, Portugal, OP_FOUND_CITY, 1949, PRE Moving To Target with Army 1950; center (20:21); target (22:16); Progress 15 percent
+106, Portugal, OP_FOUND_CITY, 1949, POST Moving To Target with Army 1950; center (21:19); target (22:16); Progress 43 percent
+106, China, OP_FOUND_CITY, 2091, Ended: NoTarget; Distance -1; Duration 107
+106, Poland, OP_FOUND_CITY, 2093, Ended: NoTarget; Distance -1; Duration 107
+106, Egypt, OP_FOUND_CITY, 2094, Ended: NoTarget; Distance -1; Duration 107
+106, Austria, OP_FOUND_CITY, 2095, Ended: NoTarget; Distance -1; Duration 107
+106, Japan, OP_RAPID_RESPONSE, 2097, Initial stage is recruiting
+106, Japan, OP_RAPID_RESPONSE, 2097, Found 1 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+106, Japan, OP_RAPID_RESPONSE, 2097, Added Spearman 1557 to slot 0 in army 2098. ETA at (60:22) is 0 
+106, Japan, OP_RAPID_RESPONSE, 2097, Started Army 2098; Units Recruited 1; Max Formation Size 4; Recruiting Units
+106, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+106, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+106, Japan, OP_RAPID_RESPONSE, 1906, Contact with enemy!
+106, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+106, Japan, OP_FOUND_CITY, 2032, PRE Moving To Target with Army 2033; center (55:18); target (53:16); Progress 34 percent
+106, Japan, OP_FOUND_CITY, 2032, POST Moving To Target with Army 2033; center (54:18); target (53:16); Progress 50 percent
+106, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (60:18) - ETA 0; Open; Open; Open; 
+106, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+106, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (62:20) - ETA 0; Open; Open; Open; 
+107, Denmark, OP_FOUND_CITY, 2104, Ended: NoTarget; Distance -1; Duration 108
+107, Portugal, OP_FOUND_CITY, 2105, Ended: NoTarget; Distance -1; Duration 108
+107, Portugal, OP_FOUND_CITY, 1949, PRE Moving To Target with Army 1950; center (21:19); target (22:16); Progress 43 percent
+107, Portugal, OP_FOUND_CITY, 1949, POST Moving To Target with Army 1950; center (21:17); target (22:16); Progress 100 percent
+107, China, OP_FOUND_CITY, 2108, Ended: NoTarget; Distance -1; Duration 108
+107, Poland, OP_FOUND_CITY, 2111, Ended: NoTarget; Distance -1; Duration 108
+107, Egypt, OP_FOUND_CITY, 2112, Ended: NoTarget; Distance -1; Duration 108
+107, Austria, OP_FOUND_CITY, 2113, Ended: NoTarget; Distance -1; Duration 108
+107, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+107, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+107, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+107, Japan, OP_FOUND_CITY, 2032, PRE Moving To Target with Army 2033; center (54:18); target (53:16); Progress 50 percent
+107, Japan, OP_FOUND_CITY, 2032, Transition to target stage
+107, Japan, OP_FOUND_CITY, 2032, POST At Target
+107, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (62:20) - ETA 0; Open; Open; Open; 
+107, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+107, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (61:21) - ETA 0; Open; Open; Open; 
+108, Denmark, OP_FOUND_CITY, 2121, Ended: NoTarget; Distance -1; Duration 109
+108, Portugal, OP_FOUND_CITY, 2122, Ended: NoTarget; Distance -1; Duration 109
+108, Portugal, OP_FOUND_CITY, 1949, PRE Moving To Target with Army 1950; center (21:17); target (22:16); Progress 100 percent
+108, Portugal, OP_FOUND_CITY, 1949, Transition to target stage
+108, Portugal, OP_FOUND_CITY, 1949, POST At Target
+108, China, OP_FOUND_CITY, 2124, Ended: NoTarget; Distance -1; Duration 109
+108, Poland, OP_FOUND_CITY, 2125, Ended: NoTarget; Distance -1; Duration 109
+108, Egypt, OP_FOUND_CITY, 2126, Ended: NoTarget; Distance -1; Duration 109
+108, Austria, OP_FOUND_CITY, 2127, Ended: NoTarget; Distance -1; Duration 109
+108, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+108, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+108, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+108, Japan, OP_FOUND_CITY, 2032, PRE At Target
+108, Japan, OP_FOUND_CITY, 2032, City founded (Kagoshima) at (53:16), plot value 57970, q0
+108, Japan, OP_FOUND_CITY, 2032, Transition to finished stage
+108, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (61:21) - ETA 0; Open; Open; Open; 
+108, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+108, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+108, Japan, OP_FOUND_CITY, 2032, Ended: Success; Distance 6; Duration 6
+109, Denmark, OP_FOUND_CITY, 2136, Ended: NoTarget; Distance -1; Duration 110
+109, Portugal, OP_FOUND_CITY, 2137, Ended: NoTarget; Distance -1; Duration 110
+109, Portugal, OP_FOUND_CITY, 1949, PRE At Target
+109, Portugal, OP_FOUND_CITY, 1949, City founded (Goa) at (22:16), plot value 55948, q-4
+109, Portugal, OP_FOUND_CITY, 1949, Transition to finished stage
+109, Portugal, OP_FOUND_CITY, 1949, Ended: Success; Distance 7; Duration 11
+109, China, OP_FOUND_CITY, 2141, Ended: NoTarget; Distance -1; Duration 110
+109, Poland, OP_FOUND_CITY, 2142, Ended: NoTarget; Distance -1; Duration 110
+109, Egypt, OP_FOUND_CITY, 2144, Ended: NoTarget; Distance -1; Duration 110
+109, Austria, OP_FOUND_CITY, 2146, Ended: NoTarget; Distance -1; Duration 110
+109, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+109, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+109, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+109, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+109, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+109, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+110, Denmark, OP_FOUND_CITY, 2154, Ended: NoTarget; Distance -1; Duration 111
+110, Portugal, OP_FOUND_CITY, 2155, Ended: NoTarget; Distance -1; Duration 111
+110, China, OP_FOUND_CITY, 2158, Ended: NoTarget; Distance -1; Duration 111
+110, Poland, OP_FOUND_CITY, 2160, Ended: NoTarget; Distance -1; Duration 111
+110, Egypt, OP_FOUND_CITY, 2162, Ended: NoTarget; Distance -1; Duration 111
+110, Austria, OP_FOUND_CITY, 2163, Ended: NoTarget; Distance -1; Duration 111
+110, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+110, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+110, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+110, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+110, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+110, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+111, Denmark, OP_FOUND_CITY, 2168, Ended: NoTarget; Distance -1; Duration 112
+111, Portugal, OP_FOUND_CITY, 2169, Ended: NoTarget; Distance -1; Duration 112
+111, China, OP_FOUND_CITY, 2172, Ended: NoTarget; Distance -1; Duration 112
+111, Poland, OP_FOUND_CITY, 2173, Ended: NoTarget; Distance -1; Duration 112
+111, Egypt, OP_FOUND_CITY, 2177, Ended: NoTarget; Distance -1; Duration 112
+111, Austria, OP_FOUND_CITY, 2178, Ended: NoTarget; Distance -1; Duration 112
+111, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+111, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+111, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+111, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+111, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+111, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+112, Denmark, OP_FOUND_CITY, 2183, Ended: NoTarget; Distance -1; Duration 113
+112, Portugal, OP_FOUND_CITY, 2184, Ended: NoTarget; Distance -1; Duration 113
+112, China, OP_FOUND_CITY, 2187, Ended: NoTarget; Distance -1; Duration 113
+112, Poland, OP_FOUND_CITY, 2188, Ended: NoTarget; Distance -1; Duration 113
+112, Egypt, OP_FOUND_CITY, 2190, Ended: NoTarget; Distance -1; Duration 113
+112, Austria, OP_FOUND_CITY, 2191, Ended: NoTarget; Distance -1; Duration 113
+112, The_Inca, OP_FOUND_CITY, 2193, found target for settler, score 53862 (q-7)
+112, The_Inca, OP_FOUND_CITY, 2193, Skip recruiting, start with movement stage
+112, The_Inca, OP_FOUND_CITY, 2193, Found 4 potential units to recruit for operation 2193 at (33:14) with target at (40:12)
+112, The_Inca, OP_FOUND_CITY, 2193, Added Swordsman 1723 to slot 1 in army 2194. ETA at (33:14) is 0 
+112, The_Inca, OP_FOUND_CITY, 2193, Started Army 2194; Units Recruited 2; Max Formation Size 2; Moving To Target
+112, The_Inca, OP_FOUND_CITY, 2193, PRE Moving To Target with Army 2194; center (33:14); target (40:12); Progress 0 percent
+112, The_Inca, OP_FOUND_CITY, 2193, POST Moving To Target with Army 2194; center (33:11); target (40:12); Progress 12 percent
+112, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+112, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+112, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+112, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+112, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+112, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+113, Portugal, OP_FOUND_CITY, 2204, Ended: NoTarget; Distance -1; Duration 114
+113, China, OP_FOUND_CITY, 2207, Ended: NoTarget; Distance -1; Duration 114
+113, Poland, OP_FOUND_CITY, 2208, Ended: NoTarget; Distance -1; Duration 114
+113, Egypt, OP_FOUND_CITY, 2209, Ended: NoTarget; Distance -1; Duration 114
+113, Austria, OP_FOUND_CITY, 2211, Ended: NoTarget; Distance -1; Duration 114
+113, The_Inca, OP_FOUND_CITY, 2193, PRE Moving To Target with Army 2194; center (33:11); target (40:12); Progress 12 percent
+113, The_Inca, OP_FOUND_CITY, 2193, POST Moving To Target with Army 2194; center (35:10); target (40:12); Progress 23 percent
+113, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+113, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+113, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+113, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+113, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+113, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+114, Portugal, OP_FOUND_CITY, 2219, Ended: NoTarget; Distance -1; Duration 115
+114, China, OP_FOUND_CITY, 2221, Ended: NoTarget; Distance -1; Duration 115
+114, Poland, OP_FOUND_CITY, 2222, Ended: NoTarget; Distance -1; Duration 115
+114, Egypt, OP_FOUND_CITY, 2223, Ended: NoTarget; Distance -1; Duration 115
+114, Austria, OP_FOUND_CITY, 2224, Ended: NoTarget; Distance -1; Duration 115
+114, The_Inca, OP_FOUND_CITY, 2193, PRE Moving To Target with Army 2194; center (35:10); target (40:12); Progress 23 percent
+114, The_Inca, OP_FOUND_CITY, 2193, POST Moving To Target with Army 2194; center (36:11); target (40:12); Progress 45 percent
+114, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+114, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+114, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+114, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+114, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+114, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+115, Portugal, OP_FOUND_CITY, 2235, Ended: NoTarget; Distance -1; Duration 116
+115, China, OP_FOUND_CITY, 2237, Ended: NoTarget; Distance -1; Duration 116
+115, Poland, OP_FOUND_CITY, 2238, Ended: NoTarget; Distance -1; Duration 116
+115, Egypt, OP_FOUND_CITY, 2239, Ended: NoTarget; Distance -1; Duration 116
+115, Austria, OP_FOUND_CITY, 2242, Ended: NoTarget; Distance -1; Duration 116
+115, The_Inca, OP_FOUND_CITY, 2193, PRE Moving To Target with Army 2194; center (36:11); target (40:12); Progress 45 percent
+115, The_Inca, OP_FOUND_CITY, 2193, POST Moving To Target with Army 2194; center (38:10); target (40:12); Progress 56 percent
+115, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+115, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+115, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+115, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+115, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+115, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+116, Portugal, OP_FOUND_CITY, 2251, Ended: NoTarget; Distance -1; Duration 117
+116, China, OP_FOUND_CITY, 2255, Ended: NoTarget; Distance -1; Duration 117
+116, Poland, OP_FOUND_CITY, 2256, Ended: NoTarget; Distance -1; Duration 117
+116, Egypt, OP_FOUND_CITY, 2258, Ended: NoTarget; Distance -1; Duration 117
+116, Austria, OP_FOUND_CITY, 2259, Ended: NoTarget; Distance -1; Duration 117
+116, The_Inca, OP_FOUND_CITY, 2193, PRE Moving To Target with Army 2194; center (38:10); target (40:12); Progress 56 percent
+116, The_Inca, OP_FOUND_CITY, 2193, POST Moving To Target with Army 2194; center (39:11); target (40:12); Progress 100 percent
+116, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+116, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+116, Japan, OP_RAPID_RESPONSE, 1906, Contact with enemy!
+116, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+116, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+116, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+116, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (61:22) - ETA 0; Open; Open; Open; 
+117, Portugal, OP_FOUND_CITY, 2267, Ended: NoTarget; Distance -1; Duration 118
+117, China, OP_FOUND_CITY, 2271, Ended: NoTarget; Distance -1; Duration 118
+117, Poland, OP_FOUND_CITY, 2272, Ended: NoTarget; Distance -1; Duration 118
+117, Egypt, OP_FOUND_CITY, 2274, Ended: NoTarget; Distance -1; Duration 118
+117, Austria, OP_FOUND_CITY, 2275, Ended: NoTarget; Distance -1; Duration 118
+117, The_Inca, OP_FOUND_CITY, 2193, PRE Moving To Target with Army 2194; center (39:11); target (40:12); Progress 100 percent
+117, The_Inca, OP_FOUND_CITY, 2193, Transition to target stage
+117, The_Inca, OP_FOUND_CITY, 2193, City founded (Huamanga) at (40:12), plot value 52417, q-10
+117, The_Inca, OP_FOUND_CITY, 2193, Transition to finished stage
+117, The_Inca, OP_FOUND_CITY, 2193, POST Completed
+117, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+117, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+117, Japan, OP_RAPID_RESPONSE, 1906, Contact with enemy!
+117, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (61:24) - ETA 0; Open; Open; Open; 
+117, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (61:22) - ETA 0; Open; Open; Open; 
+117, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+117, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+118, Portugal, OP_FOUND_CITY, 2286, Ended: NoTarget; Distance -1; Duration 119
+118, China, OP_FOUND_CITY, 2290, Ended: NoTarget; Distance -1; Duration 119
+118, Poland, OP_FOUND_CITY, 2291, Ended: NoTarget; Distance -1; Duration 119
+118, Egypt, OP_FOUND_CITY, 2292, Ended: NoTarget; Distance -1; Duration 119
+118, Austria, OP_FOUND_CITY, 2293, Ended: NoTarget; Distance -1; Duration 119
+118, The_Inca, OP_FOUND_CITY, 2193, Ended: Success; Distance 9; Duration 6
+118, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (61:24) - ETA 0; Open; Open; Open; 
+118, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+118, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+118, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+118, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+118, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+119, Portugal, OP_FOUND_CITY, 2300, Ended: NoTarget; Distance -1; Duration 120
+119, China, OP_FOUND_CITY, 2305, Ended: NoTarget; Distance -1; Duration 120
+119, Poland, OP_FOUND_CITY, 2307, Ended: NoTarget; Distance -1; Duration 120
+119, Egypt, OP_FOUND_CITY, 2309, Ended: NoTarget; Distance -1; Duration 120
+119, Austria, OP_FOUND_CITY, 2310, Ended: NoTarget; Distance -1; Duration 120
+119, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+119, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+119, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+119, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+119, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+119, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+120, Portugal, OP_FOUND_CITY, 2321, Ended: NoTarget; Distance -1; Duration 121
+120, China, OP_FOUND_CITY, 2324, Ended: NoTarget; Distance -1; Duration 121
+120, Poland, OP_FOUND_CITY, 2325, Ended: NoTarget; Distance -1; Duration 121
+120, Egypt, OP_FOUND_CITY, 2326, Ended: NoTarget; Distance -1; Duration 121
+120, Austria, OP_FOUND_CITY, 2327, Ended: NoTarget; Distance -1; Duration 121
+120, Japan, OP_RAPID_RESPONSE, 2334, Initial stage is recruiting
+120, Japan, OP_RAPID_RESPONSE, 2334, Found 1 potential units to recruit for operation 2334 at (56:25) with target at (56:25)
+120, Japan, OP_RAPID_RESPONSE, 2334, Added Spearman 2317 to slot 0 in army 2335. ETA at (56:25) is 1 
+120, Japan, OP_RAPID_RESPONSE, 2334, Started Army 2335; Units Recruited 1; Max Formation Size 4; Recruiting Units
+120, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+120, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+120, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+120, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+120, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+120, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+120, Japan, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Open; Open; Open; Open; 
+120, Japan, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (56:25) with target at (56:25)
+120, Japan, OP_RAPID_RESPONSE, 2334, Ended: LostPath; Distance 1; Duration 0
+121, Portugal, OP_FOUND_CITY, 2344, Ended: NoTarget; Distance -1; Duration 122
+121, China, OP_FOUND_CITY, 2347, Ended: NoTarget; Distance -1; Duration 122
+121, Poland, OP_FOUND_CITY, 2349, Ended: NoTarget; Distance -1; Duration 122
+121, Egypt, OP_FOUND_CITY, 2351, Ended: NoTarget; Distance -1; Duration 122
+121, Austria, OP_FOUND_CITY, 2355, Ended: NoTarget; Distance -1; Duration 122
+121, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+121, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+121, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+121, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+121, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+121, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+122, Portugal, OP_FOUND_CITY, 2366, Ended: NoTarget; Distance -1; Duration 123
+122, China, OP_FOUND_CITY, 2369, Ended: NoTarget; Distance -1; Duration 123
+122, Poland, OP_FOUND_CITY, 2370, Ended: NoTarget; Distance -1; Duration 123
+122, Egypt, OP_FOUND_CITY, 2371, Ended: NoTarget; Distance -1; Duration 123
+122, Austria, OP_FOUND_CITY, 2373, Ended: NoTarget; Distance -1; Duration 123
+122, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:22) - ETA 0; Open; Open; Open; 
+122, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+122, Japan, OP_RAPID_RESPONSE, 1906, Contact with enemy!
+122, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+122, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (63:22) - ETA 0; Open; Open; Open; 
+122, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+122, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+123, Portugal, OP_FOUND_CITY, 2386, Ended: NoTarget; Distance -1; Duration 124
+123, China, OP_FOUND_CITY, 2388, Ended: NoTarget; Distance -1; Duration 124
+123, Poland, OP_FOUND_CITY, 2389, Ended: NoTarget; Distance -1; Duration 124
+123, Egypt, OP_FOUND_CITY, 2391, Ended: NoTarget; Distance -1; Duration 124
+123, Austria, OP_FOUND_CITY, 2396, Ended: NoTarget; Distance -1; Duration 124
+123, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:23) - ETA 0; Open; Open; Open; 
+123, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+123, Japan, OP_RAPID_RESPONSE, 1906, Contact with enemy!
+123, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Swordsman 1586 at (60:24) - ETA 0; Open; Open; Open; 
+123, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (62:22) - ETA 0; Open; Open; Open; 
+123, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+123, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (60:22) - ETA 0; Open; Open; Open; 
+124, Portugal, OP_FOUND_CITY, 2409, Ended: NoTarget; Distance -1; Duration 125
+124, China, OP_FOUND_CITY, 2414, Ended: NoTarget; Distance -1; Duration 125
+124, Poland, OP_FOUND_CITY, 2415, Ended: NoTarget; Distance -1; Duration 125
+124, Denmark, OP_RAPID_RESPONSE, 2417, Initial stage is recruiting
+124, Denmark, OP_RAPID_RESPONSE, 2417, Found 1 potential units to recruit for operation 2417 at (55:10) with target at (55:10)
+124, Denmark, OP_RAPID_RESPONSE, 2417, Added Pikeman 2419 to slot 0 in army 2418. ETA at (55:10) is 3 
+124, Denmark, OP_RAPID_RESPONSE, 2417, Started Army 2418; Units Recruited 1; Max Formation Size 4; Recruiting Units
+124, Denmark, OP_RAPID_RESPONSE, 2417, Ended: NoUnits; Distance 1; Duration 0
+124, Egypt, OP_FOUND_CITY, 2427, Ended: NoTarget; Distance -1; Duration 125
+124, Austria, OP_FOUND_CITY, 2428, Ended: NoTarget; Distance -1; Duration 125
+124, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Swordsman 1586 at (60:24) - ETA 0; Open; Open; Open; 
+124, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+124, Japan, OP_RAPID_RESPONSE, 1906, POST Recruiting Units for army 1907; Open; Open; Open; Open; 
+124, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (60:22) - ETA 0; Open; Open; Open; 
+124, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+124, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (61:23) - ETA 0; Open; Open; Open; 
+125, Portugal, OP_FOUND_CITY, 2448, Ended: NoTarget; Distance -1; Duration 126
+125, China, OP_FOUND_CITY, 2450, Ended: NoTarget; Distance -1; Duration 126
+125, Poland, OP_FOUND_CITY, 2451, Ended: NoTarget; Distance -1; Duration 126
+125, Egypt, OP_FOUND_CITY, 2452, Ended: NoTarget; Distance -1; Duration 126
+125, Austria, OP_FOUND_CITY, 2453, Ended: NoTarget; Distance -1; Duration 126
+125, Japan, OP_RAPID_RESPONSE, 2457, Initial stage is recruiting
+125, Japan, OP_RAPID_RESPONSE, 2457, Found 1 potential units to recruit for operation 2457 at (56:25) with target at (56:25)
+125, Japan, OP_RAPID_RESPONSE, 2457, Added Spearman 2150 to slot 0 in army 2458. ETA at (56:25) is 1 
+125, Japan, OP_RAPID_RESPONSE, 2457, Started Army 2458; Units Recruited 1; Max Formation Size 4; Recruiting Units
+125, Japan, OP_RAPID_RESPONSE, 1906, PRE Recruiting Units for army 1907; Open; Open; Open; Open; 
+125, Japan, OP_RAPID_RESPONSE, 1906, Found 0 potential units to recruit for operation 1906 at (60:22) with target at (60:22)
+125, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (61:23) - ETA 0; Open; Open; Open; 
+125, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+125, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+125, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (61:23) - ETA 0; Open; Open; Open; 
+125, Japan, OP_RAPID_RESPONSE, 2457, PRE Recruiting Units for army 2458; Spearman 2150 at (59:19) - ETA 1; Open; Open; Open; 
+125, Japan, OP_RAPID_RESPONSE, 2457, Found 0 potential units to recruit for operation 2457 at (56:25) with target at (56:25)
+125, Japan, OP_RAPID_RESPONSE, 2457, POST Recruiting Units for army 2458; Spearman 2150 at (58:22) - ETA 1; Open; Open; Open; 
+125, Japan, OP_RAPID_RESPONSE, 1906, Ended: LostPath; Distance 1; Duration 30
+126, Portugal, OP_FOUND_CITY, 2475, Ended: NoTarget; Distance -1; Duration 127
+126, China, OP_FOUND_CITY, 2480, found target for settler, score 49683 (q-14)
+126, China, OP_FOUND_CITY, 2480, Skip recruiting, start with movement stage
+126, China, OP_FOUND_CITY, 2480, Found 1 potential units to recruit for operation 2480 at (47:24) with target at (43:15)
+126, China, OP_FOUND_CITY, 2480, Added Warrior 1006 to slot 1 in army 2481. ETA at (47:24) is 3 
+126, China, OP_FOUND_CITY, 2480, Started Army 2481; Units Recruited 2; Max Formation Size 2; Moving To Target
+126, China, OP_FOUND_CITY, 2480, PRE Moving To Target with Army 2481; center (47:24); target (43:15); Progress 0 percent
+126, China, OP_FOUND_CITY, 2480, POST Moving To Target with Army 2481; center (45:23); target (43:15); Progress 10 percent
+126, Poland, OP_FOUND_CITY, 2482, Ended: NoTarget; Distance -1; Duration 127
+126, Egypt, OP_FOUND_CITY, 2485, Ended: NoTarget; Distance -1; Duration 127
+126, Austria, OP_FOUND_CITY, 2487, Ended: NoTarget; Distance -1; Duration 127
+126, The_Inca, OP_FOUND_CITY, 2491, Ended: NoTarget; Distance -1; Duration 127
+126, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (61:23) - ETA 0; Open; Open; Open; 
+126, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+126, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+126, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (61:23) - ETA 0; Open; Open; Open; 
+126, Japan, OP_RAPID_RESPONSE, 2457, PRE Recruiting Units for army 2458; Spearman 2150 at (58:22) - ETA 1; Open; Open; Open; 
+126, Japan, OP_RAPID_RESPONSE, 2457, Found 0 potential units to recruit for operation 2457 at (56:25) with target at (56:25)
+126, Japan, OP_RAPID_RESPONSE, 2457, Contact with enemy!
+126, Japan, OP_RAPID_RESPONSE, 2457, POST Recruiting Units for army 2458; Spearman 2150 at (58:24) - ETA 0; Open; Open; Open; 
+127, Portugal, OP_FOUND_CITY, 2512, Ended: NoTarget; Distance -1; Duration 128
+127, China, OP_FOUND_CITY, 2480, PRE Moving To Target with Army 2481; center (45:23); target (43:15); Progress 10 percent
+127, China, OP_FOUND_CITY, 2480, POST Moving To Target with Army 2481; center (41:25); target (43:15); Progress -20 percent
+127, Poland, OP_FOUND_CITY, 2515, Ended: NoTarget; Distance -1; Duration 128
+127, Egypt, OP_FOUND_CITY, 2516, Ended: NoTarget; Distance -1; Duration 128
+127, Austria, OP_FOUND_CITY, 2517, Ended: NoTarget; Distance -1; Duration 128
+127, The_Inca, OP_FOUND_CITY, 2518, Ended: NoTarget; Distance -1; Duration 128
+127, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (61:23) - ETA 0; Open; Open; Open; 
+127, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+127, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+127, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (61:23) - ETA 0; Open; Open; Open; 
+127, Japan, OP_RAPID_RESPONSE, 2457, PRE Recruiting Units for army 2458; Spearman 2150 at (58:24) - ETA 0; Open; Open; Open; 
+127, Japan, OP_RAPID_RESPONSE, 2457, Found 1 potential units to recruit for operation 2457 at (56:25) with target at (56:25)
+127, Japan, OP_RAPID_RESPONSE, 2457, Added Samurai 2434 to slot 1 in army 2458. ETA at (56:25) is 1 
+127, Japan, OP_RAPID_RESPONSE, 2457, Transition to gathering stage
+127, Japan, OP_RAPID_RESPONSE, 2457, POST Gathering Forces for army 2458; center (56:25); variance (4.00:2.25); free slots 2
+128, Portugal, OP_FOUND_CITY, 2534, Ended: NoTarget; Distance -1; Duration 129
+128, China, OP_FOUND_CITY, 2480, PRE Moving To Target with Army 2481; center (41:25); target (43:15); Progress -20 percent
+128, China, OP_FOUND_CITY, 2480, POST Moving To Target with Army 2481; center (43:24); target (43:15); Progress -10 percent
+128, Poland, OP_FOUND_CITY, 2539, Ended: NoTarget; Distance -1; Duration 129
+128, Egypt, OP_FOUND_CITY, 2541, Ended: NoTarget; Distance -1; Duration 129
+128, Austria, OP_FOUND_CITY, 2542, Ended: NoTarget; Distance -1; Duration 129
+128, The_Inca, OP_FOUND_CITY, 2545, Ended: NoTarget; Distance -1; Duration 129
+128, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Spearman 1557 at (61:23) - ETA 0; Open; Open; Open; 
+128, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+128, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+128, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Spearman 1557 at (61:23) - ETA 0; Open; Open; Open; 
+128, Japan, OP_RAPID_RESPONSE, 2457, PRE Gathering Forces for army 2458; center (56:25); variance (4.00:2.25); free slots 2
+128, Japan, OP_RAPID_RESPONSE, 2457, Transition to movement stage
+128, Japan, OP_RAPID_RESPONSE, 2457, POST Moving To Target with Army 2458; center (56:25); target (56:25); Progress 100 percent
+128, Japan, OP_RAPID_RESPONSE, 2097, Added Pikeman 2551 to slot 0 in army 2098. ETA at (60:22) is 0 
+129, Portugal, OP_FOUND_CITY, 2566, Ended: NoTarget; Distance -1; Duration 130
+129, China, OP_FOUND_CITY, 2480, PRE Moving To Target with Army 2481; center (43:24); target (43:15); Progress 0 percent
+129, China, OP_FOUND_CITY, 2480, POST Moving To Target with Army 2481; center (44:22); target (43:15); Progress 20 percent
+129, Poland, OP_FOUND_CITY, 2569, Ended: NoTarget; Distance -1; Duration 130
+129, Egypt, OP_FOUND_CITY, 2570, Ended: NoTarget; Distance -1; Duration 130
+129, Austria, OP_FOUND_CITY, 2571, Ended: NoTarget; Distance -1; Duration 130
+129, The_Inca, OP_FOUND_CITY, 2574, Ended: NoTarget; Distance -1; Duration 130
+129, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+129, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+129, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+129, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+129, Japan, OP_RAPID_RESPONSE, 2457, PRE Moving To Target with Army 2458; center (56:25); target (56:25); Progress 100 percent
+129, Japan, OP_RAPID_RESPONSE, 2457, Transition to finished stage; unit distance near 0; far 1
+129, Japan, OP_RAPID_RESPONSE, 2457, POST Completed
+130, Portugal, OP_FOUND_CITY, 2592, Ended: NoTarget; Distance -1; Duration 131
+130, China, OP_FOUND_CITY, 2480, PRE Moving To Target with Army 2481; center (44:22); target (43:15); Progress 20 percent
+130, China, OP_FOUND_CITY, 2480, POST Moving To Target with Army 2481; center (43:21); target (43:15); Progress 30 percent
+130, Poland, OP_FOUND_CITY, 2595, Ended: NoTarget; Distance -1; Duration 131
+130, Egypt, OP_FOUND_CITY, 2598, Ended: NoTarget; Distance -1; Duration 131
+130, Austria, OP_FOUND_CITY, 2599, Ended: NoTarget; Distance -1; Duration 131
+130, The_Inca, OP_FOUND_CITY, 2602, Ended: NoTarget; Distance -1; Duration 131
+130, Japan, OP_RAPID_RESPONSE, 2457, Ended: Success; Distance 1; Duration 5
+130, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+130, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+130, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+130, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+131, Portugal, OP_FOUND_CITY, 2619, Ended: NoTarget; Distance -1; Duration 132
+131, China, OP_FOUND_CITY, 2480, PRE Moving To Target with Army 2481; center (44:22); target (43:15); Progress 10 percent
+131, China, OP_FOUND_CITY, 2480, POST Moving To Target with Army 2481; center (45:22); target (43:15); Progress 20 percent
+131, Poland, OP_FOUND_CITY, 2623, Ended: NoTarget; Distance -1; Duration 132
+131, Egypt, OP_FOUND_CITY, 2625, Ended: NoTarget; Distance -1; Duration 132
+131, Austria, OP_FOUND_CITY, 2627, Ended: NoTarget; Distance -1; Duration 132
+131, The_Inca, OP_FOUND_CITY, 2630, Ended: NoTarget; Distance -1; Duration 132
+131, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+131, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+131, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+131, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+132, Portugal, OP_FOUND_CITY, 2650, Ended: NoTarget; Distance -1; Duration 133
+132, China, OP_FOUND_CITY, 2480, PRE Moving To Target with Army 2481; center (45:22); target (43:15); Progress 20 percent
+132, China, OP_FOUND_CITY, 2480, POST Moving To Target with Army 2481; center (44:21); target (43:15); Progress 30 percent
+132, Poland, OP_FOUND_CITY, 2653, Ended: NoTarget; Distance -1; Duration 133
+132, Egypt, OP_FOUND_CITY, 2655, Ended: NoTarget; Distance -1; Duration 133
+132, Austria, OP_FOUND_CITY, 2656, Ended: NoTarget; Distance -1; Duration 133
+132, The_Inca, OP_FOUND_CITY, 2659, Ended: NoTarget; Distance -1; Duration 133
+132, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+132, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+132, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+133, Portugal, OP_FOUND_CITY, 2674, Ended: NoTarget; Distance -1; Duration 134
+133, China, OP_FOUND_CITY, 2480, PRE Moving To Target with Army 2481; center (44:21); target (43:15); Progress 30 percent
+133, China, OP_FOUND_CITY, 2480, POST Moving To Target with Army 2481; center (45:18); target (43:15); Progress 60 percent
+133, Poland, OP_FOUND_CITY, 2677, Ended: NoTarget; Distance -1; Duration 134
+133, Egypt, OP_FOUND_CITY, 2678, Ended: NoTarget; Distance -1; Duration 134
+133, Austria, OP_FOUND_CITY, 2679, Ended: NoTarget; Distance -1; Duration 134
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Initial stage is recruiting
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 10 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Added Knight 2633 to slot 0 in army 2681. ETA at (33:14) is 0 
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Added Knight 2547 to slot 1 in army 2681. ETA at (33:14) is 0 
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Added Knight 2631 to slot 2 in army 2681. ETA at (33:14) is 0 
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Added Composite Bowman 1466 to slot 3 in army 2681. ETA at (33:14) is 0 
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Added Chariot Archer 1889 to slot 4 in army 2681. ETA at (33:14) is 0 
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Added Composite Bowman 1467 to slot 5 in army 2681. ETA at (33:14) is 3 
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, SiegeArmy: waiting for more units, expected damage 29 a turn, Thebes needs 60
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Started Army 2681; Units Recruited 6; Max Formation Size 10; Recruiting Units
+133, The_Inca, OP_FOUND_CITY, 2682, Ended: NoTarget; Distance -1; Duration 134
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (30:15) - ETA 0; Knight 2547 at (29:13) - ETA 0; Knight 2631 at (30:14) - ETA 0; Composite Bowman 1466 at (33:14) - ETA 0; Chariot Archer 1889 at (32:9) - ETA 0; Composite Bowman 1467 at (23:7) - ETA 3; Open; Open; Open; Open; 
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 1 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Added Catapult 2683 to slot 6 in army 2681. ETA at (33:14) is 0 
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, SiegeArmy: waiting for more units, expected damage 46 a turn, Thebes needs 60
+133, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (32:16) - ETA 0; Knight 2547 at (33:15) - ETA 0; Knight 2631 at (31:15) - ETA 0; Composite Bowman 1466 at (32:14) - ETA 0; Chariot Archer 1889 at (32:15) - ETA 0; Composite Bowman 1467 at (25:7) - ETA 3; Catapult 2683 at (33:14) - ETA 0; Open; Open; Open; 
+133, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+133, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+133, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+134, Portugal, OP_FOUND_CITY, 2703, Ended: NoTarget; Distance -1; Duration 135
+134, China, OP_FOUND_CITY, 2480, PRE Moving To Target with Army 2481; center (45:18); target (43:15); Progress 60 percent
+134, China, OP_FOUND_CITY, 2480, POST Moving To Target with Army 2481; center (44:16); target (43:15); Progress 100 percent
+134, Poland, OP_FOUND_CITY, 2707, Ended: NoTarget; Distance -1; Duration 135
+134, Egypt, OP_FOUND_CITY, 2709, Ended: NoTarget; Distance -1; Duration 135
+134, Austria, OP_FOUND_CITY, 2710, Ended: NoTarget; Distance -1; Duration 135
+134, The_Inca, OP_FOUND_CITY, 2714, Ended: NoTarget; Distance -1; Duration 135
+134, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (32:16) - ETA 0; Knight 2547 at (33:15) - ETA 0; Knight 2631 at (31:15) - ETA 0; Composite Bowman 1466 at (32:14) - ETA 0; Chariot Archer 1889 at (32:15) - ETA 0; Composite Bowman 1467 at (25:7) - ETA 3; Catapult 2683 at (33:14) - ETA 0; Open; Open; Open; 
+134, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+134, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Removing Composite Bowman 1467 from army 2681 because no progress to checkpoint (33:14). ETA 3; prev 3; prev 3
+134, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (33:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (32:14) - ETA 0; Chariot Archer 1889 at (32:15) - ETA 0; Open; Catapult 2683 at (33:14) - ETA 0; Open; Open; Open; 
+134, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (61:23) - ETA 0; Open; Open; Open; 
+134, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+134, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+134, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (62:22) - ETA 0; Open; Open; Open; 
+135, Portugal, OP_FOUND_CITY, 2731, Ended: NoTarget; Distance -1; Duration 136
+135, China, OP_FOUND_CITY, 2480, cannot found city at (43:15)
+135, China, OP_FOUND_CITY, 2480, found no suitable target in area 1
+135, China, OP_FOUND_CITY, 2480, Ended: NoTarget; Distance 10; Duration 9
+135, Poland, OP_FOUND_CITY, 2734, Ended: NoTarget; Distance -1; Duration 136
+135, Egypt, OP_FOUND_CITY, 2735, Ended: NoTarget; Distance -1; Duration 136
+135, Austria, OP_FOUND_CITY, 2737, Ended: NoTarget; Distance -1; Duration 136
+135, The_Inca, OP_FOUND_CITY, 2740, Ended: NoTarget; Distance -1; Duration 136
+135, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (33:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (32:14) - ETA 0; Chariot Archer 1889 at (32:15) - ETA 0; Open; Catapult 2683 at (33:14) - ETA 0; Open; Open; Open; 
+135, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 1 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+135, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Added Composite Bowman 1467 to slot 5 in army 2681. ETA at (33:14) is 3 
+135, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (33:14) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Open; Composite Bowman 1467 at (25:7) - ETA 3; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+135, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (62:22) - ETA 0; Open; Open; Open; 
+135, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+135, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (62:22) - ETA 0; Open; Open; Open; 
+136, Portugal, OP_FOUND_CITY, 2757, Ended: NoTarget; Distance -1; Duration 137
+136, China, OP_FOUND_CITY, 2763, Ended: NoTarget; Distance -1; Duration 137
+136, Poland, OP_FOUND_CITY, 2764, Ended: NoTarget; Distance -1; Duration 137
+136, Egypt, OP_FOUND_CITY, 2765, Ended: NoTarget; Distance -1; Duration 137
+136, Austria, OP_FOUND_CITY, 2766, Ended: NoTarget; Distance -1; Duration 137
+136, The_Inca, OP_FOUND_CITY, 2770, Ended: NoTarget; Distance -1; Duration 137
+136, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (33:14) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Open; Composite Bowman 1467 at (25:7) - ETA 3; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+136, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+136, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Removing Composite Bowman 1467 from army 2681 because no progress to checkpoint (33:14). ETA 3; prev 3; prev 3
+136, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (33:14) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Open; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+136, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (62:22) - ETA 0; Open; Open; Open; 
+136, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+136, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (62:23) - ETA 0; Open; Open; Open; 
+137, Portugal, OP_FOUND_CITY, 2785, Ended: NoTarget; Distance -1; Duration 138
+137, China, OP_FOUND_CITY, 2788, Ended: NoTarget; Distance -1; Duration 138
+137, Poland, OP_FOUND_CITY, 2789, Ended: NoTarget; Distance -1; Duration 138
+137, Egypt, OP_FOUND_CITY, 2790, Ended: NoTarget; Distance -1; Duration 138
+137, Austria, OP_FOUND_CITY, 2791, Ended: NoTarget; Distance -1; Duration 138
+137, The_Inca, OP_FOUND_CITY, 2794, Ended: NoTarget; Distance -1; Duration 138
+137, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Open; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+137, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 1 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+137, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Added Composite Bowman 1467 to slot 4 in army 2681. ETA at (33:14) is 3 
+137, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Composite Bowman 1467 at (25:7) - ETA 3; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+137, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (62:23) - ETA 0; Open; Open; Open; 
+137, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+137, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+137, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (62:23) - ETA 0; Open; Open; Open; 
+138, Portugal, OP_FOUND_CITY, 2811, Ended: NoTarget; Distance -1; Duration 139
+138, China, OP_FOUND_CITY, 2815, Ended: NoTarget; Distance -1; Duration 139
+138, Poland, OP_FOUND_CITY, 2816, Ended: NoTarget; Distance -1; Duration 139
+138, Egypt, OP_FOUND_CITY, 2818, Ended: NoTarget; Distance -1; Duration 139
+138, Austria, OP_FOUND_CITY, 2822, Ended: NoTarget; Distance -1; Duration 139
+138, The_Inca, OP_FOUND_CITY, 2825, Ended: NoTarget; Distance -1; Duration 139
+138, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Composite Bowman 1467 at (25:7) - ETA 3; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+138, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+138, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Composite Bowman 1467 at (26:9) - ETA 2; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+138, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (62:23) - ETA 0; Open; Open; Open; 
+138, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+138, Japan, OP_RAPID_RESPONSE, 2097, Contact with enemy!
+138, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (63:23) - ETA 0; Open; Open; Open; 
+139, Portugal, OP_FOUND_CITY, 2845, Ended: NoTarget; Distance -1; Duration 140
+139, China, OP_FOUND_CITY, 2851, Ended: NoTarget; Distance -1; Duration 140
+139, Poland, OP_FOUND_CITY, 2852, Ended: NoTarget; Distance -1; Duration 140
+139, Egypt, OP_FOUND_CITY, 2855, Ended: NoTarget; Distance -1; Duration 140
+139, Austria, OP_FOUND_CITY, 2856, Ended: NoTarget; Distance -1; Duration 140
+139, The_Inca, OP_FOUND_CITY, 2859, Ended: NoTarget; Distance -1; Duration 140
+139, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Composite Bowman 1467 at (26:9) - ETA 2; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+139, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+139, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Composite Bowman 1467 at (29:10) - ETA 1; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+139, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (63:23) - ETA 0; Open; Open; Open; 
+139, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+139, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (63:23) - ETA 1; Open; Open; Open; 
+140, Portugal, OP_FOUND_CITY, 2877, Ended: NoTarget; Distance -1; Duration 141
+140, China, OP_FOUND_CITY, 2880, Ended: NoTarget; Distance -1; Duration 141
+140, Poland, OP_FOUND_CITY, 2881, Ended: NoTarget; Distance -1; Duration 141
+140, Egypt, OP_FOUND_CITY, 2883, Ended: NoTarget; Distance -1; Duration 141
+140, Austria, OP_FOUND_CITY, 2885, Ended: NoTarget; Distance -1; Duration 141
+140, The_Inca, OP_FOUND_CITY, 2890, Ended: NoTarget; Distance -1; Duration 141
+140, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (32:13) - ETA 0; Composite Bowman 1467 at (29:10) - ETA 1; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+140, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+140, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:15) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (32:12) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+140, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (63:23) - ETA 1; Open; Open; Open; 
+140, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+140, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (63:23) - ETA 1; Open; Open; Open; 
+141, Portugal, OP_FOUND_CITY, 2907, Ended: NoTarget; Distance -1; Duration 142
+141, China, OP_FOUND_CITY, 2910, Ended: NoTarget; Distance -1; Duration 142
+141, Poland, OP_FOUND_CITY, 2911, Ended: NoTarget; Distance -1; Duration 142
+141, Egypt, OP_FOUND_CITY, 2913, Ended: NoTarget; Distance -1; Duration 142
+141, Austria, OP_FOUND_CITY, 2914, Ended: NoTarget; Distance -1; Duration 142
+141, The_Inca, OP_FOUND_CITY, 2917, Ended: NoTarget; Distance -1; Duration 142
+141, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:15) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (32:12) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+141, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+141, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+141, Japan, OP_RAPID_RESPONSE, 2922, Initial stage is recruiting
+141, Japan, OP_RAPID_RESPONSE, 2922, Found 1 potential units to recruit for operation 2922 at (63:19) with target at (65:15)
+141, Japan, OP_RAPID_RESPONSE, 2922, Added Pikeman 2749 to slot 0 in army 2923. ETA at (63:19) is 0 
+141, Japan, OP_RAPID_RESPONSE, 2922, Started Army 2923; Units Recruited 1; Max Formation Size 4; Recruiting Units
+141, Japan, OP_RAPID_RESPONSE, 2097, PRE Recruiting Units for army 2098; Pikeman 2551 at (63:23) - ETA 1; Open; Open; Open; 
+141, Japan, OP_RAPID_RESPONSE, 2097, Found 0 potential units to recruit for operation 2097 at (60:22) with target at (60:22)
+141, Japan, OP_RAPID_RESPONSE, 2097, POST Recruiting Units for army 2098; Pikeman 2551 at (63:23) - ETA 1; Open; Open; Open; 
+141, Japan, OP_RAPID_RESPONSE, 2922, PRE Recruiting Units for army 2923; Pikeman 2749 at (63:22) - ETA 0; Open; Open; Open; 
+141, Japan, OP_RAPID_RESPONSE, 2922, Found 0 potential units to recruit for operation 2922 at (63:19) with target at (65:15)
+141, Japan, OP_RAPID_RESPONSE, 2922, POST Recruiting Units for army 2923; Pikeman 2749 at (63:21) - ETA 0; Open; Open; Open; 
+142, Portugal, OP_FOUND_CITY, 2991, Ended: NoTarget; Distance -1; Duration 143
+142, China, OP_FOUND_CITY, 2996, Ended: NoTarget; Distance -1; Duration 143
+142, China, OP_FOUND_CITY, 2998, Ended: NoTarget; Distance -1; Duration 143
+142, China, OP_FOUND_CITY, 2999, Ended: NoTarget; Distance -1; Duration 143
+142, Poland, OP_FOUND_CITY, 3000, Ended: NoTarget; Distance -1; Duration 143
+142, Egypt, OP_FOUND_CITY, 3002, Ended: NoTarget; Distance -1; Duration 143
+142, Austria, OP_FOUND_CITY, 3004, Ended: NoTarget; Distance -1; Duration 143
+142, The_Inca, OP_FOUND_CITY, 3008, Ended: NoTarget; Distance -1; Duration 143
+142, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+142, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+142, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+142, Japan, OP_RAPID_RESPONSE, 3012, Initial stage is recruiting
+142, Japan, OP_RAPID_RESPONSE, 3012, Found 1 potential units to recruit for operation 3012 at (63:19) with target at (65:15)
+142, Japan, OP_RAPID_RESPONSE, 3012, Added Pikeman 2722 to slot 0 in army 3013. ETA at (63:19) is 0 
+142, Japan, OP_RAPID_RESPONSE, 3012, Started Army 3013; Units Recruited 1; Max Formation Size 4; Recruiting Units
+142, Japan, OP_RAPID_RESPONSE, 2097, Ended: NoTarget; Distance 1; Duration 36
+142, Japan, OP_RAPID_RESPONSE, 2922, PRE Recruiting Units for army 2923; Pikeman 2749 at (63:21) - ETA 0; Open; Open; Open; 
+142, Japan, OP_RAPID_RESPONSE, 2922, Found 1 potential units to recruit for operation 2922 at (63:19) with target at (65:15)
+142, Japan, OP_RAPID_RESPONSE, 2922, Added Pikeman 2551 to slot 1 in army 2923. ETA at (63:19) is 1 
+142, Japan, OP_RAPID_RESPONSE, 2922, Transition to gathering stage
+142, Japan, OP_RAPID_RESPONSE, 2922, POST Gathering Forces for army 2923; center (63:23); variance (0.00:2.25); free slots 2
+142, Japan, OP_RAPID_RESPONSE, 3012, PRE Recruiting Units for army 3013; Pikeman 2722 at (62:19) - ETA 0; Open; Open; Open; 
+142, Japan, OP_RAPID_RESPONSE, 3012, Found 0 potential units to recruit for operation 3012 at (63:19) with target at (65:15)
+142, Japan, OP_RAPID_RESPONSE, 3012, POST Recruiting Units for army 3013; Pikeman 2722 at (64:16) - ETA 0; Open; Open; Open; 
+143, Portugal, OP_FOUND_CITY, 3031, Ended: NoTarget; Distance -1; Duration 144
+143, China, OP_FOUND_CITY, 3034, Ended: NoTarget; Distance -1; Duration 144
+143, China, OP_FOUND_CITY, 3035, Ended: NoTarget; Distance -1; Duration 144
+143, Poland, OP_FOUND_CITY, 3036, Ended: NoTarget; Distance -1; Duration 144
+143, Egypt, OP_FOUND_CITY, 3038, Ended: NoTarget; Distance -1; Duration 144
+143, Austria, OP_FOUND_CITY, 3041, Ended: NoTarget; Distance -1; Duration 144
+143, The_Inca, OP_FOUND_CITY, 3044, Ended: NoTarget; Distance -1; Duration 144
+143, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+143, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+143, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+143, Japan, OP_RAPID_RESPONSE, 2922, PRE Gathering Forces for army 2923; center (63:23); variance (0.00:2.25); free slots 2
+143, Japan, OP_RAPID_RESPONSE, 2922, Transition to movement stage
+143, Japan, OP_RAPID_RESPONSE, 2922, POST Moving To Target with Army 2923; center (63:22); target (65:15); Progress -50 percent
+143, Japan, OP_RAPID_RESPONSE, 3012, PRE Recruiting Units for army 3013; Pikeman 2722 at (64:16) - ETA 0; Open; Open; Open; 
+143, Japan, OP_RAPID_RESPONSE, 3012, Found 0 potential units to recruit for operation 3012 at (63:19) with target at (65:15)
+143, Japan, OP_RAPID_RESPONSE, 3012, Ended: LostPath; Distance 6; Duration 1
+144, Portugal, OP_FOUND_CITY, 3064, Ended: NoTarget; Distance -1; Duration 145
+144, China, OP_FOUND_CITY, 3068, Ended: NoTarget; Distance -1; Duration 145
+144, China, OP_FOUND_CITY, 3069, Ended: NoTarget; Distance -1; Duration 145
+144, Poland, OP_FOUND_CITY, 3070, Ended: NoTarget; Distance -1; Duration 145
+144, Egypt, OP_FOUND_CITY, 3073, Ended: NoTarget; Distance -1; Duration 145
+144, Austria, OP_FOUND_CITY, 3074, Ended: NoTarget; Distance -1; Duration 145
+144, The_Inca, OP_FOUND_CITY, 3077, Ended: NoTarget; Distance -1; Duration 145
+144, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+144, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+144, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+144, Japan, OP_RAPID_RESPONSE, 2922, PRE Moving To Target with Army 2923; center (63:22); target (65:15); Progress -50 percent
+144, Japan, OP_RAPID_RESPONSE, 2922, POST Moving To Target with Army 2923; center (63:21); target (65:15); Progress -33 percent
+145, Portugal, OP_FOUND_CITY, 3098, Ended: NoTarget; Distance -1; Duration 146
+145, China, OP_FOUND_CITY, 3103, Ended: NoTarget; Distance -1; Duration 146
+145, China, OP_FOUND_CITY, 3104, Ended: NoTarget; Distance -1; Duration 146
+145, Poland, OP_FOUND_CITY, 3106, Ended: NoTarget; Distance -1; Duration 146
+145, Egypt, OP_FOUND_CITY, 3108, Ended: NoTarget; Distance -1; Duration 146
+145, Austria, OP_FOUND_CITY, 3109, Ended: NoTarget; Distance -1; Duration 146
+145, The_Inca, OP_FOUND_CITY, 3113, Ended: NoTarget; Distance -1; Duration 146
+145, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+145, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+145, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+145, Japan, OP_RAPID_RESPONSE, 2922, PRE Moving To Target with Army 2923; center (63:21); target (65:15); Progress -33 percent
+145, Japan, OP_RAPID_RESPONSE, 2922, POST Moving To Target with Army 2923; center (62:16); target (65:15); Progress 17 percent
+146, Portugal, OP_FOUND_CITY, 3135, Ended: NoTarget; Distance -1; Duration 147
+146, China, OP_FOUND_CITY, 3138, Ended: NoTarget; Distance -1; Duration 147
+146, China, OP_FOUND_CITY, 3139, Ended: NoTarget; Distance -1; Duration 147
+146, Poland, OP_FOUND_CITY, 3140, Ended: NoTarget; Distance -1; Duration 147
+146, Egypt, OP_FOUND_CITY, 3141, Ended: NoTarget; Distance -1; Duration 147
+146, Austria, OP_FOUND_CITY, 3142, Ended: NoTarget; Distance -1; Duration 147
+146, The_Inca, OP_FOUND_CITY, 3145, Ended: NoTarget; Distance -1; Duration 147
+146, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+146, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+146, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+146, Japan, OP_RAPID_RESPONSE, 2922, PRE Moving To Target with Army 2923; center (62:16); target (65:15); Progress 17 percent
+146, Japan, OP_RAPID_RESPONSE, 2922, Contact with enemy!
+146, Japan, OP_RAPID_RESPONSE, 2922, POST Moving To Target with Army 2923; center (63:18); target (65:15); Progress 17 percent
+147, Portugal, OP_FOUND_CITY, 3167, Ended: NoTarget; Distance -1; Duration 148
+147, China, OP_FOUND_CITY, 3172, Ended: NoTarget; Distance -1; Duration 148
+147, China, OP_FOUND_CITY, 3173, Ended: NoTarget; Distance -1; Duration 148
+147, Poland, OP_FOUND_CITY, 3174, Ended: NoTarget; Distance -1; Duration 148
+147, Egypt, OP_FOUND_CITY, 3177, Ended: NoTarget; Distance -1; Duration 148
+147, Austria, OP_FOUND_CITY, 3179, Ended: NoTarget; Distance -1; Duration 148
+147, The_Inca, OP_FOUND_CITY, 3184, Ended: NoTarget; Distance -1; Duration 148
+147, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, PRE Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+147, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Found 0 potential units to recruit for operation 2680 at (33:14) with target at (34:20)
+147, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, POST Recruiting Units for army 2681; Knight 2633 at (34:14) - ETA 0; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (32:13) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Catapult 2683 at (32:14) - ETA 0; Open; Open; Open; 
+147, Japan, OP_RAPID_RESPONSE, 2922, PRE Moving To Target with Army 2923; center (63:18); target (65:15); Progress 17 percent
+147, Japan, OP_RAPID_RESPONSE, 2922, Contact with enemy!
+147, Japan, OP_RAPID_RESPONSE, 2922, Transition to finished stage; unit distance near 3; far 3
+147, Japan, OP_RAPID_RESPONSE, 2922, POST Completed
+148, Denmark, OP_FOUND_CITY, 3199, Ended: NoTarget; Distance -1; Duration 149
+148, Portugal, OP_FOUND_CITY, 3208, Ended: NoTarget; Distance -1; Duration 149
+148, China, OP_FOUND_CITY, 3212, Ended: NoTarget; Distance -1; Duration 149
+148, China, OP_FOUND_CITY, 3213, Ended: NoTarget; Distance -1; Duration 149
+148, Poland, OP_FOUND_CITY, 3214, Ended: NoTarget; Distance -1; Duration 149
+148, Egypt, OP_FOUND_CITY, 3216, Ended: NoTarget; Distance -1; Duration 149
+148, Austria, OP_FOUND_CITY, 3217, Ended: NoTarget; Distance -1; Duration 149
+148, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, War goal changed, probably another war is more important
+148, The_Inca, OP_FOUND_CITY, 3220, Ended: NoTarget; Distance -1; Duration 149
+148, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 2680, Ended: DiploOpinionChange; Distance 7; Duration 15
+148, Japan, OP_RAPID_RESPONSE, 2922, Ended: Success; Distance 6; Duration 7
+149, Portugal, OP_FOUND_CITY, 3240, Ended: NoTarget; Distance -1; Duration 150
+149, China, OP_FOUND_CITY, 3245, Ended: NoTarget; Distance -1; Duration 150
+149, China, OP_FOUND_CITY, 3246, Ended: NoTarget; Distance -1; Duration 150
+149, Poland, OP_FOUND_CITY, 3247, Ended: NoTarget; Distance -1; Duration 150
+149, Egypt, OP_FOUND_CITY, 3249, Ended: NoTarget; Distance -1; Duration 150
+149, Austria, OP_FOUND_CITY, 3251, Ended: NoTarget; Distance -1; Duration 150
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Initial stage is recruiting
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Found 13 potential units to recruit for operation 3253 at (33:14) with target at (34:20)
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Added Knight 2547 to slot 0 in army 3254. ETA at (33:14) is 0 
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Added Knight 2631 to slot 1 in army 3254. ETA at (33:14) is 0 
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Added Knight 2633 to slot 2 in army 3254. ETA at (33:14) is 0 
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Added Catapult 2683 to slot 3 in army 3254. ETA at (33:14) is 0 
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Added Composite Bowman 1466 to slot 4 in army 3254. ETA at (33:14) is 0 
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Added Composite Bowman 1467 to slot 5 in army 3254. ETA at (33:14) is 0 
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, SiegeArmy: waiting for more units, expected damage 34 a turn, Thebes needs 60
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Started Army 3254; Units Recruited 6; Max Formation Size 10; Recruiting Units
+149, The_Inca, OP_FOUND_CITY, 3255, Ended: NoTarget; Distance -1; Duration 150
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, PRE Recruiting Units for army 3254; Knight 2547 at (32:9) - ETA 0; Knight 2631 at (29:14) - ETA 0; Knight 2633 at (34:14) - ETA 0; Catapult 2683 at (32:14) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (33:13) - ETA 0; Open; Open; Open; Open; 
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, Found 0 potential units to recruit for operation 3253 at (33:14) with target at (34:20)
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, SiegeArmy: waiting for more units, expected damage 34 a turn, Thebes needs 60
+149, The_Inca, OP_CITY_ATTACK_LAND_SNEAKY, 3253, POST Recruiting Units for army 3254; Knight 2547 at (32:15) - ETA 0; Knight 2631 at (33:13) - ETA 0; Knight 2633 at (34:15) - ETA 0; Catapult 2683 at (32:14) - ETA 0; Composite Bowman 1466 at (33:15) - ETA 0; Composite Bowman 1467 at (32:13) - ETA 0; Open; Open; Open; Open; 
+150, Denmark, OP_FOUND_CITY, 3266, Ended: NoTarget; Distance -1; Duration 151
+150, Portugal, OP_FOUND_CITY, 3273, Ended: NoTarget; Distance -1; Duration 151
+150, China, OP_FOUND_CITY, 3277, Ended: NoTarget; Distance -1; Duration 151
+150, China, OP_FOUND_CITY, 3278, Ended: NoTarget; Distance -1; Duration 151
+150, Poland, OP_FOUND_CITY, 3279, Ended: NoTarget; Distance -1; Duration 151
+150, Egypt, OP_FOUND_CITY, 3280, Ended: NoTarget; Distance -1; Duration 151
+150, Austria, OP_FOUND_CITY, 3284, Ended: NoTarget; Distance -1; Duration 151
+150, The_Inca, OP_FOUND_CITY, 3286, Ended: NoTarget; Distance -1; Duration 151
