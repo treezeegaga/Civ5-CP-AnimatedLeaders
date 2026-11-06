@@ -1929,6 +1929,61 @@ per civ (the same script).
 
 **Status:** coded, patch 0038 on ai/war `f9c16cd` + 0037 (0035 and 0036 are already on ai/war). Not built.
 
+### StrikeList: the strike book follows the expert list, strictly (Economy, Nov 6, 6:30am ET; design)
+The user (via the lead): "this is why we looked up expert build orders. literally just follow the list." New flag
+**StrikeList** (Economy). It replaces the priorities-with-conditions book (0031) for a strike civ whose plan carries a
+list.
+
+**The plan's lists.** These are the interface for Personality. The new fields in `CvStrikePlan` are empty by default,
+so the executor runs only for civs whose rows fill them:
+- `aBuild[]`, `iNumBuild`: ordered items. Each item is a unit class or a building class, with a count. For example,
+  the Aztec: Warrior x3 (the Jaguar, via GetSpecificUnitType), Worker, Settler, Archer x4, Warrior x2.
+- `aTech[]`, `iNumTech`: ordered techs.
+- `aPolicy[]`, `iNumPolicy`: ordered policies (optional). The first tree stays `eFirstPolicyBranch`.
+
+**The executor.** It runs while the strike state is PREP or BUILDUP (`IsStrikePending`). There is no turn limit and no
+book switch-off from an unrelated war.
+- **Capital, in order.** Walk the list, adding up the counts per class. The first item still short is what the capital
+  builds. "Have" counts:
+  - units of the class on the map or in production, plus units of the classes it upgrades into (an Archer that became a
+    Composite Bowman is still built);
+  - for settlers, cities founded (minus the capital) plus settlers on the map;
+  - for buildings, the building in this city.
+- **Lost units.** A unit lost later makes its item short again, so it is rebuilt at its place in the order, before
+  anything after it. That is the lead's "a list unit was lost (rebuild it)", with nothing saved in the game file.
+- **No CP holds.** None of CP's settler holds apply (growth due, unhappy, one at a time, the size-2 rule beyond what the
+  game itself refuses). The WarBudget gold check doesn't apply either: the experts' lists assume their own economy.
+- **Blocked items.** An item the game can't train yet (its tech isn't in) is passed over for the next one that can be
+  done. It stays first in line, and the city log says "LIST WAIT <item>". Research follows the list too, so this should
+  be rare; every wait is logged for the check.
+- **Danger.** The city is in danger (`isInDangerOfFalling` or under siege): first a defender, the plan's melee unit
+  (core, else support).
+- **After the list.**
+  - An early strike, or a late strike in BUILDUP: the plan's core and support until `iCoreTarget`, `iSupportTarget` and
+    `iSiegeTarget` are met, then more core (losses during the war).
+  - A late strike in PREP: CP's choice (its economy-first phase), with the wonder ban (0040).
+  - In both cases, CP's choice comes in only when no army unit is affordable for 10 turns. It is logged as "LIST NORMAL
+    (unaffordable)".
+- **Other cities.** Core and support (siege if the plan has it), or a worker if the city has none in its area. Nothing
+  else until the strike.
+- **Research.** The first list tech not yet known; a prerequisite first if it isn't researchable. After the list,
+  0029's straight line.
+- **Policy.** The first tree is `eFirstPolicyBranch`. Then the first listed policy not yet adopted, when it can be
+  adopted. Otherwise CP's choice.
+
+**Hypothesis.** A strike civ with StrikeList:
+- has an OPENING BOOK sequence in its capital that matches its list item by item to the list's end (LIST WAITs
+  aside);
+- has 0 CP choices (CHOSEN lines without "OPENING BOOK") in any city before its declaration, except danger and
+  unaffordable turns;
+- fields the plan's core and support by the declaration (the expert block was 4 units short);
+- declares earlier than in ab-8f9b7f9.
+
+The measure is captures per strike game. The check is `tools/ab/scripts/earlystrike/book_check.py`, extended for
+list-vs-built.
+
+**Status:** design. The patch comes next, on ai/war `6df9a4d` + 0039 + 0040. Personality fills the lists.
+
 ### Patches 0039 and 0040: the leak audit, and the late strike's gap (Economy, Nov 6, 6:27am ET)
 The lead asked: in the first bullyabort19 game (ab-8f9b7f9), does the strike civ build a world wonder or give gold to
 a city-state before its first declaration? It does. PC 1 stopped on game 1 (`1468D9F4`).
