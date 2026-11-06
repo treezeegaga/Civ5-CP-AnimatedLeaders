@@ -2989,6 +2989,13 @@ already gates. A **proposed gate** is the single choke point every caller passes
 LEAD: the audit is above. Next I code the five gates on ai/war for the next block; Economy owns production, gold, research
 and policies.
 
+**The five gates are coded: ai/war b9dd1b77** (after 5fe900a1, 8 files, +139). Each is at the gate point in the table:
+CvTeam::declareWar, CvTeam::makePeace, CvDiplomacyAI::SetCivApproach, CvAIOperation::SetToAbort (plus a city attack
+requested on the target in WAR whenever no attack on it is running), and IsStrikeKeepingUnit at FindUnitToScrap,
+FindArmyScrapUnit, DoGreedyDisbandToCap, ReviewUnassignedUnits and AddIncomingUnit. New log lines to read in the next
+block: "(gate 1)", "(gate 2)", "keeps going (gate 4", "city attack requested".
+LEAD: the ownership gates are on ai/war **b9dd1b77**, for the next block. CI to follow.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
