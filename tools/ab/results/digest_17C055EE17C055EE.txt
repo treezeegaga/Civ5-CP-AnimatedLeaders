@@ -1,0 +1,35 @@
+﻿Game 17C055EE17C055EE (AIABTest_c8e.csv), last logged turn 150
+b    Byzantium    tall      cities 6
+  builds to T80 (capital Constantinople; other cities named): T0 Scout* | T3 Monument* | T7 Warrior* | T11 Shrine* | T16 Settler* | T25 Worker* | T30 Monument* (Adrianople) | T31 Great Library | T33 Library* (Adrianople) | T42 Library* | T48 Worker* | T51 Settler* | T57 Granary (Adrianople) | T59 Granary | T65 Settler | T66 Monument (Nicaea) | T67 Shrine (Nicaea) | T71 Settler (Adrianople) | T71 Spearman | T76 Monument (Antioch) | T77 Shrine (Antioch) | T77 Scout | T77 Spearman | T79 Worker
+  settlers ordered T: 16,51,65,71,113   found-city ops started T: 25,59,71,91,122   cities founded T: 30,66,76,100,127
+  ops aborted: T81 NoTarget, T82 NoTarget, T83 NoTarget, T84 NoTarget, T85 NoTarget, T86 NoTarget, T87 NoTarget, T88 NoTarget, T89 NoTarget, T90 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: Library 2   first: T031 Constantinople size 4 next Library | T042 Constantinople size 4 next Library
+  IDLE SETTLER turns: 5 (first T51)
+  military ops ended (whole game): NoUnits 6, DiploOpinionChange 1, NoTarget 1
+  settler timeline to T80: T16 settler (book) in Constantinople | T25 op started | T30 FOUNDED | T51 settler (book) in Constantinople | T59 op started | T65 settler (AI) in Constantinople | T66 FOUNDED | T71 settler (AI) in Adrianople | T71 op started | T76 FOUNDED
+  saving gold for a settler: 39 turns (T6-T79)
+b    Carthage     wide      cities 5
+  builds to T80 (capital Carthage; other cities named): T0 Scout* | T4 Monument* | T10 Worker* | T19 Settler* | T29 Settler* | T32 Shrine (Utique) | T33 Granary* | T36 Settler* | T39 Shrine* | T42 Work Boat | T45 Work Boat | T47 Water Mill | T51 Monument (Utique) | T52 Caravan | T54 Market* | T61 Settler* | T63 Archer (Utique) | T64 Archer* | T65 Archer* | T68 Library* | T72 Scout (Utique) | T73 Barracks* | T74 African Forest Elephant (Utique) | T79 Caravan (Utique) | T79 African Forest Elephant*
+  settlers ordered T: 19,29,36,61,103,133   found-city ops started T: 29,39,65,90,126   cities founded T: 32,93,145
+  ops aborted: T58 LostCivilian, T82 NoTarget, T83 NoTarget, T84 NoTarget, T85 NoTarget, T86 NoTarget, T87 NoTarget, T88 NoTarget, T89 NoTarget
+  IDLE SETTLER turns: 5 (first T36)
+  military ops ended (whole game): Success 3
+  settler timeline to T80: T19 settler (book) in Carthage | T29 op started | T29 settler (book) in Carthage | T32 FOUNDED | T36 settler (book) in Carthage | T39 op started | T58 op ended: LostCivilian | T61 settler (book) in Carthage | T65 op started
+  saving gold for a settler: 39 turns (T5-T64)
+c    Rome         wide      cities 6
+  builds to T80 (capital Rome; other cities named): T0 Scout* | T4 Warrior* | T8 Settler* | T16 Granary | T19 Granary (Antium) | T23 Warrior* | T25 Shrine* | T29 Warrior* | T32 Monument* | T35 Monument* (Antium) | T36 Great Library | T41 Shrine (Antium) | T42 Library* | T46 Settler* | T49 Water Mill (Antium) | T51 Water Mill | T54 Market (Cumae) | T54 Temple of Artemis | T58 Market (Antium) | T60 Market | T64 Circus | T68 Library (Antium) | T68 Stonehenge | T69 Granary (Cumae) | T72 Chariot Archer | T73 Settler | T73 Chariot Archer | T74 Worker (Antium) | T77 Caravan | T78 Water Mill (Cumae) | T80 Scout (Antium)
+  settlers ordered T: 8,46,73,81,93,95,96,106   found-city ops started T: 16,51,77,85,89,103   cities founded T: 19,54,82,87,106
+  ops aborted: T95 LostCivilian, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget
+  book SETTLER HELD to T80: 5 (unhappy 5)   built instead: the normal AI choice 2, Library 2, Monument 1   first: T032 Rome size 3 next Monument | T036 Rome size 3 next Library | T042 Rome size 3 next Library
+  IDLE SETTLER turns: 5 (first T46)
+  military ops ended (whole game): Success 4, LostPath 2, HalfStrength 1
+  settler timeline to T80: T8 settler (book) in Rome | T16 op started | T19 FOUNDED | T46 settler (book) in Rome | T51 op started | T54 FOUNDED | T73 settler (AI) in Rome | T77 op started
+  saving gold for a settler: 25 turns (T5-T77)
+c    Spain        wide      cities 4
+  builds to T80 (capital Madrid; other cities named): T1 Scout* | T4 Warrior* | T8 Settler* | T16 Granary | T22 Worker | T28 Great Library | T42 Warrior* | T45 Shrine* | T48 Warrior* | T50 Settler* | T55 Water Mill | T58 Mausoleum of Halicarnassus | T66 Market | T71 Terracotta Army | T79 Settler | T80 Granary (Barcelona)
+  settlers ordered T: 8,50,79,81   found-city ops started T: 16,55,82,84,87,90,93,96,99,104,106,146   cities founded T: 80,86,115
+  ops aborted: T38 LostCivilian, T86 LostCivilian, T89 LostCivilian, T92 LostCivilian, T95 LostCivilian, T98 LostCivilian, T103 LostCivilian, T105 HalfStrength, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Shrine 1   first: T045 Madrid size 6 next Shrine
+  IDLE SETTLER turns: 2 (first T81)
+  settler timeline to T80: T8 settler (book) in Madrid | T16 op started | T38 op ended: LostCivilian | T50 settler (book) in Madrid | T55 op started | T79 settler (AI) in Madrid | T80 FOUNDED
+  saving gold for a settler: 12 turns (T7-T39)
