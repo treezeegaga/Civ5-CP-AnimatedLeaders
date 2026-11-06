@@ -1830,6 +1830,59 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
+### EarlyStrike book as the expert openings (Economy, patch 0031, Nov 5, 9:54pm ET)
+
+The user (via the lead, 9:58pm ET): "no, we dont need a baseline. use the experts ideas right away and we will know if
+they are good by if they take cities." So this replaces the plan above. It's under `EarlyStrike`, with no new flag.
+
+**The plan per civ** (`CvPlayer::GetEarlyStrikePlan`). The numbers are Personality's strike-plan spec ("Strike plans per
+civ: spec", `claude/personality` `d3ee38c`); its profile fields aren't coded yet, so the table lives in Economy for now
+and gets replaced when they land.
+
+| Civ | Core (N before the 1st settler, total) | Support | Siege | K cities | First tree |
+|---|---|---|---|---|---|
+| Aztec | Jaguar (3, 5) | Archer ×4 | none | 2 | Honor |
+| Huns | Horse Archer (2, 4) | Archer ×1 | Battering Ram ×2 | 3 | Honor |
+| Inca | Slinger (2, 5) | Spearman (Warrior before Bronze Working) ×1 | none | 3 | Honor |
+| Greece | Hoplite (2, 4) | Archer ×2 | none | 3 | Honor |
+| Celts | Pictish Warrior (1, 4) | Archer ×2 | none | 3 | Honor |
+| other early-spike civs | the profile's spike unit (3, 5) | Archer ×4 (melee in front of a ranged core) | none | 2 | Honor |
+
+The fallback is T50 on Quick (75 Standard). The Huns' core is the Horse Archer, not the Ram that the profile can pick
+(Personality's "wrong core").
+
+**The capital's book: priorities with conditions**, rebuilt at each choice:
+1. Core units while a barbarian camp or another major's city is within 8 tiles of the capital, until N.
+2. Then a worker and a settler. When nothing is in reach, these come first.
+3. Then the siege, the support and the rest of the core.
+4. Then settlers up to K.
+
+A step whose unit isn't available yet is skipped until it is.
+
+**Research, a straight line:**
+1. the spike tech;
+2. one luxury tech, only while we have no luxury and one next to our cities needs a tech;
+3. the support's tech;
+4. the upgrade: Personality's `eUpgradeTech`, else the ranged unit's upgrade within the first 4 columns (Construction
+   for Archers and Slingers);
+5. the siege tech.
+
+Then the warmonger list.
+
+**Small empire and gold:**
+- No settler is built past K cities, and none is bought before the strike.
+- Before the strike, nothing at all is bought (hurries, WarChest, tiles): the treasury is for War's upgrades.
+
+**Fallback:** past T50 Quick with no target in reach and no war with a major, `IsEarlyStrikeBook` turns false, so the
+civ goes back to the normal plan, and War's `IsEarlyStrikeCiv` follows.
+
+**Policy:** the plan's first tree (Honor for all five, as in 0030).
+
+**Measure:** captures (the user's test); also military in the capital by T50, cities at the declaration, turns at 0
+gold, and the first tree.
+
+**Status:** coded, patch 0031 on `claude/ab-c1` `db638c3`, not built.
+
 ### EarlyStrike book: changes planned after this block (Economy, Nov 5, 9:48pm ET; not coded)
 From the expert research (`tools/ab/STRIKE_PLANS_RESEARCH.md`, lead's `8f04839`). The running block (`ab-db638c3`)
 is unchanged.
