@@ -3544,6 +3544,33 @@ weights fill everything a plan doesn't name):
 - **Status:** `221fb3e` and the Inca's Catapults (`0356f6b`) merged into `claude/ab-c1` (`03bbc90`); `221fb3e` compiles (CI run 274
   passed); `0356f6b` compiles (CI run 277 passed). Late-strike civs (Mongolia, Songhai, Zulu, Assyria, Japan) come after.
 
+### Expert lists: the capital's builds and the research, item by item (Personality, 2026-11-06 6:27am ET)
+- **The user (via the lead, morning of 2026-11-06):** "this is why we looked up expert build orders. literally just
+  follow the list." Each strike plan carries the capital's first ~10-14 builds and the research to the upgrade tech,
+  straight from `STRIKE_PLANS_RESEARCH.md`; Economy's book follows them item by item, with no CP fill-in before the
+  strike. A research item is a target (its prerequisites first); "luxury" is one luxury tech (Economy's pick).
+- **Fields** (`CvStrikePlan`, `da1a760`): `aBuilds`/`iNumBuilds` (unit or building classes), `aeTechs`/`iNumTechs`
+  (`STRIKE_TECH_LUXURY` for a luxury), `bListInferred`. Logged as "strike lists" in StrategyProfile_Log.csv.
+
+| Civ | Capital's builds | Research | Source |
+|---|---|---|---|
+| Huns | Scout, Monument, Horse Archer x2, Settler, Horse Archer, Ram, Horse Archer, Ram, Warrior, Horse Archer | The Wheel, luxury, Bronze Working, Horseback Riding, Writing, Mathematics | S4 Cromagnus; the settler's place [I] |
+| Aztec | Jaguar x3, Worker, Settler, Archer x4, Jaguar x2 | luxury, Archery, Construction | the user's game; the sources fit it |
+| Inca | Scout, Monument, Slinger x2, Settler, Worker, Slinger x2, Spearman, Settler, Slinger, Catapult x2, Spearman | Pottery, Mining, luxury, Archery, Mathematics, Construction | S19 + [I]; the user's Catapults |
+| Greece | Monument, Hoplite, Settler, Archer, Hoplite, Archer x2, Settler, Hoplite, Archer x2 | Bronze Working, Archery, luxury, Horseback Riding, Construction | S21 (Monuments first, then units) + [I] |
+| Celts | Scout, Monument, Pictish Warrior x2, Settler, Archer, Pictish Warrior, Archer, Settler, Pictish Warrior, Archer, Pictish Warrior | Bronze Working, luxury, Archery, Construction | S7/S22 + [I] |
+| Zulu | Scout, Monument, Scout, Granary, Shrine, Archer x3, Worker, Pyramids, Archer, Settler, Ikanda, Spearman | Pottery, Archery, Mining, Animal Husbandry, Masonry, luxury, Construction, Bronze Working, Horseback Riding, Writing, Currency, Machinery, Civil Service | S24 glory7 |
+| Mongolia | Scout x2, Granary, Shrine, Caravan, Chariot Archer, Settler, Chariot Archer, Settler, Chariot Archer x2 | Pottery, Writing, Animal Husbandry, Mining, Archery, Trapping, The Wheel, Bronze Working, Philosophy, Civil Service, Currency, Chivalry | S26 fils, hicks53081 |
+| Assyria | Scout x2, Temple of Artemis, Shrine, Worker, Archer, Settler, Granary, Archer x2 (Composite Bowmen), Siege Tower, Archer, Royal Library, Caravan, National College | Archery, Mining, luxury, Construction, luxury, Mathematics, Writing, Philosophy | S28 imMapex |
+| Japan | Scout, Monument, Settler, Worker, Settler, Library, Swordsman x2, National College, Swordsman x2, Archer | luxury, Bronze Working, Iron Working, Writing, Mathematics, Construction, Civil Service, Machinery, Steel | S3 + [I] |
+| Songhai | Scout, Warrior x2, Scout, Warrior, Settler, Horseman, Worker, Horseman, Settler, Horseman x2 | Animal Husbandry, Horseback Riding, Writing, Philosophy, Civil Service, Currency, Chivalry | S33 Redaxe, S27 + [I] |
+| China | Scout, Monument, Archer x2, Settler, Worker, Archer, Paper Maker, Archer, Settler, Archer x2, Spearman | Archery, luxury, Writing, Philosophy, Construction, Machinery | S36 + [I] |
+| any other civ with a plan | [I] N core units, Worker, Settler, support x2, core, (Settler if K is 3+), support, core x2; late: Monument, Worker, Settler x2 | the core's tech, luxury, the upgrade tech | generated |
+
+- The late civs' lists (Zulu to China) apply with `LateStrike`, as their rows do. Persia isn't in the research: it gets
+  the generated list.
+- **Status:** coded (`da1a760`), CI pending. Economy's book reads the lists next.
+
 ### LateStrikePlans: expert rows for the late-strike civs (Personality, draft, 2026-11-05 10:27pm ET)
 - **The lead (about 10:30pm ET by its clock, overnight; the user asleep):** the expert block (`ab-40203a3`) is frozen. Draft expert rows
   for the late-strike civs (Zulu, Mongolia, Assyria, Japan, Songhai) from `STRIKE_PLANS_RESEARCH.md`; China
