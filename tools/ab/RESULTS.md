@@ -3246,6 +3246,10 @@ yet; I'll confirm from them.**
   low approach score), it wouldn't. MilitaryAILog will say which.
 LEAD: answer partly from the code. The confirmation and any change follow when 17813E6E's logs land.
 
+**Economy 0058** is applied on 824f1dbf, for the trial build the lead wants. It adds no wonders and no city-state gold during
+the strike's WAR, and in WAR, with nothing left for the army phase, income items while net gold is below 0.
+LEAD: the trial head is **ai/war c89ed4ac** (824f1dbf + 0058). CI to follow. Reading only: no new expert-block games.
+
 **Read, Persia 15A7D14F (ab-f939c50, logs now in; 9:29am ET).** This corrects the "73-turn BUILDUP".
 - **States.** PREP T1, BUILDUP T56 (city-state target Wellington, 7 tiles, unwalled, no siege asked), then **OVER at
   T70, "a major declared war on us first"** (Germany and Ethiopia, T69). The war at T129 came long after the strike had
