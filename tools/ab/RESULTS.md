@@ -3378,7 +3378,8 @@ logged pair".
 - **Status:** draft. `1173f7c`, War's fields (`d1d4063`) and the recalibrated window (`bed8e14`) merged into
   `claude/ab-c1` (`ec78b0d`) by the lead. War's revised half (`3b0d6f0`) no longer calls `GetStrikeWindow` (its build-up
   opens at the normal T40 Standard on Economy's book), so the window is in the profile and the logs only for now. The
-  upgrade tech: `a55a585`, CI pending. The table needs checking against the log.
+  upgrade tech: `a55a585`, compiles (CI run 263 passed, 9:00pm ET; it also covers `d1d4063` and `bed8e14`, whose
+  own runs were cancelled by later pushes), ready to merge. The table needs checking against the log.
 
 ### VictoryTechPath: research for the target victory after the book (Personality, 2026-11-05 3:20pm ET)
 - **The finding** (Economy, `claude/economy-expansion`, "Do civs research for their target victory?"; 966 civ-games,
