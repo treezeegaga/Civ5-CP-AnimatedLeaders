@@ -1,0 +1,168 @@
+From 03d8e06afef312618fc60d82b253d26b3f13acd6 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 04:03:09 +0000
+Subject: [PATCH] AI_AB_TEST Economy: the strike books read War's strike state,
+ no turn limits (the user: "dont have the ai judge itself based on the
+ window")
+
+On ai/war 56e0cad (GetStrikeState). Option a, as the lead settled:
+- EarlyStrike book: runs while the strike state is PREP or BUILDUP (or
+  NONE before War's first update), with no book turn limit; the T90 small
+  empire and the fallback turn are gone (War's game-state exits end it).
+- K-city cap: until the strike is OVER, through the war; no settler built
+  or bought past K.
+- Purchases: EarlyStrike buys nothing in PREP and BUILDUP (hurries,
+  WarChest, tiles, settlers); LateStrike buys nothing in BUILDUP (WarChest's
+  siege purchases still run).
+- LateStrike: IsLateStrikeCiv reads GetStrikePlan().bLateStrike (one
+  source with War and Personality); the beeline (pre-build tech, core
+  tech, upgrade tech) and the saving run in BUILDUP, not from turns.
+- iFallbackTurn stays in CvEarlyStrikePlan as Personality's reference
+  (logs only).
+Written 11:04pm ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp |  5 ++-
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp     | 50 +++++++++++++----------
+ CvGameCoreDLL_Expansion2/CvPlayer.h       |  2 +-
+ 3 files changed, 32 insertions(+), 25 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index 234ce60..e463037 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3128,8 +3128,9 @@ static bool GetWantedExpansionSettler(CvPlayer* pPlayer, UnitTypes& eSettler, Cv
+ 
+ 	if (pPlayer->GetTreasury()->CalculateBaseNetGold() < 0 || pPlayer->IsBoxedInForSettling())
+ 		return false;
+-	// AI_AB_TEST candidate (EarlyStrike): no settler bought before the strike; the treasury is for the upgrades
+-	if (pPlayer->IsEarlyStrikeSmallEmpire())
++	// AI_AB_TEST candidate (EarlyStrike): no settler bought before the strike (the treasury is for the upgrades), nor past
++	// the plan's K cities until the strike is over
++	if (pPlayer->IsEarlyStrikeSmallEmpire() || pPlayer->IsEarlyStrikeCityCapReached())
+ 		return false;
+ 
+ 	UnitClassTypes eSettlerClass = (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_SETTLER", true);
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 7334512..ab5c7d7 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33879,12 +33879,11 @@ bool CvPlayer::IsEarlyStrikeBook() const
+ 	if (!MOD_AI_AB_TEST || !IsCandidateWarmonger(FIX_EARLY_STRIKE) || GetOpeningBook() == OPENING_BOOK_NONE ||
+ 		GetEarlyStrikeCoreClass() == NO_UNITCLASS)
+ 		return false;
+-	// the experts' exit: no target in reach and no war by the fallback turn, back to the normal plan (economy first)
+-	CvEarlyStrikePlan kPlan;
+-	if (GetEarlyStrikePlan(kPlan) && GC.getGame().getElapsedGameTurns() > kPlan.iFallbackTurn && !IsAtWarAnyMajor() &&
+-		!IsEarlyStrikeTargetInReach())
+-		return false;
+-	return true;
++	// no turn limits (the user: "dont have the ai judge itself based on the window during a game"): the book runs until
++	// War's strike state leaves PREP and BUILDUP (the declaration, or OVER by its game-state exits). NONE is the state
++	// before War's first update of the game.
++	const CvMilitaryAI::StrikeStateTypes eState = GetMilitaryAI() ? GetMilitaryAI()->GetStrikeState() : CvMilitaryAI::STRIKE_NONE;
++	return eState == CvMilitaryAI::STRIKE_NONE || eState == CvMilitaryAI::STRIKE_PREP || eState == CvMilitaryAI::STRIKE_BUILDUP;
+ }
+ 
+ /// AI_AB_TEST (EarlyStrike, the expert openings; the user: "use the experts ideas right away"): the civ's opening plan,
+@@ -33924,20 +33923,17 @@ bool CvPlayer::IsLateStrikeCiv() const
+ 		return false;
+ 	if (GetEarlyStrikeCoreClass() != NO_UNITCLASS) // an early-spike civ: EarlyStrike's book
+ 		return false;
++	// one source (the lead): the strike plan's own bLateStrike (Personality's late-strike rows, else its default)
+ 	const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
+-	return kStrike.bValid && kStrike.iOpenTurn > 0;
++	return kStrike.bValid && kStrike.bLateStrike && kStrike.eCoreClass != NO_UNITCLASS;
+ }
+ 
+ /// LateStrike: from the build-up (15 turns Standard before the window opens) to the declaration (or the plan's
+ /// declare-by turn), no hurries and no tiles: the treasury pays for the upgrade and go (the research: 70-80 gold per unit)
+ bool CvPlayer::IsLateStrikeSaving() const
+ {
+-	if (!IsLateStrikeCiv() || IsAtWarAnyMajor())
+-		return false;
+-	const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
+-	const int iTurn = GC.getGame().getElapsedGameTurns();
+-	const int iBuildup = kStrike.iOpenTurn - 15 * GC.getGame().getGameSpeedInfo().getTrainPercent() / 100;
+-	return iTurn >= iBuildup && iTurn <= max(kStrike.iDeclareByTurn, kStrike.iOpenTurn);
++	// War's strike state BUILDUP (Personality's economy-ready condition fired), to the declaration; no turns
++	return IsLateStrikeCiv() && !IsAtWarAnyMajor() && GetMilitaryAI() && GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_BUILDUP;
+ }
+ 
+ /// LateStrike: economy first, then a straight line to the strike. From 30 turns (Standard) before the window opens, the
+@@ -33945,13 +33941,18 @@ bool CvPlayer::IsLateStrikeSaving() const
+ /// Chivalry for Keshiks and Mandekalu, Civil Service for Impis, Steel for Samurai). After the opening book.
+ TechTypes CvPlayer::GetLateStrikeTech() const
+ {
+-	if (IsOpeningBookActive() || !IsLateStrikeCiv() || IsAtWarAnyMajor())
++	// the beeline starts at the readiness trigger (War's BUILDUP, option a), not at a turn
++	if (IsOpeningBookActive() || !IsLateStrikeSaving())
+ 		return NO_TECH;
+ 	const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
+-	const int iTurn = GC.getGame().getElapsedGameTurns();
+-	if (iTurn < kStrike.iOpenTurn - 30 * GC.getGame().getGameSpeedInfo().getTrainPercent() / 100 ||
+-		iTurn > max(kStrike.iDeclareByTurn, kStrike.iOpenTurn))
+-		return NO_TECH;
++	// the pre-build first (it becomes the core at the upgrade tech: China's Composite Bowmen), then the core, then the upgrade
++	const UnitTypes ePreBuild = (kStrike.ePreBuildClass != NO_UNITCLASS) ? GetSpecificUnitType(kStrike.ePreBuildClass) : NO_UNIT;
++	if (ePreBuild != NO_UNIT)
++	{
++		const TechTypes eStep = GetOpeningBookTechStep(*this, (TechTypes)GC.getUnitInfo(ePreBuild)->GetPrereqAndTech(), 0);
++		if (eStep != NO_TECH)
++			return eStep;
++	}
+ 	const UnitTypes eCore = (kStrike.eCoreClass != NO_UNITCLASS) ? GetSpecificUnitType(kStrike.eCoreClass) : NO_UNIT;
+ 	if (eCore != NO_UNIT)
+ 	{
+@@ -33967,7 +33968,9 @@ TechTypes CvPlayer::GetLateStrikeTech() const
+ /// EarlyStrike: K cities before the strike; past K, no settlers until it's over
+ bool CvPlayer::IsEarlyStrikeCityCapReached() const
+ {
+-	if (!IsEarlyStrikeSmallEmpire())
++	// the cap holds until the strike is OVER (War's game-state exits), through the war itself; no turn limit
++	if (!MOD_AI_AB_TEST || !IsCandidateWarmonger(FIX_EARLY_STRIKE) || GetEarlyStrikeCoreClass() == NO_UNITCLASS || !GetMilitaryAI() ||
++		GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_OVER)
+ 		return false;
+ 	CvEarlyStrikePlan kPlan;
+ 	return GetEarlyStrikePlan(kPlan) && getNumCities() >= kPlan.iMaxCities;
+@@ -34054,9 +34057,8 @@ TechTypes CvPlayer::GetEarlyStrikeLuxuryTech() const
+ /// started, or to turn 90 (Standard) at most; captured cities don't count against it.
+ bool CvPlayer::IsEarlyStrikeSmallEmpire() const
+ {
+-	if (!IsEarlyStrikeBook() || IsAtWarAnyMajor())
+-		return false;
+-	return GC.getGame().getElapsedGameTurns() < 90 * GC.getGame().getGameSpeedInfo().getTrainPercent() / 100;
++	// before the strike: the book's strike states (PREP, BUILDUP), no turn limit
++	return IsEarlyStrikeBook() && !IsAtWarAnyMajor();
+ }
+ 
+ OpeningBookType CvPlayer::GetOpeningBook() const
+@@ -34291,6 +34293,10 @@ bool CvPlayer::IsOpeningBookActive() const
+ 	if (eBook == OPENING_BOOK_NONE || getNumCities() == 0 || IsAtWarAnyMajor())
+ 		return false;
+ 
++	// AI_AB_TEST candidate (EarlyStrike): no turn limit; the strike book runs while War's strike state is PREP or BUILDUP
++	if (IsEarlyStrikeBook())
++		return true;
++
+ 	// Turn limits are for Standard speed
+ 	// Candidate: wide civs keep settling longer. In test games they led CP by a city at turn 60 on Quick, then expanded
+ 	// no faster than CP once the book ended (turn 67), so the lead never grew.
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 28c2dac..1df009a 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -138,7 +138,7 @@ struct CvEarlyStrikePlan
+ 	UnitClassTypes eSiege;		// NO_UNITCLASS: none (unwalled targets need none)
+ 	int iSiegeTotal;
+ 	int iMaxCities;				// K: cities before the strike
+-	int iFallbackTurn;			// elapsed turns, this game's speed: no target in reach and no war by then, back to the normal plan
++	int iFallbackTurn;			// Personality's reference turn (logs only: the strike state's game-state exits decide, not turns)
+ 	PolicyBranchTypes eFirstTree;	// NO_POLICY_BRANCH_TYPE: the book's own
+ 	TechTypes eUpgradeTech;		// upgrade and go (NO_TECH: none)
+ };
+-- 
+2.43.0
+

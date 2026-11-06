@@ -1830,6 +1830,20 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
+### Patch 0034: the strike books read War's strike state, no turn limits (Economy, Nov 5, 11:03pm ET; next block)
+The user: "dont have the ai judge itself based on the window during a game". The lead settled option (a). War's
+`CvMilitaryAI::GetStrikeState()` (ai/war `56e0cad`) drives every strike decision; Personality defines economy-ready.
+Patch 0034 is on ai/war `56e0cad` and is merged after the expert block.
+- **EarlyStrike book:** runs while the strike state is PREP or BUILDUP (or NONE, before War's first update), with no
+  book turn limit. The T90 small empire and the fallback turn are gone; War's game-state exits end the strike.
+- **K-city cap:** until the strike is OVER, through the war. No settler is built or bought past K.
+- **Purchases:**
+  - EarlyStrike buys nothing in PREP and BUILDUP (hurries, WarChest, tiles, settlers);
+  - LateStrike buys nothing in BUILDUP (WarChest's siege purchases still run).
+- **LateStrike:**
+  - `IsLateStrikeCiv` reads `GetStrikePlan().bLateStrike`, one source with War and Personality;
+  - the beeline (the pre-build's tech, the core's, then the upgrade) and the saving run in BUILDUP, not from turns.
+
 ### Expert block (ab-40203a3): the book check, running table (Economy, overnight from Nov 5, 10:30pm ET)
 The lead: overnight, the block is frozen; check the book on each pair as it lands. Script:
 `tools/ab/scripts/earlystrike/book_check.py`. The questions:
@@ -1840,7 +1854,7 @@ The lead: overnight, the block is frozen; check the book on each pair as it land
 
 | Pair (game) | Aggressor | N before the 1st settler (plan) | Cities at the declaration (K) | Upgrade tech buildable from | Luxury tech | First tree | Bought before the declaration | Upgrades at the declaration |
 |---|---|---|---|---|---|---|---|---|
-| (no expert games in yet at 10:30pm ET) | | | | | | | | |
+| (none yet at 11:05pm ET: PC 1's bullyabort16-18 ran on 8fe8e0f, not ab-40203a3; their logs don't test the book) | | | | | | | | |
 
 ### LateStrike, the book half (Economy, patch 0033, prepared for the next block, Nov 5, 10:29pm ET; not merged)
 The lead: prepare the late-strike civs' book half for the next block. Personality's late-spike table: Denmark, Mongolia,
