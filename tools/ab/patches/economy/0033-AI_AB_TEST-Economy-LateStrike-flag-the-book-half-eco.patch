@@ -1,0 +1,183 @@
+From 98ef58e65f77c4c8c5a6acd9cefea7210ad5da08 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 6 Nov 2026 03:28:30 +0000
+Subject: [PATCH] AI_AB_TEST Economy: LateStrike flag, the book half (economy
+ first, then a straight line to the spike, gold saved for the upgrades)
+
+For a candidate warmonger whose spike comes late (not Personality's
+bMilitaryFirst) and has a strike plan (CvGrandStrategyAI::GetStrikePlan),
+under the new flag LateStrike (off in the bundle; for the next block):
+- the normal book and expansion (no city cap);
+- research: after the book, from 30 turns (Standard) before the plan's
+  window opens to its declare-by turn, the core unit's tech, then the
+  plan's upgrade tech (before War's TimingBuildup techs);
+- gold: from the build-up (15 turns Standard before the window) to the
+  declaration, no hurries (WarChest's siege purchases still run) and no
+  tiles, for the upgrade and go;
+- policy: the plan's first branch when Personality names one
+  (NO_POLICY_BRANCH_TYPE keeps the book's own).
+War's half (the late window and the target) can read IsLateStrikeCiv.
+On claude/ab-c1 40203a3. Written 10:28pm ET.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvEconomicAI.cpp |  8 ++++
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp     | 58 +++++++++++++++++++++++
+ CvGameCoreDLL_Expansion2/CvPlayer.h       |  6 +++
+ CvGameCoreDLL_Expansion2/CvTechAI.cpp     |  6 +++
+ 4 files changed, 78 insertions(+)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+index 3d52848..234ce60 100644
+--- a/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvEconomicAI.cpp
+@@ -3444,6 +3444,11 @@ void CvEconomicAI::DoHurry()
+ 
+ 	DoWarChest(m_pPlayer);
+ 
++	// AI_AB_TEST candidate (LateStrike): from the build-up to the declaration, the treasury is for the upgrades; only
++	// WarChest's siege purchases (above) spend it
++	if (m_pPlayer->IsLateStrikeSaving())
++		return;
++
+ 	if (m_pPlayer->UsesNewAI())
+ 	{
+ 		BuyExpansionSettler(m_pPlayer);
+@@ -3806,6 +3811,9 @@ void CvEconomicAI::DoPlotPurchases()
+ 	// AI_AB_TEST candidate (EarlyStrike): no tiles bought before the strike, the gold is for the upgrades
+ 	if (m_pPlayer->IsEarlyStrikeSmallEmpire())
+ 		return;
++	// AI_AB_TEST candidate (LateStrike): nor in a late strike's build-up
++	if (m_pPlayer->IsLateStrikeSaving())
++		return;
+ 
+ 	// AI_AB_TEST: CP never cancels a tile savings request, so after one unaffordable plot the amount stays
+ 	// reserved (and blocks hurrying) for the rest of the game. The new AI clears it here; the loop below
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index a5a8c2d..0db758f 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33453,6 +33453,7 @@ static const CandidateFixInfo kCandidateFixes[] = {
+ 	{"EarlyStrike", false},
+ 	{"EarlyStrikeAggressor", false},
+ 	{"Spoiler", false},
++	{"LateStrike", false},
+ };
+ // one line per flag, and room in the masks
+ typedef char ABTestFixTableMatchesEnum[(sizeof(kCandidateFixes) / sizeof(kCandidateFixes[0]) == NUM_CANDIDATE_FIXES) ? 1 : -1];
+@@ -33910,6 +33911,58 @@ bool CvPlayer::GetEarlyStrikePlan(CvEarlyStrikePlan& kPlan) const
+ 	return true;
+ }
+ 
++static TechTypes GetOpeningBookTechStep(const CvPlayer& kPlayer, TechTypes eTech, int iDepth); // defined with the book below
++
++/// AI_AB_TEST candidate (LateStrike, Economy's half; the user: "with other warmonger civs like zulu, maybe you build up more
++/// of an infrastructure and then try to time an impi attack"): a candidate warmonger whose spike comes after turn 30
++/// Standard (not Personality's bMilitaryFirst) and has a strike plan (CvGrandStrategyAI::GetStrikePlan). It keeps the
++/// normal book and its expansion (no city cap: Personality's K = no limit for late-spike civs).
++bool CvPlayer::IsLateStrikeCiv() const
++{
++	if (!MOD_AI_AB_TEST || !IsCandidateWarmonger(FIX_LATE_STRIKE) || !GetGrandStrategyAI() || getNumCities() == 0)
++		return false;
++	if (GetEarlyStrikeCoreClass() != NO_UNITCLASS) // an early-spike civ: EarlyStrike's book
++		return false;
++	const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
++	return kStrike.bValid && kStrike.iOpenTurn > 0;
++}
++
++/// LateStrike: from the build-up (15 turns Standard before the window opens) to the declaration (or the plan's
++/// declare-by turn), no hurries and no tiles: the treasury pays for the upgrade and go (the research: 70-80 gold per unit)
++bool CvPlayer::IsLateStrikeSaving() const
++{
++	if (!IsLateStrikeCiv() || IsAtWarAnyMajor())
++		return false;
++	const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
++	const int iTurn = GC.getGame().getElapsedGameTurns();
++	const int iBuildup = kStrike.iOpenTurn - 15 * GC.getGame().getGameSpeedInfo().getTrainPercent() / 100;
++	return iTurn >= iBuildup && iTurn <= max(kStrike.iDeclareByTurn, kStrike.iOpenTurn);
++}
++
++/// LateStrike: economy first, then a straight line to the strike. From 30 turns (Standard) before the window opens, the
++/// spike unit's tech, then the plan's upgrade tech (the late-spike table: Metal Casting for Denmark's Berserkers,
++/// Chivalry for Keshiks and Mandekalu, Civil Service for Impis, Steel for Samurai). After the opening book.
++TechTypes CvPlayer::GetLateStrikeTech() const
++{
++	if (IsOpeningBookActive() || !IsLateStrikeCiv() || IsAtWarAnyMajor())
++		return NO_TECH;
++	const CvStrikePlan& kStrike = GetGrandStrategyAI()->GetStrikePlan();
++	const int iTurn = GC.getGame().getElapsedGameTurns();
++	if (iTurn < kStrike.iOpenTurn - 30 * GC.getGame().getGameSpeedInfo().getTrainPercent() / 100 ||
++		iTurn > max(kStrike.iDeclareByTurn, kStrike.iOpenTurn))
++		return NO_TECH;
++	const UnitTypes eCore = (kStrike.eCoreClass != NO_UNITCLASS) ? GetSpecificUnitType(kStrike.eCoreClass) : NO_UNIT;
++	if (eCore != NO_UNIT)
++	{
++		const TechTypes eStep = GetOpeningBookTechStep(*this, (TechTypes)GC.getUnitInfo(eCore)->GetPrereqAndTech(), 0);
++		if (eStep != NO_TECH)
++			return eStep;
++	}
++	if (kStrike.eUpgradeTech != NO_TECH)
++		return GetOpeningBookTechStep(*this, kStrike.eUpgradeTech, 0);
++	return NO_TECH;
++}
++
+ /// EarlyStrike: K cities before the strike; past K, no settlers until it's over
+ bool CvPlayer::IsEarlyStrikeCityCapReached() const
+ {
+@@ -34875,6 +34928,11 @@ PolicyBranchTypes CvPlayer::GetOpeningBookPolicyBranch() const
+ 	CvEarlyStrikePlan kPlan;
+ 	if (IsEarlyStrikeBook() && GetEarlyStrikePlan(kPlan) && kPlan.eFirstTree != NO_POLICY_BRANCH_TYPE)
+ 		return kPlan.eFirstTree;
++	// AI_AB_TEST candidate (LateStrike): the strike plan's first tree when it names one (Personality's late-spike table:
++	// Tradition for the Zulu, Japan and China, Liberty for Denmark, the Ottomans and England, Honor for Mongolia, Songhai
++	// and Germany); NO_POLICY_BRANCH_TYPE keeps the book's own
++	if (IsLateStrikeCiv() && GetGrandStrategyAI()->GetStrikePlan().eFirstPolicyBranch != NO_POLICY_BRANCH_TYPE)
++		return GetGrandStrategyAI()->GetStrikePlan().eFirstPolicyBranch;
+ 
+ 	switch (GetOpeningBook())
+ 	{
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.h b/CvGameCoreDLL_Expansion2/CvPlayer.h
+index 42fa5c8..c0be7cc 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.h
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.h
+@@ -317,6 +317,9 @@ enum CandidateFixTypes
+ 	FIX_SPOILER,			// Diplomacy (the user's design): a civ that has fallen too far behind to be first picks the one civ it blames
+ 							// for its downfall and, while that civ contends for first, helps its enemies (better deals, joint wars) and
+ 							// sells it nothing. Off in the bundle
++	FIX_LATE_STRIKE,		// Economy (the book half; War has the window): a warmonger whose spike comes late (not bMilitaryFirst) plays
++							// economy first, researches its spike and upgrade techs before its window, and saves gold for the
++							// upgrades from the build-up to the declaration. Off in the bundle
+ 	NUM_CANDIDATE_FIXES
+ };
+ // AI_AB_TEST: ABTestFixMask, a set of candidate flags, is defined in CustomMods.h (128 bits)
+@@ -1922,6 +1925,9 @@ public:
+ 	bool IsEarlyStrikeCityCapReached() const; // AI_AB_TEST Economy, flag EarlyStrike: K cities before the strike
+ 	bool IsEarlyStrikeTargetInReach() const; // AI_AB_TEST Economy, flag EarlyStrike: a barbarian camp or a major's city near the capital
+ 	TechTypes GetEarlyStrikeLuxuryTech() const; // AI_AB_TEST Economy, flag EarlyStrike: the one luxury tech before the upgrade
++	bool IsLateStrikeCiv() const; // AI_AB_TEST Economy, flag LateStrike: a warmonger with a late spike and a strike plan
++	bool IsLateStrikeSaving() const; // AI_AB_TEST Economy, flag LateStrike: from the build-up to the declaration, gold kept for upgrades
++	TechTypes GetLateStrikeTech() const; // AI_AB_TEST Economy, flag LateStrike: the spike's and the upgrade's techs before the window
+ 	bool IsWarGoldShort() const; // AI_AB_TEST Economy, flag WarGold
+ 	PolicyBranchTypes GetOpeningBookPolicyBranch() const;
+ 
+diff --git a/CvGameCoreDLL_Expansion2/CvTechAI.cpp b/CvGameCoreDLL_Expansion2/CvTechAI.cpp
+index 2cff365..500f133 100644
+--- a/CvGameCoreDLL_Expansion2/CvTechAI.cpp
++++ b/CvGameCoreDLL_Expansion2/CvTechAI.cpp
+@@ -233,6 +233,12 @@ TechTypes CvTechAI::ChooseNextTech(CvPlayer *pPlayer, bool bFreeTech)
+ 			LogResearchChoice(eBookTech);
+ 			return eBookTech;
+ 		}
++		eBookTech = pPlayer->GetLateStrikeTech(); // AI_AB_TEST Economy, flag LateStrike: the spike and upgrade techs before the window
++		if (eBookTech != NO_TECH)
++		{
++			LogResearchChoice(eBookTech);
++			return eBookTech;
++		}
+ 		eBookTech = pPlayer->GetTimingBuildupTech(); // AI_AB_TEST War, flag TimingBuildup
+ 		if (eBookTech != NO_TECH)
+ 		{
+-- 
+2.43.0
+

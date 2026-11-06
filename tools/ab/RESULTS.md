@@ -1830,6 +1830,42 @@ and go". The treasury was 263 at T40 and 31 at T50.
 - **The upgrades just before the declaration are War's:** CP's homeland upgrades would otherwise spend the gold as
   soon as there's enough.
 
+### Expert block (ab-40203a3): the book check, running table (Economy, overnight from Nov 5, 10:30pm ET)
+The lead: overnight, the block is frozen; check the book on each pair as it lands. Script:
+`tools/ab/scripts/earlystrike/book_check.py`. The questions:
+- did the capital follow the plan's N and K;
+- did research reach the upgrade tech after one luxury tech;
+- the first policy tree;
+- was gold saved for the upgrades (no purchases before the declaration).
+
+| Pair (game) | Aggressor | N before the 1st settler (plan) | Cities at the declaration (K) | Upgrade tech buildable from | Luxury tech | First tree | Bought before the declaration | Upgrades at the declaration |
+|---|---|---|---|---|---|---|---|---|
+| (no expert games in yet at 10:30pm ET) | | | | | | | | |
+
+### LateStrike, the book half (Economy, patch 0033, prepared for the next block, Nov 5, 10:29pm ET; not merged)
+The lead: prepare the late-strike civs' book half for the next block. Personality's late-spike table: Denmark, Mongolia,
+Songhai, Japan, Ottoman, Zulu, Germany, England, China. Its plan: economy first, then a timed strike at the spike's
+tech, K = no limit.
+
+- **Who:** a candidate warmonger whose spike isn't early (not `bMilitaryFirst`) and that has a strike plan
+  (`GetStrikePlan().bValid`, an open turn). New flag `LateStrike`, off in the bundle. War's half (the late window,
+  the target) can read `CvPlayer::IsLateStrikeCiv`.
+- **Book:** the normal one. Expansion has no cap.
+- **Research:** after the book, from 30 turns (Standard) before the plan's window opens up to its declare-by turn:
+  the core unit's tech, then the plan's upgrade tech. This comes before War's TimingBuildup techs (after WarGold's
+  Currency when gold is short).
+- **Gold:** from the build-up (15 turns Standard before the window) to the declaration, no hurries and no tiles; only
+  WarChest's siege purchases still run. The treasury goes to the upgrade and go (the research: 70-80 gold a unit).
+- **Policy:** the plan's first branch when Personality names one. Personality's table: Tradition for the Zulu,
+  Japan and China; Liberty for Denmark, the Ottomans and England; Honor for Mongolia, Songhai and Germany. Today
+  its data default gives none for late-spike civs, so the book's own branch stays until Personality fills those rows.
+- **Hypothesis:** late-spike aggressors keep a normal economy until about 30 turns before their window. They reach
+  the window with the spike unit and the upgrade researched and gold for the upgrades, and capture more than the
+  honest package's aggressors without falling behind on cities.
+- **Measure:** captures; the spike tech turn against the plan's open turn; gold at the declaration; cities and
+  science at T100.
+- **Status:** patch 0033 on `claude/ab-c1` `40203a3`, not merged (the lead).
+
 ### EarlyStrike book as the expert openings (Economy, patch 0031, Nov 5, 9:52pm ET)
 
 The user (via the lead, 9:58pm ET): "no, we dont need a baseline. use the experts ideas right away and we will know if
