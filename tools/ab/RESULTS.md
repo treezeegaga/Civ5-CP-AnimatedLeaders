@@ -8494,3 +8494,45 @@ early or late strike civ with any land combat unit, bGoAlone is forced false: th
 - **Workers lost next to the capital:** a separate homeland read.
 
 LEAD (10:15am ET): new flag **StrikeEscort** on ai/war 0fd37c408, from the user's ruling. A strike civ's Settler never goes alone while the civ has a land combat unit. Off in the bundle; please put it in the next block's RoleFixes. CI is running.
+
+### War: 1B22084A, Persia's early strike stuck in PREP (bullygreedy26 game 3, ab-993343d) (War, 2026-11-07 10:23am ET)
+
+**What holds PREP -> BUILDUP for an early strike:** the transition needs three things, read from the code; the logs for
+1B22084A aren't in the pack yet.
+- **economy-ready** (Personality's IsStrikeEconomyReady, early): the plan's core trainable on its upgrade line
+  (IsStrikeClassBuildable), core units >= iCoreBeforeSettler, and cities >= K or boxed in;
+- **the target in reach:** a held target counts as in reach (the review of cbebe77), so Yerevan, held from T4, passes;
+- **the early core trainable:** IsStrikeArmyBuildable, which is Economy's early core (GetEarlyStrikeCore), else the
+  pre-build.
+
+None of these logs anything in PREP. That's why 1B22084A shows no line for 150 turns.
+
+**What the other games say:**
+- Same civ, same plan in 1A5C4C1E (bullyabort26): Persia left PREP at T57. So the plan isn't broken; something in
+  1B22084A's game state fails.
+- With 10 cities and the army complete, cities and core count should pass. My leading candidates are the core line or the
+  early core read as not trainable (for instance a missing tech or resource). I'll confirm from the logs when they land.
+
+**Smallest fix:** on **ai/war 9367095e6** (on 0fd37c408), for the next build:
+- **The way out:** PREP -> BUILDUP also fires when the plan's army is out (core and support at their counts, upgrade lines
+  included) and a target is held in reach. It logs "the plan's army is out, target X held in reach". That's a game-state
+  way out: the army is what PREP waits for, and once it exists the build-up starts.
+- **Diagnosis:** a "Strike: PREP holds (...)" line, written when the reason changes. It shows economy-ready and each of
+  its parts, the early core, the target and its reach, and the plan's army counts. A held PREP now names its cause.
+
+**Count, first games of bullygreedy26 and bullyabort26 so far:**
+
+| Game | Civ | Left PREP |
+|---|---|---|
+| 1A46A642 | Ottomans | T55 |
+| 1A5C4C1E | Persia | T57 |
+| 1B02BA85 | Assyria | T71 |
+| 1B22084A | Persia | never (no logs yet) |
+
+So 1 of 4 stayed in PREP past T80.
+
+LEAD (10:23am ET): 1B22084A read above.
+- **Fix on ai/war 9367095e6, next build:** PREP -> BUILDUP once the plan's army is out with a target held, plus a
+  "PREP holds" line naming the failing part.
+- **The exact cause** needs the game's logs; I'll name it when they land.
+- **Count:** 1 of 4 first games so far stayed in PREP past T80.
