@@ -7660,3 +7660,24 @@ holds no growing state. Symbols for the stack to follow. I don't see a reason to
 
 LEAD: logging proposal above (no code yet): an AB_LOG_CHECKED_ONLY option that writes only the logs our checks read.
 Plus a cheap PC 2 test (Logs\ size vs private bytes) to confirm logging is the pressure first. Waiting for your go.
+
+**Crash on ab-791ab9d (183D5D87), symbolized (8:59pm ET; a helper session with the CI PDB, DLL timestamp matched): our bug, not memory.**
+- Crash site: RVA 0x933ad7. crashes.log's "in file" +0x932ed7 is a file offset (RVA - 0xC00); the stack entries are RVAs.
+  The site is CvAIOperation::LogOperationStatus, MOVING_TO_TARGET branch (CvAIOperation.cpp ~1283):
+  pThisArmy->GetCenterOfMass(true) returned NULL and pCoM->getY() read 0x00000002. GetCenterOfMass is NULL for an army with
+  no units. Chain: CvGame::updateMoves -> AI_unitUpdate -> ProcessDominanceZones -> PlotOperationalArmyMoves ->
+  CvAIOperation::DoTurn -> LogOperationStatus(false). It runs only with AI logging on, which is why logged games crash.
+- **How an empty army survives: gate 4.** When an operation's last unit dies, UnitWasRemoved asks
+  SetToAbort(AI_ABORT_HALF_STRENGTH). The strike's bypass there covers only armies with units left, so the request is made,
+  and gate 4 refuses HALF_STRENGTH against the strike's target. The operation stays in MOVING_TO_TARGET with an empty army,
+  and the next logged turn crashes. Without logging it doesn't crash, but it counts as "an attack under way"
+  (getFirstOffensiveAIOperation), so the strike requests no new attack until the 42-turn timeout. That may be part of the
+  long no-attack stretches.
+- The memory figures were near the ceiling, but this crash is a NULL read, not a failed allocation. The 1c3ab74 crash is a
+  separate engine/Lua crash with no DLL frames.
+
+**Design (a crash fix, not a behaviour idea, so no flag):**
+1. Gate 4 (SetToAbort) refuses nothing for an operation with no units left in any of its armies: an empty army isn't a
+   retreat.
+2. LogOperationStatus null-checks GetArmy and GetCenterOfMass in its recruiting, gathering and moving branches (logging
+   must never crash).
