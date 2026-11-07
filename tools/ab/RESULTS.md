@@ -5456,3 +5456,12 @@ LEAD: ghost operations were 1 in 27 logged games (and only crashable in logged o
 - **Next:**
   - PC 2: trial29 on `ab-03494ee` (+SiegeCapturer, T100), then bullygreedy25 straight after if clean.
   - PC 1: trio27 games 3-6 on it, then bullyabort25.
+
+### bullygreedy25 pair 1, and memory without logging (lead, 11:29pm ET Nov 6)
+- **Game 18BE1E3E (ab-03494ee):** Greece (early strike) targeted the city-state La Venta (walled, defence 22-23). It declared at
+  T81, confirmed, WAR from T82, but never attacked: "city attack requested (not possible this turn)" on and off to T150. No
+  capture by anyone. Clean on wonders, gifts and the list. War is reading why RequestCityAttack fails. The block stays frozen.
+- **Memory:** the flipped game with AILog = 0 used the same memory as the logged game at the same turn (1692 vs 1687 MB
+  private at T100; 1711 vs 1724 MB at T150). Logging isn't the pressure: about 1.7 GB is the game's own footprint here,
+  about 100 MB under the 1.81 GB crash level. AILog goes back on for every game. This is a risk for full games to a winner
+  (past T150); look at it before those.
