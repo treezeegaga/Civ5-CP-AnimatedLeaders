@@ -5361,7 +5361,7 @@ Plus a cheap PC 2 test (Logs\ size vs private bytes) to confirm logging is the p
 2. LogOperationStatus null-checks GetArmy and GetCenterOfMass in its recruiting, gathering and moving branches (logging
    must never crash).
 
-### Crash fix merged: claude/ab-c1 = 9273f98 (lead, 9:08pm ET Nov 6)
+### Crash fix merged: claude/ab-c1 = 9273f98 (lead, 9:01pm ET Nov 6)
 - **The 791ab9d crash was ours.** Gate 4 refused the half-strength abort of a strike operation whose last unit had died.
   The empty operation stayed in MOVING_TO_TARGET, and with AI logging on, LogOperationStatus read its NULL center of mass.
   Without logging there's no crash, but the empty operation counted as "an attack under way" and blocked the strike's new
@@ -5395,7 +5395,7 @@ matters for captures too. CI to follow. The logging-memory proposal still stands
 
 LEAD: ghost operations were 1 in 27 logged games (and only crashable in logged ones); not a main cause of the funnel loss.
 
-### The strike lasts until the target's capital falls: claude/ab-c1 = 0f35217 (lead, 9:27pm ET Nov 6)
+### The strike lasts until the target's capital falls: claude/ab-c1 = 0f35217 (lead, 9:13pm ET Nov 6)
 - **From the user, watching trio27 game 1:** "huns took indonesias first city easily, but then the game ai took over from
   the strike ai, and instead of the whole army marching on the capital, half the units just wandered across the world
   randomly. maybe we need to have the strike last until the capital is conquered."
