@@ -3631,6 +3631,39 @@ weights fill everything a plan doesn't name):
     the whole upgrade line breadth-first (War's Zulu in `17436CCD` read support 7/8 for 30 turns with a Crossbowman two
     steps up from the Archer). `ai/war` = `ai/personality` = `261d5da`: CI run 379 (`ai/war`) and run 380
     (`ai/personality`) passed.
+- **Mongolia in trial29** (`18B3086C`, `ab-03494ee`, logs in pack `8aef2cb`; the lead, 10:58pm ET, design only while
+  the block runs frozen). List item 6 (Chariot Archer) waited T29-T60. From T86, item 16 (Chariot Archer) blocked
+  everything under the gold hold. The strike stayed in PREP to T100. What the logs show:
+  - the plan and lists are as written;
+  - the first Chariot Archer moves at T67;
+  - CP's own picks skip Chariot Archers and Horsemen as "nosupply" or "badtimeorplace" (T69-T77).
+
+  Three problems with the row:
+  1. **Research order.** The builds are fils' and the research is hicks53081's, two players. Fils builds a Chariot
+     Archer 6th, but hicks takes The Wheel 7th, after Pottery, Writing, Animal Husbandry, Mining, Archery and Trapping.
+     Sourced lists keep their order, so OrderStrikeLists never moved The Wheel up.
+     - Proposed order: Pottery, Animal Husbandry (shows Horses; the Caravan needs it), The Wheel, Writing, Mining,
+       Archery, Trapping, Bronze Working, Horseback Riding (for the 2 Horsemen), Philosophy, Civil Service, Currency,
+       Chivalry.
+     - General rule: a list combined from two sources gets the build-tech ordering; only a single-source list keeps
+       its order.
+  2. **Horses.** Every unit on the row needs one. 8 Chariot Archers plus 2 Horsemen need 10, and 8 Keshiks need 8.
+     A Strategic Balance capital usually has a few, and an item waiting on a Horse never ends. Proposed:
+     - pre-build 4 Chariot Archers, not 8. Fils "upgraded four chariot archers"; 8 was my scaling of peddroelm's 14,
+       [I]. After Chivalry, Keshiks are built directly up to the core's 8;
+     - for Economy's executor: an item blocked only by a missing strategic resource is skipped, not held. That check
+       reads current resources, so it belongs in the executor, never in the cached plan (multiplayer-safe);
+     - a civ with fewer than 4 Horses falls back to the generic rush with Composite Bowmen (the user's Inca rule).
+  3. **Timing.** The source's Chivalry is T92-105 Standard (about T61-70 Quick) at a Deity human's pace. Ours comes
+     much later, and the trial stops at T100. Readiness is take-the-city, so a Chariot Archer and Horseman army can
+     declare before Chivalry. That is hicks' early grab around T97 Standard, and it's how `172518A7` got the first
+     strike capture at T123.
+     - The realistic Mongol game: a few Chariot Archers early (barbarians, promotions), declare when they can take the
+       target, upgrade to Keshiks when Chivalry lands.
+     - Keep the late row, with 1 and the 4-unit pre-build.
+
+  With 4 pre-built, item 16 (the 6th Chariot Archer) wouldn't be on the list. The gold hold is Economy's side.
+  For the next block, coded on `ai/personality` once the lead says go.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
   (the ruling, no wonders) compiles (CI run 318; `da1a760` run 305, `184fe09` run 313). Economy's book needs to treat `bGenericRush` like an early strike.
 
