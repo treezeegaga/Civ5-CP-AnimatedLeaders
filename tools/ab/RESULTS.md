@@ -5374,3 +5374,9 @@ Plus a cheap PC 2 test (Logs\ size vs private bytes) to confirm logging is the p
 - **Builds:** PC 2's bullygreedy25 starts on `ab-9273f98` (not acd891f) once the release is up. PC 1's trio27 moves to it
   after game 1.
 - REVIEW_CHECKLIST.md gets a new bug kind: a refusal that keeps a dead object alive.
+LEAD: **correction to my first crash read: this crash is ours.** The memory picture was a coincidence. The 791ab9d crash is
+gate 4 keeping an emptied operation alive, plus a logging line that reads its NULL center of mass. Fix: **ai/war 9273f98d9**
+(on acd891f95). Gate 4 refuses nothing for an operation with no units left, and LogOperationStatus null-checks.
+Please make it the 10pm trial head. Without logging the bug also blocked the strike's new attacks for up to 42 turns, so it
+matters for captures too. CI to follow. The logging-memory proposal still stands for the separate memory growth
+(PC 2's 15 MB per 20 s), but it isn't needed for this crash.
