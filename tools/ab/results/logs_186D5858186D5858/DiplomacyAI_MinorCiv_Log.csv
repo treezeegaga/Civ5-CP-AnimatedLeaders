@@ -1,0 +1,965 @@
+011, Kuala Lumpur, Siam, RECEIVED_UNIT_GIFT, Warrior
+014, Genoa, Rome, RECEIVED_UNIT_GIFT, Warrior
+021, Antananarivo, Japan, RECEIVED_UNIT_GIFT, Warrior
+023, Genoa, Russia, RECEIVED_UNIT_GIFT, Warrior
+024, Genoa, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
+025, Korea, Genoa, SENT OUT QUEST, Type, 13
+025, Korea, Genoa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENOA
+025, Russia, Genoa, SENT OUT QUEST, Type, 13
+025, Russia, Genoa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENOA
+025, Rome, Genoa, SENT OUT QUEST, Type, 13
+025, Rome, Genoa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENOA
+025, Ethiopia, Genoa, SENT OUT QUEST, Type, 13
+025, Ethiopia, Genoa, RECEIVED QUEST, Invest, Friendship: 2 to 2, MINOR_CIV_GENOA
+025, Austria, Manila, SENT OUT QUEST, Type, 7
+025, Austria, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 4 to 4, MINOR_CIV_MANILA
+026, Korea, Riga, SENT OUT QUEST, Type, 2
+026, Korea, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+026, Rome, Hanoi, SENT OUT QUEST, Type, 2
+026, Rome, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+028, Rome, Genoa, SENT OUT QUEST, Type, 17
+028, Rome, Genoa, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_GENOA
+028, Japan, Kuala Lumpur, SENT OUT QUEST, Type, 1
+028, Japan, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+028, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 1
+028, Siam, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+028, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 17
+028, Siam, Kuala Lumpur, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+028, Ethiopia, Cape Town, SENT OUT QUEST, Type, 2
+028, Ethiopia, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+029, Austria, Manila, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_MANILA, (SAVING) 
+029, Russia, Genoa, SENT OUT QUEST, Type, 2
+029, Russia, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENOA
+029, Rome, Wittenberg, SENT OUT QUEST, Type, 3
+029, Rome, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+029, Japan, Antananarivo, SENT OUT QUEST, Type, 7
+029, Japan, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+029, Korea, Hanoi, SENT OUT QUEST, Type, 7
+029, Korea, Hanoi, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+030, Russia, Wittenberg, SENT OUT QUEST, Type, 12
+030, Russia, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+030, Rome, Wittenberg, SENT OUT QUEST, Type, 12
+030, Rome, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+030, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 12
+030, Ethiopia, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+030, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 3
+030, Ethiopia, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+030, Rome, Cape Town, SENT OUT QUEST, Type, 17
+030, Rome, Cape Town, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+030, Japan, Hanoi, SENT OUT QUEST, Type, 1
+030, Japan, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+030, Korea, Hanoi, SENT OUT QUEST, Type, 1
+030, Korea, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+030, Siam, Hanoi, SENT OUT QUEST, Type, 1
+030, Siam, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+030, Rome, Hanoi, SENT OUT QUEST, Type, 1
+030, Rome, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: -3 to -3, MINOR_CIV_HANOI
+030, Ethiopia, Hanoi, SENT OUT QUEST, Type, 1
+030, Ethiopia, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+030, Siam, Hanoi, SENT OUT QUEST, Type, 17
+030, Siam, Hanoi, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_HANOI
+031, Korea, Kuala Lumpur, SENT OUT QUEST, Type, 1
+031, Korea, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+031, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+031, Russia, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+031, Ethiopia, Hanoi, SENT OUT QUEST, Type, 2
+031, Ethiopia, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+032, The Aztecs, Sofia, SENT OUT QUEST, Type, 7
+032, The Aztecs, Sofia, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SOFIA
+032, Japan, Antananarivo, SENT OUT QUEST, Type, 1
+032, Japan, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+032, Japan, Lhasa, SENT OUT QUEST, Type, 1
+032, Japan, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
+032, Austria, Lhasa, SENT OUT QUEST, Type, 1
+032, Austria, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
+033, Korea, Antananarivo, SENT OUT QUEST, Type, 1
+033, Korea, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+033, Japan, Manila, SENT OUT QUEST, Type, 1
+033, Japan, Manila, RECEIVED QUEST, Kill Camp, Friendship: 2 to 2, MINOR_CIV_MANILA
+033, Austria, Manila, SENT OUT QUEST, Type, 1
+033, Austria, Manila, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MANILA
+034, Russia, Wittenberg, SENT OUT QUEST, Type, 2
+034, Russia, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+034, The Aztecs, Sofia, SENT OUT QUEST, Type, 1
+034, The Aztecs, Sofia, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SOFIA
+034, Japan, Manila, SENT OUT QUEST, Type, 7
+034, Japan, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 4 to 4, MINOR_CIV_MANILA
+034, Korea, Cape Town, SENT OUT QUEST, Type, 1
+034, Korea, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+034, Russia, Cape Town, SENT OUT QUEST, Type, 1
+034, Russia, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+034, Rome, Cape Town, SENT OUT QUEST, Type, 1
+034, Rome, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+034, Ethiopia, Cape Town, SENT OUT QUEST, Type, 1
+034, Ethiopia, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+034, Russia, Cape Town, SENT OUT QUEST, Type, 2
+034, Russia, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+035, Austria, Lhasa, SENT OUT QUEST, Type, 1
+035, The Aztecs, Sofia, gained friend
+035, The Aztecs, Sofia, FINISHED QUEST, Kill Camp, Friendship: 9 to 59, MINOR_CIV_SOFIA
+036, Korea, Lhasa, SENT OUT QUEST, Type, 1
+036, Korea, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
+036, Korea, Genoa, SENT OUT QUEST, Type, 7
+036, Korea, Genoa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_GENOA
+036, Ethiopia, Genoa, SENT OUT QUEST, Type, 3
+036, Ethiopia, Genoa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_GENOA
+036, Korea, Riga, SENT OUT QUEST, Type, 1
+036, Korea, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+036, Japan, Kuala Lumpur, SENT OUT QUEST, Type, 7
+036, Japan, Kuala Lumpur, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+036, Korea, Cape Town, SENT OUT QUEST, Type, 2
+036, Korea, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+037, Japan, Manila, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_MANILA, (SAVING) 
+037, Japan, Wittenberg, SENT OUT QUEST, Type, 12
+037, Japan, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+037, Korea, Manila, SENT OUT QUEST, Type, 1
+037, Korea, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+037, Austria, Antananarivo, SENT OUT QUEST, Type, 1
+037, Austria, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+037, Japan, Lhasa, SENT OUT QUEST, Type, 2
+037, Japan, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
+038, Siam, Kuala Lumpur, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_KUALA_LUMPUR, (SAVING) 
+038, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 1
+038, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 17
+038, Siam, Hanoi, SENT OUT QUEST, Type, 1
+038, Siam, Hanoi, SENT OUT QUEST, Type, 17
+038, Austria, Antananarivo, SENT OUT QUEST, Type, 1
+038, Genoa, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
+038, Korea, Genoa, gained friend
+038, Korea, Genoa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_GENOA
+038, Kuala Lumpur, Russia, RECEIVED_UNIT_GIFT, Warrior
+038, Korea, Hanoi, gained friend
+038, Korea, Hanoi, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_HANOI
+039, Korea, Riga, SENT OUT QUEST, Type, 2
+039, Korea, Riga, SENT OUT QUEST, Type, 1
+039, Korea, Cape Town, SENT OUT QUEST, Type, 1
+039, Korea, Cape Town, SENT OUT QUEST, Type, 2
+040, Japan, Cape Town, SENT OUT QUEST, Type, 1
+040, Japan, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+040, Ethiopia, Cape Town, Gold Gift: 500, Friendship: 0 to 0, Culture, MINOR_CIV_CAPE_TOWN, (SAVING) 
+040, Ethiopia, Cape Town, SENT OUT QUEST, Type, 2
+040, Ethiopia, Cape Town, SENT OUT QUEST, Type, 1
+040, Austria, Manila, gained friend
+040, Austria, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_MANILA
+041, Japan, Genoa, era change yield update
+041, Japan, Wittenberg, era change yield update
+041, Japan, Colombo, era change yield update
+041, Japan, Riga, era change yield update
+041, Japan, Kuala Lumpur, era change yield update
+041, Japan, Sofia, era change yield update
+041, Japan, Antananarivo, era change yield update
+041, Japan, Manila, era change yield update
+041, Japan, Hong Kong, era change yield update
+041, Japan, Lhasa, era change yield update
+041, Japan, Melbourne, era change yield update
+041, Japan, M'banza-Kongo, era change yield update
+041, Japan, Cape Town, era change yield update
+041, Japan, Mogadishu, era change yield update
+041, Japan, Hanoi, era change yield update
+041, Japan, Tyre, era change yield update
+041, Japan, Wittenberg, SENT OUT QUEST, Type, 12
+041, Japan, Kuala Lumpur, SENT OUT QUEST, Type, 1
+041, Japan, Kuala Lumpur, SENT OUT QUEST, Type, 7
+041, Japan, Antananarivo, SENT OUT QUEST, Type, 7
+041, Japan, Antananarivo, SENT OUT QUEST, Type, 1
+041, Japan, Manila, SENT OUT QUEST, Type, 1
+041, Japan, Manila, SENT OUT QUEST, Type, 7
+041, Japan, Lhasa, SENT OUT QUEST, Type, 1
+041, Japan, Lhasa, SENT OUT QUEST, Type, 2
+041, Japan, Cape Town, SENT OUT QUEST, Type, 1
+041, Japan, Hanoi, SENT OUT QUEST, Type, 1
+041, Korea, Genoa, era change yield update
+041, Korea, Wittenberg, era change yield update
+041, Korea, Colombo, era change yield update
+041, Korea, Riga, era change yield update
+041, Korea, Kuala Lumpur, era change yield update
+041, Korea, Sofia, era change yield update
+041, Korea, Antananarivo, era change yield update
+041, Korea, Manila, era change yield update
+041, Korea, Hong Kong, era change yield update
+041, Korea, Lhasa, era change yield update
+041, Korea, Melbourne, era change yield update
+041, Korea, M'banza-Kongo, era change yield update
+041, Korea, Cape Town, era change yield update
+041, Korea, Mogadishu, era change yield update
+041, Korea, Hanoi, era change yield update
+041, Korea, Tyre, era change yield update
+041, Korea, Genoa, SENT OUT QUEST, Type, 13
+041, Korea, Riga, SENT OUT QUEST, Type, 2
+041, Korea, Riga, SENT OUT QUEST, Type, 1
+041, Korea, Kuala Lumpur, SENT OUT QUEST, Type, 1
+041, Korea, Antananarivo, SENT OUT QUEST, Type, 1
+041, Korea, Manila, SENT OUT QUEST, Type, 1
+041, Korea, Lhasa, SENT OUT QUEST, Type, 1
+041, Korea, Cape Town, SENT OUT QUEST, Type, 1
+041, Korea, Cape Town, SENT OUT QUEST, Type, 2
+041, Korea, Hanoi, SENT OUT QUEST, Type, 1
+041, Ethiopia, Genoa, era change yield update
+041, Ethiopia, Wittenberg, era change yield update
+041, Ethiopia, Colombo, era change yield update
+041, Ethiopia, Riga, era change yield update
+041, Ethiopia, Kuala Lumpur, era change yield update
+041, Ethiopia, Sofia, era change yield update
+041, Ethiopia, Antananarivo, era change yield update
+041, Ethiopia, Manila, era change yield update
+041, Ethiopia, Hong Kong, era change yield update
+041, Ethiopia, Lhasa, era change yield update
+041, Ethiopia, Melbourne, era change yield update
+041, Ethiopia, M'banza-Kongo, era change yield update
+041, Ethiopia, Cape Town, era change yield update
+041, Ethiopia, Mogadishu, era change yield update
+041, Ethiopia, Hanoi, era change yield update
+041, Ethiopia, Tyre, era change yield update
+041, Ethiopia, Genoa, SENT OUT QUEST, Type, 13
+041, Ethiopia, Genoa, SENT OUT QUEST, Type, 3
+041, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 12
+041, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 3
+041, Ethiopia, Cape Town, SENT OUT QUEST, Type, 2
+041, Ethiopia, Cape Town, SENT OUT QUEST, Type, 1
+041, Ethiopia, Hanoi, SENT OUT QUEST, Type, 1
+041, Ethiopia, Hanoi, SENT OUT QUEST, Type, 2
+041, Austria, Genoa, era change yield update
+041, Austria, Wittenberg, era change yield update
+041, Austria, Colombo, era change yield update
+041, Austria, Riga, era change yield update
+041, Austria, Kuala Lumpur, era change yield update
+041, Austria, Sofia, era change yield update
+041, Austria, Antananarivo, era change yield update
+041, Austria, Manila, era change yield update
+041, Austria, Hong Kong, era change yield update
+041, Austria, Lhasa, era change yield update
+041, Austria, Melbourne, era change yield update
+041, Austria, M'banza-Kongo, era change yield update
+041, Austria, Cape Town, era change yield update
+041, Austria, Mogadishu, era change yield update
+041, Austria, Hanoi, era change yield update
+041, Austria, Tyre, era change yield update
+041, Austria, Antananarivo, SENT OUT QUEST, Type, 1
+041, Austria, Manila, SENT OUT QUEST, Type, 1
+041, Austria, Lhasa, SENT OUT QUEST, Type, 1
+041, Austria, Manila, SENT OUT QUEST, Type, 7
+041, Austria, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 43 to 43, MINOR_CIV_MANILA
+041, Ethiopia, Cape Town, SENT OUT QUEST, Type, 7
+041, Ethiopia, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: 2 to 2, MINOR_CIV_CAPE_TOWN
+042, Japan, Genoa, SENT OUT QUEST, Type, 13
+042, Japan, Genoa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENOA
+042, Russia, Genoa, era change yield update
+042, Russia, Wittenberg, era change yield update
+042, Russia, Colombo, era change yield update
+042, Russia, Riga, era change yield update
+042, Russia, Kuala Lumpur, era change yield update
+042, Russia, Sofia, era change yield update
+042, Russia, Antananarivo, era change yield update
+042, Russia, Manila, era change yield update
+042, Russia, Hong Kong, era change yield update
+042, Russia, Lhasa, era change yield update
+042, Russia, Melbourne, era change yield update
+042, Russia, M'banza-Kongo, era change yield update
+042, Russia, Cape Town, era change yield update
+042, Russia, Mogadishu, era change yield update
+042, Russia, Hanoi, era change yield update
+042, Russia, Tyre, era change yield update
+042, Russia, Genoa, SENT OUT QUEST, Type, 13
+042, Russia, Genoa, SENT OUT QUEST, Type, 2
+042, Russia, Wittenberg, SENT OUT QUEST, Type, 12
+042, Russia, Wittenberg, SENT OUT QUEST, Type, 2
+042, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+042, Russia, Cape Town, SENT OUT QUEST, Type, 1
+042, Russia, Cape Town, SENT OUT QUEST, Type, 2
+042, Rome, Genoa, era change yield update
+042, Rome, Wittenberg, era change yield update
+042, Rome, Colombo, era change yield update
+042, Rome, Riga, era change yield update
+042, Rome, Kuala Lumpur, era change yield update
+042, Rome, Sofia, era change yield update
+042, Rome, Antananarivo, era change yield update
+042, Rome, Manila, era change yield update
+042, Rome, Hong Kong, era change yield update
+042, Rome, Lhasa, era change yield update
+042, Rome, Melbourne, era change yield update
+042, Rome, M'banza-Kongo, era change yield update
+042, Rome, Cape Town, era change yield update
+042, Rome, Mogadishu, era change yield update
+042, Rome, Hanoi, era change yield update
+042, Rome, Tyre, era change yield update
+042, Rome, Genoa, SENT OUT QUEST, Type, 13
+042, Rome, Genoa, SENT OUT QUEST, Type, 17
+042, Rome, Wittenberg, SENT OUT QUEST, Type, 3
+042, Rome, Wittenberg, SENT OUT QUEST, Type, 12
+042, Rome, Cape Town, SENT OUT QUEST, Type, 17
+042, Rome, Cape Town, SENT OUT QUEST, Type, 1
+042, Rome, Hanoi, SENT OUT QUEST, Type, 2
+042, Rome, Hanoi, SENT OUT QUEST, Type, 1
+043, Russia, Hanoi, SENT OUT QUEST, Type, 1
+043, Russia, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+043, Siam, Genoa, era change yield update
+043, Siam, Wittenberg, era change yield update
+043, Siam, Colombo, era change yield update
+043, Siam, Riga, era change yield update
+043, Siam, Kuala Lumpur, era change yield update
+043, Siam, Sofia, era change yield update
+043, Siam, Antananarivo, era change yield update
+043, Siam, Manila, era change yield update
+043, Siam, Hong Kong, era change yield update
+043, Siam, Lhasa, era change yield update
+043, Siam, Melbourne, era change yield update
+043, Siam, M'banza-Kongo, era change yield update
+043, Siam, Cape Town, era change yield update
+043, Siam, Mogadishu, era change yield update
+043, Siam, Hanoi, era change yield update
+043, Siam, Tyre, era change yield update
+043, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 1
+043, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 17
+043, Siam, Hanoi, SENT OUT QUEST, Type, 1
+043, Siam, Hanoi, SENT OUT QUEST, Type, 17
+043, Austria, Kuala Lumpur, SENT OUT QUEST, Type, 3
+043, Austria, Kuala Lumpur, RECEIVED QUEST, Construct Wonder, Friendship: 1 to 1, MINOR_CIV_KUALA_LUMPUR
+043, Japan, Antananarivo, SENT OUT QUEST, Type, 2
+043, Japan, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+044, Ethiopia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+044, Ethiopia, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+044, Korea, Hanoi, SENT OUT QUEST, Type, 2
+044, Korea, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 31 to 31, MINOR_CIV_HANOI
+044, Siam, Hanoi, SENT OUT QUEST, Type, 2
+044, Siam, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_HANOI
+045, The Aztecs, Genoa, era change yield update
+045, The Aztecs, Wittenberg, era change yield update
+045, The Aztecs, Colombo, era change yield update
+045, The Aztecs, Riga, era change yield update
+045, The Aztecs, Kuala Lumpur, era change yield update
+045, The Aztecs, Sofia, era change yield update
+045, The Aztecs, Antananarivo, era change yield update
+045, The Aztecs, Manila, era change yield update
+045, The Aztecs, Hong Kong, era change yield update
+045, The Aztecs, Lhasa, era change yield update
+045, The Aztecs, Melbourne, era change yield update
+045, The Aztecs, M'banza-Kongo, era change yield update
+045, The Aztecs, Cape Town, era change yield update
+045, The Aztecs, Mogadishu, era change yield update
+045, The Aztecs, Hanoi, era change yield update
+045, The Aztecs, Tyre, era change yield update
+045, The Aztecs, Sofia, SENT OUT QUEST, Type, 7
+045, Korea, Genoa, lost friend
+045, Korea, Genoa, FINISHED QUEST, Invest, Friendship: 29 to 29, MINOR_CIV_GENOA
+045, Japan, Genoa, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENOA
+045, Russia, Genoa, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENOA
+045, Rome, Genoa, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENOA
+045, Ethiopia, Genoa, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_GENOA
+045, Korea, Hanoi, lost friend
+045, Ethiopia, Hanoi, SENT OUT QUEST, Type, 3
+045, Ethiopia, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+046, Ethiopia, Genoa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_GENOA
+046, Ethiopia, Wittenberg, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+046, Korea, Kuala Lumpur, SENT OUT QUEST, Type, 2
+046, Korea, Kuala Lumpur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+047, Japan, Lhasa, SENT OUT QUEST, Type, 1
+047, Japan, Lhasa, SENT OUT QUEST, Type, 2
+047, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 12
+047, Russia, Cape Town, SENT OUT QUEST, Type, 7
+047, Russia, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+047, Korea, Mogadishu, SENT OUT QUEST, Type, 1
+047, Korea, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+047, Japan, Hanoi, SENT OUT QUEST, Type, 3
+047, Japan, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+048, Korea, Mogadishu, SENT OUT QUEST, Type, 1
+048, Rome, Cape Town, SENT OUT QUEST, Type, 17
+048, Rome, Cape Town, SENT OUT QUEST, Type, 1
+048, Rome, Cape Town, SENT OUT QUEST, Type, 2
+048, Rome, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 1 to 1, MINOR_CIV_CAPE_TOWN
+049, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 2
+049, Russia, Kuala Lumpur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+049, The Aztecs, Sofia, lost friend
+049, Korea, Antananarivo, SENT OUT QUEST, Type, 2
+049, Korea, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+050, The Aztecs, Riga, SENT OUT QUEST, Type, 1
+050, The Aztecs, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+050, The Aztecs, Sofia, gained friend
+050, Korea, Genoa, SENT OUT QUEST, Type, 2
+050, Korea, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 22 to 22, MINOR_CIV_GENOA
+050, Rome, Genoa, SENT OUT QUEST, Type, 7
+050, Rome, Genoa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_GENOA
+050, Ethiopia, Wittenberg, gained friend
+050, Ethiopia, Wittenberg, FINISHED QUEST, Contest Techs, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+050, Japan, Wittenberg, gained friend
+050, Japan, Wittenberg, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+050, Russia, Wittenberg, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+050, Rome, Wittenberg, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+050, Austria, Lhasa, SENT OUT QUEST, Type, 4
+050, Austria, Lhasa, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_LHASA
+051, Austria, Manila, lost friend
+052, Rome, Cape Town, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_CAPE_TOWN, (SAVING) 
+053, Rome, Kuala Lumpur, SENT OUT QUEST, Type, 1
+053, Rome, Kuala Lumpur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+053, Russia, Genoa, SENT OUT QUEST, Type, 7
+053, Russia, Genoa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_GENOA
+053, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 4
+053, Siam, Kuala Lumpur, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_KUALA_LUMPUR
+054, The Aztecs, Sofia, lost friend
+054, Rome, Hanoi, SENT OUT QUEST, Type, 3
+054, Rome, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+055, Korea, Riga, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_RIGA, (SAVING) 
+055, Japan, Wittenberg, lost friend
+055, Russia, Wittenberg, SENT OUT QUEST, Type, 7
+055, Russia, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+055, The Aztecs, Riga, gained friend
+055, The Aztecs, Riga, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_RIGA
+055, Korea, Riga, SENT OUT QUEST, Type, 17
+055, Korea, Riga, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_RIGA
+055, Kuala Lumpur, Russia, RECEIVED_UNIT_GIFT, Warrior
+055, Japan, Manila, SENT OUT QUEST, Type, 2
+055, Japan, Manila, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MANILA
+056, The Aztecs, Sofia, gained friend
+056, Korea, Riga, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_RIGA
+056, Japan, Kuala Lumpur, gained friend
+056, Japan, Kuala Lumpur, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KUALA_LUMPUR
+056, Japan, Antananarivo, gained friend
+056, Japan, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+056, Japan, Manila, gained friend
+056, Japan, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_MANILA
+057, Ethiopia, Wittenberg, lost friend
+057, Siam, Antananarivo, SENT OUT QUEST, Type, 1
+057, Siam, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+057, Rome, Antananarivo, SENT OUT QUEST, Type, 1
+057, Rome, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+057, Korea, Lhasa, SENT OUT QUEST, Type, 7
+057, Korea, Lhasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
+058, Siam, Antananarivo, SENT OUT QUEST, Type, 1
+058, Japan, Kuala Lumpur, SENT OUT QUEST, Type, 16
+058, Japan, Kuala Lumpur, RECEIVED QUEST, Spread Religion, Friendship: 37 to 37, MINOR_CIV_KUALA_LUMPUR
+059, Russia, Cape Town, SENT OUT QUEST, Type, 1
+059, Russia, Cape Town, SENT OUT QUEST, Type, 2
+059, Russia, Cape Town, SENT OUT QUEST, Type, 7
+059, Japan, Cape Town, SENT OUT QUEST, Type, 3
+059, Japan, Cape Town, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+060, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 16
+060, Ethiopia, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 22 to 22, MINOR_CIV_WITTENBERG
+060, The Aztecs, Sofia, lost friend
+060, Korea, Mogadishu, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+060, Korea, Hanoi, SENT OUT QUEST, Type, 0
+060, Korea, Hanoi, RECEIVED QUEST, Route, Friendship: 7 to 7, MINOR_CIV_HANOI
+061, Rome, Lhasa, SENT OUT QUEST, Type, 1
+061, Rome, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
+062, Japan, Manila, gained ally
+062, Japan, Manila, Gold Gift: 250, Friendship: 37 to 62, Conquest, MINOR_CIV_MANILA, Boost! , Passing Austria
+062, Japan, Lhasa, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_LHASA, (SAVING) 
+062, The Aztecs, Sofia, SENT OUT QUEST, Type, 2
+062, The Aztecs, Sofia, RECEIVED QUEST, Connect Resource, Friendship: 23 to 23, MINOR_CIV_SOFIA
+062, Rome, Manila, SENT OUT QUEST, Type, 1
+062, Rome, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+063, Russia, Cape Town, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_CAPE_TOWN, (SAVING) 
+063, Ethiopia, Genoa, SENT OUT QUEST, Type, 2
+063, Ethiopia, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENOA
+063, Japan, Kuala Lumpur, lost friend
+063, Russia, Kuala Lumpur, gained friend
+063, Russia, Kuala Lumpur, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KUALA_LUMPUR
+063, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 3
+063, Russia, Kuala Lumpur, RECEIVED QUEST, Construct Wonder, Friendship: 40 to 40, MINOR_CIV_KUALA_LUMPUR
+063, Japan, Antananarivo, lost friend
+063, Japan, Manila, lost ally
+063, Japan, Lhasa, SENT OUT QUEST, Type, 16
+063, Japan, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_LHASA
+063, Japan, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+063, Korea, Hanoi, cancelled, Kill Camp, Friendship: 2 to 2, MINOR_CIV_HANOI
+063, Russia, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+063, Siam, Hanoi, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HANOI
+063, Rome, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+063, Ethiopia, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+064, Rome, Genoa, gained friend
+064, Rome, Genoa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_GENOA
+064, Korea, Manila, SENT OUT QUEST, Type, 7
+064, Korea, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+064, Korea, Cape Town, SENT OUT QUEST, Type, 7
+064, Korea, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+064, Korea, Mogadishu, SENT OUT QUEST, Type, 2
+064, Korea, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+065, Rome, Wittenberg, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+065, Austria, Lhasa, SENT OUT QUEST, Type, 2
+065, Austria, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_LHASA
+065, Rome, Hanoi, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+066, The Aztecs, Sofia, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_SOFIA
+066, The Aztecs, Sofia, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_SOFIA
+066, Korea, Genoa, SENT OUT QUEST, Type, 7
+066, Korea, Genoa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_GENOA
+066, Austria, Antananarivo, SENT OUT QUEST, Type, 17
+066, Austria, Antananarivo, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+067, Japan, Genoa, SENT OUT QUEST, Type, 2
+067, Japan, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENOA
+067, Austria, Manila, gained friend
+067, Austria, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_MANILA
+067, Japan, Hanoi, SENT OUT QUEST, Type, 16
+067, Japan, Hanoi, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_HANOI
+067, Russia, Hanoi, SENT OUT QUEST, Type, 14
+067, Russia, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
+069, Genoa, Rome, RECEIVED_UNIT_GIFT, Warrior
+069, Japan, Wittenberg, SENT OUT QUEST, Type, 2
+069, Japan, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+069, The Aztecs, Riga, lost friend
+069, Ethiopia, Kuala Lumpur, SENT OUT QUEST, Type, 3
+069, Ethiopia, Kuala Lumpur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+069, Japan, Manila, SENT OUT QUEST, Type, 7
+069, Japan, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 50 to 50, MINOR_CIV_MANILA
+069, Austria, Manila, SENT OUT QUEST, Type, 7
+069, Austria, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 42 to 42, MINOR_CIV_MANILA
+070, Rome, Genoa, SENT OUT QUEST, Type, 17
+070, Russia, Kuala Lumpur, lost friend
+070, Korea, Kuala Lumpur, SENT OUT QUEST, Type, 14
+070, Korea, Kuala Lumpur, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+071, Austria, Cape Town, SENT OUT QUEST, Type, 1
+071, Austria, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+071, Korea, Genoa, gained friend
+071, Korea, Genoa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_GENOA
+071, The Aztecs, Riga, SENT OUT QUEST, Type, 17
+071, The Aztecs, Riga, RECEIVED QUEST, Trade Route, Friendship: 26 to 26, MINOR_CIV_RIGA
+071, Korea, Manila, gained friend
+071, Korea, Manila, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MANILA
+071, Korea, Lhasa, gained friend
+071, Korea, Lhasa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_LHASA
+071, Korea, Cape Town, gained friend
+071, Korea, Cape Town, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_CAPE_TOWN
+072, Siam, Lhasa, SENT OUT QUEST, Type, 1
+072, Siam, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
+072, Austria, Cape Town, SENT OUT QUEST, Type, 1
+072, Japan, Colombo, SENT OUT QUEST, Type, 13
+072, Japan, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+072, Rome, Colombo, SENT OUT QUEST, Type, 13
+072, Rome, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+072, Russia, Kuala Lumpur, gained friend
+072, Russia, Kuala Lumpur, gained ally
+072, Russia, Kuala Lumpur, FINISHED QUEST, Construct Wonder, Friendship: 26 to 66, MINOR_CIV_KUALA_LUMPUR
+072, Austria, Kuala Lumpur, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KUALA_LUMPUR
+072, Austria, Kuala Lumpur, SENT OUT QUEST, Type, 2
+072, Austria, Kuala Lumpur, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_KUALA_LUMPUR
+072, Russia, Antananarivo, SENT OUT QUEST, Type, 1
+072, Russia, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+072, Russia, Cape Town, gained friend
+072, Russia, Cape Town, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_CAPE_TOWN
+072, Japan, Cape Town, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+072, Japan, Hanoi, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+072, Russia, Hanoi, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
+072, Ethiopia, Hanoi, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+073, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+073, Rome, Wittenberg, SENT OUT QUEST, Type, 17
+073, Rome, Wittenberg, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+074, Japan, Genoa, SENT OUT QUEST, Type, 12
+074, Japan, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+074, Korea, Genoa, SENT OUT QUEST, Type, 12
+074, Korea, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 35 to 35, MINOR_CIV_GENOA
+074, Russia, Genoa, SENT OUT QUEST, Type, 12
+074, Russia, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+074, Rome, Genoa, SENT OUT QUEST, Type, 12
+074, Rome, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 30 to 30, MINOR_CIV_GENOA
+074, Ethiopia, Genoa, SENT OUT QUEST, Type, 12
+074, Ethiopia, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+074, Austria, Genoa, SENT OUT QUEST, Type, 12
+074, Austria, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+074, Russia, Melbourne, SENT OUT QUEST, Type, 1
+074, Russia, Melbourne, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+075, Austria, Genoa, SENT OUT QUEST, Type, 12
+075, Rome, Genoa, lost friend
+076, Austria, Manila, Gold Gift: 250, Friendship: 33 to 58, Diplomacy, MINOR_CIV_MANILA, Boost! 
+076, Austria, Genoa, Gold Gift: 500, Friendship: 1 to 1, Diplomacy, MINOR_CIV_GENOA, (SAVING) 
+076, Siam, Manila, SENT OUT QUEST, Type, 1
+076, Siam, Manila, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MANILA
+077, Siam, Manila, SENT OUT QUEST, Type, 1
+077, Korea, Genoa, gained ally
+077, Korea, Genoa, FINISHED QUEST, Connect Resource, Friendship: 31 to 71, MINOR_CIV_GENOA
+077, Ethiopia, Genoa, SENT OUT QUEST, Type, 14
+077, Ethiopia, Genoa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_GENOA
+077, Korea, Riga, gained friend
+077, Korea, Riga, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_RIGA
+077, Russia, Kuala Lumpur, lost ally
+077, Korea, Kuala Lumpur, gained friend
+077, Korea, Kuala Lumpur, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KUALA_LUMPUR
+077, Korea, Antananarivo, gained friend
+077, Korea, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+077, Korea, Antananarivo, SENT OUT QUEST, Type, 7
+077, Korea, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 40 to 40, MINOR_CIV_ANTANANARIVO
+077, Korea, Cape Town, gained ally
+077, Korea, Cape Town, FINISHED QUEST, Connect Resource, Friendship: 36 to 76, MINOR_CIV_CAPE_TOWN
+077, Korea, Hanoi, gained friend
+077, Korea, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HANOI
+077, Austria, Hanoi, SENT OUT QUEST, Type, 3
+077, Austria, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_HANOI
+078, Korea, Genoa, SENT OUT QUEST, Type, 12
+078, Korea, Hanoi, SENT OUT QUEST, Type, 0
+078, Rome, Cape Town, SENT OUT QUEST, Type, 17
+078, Rome, Cape Town, SENT OUT QUEST, Type, 1
+078, Rome, Cape Town, SENT OUT QUEST, Type, 2
+078, Korea, Kuala Lumpur, cancelled, Bully City-State, Friendship: 38 to 38, MINOR_CIV_KUALA_LUMPUR
+078, Siam, Antananarivo, SENT OUT QUEST, Type, 7
+078, Siam, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+078, Korea, Manila, lost friend
+078, Korea, Lhasa, lost friend
+078, Korea, Mogadishu, SENT OUT QUEST, Type, 17
+078, Korea, Mogadishu, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+078, Rome, Hanoi, SENT OUT QUEST, Type, 7
+078, Rome, Hanoi, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+079, Ethiopia, Kuala Lumpur, gained friend
+079, Ethiopia, Kuala Lumpur, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_KUALA_LUMPUR
+079, Siam, Antananarivo, gained friend
+079, Siam, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_ANTANANARIVO
+079, Rome, Manila, SENT OUT QUEST, Type, 3
+079, Rome, Manila, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MANILA
+080, Korea, Genoa, era change yield update
+080, Korea, Wittenberg, era change yield update
+080, Korea, Colombo, era change yield update
+080, Korea, Riga, era change yield update
+080, Korea, Kuala Lumpur, era change yield update
+080, Korea, Sofia, era change yield update
+080, Korea, Antananarivo, era change yield update
+080, Korea, Manila, era change yield update
+080, Korea, Hong Kong, era change yield update
+080, Korea, Lhasa, era change yield update
+080, Korea, Melbourne, era change yield update
+080, Korea, M'banza-Kongo, era change yield update
+080, Korea, Cape Town, era change yield update
+080, Korea, Mogadishu, era change yield update
+080, Korea, Hanoi, era change yield update
+080, Korea, Tyre, era change yield update
+080, Korea, Genoa, SENT OUT QUEST, Type, 12
+080, Korea, Riga, SENT OUT QUEST, Type, 17
+080, Korea, Kuala Lumpur, SENT OUT QUEST, Type, 1
+080, Korea, Antananarivo, SENT OUT QUEST, Type, 1
+080, Korea, Antananarivo, SENT OUT QUEST, Type, 7
+080, Korea, Manila, SENT OUT QUEST, Type, 1
+080, Korea, Lhasa, SENT OUT QUEST, Type, 1
+080, Korea, Cape Town, SENT OUT QUEST, Type, 1
+080, Korea, Mogadishu, SENT OUT QUEST, Type, 2
+080, Korea, Mogadishu, SENT OUT QUEST, Type, 17
+080, Korea, Hanoi, SENT OUT QUEST, Type, 0
+080, Rome, Genoa, SENT OUT QUEST, Type, 17
+080, Rome, Genoa, SENT OUT QUEST, Type, 12
+080, Ethiopia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+080, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 7
+080, Russia, Kuala Lumpur, RECEIVED QUEST, Find Natural Wonder, Friendship: 54 to 54, MINOR_CIV_KUALA_LUMPUR
+080, Rome, Kuala Lumpur, SENT OUT QUEST, Type, 14
+080, Rome, Kuala Lumpur, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+081, Japan, Genoa, SENT OUT QUEST, Type, 14
+081, Japan, Genoa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_GENOA
+081, Japan, Antananarivo, SENT OUT QUEST, Type, 16
+081, Japan, Antananarivo, RECEIVED QUEST, Spread Religion, Friendship: 2 to 2, MINOR_CIV_ANTANANARIVO
+083, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+083, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 7
+083, Ethiopia, Antananarivo, SENT OUT QUEST, Type, 1
+083, Ethiopia, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+083, Korea, Colombo, SENT OUT QUEST, Type, 13
+083, Korea, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+083, Rome, Antananarivo, SENT OUT QUEST, Type, 7
+083, Rome, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+083, Japan, Manila, lost friend
+083, Russia, Cape Town, lost friend
+084, Japan, Wittenberg, SENT OUT QUEST, Type, 10
+084, Japan, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+084, Russia, Wittenberg, SENT OUT QUEST, Type, 10
+084, Russia, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+084, Rome, Wittenberg, SENT OUT QUEST, Type, 10
+084, Rome, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+084, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 10
+084, Ethiopia, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+084, Korea, Kuala Lumpur, lost friend
+084, Korea, Antananarivo, lost friend
+084, Austria, Antananarivo, SENT OUT QUEST, Type, 2
+084, Austria, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+084, Rome, Mogadishu, SENT OUT QUEST, Type, 2
+084, Rome, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+084, Korea, Hanoi, lost friend
+085, Japan, Melbourne, SENT OUT QUEST, Type, 1
+085, Japan, Melbourne, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+085, Korea, Genoa, lost ally
+085, Japan, Kuala Lumpur, SENT OUT QUEST, Type, 2
+085, Japan, Kuala Lumpur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KUALA_LUMPUR
+085, Korea, Manila, SENT OUT QUEST, Type, 2
+085, Korea, Manila, RECEIVED QUEST, Connect Resource, Friendship: 19 to 19, MINOR_CIV_MANILA
+085, Japan, Mogadishu, SENT OUT QUEST, Type, 3
+085, Japan, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+085, Austria, Hanoi, gained friend
+085, Austria, Hanoi, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_HANOI
+086, Siam, Antananarivo, gained ally
+086, Siam, Antananarivo, Gold Gift: 250, Friendship: 36 to 61, Diplomacy, MINOR_CIV_ANTANANARIVO, Boost! , Passing Austria
+086, Siam, Manila, Gold Gift: 500, Friendship: 7 to 7, Diplomacy, MINOR_CIV_MANILA, (SAVING) 
+086, Ethiopia, Kuala Lumpur, Gold Gift: 250, Friendship: 31 to 56, Diplomacy, MINOR_CIV_KUALA_LUMPUR, Boost! , Passing Austria
+086, Ethiopia, Cape Town, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_CAPE_TOWN, (SAVING) 
+086, Siam, Antananarivo, lost ally
+086, Korea, Antananarivo, gained friend
+086, Korea, Antananarivo, gained ally
+086, Korea, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 26 to 66, MINOR_CIV_ANTANANARIVO
+086, Korea, Lhasa, SENT OUT QUEST, Type, 3
+086, Korea, Lhasa, RECEIVED QUEST, Construct Wonder, Friendship: 17 to 17, MINOR_CIV_LHASA
+086, Rome, Lhasa, SENT OUT QUEST, Type, 14
+086, Rome, Lhasa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_LHASA
+086, Japan, Cape Town, SENT OUT QUEST, Type, 14
+086, Japan, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+087, Japan, Manila, gained friend
+087, Korea, Antananarivo, SENT OUT QUEST, Type, 1
+087, Rome, Colombo, SENT OUT QUEST, Type, 17
+087, Rome, Colombo, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+087, Japan, Mogadishu, SENT OUT QUEST, Type, 10
+087, Japan, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+087, Korea, Mogadishu, SENT OUT QUEST, Type, 10
+087, Korea, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 1 to 1, MINOR_CIV_MOGADISHU
+087, Rome, Mogadishu, SENT OUT QUEST, Type, 10
+087, Rome, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+088, Korea, Genoa, SENT OUT QUEST, Type, 12
+088, Korea, Hanoi, SENT OUT QUEST, Type, 0
+088, Korea, Riga, lost friend
+088, Siam, Lhasa, SENT OUT QUEST, Type, 4
+088, Siam, Lhasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_LHASA
+088, Korea, Cape Town, lost ally
+089, Russia, Antananarivo, SENT OUT QUEST, Type, 7
+089, Russia, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+089, Japan, Hanoi, SENT OUT QUEST, Type, 2
+089, Japan, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+090, Siam, Genoa, era change yield update
+090, Siam, Wittenberg, era change yield update
+090, Siam, Colombo, era change yield update
+090, Siam, Riga, era change yield update
+090, Siam, Kuala Lumpur, era change yield update
+090, Siam, Sofia, era change yield update
+090, Siam, Antananarivo, era change yield update
+090, Siam, Manila, era change yield update
+090, Siam, Hong Kong, era change yield update
+090, Siam, Lhasa, era change yield update
+090, Siam, Melbourne, era change yield update
+090, Siam, M'banza-Kongo, era change yield update
+090, Siam, Cape Town, era change yield update
+090, Siam, Mogadishu, era change yield update
+090, Siam, Hanoi, era change yield update
+090, Siam, Tyre, era change yield update
+090, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 1
+090, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 17
+090, Siam, Kuala Lumpur, SENT OUT QUEST, Type, 4
+090, Siam, Antananarivo, SENT OUT QUEST, Type, 1
+090, Siam, Manila, SENT OUT QUEST, Type, 1
+090, Siam, Lhasa, SENT OUT QUEST, Type, 1
+090, Siam, Lhasa, SENT OUT QUEST, Type, 4
+090, Siam, Hanoi, SENT OUT QUEST, Type, 17
+090, Siam, Hanoi, SENT OUT QUEST, Type, 2
+090, Siam, Lhasa, SENT OUT QUEST, Type, 1
+090, Siam, Lhasa, SENT OUT QUEST, Type, 4
+090, Austria, Wittenberg, SENT OUT QUEST, Type, 10
+090, Austria, Wittenberg, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+091, Austria, Wittenberg, SENT OUT QUEST, Type, 10
+091, Rome, Genoa, SENT OUT QUEST, Type, 16
+091, Rome, Genoa, RECEIVED QUEST, Spread Religion, Friendship: 4 to 4, MINOR_CIV_GENOA
+091, Ethiopia, Kuala Lumpur, SENT OUT QUEST, Type, 17
+091, Ethiopia, Kuala Lumpur, RECEIVED QUEST, Trade Route, Friendship: 47 to 47, MINOR_CIV_KUALA_LUMPUR
+091, Korea, Sofia, SENT OUT QUEST, Type, 13
+091, Korea, Sofia, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SOFIA
+091, Russia, Sofia, SENT OUT QUEST, Type, 13
+091, Russia, Sofia, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SOFIA
+091, Antananarivo, Japan, RECEIVED_UNIT_GIFT, Warrior
+091, Korea, Antananarivo, lost ally
+091, Korea, Antananarivo, SENT OUT QUEST, Type, 2
+091, Korea, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 59 to 59, MINOR_CIV_ANTANANARIVO
+091, Korea, Manila, gained friend
+091, Korea, Manila, FINISHED QUEST, Connect Resource, Friendship: 10 to 50, MINOR_CIV_MANILA
+091, Austria, Manila, SENT OUT QUEST, Type, 4
+091, Austria, Manila, RECEIVED QUEST, Great Person, Friendship: 34 to 34, MINOR_CIV_MANILA
+091, Korea, Mogadishu, gained friend
+091, Korea, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_MOGADISHU
+091, Russia, Hanoi, SENT OUT QUEST, Type, 4
+091, Russia, Hanoi, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_HANOI
+091, Ethiopia, Hanoi, SENT OUT QUEST, Type, 7
+091, Ethiopia, Hanoi, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+092, Japan, Colombo, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+092, Korea, Colombo, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+092, Rome, Colombo, FINISHED QUEST, Invest, Friendship: -4 to -4, MINOR_CIV_COLOMBO
+092, Korea, Riga, SENT OUT QUEST, Type, 4
+092, Korea, Riga, RECEIVED QUEST, Great Person, Friendship: 22 to 22, MINOR_CIV_RIGA
+092, Korea, Lhasa, cancelled, Construct Wonder, Friendship: 8 to 8, MINOR_CIV_LHASA
+092, Austria, Cape Town, SENT OUT QUEST, Type, 7
+092, Austria, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: -4 to -4, MINOR_CIV_CAPE_TOWN
+092, Japan, Hanoi, gained friend
+092, Japan, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HANOI
+092, Japan, Hanoi, SENT OUT QUEST, Type, 1
+092, Japan, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 40 to 40, MINOR_CIV_HANOI
+092, Korea, Hanoi, SENT OUT QUEST, Type, 1
+092, Korea, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 17 to 17, MINOR_CIV_HANOI
+092, Russia, Hanoi, SENT OUT QUEST, Type, 1
+092, Russia, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+092, Siam, Hanoi, SENT OUT QUEST, Type, 1
+092, Siam, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_HANOI
+092, Rome, Hanoi, SENT OUT QUEST, Type, 1
+092, Rome, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+092, Ethiopia, Hanoi, SENT OUT QUEST, Type, 1
+092, Ethiopia, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+092, Austria, Hanoi, SENT OUT QUEST, Type, 1
+092, Austria, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 34 to 34, MINOR_CIV_HANOI
+093, Japan, Genoa, era change yield update
+093, Japan, Wittenberg, era change yield update
+093, Japan, Colombo, era change yield update
+093, Japan, Riga, era change yield update
+093, Japan, Kuala Lumpur, era change yield update
+093, Japan, Sofia, era change yield update
+093, Japan, Antananarivo, era change yield update
+093, Japan, Manila, era change yield update
+093, Japan, Hong Kong, era change yield update
+093, Japan, Lhasa, era change yield update
+093, Japan, Melbourne, era change yield update
+093, Japan, M'banza-Kongo, era change yield update
+093, Japan, Cape Town, era change yield update
+093, Japan, Mogadishu, era change yield update
+093, Japan, Hanoi, era change yield update
+093, Japan, Tyre, era change yield update
+093, Japan, Genoa, SENT OUT QUEST, Type, 2
+093, Japan, Genoa, SENT OUT QUEST, Type, 12
+093, Japan, Genoa, SENT OUT QUEST, Type, 14
+093, Japan, Wittenberg, SENT OUT QUEST, Type, 2
+093, Japan, Wittenberg, SENT OUT QUEST, Type, 10
+093, Japan, Kuala Lumpur, SENT OUT QUEST, Type, 1
+093, Japan, Kuala Lumpur, SENT OUT QUEST, Type, 16
+093, Japan, Kuala Lumpur, SENT OUT QUEST, Type, 2
+093, Japan, Antananarivo, SENT OUT QUEST, Type, 1
+093, Japan, Antananarivo, SENT OUT QUEST, Type, 2
+093, Japan, Antananarivo, SENT OUT QUEST, Type, 16
+093, Japan, Manila, SENT OUT QUEST, Type, 1
+093, Japan, Manila, SENT OUT QUEST, Type, 2
+093, Japan, Manila, SENT OUT QUEST, Type, 7
+093, Japan, Lhasa, SENT OUT QUEST, Type, 1
+093, Japan, Lhasa, SENT OUT QUEST, Type, 2
+093, Japan, Lhasa, SENT OUT QUEST, Type, 16
+093, Japan, Melbourne, SENT OUT QUEST, Type, 1
+093, Japan, Cape Town, SENT OUT QUEST, Type, 1
+093, Japan, Cape Town, SENT OUT QUEST, Type, 14
+093, Japan, Mogadishu, SENT OUT QUEST, Type, 3
+093, Japan, Mogadishu, SENT OUT QUEST, Type, 10
+093, Japan, Hanoi, SENT OUT QUEST, Type, 16
+093, Japan, Hanoi, SENT OUT QUEST, Type, 1
+093, The Aztecs, Riga, SENT OUT QUEST, Type, 2
+093, The Aztecs, Riga, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_RIGA
+093, Antananarivo, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
+093, Japan, Manila, lost friend
+093, Siam, Manila, SENT OUT QUEST, Type, 2
+093, Siam, Manila, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MANILA
+094, Korea, Genoa, gained ally
+094, Korea, Genoa, FINISHED QUEST, Contest Techs, Friendship: 45 to 85, MINOR_CIV_GENOA
+094, Ethiopia, Genoa, gained friend
+094, Ethiopia, Genoa, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_GENOA
+094, Japan, Genoa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+094, Russia, Genoa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+094, Rome, Genoa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+094, Austria, Genoa, cancelled, Contest Techs, Friendship: 5 to 5, MINOR_CIV_GENOA
+094, Korea, Genoa, SENT OUT QUEST, Type, 7
+094, Korea, Genoa, RECEIVED QUEST, Find Natural Wonder, Friendship: 85 to 85, MINOR_CIV_GENOA
+094, Japan, Colombo, SENT OUT QUEST, Type, 16
+094, Japan, Colombo, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+094, Austria, Manila, lost friend
+094, Korea, Hanoi, SENT OUT QUEST, Type, 14
+094, Korea, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 14 to 14, MINOR_CIV_HANOI
+095, Korea, Genoa, SENT OUT QUEST, Type, 7
+095, Japan, Wittenberg, SENT OUT QUEST, Type, 14
+095, Japan, Wittenberg, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+096, Russia, Genoa, era change yield update
+096, Russia, Wittenberg, era change yield update
+096, Russia, Colombo, era change yield update
+096, Russia, Riga, era change yield update
+096, Russia, Kuala Lumpur, era change yield update
+096, Russia, Sofia, era change yield update
+096, Russia, Antananarivo, era change yield update
+096, Russia, Manila, era change yield update
+096, Russia, Hong Kong, era change yield update
+096, Russia, Lhasa, era change yield update
+096, Russia, Melbourne, era change yield update
+096, Russia, M'banza-Kongo, era change yield update
+096, Russia, Cape Town, era change yield update
+096, Russia, Mogadishu, era change yield update
+096, Russia, Hanoi, era change yield update
+096, Russia, Tyre, era change yield update
+096, Russia, Genoa, SENT OUT QUEST, Type, 2
+096, Russia, Genoa, SENT OUT QUEST, Type, 7
+096, Russia, Wittenberg, SENT OUT QUEST, Type, 2
+096, Russia, Wittenberg, SENT OUT QUEST, Type, 7
+096, Russia, Wittenberg, SENT OUT QUEST, Type, 10
+096, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 1
+096, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 7
+096, Russia, Sofia, SENT OUT QUEST, Type, 13
+096, Russia, Antananarivo, SENT OUT QUEST, Type, 1
+096, Russia, Antananarivo, SENT OUT QUEST, Type, 7
+096, Russia, Melbourne, SENT OUT QUEST, Type, 1
+096, Russia, Cape Town, SENT OUT QUEST, Type, 1
+096, Russia, Cape Town, SENT OUT QUEST, Type, 7
+096, Russia, Hanoi, SENT OUT QUEST, Type, 4
+096, Russia, Hanoi, SENT OUT QUEST, Type, 1
+096, Rome, Genoa, era change yield update
+096, Rome, Wittenberg, era change yield update
+096, Rome, Colombo, era change yield update
+096, Rome, Riga, era change yield update
+096, Rome, Kuala Lumpur, era change yield update
+096, Rome, Sofia, era change yield update
+096, Rome, Antananarivo, era change yield update
+096, Rome, Manila, era change yield update
+096, Rome, Hong Kong, era change yield update
+096, Rome, Lhasa, era change yield update
+096, Rome, Melbourne, era change yield update
+096, Rome, M'banza-Kongo, era change yield update
+096, Rome, Cape Town, era change yield update
+096, Rome, Mogadishu, era change yield update
+096, Rome, Hanoi, era change yield update
+096, Rome, Tyre, era change yield update
+096, Rome, Genoa, SENT OUT QUEST, Type, 17
+096, Rome, Genoa, SENT OUT QUEST, Type, 16
+096, Rome, Wittenberg, SENT OUT QUEST, Type, 17
+096, Rome, Wittenberg, SENT OUT QUEST, Type, 10
+096, Rome, Colombo, SENT OUT QUEST, Type, 17
+096, Rome, Kuala Lumpur, SENT OUT QUEST, Type, 1
+096, Rome, Kuala Lumpur, SENT OUT QUEST, Type, 14
+096, Rome, Antananarivo, SENT OUT QUEST, Type, 1
+096, Rome, Antananarivo, SENT OUT QUEST, Type, 7
+096, Rome, Manila, SENT OUT QUEST, Type, 1
+096, Rome, Manila, SENT OUT QUEST, Type, 3
+096, Rome, Lhasa, SENT OUT QUEST, Type, 1
+096, Rome, Lhasa, SENT OUT QUEST, Type, 14
+096, Rome, Cape Town, SENT OUT QUEST, Type, 17
+096, Rome, Cape Town, SENT OUT QUEST, Type, 1
+096, Rome, Cape Town, SENT OUT QUEST, Type, 2
+096, Rome, Mogadishu, SENT OUT QUEST, Type, 2
+096, Rome, Mogadishu, SENT OUT QUEST, Type, 10
+096, Rome, Hanoi, SENT OUT QUEST, Type, 2
+096, Rome, Hanoi, SENT OUT QUEST, Type, 7
+096, Rome, Hanoi, SENT OUT QUEST, Type, 1
+096, Japan, Genoa, gained friend
+096, Japan, Genoa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_GENOA
+096, Kuala Lumpur, Russia, RECEIVED_UNIT_GIFT, Spearman
+096, Rome, Manila, gained friend
+096, Rome, Manila, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_MANILA
+096, Austria, Hanoi, lost friend
+097, Korea, Antananarivo, SENT OUT QUEST, Type, 1
+097, Korea, Antananarivo, SENT OUT QUEST, Type, 2
+097, Ethiopia, Genoa, cancelled, Bully City-State, Friendship: 35 to 35, MINOR_CIV_GENOA
+097, Korea, Riga, SENT OUT QUEST, Type, 13
+097, Korea, Riga, RECEIVED QUEST, Invest, Friendship: 9 to 9, MINOR_CIV_RIGA
+097, Russia, Riga, SENT OUT QUEST, Type, 13
+097, Russia, Riga, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+097, The Aztecs, Riga, SENT OUT QUEST, Type, 13
+097, The Aztecs, Riga, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_RIGA
+097, Kuala Lumpur, Ethiopia, RECEIVED_UNIT_GIFT, Spearman
+097, Russia, Sofia, SENT OUT QUEST, Type, 14
+097, Russia, Sofia, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SOFIA
+097, Russia, Melbourne, SENT OUT QUEST, Type, 2
+097, Russia, Melbourne, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+098, Korea, Riga, SENT OUT QUEST, Type, 17
+098, Korea, Riga, SENT OUT QUEST, Type, 4
+098, Korea, Riga, SENT OUT QUEST, Type, 13
+098, Genoa, Austria, RECEIVED_UNIT_GIFT, Warrior
+098, Ethiopia, Wittenberg, SENT OUT QUEST, Type, 2
+098, Ethiopia, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+098, Russia, Kuala Lumpur, SENT OUT QUEST, Type, 4
+098, Russia, Kuala Lumpur, RECEIVED QUEST, Great Person, Friendship: 32 to 32, MINOR_CIV_KUALA_LUMPUR
+098, Russia, Cape Town, SENT OUT QUEST, Type, 2
+098, Russia, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 6 to 6, MINOR_CIV_CAPE_TOWN
+098, Austria, Hanoi, SENT OUT QUEST, Type, 16
+098, Austria, Hanoi, RECEIVED QUEST, Spread Religion, Friendship: 25 to 25, MINOR_CIV_HANOI
+099, Genoa, Rome, RECEIVED_UNIT_GIFT, Spearman
+099, Austria, Genoa, SENT OUT QUEST, Type, 16
+099, Austria, Genoa, RECEIVED QUEST, Spread Religion, Friendship: 7 to 7, MINOR_CIV_GENOA
+099, Korea, Colombo, SENT OUT QUEST, Type, 2
+099, Korea, Colombo, RECEIVED QUEST, Connect Resource, Friendship: -4 to -4, MINOR_CIV_COLOMBO
+099, Rome, Manila, SENT OUT QUEST, Type, 7
+099, Rome, Manila, RECEIVED QUEST, Find Natural Wonder, Friendship: 35 to 35, MINOR_CIV_MANILA
+099, Korea, Cape Town, SENT OUT QUEST, Type, 2
+099, Korea, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 43 to 43, MINOR_CIV_CAPE_TOWN
+099, Rome, Mogadishu, SENT OUT QUEST, Type, 7
+099, Rome, Mogadishu, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+099, Japan, Hanoi, lost friend
+100, Ethiopia, Lhasa, SENT OUT QUEST, Type, 1
+100, Ethiopia, Lhasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_LHASA
