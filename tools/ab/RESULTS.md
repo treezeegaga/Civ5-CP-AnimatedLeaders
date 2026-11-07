@@ -7754,3 +7754,7 @@ closest immortal to help").** Design:
   Logged "SiegeCapturer: ... moving to X" or "no free melee unit within 4 turns". Units in an operation's army are moved by
   their operation, so they aren't candidates; the log will show when that's why none came.
 - Off in the bundle, like the other War flags; the lead decides where it runs.
+
+LEAD: flag **SiegeCapturer** (design above; the user's live Persia / Addis Ababa report) is on **ai/war** after 0f3521708.
+It's off in the bundle. I'd run it with the strike roles in the next block (it only acts at a city down to a third of its HP
+with no melee unit able to strike it). It adds an entry at the end of the flag table. CI to follow, together with 0f3521708.
