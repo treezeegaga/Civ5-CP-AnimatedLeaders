@@ -1,0 +1,27 @@
+﻿Game 18B3086C18B3086C (AIABTest_c8e.csv), last logged turn 100
+c    Denmark      tall      cities 3
+  builds to T80 (capital Copenhagen; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T20 Worker* | T31 Warrior* | T37 Settler* | T48 Granary | T51 Granary (Aarhus) | T54 Spearman | T56 Spearman | T58 Settler | T59 Temple | T62 Worker | T64 Library | T66 Granary (Kaupang) | T68 Catapult | T70 Water Mill (Aarhus) | T71 Hanging Gardens | T79 Settler (Kaupang) | T80 Scout
+  settlers ordered T: 37,58,79   found-city ops started T: 48,60,89   cities founded T: 51,66,100
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Worker 1   first: T020 Copenhagen size 3 next Worker
+  IDLE SETTLER turns: 3 (first T58)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T37 settler (book) in Copenhagen | T48 op started | T51 FOUNDED | T58 settler (AI) in Copenhagen | T59 BOUGHT in Copenhagen. Cost: 370 | T60 op started | T66 FOUNDED | T79 settler (AI) in Kaupang
+  saving gold for a settler: 63 turns (T6-T80)
+c    Russia       tall      cities 3
+  builds to T80 (capital Moscow; other cities named): T1 Scout* | T5 Monument* | T10 Shrine* | T14 Warrior* | T19 Settler* | T29 Warrior | T34 Worker* | T42 Warrior* | T46 Settler* | T55 Spearman | T58 Granary (St. Petersburg) | T58 Spearman | T59 Granary | T63 Settler | T68 Spearman | T71 Monument (Novgorod) | T71 Spearman | T72 Shrine (Novgorod) | T74 Work Boat (St. Petersburg) | T74 Temple | T79 Scout | T80 Worker
+  settlers ordered T: 19,46,63   found-city ops started T: 29,35,55,68   cities founded T: 58,71
+  ops aborted: T34 LostCivilian, T43 LostCivilian, T73 NoTarget, T74 NoTarget, T75 NoTarget, T76 NoTarget, T77 NoTarget, T77 NoTarget, T78 NoTarget, T78 NoTarget, T79 NoTarget, T79 NoTarget, T80 NoTarget, T80 NoTarget, T81 NoTarget, T81 NoTarget, T82 NoTarget, T82 NoTarget, T83 NoTarget, T83 NoTarget, T84 NoTarget, T84 NoTarget, T85 NoTarget, T85 NoTarget, T86 NoTarget, T86 NoTarget, T87 NoTarget, T87 NoTarget, T88 NoTarget, T88 NoTarget, T89 NoTarget, T89 NoTarget, T90 NoTarget, T90 NoTarget, T91 NoTarget, T91 NoTarget, T92 NoTarget, T92 NoTarget, T93 NoTarget, T93 NoTarget, T94 NoTarget, T94 NoTarget, T95 NoTarget, T95 NoTarget, T96 NoTarget, T96 NoTarget, T97 NoTarget, T97 NoTarget, T98 NoTarget, T98 NoTarget, T99 NoTarget, T99 NoTarget, T100 NoTarget, T100 NoTarget, T101 NoTarget, T101 NoTarget
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Worker 1   first: T034 Moscow size 3 next Worker
+  IDLE SETTLER turns: 1 (first T63)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T19 settler (book) in Moscow | T29 op started | T34 op ended: LostCivilian | T35 op started | T43 op ended: LostCivilian | T46 settler (book) in Moscow | T55 op started | T58 FOUNDED | T63 settler (AI) in Moscow | T68 op started | T71 FOUNDED | T72 BOUGHT in Moscow. Cost: 370 | T73 op ended: NoTarget | T74 op ended: NoTarget | T75 op ended: NoTarget | T76 op ended: NoTarget | T77 op ended: NoTarget | T77 op ended: NoTarget | T78 op ended: NoTarget | T78 op ended: NoTarget | T79 op ended: NoTarget | T79 op ended: NoTarget | T80 op ended: NoTarget | T80 op ended: NoTarget
+  saving gold for a settler: 47 turns (T7-T68)
+c    Spain        wide      cities 5
+  builds to T80 (capital Madrid; other cities named): T0 Scout* | T4 Warrior* | T9 Worker* | T17 Granary | T23 Shrine* | T25 Monument* (Barcelona) | T26 Settler* | T32 Monument* | T34 Great Library | T36 Granary (Barcelona) | T37 Monument* (Seville) | T42 Library* | T45 Archer | T46 Granary (Seville) | T47 Worker | T47 Library (Barcelona) | T50 Temple of Artemis | T51 Market | T54 Scout (Seville) | T55 Work Boat | T57 Library (Seville) | T57 Market (Barcelona) | T58 Water Mill | T62 Worker | T65 Water Mill (Seville) | T65 Settler* | T66 Water Mill (Barcelona) | T68 Mausoleum of Halicarnassus | T71 Market (Seville) | T72 Shrine (Barcelona) | T74 Granary (Cordoba) | T75 Warrior (Barcelona) | T76 Terracotta Army | T77 Worker (Seville) | T78 Colosseum (Barcelona)
+  settlers ordered T: 26,65   found-city ops started T: 10,11,32,68,77,90   cities founded T: 25,37,74,88
+  ops aborted: T10 HalfStrength
+  book SETTLER HELD to T80: 9 (unhappy 7, growth due 2)   built instead: the normal AI choice 7, Library 2   first: T034 Madrid size 4 next Library | T042 Madrid size 5 next Library | T045 Madrid size 5 next the normal AI choice
+  IDLE SETTLER turns: 4 (first T9)
+  military ops ended (whole game): NoTarget 2, HalfStrength 1
+  settler timeline to T80: T9 BOUGHT in Madrid. Cost: 370 | T10 op started | T10 op ended: HalfStrength | T11 op started | T25 FOUNDED | T26 settler (book) in Madrid | T32 op started | T37 FOUNDED | T65 settler (book) in Madrid | T68 op started | T74 FOUNDED | T77 op started
+  saving gold for a settler: 18 turns (T6-T68)
