@@ -30,8 +30,9 @@ for l in tac:
             m3 = [x for x in m3 if x]
         tgt = m3[-1].group(1).replace('_', ' ') if m3 else '?'
     tu = tgt.replace(' ', '_')
-    lu = {turn(l2) for l2 in mil if (', %s, ' % civ) in l2 and 'lack of units' in l2 and tgt in l2}
-    sf = {turn(l2) for l2 in mil if (', %s, ' % civ) in l2 and 'SiegeFeed: %s' % tu in l2}
+    civs = (', %s, ' % civ, ', %s, ' % civ.replace('_', ' '))  # MilitaryAILog spells 'The Aztecs', the tactical log 'The_Aztecs'
+    lu = {turn(l2) for l2 in mil if any(c in l2 for c in civs) and 'lack of units' in l2}
+    sf = {turn(l2) for l2 in mil if any(c in l2 for c in civs) and 'SiegeFeed:' in l2}
     np = sorted(t for t, r in req.items() if 'not possible' in r)
     started = sorted(t for t, r in req.items() if r == 'started')
     # turns where an offensive op existed: city attack ops alive vs only rapid responses

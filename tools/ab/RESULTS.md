@@ -8151,6 +8151,14 @@ only strike civ that reached WAR in this game: it declared on T81, WAR T82 to T1
 |---|---|---|---|---|---|---|---|
 | 18BE1E3E | Greece vs La Venta (city-state) | T82-151, 70 | 10 (4 / 6) | 32 | 0 / 17 | 33 | 231 of 250 |
 | 18DA3905 | Persia vs Korea (nearest city Daegu) | T132-151, 20 | 0 | 7 (T144-150) | 0 / 4 | 8 | 112 of 250 |
+| 1819E707 (bullyabort25) | Inca vs Kyzyl (city-state) | T62-69, 8 | 3 (0 / 3) | 3 | 0 / 6 | 1 | 87 |
+| 1819E707 | Inca vs Japan | T83-99, 17 | 2 (0 / 2) | 2 | 0 / 0 | 0 | - (took Osaka T88 and Kyoto T98; Japan's capital out of its hands, WAR -> BUILDUP) |
+| 1819E707 | Inca vs Kyzyl again | T111-150, 40 | 0 | 0 | 0 / 0 | 1 | 87 |
+| 185B8F35 (bullyabort25) | Aztecs vs Sidon (city-state) | T46-151, 106 | 44 (26 / 7) | 0 | 0 / 1 | 16 | 193 of 200 |
+| 18895EE4 (bullyabort25) | Songhai vs Tekedda (city-state) | T147-148, 2 | 0 | 0 | 0 / 0 | 0 | 250 |
+| 18D1C365 (bullyabort25) | Carthage vs Rome | T82-95, 14 | 8 (1 / 7) | 1 | 0 / 15 | 3 | 21 (1 HP on T89 and 4 on T90, no capture; dropped T95) |
+| 18E7F265 (bullyabort25) | Huns vs Genoa (city-state) | T58-151, 94 | 10 (2 / 8) | 29 | 0 / 2 | 47 | 187 |
+| 1AA2D0DF (bullygreedy25 pair 4) | Persia vs Kuala Lumpur (city-state) | T51-152, 102 | 38 (25 / 15) | 63 | 1 / 5 | 68 | 181 |
 
 - **Correction:** the first count said 18 rapid-response turns for Greece. T135-151 were missed; ten rapid responses ran back
   to back there. The right count is 32.
@@ -8313,3 +8321,25 @@ garrison of 100 HP; heal 20; our damage at 90%):
 - The Jaguars (8 against 19) fail the suicide test (about 14 dealt against 64 taken), so they hit no walls, as in the
   user's game.
 - The city's strike costs about 560 HP over the 8 turns, against 900 available, so the army survives the siege.
+
+LEAD (8:34am ET): the War count table (the 18BE1E3E entry) has rows for the ab-03494ee games that landed this morning:
+bullyabort25 run 2 (20 games, 10 with logs; 5 strike WARs) and bullygreedy25 pair 4 (1AA2D0DF). Reading only.
+- **All 8 wars: 1 melee attack on a city in total, and 4 of the wars sat at the walls for 16 to 68 "too early" turns.**
+  - Aztecs vs Sidon: 106 WAR turns, the city never below 193 of 200.
+  - Huns vs Genoa: 94 WAR turns, 47 "too early".
+  - Persia vs Kuala Lumpur: 102 WAR turns, 68 "too early".
+  - This is 18BE1E3E's picture again, the case that ai/war 6bf89527e's takeable math is for.
+- **Rapid responses as "an attack under way":** 29 turns for the Huns and 63 for Persia (1AA2D0DF). Fixed by
+  HasStrikeCityAttackUnderWay.
+- **"Not possible" turns:** 105 in all, 54 for lack of units and 42 SiegeFeed. Fixed by the 3-unit allowance and the
+  SiegeFeed ranged check.
+- **Carthage:** got Rome to 1 HP on T89 and 4 HP on T90, but no melee unit took it. That is the capturer gap; SiegeCapturer
+  is in the next block's RoleFixes. The strike dropped Rome on T95.
+- **The Inca took Osaka and Kyoto**, and Japan's capital went out of Japan's hands on T99. It's the only success of the
+  eight.
+- `tools/ab/strike_requests.py` fix: MilitaryAILog spells "The Aztecs" where the tactical log has "The_Aztecs", so causes
+  weren't matched for those civs. The cause now counts any "lack of units" or "SiegeFeed" line from the civ on that turn.
+
+Also on ai/war: **25f39a951**, Personality's daa42932 (a Worker 3rd in the Huns, Greece, Celts and Mongolia lists; Mongolia
+sized to about 4 Horses). The user confirmed it and you asked for it in the next build. Personality's branch was based on
+655df72, so I cherry-picked it onto 6bf89527e; it applied cleanly. Personality says your session refuses their messages.
