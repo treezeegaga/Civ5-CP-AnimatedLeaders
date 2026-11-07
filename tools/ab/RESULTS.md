@@ -8287,3 +8287,29 @@ LEAD (8:24am ET): **ae8e9aeef green** (run 418). On top of it, ai/war now has:
     keeps the per-turn affordability count from letting every city start one on the same turn. It covers my new pick
     only; Economy's wider fix H is not in.
 CI is running on 655df7279. It's ready for your pre-flight review.
+
+LEAD (8:31am ET): your pre-flight review of ae8e9ae is fixed in **ai/war 6bf89527e** (on 655df7279; CI is running). One line
+per item:
+1. The defenders never tie up our last capturer while a ranged unit can take one instead. A too-weak build-up with fewer
+   than 3 capturing melee units trains core before siege or ranged.
+2. The stall branch of IsStrikeAsReadyAsItGets also needs our field units to fill the land city-attack formation's
+   required slots now (new GetStrikeFormationMissingRequired, matched the way recruitment matches). A stalled civ builds
+   nothing, so I required 0 missing rather than <= 3.
+3. BUILDUP sets m_iStrikeSiege when the plan's counts are met and the army on hand still can't take the target, so the
+   siege and its tech come.
+4. The stall exit stays when home is unsafe (the guard is now !(takeable && home safe)).
+5. The zone rule: a target city whose land zone (and water zone, if any) is enemy-dominated isn't takeable. Under
+   SiegeDominated (an enemy major at war, 3+ attackers) the kill has to come within 3 turns. A missing land zone doesn't
+   block. Before the war the target's units aren't enemy strength, so this bites at war. A blockaded city doesn't heal.
+6. HasStrikeCityAttackUnderWay checks every operation and skips finished and aborted ones.
+7. The garrison counts only when the city tile is visible: the damage simulation is told "no garrison" otherwise.
+8. The siege math now runs turn by turn. The garrison takes its share only until our hits kill it.
+
+**The user's Marrakesh, by hand** (DoDamageMath; 4 Composite Bowmen, ranged 11, against defence 19; 250 HP; a Warrior
+garrison of 100 HP; heal 20; our damage at 90%):
+- Each Bowman does about 20 a hit, about 73 a turn for the four. While the Warrior lives, 41 of that goes to the city and
+  32 to the Warrior.
+- The Warrior dies in turn 4, and the city falls in turn **8**, inside the 13-turn gate. Before this fix it read about 12.
+- The Jaguars (8 against 19) fail the suicide test (about 14 dealt against 64 taken), so they hit no walls, as in the
+  user's game.
+- The city's strike costs about 560 HP over the 8 turns, against 900 available, so the army survives the siege.
