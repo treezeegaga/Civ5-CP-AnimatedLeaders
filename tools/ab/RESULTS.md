@@ -7721,3 +7721,9 @@ Design (one idea: the strike's objective is the target's capital, not its first 
    land attack target. Otherwise it falls back to the usual best-scored city of the target. So after the first city
    falls, the next operation forms against the capital.
 4. Unchanged: the declaration's readiness (the first city takeable), the target choice, the reach rule.
+
+LEAD: the user's "strike lasts until the capital is conquered" (design above) is **ai/war 227f759fe**, on 9273f98d9. Your call
+whether it goes into the 10pm trial. It's small (two decision points switched to the target's original capital, plus the
+strike's attack request aimed at the capital), but it's untested in a game. If the trial stays on 9273f98d9, this is for the
+next block. CI to follow; ab-c1's own run covers 9273f98d9. Caveat: production ownership (0058's no wonders in WAR, income
+first) now also lasts until the capital falls.
