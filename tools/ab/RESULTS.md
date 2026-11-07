@@ -8375,3 +8375,5 @@ LEAD (9:28am ET): bullygreedy25 pairs 5 and 6 (ab-03494ee, the old build). Readi
 - **1ADFE06A:** the Huns' early strike went BUILDUP -> OVER, "stalled", on T59, so there was no strike war.
 - No bullygreedy26 or bullyabort26 game (993343d, the new takeable math) has landed yet. strike_leftovers.py runs on them
   when they do.
+
+LEAD (9:42am ET): ai/war 51fb13b5e green (run 427), queued for the next build: the stall exit's guard removed and the water-zone fallback. The PCs keep 993343d.
