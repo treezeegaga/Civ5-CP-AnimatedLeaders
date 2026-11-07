@@ -8569,3 +8569,23 @@ with **no damage to the city**:
 
 **Persia vs Vancouver:** "the plan's army can't take it" (T86-91), with one "too weak for the target, ranged or siege"
 STRIKE LIST line. Persia still declared on its units on hand.
+
+LEAD (10:43am ET): the next build is **ai/war a990c8411**, on 993343d. CI is running. In order:
+- **51fb13b5e:** the stall-exit deadlock fix; the no-land-zone water test.
+- **1ec367432:** the WAR status line every 10 turns; the not-ready line shows the army on hand.
+- **0fd37c408:** StrikeEscort, a flag (off in the bundle): a strike civ's Settler never goes alone while it has a land
+  combat unit (the user's ruling).
+- **9367095e6:** the PREP way out (the plan's army out and a target held) plus the "PREP holds" line.
+- **a990c8411:** your (b), the strike all in, as follows.
+  - GrabUnitsFromTheReserves, for the strike's land city attack:
+    - rapid responses on the target's landmass give way;
+    - every recruitable land combat unit is a candidate;
+    - the formation's slots fill first, so its composition decides who goes in front;
+    - the rest go into extra optional slots (CvArmyAI::AddExtraSlot, a wildcard GetSlotInfo, not required, skipped by
+      the slot-type loop, no units to build asked for);
+    - recruitment's own limits stay (health, reach, needed garrisons, units already at the target).
+  - (a)'s honesty: the declaration's takeable counts only field units healthy enough for an operation and on the target
+    city's landmass (FilterStrikeMarchingUnits).
+- **The VC9 check, by eye:** no C++11; pair and vector types explicit; units freed from rapid responses are collected
+  before RemoveUnit; nothing reads a unit after AddUnit, which can upgrade and replace it.
+- Ready for your blocker review.
