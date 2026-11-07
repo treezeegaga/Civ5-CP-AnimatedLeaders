@@ -1,0 +1,62 @@
+﻿Game 1B6B03021B6B0302 (AIABTest_c8e.csv), last logged turn 150
+b    Ethiopia     tall      cities 4
+  builds to T80 (capital Addis Ababa; other cities named): T0 Scout* | T4 Stele* | T11 Shrine* | T17 Warrior* | T24 Settler* | T34 Granary | T44 Worker* | T55 Caravan | T66 Settler | T74 Water Mill
+  settlers ordered T: 24,66,100,108   found-city ops started T: 34,74,78,81,105   cities founded T: 84,85,119
+  ops aborted: T39 LostCivilian, T80 LostCivilian, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Worker 1   first: T044 Addis Ababa size 6 next Worker
+  IDLE SETTLER turns: 1 (first T100)
+  settler timeline to T80: T24 settler (book) in Addis Ababa | T34 op started | T39 op ended: LostCivilian | T66 settler (AI) in Addis Ababa | T74 op started | T78 op started | T80 op ended: LostCivilian
+  saving gold for a settler: 59 turns (T5-T67)
+b    Persia       tall      cities 5
+  builds to T80 (capital Persepolis; other cities named): T0 Worker* | T10 Monument | T14 Settler* | T24 Settler* | T26 Immortal* (Pasargadae) | T27 Immortal* | T27 Immortal* (Pasargadae) | T32 Settler* | T39 Immortal* (Pasargadae) | T41 Immortal* | T43 Immortal* (Susa) | T44 Archer* (Susa) | T46 Immortal* (Pasargadae) | T47 Archer* | T50 Archer* | T53 Granary | T56 Monument (Pasargadae) | T56 Archer* (Susa) | T59 Scout | T61 Immortal* | T62 Immortal* (Pasargadae) | T65 Immortal* | T69 Immortal* | T70 Immortal* (Pasargadae) | T70 Immortal* | T71 Immortal* (Susa) | T71 Immortal* | T74 Immortal* | T75 Immortal* (Ecbatana) | T76 Immortal* | T76 Immortal* (Ecbatana) | T77 Immortal* (Susa) | T78 Worker (Pasargadae) | T78 Barracks (Susa) | T78 Immortal* | T78 Barracks (Ecbatana) | T79 Caravan*
+  settlers ordered T: 14,24,32   found-city ops started T: 24,41,72,152   cities founded T: 26,43,75
+  ops aborted: T89 NoTarget, T90 NoTarget, T91 NoTarget, T92 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget
+  IDLE SETTLER turns: 2 (first T32)
+  military ops ended (whole game): Success 13, HalfStrength 2, LostPath 2, NoTarget 2
+  settler timeline to T80: T14 settler (book) in Persepolis | T24 op started | T24 settler (book) in Persepolis | T26 FOUNDED | T32 settler (book) in Persepolis | T41 op started | T43 FOUNDED | T71 BOUGHT in Persepolis. Cost: 370 | T72 op started | T75 FOUNDED
+  saving gold for a settler: 10 turns (T62-T78)
+c    Carthage     wide      cities 6
+  builds to T80 (capital Carthage; other cities named): T0 Scout* | T3 Warrior* | T10 Worker* | T21 Settler* | T33 Granary | T40 Shrine* | T42 Monument* (Utique) | T44 Settler* | T51 Water Mill (Utique) | T52 Monument | T55 Library | T61 Shrine (Utique) | T61 Temple of Artemis | T65 Granary (Utique) | T69 Settler (Utique) | T70 Petra | T75 Spearman (Utique) | T79 Market (Utique)
+  settlers ordered T: 21,44,69,111,112,120   found-city ops started T: 33,52,75,76,111,117   cities founded T: 42,82,94,116,123
+  ops aborted: T91 NoTarget, T92 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 1 (size 1 1)   built instead: Worker 1   first: T010 Carthage size 1 next Worker
+  IDLE SETTLER turns: 1 (first T44)
+  military ops ended (whole game): NoTarget 5, Success 3, WarStateChange 1
+  settler timeline to T80: T21 settler (book) in Carthage | T33 op started | T42 FOUNDED | T44 settler (book) in Carthage | T52 op started | T69 settler (AI) in Utique | T75 op started | T76 op started
+  saving gold for a settler: 33 turns (T11-T52)
+c    Denmark      tall      cities 6
+  builds to T80 (capital Copenhagen; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T18 Settler* | T28 Worker* | T33 Monument* (Aarhus) | T34 Stonehenge | T34 Library* (Aarhus) | T48 Worker (Aarhus) | T48 Settler* | T54 Granary | T60 Granary (Aarhus) | T60 Library | T61 Temple | T67 Trireme (Aarhus) | T69 Spearman | T73 Shrine (Aarhus) | T74 Settler | T77 Scout (Aarhus) | T79 Archer (Aarhus) | T79 Hanging Gardens
+  settlers ordered T: 18,48,74,96,109,110,149,150   found-city ops started T: 28,54,79,88,104,112   cities founded T: 33,86,97,115,128
+  ops aborted: T74 LostCivilian, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T034 Copenhagen size 3 next Library
+  IDLE SETTLER turns: 4 (first T48)
+  military ops ended (whole game): NoUnits 9, HalfStrength 4, NoTarget 4, WarStateChange 2, Success 1, LostPath 1
+  settler timeline to T80: T18 settler (book) in Copenhagen | T28 op started | T33 FOUNDED | T48 settler (book) in Copenhagen | T54 op started | T74 op ended: LostCivilian | T74 settler (AI) in Copenhagen | T79 op started
+  saving gold for a settler: 50 turns (T6-T79)
+c    Indonesia    wide      cities 6
+  builds to T80 (capital Jakarta; other cities named): T0 Scout* | T4 Warrior* | T9 Worker* | T17 Settler* | T27 Shrine* | T30 Monument* (Surabaya) | T31 Settler* | T35 Shrine (Surabaya) | T38 Monument* | T41 Settler* | T46 Granary (Surabaya) | T47 Warrior | T51 Library* | T54 Monument* (Medan) | T58 Temple of Artemis | T71 Work Boat (Surabaya) | T71 Work Boat | T72 Work Boat (Medan) | T72 Work Boat (Surabaya) | T72 Work Boat | T75 Work Boat | T78 Work Boat | T79 Work Boat (Surabaya) | T80 Work Boat (Surabaya)
+  settlers ordered T: 17,31,41,86,100,111   found-city ops started T: 27,47,85,93,106   cities founded T: 30,54,91,101,110
+  ops aborted: T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 3 (unhappy 1, one at a time 1, size 1 1)   built instead: the normal AI choice 1, Library 1, Worker 1   first: T009 Jakarta size 1 next Worker | T051 Jakarta size 3 next Library | T058 Jakarta size 3 next the normal AI choice
+  IDLE SETTLER turns: 5 (first T31)
+  military ops ended (whole game): NoUnits 8, LostPath 3, NoTarget 1
+  settler timeline to T80: T17 settler (book) in Jakarta | T27 op started | T30 FOUNDED | T31 settler (book) in Jakarta | T41 settler (book) in Jakarta | T47 op started | T54 FOUNDED
+  saving gold for a settler: 29 turns (T11-T47)
+c    Portugal     wide      cities 5
+  builds to T80 (capital Lisbon; other cities named): T1 Scout* | T5 Warrior* | T12 Settler* | T30 Granary | T37 Shrine* | T42 Monument* | T42 Monument* (Porto) | T46 Worker* | T52 Settler (Porto) | T54 Library* | T60 Settler (Porto) | T60 Archer | T61 Settler (Porto) | T61 Archer | T62 Archer | T62 Granary (Porto) | T62 Archer | T63 Archer | T65 Scout | T66 Water Mill | T66 Monument* (Braga) | T69 Scout (Porto) | T70 Spearman | T71 Worker (Porto) | T74 Market | T75 Granary (Braga) | T79 Water Mill (Porto)
+  settlers ordered T: 12,52,60,61,81,92   found-city ops started T: 30,63,73,86   cities founded T: 42,66,86,96
+  ops aborted: T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget
+  book SETTLER HELD to T80: 9 (one at a time 8, growth due 1)   built instead: the normal AI choice 7, Monument 1, Library 1   first: T042 Lisbon size 3 next Monument | T054 Lisbon size 4 next Library | T060 Lisbon size 5 next the normal AI choice
+  IDLE SETTLER turns: 2 (first T53)
+  military ops ended (whole game): NoUnits 9, NoTarget 3, Success 1, WarStateChange 1
+  settler timeline to T80: T12 settler (book) in Lisbon | T30 op started | T42 FOUNDED | T52 settler (AI) in Porto | T60 settler (AI) in Porto | T61 settler (AI) in Porto | T62 BOUGHT in Porto. Cost: 370 | T63 op started | T66 FOUNDED | T73 op started
+  saving gold for a settler: 40 turns (T12-T68)
+c    Russia       tall      cities 7
+  builds to T80 (capital Moscow; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T22 Settler* | T37 Worker* | T39 Monument* (St. Petersburg) | T40 Library* (St. Petersburg) | T40 Settler* | T43 Worker* | T50 Settler* | T51 Library* | T51 Worker* | T60 Spearman | T66 Granary | T71 Settler | T72 Monument (Novgorod) | T73 Granary (Novgorod) | T73 Granary (St. Petersburg) | T74 Spearman | T76 Spearman | T78 Spearman | T79 Worker
+  settlers ordered T: 22,40,50,71,82,98,114,129   found-city ops started T: 37,52,74,86,107,121   cities founded T: 39,72,90,90,114,127
+  ops aborted: T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget
+  book SETTLER HELD to T80: 1 (one at a time 1)   built instead: Library 1   first: T051 Moscow size 4 next Library
+  IDLE SETTLER turns: 5 (first T41)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T22 settler (book) in Moscow | T37 op started | T39 FOUNDED | T40 settler (book) in Moscow | T50 settler (book) in Moscow | T51 BOUGHT in Moscow. Cost: 370 | T52 op started | T71 settler (AI) in Moscow | T72 FOUNDED | T74 op started
+  saving gold for a settler: 43 turns (T6-T74)
