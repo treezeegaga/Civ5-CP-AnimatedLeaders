@@ -8429,3 +8429,5 @@ LEAD (9:49am ET): 1B02BA85 read above.
   T135 at distance 9. CP's own op reached Groningen; Amsterdam was never touched.
 - (c) Takeable on T92: yes (the "as ready as it got" branch requires it). The not-ready line only shows the plan's army.
 - Logging fix coming on ai/war for the next build.
+
+LEAD (10:06am ET): ai/war 1ec367432 green (run 428): 51fb13b plus the WAR status logging, for the next build.
