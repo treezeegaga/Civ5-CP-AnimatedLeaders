@@ -327,6 +327,12 @@ and goals, diplomacy changes how decisions are computed from them.
    - then one trial game to T80 on one PC (-Unpaired -MaxGames 1 -StopTurn 80) with the wonder/gift, LIST and Strike checks.
    - The block starts only after both are clean.
 
+0b. **Regression replays before blocks (the user, 2026-11-07: "a deterministic closed system").** Every logged game can be
+   replayed from its seeds: `Run-Games.ps1 -Regression <GameId,...>` plays each one as a single unflipped game, with the same
+   map, civs and city-states, under the new build's flags. Each failure that a fix targets becomes a case, listed in
+   `tools/ab/REGRESSION.md`. A new build replays its cases first, and its fix counts only if the case now plays out as
+   intended, with no older case breaking. Then it gets a block.
+
 1. **One idea per fix.** Each fix gets its own flag (`FIX_18`, `FIX_OPENING_BOOK`, ...). Never bundle. Adding a
    flag (from fork commit `27437f0`):
    - append it to `CandidateFixTypes` in `CvPlayer.h`;

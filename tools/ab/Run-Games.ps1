@@ -43,6 +43,7 @@ param(
     [string]$BalancedFixes = "",      # AIABTest.ini BalancedFixes = (trio: our balanced civ's style flags)
     [int]$Civs = 0,                   # AIABTest.ini Civs = (close AI slots past this many; trio: 6; 0 = as set up)
     [switch]$Unpaired,                # single games instead of pairs
+    [string]$Regression = "",         # comma-separated GameIds: replay each logged game's start (results\replay\<id>.ini), unflipped, one single game each
     [switch]$NoSettings,              # leave AIABTest.ini alone (builds before c7c_flags, or a hand-written file)
     [int]$Ruins = 0,                  # AIABTest.ini Ruins = (0 = no ancient ruins)
     [int]$Resources = 5,              # AIABTest.ini MapOption5 = (Pangaea's resources option; 5 = Strategic Balance)
@@ -115,12 +116,12 @@ $SettingsFile = Join-Path $MyGames "AIABTest.ini"
 $ReplayFile = Join-Path $MyGames "AIABTest_lastgame.ini"
 
 # AIABTest.ini for the next game: the flags, and for the second game of a pair the first game's replay keys and Flip = 1
-function Write-Settings([string[]]$replay) {
+function Write-Settings([string[]]$replay, [int]$flip = 1) {
     if ($NoSettings) { return }
     $lines = @("; written by Run-Games.ps1", "[ABTest]", "Fixes = $Fixes", "Screen = $Screen", "Base = $Base", "RoleFixes = $RoleFixes", "OthersBase = $OthersBase", "GreedyFixes = $GreedyFixes", "BalancedFixes = $BalancedFixes", "Civs = $Civs", "StopTurn = $StopTurn",
         "Ruins = $Ruins", "MapOption5 = $Resources", "Mode = $Mode", "HeadStartProduction = $HeadStartProduction",
         "HeadStartGold = $HeadStartGold", "Difficulty = $ExpectDifficulty")
-    if ($replay) { $lines += "Flip = 1"; $lines += $replay } else { $lines += "Flip = 0" }
+    if ($replay) { $lines += "Flip = $flip"; $lines += $replay } else { $lines += "Flip = 0" }
     [IO.File]::WriteAllLines($SettingsFile, [string[]]$lines, [Text.Encoding]::ASCII)
 }
 
@@ -328,6 +329,20 @@ function Wait-TestGame([string[]]$knownIds) {
     }
 }
 
+# -Regression: the logged games to replay, each as a single unflipped game from its stored seeds and civs
+$regIds = @()
+if ($Regression) {
+    $regIds = @($Regression -split '[,\s]+' | Where-Object { $_ } | ForEach-Object { $_.Trim().ToUpper() })
+    foreach ($id in $regIds) {
+        if (-not (Test-Path (Join-Path $PSScriptRoot "results\replay\$id.ini"))) { throw "No results\replay\$id.ini for -Regression $id" }
+    }
+    $Unpaired = $true
+    $MaxGames = $regIds.Count
+}
+function Get-RegressionKeys([string]$id) {
+    return @(Get-Content (Join-Path $PSScriptRoot "results\replay\$id.ini") | Where-Object { $_ -match '^\s*(MapSeed|SyncSeed|Player\d+)\s*=' } | ForEach-Object { $_.Trim() })
+}
+
 Remove-Item $StopFile -ErrorAction SilentlyContinue
 $played = 0
 $failures = 0
@@ -344,13 +359,20 @@ while ($played -lt $MaxGames -or $pairReplay) {
         $wasFirstOfPair = $false
     } else {
         $wasFirstOfPair = (-not $Unpaired -and -not $NoSettings -and -not $pairReplay)
-        Write-Settings $pairReplay
+        $regKeys = $null
+        if ($regIds.Count -gt 0) { $regKeys = Get-RegressionKeys $regIds[$played] }
+        if ($regKeys) { Write-Settings $regKeys 0 } else { Write-Settings $pairReplay }
         if ($wasFirstOfPair) { Remove-Item $ReplayFile -ErrorAction SilentlyContinue }
-        $what = if ($pairReplay) { "second game of the pair (Flip = 1)" } elseif ($wasFirstOfPair) { "first game of a pair" } else { "single game" }
+        $what = if ($regKeys) { "regression replay of $($regIds[$played])" } elseif ($pairReplay) { "second game of the pair (Flip = 1)" } elseif ($wasFirstOfPair) { "first game of a pair" } else { "single game" }
         Write-Log "Starting game $($played + 1): $what; Mode = $Mode; Fixes = $Fixes; Screen = $Screen; Base = $Base; RoleFixes = $RoleFixes; OthersBase = $OthersBase; GreedyFixes = $GreedyFixes; BalancedFixes = $BalancedFixes; Civs = $Civs"
         if (-not (Start-TestGame)) { Write-Log "Setup failed; retrying"; $failures++; if ($failures -ge 3) { Write-Log "Three failed starts in a row; giving up"; break }; continue }
 
         $replay = Read-Replay
+        if ($regKeys -and $replay) {
+            $rdiff = @(Compare-Object $regKeys $replay | ForEach-Object { $_.InputObject })
+            if ($rdiff.Count -eq 0) { Write-Log "  regression start matches $($regIds[$played])" }
+            else { Write-Log "  REGRESSION START DIFFERS from $($regIds[$played]): $($rdiff -join '; ')" }
+        }
         if ($wasFirstOfPair -and -not $replay) {
             Write-Log "  no $ReplayFile after the start (a build before fork commit 7097d49?); playing single games"
             $wasFirstOfPair = $false
