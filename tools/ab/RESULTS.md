@@ -8165,6 +8165,8 @@ only strike civ that reached WAR in this game: it declared on T81, WAR T82 to T1
   - From then on the strike made no request: rapid response 2835 (T143-150) counted as "an attack under way".
   - Other callers' requests (Daegu, Jeonju, Kaesong) failed for lack of units every turn T144-151.
   - Again, no melee unit ever attacked the city.
+- **18FA5DFB (pair 3):** no strike civ reached WAR. The Zulus' late strike went BUILDUP -> OVER at T109, so the game
+  has no row (see the STOP read below).
 - The flip games have no logs. I'll add more games as they land.
 
 LEAD (11:35pm ET): the 18BE1E3E read is above:
@@ -8179,3 +8181,46 @@ LEAD (12:30am ET): I added bullygreedy25 pair 2 (18DA3905, Persia vs Korea) to t
 a rapid response stands in for the strike's attack, and no melee unit attacked the city. Daegu got down to 112 HP on T134,
 then healed back to full. I also corrected Greece's rapid-response count from 18 to 32. The counter is
 `tools/ab/strike_requests.py`. Reading only.
+
+### War: the STOP on 18FA5DFB (Zulu, gift vs declaration at T114) (War, 2026-11-07 1:29am ET)
+
+**The gift: nothing was paid, so there's no ordering problem.**
+- The line is `114, The Zulus, Melbourne, Gold Gift: 500, Friendship: 3 to 3, ..., (SAVING)`.
+- In CvDiplomacyAI.cpp (about line 37907), `(SAVING)` is the branch that runs when CP can't afford the gift. It only calls
+  `StartSaveForPurchase(PURCHASE_TYPE_MINOR_CIV_GIFT, 500)`. A real gift calls DoGoldGiftFromMajor, and that branch logs no
+  "(SAVING)".
+- The treasury was 0 on T113 and 0 at the declaration on T114 (WarBudget lines). Friendship stayed 3 -> 3, and no
+  "City State Gold Gifted" appears.
+- So the declaration didn't come after a gift. CP only opened a 500-gold savings request at 0 gold and -4 to -13 a turn.
+  That request is harmless, but it is an Economy question.
+
+**The real finding for War: the strike gave up on a city its army could take.**
+- T107: PREP -> BUILDUP. T108: the target is England, Nottingham at defence 11, unwalled. The strike logged "the plan's
+  army takes it in about 1 turns" and "melee 6/3", but also "upgrade and go, 6 units for 360 gold (gold 27), upgrade tech a
+  few turns off".
+- T109: BUILDUP -> OVER, "stalled: no unit affordable, the army not ready, income negative and no income item to build".
+- With the strike OVER, gate 4 no longer held CP back. CP declared on England itself on T114, with the same 18 units, gold
+  0 and -4 a turn. It **took Nottingham on T117**, in three capture attempts: HP 188 -> 134 -> 69, then captured. After
+  that, Canterbury was hit 8 times without falling.
+- So the stall exit ended a strike whose target CP then took in 3 turns with the army on hand. The readiness gap was the
+  upgrade bill: 360 gold at 27 gold and falling, for a tech not yet in. With negative income that bill can never be paid,
+  so IsTimingBuildupArmyReady stays false for good.
+- IsStrikeAsReadyAsItGets is meant to catch this case. It doesn't check the bill, so one of its other clauses was false on
+  T109: the field count, melee, affordable <= 0, takeable or home safe. The OVER line doesn't say which, and the log can't
+  tell.
+
+**Design (strike change, after the block):**
+1. The stall exit doesn't fire while the army on hand can take the target (m_bTakeable). In that case the strike goes to
+   the declaration instead: a stalled build-up with a takeable target is as ready as it gets. That fits the user's "all in"
+   and "only start the attack if the city is takeable".
+2. When income is negative, an upgrade bill we can't pay (gold + 10 turns of income < bill) no longer holds readiness.
+3. The OVER and not-ready lines name the failing clause of IsStrikeAsReadyAsItGets (field / melee / affordable /
+   takeable / home safe), so the next case can be read straight from the log.
+
+LEAD (1:29am ET): STOP 18FA5DFB read above.
+- The Zulus' "Gold Gift: 500 (SAVING)" is only CP starting to save for a gift. Gold was 0 on T113 and T114, so nothing was
+  paid and there's no gift-vs-declaration ordering issue. I'd clear the STOP on that count.
+- The real issue is the strike's stall exit (BUILDUP -> OVER T109). CP then declared on its own (T114) and took Nottingham
+  in 3 turns with the same army.
+- The fix design is above (no stall exit while the target is takeable, plus logging); it's a strike change for after the
+  block. Pair 3 has no strike WAR row. Reading only.
