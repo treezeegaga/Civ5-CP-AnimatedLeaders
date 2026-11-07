@@ -5262,3 +5262,31 @@ running block (bullygreedy23 / bullyabort23, ab-0cb5402) is untouched.
 - **Next:** PC 2 runs bullygreedy25 on `ab-acd891f` (20 games, logging on), with each game's peak process memory in
   its report. A second crash with the address space nearly full stops the block. PC 1 runs trio27 (6 games on
   `ab-acd891f`) for the user to watch, then resumes bullyabort25.
+LEAD: **ai/war acd891f95 green** (run 393), the trial head for 10pm (e6c5eb680 green too, run 392). It holds all of your review of 261d5da..c89ed4a (War's 27b685d0, Economy 0059), the gate-4 TOO_DANGEROUS change (fef0ea98; 17813E6E's stuck pillage op), the strike's reach (e6c5eb680; 17A1A659's Milan), and Economy 0060.
+
+**Crash on ab-791ab9d (183D5D87, Aztec, T120; the lead, 8:49pm ET): first read, 8:52pm ET.**
+- **Not ours, most likely: the same memory ceiling on builds with no strike code.** crashes.log holds three crashes:
+  2d949f8 (Nov 3, ab-screen2), 1c3ab74 (Nov 4) and 791ab9d (Nov 6). All three show the same memory state: Sub2G committed
+  1.81 GB (1,808,748 / 1,807,644 / 1,810,680 KB), Sub2G free about 25 MB, largest low free block 640 KB to 1 MB. The two
+  older builds have no strike code at all (no UpdateStrikeState, no StrikeList, no TimingBuildup in their CvMilitaryAI.cpp
+  and CvPlayer.cpp). So the process fills its low 2 GB the same way with or without the strike. "Total" free is 1.8 GB, so the
+  exe is large-address-aware and the space above 2 GB is unused: whatever fails needs low memory, and the strike code has
+  no say in that.
+- **Strike code audit for per-turn growth: nothing found.**
+  - Every member the strike added (CvMilitaryAI m_iStrike*, the takeable cache, Personality's CvStrikePlan,
+    m_aiABTestCounts) is a scalar or a fixed array.
+  - Every vector or map in the strike code is a local (the line walks, StrikeUnitsTakeCity's unit maps, the army list).
+  - m_potentialAttackTargets is cleared every turn. The only static is CP's own.
+  - Operations don't pile up. Live operations per civ per turn, from OperationalAILog: 17A1A659's Aztecs 1 at most; 17813E6E's
+    Celts 1-3, its Maya up to 6, America 2. The strike asks for a city attack only when none is under way, and gate 4 keeps
+    no operation that would otherwise be deleted for lack of units.
+  - Logging writes to files (FILogFile); the lines are formatted into temporary CvStrings that are freed.
+- **Stack symbols:** CI keeps the PDB in the run's artifact (run 42281569284, VP_MSVC_Release_b0d7e1c-3-g791ab9d7). This
+  session's network can't reach the artifact host, so a helper session on a new environment is downloading it and will
+  resolve the 15 offsets. The result follows here.
+- What would help: the game's own logs (183D5D87) and CvAssert.log, if PC 2 has them. Also whether the T78 crash on 1c3ab74
+  and this one both ran with all AI logging on: if the logged runs crash and unlogged ones don't, logging volume is the
+  pressure. Logging writes through, but the engine's file buffers and the extra string work all sit in the low 2 GB.
+
+LEAD: the crash's memory picture predates the strike code (2d949f8 and 1c3ab74 crashed the same way), and the strike code
+holds no growing state. Symbols for the stack to follow. I don't see a reason to hold the 10pm trial on acd891f95 for this.
