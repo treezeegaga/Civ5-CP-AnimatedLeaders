@@ -5419,3 +5419,40 @@ LEAD: ghost operations were 1 in 27 logged games (and only crashable in logged o
   - PC 1: trio27 games 2-6 on `ab-0f35217`; game 1 ran on acd891f.
 - **Watch in the block:** a rich civ whose army can't take a strong capital keeps feeding units, since "spent" needs the
   gold to run out. That follows the user's no-retreat rule, but if it stalls whole games we'll look again.
+
+### Pick once, all in, the capital: claude/ab-c1 = 03494ee (lead, 10:32pm ET Nov 6)
+- **The user's rulings tonight, in AGENTS.md:**
+  - pick a target and eliminate it, no flip-flopping;
+  - all in, no retreat on losses;
+  - "the goal is the enemy capital. if we take that, we can declare peace and let them have a minor settlement" (no
+    elimination penalties).
+- **War's builds:**
+  - 227f759, 0f35217: the capital as the goal;
+  - d750180, f0db3a5: pick once, then the next target;
+  - c8c224e: all in;
+  - e685090: finished = the original capital taken;
+  - 5f5334e: no stalled-near handover against the strike's target, from trial28's Sofia (and Kyzyl, Boston);
+  - 1645bba, 7091173: SiegeCapturer, a flag;
+  - review fixes 647fdd3, 677f7a4, 68df55d, 88cf09c, cbebe77, 578de30, 03494ee.
+- **Economy:** 0061 (the K-city cap ends at the first declaration), 0062 (the bans only before the first declaration and in
+  the strike's WAR).
+- **Six pre-flight review rounds.** Each found real deadlocks or desyncs, among them:
+  - a vassal target held for good;
+  - a finished major re-picked through CP's window;
+  - two "done" tests;
+  - one-pair reach;
+  - UI-filled per-turn caches (a multiplayer desync);
+  - a reach test that rejected most capitals;
+  - a reach failure ending WAR with nothing taken.
+  The design was then simplified: reach gates only a new pick; a held target is kept until its capital is out of its
+  hands; the only pre-war release is no city on our land. The checklist gained about 20 bug kinds.
+- **Snapshot:** takeable, ready, finished, holding-reachable and upgrade-go are computed in our own turn and saved; no
+  UI-reachable cache feeds a decision. Saves from before 68df55d don't load in this build (test runs only).
+- **trial28 (ab-227f759, Aztecs vs Sofia):**
+  - Clean: no wonders or gifts, the list followed.
+  - But Sofia stayed at 250/250 HP for 33 turns of war: MarchOn handed the army over 6 tiles out and the tactical AI withdrew.
+- **trio27:** games 1-2 on acd891f. Huns top (19.1%), Jakarta taken through CP's war after the strike went OVER at T40
+  ("no target in reach"). Persia went OVER at T57 the same way; Byzantium (balanced) top. Both exits are gone in 03494ee.
+- **Next:**
+  - PC 2: trial29 on `ab-03494ee` (+SiegeCapturer, T100), then bullygreedy25 straight after if clean.
+  - PC 1: trio27 games 3-6 on it, then bullyabort25.
