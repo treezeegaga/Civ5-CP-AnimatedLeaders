@@ -1,0 +1,33 @@
+﻿Game 1A0565831A056583 (AIABTest_c8e.csv), last logged turn 150
+b    Germany      none      cities 3
+  builds to T80 (capital Berlin; other cities named): T0 Worker | T12 Monument | T18 Granary | T25 Settler | T32 Archer | T36 Shrine | T39 Water Mill | T45 Caravan | T50 Great Library | T54 Caravan | T57 Caravan | T60 Caravan | T63 Caravan | T66 Caravan | T69 Statue of Zeus | T76 Library | T79 Caravan
+  settlers ordered T: 25,126,138,151   found-city ops started T: 118,133,145   cities founded T: 121,137,151
+  IDLE SETTLER turns: 3 (first T33)
+  settler timeline to T80: T25 settler (AI) in Berlin
+b    Indonesia    none      cities 9
+  builds to T80 (capital Jakarta; other cities named): T0 Worker | T7 Monument | T11 Settler | T19 Granary | T24 Warrior | T27 Shrine | T29 Barracks | T33 Cargo Ship | T34 Monument (Surabaya) | T35 Trireme | T37 Stonehenge | T43 Settler (Surabaya) | T45 Library | T48 Great Library | T54 Granary (Surabaya) | T54 Cargo Ship | T55 Cargo Ship | T57 Caravan | T59 Kris Swordsman | T62 Shrine (Surabaya) | T62 Kris Swordsman | T64 Settler | T67 Library (Surabaya) | T67 Great Lighthouse | T71 Writers' Guild | T74 Monument (Medan) | T74 Colossus | T77 Worker (Surabaya) | T80 Monument (Makassar)
+  settlers ordered T: 11,43,64,95,96,102,117,124   found-city ops started T: 28,63,67,73,80,98,106,122,127,135   cities founded T: 34,74,80,92,107,119,132,138
+  ops aborted: T65 LostCivilian, T134 NoTarget
+  IDLE SETTLER turns: 5 (first T20)
+  settler timeline to T80: T11 settler (AI) in Jakarta | T28 op started | T34 FOUNDED | T43 settler (AI) in Surabaya | T63 op started | T64 settler (AI) in Jakarta | T65 op ended: LostCivilian | T67 op started | T73 op started | T74 FOUNDED | T80 op started | T80 FOUNDED
+b    Sweden       none      cities 9
+  builds to T80 (capital Stockholm; other cities named): T0 Worker | T10 Granary | T18 Shrine | T21 Settler | T27 Warrior | T30 Monument | T33 Worker | T34 Granary (Sigtuna) | T35 Warrior | T36 Worker | T39 Library | T42 Monument (Sigtuna) | T43 Great Library | T46 Settler (Sigtuna) | T53 Circus (Sigtuna) | T53 Walls | T54 Parthenon | T56 Settler (Sigtuna) | T59 Walls (Helsinki) | T63 Circus (Sigtuna) | T64 Pyramids | T66 Walls (Sigtuna) | T70 Writers' Guild (Sigtuna) | T71 Market (Birka) | T72 Settler | T73 Settler | T76 Market | T77 Mint (Sigtuna) | T80 Mint
+  settlers ordered T: 21,46,56,72,73,96,112,131,147   found-city ops started T: 31,54,65,76,78,108,127,143   cities founded T: 34,59,71,82,84,113,131,147
+  IDLE SETTLER turns: 8 (first T28)
+  military ops ended (whole game): HalfStrength 2, NoTarget 1
+  settler timeline to T80: T21 settler (AI) in Stockholm | T31 op started | T34 FOUNDED | T46 settler (AI) in Sigtuna | T54 op started | T56 settler (AI) in Sigtuna | T59 FOUNDED | T65 op started | T71 FOUNDED | T72 settler (AI) in Stockholm | T73 settler (AI) in Stockholm | T76 op started | T78 op started
+c    America      wide      cities 7
+  builds to T80 (capital Washington; other cities named): T2 Worker* | T14 Scout* | T18 Settler* | T29 Settler* | T38 Archer* | T41 Archer* | T45 Archer* | T48 Archer* (New York) | T48 Archer* | T49 Archer* (New York) | T49 Archer* | T51 Archer* | T53 Spearman* | T55 Spearman* (New York) | T56 Spearman* | T57 Worker* (Boston) | T58 Archer* (Boston) | T59 Archer* | T62 Composite Bowman* (New York) | T64 Composite Bowman* | T68 Worker (New York) | T70 Caravan* | T74 Settler (New York) | T75 Worker (Boston) | T77 Temple of Artemis | T80 Warrior (New York)
+  settlers ordered T: 18,29,74,83,96,145   found-city ops started T: 29,38,80,89,105,105   cities founded T: 48,57,84,101,109,112
+  ops aborted: T104 NoTarget, T104 NoTarget, T104 NoTarget
+  IDLE SETTLER turns: 6 (first T74)
+  military ops ended (whole game): NoUnits 5, DiploOpinionChange 2, LostPath 1, TimedOut 1, HalfStrength 1, WarStateChange 1, Success 1
+  settler timeline to T80: T18 settler (book) in Washington | T29 op started | T29 settler (book) in Washington | T38 op started | T48 FOUNDED | T57 FOUNDED | T74 settler (AI) in New York | T80 op started
+c    Polynesia    wide      cities 6
+  builds to T80 (capital Honolulu; other cities named): T0 Worker | T10 Scout* | T12 Maori Warrior* | T17 Shrine* | T21 Maori Warrior* | T24 Settler* | T34 Granary | T37 Granary (Samoa) | T41 Maori Warrior* | T44 Monument* | T47 Settler* | T51 Monument* (Samoa) | T54 Settler* | T58 Caravan (Samoa) | T62 Library* | T66 Library (Samoa) | T66 Work Boat | T68 Granary (Tonga) | T70 Maori Warrior | T71 Maori Warrior | T72 Work Boat (Samoa) | T73 Temple of Artemis | T76 Lighthouse (Samoa) | T79 Monument (Tonga)
+  settlers ordered T: 24,47,54,82,90,118   found-city ops started T: 34,54,62,87,91,113   cities founded T: 37,68,92,93,119
+  ops aborted: T85 LostCivilian, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T123 NoTarget, T124 NoTarget, T124 NoTarget, T124 NoTarget, T125 NoTarget, T125 NoTarget, T126 NoTarget, T126 NoTarget, T127 NoTarget, T127 NoTarget, T128 NoTarget, T128 NoTarget, T129 NoTarget, T129 NoTarget, T135 NoTarget, T135 NoTarget, T136 NoTarget, T136 NoTarget, T137 NoTarget, T137 NoTarget, T138 NoTarget, T138 NoTarget, T139 NoTarget, T139 NoTarget, T140 NoTarget, T140 NoTarget, T141 NoTarget, T141 NoTarget, T142 NoTarget, T142 NoTarget, T143 NoTarget, T143 NoTarget, T144 NoTarget, T144 NoTarget, T145 NoTarget, T145 NoTarget, T146 NoTarget, T146 NoTarget, T147 NoTarget, T147 NoTarget, T148 NoTarget, T148 NoTarget, T149 NoTarget, T149 NoTarget, T150 NoTarget, T150 NoTarget, T151 NoTarget, T151 NoTarget, T152 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 4 (one at a time 2, growth due 2)   built instead: Library 1, the normal AI choice 1, Shrine 1, Monument 1   first: T017 Honolulu size 2 next Shrine | T044 Honolulu size 3 next Monument | T062 Honolulu size 4 next Library
+  IDLE SETTLER turns: 3 (first T47)
+  settler timeline to T80: T24 settler (book) in Honolulu | T34 op started | T37 FOUNDED | T47 settler (book) in Honolulu | T54 op started | T54 settler (book) in Honolulu | T62 op started | T68 FOUNDED
+  saving gold for a settler: 38 turns (T6-T51)
