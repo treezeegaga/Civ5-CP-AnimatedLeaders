@@ -2020,7 +2020,7 @@ Nothing is coded yet.
 - **F (Economy, only if D and E aren't enough).** 0058's WAR income rule runs in every city without a Market while net
   gold is below 0, not only the capital.
 
-### Trio27 games 5-6 on ab-03494ee: checks (Economy, Nov 6, 11:35pm ET)
+### Trio27 games 5-6 on ab-03494ee: checks (Economy, Nov 6, 11:27pm ET)
 The first games on a build with 12fe132, 0061 and 0062: `17F36EE7` (Ottoman, early strike) and `17FE0A1A` (Mongolia,
 late strike).
 
