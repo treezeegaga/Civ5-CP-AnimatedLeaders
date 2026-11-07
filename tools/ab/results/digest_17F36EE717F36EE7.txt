@@ -1,0 +1,21 @@
+﻿Game 17F36EE717F36EE7 (AIABTest_c8e.csv), last logged turn 150
+b    France       none      cities 6
+  builds to T80 (capital Paris; other cities named): T0 Worker | T8 Monument | T12 Shrine | T15 Settler | T22 Warrior | T25 Library | T31 Great Library | T33 Monument (Orleans) | T41 Scout | T42 Warrior | T42 Scout | T43 Settler | T44 Granary (Orleans) | T47 Granary | T50 Settler | T54 Shrine (Orleans) | T54 Chariot Archer | T57 Writers' Guild | T61 Library (Orleans) | T61 Parthenon | T69 Market (Orleans) | T72 Market (Troyes) | T72 Market (Lyon) | T73 Circus | T73 Walls (Troyes) | T73 Walls (Lyon) | T76 Walls | T77 Warrior (Orleans) | T79 Pikeman | T80 Warrior (Orleans)
+  settlers ordered T: 15,43,50,104,140   found-city ops started T: 26,47,68,79,116   cities founded T: 33,72,72,86,124
+  ops aborted: T151 NoTarget
+  IDLE SETTLER turns: 8 (first T23)
+  military ops ended (whole game): NoUnits 3, WarStateChange 1, TargetAlreadyCaptured 1
+  settler timeline to T80: T15 settler (AI) in Paris | T26 op started | T33 FOUNDED | T43 settler (AI) in Paris | T47 op started | T50 settler (AI) in Paris | T68 op started | T72 FOUNDED | T72 FOUNDED | T79 op started
+b    Greece       none      cities 4
+  builds to T80 (capital Athens; other cities named): T0 Worker | T12 Monument | T17 Granary | T23 Settler | T30 Warrior | T33 Shrine | T35 Barracks | T40 Shrine (Sparta) | T40 Stonehenge | T49 Monument (Sparta) | T50 Archer | T51 Settler | T55 Archer | T56 Granary (Sparta) | T57 Settler | T61 Monument (Corinth) | T62 Companion Cavalry (Sparta) | T62 Hoplite | T66 Water Mill | T69 Worker (Sparta) | T71 Circus | T72 Caravansary (Corinth) | T73 Caravansary (Argos) | T75 Worker | T76 Settler (Sparta) | T78 Caravan | T80 Market (Knossos)
+  settlers ordered T: 23,51,57,76,88   found-city ops started T: 36,55,67,67,86   cities founded T: 40,61,73,80
+  ops aborted: T90 NoTarget, T91 NoTarget, T93 NoTarget, T93 NoTarget, T95 NoTarget, T95 NoTarget, T96 NoTarget, T96 NoTarget, T97 NoTarget, T97 NoTarget, T98 NoTarget, T98 NoTarget, T99 NoTarget, T99 NoTarget, T107 NoTarget, T107 NoTarget, T108 NoTarget, T108 NoTarget, T109 NoTarget, T109 NoTarget
+  IDLE SETTLER turns: 5 (first T31)
+  military ops ended (whole game): WarStateChange 2, Success 1, NoTarget 1, HalfStrength 1
+  settler timeline to T80: T23 settler (AI) in Athens | T36 op started | T40 FOUNDED | T51 settler (AI) in Athens | T55 op started | T57 settler (AI) in Athens | T61 FOUNDED | T67 op started | T67 op started | T73 FOUNDED | T76 settler (AI) in Sparta | T80 FOUNDED
+b    Persia       none      cities 4
+  builds to T80 (capital Persepolis; other cities named): T0 Worker | T10 Monument | T15 Settler | T27 Granary | T35 Shrine | T38 Water Mill | T45 Barracks | T49 Statue of Zeus | T59 Temple of Artemis | T66 Caravan | T69 Caravan | T72 Library | T75 Circus | T79 Caravansary
+  settlers ordered T: 15,99,100,102,127   found-city ops started T: 93,101,110   cities founded T: 96,103,120
+  ops aborted: T105 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  IDLE SETTLER turns: 4 (first T28)
+  settler timeline to T80: T15 settler (AI) in Persepolis
