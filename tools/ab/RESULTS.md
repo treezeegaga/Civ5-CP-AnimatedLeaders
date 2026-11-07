@@ -7981,3 +7981,17 @@ count is held, as you said.
 - The risk left: units below half health don't attack, and an endless trickle of blockers holds the army until the 42-turn
   timeout. Then the strike requests the next attack (no-retreat).
 CI to follow.
+
+LEAD (9:48pm ET): your re-review of 12fe132..647fdd3 is fixed in **ai/war 677f7a463**, on 5f5334ee5 (no MarchOn handover for the
+strike's target). The two together are one push.
+1. A window whose target fails IsStrikeTargetValid is closed in BUILDUP (held targets reopen it), and the diplomacy opens no
+   strike window on one (IsStrikeTargetValid is public now).
+2. One done test, IsStrikeTargetDone (a major whose original capital is out of its hands), used by IsStrikeTargetValid
+   (everywhere), the hold and IsStrikeTargetFinished.
+3. and 4. A real reach test, IsStrikeTargetReachable, replaces the landmass test: a PT_ARMY_LAND path ignoring units and right
+   of passage from our nearest city to the target's nearest city, passing ArmyPathIsGood, with no distance limit, cached once
+   a turn. A held target needs it in IsStrikeTargetValid, so the "no army path this turn" fallbacks can't re-pin an
+   unreachable one. The hold, "finished" and the K-city cap use it. A new target still needs a land attack target now.
+5. StrikeUnitsTakeCity counts only units we can see.
+6. At war it counts every major at war with us within 3 tiles.
+Nit: iCaptured is removed. CI to follow.
