@@ -1,0 +1,140 @@
+From e547263df1e802b099f00553c84655ae3c5841db Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sat, 7 Nov 2026 13:31:57 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0064: the capital's off-list Worker only
+ when its list is stuck on an unimproved resource
+
+The user's ruling on 0063, via the lead: as written, a capital whose list has no Worker built one on turn 1, ahead of
+the expert opening. Not wanted.
+
+The capital now follows its list. It takes an off-list Worker only when all of these hold (IsStrikeListStuckOnUnimprovedResource):
+- the next list item (the first still short, counted as the executor counts) is a unit;
+- neither that unit nor its upgrade line can be trained, for lack of a strategic resource;
+- that resource sits on a tile we own with no working improvement that connects it;
+- we know the tech for such an improvement.
+The usual guards stay: no Worker already in the area, none in production. The log line names the item, the resource and
+the tile. Other cities keep the worker rule as 0063 placed it (right after the danger defender). 0063's "list has a
+Worker item" exemption is gone; the stuck test replaces it.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 88 +++++++++++++++++++++++----
+ 1 file changed, 75 insertions(+), 13 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 6436965..55ba6c3 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -35301,6 +35301,72 @@ static void LogStrikeList(CvPlayer& kPlayer, const CvCity* pCity, const char* sz
+ 	kPlayer.GetCitySpecializationAI()->LogMsg(strOut);
+ }
+ 
++/// AI_AB_TEST (Economy 0064, the user's ruling on 0063 via the lead): the capital's list is stuck on a resource a Worker
++/// can fix. The next list item (the first one still short, counted as the executor counts) is a unit that neither it nor its
++/// upgrade line can be trained, for lack of a strategic resource that sits on a tile we own without an improvement that
++/// connects it, and we know the tech for such an improvement. Then, and only then, the capital takes an off-list Worker
++static bool IsStrikeListStuckOnUnimprovedResource(const CvPlayer& kPlayer, const CvStrikePlan& kPlan, const CvCity* pCapital, CvString& strWhy)
++{
++	std::map<int, int> unitsWanted;
++	for (int i = 0; i < kPlan.iNumBuilds; i++)
++	{
++		const CvStrikeBuildItem& kItem = kPlan.aBuilds[i];
++		if (!kItem.bUnit)
++		{
++			if (pCapital->GetCityBuildings()->HasBuildingClass((BuildingClassTypes)kItem.iClass))
++				continue;
++			return false;	// the next item is a building
++		}
++		const UnitClassTypes eClass = (UnitClassTypes)kItem.iClass;
++		if (CountStrikeListUnits(kPlayer, eClass, true) >= ++unitsWanted[eClass])
++			continue;
++		// the next item: a unit
++		const UnitTypes eUnit = kPlayer.GetSpecificUnitType(eClass);
++		CvUnitEntry* pkUnitInfo = (eUnit != NO_UNIT) ? GC.getUnitInfo(eUnit) : NULL;
++		if (!pkUnitInfo || GetStrikeListTrainableOnLine(kPlayer, eClass, pCapital) != NO_UNIT)
++			return false;
++		for (int iRes = 0; iRes < GC.getNumResourceInfos(); iRes++)
++		{
++			const ResourceTypes eResource = (ResourceTypes)iRes;
++			const int iNeeded = pkUnitInfo->GetResourceQuantityRequirement(iRes);
++			if (iNeeded <= 0 || kPlayer.getNumResourceAvailable(eResource, true) >= iNeeded)
++				continue;
++			// an improvement we can build that connects it
++			bool bCanConnect = false;
++			for (int iBuild = 0; iBuild < GC.getNumBuildInfos() && !bCanConnect; iBuild++)
++			{
++				const CvBuildInfo* pkBuild = GC.getBuildInfo((BuildTypes)iBuild);
++				const ImprovementTypes eImp = pkBuild ? (ImprovementTypes)pkBuild->getImprovement() : NO_IMPROVEMENT;
++				const CvImprovementEntry* pkImp = (eImp != NO_IMPROVEMENT) ? GC.getImprovementInfo(eImp) : NULL;
++				if (!pkImp || !pkImp->IsConnectsResource(iRes))
++					continue;
++				if (pkImp->GetRequiredCivilization() != NO_CIVILIZATION && pkImp->GetRequiredCivilization() != kPlayer.getCivilizationType())
++					continue;
++				bCanConnect = pkBuild->getTechPrereq() == NO_TECH || GET_TEAM(kPlayer.getTeam()).GetTeamTechs()->HasTech((TechTypes)pkBuild->getTechPrereq());
++			}
++			if (!bCanConnect)
++				continue;
++			// the resource on a tile of ours, not connected by its improvement
++			const PlotIndexContainer& aiPlots = kPlayer.GetPlots();
++			for (size_t iPlot = 0; iPlot < aiPlots.size(); iPlot++)
++			{
++				const CvPlot* pPlot = GC.getMap().plotByIndex(aiPlots[iPlot]);
++				if (!pPlot || pPlot->getOwner() != kPlayer.GetID() || pPlot->getResourceType(kPlayer.getTeam()) != eResource)
++					continue;
++				const ImprovementTypes eHere = pPlot->getImprovementType();
++				const CvImprovementEntry* pkHere = (eHere != NO_IMPROVEMENT) ? GC.getImprovementInfo(eHere) : NULL;
++				if (pkHere && pkHere->IsConnectsResource(iRes) && !pPlot->IsImprovementPillaged())
++					continue;
++				strWhy.Format("(item %d %s waits on %s at (%d, %d), not improved)", i + 1, pkUnitInfo->GetDescription(),
++					GC.getResourceInfo(eResource)->GetDescription(), pPlot->getX(), pPlot->getY());
++				return true;
++			}
++		}
++		return false;
++	}
++	return false;
++}
++
+ /// StrikeList: the capital builds the plan's list in order. The first item still short is next (counts add up along the
+ /// list, so a unit lost later makes its item short again and it's rebuilt in its place). No settler holds and no gold
+ /// check: the experts' lists come with their own economy. The only deviations are game events: the city in danger (a
+@@ -35340,18 +35406,14 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 	}
+ 
+ 	// a worker where a city has none in its area
+-	// (0063) the capital too, and before its list: Mongolia's list (trial29 18B3086C, ab-03494ee) has no Worker and this
+-	// rule skipped the capital, so its first Worker came at T53; its Horse tile, in its borders since T25, was pastured
+-	// only then and the list's Chariot Archer waited T29-T60. A city in danger takes its defender first (above). A capital
+-	// whose list has a Worker item follows the list (the user: "literally just follow the list")
+-	bool bListHasWorker = false;
+-	if (pCity->isCapital())
+-	{
+-		const UnitClassTypes eWorkerClass = (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_WORKER", true);
+-		for (int i = 0; i < kPlan.iNumBuilds && !bListHasWorker; i++)
+-			bListHasWorker = kPlan.aBuilds[i].bUnit && kPlan.aBuilds[i].iClass == (int)eWorkerClass;
+-	}
+-	if (!bListHasWorker)
++	// (0063) Mongolia's list (trial29 18B3086C, ab-03494ee) has no Worker and this rule skipped the capital, so its first
++	// Worker came at T53; its Horse tile, in its borders since T25, was pastured only then and the list's Chariot Archer
++	// waited T29-T60. (0064, the user's ruling via the lead: not a Worker on turn 1 ahead of the expert opening) the capital
++	// follows its list and takes an off-list Worker only while the list is stuck on a resource a Worker can fix
++	// (IsStrikeListStuckOnUnimprovedResource); the other cities as before. A city in danger takes its defender first (above)
++	CvString strStuck;
++	const bool bWorkerRule = !pCity->isCapital() || IsStrikeListStuckOnUnimprovedResource(*this, kPlan, pCity, strStuck);
++	if (bWorkerRule)
+ 	{
+ 		bool bWorker = false;
+ 		int iLoop = 0;
+@@ -35362,7 +35424,7 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 		{
+ 			eOrder = ORDER_TRAIN;
+ 			iData = eWorker;
+-			LogStrikeList(*this, pCity, "a worker (none in this area)", NULL);
++			LogStrikeList(*this, pCity, "a worker (none in this area)", strStuck.IsEmpty() ? NULL : strStuck.c_str());
+ 			return true;
+ 		}
+ 	}
+-- 
+2.43.0
+

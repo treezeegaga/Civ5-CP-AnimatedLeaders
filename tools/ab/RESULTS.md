@@ -2090,6 +2090,24 @@ ranged support):
   stalled, and its siege or ranged pick waits while another city is training that class. Fix H for the rest of the army
   rule (`bMoreCore` in WAR, `bShort`) is still open.
 
+### Patch 0064: the capital's off-list Worker only when its list is stuck on an unimproved resource (Economy, Nov 7, 8:31am ET)
+The user's ruling on 0063, via the lead: a capital whose list has no Worker built one on turn 1, ahead of the expert
+opening (the user asked whether the Celts would). Not wanted. The patch is on ai/war `655df72` and applies cleanly there.
+- **The capital follows its list.** It takes an off-list Worker only when all of these hold
+  (`IsStrikeListStuckOnUnimprovedResource`):
+  - the next list item, the first one still short (counted as the executor counts), is a unit;
+  - neither that unit nor its upgrade line can be trained, for lack of a strategic resource;
+  - that resource sits on a tile we own with no working improvement that connects it;
+  - we know the tech for such an improvement.
+- **The usual guards stay:** no Worker already in the area, and none in production.
+- **The log line names the stuck item.** For example: "a worker (none in this area) (item 6 Chariot Archer waits on
+  Horses at (48, 38), not improved)".
+- **The other cities keep the worker rule where 0063 put it**, right after the danger defender. 0063's exemption for a
+  list with a Worker item is gone; the stuck test replaces it.
+- **Mongolia in 18B3086C:** at T29 its next item, the Chariot Archer, waited on unimproved Horses at (48,38), with
+  Animal Husbandry known and no Worker. So the capital would have built one then, not at T1. At T81-T100 the Horses were
+  used up on an improved pasture, so the capital follows its list.
+
 ### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:36pm ET)
 The lead's review of the pick-once build (`12fe132`): `IsStrikeNoWonders` held in every PREP and BUILDUP. A finished
 target now sends WAR back to BUILDUP for the next one, so the wonder and city-state gold bans came back in every later
