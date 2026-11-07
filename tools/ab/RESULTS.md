@@ -7873,3 +7873,18 @@ targets still skip one with defensive allies, so that case is only one that gain
 - the war marks are reset to the current counts, so only a new declaration moves BUILDUP -> WAR;
 - a finished major (capital lost, one city at most left) isn't picked again.
 Lasting-loss release kept until the user answers. CI to follow.
+
+**The user's ruling, 9:32pm ET: "there is no 2nd place in civ. you are either the champion or you are nothing. if an aggressive civ
+puts all their resources into a timing attack, they are ALL IN. Their is no retreating and find another target, if you do
+that you have wasted too much time and resources and your window to victory is gone."**
+This answers the open question: **the lasting-loss release goes.** Design (one idea: once committed, no release by losses):
+- IsStrikeNoRetreat drops its loss releases: a city of ours lost since the war began, a city of ours in danger, the war
+  NEARLY_DEFEATED. In the strike's war it holds until the target is finished (IsStrikeTargetFinished) or dead. Peace is
+  refused, gate 4 holds and no other war is declared.
+- WAR's "no-retreat released by a loss" exit is removed.
+- Unchanged:
+  - IsStrikeHomeSafe still delays the declaration (before the commitment, not a retreat).
+  - The tactical AI still defends our cities: gate 4 only limits whom new city attacks go for, and anyone at war with us
+    is allowed.
+  - A held target that can never be fought is still released (that's impossibility, not retreat).
+- The way out the lead's checklist asks for is the target finished, or us dead. That's the user's "champion or nothing".
