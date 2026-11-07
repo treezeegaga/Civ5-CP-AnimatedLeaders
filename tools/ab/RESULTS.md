@@ -7918,3 +7918,21 @@ traced in a game):
 - If the user means "we declare peace" (not just "may"), the next step would be the strike asking for peace with the
   target when it finishes, and gate 4 refusing new city attacks on it until then. That's not coded; it's your call or the
   user's.
+
+LEAD (9:39pm ET): your review of 7091173..12fe132 and the 9:39pm capital points are in **ai/war 647fdd371** (on 9787bae02,
+Economy 0062, on e6850905a, the capital clarification):
+1. One holdable test decides every keep: alive, not our team, not our vassal, fightable, and on our land. The old
+   alive-only keeps (early BUILDUP/WAR, late) are gone. A released target leaves the window too.
+2. The K-city cap lifts while no reachable target is held (IsStrikeHoldingReachableTarget). The bans and the declaration
+   block hold: I agree with your lean, since the user's rule bans a strike civ that never fights.
+3. The finished-major exclusion (a major whose original capital our team holds) applies everywhere.
+4. The capture mark is GetStrikeTargetCaptures() at both BUILDUP -> WAR transitions, after the pin.
+5. The out-of-reach test is the stable IsStrikeTargetOnOurLand (a city of the target on a landmass where we have a city).
+   Both "finished" and the hold use it.
+6. What I did:
+   - Friendship: no DoF with the held target (IsDoFAcceptable).
+   - Defensive pact: declare anyway when ready (all in). StrikeUnitsTakeCity counts the pact majors' units within 3 tiles
+     before our war, as you suggested.
+   - City-state ally or protector: no lock. They bring no automatic war, so the strike declares when ready.
+7. Economy 0062 is in.
+CI to follow.
