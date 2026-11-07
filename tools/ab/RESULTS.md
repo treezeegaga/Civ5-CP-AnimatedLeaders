@@ -8145,9 +8145,27 @@ only strike civ that reached WAR in this game: it declared on T81, WAR T82 to T1
 3. **Not in the smallest fix, worth watching:** with 29 units in the zone, only 1-3 ranged units were in reach each turn. Ranged
    positioning around a walled city may be a separate problem. I'll check it once the block's other games come in.
 
-**Count so far:** across the block's logged games, "not possible this turn" WAR turns: 18BE1E3E Greece 10 of 70 (4 lack of
-units, 6 SiegeFeed), plus 18 WAR turns with no request because a rapid response counted as the attack. The flip game has no
-logs. I'll add more games as they land.
+**Count so far** (`tools/ab/strike_requests.py`, run per logs dir):
+
+| game | strike civ vs target | WAR turns | "not possible" (lack of units / SiegeFeed) | no request, only a rapid response alive | city attacks melee / ranged | "too early" turns | lowest city HP |
+|---|---|---|---|---|---|---|---|
+| 18BE1E3E | Greece vs La Venta (city-state) | T82-151, 70 | 10 (4 / 6) | 32 | 0 / 17 | 33 | 231 of 250 |
+| 18DA3905 | Persia vs Korea (nearest city Daegu) | T132-151, 20 | 0 | 7 (T144-150) | 0 / 4 | 8 | 112 of 250 |
+
+- **Correction:** the first count said 18 rapid-response turns for Greece. T135-151 were missed; ten rapid responses ran back
+  to back there. The right count is 32.
+- **Persia (pair 2, game 18DA3905):**
+  - The sneak attack 2204 reached Daegu on T132, the turn Persia declared. Daegu fell to 112 HP.
+  - On T134 the tactical AI tried a capture: 80 expected damage against 132 needed, one city attack.
+  - After that it was "too early" every turn, with 0-17 expected damage. Daegu healed to 250 by T144, and Korea's army came
+    up (7 units in the zone by T150). Persia's posture went to WITHDRAW.
+  - The second attack, 2267, ended "HalfStrength" on T143, 3 tiles from Daegu. Gate 4 and UnitWasRemoved both skip that
+    abort while IsStrikeNoRetreat holds and the army still has units. So most likely its last unit, an Immortal killed in
+    the operation on T143, had died. The log can't confirm it.
+  - From then on the strike made no request: rapid response 2835 (T143-150) counted as "an attack under way".
+  - Other callers' requests (Daegu, Jeonju, Kaesong) failed for lack of units every turn T144-151.
+  - Again, no melee unit ever attacked the city.
+- The flip games have no logs. I'll add more games as they land.
 
 LEAD (11:35pm ET): the 18BE1E3E read is above:
 - RequestCityAttack fails in three ways: rapid responses take the melee (lack of units), SiegeFeed counts idle melee as a
@@ -8156,3 +8174,8 @@ LEAD (11:35pm ET): the 18BE1E3E read is above:
   "too early" turns. The strike's takeable math counts melee hits that the tactical AI refuses to make.
 - Fix designs 1 (the request) and 2 (the takeable math) are ready to code when the block unfreezes. **Please rule on the
   13-turn gate in fix 2.**
+
+LEAD (12:30am ET): I added bullygreedy25 pair 2 (18DA3905, Persia vs Korea) to the 18BE1E3E entry's count. It's the same picture:
+a rapid response stands in for the strike's attack, and no melee unit attacked the city. Daegu got down to 112 HP on T134,
+then healed back to full. I also corrected Greece's rapid-response count from 18 to 32. The counter is
+`tools/ab/strike_requests.py`. Reading only.
