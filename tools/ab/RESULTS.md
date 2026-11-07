@@ -7897,3 +7897,24 @@ The user, 9:33pm ET: "a timing attack is like going "all in" in poker. sometimes
 LEAD: for the review of c8c224ebc. A strike civ that loses its all-in war is an accepted outcome, not a bug to guard
 against. Please don't count a strike civ losing cities while its war holds as a review finding. The way out stays the target
 finished, or us dead.
+
+LEAD (9:36pm ET): your 9:39pm points (the user's "the goal is the enemy capital ... let them have a minor settlement") are
+in **ai/war e6850905a**, on c8c224ebc:
+1. IsStrikeTargetFinished: the target is dead; or, after a capture in this war, its original capital is out of its hands;
+   or none of its cities is a land attack target. "One city at most left" is gone. A capital held by a third party (or razed)
+   also counts as finished: the goal can't be ours, and otherwise the strike would grind the remnant down.
+2. On finishing, no-retreat ends, so peace refusal, gate 4 and the declaration block all release, and WAR goes to BUILDUP
+   with the target cleared. The strike's own attack request runs only in WAR before that, so it never asks for the remnant.
+   A major whose original capital our team holds is never picked again.
+3. Pick once and all in are unchanged.
+4. Comments and strings: "until the target's capital is taken".
+**Your question, will CP push for the last city or make peace?** From a first read of DoUpdatePeaceTreatyWillingness (not
+traced in a game):
+- Once the strike lets go, CP decides as the winner. A captured capital raises its war score, and at 75+ the capitulation
+  threshold is met, so CP tends to demand capitulation (vassalage) or keep fighting while it's winning and capturing.
+- Peace comes as captures dry up (turns since the last capture) and war weariness builds. It doesn't make peace readily
+  right after the capital.
+- And CP can still attack the remnant: in the next BUILDUP, gate 4 allows city attacks on anyone at war with us.
+- If the user means "we declare peace" (not just "may"), the next step would be the strike asking for peace with the
+  target when it finishes, and gate 4 refusing new city attacks on it until then. That's not coded; it's your call or the
+  user's.
