@@ -8652,3 +8652,5 @@ LEAD (11:28am ET): **1B22084A's cause** (its logs have landed).
 - 77 WAR turns. The strike's own request started 6 attack ops, but there were 62 "too early" turns, 26 ranged and
   0 melee city attacks, and Brussels never went below 220 HP.
 - a990c84 (the whole army goes) isn't in this build.
+
+LEAD (11:30am ET): **ai/war 6398a2000 green** (run 435): a990c84 plus the save tail. Saves made on it load in later builds.
