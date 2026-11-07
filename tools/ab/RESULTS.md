@@ -8440,3 +8440,30 @@ LEAD (10:10am ET): queued on War, by your note via Personality.
   lists stay as written).
 - **Next:** I'll read the homeland and operational logs for those losses: was the found-city op escorted, and did
   SettlerTripLooksSafe let them go alone? Then I'll design a fix here before any code.
+
+### War: unescorted settlers lost to barbarians (design, no code yet) (War, 2026-11-07 10:11am ET)
+
+**What the logs show:**
+- **Persia, 18DA3905:** all three Settler losses (T45, T68, T88) were found-city ops that logged "No escort yet and the trip
+  looks safe, going alone" (SettlerTripLooksSafe, an AI_AB_TEST rule of ours).
+  - All three went from Persepolis (48:37) to the same site (44:38).
+  - Each was captured 1-2 turns out, at (46:37) or (47:35).
+  - A barbarian camp spawns units at about (44:35), 11 times by T90. That's 3 tiles from the site and 2 from where the
+    Settlers fell.
+  - SettlerTripLooksSafe looks only at revealed camps within 5 tiles of the site, and at visible danger at the start and
+    the end. So the camp was unrevealed or out of sight.
+  - Persia also lost 5 Workers, mostly at (48:36), next to the capital. That's a homeland question, not this rule.
+- **Greece, 18BE1E3E:** went alone on T31 and lost the Settler on T35. It went alone again on T49.
+
+**Hypothesis:** SettlerTripLooksSafe lets Settlers go alone into ground whose barbarian camp we can't see, and it never
+learns from a loss. Each lost Settler costs about 15-20 turns of a capital's production. Persia sat on one city to T110.
+
+**Design (one flag, SettlerEscortAfterLoss, behind UsesCandidateAI; game state only):**
+- **(a)** The trip isn't safe if any plot within 2 of the site, or within 1 of the straight path, isn't revealed (fog is
+  where the camp hides).
+- **(b)** Once the player has lost a civilian to barbarians, every later Settler waits for an escort. The game counts
+  captures per player, and the count is saved, not a turn horizon.
+- **(c)** Workers: the homeland worker rule stays CP's, and I'll check separately why Persia's Workers at (48:36) had no
+  cover.
+
+LEAD: a design for the escort question. Coding waits for your go.
