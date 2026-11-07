@@ -3679,7 +3679,8 @@ weights fill everything a plan doesn't name):
     - Lists with no Worker: **Huns, Greece, Celts, Mongolia**. Aztec, Inca, Zulu, Assyria, Japan, Songhai and China
       have one, and the late default adds one.
     - A Worker as the 3rd item in those four lists [I]. Fils' Mongol order is kept otherwise. Coded: `ai/personality`
-      `daa4293` on `ai/war` `655df72`; patch `tools/ab/patches/personality/0001-*.patch`. CI pending.
+      `daa4293` on `ai/war` `655df72`; patch `tools/ab/patches/personality/0001-*.patch`. On `ai/war` as `25f39a95` (cherry-picked by War); `ai/war`
+      `993343d` with it passed CI run 424.
   - **Mongolia's army sized to about 4 Horses** (the user, 11:20pm ET: "horses arent that rare, but having 10 seems very
     unlikely"; a Horse tile gives 2, so one or two pastures). Next block:
     - 4 Chariot Archers pre-built, upgraded to Keshiks at Chivalry;
