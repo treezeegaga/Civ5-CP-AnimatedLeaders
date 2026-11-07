@@ -1,0 +1,27 @@
+﻿Game 17B7518E17B7518E (AIABTest_c8e.csv), last logged turn 150
+b    Assyria      none      cities 6
+  builds to T80 (capital Assur; other cities named): T0 Worker | T9 Monument | T13 Granary | T19 Settler | T27 Warrior | T30 Shrine | T33 Royal Library | T37 Granary (Nineveh) | T38 Scout | T40 Archer | T42 Great Library | T50 Settler | T51 Monument (Nineveh) | T51 Caravan | T51 Settler | T54 Caravan | T59 Shrine (Nineveh) | T59 Worker | T61 Granary (Nimrud) | T62 Chariot Archer | T64 Spearman (Nineveh) | T65 Siege Tower | T68 Terracotta Army | T71 Settler (Nineveh) | T76 Water Mill | T77 Monument (Nimrud) | T79 Worker
+  settlers ordered T: 19,50,51,71,105,127,138   found-city ops started T: 31,54,98,111,134   cities founded T: 37,61,105,120,139
+  ops aborted: T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget
+  IDLE SETTLER turns: 9 (first T28)
+  military ops ended (whole game): Success 2
+  settler timeline to T80: T19 settler (AI) in Assur | T31 op started | T37 FOUNDED | T50 settler (AI) in Assur | T51 settler (AI) in Assur | T54 op started | T61 FOUNDED | T71 settler (AI) in Nineveh
+b    Brazil       none      cities 7
+  builds to T80 (capital Rio de Janeiro; other cities named): T0 Worker | T8 Monument | T14 Shrine | T20 Settler | T28 Warrior | T32 Library | T38 Shrine (Sao Paulo) | T42 Scout | T44 Spearman | T47 Monument (Sao Paulo) | T50 Settler | T52 Work Boat (Sao Paulo) | T58 Granary | T59 Work Boat (Sao Paulo) | T64 Caravan | T65 Monument (Salvador) | T66 Work Boat (Sao Paulo) | T69 Caravan | T70 Granary (Brasilia) | T70 Worker | T71 Work Boat (Sao Paulo) | T74 Shrine (Salvador) | T75 Chariot Archer | T76 Worker (Sao Paulo) | T80 Trireme (Salvador)
+  settlers ordered T: 20,50,93,107,115   found-city ops started T: 33,58,62,99,113,124   cities founded T: 38,65,70,105,134,138
+  IDLE SETTLER turns: 4 (first T29)
+  settler timeline to T80: T20 settler (AI) in Rio de Janeiro | T33 op started | T38 FOUNDED | T50 settler (AI) in Rio de Janeiro | T58 op started | T62 op started | T65 FOUNDED | T70 FOUNDED
+c    Arabia       tall      cities 6
+  builds to T80 (capital Mecca; other cities named): T1 Scout* | T5 Monument* | T10 Shrine* | T15 Warrior* | T19 Settler* | T28 Worker* | T31 Monument* (Medina) | T32 Library* | T36 Library* (Medina) | T38 Worker* | T40 Warrior | T44 Settler* | T52 Settler* | T60 Spearman | T61 Granary (Damascus) | T63 Spearman | T64 Work Boat (Baghdad) | T65 Work Boat (Baghdad) | T65 Granary (Medina) | T68 Scout | T70 Spearman | T74 Worker | T75 Scout (Medina) | T76 Granary (Baghdad) | T77 Library (Damascus) | T78 Warrior (Medina) | T78 Granary
+  settlers ordered T: 19,44,52,84,132,139   found-city ops started T: 28,52,60,68,75,80,89,136,143   cities founded T: 31,61,64,98,98,141
+  ops aborted: T73 NoTarget, T74 NoTarget, T78 NoTarget, T79 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: the normal AI choice 1, Library 1   first: T032 Mecca size 3 next Library | T040 Mecca size 3 next the normal AI choice
+  IDLE SETTLER turns: 3 (first T44)
+  military ops ended (whole game): LostPath 2, Success 2, NoTarget 2, TargetAlreadyCaptured 1
+  settler timeline to T80: T19 settler (book) in Mecca | T28 op started | T31 FOUNDED | T44 settler (book) in Mecca | T52 op started | T52 settler (book) in Mecca | T60 op started | T61 FOUNDED | T64 FOUNDED | T67 BOUGHT in Mecca. Cost: 370 | T68 op started | T73 op ended: NoTarget | T74 op ended: NoTarget | T75 op started | T78 op ended: NoTarget | T79 op ended: NoTarget | T80 op started
+  saving gold for a settler: 36 turns (T7-T66)
+c    Venice       tall      cities 2
+  builds to T80 (capital Venice; other cities named): T0 Worker | T10 Scout* | T13 Monument* | T18 Shrine* | T23 Warrior* | T28 Library* | T38 Warrior* | T43 National College* | T57 Work Boat | T61 Great Lighthouse | T69 Hagia Sophia | T78 Warrior | T80 Mausoleum of Halicarnassus
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  book SETTLER HELD to T80: 2 (growth due 2)   built instead: National College 1, Library 1   first: T028 Venice size 4 next Library | T043 Venice size 7 next National College
+  military ops ended (whole game): Success 1, LostCivilian 1

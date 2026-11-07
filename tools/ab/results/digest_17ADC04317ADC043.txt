@@ -1,0 +1,37 @@
+﻿Game 17ADC04317ADC043 (AIABTest_c8e.csv), last logged turn 150
+b    Assyria      none      cities 6
+  builds to T80 (capital Assur; other cities named): T0 Worker | T10 Granary | T16 Monument | T19 Settler | T25 Warrior | T28 Work Boat | T31 Royal Library | T32 Granary (Nineveh) | T35 Worker | T39 Scout | T40 Trireme | T42 Great Library | T49 Settler | T50 Water Mill | T50 Settler | T52 Monument (Nineveh) | T53 Settler | T55 Granary (Nimrud) | T55 Work Boat | T57 Spearman (Nineveh) | T57 Siege Tower | T58 Great Lighthouse | T63 Worker | T64 Shrine (Nineveh) | T64 Terracotta Army | T69 Settler (Nineveh) | T70 Walls (Nimrud) | T71 Worker | T72 Colossus | T76 Worker | T77 Market | T78 Worker (Nineveh) | T79 Market (Nimrud) | T79 Worker
+  settlers ordered T: 19,49,50,53,69,103,143   found-city ops started T: 29,50,62,66,78,92,116,122,145   cities founded T: 32,55,85,95,138
+  ops aborted: T64 NoTarget, T88 HalfStrength, T121 NoTarget
+  IDLE SETTLER turns: 7 (first T26)
+  military ops ended (whole game): Success 4, NoUnits 1
+  settler timeline to T80: T19 settler (AI) in Assur | T29 op started | T32 FOUNDED | T49 settler (AI) in Assur | T50 op started | T50 settler (AI) in Assur | T53 settler (AI) in Assur | T55 FOUNDED | T62 op started | T64 op ended: NoTarget | T66 op started | T69 settler (AI) in Nineveh | T78 op started
+b    Carthage     none      cities 4
+  builds to T80 (capital Carthage; other cities named): T0 Worker | T10 Granary | T18 Shrine | T22 Settler | T30 Warrior | T33 Monument | T37 Shrine (Utique) | T37 Warrior | T38 Warrior | T40 Scout | T42 Warrior | T45 Quinquereme | T46 Monument (Utique) | T48 Great Library | T50 Library | T52 Granary (Utique) | T54 Settler | T58 Water Mill | T59 Work Boat (Utique) | T62 Temple of Artemis | T63 Work Boat (Utique) | T64 Monument (Hippo Regius) | T64 Work Boat (Utique) | T65 Library (Utique) | T65 Work Boat (Utique) | T70 Cargo Ship | T71 Shrine (Hippo Regius) | T71 Cargo Ship | T72 Lighthouse (Utique) | T74 Caravan | T75 Settler (Hippo Regius) | T77 Barracks (Utique) | T77 Walls | T79 Composite Bowman
+  settlers ordered T: 22,54,75   found-city ops started T: 34,60,84,99   cities founded T: 37,64,86
+  ops aborted: T103 NoTarget
+  IDLE SETTLER turns: 6 (first T31)
+  settler timeline to T80: T22 settler (AI) in Carthage | T34 op started | T37 FOUNDED | T54 settler (AI) in Carthage | T60 op started | T64 FOUNDED | T75 settler (AI) in Hippo Regius
+c    Greece       wide      cities 9
+  builds to T80 (capital Athens; other cities named): T0 Worker | T10 Monument* | T15 Settler* | T24 Settler* | T28 Hoplite* (Sparta) | T29 Hoplite* | T29 Hoplite* (Sparta) | T32 Settler* | T35 Hoplite* | T38 Archer* | T38 Archer* (Corinth) | T39 Archer* (Corinth) | T40 Archer* | T40 Archer* (Sparta) | T42 Archer* | T44 Hoplite* | T46 Hoplite* (Sparta) | T47 Water Mill | T47 Monument (Corinth) | T50 Hoplite* | T53 Scout | T54 Barracks | T54 Water Mill (Sparta) | T55 Barracks (Corinth) | T57 Hoplite* (Sparta) | T57 Hoplite* | T59 Monument (Sparta) | T59 Caravan* | T59 Hoplite* | T62 Composite Bowman* | T65 Composite Bowman* | T67 Shrine (Corinth) | T67 Caravan* | T68 Shrine (Sparta) | T69 Caravansary | T74 Caravan* | T74 Circus (Corinth) | T75 Caravansary (Argos) | T76 Caravan* | T76 Caravan* | T78 Caravansary (Sparta) | T80 Circus
+  settlers ordered T: 15,24,32,107,123,124,129,149,151   found-city ops started T: 24,35,65,95,111,126,137,142,143   cities founded T: 28,38,75,99,114,144,147
+  ops aborted: T136 NoTarget, T142 HalfStrength
+  IDLE SETTLER turns: 4 (first T32)
+  military ops ended (whole game): Success 18, LostPath 8, HalfStrength 2, NoTarget 2, WarStateChange 1
+  settler timeline to T80: T15 settler (book) in Athens | T24 op started | T24 settler (book) in Athens | T28 FOUNDED | T32 settler (book) in Athens | T35 op started | T38 FOUNDED | T65 op started | T75 FOUNDED
+c    Japan        wide      cities 1
+  builds to T80 (capital Kyoto; other cities named): T1 Scout* | T5 Warrior* | T10 Settler* | T20 Worker* | T28 Shrine* | T32 Settler* | T41 Monument* | T42 Monument* (Osaka) | T45 Warrior | T49 Warrior | T52 Settler* | T53 Shrine (Osaka) | T53 Monument* (Tokyo) | T58 Monument (Tokyo) | T59 Warrior | T62 Water Mill (Osaka) | T62 Caravan | T65 Water Mill (Tokyo) | T68 Library | T70 Caravan (Osaka) | T74 Warrior | T75 Granary (Osaka) | T77 Caravan | T79 Warrior (Osaka) | T80 Granary (Tokyo)
+  settlers ordered T: 10,32,52   found-city ops started T: 26,41,83   cities founded T: 42,53
+  ops aborted: T20 NoTarget, T21 NoTarget, T22 NoTarget, T23 NoTarget, T24 NoTarget, T25 NoTarget, T87 LostCivilian
+  IDLE SETTLER turns: 1 (first T54)
+  military ops ended (whole game): LostPath 4, Success 1, WarStateChange 1
+  settler timeline to T80: T10 settler (book) in Kyoto | T20 op ended: NoTarget | T21 op ended: NoTarget | T22 op ended: NoTarget | T23 op ended: NoTarget | T24 op ended: NoTarget | T25 op ended: NoTarget | T26 op started | T32 settler (book) in Kyoto | T41 op started | T42 FOUNDED | T52 settler (book) in Kyoto | T53 FOUNDED
+  saving gold for a settler: 14 turns (T7-T20)
+c    Russia       tall      cities 4
+  builds to T80 (capital Moscow; other cities named): T0 Worker | T9 Scout* | T12 Monument* | T16 Shrine* | T20 Warrior* | T23 Library* | T30 Warrior* | T33 Settler* | T41 Granary | T45 National College | T54 Stonehenge | T61 Oracle | T69 Settler | T73 Warrior | T74 Parthenon | T78 Granary (St. Petersburg)
+  settlers ordered T: 33,69,90,98   found-city ops started T: 41,73,93,101   cities founded T: 78,102,106
+  ops aborted: T59 LostCivilian
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T023 Moscow size 3 next Library
+  IDLE SETTLER turns: 1 (first T90)
+  settler timeline to T80: T33 settler (book) in Moscow | T41 op started | T59 op ended: LostCivilian | T69 settler (AI) in Moscow | T73 op started | T78 FOUNDED
+  saving gold for a settler: 52 turns (T6-T79)
