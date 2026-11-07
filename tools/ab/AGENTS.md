@@ -114,6 +114,14 @@ flag. Expected: wide out-grows tall while nobody attacks; once attacks take citi
 - **City-state targets allowed (the user, 2026-11-06 morning):** when no major civ is in reach, the early strike may
   target a city-state.
 
+### Usage budget (the user, 2026-11-07 10:45am ET)
+This project must stay under **90% of the user's weekly plan usage** (Max plan). On Nov 7 at 10:45am ET it was at 83%, and
+the weekly limit resets Wed Nov 11 5am ET. Near the line, the project runs in low-usage mode:
+- the topic sessions pause;
+- the PC runners play and push with one short line per game;
+- the lead checks in every 3 hours with a short summary, and runs no reviews or agents.
+The lead can't read the percentage, only a "warning" flag, so the user gives the number.
+
 ### Priorities: competence first, then flavour and fun
 
 The list above is where we're going, not the order we work in. Making the AI merely competent is
