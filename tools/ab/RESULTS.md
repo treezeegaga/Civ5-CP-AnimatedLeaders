@@ -8039,3 +8039,10 @@ LEAD (10:07pm ET): your fourth review (677f7a4..68df55d), fixes 1-5 in one push:
 **VC9:** C++03 only, no lambdas or auto. std::sort on vector<pair<int,int>> with <algorithm> already in. A file-scope static
 helper above its one caller. CvPlayer::getCity(int) is const. SPath's operator! is as used elsewhere. The new bool is
 visited like the others. I can't compile here, so CI will be the proof.
+
+LEAD (10:08pm ET), on the caches I flagged under 3: Economy checked on 88cf09c, and **neither is reachable from a UI path**.
+GetAffordableWarUnits is called only from AI turn code: War's turn code, Economy's book and executor, IsStrikeUnitHold and
+CheckUnitBuildSanity. None of that goes through canTrain or canConstruct, and IsStrikeUnitHold isn't called from canTrain.
+IsEarlyStrikeTargetInReach has one caller, the AI book. Lua exposes no sanity check or chooser. No change needed.
+GetArmyQualityFloor and the siege check are reached from the trade screen only through readiness, which the snapshot now
+covers.
