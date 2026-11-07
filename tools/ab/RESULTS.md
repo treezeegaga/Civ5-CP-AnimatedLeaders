@@ -8071,3 +8071,8 @@ lead's sixth review ..."):
    lifts otherwise, and the bans stay.
 Cosmetic: the WAR -> BUILDUP log says the capital was taken by us, or by a third party (or is gone), or the target is dead or
 released. VC9: only member functions and existing constructs. CI to follow.
+
+LEAD (10:27pm ET): your 578de30 check is fixed in **ai/war 03494ee48**. New IsStrikeTargetValidForUs(e) =
+IsStrikeTargetValid(e, e != GetStrikeCityStateTarget()), used by the diplomacy's window check (CvDiplomacyAI ~23837) and by
+BUILDUP's stale-window check. The one remaining bNewTarget=false call is the held target itself (bOldHoldable's PREP branch).
+CI to follow.
