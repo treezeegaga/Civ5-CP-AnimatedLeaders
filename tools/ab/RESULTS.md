@@ -7964,3 +7964,20 @@ strike's take-the-city math counts the target's field units within 6 tiles (not 
 LEAD: trial28's Sofia, read above. Cause: MarchOn handed the army over 6 tiles out after 3 turns of contact with Sofia's
 field units, and the tactical AI withdrew from the empty zone. Same as Kyzyl and Boston. Proposed smallest fix: no
 stalled-near handover for the strike's target, only at the walls. Say go and I'll code it on ai/war after 647fdd371.
+
+LEAD (9:45pm ET): your go is **ai/war 5f5334ee5** (on 647fdd371). For an operation against the strike's target
+(IsStrikeNoRetreat), MarchOn's at-war "stalled near the target" handover is off; it hands over only at the walls. The 6-tile
+count is held, as you said.
+**Your check, what the operation does on "Contact with enemy!":** it's not a hold.
+- PlotArmyMovesCombat calls CheckForEnemiesNearArmy first. For each army unit at half health or better that can attack or be
+  attacked, it collects the enemy attackers, adds our non-army units around them, and runs
+  TacticalAIHelpers::FindAndExecuteBestUnitAssignments at AL_MEDIUM against the closest enemy plot. That's the tactical
+  sim's real attacks and moves. Logged "Performing opportunity attack with army N and friends".
+- The units not used there run ExecuteGatherMoves on the army's centre: no forward step that turn.
+- It declines the fight, so the army moves on to its target, when the closest enemy sits in an enemy-territory zone that's
+  enemy-dominated.
+- In 186D5858 the opportunity attacks ran every turn T73-T77, and Sofia's field units in the zone went 2 (T75) -> 1 (T78)
+  -> 0 (T81). With no handover at T77 the army would have had a clear way on by about T81.
+- The risk left: units below half health don't attack, and an endless trickle of blockers holds the army until the 42-turn
+  timeout. Then the strike requests the next attack (no-retreat).
+CI to follow.
