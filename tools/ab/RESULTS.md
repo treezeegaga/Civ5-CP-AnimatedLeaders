@@ -8059,3 +8059,15 @@ LEAD (10:17pm ET): your fifth review (68df55d..88cf09c), simplified as you asked
 4. IsEarlyStrikeHoldingUpgrades reads the new saved m_bStrikeUpgradeGo, computed in RefreshStrikeSnapshot.
 5. Accepted as you said: the diplomacy may read a turn-old m_bStrikeReady, which is deterministic.
 VC9: no new constructs beyond the previous push. CI to follow.
+
+LEAD (10:25pm ET): your sixth review (88cf09c..cbebe77), all three plus the cosmetic, on **ai/war** after cbebe77e5 (subject "The
+lead's sixth review ..."):
+1. The two "no army path this turn" fallbacks are deleted. The city-state fallback is IsStrikeTargetValid(.., true), with reach.
+2. One hold test, IsStrikeTargetHoldable: alive, not our team or vassal, fightable (at war, declarable, or a peace treaty's
+   turns), not done, and before the strike's war a city on our landmass. It's both bOldHoldable and IsStrikeTargetValid for a
+   held target, so the window opens on any held target; a pact is fought. A held target also counts as in reach for
+   PREP -> BUILDUP (no 12-tile re-check).
+3. Your ruling: m_bStrikeHoldingReachable = the held target is a land attack target now (HaveStrikeLandAttackTarget). The cap
+   lifts otherwise, and the bans stay.
+Cosmetic: the WAR -> BUILDUP log says the capital was taken by us, or by a third party (or is gone), or the target is dead or
+released. VC9: only member functions and existing constructs. CI to follow.
