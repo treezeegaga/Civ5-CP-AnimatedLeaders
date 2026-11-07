@@ -8163,6 +8163,7 @@ only strike civ that reached WAR in this game: it declared on T81, WAR T82 to T1
 | 1A46A642 (bullyabort26, **993343d**) | Ottomans vs Antananarivo (city-state) | T58-150, 93 | 2 (2 / 0) | 0 | 0 / 15 | 41 | 250 (never damaged) |
 | 1A5C4C1E (bullyabort26, **993343d**) | Persia vs Vancouver (defence 27-28) | T91-152, 62 | 6 (6 / 0) | 0 | 0 / 10 | 26 | 250 (never damaged) |
 | 1B02BA85 (bullygreedy26, **993343d**) | Assyria vs the Netherlands (Amsterdam) | T92-150, 59 | 0 | 0 | 0 / 1 | 11 | 250 (see the 1B02BA85 read) |
+| 1B40CD22 (bullygreedy26, **993343d**) | Persia vs Brussels | T76-152, 77 | 8 (8 / 0) | 0 | 0 / 26 | 62 | 220 (6 strike requests started) |
 
 - **Correction:** the first count said 18 rapid-response turns for Greece. T135-151 were missed; ten rapid responses ran back
   to back there. The right count is 32.
@@ -8628,3 +8629,26 @@ The cost is that saves from before 6398a20 won't load in it (once). Its case for
 then load it in the next build.
 
 LEAD (11:08am ET): **ai/war a990c8411 green** (run 433): the next build, ready for your blocker review. 6398a20 (the save tail) is building as run 435.
+
+LEAD (11:28am ET): **1B22084A's cause** (its logs have landed).
+- **What held PREP:** IsStrikeEconomyReady's cities test, cities >= K (3), was false. Persia had **2 cities all game**:
+  - Persepolis, plus Pasargadae from T76;
+  - the digest says "cities 2", not 10.
+- **How it got there:**
+  - Both earlier Settlers went out alone ("the trip looks safe, going alone", T34 and T56), and barbarians captured them
+    (T39-40 and T65-66). That's the StrikeEscort case.
+  - From T55 the found-city ops ended "NoTarget" every turn, yet IsBoxedInForSettling never said boxed in.
+  - So K was never reached and never waived. The army was complete (5 Immortals, LIST NORMAL from T100), and the
+    target, Yerevan, was held.
+- **On the next build (a990c84):**
+  - 9367095's way out fires: the plan's army is out with a target held, so PREP -> BUILDUP.
+  - StrikeEscort (if it's in RoleFixes) would have kept both Settlers.
+- **Open, for Economy or Personality:** IsBoxedInForSettling should count "every found-city op ends NoTarget" as boxed in.
+  Not my file.
+- **The regression case** "Persia PREP" should pass on a990c84 via the way out; the line will read "the plan's army is
+  out, target Yerevan held in reach".
+
+**1B40CD22, Persia vs Brussels (993343d):**
+- 77 WAR turns. The strike's own request started 6 attack ops, but there were 62 "too early" turns, 26 ranged and
+  0 melee city attacks, and Brussels never went below 220 HP.
+- a990c84 (the whole army goes) isn't in this build.
