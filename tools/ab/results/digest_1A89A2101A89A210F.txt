@@ -1,0 +1,48 @@
+﻿Game 1A89A2101A89A210F (AIABTest_c8e.csv), last logged turn 150
+b    India        tall      cities 4
+  builds to T80 (capital Delhi; other cities named): T0 Scout* | T4 Monument* | T10 Shrine* | T15 Warrior* | T22 Settler* | T32 Worker* | T34 Monument* (Mumbai) | T35 Stonehenge | T35 Library* (Mumbai) | T46 Library* | T53 Worker* | T58 Granary (Vijayanagara) | T58 Granary (Mumbai) | T58 Water Mill | T64 War Elephant | T68 Worker | T72 Spearman | T75 Settler | T77 Water Mill (Mumbai) | T80 Hanging Gardens
+  settlers ordered T: 22,75   found-city ops started T: 32,54,80   cities founded T: 34,58,86
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: Library 2   first: T035 Delhi size 4 next Library | T046 Delhi size 4 next Library
+  IDLE SETTLER turns: 2 (first T53)
+  settler timeline to T80: T22 settler (book) in Delhi | T32 op started | T34 FOUNDED | T53 BOUGHT in Delhi. Cost: 370 | T54 op started | T58 FOUNDED | T75 settler (AI) in Delhi | T80 op started
+  saving gold for a settler: 34 turns (T6-T80)
+b    Japan        tall      cities 7
+  builds to T80 (capital Kyoto; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T19 Settler* | T29 Worker* | T36 Stonehenge | T36 Monument* (Osaka) | T37 Library* (Osaka) | T47 Settler* | T48 Library* | T54 Granary (Osaka) | T55 Granary | T61 Temple | T62 Work Boat (Osaka) | T63 Granary (Tokyo) | T68 Settler (Osaka) | T69 Archer | T71 Worker | T75 Lighthouse (Tokyo) | T75 Work Boat (Osaka) | T75 Warrior | T77 Settler | T79 Shrine (Osaka) | T80 Monument (Satsuma) | T80 Hanging Gardens
+  settlers ordered T: 19,47,68,77,95,129   found-city ops started T: 29,53,75,80,99,135   cities founded T: 36,63,80,88,103,146
+  book SETTLER HELD to T80: 2 (one at a time 2)   built instead: Library 2   first: T036 Kyoto size 3 next Library | T048 Kyoto size 3 next Library
+  IDLE SETTLER turns: 6 (first T47)
+  military ops ended (whole game): WarStateChange 1, NoTarget 1
+  settler timeline to T80: T19 settler (book) in Kyoto | T29 op started | T36 FOUNDED | T47 settler (book) in Kyoto | T52 BOUGHT in Kyoto. Cost: 370 | T53 op started | T63 FOUNDED | T68 settler (AI) in Osaka | T75 op started | T77 settler (AI) in Kyoto | T80 FOUNDED | T80 op started
+  saving gold for a settler: 51 turns (T6-T75)
+b    Morocco      tall      cities 4
+  builds to T80 (capital Marrakech; other cities named): T2 Scout* | T5 Monument* | T9 Warrior* | T14 Shrine* | T20 Settler* | T32 Worker* | T36 Monument* (Rabat) | T37 Library* (Rabat) | T37 Settler* | T48 Worker* | T50 Library* | T55 Work Boat (Fes) | T56 Worker (Fes) | T57 Worker (Rabat) | T57 Work Boat | T63 Warrior | T67 Warrior | T68 Granary (Fes) | T68 Warrior | T69 Warrior | T70 Warrior | T71 Worker | T71 Warrior | T72 Trireme | T73 Trireme | T74 Shrine (Rabat) | T74 Trireme | T75 Worker | T75 Trireme | T76 Temple
+  settlers ordered T: 20,37,102,148,151   found-city ops started T: 32,48,81,142   cities founded T: 36,55,89
+  ops aborted: T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget
+  book SETTLER HELD to T80: 1 (one at a time 1)   built instead: Library 1   first: T050 Marrakech size 2 next Library
+  IDLE SETTLER turns: 3 (first T37)
+  military ops ended (whole game): Success 5, HalfStrength 4, NoTarget 4, WarStateChange 1
+  settler timeline to T80: T20 settler (book) in Marrakech | T32 op started | T36 FOUNDED | T37 settler (book) in Marrakech | T48 op started | T55 FOUNDED | T80 BOUGHT in Marrakech. Cost: 370
+  saving gold for a settler: 32 turns (T13-T48)
+b    Siam         tall      cities 4
+  builds to T80 (capital Sukhothai; other cities named): T0 Scout* | T3 Monument* | T7 Warrior* | T12 Shrine* | T16 Worker* | T23 Settler* | T32 Stonehenge | T36 Monument* (Si Satchanalai) | T37 Library* (Si Satchanalai) | T47 Settler* | T48 Library* | T55 Granary (Si Satchanalai) | T55 Granary | T57 Granary (Muang Saluang) | T59 Warrior | T60 Warrior | T61 Warrior | T62 Worker | T67 Temple | T69 Settler (Si Satchanalai) | T74 Shrine (Muang Saluang) | T74 Scout | T76 Spearman | T80 Library (Muang Saluang) | T80 Warrior (Si Satchanalai) | T80 Worker
+  settlers ordered T: 23,47,69,94   found-city ops started T: 32,52,80,91,103   cities founded T: 36,57,100
+  ops aborted: T82 NoTarget, T83 NoTarget, T84 NoTarget, T85 NoTarget, T86 NoTarget, T87 NoTarget, T88 NoTarget, T89 NoTarget, T90 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 3 (one at a time 2, growth due 1)   built instead: Library 2, Worker 1   first: T016 Sukhothai size 2 next Worker | T032 Sukhothai size 3 next Library | T048 Sukhothai size 4 next Library
+  IDLE SETTLER turns: 4 (first T47)
+  military ops ended (whole game): LostPath 2, WarStateChange 1, NoTarget 1, HalfStrength 1
+  settler timeline to T80: T23 settler (book) in Sukhothai | T32 op started | T36 FOUNDED | T47 settler (book) in Sukhothai | T51 BOUGHT in Sukhothai. Cost: 370 | T52 op started | T57 FOUNDED | T69 settler (AI) in Si Satchanalai | T80 op started
+  saving gold for a settler: 51 turns (T11-T76)
+b    Songhai      tall      cities 4
+  builds to T80 (capital Gao; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T18 Settler* | T26 Worker* | T28 Monument* (Tombouctu) | T29 Great Library | T32 Library* (Tombouctu) | T42 Worker | T44 Writers' Guild | T51 Settler* | T55 Work Boat (Tombouctu) | T59 Water Mill | T62 Work Boat (Jenne) | T63 Work Boat (Jenne) | T64 Worker | T66 Work Boat (Tombouctu) | T71 Archer | T72 Worker (Tombouctu) | T75 Work Boat (Jenne) | T77 Terracotta Army | T79 Walls (Tombouctu)
+  settlers ordered T: 18,51,87,119,121,122,123,124,150   found-city ops started T: 26,59,97,142   cities founded T: 28,62,100
+  ops aborted: T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 3 (unhappy 3)   built instead: the normal AI choice 2, Library 1   first: T029 Gao size 3 next Library | T042 Gao size 3 next the normal AI choice | T044 Gao size 3 next the normal AI choice
+  IDLE SETTLER turns: 3 (first T51)
+  military ops ended (whole game): WarStateChange 1, NoTarget 1
+  settler timeline to T80: T18 settler (book) in Gao | T26 op started | T28 FOUNDED | T51 settler (book) in Gao | T59 op started | T62 FOUNDED
+  saving gold for a settler: 41 turns (T6-T68)
+b    Venice       tall      cities 2
+  builds to T80 (capital Venice; other cities named): T0 Scout* | T4 Monument* | T10 Shrine* | T15 Warrior* | T20 Worker* | T31 Stonehenge | T46 Library* | T56 Work Boat | T62 Granary | T68 Writers' Guild | T71 Shrine (Tyre) | T71 Granary (Tyre) | T74 Temple (Tyre) | T75 Cargo Ship | T79 Walls (Tyre)
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T046 Venice size 6 next Library
+  military ops ended (whole game): TooDangerous 7, NoTarget 4, WarStateChange 2, HalfStrength 2, Success 1, LostPath 1
