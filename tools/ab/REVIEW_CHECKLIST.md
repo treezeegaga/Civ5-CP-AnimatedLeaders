@@ -105,3 +105,10 @@ against this list. The list grows: every bug a review or a test game finds gets 
   actually started, so the normal pass never runs.
 - **A goal that's already met at the start:** "the capital is ours" was true from the first turn when we already held it,
   so WAR went straight to OVER. Count only what changed during this strike (the per-war capture mark).
+- **A tactical move that skips the safety passes:** a new move that runs before the heal and safety passes, and marks the
+  unit processed, sends wounded units into danger along unsafe paths (SiegeCapturer review). Filter on shouldHeal and
+  projected death, and use safe paths.
+- **A new move placed inside the condition that rules it out:** the capturer call sat inside "some unit can strike the city",
+  so the very case it was written for (nobody can strike) never reached it.
+- **Unit filters that admit units that can't do the job:** "combat and not ranged" lets in defensive-only units that can't
+  attack or capture.
