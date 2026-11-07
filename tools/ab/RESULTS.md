@@ -8377,3 +8377,55 @@ LEAD (9:28am ET): bullygreedy25 pairs 5 and 6 (ab-03494ee, the old build). Readi
   when they do.
 
 LEAD (9:42am ET): ai/war 51fb13b5e green (run 427), queued for the next build: the stall exit's guard removed and the water-zone fallback. The PCs keep 993343d.
+
+### War: 1B02BA85, Assyria's silent WAR (bullygreedy26 game 1, ab-993343d) (War, 2026-11-07 9:49am ET)
+
+**(a) Not a bug, not a blocker.**
+- In WAR, UpdateStrikeState writes a line only in three cases: the state changes, the strike requests a city attack, or
+  gate 4 refuses someone else's attack. The request needs "no city attack operation against the target"
+  (HasStrikeCityAttackUnderWay).
+- Assyria had a city attack operation against the Netherlands on every turn from T92 to T150 (OperationalAILog):
+  - **2278** (Amsterdam, (64:32)): T92-135;
+  - **2690** (Groningen, (69:27)): T103-124;
+  - **4129** (Amsterdam): T136 on;
+  - **4651** (Groningen): T145 on.
+- So there was no request, no state change and, since CP stopped asking for other targets after T92, no gate-4 line.
+- The state didn't change silently either. Every state change is logged, and the WAR exits (the capital taken, peace, a
+  release) didn't happen: the Netherlands kept Amsterdam, and the war stood to T150.
+- The gap is visibility. A WAR strike that's working writes nothing (fix below).
+
+**(b) The attack on Amsterdam never got there.**
+- **2278** recruited T92-96, gathered T96-100 and moved from T100. Its army then sat at (58-61, 27-28), next to the muster
+  point (59:26) in our own land:
+  - "Contact with enemy!" every 3 turns;
+  - progress 0-34%;
+  - the Siege Tower dropped on T106 for no progress;
+  - **TimedOut on T135 at distance 9**. Gate 4 lets TimedOut through, by design.
+- Nineveh's and Nimrud's zones were in **COUNTERATTACK** posture throughout. Units of the Netherlands' side were in our
+  land, and the army fought at home. 10 Assyrian units were killed T119-149.
+- **2690** (CP's request, not the strike's, aimed at Groningen) reached Groningen on T123: 7 capture attempts and
+  25 "too early" turns there.
+- Amsterdam stayed at 250/250 the whole war; 12 "too early" turns at Amsterdam, and no capture anywhere.
+- So the army never reached the walls the math judged. It was pinned by a counterattack at home.
+
+**(c) Yes, the new math said takeable on T92.**
+- "declared, as ready as it got" is the IsStrikeAsReadyAsItGets branch, and it requires IsStrikeTargetTakeableNow
+  (m_bTakeable, now the new math), so the army on hand was judged takeable against Amsterdam (defence 21) on T92.
+- The "not ready" lines don't show that answer: their "takes it in about 4 turns" is the plan's army
+  (IsStrikeArmyStrongEnough), not the units on hand.
+- The math was never tested at Amsterdam's walls.
+
+**Logging fix (next build, logging only; coding it on ai/war now):**
+- in WAR, a status line every 10 turns: the operation under way (id, target city, stage), or none;
+- the not-ready line gets "on hand: takeable / not takeable", and that answer is part of its change key.
+
+**Not a code fix yet:** an army pinned at home by a counterattack until it times out. If the bigger blocks show it more
+than once, it needs its own look (e.g. the strike's operation ignores enemies near its muster point once it has moved).
+
+LEAD (9:49am ET): 1B02BA85 read above.
+- (a) **No bug, no blocker.** City attack operations on the Netherlands existed every turn T92-150, so the WAR branch had
+  nothing to log.
+- (b) Op 2278 to Amsterdam was pinned at home by Dutch-side units (Nineveh and Nimrud in COUNTERATTACK) and timed out on
+  T135 at distance 9. CP's own op reached Groningen; Amsterdam was never touched.
+- (c) Takeable on T92: yes (the "as ready as it got" branch requires it). The not-ready line only shows the plan's army.
+- Logging fix coming on ai/war for the next build.
