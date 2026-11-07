@@ -5231,3 +5231,20 @@ running block (bullygreedy23 / bullyabort23, ab-0cb5402) is untouched.
   - Gap: the attack on Kyzyl couldn't re-form (a 5-turn deploy lock, SiegeArmy's bar). Fixed on ai/war b446678 for the
     next block.
 - **bullygreedy24 (ab-791ab9d, PC 2, 20 games) started at 3:27pm.** PC 1 waits for its disk (Windows Search).
+
+### bullyabort23 done (PC 1, ab-0cb5402, 20 games vs normal civs; lead, 7:57pm ET Nov 6)
+- **Our aggressor took a city in 1 of 10 first games** (Persia 15D64D9B, 2 cities, first by T80).
+- **The flipped games had captures in 3**, but by non-aggressor civs: Morocco, Carthage and America, Byzantium.
+- **Funnel, first games:** no war 2, refused 1, not taken 5, captured 1, attacked first 1. "SiegeArmy too weak" 11;
+  window paused for gold 58 turns; zone refusals 83.
+- **Reading:** the build before the ownership changes, against normal (defended) civs. Its known gaps are fixed on
+  `ab-acd891f`:
+  - city-state declarations undone;
+  - CP's operations sending the army elsewhere;
+  - unreachable targets;
+  - the field count holding the declaration;
+  - wonders during the strike's war.
+- **bullygreedy24 (PC 2, ab-791ab9d) at 8 of 10 pairs:** captures in 3 of 8 first games (Mongolia T123; Carthage after
+  OVER; Persia T94). CP's flipped games: 0.
+- **Next:** PC 1 runs trial26 on `ab-acd891f` now. If it's clean, bullyabort25 (PC 1) and bullygreedy25 (PC 2, after its
+  block) run on `ab-acd891f`.
