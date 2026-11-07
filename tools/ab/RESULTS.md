@@ -7702,3 +7702,22 @@ matters for captures too. CI to follow. The logging-memory proposal still stands
   didn't fall (17813E6E's Boston). The crash fix stands on its own.
 
 LEAD: ghost operations were 1 in 27 logged games (and only crashable in logged ones); not a main cause of the funnel loss.
+
+**The strike lasts until the target's capital falls (the user, 9:04pm ET, from the trio game).** The user: "huns took indonesias first
+city easily, but then the game ai took over from the strike ai, and instead of the whole army marching on the capital, half
+the units just wandered across the world randomly. maybe we need to have the strike last until the capital is conquered."
+Design (one idea: the strike's objective is the target's capital, not its first city):
+1. **Done = we hold the target's original capital.** If the target no longer holds it (a third party took it), done = any
+   city taken from the target since the war began, which is the old rule. For a city-state, its one city is its capital, so
+   nothing changes there.
+2. Two decision points move to it:
+   - IsStrikeNoRetreat: no-retreat is released when the capital is ours, not on the first capture.
+   - The WAR exit: WAR -> OVER on the capital, not on the first capture.
+   Everything keyed on no-retreat follows with no other change: peace refusal, gate 4 on aborts and on whom the army
+   attacks, the declaration block, and production ownership (0058's no wonders in WAR) until the capital falls. The
+   lasting-loss exit (a city lost, the war nearly lost) and peace / target dead exits stay.
+3. **The strike aims at the capital.** In WAR, when no attack on the target is under way, the strike's request
+   (RequestCityAttack, new optional preferred city) tries the target's capital first, while the target holds it and it's a
+   land attack target. Otherwise it falls back to the usual best-scored city of the target. So after the first city
+   falls, the next operation forms against the capital.
+4. Unchanged: the declaration's readiness (the first city takeable), the target choice, the reach rule.
