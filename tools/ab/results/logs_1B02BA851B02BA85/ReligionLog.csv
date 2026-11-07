@@ -135,12 +135,12 @@
 025, -2500, Samoa, POP_CHANGE, Pop: 1, No religion in city
 025, -2500, Austria, Belief, Ancestor Worship, 198
 025, -2500, Austria, Belief, Oral Tradition, 128
-025, -2500, Austria, Belief, Desert Folklore, 120
+025, -2500, Austria, Belief, Desert Folklore, 125
 025, -2500, Austria, Belief, Messenger of the Gods, 114
 025, -2500, Austria, Belief, God of Craftsmen, 104
 025, -2500, Austria, Belief, Monument to the Gods, 84
+025, -2500, Austria, Belief, God of the Open Sky, 76
 025, -2500, Austria, Belief, Religious Settlements, 75
-025, -2500, Austria, Belief, God of the Open Sky, 72
 025, -2500, Austria, Belief, Goddess of Love, 51
 025, -2500, Austria, Belief, Stone Circles, 50
 025, -2500, Austria, Belief, Sacred Waters, 48
@@ -175,13 +175,13 @@
 029, -2260, Rotterdam, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
 029, -2260, Monaco, POP_CHANGE, Pop: 5, No religion in city
 029, -2260, Zanzibar, POP_CHANGE, Pop: 5, No religion in city
+030, -2200, Beshbalik, POP_CHANGE, Pop: 1, No religion in city
+030, -2200, Beshbalik, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
 030, -2200, M'banza-Kongo, POP_CHANGE, Pop: 4, No religion in city
 030, -2200, Tyre, POP_CHANGE, Pop: 4, No religion in city
 030, -2200, Belgrade, POP_CHANGE, Pop: 5, No religion in city
 030, -2200, Buenos Aires, POP_CHANGE, Pop: 5, No religion in city
 031, -2140, Karakorum, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
-031, -2140, Beshbalik, POP_CHANGE, Pop: 1, No religion in city
-031, -2140, Beshbalik, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
 031, -2140, Carthage, Belief, Dance of the Aurora, 378
 031, -2140, Carthage, Belief, Messenger of the Gods, 229
 031, -2140, Carthage, Belief, Desert Folklore, 98
@@ -211,26 +211,29 @@
 031, -2140, Zurich, POP_CHANGE, Pop: 5, No religion in city
 031, -2140, Singapore, POP_CHANGE, Pop: 5, No religion in city
 032, -2080, Tiwanaku, POP_CHANGE, Pop: 2, No religion in city
+032, -2080, Salzburg, POP_CHANGE, Pop: 1, No religion in city
+032, -2080, Salzburg, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+032, -2080, Barcelona, POP_CHANGE, Pop: 2, No religion in city
 032, -2080, Kabul, POP_CHANGE, Pop: 5, No religion in city
 033, -2020, Vienna, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-033, -2020, Salzburg, POP_CHANGE, Pop: 1, No religion in city
-033, -2020, Salzburg, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+034, -1960, Seville, POP_CHANGE, Pop: 1, No religion in city
 035, -1900, Samoa, POP_CHANGE, Pop: 2, No religion in city
+035, -1900, Nineveh, POP_CHANGE, Pop: 1, No religion in city
 035, -1900, Prague, POP_CHANGE, Pop: 5, No religion in city
-036, -1840, Assyria, Belief, Sacred Path, 222
-036, -1840, Assyria, Belief, God of the Open Sky, 176
-036, -1840, Assyria, Belief, Messenger of the Gods, 164
+036, -1840, Assyria, Belief, Sacred Path, 375
+036, -1840, Assyria, Belief, God of the Open Sky, 250
+036, -1840, Assyria, Belief, Messenger of the Gods, 220
+036, -1840, Assyria, Belief, Oral Tradition, 110
+036, -1840, Assyria, Belief, God of Craftsmen, 90
 036, -1840, Assyria, Belief, Religious Settlements, 75
-036, -1840, Assyria, Belief, Oral Tradition, 70
-036, -1840, Assyria, Belief, God of Craftsmen, 66
+036, -1840, Assyria, Belief, Sacred Waters, 73
 036, -1840, Assyria, Belief, Monument to the Gods, 60
-036, -1840, Assyria, Belief, Sacred Waters, 43
-036, -1840, Assyria, Belief, Goddess of Love, 43
+036, -1840, Assyria, Belief, Goddess of Love, 58
 036, -1840, Assyria, Belief, Fertility Rites, 40
+036, -1840, Assyria, Belief, Sun God, 26
 036, -1840, Assyria, Belief, Stone Circles, 16
-036, -1840, Assyria, Belief, Sun God, 16
+036, -1840, Assyria, Belief, Goddess of the Hunt, 8
 036, -1840, Assyria, Belief, Desert Folklore, 4
-036, -1840, Assyria, Belief, Goddess of the Hunt, 3
 036, -1840, Assyria, Belief, God of the Sea, 0
 036, -1840, Assyria, Belief, One with Nature, 0
 036, -1840, Assyria, Belief, God of War, 0
@@ -241,1203 +244,586 @@
 036, -1840, Assyria, Belief, Earth Mother, 0
 036, -1840, Assyria, CHOSEN, Sacred Path
 036, -1840, Assur, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+036, -1840, Nineveh, PANTHEON_FOUNDED, Pop: 1, Second: Pantheon(1), Nonreligious: 0
 036, -1840, Assyria, PANTHEON FOUNDED, Pantheon
 036, -1840, Monaco, POP_CHANGE, Pop: 6, No religion in city
 036, -1840, Belgrade, POP_CHANGE, Pop: 6, No religion in city
 036, -1840, Sofia, POP_CHANGE, Pop: 5, No religion in city
 036, -1840, Antananarivo, POP_CHANGE, Pop: 5, No religion in city
-037, -1780, Barcelona, POP_CHANGE, Pop: 2, No religion in city
+037, -1780, Salzburg, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
 037, -1780, Assur, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
 037, -1780, Zanzibar, POP_CHANGE, Pop: 6, No religion in city
 037, -1780, Kyzyl, POP_CHANGE, Pop: 5, No religion in city
 037, -1780, Kuala Lumpur, POP_CHANGE, Pop: 5, No religion in city
-038, -1720, Salzburg, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
 038, -1720, Singapore, POP_CHANGE, Pop: 6, No religion in city
-039, -1660, Tyre, POP_CHANGE, Pop: 5, No religion in city
-040, -1600, Buenos Aires, POP_CHANGE, Pop: 6, No religion in city
-041, -1540, Beshbalik, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+040, -1600, Beshbalik, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+040, -1600, Seville, POP_CHANGE, Pop: 2, No religion in city
+040, -1600, Tyre, POP_CHANGE, Pop: 5, No religion in city
+041, -1540, Kyiv, POP_CHANGE, Pop: 6, No religion in city
 041, -1540, Kabul, POP_CHANGE, Pop: 6, No religion in city
+042, -1480, Tonga, POP_CHANGE, Pop: 1, No religion in city
+042, -1480, Nineveh, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
 042, -1480, Vancouver, POP_CHANGE, Pop: 5, No religion in city
-042, -1480, Kyiv, POP_CHANGE, Pop: 6, No religion in city
+042, -1480, Zurich, POP_CHANGE, Pop: 6, No religion in city
 042, -1480, Prague, POP_CHANGE, Pop: 6, No religion in city
-043, -1420, Madrid, POP_CHANGE, Pop: 3, No religion in city
-043, -1420, Utrecht, POP_CHANGE, Pop: 1, No religion in city
-043, -1420, Utrecht, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-043, -1420, M'banza-Kongo, POP_CHANGE, Pop: 5, No religion in city
-043, -1420, Zurich, POP_CHANGE, Pop: 6, No religion in city
-044, -1360, Tonga, POP_CHANGE, Pop: 1, No religion in city
+043, -1420, Machu, POP_CHANGE, Pop: 1, No religion in city
+043, -1420, Buenos Aires, POP_CHANGE, Pop: 6, No religion in city
+044, -1360, Tiwanaku, POP_CHANGE, Pop: 3, No religion in city
 044, -1360, Monaco, POP_CHANGE, Pop: 7, No religion in city
-045, -1300, Honolulu, POP_CHANGE, Pop: 4, No religion in city
-045, -1300, Seville, POP_CHANGE, Pop: 1, No religion in city
 045, -1300, Antananarivo, POP_CHANGE, Pop: 6, No religion in city
 045, -1300, Kyzyl, POP_CHANGE, Pop: 6, No religion in city
-046, -1240, Tiwanaku, POP_CHANGE, Pop: 3, No religion in city
-046, -1240, Barcelona, POP_CHANGE, Pop: 3, No religion in city
+046, -1240, M'banza-Kongo, POP_CHANGE, Pop: 5, No religion in city
 046, -1240, Belgrade, POP_CHANGE, Pop: 7, No religion in city
 046, -1240, Kuala Lumpur, POP_CHANGE, Pop: 6, No religion in city
-047, -1180, Karakorum, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-047, -1180, Tyre, POP_CHANGE, Pop: 6, No religion in city
-047, -1180, Singapore, POP_CHANGE, Pop: 7, No religion in city
-048, -1120, Machu, POP_CHANGE, Pop: 1, No religion in city
-048, -1120, Utrecht, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+047, -1180, Tonga, POP_CHANGE, Pop: 2, No religion in city
+047, -1180, Machu, POP_CHANGE, Pop: 2, No religion in city
+047, -1180, Kyiv, POP_CHANGE, Pop: 5, No religion in city
+048, -1120, Polynesia, Belief, Desert Folklore, 515
+048, -1120, Polynesia, Belief, Goddess of Protection, 300
+048, -1120, Polynesia, Belief, Faith Healers, 300
+048, -1120, Polynesia, Belief, Messenger of the Gods, 276
+048, -1120, Polynesia, Belief, Oral Tradition, 142
+048, -1120, Polynesia, Belief, God of the Open Sky, 140
+048, -1120, Polynesia, Belief, Religious Settlements, 105
+048, -1120, Polynesia, Belief, God of Craftsmen, 80
+048, -1120, Polynesia, Belief, Goddess of Love, 79
+048, -1120, Polynesia, Belief, Sacred Waters, 73
+048, -1120, Polynesia, Belief, Earth Mother, 40
+048, -1120, Polynesia, Belief, Stone Circles, 30
+048, -1120, Polynesia, Belief, Monument to the Gods, 24
+048, -1120, Polynesia, Belief, Fertility Rites, 20
+048, -1120, Polynesia, Belief, God of the Sea, 6
+048, -1120, Polynesia, Belief, Goddess of the Hunt, 0
+048, -1120, Polynesia, Belief, One with Nature, 0
+048, -1120, Polynesia, Belief, God of War, 0
+048, -1120, Polynesia, Belief, Goddess of Festivals, 0
+048, -1120, Polynesia, Belief, Tears of the Gods, 0
+048, -1120, Polynesia, Belief, Sun God, 0
+048, -1120, Polynesia, CHOSEN, Desert Folklore
+048, -1120, Honolulu, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+048, -1120, Samoa, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
+048, -1120, Tonga, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
+048, -1120, Polynesia, PANTHEON FOUNDED, Pantheon
+048, -1120, Amsterdam, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+048, -1120, Tyre, POP_CHANGE, Pop: 6, No religion in city
 048, -1120, Zanzibar, POP_CHANGE, Pop: 7, No religion in city
-049, -1060, Tonga, POP_CHANGE, Pop: 2, No religion in city
-049, -1060, Buenos Aires, POP_CHANGE, Pop: 7, No religion in city
-050, -1000, Cusco, POP_CHANGE, Pop: 4, No religion in city
-050, -1000, Kabul, POP_CHANGE, Pop: 7, No religion in city
+050, -1000, Singapore, POP_CHANGE, Pop: 7, No religion in city
+051, -960, The Inca, Belief, God of the Open Sky, 576
+051, -960, The Inca, Belief, Tears of the Gods, 468
+051, -960, The Inca, Belief, Messenger of the Gods, 385
+051, -960, The Inca, Belief, Goddess of Protection, 360
+051, -960, The Inca, Belief, Faith Healers, 360
+051, -960, The Inca, Belief, Stone Circles, 240
+051, -960, The Inca, Belief, God of Craftsmen, 143
+051, -960, The Inca, Belief, Goddess of Love, 82
+051, -960, The Inca, Belief, Religious Settlements, 75
+051, -960, The Inca, Belief, Sacred Waters, 73
+051, -960, The Inca, Belief, Earth Mother, 54
+051, -960, The Inca, Belief, Monument to the Gods, 42
+051, -960, The Inca, Belief, Oral Tradition, 30
+051, -960, The Inca, Belief, Fertility Rites, 20
+051, -960, The Inca, Belief, Sun God, 6
+051, -960, The Inca, Belief, Goddess of the Hunt, 0
+051, -960, The Inca, Belief, God of the Sea, 0
+051, -960, The Inca, Belief, One with Nature, 0
+051, -960, The Inca, Belief, God of War, 0
+051, -960, The Inca, Belief, Goddess of Festivals, 0
+051, -960, The Inca, CHOSEN, God of the Open Sky
+051, -960, Cusco, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+051, -960, Tiwanaku, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+051, -960, Machu, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
+051, -960, The Inca, PANTHEON FOUNDED, Pantheon
+051, -960, Barcelona, POP_CHANGE, Pop: 3, No religion in city
+051, -960, Assur, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
 051, -960, Prague, POP_CHANGE, Pop: 7, No religion in city
-052, -920, Machu, POP_CHANGE, Pop: 2, No religion in city
-052, -920, Spain, Belief, Desert Folklore, 1602
-052, -920, Spain, Belief, One with Nature, 260
-052, -920, Spain, Belief, Goddess of Protection, 240
-052, -920, Spain, Belief, Faith Healers, 240
-052, -920, Spain, Belief, Messenger of the Gods, 220
-052, -920, Spain, Belief, Earth Mother, 204
-052, -920, Spain, Belief, God of the Open Sky, 130
-052, -920, Spain, Belief, God of Craftsmen, 112
-052, -920, Spain, Belief, Religious Settlements, 75
-052, -920, Spain, Belief, Sacred Waters, 64
-052, -920, Spain, Belief, Goddess of Love, 64
-052, -920, Spain, Belief, Stone Circles, 60
-052, -920, Spain, Belief, Sun God, 26
-052, -920, Spain, Belief, Fertility Rites, 20
-052, -920, Spain, Belief, Monument to the Gods, 18
-052, -920, Spain, Belief, Goddess of the Hunt, 8
-052, -920, Spain, Belief, Oral Tradition, 4
-052, -920, Spain, Belief, God of the Sea, 1
-052, -920, Spain, Belief, God of War, 0
-052, -920, Spain, Belief, Goddess of Festivals, 0
-052, -920, Spain, Belief, Tears of the Gods, 0
-052, -920, Spain, CHOSEN, Desert Folklore
-052, -920, Madrid, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
-052, -920, Barcelona, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
-052, -920, Seville, PANTHEON_FOUNDED, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-052, -920, Spain, PANTHEON FOUNDED, Pantheon
-052, -920, Sofia, POP_CHANGE, Pop: 6, No religion in city
+051, -960, Kabul, POP_CHANGE, Pop: 7, No religion in city
+052, -920, Cordoba, POP_CHANGE, Pop: 1, No religion in city
+052, -920, Buenos Aires, POP_CHANGE, Pop: 7, No religion in city
 052, -920, Kyzyl, POP_CHANGE, Pop: 7, No religion in city
 053, -880, Turfan, POP_CHANGE, Pop: 1, No religion in city
 053, -880, Turfan, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-053, -880, Assur, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-053, -880, M'banza-Kongo, POP_CHANGE, Pop: 6, No religion in city
 053, -880, Monaco, POP_CHANGE, Pop: 8, No religion in city
 053, -880, Zurich, POP_CHANGE, Pop: 7, No religion in city
-054, -840, Tyre, POP_CHANGE, Pop: 7, No religion in city
-055, -800, The Inca, Belief, Goddess of Protection, 720
-055, -800, The Inca, Belief, Faith Healers, 720
-055, -800, The Inca, Belief, God of the Open Sky, 597
-055, -800, The Inca, Belief, Tears of the Gods, 468
-055, -800, The Inca, Belief, Messenger of the Gods, 385
-055, -800, The Inca, Belief, Stone Circles, 234
-055, -800, The Inca, Belief, God of Craftsmen, 143
-055, -800, The Inca, Belief, Goddess of Love, 85
-055, -800, The Inca, Belief, Religious Settlements, 75
-055, -800, The Inca, Belief, Sacred Waters, 73
-055, -800, The Inca, Belief, Earth Mother, 54
-055, -800, The Inca, Belief, Monument to the Gods, 42
-055, -800, The Inca, Belief, Oral Tradition, 36
-055, -800, The Inca, Belief, Fertility Rites, 20
-055, -800, The Inca, Belief, Sun God, 6
-055, -800, The Inca, Belief, Goddess of the Hunt, 0
-055, -800, The Inca, Belief, God of the Sea, 0
-055, -800, The Inca, Belief, One with Nature, 0
-055, -800, The Inca, Belief, God of War, 0
-055, -800, The Inca, Belief, Goddess of Festivals, 0
-055, -800, The Inca, CHOSEN, Goddess of Protection
-055, -800, Cusco, PANTHEON_FOUNDED, Pop: 4, Second: Pantheon(3), Nonreligious: 1
-055, -800, Tiwanaku, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
-055, -800, Machu, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
-055, -800, The Inca, PANTHEON FOUNDED, Pantheon
-055, -800, Seville, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+054, -840, Machu, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+054, -840, Utrecht, POP_CHANGE, Pop: 1, No religion in city
+054, -840, Utrecht, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+055, -800, Tiwanaku, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+055, -800, Seville, POP_CHANGE, Pop: 3, No religion in city
+055, -800, Spain, Belief, Messenger of the Gods, 300
+055, -800, Spain, Belief, One with Nature, 260
+055, -800, Spain, Belief, Goddess of Protection, 240
+055, -800, Spain, Belief, Faith Healers, 240
+055, -800, Spain, Belief, Earth Mother, 240
+055, -800, Spain, Belief, God of Craftsmen, 143
+055, -800, Spain, Belief, Stone Circles, 120
+055, -800, Spain, Belief, Goddess of Love, 82
+055, -800, Spain, Belief, Religious Settlements, 75
+055, -800, Spain, Belief, Sacred Waters, 64
+055, -800, Spain, Belief, Sun God, 40
+055, -800, Spain, Belief, God of the Sea, 28
+055, -800, Spain, Belief, Fertility Rites, 20
+055, -800, Spain, Belief, Monument to the Gods, 18
+055, -800, Spain, Belief, Goddess of the Hunt, 13
+055, -800, Spain, Belief, Oral Tradition, 2
+055, -800, Spain, Belief, God of War, 0
+055, -800, Spain, Belief, Goddess of Festivals, 0
+055, -800, Spain, Belief, Tears of the Gods, 0
+055, -800, Spain, CHOSEN, Messenger of the Gods
+055, -800, Madrid, PANTHEON_FOUNDED, Pop: 2, Second: Pantheon(1), Nonreligious: 1
+055, -800, Barcelona, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+055, -800, Seville, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
+055, -800, Cordoba, PANTHEON_FOUNDED, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+055, -800, Spain, PANTHEON FOUNDED, Pantheon
+055, -800, Sofia, POP_CHANGE, Pop: 6, No religion in city
 055, -800, Antananarivo, POP_CHANGE, Pop: 7, No religion in city
-056, -760, Nineveh, POP_CHANGE, Pop: 1, No religion in city
-056, -760, Nineveh, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+056, -760, Nuku Hiva, POP_CHANGE, Pop: 1, No religion in city
+056, -760, Nuku Hiva, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+056, -760, Cusco, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+056, -760, Nineveh, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
 056, -760, Belgrade, POP_CHANGE, Pop: 8, No religion in city
-057, -720, Tiwanaku, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-057, -720, Barcelona, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+057, -720, Cordoba, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+057, -720, Assur, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+057, -720, Tyre, POP_CHANGE, Pop: 7, No religion in city
 057, -720, Kuala Lumpur, POP_CHANGE, Pop: 7, No religion in city
-058, -680, Samoa, POP_CHANGE, Pop: 3, No religion in city
-058, -680, Amsterdam, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+058, -680, Mongolia, PROPHET SPAWNED, Karakorum, Faith: 0
+058, -680, Mongolia, Belief, Initiation Rites, 226
+058, -680, Mongolia, Belief, Peace Loving, 180
+058, -680, Mongolia, Belief, Interfaith Dialogue, 88
+058, -680, Mongolia, Belief, Tithe, 52
+058, -680, Mongolia, Belief, Papal Primacy, 31
+058, -680, Mongolia, Belief, Ceremonial Burial, 16
+058, -680, Mongolia, Belief, Church Property, 15
+058, -680, Mongolia, Belief, Pilgrimage, 15
+058, -680, Mongolia, Belief, World Church, 6
+058, -680, Mongolia, CHOSEN, Initiation Rites
+058, -680, Mongolia, Belief, Mosques, 480
+058, -680, Mongolia, Belief, Pagodas, 448
+058, -680, Mongolia, Belief, Monasteries, 428
+058, -680, Mongolia, Belief, Cathedrals, 406
+058, -680, Mongolia, Belief, Religious Art, 332
+058, -680, Mongolia, Belief, Guruship, 224
+058, -680, Mongolia, Belief, Holy Warriors, 223
+058, -680, Mongolia, Belief, Feed the World, 206
+058, -680, Mongolia, Belief, Religious Community, 200
+058, -680, Mongolia, Belief, Peace Gardens, 188
+058, -680, Mongolia, Belief, Religious Center, 188
+058, -680, Mongolia, Belief, Swords into Plowshares, 170
+058, -680, Mongolia, Belief, Asceticism, 152
+058, -680, Mongolia, Belief, Divine Inspiration, 152
+058, -680, Mongolia, Belief, Choral Music, 134
+058, -680, Mongolia, Belief, Liturgical Drama, 110
+058, -680, Mongolia, CHOSEN, Pagodas
+058, -680, Karakorum, RELIGION_FOUNDED, Pop: 3, Nonreligious: 0
+058, -680, Mongolia, RELIGION FOUNDED, Karakorum, Tengriism
+058, -680, Tonga, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+058, -680, Vienna, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+058, -680, Salzburg, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
 058, -680, The Netherlands, PROPHET SPAWNED, Amsterdam, Faith: 0
-058, -680, The Netherlands, Belief, Initiation Rites, 507
-058, -680, The Netherlands, Belief, Peace Loving, 399
-058, -680, The Netherlands, Belief, Interfaith Dialogue, 194
-058, -680, The Netherlands, Belief, Tithe, 118
+058, -680, The Netherlands, Belief, Peace Loving, 432
+058, -680, The Netherlands, Belief, Interfaith Dialogue, 216
+058, -680, The Netherlands, Belief, Tithe, 129
+058, -680, The Netherlands, Belief, Church Property, 43
+058, -680, The Netherlands, Belief, Pilgrimage, 43
 058, -680, The Netherlands, Belief, Papal Primacy, 37
-058, -680, The Netherlands, Belief, Church Property, 32
-058, -680, The Netherlands, Belief, Pilgrimage, 32
-058, -680, The Netherlands, Belief, World Church, 10
+058, -680, The Netherlands, Belief, World Church, 21
 058, -680, The Netherlands, Belief, Ceremonial Burial, 5
-058, -680, The Netherlands, CHOSEN, Initiation Rites
-058, -680, The Netherlands, Belief, Mosques, 924
-058, -680, The Netherlands, Belief, Pagodas, 730
-058, -680, The Netherlands, Belief, Monasteries, 710
-058, -680, The Netherlands, Belief, Cathedrals, 551
+058, -680, The Netherlands, CHOSEN, Peace Loving
+058, -680, The Netherlands, Belief, Mosques, 684
+058, -680, The Netherlands, Belief, Monasteries, 554
+058, -680, The Netherlands, Belief, Cathedrals, 469
 058, -680, The Netherlands, Belief, Swords into Plowshares, 320
 058, -680, The Netherlands, Belief, Religious Art, 302
-058, -680, The Netherlands, Belief, Religious Community, 236
-058, -680, The Netherlands, Belief, Guruship, 200
-058, -680, The Netherlands, Belief, Feed the World, 176
+058, -680, The Netherlands, Belief, Religious Community, 206
+058, -680, The Netherlands, Belief, Feed the World, 194
+058, -680, The Netherlands, Belief, Guruship, 194
 058, -680, The Netherlands, Belief, Peace Gardens, 158
 058, -680, The Netherlands, Belief, Religious Center, 158
+058, -680, The Netherlands, Belief, Choral Music, 122
 058, -680, The Netherlands, Belief, Asceticism, 122
 058, -680, The Netherlands, Belief, Divine Inspiration, 122
-058, -680, The Netherlands, Belief, Choral Music, 104
 058, -680, The Netherlands, Belief, Liturgical Drama, 80
 058, -680, The Netherlands, Belief, Holy Warriors, 59
 058, -680, The Netherlands, CHOSEN, Mosques
 058, -680, Amsterdam, RELIGION_FOUNDED, Pop: 4, Nonreligious: 1
 058, -680, The Netherlands, RELIGION FOUNDED, Amsterdam, Protestantism
-058, -680, Buenos Aires, POP_CHANGE, Pop: 8, No religion in city
-058, -680, Singapore, POP_CHANGE, Pop: 8, No religion in city
 058, -680, Prague, POP_CHANGE, Pop: 8, No religion in city
-058, -680, Kabul, POP_CHANGE, Pop: 8, No religion in city
-058, -680, Utrecht, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
-059, -640, Karakorum, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-059, -640, Tonga, POP_CHANGE, Pop: 3, No religion in city
-059, -640, Machu, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+058, -680, Beshbalik, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
+058, -680, Cordoba, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
+059, -640, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+059, -640, Raiatea, POP_CHANGE, Pop: 1, No religion in city
+059, -640, Raiatea, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
 059, -640, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
-060, -600, Polynesia, Belief, Faith Healers, 300
-060, -600, Polynesia, Belief, Messenger of the Gods, 276
-060, -600, Polynesia, Belief, God of the Open Sky, 180
-060, -600, Polynesia, Belief, Oral Tradition, 176
-060, -600, Polynesia, Belief, Religious Settlements, 105
-060, -600, Polynesia, Belief, Goddess of Love, 88
-060, -600, Polynesia, Belief, God of Craftsmen, 84
-060, -600, Polynesia, Belief, Sacred Waters, 73
-060, -600, Polynesia, Belief, Earth Mother, 50
-060, -600, Polynesia, Belief, Stone Circles, 25
-060, -600, Polynesia, Belief, Monument to the Gods, 24
-060, -600, Polynesia, Belief, Fertility Rites, 20
-060, -600, Polynesia, Belief, God of the Sea, 10
-060, -600, Polynesia, Belief, Goddess of the Hunt, 0
-060, -600, Polynesia, Belief, One with Nature, 0
-060, -600, Polynesia, Belief, God of War, 0
-060, -600, Polynesia, Belief, Goddess of Festivals, 0
-060, -600, Polynesia, Belief, Tears of the Gods, 0
-060, -600, Polynesia, Belief, Sun God, 0
-060, -600, Polynesia, CHOSEN, Faith Healers
-060, -600, Honolulu, PANTHEON_FOUNDED, Pop: 4, Second: Pantheon(3), Nonreligious: 1
-060, -600, Samoa, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
-060, -600, Tonga, PANTHEON_FOUNDED, Pop: 3, Second: Pantheon(2), Nonreligious: 1
-060, -600, Polynesia, PANTHEON FOUNDED, Pantheon
-060, -600, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 5.00
+059, -640, Kabul, POP_CHANGE, Pop: 8, No religion in city
+060, -600, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 7.00
+060, -600, Madrid, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+060, -600, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 6.00
 060, -600, Zanzibar, POP_CHANGE, Pop: 8, No religion in city
+060, -600, Singapore, POP_CHANGE, Pop: 8, No religion in city
 060, -600, Amsterdam, HOLY_CITY, Pop: 4, First: Protestantism(4), Nonreligious: 0
-061, -560, Nuku Hiva, POP_CHANGE, Pop: 1, No religion in city
-061, -560, Nuku Hiva, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-061, -560, Vienna, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-061, -560, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 10.00
-061, -560, Assur, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+061, -560, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 14.00
+061, -560, Utique, POP_CHANGE, Pop: 1, No religion in city
+061, -560, Utique, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+061, -560, Nuku Hiva, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+061, -560, Graz, POP_CHANGE, Pop: 1, No religion in city
+061, -560, Graz, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+061, -560, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 12.00
+061, -560, Buenos Aires, POP_CHANGE, Pop: 8, No religion in city
+061, -560, Zurich, POP_CHANGE, Pop: 8, No religion in city
 061, -560, Kyzyl, POP_CHANGE, Pop: 8, No religion in city
-062, -520, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 15.00
-062, -520, Monaco, POP_CHANGE, Pop: 9, No religion in city
-063, -480, Turfan, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
-063, -480, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 21.00
-063, -480, Utrecht, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
-063, -480, Tyre, POP_CHANGE, Pop: 8, No religion in city
-064, -440, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 27.00
+062, -520, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 21.00
+062, -520, Hippo Regius, POP_CHANGE, Pop: 1, No religion in city
+062, -520, Hippo Regius, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+062, -520, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
+063, -480, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 29.00
+063, -480, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
+063, -480, Monaco, POP_CHANGE, Pop: 9, Second: Tengriism(0), Nonreligious: 9
+064, -440, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 37.00
+064, -440, Samoa, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+064, -440, Raiatea, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+064, -440, Cusco, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+064, -440, Cordoba, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+064, -440, Toledo, POP_CHANGE, Pop: 1, No religion in city
+064, -440, Toledo, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+064, -440, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 32.00
+064, -440, Nineveh, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
 064, -440, Antananarivo, POP_CHANGE, Pop: 8, No religion in city
-065, -400, Karakorum, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
-065, -400, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 33.00
-065, -400, Nineveh, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
-066, -360, Vienna, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
-066, -360, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 38.00
-067, -320, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 44.00
-067, -320, Buenos Aires, POP_CHANGE, Pop: 9, No religion in city
-068, -280, Ollantaytambo, POP_CHANGE, Pop: 1, No religion in city
-068, -280, Ollantaytambo, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-068, -280, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 51.00
-068, -280, Nimrud, POP_CHANGE, Pop: 1, No religion in city
-068, -280, Nimrud, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+065, -400, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 45.00
+065, -400, Hsia, POP_CHANGE, Pop: 1, No religion in city
+065, -400, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
+066, -360, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 54.00
+066, -360, Machu, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+066, -360, Salzburg, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+066, -360, Graz, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+066, -360, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 49.00
+067, -320, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 63.00
+067, -320, Hippo Regius, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+067, -320, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 58.00
+067, -320, Nimrud, POP_CHANGE, Pop: 1, No religion in city
+067, -320, Nimrud, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+068, -280, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 72.00
+068, -280, Hsia, POP_CHANGE, Pop: 2, Second: Tengriism(0), Nonreligious: 2
+068, -280, Santiago, POP_CHANGE, Pop: 1, No religion in city
+068, -280, Santiago, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+068, -280, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 68.00
+068, -280, Amsterdam, POP_CHANGE, Pop: 6, First: Protestantism(5), Nonreligious: 1
 068, -280, Belgrade, POP_CHANGE, Pop: 9, No religion in city
-068, -280, Zurich, POP_CHANGE, Pop: 8, No religion in city
-068, -280, Singapore, POP_CHANGE, Pop: 9, No religion in city
+068, -280, Kyiv, POP_CHANGE, Pop: 6, No religion in city
 068, -280, Prague, POP_CHANGE, Pop: 9, No religion in city
-069, -240, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 57.00
-069, -240, Amsterdam, POP_CHANGE, Pop: 6, First: Protestantism(5), Nonreligious: 1
-069, -240, Sofia, POP_CHANGE, Pop: 7, No religion in city
-069, -240, Kabul, POP_CHANGE, Pop: 9, No religion in city
-070, -200, Salzburg, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-070, -200, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 63.00
-071, -160, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 70.00
-071, -160, Groningen, POP_CHANGE, Pop: 1, No religion in city
-072, -120, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 76.00
+069, -240, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 81.00
+069, -240, Carthage, POP_CHANGE, Pop: 6, First: Pantheon(4), Nonreligious: 2
+069, -240, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 78.00
+069, -240, Utrecht, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+069, -240, M'banza-Kongo, POP_CHANGE, Pop: 6, No religion in city
+070, -200, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 90.00
+070, -200, Cusco, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+070, -200, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 87.00
+070, -200, Sofia, POP_CHANGE, Pop: 7, No religion in city
+071, -160, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 99.00
+071, -160, Karakorum, POP_CHANGE, Pop: 4, First: Tengriism(4), Nonreligious: 0
+071, -160, Honolulu, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+071, -160, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 97.00
+071, -160, Kabul, POP_CHANGE, Pop: 9, No religion in city
+072, -120, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 108.00
+072, -120, Hsia, POP_CHANGE, Pop: 3, Second: Tengriism(0), Nonreligious: 3
+072, -120, Vienna, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+072, -120, Salzburg, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+072, -120, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 107.00
+072, -120, Groningen, POP_CHANGE, Pop: 1, No religion in city
+072, -120, Buenos Aires, POP_CHANGE, Pop: 9, No religion in city
+072, -120, Zurich, POP_CHANGE, Pop: 9, No religion in city
 072, -120, Kuala Lumpur, POP_CHANGE, Pop: 8, No religion in city
-073, -80, Karakorum, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
-073, -80, Machu, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-073, -80, Austria, PROPHET SPAWNED, Vienna, Faith: 0
-073, -80, Austria, Belief, Peace Loving, 548
-073, -80, Austria, Belief, Interfaith Dialogue, 274
-073, -80, Austria, Belief, Tithe, 160
-073, -80, Austria, Belief, Church Property, 45
-073, -80, Austria, Belief, Pilgrimage, 45
-073, -80, Austria, Belief, Papal Primacy, 43
-073, -80, Austria, Belief, World Church, 22
-073, -80, Austria, Belief, Ceremonial Burial, 6
-073, -80, Austria, CHOSEN, Peace Loving
-073, -80, Austria, Belief, Pagodas, 550
-073, -80, Austria, Belief, Monasteries, 530
-073, -80, Austria, Belief, Religious Community, 518
-073, -80, Austria, Belief, Cathedrals, 457
-073, -80, Austria, Belief, Swords into Plowshares, 230
-073, -80, Austria, Belief, Religious Art, 218
-073, -80, Austria, Belief, Guruship, 186
-073, -80, Austria, Belief, Feed the World, 176
-073, -80, Austria, Belief, Divine Inspiration, 170
-073, -80, Austria, Belief, Religious Center, 167
-073, -80, Austria, Belief, Choral Music, 131
-073, -80, Austria, Belief, Asceticism, 128
-073, -80, Austria, Belief, Peace Gardens, 125
-073, -80, Austria, Belief, Liturgical Drama, 115
-073, -80, Austria, Belief, Holy Warriors, 62
-073, -80, Austria, CHOSEN, Monasteries
-073, -80, Vienna, RELIGION_FOUNDED, Pop: 6, Nonreligious: 1
-073, -80, Austria, RELIGION FOUNDED, Vienna, Catholicism
-073, -80, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 83.00
-074, -40, Utique, POP_CHANGE, Pop: 1, No religion in city
-074, -40, Utique, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-074, -40, Tonga, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-074, -40, Cusco, POP_CHANGE, Pop: 6, First: Pantheon(4), Nonreligious: 2
-074, -40, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
-074, -40, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 89.00
-074, -40, Rotterdam, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
-074, -40, Nineveh, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-074, -40, Kyiv, POP_CHANGE, Pop: 7, No religion in city
-074, -40, Antananarivo, POP_CHANGE, Pop: 9, No religion in city
-075, 0, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 7.00
-075, 0, Vienna, POP_CHANGE, Pop: 7, First: Catholicism(6), Nonreligious: 1
-075, 0, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 98.00
-075, 0, Groningen, POP_CHANGE, Pop: 2, No religion in city
-075, 0, Kyzyl, POP_CHANGE, Pop: 9, No religion in city
-076, 40, Carthage, POP_CHANGE, Pop: 6, First: Pantheon(4), Nonreligious: 2
-076, 40, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 14.00
-076, 40, Salzburg, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-076, 40, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 107.00
-076, 40, Buenos Aires, POP_CHANGE, Pop: 10, No religion in city
-077, 80, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 21.00
-077, 80, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 116.00
-077, 80, Amsterdam, POP_CHANGE, Pop: 7, First: Protestantism(6), Nonreligious: 1
-078, 120, Nuku Hiva, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
-078, 120, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 28.00
-078, 120, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 125.00
-078, 120, Zanzibar, POP_CHANGE, Pop: 9, No religion in city
-078, 120, Sofia, POP_CHANGE, Pop: 8, No religion in city
-079, 160, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
-079, 160, The Netherlands, FAITH UNIT PURCHASE, Missionary, Amsterdam, Faith Cost: 130, Faith Left: 4.00
-079, 160, The Netherlands, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 4.00
-079, 160, Monaco, POP_CHANGE, Pop: 10, No religion in city
-080, 200, Turfan, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-080, 200, Mongolia, PROPHET SPAWNED, Karakorum, Faith: 0
-080, 200, Mongolia, Belief, Interfaith Dialogue, 88
-080, 200, Mongolia, Belief, Tithe, 52
-080, 200, Mongolia, Belief, Papal Primacy, 31
-080, 200, Mongolia, Belief, Ceremonial Burial, 16
-080, 200, Mongolia, Belief, Church Property, 15
-080, 200, Mongolia, Belief, Pilgrimage, 15
-080, 200, Mongolia, Belief, World Church, 6
-080, 200, Mongolia, CHOSEN, Interfaith Dialogue
-080, 200, Mongolia, Belief, Religious Community, 740
-080, 200, Mongolia, Belief, Pagodas, 514
-080, 200, Mongolia, Belief, Cathedrals, 435
-080, 200, Mongolia, Belief, Religious Art, 332
-080, 200, Mongolia, Belief, Guruship, 272
-080, 200, Mongolia, Belief, Feed the World, 242
-080, 200, Mongolia, Belief, Religious Center, 224
-080, 200, Mongolia, Belief, Peace Gardens, 188
-080, 200, Mongolia, Belief, Choral Music, 188
-080, 200, Mongolia, Belief, Asceticism, 188
-080, 200, Mongolia, Belief, Swords into Plowshares, 170
-080, 200, Mongolia, Belief, Divine Inspiration, 152
-080, 200, Mongolia, Belief, Liturgical Drama, 134
-080, 200, Mongolia, Belief, Holy Warriors, 108
-080, 200, Mongolia, CHOSEN, Religious Community
-080, 200, Karakorum, RELIGION_FOUNDED, Pop: 7, Nonreligious: 0
-080, 200, Mongolia, RELIGION FOUNDED, Karakorum, Tengriism
-080, 200, Samoa, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-080, 200, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 42.00
-080, 200, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 13.00
-080, 200, Belgrade, POP_CHANGE, Pop: 10, No religion in city
-080, 200, Singapore, POP_CHANGE, Pop: 10, No religion in city
-080, 200, Seville, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
-081, 230, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
-081, 230, Utique, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
-081, 230, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 49.00
-081, 230, Graz, POP_CHANGE, Pop: 1, No religion in city
-081, 230, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 22.00
-081, 230, Utrecht, MISSIONARY, Pop: 3, Nonreligious: 0
-081, 230, Prague, POP_CHANGE, Pop: 10, No religion in city
-082, 260, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 5.00
-082, 260, Cusco, POP_CHANGE, Pop: 7, First: Pantheon(5), Nonreligious: 2
-082, 260, Machu, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-082, 260, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 56.00
-082, 260, Spain, PROPHET SPAWNED, Madrid, Faith: 0
-082, 260, Spain, Belief, Tithe, 163
-082, 260, Spain, Belief, Church Property, 48
-082, 260, Spain, Belief, Pilgrimage, 48
-082, 260, Spain, Belief, Papal Primacy, 38
-082, 260, Spain, Belief, Ceremonial Burial, 24
-082, 260, Spain, Belief, World Church, 19
-082, 260, Spain, CHOSEN, Tithe
-082, 260, Spain, Belief, Pagodas, 682
-082, 260, Spain, Belief, Peace Gardens, 641
-082, 260, Spain, Belief, Religious Center, 641
-082, 260, Spain, Belief, Asceticism, 551
-082, 260, Spain, Belief, Cathedrals, 532
-082, 260, Spain, Belief, Guruship, 425
-082, 260, Spain, Belief, Religious Art, 353
-082, 260, Spain, Belief, Feed the World, 227
-082, 260, Spain, Belief, Swords into Plowshares, 191
-082, 260, Spain, Belief, Divine Inspiration, 173
-082, 260, Spain, Belief, Choral Music, 155
-082, 260, Spain, Belief, Liturgical Drama, 143
-082, 260, Spain, Belief, Holy Warriors, 110
-082, 260, Spain, CHOSEN, Peace Gardens
-082, 260, Madrid, RELIGION_FOUNDED, Pop: 3, Nonreligious: 1
-082, 260, Spain, RELIGION FOUNDED, Madrid, Buddhism
-082, 260, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 31.00
-082, 260, Madrid, HOLY_CITY, Pop: 3, First: Buddhism(3), Nonreligious: 0
-083, 290, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 10.00
-083, 290, Beshbalik, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-083, 290, Carthage, POP_CHANGE, Pop: 7, First: Pantheon(5), Nonreligious: 2
-083, 290, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 63.00
-083, 290, Salzburg, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
-083, 290, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
-083, 290, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
-083, 290, Rotterdam, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-083, 290, Utrecht, POP_CHANGE, Pop: 4, First: Protestantism(4), Nonreligious: 0
-083, 290, Tyre, POP_CHANGE, Pop: 9, No religion in city
-083, 290, Antananarivo, POP_CHANGE, Pop: 10, No religion in city
-084, 320, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 15.00
-084, 320, Karakorum, POP_CHANGE, Pop: 8, First: Tengriism(8), Nonreligious: 0
-084, 320, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 70.00
-084, 320, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 6.00
-084, 320, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 49.00
-084, 320, Groningen, POP_CHANGE, Pop: 3, Second: Protestantism(0), Nonreligious: 3
-084, 320, Breda, POP_CHANGE, Pop: 1, No religion in city
-084, 320, Zurich, POP_CHANGE, Pop: 9, No religion in city
-085, 350, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 20.00
-085, 350, Hsia, POP_CHANGE, Pop: 1, No religion in city
-085, 350, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 77.00
-085, 350, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 12.00
-085, 350, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 59.00
-085, 350, Groningen, MISSIONARY, Pop: 3, Second: Protestantism(2), Nonreligious: 1
-086, 380, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
-086, 380, Raiatea, POP_CHANGE, Pop: 1, No religion in city
-086, 380, Raiatea, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-086, 380, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 84.00
-086, 380, Graz, POP_CHANGE, Pop: 2, Second: Catholicism(0), Nonreligious: 2
-086, 380, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
-086, 380, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 69.00
-086, 380, Sofia, POP_CHANGE, Pop: 9, No religion in city
-086, 380, Kyiv, POP_CHANGE, Pop: 8, No religion in city
-087, 410, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
-087, 410, Carthage, POP_CHANGE, Pop: 8, First: Pantheon(6), Nonreligious: 2
-087, 410, Ollantaytambo, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
-087, 410, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 91.00
-087, 410, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
-087, 410, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 79.00
-087, 410, Nimrud, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
-087, 410, Buenos Aires, POP_CHANGE, Pop: 11, No religion in city
-087, 410, Kabul, POP_CHANGE, Pop: 10, Second: Catholicism(0), Nonreligious: 10
-088, 440, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
-088, 440, Karakorum, POP_CHANGE, Pop: 9, First: Tengriism(9), Nonreligious: 0
-088, 440, Hsia, POP_CHANGE, Pop: 2, Second: Tengriism(0), Nonreligious: 2
-088, 440, Old Sarai, POP_CHANGE, Pop: 1, No religion in city
-088, 440, Cusco, POP_CHANGE, Pop: 8, First: Pantheon(6), Nonreligious: 2
-088, 440, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 98.00
-088, 440, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
-088, 440, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 90.00
-088, 440, Kyzyl, POP_CHANGE, Pop: 10, No religion in city
-088, 440, Kuala Lumpur, POP_CHANGE, Pop: 9, Second: Buddhism(0), Nonreligious: 9
-089, 470, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
-089, 470, Nuku Hiva, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-089, 470, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 105.00
-089, 470, Salzburg, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
-089, 470, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 36.00
-089, 470, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 100.00
-089, 470, Vienna, HOLY_CITY, Pop: 7, First: Catholicism(7), Nonreligious: 0
-090, 500, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 45.00
-090, 500, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 112.00
-090, 500, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 43.00
-090, 500, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 111.00
-090, 500, Belgrade, POP_CHANGE, Pop: 11, No religion in city
-090, 500, Beshbalik, ADJACENT_PRESSURE, Pop: 4, First: Pantheon(2), Nonreligious: 1
-091, 530, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 50.00
-091, 530, Beshbalik, POP_CHANGE, Pop: 5, First: Pantheon(3), Nonreligious: 1
-091, 530, Raiatea, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
-091, 530, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 119.00
-091, 530, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 50.00
-091, 530, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 121.00
-091, 530, Vancouver, POP_CHANGE, Pop: 6, Second: Catholicism(0), Nonreligious: 6
-091, 530, Singapore, POP_CHANGE, Pop: 11, No religion in city
-091, 530, Amsterdam, HOLY_CITY, Pop: 7, First: Protestantism(7), Nonreligious: 0
-092, 560, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 55.00
-092, 560, Hsia, POP_CHANGE, Pop: 3, Second: Tengriism(0), Nonreligious: 3
-092, 560, Hippo Regius, POP_CHANGE, Pop: 1, No religion in city
-092, 560, Hippo Regius, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-092, 560, Tonga, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-092, 560, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 126.00
-092, 560, Graz, POP_CHANGE, Pop: 3, Second: Catholicism(0), Nonreligious: 3
-092, 560, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 58.00
-092, 560, The Netherlands, FAITH UNIT PURCHASE, Missionary, Amsterdam, Faith Cost: 130, Faith Left: 2.00
-092, 560, The Netherlands, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 2.00
-092, 560, Breda, POP_CHANGE, Pop: 2, Second: Protestantism(0), Nonreligious: 2
-092, 560, Nineveh, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-092, 560, Samoa, ADJACENT_PRESSURE, Pop: 4, First: Pantheon(2), Nonreligious: 1
-092, 560, Madrid, HOLY_CITY, Pop: 4, First: Buddhism(4), Nonreligious: 0
-092, 560, Seville, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Second: Tengriism(1), Nonreligious: 0
-093, 590, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 60.00
-093, 590, Karakorum, POP_CHANGE, Pop: 10, First: Tengriism(10), Nonreligious: 0
-093, 590, Nuku Hiva, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-093, 590, Tiwanaku, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-093, 590, Austria, FAITH UNIT PURCHASE, Missionary, Vienna, Faith Cost: 130, Faith Left: 3.00
-093, 590, Austria, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 3.00
-093, 590, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 66.00
-093, 590, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 13.00
-093, 590, Antananarivo, POP_CHANGE, Pop: 11, No religion in city
-094, 620, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 65.00
-094, 620, Ollantaytambo, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-094, 620, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 10.00
-094, 620, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 74.00
-094, 620, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 23.00
-094, 620, Breda, MISSIONARY, Pop: 2, Second: Protestantism(2), Nonreligious: 0
-094, 620, Nimrud, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+073, -80, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 117.00
+073, -80, Madrid, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+073, -80, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 117.00
+073, -80, Nimrud, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+073, -80, Tyre, POP_CHANGE, Pop: 8, No religion in city
+073, -80, Singapore, POP_CHANGE, Pop: 9, No religion in city
+073, -80, Antananarivo, POP_CHANGE, Pop: 9, No religion in city
+074, -40, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 126.00
+074, -40, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 126.00
+074, -40, Nineveh, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+074, -40, Kyzyl, POP_CHANGE, Pop: 9, No religion in city
+075, 0, Mongolia, FAITH UNIT PURCHASE, Missionary, Karakorum, Faith Cost: 130, Faith Left: 5.00
+075, 0, Mongolia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 5.00
+075, 0, Seville, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+075, 0, The Netherlands, FAITH UNIT PURCHASE, Missionary, Amsterdam, Faith Cost: 130, Faith Left: 6.00
+075, 0, The Netherlands, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 6.00
+076, 40, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 14.00
+076, 40, Carthage, POP_CHANGE, Pop: 7, First: Pantheon(5), Nonreligious: 2
+076, 40, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 15.00
+076, 40, Rotterdam, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+077, 80, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 23.00
+077, 80, Hsia, POP_CHANGE, Pop: 4, Second: Tengriism(0), Nonreligious: 4
+077, 80, Turfan, MISSIONARY, Pop: 2, Nonreligious: 0
+077, 80, Toledo, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+077, 80, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
+077, 80, Utrecht, MISSIONARY, Pop: 3, Nonreligious: 0
+077, 80, Zanzibar, POP_CHANGE, Pop: 9, No religion in city
+077, 80, Sofia, POP_CHANGE, Pop: 8, No religion in city
+078, 120, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 32.00
+078, 120, Salzburg, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+078, 120, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
+079, 160, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 41.00
+079, 160, Machu, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+079, 160, Graz, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+079, 160, Cordoba, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+079, 160, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 45.00
+079, 160, Groningen, POP_CHANGE, Pop: 2, Second: Protestantism(0), Nonreligious: 2
+079, 160, Nineveh, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
+079, 160, Belgrade, POP_CHANGE, Pop: 10, No religion in city
+080, 200, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 50.00
+080, 200, Beshbalik, MISSIONARY, Pop: 2, Nonreligious: 0
+080, 200, Carthage, POP_CHANGE, Pop: 8, First: Pantheon(6), Nonreligious: 2
+080, 200, Utique, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+080, 200, Nuku Hiva, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+080, 200, Santiago, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+080, 200, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 55.00
+080, 200, Rotterdam, MISSIONARY, Pop: 3, Nonreligious: 0
+080, 200, Monaco, POP_CHANGE, Pop: 10, Second: Tengriism(0), Nonreligious: 10
+080, 200, Kyiv, POP_CHANGE, Pop: 7, No religion in city
+080, 200, Amsterdam, ADJACENT_PRESSURE, Pop: 6, First: Protestantism(6), Nonreligious: 0
+081, 230, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 59.00
+081, 230, Seville, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+081, 230, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 65.00
+081, 230, Buenos Aires, POP_CHANGE, Pop: 10, No religion in city
+082, 260, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 68.00
+082, 260, Hsia, POP_CHANGE, Pop: 5, Second: Tengriism(0), Nonreligious: 5
+082, 260, Aotearoa, POP_CHANGE, Pop: 1, No religion in city
+082, 260, Aotearoa, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+082, 260, Madrid, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+082, 260, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 75.00
+082, 260, Nimrud, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+082, 260, Kuala Lumpur, POP_CHANGE, Pop: 9, No religion in city
+082, 260, Prague, POP_CHANGE, Pop: 10, No religion in city
+083, 290, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 78.00
+083, 290, Carthage, PROPHET SPAWNED, Carthage, Faith: 0
+083, 290, Carthage, Belief, Interfaith Dialogue, 94
+083, 290, Carthage, Belief, Tithe, 55
+083, 290, Carthage, Belief, Papal Primacy, 33
+083, 290, Carthage, Belief, Church Property, 16
+083, 290, Carthage, Belief, Pilgrimage, 16
+083, 290, Carthage, Belief, Ceremonial Burial, 8
+083, 290, Carthage, Belief, World Church, 6
+083, 290, Carthage, CHOSEN, Interfaith Dialogue
+083, 290, Carthage, Belief, Monasteries, 953
+083, 290, Carthage, Belief, Religious Community, 740
+083, 290, Carthage, Belief, Cathedrals, 655
+083, 290, Carthage, Belief, Swords into Plowshares, 320
+083, 290, Carthage, Belief, Religious Art, 302
+083, 290, Carthage, Belief, Guruship, 236
+083, 290, Carthage, Belief, Feed the World, 194
+083, 290, Carthage, Belief, Religious Center, 194
+083, 290, Carthage, Belief, Peace Gardens, 158
+083, 290, Carthage, Belief, Asceticism, 140
+083, 290, Carthage, Belief, Choral Music, 122
+083, 290, Carthage, Belief, Divine Inspiration, 122
+083, 290, Carthage, Belief, Liturgical Drama, 110
+083, 290, Carthage, Belief, Holy Warriors, 59
+083, 290, Carthage, CHOSEN, Monasteries
+083, 290, Carthage, RELIGION_FOUNDED, Pop: 8, Nonreligious: 1
+083, 290, Carthage, RELIGION FOUNDED, Carthage, Islam
+083, 290, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 85.00
+083, 290, Rotterdam, POP_CHANGE, Pop: 4, First: Protestantism(4), Nonreligious: 0
+083, 290, Assur, POP_CHANGE, Pop: 8, First: Pantheon(6), Nonreligious: 2
+083, 290, Kar-Tukulti-Ninurta, POP_CHANGE, Pop: 1, No religion in city
+083, 290, Kar-Tukulti-Ninurta, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
+083, 290, Singapore, POP_CHANGE, Pop: 10, No religion in city
+083, 290, Utique, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
+084, 320, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 88.00
+084, 320, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+084, 320, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 95.00
+084, 320, Vancouver, POP_CHANGE, Pop: 6, No religion in city
+084, 320, Zurich, POP_CHANGE, Pop: 10, No religion in city
+085, 350, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 98.00
+085, 350, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 7.00
+085, 350, Carthage, POP_CHANGE, Pop: 9, First: Islam(8), Nonreligious: 1
+085, 350, Tonga, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+085, 350, Polynesia, PROPHET SPAWNED, Honolulu, Faith: 0
+085, 350, Polynesia, Belief, Tithe, 184
+085, 350, Polynesia, Belief, Church Property, 58
+085, 350, Polynesia, Belief, Pilgrimage, 58
+085, 350, Polynesia, Belief, Papal Primacy, 39
+085, 350, Polynesia, Belief, World Church, 29
+085, 350, Polynesia, Belief, Ceremonial Burial, 27
+085, 350, Polynesia, CHOSEN, Tithe
+085, 350, Polynesia, Belief, Cathedrals, 726
+085, 350, Polynesia, Belief, Religious Community, 704
+085, 350, Polynesia, Belief, Swords into Plowshares, 650
+085, 350, Polynesia, Belief, Religious Art, 614
+085, 350, Polynesia, Belief, Guruship, 434
+085, 350, Polynesia, Belief, Feed the World, 392
+085, 350, Polynesia, Belief, Divine Inspiration, 326
+085, 350, Polynesia, Belief, Peace Gardens, 317
+085, 350, Polynesia, Belief, Religious Center, 317
+085, 350, Polynesia, Belief, Asceticism, 290
+085, 350, Polynesia, Belief, Choral Music, 203
+085, 350, Polynesia, Belief, Liturgical Drama, 196
+085, 350, Polynesia, Belief, Holy Warriors, 125
+085, 350, Polynesia, CHOSEN, Cathedrals
+085, 350, Honolulu, RELIGION_FOUNDED, Pop: 4, Nonreligious: 1
+085, 350, Polynesia, RELIGION FOUNDED, Honolulu, Catholicism
+085, 350, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 105.00
+085, 350, Sofia, POP_CHANGE, Pop: 9, Second: Protestantism(0), Nonreligious: 9
+085, 350, Antananarivo, POP_CHANGE, Pop: 10, No religion in city
+086, 380, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 108.00
+086, 380, Karakorum, POP_CHANGE, Pop: 5, First: Tengriism(5), Nonreligious: 0
+086, 380, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 12.00
+086, 380, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+086, 380, Salzburg, POP_CHANGE, Pop: 8, First: Pantheon(7), Nonreligious: 1
+086, 380, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 115.00
+086, 380, Utrecht, POP_CHANGE, Pop: 4, First: Protestantism(4), Nonreligious: 0
+086, 380, Nineveh, POP_CHANGE, Pop: 8, First: Pantheon(7), Nonreligious: 1
+087, 410, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 118.00
+087, 410, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 19.00
+087, 410, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 6.00
+087, 410, Tiwanaku, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+087, 410, Graz, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+087, 410, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 125.00
+087, 410, Honolulu, HOLY_CITY, Pop: 4, First: Catholicism(4), Second: Tengriism(0), Nonreligious: 0
+088, 440, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 128.00
+088, 440, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
+088, 440, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 12.00
+088, 440, Cordoba, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+088, 440, Santiago, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+088, 440, The Netherlands, FAITH UNIT PURCHASE, Missionary, Amsterdam, Faith Cost: 130, Faith Left: 5.00
+088, 440, The Netherlands, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 5.00
+088, 440, Breda, POP_CHANGE, Pop: 1, No religion in city
+088, 440, Kar-Tukulti-Ninurta, POP_CHANGE, Pop: 2, First: Pantheon(2), Nonreligious: 0
+088, 440, Monaco, ADJACENT_PRESSURE, Pop: 10, Second: Tengriism(1), Nonreligious: 9
+089, 470, Mongolia, FAITH UNIT PURCHASE, Missionary, Karakorum, Faith Cost: 130, Faith Left: 8.00
+089, 470, Mongolia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 8.00
+089, 470, Hsia, POP_CHANGE, Pop: 6, Second: Tengriism(0), Nonreligious: 6
+089, 470, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 32.00
+089, 470, Utique, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
+089, 470, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
+089, 470, Barcelona, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+089, 470, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 15.00
+089, 470, Nimrud, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
+089, 470, Belgrade, POP_CHANGE, Pop: 11, No religion in city
+089, 470, Kyiv, POP_CHANGE, Pop: 8, No religion in city
+089, 470, Santiago, ADJACENT_PRESSURE, Pop: 4, First: Pantheon(2), Nonreligious: 1
+090, 500, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 18.00
+090, 500, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 38.00
+090, 500, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
+090, 500, Cusco, POP_CHANGE, Pop: 8, First: Pantheon(6), Nonreligious: 2
+090, 500, Machu, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+090, 500, Austria, PROPHET SPAWNED, Vienna, Faith: 0
+090, 500, Austria, Belief, Church Property, 58
+090, 500, Austria, Belief, Pilgrimage, 58
+090, 500, Austria, Belief, Papal Primacy, 44
+090, 500, Austria, Belief, World Church, 23
+090, 500, Austria, Belief, Ceremonial Burial, 7
+090, 500, Austria, CHOSEN, Pilgrimage
+090, 500, Austria, Belief, Religious Community, 1286
+090, 500, Austria, Belief, Swords into Plowshares, 320
+090, 500, Austria, Belief, Religious Art, 302
+090, 500, Austria, Belief, Guruship, 278
+090, 500, Austria, Belief, Religious Center, 266
+090, 500, Austria, Belief, Feed the World, 230
+090, 500, Austria, Belief, Divine Inspiration, 230
+090, 500, Austria, Belief, Choral Music, 194
+090, 500, Austria, Belief, Peace Gardens, 158
+090, 500, Austria, Belief, Asceticism, 158
+090, 500, Austria, Belief, Holy Warriors, 141
+090, 500, Austria, Belief, Liturgical Drama, 122
+090, 500, Austria, CHOSEN, Religious Community
+090, 500, Vienna, RELIGION_FOUNDED, Pop: 7, Nonreligious: 1
+090, 500, Austria, RELIGION FOUNDED, Vienna, Confucianism
+090, 500, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
+090, 500, Breda, MISSIONARY, Pop: 1, Second: Protestantism(1), Nonreligious: 0
+090, 500, Kyiv, POP_CHANGE, Pop: 7, No religion in city
+090, 500, Amsterdam, HOLY_CITY, Pop: 7, First: Protestantism(7), Nonreligious: 0
+091, 530, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 28.00
+091, 530, Hsia, MISSIONARY, Pop: 6, Second: Tengriism(4), Nonreligious: 2
+091, 530, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 46.00
+091, 530, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 29.00
+091, 530, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
+091, 530, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
+091, 530, Rotterdam, POP_CHANGE, Pop: 5, First: Protestantism(5), Nonreligious: 0
+091, 530, Kyzyl, POP_CHANGE, Pop: 10, Second: Catholicism(0), Nonreligious: 10
+091, 530, Groningen, ADJACENT_PRESSURE, Pop: 2, Second: Protestantism(1), Nonreligious: 1
+091, 530, Sofia, ADJACENT_PRESSURE, Pop: 9, Second: Protestantism(1), Nonreligious: 8
+092, 560, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 38.00
+092, 560, Karakorum, POP_CHANGE, Pop: 6, First: Tengriism(6), Nonreligious: 0
+092, 560, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 52.00
+092, 560, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 34.00
+092, 560, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 5.00
+092, 560, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 45.00
+092, 560, Utrecht, POP_CHANGE, Pop: 5, First: Protestantism(5), Nonreligious: 0
+092, 560, Breda, POP_CHANGE, Pop: 2, First: Protestantism(2), Nonreligious: 0
+092, 560, Kyiv, POP_CHANGE, Pop: 6, No religion in city
+092, 560, Kabul, POP_CHANGE, Pop: 10, Second: Confucianism(0), Nonreligious: 10
+093, 590, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 48.00
+093, 590, Old Sarai, POP_CHANGE, Pop: 1, No religion in city
+093, 590, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 58.00
+093, 590, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 39.00
+093, 590, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 10.00
+093, 590, Vienna, POP_CHANGE, Pop: 8, First: Confucianism(7), Nonreligious: 1
+093, 590, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 55.00
+093, 590, Groningen, POP_CHANGE, Pop: 3, Second: Protestantism(1), Nonreligious: 2
+093, 590, Samoa, ADJACENT_PRESSURE, Pop: 3, First: Pantheon(1), Nonreligious: 1
+094, 620, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 58.00
+094, 620, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 63.00
+094, 620, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 44.00
+094, 620, Tahiti, POP_CHANGE, Pop: 1, No religion in city
+094, 620, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 15.00
+094, 620, Salzburg, POP_CHANGE, Pop: 9, First: Pantheon(8), Nonreligious: 1
+094, 620, Seville, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+094, 620, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 67.00
 094, 620, Zanzibar, POP_CHANGE, Pop: 10, Second: Protestantism(0), Nonreligious: 10
-095, 650, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 70.00
+094, 620, Buenos Aires, POP_CHANGE, Pop: 11, Second: Protestantism(0), Nonreligious: 11
+095, 650, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 68.00
+095, 650, Old Sarai, MISSIONARY, Pop: 1, Second: Tengriism(1), Nonreligious: 0
+095, 650, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 70.00
 095, 650, Utique, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-095, 650, Carthage, PROPHET SPAWNED, Carthage, Faith: 0
-095, 650, Carthage, Belief, Papal Primacy, 32
-095, 650, Carthage, Belief, Church Property, 9
-095, 650, Carthage, Belief, Pilgrimage, 9
-095, 650, Carthage, Belief, Ceremonial Burial, 5
-095, 650, Carthage, Belief, World Church, 3
-095, 650, Carthage, CHOSEN, Papal Primacy
-095, 650, Carthage, Belief, Pagodas, 624
-095, 650, Carthage, Belief, Cathedrals, 487
-095, 650, Carthage, Belief, Swords into Plowshares, 320
-095, 650, Carthage, Belief, Religious Art, 302
-095, 650, Carthage, Belief, Guruship, 236
-095, 650, Carthage, Belief, Religious Center, 194
-095, 650, Carthage, Belief, Feed the World, 176
-095, 650, Carthage, Belief, Asceticism, 140
-095, 650, Carthage, Belief, Choral Music, 122
-095, 650, Carthage, Belief, Divine Inspiration, 122
-095, 650, Carthage, Belief, Liturgical Drama, 92
-095, 650, Carthage, Belief, Holy Warriors, 56
-095, 650, Carthage, CHOSEN, Pagodas
-095, 650, Carthage, RELIGION_FOUNDED, Pop: 8, Nonreligious: 1
-095, 650, Carthage, RELIGION FOUNDED, Carthage, Islam
-095, 650, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 17.00
-095, 650, Graz, MISSIONARY, Pop: 3, Second: Catholicism(2), Nonreligious: 1
-095, 650, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 82.00
-095, 650, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 33.00
-095, 650, Sofia, POP_CHANGE, Pop: 10, Second: Protestantism(0), Nonreligious: 10
-095, 650, Raiatea, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Nonreligious: 1
-096, 680, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 75.00
-096, 680, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 0.00
-096, 680, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
-096, 680, Salzburg, POP_CHANGE, Pop: 8, First: Pantheon(7), Nonreligious: 1
-096, 680, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 91.00
-096, 680, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 43.00
-096, 680, Rotterdam, MISSIONARY, Pop: 4, Nonreligious: 0
-096, 680, Kuala Lumpur, ADJACENT_PRESSURE, Pop: 9, Second: Tengriism(1), Nonreligious: 8
-097, 710, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 80.00
-097, 710, Hsia, POP_CHANGE, Pop: 4, Second: Tengriism(0), Nonreligious: 4
-097, 710, Old Sarai, POP_CHANGE, Pop: 2, Second: Tengriism(0), Nonreligious: 2
-097, 710, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 2.00
-097, 710, Aotearoa, POP_CHANGE, Pop: 1, No religion in city
-097, 710, Aotearoa, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-097, 710, Cusco, POP_CHANGE, Pop: 9, First: Pantheon(7), Nonreligious: 2
-097, 710, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 33.00
-097, 710, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 101.00
-097, 710, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 54.00
-097, 710, Kyiv, POP_CHANGE, Pop: 9, No religion in city
-097, 710, Prague, POP_CHANGE, Pop: 11, Second: Protestantism(0), Nonreligious: 11
-097, 710, Belgrade, ADJACENT_PRESSURE, Pop: 11, Second: Tengriism(1), Nonreligious: 10
-098, 740, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 85.00
-098, 740, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 4.00
-098, 740, Raiatea, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
-098, 740, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 42.00
-098, 740, Graz, POP_CHANGE, Pop: 4, First: Catholicism(3), Nonreligious: 1
-098, 740, Salzburg, MISSIONARY, Pop: 8, Nonreligious: 1
-098, 740, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 111.00
-098, 740, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 64.00
-098, 740, Kar-Tukulti-Ninurta, POP_CHANGE, Pop: 1, No religion in city
-098, 740, Kar-Tukulti-Ninurta, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-099, 770, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 90.00
-099, 770, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 6.00
-099, 770, Tonga, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
-099, 770, Austria, Saving up for a Prophet for religion enhancement., Faith: 51.00
-099, 770, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 122.00
-099, 770, Barcelona, POP_CHANGE, Pop: 6, First: Pantheon(4), Nonreligious: 2
-099, 770, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 74.00
-099, 770, Breda, POP_CHANGE, Pop: 3, First: Protestantism(3), Nonreligious: 0
-099, 770, Nineveh, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
-099, 770, Vienna, ADJACENT_PRESSURE, Pop: 8, First: Catholicism(8), Nonreligious: 0
-100, 800, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 95.00
-100, 800, Karakorum, POP_CHANGE, Pop: 11, First: Tengriism(11), Nonreligious: 0
-100, 800, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 8.00
-100, 800, Utique, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-100, 800, Ollantaytambo, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-100, 800, Austria, Saving up for a Prophet for religion enhancement., Faith: 60.00
-100, 800, Spain, FAITH UNIT PURCHASE, Missionary, Madrid, Faith Cost: 130, Faith Left: 4.00
-100, 800, Spain, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 4.00
-100, 800, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 85.00
-100, 800, Assur, POP_CHANGE, Pop: 8, First: Pantheon(6), Nonreligious: 2
-100, 800, M'banza-Kongo, POP_CHANGE, Pop: 7, Second: Catholicism(0), Nonreligious: 7
-100, 800, Buenos Aires, POP_CHANGE, Pop: 12, Second: Protestantism(0), Nonreligious: 12
-100, 800, Kyzyl, POP_CHANGE, Pop: 11, No religion in city
-101, 820, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 100.00
-101, 820, Turfan, POP_CHANGE, Pop: 5, First: Pantheon(4), Nonreligious: 1
-101, 820, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 10.00
-101, 820, Carthage, POP_CHANGE, Pop: 9, First: Islam(8), Nonreligious: 1
-101, 820, Austria, Saving up for a Prophet for religion enhancement., Faith: 69.00
-101, 820, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 16.00
-101, 820, Barcelona, MISSIONARY, Pop: 6, Nonreligious: 1
-101, 820, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 96.00
-101, 820, Utrecht, POP_CHANGE, Pop: 5, First: Protestantism(5), Nonreligious: 0
-101, 820, Zurich, POP_CHANGE, Pop: 10, Second: Islam(0), Nonreligious: 10
-102, 840, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 105.00
-102, 840, Hsia, POP_CHANGE, Pop: 5, Second: Tengriism(0), Nonreligious: 5
-102, 840, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 13.00
-102, 840, Machu, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
-102, 840, Austria, Saving up for a Prophet for religion enhancement., Faith: 78.00
-102, 840, Salzburg, POP_CHANGE, Pop: 9, First: Catholicism(8), Nonreligious: 1
-102, 840, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 28.00
-102, 840, Seville, POP_CHANGE, Pop: 3, First: Tengriism(2), Second: Buddhism(1), Nonreligious: 0
-102, 840, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 106.00
-102, 840, Belgrade, POP_CHANGE, Pop: 12, Second: Tengriism(1), Nonreligious: 11
-102, 840, Sofia, ADJACENT_PRESSURE, Pop: 10, Second: Protestantism(1), Nonreligious: 9
-103, 860, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 110.00
-103, 860, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 17.00
-103, 860, Austria, Saving up for a Prophet for religion enhancement., Faith: 87.00
-103, 860, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
-103, 860, Barcelona, POP_CHANGE, Pop: 7, First: Buddhism(6), Nonreligious: 1
-103, 860, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 117.00
-103, 860, Sofia, POP_CHANGE, Pop: 11, Second: Protestantism(1), Nonreligious: 10
-104, 880, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 115.00
-104, 880, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 21.00
-104, 880, Austria, Saving up for a Prophet for religion enhancement., Faith: 96.00
-104, 880, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 53.00
-104, 880, Cordoba, POP_CHANGE, Pop: 1, No religion in city
-104, 880, Machu, MISSIONARY, Pop: 6, First: Pantheon(0), Nonreligious: 1
-104, 880, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 129.00
-104, 880, Monaco, POP_CHANGE, Pop: 11, Second: Tengriism(0), Nonreligious: 11
-104, 880, Singapore, POP_CHANGE, Pop: 12, No religion in city
-104, 880, Beshbalik, ADJACENT_PRESSURE, Pop: 6, First: Pantheon(2), Second: Buddhism(2), Nonreligious: 1
-105, 900, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 120.00
-105, 900, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
-105, 900, Utique, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
-105, 900, Tahiti, POP_CHANGE, Pop: 1, No religion in city
-105, 900, Tahiti, POP_CHANGE, Pop: 1, Second: Pantheon(1), Nonreligious: 0
-105, 900, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 109.00
-105, 900, Austria, Saving up for a Prophet for religion enhancement., Faith: 105.00
-105, 900, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 66.00
-105, 900, Madrid, POP_CHANGE, Pop: 6, First: Buddhism(5), Nonreligious: 1
-105, 900, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 141.00
-106, 920, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 125.00
-106, 920, Beshbalik, POP_CHANGE, Pop: 7, First: Pantheon(2), Second: Buddhism(2), Nonreligious: 2
-106, 920, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 29.00
-106, 920, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 112.00
-106, 920, Austria, Saving up for a Prophet for religion enhancement., Faith: 115.00
-106, 920, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 80.00
-106, 920, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 153.00
-106, 920, Nineveh, POP_CHANGE, Pop: 7, First: Pantheon(6), Nonreligious: 1
-106, 920, Nimrud, POP_CHANGE, Pop: 6, First: Pantheon(4), Second: Catholicism(1), Nonreligious: 1
-106, 920, Zanzibar, ADJACENT_PRESSURE, Pop: 10, Second: Protestantism(1), Nonreligious: 9
-106, 920, Kuala Lumpur, ADJACENT_PRESSURE, Pop: 9, Second: Tengriism(1), Nonreligious: 7
-107, 940, Mongolia, FAITH UNIT PURCHASE, Missionary, Karakorum, Faith Cost: 130, Faith Left: 0.00
-107, 940, Mongolia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 0.00
-107, 940, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 33.00
-107, 940, Carthage, POP_CHANGE, Pop: 10, First: Islam(9), Nonreligious: 1
-107, 940, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 115.00
-107, 940, Austria, Saving up for a Prophet for religion enhancement., Faith: 125.00
-107, 940, Graz, POP_CHANGE, Pop: 5, First: Catholicism(4), Nonreligious: 1
-107, 940, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 94.00
-107, 940, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 163.00
-107, 940, Groningen, POP_CHANGE, Pop: 4, First: Protestantism(3), Nonreligious: 1
-107, 940, Kar-Tukulti-Ninurta, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
-107, 940, Antananarivo, POP_CHANGE, Pop: 12, Second: Catholicism(0), Nonreligious: 12
-108, 960, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 5.00
-108, 960, New Sarai, POP_CHANGE, Pop: 1, No religion in city
-108, 960, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 37.00
-108, 960, Samoa, POP_CHANGE, Pop: 5, First: Pantheon(2), Nonreligious: 1
-108, 960, Nuku Hiva, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
-108, 960, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 118.00
-108, 960, Austria, Saving up for a Prophet for religion enhancement., Faith: 135.00
-108, 960, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 109.00
-108, 960, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 174.00
-108, 960, Utique, ADJACENT_PRESSURE, Pop: 6, First: Pantheon(4), Nonreligious: 1
-108, 960, Buenos Aires, ADJACENT_PRESSURE, Pop: 12, Second: Protestantism(1), Nonreligious: 11
-108, 960, Zurich, ADJACENT_PRESSURE, Pop: 10, Second: Islam(1), Nonreligious: 9
-109, 980, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 12.00
-109, 980, Hsia, POP_CHANGE, Pop: 6, Second: Tengriism(0), Nonreligious: 6
-109, 980, Turfan, MISSIONARY, Pop: 5, Nonreligious: 0
-109, 980, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 41.00
-109, 980, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 121.00
-109, 980, Austria, Saving up for a Prophet for religion enhancement., Faith: 145.00
-109, 980, Salzburg, POP_CHANGE, Pop: 10, First: Catholicism(9), Nonreligious: 1
-109, 980, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 124.00
-109, 980, Cordoba, POP_CHANGE, Pop: 2, Second: Buddhism(0), Nonreligious: 2
-109, 980, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 184.00
-109, 980, Tyre, POP_CHANGE, Pop: 10, Second: Buddhism(0), Nonreligious: 10
-109, 980, Kuala Lumpur, POP_CHANGE, Pop: 10, Second: Tengriism(1), Nonreligious: 8
-109, 980, Belgrade, ADJACENT_PRESSURE, Pop: 12, Second: Tengriism(2), Nonreligious: 10
-110, 1000, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 19.00
-110, 1000, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 45.00
-110, 1000, Hippo Regius, POP_CHANGE, Pop: 3, First: Pantheon(2), Nonreligious: 1
-110, 1000, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 126.00
-110, 1000, Austria, Saving up for a Prophet for religion enhancement., Faith: 155.00
-110, 1000, Spain, FAITH UNIT PURCHASE, Missionary, Madrid, Faith Cost: 130, Faith Left: 9.00
-110, 1000, Spain, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 9.00
-110, 1000, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 195.00
-110, 1000, Kyiv, POP_CHANGE, Pop: 10, No religion in city
-111, 1020, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 26.00
-111, 1020, New Sarai, POP_CHANGE, Pop: 2, No religion in city
-111, 1020, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 49.00
-111, 1020, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 133.00
-111, 1020, Ollantaytambo, POP_CHANGE, Pop: 7, First: Pantheon(5), Second: Protestantism(1), Nonreligious: 1
-111, 1020, Austria, Saving up for a Prophet for religion enhancement., Faith: 165.00
-111, 1020, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
-111, 1020, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 206.00
-111, 1020, Beshbalik, ADJACENT_PRESSURE, Pop: 7, First: Buddhism(2), Second: Pantheon(2), Nonreligious: 1
-112, 1040, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 34.00
-112, 1040, Old Sarai, MISSIONARY, Pop: 2, Second: Tengriism(2), Nonreligious: 0
-112, 1040, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 53.00
-112, 1040, Utique, POP_CHANGE, Pop: 7, First: Pantheon(5), Second: Islam(1), Nonreligious: 1
-112, 1040, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 140.00
-112, 1040, Austria, Saving up for a Prophet for religion enhancement., Faith: 175.00
-112, 1040, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 39.00
-112, 1040, Barcelona, POP_CHANGE, Pop: 9, First: Buddhism(7), Nonreligious: 2
-112, 1040, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 216.00
-112, 1040, The Netherlands, PROPHET SPAWNED, Amsterdam, Faith: 0
-112, 1040, The Netherlands, Belief, Swords into Plowshares, 556
-112, 1040, The Netherlands, Belief, Religious Art, 526
-112, 1040, The Netherlands, Belief, Guruship, 502
-112, 1040, The Netherlands, Belief, Feed the World, 376
-112, 1040, The Netherlands, Belief, Religious Center, 358
-112, 1040, The Netherlands, Belief, Asceticism, 286
-112, 1040, The Netherlands, Belief, Choral Music, 268
-112, 1040, The Netherlands, Belief, Divine Inspiration, 226
-112, 1040, The Netherlands, Belief, Liturgical Drama, 214
-112, 1040, The Netherlands, Belief, Cathedrals, 212
-112, 1040, The Netherlands, Belief, Holy Warriors, 136
-112, 1040, The Netherlands, CHOSEN, Religious Art
-112, 1040, The Netherlands, Belief, Defender of the Faith, 805
-112, 1040, The Netherlands, Belief, Just War, 655
-112, 1040, The Netherlands, Belief, Religious Unity, 623
-112, 1040, The Netherlands, Belief, Reliquary, 157
-112, 1040, The Netherlands, Belief, Messiah, 101
-112, 1040, The Netherlands, Belief, Missionary Zeal, 78
-112, 1040, The Netherlands, Belief, Holy Order, 78
-112, 1040, The Netherlands, Belief, Religious Texts, 55
-112, 1040, The Netherlands, Belief, Itinerant Preachers, 55
-112, 1040, The Netherlands, CHOSEN, Defender of the Faith
-112, 1040, The Netherlands, RELIGION ENHANCED
-112, 1040, Nimrud, POP_CHANGE, Pop: 7, First: Pantheon(5), Second: Catholicism(1), Nonreligious: 1
-112, 1040, Sofia, POP_CHANGE, Pop: 12, Second: Protestantism(1), Nonreligious: 11
-112, 1040, Beshbalik, ADJACENT_PRESSURE, Pop: 7, First: Buddhism(2), Second: Tengriism(2), Nonreligious: 2
-112, 1040, Vancouver, ADJACENT_PRESSURE, Pop: 6, Second: Catholicism(1), Nonreligious: 5
-112, 1040, Antananarivo, ADJACENT_PRESSURE, Pop: 12, Second: Catholicism(1), Nonreligious: 11
-113, 1060, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 42.00
-113, 1060, Karakorum, POP_CHANGE, Pop: 12, First: Tengriism(12), Nonreligious: 0
-113, 1060, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 57.00
-113, 1060, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 147.00
-113, 1060, Austria, Saving up for a Prophet for religion enhancement., Faith: 185.00
-113, 1060, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 55.00
-113, 1060, Madrid, POP_CHANGE, Pop: 7, First: Buddhism(6), Nonreligious: 1
-113, 1060, Seville, POP_CHANGE, Pop: 4, First: Tengriism(3), Second: Buddhism(1), Nonreligious: 0
-113, 1060, Cordoba, MISSIONARY, Pop: 2, Second: Buddhism(2), Nonreligious: 0
-113, 1060, Assur, POP_CHANGE, Pop: 9, First: Pantheon(7), Nonreligious: 2
-113, 1060, Nineveh, POP_CHANGE, Pop: 8, First: Pantheon(7), Nonreligious: 1
-113, 1060, Kar-Tukulti-Ninurta, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-113, 1060, Sofia, ADJACENT_PRESSURE, Pop: 12, Second: Protestantism(2), Nonreligious: 10
-114, 1080, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 50.00
-114, 1080, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 61.00
-114, 1080, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 154.00
-114, 1080, Austria, Saving up for a Prophet for religion enhancement., Faith: 195.00
-114, 1080, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 72.00
-114, 1080, Belgrade, POP_CHANGE, Pop: 13, Second: Tengriism(2), Nonreligious: 11
-114, 1080, Zanzibar, POP_CHANGE, Pop: 11, Second: Protestantism(1), Nonreligious: 10
-115, 1100, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 58.00
-115, 1100, Old Sarai, POP_CHANGE, Pop: 3, First: Tengriism(3), Nonreligious: 0
-115, 1100, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 66.00
-115, 1100, Carthage, POP_CHANGE, Pop: 11, First: Islam(10), Nonreligious: 1
-115, 1100, The Inca, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 161.00
-115, 1100, Austria, Saving up for a Prophet for religion enhancement., Faith: 205.00
-115, 1100, Austria, PROPHET SPAWNED, Vienna, Faith: 0
-115, 1100, Austria, Belief, Guruship, 427
-115, 1100, Austria, Belief, Swords into Plowshares, 367
-115, 1100, Austria, Belief, Religious Center, 313
-115, 1100, Austria, Belief, Feed the World, 277
-115, 1100, Austria, Belief, Divine Inspiration, 277
-115, 1100, Austria, Belief, Choral Music, 241
-115, 1100, Austria, Belief, Asceticism, 205
-115, 1100, Austria, Belief, Cathedrals, 200
-115, 1100, Austria, Belief, Liturgical Drama, 169
-115, 1100, Austria, Belief, Holy Warriors, 107
-115, 1100, Austria, CHOSEN, Guruship
-115, 1100, Austria, Belief, Religious Unity, 564
-115, 1100, Austria, Belief, Just War, 248
-115, 1100, Austria, Belief, Reliquary, 151
-115, 1100, Austria, Belief, Messiah, 82
-115, 1100, Austria, Belief, Missionary Zeal, 58
-115, 1100, Austria, Belief, Holy Order, 58
-115, 1100, Austria, Belief, Religious Texts, 46
-115, 1100, Austria, Belief, Itinerant Preachers, 46
-115, 1100, Austria, CHOSEN, Religious Unity
-115, 1100, Austria, RELIGION ENHANCED
-115, 1100, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 92.00
-115, 1100, Cusco, MISSIONARY, Pop: 9, First: Pantheon(3), Nonreligious: 2
-115, 1100, Hsia, ADJACENT_PRESSURE, Pop: 6, Second: Tengriism(1), Nonreligious: 5
-116, 1120, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 66.00
-116, 1120, New Sarai, POP_CHANGE, Pop: 3, Second: Tengriism(0), Nonreligious: 3
-116, 1120, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 71.00
-116, 1120, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 0.00
-116, 1120, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 112.00
-116, 1120, Barcelona, POP_CHANGE, Pop: 10, First: Buddhism(8), Nonreligious: 2
-116, 1120, Buenos Aires, POP_CHANGE, Pop: 13, Second: Protestantism(1), Nonreligious: 12
-116, 1120, Beshbalik, ADJACENT_PRESSURE, Pop: 7, First: Buddhism(3), Second: Tengriism(2), Nonreligious: 1
-117, 1140, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 74.00
-117, 1140, Turfan, POP_CHANGE, Pop: 6, First: Tengriism(6), Nonreligious: 0
-117, 1140, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 76.00
-117, 1140, Ollantaytambo, POP_CHANGE, Pop: 8, First: Pantheon(6), Second: Protestantism(1), Nonreligious: 1
-117, 1140, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 10.00
-117, 1140, Spain, FAITH UNIT PURCHASE, Missionary, Madrid, Faith Cost: 130, Faith Left: 2.00
-117, 1140, Spain, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 2.00
-117, 1140, Cordoba, POP_CHANGE, Pop: 3, First: Buddhism(3), Nonreligious: 0
-117, 1140, Kyzyl, POP_CHANGE, Pop: 12, Second: Tengriism(0), Nonreligious: 12
-117, 1140, Kuala Lumpur, ADJACENT_PRESSURE, Pop: 10, Second: Tengriism(2), Nonreligious: 7
-118, 1160, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 82.00
-118, 1160, Beshbalik, POP_CHANGE, Pop: 8, First: Buddhism(3), Second: Tengriism(2), Nonreligious: 2
-118, 1160, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 81.00
-118, 1160, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 20.00
-118, 1160, Salzburg, POP_CHANGE, Pop: 11, First: Catholicism(10), Nonreligious: 1
-118, 1160, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
-118, 1160, Cusco, ADJACENT_PRESSURE, Pop: 9, First: Buddhism(5), Second: Pantheon(2), Nonreligious: 2
-118, 1160, Nimrud, ADJACENT_PRESSURE, Pop: 7, First: Pantheon(4), Second: Catholicism(2), Nonreligious: 1
-118, 1160, M'banza-Kongo, ADJACENT_PRESSURE, Pop: 7, Second: Catholicism(1), Nonreligious: 6
-118, 1160, Kabul, ADJACENT_PRESSURE, Pop: 10, Second: Catholicism(1), Nonreligious: 9
-119, 1180, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 90.00
-119, 1180, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 86.00
-119, 1180, Utique, POP_CHANGE, Pop: 8, First: Pantheon(6), Second: Islam(1), Nonreligious: 1
-119, 1180, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 30.00
-119, 1180, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 46.00
-119, 1180, Madrid, POP_CHANGE, Pop: 8, First: Buddhism(7), Nonreligious: 1
-119, 1180, Breda, POP_CHANGE, Pop: 4, First: Protestantism(4), Nonreligious: 0
-119, 1180, Antananarivo, POP_CHANGE, Pop: 13, Second: Catholicism(1), Nonreligious: 12
-119, 1180, Tonga, ADJACENT_PRESSURE, Pop: 6, First: Pantheon(4), Nonreligious: 2
-119, 1180, Zanzibar, ADJACENT_PRESSURE, Pop: 11, Second: Protestantism(2), Nonreligious: 9
-120, 1200, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 98.00
-120, 1200, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 92.00
-120, 1200, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 40.00
-120, 1200, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 69.00
-120, 1200, Kyiv, POP_CHANGE, Pop: 11, No religion in city
-120, 1200, Beshbalik, ADJACENT_PRESSURE, Pop: 8, First: Buddhism(3), Second: Tengriism(2), Nonreligious: 3
-120, 1200, Tyre, ADJACENT_PRESSURE, Pop: 10, Second: Buddhism(1), Nonreligious: 9
-120, 1200, Monaco, ADJACENT_PRESSURE, Pop: 11, Second: Tengriism(1), Nonreligious: 10
-121, 1220, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 106.00
-121, 1220, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 98.00
-121, 1220, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 50.00
-121, 1220, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 92.00
-121, 1220, Barcelona, POP_CHANGE, Pop: 11, First: Buddhism(9), Nonreligious: 2
-121, 1220, Amsterdam, POP_CHANGE, Pop: 8, First: Protestantism(8), Nonreligious: 0
-121, 1220, Vancouver, POP_CHANGE, Pop: 7, Second: Catholicism(1), Nonreligious: 6
-121, 1220, Sofia, POP_CHANGE, Pop: 13, Second: Protestantism(2), Nonreligious: 11
-121, 1220, Beshbalik, ADJACENT_PRESSURE, Pop: 8, First: Buddhism(3), Second: Tengriism(3), Nonreligious: 2
-122, 1240, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 114.00
-122, 1240, New Sarai, POP_CHANGE, Pop: 4, Second: Tengriism(0), Nonreligious: 4
-122, 1240, Tabriz, POP_CHANGE, Pop: 1, No religion in city
-122, 1240, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 104.00
-122, 1240, Honolulu, POP_CHANGE, Pop: 6, First: Pantheon(4), Nonreligious: 2
-122, 1240, Ollantaytambo, POP_CHANGE, Pop: 9, First: Pantheon(7), Second: Protestantism(1), Nonreligious: 1
-122, 1240, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 60.00
-122, 1240, Graz, POP_CHANGE, Pop: 6, First: Catholicism(5), Nonreligious: 1
-122, 1240, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 116.00
-122, 1240, Rotterdam, POP_CHANGE, Pop: 5, First: Protestantism(5), Nonreligious: 0
-122, 1240, Nimrud, POP_CHANGE, Pop: 8, First: Pantheon(5), Second: Catholicism(2), Nonreligious: 1
-122, 1240, Zurich, POP_CHANGE, Pop: 11, Second: Islam(1), Nonreligious: 10
-123, 1260, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 122.00
-123, 1260, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 110.00
-123, 1260, Carthage, POP_CHANGE, Pop: 12, First: Islam(11), Nonreligious: 1
-123, 1260, Cusco, POP_CHANGE, Pop: 10, First: Buddhism(6), Second: Pantheon(2), Nonreligious: 2
-123, 1260, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 70.00
-123, 1260, Spain, FAITH UNIT PURCHASE, Missionary, Madrid, Faith Cost: 130, Faith Left: 9.00
-123, 1260, Spain, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 9.00
-123, 1260, Tiwanaku, MISSIONARY, Pop: 6, First: Pantheon(0), Nonreligious: 2
-123, 1260, Singapore, POP_CHANGE, Pop: 13, Second: Tengriism(0), Nonreligious: 13
-123, 1260, Prague, POP_CHANGE, Pop: 12, Second: Buddhism(0), Nonreligious: 12
-123, 1260, Nuku Hiva, ADJACENT_PRESSURE, Pop: 6, First: Pantheon(4), Nonreligious: 1
-123, 1260, Ollantaytambo, ADJACENT_PRESSURE, Pop: 9, First: Pantheon(6), Second: Protestantism(2), Nonreligious: 1
-123, 1260, Belgrade, ADJACENT_PRESSURE, Pop: 13, Second: Tengriism(3), Nonreligious: 10
-124, 1280, Mongolia, FAITH UNIT PURCHASE, Missionary, Karakorum, Faith Cost: 130, Faith Left: 0.00
-124, 1280, Mongolia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 0.00
-124, 1280, Karakorum, POP_CHANGE, Pop: 13, First: Tengriism(13), Nonreligious: 0
-124, 1280, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 117.00
-124, 1280, The Inca, FAITH UNIT PURCHASE, Missionary, Cusco, Faith Cost: 130, Faith Left: 107.00
-124, 1280, The Inca, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 107.00
-124, 1280, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 80.00
-124, 1280, Spain, Saving up for a Prophet for religion enhancement., Faith: 32.00
-124, 1280, Barcelona, POP_CHANGE, Pop: 12, First: Buddhism(10), Nonreligious: 2
-124, 1280, Seville, MISSIONARY, Pop: 4, First: Tengriism(1), Second: Buddhism(3), Nonreligious: 0
-125, 1300, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 8.00
-125, 1300, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 124.00
-125, 1300, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 90.00
-125, 1300, Salzburg, POP_CHANGE, Pop: 12, First: Catholicism(11), Nonreligious: 1
-125, 1300, Spain, Saving up for a Prophet for religion enhancement., Faith: 54.00
-125, 1300, The Netherlands, FAITH BUILDING PURCHASE, Mosque, Amsterdam, Faith Cost: 130, Faith Left: 2.00
-125, 1300, The Netherlands, Bought a Faith Building, Faith: 2.00
-125, 1300, Tyre, POP_CHANGE, Pop: 11, Second: Buddhism(1), Nonreligious: 10
-125, 1300, Belgrade, POP_CHANGE, Pop: 14, Second: Tengriism(3), Nonreligious: 11
-126, 1320, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 16.00
-126, 1320, Hsia, POP_CHANGE, Pop: 7, Second: Tengriism(1), Nonreligious: 6
-126, 1320, Hsia, MISSIONARY, Pop: 7, Second: Tengriism(4), Nonreligious: 3
-126, 1320, Carthage, FAITH UNIT PURCHASE, Missionary, Carthage, Faith Cost: 130, Faith Left: 1.00
-126, 1320, Carthage, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 1.00
-126, 1320, Ollantaytambo, POP_CHANGE, Pop: 10, First: Pantheon(7), Second: Protestantism(2), Nonreligious: 1
-126, 1320, Ollantaytambo, MISSIONARY, Pop: 10, Second: Protestantism(1), Nonreligious: 1
-126, 1320, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 100.00
-126, 1320, Spain, Saving up for a Prophet for religion enhancement., Faith: 78.00
-126, 1320, Madrid, POP_CHANGE, Pop: 9, First: Buddhism(8), Nonreligious: 1
-126, 1320, Karakorum, ADJACENT_PRESSURE, Pop: 13, First: Tengriism(12), Nonreligious: 1
-126, 1320, Prague, ADJACENT_PRESSURE, Pop: 12, Second: Buddhism(1), Nonreligious: 11
-127, 1340, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 24.00
-127, 1340, Tabriz, POP_CHANGE, Pop: 2, Second: Islam(0), Nonreligious: 2
-127, 1340, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 9.00
-127, 1340, Utique, POP_CHANGE, Pop: 9, First: Pantheon(7), Second: Islam(1), Nonreligious: 1
-127, 1340, Hippo Regius, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
-127, 1340, Utique, MISSIONARY, Pop: 9, Second: Islam(8), Nonreligious: 1
-127, 1340, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 110.00
-127, 1340, Spain, Saving up for a Prophet for religion enhancement., Faith: 103.00
-127, 1340, Samoa, ADJACENT_PRESSURE, Pop: 5, First: Pantheon(1), Nonreligious: 2
-127, 1340, Ollantaytambo, ADJACENT_PRESSURE, Pop: 10, First: Buddhism(7), Second: Protestantism(2), Nonreligious: 1
-127, 1340, Nineveh, ADJACENT_PRESSURE, Pop: 8, First: Pantheon(6), Nonreligious: 1
-127, 1340, Sofia, ADJACENT_PRESSURE, Pop: 13, Second: Protestantism(3), Nonreligious: 10
-128, 1360, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 34.00
-128, 1360, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 17.00
-128, 1360, Tonga, POP_CHANGE, Pop: 7, First: Pantheon(5), Nonreligious: 2
-128, 1360, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 123.00
-128, 1360, Spain, Saving up for a Prophet for religion enhancement., Faith: 124.00
-128, 1360, Nineveh, MISSIONARY, Pop: 8, First: Pantheon(4), Nonreligious: 1
-128, 1360, Buenos Aires, POP_CHANGE, Pop: 14, Second: Protestantism(1), Nonreligious: 13
-128, 1360, Kyzyl, POP_CHANGE, Pop: 13, Second: Tengriism(0), Nonreligious: 13
-129, 1380, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 44.00
-129, 1380, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
-129, 1380, Austria, FAITH UNIT PURCHASE, Missionary, Vienna, Faith Cost: 130, Faith Left: 12.00
-129, 1380, Austria, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 12.00
-129, 1380, Spain, Saving up for a Prophet for religion enhancement., Faith: 148.00
-129, 1380, Barcelona, POP_CHANGE, Pop: 13, First: Buddhism(11), Nonreligious: 2
-129, 1380, Nineveh, POP_CHANGE, Pop: 9, First: Pantheon(5), Second: Buddhism(3), Nonreligious: 1
-129, 1380, Zanzibar, POP_CHANGE, Pop: 12, Second: Protestantism(2), Nonreligious: 10
-129, 1380, Nimrud, ADJACENT_PRESSURE, Pop: 8, First: Pantheon(4), Second: Catholicism(2), Nonreligious: 1
-129, 1380, Buenos Aires, ADJACENT_PRESSURE, Pop: 14, Second: Protestantism(2), Nonreligious: 12
-130, 1400, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 54.00
-130, 1400, New Sarai, MISSIONARY, Pop: 4, Second: Tengriism(3), Nonreligious: 1
-130, 1400, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 33.00
-130, 1400, Hippo Regius, MISSIONARY, Pop: 4, Nonreligious: 0
-130, 1400, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 31.00
-130, 1400, Spain, Saving up for a Prophet for religion enhancement., Faith: 172.00
-130, 1400, Groningen, POP_CHANGE, Pop: 5, First: Protestantism(4), Nonreligious: 1
-130, 1400, Samoa, ADJACENT_PRESSURE, Pop: 5, First: Tengriism(2), Second: Pantheon(1), Nonreligious: 1
-130, 1400, Cusco, ADJACENT_PRESSURE, Pop: 10, First: Buddhism(7), Second: Pantheon(1), Nonreligious: 2
-130, 1400, Antananarivo, ADJACENT_PRESSURE, Pop: 13, Second: Catholicism(2), Nonreligious: 11
-130, 1400, Kabul, ADJACENT_PRESSURE, Pop: 10, Second: Catholicism(1), Nonreligious: 8
-131, 1410, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 64.00
-131, 1410, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 41.00
-131, 1410, Machu, POP_CHANGE, Pop: 7, First: Buddhism(6), Nonreligious: 1
-131, 1410, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 50.00
-131, 1410, Graz, POP_CHANGE, Pop: 7, First: Catholicism(6), Nonreligious: 1
-131, 1410, Spain, Saving up for a Prophet for religion enhancement., Faith: 196.00
-131, 1410, Rotterdam, POP_CHANGE, Pop: 6, First: Protestantism(6), Nonreligious: 0
-131, 1410, Tyre, POP_CHANGE, Pop: 12, Second: Buddhism(1), Nonreligious: 11
-131, 1410, Antananarivo, POP_CHANGE, Pop: 14, Second: Catholicism(2), Nonreligious: 12
-131, 1410, Kuala Lumpur, POP_CHANGE, Pop: 11, Second: Tengriism(2), Nonreligious: 8
-131, 1410, Cordoba, ADJACENT_PRESSURE, Pop: 4, First: Buddhism(4), Nonreligious: 0
-132, 1420, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 74.00
-132, 1420, Karakorum, POP_CHANGE, Pop: 14, First: Tengriism(13), Second: Buddhism(1), Nonreligious: 0
-132, 1420, Hsia, POP_CHANGE, Pop: 8, First: Tengriism(5), Nonreligious: 3
-132, 1420, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 49.00
-132, 1420, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 69.00
-132, 1420, Spain, Saving up for a Prophet for religion enhancement., Faith: 221.00
-132, 1420, Madrid, POP_CHANGE, Pop: 10, First: Buddhism(9), Second: Tengriism(1), Nonreligious: 0
-132, 1420, Sofia, POP_CHANGE, Pop: 14, Second: Protestantism(3), Nonreligious: 11
-132, 1420, Singapore, POP_CHANGE, Pop: 14, Second: Tengriism(0), Nonreligious: 14
-132, 1420, Kabul, POP_CHANGE, Pop: 11, Second: Catholicism(1), Nonreligious: 9
-132, 1420, Nineveh, ADJACENT_PRESSURE, Pop: 9, First: Pantheon(4), Second: Buddhism(4), Nonreligious: 1
-132, 1420, Zurich, ADJACENT_PRESSURE, Pop: 11, Second: Islam(2), Nonreligious: 9
-133, 1430, Mongolia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 84.00
-133, 1430, Beshbalik, POP_CHANGE, Pop: 9, First: Buddhism(3), Second: Tengriism(3), Nonreligious: 3
-133, 1430, Old Sarai, POP_CHANGE, Pop: 5, First: Tengriism(4), Nonreligious: 1
-133, 1430, Beshbalik, MISSIONARY, Pop: 9, First: Buddhism(2), Second: Tengriism(5), Nonreligious: 2
-133, 1430, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 57.00
-133, 1430, Ollantaytambo, POP_CHANGE, Pop: 11, First: Buddhism(8), Second: Protestantism(2), Nonreligious: 1
-133, 1430, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 88.00
-133, 1430, Salzburg, POP_CHANGE, Pop: 13, First: Catholicism(12), Nonreligious: 1
-133, 1430, Nuku Hiva, MISSIONARY, Pop: 6, Second: Catholicism(5), Nonreligious: 1
-133, 1430, Spain, Saving up for a Prophet for religion enhancement., Faith: 247.00
-133, 1430, Spain, PROPHET SPAWNED, Madrid, Faith: 0
-133, 1430, Spain, Belief, Religious Center, 1393
-133, 1430, Spain, Belief, Asceticism, 853
-133, 1430, Spain, Belief, Cathedrals, 618
-133, 1430, Spain, Belief, Feed the World, 349
-133, 1430, Spain, Belief, Choral Music, 259
-133, 1430, Spain, Belief, Swords into Plowshares, 253
-133, 1430, Spain, Belief, Liturgical Drama, 241
-133, 1430, Spain, Belief, Divine Inspiration, 229
-133, 1430, Spain, Belief, Holy Warriors, 174
-133, 1430, Spain, CHOSEN, Religious Center
-133, 1430, Spain, Belief, Just War, 856
-133, 1430, Spain, Belief, Messiah, 836
-133, 1430, Spain, Belief, Holy Order, 444
-133, 1430, Spain, Belief, Missionary Zeal, 434
-133, 1430, Spain, Belief, Reliquary, 145
-133, 1430, Spain, Belief, Itinerant Preachers, 71
-133, 1430, Spain, Belief, Religious Texts, 61
-133, 1430, Spain, CHOSEN, Just War
-133, 1430, Spain, RELIGION ENHANCED
-133, 1430, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 173.00
-133, 1430, Assur, ADJACENT_PRESSURE, Pop: 9, First: Pantheon(6), Nonreligious: 2
-133, 1430, Kyzyl, ADJACENT_PRESSURE, Pop: 13, Second: Tengriism(1), Nonreligious: 12
-134, 1440, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 99.00
-134, 1440, Tabriz, POP_CHANGE, Pop: 3, Second: Islam(0), Nonreligious: 3
-134, 1440, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 65.00
-134, 1440, Carthage, POP_CHANGE, Pop: 13, First: Islam(12), Nonreligious: 1
-134, 1440, Polynesia, Favorite Foreign Religion is, Catholicism
-134, 1440, Polynesia, FAITH UNIT PURCHASE, Missionary, Nuku Hiva, Faith Cost: 130, Faith Left: 69.00
-134, 1440, Polynesia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 69.00
-134, 1440, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 107.00
-134, 1440, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 0.00
-134, 1440, Barcelona, POP_CHANGE, Pop: 14, First: Buddhism(12), Nonreligious: 2
-134, 1440, The Netherlands, FAITH BUILDING PURCHASE, Mosque, Rotterdam, Faith Cost: 130, Faith Left: 7.00
-134, 1440, The Netherlands, Bought a Faith Building, Faith: 7.00
-134, 1440, Breda, POP_CHANGE, Pop: 6, First: Protestantism(5), Nonreligious: 1
-134, 1440, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 176.00
-134, 1440, Prague, POP_CHANGE, Pop: 13, Second: Buddhism(1), Nonreligious: 12
-134, 1440, Raiatea, ADJACENT_PRESSURE, Pop: 3, First: Pantheon(1), Second: Islam(1), Nonreligious: 1
-134, 1440, Kuala Lumpur, ADJACENT_PRESSURE, Pop: 11, Second: Tengriism(2), Nonreligious: 7
-135, 1450, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 114.00
-135, 1450, Carthage, Saving up for a Prophet for religion enhancement., Faith: 74.00
-135, 1450, Utique, POP_CHANGE, Pop: 10, First: Islam(9), Nonreligious: 1
-135, 1450, Polynesia, Favorite Foreign Religion is, Catholicism
-135, 1450, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 126.00
-135, 1450, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 26.00
-135, 1450, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 179.00
-135, 1450, Ollantaytambo, ADJACENT_PRESSURE, Pop: 11, First: Buddhism(7), Second: Protestantism(3), Nonreligious: 1
-135, 1450, Nimrud, ADJACENT_PRESSURE, Pop: 8, First: Pantheon(3), Second: Catholicism(3), Nonreligious: 1
-135, 1450, Singapore, ADJACENT_PRESSURE, Pop: 14, Second: Tengriism(1), Nonreligious: 13
-136, 1460, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 129.00
-136, 1460, Hsia, POP_CHANGE, Pop: 9, First: Tengriism(6), Nonreligious: 3
-136, 1460, New Sarai, POP_CHANGE, Pop: 5, First: Tengriism(4), Nonreligious: 1
-136, 1460, Monaco, MISSIONARY, Pop: 11, Second: Tengriism(6), Nonreligious: 5
-136, 1460, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 82.00
-136, 1460, Polynesia, Favorite Foreign Religion is, Catholicism
-136, 1460, Honolulu, MISSIONARY, Pop: 6, Nonreligious: 2
-136, 1460, Austria, FAITH UNIT PURCHASE, Missionary, Vienna, Faith Cost: 130, Faith Left: 15.00
-136, 1460, Austria, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 15.00
-136, 1460, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 51.00
-136, 1460, Utrecht, POP_CHANGE, Pop: 6, First: Protestantism(6), Nonreligious: 0
-136, 1460, Kyzyl, POP_CHANGE, Pop: 14, Second: Tengriism(1), Nonreligious: 13
-136, 1460, Prague, ADJACENT_PRESSURE, Pop: 13, Second: Buddhism(2), Nonreligious: 11
-137, 1470, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 144.00
-137, 1470, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 90.00
-137, 1470, Polynesia, Favorite Foreign Religion is, Catholicism
-137, 1470, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 90.00
-137, 1470, Nimrud, MISSIONARY, Pop: 8, Second: Catholicism(7), Nonreligious: 0
-137, 1470, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 77.00
-137, 1470, Assyria, FAITH BUILDING PURCHASE, Monastery, Nimrud, Faith Cost: 100, Faith Left: 85.00
-137, 1470, Assyria, Bought a Faith Building, Faith: 85.00
-137, 1470, Vancouver, POP_CHANGE, Pop: 8, Second: Catholicism(1), Nonreligious: 7
-137, 1470, Nuku Hiva, ADJACENT_PRESSURE, Pop: 6, First: Catholicism(6), Nonreligious: 0
-137, 1470, Tyre, ADJACENT_PRESSURE, Pop: 12, Second: Buddhism(2), Nonreligious: 10
-138, 1480, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 159.00
-138, 1480, Tabriz, MISSIONARY, Pop: 3, Second: Islam(0), Nonreligious: 1
-138, 1480, Kyiv, MISSIONARY, Pop: 11, Second: Tengriism(5), Nonreligious: 6
-138, 1480, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 98.00
-138, 1480, Polynesia, Favorite Foreign Religion is, Catholicism
-138, 1480, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 97.00
-138, 1480, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 53.00
-138, 1480, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 102.00
-138, 1480, Madrid, POP_CHANGE, Pop: 11, First: Buddhism(10), Second: Tengriism(1), Nonreligious: 0
-138, 1480, Nuku Hiva, ADJACENT_PRESSURE, Pop: 6, First: Catholicism(5), Nonreligious: 1
-138, 1480, Nuku Hiva, ADJACENT_PRESSURE, Pop: 6, First: Catholicism(6), Nonreligious: 0
-138, 1480, Nuku Hiva, ADJACENT_PRESSURE, Pop: 6, First: Catholicism(5), Nonreligious: 1
-138, 1480, Cusco, ADJACENT_PRESSURE, Pop: 10, First: Buddhism(8), Second: Pantheon(0), Nonreligious: 2
-139, 1490, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 174.00
-139, 1490, Kyiv, MISSIONARY, Pop: 12, Second: Tengriism(8), Nonreligious: 4
-139, 1490, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 106.00
-139, 1490, Polynesia, Favorite Foreign Religion is, Catholicism
-139, 1490, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 104.00
-139, 1490, Tiwanaku, POP_CHANGE, Pop: 7, First: Buddhism(5), Nonreligious: 1
-139, 1490, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 72.00
-139, 1490, Kar-Tukulti-Ninurta, MISSIONARY, Pop: 4, Nonreligious: 0
-139, 1490, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 128.00
-139, 1490, Barcelona, POP_CHANGE, Pop: 15, First: Buddhism(13), Nonreligious: 2
-139, 1490, Tyre, POP_CHANGE, Pop: 13, Second: Buddhism(2), Nonreligious: 11
-139, 1490, Nineveh, ADJACENT_PRESSURE, Pop: 9, First: Buddhism(5), Second: Pantheon(3), Nonreligious: 1
-139, 1490, Nineveh, ADJACENT_PRESSURE, Pop: 9, First: Buddhism(4), Second: Pantheon(3), Nonreligious: 1
-139, 1490, Belgrade, ADJACENT_PRESSURE, Pop: 14, Second: Tengriism(2), Nonreligious: 10
-140, 1500, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 189.00
-140, 1500, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 114.00
-140, 1500, Polynesia, Favorite Foreign Religion is, Catholicism
-140, 1500, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 111.00
-140, 1500, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 91.00
-140, 1500, Assur, MISSIONARY, Pop: 9, First: Pantheon(1), Nonreligious: 2
-140, 1500, Spain, FAITH UNIT PURCHASE, Missionary, Madrid, Faith Cost: 130, Faith Left: 25.00
-140, 1500, Spain, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 25.00
-140, 1500, Samoa, POP_CHANGE, Pop: 1, No religion in city
-140, 1500, Samoa, CONQUEST, Pop: 2, First: Tengriism(1), Nonreligious: 1
-140, 1500, Groningen, POP_CHANGE, Pop: 6, First: Protestantism(5), Nonreligious: 1
-140, 1500, Assyria, FAITH BUILDING PURCHASE, Monastery, Assur, Faith Cost: 100, Faith Left: 0.00
-140, 1500, Assyria, Bought a Faith Building, Faith: 0.00
-140, 1500, Nineveh, ADJACENT_PRESSURE, Pop: 9, First: Buddhism(5), Second: Pantheon(3), Nonreligious: 1
-140, 1500, Nineveh, ADJACENT_PRESSURE, Pop: 9, First: Buddhism(4), Second: Pantheon(3), Nonreligious: 1
-140, 1500, Nineveh, ADJACENT_PRESSURE, Pop: 9, First: Buddhism(5), Second: Pantheon(2), Nonreligious: 1
-140, 1500, Zanzibar, ADJACENT_PRESSURE, Pop: 12, Second: Protestantism(3), Nonreligious: 9
-140, 1500, Sofia, ADJACENT_PRESSURE, Pop: 14, Second: Protestantism(3), Nonreligious: 10
-141, 1510, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 204.00
-141, 1510, Karakorum, POP_CHANGE, Pop: 15, First: Tengriism(14), Second: Buddhism(1), Nonreligious: 0
-141, 1510, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 122.00
-141, 1510, Polynesia, Favorite Foreign Religion is, Catholicism
-141, 1510, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 118.00
-141, 1510, Ollantaytambo, POP_CHANGE, Pop: 12, First: Buddhism(8), Second: Protestantism(3), Nonreligious: 1
-141, 1510, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 110.00
-141, 1510, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 53.00
-141, 1510, The Netherlands, FAITH BUILDING PURCHASE, Mosque, Utrecht, Faith Cost: 130, Faith Left: 9.00
-141, 1510, The Netherlands, Bought a Faith Building, Faith: 9.00
-141, 1510, Utrecht, POP_CHANGE, Pop: 7, First: Protestantism(7), Second: Buddhism(0), Nonreligious: 0
-141, 1510, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 7.00
-141, 1510, Belgrade, POP_CHANGE, Pop: 15, Second: Tengriism(2), Nonreligious: 11
-141, 1510, Utrecht, ADJACENT_PRESSURE, Pop: 7, First: Protestantism(6), Second: Buddhism(1), Nonreligious: 0
-141, 1510, M'banza-Kongo, ADJACENT_PRESSURE, Pop: 7, Second: Catholicism(2), Nonreligious: 5
-141, 1510, Vancouver, ADJACENT_PRESSURE, Pop: 8, Second: Catholicism(2), Nonreligious: 6
-142, 1520, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 219.00
-142, 1520, Hsia, POP_CHANGE, Pop: 10, First: Tengriism(7), Nonreligious: 3
-142, 1520, Carthage, FAITH UNIT PURCHASE, Missionary, Carthage, Faith Cost: 130, Faith Left: 0.00
-142, 1520, Carthage, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 0.00
-142, 1520, Polynesia, Favorite Foreign Religion is, Catholicism
-142, 1520, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 125.00
-142, 1520, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 129.00
-142, 1520, Salzburg, POP_CHANGE, Pop: 14, First: Catholicism(13), Nonreligious: 1
-142, 1520, Spain, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 83.00
-142, 1520, Samoa, MISSIONARY, Pop: 2, First: Tengriism(1), Second: Buddhism(1), Nonreligious: 0
-142, 1520, Rotterdam, POP_CHANGE, Pop: 7, First: Protestantism(7), Nonreligious: 0
-142, 1520, Breda, POP_CHANGE, Pop: 7, First: Protestantism(6), Nonreligious: 1
-142, 1520, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 14.00
-143, 1530, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 234.00
-143, 1530, Old Sarai, POP_CHANGE, Pop: 6, First: Tengriism(5), Nonreligious: 1
-143, 1530, Mongolia, PROPHET SPAWNED, Karakorum, Faith: 0
-143, 1530, Mongolia, Belief, Cathedrals, 659
-143, 1530, Mongolia, Belief, Feed the World, 427
-143, 1530, Mongolia, Belief, Choral Music, 391
-143, 1530, Mongolia, Belief, Asceticism, 373
-143, 1530, Mongolia, Belief, Swords into Plowshares, 355
-143, 1530, Mongolia, Belief, Divine Inspiration, 313
-143, 1530, Mongolia, Belief, Holy Warriors, 272
-143, 1530, Mongolia, Belief, Liturgical Drama, 243
-143, 1530, Mongolia, CHOSEN, Cathedrals
-143, 1530, Mongolia, Belief, Reliquary, 135
-143, 1530, Mongolia, Belief, Messiah, 103
-143, 1530, Mongolia, Belief, Holy Order, 69
-143, 1530, Mongolia, Belief, Missionary Zeal, 66
-143, 1530, Mongolia, Belief, Itinerant Preachers, 39
-143, 1530, Mongolia, Belief, Religious Texts, 36
-143, 1530, Mongolia, CHOSEN, Reliquary
-143, 1530, Mongolia, RELIGION ENHANCED
-143, 1530, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 8.00
-143, 1530, Polynesia, Favorite Foreign Religion is, Catholicism
-143, 1530, Polynesia, FAITH UNIT PURCHASE, Missionary, Honolulu, Faith Cost: 130, Faith Left: 2.00
-143, 1530, Polynesia, Bought a Missionary/Inquisitor, Need to Convert our Cities, Faith: 2.00
-143, 1530, Austria, FAITH UNIT PURCHASE, Missionary, Vienna, Faith Cost: 130, Faith Left: 18.00
-143, 1530, Austria, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 18.00
-143, 1530, Vienna, POP_CHANGE, Pop: 9, First: Catholicism(9), Nonreligious: 0
-143, 1530, Graz, POP_CHANGE, Pop: 8, First: Catholicism(7), Nonreligious: 1
-143, 1530, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 111.00
-143, 1530, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 21.00
-143, 1530, Singapore, POP_CHANGE, Pop: 15, Second: Tengriism(1), Nonreligious: 14
-143, 1530, Tonga, ADJACENT_PRESSURE, Pop: 7, First: Pantheon(4), Nonreligious: 2
-143, 1530, Ollantaytambo, ADJACENT_PRESSURE, Pop: 12, First: Buddhism(7), Second: Protestantism(4), Nonreligious: 1
-143, 1530, Antananarivo, ADJACENT_PRESSURE, Pop: 14, Second: Catholicism(3), Nonreligious: 11
-144, 1540, Mongolia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 50.00
-144, 1540, Carthage, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 16.00
-144, 1540, Carthage, POP_CHANGE, Pop: 14, First: Islam(13), Nonreligious: 1
-144, 1540, Polynesia, Favorite Foreign Religion is, Catholicism
-144, 1540, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 37.00
-144, 1540, Spain, FAITH UNIT PURCHASE, Missionary, Madrid, Faith Cost: 130, Faith Left: 12.00
-144, 1540, Spain, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 12.00
-144, 1540, Samoa, POP_CHANGE, Pop: 3, First: Buddhism(2), Second: Tengriism(1), Nonreligious: 0
-144, 1540, Amsterdam, POP_CHANGE, Pop: 10, First: Protestantism(9), Second: Buddhism(1), Nonreligious: 0
-144, 1540, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 28.00
-144, 1540, Kyzyl, POP_CHANGE, Pop: 15, Second: Tengriism(1), Nonreligious: 14
-144, 1540, Kabul, POP_CHANGE, Pop: 12, Second: Catholicism(1), Nonreligious: 10
-144, 1540, Tyre, ADJACENT_PRESSURE, Pop: 13, Second: Buddhism(2), Nonreligious: 10
-144, 1540, Kyzyl, ADJACENT_PRESSURE, Pop: 15, Second: Tengriism(1), Nonreligious: 13
-145, 1550, Mongolia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 115.00
-145, 1550, Tabriz, POP_CHANGE, Pop: 4, First: Tengriism(3), Nonreligious: 1
-145, 1550, Singapore, MISSIONARY, Pop: 15, Second: Tengriism(6), Nonreligious: 9
-145, 1550, Carthage, Saving up for a Prophet for religion enhancement., Faith: 25.00
-145, 1550, Polynesia, Favorite Foreign Religion is, Catholicism
-145, 1550, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 56.00
-145, 1550, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
-145, 1550, Buenos Aires, POP_CHANGE, Pop: 15, Second: Protestantism(2), Nonreligious: 13
-145, 1550, Kuala Lumpur, POP_CHANGE, Pop: 12, Second: Buddhism(2), Nonreligious: 8
-145, 1550, Nineveh, ADJACENT_PRESSURE, Pop: 9, First: Buddhism(6), Second: Pantheon(1), Nonreligious: 1
-145, 1550, Zurich, ADJACENT_PRESSURE, Pop: 11, Second: Islam(2), Nonreligious: 8
-146, 1560, Mongolia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 130.00
-146, 1560, Carthage, Saving up for a Prophet for religion enhancement., Faith: 34.00
-146, 1560, Zurich, MISSIONARY, Pop: 11, Second: Islam(6), Nonreligious: 5
-146, 1560, Polynesia, Favorite Foreign Religion is, Catholicism
-146, 1560, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 75.00
-146, 1560, Barcelona, POP_CHANGE, Pop: 16, First: Buddhism(14), Nonreligious: 2
-146, 1560, Prague, MISSIONARY, Pop: 13, Second: Buddhism(6), Nonreligious: 7
-146, 1560, Tyre, MISSIONARY, Pop: 13, Second: Buddhism(6), Nonreligious: 6
-146, 1560, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 42.00
-146, 1560, Zanzibar, POP_CHANGE, Pop: 13, Second: Protestantism(3), Nonreligious: 10
-146, 1560, Antananarivo, POP_CHANGE, Pop: 15, Second: Catholicism(3), Nonreligious: 12
-146, 1560, Tahiti, ADJACENT_PRESSURE, Pop: 2, First: Pantheon(1), Second: Tengriism(1), Nonreligious: 0
-146, 1560, Buenos Aires, ADJACENT_PRESSURE, Pop: 15, Second: Protestantism(2), Nonreligious: 12
-146, 1560, Prague, ADJACENT_PRESSURE, Pop: 13, Second: Buddhism(7), Nonreligious: 6
-147, 1570, Mongolia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 147.00
-147, 1570, Hsia, POP_CHANGE, Pop: 11, First: Tengriism(8), Nonreligious: 3
-147, 1570, Carthage, Saving up for a Prophet for religion enhancement., Faith: 43.00
-147, 1570, Polynesia, Favorite Foreign Religion is, Catholicism
-147, 1570, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 94.00
-147, 1570, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 101.00
-147, 1570, Cordoba, POP_CHANGE, Pop: 6, First: Buddhism(5), Nonreligious: 1
-147, 1570, Samoa, POP_CHANGE, Pop: 4, First: Buddhism(3), Second: Tengriism(1), Nonreligious: 0
-147, 1570, Tyre, MISSIONARY, Pop: 13, Second: Buddhism(8), Nonreligious: 5
-147, 1570, The Netherlands, FAITH BUILDING PURCHASE, Mosque, Groningen, Faith Cost: 130, Faith Left: 11.00
-147, 1570, The Netherlands, Bought a Faith Building, Faith: 11.00
-147, 1570, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 49.00
-147, 1570, Raiatea, ADJACENT_PRESSURE, Pop: 3, First: Islam(2), Second: Pantheon(0), Nonreligious: 1
-148, 1580, Mongolia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 164.00
-148, 1580, Karakorum, POP_CHANGE, Pop: 16, First: Tengriism(15), Second: Buddhism(1), Nonreligious: 0
-148, 1580, Carthage, Saving up for a Prophet for religion enhancement., Faith: 52.00
-148, 1580, Kyzyl, MISSIONARY, Pop: 15, Second: Tengriism(1), Nonreligious: 8
-148, 1580, Polynesia, Favorite Foreign Religion is, Catholicism
-148, 1580, Aotearoa, POP_CHANGE, Pop: 3, First: Pantheon(2), Second: Islam(1), Nonreligious: 0
-148, 1580, Austria, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 113.00
-148, 1580, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 133.00
-148, 1580, Utrecht, POP_CHANGE, Pop: 8, First: Protestantism(7), Second: Buddhism(1), Nonreligious: 0
-148, 1580, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 56.00
-148, 1580, Zurich, POP_CHANGE, Pop: 12, First: Islam(7), Nonreligious: 5
-148, 1580, Hsia, ADJACENT_PRESSURE, Pop: 11, First: Tengriism(7), Nonreligious: 3
-148, 1580, Kuala Lumpur, ADJACENT_PRESSURE, Pop: 12, Second: Buddhism(3), Nonreligious: 7
-149, 1590, Mongolia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 181.00
-149, 1590, New Sarai, POP_CHANGE, Pop: 6, First: Tengriism(5), Nonreligious: 1
-149, 1590, Carthage, Saving up for a Prophet for religion enhancement., Faith: 61.00
-149, 1590, Polynesia, Favorite Foreign Religion is, Catholicism
-149, 1590, Austria, FAITH UNIT PURCHASE, Missionary, Vienna, Faith Cost: 130, Faith Left: 2.00
-149, 1590, Austria, Focusing on Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 2.00
-149, 1590, Tonga, MISSIONARY, Pop: 7, Nonreligious: 1
-149, 1590, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 165.00
-149, 1590, Groningen, POP_CHANGE, Pop: 7, First: Protestantism(6), Nonreligious: 1
-149, 1590, Assyria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 63.00
-149, 1590, Nimrud, ADJACENT_PRESSURE, Pop: 8, First: Catholicism(6), Second: Buddhism(1), Nonreligious: 1
-149, 1590, Kabul, ADJACENT_PRESSURE, Pop: 12, Second: Catholicism(2), Nonreligious: 9
-150, 1600, Mongolia, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 198.00
-150, 1600, Old Sarai, POP_CHANGE, Pop: 7, First: Tengriism(6), Nonreligious: 1
-150, 1600, Carthage, Saving up for a Prophet for religion enhancement., Faith: 70.00
-150, 1600, Polynesia, Favorite Foreign Religion is, Catholicism
-150, 1600, Ollantaytambo, POP_CHANGE, Pop: 13, First: Buddhism(8), Second: Protestantism(4), Nonreligious: 0
-150, 1600, Graz, POP_CHANGE, Pop: 9, First: Catholicism(8), Nonreligious: 1
-150, 1600, Spain, Saving up for Missionaries, Need to Convert Cities of Non-Religion Starters, Faith: 195.00
+095, 650, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 48.00
+095, 650, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 20.00
+095, 650, The Netherlands, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 79.00
+095, 650, Groningen, MISSIONARY, Pop: 3, Second: Protestantism(2), Nonreligious: 1
+095, 650, Tyre, POP_CHANGE, Pop: 9, No religion in city
+095, 650, Sofia, POP_CHANGE, Pop: 10, Second: Protestantism(1), Nonreligious: 9
+095, 650, Singapore, POP_CHANGE, Pop: 11, No religion in city
+096, 680, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 78.00
+096, 680, Turfan, POP_CHANGE, Pop: 3, First: Tengriism(3), Nonreligious: 0
+096, 680, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 78.00
+096, 680, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 53.00
+096, 680, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 25.00
+096, 680, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 91.00
+096, 680, Breda, POP_CHANGE, Pop: 3, First: Protestantism(3), Nonreligious: 0
+097, 710, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 88.00
+097, 710, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 86.00
+097, 710, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 58.00
+097, 710, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 30.00
+097, 710, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 104.00
+097, 710, Nineveh, POP_CHANGE, Pop: 9, First: Pantheon(8), Nonreligious: 1
+097, 710, Prague, POP_CHANGE, Pop: 11, No religion in city
+098, 740, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 98.00
+098, 740, Hsia, POP_CHANGE, Pop: 7, First: Tengriism(5), Nonreligious: 2
+098, 740, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 94.00
+098, 740, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 63.00
+098, 740, Raiatea, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+098, 740, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 35.00
+098, 740, Graz, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+098, 740, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 117.00
+098, 740, Utrecht, POP_CHANGE, Pop: 6, First: Protestantism(6), Nonreligious: 0
+098, 740, Assur, POP_CHANGE, Pop: 9, First: Pantheon(7), Nonreligious: 2
+098, 740, Nimrud, POP_CHANGE, Pop: 6, First: Pantheon(5), Nonreligious: 1
+098, 740, Vancouver, POP_CHANGE, Pop: 7, Second: Confucianism(0), Nonreligious: 7
+098, 740, Kuala Lumpur, POP_CHANGE, Pop: 10, No religion in city
+099, 770, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 108.00
+099, 770, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 102.00
+099, 770, Carthage, POP_CHANGE, Pop: 10, First: Islam(9), Nonreligious: 1
+099, 770, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 68.00
+099, 770, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 40.00
+099, 770, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 130.00
+099, 770, M'banza-Kongo, POP_CHANGE, Pop: 7, Second: Catholicism(0), Nonreligious: 7
+099, 770, Zurich, POP_CHANGE, Pop: 11, Second: Islam(0), Nonreligious: 11
+099, 770, Utique, ADJACENT_PRESSURE, Pop: 4, First: Pantheon(2), Nonreligious: 1
+100, 800, Mongolia, Saving up for a Prophet for religion enhancement., Faith: 118.00
+100, 800, Karakorum, POP_CHANGE, Pop: 7, First: Tengriism(7), Nonreligious: 0
+100, 800, Carthage, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 111.00
+100, 800, Utique, POP_CHANGE, Pop: 5, First: Pantheon(3), Second: Islam(1), Nonreligious: 1
+100, 800, Hippo Regius, POP_CHANGE, Pop: 4, First: Pantheon(3), Nonreligious: 1
+100, 800, Polynesia, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 73.00
+100, 800, Austria, Saving up for a Missionary/Inquisitor, need to convert our Cities., Faith: 45.00
+100, 800, The Netherlands, Saving up for a Prophet for religion enhancement., Faith: 143.00

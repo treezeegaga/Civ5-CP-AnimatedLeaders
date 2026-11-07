@@ -35,12 +35,12 @@
 021, Greece, CHOSEN, Citizenship
 022, Egypt, Oligarchy, 281
 022, Egypt, CHOSEN, Oligarchy
+024, Indonesia, Citizenship, 496
+024, Indonesia, Republic, 370
+024, Indonesia, CHOSEN, Citizenship
 025, England, Citizenship, 291
 025, England, Republic, 273
 025, England, CHOSEN, Citizenship
-025, Indonesia, Citizenship, 427
-025, Indonesia, Republic, 351
-025, Indonesia, CHOSEN, Citizenship
 030, Assyria, Legalism, 442
 030, Assyria, CHOSEN, Legalism
 031, Greece, CHOSEN, Meritocracy
@@ -52,174 +52,105 @@
 033, Germany, CHOSEN, Legalism
 034, Egypt, Legalism, 502
 034, Egypt, CHOSEN, Legalism
+035, Indonesia, Meritocracy, 6183
+035, Indonesia, Representation, 573
+035, Indonesia, Republic, 371
+035, Indonesia, CHOSEN, Meritocracy
 039, England, Meritocracy, 2615
 039, England, Republic, 285
 039, England, Representation, 250
 039, England, CHOSEN, Meritocracy
-043, Indonesia, Meritocracy, 6183
-043, Indonesia, Representation, 573
-043, Indonesia, Republic, 371
-043, Indonesia, CHOSEN, Meritocracy
 044, Assyria, Landed Elite, 1125
 044, Assyria, Monarchy, 1017
 044, Assyria, CHOSEN, Landed Elite
 045, Greece, CHOSEN, Republic
-046, Byzantium, Landed Elite, 1125
-046, Byzantium, Monarchy, 1062
-046, Byzantium, CHOSEN, Monarchy
-049, Russia, Monarchy, 669
-049, Russia, Landed Elite, 573
-049, Russia, CHOSEN, Monarchy
+046, Byzantium, Monarchy, 912
+046, Byzantium, Landed Elite, 825
+046, Byzantium, CHOSEN, Landed Elite
+046, Indonesia, Representation, 1146
+046, Indonesia, Republic, 742
+046, Indonesia, CHOSEN, Representation
+047, England, Republic, 596
+047, England, Representation, 500
+047, England, CHOSEN, Republic
+049, Russia, Landed Elite, 873
+049, Russia, Monarchy, 819
+049, Russia, CHOSEN, Landed Elite
 050, Germany, Landed Elite, 1062
 050, Germany, Monarchy, 1050
 050, Germany, CHOSEN, Monarchy
-052, England, Republic, 596
-052, England, Representation, 500
-052, England, CHOSEN, Republic
 052, Egypt, Landed Elite, 1764
-052, Egypt, Monarchy, 456
+052, Egypt, Monarchy, 459
 052, Egypt, CHOSEN, Landed Elite
-055, Indonesia, Representation, 1156
-055, Indonesia, Republic, 760
-055, Indonesia, CHOSEN, Representation
-059, Greece, CHOSEN, Collective Rule
-061, Assyria, Monarchy, 1260
-061, Assyria, CHOSEN, Monarchy
-062, England, Collective Rule, 771
-062, England, Representation, 753
-062, England, CHOSEN, Collective Rule
-063, Byzantium, Landed Elite, 1190
-063, Byzantium, CHOSEN, Landed Elite
-065, Indonesia, Republic, 1161
-065, Indonesia, CHOSEN, Republic
-070, Germany, Landed Elite, 1136
-070, Germany, CHOSEN, Landed Elite
-071, Russia, Landed Elite, 894
-071, Russia, CHOSEN, Landed Elite
-073, Greece, CHOSEN, Representation
-076, Egypt, Monarchy, 746
-076, Egypt, CHOSEN, Monarchy
-076, Indonesia, Collective Rule, 1584
-076, Indonesia, CHOSEN, Collective Rule
-079, England, Representation, 1164
-079, England, CHOSEN, Representation
-084, Byzantium, Branch 5, 227
-084, Byzantium, Branch 4, 71
-084, Byzantium, Branch 2, 62
-084, Byzantium, Branch 3, 58
-084, Byzantium, Branch 1, 50
-084, Byzantium, CHOSEN, Branch 5
-088, Assyria, Branch 5, 225
-088, Assyria, Branch 2, 153
-088, Assyria, Branch 4, 79
-088, Assyria, Branch 1, 55
-088, Assyria, Branch 3, 51
-088, Assyria, CHOSEN, Branch 5
-090, Greece, CHOSEN, Branch 2
-093, England, Branch 7, 268
-093, England, Branch 6, 262
-093, England, Branch 2, 65
-093, England, Branch 5, 50
-093, England, Branch 4, 36
-093, England, Branch 0, 35
-093, England, Branch 3, 12
-093, England, CHOSEN, Branch 6
-093, Russia, Branch 6, 214
-093, Russia, Branch 7, 161
-093, Russia, Branch 5, 53
-093, Russia, Branch 2, 32
-093, Russia, Branch 4, 27
-093, Russia, Branch 3, 24
-093, Russia, Branch 1, 23
-093, Russia, CHOSEN, Branch 6
-093, Indonesia, Branch 5, 321
-093, Indonesia, Branch 0, 79
-093, Indonesia, Branch 4, 79
-093, Indonesia, Branch 2, 63
-093, Indonesia, Branch 3, 44
-093, Indonesia, CHOSEN, Branch 5
-096, Assyria, Fine Arts, 261
-096, Assyria, Cultural Centers, 189
-096, Assyria, CHOSEN, Fine Arts
-097, Germany, Branch 5, 245
-097, Germany, Branch 2, 152
-097, Germany, Branch 4, 147
-097, Germany, Branch 1, 50
-097, Germany, Branch 3, 46
-097, Germany, CHOSEN, Branch 5
-098, Egypt, Branch 5, 476
-098, Egypt, Branch 4, 170
-098, Egypt, Branch 1, 68
-098, Egypt, Branch 2, 62
-098, Egypt, Branch 3, 57
-098, Egypt, CHOSEN, Branch 5
-101, Byzantium, Fine Arts, 261
-101, Byzantium, Cultural Centers, 193
-101, Byzantium, CHOSEN, Fine Arts
-106, Russia, Mercenary Army, 350
-106, Russia, Wagon Trains, 24
-106, Russia, CHOSEN, Mercenary Army
-106, Indonesia, Fine Arts, 422
-106, Indonesia, Cultural Centers, 384
-106, Indonesia, CHOSEN, Cultural Centers
-107, Greece, CHOSEN, Warrior Code
-108, Assyria, Artistic Genius, 355
-108, Assyria, Cultural Centers, 203
-108, Assyria, CHOSEN, Artistic Genius
-110, England, Mercenary Army, 530
-110, England, Wagon Trains, 57
-110, England, CHOSEN, Mercenary Army
-111, Egypt, Fine Arts, 508
-111, Egypt, Cultural Centers, 283
-111, Egypt, CHOSEN, Fine Arts
-112, Byzantium, Artistic Genius, 305
-112, Byzantium, Cultural Centers, 193
-112, Byzantium, CHOSEN, Artistic Genius
-116, Indonesia, Fine Arts, 358
-116, Indonesia, CHOSEN, Fine Arts
-117, Germany, Fine Arts, 293
-117, Germany, Cultural Centers, 216
-117, Germany, CHOSEN, Fine Arts
-118, Egypt, Artistic Genius, 418
-118, Egypt, Cultural Centers, 283
-118, Egypt, CHOSEN, Artistic Genius
-120, England, Mercantilism, 270
-120, England, Wagon Trains, 57
-120, England, CHOSEN, Mercantilism
-123, Greece, CHOSEN, Military Tradition
-125, Russia, Mercantilism, 221
-125, Russia, Wagon Trains, 24
-125, Russia, CHOSEN, Mercantilism
-126, Byzantium, Cultural Centers, 388
-126, Byzantium, CHOSEN, Cultural Centers
-126, Indonesia, Flourishing of the Arts, 1108
-126, Indonesia, Artistic Genius, 1000
-126, Indonesia, CHOSEN, Artistic Genius
-128, Assyria, Cultural Centers, 406
-128, Assyria, CHOSEN, Cultural Centers
-130, Egypt, Cultural Centers, 564
-130, Egypt, CHOSEN, Cultural Centers
-133, Germany, Artistic Genius, 326
-133, Germany, Cultural Centers, 216
-133, Germany, CHOSEN, Artistic Genius
-137, Byzantium, Flourishing of the Arts, 1389
-137, Byzantium, CHOSEN, Flourishing of the Arts
-138, England, Wagon Trains, 154
-138, England, CHOSEN, Wagon Trains
-138, Greece, CHOSEN, Discipline
-140, Indonesia, Flourishing of the Arts, 1560
-140, Indonesia, CHOSEN, Flourishing of the Arts
-141, Egypt, Flourishing of the Arts, 2514
-141, Egypt, CHOSEN, Flourishing of the Arts
-142, Assyria, Flourishing of the Arts, 1002
-142, Assyria, CHOSEN, Flourishing of the Arts
-143, Russia, Wagon Trains, 60
-143, Russia, CHOSEN, Wagon Trains
-146, Indonesia, Cultural Exchange, 1592
-146, Indonesia, CHOSEN, Cultural Exchange
-148, Egypt, Cultural Exchange, 4144
-148, Egypt, CHOSEN, Cultural Exchange
-149, Byzantium, Cultural Exchange, 1224
-149, Byzantium, CHOSEN, Cultural Exchange
-149, Germany, Cultural Centers, 460
-149, Germany, CHOSEN, Cultural Centers
+057, Greece, CHOSEN, Collective Rule
+058, England, Collective Rule, 765
+058, England, Representation, 750
+058, England, CHOSEN, Collective Rule
+058, Indonesia, Republic, 1140
+058, Indonesia, CHOSEN, Republic
+059, Assyria, Monarchy, 1256
+059, Assyria, CHOSEN, Monarchy
+065, Byzantium, Monarchy, 1310
+065, Byzantium, CHOSEN, Monarchy
+068, Greece, CHOSEN, Representation
+071, Germany, Landed Elite, 1136
+071, Germany, CHOSEN, Landed Elite
+072, Russia, Monarchy, 1022
+072, Russia, CHOSEN, Monarchy
+073, Egypt, Monarchy, 730
+073, Egypt, CHOSEN, Monarchy
+074, Assyria, Branch 5, 228
+074, Assyria, Branch 4, 160
+074, Assyria, Branch 2, 154
+074, Assyria, Branch 1, 63
+074, Assyria, Branch 3, 49
+074, Assyria, CHOSEN, Branch 5
+075, England, Representation, 1160
+075, England, CHOSEN, Representation
+077, Indonesia, Collective Rule, 1576
+077, Indonesia, CHOSEN, Collective Rule
+081, Greece, CHOSEN, Branch 2
+086, Byzantium, Branch 5, 235
+086, Byzantium, Branch 4, 146
+086, Byzantium, Branch 2, 63
+086, Byzantium, Branch 3, 61
+086, Byzantium, Branch 1, 55
+086, Byzantium, CHOSEN, Branch 5
+089, Assyria, Fine Arts, 261
+089, Assyria, Cultural Centers, 176
+089, Assyria, CHOSEN, Fine Arts
+091, England, Branch 7, 262
+091, England, Branch 6, 230
+091, England, Branch 2, 65
+091, England, Branch 5, 47
+091, England, Branch 0, 35
+091, England, Branch 4, 33
+091, England, Branch 3, 12
+091, England, CHOSEN, Branch 7
+091, Russia, Branch 6, 152
+091, Russia, Branch 7, 145
+091, Russia, Branch 5, 52
+091, Russia, Branch 2, 28
+091, Russia, Branch 4, 26
+091, Russia, Branch 1, 22
+091, Russia, Branch 3, 17
+091, Russia, CHOSEN, Branch 6
+093, Egypt, Branch 5, 408
+093, Egypt, Branch 4, 163
+093, Egypt, Branch 1, 61
+093, Egypt, Branch 2, 60
+093, Egypt, Branch 3, 53
+093, Egypt, CHOSEN, Branch 5
+097, Greece, CHOSEN, Warrior Code
+099, Germany, Branch 5, 249
+099, Germany, Branch 2, 154
+099, Germany, Branch 4, 147
+099, Germany, Branch 1, 55
+099, Germany, Branch 3, 49
+099, Germany, CHOSEN, Branch 5
+099, Indonesia, Branch 5, 280
+099, Indonesia, Branch 4, 144
+099, Indonesia, Branch 0, 82
+099, Indonesia, Branch 2, 62
+099, Indonesia, Branch 3, 48
+099, Indonesia, CHOSEN, Branch 5

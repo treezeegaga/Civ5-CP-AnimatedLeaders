@@ -1,53 +1,45 @@
 031, The Celts, Songhai, DISPUTE_LEVEL_WEAK, score 0
 032, The Celts, Songhai, DISPUTE_LEVEL_NONE, score 0
 034, Assyria, The Celts, DISPUTE_LEVEL_WEAK, score 2
-047, France, The Celts, DISPUTE_LEVEL_STRONG, score 0
-048, France, The Celts, DISPUTE_LEVEL_NONE, score 0
+043, Ethiopia, Arabia, DISPUTE_LEVEL_STRONG, score 6
+048, France, The Celts, DISPUTE_LEVEL_STRONG, score 0
+048, Ethiopia, Vancouver, DISPUTE_LEVEL_WEAK, score 1
+049, France, The Celts, DISPUTE_LEVEL_NONE, score 0
 050, France, Hanoi, DISPUTE_LEVEL_STRONG, score 0
 051, France, Hanoi, DISPUTE_LEVEL_NONE, score 0
-055, France, Assyria, DISPUTE_LEVEL_WEAK, score 2
-055, France, Hanoi, DISPUTE_LEVEL_FIERCE, score 8
-056, Arabia, Ethiopia, DISPUTE_LEVEL_WEAK, score 3
-056, Arabia, Vancouver, DISPUTE_LEVEL_WEAK, score 1
-057, France, The Iroquois, DISPUTE_LEVEL_STRONG, score 0
-058, France, The Iroquois, DISPUTE_LEVEL_NONE, score 0
+055, France, The Iroquois, DISPUTE_LEVEL_STRONG, score 0
+056, France, The Iroquois, DISPUTE_LEVEL_NONE, score 0
+059, France, Hanoi, DISPUTE_LEVEL_FIERCE, score 8
 061, France, The Iroquois, DISPUTE_LEVEL_STRONG, score 0
 062, France, The Iroquois, DISPUTE_LEVEL_NONE, score 0
-076, Assyria, The Celts, DISPUTE_LEVEL_STRONG, score 4
-077, The Iroquois, Lhasa, DISPUTE_LEVEL_STRONG, score 6
-078, Arabia, Ethiopia, DISPUTE_LEVEL_STRONG, score 4
-081, Ethiopia, Arabia, DISPUTE_LEVEL_WEAK, score 1
-087, Assyria, Antananarivo, DISPUTE_LEVEL_WEAK, score 2
-091, France, The Iroquois, DISPUTE_LEVEL_STRONG, score 0
-091, The Iroquois, Sydney, DISPUTE_LEVEL_WEAK, score 2
-092, France, The Iroquois, DISPUTE_LEVEL_NONE, score 0
-092, Arabia, Ethiopia, DISPUTE_LEVEL_FIERCE, score 9
-094, Songhai, The Celts, DISPUTE_LEVEL_WEAK, score 1
-095, The Iroquois, France, DISPUTE_LEVEL_WEAK, score 2
-095, Arabia, Vancouver, DISPUTE_LEVEL_STRONG, score 6
-095, Assyria, The Celts, DISPUTE_LEVEL_WEAK, score 3
-097, Assyria, Songhai, DISPUTE_LEVEL_WEAK, score 1
-102, Songhai, Kyzyl, DISPUTE_LEVEL_WEAK, score 3
-103, Assyria, The Celts, DISPUTE_LEVEL_STRONG, score 5
-104, Assyria, France, DISPUTE_LEVEL_WEAK, score 1
-107, Songhai, The Celts, DISPUTE_LEVEL_STRONG, score 7
-107, Arabia, Ethiopia, DISPUTE_LEVEL_STRONG, score 7
-109, The Iroquois, Sydney, DISPUTE_LEVEL_FIERCE, score 15
-109, The Iroquois, Panama City, DISPUTE_LEVEL_WEAK, score 1
-110, Songhai, Ethiopia, DISPUTE_LEVEL_WEAK, score 1
-111, Assyria, Antananarivo, DISPUTE_LEVEL_NONE, score 0
-115, The Celts, Ethiopia, DISPUTE_LEVEL_WEAK, score 1
-120, Songhai, The Celts, DISPUTE_LEVEL_FIERCE, score 9
-120, Songhai, Kyzyl, DISPUTE_LEVEL_STRONG, score 4
-123, Assyria, The Celts, DISPUTE_LEVEL_FIERCE, score 10
-126, Arabia, Singapore, DISPUTE_LEVEL_WEAK, score 1
-127, Songhai, Ethiopia, DISPUTE_LEVEL_STRONG, score 4
-133, Ethiopia, Malacca, DISPUTE_LEVEL_FIERCE, score 9
-138, Ethiopia, Songhai, DISPUTE_LEVEL_WEAK, score 1
-140, France, Assyria, DISPUTE_LEVEL_STRONG, score 5
-144, France, The Celts, DISPUTE_LEVEL_WEAK, score 1
-145, Songhai, Ethiopia, DISPUTE_LEVEL_FIERCE, score 8
-145, Ethiopia, Songhai, DISPUTE_LEVEL_STRONG, score 4
-146, The Celts, Assyria, DISPUTE_LEVEL_WEAK, score 2
-146, Assyria, The Celts, DISPUTE_LEVEL_WEAK, score 1
-147, Assyria, France, DISPUTE_LEVEL_STRONG, score 4
+062, France, Assyria, DISPUTE_LEVEL_WEAK, score 2
+071, France, The Iroquois, DISPUTE_LEVEL_STRONG, score 0
+071, The Iroquois, Sydney, DISPUTE_LEVEL_WEAK, score 2
+072, France, The Iroquois, DISPUTE_LEVEL_NONE, score 0
+072, France, Lhasa, DISPUTE_LEVEL_STRONG, score 0
+072, Assyria, The Celts, DISPUTE_LEVEL_STRONG, score 4
+073, France, Lhasa, DISPUTE_LEVEL_NONE, score 0
+075, The Iroquois, France, DISPUTE_LEVEL_WEAK, score 2
+076, Ethiopia, Arabia, DISPUTE_LEVEL_FIERCE, score 9
+083, France, The Celts, DISPUTE_LEVEL_STRONG, score 0
+084, France, The Celts, DISPUTE_LEVEL_NONE, score 0
+084, France, Assyria, DISPUTE_LEVEL_STRONG, score 4
+086, Songhai, Kyzyl, DISPUTE_LEVEL_STRONG, score 4
+086, Assyria, France, DISPUTE_LEVEL_WEAK, score 2
+088, France, Lhasa, DISPUTE_LEVEL_STRONG, score 0
+089, France, Lhasa, DISPUTE_LEVEL_NONE, score 0
+090, France, The Celts, DISPUTE_LEVEL_STRONG, score 0
+091, France, The Celts, DISPUTE_LEVEL_NONE, score 0
+091, Songhai, The Celts, DISPUTE_LEVEL_STRONG, score 4
+093, The Iroquois, Sydney, DISPUTE_LEVEL_STRONG, score 4
+094, France, Lhasa, DISPUTE_LEVEL_STRONG, score 0
+095, France, Lhasa, DISPUTE_LEVEL_NONE, score 0
+096, France, The Celts, DISPUTE_LEVEL_STRONG, score 0
+097, France, The Celts, DISPUTE_LEVEL_NONE, score 0
+097, France, Assyria, DISPUTE_LEVEL_WEAK, score 3
+098, The Iroquois, The Celts, DISPUTE_LEVEL_WEAK, score 2
+099, The Iroquois, Sydney, DISPUTE_LEVEL_WEAK, score 3
+101, Persia, Monaco, DISPUTE_LEVEL_STRONG, score 0
+102, France, Lhasa, DISPUTE_LEVEL_STRONG, score 0
+102, Ethiopia, Arabia, DISPUTE_LEVEL_STRONG, score 7
+102, Persia, Monaco, DISPUTE_LEVEL_NONE, score 0

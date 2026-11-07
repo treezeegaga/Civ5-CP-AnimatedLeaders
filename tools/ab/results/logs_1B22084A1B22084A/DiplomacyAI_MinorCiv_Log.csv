@@ -1,8 +1,3 @@
-020, Antananarivo, Assyria, RECEIVED_UNIT_GIFT, Warrior
-020, Singapore, Ethiopia, RECEIVED_UNIT_GIFT, Warrior
-021, Malacca, Arabia, RECEIVED_UNIT_GIFT, Warrior
-022, Belgrade, Songhai, RECEIVED_UNIT_GIFT, Warrior
-023, Sydney, The Iroquois, RECEIVED_UNIT_GIFT, Warrior
 025, The Iroquois, Singapore, SENT OUT QUEST, Type, 2
 025, The Iroquois, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
 025, Arabia, Malacca, SENT OUT QUEST, Type, 1
@@ -43,8 +38,8 @@
 027, Arabia, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
 028, Ethiopia, Malacca, SENT OUT QUEST, Type, 1
 028, Ethiopia, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
-028, The Iroquois, Sydney, SENT OUT QUEST, Type, 3
-028, The Iroquois, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+028, The Iroquois, Sydney, SENT OUT QUEST, Type, 2
+028, The Iroquois, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
 028, France, Belgrade, SENT OUT QUEST, Type, 7
 028, France, Belgrade, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
 028, Assyria, Antananarivo, SENT OUT QUEST, Type, 2
@@ -84,7 +79,6 @@
 031, Persia, Monaco, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MONACO
 031, France, Belgrade, gained friend
 031, France, Belgrade, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BELGRADE
-031, Malacca, Arabia, RECEIVED_UNIT_GIFT, Warrior
 031, Assyria, Hanoi, SENT OUT QUEST, Type, 3
 031, Assyria, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
 032, France, Panama City, SENT OUT QUEST, Type, 2
@@ -105,18 +99,25 @@
 034, Ethiopia, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
 034, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
 034, Songhai, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
+034, The Celts, Kyzyl, SENT OUT QUEST, Type, 1
+034, The Celts, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
 034, Ethiopia, Vancouver, SENT OUT QUEST, Type, 6
 034, Ethiopia, Vancouver, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
 035, Arabia, Malacca, gained friend
 035, Arabia, Malacca, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MALACCA
 035, Ethiopia, Vancouver, gained friend
 035, Ethiopia, Vancouver, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_VANCOUVER
-036, Assyria, Belgrade, SENT OUT QUEST, Type, 3
-036, Assyria, Belgrade, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+036, Arabia, Singapore, SENT OUT QUEST, Type, 10
+036, Arabia, Singapore, SENT OUT QUEST, Type, 2
+036, Arabia, Malacca, SENT OUT QUEST, Type, 1
+036, Arabia, Vancouver, SENT OUT QUEST, Type, 10
+036, Arabia, Vancouver, SENT OUT QUEST, Type, 2
+036, Assyria, Belgrade, SENT OUT QUEST, Type, 7
+036, Assyria, Belgrade, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_BELGRADE
 036, Persia, Belgrade, SENT OUT QUEST, Type, 17
 036, Persia, Belgrade, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-036, Songhai, Antananarivo, SENT OUT QUEST, Type, 1
-036, Songhai, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+036, The Iroquois, Singapore, gained friend
+036, The Iroquois, Singapore, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
 036, France, Hanoi, SENT OUT QUEST, Type, 2
 036, France, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
 036, Arabia, Hanoi, SENT OUT QUEST, Type, 1
@@ -127,6 +128,8 @@
 036, The Iroquois, Lhasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LHASA
 036, The Iroquois, Lhasa, SENT OUT QUEST, Type, 3
 036, The Iroquois, Lhasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
+037, Songhai, Antananarivo, SENT OUT QUEST, Type, 1
+037, Songhai, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
 037, Songhai, Monaco, SENT OUT QUEST, Type, 12
 037, Songhai, Monaco, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MONACO
 037, Assyria, Monaco, SENT OUT QUEST, Type, 12
@@ -151,29 +154,7 @@
 038, The Celts, Lhasa, era change yield update
 038, The Celts, Panama City, era change yield update
 038, The Celts, Vancouver, era change yield update
-038, Ethiopia, Sydney, era change yield update
-038, Ethiopia, Monaco, era change yield update
-038, Ethiopia, Belgrade, era change yield update
-038, Ethiopia, Antananarivo, era change yield update
-038, Ethiopia, Singapore, era change yield update
-038, Ethiopia, Ur, era change yield update
-038, Ethiopia, Kyzyl, era change yield update
-038, Ethiopia, Malacca, era change yield update
-038, Ethiopia, Cape Town, era change yield update
-038, Ethiopia, Melbourne, era change yield update
-038, Ethiopia, Hong Kong, era change yield update
-038, Ethiopia, Yerevan, era change yield update
-038, Ethiopia, Hanoi, era change yield update
-038, Ethiopia, Lhasa, era change yield update
-038, Ethiopia, Panama City, era change yield update
-038, Ethiopia, Vancouver, era change yield update
-038, Ethiopia, Singapore, SENT OUT QUEST, Type, 2
-038, Ethiopia, Singapore, SENT OUT QUEST, Type, 10
-038, Ethiopia, Ur, SENT OUT QUEST, Type, 1
-038, Ethiopia, Malacca, SENT OUT QUEST, Type, 1
-038, Ethiopia, Panama City, SENT OUT QUEST, Type, 12
-038, Ethiopia, Panama City, SENT OUT QUEST, Type, 2
-038, Ethiopia, Vancouver, SENT OUT QUEST, Type, 10
+038, The Celts, Kyzyl, SENT OUT QUEST, Type, 1
 038, France, Belgrade, lost friend
 039, France, Sydney, era change yield update
 039, France, Monaco, era change yield update
@@ -245,11 +226,34 @@
 039, Assyria, Monaco, SENT OUT QUEST, Type, 2
 039, Assyria, Monaco, SENT OUT QUEST, Type, 12
 039, Assyria, Belgrade, SENT OUT QUEST, Type, 13
-039, Assyria, Belgrade, SENT OUT QUEST, Type, 3
+039, Assyria, Belgrade, SENT OUT QUEST, Type, 7
 039, Assyria, Antananarivo, SENT OUT QUEST, Type, 2
 039, Assyria, Antananarivo, SENT OUT QUEST, Type, 1
 039, Assyria, Hanoi, SENT OUT QUEST, Type, 1
 039, Assyria, Hanoi, SENT OUT QUEST, Type, 3
+039, Ethiopia, Sydney, era change yield update
+039, Ethiopia, Monaco, era change yield update
+039, Ethiopia, Belgrade, era change yield update
+039, Ethiopia, Antananarivo, era change yield update
+039, Ethiopia, Singapore, era change yield update
+039, Ethiopia, Ur, era change yield update
+039, Ethiopia, Kyzyl, era change yield update
+039, Ethiopia, Malacca, era change yield update
+039, Ethiopia, Cape Town, era change yield update
+039, Ethiopia, Melbourne, era change yield update
+039, Ethiopia, Hong Kong, era change yield update
+039, Ethiopia, Yerevan, era change yield update
+039, Ethiopia, Hanoi, era change yield update
+039, Ethiopia, Lhasa, era change yield update
+039, Ethiopia, Panama City, era change yield update
+039, Ethiopia, Vancouver, era change yield update
+039, Ethiopia, Singapore, SENT OUT QUEST, Type, 2
+039, Ethiopia, Singapore, SENT OUT QUEST, Type, 10
+039, Ethiopia, Ur, SENT OUT QUEST, Type, 1
+039, Ethiopia, Malacca, SENT OUT QUEST, Type, 1
+039, Ethiopia, Panama City, SENT OUT QUEST, Type, 12
+039, Ethiopia, Panama City, SENT OUT QUEST, Type, 2
+039, Ethiopia, Vancouver, SENT OUT QUEST, Type, 10
 039, Ethiopia, Vancouver, lost friend
 039, The Iroquois, Vancouver, SENT OUT QUEST, Type, 2
 039, The Iroquois, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
@@ -278,259 +282,260 @@
 040, Arabia, Panama City, SENT OUT QUEST, Type, 12
 040, Arabia, Vancouver, SENT OUT QUEST, Type, 10
 040, Arabia, Vancouver, SENT OUT QUEST, Type, 2
-040, Assyria, Belgrade, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_BELGRADE, (SAVING) 
-040, France, Malacca, SENT OUT QUEST, Type, 1
-040, France, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
 040, Songhai, Hanoi, SENT OUT QUEST, Type, 3
 040, Songhai, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+041, Arabia, Ur, SENT OUT QUEST, Type, 1
+041, Arabia, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+041, Assyria, Belgrade, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_BELGRADE, (SAVING) 
 041, France, Belgrade, SENT OUT QUEST, Type, 7
 041, France, Belgrade, RECEIVED QUEST, Find Natural Wonder, Friendship: 25 to 25, MINOR_CIV_BELGRADE
+041, The Iroquois, Singapore, lost friend
 042, The Iroquois, Ur, SENT OUT QUEST, Type, 1
 042, The Iroquois, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
-042, The Iroquois, Singapore, gained friend
-042, The Iroquois, Singapore, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+042, Arabia, Ur, SENT OUT QUEST, Type, 1
 042, Arabia, Malacca, lost friend
-042, Arabia, Panama City, SENT OUT QUEST, Type, 7
-042, Arabia, Panama City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-042, The Iroquois, Vancouver, gained friend
-042, The Iroquois, Vancouver, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
+042, France, Malacca, SENT OUT QUEST, Type, 1
+042, France, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
+042, Arabia, Panama City, SENT OUT QUEST, Type, 6
+042, Arabia, Panama City, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
 043, Songhai, Belgrade, SENT OUT QUEST, Type, 2
 043, Songhai, Belgrade, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+043, Arabia, Panama City, gained friend
+043, Arabia, Panama City, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_PANAMA_CITY
 044, Persia, Yerevan, SENT OUT QUEST, Type, 2
 044, Persia, Yerevan, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_YEREVAN
-045, The Iroquois, Sydney, era change yield update
-045, The Iroquois, Monaco, era change yield update
-045, The Iroquois, Belgrade, era change yield update
-045, The Iroquois, Antananarivo, era change yield update
-045, The Iroquois, Singapore, era change yield update
-045, The Iroquois, Ur, era change yield update
-045, The Iroquois, Kyzyl, era change yield update
-045, The Iroquois, Malacca, era change yield update
-045, The Iroquois, Cape Town, era change yield update
-045, The Iroquois, Melbourne, era change yield update
-045, The Iroquois, Hong Kong, era change yield update
-045, The Iroquois, Yerevan, era change yield update
-045, The Iroquois, Hanoi, era change yield update
-045, The Iroquois, Lhasa, era change yield update
-045, The Iroquois, Panama City, era change yield update
-045, The Iroquois, Vancouver, era change yield update
-045, The Iroquois, Sydney, SENT OUT QUEST, Type, 3
-045, The Iroquois, Sydney, SENT OUT QUEST, Type, 1
-045, The Iroquois, Singapore, SENT OUT QUEST, Type, 10
-045, The Iroquois, Ur, SENT OUT QUEST, Type, 1
-045, The Iroquois, Malacca, SENT OUT QUEST, Type, 1
-045, The Iroquois, Lhasa, SENT OUT QUEST, Type, 13
-045, The Iroquois, Lhasa, SENT OUT QUEST, Type, 3
-045, The Iroquois, Panama City, SENT OUT QUEST, Type, 12
-045, The Iroquois, Panama City, SENT OUT QUEST, Type, 2
-045, The Iroquois, Vancouver, SENT OUT QUEST, Type, 10
-045, France, Belgrade, SENT OUT QUEST, Type, 13
-045, France, Belgrade, SENT OUT QUEST, Type, 7
-045, Arabia, Sydney, SENT OUT QUEST, Type, 2
-045, Arabia, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-045, Songhai, Monaco, SENT OUT QUEST, Type, 7
-045, Songhai, Monaco, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+045, Arabia, Sydney, SENT OUT QUEST, Type, 4
+045, Arabia, Sydney, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+045, Songhai, Monaco, SENT OUT QUEST, Type, 3
+045, Songhai, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+045, Songhai, Belgrade, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
 045, Arabia, Singapore, SENT OUT QUEST, Type, 3
-045, Arabia, Singapore, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-045, Assyria, Hanoi, SENT OUT QUEST, Type, 2
-045, Assyria, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+045, Arabia, Singapore, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+045, The Celts, Kyzyl, SENT OUT QUEST, Type, 3
+045, The Celts, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+045, Assyria, Hanoi, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+045, Assyria, Hanoi, SENT OUT QUEST, Type, 3
+045, Assyria, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+045, Arabia, Panama City, gained ally
+045, Arabia, Panama City, FINISHED QUEST, Construct Wonder, Friendship: 30 to 70, MINOR_CIV_PANAMA_CITY
 045, The Iroquois, Panama City, SENT OUT QUEST, Type, 7
 045, The Iroquois, Panama City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-046, Assyria, Sydney, SENT OUT QUEST, Type, 1
-046, Assyria, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+046, The Iroquois, Sydney, era change yield update
+046, The Iroquois, Monaco, era change yield update
+046, The Iroquois, Belgrade, era change yield update
+046, The Iroquois, Antananarivo, era change yield update
+046, The Iroquois, Singapore, era change yield update
+046, The Iroquois, Ur, era change yield update
+046, The Iroquois, Kyzyl, era change yield update
+046, The Iroquois, Malacca, era change yield update
+046, The Iroquois, Cape Town, era change yield update
+046, The Iroquois, Melbourne, era change yield update
+046, The Iroquois, Hong Kong, era change yield update
+046, The Iroquois, Yerevan, era change yield update
+046, The Iroquois, Hanoi, era change yield update
+046, The Iroquois, Lhasa, era change yield update
+046, The Iroquois, Panama City, era change yield update
+046, The Iroquois, Vancouver, era change yield update
+046, The Iroquois, Sydney, SENT OUT QUEST, Type, 2
+046, The Iroquois, Sydney, SENT OUT QUEST, Type, 1
+046, The Iroquois, Singapore, SENT OUT QUEST, Type, 10
+046, The Iroquois, Ur, SENT OUT QUEST, Type, 1
+046, The Iroquois, Malacca, SENT OUT QUEST, Type, 1
+046, The Iroquois, Lhasa, SENT OUT QUEST, Type, 13
+046, The Iroquois, Lhasa, SENT OUT QUEST, Type, 3
+046, The Iroquois, Panama City, SENT OUT QUEST, Type, 12
+046, The Iroquois, Panama City, SENT OUT QUEST, Type, 2
+046, The Iroquois, Panama City, SENT OUT QUEST, Type, 7
+046, The Iroquois, Vancouver, SENT OUT QUEST, Type, 10
+046, The Iroquois, Vancouver, SENT OUT QUEST, Type, 2
+046, France, Belgrade, SENT OUT QUEST, Type, 13
+046, France, Belgrade, SENT OUT QUEST, Type, 7
+046, Arabia, Panama City, SENT OUT QUEST, Type, 12
 046, Ethiopia, Panama City, SENT OUT QUEST, Type, 7
 046, Ethiopia, Panama City, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-046, Ethiopia, Vancouver, gained friend
-046, Ethiopia, Vancouver, FINISHED QUEST, Contest Culture, Friendship: 18 to 58, MINOR_CIV_VANCOUVER
+046, Arabia, Vancouver, gained friend
+046, Arabia, Vancouver, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_VANCOUVER
 046, France, Vancouver, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-046, The Iroquois, Vancouver, cancelled, Contest Culture, Friendship: 34 to 34, MINOR_CIV_VANCOUVER
-046, Arabia, Vancouver, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+046, The Iroquois, Vancouver, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+046, Ethiopia, Vancouver, cancelled, Contest Culture, Friendship: 18 to 18, MINOR_CIV_VANCOUVER
 046, Arabia, Vancouver, SENT OUT QUEST, Type, 3
-046, Arabia, Vancouver, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+046, Arabia, Vancouver, RECEIVED QUEST, Construct Wonder, Friendship: 45 to 45, MINOR_CIV_VANCOUVER
 047, France, Belgrade, FINISHED QUEST, Invest, Friendship: 16 to 16, MINOR_CIV_BELGRADE
 047, Assyria, Belgrade, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BELGRADE
 047, Songhai, Belgrade, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BELGRADE
 047, Persia, Belgrade, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-047, The Iroquois, Singapore, lost friend
 047, The Iroquois, Malacca, SENT OUT QUEST, Type, 2
-047, The Iroquois, Malacca, RECEIVED QUEST, Connect Resource, Friendship: -4 to -4, MINOR_CIV_MALACCA
+047, The Iroquois, Malacca, RECEIVED QUEST, Connect Resource, Friendship: -3 to -3, MINOR_CIV_MALACCA
 047, France, Hanoi, gained friend
 047, France, Hanoi, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_HANOI
-047, France, Panama City, gained friend
-047, France, Panama City, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
+047, Arabia, Panama City, FINISHED QUEST, Contest Techs, Friendship: 66 to 106, MINOR_CIV_PANAMA_CITY
 047, The Iroquois, Panama City, gained friend
 047, The Iroquois, Panama City, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
+047, The Iroquois, Panama City, FINISHED QUEST, Find Natural Wonder, Friendship: 40 to 80, MINOR_CIV_PANAMA_CITY
+047, France, Panama City, gained friend
+047, France, Panama City, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
 047, Ethiopia, Panama City, gained friend
 047, Ethiopia, Panama City, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
-047, Arabia, Panama City, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
 047, France, Vancouver, SENT OUT QUEST, Type, 7
 047, France, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
 048, France, Belgrade, Gold Gift: 500, Friendship: 16 to 16, Culture, MINOR_CIV_BELGRADE, (SAVING) , Passing Assyria
-048, The Iroquois, Sydney, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-048, Assyria, Belgrade, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BELGRADE
 048, The Iroquois, Singapore, SENT OUT QUEST, Type, 2
-048, The Iroquois, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 26 to 26, MINOR_CIV_SINGAPORE
+048, The Iroquois, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 13 to 13, MINOR_CIV_SINGAPORE
 048, Ethiopia, Singapore, SENT OUT QUEST, Type, 16
 048, Ethiopia, Singapore, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+048, Songhai, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
 048, Songhai, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
 048, Arabia, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
 048, Assyria, Hanoi, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
-049, Arabia, Sydney, gained friend
-049, Arabia, Sydney, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+049, France, Ur, SENT OUT QUEST, Type, 1
+049, France, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+049, Assyria, Lhasa, SENT OUT QUEST, Type, 13
+049, Assyria, Lhasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LHASA
 049, Persia, Monaco, SENT OUT QUEST, Type, 17
 049, Persia, Monaco, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_MONACO
-049, Ethiopia, Singapore, gained friend
-049, Ethiopia, Singapore, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+049, Arabia, Singapore, gained friend
+049, Arabia, Singapore, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_SINGAPORE
 049, France, Singapore, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-049, The Iroquois, Singapore, cancelled, Contest Culture, Friendship: 24 to 24, MINOR_CIV_SINGAPORE
-049, Arabia, Singapore, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+049, The Iroquois, Singapore, cancelled, Contest Culture, Friendship: 11 to 11, MINOR_CIV_SINGAPORE
+049, Ethiopia, Singapore, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
 049, Arabia, Malacca, SENT OUT QUEST, Type, 2
 049, Arabia, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 19 to 19, MINOR_CIV_MALACCA
-049, Ethiopia, Malacca, SENT OUT QUEST, Type, 2
-049, Ethiopia, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MALACCA
-049, The Iroquois, Vancouver, lost friend
-050, France, Belgrade, gained friend
-050, France, Belgrade, FINISHED QUEST, Find Natural Wonder, Friendship: 11 to 51, MINOR_CIV_BELGRADE
-050, France, Vancouver, gained friend
-050, France, Vancouver, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
-051, France, Monaco, SENT OUT QUEST, Type, 12
-051, France, Monaco, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MONACO
-051, Songhai, Belgrade, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-051, Songhai, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
-051, Songhai, Hanoi, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
-051, Assyria, Hanoi, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
-051, Arabia, Panama City, gained friend
-051, Arabia, Panama City, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
+049, Ethiopia, Malacca, SENT OUT QUEST, Type, 7
+049, Ethiopia, Malacca, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MALACCA
 052, Arabia, Hanoi, SENT OUT QUEST, Type, 3
 052, Arabia, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: -3 to -3, MINOR_CIV_HANOI
 052, France, Panama City, lost friend
-052, The Iroquois, Panama City, lost friend
 052, Ethiopia, Panama City, lost friend
+053, France, Monaco, SENT OUT QUEST, Type, 12
+053, France, Monaco, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MONACO
+053, France, Cape Town, SENT OUT QUEST, Type, 1
+053, France, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
 053, France, Lhasa, SENT OUT QUEST, Type, 2
 053, France, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
-053, Ethiopia, Vancouver, SENT OUT QUEST, Type, 16
-053, Ethiopia, Vancouver, RECEIVED QUEST, Spread Religion, Friendship: 48 to 48, MINOR_CIV_VANCOUVER
-054, Arabia, Sydney, lost friend
+053, Ethiopia, Vancouver, SENT OUT QUEST, Type, 2
+053, Ethiopia, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 8 to 8, MINOR_CIV_VANCOUVER
 054, Assyria, Monaco, SENT OUT QUEST, Type, 3
 054, Assyria, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
-054, France, Belgrade, SENT OUT QUEST, Type, 7
-054, France, Belgrade, RECEIVED QUEST, Find Natural Wonder, Friendship: 45 to 45, MINOR_CIV_BELGRADE
-054, Ethiopia, Singapore, lost friend
+054, France, Belgrade, SENT OUT QUEST, Type, 17
+054, France, Belgrade, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_BELGRADE
 055, Persia, Belgrade, SENT OUT QUEST, Type, 7
 055, Persia, Belgrade, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
 055, Ethiopia, Ur, SENT OUT QUEST, Type, 2
 055, Ethiopia, Ur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_UR
-056, Arabia, Singapore, SENT OUT QUEST, Type, 2
-056, Arabia, Singapore, SENT OUT QUEST, Type, 3
-056, Arabia, Malacca, SENT OUT QUEST, Type, 1
-056, Arabia, Malacca, SENT OUT QUEST, Type, 2
-056, Arabia, Panama City, SENT OUT QUEST, Type, 7
-056, Arabia, Vancouver, SENT OUT QUEST, Type, 2
-056, Arabia, Vancouver, SENT OUT QUEST, Type, 3
+056, Arabia, Monaco, SENT OUT QUEST, Type, 12
+056, Arabia, Monaco, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MONACO
+056, Arabia, Singapore, lost friend
+056, Arabia, Ur, SENT OUT QUEST, Type, 17
+056, Arabia, Ur, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_UR
 056, France, Lhasa, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LHASA
 056, The Iroquois, Lhasa, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LHASA
-056, Arabia, Panama City, lost friend
-057, Songhai, Monaco, gained friend
-057, Songhai, Monaco, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_MONACO
+056, Assyria, Lhasa, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LHASA
 057, Assyria, Monaco, gained friend
 057, Assyria, Monaco, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_MONACO
 057, France, Monaco, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MONACO
+057, Songhai, Monaco, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MONACO
+057, Arabia, Monaco, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MONACO
 057, Persia, Monaco, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MONACO
 057, France, Singapore, SENT OUT QUEST, Type, 2
 057, France, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-057, Panama City, Arabia, RECEIVED_UNIT_GIFT, Warrior
-057, Arabia, Panama City, gained friend
-057, France, Vancouver, lost friend
-058, Arabia, Sydney, SENT OUT QUEST, Type, 2
-058, Arabia, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 19 to 19, MINOR_CIV_SYDNEY
+057, The Iroquois, Cape Town, SENT OUT QUEST, Type, 1
+057, The Iroquois, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+057, Arabia, Vancouver, lost friend
+058, Assyria, Sydney, SENT OUT QUEST, Type, 1
+058, Assyria, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+058, Arabia, Sydney, SENT OUT QUEST, Type, 3
+058, Arabia, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
 058, The Iroquois, Ur, SENT OUT QUEST, Type, 7
 058, The Iroquois, Ur, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_UR
-058, Arabia, Panama City, lost friend
-059, Ethiopia, Ur, gained friend
-059, Ethiopia, Ur, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_UR
+059, Arabia, Yerevan, SENT OUT QUEST, Type, 1
+059, Arabia, Yerevan, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
 059, France, Panama City, SENT OUT QUEST, Type, 3
 059, France, Panama City, RECEIVED QUEST, Construct Wonder, Friendship: 13 to 13, MINOR_CIV_PANAMA_CITY
-060, Assyria, Belgrade, SENT OUT QUEST, Type, 2
-060, Assyria, Belgrade, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-060, Songhai, Antananarivo, SENT OUT QUEST, Type, 2
-060, Songhai, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-061, Ethiopia, Vancouver, Gold Gift: 250, Friendship: 37 to 37, Diplomacy, MINOR_CIV_VANCOUVER, (SAVING) , Boost! , Passing Arabia
+060, Arabia, Malacca, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_MALACCA, (SAVING) 
+060, France, Belgrade, gained friend
+060, France, Belgrade, FINISHED QUEST, Find Natural Wonder, Friendship: 1 to 41, MINOR_CIV_BELGRADE
+060, Assyria, Belgrade, SENT OUT QUEST, Type, 3
+060, Assyria, Belgrade, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+060, Assyria, Hanoi, SENT OUT QUEST, Type, 2
+060, Assyria, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
+060, France, Vancouver, gained friend
+060, France, Vancouver, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
+061, France, Cape Town, SENT OUT QUEST, Type, 1
 061, France, Hanoi, lost friend
 061, France, Hanoi, SENT OUT QUEST, Type, 0
 061, France, Hanoi, RECEIVED QUEST, Route, Friendship: 29 to 29, MINOR_CIV_HANOI
-063, Songhai, Hanoi, SENT OUT QUEST, Type, 3
-063, Songhai, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
 064, The Iroquois, Sydney, SENT OUT QUEST, Type, 17
 064, The Iroquois, Sydney, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-064, Songhai, Monaco, lost friend
 064, Assyria, Monaco, lost friend
-064, Assyria, Monaco, gained friend
-064, Assyria, Monaco, gained ally
-064, Assyria, Monaco, FINISHED QUEST, Construct Wonder, Friendship: 29 to 69, MINOR_CIV_MONACO
 064, Songhai, Belgrade, SENT OUT QUEST, Type, 3
 064, Songhai, Belgrade, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+064, Ethiopia, Ur, gained friend
+064, Ethiopia, Ur, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_UR
 064, Songhai, Kyzyl, SENT OUT QUEST, Type, 3
 064, Songhai, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
 064, France, Malacca, SENT OUT QUEST, Type, 3
-064, France, Malacca, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MALACCA
-064, The Iroquois, Lhasa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
-064, The Iroquois, Lhasa, SENT OUT QUEST, Type, 7
-064, The Iroquois, Lhasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
-065, Arabia, Antananarivo, SENT OUT QUEST, Type, 1
-065, Arabia, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-065, Assyria, Monaco, SENT OUT QUEST, Type, 2
-065, France, Belgrade, lost friend
+064, France, Malacca, RECEIVED QUEST, Construct Wonder, Friendship: -1 to -1, MINOR_CIV_MALACCA
+064, The Iroquois, Lhasa, SENT OUT QUEST, Type, 17
+064, The Iroquois, Lhasa, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_LHASA
+064, Assyria, Lhasa, SENT OUT QUEST, Type, 2
+064, Assyria, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
 065, France, Vancouver, SENT OUT QUEST, Type, 2
-065, France, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 17 to 17, MINOR_CIV_VANCOUVER
+065, France, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 32 to 32, MINOR_CIV_VANCOUVER
 066, Assyria, Antananarivo, SENT OUT QUEST, Type, 17
 066, Assyria, Antananarivo, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-066, Arabia, Singapore, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
-066, Ethiopia, Ur, lost friend
-066, Arabia, Hanoi, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
-066, Assyria, Hanoi, SENT OUT QUEST, Type, 17
-066, Assyria, Hanoi, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_HANOI
-066, Ethiopia, Vancouver, lost friend
-066, Arabia, Vancouver, cancelled, Construct Wonder, Friendship: 3 to 3, MINOR_CIV_VANCOUVER
-066, The Iroquois, Vancouver, SENT OUT QUEST, Type, 2
-066, The Iroquois, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 4 to 4, MINOR_CIV_VANCOUVER
-067, Persia, Monaco, SENT OUT QUEST, Type, 2
-067, Persia, Monaco, SENT OUT QUEST, Type, 17
-067, Persia, Belgrade, SENT OUT QUEST, Type, 17
-067, Persia, Belgrade, SENT OUT QUEST, Type, 7
-067, Persia, Yerevan, SENT OUT QUEST, Type, 1
-067, Persia, Yerevan, SENT OUT QUEST, Type, 6
-067, Persia, Yerevan, SENT OUT QUEST, Type, 2
-068, Persia, Sydney, era change yield update
-068, Persia, Monaco, era change yield update
-068, Persia, Belgrade, era change yield update
-068, Persia, Antananarivo, era change yield update
-068, Persia, Singapore, era change yield update
-068, Persia, Ur, era change yield update
-068, Persia, Kyzyl, era change yield update
-068, Persia, Malacca, era change yield update
-068, Persia, Cape Town, era change yield update
-068, Persia, Melbourne, era change yield update
-068, Persia, Hong Kong, era change yield update
-068, Persia, Yerevan, era change yield update
-068, Persia, Hanoi, era change yield update
-068, Persia, Lhasa, era change yield update
-068, Persia, Panama City, era change yield update
-068, Persia, Vancouver, era change yield update
-068, Persia, Monaco, SENT OUT QUEST, Type, 2
-068, Persia, Monaco, SENT OUT QUEST, Type, 17
-068, Persia, Belgrade, SENT OUT QUEST, Type, 17
-068, Persia, Belgrade, SENT OUT QUEST, Type, 7
-068, Persia, Yerevan, SENT OUT QUEST, Type, 1
-068, Persia, Yerevan, SENT OUT QUEST, Type, 6
-068, Persia, Yerevan, SENT OUT QUEST, Type, 2
+066, Arabia, Ur, gained friend
+066, Arabia, Ur, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_UR
+066, The Iroquois, Vancouver, SENT OUT QUEST, Type, 7
+066, The Iroquois, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+067, France, Ur, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+067, The Iroquois, Ur, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+067, Ethiopia, Ur, cancelled, Kill Camp, Friendship: 35 to 35, MINOR_CIV_UR
+067, France, Vancouver, lost friend
 068, France, Sydney, SENT OUT QUEST, Type, 7
 068, France, Sydney, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-068, The Iroquois, Singapore, SENT OUT QUEST, Type, 14
-068, The Iroquois, Singapore, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+068, The Iroquois, Singapore, SENT OUT QUEST, Type, 3
+068, The Iroquois, Singapore, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+068, France, Ur, SENT OUT QUEST, Type, 3
+068, France, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_UR
+068, Arabia, Panama City, lost ally
+068, The Iroquois, Vancouver, gained friend
+068, The Iroquois, Vancouver, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
+069, France, Belgrade, lost friend
+069, Arabia, Belgrade, SENT OUT QUEST, Type, 7
+069, Arabia, Belgrade, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
 069, Arabia, Malacca, SENT OUT QUEST, Type, 3
 069, Arabia, Malacca, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MALACCA
-070, Assyria, Malacca, SENT OUT QUEST, Type, 1
-070, Assyria, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
+070, Persia, Sydney, era change yield update
+070, Persia, Monaco, era change yield update
+070, Persia, Belgrade, era change yield update
+070, Persia, Antananarivo, era change yield update
+070, Persia, Singapore, era change yield update
+070, Persia, Ur, era change yield update
+070, Persia, Kyzyl, era change yield update
+070, Persia, Malacca, era change yield update
+070, Persia, Cape Town, era change yield update
+070, Persia, Melbourne, era change yield update
+070, Persia, Hong Kong, era change yield update
+070, Persia, Yerevan, era change yield update
+070, Persia, Hanoi, era change yield update
+070, Persia, Lhasa, era change yield update
+070, Persia, Panama City, era change yield update
+070, Persia, Vancouver, era change yield update
+070, Persia, Monaco, SENT OUT QUEST, Type, 2
+070, Persia, Monaco, SENT OUT QUEST, Type, 17
+070, Persia, Belgrade, SENT OUT QUEST, Type, 17
+070, Persia, Belgrade, SENT OUT QUEST, Type, 7
+070, Persia, Yerevan, SENT OUT QUEST, Type, 1
+070, Persia, Yerevan, SENT OUT QUEST, Type, 6
+070, Persia, Yerevan, SENT OUT QUEST, Type, 2
+070, Persia, Monaco, SENT OUT QUEST, Type, 2
+070, Persia, Monaco, SENT OUT QUEST, Type, 17
+070, Persia, Belgrade, SENT OUT QUEST, Type, 17
+070, Persia, Belgrade, SENT OUT QUEST, Type, 7
+070, Persia, Yerevan, SENT OUT QUEST, Type, 1
+070, Persia, Yerevan, SENT OUT QUEST, Type, 6
+070, Persia, Yerevan, SENT OUT QUEST, Type, 2
+070, The Iroquois, Panama City, lost friend
 071, The Celts, Sydney, era change yield update
 071, The Celts, Monaco, era change yield update
 071, The Celts, Belgrade, era change yield update
@@ -547,1250 +552,430 @@
 071, The Celts, Lhasa, era change yield update
 071, The Celts, Panama City, era change yield update
 071, The Celts, Vancouver, era change yield update
-071, Assyria, Monaco, lost ally
-071, Ethiopia, Malacca, SENT OUT QUEST, Type, 16
-071, Ethiopia, Malacca, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_MALACCA
-072, Assyria, Panama City, SENT OUT QUEST, Type, 4
-072, Assyria, Panama City, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-073, Songhai, Belgrade, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-073, Songhai, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
-073, Songhai, Hanoi, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
-073, Arabia, Hanoi, SENT OUT QUEST, Type, 16
-073, Arabia, Hanoi, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_HANOI
-073, Assyria, Vancouver, SENT OUT QUEST, Type, 2
-073, Assyria, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-074, France, Antananarivo, SENT OUT QUEST, Type, 1
-074, France, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-074, France, Belgrade, SENT OUT QUEST, Type, 0
-074, France, Belgrade, RECEIVED QUEST, Route, Friendship: 15 to 15, MINOR_CIV_BELGRADE
-074, The Iroquois, Ur, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
-074, Ethiopia, Ur, cancelled, Kill Camp, Friendship: 17 to 17, MINOR_CIV_UR
+071, The Celts, Kyzyl, SENT OUT QUEST, Type, 1
+071, The Celts, Kyzyl, SENT OUT QUEST, Type, 3
+071, Ethiopia, Ur, lost friend
+071, Ethiopia, Malacca, SENT OUT QUEST, Type, 2
+071, Ethiopia, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MALACCA
+072, France, Lhasa, SENT OUT QUEST, Type, 2
+072, France, Cape Town, SENT OUT QUEST, Type, 14
+072, France, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+072, Arabia, Yerevan, SENT OUT QUEST, Type, 16
+072, Arabia, Yerevan, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+073, Assyria, Cape Town, SENT OUT QUEST, Type, 1
+073, Assyria, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+073, The Celts, Kyzyl, SENT OUT QUEST, Type, 4
+073, The Celts, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
+073, Arabia, Hanoi, SENT OUT QUEST, Type, 7
+073, Arabia, Hanoi, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+074, Arabia, Monaco, SENT OUT QUEST, Type, 4
+074, Arabia, Monaco, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MONACO
 074, The Iroquois, Malacca, SENT OUT QUEST, Type, 14
 074, The Iroquois, Malacca, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MALACCA
+074, France, Cape Town, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+074, The Iroquois, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+074, Assyria, Cape Town, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+074, Arabia, Yerevan, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_YEREVAN
 074, Persia, Yerevan, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_YEREVAN
 074, France, Panama City, SENT OUT QUEST, Type, 1
 074, France, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
 074, The Iroquois, Panama City, SENT OUT QUEST, Type, 1
-074, The Iroquois, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+074, The Iroquois, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 19 to 19, MINOR_CIV_PANAMA_CITY
 074, Arabia, Panama City, SENT OUT QUEST, Type, 1
-074, Arabia, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_PANAMA_CITY
-074, Assyria, Panama City, SENT OUT QUEST, Type, 1
-074, Assyria, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+074, Arabia, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 45 to 45, MINOR_CIV_PANAMA_CITY
 074, Ethiopia, Panama City, SENT OUT QUEST, Type, 1
 074, Ethiopia, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-075, Arabia, Malacca, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_MALACCA, (SAVING) 
-075, Assyria, Monaco, SENT OUT QUEST, Type, 2
-075, France, Antananarivo, gained friend
-075, France, Antananarivo, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_ANTANANARIVO
-075, France, Lhasa, SENT OUT QUEST, Type, 3
-075, France, Lhasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
+075, France, Lhasa, SENT OUT QUEST, Type, 16
+075, France, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_LHASA
+075, The Iroquois, Vancouver, lost friend
 075, France, Vancouver, SENT OUT QUEST, Type, 1
-075, France, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 2 to 2, MINOR_CIV_VANCOUVER
+075, France, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 17 to 17, MINOR_CIV_VANCOUVER
 075, The Iroquois, Vancouver, SENT OUT QUEST, Type, 1
-075, The Iroquois, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+075, The Iroquois, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 29 to 29, MINOR_CIV_VANCOUVER
 075, Arabia, Vancouver, SENT OUT QUEST, Type, 1
 075, Arabia, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VANCOUVER
-075, Assyria, Vancouver, SENT OUT QUEST, Type, 1
-075, Assyria, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
 075, Ethiopia, Vancouver, SENT OUT QUEST, Type, 1
-075, Ethiopia, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 15 to 15, MINOR_CIV_VANCOUVER
-075, Ethiopia, Vancouver, SENT OUT QUEST, Type, 2
-075, Ethiopia, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 15 to 15, MINOR_CIV_VANCOUVER
-076, Songhai, Antananarivo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-076, Arabia, Antananarivo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-076, Assyria, Antananarivo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-078, France, Monaco, SENT OUT QUEST, Type, 3
-078, France, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
-079, Ethiopia, Sydney, era change yield update
-079, Ethiopia, Monaco, era change yield update
-079, Ethiopia, Belgrade, era change yield update
-079, Ethiopia, Antananarivo, era change yield update
-079, Ethiopia, Singapore, era change yield update
-079, Ethiopia, Ur, era change yield update
-079, Ethiopia, Kyzyl, era change yield update
-079, Ethiopia, Malacca, era change yield update
-079, Ethiopia, Cape Town, era change yield update
-079, Ethiopia, Melbourne, era change yield update
-079, Ethiopia, Hong Kong, era change yield update
-079, Ethiopia, Yerevan, era change yield update
-079, Ethiopia, Hanoi, era change yield update
-079, Ethiopia, Lhasa, era change yield update
-079, Ethiopia, Panama City, era change yield update
-079, Ethiopia, Vancouver, era change yield update
-079, Ethiopia, Singapore, SENT OUT QUEST, Type, 2
-079, Ethiopia, Singapore, SENT OUT QUEST, Type, 16
-079, Ethiopia, Malacca, SENT OUT QUEST, Type, 1
-079, Ethiopia, Malacca, SENT OUT QUEST, Type, 2
-079, Ethiopia, Malacca, SENT OUT QUEST, Type, 16
-079, Ethiopia, Panama City, SENT OUT QUEST, Type, 2
-079, Ethiopia, Panama City, SENT OUT QUEST, Type, 7
-079, Ethiopia, Panama City, SENT OUT QUEST, Type, 1
-079, Ethiopia, Vancouver, SENT OUT QUEST, Type, 16
-079, Ethiopia, Vancouver, SENT OUT QUEST, Type, 1
-079, Ethiopia, Vancouver, SENT OUT QUEST, Type, 2
-079, Songhai, Kyzyl, SENT OUT QUEST, Type, 17
-079, Songhai, Kyzyl, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KYZYL
-079, Malacca, Arabia, RECEIVED_UNIT_GIFT, Spearman
-080, The Iroquois, Sydney, SENT OUT QUEST, Type, 2
-080, The Iroquois, Sydney, RECEIVED QUEST, Connect Resource, Friendship: -4 to -4, MINOR_CIV_SYDNEY
-080, Assyria, Belgrade, SENT OUT QUEST, Type, 4
-080, Assyria, Belgrade, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-080, The Iroquois, Singapore, gained friend
-080, The Iroquois, Singapore, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
-080, The Iroquois, Malacca, gained friend
-080, The Iroquois, Malacca, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MALACCA
+075, Ethiopia, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+075, Ethiopia, Vancouver, SENT OUT QUEST, Type, 14
+075, Ethiopia, Vancouver, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+076, France, Belgrade, SENT OUT QUEST, Type, 0
+076, France, Belgrade, RECEIVED QUEST, Route, Friendship: 18 to 18, MINOR_CIV_BELGRADE
+076, France, Hanoi, gained friend
+076, France, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HANOI
+077, France, Hanoi, SENT OUT QUEST, Type, 0
+077, Ethiopia, Vancouver, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_VANCOUVER, (SAVING) 
+077, Ethiopia, Vancouver, SENT OUT QUEST, Type, 2
+077, Ethiopia, Vancouver, SENT OUT QUEST, Type, 1
+077, Ethiopia, Vancouver, SENT OUT QUEST, Type, 14
+077, France, Monaco, SENT OUT QUEST, Type, 3
+077, France, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+077, Ethiopia, Vancouver, gained friend
+077, Ethiopia, Vancouver, FINISHED QUEST, Connect Resource, Friendship: 1 to 41, MINOR_CIV_VANCOUVER
+078, Arabia, Belgrade, gained friend
+078, Arabia, Belgrade, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_BELGRADE
+078, Arabia, Hanoi, gained friend
+078, Arabia, Hanoi, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_HANOI
+079, Assyria, Sydney, SENT OUT QUEST, Type, 2
+079, Assyria, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+079, Assyria, Antananarivo, gained friend
+079, Assyria, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+079, Songhai, Antananarivo, SENT OUT QUEST, Type, 3
+079, Songhai, Antananarivo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+079, Songhai, Kyzyl, SENT OUT QUEST, Type, 7
+079, Songhai, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+079, Arabia, Panama City, SENT OUT QUEST, Type, 4
+079, Arabia, Panama City, RECEIVED QUEST, Great Person, Friendship: 34 to 34, MINOR_CIV_PANAMA_CITY
+080, The Iroquois, Lhasa, SENT OUT QUEST, Type, 3
+080, The Iroquois, Lhasa, SENT OUT QUEST, Type, 17
+080, Assyria, Antananarivo, SENT OUT QUEST, Type, 1
+080, Assyria, Antananarivo, SENT OUT QUEST, Type, 17
+080, Arabia, Ur, SENT OUT QUEST, Type, 2
+080, Arabia, Ur, RECEIVED QUEST, Connect Resource, Friendship: 34 to 34, MINOR_CIV_UR
 080, France, Malacca, SENT OUT QUEST, Type, 7
 080, France, Malacca, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MALACCA
-080, France, Hanoi, gained friend
-080, France, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HANOI
-080, France, Vancouver, gained friend
-080, France, Vancouver, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
-080, Arabia, Vancouver, SENT OUT QUEST, Type, 17
-080, Arabia, Vancouver, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_VANCOUVER
-081, Assyria, Kyzyl, SENT OUT QUEST, Type, 1
-081, Assyria, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
-081, Arabia, Panama City, SENT OUT QUEST, Type, 14
-081, Arabia, Panama City, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_PANAMA_CITY
+081, France, Singapore, gained friend
+081, France, Singapore, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+081, France, Lhasa, gained friend
+081, France, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_LHASA
+081, The Iroquois, Vancouver, SENT OUT QUEST, Type, 4
+081, The Iroquois, Vancouver, RECEIVED QUEST, Great Person, Friendship: 20 to 20, MINOR_CIV_VANCOUVER
 082, France, Belgrade, SENT OUT QUEST, Type, 10
-082, France, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+082, France, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 9 to 9, MINOR_CIV_BELGRADE
 082, Songhai, Belgrade, SENT OUT QUEST, Type, 10
 082, Songhai, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+082, Arabia, Belgrade, SENT OUT QUEST, Type, 10
+082, Arabia, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 34 to 34, MINOR_CIV_BELGRADE
 082, Assyria, Belgrade, SENT OUT QUEST, Type, 10
 082, Assyria, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BELGRADE
 082, Persia, Belgrade, SENT OUT QUEST, Type, 10
 082, Persia, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-082, Ethiopia, Malacca, gained friend
-082, Ethiopia, Malacca, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_MALACCA
-082, The Iroquois, Lhasa, SENT OUT QUEST, Type, 17
-082, The Iroquois, Lhasa, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_LHASA
-082, The Iroquois, Vancouver, SENT OUT QUEST, Type, 3
-082, The Iroquois, Vancouver, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-083, Assyria, Sydney, SENT OUT QUEST, Type, 14
-083, Assyria, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-083, France, Malacca, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
-083, The Iroquois, Malacca, cancelled, Kill Camp, Friendship: 35 to 35, MINOR_CIV_MALACCA
-083, Arabia, Malacca, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MALACCA
-083, Assyria, Malacca, cancelled, Kill Camp, Friendship: -9 to -9, MINOR_CIV_MALACCA
-083, Assyria, Malacca, SENT OUT QUEST, Type, 7
-083, Assyria, Malacca, RECEIVED QUEST, Find Natural Wonder, Friendship: -9 to -9, MINOR_CIV_MALACCA
-083, The Iroquois, Cape Town, SENT OUT QUEST, Type, 1
-083, The Iroquois, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
-083, Persia, Yerevan, gained friend
-083, Persia, Yerevan, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_YEREVAN
-084, France, Antananarivo, lost friend
+082, Assyria, Hanoi, gained friend
+082, Assyria, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HANOI
+082, Arabia, Panama City, lost friend
+083, France, Monaco, SENT OUT QUEST, Type, 3
+083, Assyria, Hanoi, SENT OUT QUEST, Type, 3
+083, Arabia, Ur, lost friend
+083, France, Cape Town, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+084, Assyria, Antananarivo, Gold Gift: 250, Friendship: 31 to 56, Conquest, MINOR_CIV_ANTANANARIVO, Boost! 
+084, France, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+084, The Iroquois, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+084, Arabia, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+084, Assyria, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
 084, The Iroquois, Ur, SENT OUT QUEST, Type, 2
-084, The Iroquois, Ur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_UR
+084, The Iroquois, Ur, RECEIVED QUEST, Connect Resource, Friendship: -9 to -9, MINOR_CIV_UR
 084, Ethiopia, Ur, SENT OUT QUEST, Type, 3
-084, Ethiopia, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 2 to 2, MINOR_CIV_UR
-084, Assyria, Malacca, gained friend
-084, Assyria, Malacca, FINISHED QUEST, Find Natural Wonder, Friendship: -7 to 32, MINOR_CIV_MALACCA
-084, The Iroquois, Cape Town, gained friend
-084, The Iroquois, Cape Town, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_CAPE_TOWN
-085, The Iroquois, Singapore, lost friend
-086, Assyria, Monaco, gained ally
-086, Assyria, Monaco, FINISHED QUEST, Connect Resource, Friendship: 36 to 76, MINOR_CIV_MONACO
-086, Assyria, Antananarivo, gained friend
-086, Assyria, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
-086, Assyria, Malacca, lost friend
-086, Assyria, Hanoi, gained friend
-086, Assyria, Hanoi, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HANOI
-087, Assyria, Antananarivo, SENT OUT QUEST, Type, 17
-087, Assyria, Hanoi, SENT OUT QUEST, Type, 17
-087, The Iroquois, Malacca, lost friend
-087, France, Hanoi, lost friend
-087, France, Vancouver, lost friend
-088, Arabia, Sydney, SENT OUT QUEST, Type, 3
-088, Arabia, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-088, The Iroquois, Singapore, cancelled, Bully City-State, Friendship: 22 to 22, MINOR_CIV_SINGAPORE
-088, Arabia, Singapore, SENT OUT QUEST, Type, 14
-088, Arabia, Singapore, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
-088, Arabia, Hanoi, SENT OUT QUEST, Type, 14
-088, Arabia, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
-089, The Iroquois, Lhasa, SENT OUT QUEST, Type, 7
-089, The Iroquois, Lhasa, SENT OUT QUEST, Type, 17
-089, Assyria, Monaco, SENT OUT QUEST, Type, 3
-089, Assyria, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 72 to 72, MINOR_CIV_MONACO
-089, France, Singapore, SENT OUT QUEST, Type, 3
-089, France, Singapore, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-089, France, Hanoi, SENT OUT QUEST, Type, 10
-089, France, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 26 to 26, MINOR_CIV_HANOI
-089, Songhai, Hanoi, SENT OUT QUEST, Type, 10
-089, Songhai, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_HANOI
-089, Arabia, Hanoi, SENT OUT QUEST, Type, 10
-089, Arabia, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_HANOI
-089, Assyria, Hanoi, SENT OUT QUEST, Type, 10
-089, Assyria, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 35 to 35, MINOR_CIV_HANOI
-090, Songhai, Antananarivo, SENT OUT QUEST, Type, 3
-090, Songhai, Antananarivo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-090, Persia, Yerevan, lost friend
-090, Songhai, Hanoi, SENT OUT QUEST, Type, 3
-090, Songhai, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
-091, The Iroquois, Lhasa, Gold Gift: 500, Friendship: 2 to 2, Diplomacy, MINOR_CIV_LHASA, (SAVING) 
-091, France, Monaco, SENT OUT QUEST, Type, 10
-091, France, Monaco, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MONACO
-091, Songhai, Monaco, SENT OUT QUEST, Type, 10
-091, Songhai, Monaco, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MONACO
-091, Assyria, Monaco, SENT OUT QUEST, Type, 10
-091, Assyria, Monaco, RECEIVED QUEST, Contest Culture, Friendship: 69 to 69, MINOR_CIV_MONACO
-091, Persia, Monaco, SENT OUT QUEST, Type, 10
-091, Persia, Monaco, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_MONACO
-091, France, Monaco, SENT OUT QUEST, Type, 7
-091, France, Monaco, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
-091, Assyria, Antananarivo, lost friend
-092, France, Sydney, era change yield update
-092, France, Monaco, era change yield update
-092, France, Belgrade, era change yield update
-092, France, Antananarivo, era change yield update
-092, France, Singapore, era change yield update
-092, France, Ur, era change yield update
-092, France, Kyzyl, era change yield update
-092, France, Malacca, era change yield update
-092, France, Cape Town, era change yield update
-092, France, Melbourne, era change yield update
-092, France, Hong Kong, era change yield update
-092, France, Yerevan, era change yield update
-092, France, Hanoi, era change yield update
-092, France, Lhasa, era change yield update
-092, France, Panama City, era change yield update
-092, France, Vancouver, era change yield update
-092, France, Sydney, SENT OUT QUEST, Type, 2
-092, France, Sydney, SENT OUT QUEST, Type, 1
-092, France, Sydney, SENT OUT QUEST, Type, 7
-092, France, Monaco, SENT OUT QUEST, Type, 3
-092, France, Monaco, SENT OUT QUEST, Type, 10
-092, France, Monaco, SENT OUT QUEST, Type, 7
-092, France, Belgrade, SENT OUT QUEST, Type, 7
-092, France, Belgrade, SENT OUT QUEST, Type, 0
-092, France, Belgrade, SENT OUT QUEST, Type, 10
-092, France, Singapore, SENT OUT QUEST, Type, 2
-092, France, Singapore, SENT OUT QUEST, Type, 3
-092, France, Malacca, SENT OUT QUEST, Type, 3
-092, France, Malacca, SENT OUT QUEST, Type, 7
-092, France, Hanoi, SENT OUT QUEST, Type, 0
-092, France, Hanoi, SENT OUT QUEST, Type, 10
-092, France, Lhasa, SENT OUT QUEST, Type, 2
-092, France, Lhasa, SENT OUT QUEST, Type, 3
-092, France, Panama City, SENT OUT QUEST, Type, 2
-092, France, Panama City, SENT OUT QUEST, Type, 3
-092, France, Panama City, SENT OUT QUEST, Type, 1
-092, France, Vancouver, SENT OUT QUEST, Type, 1
-092, Songhai, Sydney, era change yield update
-092, Songhai, Monaco, era change yield update
-092, Songhai, Belgrade, era change yield update
-092, Songhai, Antananarivo, era change yield update
-092, Songhai, Singapore, era change yield update
-092, Songhai, Ur, era change yield update
-092, Songhai, Kyzyl, era change yield update
-092, Songhai, Malacca, era change yield update
-092, Songhai, Cape Town, era change yield update
-092, Songhai, Melbourne, era change yield update
-092, Songhai, Hong Kong, era change yield update
-092, Songhai, Yerevan, era change yield update
-092, Songhai, Hanoi, era change yield update
-092, Songhai, Lhasa, era change yield update
-092, Songhai, Panama City, era change yield update
-092, Songhai, Vancouver, era change yield update
-092, Songhai, Monaco, SENT OUT QUEST, Type, 2
-092, Songhai, Monaco, SENT OUT QUEST, Type, 7
-092, Songhai, Monaco, SENT OUT QUEST, Type, 10
-092, Songhai, Belgrade, SENT OUT QUEST, Type, 2
-092, Songhai, Belgrade, SENT OUT QUEST, Type, 10
-092, Songhai, Antananarivo, SENT OUT QUEST, Type, 2
-092, Songhai, Antananarivo, SENT OUT QUEST, Type, 3
-092, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
-092, Songhai, Kyzyl, SENT OUT QUEST, Type, 17
-092, Songhai, Hanoi, SENT OUT QUEST, Type, 7
-092, Songhai, Hanoi, SENT OUT QUEST, Type, 10
-092, Songhai, Hanoi, SENT OUT QUEST, Type, 3
-092, Assyria, Singapore, SENT OUT QUEST, Type, 4
-092, Assyria, Singapore, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-092, France, Lhasa, SENT OUT QUEST, Type, 10
-092, France, Lhasa, RECEIVED QUEST, Contest Culture, Friendship: -4 to -4, MINOR_CIV_LHASA
-092, The Iroquois, Lhasa, SENT OUT QUEST, Type, 10
-092, The Iroquois, Lhasa, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_LHASA
-092, Assyria, Lhasa, SENT OUT QUEST, Type, 10
-092, Assyria, Lhasa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_LHASA
-092, Assyria, Lhasa, SENT OUT QUEST, Type, 2
-092, Assyria, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
-093, The Iroquois, Cape Town, lost friend
-093, Assyria, Hanoi, lost friend
-094, Assyria, Sydney, era change yield update
-094, Assyria, Monaco, era change yield update
-094, Assyria, Belgrade, era change yield update
-094, Assyria, Antananarivo, era change yield update
-094, Assyria, Singapore, era change yield update
-094, Assyria, Ur, era change yield update
-094, Assyria, Kyzyl, era change yield update
-094, Assyria, Malacca, era change yield update
-094, Assyria, Cape Town, era change yield update
-094, Assyria, Melbourne, era change yield update
-094, Assyria, Hong Kong, era change yield update
-094, Assyria, Yerevan, era change yield update
-094, Assyria, Hanoi, era change yield update
-094, Assyria, Lhasa, era change yield update
-094, Assyria, Panama City, era change yield update
-094, Assyria, Vancouver, era change yield update
-094, Assyria, Sydney, SENT OUT QUEST, Type, 1
-094, Assyria, Sydney, SENT OUT QUEST, Type, 14
-094, Assyria, Monaco, SENT OUT QUEST, Type, 3
-094, Assyria, Monaco, SENT OUT QUEST, Type, 10
-094, Assyria, Belgrade, SENT OUT QUEST, Type, 2
-094, Assyria, Belgrade, SENT OUT QUEST, Type, 4
-094, Assyria, Belgrade, SENT OUT QUEST, Type, 10
-094, Assyria, Antananarivo, SENT OUT QUEST, Type, 17
-094, Assyria, Singapore, SENT OUT QUEST, Type, 4
-094, Assyria, Kyzyl, SENT OUT QUEST, Type, 1
-094, Assyria, Hanoi, SENT OUT QUEST, Type, 17
-094, Assyria, Hanoi, SENT OUT QUEST, Type, 10
-094, Assyria, Lhasa, SENT OUT QUEST, Type, 10
-094, Assyria, Lhasa, SENT OUT QUEST, Type, 2
-094, Assyria, Panama City, SENT OUT QUEST, Type, 4
-094, Assyria, Panama City, SENT OUT QUEST, Type, 1
-094, Assyria, Vancouver, SENT OUT QUEST, Type, 2
-094, Assyria, Vancouver, SENT OUT QUEST, Type, 1
-094, Persia, Belgrade, SENT OUT QUEST, Type, 17
-094, Persia, Belgrade, SENT OUT QUEST, Type, 7
-094, Persia, Belgrade, SENT OUT QUEST, Type, 10
-094, Persia, Yerevan, SENT OUT QUEST, Type, 2
-094, The Iroquois, Malacca, cancelled, Bully City-State, Friendship: 19 to 19, MINOR_CIV_MALACCA
-094, France, Vancouver, SENT OUT QUEST, Type, 16
-094, France, Vancouver, RECEIVED QUEST, Spread Religion, Friendship: 19 to 19, MINOR_CIV_VANCOUVER
-095, France, Singapore, gained friend
-095, France, Singapore, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
-095, Assyria, Ur, SENT OUT QUEST, Type, 3
-095, Assyria, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_UR
-095, Songhai, Kyzyl, SENT OUT QUEST, Type, 4
-095, Songhai, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KYZYL
-095, France, Lhasa, gained friend
-095, France, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 39, MINOR_CIV_LHASA
-095, Assyria, Panama City, SENT OUT QUEST, Type, 14
-095, Assyria, Panama City, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-096, The Iroquois, Sydney, era change yield update
-096, The Iroquois, Monaco, era change yield update
-096, The Iroquois, Belgrade, era change yield update
-096, The Iroquois, Antananarivo, era change yield update
-096, The Iroquois, Singapore, era change yield update
-096, The Iroquois, Ur, era change yield update
-096, The Iroquois, Kyzyl, era change yield update
-096, The Iroquois, Malacca, era change yield update
-096, The Iroquois, Cape Town, era change yield update
-096, The Iroquois, Melbourne, era change yield update
-096, The Iroquois, Hong Kong, era change yield update
-096, The Iroquois, Yerevan, era change yield update
-096, The Iroquois, Hanoi, era change yield update
-096, The Iroquois, Lhasa, era change yield update
-096, The Iroquois, Panama City, era change yield update
-096, The Iroquois, Vancouver, era change yield update
-096, The Iroquois, Sydney, SENT OUT QUEST, Type, 1
-096, The Iroquois, Sydney, SENT OUT QUEST, Type, 17
-096, The Iroquois, Sydney, SENT OUT QUEST, Type, 2
-096, The Iroquois, Ur, SENT OUT QUEST, Type, 7
-096, The Iroquois, Ur, SENT OUT QUEST, Type, 2
-096, The Iroquois, Lhasa, SENT OUT QUEST, Type, 7
-096, The Iroquois, Lhasa, SENT OUT QUEST, Type, 17
-096, The Iroquois, Lhasa, SENT OUT QUEST, Type, 10
-096, The Iroquois, Panama City, SENT OUT QUEST, Type, 2
-096, The Iroquois, Panama City, SENT OUT QUEST, Type, 7
-096, The Iroquois, Panama City, SENT OUT QUEST, Type, 1
-096, The Iroquois, Vancouver, SENT OUT QUEST, Type, 2
-096, The Iroquois, Vancouver, SENT OUT QUEST, Type, 1
-096, The Iroquois, Vancouver, SENT OUT QUEST, Type, 3
-096, France, Lhasa, SENT OUT QUEST, Type, 3
-096, France, Lhasa, SENT OUT QUEST, Type, 10
-096, The Iroquois, Monaco, SENT OUT QUEST, Type, 10
-096, The Iroquois, Monaco, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MONACO
-096, Songhai, Belgrade, SENT OUT QUEST, Type, 4
-096, Songhai, Belgrade, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-096, France, Antananarivo, SENT OUT QUEST, Type, 14
-096, France, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 3 to 3, MINOR_CIV_ANTANANARIVO
-096, Ethiopia, Malacca, lost friend
-097, Assyria, Sydney, SENT OUT QUEST, Type, 4
-097, Assyria, Sydney, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-097, Songhai, Antananarivo, gained friend
-097, Songhai, Antananarivo, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
-097, The Iroquois, Malacca, SENT OUT QUEST, Type, 2
-097, The Iroquois, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 14 to 14, MINOR_CIV_MALACCA
-097, Songhai, Hanoi, gained friend
-097, Songhai, Hanoi, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_HANOI
-097, The Iroquois, Vancouver, gained friend
-097, The Iroquois, Vancouver, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
-097, Assyria, Vancouver, SENT OUT QUEST, Type, 3
-097, Assyria, Vancouver, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-097, The Celts, Vancouver, SENT OUT QUEST, Type, 1
-097, The Celts, Vancouver, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-098, Arabia, Sydney, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-098, Assyria, Monaco, lost ally
-098, France, Monaco, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
-098, Assyria, Monaco, cancelled, Construct Wonder, Friendship: 58 to 58, MINOR_CIV_MONACO
-098, France, Singapore, cancelled, Construct Wonder, Friendship: 33 to 33, MINOR_CIV_SINGAPORE
-098, Malacca, The Iroquois, RECEIVED_UNIT_GIFT, Archer
-098, France, Malacca, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MALACCA
-098, Arabia, Malacca, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MALACCA
-098, France, Lhasa, cancelled, Construct Wonder, Friendship: 35 to 35, MINOR_CIV_LHASA
-098, France, Panama City, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-098, The Iroquois, Vancouver, cancelled, Construct Wonder, Friendship: 38 to 38, MINOR_CIV_VANCOUVER
-099, Assyria, Monaco, SENT OUT QUEST, Type, 10
-099, Persia, Monaco, SENT OUT QUEST, Type, 2
-099, Persia, Monaco, SENT OUT QUEST, Type, 17
-099, Persia, Monaco, SENT OUT QUEST, Type, 10
-099, The Iroquois, Sydney, gained friend
-099, The Iroquois, Sydney, FINISHED QUEST, Trade Route, Friendship: 0 to 40, MINOR_CIV_SYDNEY
-099, Monaco, The Iroquois, RECEIVED_UNIT_GIFT, Catapult
-099, The Celts, Monaco, SENT OUT QUEST, Type, 3
-099, The Celts, Monaco, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
-099, France, Hanoi, SENT OUT QUEST, Type, 14
-099, France, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 11 to 11, MINOR_CIV_HANOI
-100, The Iroquois, Sydney, SENT OUT QUEST, Type, 1
-100, The Iroquois, Sydney, SENT OUT QUEST, Type, 2
-100, The Iroquois, Sydney, gained ally
-100, The Iroquois, Sydney, FINISHED QUEST, Connect Resource, Friendship: 37 to 77, MINOR_CIV_SYDNEY
-100, France, Singapore, lost friend
-101, Assyria, Cape Town, SENT OUT QUEST, Type, 14
-101, Assyria, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
-101, Arabia, Panama City, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_PANAMA_CITY
-102, Persia, Belgrade, SENT OUT QUEST, Type, 17
-102, Persia, Belgrade, SENT OUT QUEST, Type, 7
-102, Persia, Belgrade, SENT OUT QUEST, Type, 10
-102, Assyria, Belgrade, gained friend
-102, Assyria, Belgrade, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_BELGRADE
-102, France, Belgrade, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-102, Songhai, Belgrade, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-102, Persia, Belgrade, cancelled, Contest Culture, Friendship: 1 to 1, MINOR_CIV_BELGRADE
-102, Songhai, Antananarivo, lost friend
-102, Ethiopia, Singapore, gained friend
-102, Ethiopia, Singapore, FINISHED QUEST, Spread Religion, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
-102, France, Singapore, SENT OUT QUEST, Type, 13
-102, France, Singapore, RECEIVED QUEST, Invest, Friendship: 24 to 24, MINOR_CIV_SINGAPORE
-102, The Iroquois, Singapore, SENT OUT QUEST, Type, 13
-102, The Iroquois, Singapore, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-102, The Celts, Singapore, SENT OUT QUEST, Type, 13
-102, The Celts, Singapore, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-102, Arabia, Singapore, SENT OUT QUEST, Type, 13
-102, Arabia, Singapore, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
-102, Assyria, Singapore, SENT OUT QUEST, Type, 13
-102, Assyria, Singapore, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-102, Ethiopia, Singapore, SENT OUT QUEST, Type, 13
-102, Ethiopia, Singapore, RECEIVED QUEST, Invest, Friendship: 40 to 40, MINOR_CIV_SINGAPORE
-102, Assyria, Kyzyl, SENT OUT QUEST, Type, 2
-102, Assyria, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KYZYL
-102, The Celts, Malacca, SENT OUT QUEST, Type, 2
-102, The Celts, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MALACCA
-102, France, Lhasa, lost friend
-102, Vancouver, The Iroquois, RECEIVED_UNIT_GIFT, Warrior
-102, Arabia, Vancouver, gained friend
-102, Arabia, Vancouver, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_VANCOUVER
-103, Assyria, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-103, Arabia, Antananarivo, SENT OUT QUEST, Type, 2
-103, Arabia, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-103, Assyria, Hong Kong, SENT OUT QUEST, Type, 13
-103, Assyria, Hong Kong, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
-103, Ethiopia, Hong Kong, SENT OUT QUEST, Type, 13
-103, Ethiopia, Hong Kong, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
-103, France, Vancouver, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VANCOUVER
-103, The Iroquois, Vancouver, cancelled, Kill Camp, Friendship: 36 to 36, MINOR_CIV_VANCOUVER
-103, The Celts, Vancouver, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-103, Assyria, Vancouver, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-103, Ethiopia, Vancouver, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VANCOUVER
-104, Songhai, Antananarivo, gained friend
-104, Songhai, Antananarivo, gained ally
-104, Songhai, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 24 to 64, MINOR_CIV_ANTANANARIVO
-104, Assyria, Ur, gained friend
-104, Assyria, Ur, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_UR
-104, Songhai, Hanoi, lost friend
-104, Assyria, Vancouver, gained friend
-104, Assyria, Vancouver, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
-105, Songhai, Antananarivo, Gold Gift: 250, Friendship: 64 to 64, Conquest, MINOR_CIV_ANTANANARIVO, (SAVING) , Boost! , Passing Assyria
-105, Assyria, Antananarivo, SENT OUT QUEST, Type, 17
-105, Songhai, Monaco, gained friend
-105, Songhai, Monaco, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MONACO
-105, Songhai, Belgrade, gained friend
-105, Songhai, Belgrade, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BELGRADE
-105, The Celts, Panama City, SENT OUT QUEST, Type, 1
-105, The Celts, Panama City, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-105, Ethiopia, Vancouver, gained friend
-105, Ethiopia, Vancouver, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_VANCOUVER
-106, The Iroquois, Sydney, Gold Gift: 250, Friendship: 66 to 91, Diplomacy, MINOR_CIV_SYDNEY, Boost! 
-106, The Iroquois, Lhasa, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_LHASA, (SAVING) 
-106, Songhai, Antananarivo, Gold Gift: 250, Friendship: 62 to 87, Conquest, MINOR_CIV_ANTANANARIVO, Boost! , Passing Assyria
-106, Arabia, Sydney, era change yield update
-106, Arabia, Monaco, era change yield update
-106, Arabia, Belgrade, era change yield update
-106, Arabia, Antananarivo, era change yield update
-106, Arabia, Singapore, era change yield update
-106, Arabia, Ur, era change yield update
-106, Arabia, Kyzyl, era change yield update
-106, Arabia, Malacca, era change yield update
-106, Arabia, Cape Town, era change yield update
-106, Arabia, Melbourne, era change yield update
-106, Arabia, Hong Kong, era change yield update
-106, Arabia, Yerevan, era change yield update
-106, Arabia, Hanoi, era change yield update
-106, Arabia, Lhasa, era change yield update
-106, Arabia, Panama City, era change yield update
-106, Arabia, Vancouver, era change yield update
-106, Arabia, Sydney, SENT OUT QUEST, Type, 1
-106, Arabia, Sydney, SENT OUT QUEST, Type, 2
-106, Arabia, Antananarivo, SENT OUT QUEST, Type, 2
-106, Arabia, Singapore, SENT OUT QUEST, Type, 2
-106, Arabia, Singapore, SENT OUT QUEST, Type, 14
-106, Arabia, Singapore, SENT OUT QUEST, Type, 13
-106, Arabia, Malacca, SENT OUT QUEST, Type, 2
-106, Arabia, Hanoi, SENT OUT QUEST, Type, 16
-106, Arabia, Hanoi, SENT OUT QUEST, Type, 14
-106, Arabia, Hanoi, SENT OUT QUEST, Type, 10
-106, Arabia, Panama City, SENT OUT QUEST, Type, 7
-106, Arabia, Panama City, SENT OUT QUEST, Type, 1
-106, Arabia, Vancouver, SENT OUT QUEST, Type, 2
-106, Arabia, Vancouver, SENT OUT QUEST, Type, 17
-106, Persia, Yerevan, SENT OUT QUEST, Type, 7
-106, Persia, Yerevan, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
-106, The Iroquois, Hanoi, SENT OUT QUEST, Type, 10
-106, The Iroquois, Hanoi, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_HANOI
-107, Arabia, Kyzyl, SENT OUT QUEST, Type, 1
-107, Arabia, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
-107, Ethiopia, Ur, gained friend
-107, Ethiopia, Ur, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_UR
-107, France, Ur, SENT OUT QUEST, Type, 13
-107, France, Ur, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_UR
-107, The Iroquois, Ur, SENT OUT QUEST, Type, 13
-107, The Iroquois, Ur, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_UR
-107, Arabia, Ur, SENT OUT QUEST, Type, 13
-107, Arabia, Ur, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_UR
-107, Assyria, Ur, SENT OUT QUEST, Type, 13
-107, Assyria, Ur, RECEIVED QUEST, Invest, Friendship: 35 to 35, MINOR_CIV_UR
-107, Ethiopia, Ur, SENT OUT QUEST, Type, 13
-107, Ethiopia, Ur, RECEIVED QUEST, Invest, Friendship: 40 to 40, MINOR_CIV_UR
-107, The Iroquois, Yerevan, SENT OUT QUEST, Type, 13
-107, The Iroquois, Yerevan, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_YEREVAN
-107, Persia, Yerevan, SENT OUT QUEST, Type, 13
-107, Persia, Yerevan, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_YEREVAN
-107, Assyria, Lhasa, SENT OUT QUEST, Type, 7
-107, Assyria, Lhasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
-108, Arabia, Kyzyl, SENT OUT QUEST, Type, 1
-108, Assyria, Sydney, gained friend
-108, Assyria, Sydney, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_SYDNEY
-108, Assyria, Belgrade, gained ally
-108, Assyria, Belgrade, FINISHED QUEST, Great Person, Friendship: 37 to 77, MINOR_CIV_BELGRADE
-108, Assyria, Singapore, gained friend
-108, Assyria, Singapore, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
-108, Assyria, Panama City, gained friend
-108, Assyria, Panama City, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
-108, Persia, Monaco, SENT OUT QUEST, Type, 2
-108, Persia, Monaco, SENT OUT QUEST, Type, 17
-108, Persia, Monaco, SENT OUT QUEST, Type, 10
-108, Persia, Yerevan, SENT OUT QUEST, Type, 2
-108, Persia, Yerevan, SENT OUT QUEST, Type, 7
-108, Persia, Yerevan, SENT OUT QUEST, Type, 13
-108, Ethiopia, Singapore, lost friend
-108, Arabia, Singapore, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
-108, Assyria, Ur, SENT OUT QUEST, Type, 2
-108, Assyria, Ur, RECEIVED QUEST, Connect Resource, Friendship: 34 to 34, MINOR_CIV_UR
-108, Assyria, Malacca, SENT OUT QUEST, Type, 2
-108, Assyria, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MALACCA
-108, Arabia, Hanoi, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
-108, The Iroquois, Lhasa, gained friend
-108, The Iroquois, Lhasa, FINISHED QUEST, Trade Route, Friendship: 5 to 45, MINOR_CIV_LHASA
-108, France, Lhasa, SENT OUT QUEST, Type, 0
-108, France, Lhasa, RECEIVED QUEST, Route, Friendship: 20 to 20, MINOR_CIV_LHASA
-108, The Iroquois, Vancouver, lost friend
-109, France, Malacca, SENT OUT QUEST, Type, 13
-109, France, Malacca, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
-109, The Iroquois, Malacca, SENT OUT QUEST, Type, 13
-109, The Iroquois, Malacca, RECEIVED QUEST, Invest, Friendship: 1 to 1, MINOR_CIV_MALACCA
-109, The Celts, Malacca, SENT OUT QUEST, Type, 13
-109, The Celts, Malacca, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
-109, Arabia, Malacca, SENT OUT QUEST, Type, 13
-109, Arabia, Malacca, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_MALACCA
-109, Assyria, Malacca, SENT OUT QUEST, Type, 13
-109, Assyria, Malacca, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
-109, Ethiopia, Malacca, SENT OUT QUEST, Type, 13
-109, Ethiopia, Malacca, RECEIVED QUEST, Invest, Friendship: 9 to 9, MINOR_CIV_MALACCA
-109, Assyria, Hanoi, gained friend
-109, Assyria, Hanoi, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_HANOI
-109, France, Hanoi, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_HANOI
-109, The Iroquois, Hanoi, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_HANOI
-109, Songhai, Hanoi, cancelled, Contest Culture, Friendship: 22 to 22, MINOR_CIV_HANOI
-109, Arabia, Hanoi, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_HANOI
-110, France, Monaco, SENT OUT QUEST, Type, 4
-110, France, Monaco, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MONACO
-110, The Iroquois, Ur, gained friend
-110, The Iroquois, Ur, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_UR
-110, Ethiopia, Ur, SENT OUT QUEST, Type, 2
-110, Ethiopia, Ur, RECEIVED QUEST, Connect Resource, Friendship: 35 to 35, MINOR_CIV_UR
-110, The Iroquois, Lhasa, gained ally
-110, The Iroquois, Lhasa, FINISHED QUEST, Find Natural Wonder, Friendship: 42 to 82, MINOR_CIV_LHASA
-110, The Iroquois, Panama City, gained friend
-110, The Iroquois, Panama City, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
-111, Assyria, Monaco, gained ally
-111, The Celts, Monaco, cancelled, Construct Wonder, Friendship: -60 to -60, MINOR_CIV_MONACO
-111, Assyria, Monaco, FINISHED QUEST, Contest Culture, Friendship: 39 to 79, MINOR_CIV_MONACO
-111, France, Monaco, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MONACO
-111, The Iroquois, Monaco, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MONACO
-111, Songhai, Monaco, cancelled, Contest Culture, Friendship: 31 to 31, MINOR_CIV_MONACO
-111, Persia, Monaco, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_MONACO
-111, The Iroquois, Monaco, SENT OUT QUEST, Type, 2
-111, The Iroquois, Monaco, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MONACO
-111, Assyria, Ur, lost friend
-111, Arabia, Ur, SENT OUT QUEST, Type, 4
-111, Arabia, Ur, RECEIVED QUEST, Great Person, Friendship: -10 to -10, MINOR_CIV_UR
-111, Assyria, Kyzyl, gained friend
-111, Assyria, Kyzyl, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KYZYL
-111, Arabia, Malacca, SENT OUT QUEST, Type, 17
-111, Arabia, Malacca, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MALACCA
-111, Assyria, Cape Town, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
-111, Assyria, Vancouver, lost friend
-112, Assyria, Sydney, lost friend
-112, Songhai, Monaco, lost friend
-112, Songhai, Belgrade, lost friend
-112, Assyria, Singapore, lost friend
-112, Ethiopia, Singapore, gained friend
-112, Ethiopia, Singapore, gained ally
-112, Ethiopia, Singapore, FINISHED QUEST, Connect Resource, Friendship: 23 to 63, MINOR_CIV_SINGAPORE
-112, Ethiopia, Ur, gained ally
-112, Ethiopia, Ur, FINISHED QUEST, Connect Resource, Friendship: 32 to 72, MINOR_CIV_UR
-112, Ethiopia, Malacca, gained friend
-112, Ethiopia, Malacca, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_MALACCA
-112, Persia, Cape Town, SENT OUT QUEST, Type, 2
-112, Persia, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
-112, Assyria, Hanoi, SENT OUT QUEST, Type, 0
-112, Assyria, Hanoi, RECEIVED QUEST, Route, Friendship: 41 to 41, MINOR_CIV_HANOI
-112, The Iroquois, Lhasa, FINISHED QUEST, Contest Culture, Friendship: 79 to 119, MINOR_CIV_LHASA
-112, France, Lhasa, cancelled, Contest Culture, Friendship: 14 to 14, MINOR_CIV_LHASA
-112, Assyria, Lhasa, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_LHASA
-112, Assyria, Panama City, lost friend
-112, Ethiopia, Panama City, gained friend
-112, Ethiopia, Panama City, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
-113, Ethiopia, Singapore, Gold Gift: 250, Friendship: 63 to 98, Diplomacy, MINOR_CIV_SINGAPORE, Boost! , Passing Assyria
-113, Ethiopia, Vancouver, Gold Gift: 250, Friendship: 34 to 34, Diplomacy, MINOR_CIV_VANCOUVER, (SAVING) , Boost! , Passing Assyria
-113, Ethiopia, Singapore, SENT OUT QUEST, Type, 13
-113, Ethiopia, Ur, SENT OUT QUEST, Type, 13
-113, Ethiopia, Sydney, SENT OUT QUEST, Type, 1
-113, Ethiopia, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-113, France, Panama City, SENT OUT QUEST, Type, 16
-113, France, Panama City, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-114, France, Hong Kong, SENT OUT QUEST, Type, 13
-114, France, Hong Kong, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
-114, France, Antananarivo, SENT OUT QUEST, Type, 2
-114, France, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-114, Songhai, Hanoi, SENT OUT QUEST, Type, 14
-114, Songhai, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 14 to 14, MINOR_CIV_HANOI
-114, Arabia, Panama City, gained friend
-114, Arabia, Panama City, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_PANAMA_CITY
-114, France, Vancouver, SENT OUT QUEST, Type, 14
-114, France, Vancouver, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-115, France, Lhasa, SENT OUT QUEST, Type, 0
-115, Songhai, Antananarivo, Gold Gift: 250, Friendship: 67 to 67, Conquest, MINOR_CIV_ANTANANARIVO, (SAVING) , Boost! 
-115, Arabia, Antananarivo, gained friend
-115, Arabia, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
-115, France, Antananarivo, SENT OUT QUEST, Type, 13
-115, France, Antananarivo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-115, Songhai, Antananarivo, SENT OUT QUEST, Type, 13
-115, Songhai, Antananarivo, RECEIVED QUEST, Invest, Friendship: 64 to 64, MINOR_CIV_ANTANANARIVO
-115, The Celts, Antananarivo, SENT OUT QUEST, Type, 13
-115, The Celts, Antananarivo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-115, Arabia, Antananarivo, SENT OUT QUEST, Type, 13
-115, Arabia, Antananarivo, RECEIVED QUEST, Invest, Friendship: 40 to 40, MINOR_CIV_ANTANANARIVO
-115, Assyria, Antananarivo, SENT OUT QUEST, Type, 13
-115, Assyria, Antananarivo, RECEIVED QUEST, Invest, Friendship: -41 to -41, MINOR_CIV_ANTANANARIVO
-115, The Iroquois, Malacca, SENT OUT QUEST, Type, 14
-115, The Iroquois, Malacca, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MALACCA
-115, Assyria, Hong Kong, SENT OUT QUEST, Type, 2
-115, Assyria, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
-115, The Iroquois, Panama City, lost friend
-115, Assyria, Panama City, cancelled, Bully City-State, Friendship: 22 to 22, MINOR_CIV_PANAMA_CITY
-116, Assyria, Monaco, SENT OUT QUEST, Type, 4
-116, Assyria, Monaco, RECEIVED QUEST, Great Person, Friendship: 72 to 72, MINOR_CIV_MONACO
-116, France, Antananarivo, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-116, Assyria, Lhasa, gained friend
-116, Assyria, Lhasa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_LHASA
-116, Ethiopia, Vancouver, lost friend
-116, The Iroquois, Vancouver, SENT OUT QUEST, Type, 7
-116, The Iroquois, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 16 to 16, MINOR_CIV_VANCOUVER
-117, The Iroquois, Antananarivo, SENT OUT QUEST, Type, 13
-117, The Iroquois, Antananarivo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-117, Ethiopia, Vancouver, SENT OUT QUEST, Type, 16
-117, The Iroquois, Belgrade, SENT OUT QUEST, Type, 4
-117, The Iroquois, Belgrade, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-117, The Iroquois, Singapore, SENT OUT QUEST, Type, 2
-117, The Iroquois, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-117, The Iroquois, Ur, lost friend
-117, France, Ur, SENT OUT QUEST, Type, 7
-117, France, Ur, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_UR
-117, Songhai, Kyzyl, gained friend
-117, Songhai, Kyzyl, FINISHED QUEST, Trade Route, Friendship: 0 to 40, MINOR_CIV_KYZYL
-117, The Iroquois, Cape Town, SENT OUT QUEST, Type, 17
-117, The Iroquois, Cape Town, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
-117, Ethiopia, Panama City, lost friend
-117, The Celts, Vancouver, SENT OUT QUEST, Type, 16
-117, The Celts, Vancouver, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-118, Songhai, Kyzyl, SENT OUT QUEST, Type, 1
-118, Songhai, Kyzyl, SENT OUT QUEST, Type, 4
-118, Persia, Yerevan, SENT OUT QUEST, Type, 2
-118, Persia, Yerevan, SENT OUT QUEST, Type, 7
-118, Persia, Yerevan, SENT OUT QUEST, Type, 13
-118, Songhai, Antananarivo, lost ally
-118, Assyria, Kyzyl, lost friend
-118, Assyria, Hong Kong, gained friend
-118, Assyria, Hong Kong, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_HONG_KONG
-119, Assyria, Belgrade, lost ally
-119, Assyria, Antananarivo, FINISHED QUEST, Trade Route, Friendship: -35 to 4, MINOR_CIV_ANTANANARIVO
-119, Ethiopia, Singapore, SENT OUT QUEST, Type, 3
-119, Ethiopia, Singapore, RECEIVED QUEST, Construct Wonder, Friendship: 86 to 86, MINOR_CIV_SINGAPORE
-119, Assyria, Kyzyl, SENT OUT QUEST, Type, 2
-119, Assyria, Kyzyl, RECEIVED QUEST, Connect Resource, Friendship: 28 to 28, MINOR_CIV_KYZYL
-119, France, Hanoi, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
-120, The Iroquois, Sydney, Gold Gift: 250, Friendship: 60 to 80, Diplomacy, MINOR_CIV_SYDNEY, Boost! , Passing Assyria
-120, The Iroquois, Belgrade, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_BELGRADE, (SAVING) 
-120, Assyria, Antananarivo, SENT OUT QUEST, Type, 13
-120, Arabia, Antananarivo, lost friend
-120, Assyria, Ur, gained friend
-120, Assyria, Ur, FINISHED QUEST, Connect Resource, Friendship: 16 to 56, MINOR_CIV_UR
-120, Assyria, Hanoi, lost friend
-120, Assyria, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 34 to 74, MINOR_CIV_LHASA
-121, Belgrade, The Iroquois, RECEIVED_UNIT_GIFT, Archer
-121, France, Singapore, SENT OUT QUEST, Type, 4
-121, France, Singapore, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-121, Ethiopia, Ur, lost ally
-121, France, Malacca, SENT OUT QUEST, Type, 2
-121, France, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MALACCA
-121, Arabia, Panama City, lost friend
-122, France, Singapore, gained friend
-122, France, Singapore, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
-122, The Celts, Antananarivo, SENT OUT QUEST, Type, 2
-122, The Celts, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-122, Ethiopia, Singapore, FINISHED QUEST, Invest, Friendship: 81 to 81, MINOR_CIV_SINGAPORE
-122, France, Singapore, FINISHED QUEST, Invest, Friendship: 37 to 37, MINOR_CIV_SINGAPORE
-122, Assyria, Singapore, FINISHED QUEST, Invest, Friendship: 6 to 6, MINOR_CIV_SINGAPORE
-122, Arabia, Singapore, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
-122, The Iroquois, Singapore, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-122, The Celts, Singapore, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-122, The Celts, Malacca, SENT OUT QUEST, Type, 16
-122, The Celts, Malacca, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_MALACCA
-122, Arabia, Hanoi, SENT OUT QUEST, Type, 14
-122, Arabia, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
-122, Arabia, Vancouver, lost friend
-122, Ethiopia, Vancouver, SENT OUT QUEST, Type, 2
-122, Ethiopia, Vancouver, RECEIVED QUEST, Connect Resource, Friendship: 19 to 19, MINOR_CIV_VANCOUVER
-123, The Iroquois, Kyzyl, SENT OUT QUEST, Type, 1
-123, The Iroquois, Kyzyl, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
-123, Ethiopia, Ur, SENT OUT QUEST, Type, 13
-123, Assyria, Antananarivo, SENT OUT QUEST, Type, 2
-123, Assyria, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
-123, Arabia, Singapore, SENT OUT QUEST, Type, 4
-123, Arabia, Singapore, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
-123, Ethiopia, Malacca, lost friend
-123, Assyria, Hong Kong, lost friend
-123, Assyria, Hong Kong, FINISHED QUEST, Invest, Friendship: 28 to 28, MINOR_CIV_HONG_KONG
-123, France, Hong Kong, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
-123, Ethiopia, Hong Kong, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
-123, Assyria, Panama City, SENT OUT QUEST, Type, 2
-123, Assyria, Panama City, RECEIVED QUEST, Connect Resource, Friendship: 4 to 4, MINOR_CIV_PANAMA_CITY
-124, The Celts, Sydney, era change yield update
-124, The Celts, Monaco, era change yield update
-124, The Celts, Belgrade, era change yield update
-124, The Celts, Antananarivo, era change yield update
-124, The Celts, Singapore, era change yield update
-124, The Celts, Ur, era change yield update
-124, The Celts, Kyzyl, era change yield update
-124, The Celts, Malacca, era change yield update
-124, The Celts, Cape Town, era change yield update
-124, The Celts, Melbourne, era change yield update
-124, The Celts, Hong Kong, era change yield update
-124, The Celts, Yerevan, era change yield update
-124, The Celts, Hanoi, era change yield update
-124, The Celts, Lhasa, era change yield update
-124, The Celts, Panama City, era change yield update
-124, The Celts, Vancouver, era change yield update
-124, The Celts, Antananarivo, SENT OUT QUEST, Type, 13
-124, The Celts, Antananarivo, SENT OUT QUEST, Type, 2
-124, The Celts, Malacca, SENT OUT QUEST, Type, 2
-124, The Celts, Malacca, SENT OUT QUEST, Type, 13
-124, The Celts, Malacca, SENT OUT QUEST, Type, 16
-124, The Celts, Panama City, SENT OUT QUEST, Type, 1
-124, The Celts, Vancouver, SENT OUT QUEST, Type, 16
-124, Ethiopia, Sydney, era change yield update
-124, Ethiopia, Monaco, era change yield update
-124, Ethiopia, Belgrade, era change yield update
-124, Ethiopia, Antananarivo, era change yield update
-124, Ethiopia, Singapore, era change yield update
-124, Ethiopia, Ur, era change yield update
-124, Ethiopia, Kyzyl, era change yield update
-124, Ethiopia, Malacca, era change yield update
-124, Ethiopia, Cape Town, era change yield update
-124, Ethiopia, Melbourne, era change yield update
-124, Ethiopia, Hong Kong, era change yield update
-124, Ethiopia, Yerevan, era change yield update
-124, Ethiopia, Hanoi, era change yield update
-124, Ethiopia, Lhasa, era change yield update
-124, Ethiopia, Panama City, era change yield update
-124, Ethiopia, Vancouver, era change yield update
-124, Ethiopia, Sydney, SENT OUT QUEST, Type, 1
-124, Ethiopia, Singapore, SENT OUT QUEST, Type, 3
-124, Ethiopia, Ur, SENT OUT QUEST, Type, 13
-124, Ethiopia, Malacca, SENT OUT QUEST, Type, 16
-124, Ethiopia, Malacca, SENT OUT QUEST, Type, 13
-124, Ethiopia, Panama City, SENT OUT QUEST, Type, 7
-124, Ethiopia, Panama City, SENT OUT QUEST, Type, 1
-124, Ethiopia, Vancouver, SENT OUT QUEST, Type, 16
-124, Ethiopia, Vancouver, SENT OUT QUEST, Type, 2
-124, Persia, Monaco, gained friend
-124, Persia, Monaco, FINISHED QUEST, Trade Route, Friendship: 5 to 45, MINOR_CIV_MONACO
-124, Ethiopia, Ur, SENT OUT QUEST, Type, 2
-124, Ethiopia, Ur, RECEIVED QUEST, Connect Resource, Friendship: 54 to 54, MINOR_CIV_UR
-124, Songhai, Kyzyl, lost friend
-124, Ethiopia, Panama City, SENT OUT QUEST, Type, 14
-124, Ethiopia, Panama City, RECEIVED QUEST, Bully City-State, Friendship: 13 to 13, MINOR_CIV_PANAMA_CITY
-125, Arabia, Sydney, SENT OUT QUEST, Type, 16
-125, Arabia, Sydney, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-125, Assyria, Monaco, lost ally
-125, The Iroquois, Monaco, SENT OUT QUEST, Type, 4
-125, The Iroquois, Monaco, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MONACO
-125, Arabia, Ur, SENT OUT QUEST, Type, 7
-125, Arabia, Ur, RECEIVED QUEST, Find Natural Wonder, Friendship: -57 to -57, MINOR_CIV_UR
-125, Assyria, Vancouver, SENT OUT QUEST, Type, 4
-125, Assyria, Vancouver, RECEIVED QUEST, Great Person, Friendship: 8 to 8, MINOR_CIV_VANCOUVER
-126, Assyria, Monaco, SENT OUT QUEST, Type, 4
-126, Persia, Monaco, SENT OUT QUEST, Type, 2
-126, The Iroquois, Sydney, SENT OUT QUEST, Type, 4
-126, The Iroquois, Sydney, RECEIVED QUEST, Great Person, Friendship: 64 to 64, MINOR_CIV_SYDNEY
-126, Assyria, Sydney, SENT OUT QUEST, Type, 14
-126, Assyria, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-126, Ethiopia, Sydney, SENT OUT QUEST, Type, 14
-126, Ethiopia, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-126, The Celts, Monaco, SENT OUT QUEST, Type, 2
-126, The Celts, Monaco, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MONACO
-126, France, Singapore, lost friend
-127, Arabia, Singapore, gained friend
-127, Arabia, Singapore, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_SINGAPORE
-127, Ethiopia, Ur, FINISHED QUEST, Invest, Friendship: 50 to 50, MINOR_CIV_UR
-127, Assyria, Ur, FINISHED QUEST, Invest, Friendship: 45 to 45, MINOR_CIV_UR
-127, The Iroquois, Ur, FINISHED QUEST, Invest, Friendship: 14 to 14, MINOR_CIV_UR
-127, France, Ur, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_UR
-127, Arabia, Ur, FINISHED QUEST, Invest, Friendship: -57 to -57, MINOR_CIV_UR
-127, The Iroquois, Yerevan, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_YEREVAN
-127, Persia, Yerevan, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_YEREVAN
-128, The Celts, Monaco, gained friend
-128, The Celts, Monaco, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MONACO
-128, Songhai, Monaco, SENT OUT QUEST, Type, 14
-128, Songhai, Monaco, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_MONACO
-128, The Iroquois, Yerevan, SENT OUT QUEST, Type, 3
-128, The Iroquois, Yerevan, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
-129, The Iroquois, Sydney, lost ally
-129, France, Belgrade, SENT OUT QUEST, Type, 10
-129, France, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-129, The Iroquois, Belgrade, SENT OUT QUEST, Type, 10
-129, The Iroquois, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-129, Songhai, Belgrade, SENT OUT QUEST, Type, 10
-129, Songhai, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 4 to 4, MINOR_CIV_BELGRADE
-129, The Celts, Belgrade, SENT OUT QUEST, Type, 10
-129, The Celts, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-129, Arabia, Belgrade, SENT OUT QUEST, Type, 10
-129, Arabia, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-129, Assyria, Belgrade, SENT OUT QUEST, Type, 10
-129, Assyria, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 44 to 44, MINOR_CIV_BELGRADE
-129, Persia, Belgrade, SENT OUT QUEST, Type, 10
-129, Persia, Belgrade, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-129, Songhai, Belgrade, SENT OUT QUEST, Type, 16
-129, Songhai, Belgrade, RECEIVED QUEST, Spread Religion, Friendship: 4 to 4, MINOR_CIV_BELGRADE
-129, The Celts, Belgrade, SENT OUT QUEST, Type, 4
-129, The Celts, Belgrade, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-129, Songhai, Antananarivo, SENT OUT QUEST, Type, 14
-129, Songhai, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 33 to 33, MINOR_CIV_ANTANANARIVO
-129, Ethiopia, Malacca, FINISHED QUEST, Invest, Friendship: 19 to 19, MINOR_CIV_MALACCA
-129, Arabia, Malacca, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_MALACCA
-129, France, Malacca, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
-129, The Iroquois, Malacca, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
-129, The Celts, Malacca, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
-129, Assyria, Malacca, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MALACCA
-130, The Iroquois, Sydney, gained ally
-130, The Iroquois, Sydney, FINISHED QUEST, Great Person, Friendship: 58 to 98, MINOR_CIV_SYDNEY
-130, The Iroquois, Belgrade, gained friend
-130, The Iroquois, Belgrade, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_BELGRADE
-130, Assyria, Vancouver, gained friend
-130, Assyria, Vancouver, FINISHED QUEST, Great Person, Friendship: 2 to 42, MINOR_CIV_VANCOUVER
-130, Assyria, Belgrade, SENT OUT QUEST, Type, 14
-130, Assyria, Belgrade, RECEIVED QUEST, Bully City-State, Friendship: 43 to 43, MINOR_CIV_BELGRADE
-130, Assyria, Malacca, SENT OUT QUEST, Type, 4
-130, Assyria, Malacca, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MALACCA
-130, Arabia, Vancouver, gained friend
-130, Ethiopia, Vancouver, gained friend
-130, Ethiopia, Vancouver, FINISHED QUEST, Connect Resource, Friendship: 2 to 42, MINOR_CIV_VANCOUVER
-131, Assyria, Lhasa, lost friend
-131, Persia, Belgrade, gained friend
-131, Persia, Belgrade, FINISHED QUEST, Trade Route, Friendship: 5 to 45, MINOR_CIV_BELGRADE
-131, Songhai, Antananarivo, lost friend
-131, The Iroquois, Ur, SENT OUT QUEST, Type, 14
-131, The Iroquois, Ur, RECEIVED QUEST, Bully City-State, Friendship: 8 to 8, MINOR_CIV_UR
-131, Assyria, Hong Kong, SENT OUT QUEST, Type, 2
-131, Assyria, Hong Kong, RECEIVED QUEST, Connect Resource, Friendship: 11 to 11, MINOR_CIV_HONG_KONG
-131, The Iroquois, Hanoi, SENT OUT QUEST, Type, 3
-131, The Iroquois, Hanoi, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
-131, The Iroquois, Lhasa, SENT OUT QUEST, Type, 4
-131, The Iroquois, Lhasa, RECEIVED QUEST, Great Person, Friendship: 85 to 85, MINOR_CIV_LHASA
-132, Songhai, Antananarivo, SENT OUT QUEST, Type, 13
-132, Songhai, Antananarivo, SENT OUT QUEST, Type, 14
-132, Ethiopia, Singapore, cancelled, Construct Wonder, Friendship: 64 to 64, MINOR_CIV_SINGAPORE
-133, The Iroquois, Sydney, era change yield update
-133, The Iroquois, Monaco, era change yield update
-133, The Iroquois, Belgrade, era change yield update
-133, The Iroquois, Antananarivo, era change yield update
-133, The Iroquois, Singapore, era change yield update
-133, The Iroquois, Ur, era change yield update
-133, The Iroquois, Kyzyl, era change yield update
-133, The Iroquois, Malacca, era change yield update
-133, The Iroquois, Cape Town, era change yield update
-133, The Iroquois, Melbourne, era change yield update
-133, The Iroquois, Hong Kong, era change yield update
-133, The Iroquois, Yerevan, era change yield update
-133, The Iroquois, Hanoi, era change yield update
-133, The Iroquois, Lhasa, era change yield update
-133, The Iroquois, Panama City, era change yield update
-133, The Iroquois, Vancouver, era change yield update
-133, The Iroquois, Sydney, SENT OUT QUEST, Type, 1
-133, The Iroquois, Monaco, SENT OUT QUEST, Type, 2
-133, The Iroquois, Monaco, SENT OUT QUEST, Type, 4
-133, The Iroquois, Belgrade, SENT OUT QUEST, Type, 10
-133, The Iroquois, Antananarivo, SENT OUT QUEST, Type, 13
-133, The Iroquois, Singapore, SENT OUT QUEST, Type, 2
-133, The Iroquois, Ur, SENT OUT QUEST, Type, 2
-133, The Iroquois, Ur, SENT OUT QUEST, Type, 14
-133, The Iroquois, Kyzyl, SENT OUT QUEST, Type, 1
-133, The Iroquois, Malacca, SENT OUT QUEST, Type, 2
-133, The Iroquois, Malacca, SENT OUT QUEST, Type, 14
-133, The Iroquois, Cape Town, SENT OUT QUEST, Type, 17
-133, The Iroquois, Yerevan, SENT OUT QUEST, Type, 3
-133, The Iroquois, Hanoi, SENT OUT QUEST, Type, 3
-133, The Iroquois, Lhasa, SENT OUT QUEST, Type, 4
-133, The Iroquois, Panama City, SENT OUT QUEST, Type, 2
-133, The Iroquois, Panama City, SENT OUT QUEST, Type, 1
-133, The Iroquois, Vancouver, SENT OUT QUEST, Type, 7
-133, The Iroquois, Belgrade, SENT OUT QUEST, Type, 4
-133, The Iroquois, Belgrade, RECEIVED QUEST, Great Person, Friendship: 39 to 39, MINOR_CIV_BELGRADE
-133, France, Ur, SENT OUT QUEST, Type, 2
-133, France, Ur, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_UR
-133, Assyria, Ur, SENT OUT QUEST, Type, 2
-133, Assyria, Ur, RECEIVED QUEST, Connect Resource, Friendship: 36 to 36, MINOR_CIV_UR
-133, France, Hong Kong, SENT OUT QUEST, Type, 16
-133, France, Hong Kong, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
-133, Assyria, Lhasa, SENT OUT QUEST, Type, 14
-133, Assyria, Lhasa, RECEIVED QUEST, Bully City-State, Friendship: -5 to -5, MINOR_CIV_LHASA
-133, The Celts, Vancouver, SENT OUT QUEST, Type, 7
-133, The Celts, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-134, Persia, Sydney, era change yield update
-134, Persia, Monaco, era change yield update
-134, Persia, Belgrade, era change yield update
-134, Persia, Antananarivo, era change yield update
-134, Persia, Singapore, era change yield update
-134, Persia, Ur, era change yield update
-134, Persia, Kyzyl, era change yield update
-134, Persia, Malacca, era change yield update
-134, Persia, Cape Town, era change yield update
-134, Persia, Melbourne, era change yield update
-134, Persia, Hong Kong, era change yield update
-134, Persia, Yerevan, era change yield update
-134, Persia, Hanoi, era change yield update
-134, Persia, Lhasa, era change yield update
-134, Persia, Panama City, era change yield update
-134, Persia, Vancouver, era change yield update
-134, Persia, Monaco, SENT OUT QUEST, Type, 2
-134, Persia, Belgrade, SENT OUT QUEST, Type, 7
-134, Persia, Belgrade, SENT OUT QUEST, Type, 10
-134, Persia, Cape Town, SENT OUT QUEST, Type, 2
-134, Persia, Yerevan, SENT OUT QUEST, Type, 2
-134, Persia, Yerevan, SENT OUT QUEST, Type, 7
-134, Arabia, Singapore, lost friend
-134, The Celts, Singapore, SENT OUT QUEST, Type, 7
-134, The Celts, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-134, Arabia, Kyzyl, SENT OUT QUEST, Type, 4
-134, Arabia, Kyzyl, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_KYZYL
-134, Songhai, Hanoi, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
-134, France, Lhasa, SENT OUT QUEST, Type, 16
-134, France, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_LHASA
-134, France, Vancouver, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-135, The Iroquois, Belgrade, Gold Gift: 250, Friendship: 37 to 57, Diplomacy, MINOR_CIV_BELGRADE, Boost! , Passing France
-135, Arabia, Vancouver, Gold Gift: 250, Friendship: 35 to 55, Diplomacy, MINOR_CIV_VANCOUVER, Boost! , Passing Assyria
-135, Arabia, Malacca, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_MALACCA, (SAVING) 
-135, The Celts, Monaco, lost friend
-135, Persia, Monaco, lost friend
-135, Songhai, Antananarivo, FINISHED QUEST, Invest, Friendship: 21 to 21, MINOR_CIV_ANTANANARIVO
-135, Assyria, Antananarivo, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
-135, France, Antananarivo, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-135, The Celts, Antananarivo, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-135, Arabia, Antananarivo, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-135, The Iroquois, Antananarivo, FINISHED QUEST, Invest, Friendship: -4 to -4, MINOR_CIV_ANTANANARIVO
-135, Ethiopia, Singapore, lost ally
-135, The Iroquois, Malacca, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MALACCA
-135, Assyria, Vancouver, lost friend
-136, The Celts, Belgrade, SENT OUT QUEST, Type, 10
-136, The Celts, Belgrade, SENT OUT QUEST, Type, 4
-136, Assyria, Monaco, SENT OUT QUEST, Type, 2
-136, Assyria, Monaco, RECEIVED QUEST, Connect Resource, Friendship: 42 to 42, MINOR_CIV_MONACO
-136, Ethiopia, Malacca, SENT OUT QUEST, Type, 14
-136, Ethiopia, Malacca, RECEIVED QUEST, Bully City-State, Friendship: 9 to 9, MINOR_CIV_MALACCA
-136, Ethiopia, Hanoi, SENT OUT QUEST, Type, 14
-136, Ethiopia, Hanoi, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
-137, The Iroquois, Cape Town, SENT OUT QUEST, Type, 13
-137, The Iroquois, Cape Town, RECEIVED QUEST, Invest, Friendship: 2 to 2, MINOR_CIV_CAPE_TOWN
-137, Assyria, Cape Town, SENT OUT QUEST, Type, 13
-137, Assyria, Cape Town, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
-137, Persia, Cape Town, SENT OUT QUEST, Type, 13
-137, Persia, Cape Town, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
-137, France, Hanoi, SENT OUT QUEST, Type, 11
-137, France, Hanoi, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_HANOI
-137, The Iroquois, Hanoi, SENT OUT QUEST, Type, 11
-137, The Iroquois, Hanoi, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_HANOI
-137, Songhai, Hanoi, SENT OUT QUEST, Type, 11
-137, Songhai, Hanoi, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_HANOI
-137, Arabia, Hanoi, SENT OUT QUEST, Type, 11
-137, Arabia, Hanoi, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_HANOI
-137, Assyria, Hanoi, SENT OUT QUEST, Type, 11
-137, Assyria, Hanoi, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_HANOI
-137, Ethiopia, Hanoi, SENT OUT QUEST, Type, 11
-137, Ethiopia, Hanoi, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_HANOI
-138, Assyria, Singapore, SENT OUT QUEST, Type, 14
-138, Assyria, Singapore, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-138, Assyria, Ur, lost friend
-138, The Iroquois, Kyzyl, SENT OUT QUEST, Type, 3
-138, The Iroquois, Kyzyl, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
-139, France, Cape Town, SENT OUT QUEST, Type, 13
-139, France, Cape Town, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
-139, Assyria, Antananarivo, gained friend
-139, Assyria, Antananarivo, Gold Gift: 500, Friendship: 5 to 50, Conquest, MINOR_CIV_ANTANANARIVO
-139, Assyria, Belgrade, Gold Gift: 250, Friendship: 31 to 31, Conquest, MINOR_CIV_BELGRADE, (SAVING) , Boost! , Passing The Celts
-139, Assyria, Belgrade, lost friend
-139, France, Antananarivo, SENT OUT QUEST, Type, 7
-139, France, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-139, Ethiopia, Vancouver, lost friend
-140, Arabia, Singapore, gained friend
-140, Songhai, Kyzyl, gained friend
-140, Songhai, Kyzyl, FINISHED QUEST, Kill Camp, Friendship: 5 to 55, MINOR_CIV_KYZYL
-140, Persia, Cape Town, SENT OUT QUEST, Type, 14
-140, Persia, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 1 to 1, MINOR_CIV_CAPE_TOWN
-140, Arabia, Panama City, SENT OUT QUEST, Type, 16
-140, Arabia, Panama City, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_PANAMA_CITY
-141, Songhai, Sydney, era change yield update
-141, Songhai, Monaco, era change yield update
-141, Songhai, Belgrade, era change yield update
-141, Songhai, Antananarivo, era change yield update
-141, Songhai, Singapore, era change yield update
-141, Songhai, Ur, era change yield update
-141, Songhai, Kyzyl, era change yield update
-141, Songhai, Malacca, era change yield update
-141, Songhai, Cape Town, era change yield update
-141, Songhai, Melbourne, era change yield update
-141, Songhai, Hong Kong, era change yield update
-141, Songhai, Yerevan, era change yield update
-141, Songhai, Hanoi, era change yield update
-141, Songhai, Lhasa, era change yield update
-141, Songhai, Panama City, era change yield update
-141, Songhai, Vancouver, era change yield update
-141, Songhai, Monaco, SENT OUT QUEST, Type, 7
-141, Songhai, Monaco, SENT OUT QUEST, Type, 14
-141, Songhai, Belgrade, SENT OUT QUEST, Type, 4
-141, Songhai, Belgrade, SENT OUT QUEST, Type, 10
-141, Songhai, Belgrade, SENT OUT QUEST, Type, 16
-141, Songhai, Antananarivo, SENT OUT QUEST, Type, 14
-141, Songhai, Kyzyl, SENT OUT QUEST, Type, 4
-141, Songhai, Hanoi, SENT OUT QUEST, Type, 7
-141, Songhai, Hanoi, SENT OUT QUEST, Type, 11
-141, The Iroquois, Monaco, gained friend
-141, The Iroquois, Monaco, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MONACO
-141, Persia, Monaco, SENT OUT QUEST, Type, 7
-141, Persia, Monaco, RECEIVED QUEST, Find Natural Wonder, Friendship: 19 to 19, MINOR_CIV_MONACO
-141, Assyria, Antananarivo, SENT OUT QUEST, Type, 14
-141, Assyria, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 43 to 43, MINOR_CIV_ANTANANARIVO
-141, Ethiopia, Ur, lost friend
-141, Songhai, Ur, SENT OUT QUEST, Type, 3
-141, Songhai, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_UR
-141, The Iroquois, Kyzyl, cancelled, Kill Camp, Friendship: -4 to -4, MINOR_CIV_KYZYL
-141, Arabia, Kyzyl, cancelled, Kill Camp, Friendship: 3 to 3, MINOR_CIV_KYZYL
-141, Assyria, Kyzyl, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KYZYL
-141, Assyria, Kyzyl, SENT OUT QUEST, Type, 7
-141, Assyria, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
-141, The Iroquois, Panama City, SENT OUT QUEST, Type, 14
-141, The Iroquois, Panama City, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-141, The Celts, Panama City, SENT OUT QUEST, Type, 14
-141, The Celts, Panama City, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-142, The Celts, Belgrade, Gold Gift: 500, Friendship: 5 to 5, Culture, MINOR_CIV_BELGRADE, (SAVING) 
-142, The Celts, Monaco, SENT OUT QUEST, Type, 4
-142, The Celts, Monaco, RECEIVED QUEST, Great Person, Friendship: 19 to 19, MINOR_CIV_MONACO
-142, Persia, Belgrade, lost friend
-142, Ethiopia, Ur, SENT OUT QUEST, Type, 17
-142, Ethiopia, Ur, RECEIVED QUEST, Trade Route, Friendship: 27 to 27, MINOR_CIV_UR
-142, Songhai, Kyzyl, SENT OUT QUEST, Type, 7
-142, Songhai, Kyzyl, RECEIVED QUEST, Find Natural Wonder, Friendship: 53 to 53, MINOR_CIV_KYZYL
-142, Ethiopia, Hong Kong, SENT OUT QUEST, Type, 3
-142, Ethiopia, Hong Kong, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HONG_KONG
-142, Arabia, Hanoi, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_HANOI
-143, Assyria, Sydney, era change yield update
-143, Assyria, Monaco, era change yield update
-143, Assyria, Belgrade, era change yield update
-143, Assyria, Antananarivo, era change yield update
-143, Assyria, Singapore, era change yield update
-143, Assyria, Ur, era change yield update
-143, Assyria, Kyzyl, era change yield update
-143, Assyria, Malacca, era change yield update
-143, Assyria, Cape Town, era change yield update
-143, Assyria, Melbourne, era change yield update
-143, Assyria, Hong Kong, era change yield update
-143, Assyria, Yerevan, era change yield update
-143, Assyria, Hanoi, era change yield update
-143, Assyria, Lhasa, era change yield update
-143, Assyria, Panama City, era change yield update
-143, Assyria, Vancouver, era change yield update
-143, Assyria, Sydney, SENT OUT QUEST, Type, 1
-143, Assyria, Sydney, SENT OUT QUEST, Type, 14
-143, Assyria, Monaco, SENT OUT QUEST, Type, 4
-143, Assyria, Monaco, SENT OUT QUEST, Type, 2
-143, Assyria, Belgrade, SENT OUT QUEST, Type, 2
-143, Assyria, Belgrade, SENT OUT QUEST, Type, 10
-143, Assyria, Belgrade, SENT OUT QUEST, Type, 14
-143, Assyria, Antananarivo, SENT OUT QUEST, Type, 2
-143, Assyria, Antananarivo, SENT OUT QUEST, Type, 14
-143, Assyria, Singapore, SENT OUT QUEST, Type, 14
-143, Assyria, Ur, SENT OUT QUEST, Type, 2
-143, Assyria, Kyzyl, SENT OUT QUEST, Type, 2
-143, Assyria, Kyzyl, SENT OUT QUEST, Type, 7
-143, Assyria, Malacca, SENT OUT QUEST, Type, 2
-143, Assyria, Malacca, SENT OUT QUEST, Type, 4
-143, Assyria, Cape Town, SENT OUT QUEST, Type, 13
-143, Assyria, Hong Kong, SENT OUT QUEST, Type, 2
-143, Assyria, Hanoi, SENT OUT QUEST, Type, 17
-143, Assyria, Hanoi, SENT OUT QUEST, Type, 0
-143, Assyria, Hanoi, SENT OUT QUEST, Type, 11
-143, Assyria, Lhasa, SENT OUT QUEST, Type, 14
-143, Assyria, Panama City, SENT OUT QUEST, Type, 1
-143, Assyria, Panama City, SENT OUT QUEST, Type, 2
-143, Assyria, Vancouver, SENT OUT QUEST, Type, 2
-143, Arabia, Singapore, lost friend
-143, France, Lhasa, SENT OUT QUEST, Type, 13
-143, France, Lhasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LHASA
-143, The Iroquois, Lhasa, SENT OUT QUEST, Type, 13
-143, The Iroquois, Lhasa, RECEIVED QUEST, Invest, Friendship: 67 to 67, MINOR_CIV_LHASA
-143, Arabia, Lhasa, SENT OUT QUEST, Type, 13
-143, Arabia, Lhasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LHASA
-143, Assyria, Lhasa, SENT OUT QUEST, Type, 13
-143, Assyria, Lhasa, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_LHASA
-144, Arabia, Kyzyl, SENT OUT QUEST, Type, 4
-144, The Iroquois, Antananarivo, SENT OUT QUEST, Type, 14
-144, The Iroquois, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-144, Songhai, Singapore, SENT OUT QUEST, Type, 3
-144, Songhai, Singapore, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
-144, Arabia, Malacca, gained friend
-144, Arabia, Malacca, FINISHED QUEST, Trade Route, Friendship: 5 to 45, MINOR_CIV_MALACCA
-144, France, Hanoi, SENT OUT QUEST, Type, 4
-144, France, Hanoi, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_HANOI
-144, Ethiopia, Panama City, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
-144, France, Vancouver, SENT OUT QUEST, Type, 10
-144, France, Vancouver, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-144, The Iroquois, Vancouver, SENT OUT QUEST, Type, 10
-144, The Iroquois, Vancouver, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-144, The Celts, Vancouver, SENT OUT QUEST, Type, 10
-144, The Celts, Vancouver, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-144, Arabia, Vancouver, SENT OUT QUEST, Type, 10
-144, Arabia, Vancouver, RECEIVED QUEST, Contest Culture, Friendship: 44 to 44, MINOR_CIV_VANCOUVER
-144, Assyria, Vancouver, SENT OUT QUEST, Type, 10
-144, Assyria, Vancouver, RECEIVED QUEST, Contest Culture, Friendship: 15 to 15, MINOR_CIV_VANCOUVER
-144, Ethiopia, Vancouver, SENT OUT QUEST, Type, 10
-144, Ethiopia, Vancouver, RECEIVED QUEST, Contest Culture, Friendship: 21 to 21, MINOR_CIV_VANCOUVER
-144, The Iroquois, Vancouver, SENT OUT QUEST, Type, 3
-144, The Iroquois, Vancouver, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
-145, Assyria, Monaco, lost friend
-145, Arabia, Antananarivo, SENT OUT QUEST, Type, 16
-145, Arabia, Antananarivo, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
-145, Assyria, Cape Town, SENT OUT QUEST, Type, 2
-145, Assyria, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
-145, The Iroquois, Lhasa, SENT OUT QUEST, Type, 17
-145, The Iroquois, Lhasa, RECEIVED QUEST, Trade Route, Friendship: 64 to 64, MINOR_CIV_LHASA
-146, Assyria, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-146, Ethiopia, Sydney, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-146, Belgrade, The Iroquois, RECEIVED_UNIT_GIFT, Pikeman
-146, Arabia, Ur, FINISHED QUEST, Find Natural Wonder, Friendship: -57 to -17, MINOR_CIV_UR
-146, Arabia, Lhasa, SENT OUT QUEST, Type, 16
-146, Arabia, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_LHASA
-147, The Iroquois, Sydney, lost ally
-147, The Celts, Belgrade, SENT OUT QUEST, Type, 16
-147, The Celts, Belgrade, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-147, Assyria, Antananarivo, lost friend
-147, Assyria, Melbourne, SENT OUT QUEST, Type, 13
-147, Assyria, Melbourne, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
-147, Ethiopia, Melbourne, SENT OUT QUEST, Type, 13
-147, Ethiopia, Melbourne, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
-148, The Iroquois, Lhasa, Gold Gift: 250, Friendship: 61 to 91, Diplomacy, MINOR_CIV_LHASA, Boost! 
-148, Arabia, Sydney, era change yield update
-148, Arabia, Monaco, era change yield update
-148, Arabia, Belgrade, era change yield update
-148, Arabia, Antananarivo, era change yield update
-148, Arabia, Singapore, era change yield update
-148, Arabia, Ur, era change yield update
-148, Arabia, Kyzyl, era change yield update
-148, Arabia, Malacca, era change yield update
-148, Arabia, Cape Town, era change yield update
-148, Arabia, Melbourne, era change yield update
-148, Arabia, Hong Kong, era change yield update
-148, Arabia, Yerevan, era change yield update
-148, Arabia, Hanoi, era change yield update
-148, Arabia, Lhasa, era change yield update
-148, Arabia, Panama City, era change yield update
-148, Arabia, Vancouver, era change yield update
-148, Arabia, Sydney, SENT OUT QUEST, Type, 1
-148, Arabia, Sydney, SENT OUT QUEST, Type, 2
-148, Arabia, Sydney, SENT OUT QUEST, Type, 16
-148, Arabia, Belgrade, SENT OUT QUEST, Type, 10
-148, Arabia, Antananarivo, SENT OUT QUEST, Type, 16
-148, Arabia, Singapore, SENT OUT QUEST, Type, 4
-148, Arabia, Ur, SENT OUT QUEST, Type, 4
-148, Arabia, Kyzyl, SENT OUT QUEST, Type, 4
-148, Arabia, Malacca, SENT OUT QUEST, Type, 2
-148, Arabia, Hanoi, SENT OUT QUEST, Type, 16
-148, Arabia, Hanoi, SENT OUT QUEST, Type, 11
-148, Arabia, Lhasa, SENT OUT QUEST, Type, 13
-148, Arabia, Lhasa, SENT OUT QUEST, Type, 16
-148, Arabia, Panama City, SENT OUT QUEST, Type, 1
-148, Arabia, Panama City, SENT OUT QUEST, Type, 16
-148, Arabia, Vancouver, SENT OUT QUEST, Type, 2
-148, Arabia, Vancouver, SENT OUT QUEST, Type, 17
-148, Arabia, Vancouver, SENT OUT QUEST, Type, 10
-148, Assyria, Sydney, SENT OUT QUEST, Type, 14
-148, Assyria, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
-148, The Iroquois, Monaco, lost friend
-148, Songhai, Monaco, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MONACO
-148, The Iroquois, Malacca, SENT OUT QUEST, Type, 4
-148, The Iroquois, Malacca, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MALACCA
-148, The Iroquois, Yerevan, SENT OUT QUEST, Type, 4
-148, The Iroquois, Yerevan, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_YEREVAN
-148, Songhai, Hanoi, SENT OUT QUEST, Type, 2
-148, Songhai, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_HANOI
-149, The Celts, Monaco, gained friend
-149, The Celts, Monaco, FINISHED QUEST, Great Person, Friendship: 10 to 50, MINOR_CIV_MONACO
-149, Arabia, Belgrade, gained friend
-149, Arabia, Belgrade, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_BELGRADE
-149, France, Belgrade, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-149, The Iroquois, Belgrade, cancelled, Contest Culture, Friendship: 40 to 40, MINOR_CIV_BELGRADE
-149, Songhai, Belgrade, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_BELGRADE
-149, The Celts, Belgrade, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_BELGRADE
-149, Assyria, Belgrade, cancelled, Contest Culture, Friendship: 14 to 14, MINOR_CIV_BELGRADE
-149, Persia, Belgrade, cancelled, Contest Culture, Friendship: 18 to 18, MINOR_CIV_BELGRADE
-149, Arabia, Belgrade, SENT OUT QUEST, Type, 16
-149, Arabia, Belgrade, RECEIVED QUEST, Spread Religion, Friendship: 40 to 40, MINOR_CIV_BELGRADE
-149, Songhai, Antananarivo, cancelled, Bully City-State, Friendship: 15 to 15, MINOR_CIV_ANTANANARIVO
-149, Assyria, Vancouver, SENT OUT QUEST, Type, 14
-149, Assyria, Vancouver, RECEIVED QUEST, Bully City-State, Friendship: 7 to 7, MINOR_CIV_VANCOUVER
-150, France, Monaco, SENT OUT QUEST, Type, 13
-150, France, Monaco, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MONACO
-150, The Iroquois, Monaco, SENT OUT QUEST, Type, 13
-150, The Iroquois, Monaco, RECEIVED QUEST, Invest, Friendship: 26 to 26, MINOR_CIV_MONACO
-150, Songhai, Monaco, SENT OUT QUEST, Type, 13
-150, Songhai, Monaco, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MONACO
-150, The Celts, Monaco, SENT OUT QUEST, Type, 13
-150, The Celts, Monaco, RECEIVED QUEST, Invest, Friendship: 47 to 47, MINOR_CIV_MONACO
-150, Assyria, Monaco, SENT OUT QUEST, Type, 13
-150, Assyria, Monaco, RECEIVED QUEST, Invest, Friendship: 21 to 21, MINOR_CIV_MONACO
-150, Persia, Monaco, SENT OUT QUEST, Type, 13
-150, Persia, Monaco, RECEIVED QUEST, Invest, Friendship: 6 to 6, MINOR_CIV_MONACO
-150, Belgrade, The Iroquois, RECEIVED_UNIT_GIFT, Mohawk Warrior
-150, Assyria, Belgrade, cancelled, Bully City-State, Friendship: 13 to 13, MINOR_CIV_BELGRADE
-150, Ethiopia, Singapore, lost friend
-150, Songhai, Ur, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_UR
-150, Persia, Yerevan, gained friend
-150, Persia, Yerevan, lost friend
+084, Ethiopia, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 10 to 10, MINOR_CIV_UR
+084, The Iroquois, Cape Town, SENT OUT QUEST, Type, 2
+084, The Iroquois, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+084, France, Hanoi, lost friend
+084, France, Panama City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+084, The Iroquois, Panama City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+084, Arabia, Panama City, cancelled, Kill Camp, Friendship: 23 to 23, MINOR_CIV_PANAMA_CITY
+084, Ethiopia, Panama City, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+085, The Celts, Antananarivo, SENT OUT QUEST, Type, 1
+085, The Celts, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+085, Assyria, Hanoi, Gold Gift: 250, Friendship: 37 to 37, Conquest, MINOR_CIV_HANOI, (SAVING) , Boost! , Passing Arabia
+085, Arabia, Belgrade, lost friend
+085, Persia, Yerevan, gained friend
+085, Persia, Yerevan, FINISHED QUEST, Find Player, Friendship: 5 to 40, MINOR_CIV_YEREVAN
+085, Arabia, Hanoi, lost friend
+085, Ethiopia, Vancouver, lost friend
+086, Assyria, Monaco, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+086, Assyria, Belgrade, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+086, France, Singapore, lost friend
+086, The Iroquois, Lhasa, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_LHASA
+086, The Iroquois, Panama City, SENT OUT QUEST, Type, 4
+086, The Iroquois, Panama City, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PANAMA_CITY
+087, France, Hanoi, SENT OUT QUEST, Type, 0
+087, Songhai, Monaco, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MONACO
+087, Arabia, Monaco, SENT OUT QUEST, Type, 14
+087, Arabia, Monaco, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MONACO
+087, Songhai, Belgrade, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BELGRADE
+087, Assyria, Antananarivo, gained ally
+087, The Celts, Antananarivo, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_ANTANANARIVO
+087, Assyria, Antananarivo, FINISHED QUEST, Trade Route, Friendship: 47 to 87, MINOR_CIV_ANTANANARIVO
+087, Arabia, Singapore, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SINGAPORE
+087, France, Ur, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_UR
+087, Songhai, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+087, The Celts, Kyzyl, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KYZYL
+087, Songhai, Hanoi, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_HANOI
+087, Arabia, Hanoi, cancelled, Construct Wonder, Friendship: 26 to 26, MINOR_CIV_HANOI
+087, Assyria, Hanoi, cancelled, Construct Wonder, Friendship: 32 to 32, MINOR_CIV_HANOI
+087, Arabia, Vancouver, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_VANCOUVER
+088, The Celts, Kyzyl, gained friend
+088, The Celts, Kyzyl, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KYZYL
+088, The Iroquois, Sydney, gained friend
+088, The Iroquois, Sydney, FINISHED QUEST, Connect Resource, Friendship: -1 to 38, MINOR_CIV_SYDNEY
+088, The Iroquois, Singapore, gained friend
+088, The Iroquois, Singapore, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+088, The Iroquois, Malacca, gained friend
+088, The Iroquois, Malacca, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MALACCA
+089, The Iroquois, Singapore, SENT OUT QUEST, Type, 3
+089, France, Singapore, SENT OUT QUEST, Type, 2
+089, France, Singapore, RECEIVED QUEST, Connect Resource, Friendship: 22 to 22, MINOR_CIV_SINGAPORE
+089, Assyria, Hanoi, lost friend
+089, France, Hanoi, SENT OUT QUEST, Type, 1
+089, France, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 21 to 21, MINOR_CIV_HANOI
+089, Songhai, Hanoi, SENT OUT QUEST, Type, 1
+089, Songhai, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_HANOI
+089, Arabia, Hanoi, SENT OUT QUEST, Type, 1
+089, Arabia, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 23 to 23, MINOR_CIV_HANOI
+089, Assyria, Hanoi, SENT OUT QUEST, Type, 1
+089, Assyria, Hanoi, RECEIVED QUEST, Kill Camp, Friendship: 29 to 29, MINOR_CIV_HANOI
+090, France, Monaco, SENT OUT QUEST, Type, 14
+090, France, Monaco, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_MONACO
+090, France, Cape Town, SENT OUT QUEST, Type, 7
+090, France, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+091, Persia, Monaco, SENT OUT QUEST, Type, 2
+091, Persia, Monaco, SENT OUT QUEST, Type, 17
+091, Persia, Belgrade, SENT OUT QUEST, Type, 17
+091, Persia, Belgrade, SENT OUT QUEST, Type, 7
+091, Persia, Belgrade, SENT OUT QUEST, Type, 10
+091, Persia, Yerevan, SENT OUT QUEST, Type, 2
+091, France, Monaco, SENT OUT QUEST, Type, 1
+091, France, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MONACO
+091, Songhai, Monaco, SENT OUT QUEST, Type, 1
+091, Songhai, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+091, Arabia, Monaco, SENT OUT QUEST, Type, 1
+091, Arabia, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+091, Assyria, Monaco, SENT OUT QUEST, Type, 1
+091, Assyria, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MONACO
+091, Persia, Monaco, SENT OUT QUEST, Type, 1
+091, Persia, Monaco, RECEIVED QUEST, Kill Camp, Friendship: 3 to 3, MINOR_CIV_MONACO
+092, The Iroquois, Sydney, lost friend
+092, Assyria, Monaco, gained friend
+092, Assyria, Monaco, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MONACO
+092, Persia, Yerevan, lost friend
+092, Assyria, Yerevan, SENT OUT QUEST, Type, 7
+092, Assyria, Yerevan, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+092, France, Lhasa, lost friend
+092, Assyria, Lhasa, gained friend
+092, Assyria, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_LHASA
+092, France, Lhasa, SENT OUT QUEST, Type, 11
+092, France, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 28 to 28, MINOR_CIV_LHASA
+092, The Iroquois, Lhasa, SENT OUT QUEST, Type, 11
+092, The Iroquois, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_LHASA
+092, Assyria, Lhasa, SENT OUT QUEST, Type, 11
+092, Assyria, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 40 to 40, MINOR_CIV_LHASA
+092, Assyria, Lhasa, SENT OUT QUEST, Type, 4
+092, Assyria, Lhasa, RECEIVED QUEST, Great Person, Friendship: 40 to 40, MINOR_CIV_LHASA
+093, France, Monaco, SENT OUT QUEST, Type, 3
+093, France, Monaco, SENT OUT QUEST, Type, 14
+093, France, Monaco, SENT OUT QUEST, Type, 1
+093, Arabia, Belgrade, SENT OUT QUEST, Type, 2
+093, Arabia, Belgrade, RECEIVED QUEST, Connect Resource, Friendship: 17 to 17, MINOR_CIV_BELGRADE
+093, The Iroquois, Singapore, lost friend
+093, France, Ur, SENT OUT QUEST, Type, 3
+093, France, Ur, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_UR
+093, France, Hanoi, SENT OUT QUEST, Type, 2
+093, France, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 15 to 15, MINOR_CIV_HANOI
+094, Arabia, Lhasa, SENT OUT QUEST, Type, 11
+094, Arabia, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LHASA
+094, Ethiopia, Singapore, gained friend
+094, Ethiopia, Singapore, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+094, The Iroquois, Singapore, cancelled, Construct Wonder, Friendship: 26 to 26, MINOR_CIV_SINGAPORE
+094, Ethiopia, Malacca, gained friend
+094, Ethiopia, Malacca, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MALACCA
+094, The Iroquois, Malacca, cancelled, Bully City-State, Friendship: 31 to 31, MINOR_CIV_MALACCA
+094, Arabia, Yerevan, SENT OUT QUEST, Type, 2
+094, Arabia, Yerevan, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_YEREVAN
+094, France, Vancouver, SENT OUT QUEST, Type, 7
+094, France, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VANCOUVER
+094, Ethiopia, Vancouver, SENT OUT QUEST, Type, 7
+094, Ethiopia, Vancouver, RECEIVED QUEST, Find Natural Wonder, Friendship: 16 to 16, MINOR_CIV_VANCOUVER
+095, Songhai, Lhasa, SENT OUT QUEST, Type, 11
+095, Songhai, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LHASA
+095, Ethiopia, Singapore, SENT OUT QUEST, Type, 16
+095, The Iroquois, Malacca, lost friend
+095, Ethiopia, Vancouver, cancelled, Bully City-State, Friendship: 14 to 14, MINOR_CIV_VANCOUVER
+096, France, Sydney, era change yield update
+096, France, Monaco, era change yield update
+096, France, Belgrade, era change yield update
+096, France, Antananarivo, era change yield update
+096, France, Singapore, era change yield update
+096, France, Ur, era change yield update
+096, France, Kyzyl, era change yield update
+096, France, Malacca, era change yield update
+096, France, Cape Town, era change yield update
+096, France, Melbourne, era change yield update
+096, France, Hong Kong, era change yield update
+096, France, Yerevan, era change yield update
+096, France, Hanoi, era change yield update
+096, France, Lhasa, era change yield update
+096, France, Panama City, era change yield update
+096, France, Vancouver, era change yield update
+096, France, Sydney, SENT OUT QUEST, Type, 2
+096, France, Sydney, SENT OUT QUEST, Type, 7
+096, France, Monaco, SENT OUT QUEST, Type, 3
+096, France, Monaco, SENT OUT QUEST, Type, 14
+096, France, Monaco, SENT OUT QUEST, Type, 1
+096, France, Belgrade, SENT OUT QUEST, Type, 17
+096, France, Belgrade, SENT OUT QUEST, Type, 0
+096, France, Belgrade, SENT OUT QUEST, Type, 10
+096, France, Singapore, SENT OUT QUEST, Type, 2
+096, France, Ur, SENT OUT QUEST, Type, 3
+096, France, Malacca, SENT OUT QUEST, Type, 1
+096, France, Malacca, SENT OUT QUEST, Type, 3
+096, France, Malacca, SENT OUT QUEST, Type, 7
+096, France, Cape Town, SENT OUT QUEST, Type, 7
+096, France, Hanoi, SENT OUT QUEST, Type, 0
+096, France, Hanoi, SENT OUT QUEST, Type, 1
+096, France, Hanoi, SENT OUT QUEST, Type, 2
+096, France, Lhasa, SENT OUT QUEST, Type, 16
+096, France, Lhasa, SENT OUT QUEST, Type, 11
+096, France, Panama City, SENT OUT QUEST, Type, 2
+096, France, Panama City, SENT OUT QUEST, Type, 3
+096, France, Vancouver, SENT OUT QUEST, Type, 2
+096, France, Vancouver, SENT OUT QUEST, Type, 1
+096, France, Vancouver, SENT OUT QUEST, Type, 7
+096, The Iroquois, Panama City, gained friend
+096, The Iroquois, Panama City, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_PANAMA_CITY
+096, The Iroquois, Vancouver, gained friend
+096, The Iroquois, Vancouver, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VANCOUVER
+097, France, Cape Town, SENT OUT QUEST, Type, 7
+097, Arabia, Sydney, gained friend
+097, Arabia, Sydney, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+097, Arabia, Monaco, gained friend
+097, Arabia, Monaco, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MONACO
+097, Arabia, Panama City, gained friend
+097, Arabia, Panama City, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_PANAMA_CITY
+097, France, Ur, SENT OUT QUEST, Type, 1
+097, France, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+097, The Iroquois, Ur, SENT OUT QUEST, Type, 1
+097, The Iroquois, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+097, Arabia, Ur, SENT OUT QUEST, Type, 1
+097, Arabia, Ur, RECEIVED QUEST, Kill Camp, Friendship: 8 to 8, MINOR_CIV_UR
+097, Ethiopia, Ur, SENT OUT QUEST, Type, 1
+097, Ethiopia, Ur, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_UR
+097, The Celts, Kyzyl, lost friend
+097, Arabia, Hanoi, SENT OUT QUEST, Type, 2
+097, Arabia, Hanoi, RECEIVED QUEST, Connect Resource, Friendship: 11 to 11, MINOR_CIV_HANOI
+098, The Iroquois, Sydney, era change yield update
+098, The Iroquois, Monaco, era change yield update
+098, The Iroquois, Belgrade, era change yield update
+098, The Iroquois, Antananarivo, era change yield update
+098, The Iroquois, Singapore, era change yield update
+098, The Iroquois, Ur, era change yield update
+098, The Iroquois, Kyzyl, era change yield update
+098, The Iroquois, Malacca, era change yield update
+098, The Iroquois, Cape Town, era change yield update
+098, The Iroquois, Melbourne, era change yield update
+098, The Iroquois, Hong Kong, era change yield update
+098, The Iroquois, Yerevan, era change yield update
+098, The Iroquois, Hanoi, era change yield update
+098, The Iroquois, Lhasa, era change yield update
+098, The Iroquois, Panama City, era change yield update
+098, The Iroquois, Vancouver, era change yield update
+098, The Iroquois, Sydney, SENT OUT QUEST, Type, 17
+098, The Iroquois, Ur, SENT OUT QUEST, Type, 7
+098, The Iroquois, Ur, SENT OUT QUEST, Type, 2
+098, The Iroquois, Ur, SENT OUT QUEST, Type, 1
+098, The Iroquois, Malacca, SENT OUT QUEST, Type, 1
+098, The Iroquois, Cape Town, SENT OUT QUEST, Type, 2
+098, The Iroquois, Lhasa, SENT OUT QUEST, Type, 17
+098, The Iroquois, Lhasa, SENT OUT QUEST, Type, 11
+098, The Iroquois, Panama City, SENT OUT QUEST, Type, 2
+098, The Iroquois, Vancouver, SENT OUT QUEST, Type, 7
+098, The Iroquois, Vancouver, SENT OUT QUEST, Type, 1
+098, Arabia, Sydney, SENT OUT QUEST, Type, 3
+099, Assyria, Monaco, lost friend
+099, Assyria, Belgrade, SENT OUT QUEST, Type, 3
+099, Assyria, Belgrade, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_BELGRADE
+099, Ethiopia, Singapore, lost friend
+099, Assyria, Lhasa, lost friend
+099, Arabia, Panama City, SENT OUT QUEST, Type, 4
+099, Arabia, Panama City, RECEIVED QUEST, Great Person, Friendship: 38 to 38, MINOR_CIV_PANAMA_CITY
+100, The Iroquois, Singapore, Gold Gift: 500, Friendship: 15 to 15, Diplomacy, MINOR_CIV_SINGAPORE, (SAVING) , Passing Arabia
+100, Arabia, Sydney, era change yield update
+100, Arabia, Monaco, era change yield update
+100, Arabia, Belgrade, era change yield update
+100, Arabia, Antananarivo, era change yield update
+100, Arabia, Singapore, era change yield update
+100, Arabia, Ur, era change yield update
+100, Arabia, Kyzyl, era change yield update
+100, Arabia, Malacca, era change yield update
+100, Arabia, Cape Town, era change yield update
+100, Arabia, Melbourne, era change yield update
+100, Arabia, Hong Kong, era change yield update
+100, Arabia, Yerevan, era change yield update
+100, Arabia, Hanoi, era change yield update
+100, Arabia, Lhasa, era change yield update
+100, Arabia, Panama City, era change yield update
+100, Arabia, Vancouver, era change yield update
+100, Arabia, Sydney, SENT OUT QUEST, Type, 3
+100, Arabia, Monaco, SENT OUT QUEST, Type, 14
+100, Arabia, Monaco, SENT OUT QUEST, Type, 1
+100, Arabia, Belgrade, SENT OUT QUEST, Type, 10
+100, Arabia, Belgrade, SENT OUT QUEST, Type, 2
+100, Arabia, Singapore, SENT OUT QUEST, Type, 2
+100, Arabia, Ur, SENT OUT QUEST, Type, 17
+100, Arabia, Ur, SENT OUT QUEST, Type, 2
+100, Arabia, Ur, SENT OUT QUEST, Type, 1
+100, Arabia, Malacca, SENT OUT QUEST, Type, 1
+100, Arabia, Malacca, SENT OUT QUEST, Type, 2
+100, Arabia, Malacca, SENT OUT QUEST, Type, 3
+100, Arabia, Yerevan, SENT OUT QUEST, Type, 16
+100, Arabia, Yerevan, SENT OUT QUEST, Type, 2
+100, Arabia, Hanoi, SENT OUT QUEST, Type, 1
+100, Arabia, Hanoi, SENT OUT QUEST, Type, 2
+100, Arabia, Lhasa, SENT OUT QUEST, Type, 11
+100, Arabia, Panama City, SENT OUT QUEST, Type, 4
+100, Arabia, Vancouver, SENT OUT QUEST, Type, 2
+100, Arabia, Vancouver, SENT OUT QUEST, Type, 1
+100, Assyria, Antananarivo, lost ally
+100, Arabia, Cape Town, SENT OUT QUEST, Type, 3
+100, Arabia, Cape Town, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+100, The Iroquois, Panama City, lost friend
+101, Ethiopia, Sydney, era change yield update
+101, Ethiopia, Monaco, era change yield update
+101, Ethiopia, Belgrade, era change yield update
+101, Ethiopia, Antananarivo, era change yield update
+101, Ethiopia, Singapore, era change yield update
+101, Ethiopia, Ur, era change yield update
+101, Ethiopia, Kyzyl, era change yield update
+101, Ethiopia, Malacca, era change yield update
+101, Ethiopia, Cape Town, era change yield update
+101, Ethiopia, Melbourne, era change yield update
+101, Ethiopia, Hong Kong, era change yield update
+101, Ethiopia, Yerevan, era change yield update
+101, Ethiopia, Hanoi, era change yield update
+101, Ethiopia, Lhasa, era change yield update
+101, Ethiopia, Panama City, era change yield update
+101, Ethiopia, Vancouver, era change yield update
+101, Ethiopia, Singapore, SENT OUT QUEST, Type, 16
+101, Ethiopia, Ur, SENT OUT QUEST, Type, 3
+101, Ethiopia, Ur, SENT OUT QUEST, Type, 1
+101, Ethiopia, Malacca, SENT OUT QUEST, Type, 1
+101, Ethiopia, Malacca, SENT OUT QUEST, Type, 7
+101, Ethiopia, Panama City, SENT OUT QUEST, Type, 2
+101, Ethiopia, Panama City, SENT OUT QUEST, Type, 7
+101, Ethiopia, Vancouver, SENT OUT QUEST, Type, 1
+101, Ethiopia, Vancouver, SENT OUT QUEST, Type, 7
+101, Arabia, Sydney, lost friend
+101, Ethiopia, Malacca, lost friend
+102, Assyria, Sydney, era change yield update
+102, Assyria, Monaco, era change yield update
+102, Assyria, Belgrade, era change yield update
+102, Assyria, Antananarivo, era change yield update
+102, Assyria, Singapore, era change yield update
+102, Assyria, Ur, era change yield update
+102, Assyria, Kyzyl, era change yield update
+102, Assyria, Malacca, era change yield update
+102, Assyria, Cape Town, era change yield update
+102, Assyria, Melbourne, era change yield update
+102, Assyria, Hong Kong, era change yield update
+102, Assyria, Yerevan, era change yield update
+102, Assyria, Hanoi, era change yield update
+102, Assyria, Lhasa, era change yield update
+102, Assyria, Panama City, era change yield update
+102, Assyria, Vancouver, era change yield update
+102, Assyria, Sydney, SENT OUT QUEST, Type, 2
+102, Assyria, Monaco, SENT OUT QUEST, Type, 1
+102, Assyria, Belgrade, SENT OUT QUEST, Type, 7
+102, Assyria, Belgrade, SENT OUT QUEST, Type, 10
+102, Assyria, Belgrade, SENT OUT QUEST, Type, 3
+102, Assyria, Antananarivo, SENT OUT QUEST, Type, 1
+102, Assyria, Yerevan, SENT OUT QUEST, Type, 7
+102, Assyria, Hanoi, SENT OUT QUEST, Type, 1
+102, Assyria, Lhasa, SENT OUT QUEST, Type, 11
+102, Assyria, Lhasa, SENT OUT QUEST, Type, 4

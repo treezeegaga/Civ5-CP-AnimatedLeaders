@@ -40,7 +40,7 @@
 024, The Inca, Citizenship, 386
 024, The Inca, Republic, 352
 024, The Inca, CHOSEN, Republic
-025, Polynesia, Citizenship, 388
+025, Polynesia, Citizenship, 389
 025, Polynesia, Republic, 345
 025, Polynesia, CHOSEN, Citizenship
 029, The Netherlands, Legalism, 468
@@ -52,199 +52,106 @@
 032, Austria, CHOSEN, Legalism
 034, Carthage, Legalism, 246
 034, Carthage, CHOSEN, Legalism
-037, The Inca, Citizenship, 386
-037, The Inca, Collective Rule, 246
-037, The Inca, CHOSEN, Citizenship
-038, Spain, Representation, 942
-038, Spain, Republic, 758
-038, Spain, CHOSEN, Representation
-039, Polynesia, Meritocracy, 6168
-039, Polynesia, Representation, 526
-039, Polynesia, Republic, 365
-039, Polynesia, CHOSEN, Meritocracy
-041, Mongolia, Monarchy, 867
-041, Mongolia, Landed Elite, 825
-041, Mongolia, CHOSEN, Monarchy
+034, The Inca, Citizenship, 386
+034, The Inca, Collective Rule, 246
+034, The Inca, CHOSEN, Citizenship
+038, Polynesia, Meritocracy, 6168
+038, Polynesia, Representation, 526
+038, Polynesia, Republic, 365
+038, Polynesia, CHOSEN, Meritocracy
+039, Spain, Representation, 942
+039, Spain, Republic, 796
+039, Spain, CHOSEN, Representation
 041, The Netherlands, Monarchy, 1179
 041, The Netherlands, Landed Elite, 1140
 041, The Netherlands, CHOSEN, Monarchy
-043, Assyria, CHOSEN, Legalism
+044, Mongolia, Monarchy, 867
+044, Mongolia, Landed Elite, 825
+044, Mongolia, CHOSEN, Monarchy
+045, The Inca, Meritocracy, 14080
+045, The Inca, Representation, 1014
+045, The Inca, Collective Rule, 482
+045, The Inca, CHOSEN, Meritocracy
+045, Assyria, CHOSEN, Legalism
 046, Austria, Monarchy, 1074
 046, Austria, Landed Elite, 951
 046, Austria, CHOSEN, Monarchy
-051, The Inca, Meritocracy, 14080
-051, The Inca, Representation, 1014
-051, The Inca, Collective Rule, 480
-051, The Inca, CHOSEN, Meritocracy
+049, Polynesia, Representation, 1050
+049, Polynesia, Republic, 768
+049, Polynesia, CHOSEN, Representation
+050, Spain, Republic, 1197
+050, Spain, CHOSEN, Republic
 053, Carthage, Monarchy, 951
 053, Carthage, Landed Elite, 699
 053, Carthage, CHOSEN, Monarchy
-053, Polynesia, Representation, 1050
-053, Polynesia, Republic, 770
-053, Polynesia, CHOSEN, Representation
-055, Spain, Republic, 1197
-055, Spain, CHOSEN, Republic
 055, Assyria, CHOSEN, Monarchy
-056, The Netherlands, Landed Elite, 1600
-056, The Netherlands, CHOSEN, Landed Elite
-057, Mongolia, Landed Elite, 1200
-057, Mongolia, CHOSEN, Landed Elite
-060, Austria, Landed Elite, 1358
-060, Austria, CHOSEN, Landed Elite
-063, The Inca, Representation, 1539
-063, The Inca, Collective Rule, 747
-063, The Inca, CHOSEN, Representation
-065, Polynesia, Republic, 1275
+058, The Inca, Representation, 1539
+058, The Inca, Collective Rule, 741
+058, The Inca, CHOSEN, Representation
+058, The Netherlands, Landed Elite, 1600
+058, The Netherlands, CHOSEN, Landed Elite
+059, Mongolia, Landed Elite, 1200
+059, Mongolia, CHOSEN, Landed Elite
+063, Spain, Collective Rule, 1240
+063, Spain, CHOSEN, Collective Rule
+064, Austria, Landed Elite, 1358
+064, Austria, CHOSEN, Landed Elite
+065, Polynesia, Republic, 1347
 065, Polynesia, CHOSEN, Republic
-068, Spain, Collective Rule, 1260
-068, Spain, CHOSEN, Collective Rule
+068, The Inca, Collective Rule, 1140
+068, The Inca, CHOSEN, Collective Rule
 070, Assyria, CHOSEN, Landed Elite
-073, The Netherlands, Branch 4, 278
-073, The Netherlands, Branch 5, 266
-073, The Netherlands, Branch 2, 76
-073, The Netherlands, Branch 1, 70
-073, The Netherlands, Branch 3, 53
-073, The Netherlands, CHOSEN, Branch 4
-075, The Inca, Collective Rule, 1104
-075, The Inca, CHOSEN, Collective Rule
-075, Austria, Branch 5, 338
-075, Austria, Branch 4, 296
-075, Austria, Branch 2, 84
-075, Austria, Branch 1, 63
-075, Austria, Branch 3, 52
-075, Austria, CHOSEN, Branch 5
-078, Carthage, Landed Elite, 1052
-078, Carthage, CHOSEN, Landed Elite
-078, Austria, Cultural Centers, 391
-078, Austria, Fine Arts, 390
-078, Austria, CHOSEN, Fine Arts
-080, Mongolia, Branch 5, 262
-080, Mongolia, Branch 2, 162
-080, Mongolia, Branch 4, 133
-080, Mongolia, Branch 1, 63
-080, Mongolia, Branch 3, 37
-080, Mongolia, CHOSEN, Branch 5
-080, Spain, Branch 5, 200
-080, Spain, Branch 4, 178
-080, Spain, Branch 0, 86
-080, Spain, Branch 2, 74
-080, Spain, Branch 3, 47
-080, Spain, CHOSEN, Branch 5
-082, Polynesia, Collective Rule, 1500
-082, Polynesia, CHOSEN, Collective Rule
-087, Austria, Artistic Genius, 339
-087, Austria, Cultural Centers, 334
-087, Austria, CHOSEN, Cultural Centers
-089, The Inca, Branch 5, 299
-089, The Inca, Branch 4, 166
-089, The Inca, Branch 0, 87
-089, The Inca, Branch 2, 73
-089, The Inca, Branch 3, 49
-089, The Inca, CHOSEN, Branch 5
-090, The Netherlands, Philanthropy, 410
-090, The Netherlands, Consulates, 332
-090, The Netherlands, CHOSEN, Philanthropy
-090, Assyria, CHOSEN, Branch 2
-092, Spain, Fine Arts, 196
-092, Spain, Cultural Centers, 175
-092, Spain, CHOSEN, Fine Arts
-096, The Inca, Fine Arts, 358
-096, The Inca, Cultural Centers, 331
-096, The Inca, CHOSEN, Cultural Centers
-099, Polynesia, Branch 5, 244
-099, Polynesia, Branch 4, 90
-099, Polynesia, Branch 0, 87
-099, Polynesia, Branch 2, 63
-099, Polynesia, Branch 3, 51
-099, Polynesia, CHOSEN, Branch 5
-099, The Inca, Fine Arts, 358
-099, The Inca, CHOSEN, Fine Arts
-099, Austria, Flourishing of the Arts, 948
-099, Austria, Artistic Genius, 678
-099, Austria, CHOSEN, Flourishing of the Arts
-101, Spain, Artistic Genius, 254
-101, Spain, Cultural Centers, 175
-101, Spain, CHOSEN, Artistic Genius
-103, Mongolia, Fine Arts, 261
-103, Mongolia, Cultural Centers, 201
-103, Mongolia, CHOSEN, Fine Arts
-105, The Inca, Flourishing of the Arts, 1118
-105, The Inca, Artistic Genius, 816
-105, The Inca, CHOSEN, Flourishing of the Arts
-105, Austria, Cultural Exchange, 1695
-105, Austria, Artistic Genius, 1017
-105, Austria, CHOSEN, Cultural Exchange
-106, The Netherlands, Scholasticism, 628
-106, The Netherlands, Consulates, 353
-106, The Netherlands, CHOSEN, Scholasticism
-107, Carthage, Branch 4, 192
-107, Carthage, Branch 5, 156
-107, Carthage, Branch 2, 65
-107, Carthage, Branch 3, 53
-107, Carthage, Branch 1, 51
-107, Carthage, CHOSEN, Branch 4
-109, Polynesia, Cultural Centers, 328
-109, Polynesia, Fine Arts, 261
-109, Polynesia, CHOSEN, Cultural Centers
-109, Assyria, CHOSEN, Warrior Code
-110, Spain, Cultural Centers, 390
-110, Spain, CHOSEN, Cultural Centers
-113, The Inca, Artistic Genius, 1224
-113, The Inca, Cultural Exchange, 1137
-113, The Inca, CHOSEN, Artistic Genius
-116, Mongolia, Artistic Genius, 405
-116, Mongolia, Cultural Centers, 214
-116, Mongolia, CHOSEN, Artistic Genius
-117, The Inca, Cultural Exchange, 1144
-117, The Inca, CHOSEN, Cultural Exchange
-118, Austria, Artistic Genius, 1536
-118, Austria, CHOSEN, Artistic Genius
-120, The Netherlands, Cultural Diplomacy, 1108
-120, The Netherlands, Consulates, 720
-120, The Netherlands, CHOSEN, Cultural Diplomacy
-123, Polynesia, Fine Arts, 261
-123, Polynesia, CHOSEN, Fine Arts
-127, Austria, Branch 6, 412
-127, Austria, Branch 7, 258
-127, Austria, Branch 4, 78
-127, Austria, Branch 2, 45
-127, Austria, Branch 1, 23
-127, Austria, Branch 3, 22
-127, Austria, CHOSEN, Branch 6
-127, Spain, Flourishing of the Arts, 786
-127, Spain, CHOSEN, Flourishing of the Arts
-128, The Inca, Branch 6, 286
-128, The Inca, Branch 7, 245
-128, The Inca, Branch 0, 40
-128, The Inca, Branch 4, 40
-128, The Inca, Branch 2, 34
-128, The Inca, Branch 3, 20
-128, The Inca, CHOSEN, Branch 6
-130, Mongolia, Cultural Centers, 454
-130, Mongolia, CHOSEN, Cultural Centers
-131, Assyria, CHOSEN, Military Tradition
-136, Carthage, Philanthropy, 356
-136, Carthage, Consulates, 323
-136, Carthage, CHOSEN, Consulates
-137, The Inca, Mercenary Army, 509
-137, The Inca, Wagon Trains, 81
-137, The Inca, CHOSEN, Mercenary Army
-138, Spain, Cultural Exchange, 1240
-138, Spain, CHOSEN, Cultural Exchange
-139, Mongolia, Flourishing of the Arts, 789
-139, Mongolia, CHOSEN, Flourishing of the Arts
-141, The Netherlands, Consulates, 1056
-141, The Netherlands, CHOSEN, Consulates
-142, Polynesia, Artistic Genius, 890
-142, Polynesia, Flourishing of the Arts, 522
-142, Polynesia, CHOSEN, Artistic Genius
-144, Austria, Mercenary Army, 497
-144, Austria, Wagon Trains, 89
-144, Austria, CHOSEN, Mercenary Army
-145, Spain, Branch 6, 306
-145, Spain, Branch 7, 278
-145, Spain, Branch 4, 45
-145, Spain, Branch 0, 43
-145, Spain, Branch 2, 39
-145, Spain, Branch 3, 27
-145, Spain, CHOSEN, Branch 6
+072, The Netherlands, Branch 4, 278
+072, The Netherlands, Branch 5, 260
+072, The Netherlands, Branch 2, 76
+072, The Netherlands, Branch 1, 65
+072, The Netherlands, Branch 3, 49
+072, The Netherlands, CHOSEN, Branch 4
+074, Carthage, Landed Elite, 1052
+074, Carthage, CHOSEN, Landed Elite
+077, The Netherlands, Philanthropy, 339
+077, The Netherlands, Consulates, 259
+077, The Netherlands, CHOSEN, Philanthropy
+079, Spain, Branch 5, 211
+079, Spain, Branch 4, 157
+079, Spain, Branch 0, 99
+079, Spain, Branch 2, 73
+079, Spain, Branch 3, 56
+079, Spain, CHOSEN, Branch 5
+081, Mongolia, Branch 5, 206
+081, Mongolia, Branch 2, 148
+081, Mongolia, Branch 1, 64
+081, Mongolia, Branch 4, 61
+081, Mongolia, Branch 3, 49
+081, Mongolia, CHOSEN, Branch 5
+081, The Inca, Branch 5, 354
+081, The Inca, Branch 4, 144
+081, The Inca, Branch 0, 104
+081, The Inca, Branch 2, 79
+081, The Inca, Branch 3, 47
+081, The Inca, CHOSEN, Branch 5
+084, Polynesia, Collective Rule, 1464
+084, Polynesia, CHOSEN, Collective Rule
+084, Austria, Branch 5, 392
+084, Austria, Branch 4, 315
+084, Austria, Branch 2, 100
+084, Austria, Branch 1, 54
+084, Austria, Branch 3, 41
+084, Austria, CHOSEN, Branch 5
+086, The Netherlands, Scholasticism, 535
+086, The Netherlands, Consulates, 262
+086, The Netherlands, CHOSEN, Scholasticism
+086, Assyria, CHOSEN, Branch 2
+094, Carthage, Branch 5, 156
+094, Carthage, Branch 4, 95
+094, Carthage, Branch 2, 65
+094, Carthage, Branch 3, 53
+094, Carthage, Branch 1, 51
+094, Carthage, CHOSEN, Branch 5
+094, The Inca, Fine Arts, 358
+094, The Inca, Cultural Centers, 307
+094, The Inca, CHOSEN, Fine Arts
+096, Spain, Cultural Centers, 243
+096, Spain, Fine Arts, 196
+096, Spain, CHOSEN, Cultural Centers
+100, Assyria, CHOSEN, Warrior Code

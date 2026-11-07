@@ -59,169 +59,101 @@
 033, Assyria, CHOSEN, Legalism
 034, Songhai, Legalism, 530
 034, Songhai, CHOSEN, Legalism
+035, The Iroquois, Citizenship, 465
+035, The Iroquois, Collective Rule, 373
+035, The Iroquois, CHOSEN, Citizenship
 036, France, Legalism, 412
 036, France, CHOSEN, Legalism
-038, The Iroquois, Citizenship, 465
-038, The Iroquois, Collective Rule, 373
-038, The Iroquois, CHOSEN, Citizenship
 044, The Celts, Monarchy, 903
 044, The Celts, Aristocracy, 708
 044, The Celts, CHOSEN, Monarchy
+045, Arabia, Monarchy, 1188
+045, Arabia, Landed Elite, 1077
+045, Arabia, CHOSEN, Landed Elite
 045, Persia, CHOSEN, Meritocracy
-047, Arabia, Monarchy, 1188
-047, Arabia, Landed Elite, 1077
-047, Arabia, CHOSEN, Landed Elite
+046, The Iroquois, Meritocracy, 12350
+046, The Iroquois, Representation, 1122
+046, The Iroquois, Collective Rule, 746
+046, The Iroquois, CHOSEN, Meritocracy
 048, Songhai, Monarchy, 1152
 048, Songhai, Landed Elite, 1062
 048, Songhai, CHOSEN, Monarchy
 048, Ethiopia, Monarchy, 1032
-048, Ethiopia, Aristocracy, 912
+048, Ethiopia, Aristocracy, 852
 048, Ethiopia, CHOSEN, Monarchy
 049, Assyria, Landed Elite, 1188
 049, Assyria, Monarchy, 1083
 049, Assyria, CHOSEN, Landed Elite
-051, The Iroquois, Meritocracy, 12348
-051, The Iroquois, Representation, 1118
-051, The Iroquois, Collective Rule, 744
-051, The Iroquois, CHOSEN, Meritocracy
 054, France, Landed Elite, 1875
 054, France, Monarchy, 477
 054, France, CHOSEN, Landed Elite
-063, The Celts, Aristocracy, 1120
-063, The Celts, CHOSEN, Aristocracy
-064, Songhai, Landed Elite, 1086
-064, Songhai, CHOSEN, Landed Elite
-066, The Celts, Branch 5, 273
-066, The Celts, Branch 2, 60
-066, The Celts, Branch 1, 57
-066, The Celts, Branch 4, 54
-066, The Celts, Branch 3, 52
-066, The Celts, CHOSEN, Branch 5
-066, Arabia, Monarchy, 1690
-066, Arabia, CHOSEN, Monarchy
-067, The Iroquois, Representation, 1686
-067, The Iroquois, Collective Rule, 1125
-067, The Iroquois, CHOSEN, Representation
-067, Assyria, Monarchy, 1354
-067, Assyria, CHOSEN, Monarchy
-070, Ethiopia, Aristocracy, 1506
-070, Ethiopia, CHOSEN, Aristocracy
-074, France, Monarchy, 544
-074, France, CHOSEN, Monarchy
-078, The Celts, Fine Arts, 454
-078, The Celts, Cultural Centers, 365
-078, The Celts, CHOSEN, Fine Arts
-081, Persia, CHOSEN, Republic
-083, Ethiopia, Branch 6, 222
-083, Ethiopia, Branch 7, 164
-083, Ethiopia, Branch 5, 68
-083, Ethiopia, Branch 4, 39
-083, Ethiopia, Branch 2, 29
-083, Ethiopia, Branch 3, 23
-083, Ethiopia, Branch 1, 17
-083, Ethiopia, CHOSEN, Branch 6
-085, The Iroquois, Collective Rule, 1608
-085, The Iroquois, CHOSEN, Collective Rule
-086, Assyria, Branch 5, 177
-086, Assyria, Branch 2, 167
-086, Assyria, Branch 4, 145
-086, Assyria, Branch 1, 51
-086, Assyria, Branch 3, 28
-086, Assyria, CHOSEN, Branch 2
-087, Arabia, Branch 5, 308
-087, Arabia, Branch 4, 147
-087, Arabia, Branch 2, 81
-087, Arabia, Branch 3, 65
-087, Arabia, Branch 1, 57
-087, Arabia, CHOSEN, Branch 5
-088, Songhai, Branch 5, 245
-088, Songhai, Branch 2, 152
-088, Songhai, Branch 4, 65
-088, Songhai, Branch 1, 49
-088, Songhai, Branch 3, 28
-088, Songhai, CHOSEN, Branch 5
-090, The Celts, Artistic Genius, 331
-090, The Celts, Cultural Centers, 325
-090, The Celts, CHOSEN, Artistic Genius
-097, France, Branch 6, 256
-097, France, Branch 7, 174
-097, France, Branch 5, 106
-097, France, Branch 4, 38
-097, France, Branch 2, 30
-097, France, Branch 1, 24
-097, France, Branch 3, 19
-097, France, CHOSEN, Branch 6
-098, Ethiopia, Mercenary Army, 418
-098, Ethiopia, Wagon Trains, 67
-098, Ethiopia, CHOSEN, Mercenary Army
-103, Assyria, Warrior Code, 987
-103, Assyria, Discipline, 527
-103, Assyria, CHOSEN, Warrior Code
-104, The Iroquois, Branch 6, 282
-104, The Iroquois, Branch 7, 232
-104, The Iroquois, Branch 5, 57
-104, The Iroquois, Branch 4, 45
-104, The Iroquois, Branch 0, 39
-104, The Iroquois, Branch 2, 31
-104, The Iroquois, Branch 3, 24
-104, The Iroquois, CHOSEN, Branch 6
-105, The Celts, Cultural Centers, 542
-105, The Celts, CHOSEN, Cultural Centers
-107, Arabia, Fine Arts, 325
-107, Arabia, Cultural Centers, 311
-107, Arabia, CHOSEN, Cultural Centers
-111, Ethiopia, Mercantilism, 209
-111, Ethiopia, Wagon Trains, 67
-111, Ethiopia, CHOSEN, Mercantilism
-113, Persia, CHOSEN, Representation
-114, Songhai, Fine Arts, 358
-114, Songhai, Cultural Centers, 271
-114, Songhai, CHOSEN, Fine Arts
-117, France, Mercenary Army, 289
-117, France, Wagon Trains, 79
-117, France, CHOSEN, Mercenary Army
-117, The Iroquois, Mercenary Army, 454
-117, The Iroquois, Wagon Trains, 87
-117, The Iroquois, CHOSEN, Mercenary Army
-120, The Celts, Flourishing of the Arts, 1278
-120, The Celts, CHOSEN, Flourishing of the Arts
-122, Arabia, Fine Arts, 325
-122, Arabia, CHOSEN, Fine Arts
-122, Assyria, Military Tradition, 2543
-122, Assyria, Discipline, 489
-122, Assyria, CHOSEN, Military Tradition
-125, Ethiopia, Wagon Trains, 170
-125, Ethiopia, CHOSEN, Wagon Trains
-128, Songhai, Artistic Genius, 368
-128, Songhai, Cultural Centers, 271
-128, Songhai, CHOSEN, Artistic Genius
-130, The Iroquois, Mercantilism, 381
-130, The Iroquois, Wagon Trains, 89
-130, The Iroquois, CHOSEN, Mercantilism
-133, Arabia, Flourishing of the Arts, 836
-133, Arabia, Artistic Genius, 694
-133, Arabia, CHOSEN, Flourishing of the Arts
-135, The Celts, Cultural Exchange, 1956
-135, The Celts, CHOSEN, Cultural Exchange
-136, France, Mercantilism, 234
-136, France, Wagon Trains, 65
-136, France, CHOSEN, Mercantilism
-141, Songhai, Cultural Centers, 542
-141, Songhai, CHOSEN, Cultural Centers
-144, Assyria, Discipline, 1162
-144, Assyria, CHOSEN, Discipline
-145, The Iroquois, Wagon Trains, 160
-145, The Iroquois, CHOSEN, Wagon Trains
-145, Arabia, Cultural Exchange, 1662
-145, Arabia, Artistic Genius, 1041
-145, Arabia, CHOSEN, Cultural Exchange
-147, Ethiopia, Entrepreneurship, 1641
-147, Ethiopia, CHOSEN, Entrepreneurship
-150, The Celts, Branch 8, 193
-150, The Celts, Branch 6, 55
-150, The Celts, Branch 7, 51
-150, The Celts, Branch 2, 19
-150, The Celts, Branch 3, 14
-150, The Celts, Branch 1, 12
-150, The Celts, Branch 4, 12
-150, The Celts, CHOSEN, Branch 8
+061, The Celts, Aristocracy, 1120
+061, The Celts, CHOSEN, Aristocracy
+061, Arabia, Monarchy, 1690
+061, Arabia, CHOSEN, Monarchy
+063, The Iroquois, Representation, 1686
+063, The Iroquois, Collective Rule, 1128
+063, The Iroquois, CHOSEN, Representation
+066, Songhai, Landed Elite, 1086
+066, Songhai, CHOSEN, Landed Elite
+068, Ethiopia, Aristocracy, 1386
+068, Ethiopia, CHOSEN, Aristocracy
+069, Assyria, Monarchy, 1354
+069, Assyria, CHOSEN, Monarchy
+075, France, Monarchy, 544
+075, France, CHOSEN, Monarchy
+075, The Celts, Branch 6, 204
+075, The Celts, Branch 7, 175
+075, The Celts, Branch 5, 81
+075, The Celts, Branch 2, 32
+075, The Celts, Branch 3, 23
+075, The Celts, Branch 1, 22
+075, The Celts, Branch 4, 21
+075, The Celts, CHOSEN, Branch 6
+079, Arabia, Branch 5, 308
+079, Arabia, Branch 4, 296
+079, Arabia, Branch 2, 81
+079, Arabia, Branch 1, 65
+079, Arabia, Branch 3, 65
+079, Arabia, CHOSEN, Branch 5
+080, Persia, CHOSEN, Republic
+081, The Iroquois, Collective Rule, 1608
+081, The Iroquois, CHOSEN, Collective Rule
+087, Ethiopia, Branch 5, 279
+087, Ethiopia, Branch 4, 85
+087, Ethiopia, Branch 2, 63
+087, Ethiopia, Branch 3, 55
+087, Ethiopia, Branch 1, 45
+087, Ethiopia, CHOSEN, Branch 5
+087, Ethiopia, Fine Arts, 390
+087, Ethiopia, Cultural Centers, 288
+087, Ethiopia, CHOSEN, Fine Arts
+090, Songhai, Branch 5, 273
+090, Songhai, Branch 2, 162
+090, Songhai, Branch 4, 63
+090, Songhai, Branch 1, 50
+090, Songhai, Branch 3, 48
+090, Songhai, CHOSEN, Branch 5
+091, The Celts, Mercenary Army, 184
+091, The Celts, Wagon Trains, 46
+091, The Celts, CHOSEN, Mercenary Army
+097, Assyria, Branch 5, 220
+097, Assyria, Branch 2, 173
+097, Assyria, Branch 4, 139
+097, Assyria, Branch 1, 46
+097, Assyria, Branch 3, 28
+097, Assyria, CHOSEN, Branch 5
+098, France, Branch 6, 274
+098, France, Branch 7, 181
+098, France, Branch 5, 130
+098, France, Branch 4, 39
+098, France, Branch 2, 35
+098, France, Branch 1, 24
+098, France, Branch 3, 20
+098, France, CHOSEN, Branch 6
+098, Arabia, Fine Arts, 325
+098, Arabia, Cultural Centers, 278
+098, Arabia, CHOSEN, Fine Arts
+098, Ethiopia, Artistic Genius, 339
+098, Ethiopia, Cultural Centers, 289
+098, Ethiopia, CHOSEN, Artistic Genius

@@ -31,25 +31,31 @@
 023, Carthage, Spain, ***** Embassy Exchange *****
 023, Spain, ,***** OPENED EMBASSY @ Carthage! *****
 023, Carthage, ,***** OPENED EMBASSY @ Spain! *****
+025, Polynesia, Spain, ***** Embassy Exchange *****
+025, Spain, ,***** OPENED EMBASSY @ Polynesia! *****
+025, Polynesia, ,***** OPENED EMBASSY @ Spain! *****
 027, Austria, The Netherlands, ***** Embassy Exchange *****
 027, The Netherlands, ,***** OPENED EMBASSY @ Austria! *****
 027, Austria, ,***** OPENED EMBASSY @ The Netherlands! *****
-029, Polynesia, The Inca, ***** Embassy Exchange *****
-029, The Inca, ,***** OPENED EMBASSY @ Polynesia! *****
-029, Polynesia, ,***** OPENED EMBASSY @ The Inca! *****
-033, Carthage, The Netherlands, ***** Embassy Exchange *****
-033, The Netherlands, ,***** OPENED EMBASSY @ Carthage! *****
-033, Carthage, ,***** OPENED EMBASSY @ The Netherlands! *****
+032, Carthage, The Netherlands, ***** Embassy Exchange *****
+032, The Netherlands, ,***** OPENED EMBASSY @ Carthage! *****
+032, Carthage, ,***** OPENED EMBASSY @ The Netherlands! *****
 033, The Netherlands, Spain, ***** You have a Luxury I would like *****
-035, Mongolia, Austria, ***** Embassy Exchange *****
-035, Austria, ,***** OPENED EMBASSY @ Mongolia! *****
-035, Mongolia, ,***** OPENED EMBASSY @ Austria! *****
-036, Polynesia, Spain, ***** Embassy Exchange *****
-036, Spain, ,***** OPENED EMBASSY @ Polynesia! *****
-036, Polynesia, ,***** OPENED EMBASSY @ Spain! *****
+035, Carthage, The Inca, ***** Embassy Exchange *****
+035, The Inca, ,***** OPENED EMBASSY @ Carthage! *****
+035, Carthage, ,***** OPENED EMBASSY @ The Inca! *****
+036, Mongolia, Spain, ***** You have a Luxury I would like *****
+038, Spain, Mongolia, 3rd Party WAR Offer
+038, Mongolia, ,***** CLOSED EMBASSY @ Polynesia! *****
+038, Polynesia, ,***** CLOSED EMBASSY @ Mongolia! *****
+038, Mongolia, , ***** WAR DECLARATION! *****, Polynesia
+039, Polynesia, ,***** DENOUNCED GENERIC Mongolia! *****
 039, The Inca, The Netherlands, ***** Embassy Exchange *****
 039, The Netherlands, ,***** OPENED EMBASSY @ The Inca! *****
 039, The Inca, ,***** OPENED EMBASSY @ The Netherlands! *****
+040, Mongolia, ,***** DENOUNCED BECAUSE UNTRUSTWORTHY Polynesia! *****
+040, Mongolia, The Inca, ***** You have a Luxury I would like *****
+042, Carthage, Spain, ***** You have a Luxury I would like *****
 043, Mongolia, Assyria, ***** Embassy Exchange *****
 043, Assyria, ,***** OPENED EMBASSY @ Mongolia! *****
 043, Mongolia, ,***** OPENED EMBASSY @ Assyria! *****
@@ -62,311 +68,147 @@
 043, The Inca, Assyria, ***** Embassy Exchange *****
 043, Assyria, ,***** OPENED EMBASSY @ The Inca! *****
 043, The Inca, ,***** OPENED EMBASSY @ Assyria! *****
+043, Austria, The Inca, ***** You have a Luxury I would like *****
 043, Austria, Assyria, ***** Embassy Exchange *****
 043, Assyria, ,***** OPENED EMBASSY @ Austria! *****
 043, Austria, ,***** OPENED EMBASSY @ Assyria! *****
 043, The Netherlands, Assyria, ***** Embassy Exchange *****
 043, Assyria, ,***** OPENED EMBASSY @ The Netherlands! *****
 043, The Netherlands, ,***** OPENED EMBASSY @ Assyria! *****
-044, Carthage, The Inca, ***** Embassy Exchange *****
-044, The Inca, ,***** OPENED EMBASSY @ Carthage! *****
-044, Carthage, ,***** OPENED EMBASSY @ The Inca! *****
-046, Mongolia, The Inca, ***** You have a Luxury I would like *****
-046, Spain, Assyria, ***** Embassy Exchange *****
-046, Assyria, ,***** OPENED EMBASSY @ Spain! *****
-046, Spain, ,***** OPENED EMBASSY @ Assyria! *****
-047, Carthage, Spain, ***** You have a Luxury I would like *****
-047, Austria, The Inca, ***** You have a Luxury I would like *****
-047, Spain, Mongolia, 3rd Party WAR Offer
-047, Mongolia, ,***** CLOSED EMBASSY @ Polynesia! *****
-047, Polynesia, ,***** CLOSED EMBASSY @ Mongolia! *****
-047, Mongolia, , ***** WAR DECLARATION! *****, Polynesia
-048, The Inca, Spain, ***** Embassy Exchange *****
-048, Spain, ,***** OPENED EMBASSY @ The Inca! *****
-048, The Inca, ,***** OPENED EMBASSY @ Spain! *****
-049, The Inca, Carthage, ***** You have a Luxury I would like *****
+045, The Inca, Carthage, ***** You have a Luxury I would like *****
+045, Spain, Assyria, ***** Embassy Exchange *****
+045, Assyria, ,***** OPENED EMBASSY @ Spain! *****
+045, Spain, ,***** OPENED EMBASSY @ Assyria! *****
+048, Mongolia, Austria, ***** Embassy Exchange *****
+048, Austria, ,***** OPENED EMBASSY @ Mongolia! *****
+048, Mongolia, ,***** OPENED EMBASSY @ Austria! *****
+050, The Inca, Spain, ***** Embassy Exchange *****
+050, Spain, ,***** OPENED EMBASSY @ The Inca! *****
+050, The Inca, ,***** OPENED EMBASSY @ Spain! *****
+051, Mongolia, Carthage, ***** You have a Luxury I would like *****
 051, Carthage, Polynesia, Wanna team up?
-053, Polynesia, Carthage, Wanna team up?
-053, Polynesia, ,***** NOW FRIENDS CarthageRank: 002, ! *****
+051, Polynesia, Carthage, Wanna team up?
+051, Polynesia, ,***** NOW FRIENDS CarthageRank: 002, ! *****
+052, Carthage, Polynesia, ***** We would like to offer you a gift. *****
+053, Mongolia, Spain, Expansion Warning!
 053, Austria, Assyria, Wanna team up?
-053, Assyria, Austria, Wanna team up?
-053, Assyria, ,***** NOW FRIENDS AustriaRank: 002, ! *****
 054, Polynesia, Austria, Wanna team up?
+054, Polynesia, The Netherlands, ***** Embassy Exchange *****
+054, The Netherlands, ,***** OPENED EMBASSY @ Polynesia! *****
+054, Polynesia, ,***** OPENED EMBASSY @ The Netherlands! *****
 054, Austria, Polynesia, Wanna team up?
 054, Austria, ,***** NOW FRIENDS PolynesiaRank: 002, ! *****
-054, Assyria, Polynesia, ***** Compliment sent! Cooldown now active *****
-054, Assyria, Polynesia, ***** YAY - YOU BEFRIENDED A FRIEND! *****
-055, Polynesia, Assyria, ***** Compliment sent! Cooldown now active *****
-055, Polynesia, Assyria, ***** JUST FYI - I BEFRIENDED YOUR FRIEND! *****
 055, The Inca, Austria, Wanna team up?
 055, The Inca, Assyria, Wanna team up?
 055, Assyria, The Inca, Wanna team up?
 055, Assyria, ,***** NOW FRIENDS The IncaRank: 002, ! *****
+056, Carthage, The Netherlands, ***** You have a Luxury I would like *****
+056, Polynesia, The Inca, ***** Embassy Exchange *****
+056, The Inca, ,***** OPENED EMBASSY @ Polynesia! *****
+056, Polynesia, ,***** OPENED EMBASSY @ The Inca! *****
 057, Carthage, Austria, Wanna team up?
 057, The Netherlands, Assyria, Wanna team up?
-058, Carthage, The Netherlands, ***** You have a Luxury I would like *****
-058, Spain, The Netherlands, Renew Deal
-059, Polynesia, , ***** PEACE MADE! *****, Sofia
+057, Assyria, The Netherlands, Wanna team up?
+057, Assyria, ,***** NOW FRIENDS The NetherlandsRank: 002, ! *****
+059, Polynesia, , ***** PEACE MADE! *****, Belgrade
 059, Polynesia, Assyria, Wanna team up?
+059, The Inca, Spain, ***** You have a Luxury I would like *****
 059, Spain, Austria, Wanna team up?
-060, Carthage, Austria, ***** You have a Luxury I would like *****
-062, Mongolia, The Netherlands, ***** Embassy Exchange *****
-062, The Netherlands, ,***** OPENED EMBASSY @ Mongolia! *****
-062, Mongolia, ,***** OPENED EMBASSY @ The Netherlands! *****
-065, Spain, The Netherlands, Wanna team up?
+061, Mongolia, Spain, Renew Deal
+063, Austria, Carthage, Wanna team up?
+063, Austria, ,***** NOW FRIENDS CarthageRank: 002, ! *****
+064, Spain, Mongolia, Wanna team up?
+065, Polynesia, The Netherlands, ***** You have a Luxury I would like *****
+065, The Inca, Spain, Expansion Warning!
 065, The Netherlands, Spain, Wanna team up?
-065, The Netherlands, ,***** NOW FRIENDS SpainRank: 002, ! *****
+066, Carthage, The Inca, ***** You have a Luxury I would like *****
+066, Spain, The Netherlands, Wanna team up?
+066, Spain, ,***** NOW FRIENDS The NetherlandsRank: 002, ! *****
 067, Mongolia, Carthage, Wanna team up?
 067, Mongolia, The Inca, Wanna team up?
-067, Mongolia, The Netherlands, ***** You have a Luxury I would like *****
-067, Carthage, Spain, Wanna team up?
-068, The Inca, Mongolia, ***** You have a Luxury I would like *****
-068, The Netherlands, The Inca, Expansion Warning!
-068, Assyria, The Inca, Expansion Warning!
-069, Austria, Assyria, Expansion Warning!
-071, Mongolia, The Inca, Renew Deal
-071, Mongolia, Spain, ***** You have a Luxury I would like *****
-071, The Inca, The Netherlands, ***** You have a Luxury I would like *****
-071, Austria, Mongolia, ***** You have a Luxury I would like *****
+067, Carthage, Mongolia, Wanna team up?
+067, Carthage, ,***** NOW FRIENDS MongoliaRank: 002, ! *****
+067, Carthage, Spain, Renew Deal
+068, The Inca, Austria, Renew Deal
+069, Polynesia, Spain, Wanna team up?
+070, Mongolia, Austria, ***** You have a Luxury I would like *****
+070, Polynesia, Austria, ***** Can you spare something for a friend? *****
+070, Austria, Polynesia, ***** We would like to offer you a gift. *****
+070, Austria, The Inca, ***** You have a Luxury I would like *****
+070, Austria, The Netherlands, ***** You have a Luxury I would like *****
 071, The Netherlands, Austria, Wanna team up?
-072, The Inca, Austria, Renew Deal
-073, Spain, Mongolia, Wanna team up?
-073, The Netherlands, Mongolia, ***** You have a Luxury I would like *****
-075, Carthage, Mongolia, Wanna team up?
-075, Carthage, ,***** NOW FRIENDS MongoliaRank: 002, ! *****
-076, Mongolia, Austria, ***** You have a Luxury I would like *****
-076, Austria, Polynesia, ***** You have a Luxury I would like *****
-076, Spain, Mongolia, ***** You have a Luxury I would like *****
-078, Polynesia, Mongolia, We request peace!!!
-078, Polynesia, , ***** PEACE MADE! *****, Mongolia
-078, Spain, The Netherlands, ***** You have a Luxury I would like *****
-079, Mongolia, Polynesia, ***** Embassy Exchange *****
-079, Polynesia, ,***** OPENED EMBASSY @ Mongolia! *****
-079, Mongolia, ,***** OPENED EMBASSY @ Polynesia! *****
-080, Mongolia, Polynesia, DOF offer - Untrustworthy
-081, Spain, Carthage, ***** You have a Luxury I would like *****
-082, Carthage, Mongolia, ***** You have a Luxury I would like *****
-082, Austria, Spain, ***** You have a Luxury I would like *****
-083, Carthage, The Netherlands, Renew Deal
-085, Mongolia, The Inca, ***** You have a Luxury I would like *****
-085, The Inca, Austria, Wanna team up?
-085, Austria, Carthage, Renew Deal
-087, Mongolia, Polynesia, ***** You have a Luxury I would like *****
-087, Carthage, Polynesia, Expansion Warning!
-087, Carthage, Austria, Wanna team up?
-087, The Netherlands, Assyria, Wanna team up?
-087, The Inca, ,***** COOP WAR STATE CHANGE: We rejected Assyria's request to go to war against The Netherlands (REJECTED).
-087, Assyria, Austria, ***** We're done working with you. *****
-087, Assyria, ,***** NO LONGER FRIENDS Austria! *****
-088, Austria, The Inca, Wanna team up?
-088, Austria, ,***** NOW FRIENDS The IncaRank: 002, ! *****
-088, Austria, ,***** CLOSED EMBASSY @ Assyria! *****
-088, Assyria, ,***** CLOSED EMBASSY @ Austria! *****
-088, Austria, ,***** DENOUNCED BECAUSE UNTRUSTWORTHY Assyria! *****
-088, Assyria, Polynesia, Wanna team up?
-088, Assyria, ,***** NOW FRIENDS PolynesiaRank: 002, ! *****
-090, Polynesia, Carthage, ***** We're done working with you. *****
-090, Polynesia, ,***** NO LONGER FRIENDS Carthage! *****
-090, The Inca, Polynesia, ***** You have a Luxury I would like *****
-091, Mongolia, ,***** COOP WAR STATE CHANGE: We rejected Carthage's request to go to war against Polynesia (REJECTED).
-091, Carthage, ,***** CLOSED EMBASSY @ Polynesia! *****
-091, Polynesia, ,***** CLOSED EMBASSY @ Carthage! *****
-091, Carthage, ,***** DENOUNCED BECAUSE UNTRUSTWORTHY Polynesia! *****
-091, Polynesia, ,***** DENOUNCED BECAUSE OF LAND Carthage! *****
-091, Polynesia, The Inca, Wanna team up?
-092, Mongolia, Polynesia, ***** Insult sent! Cooldown now active *****
-092, Mongolia, Polynesia, ***** YOU DENOUNCED A FRIEND OF MINE! *****
-092, Mongolia, The Netherlands, Renew Deal
-092, Polynesia, Carthage, Expansion Warning!
-092, Assyria, ,***** CLOSED EMBASSY @ The Netherlands! *****
-092, The Netherlands, ,***** CLOSED EMBASSY @ Assyria! *****
-092, Assyria, , ***** WAR DECLARATION! *****, The Netherlands
-093, Carthage, Spain, ***** You have a Luxury I would like *****
-093, The Inca, Mongolia, Renew Deal
-093, The Netherlands, Carthage, Wanna team up?
-094, Carthage, Mongolia, Open Borders Exchange
-094, The Inca, Mongolia, Open Borders Offer
-094, Spain, Carthage, Wanna team up?
-094, Spain, ,***** NOW FRIENDS CarthageRank: 002, ! *****
-095, Carthage, ,***** COOP WAR STATE CHANGE: We are preparing to go to war with Mongolia against Polynesia (PREPARING).
-095, Mongolia, ,***** COOP WAR STATE CHANGE: We are preparing to go to war with Carthage against Polynesia (PREPARING).
-095, Mongolia, ,***** CLOSED EMBASSY @ Polynesia! *****
-095, Polynesia, ,***** CLOSED EMBASSY @ Mongolia! *****
-095, Mongolia, ,***** DENOUNCED BECAUSE DOGPILE Polynesia! *****
-095, Spain, ,***** COOP WAR STATE CHANGE: We are preparing to go to war with Carthage against Polynesia (PREPARING).
-095, Carthage, ,***** COOP WAR STATE CHANGE: We are preparing to go to war with Spain against Polynesia (PREPARING).
-095, Carthage, The Netherlands, ***** Compliment sent! Cooldown now active *****
-095, Carthage, The Netherlands, ***** JUST FYI - I BEFRIENDED YOUR FRIEND! *****
-096, Mongolia, The Inca, Renew Deal
-096, The Inca, Carthage, ***** You have a Luxury I would like *****
-096, The Netherlands, Spain, ***** Can you spare something for a friend? *****
-097, Mongolia, The Inca, Wanna team up?
-097, Carthage, Spain, Open Borders Exchange
-097, Spain, Austria, Open Borders Offer
-097, Spain, The Netherlands, Open Borders Exchange
-097, Spain, Assyria, Open Borders Offer
-097, The Netherlands, , ***** PEACE MADE! *****, Antananarivo
-098, Carthage, The Inca, ***** You have a Luxury I would like *****
-098, The Inca, ,***** CLOSED EMBASSY @ The Netherlands! *****
-098, The Netherlands, ,***** CLOSED EMBASSY @ The Inca! *****
-098, The Inca, ,***** DENOUNCED GENERIC The Netherlands! *****
-098, Austria, Mongolia, ***** You have a Luxury I would like *****
-098, Assyria, ,***** DENOUNCED GENERIC The Netherlands! *****
-100, Mongolia, Spain, Open Borders Exchange
-100, Carthage, The Inca, Wanna team up?
-101, Mongolia, Austria, Renew Deal
-101, Mongolia, Spain, Renew Deal
-101, Polynesia, The Netherlands, ***** Embassy Exchange *****
-101, The Netherlands, ,***** OPENED EMBASSY @ Polynesia! *****
-101, Polynesia, ,***** OPENED EMBASSY @ The Netherlands! *****
-101, The Inca, Assyria, ***** We would like to offer you a gift. *****
-101, The Netherlands, Austria, Wanna team up?
-102, Mongolia, Austria, Open Borders Exchange
-102, Mongolia, Spain, ***** You have a Luxury I would like *****
-103, The Netherlands, , ***** PEACE MADE! *****, Sofia
-104, Austria, Polynesia, DOF offer - Friends
-105, Carthage, ,***** COOP WAR STATE CHANGE: We are now in a coop war with Mongolia against Polynesia (ONGOING).
-105, Mongolia, ,***** COOP WAR STATE CHANGE: We are now in a coop war with Carthage against Polynesia (ONGOING).
-105, Spain, ,***** CLOSED EMBASSY @ Polynesia! *****
-105, Polynesia, ,***** CLOSED EMBASSY @ Spain! *****
-105, Spain, ,***** COOP WAR STATE CHANGE: We are now in a coop war with Carthage against Polynesia (ONGOING).
-105, Carthage, ,***** COOP WAR STATE CHANGE: We are now in a coop war with Spain against Polynesia (ONGOING).
-105, Spain, , ***** WAR DECLARATION! *****, Polynesia
-105, Carthage, , ***** WAR DECLARATION! *****, Polynesia
-105, Mongolia, , ***** WAR DECLARATION! *****, Polynesia
-105, Polynesia, Austria, DOF offer - Friends
-105, Polynesia, ,***** NOW FRIENDS AustriaRank: 003, ! *****
-105, The Inca, Spain, Expansion Warning!
-105, The Netherlands, , ***** PEACE MADE! *****, Zanzibar
-105, Assyria, Polynesia, ***** Can you spare something for a friend? *****
-105, Assyria, The Inca, DOF offer - Friends
-105, Assyria, ,***** NOW FRIENDS The IncaRank: 003, ! *****
-106, Carthage, Spain, Renew Deal
-106, The Inca, The Netherlands, ***** Taunt sent! Cooldown now active *****
-106, The Inca, The Netherlands, ***** JUST FYI - I BEFRIENDED YOUR ENEMY! *****
-106, Spain, ,***** DENOUNCED BECAUSE DOGPILE Polynesia! *****
-107, Austria, The Inca, ***** You have a Luxury I would like *****
-107, Austria, Spain, Renew Deal
-107, Spain, Mongolia, ***** Compliment sent! Cooldown now active *****
-107, Spain, Mongolia, ***** JUST FYI - I DENOUNCED YOUR ENEMY! *****
-108, Carthage, The Netherlands, Renew Deal
-110, Mongolia, The Inca, Renew Deal
-110, Carthage, Assyria, Wanna team up?
-111, Mongolia, Carthage, ***** You have a Luxury I would like *****
-111, Carthage, Mongolia, ***** You have a Luxury I would like *****
-111, The Inca, Austria, ***** You have a Luxury I would like *****
-115, Mongolia, Spain, Wanna team up?
-115, Polynesia, The Inca, Renew Deal
-115, The Netherlands, Spain, DOF offer - Friends
-115, The Netherlands, ,***** NOW FRIENDS SpainRank: 003, ! *****
-117, The Inca, ,***** COOP WAR STATE CHANGE: Coop war state with player Assyria against The Netherlands has been reset (NO COOP WAR STATE).
-117, The Inca, Mongolia, ***** You have a Luxury I would like *****
-117, The Netherlands, Mongolia, Renew Deal
-118, Mongolia, The Inca, Renew Deal
-119, Mongolia, The Inca, Renew Deal
-119, Spain, Assyria, ***** You have a Luxury I would like *****
-120, Carthage, Mongolia, Open Borders Exchange
-121, Mongolia, The Inca, Renew Deal
-121, Carthage, The Inca, Renew Deal
-121, Polynesia, The Inca, Wanna team up?
-122, Carthage, Spain, Renew Deal
-122, Austria, Spain, Renew Deal
-122, The Netherlands, Carthage, Open Borders Exchange
-122, The Netherlands, Spain, Renew Deal
-123, Mongolia, The Netherlands, ***** You have a Luxury I would like *****
-123, Carthage, The Netherlands, Wanna team up?
-123, Carthage, ,***** NOW FRIENDS The NetherlandsRank: 002, ! *****
-123, The Inca, Carthage, Renew Deal
-123, Spain, The Netherlands, ***** Compliment sent! Cooldown now active *****
-123, Spain, The Netherlands, ***** YAY - YOU BEFRIENDED A FRIEND! *****
-123, The Netherlands, Mongolia, ***** You have a Luxury I would like *****
-124, Mongolia, The Netherlands, ***** Compliment sent! Cooldown now active *****
-124, Mongolia, The Netherlands, ***** YAY - YOU BEFRIENDED A FRIEND! *****
-124, The Netherlands, Spain, ***** Compliment sent! Cooldown now active *****
-124, The Netherlands, Spain, ***** JUST FYI - I BEFRIENDED YOUR FRIEND! *****
-125, Carthage, Mongolia, DOF offer - Friends
-125, Carthage, ,***** NOW FRIENDS MongoliaRank: 003, ! *****
-126, Mongolia, Spain, Renew Deal
-126, The Inca, Assyria, Open Borders Offer
-126, Spain, Mongolia, Open Borders Exchange
-126, Assyria, Polynesia, Open Borders Exchange
-127, Mongolia, Austria, ***** You have a Luxury I would like *****
-128, Spain, Carthage, ***** We would like to offer you a gift. *****
-129, Mongolia, Spain, ***** You have a Luxury I would like *****
-129, Polynesia, Austria, Open Borders Exchange
-129, The Inca, Austria, Open Borders Exchange
-130, Austria, The Netherlands, Open Borders Exchange
-130, The Netherlands, , ***** PEACE MADE! *****, Sofia
-130, The Netherlands, Spain, ***** You have a Luxury I would like *****
-131, Mongolia, Assyria, ***** You have a Luxury I would like *****
-131, Carthage, Spain, Renew Deal
-131, The Netherlands, Austria, Wanna team up?
-131, Assyria, Carthage, Open Borders Exchange
-132, The Inca, Austria, Renew Deal
-133, Spain, Mongolia, ***** You have a Luxury I would like *****
-133, The Netherlands, Polynesia, ***** You have a Luxury I would like *****
-134, Mongolia, Austria, Open Borders Exchange
-134, Polynesia, , ***** PEACE MADE! *****, Kabul
-134, Austria, Mongolia, ***** You have a Luxury I would like *****
-134, Spain, The Netherlands, ***** You have a Luxury I would like *****
-135, Polynesia, The Netherlands, Boot Kissing
-136, Mongolia, Carthage, Renew Deal
-136, Carthage, Mongolia, Renew Deal
-136, The Inca, Polynesia, Open Borders Offer
-136, The Inca, Austria, Renew Deal
-137, Mongolia, Austria, Wanna team up?
-138, Carthage, Mongolia, Defensive Pact Offer
-138, Carthage, Spain, Defensive Pact Offer
-138, Austria, The Inca, ***** You have a Luxury I would like *****
-138, Austria, The Netherlands, Wanna team up?
-138, Austria, ,***** NOW FRIENDS The NetherlandsRank: 002, ! *****
-138, Assyria, Polynesia, DOF offer - Friends
-138, Assyria, ,***** NOW FRIENDS PolynesiaRank: 003, ! *****
-139, Carthage, The Netherlands, ***** Can you spare something for a friend? *****
-139, The Inca, Austria, DOF offer - Friends
-139, Austria, ,***** DENOUNCED BECAUSE OF LAND Assyria! *****
-140, Mongolia, Spain, Strategic Resource Trade
-140, Polynesia, The Inca, Open Borders Offer
-140, The Inca, Polynesia, Wanna team up?
-140, The Inca, ,***** NOW FRIENDS PolynesiaRank: 002, ! *****
-140, The Inca, Austria, ***** Compliment sent! Cooldown now active *****
-140, The Inca, Austria, ***** JUST FYI - I BEFRIENDED YOUR FRIEND! *****
-140, Assyria, The Inca, ***** Compliment sent! Cooldown now active *****
-140, Assyria, The Inca, ***** YAY - YOU BEFRIENDED A FRIEND! *****
-141, Mongolia, Assyria, Wanna team up?
-141, The Inca, Spain, ***** Taunt sent! Cooldown now active *****
-141, The Inca, Spain, ***** JUST FYI - I BEFRIENDED YOUR ENEMY! *****
-141, The Inca, Assyria, ***** Compliment sent! Cooldown now active *****
-141, The Inca, Assyria, ***** JUST FYI - I BEFRIENDED YOUR FRIEND! *****
-141, Austria, Carthage, Open Borders Exchange
-142, Carthage, ,***** DENOUNCED BECAUSE OF LAND Polynesia! *****
-142, Polynesia, , ***** PEACE MADE! *****, Kyzyl
-142, Spain, Carthage, ***** Compliment sent! Cooldown now active *****
-142, Spain, Carthage, ***** YAY - YOU DENOUNCED AN ENEMY! *****
-142, The Netherlands, Mongolia, Renew Deal
-142, The Netherlands, Austria, Defensive Pact Offer
-143, Mongolia, The Netherlands, Wanna team up?
-143, Polynesia, The Netherlands, ***** You have a Luxury I would like *****
-144, Spain, Carthage, DOF offer - Friends
-144, Spain, ,***** NOW FRIENDS CarthageRank: 003, ! *****
-145, Mongolia, Carthage, Renew Deal
-145, Polynesia, Assyria, ***** You have a Luxury I would like *****
-145, Spain, Assyria, Open Borders Offer
-146, Mongolia, ,***** DENOUNCED BECAUSE DOGPILE Polynesia! *****
-146, Mongolia, The Inca, ***** Taunt sent! Cooldown now active *****
-146, Mongolia, The Inca, ***** JUST FYI - I DENOUNCED YOUR FRIEND! *****
-146, Mongolia, Spain, ***** Compliment sent! Cooldown now active *****
-146, Mongolia, Spain, ***** JUST FYI - I DENOUNCED YOUR ENEMY! *****
-146, The Netherlands, Austria, Wants Research Agreement!
-147, Carthage, Spain, Renew Deal
-147, Carthage, The Netherlands, Renew Deal
-147, Polynesia, Austria, Wants Research Agreement!
-147, Polynesia, , ***** PEACE MADE! *****, Belgrade
-147, Austria, Polynesia, Wants Research Agreement!
-147, Austria, The Netherlands, Wants Research Agreement!
-147, Austria, Spain, Renew Deal
-147, Spain, The Netherlands, Renew Deal
-148, Mongolia, The Netherlands, Renew Deal
-149, Polynesia, The Inca, ***** Can you spare something for a friend? *****
-149, The Inca, ,***** DENOUNCED GENERIC The Netherlands! *****
-149, Assyria, ,***** DENOUNCED GENERIC The Netherlands! *****
+072, Assyria, The Netherlands, Expansion Warning!
+073, Carthage, Mongolia, ***** You have a Luxury I would like *****
+073, The Netherlands, Austria, ***** You have a Luxury I would like *****
+073, Assyria, The Netherlands, ***** We're done working with you. *****
+073, Assyria, ,***** NO LONGER FRIENDS The Netherlands! *****
+074, Mongolia, The Netherlands, ***** Embassy Exchange *****
+074, The Netherlands, ,***** OPENED EMBASSY @ Mongolia! *****
+074, Mongolia, ,***** OPENED EMBASSY @ The Netherlands! *****
+074, The Netherlands, Mongolia, ***** You have a Luxury I would like *****
+074, The Netherlands, ,***** CLOSED EMBASSY @ Assyria! *****
+074, Assyria, ,***** CLOSED EMBASSY @ The Netherlands! *****
+074, The Netherlands, ,***** DENOUNCED BECAUSE UNTRUSTWORTHY Assyria! *****
+074, Assyria, Carthage, Wanna team up?
+075, Spain, Carthage, ***** You have a Luxury I would like *****
+076, Mongolia, Carthage, Renew Deal
+076, Carthage, Polynesia, ***** You have a Luxury I would like *****
+076, Spain, The Netherlands, ***** You have a Luxury I would like *****
+076, The Netherlands, Carthage, Wanna team up?
+076, Assyria, Polynesia, Wanna team up?
+077, Spain, ,***** CLOSED EMBASSY @ Mongolia! *****
+077, Mongolia, ,***** CLOSED EMBASSY @ Spain! *****
+077, Spain, ,***** DENOUNCED BECAUSE OF LAND Mongolia! *****
+078, Spain, Polynesia, Wanna team up?
+078, Spain, ,***** NOW FRIENDS PolynesiaRank: 002, ! *****
+078, The Netherlands, Polynesia, ***** Compliment sent! Cooldown now active *****
+078, The Netherlands, Polynesia, ***** YAY - YOU BEFRIENDED A FRIEND! *****
+078, The Netherlands, Spain, ***** You have a Luxury I would like *****
+079, The Inca, Mongolia, ***** You have a Luxury I would like *****
+080, Austria, Spain, ***** Compliment sent! Cooldown now active *****
+080, Austria, Spain, ***** YAY - YOU BEFRIENDED A FRIEND! *****
+081, The Inca, Carthage, ***** You have a Luxury I would like *****
+082, The Inca, The Netherlands, ***** You have a Luxury I would like *****
+083, Carthage, Polynesia, Expansion Warning!
+083, The Inca, The Netherlands, Wanna team up?
+083, Spain, Polynesia, ***** We're done working with you. *****
+083, Spain, ,***** NO LONGER FRIENDS Polynesia! *****
+083, The Netherlands, The Inca, Wanna team up?
+083, The Netherlands, ,***** NOW FRIENDS The IncaRank: 002, ! *****
+084, Polynesia, Mongolia, We request peace!!!
+084, Polynesia, , ***** PEACE MADE! *****, Mongolia
+085, Mongolia, ,***** DENOUNCED BECAUSE OF LAND Spain! *****
+085, Assyria, Spain, ***** You have a Luxury I would like *****
+086, Mongolia, Spain, Expansion Warning!
+086, Spain, Polynesia, DOF offer - Untrustworthy
+089, Polynesia, Assyria, Wanna team up?
+089, Polynesia, ,***** NOW FRIENDS AssyriaRank: 002, ! *****
+089, Spain, Assyria, Wanna team up?
+089, Assyria, ,***** CLOSED EMBASSY @ Austria! *****
+089, Austria, ,***** CLOSED EMBASSY @ Assyria! *****
+089, Assyria, , ***** WAR DECLARATION! *****, Austria
+090, Polynesia, Mongolia, ***** Embassy Exchange *****
+090, Mongolia, ,***** OPENED EMBASSY @ Polynesia! *****
+090, Polynesia, ,***** OPENED EMBASSY @ Mongolia! *****
+090, Assyria, Polynesia, ***** Can you spare something for a friend? *****
+091, The Inca, Carthage, Renew Deal
+092, Carthage, Spain, Renew Deal
+092, Carthage, The Netherlands, ***** You have a Luxury I would like *****
+093, Polynesia, ,***** CLOSED EMBASSY @ Spain! *****
+093, Spain, ,***** CLOSED EMBASSY @ Polynesia! *****
+093, Polynesia, ,***** DENOUNCED BECAUSE DOGPILE Spain! *****
+094, The Netherlands, The Inca, ***** You have a Luxury I would like *****
+095, Mongolia, Polynesia, ***** Compliment sent! Cooldown now active *****
+095, Mongolia, Polynesia, ***** YAY - YOU DENOUNCED AN ENEMY! *****
+095, Mongolia, Austria, Renew Deal
+095, The Netherlands, Austria, Renew Deal
+096, Mongolia, Austria, Wanna team up?
+096, Austria, The Inca, ***** You have a Luxury I would like *****
+096, Austria, Spain, ***** You have a Luxury I would like *****
+098, Mongolia, The Inca, Wanna team up?
+098, Carthage, Mongolia, ***** Can you spare something for a friend? *****
+099, Polynesia, Assyria, Open Borders Exchange
+099, The Inca, Assyria, Open Borders Exchange
+099, Austria, Polynesia, ***** You have a Luxury I would like *****
+099, Spain, Assyria, Open Borders Offer
+100, Carthage, Spain, Renew Deal
