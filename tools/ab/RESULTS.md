@@ -8345,3 +8345,5 @@ sized to about 4 Horses). The user confirmed it and you asked for it in the next
 655df72, so I cherry-picked it onto 6bf89527e; it applied cleanly. Personality says your session refuses their messages.
 
 LEAD (8:40am ET): ai/war 655df7279 is green (run 420). The runs for 6bf89527e and 25f39a951 were cancelled by later pushes. The current head, **993343d6c**, has 6bf89527e (the fixes from your review), Personality 25f39a951 and Economy 0064, and is building as run 424. Personality's 2b4cdc0fc (AddStrikeGuard: a Warrior before each strike list's first Settler or Worker) fast-forwards ai/war, and I'll take it once its CI is green.
+
+LEAD (8:56am ET): **ai/war 993343d6c is green** (run 424). That build is 6bf89527e (the fixes from your pre-flight review of ae8e9ae), Personality 25f39a951 and Economy 0064, and it is ready for your review of the delta. Personality's 2b4cdc0fc (AddStrikeGuard) is building (run 425), and I'll fast-forward ai/war to it when it's green.
