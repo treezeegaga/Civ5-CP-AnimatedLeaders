@@ -1950,6 +1950,30 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Trial games on acd891f and 227f759: checks (Economy, Nov 6, 10:47pm ET)
+Five games with logs:
+- on acd891f: bullyabort25 `176CC6D8`, trial26 `175B8E8E`, trio27 `178B8F13` and `1796A531`;
+- on 227f759: trial28 `186D5858`.
+
+None of them is on 12fe132 or later yet, so the pick-once flow, the next-target BUILDUP and 0061/0062 are untested.
+
+| Game | Strike civ | Strike | Wonders and gifts | Policy | Gold (units, upkeep, net, treasury) |
+|---|---|---|---|---|---|
+| 176CC6D8 | Persia (early) | WAR T61 on Sweden; no capture by the logs (operation "keeps going" T88) | none | Liberty, then Honor T128 (the plan's first tree Liberty) | BUILDUP T50: 9, 10, +2, 253. WAR T70: 18, 26, -11, 300. T100: 22, 39, -4, 124. "income in WAR" Caravans and a Market (T69-T139) |
+| 186D5858 | Aztecs (early) | Sofia (city-state) declaration made T66, **confirmed T67** (0052), WAR; no capture | none | Honor (the plan's) | BUILDUP T50: 8, 9, -2, 223. WAR T70: 14, 20, -9, 96. **T100: 11, 21, -8, 0**. Income Caravans and a Market, and "army short, unaffordable" T81 |
+| 178B8F13 | Huns (early) | OVER T40, "no target in reach" (an exit later builds removed: BUILDUP now waits); CP war on Indonesia T68 | Terracotta Army T69, Mausoleum, Great Lighthouse, Zeus; Cahokia gift T79. **All after the T68 declaration**, as the rule allows | Honor, then Tradition T115 | n/a |
+| 1796A531 | Persia (early) | OVER T57 (army built, no target); CP war on Ethiopia T107 | Writers' Guild T135, Zeus T144; gifts T127-T140. **All after the T107 declaration** | Liberty, then Honor T100 | n/a |
+| 175B8E8E | Denmark (late) | PREP all game | none | Tradition only (late default's first tree) | n/a |
+
+- **REDIRECT lines: 0** in all five games.
+- **No Aesthetics or Piety** in any strike civ's picks.
+- **Gold.** The WAR income rule (0058) fires, but the Aztecs' treasury still hit 0 at T100 at -8 a turn. Two Caravans and a
+  Market didn't cover a 21-upkeep army in a long city-state war.
+- **No captures** in either declared strike. That's War's readiness and the war itself.
+
+To check next, on 12fe132 or later: the next-target BUILDUP, settling after the first declaration (0061), and the bans
+not returning in a later BUILDUP (0062).
+
 ### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:36pm ET)
 The lead's review of the pick-once build (`12fe132`): `IsStrikeNoWonders` held in every PREP and BUILDUP. A finished
 target now sends WAR back to BUILDUP for the next one, so the wonder and city-state gold bans came back in every later
