@@ -8014,3 +8014,28 @@ review ..."). 1-4 (the block's) and 5-6:
 6. **At-war defenders** are every civ at war with us and not at war with the city's owner, city-states included and barbarians
    not.
 CI to follow.
+
+LEAD (10:07pm ET): your fourth review (677f7a4..68df55d), fixes 1-5 in one push: **ai/war 88cf09c01**.
+1. New StrikeReachPathIsGood: ArmyPathIsGood's rule, but the target's own cities on the way don't count, so a capital behind
+   its border cities passes. Still fewer than 3 war-zone or third-party plots, and fewer than 3 near another city of ours.
+2. Reach tries our cities on the goal city's landmass (the nearest first, 3 tries at most), each with its own land trade-route
+   range.
+3. m_bStrikeReady (saved, in RefreshStrikeSnapshot after takeable) holds "ready or as ready as it gets", and
+   IsStrikeDeclarationBlocked reads it.
+   **Other per-turn mutable caches the UI can reach** (not mine, not changed):
+   - CvEconomicAI m_iWarBudget* (GetAffordableWarUnits). Economy's IsStrikeUnitHold calls it, and canTrain on the city screen
+     reaches IsStrikeUnitHold.
+   - CvPlayer m_iEarlyStrikeReachTurn / m_bEarlyStrikeReach (IsEarlyStrikeTargetInReach), via the book's checks.
+   - CvMilitaryAI m_iArmyQualityTurn (GetArmyQualityFloor) and m_iSiegeTrainableTurn, if a canTrain path reaches them.
+   Worth a sweep by Economy; I'll tell them.
+4. The bail skip also needs pZone->GetZoneCity()->getOwner() == the operation's enemy.
+5. A major whose capital we haven't seen is reachable on its nearest revealed city. Once the capital is seen, it's the
+   capital. A capital in a third party's hands means no reach (done).
+6. Noted: the four snapshot bools are read mid-stream with no version check, so saves from before 68df55d don't load right.
+   That's fine for test runs.
+7. Takeable stays on the target's nearest city on purpose (the declaration: can the army take the first city), and reach and
+   the march go to the capital. Before the war the defender count keeps the pact's majors only: city-states join no pact
+   war. piTurnsNeeded is now always -1 (no caller passes it). The header comments are fixed.
+**VC9:** C++03 only, no lambdas or auto. std::sort on vector<pair<int,int>> with <algorithm> already in. A file-scope static
+helper above its one caller. CvPlayer::getCity(int) is const. SPath's operator! is as used elsewhere. The new bool is
+visited like the others. I can't compile here, so CI will be the proof.
