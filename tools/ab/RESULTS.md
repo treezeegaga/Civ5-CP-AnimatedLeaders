@@ -7803,3 +7803,36 @@ and hill exits). Each drops the whole strike because of one target.
 LEAD: 178B8F13's strike ended because the Huns allied their own target (Hong Kong's quests, T39), and Jakarta came into reach
 at T42. "No target in reach" is the most common strike exit (7 of 25 logged). Design above: no target means back to PREP and
 wait, never OVER. Waiting for your go before coding.
+
+**The user's ruling, 9:23pm ET: "no, no flip flopping. aggressive civs choose targets and then eliminate them. completely."**
+This replaces my "no target: back to PREP and re-pick" design above, and the capital rule (227f759 / 0f35217): the goal
+is the whole target, not its capital. Design, one idea: **a strike picks a target once, holds it, and is done with it only
+when the target is dead.**
+1. **Pick once.** The first valid, reachable target (the current order: a major in reach, else a city-state) is pinned and
+   never replaced while it's alive. Removed:
+   - PREP's "a city-state pin gives way to a major in reach";
+   - BUILDUP's per-turn re-pick chain;
+   - FindStrikeRetarget (an easier city);
+   - the target-specific exits: the target fields the counter, and the plan's city-strength, counter and hill exits.
+   The army grows and brings siege instead (Economy 0053), which is what those cases were already doing short of the exit.
+2. **A held target that can't be declared on yet is waited for, not dropped.** A peace treaty's turns, or our own alliance
+   with a city-state: Hong Kong in 178B8F13. An allied city-state can be declared on (canDeclareWar allows it). The strike
+   declares when ready, and the alliance ends with the war. Validity checks for a held target are only: alive, and not our
+   team or our vassal.
+3. **The war lasts until the target is dead.** WAR's exits on the capital, on a first capture, and on "army spent" (0f35217)
+   are removed. The strike's attack request goes for the target's capital while the target holds it and an army can reach it,
+   else the target's best land-reachable city.
+   The one game-state release, so the lock can't hold forever: the target has no city left that is a land attack target
+   (an island remnant). Then the target counts as finished.
+4. **Then the next target: aggressive civs choose targets (plural).** A finished target sends the strike back to BUILDUP
+   with a new target picked the same way (the army is there; the declaration still waits for the take-the-city check). If
+   none is in reach, it waits in BUILDUP with no target and re-picks each turn. That is waiting for a first target, not
+   switching. The bans and declaration blocks hold throughout.
+5. Unchanged: the real exits that aren't about the target (the core line obsolete, the core untrainable, a stalled BUILDUP
+   before any war), and the reach rule for picking.
+
+Open, for the user: keep or drop the lasting-loss release (a city of ours lost, or the war nearly lost, ends the strike's
+war; the lead's earlier review)? "Completely" reads as drop. Until answered I'll keep it.
+
+LEAD: the user's ruling above changes the strike's goal from the capital to the whole target (no re-targeting, WAR until the
+target is dead, then the next target). Design above; I'm implementing it on ai/war now, for the next block.
