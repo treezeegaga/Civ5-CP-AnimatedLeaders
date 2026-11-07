@@ -1,0 +1,1632 @@
+026, Japan, OP_FOUND_CITY, 1131, found target for settler, score 124455 (q50)
+026, Japan, OP_FOUND_CITY, 1131, Skip recruiting, start with movement stage
+026, Japan, OP_FOUND_CITY, 1131, Found 0 potential units to recruit for operation 1131 at (36:37) with target at (32:35)
+026, Japan, OP_FOUND_CITY, 1131, Started Army 1132; Units Recruited 1; Max Formation Size 2; Moving To Target
+026, Japan, OP_FOUND_CITY, 1131, PRE Moving To Target with Army 1132; center (36:37); target (32:35); Progress 0 percent
+026, Japan, OP_FOUND_CITY, 1131, POST Moving To Target with Army 1132; center (36:36); target (32:35); Progress 17 percent
+027, Japan, OP_FOUND_CITY, 1131, PRE Moving To Target with Army 1132; center (36:36); target (32:35); Progress 17 percent
+027, Japan, OP_FOUND_CITY, 1131, POST Moving To Target with Army 1132; center (34:35); target (32:35); Progress 50 percent
+028, Japan, OP_FOUND_CITY, 1131, PRE Moving To Target with Army 1132; center (34:35); target (32:35); Progress 50 percent
+028, Japan, OP_FOUND_CITY, 1131, Transition to target stage
+028, Japan, OP_FOUND_CITY, 1131, POST At Target
+029, Japan, OP_FOUND_CITY, 1131, PRE At Target
+029, Japan, OP_FOUND_CITY, 1131, City founded (Osaka) at (32:35), plot value 124455, q50
+029, Japan, OP_FOUND_CITY, 1131, Transition to finished stage
+029, Japan, OP_FOUND_CITY, 1131, Ended: Success; Distance 6; Duration 3
+030, Carthage, OP_FOUND_CITY, 1154, found target for settler, score 119215 (q50)
+030, Carthage, OP_FOUND_CITY, 1154, Skip recruiting, start with movement stage
+030, Carthage, OP_FOUND_CITY, 1154, Found 0 potential units to recruit for operation 1154 at (22:41) with target at (18:41)
+030, Carthage, OP_FOUND_CITY, 1154, Started Army 1155; Units Recruited 1; Max Formation Size 2; Moving To Target
+030, Carthage, OP_FOUND_CITY, 1154, PRE Moving To Target with Army 1155; center (22:41); target (18:41); Progress 0 percent
+030, Carthage, OP_FOUND_CITY, 1154, POST Moving To Target with Army 1155; center (22:40); target (18:41); Progress 17 percent
+031, Austria, OP_FOUND_CITY, 1162, found target for settler, score 197200 (q50)
+031, Austria, OP_FOUND_CITY, 1162, Initial stage is recruiting
+031, Austria, OP_FOUND_CITY, 1162, Found 1 potential units to recruit for operation 1162 at (34:13) with target at (33:8)
+031, Austria, OP_FOUND_CITY, 1162, Added Warrior 1008 to slot 1 in army 1163. ETA at (34:13) is 4 
+031, Austria, OP_FOUND_CITY, 1162, Transition to gathering stage
+031, Austria, OP_FOUND_CITY, 1162, Started Army 1163; Units Recruited 2; Max Formation Size 2; Gathering Forces
+031, Austria, OP_FOUND_CITY, 1162, PRE Gathering Forces for army 1163; center (37:18); variance (2.25:6.25); free slots 0
+031, Austria, OP_FOUND_CITY, 1162, POST Gathering Forces for army 1163; center (37:17); variance (2.25:4.00); free slots 0
+031, Carthage, OP_FOUND_CITY, 1154, PRE Moving To Target with Army 1155; center (22:40); target (18:41); Progress 17 percent
+031, Carthage, OP_FOUND_CITY, 1154, POST Moving To Target with Army 1155; center (21:40); target (18:41); Progress 34 percent
+032, Austria, OP_FOUND_CITY, 1162, PRE Gathering Forces for army 1163; center (37:17); variance (2.25:4.00); free slots 0
+032, Austria, OP_FOUND_CITY, 1162, POST Gathering Forces for army 1163; center (34:13); variance (4.00:1.00); free slots 0
+032, Carthage, OP_FOUND_CITY, 1154, PRE Moving To Target with Army 1155; center (21:40); target (18:41); Progress 34 percent
+032, Carthage, OP_FOUND_CITY, 1154, POST Moving To Target with Army 1155; center (20:41); target (18:41); Progress 50 percent
+033, Austria, OP_FOUND_CITY, 1162, PRE Gathering Forces for army 1163; center (34:13); variance (4.00:1.00); free slots 0
+033, Austria, OP_FOUND_CITY, 1162, Added Warrior 1178 to slot 1 in army 1163. ETA at (34:13) is 0 
+033, Austria, OP_FOUND_CITY, 1162, Transition to movement stage
+033, Austria, OP_FOUND_CITY, 1162, POST Moving To Target with Army 1163; center (35:13); target (33:8); Progress -16 percent
+033, Carthage, OP_FOUND_CITY, 1154, PRE Moving To Target with Army 1155; center (20:41); target (18:41); Progress 50 percent
+033, Carthage, OP_FOUND_CITY, 1154, POST Moving To Target with Army 1155; center (19:41); target (18:41); Progress 100 percent
+034, Austria, OP_FOUND_CITY, 1162, PRE Moving To Target with Army 1163; center (35:13); target (33:8); Progress -16 percent
+034, Austria, OP_FOUND_CITY, 1162, POST Moving To Target with Army 1163; center (34:12); target (33:8); Progress 17 percent
+034, Carthage, OP_FOUND_CITY, 1154, PRE Moving To Target with Army 1155; center (19:41); target (18:41); Progress 100 percent
+034, Carthage, OP_FOUND_CITY, 1154, Transition to target stage
+034, Carthage, OP_FOUND_CITY, 1154, POST At Target
+035, Austria, OP_FOUND_CITY, 1162, PRE Moving To Target with Army 1163; center (34:12); target (33:8); Progress 17 percent
+035, Austria, OP_FOUND_CITY, 1162, POST Moving To Target with Army 1163; center (33:11); target (33:8); Progress 34 percent
+035, Carthage, OP_FOUND_CITY, 1154, PRE At Target
+035, Carthage, OP_FOUND_CITY, 1154, City founded (Utique) at (18:41), plot value 118172, q50
+035, Carthage, OP_FOUND_CITY, 1154, Transition to finished stage
+035, Carthage, OP_FOUND_CITY, 1154, Ended: Success; Distance 6; Duration 5
+036, Austria, OP_FOUND_CITY, 1162, PRE Moving To Target with Army 1163; center (33:11); target (33:8); Progress 34 percent
+036, Austria, OP_FOUND_CITY, 1162, POST Moving To Target with Army 1163; center (33:9); target (33:8); Progress 100 percent
+037, Austria, OP_FOUND_CITY, 1162, PRE Moving To Target with Army 1163; center (33:9); target (33:8); Progress 100 percent
+037, Austria, OP_FOUND_CITY, 1162, Transition to target stage
+037, Austria, OP_FOUND_CITY, 1162, POST At Target
+038, France, OP_FOUND_CITY, 1217, found target for settler, score 108916 (q50)
+038, France, OP_FOUND_CITY, 1217, Skip recruiting, start with movement stage
+038, France, OP_FOUND_CITY, 1217, Found 0 potential units to recruit for operation 1217 at (27:20) with target at (23:22)
+038, France, OP_FOUND_CITY, 1217, Started Army 1218; Units Recruited 1; Max Formation Size 2; Moving To Target
+038, France, OP_FOUND_CITY, 1217, PRE Moving To Target with Army 1218; center (27:20); target (23:22); Progress 0 percent
+038, France, OP_FOUND_CITY, 1217, POST Moving To Target with Army 1218; center (25:21); target (23:22); Progress 34 percent
+038, Austria, OP_FOUND_CITY, 1162, PRE At Target
+038, Austria, OP_FOUND_CITY, 1162, City founded (Salzburg) at (33:8), plot value 197200, q50
+038, Austria, OP_FOUND_CITY, 1162, Transition to finished stage
+038, Austria, OP_FOUND_CITY, 1162, Ended: Success; Distance 6; Duration 7
+039, France, OP_FOUND_CITY, 1217, PRE Moving To Target with Army 1218; center (25:21); target (23:22); Progress 34 percent
+039, France, OP_FOUND_CITY, 1217, POST Moving To Target with Army 1218; center (23:21); target (23:22); Progress 100 percent
+039, Japan, OP_FOUND_CITY, 1227, found target for settler, score 121606 (q50)
+039, Japan, OP_FOUND_CITY, 1227, Skip recruiting, start with movement stage
+039, Japan, OP_FOUND_CITY, 1227, Found 0 potential units to recruit for operation 1227 at (36:37) with target at (39:34)
+039, Japan, OP_FOUND_CITY, 1227, Started Army 1228; Units Recruited 1; Max Formation Size 2; Moving To Target
+039, Japan, OP_FOUND_CITY, 1227, found better target for settler, old score 121606 (q50), new score 97862 (q50)
+039, Japan, OP_FOUND_CITY, 1227, setting new target (35:42)
+039, Japan, OP_FOUND_CITY, 1227, PRE Moving To Target with Army 1228; center (36:37); target (35:42); Progress 0 percent
+039, Japan, OP_FOUND_CITY, 1227, POST Moving To Target with Army 1228; center (35:39); target (35:42); Progress 34 percent
+040, Polynesia, OP_FOUND_CITY, 1234, found target for settler, score 137587 (q50)
+040, Polynesia, OP_FOUND_CITY, 1234, Initial stage is recruiting
+040, Polynesia, OP_FOUND_CITY, 1234, Found 1 potential units to recruit for operation 1234 at (52:37) with target at (47:37)
+040, Polynesia, OP_FOUND_CITY, 1234, Added Maori Warrior 1225 to slot 1 in army 1235. ETA at (52:37) is 0 
+040, Polynesia, OP_FOUND_CITY, 1234, Transition to gathering stage
+040, Polynesia, OP_FOUND_CITY, 1234, Transition to movement stage
+040, Polynesia, OP_FOUND_CITY, 1234, Started Army 1235; Units Recruited 2; Max Formation Size 2; Moving To Target
+040, Polynesia, OP_FOUND_CITY, 1234, PRE Moving To Target with Army 1235; center (52:37); target (47:37); Progress 0 percent
+040, Polynesia, OP_FOUND_CITY, 1234, POST Moving To Target with Army 1235; center (51:37); target (47:37); Progress 17 percent
+040, France, OP_FOUND_CITY, 1217, PRE Moving To Target with Army 1218; center (23:21); target (23:22); Progress 100 percent
+040, France, OP_FOUND_CITY, 1217, Transition to target stage
+040, France, OP_FOUND_CITY, 1217, POST At Target
+040, Japan, OP_FOUND_CITY, 1227, PRE Moving To Target with Army 1228; center (35:39); target (35:42); Progress 34 percent
+040, Japan, OP_FOUND_CITY, 1227, POST Moving To Target with Army 1228; center (35:41); target (35:42); Progress 100 percent
+041, Polynesia, OP_FOUND_CITY, 1234, PRE Moving To Target with Army 1235; center (51:37); target (47:37); Progress 17 percent
+041, Polynesia, OP_FOUND_CITY, 1234, POST Moving To Target with Army 1235; center (50:37); target (47:37); Progress 34 percent
+041, France, OP_FOUND_CITY, 1217, PRE At Target
+041, France, OP_FOUND_CITY, 1217, City founded (Orleans) at (23:22), plot value 108916, q50
+041, France, OP_FOUND_CITY, 1217, Transition to finished stage
+041, France, OP_FOUND_CITY, 1217, Ended: Success; Distance 6; Duration 3
+041, Japan, OP_FOUND_CITY, 1227, PRE Moving To Target with Army 1228; center (35:41); target (35:42); Progress 100 percent
+041, Japan, OP_FOUND_CITY, 1227, Transition to target stage
+041, Japan, OP_FOUND_CITY, 1227, POST At Target
+042, Polynesia, OP_FOUND_CITY, 1234, PRE Moving To Target with Army 1235; center (50:37); target (47:37); Progress 34 percent
+042, Polynesia, OP_FOUND_CITY, 1234, POST Moving To Target with Army 1235; center (48:37); target (47:37); Progress 100 percent
+042, Japan, OP_FOUND_CITY, 1227, PRE At Target
+042, Japan, OP_FOUND_CITY, 1227, City founded (Tokyo) at (35:42), plot value 97862, q50
+042, Japan, OP_FOUND_CITY, 1227, Transition to finished stage
+042, Japan, OP_FOUND_CITY, 1227, Ended: Success; Distance 6; Duration 3
+043, Polynesia, OP_FOUND_CITY, 1234, PRE Moving To Target with Army 1235; center (48:37); target (47:37); Progress 100 percent
+043, Polynesia, OP_FOUND_CITY, 1234, Transition to target stage
+043, Polynesia, OP_FOUND_CITY, 1234, City founded (Samoa) at (47:37), plot value 137587, q50
+043, Polynesia, OP_FOUND_CITY, 1234, Transition to finished stage
+043, Polynesia, OP_FOUND_CITY, 1234, POST Completed
+044, Polynesia, OP_FOUND_CITY, 1234, Ended: Success; Distance 6; Duration 4
+049, Austria, OP_FOUND_CITY, 1304, found target for settler, score 84920 (q36)
+049, Austria, OP_FOUND_CITY, 1304, Initial stage is recruiting
+049, Austria, OP_FOUND_CITY, 1304, Found 1 potential units to recruit for operation 1304 at (34:13) with target at (37:17)
+049, Austria, OP_FOUND_CITY, 1304, Added Warrior 1008 to slot 1 in army 1305. ETA at (34:13) is 1 
+049, Austria, OP_FOUND_CITY, 1304, Transition to gathering stage
+049, Austria, OP_FOUND_CITY, 1304, Started Army 1305; Units Recruited 2; Max Formation Size 2; Gathering Forces
+049, Austria, OP_FOUND_CITY, 1304, PRE Gathering Forces for army 1305; center (34:13); variance (0.25:6.25); free slots 0
+049, Austria, OP_FOUND_CITY, 1304, Transition to movement stage
+049, Austria, OP_FOUND_CITY, 1304, POST Moving To Target with Army 1305; center (34:13); target (37:17); Progress 0 percent
+050, Austria, OP_FOUND_CITY, 1304, PRE Moving To Target with Army 1305; center (34:13); target (37:17); Progress 0 percent
+050, Austria, OP_FOUND_CITY, 1304, POST Moving To Target with Army 1305; center (34:12); target (37:17); Progress -12 percent
+051, Austria, OP_FOUND_CITY, 1304, PRE Moving To Target with Army 1305; center (34:12); target (37:17); Progress -12 percent
+051, Austria, OP_FOUND_CITY, 1304, POST Moving To Target with Army 1305; center (33:12); target (37:17); Progress -25 percent
+052, Austria, OP_FOUND_CITY, 1304, PRE Moving To Target with Army 1305; center (33:12); target (37:17); Progress -25 percent
+052, Austria, OP_FOUND_CITY, 1304, POST Moving To Target with Army 1305; center (34:13); target (37:17); Progress 0 percent
+052, Carthage, OP_FOUND_CITY, 1331, found target for settler, score 77860 (q24)
+052, Carthage, OP_FOUND_CITY, 1331, Skip recruiting, start with movement stage
+052, Carthage, OP_FOUND_CITY, 1331, Found 1 potential units to recruit for operation 1331 at (22:41) with target at (25:44)
+052, Carthage, OP_FOUND_CITY, 1331, Added Warrior 1010 to slot 1 in army 1332. ETA at (22:41) is 0 
+052, Carthage, OP_FOUND_CITY, 1331, Started Army 1332; Units Recruited 2; Max Formation Size 2; Moving To Target
+052, Carthage, OP_FOUND_CITY, 1331, PRE Moving To Target with Army 1332; center (22:41); target (25:44); Progress 0 percent
+052, Carthage, OP_FOUND_CITY, 1331, POST Moving To Target with Army 1332; center (22:40); target (25:44); Progress -20 percent
+053, Austria, OP_FOUND_CITY, 1304, PRE Moving To Target with Army 1305; center (34:13); target (37:17); Progress 0 percent
+053, Austria, OP_FOUND_CITY, 1304, POST Moving To Target with Army 1305; center (35:13); target (37:17); Progress 13 percent
+053, Carthage, OP_FOUND_CITY, 1331, PRE Moving To Target with Army 1332; center (22:40); target (25:44); Progress -20 percent
+053, Carthage, OP_FOUND_CITY, 1331, POST Moving To Target with Army 1332; center (22:41); target (25:44); Progress 0 percent
+054, Austria, OP_FOUND_CITY, 1304, PRE Moving To Target with Army 1305; center (35:13); target (37:17); Progress 13 percent
+054, Austria, OP_FOUND_CITY, 1304, POST Moving To Target with Army 1305; center (36:13); target (37:17); Progress 25 percent
+054, Carthage, OP_RAPID_RESPONSE, 1347, Initial stage is recruiting
+054, Carthage, OP_RAPID_RESPONSE, 1347, Found 1 potential units to recruit for operation 1347 at (18:41) with target at (18:41)
+054, Carthage, OP_RAPID_RESPONSE, 1347, Added Warrior 1097 to slot 0 in army 1348. ETA at (18:41) is 1 
+054, Carthage, OP_RAPID_RESPONSE, 1347, Started Army 1348; Units Recruited 1; Max Formation Size 4; Recruiting Units
+054, Carthage, OP_FOUND_CITY, 1331, PRE Moving To Target with Army 1332; center (22:41); target (25:44); Progress 0 percent
+054, Carthage, OP_FOUND_CITY, 1331, POST Moving To Target with Army 1332; center (24:42); target (25:44); Progress 40 percent
+054, Carthage, OP_RAPID_RESPONSE, 1347, PRE Recruiting Units for army 1348; Warrior 1097 at (23:41) - ETA 1; Open; Open; Open; 
+054, Carthage, OP_RAPID_RESPONSE, 1347, Found 0 potential units to recruit for operation 1347 at (18:41) with target at (18:41)
+054, Carthage, OP_RAPID_RESPONSE, 1347, POST Recruiting Units for army 1348; Warrior 1097 at (22:41) - ETA 1; Open; Open; Open; 
+055, Austria, OP_FOUND_CITY, 1304, PRE Moving To Target with Army 1305; center (36:13); target (37:17); Progress 25 percent
+055, Austria, OP_FOUND_CITY, 1304, POST Moving To Target with Army 1305; center (37:13); target (37:17); Progress 38 percent
+055, Carthage, OP_FOUND_CITY, 1331, PRE Moving To Target with Army 1332; center (24:42); target (25:44); Progress 40 percent
+055, Carthage, OP_FOUND_CITY, 1331, Transition to target stage
+055, Carthage, OP_FOUND_CITY, 1331, POST At Target
+055, Carthage, OP_RAPID_RESPONSE, 1347, PRE Recruiting Units for army 1348; Warrior 1097 at (22:41) - ETA 1; Open; Open; Open; 
+055, Carthage, OP_RAPID_RESPONSE, 1347, Found 0 potential units to recruit for operation 1347 at (18:41) with target at (18:41)
+055, Carthage, OP_RAPID_RESPONSE, 1347, POST Recruiting Units for army 1348; Warrior 1097 at (22:40) - ETA 1; Open; Open; Open; 
+056, Austria, OP_FOUND_CITY, 1304, PRE Moving To Target with Army 1305; center (37:13); target (37:17); Progress 38 percent
+056, Austria, OP_FOUND_CITY, 1304, POST Moving To Target with Army 1305; center (38:14); target (37:17); Progress 50 percent
+056, Carthage, OP_FOUND_CITY, 1331, PRE At Target
+056, Carthage, OP_FOUND_CITY, 1331, City founded (Hippo Regius) at (25:44), plot value 77860, q24
+056, Carthage, OP_FOUND_CITY, 1331, Transition to finished stage
+056, Carthage, OP_RAPID_RESPONSE, 1347, PRE Recruiting Units for army 1348; Warrior 1097 at (22:40) - ETA 1; Open; Open; Open; 
+056, Carthage, OP_RAPID_RESPONSE, 1347, Found 0 potential units to recruit for operation 1347 at (18:41) with target at (18:41)
+056, Carthage, OP_RAPID_RESPONSE, 1347, POST Recruiting Units for army 1348; Warrior 1097 at (20:41) - ETA 0; Open; Open; Open; 
+056, Carthage, OP_FOUND_CITY, 1331, Ended: Success; Distance 5; Duration 4
+057, France, OP_FOUND_CITY, 1365, found target for settler, score 108542 (q50)
+057, France, OP_FOUND_CITY, 1365, Skip recruiting, start with movement stage
+057, France, OP_FOUND_CITY, 1365, Found 1 potential units to recruit for operation 1365 at (27:20) with target at (30:21)
+057, France, OP_FOUND_CITY, 1365, Added Warrior 1300 to slot 1 in army 1366. ETA at (27:20) is 1 
+057, France, OP_FOUND_CITY, 1365, Started Army 1366; Units Recruited 2; Max Formation Size 2; Moving To Target
+057, France, OP_FOUND_CITY, 1365, PRE Moving To Target with Army 1366; center (27:20); target (30:21); Progress 0 percent
+057, France, OP_FOUND_CITY, 1365, POST Moving To Target with Army 1366; center (25:21); target (30:21); Progress -20 percent
+057, Austria, OP_FOUND_CITY, 1304, PRE Moving To Target with Army 1305; center (38:14); target (37:17); Progress 50 percent
+057, Austria, OP_FOUND_CITY, 1304, POST Moving To Target with Army 1305; center (38:15); target (37:17); Progress 63 percent
+057, Carthage, OP_RAPID_RESPONSE, 1347, Ended: NoTarget; Distance 1; Duration 3
+058, France, OP_FOUND_CITY, 1365, PRE Moving To Target with Army 1366; center (25:21); target (30:21); Progress -20 percent
+058, France, OP_FOUND_CITY, 1365, POST Moving To Target with Army 1366; center (26:21); target (30:21); Progress 0 percent
+058, Austria, OP_FOUND_CITY, 1304, PRE Moving To Target with Army 1305; center (38:15); target (37:17); Progress 63 percent
+058, Austria, OP_FOUND_CITY, 1304, Transition to target stage
+058, Austria, OP_FOUND_CITY, 1304, POST At Target
+058, Carthage, OP_FOUND_CITY, 1374, found target for settler, score 70827 (q13)
+058, Carthage, OP_FOUND_CITY, 1374, Initial stage is recruiting
+058, Carthage, OP_FOUND_CITY, 1374, Found 0 potential units to recruit for operation 1374 at (22:41) with target at (25:36)
+058, Carthage, OP_FOUND_CITY, 1374, Started Army 1375; Units Recruited 1; Max Formation Size 2; Recruiting Units
+058, Carthage, OP_FOUND_CITY, 1374, PRE Recruiting Units for army 1375; Settler 1373 at (22:41) - ETA -1; Open; 
+058, Carthage, OP_FOUND_CITY, 1374, Found 0 potential units to recruit for operation 1374 at (22:41) with target at (25:36)
+058, Carthage, OP_FOUND_CITY, 1374, POST Recruiting Units for army 1375; Settler 1373 at (22:41) - ETA 0; Open; 
+059, Polynesia, OP_FOUND_CITY, 1379, found target for settler, score 157185 (q50)
+059, Polynesia, OP_FOUND_CITY, 1379, Initial stage is recruiting
+059, Polynesia, OP_FOUND_CITY, 1379, Found 1 potential units to recruit for operation 1379 at (52:37) with target at (43:39)
+059, Polynesia, OP_FOUND_CITY, 1379, Added Maori Warrior 1225 to slot 1 in army 1380. ETA at (52:37) is 1 
+059, Polynesia, OP_FOUND_CITY, 1379, Transition to gathering stage
+059, Polynesia, OP_FOUND_CITY, 1379, Started Army 1380; Units Recruited 2; Max Formation Size 2; Gathering Forces
+059, Polynesia, OP_FOUND_CITY, 1379, PRE Gathering Forces for army 1380; center (52:37); variance (6.25:0.00); free slots 0
+059, Polynesia, OP_FOUND_CITY, 1379, POST Gathering Forces for army 1380; center (46:38); variance (4.00:0.25); free slots 0
+059, France, OP_FOUND_CITY, 1365, PRE Moving To Target with Army 1366; center (26:21); target (30:21); Progress 0 percent
+059, France, OP_FOUND_CITY, 1365, POST Moving To Target with Army 1366; center (28:21); target (30:21); Progress 40 percent
+059, Austria, OP_FOUND_CITY, 1304, PRE At Target
+059, Austria, OP_FOUND_CITY, 1304, City founded (Graz) at (37:17), plot value 84920, q36
+059, Austria, OP_FOUND_CITY, 1304, Transition to finished stage
+059, Austria, OP_FOUND_CITY, 1304, Ended: Success; Distance 8; Duration 10
+059, Carthage, OP_FOUND_CITY, 1374, PRE Recruiting Units for army 1375; Settler 1373 at (22:41) - ETA 0; Open; 
+059, Carthage, OP_FOUND_CITY, 1374, Found 0 potential units to recruit for operation 1374 at (22:41) with target at (25:36)
+059, Carthage, OP_FOUND_CITY, 1374, POST Recruiting Units for army 1375; Settler 1373 at (22:41) - ETA 0; Open; 
+060, Polynesia, OP_FOUND_CITY, 1379, PRE Gathering Forces for army 1380; center (46:38); variance (4.00:0.25); free slots 0
+060, Polynesia, OP_FOUND_CITY, 1379, Transition to movement stage
+060, Polynesia, OP_FOUND_CITY, 1379, POST Moving To Target with Army 1380; center (50:37); target (43:39); Progress 0 percent
+060, France, OP_FOUND_CITY, 1365, found better target for settler, old score 108542 (q50), new score 104255 (q50)
+060, France, OP_FOUND_CITY, 1365, setting new target (31:19)
+060, France, OP_FOUND_CITY, 1365, PRE Moving To Target with Army 1366; center (28:21); target (31:19); Progress 17 percent
+060, France, OP_FOUND_CITY, 1365, POST Moving To Target with Army 1366; center (27:19); target (31:19); Progress 17 percent
+060, Austria, OP_FOUND_CITY, 1387, found target for settler, score 58936 (q-6)
+060, Austria, OP_FOUND_CITY, 1387, Initial stage is recruiting
+060, Austria, OP_FOUND_CITY, 1387, Found 1 potential units to recruit for operation 1387 at (34:13) with target at (33:21)
+060, Austria, OP_FOUND_CITY, 1387, Added Spearman 1342 to slot 1 in army 1388. ETA at (34:13) is 1 
+060, Austria, OP_FOUND_CITY, 1387, Transition to gathering stage
+060, Austria, OP_FOUND_CITY, 1387, Started Army 1388; Units Recruited 2; Max Formation Size 2; Gathering Forces
+060, Austria, OP_FOUND_CITY, 1387, PRE Gathering Forces for army 1388; center (34:13); variance (0.25:6.25); free slots 0
+060, Austria, OP_FOUND_CITY, 1387, Transition to movement stage
+060, Austria, OP_FOUND_CITY, 1387, POST Moving To Target with Army 1388; center (34:13); target (33:21); Progress 0 percent
+060, Carthage, OP_FOUND_CITY, 1374, PRE Recruiting Units for army 1375; Settler 1373 at (22:41) - ETA 0; Open; 
+060, Carthage, OP_FOUND_CITY, 1374, Found 1 potential units to recruit for operation 1374 at (22:41) with target at (25:36)
+060, Carthage, OP_FOUND_CITY, 1374, Added Warrior 1389 to slot 1 in army 1375. ETA at (22:41) is 0 
+060, Carthage, OP_FOUND_CITY, 1374, Added Warrior 1097 to slot 1 in army 1375. ETA at (22:41) is 0 
+060, Carthage, OP_FOUND_CITY, 1374, Transition to gathering stage
+060, Carthage, OP_FOUND_CITY, 1374, Transition to movement stage
+060, Carthage, OP_FOUND_CITY, 1374, POST Moving To Target with Army 1375; center (22:41); target (25:36); Progress 0 percent
+061, Polynesia, OP_FOUND_CITY, 1379, PRE Moving To Target with Army 1380; center (48:37); target (43:39); Progress 23 percent
+061, Polynesia, OP_FOUND_CITY, 1379, POST Moving To Target with Army 1380; center (46:37); target (43:39); Progress 45 percent
+061, France, OP_FOUND_CITY, 1365, PRE Moving To Target with Army 1366; center (27:19); target (31:19); Progress 17 percent
+061, France, OP_FOUND_CITY, 1365, POST Moving To Target with Army 1366; center (28:18); target (31:19); Progress 17 percent
+061, Austria, OP_FOUND_CITY, 1387, PRE Moving To Target with Army 1388; center (34:13); target (33:21); Progress 0 percent
+061, Austria, OP_FOUND_CITY, 1387, POST Moving To Target with Army 1388; center (34:12); target (33:21); Progress -11 percent
+061, Carthage, OP_FOUND_CITY, 1374, PRE Moving To Target with Army 1375; center (22:41); target (25:36); Progress 0 percent
+061, Carthage, OP_FOUND_CITY, 1374, POST Moving To Target with Army 1375; center (24:41); target (25:36); Progress 25 percent
+062, Polynesia, OP_FOUND_CITY, 1379, PRE Moving To Target with Army 1380; center (46:37); target (43:39); Progress 45 percent
+062, Polynesia, OP_FOUND_CITY, 1379, POST Moving To Target with Army 1380; center (45:37); target (43:39); Progress 56 percent
+062, France, OP_FOUND_CITY, 1365, PRE Moving To Target with Army 1366; center (28:18); target (31:19); Progress 17 percent
+062, France, OP_FOUND_CITY, 1365, POST Moving To Target with Army 1366; center (29:17); target (31:19); Progress 34 percent
+062, Austria, OP_FOUND_CITY, 1387, PRE Moving To Target with Army 1388; center (34:12); target (33:21); Progress -11 percent
+062, Austria, OP_FOUND_CITY, 1387, POST Moving To Target with Army 1388; center (33:12); target (33:21); Progress -11 percent
+062, Carthage, OP_FOUND_CITY, 1374, PRE Moving To Target with Army 1375; center (24:41); target (25:36); Progress 25 percent
+062, Carthage, OP_FOUND_CITY, 1374, POST Moving To Target with Army 1375; center (25:39); target (25:36); Progress 50 percent
+063, Polynesia, OP_FOUND_CITY, 1379, PRE Moving To Target with Army 1380; center (45:37); target (43:39); Progress 56 percent
+063, Polynesia, OP_FOUND_CITY, 1379, POST Moving To Target with Army 1380; center (44:37); target (43:39); Progress 67 percent
+063, France, OP_FOUND_CITY, 1365, PRE Moving To Target with Army 1366; center (29:17); target (31:19); Progress 34 percent
+063, France, OP_FOUND_CITY, 1365, POST Moving To Target with Army 1366; center (30:17); target (31:19); Progress 50 percent
+063, Austria, OP_FOUND_CITY, 1387, PRE Moving To Target with Army 1388; center (33:12); target (33:21); Progress -11 percent
+063, Austria, OP_FOUND_CITY, 1387, POST Moving To Target with Army 1388; center (33:14); target (33:21); Progress 12 percent
+063, Carthage, OP_FOUND_CITY, 1374, PRE Moving To Target with Army 1375; center (25:39); target (25:36); Progress 50 percent
+063, Carthage, OP_FOUND_CITY, 1374, POST Moving To Target with Army 1375; center (25:38); target (25:36); Progress 63 percent
+063, America, OP_FOUND_CITY, 1409, found target for settler, score 91612 (q46)
+063, America, OP_FOUND_CITY, 1409, Initial stage is recruiting
+063, America, OP_FOUND_CITY, 1409, Found 1 potential units to recruit for operation 1409 at (54:24) with target at (51:21)
+063, America, OP_FOUND_CITY, 1409, Added Spearman 1401 to slot 1 in army 1410. ETA at (54:24) is 0 
+063, America, OP_FOUND_CITY, 1409, Transition to gathering stage
+063, America, OP_FOUND_CITY, 1409, Transition to movement stage
+063, America, OP_FOUND_CITY, 1409, Started Army 1410; Units Recruited 2; Max Formation Size 2; Moving To Target
+063, America, OP_FOUND_CITY, 1409, PRE Moving To Target with Army 1410; center (54:24); target (51:21); Progress 0 percent
+063, America, OP_FOUND_CITY, 1409, POST Moving To Target with Army 1410; center (52:23); target (51:21); Progress 40 percent
+064, Polynesia, OP_FOUND_CITY, 1414, found target for settler, score 118224 (q50)
+064, Polynesia, OP_FOUND_CITY, 1414, Initial stage is recruiting
+064, Polynesia, OP_FOUND_CITY, 1414, Found 1 potential units to recruit for operation 1414 at (52:37) with target at (54:31)
+064, Polynesia, OP_FOUND_CITY, 1414, Added Maori Warrior 1299 to slot 1 in army 1415. ETA at (52:37) is 1 
+064, Polynesia, OP_FOUND_CITY, 1414, Transition to gathering stage
+064, Polynesia, OP_FOUND_CITY, 1414, Started Army 1415; Units Recruited 2; Max Formation Size 2; Gathering Forces
+064, Polynesia, OP_FOUND_CITY, 1379, PRE Moving To Target with Army 1380; center (44:37); target (43:39); Progress 67 percent
+064, Polynesia, OP_FOUND_CITY, 1379, POST Moving To Target with Army 1380; center (44:38); target (43:39); Progress 100 percent
+064, Polynesia, OP_FOUND_CITY, 1414, PRE Gathering Forces for army 1415; center (52:37); variance (6.25:0.00); free slots 0
+064, Polynesia, OP_FOUND_CITY, 1414, POST Gathering Forces for army 1415; center (53:36); variance (4.00:0.25); free slots 0
+064, France, OP_FOUND_CITY, 1365, PRE Moving To Target with Army 1366; center (30:17); target (31:19); Progress 50 percent
+064, France, OP_FOUND_CITY, 1365, Transition to target stage
+064, France, OP_FOUND_CITY, 1365, POST At Target
+064, Austria, OP_FOUND_CITY, 1387, PRE Moving To Target with Army 1388; center (33:14); target (33:21); Progress 12 percent
+064, Austria, OP_FOUND_CITY, 1387, POST Moving To Target with Army 1388; center (32:16); target (33:21); Progress 34 percent
+064, Carthage, OP_FOUND_CITY, 1374, PRE Moving To Target with Army 1375; center (25:38); target (25:36); Progress 63 percent
+064, Carthage, OP_FOUND_CITY, 1374, Transition to target stage
+064, Carthage, OP_FOUND_CITY, 1374, POST At Target
+064, America, OP_FOUND_CITY, 1409, PRE Moving To Target with Army 1410; center (52:23); target (51:21); Progress 40 percent
+064, America, OP_FOUND_CITY, 1409, Transition to target stage
+064, America, OP_FOUND_CITY, 1409, POST At Target
+065, Polynesia, OP_FOUND_CITY, 1379, PRE Moving To Target with Army 1380; center (44:38); target (43:39); Progress 100 percent
+065, Polynesia, OP_FOUND_CITY, 1379, Added Maori Warrior 1002 to slot 1 in army 1380. ETA at (43:39) is 0 
+065, Polynesia, OP_FOUND_CITY, 1379, Transition to target stage
+065, Polynesia, OP_FOUND_CITY, 1379, POST At Target
+065, Polynesia, OP_FOUND_CITY, 1414, PRE Gathering Forces for army 1415; center (53:36); variance (4.00:0.25); free slots 0
+065, Polynesia, OP_FOUND_CITY, 1414, Transition to movement stage
+065, Polynesia, OP_FOUND_CITY, 1414, POST Moving To Target with Army 1415; center (53:36); target (54:31); Progress 0 percent
+065, France, OP_FOUND_CITY, 1365, PRE At Target
+065, France, OP_FOUND_CITY, 1365, City founded (Lyon) at (31:19), plot value 95916, q50
+065, France, OP_FOUND_CITY, 1365, Transition to finished stage
+065, France, OP_FOUND_CITY, 1365, Ended: Success; Distance 6; Duration 8
+065, Austria, OP_FOUND_CITY, 1387, cannot found city at (33:21)
+065, Austria, OP_FOUND_CITY, 1387, found better target for settler, old score -1 (q-50), new score 69793 (q11)
+065, Austria, OP_FOUND_CITY, 1387, setting new target (28:13)
+065, Austria, OP_FOUND_CITY, 1387, PRE Moving To Target with Army 1388; center (32:16); target (28:13); Progress 15 percent
+065, Austria, OP_FOUND_CITY, 1387, POST Moving To Target with Army 1388; center (31:14); target (28:13); Progress 43 percent
+065, Carthage, OP_FOUND_CITY, 1374, PRE At Target
+065, Carthage, OP_FOUND_CITY, 1374, City founded (Gades) at (25:36), plot value 65512, q5
+065, Carthage, OP_FOUND_CITY, 1374, Transition to finished stage
+065, Carthage, OP_FOUND_CITY, 1374, Ended: Success; Distance 8; Duration 7
+065, America, OP_FOUND_CITY, 1409, PRE At Target
+065, America, OP_FOUND_CITY, 1409, City founded (New York) at (51:21), plot value 91612, q46
+065, America, OP_FOUND_CITY, 1409, Transition to finished stage
+065, America, OP_FOUND_CITY, 1409, Ended: Success; Distance 5; Duration 2
+066, Polynesia, OP_FOUND_CITY, 1379, found better target for settler, old score 157185 (q50), new score 167357 (q50)
+066, Polynesia, OP_FOUND_CITY, 1379, setting new target (44:40)
+066, Polynesia, OP_FOUND_CITY, 1414, found better target for settler, old score 118224 (q50), new score 128231 (q50)
+066, Polynesia, OP_FOUND_CITY, 1414, setting new target (43:36)
+066, Polynesia, OP_FOUND_CITY, 1379, PRE Moving To Target with Army 1380; center (43:39); target (44:40); Progress 100 percent
+066, Polynesia, OP_FOUND_CITY, 1379, Added Maori Warrior 1240 to slot 1 in army 1380. ETA at (44:40) is 0 
+066, Polynesia, OP_FOUND_CITY, 1379, Transition to target stage
+066, Polynesia, OP_FOUND_CITY, 1379, POST At Target
+066, Polynesia, OP_FOUND_CITY, 1414, PRE Moving To Target with Army 1415; center (53:36); target (43:36); Progress 0 percent
+066, Polynesia, OP_FOUND_CITY, 1414, POST Moving To Target with Army 1415; center (53:35); target (43:36); Progress -8 percent
+066, Austria, OP_FOUND_CITY, 1387, PRE Moving To Target with Army 1388; center (31:14); target (28:13); Progress 43 percent
+066, Austria, OP_FOUND_CITY, 1387, POST Moving To Target with Army 1388; center (29:13); target (28:13); Progress 100 percent
+067, Polynesia, OP_FOUND_CITY, 1379, PRE At Target
+067, Polynesia, OP_FOUND_CITY, 1379, City founded (Tonga) at (44:40), plot value 167357, q50
+067, Polynesia, OP_FOUND_CITY, 1379, Transition to finished stage
+067, Polynesia, OP_FOUND_CITY, 1414, PRE Moving To Target with Army 1415; center (53:35); target (43:36); Progress -8 percent
+067, Polynesia, OP_FOUND_CITY, 1414, found better target for settler, old score 128231 (q50), new score 118224 (q50)
+067, Polynesia, OP_FOUND_CITY, 1414, setting new target (54:31)
+067, Polynesia, OP_FOUND_CITY, 1414, POST Moving To Target with Army 1415; center (53:34); target (54:31); Progress 34 percent
+067, Polynesia, OP_FOUND_CITY, 1379, Ended: Success; Distance 9; Duration 8
+067, France, OP_RAPID_RESPONSE, 1438, Initial stage is recruiting
+067, France, OP_RAPID_RESPONSE, 1438, Found 1 potential units to recruit for operation 1438 at (27:20) with target at (27:20)
+067, France, OP_RAPID_RESPONSE, 1438, Added Warrior 1004 to slot 0 in army 1439. ETA at (27:20) is 0 
+067, France, OP_RAPID_RESPONSE, 1438, Started Army 1439; Units Recruited 1; Max Formation Size 4; Recruiting Units
+067, France, OP_RAPID_RESPONSE, 1438, PRE Recruiting Units for army 1439; Warrior 1004 at (30:21) - ETA 0; Open; Open; Open; 
+067, France, OP_RAPID_RESPONSE, 1438, Found 0 potential units to recruit for operation 1438 at (27:20) with target at (27:20)
+067, France, OP_RAPID_RESPONSE, 1438, POST Recruiting Units for army 1439; Warrior 1004 at (30:21) - ETA 0; Open; Open; Open; 
+067, Austria, OP_FOUND_CITY, 1387, PRE Moving To Target with Army 1388; center (29:13); target (28:13); Progress 100 percent
+067, Austria, OP_FOUND_CITY, 1387, Transition to target stage
+067, Austria, OP_FOUND_CITY, 1387, City founded (Linz) at (28:13), plot value 69793, q11
+067, Austria, OP_FOUND_CITY, 1387, Transition to finished stage
+067, Austria, OP_FOUND_CITY, 1387, POST Completed
+068, Polynesia, OP_FOUND_CITY, 1414, PRE Moving To Target with Army 1415; center (53:34); target (54:31); Progress 34 percent
+068, Polynesia, OP_FOUND_CITY, 1414, POST Moving To Target with Army 1415; center (53:33); target (54:31); Progress 50 percent
+068, France, OP_FOUND_CITY, 1445, found target for settler, score 93536 (q50)
+068, France, OP_FOUND_CITY, 1445, Initial stage is recruiting
+068, France, OP_FOUND_CITY, 1445, Found 0 potential units to recruit for operation 1445 at (27:20) with target at (30:23)
+068, France, OP_FOUND_CITY, 1445, Started Army 1446; Units Recruited 1; Max Formation Size 2; Recruiting Units
+068, France, OP_RAPID_RESPONSE, 1438, Ended: NoTarget; Distance 1; Duration 1
+068, France, OP_FOUND_CITY, 1445, PRE Recruiting Units for army 1446; Settler 1437 at (27:20) - ETA -1; Open; 
+068, France, OP_FOUND_CITY, 1445, Found 0 potential units to recruit for operation 1445 at (27:20) with target at (30:23)
+068, France, OP_FOUND_CITY, 1445, POST Recruiting Units for army 1446; Settler 1437 at (27:20) - ETA 0; Open; 
+068, Japan, OP_FOUND_CITY, 1448, found target for settler, score 120490 (q50)
+068, Japan, OP_FOUND_CITY, 1448, Skip recruiting, start with movement stage
+068, Japan, OP_FOUND_CITY, 1448, Found 1 potential units to recruit for operation 1448 at (32:35) with target at (29:37)
+068, Japan, OP_FOUND_CITY, 1448, Added Warrior 1434 to slot 1 in army 1449. ETA at (32:35) is 1 
+068, Japan, OP_FOUND_CITY, 1448, Started Army 1449; Units Recruited 2; Max Formation Size 2; Moving To Target
+068, Japan, OP_FOUND_CITY, 1448, PRE Moving To Target with Army 1449; center (32:35); target (29:37); Progress 0 percent
+068, Japan, OP_FOUND_CITY, 1448, POST Moving To Target with Army 1449; center (34:35); target (29:37); Progress -40 percent
+068, Austria, OP_FOUND_CITY, 1451, found target for settler, score 50433 (q-20)
+068, Austria, OP_FOUND_CITY, 1451, Initial stage is recruiting
+068, Austria, OP_FOUND_CITY, 1451, Found 2 potential units to recruit for operation 1451 at (34:13) with target at (26:8)
+068, Austria, OP_FOUND_CITY, 1451, Added Spearman 1408 to slot 1 in army 1452. ETA at (34:13) is 1 
+068, Austria, OP_FOUND_CITY, 1451, Transition to gathering stage
+068, Austria, OP_FOUND_CITY, 1451, Started Army 1452; Units Recruited 2; Max Formation Size 2; Gathering Forces
+068, Austria, OP_FOUND_CITY, 1387, Ended: Success; Distance 7; Duration 8
+068, Austria, OP_FOUND_CITY, 1451, PRE Gathering Forces for army 1452; center (34:13); variance (2.25:2.25); free slots 0
+068, Austria, OP_FOUND_CITY, 1451, Transition to movement stage
+068, Austria, OP_FOUND_CITY, 1451, POST Moving To Target with Army 1452; center (32:11); target (26:8); Progress 25 percent
+069, Polynesia, OP_FOUND_CITY, 1414, PRE Moving To Target with Army 1415; center (53:33); target (54:31); Progress 50 percent
+069, Polynesia, OP_FOUND_CITY, 1414, Transition to target stage
+069, Polynesia, OP_FOUND_CITY, 1414, POST At Target
+069, France, OP_FOUND_CITY, 1445, PRE Recruiting Units for army 1446; Settler 1437 at (27:20) - ETA 0; Open; 
+069, France, OP_FOUND_CITY, 1445, Found 1 potential units to recruit for operation 1445 at (27:20) with target at (30:23)
+069, France, OP_FOUND_CITY, 1445, Added Warrior 1004 to slot 1 in army 1446. ETA at (27:20) is 1 
+069, France, OP_FOUND_CITY, 1445, Transition to gathering stage
+069, France, OP_FOUND_CITY, 1445, POST Gathering Forces for army 1446; center (27:20); variance (1.00:0.25); free slots 0
+069, Japan, OP_FOUND_CITY, 1448, PRE Moving To Target with Army 1449; center (34:35); target (29:37); Progress -40 percent
+069, Japan, OP_FOUND_CITY, 1448, POST Moving To Target with Army 1449; center (34:35); target (29:37); Progress -40 percent
+069, Austria, OP_FOUND_CITY, 1451, PRE Moving To Target with Army 1452; center (32:11); target (26:8); Progress 25 percent
+069, Austria, OP_FOUND_CITY, 1451, POST Moving To Target with Army 1452; center (33:13); target (26:8); Progress 9 percent
+070, Polynesia, OP_FOUND_CITY, 1414, PRE At Target
+070, Polynesia, OP_FOUND_CITY, 1414, City founded (Nuku Hiva) at (54:31), plot value 118224, q50
+070, Polynesia, OP_FOUND_CITY, 1414, Transition to finished stage
+070, Polynesia, OP_FOUND_CITY, 1414, Ended: Success; Distance 6; Duration 6
+070, France, OP_FOUND_CITY, 1445, PRE Gathering Forces for army 1446; center (27:20); variance (1.00:0.25); free slots 0
+070, France, OP_FOUND_CITY, 1445, Added Warrior 1457 to slot 1 in army 1446. ETA at (27:20) is 0 
+070, France, OP_FOUND_CITY, 1445, Transition to movement stage
+070, France, OP_FOUND_CITY, 1445, POST Moving To Target with Army 1446; center (29:20); target (30:23); Progress 34 percent
+070, Japan, OP_FOUND_CITY, 1448, PRE Moving To Target with Army 1449; center (34:35); target (29:37); Progress -40 percent
+070, Japan, OP_FOUND_CITY, 1448, Added Archer 1252 to slot 1 in army 1449. ETA at (32:35) is 0 
+070, Japan, OP_FOUND_CITY, 1448, POST Moving To Target with Army 1449; center (32:35); target (29:37); Progress 0 percent
+070, Austria, OP_FOUND_CITY, 1451, PRE Moving To Target with Army 1452; center (33:13); target (26:8); Progress 9 percent
+070, Austria, OP_FOUND_CITY, 1451, POST Moving To Target with Army 1452; center (32:12); target (26:8); Progress 25 percent
+071, France, OP_FOUND_CITY, 1445, PRE Moving To Target with Army 1446; center (29:20); target (30:23); Progress 34 percent
+071, France, OP_FOUND_CITY, 1445, POST Moving To Target with Army 1446; center (29:22); target (30:23); Progress 50 percent
+071, Japan, OP_FOUND_CITY, 1448, PRE Moving To Target with Army 1449; center (32:35); target (29:37); Progress 0 percent
+071, Japan, OP_FOUND_CITY, 1448, POST Moving To Target with Army 1449; center (31:35); target (29:37); Progress 20 percent
+071, Austria, OP_FOUND_CITY, 1451, PRE Moving To Target with Army 1452; center (32:12); target (26:8); Progress 25 percent
+071, Austria, OP_FOUND_CITY, 1451, POST Moving To Target with Army 1452; center (31:10); target (26:8); Progress 42 percent
+071, Carthage, OP_FOUND_CITY, 1464, found target for settler, score 85633 (q37)
+071, Carthage, OP_FOUND_CITY, 1464, Initial stage is recruiting
+071, Carthage, OP_FOUND_CITY, 1464, Found 2 potential units to recruit for operation 1464 at (22:41) with target at (23:31)
+071, Carthage, OP_FOUND_CITY, 1464, Added Warrior 1389 to slot 1 in army 1465. ETA at (22:41) is 0 
+071, Carthage, OP_FOUND_CITY, 1464, Transition to gathering stage
+071, Carthage, OP_FOUND_CITY, 1464, Transition to movement stage
+071, Carthage, OP_FOUND_CITY, 1464, Started Army 1465; Units Recruited 2; Max Formation Size 2; Moving To Target
+071, Carthage, OP_FOUND_CITY, 1464, PRE Moving To Target with Army 1465; center (22:41); target (23:31); Progress 0 percent
+071, Carthage, OP_FOUND_CITY, 1464, POST Moving To Target with Army 1465; center (22:40); target (23:31); Progress 10 percent
+072, France, OP_FOUND_CITY, 1445, PRE Moving To Target with Army 1446; center (29:22); target (30:23); Progress 50 percent
+072, France, OP_FOUND_CITY, 1445, Transition to target stage
+072, France, OP_FOUND_CITY, 1445, POST At Target
+072, Japan, OP_FOUND_CITY, 1448, PRE Moving To Target with Army 1449; center (31:35); target (29:37); Progress 20 percent
+072, Japan, OP_FOUND_CITY, 1448, POST Moving To Target with Army 1449; center (30:36); target (29:37); Progress 100 percent
+072, Austria, OP_FOUND_CITY, 1451, PRE Moving To Target with Army 1452; center (31:10); target (26:8); Progress 42 percent
+072, Austria, OP_FOUND_CITY, 1451, POST Moving To Target with Army 1452; center (29:10); target (26:8); Progress 59 percent
+072, Carthage, OP_FOUND_CITY, 1464, PRE Moving To Target with Army 1465; center (22:40); target (23:31); Progress 10 percent
+072, Carthage, OP_FOUND_CITY, 1464, POST Moving To Target with Army 1465; center (21:39); target (23:31); Progress 19 percent
+073, France, OP_FOUND_CITY, 1445, PRE At Target
+073, France, OP_FOUND_CITY, 1445, City founded (Troyes) at (30:23), plot value 93208, q49
+073, France, OP_FOUND_CITY, 1445, Transition to finished stage
+073, France, OP_FOUND_CITY, 1445, Ended: Success; Distance 6; Duration 5
+073, Japan, OP_FOUND_CITY, 1448, PRE Moving To Target with Army 1449; center (30:36); target (29:37); Progress 100 percent
+073, Japan, OP_FOUND_CITY, 1448, Transition to target stage
+073, Japan, OP_FOUND_CITY, 1448, City founded (Satsuma) at (29:37), plot value 120490, q50
+073, Japan, OP_FOUND_CITY, 1448, Transition to finished stage
+073, Japan, OP_FOUND_CITY, 1448, POST Completed
+073, Austria, OP_FOUND_CITY, 1451, PRE Moving To Target with Army 1452; center (29:10); target (26:8); Progress 59 percent
+073, Austria, OP_FOUND_CITY, 1451, POST Moving To Target with Army 1452; center (27:9); target (26:8); Progress 75 percent
+073, Carthage, OP_FOUND_CITY, 1464, PRE Moving To Target with Army 1465; center (21:39); target (23:31); Progress 19 percent
+073, Carthage, OP_FOUND_CITY, 1464, POST Moving To Target with Army 1465; center (21:38); target (23:31); Progress 28 percent
+074, Polynesia, OP_FOUND_CITY, 1475, found target for settler, score 95587 (q50)
+074, Polynesia, OP_FOUND_CITY, 1475, Initial stage is recruiting
+074, Polynesia, OP_FOUND_CITY, 1475, Found 1 potential units to recruit for operation 1475 at (52:37) with target at (51:28)
+074, Polynesia, OP_FOUND_CITY, 1475, Added Maori Warrior 1225 to slot 1 in army 1476. ETA at (52:37) is 0 
+074, Polynesia, OP_FOUND_CITY, 1475, Transition to gathering stage
+074, Polynesia, OP_FOUND_CITY, 1475, Started Army 1476; Units Recruited 2; Max Formation Size 2; Gathering Forces
+074, Polynesia, OP_FOUND_CITY, 1475, PRE Gathering Forces for army 1476; center (52:37); variance (6.25:0.00); free slots 0
+074, Polynesia, OP_FOUND_CITY, 1475, Transition to movement stage
+074, Polynesia, OP_FOUND_CITY, 1475, POST Moving To Target with Army 1476; center (52:35); target (51:28); Progress 0 percent
+074, Japan, OP_FOUND_CITY, 1448, Ended: Success; Distance 5; Duration 6
+074, Austria, OP_FOUND_CITY, 1451, PRE Moving To Target with Army 1452; center (27:9); target (26:8); Progress 75 percent
+074, Austria, OP_FOUND_CITY, 1451, POST Moving To Target with Army 1452; center (27:8); target (26:8); Progress 100 percent
+074, Carthage, OP_FOUND_CITY, 1464, PRE Moving To Target with Army 1465; center (21:38); target (23:31); Progress 28 percent
+074, Carthage, OP_FOUND_CITY, 1464, POST Moving To Target with Army 1465; center (22:36); target (23:31); Progress 46 percent
+075, Polynesia, OP_FOUND_CITY, 1475, PRE Moving To Target with Army 1476; center (52:35); target (51:28); Progress 0 percent
+075, Polynesia, OP_FOUND_CITY, 1475, POST Moving To Target with Army 1476; center (52:35); target (51:28); Progress 0 percent
+075, Austria, OP_FOUND_CITY, 1451, PRE Moving To Target with Army 1452; center (27:8); target (26:8); Progress 100 percent
+075, Austria, OP_FOUND_CITY, 1451, Transition to target stage
+075, Austria, OP_FOUND_CITY, 1451, City founded (Klagenfurt) at (26:8), plot value 50433, q-20
+075, Austria, OP_FOUND_CITY, 1451, Transition to finished stage
+075, Austria, OP_FOUND_CITY, 1451, POST Completed
+075, Carthage, OP_FOUND_CITY, 1464, PRE Moving To Target with Army 1465; center (22:36); target (23:31); Progress 46 percent
+075, Carthage, OP_FOUND_CITY, 1464, POST Moving To Target with Army 1465; center (21:35); target (23:31); Progress 46 percent
+076, Polynesia, OP_FOUND_CITY, 1475, PRE Moving To Target with Army 1476; center (52:35); target (51:28); Progress 0 percent
+076, Polynesia, OP_FOUND_CITY, 1475, POST Moving To Target with Army 1476; center (51:33); target (51:28); Progress 34 percent
+076, Austria, OP_FOUND_CITY, 1487, Ended: NoTarget; Distance -1; Duration 77
+076, Austria, OP_FOUND_CITY, 1451, Ended: Success; Distance 12; Duration 8
+076, Carthage, OP_FOUND_CITY, 1464, PRE Moving To Target with Army 1465; center (21:35); target (23:31); Progress 46 percent
+076, Carthage, OP_FOUND_CITY, 1464, POST Moving To Target with Army 1465; center (22:35); target (23:31); Progress 55 percent
+077, Polynesia, OP_FOUND_CITY, 1475, PRE Moving To Target with Army 1476; center (51:33); target (51:28); Progress 34 percent
+077, Polynesia, OP_FOUND_CITY, 1475, POST Moving To Target with Army 1476; center (51:31); target (51:28); Progress 56 percent
+077, Japan, OP_FOUND_CITY, 1494, found target for settler, score 108859 (q50)
+077, Japan, OP_FOUND_CITY, 1494, Skip recruiting, start with movement stage
+077, Japan, OP_FOUND_CITY, 1494, Found 1 potential units to recruit for operation 1494 at (32:35) with target at (32:30)
+077, Japan, OP_FOUND_CITY, 1494, Added Warrior 1434 to slot 1 in army 1495. ETA at (32:35) is 0 
+077, Japan, OP_FOUND_CITY, 1494, Started Army 1495; Units Recruited 2; Max Formation Size 2; Moving To Target
+077, Japan, OP_FOUND_CITY, 1494, PRE Moving To Target with Army 1495; center (32:35); target (32:30); Progress 0 percent
+077, Japan, OP_FOUND_CITY, 1494, POST Moving To Target with Army 1495; center (32:34); target (32:30); Progress 17 percent
+077, Austria, OP_FOUND_CITY, 1496, Ended: NoTarget; Distance -1; Duration 78
+077, Carthage, OP_FOUND_CITY, 1464, PRE Moving To Target with Army 1465; center (22:35); target (23:31); Progress 55 percent
+077, Carthage, OP_FOUND_CITY, 1464, POST Moving To Target with Army 1465; center (22:33); target (23:31); Progress 73 percent
+078, Polynesia, OP_FOUND_CITY, 1475, PRE Moving To Target with Army 1476; center (51:31); target (51:28); Progress 56 percent
+078, Polynesia, OP_FOUND_CITY, 1475, POST Moving To Target with Army 1476; center (52:30); target (51:28); Progress 67 percent
+078, Japan, OP_FOUND_CITY, 1494, PRE Moving To Target with Army 1495; center (32:34); target (32:30); Progress 17 percent
+078, Japan, OP_FOUND_CITY, 1494, POST Moving To Target with Army 1495; center (32:32); target (32:30); Progress 50 percent
+078, Austria, OP_FOUND_CITY, 1499, Ended: NoTarget; Distance -1; Duration 79
+078, Carthage, OP_FOUND_CITY, 1464, PRE Moving To Target with Army 1465; center (22:33); target (23:31); Progress 73 percent
+078, Carthage, OP_FOUND_CITY, 1464, Transition to target stage
+078, Carthage, OP_FOUND_CITY, 1464, POST At Target
+078, America, OP_FOUND_CITY, 1502, found target for settler, score 88385 (q41)
+078, America, OP_FOUND_CITY, 1502, Initial stage is recruiting
+078, America, OP_FOUND_CITY, 1502, Found 1 potential units to recruit for operation 1502 at (54:24) with target at (47:20)
+078, America, OP_FOUND_CITY, 1502, Added Spearman 1401 to slot 1 in army 1503. ETA at (54:24) is 0 
+078, America, OP_FOUND_CITY, 1502, Transition to gathering stage
+078, America, OP_FOUND_CITY, 1502, Started Army 1503; Units Recruited 2; Max Formation Size 2; Gathering Forces
+078, America, OP_FOUND_CITY, 1502, PRE Gathering Forces for army 1503; center (54:24); variance (2.25:2.25); free slots 0
+078, America, OP_FOUND_CITY, 1502, Transition to movement stage
+078, America, OP_FOUND_CITY, 1502, POST Moving To Target with Army 1503; center (54:24); target (47:20); Progress 0 percent
+079, Polynesia, OP_FOUND_CITY, 1475, PRE Moving To Target with Army 1476; center (52:30); target (51:28); Progress 67 percent
+079, Polynesia, OP_FOUND_CITY, 1475, Transition to target stage
+079, Polynesia, OP_FOUND_CITY, 1475, POST At Target
+079, Japan, OP_FOUND_CITY, 1494, PRE Moving To Target with Army 1495; center (32:32); target (32:30); Progress 50 percent
+079, Japan, OP_FOUND_CITY, 1494, Transition to target stage
+079, Japan, OP_FOUND_CITY, 1494, POST At Target
+079, Austria, OP_FOUND_CITY, 1507, Ended: NoTarget; Distance -1; Duration 80
+079, Carthage, OP_FOUND_CITY, 1510, found target for settler, score 53659 (q-14)
+079, Carthage, OP_FOUND_CITY, 1510, Skip recruiting, start with movement stage
+079, Carthage, OP_FOUND_CITY, 1510, Found 1 potential units to recruit for operation 1510 at (18:41) with target at (20:35)
+079, Carthage, OP_FOUND_CITY, 1510, Added Warrior 1097 to slot 1 in army 1511. ETA at (25:36) is 0 
+079, Carthage, OP_FOUND_CITY, 1510, Started Army 1511; Units Recruited 2; Max Formation Size 2; Moving To Target
+079, Carthage, OP_FOUND_CITY, 1464, PRE At Target
+079, Carthage, OP_FOUND_CITY, 1464, City founded (Saguntum) at (23:31), plot value 82951, q33
+079, Carthage, OP_FOUND_CITY, 1464, Transition to finished stage
+079, Carthage, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (25:36); target (20:35); Progress 23 percent
+079, Carthage, OP_FOUND_CITY, 1510, POST Moving To Target with Army 1511; center (21:39); target (20:35); Progress 45 percent
+079, Carthage, OP_FOUND_CITY, 1464, Ended: Success; Distance 11; Duration 8
+079, America, OP_FOUND_CITY, 1502, PRE Moving To Target with Army 1503; center (54:24); target (47:20); Progress 0 percent
+079, America, OP_FOUND_CITY, 1502, POST Moving To Target with Army 1503; center (53:22); target (47:20); Progress 20 percent
+080, Polynesia, OP_FOUND_CITY, 1475, PRE At Target
+080, Polynesia, OP_FOUND_CITY, 1475, City founded (Raiatea) at (51:28), plot value 105763, q50
+080, Polynesia, OP_FOUND_CITY, 1475, Transition to finished stage
+080, Polynesia, OP_FOUND_CITY, 1475, Ended: Success; Distance 9; Duration 6
+080, Japan, OP_FOUND_CITY, 1494, PRE At Target
+080, Japan, OP_FOUND_CITY, 1494, City founded (Kagoshima) at (32:30), plot value 108859, q50
+080, Japan, OP_FOUND_CITY, 1494, Transition to finished stage
+080, Japan, OP_FOUND_CITY, 1494, Ended: Success; Distance 6; Duration 3
+080, Austria, OP_FOUND_CITY, 1519, Ended: NoTarget; Distance -1; Duration 81
+080, Carthage, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (21:39); target (20:35); Progress 45 percent
+080, Carthage, OP_FOUND_CITY, 1510, POST Moving To Target with Army 1511; center (22:38); target (20:35); Progress 56 percent
+080, America, OP_FOUND_CITY, 1502, PRE Moving To Target with Army 1503; center (53:22); target (47:20); Progress 20 percent
+080, America, OP_FOUND_CITY, 1502, POST Moving To Target with Army 1503; center (51:21); target (47:20); Progress 40 percent
+081, Austria, OP_FOUND_CITY, 1524, Ended: NoTarget; Distance -1; Duration 82
+081, Carthage, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (22:38); target (20:35); Progress 56 percent
+081, Carthage, OP_FOUND_CITY, 1510, POST Moving To Target with Army 1511; center (21:36); target (20:35); Progress 100 percent
+081, America, OP_FOUND_CITY, 1502, PRE Moving To Target with Army 1503; center (51:21); target (47:20); Progress 40 percent
+081, America, OP_FOUND_CITY, 1502, POST Moving To Target with Army 1503; center (50:21); target (47:20); Progress 50 percent
+082, Austria, OP_FOUND_CITY, 1531, found target for settler, score 48787 (q-22)
+082, Austria, OP_FOUND_CITY, 1531, Initial stage is recruiting
+082, Austria, OP_FOUND_CITY, 1531, Found 2 potential units to recruit for operation 1531 at (34:13) with target at (25:14)
+082, Austria, OP_FOUND_CITY, 1531, Added Warrior 1500 to slot 1 in army 1532. ETA at (34:13) is 0 
+082, Austria, OP_FOUND_CITY, 1531, Transition to gathering stage
+082, Austria, OP_FOUND_CITY, 1531, Transition to movement stage
+082, Austria, OP_FOUND_CITY, 1531, Started Army 1532; Units Recruited 2; Max Formation Size 2; Moving To Target
+082, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (34:13); target (25:14); Progress 0 percent
+082, Austria, OP_FOUND_CITY, 1531, POST Moving To Target with Army 1532; center (33:13); target (25:14); Progress 10 percent
+082, Carthage, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (21:36); target (20:35); Progress 100 percent
+082, Carthage, OP_FOUND_CITY, 1510, Transition to target stage
+082, Carthage, OP_FOUND_CITY, 1510, City founded (Carthago Nova) at (20:35), plot value 51240, q-18
+082, Carthage, OP_FOUND_CITY, 1510, Transition to finished stage
+082, Carthage, OP_FOUND_CITY, 1510, POST Completed
+082, America, OP_FOUND_CITY, 1502, PRE Moving To Target with Army 1503; center (50:21); target (47:20); Progress 50 percent
+082, America, OP_FOUND_CITY, 1502, POST Moving To Target with Army 1503; center (49:22); target (47:20); Progress 60 percent
+083, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (33:13); target (25:14); Progress 10 percent
+083, Austria, OP_FOUND_CITY, 1531, POST Moving To Target with Army 1532; center (32:12); target (25:14); Progress 19 percent
+083, Carthage, OP_FOUND_CITY, 1510, Ended: Success; Distance 9; Duration 4
+083, America, OP_FOUND_CITY, 1502, PRE Moving To Target with Army 1503; center (49:22); target (47:20); Progress 60 percent
+083, America, OP_FOUND_CITY, 1502, POST Moving To Target with Army 1503; center (48:22); target (47:20); Progress 70 percent
+084, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (32:12); target (25:14); Progress 19 percent
+084, Austria, OP_FOUND_CITY, 1531, POST Moving To Target with Army 1532; center (30:12); target (25:14); Progress 37 percent
+084, America, OP_FOUND_CITY, 1502, PRE Moving To Target with Army 1503; center (48:22); target (47:20); Progress 70 percent
+084, America, OP_FOUND_CITY, 1502, Transition to target stage
+084, America, OP_FOUND_CITY, 1502, POST At Target
+085, Austria, OP_FOUND_CITY, 1587, Ended: NoTarget; Distance -1; Duration 86
+085, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (30:12); target (25:14); Progress 37 percent
+085, Austria, OP_FOUND_CITY, 1531, POST Moving To Target with Army 1532; center (28:12); target (25:14); Progress 55 percent
+085, America, OP_FOUND_CITY, 1502, PRE At Target
+085, America, OP_FOUND_CITY, 1502, City founded (Boston) at (47:20), plot value 94981, q50
+085, America, OP_FOUND_CITY, 1502, Transition to finished stage
+085, America, OP_FOUND_CITY, 1502, Ended: Success; Distance 10; Duration 7
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Initial stage is recruiting
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Found 11 potential units to recruit for operation 1599 at (29:37) with target at (25:44)
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Added Swordsman 1586 to slot 0 in army 1600. ETA at (29:37) is 2 
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Added Spearman 1506 to slot 1 in army 1600. ETA at (29:37) is 2 
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Added Swordsman 1517 to slot 2 in army 1600. ETA at (29:37) is 4 
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Added Composite Bowman 1479 to slot 3 in army 1600. ETA at (29:37) is 0 
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Added Catapult 1293 to slot 4 in army 1600. ETA at (29:37) is 1 
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Added Catapult 1530 to slot 5 in army 1600. ETA at (29:37) is 3 
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Added Archer 1177 to slot 6 in army 1600. ETA at (29:37) is 4 
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Added Archer 1406 to slot 7 in army 1600. ETA at (29:37) is 4 
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Transition to gathering stage
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Started Army 1600; Units Recruited 8; Max Formation Size 10; Gathering Forces
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Gathering Forces for army 1600; center (32:30); variance (5.61:17.75); free slots 2
+086, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Gathering Forces for army 1600; center (31:31); variance (3.48:12.61); free slots 2
+086, Austria, OP_FOUND_CITY, 1601, Ended: NoTarget; Distance -1; Duration 87
+086, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (28:12); target (25:14); Progress 55 percent
+086, Austria, OP_FOUND_CITY, 1531, POST Moving To Target with Army 1532; center (26:13); target (25:14); Progress 73 percent
+087, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Gathering Forces for army 1600; center (31:31); variance (3.48:12.61); free slots 2
+087, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Removing Catapult 1530 from army 1600 because no progress to checkpoint (29:37). ETA 3; prev 3; prev 3
+087, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Removing Archer 1177 from army 1600 because no progress to checkpoint (29:37). ETA 4; prev 4; prev 4
+087, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Gathering Forces for army 1600; center (31:32); variance (0.33:6.56); free slots 4
+087, Austria, OP_FOUND_CITY, 1619, Ended: NoTarget; Distance -1; Duration 88
+087, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (26:13); target (25:14); Progress 73 percent
+087, Austria, OP_FOUND_CITY, 1531, POST Moving To Target with Army 1532; center (25:13); target (25:14); Progress 100 percent
+088, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Gathering Forces for army 1600; center (31:32); variance (0.33:6.56); free slots 4
+088, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Transition to movement stage
+088, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (31:34); target (25:44); Progress 0 percent
+088, Austria, OP_FOUND_CITY, 1635, Ended: NoTarget; Distance -1; Duration 89
+088, Austria, OP_FOUND_CITY, 1531, PRE Moving To Target with Army 1532; center (25:13); target (25:14); Progress 100 percent
+088, Austria, OP_FOUND_CITY, 1531, Transition to target stage
+088, Austria, OP_FOUND_CITY, 1531, POST At Target
+089, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (31:34); target (25:44); Progress 0 percent
+089, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (30:36); target (25:44); Progress 17 percent
+089, Austria, OP_FOUND_CITY, 1652, Ended: NoTarget; Distance -1; Duration 90
+089, Austria, OP_FOUND_CITY, 1531, PRE At Target
+089, Austria, OP_FOUND_CITY, 1531, City founded (Bregenz) at (25:14), plot value 50545, q-19
+089, Austria, OP_FOUND_CITY, 1531, Transition to finished stage
+089, Austria, OP_FOUND_CITY, 1531, Ended: Success; Distance 11; Duration 7
+090, Polynesia, OP_FOUND_CITY, 1663, found target for settler, score 103711 (q50)
+090, Polynesia, OP_FOUND_CITY, 1663, Initial stage is recruiting
+090, Polynesia, OP_FOUND_CITY, 1663, Found 3 potential units to recruit for operation 1663 at (47:37) with target at (57:27)
+090, Polynesia, OP_FOUND_CITY, 1663, Added Maori Warrior 1002 to slot 1 in army 1664. ETA at (47:37) is 1 
+090, Polynesia, OP_FOUND_CITY, 1663, Transition to gathering stage
+090, Polynesia, OP_FOUND_CITY, 1663, Started Army 1664; Units Recruited 2; Max Formation Size 2; Gathering Forces
+090, Polynesia, OP_FOUND_CITY, 1663, PRE Gathering Forces for army 1664; center (47:37); variance (2.25:2.25); free slots 0
+090, Polynesia, OP_FOUND_CITY, 1663, Transition to movement stage
+090, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (45:39); target (57:27); Progress -18 percent
+090, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (30:36); target (25:44); Progress 17 percent
+090, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (28:37); target (25:44); Progress 25 percent
+090, Austria, OP_FOUND_CITY, 1668, Ended: NoTarget; Distance -1; Duration 91
+091, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (45:39); target (57:27); Progress -18 percent
+091, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (46:38); target (57:27); Progress -12 percent
+091, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (28:37); target (25:44); Progress 25 percent
+091, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (29:37); target (25:44); Progress 25 percent
+091, Austria, OP_FOUND_CITY, 1683, Ended: NoTarget; Distance -1; Duration 92
+092, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (46:38); target (57:27); Progress -12 percent
+092, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (47:37); target (57:27); Progress 0 percent
+092, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (29:37); target (25:44); Progress 25 percent
+092, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (29:37); target (25:44); Progress 25 percent
+092, Austria, OP_FOUND_CITY, 1694, Ended: NoTarget; Distance -1; Duration 93
+093, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (47:37); target (57:27); Progress 0 percent
+093, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (51:37); target (57:27); Progress 25 percent
+093, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (29:37); target (25:44); Progress 25 percent
+093, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (29:37); target (25:44); Progress 25 percent
+093, Austria, OP_FOUND_CITY, 1709, Ended: NoTarget; Distance -1; Duration 94
+094, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (51:37); target (57:27); Progress 25 percent
+094, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (52:35); target (57:27); Progress 38 percent
+094, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (29:37); target (25:44); Progress 25 percent
+094, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (29:38); target (25:44); Progress 34 percent
+094, Austria, OP_FOUND_CITY, 1721, Ended: NoTarget; Distance -1; Duration 95
+095, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (52:35); target (57:27); Progress 38 percent
+095, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (52:33); target (57:27); Progress 44 percent
+095, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (29:38); target (25:44); Progress 34 percent
+095, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (28:39); target (25:44); Progress 42 percent
+095, Austria, OP_FOUND_CITY, 1733, Ended: NoTarget; Distance -1; Duration 96
+096, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (52:33); target (57:27); Progress 44 percent
+096, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (53:32); target (57:27); Progress 50 percent
+096, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (28:39); target (25:44); Progress 42 percent
+096, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (28:40); target (25:44); Progress 50 percent
+096, Austria, OP_FOUND_CITY, 1747, Ended: NoTarget; Distance -1; Duration 97
+097, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (53:32); target (57:27); Progress 50 percent
+097, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (55:30); target (57:27); Progress 69 percent
+097, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (28:40); target (25:44); Progress 50 percent
+097, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (27:42); target (25:44); Progress 67 percent
+097, Austria, OP_FOUND_CITY, 1762, Ended: NoTarget; Distance -1; Duration 98
+098, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (55:30); target (57:27); Progress 69 percent
+098, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (56:28); target (57:27); Progress 82 percent
+098, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (27:42); target (25:44); Progress 67 percent
+098, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (27:42); target (25:44); Progress 67 percent
+098, Austria, OP_FOUND_CITY, 1776, Ended: NoTarget; Distance -1; Duration 99
+099, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (56:28); target (57:27); Progress 82 percent
+099, Polynesia, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (56:27); target (57:27); Progress 100 percent
+099, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (27:42); target (25:44); Progress 67 percent
+099, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, DeclareWhenGathered: at their border, stalled 3 turns, furthest unit 3 tiles from the centre
+099, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, MarchOn: declaring, the army marches on; unit distance near 3; far 6
+099, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (27:42); target (25:44); Progress 67 percent
+099, Austria, OP_FOUND_CITY, 1790, Ended: NoTarget; Distance -1; Duration 100
+100, Polynesia, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (56:27); target (57:27); Progress 100 percent
+100, Polynesia, OP_FOUND_CITY, 1663, Transition to target stage
+100, Polynesia, OP_FOUND_CITY, 1663, POST At Target
+100, Japan, OP_FOUND_CITY, 1805, found target for settler, score 88137 (q41)
+100, Japan, OP_FOUND_CITY, 1805, Skip recruiting, start with movement stage
+100, Japan, OP_FOUND_CITY, 1805, Found 1 potential units to recruit for operation 1805 at (35:42) with target at (39:34)
+100, Japan, OP_FOUND_CITY, 1805, Added Swordsman 1803 to slot 1 in army 1806. ETA at (35:42) is 1 
+100, Japan, OP_FOUND_CITY, 1805, Started Army 1806; Units Recruited 2; Max Formation Size 2; Moving To Target
+100, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (27:42); target (25:44); Progress 67 percent
+100, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Discovered by enemy
+100, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, MarchOn: declaring, the army marches on; unit distance near 3; far 6
+100, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Moving To Target with Army 1600; center (27:42); target (25:44); Progress 67 percent
+100, Japan, OP_FOUND_CITY, 1805, PRE Moving To Target with Army 1806; center (35:42); target (39:34); Progress 0 percent
+100, Japan, OP_FOUND_CITY, 1805, POST Moving To Target with Army 1806; center (35:39); target (39:34); Progress 30 percent
+100, Austria, OP_FOUND_CITY, 1807, Ended: NoTarget; Distance -1; Duration 101
+101, Polynesia, OP_FOUND_CITY, 1663, PRE At Target
+101, Polynesia, OP_FOUND_CITY, 1663, City founded (Aotearoa) at (57:27), plot value 85798, q37
+101, Polynesia, OP_FOUND_CITY, 1663, Transition to finished stage
+101, Polynesia, OP_FOUND_CITY, 1663, Ended: Success; Distance 16; Duration 11
+101, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, PRE Moving To Target with Army 1600; center (27:42); target (25:44); Progress 67 percent
+101, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, No progress to target
+101, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Discovered by enemy
+101, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Transition to finished stage; unit distance near 3; far 6
+101, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, POST Completed
+101, Japan, OP_FOUND_CITY, 1805, PRE Moving To Target with Army 1806; center (35:39); target (39:34); Progress 30 percent
+101, Japan, OP_FOUND_CITY, 1805, POST Moving To Target with Army 1806; center (36:39); target (39:34); Progress 30 percent
+101, Austria, OP_FOUND_CITY, 1822, Ended: NoTarget; Distance -1; Duration 102
+102, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1599, Ended: Success; Distance 12; Duration 16
+102, Japan, OP_FOUND_CITY, 1805, PRE Moving To Target with Army 1806; center (36:39); target (39:34); Progress 30 percent
+102, Japan, OP_FOUND_CITY, 1805, POST Moving To Target with Army 1806; center (37:37); target (39:34); Progress 50 percent
+102, Austria, OP_FOUND_CITY, 1832, Ended: NoTarget; Distance -1; Duration 103
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Initial stage is recruiting
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 9 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Pikeman 1745 to slot 0 in army 1852. ETA at (29:37) is 0 
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Swordsman 1731 to slot 1 in army 1852. ETA at (29:37) is 0 
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Swordsman 1682 to slot 2 in army 1852. ETA at (29:37) is 3 
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Catapult 1530 to slot 3 in army 1852. ETA at (29:37) is 0 
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Composite Bowman 1634 to slot 4 in army 1852. ETA at (29:37) is 2 
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Archer 1177 to slot 5 in army 1852. ETA at (29:37) is 6 
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Archer 1329 to slot 6 in army 1852. ETA at (29:37) is 7 
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 41 a turn, Carthage needs 60
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Started Army 1852; Units Recruited 7; Max Formation Size 10; Recruiting Units
+103, Japan, OP_FOUND_CITY, 1805, PRE Moving To Target with Army 1806; center (37:37); target (39:34); Progress 50 percent
+103, Japan, OP_FOUND_CITY, 1805, POST Moving To Target with Army 1806; center (37:35); target (39:34); Progress 70 percent
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (29:37) - ETA 0; Swordsman 1731 at (33:35) - ETA 0; Swordsman 1682 at (36:37) - ETA 3; Catapult 1530 at (32:35) - ETA 0; Composite Bowman 1634 at (32:30) - ETA 2; Archer 1177 at (36:26) - ETA 6; Archer 1329 at (37:25) - ETA 7; Open; Open; Open; 
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 41 a turn, Carthage needs 60
+103, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (29:37) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (34:37) - ETA 2; Catapult 1530 at (30:36) - ETA 0; Composite Bowman 1634 at (31:31) - ETA 2; Archer 1177 at (35:26) - ETA 6; Archer 1329 at (37:26) - ETA 7; Open; Open; Open; 
+103, Austria, OP_FOUND_CITY, 1853, Ended: NoTarget; Distance -1; Duration 104
+104, Japan, OP_FOUND_CITY, 1805, PRE Moving To Target with Army 1806; center (37:35); target (39:34); Progress 70 percent
+104, Japan, OP_FOUND_CITY, 1805, Transition to target stage
+104, Japan, OP_FOUND_CITY, 1805, POST At Target
+104, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (29:37) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (34:37) - ETA 2; Catapult 1530 at (30:36) - ETA 0; Composite Bowman 1634 at (31:31) - ETA 2; Archer 1177 at (35:26) - ETA 6; Archer 1329 at (37:26) - ETA 7; Open; Open; Open; 
+104, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+104, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 41 a turn, Carthage needs 60
+104, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (29:35) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (34:35) - ETA 1; Catapult 1530 at (31:34) - ETA 0; Composite Bowman 1634 at (30:33) - ETA 1; Archer 1177 at (34:27) - ETA 5; Archer 1329 at (36:27) - ETA 6; Open; Open; Open; 
+104, Austria, OP_FOUND_CITY, 1878, Ended: NoTarget; Distance -1; Duration 105
+105, Polynesia, OP_FOUND_CITY, 1893, found target for settler, score 88127 (q41)
+105, Polynesia, OP_FOUND_CITY, 1893, Initial stage is recruiting
+105, Polynesia, OP_FOUND_CITY, 1893, Found 2 potential units to recruit for operation 1893 at (47:37) with target at (62:27)
+105, Polynesia, OP_FOUND_CITY, 1893, Added Swordsman 1741 to slot 1 in army 1894. ETA at (47:37) is 3 
+105, Polynesia, OP_FOUND_CITY, 1893, Transition to gathering stage
+105, Polynesia, OP_FOUND_CITY, 1893, Started Army 1894; Units Recruited 2; Max Formation Size 2; Gathering Forces
+105, Polynesia, OP_FOUND_CITY, 1893, PRE Gathering Forces for army 1894; center (54:31); variance (12.25:9.00); free slots 0
+105, Polynesia, OP_FOUND_CITY, 1893, POST Gathering Forces for army 1894; center (53:33); variance (9.00:4.00); free slots 0
+105, Japan, OP_FOUND_CITY, 1805, PRE At Target
+105, Japan, OP_FOUND_CITY, 1805, City founded (Nara) at (39:34), plot value 80294, q28
+105, Japan, OP_FOUND_CITY, 1805, Transition to finished stage
+105, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (29:35) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (34:35) - ETA 1; Catapult 1530 at (31:34) - ETA 0; Composite Bowman 1634 at (30:33) - ETA 1; Archer 1177 at (34:27) - ETA 5; Archer 1329 at (36:27) - ETA 6; Open; Open; Open; 
+105, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+105, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 41 a turn, Carthage needs 60
+105, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (29:36) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (30:35) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (29:35) - ETA 0; Archer 1177 at (34:28) - ETA 4; Archer 1329 at (37:28) - ETA 5; Open; Open; Open; 
+105, Japan, OP_FOUND_CITY, 1805, Ended: Success; Distance 10; Duration 5
+105, Austria, OP_FOUND_CITY, 1901, Ended: NoTarget; Distance -1; Duration 106
+106, Polynesia, OP_FOUND_CITY, 1893, PRE Gathering Forces for army 1894; center (53:33); variance (9.00:4.00); free slots 0
+106, Polynesia, OP_FOUND_CITY, 1893, POST Gathering Forces for army 1894; center (47:37); variance (9.00:2.25); free slots 0
+106, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (29:36) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (30:35) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (29:35) - ETA 0; Archer 1177 at (34:28) - ETA 4; Archer 1329 at (37:28) - ETA 5; Open; Open; Open; 
+106, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+106, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 40 a turn, Carthage needs 60
+106, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (29:36) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (30:35) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (30:36) - ETA 0; Archer 1177 at (32:29) - ETA 3; Archer 1329 at (36:30) - ETA 4; Open; Open; Open; 
+106, Austria, OP_FOUND_CITY, 1921, Ended: NoTarget; Distance -1; Duration 107
+107, Polynesia, OP_FOUND_CITY, 1893, PRE Gathering Forces for army 1894; center (47:37); variance (9.00:2.25); free slots 0
+107, Polynesia, OP_FOUND_CITY, 1893, POST Gathering Forces for army 1894; center (52:36); variance (6.25:0.25); free slots 0
+107, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (29:36) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (30:35) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (30:36) - ETA 0; Archer 1177 at (32:29) - ETA 3; Archer 1329 at (36:30) - ETA 4; Open; Open; Open; 
+107, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+107, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 33 a turn, Carthage needs 70
+107, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (29:36) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (30:36) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Archer 1177 at (31:31) - ETA 2; Archer 1329 at (35:32) - ETA 3; Open; Open; Open; 
+107, Austria, OP_FOUND_CITY, 1938, Ended: NoTarget; Distance -1; Duration 108
+108, Polynesia, OP_FOUND_CITY, 1893, PRE Gathering Forces for army 1894; center (52:36); variance (6.25:0.25); free slots 0
+108, Polynesia, OP_FOUND_CITY, 1893, Transition to movement stage
+108, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (49:37); target (62:27); Progress 10 percent
+108, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (29:36) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (30:36) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Archer 1177 at (31:31) - ETA 2; Archer 1329 at (35:32) - ETA 3; Open; Open; Open; 
+108, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 2 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+108, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Catapult 1293 to slot 7 in army 1852. ETA at (29:37) is 0 
+108, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 50 a turn, Carthage needs 70
+108, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (29:36) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (30:37) - ETA 0; Catapult 1530 at (30:36) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Archer 1177 at (30:33) - ETA 1; Archer 1329 at (35:34) - ETA 2; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+108, Austria, OP_FOUND_CITY, 1955, Ended: NoTarget; Distance -1; Duration 109
+109, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (49:37); target (62:27); Progress 10 percent
+109, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (51:37); target (62:27); Progress 20 percent
+109, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (29:36) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (30:37) - ETA 0; Catapult 1530 at (30:36) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Archer 1177 at (30:33) - ETA 1; Archer 1329 at (35:34) - ETA 2; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+109, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+109, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 50 a turn, Carthage needs 70
+109, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (30:37) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:36) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Archer 1177 at (31:34) - ETA 0; Archer 1329 at (33:36) - ETA 1; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+109, Austria, OP_FOUND_CITY, 1968, Ended: NoTarget; Distance -1; Duration 110
+110, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (51:37); target (62:27); Progress 20 percent
+110, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (52:35); target (62:27); Progress 29 percent
+110, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (30:37) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:36) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Archer 1177 at (31:34) - ETA 0; Archer 1329 at (33:36) - ETA 1; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+110, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+110, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 50 a turn, Carthage needs 70
+110, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (31:37) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:36) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Archer 1177 at (30:37) - ETA 0; Archer 1329 at (30:35) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+110, Austria, OP_FOUND_CITY, 1977, Ended: NoTarget; Distance -1; Duration 111
+111, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (52:35); target (62:27); Progress 29 percent
+111, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (52:33); target (62:27); Progress 34 percent
+111, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (31:37) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:36) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Archer 1177 at (30:37) - ETA 0; Archer 1329 at (30:35) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+111, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+111, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 46 a turn, Carthage needs 70
+111, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (31:37) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:35) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Open; Archer 1329 at (30:36) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+111, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Composite Bowman 1988 to slot 6 in army 1852. ETA at (29:37) is 0 
+111, Austria, OP_FOUND_CITY, 1989, Ended: NoTarget; Distance -1; Duration 112
+112, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (52:33); target (62:27); Progress 34 percent
+112, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (53:32); target (62:27); Progress 39 percent
+112, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (31:37) - ETA 0; Swordsman 1731 at (29:37) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:35) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Open; Composite Bowman 1988 at (30:36) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+112, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 2 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+112, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Composite Bowman 1987 to slot 5 in army 1852. ETA at (29:37) is 0 
+112, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 58 a turn, Carthage needs 70
+112, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (31:37) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (29:37) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Composite Bowman 1987 at (30:36) - ETA 0; Composite Bowman 1988 at (30:37) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+112, Austria, OP_FOUND_CITY, 2004, Ended: NoTarget; Distance -1; Duration 113
+112, Carthage, OP_FOUND_CITY, 2010, found target for settler, score 47051 (q-25)
+112, Carthage, OP_FOUND_CITY, 2010, Initial stage is recruiting
+112, Carthage, OP_FOUND_CITY, 2010, Found 3 potential units to recruit for operation 2010 at (18:41) with target at (21:28)
+112, Carthage, OP_FOUND_CITY, 2010, Added Pikeman 1942 to slot 1 in army 2011. ETA at (18:41) is 0 
+112, Carthage, OP_FOUND_CITY, 2010, Transition to gathering stage
+112, Carthage, OP_FOUND_CITY, 2010, Started Army 2011; Units Recruited 2; Max Formation Size 2; Gathering Forces
+112, Carthage, OP_FOUND_CITY, 2010, PRE Gathering Forces for army 2011; center (21:39); variance (2.25:1.00); free slots 0
+112, Carthage, OP_FOUND_CITY, 2010, Added Chariot Archer 1590 to slot 1 in army 2011. ETA at (18:41) is 0 
+112, Carthage, OP_FOUND_CITY, 2010, Transition to movement stage
+112, Carthage, OP_FOUND_CITY, 2010, POST Moving To Target with Army 2011; center (21:39); target (21:28); Progress 24 percent
+113, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (53:32); target (62:27); Progress 39 percent
+113, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (55:30); target (62:27); Progress 53 percent
+113, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (31:37) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (29:37) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Composite Bowman 1987 at (30:36) - ETA 0; Composite Bowman 1988 at (30:37) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+113, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+113, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 58 a turn, Carthage needs 70
+113, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (31:37) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Composite Bowman 1987 at (30:36) - ETA 0; Composite Bowman 1988 at (29:37) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+113, Austria, OP_FOUND_CITY, 2022, Ended: NoTarget; Distance -1; Duration 114
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Initial stage is recruiting
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Found 6 potential units to recruit for operation 2024 at (23:31) with target at (32:35)
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Added Swordsman 1858 to slot 0 in army 2025. ETA at (23:31) is 1 
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Added Pikeman 1942 to slot 1 in army 2025. ETA at (23:31) is 2 
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Added Swordsman 1657 to slot 2 in army 2025. ETA at (23:31) is 4 
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Added Chariot Archer 1540 to slot 3 in army 2025. ETA at (23:31) is 0 
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Added Chariot Archer 1382 to slot 4 in army 2025. ETA at (23:31) is 1 
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Transition to gathering stage
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Started Army 2025; Units Recruited 5; Max Formation Size 9; Gathering Forces
+113, Carthage, OP_FOUND_CITY, 2010, no valid city site target found (with escort)!
+113, Carthage, OP_FOUND_CITY, 2010, Ended: NoTarget; Distance 17; Duration 1
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Gathering Forces for army 2025; center (25:36); variance (4.16:18.80); free slots 4
+113, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Gathering Forces for army 2025; center (24:35); variance (1.84:11.44); free slots 4
+113, America, OP_FOUND_CITY, 2028, found target for settler, score 60453 (q-4)
+113, America, OP_FOUND_CITY, 2028, Initial stage is recruiting
+113, America, OP_FOUND_CITY, 2028, Found 1 potential units to recruit for operation 2028 at (51:21) with target at (56:19)
+113, America, OP_FOUND_CITY, 2028, Added Swordsman 1700 to slot 1 in army 2029. ETA at (51:21) is 0 
+113, America, OP_FOUND_CITY, 2028, Transition to gathering stage
+113, America, OP_FOUND_CITY, 2028, Started Army 2029; Units Recruited 2; Max Formation Size 2; Gathering Forces
+113, America, OP_FOUND_CITY, 2028, PRE Gathering Forces for army 2029; center (54:24); variance (2.25:2.25); free slots 0
+113, America, OP_FOUND_CITY, 2028, Added Chariot Archer 1578 to slot 1 in army 2029. ETA at (51:21) is 0 
+113, America, OP_FOUND_CITY, 2028, Transition to movement stage
+113, America, OP_FOUND_CITY, 2028, POST Moving To Target with Army 2029; center (54:22); target (56:19); Progress 38 percent
+114, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (55:30); target (62:27); Progress 53 percent
+114, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (57:28); target (62:27); Progress 67 percent
+114, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (31:37) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Composite Bowman 1987 at (30:36) - ETA 0; Composite Bowman 1988 at (29:37) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+114, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+114, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 58 a turn, Carthage needs 70
+114, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (29:37) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Composite Bowman 1987 at (30:36) - ETA 0; Composite Bowman 1988 at (29:35) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+114, Austria, OP_FOUND_CITY, 2035, Ended: NoTarget; Distance -1; Duration 115
+114, Carthage, OP_FOUND_CITY, 2039, Ended: NoTarget; Distance -1; Duration 115
+114, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Gathering Forces for army 2025; center (24:35); variance (1.84:11.44); free slots 4
+114, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Gathering Forces for army 2025; center (22:33); variance (0.64:10.96); free slots 4
+114, America, OP_FOUND_CITY, 2028, PRE Moving To Target with Army 2029; center (54:22); target (56:19); Progress 38 percent
+114, America, OP_FOUND_CITY, 2028, POST Moving To Target with Army 2029; center (54:21); target (56:19); Progress 50 percent
+115, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (57:28); target (62:27); Progress 67 percent
+115, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (59:28); target (62:27); Progress 77 percent
+115, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (29:37) - ETA 0; Swordsman 1731 at (30:35) - ETA 0; Swordsman 1682 at (29:36) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Composite Bowman 1634 at (28:37) - ETA 0; Composite Bowman 1987 at (30:36) - ETA 0; Composite Bowman 1988 at (29:35) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Open; Open; 
+115, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 0 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+115, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, SiegeArmy: waiting for more units, expected damage 50 a turn, Carthage needs 70
+115, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Recruiting Units for army 1852; Pikeman 1745 at (29:37) - ETA 0; Swordsman 1731 at (28:36) - ETA 0; Swordsman 1682 at (30:35) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Open; Composite Bowman 1987 at (29:36) - ETA 0; Composite Bowman 1988 at (29:38) - ETA 0; Catapult 1293 at (30:36) - ETA 0; Open; Open; 
+115, Austria, OP_FOUND_CITY, 2050, Ended: NoTarget; Distance -1; Duration 116
+115, Carthage, OP_FOUND_CITY, 2054, Ended: NoTarget; Distance -1; Duration 116
+115, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Gathering Forces for army 2025; center (22:33); variance (0.64:10.96); free slots 4
+115, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Gathering Forces for army 2025; center (23:32); variance (3.36:3.44); free slots 4
+115, America, OP_FOUND_CITY, 2028, PRE Moving To Target with Army 2029; center (54:21); target (56:19); Progress 50 percent
+115, America, OP_FOUND_CITY, 2028, POST Moving To Target with Army 2029; center (56:20); target (56:19); Progress 100 percent
+116, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (59:28); target (62:27); Progress 77 percent
+116, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (60:27); target (62:27); Progress 86 percent
+116, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Recruiting Units for army 1852; Pikeman 1745 at (29:37) - ETA 0; Swordsman 1731 at (28:36) - ETA 0; Swordsman 1682 at (30:35) - ETA 0; Catapult 1530 at (30:37) - ETA 0; Open; Composite Bowman 1987 at (29:36) - ETA 0; Composite Bowman 1988 at (29:38) - ETA 0; Catapult 1293 at (30:36) - ETA 0; Open; Open; 
+116, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Found 3 potential units to recruit for operation 1851 at (29:37) with target at (22:41)
+116, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Crossbowman 2049 to slot 4 in army 1852. ETA at (29:37) is 0 
+116, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Added Trung Vuong (Great General) 2063 to slot 8 in army 1852. ETA at (29:37) is 1 
+116, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Transition to gathering stage
+116, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Gathering Forces for army 1852; center (30:37); variance (1.28:1.14); free slots 1
+116, Austria, OP_FOUND_CITY, 2064, Ended: NoTarget; Distance -1; Duration 117
+116, Carthage, OP_FOUND_CITY, 2068, found target for settler, score 46915 (q-25)
+116, Carthage, OP_FOUND_CITY, 2068, Initial stage is recruiting
+116, Carthage, OP_FOUND_CITY, 2068, Found 0 potential units to recruit for operation 2068 at (22:41) with target at (21:28)
+116, Carthage, OP_FOUND_CITY, 2068, Started Army 2069; Units Recruited 1; Max Formation Size 2; Recruiting Units
+116, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Gathering Forces for army 2025; center (23:32); variance (3.36:3.44); free slots 4
+116, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Gathering Forces for army 2025; center (23:31); variance (3.76:3.44); free slots 4
+116, Carthage, OP_FOUND_CITY, 2068, PRE Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA -1; Open; 
+116, Carthage, OP_FOUND_CITY, 2068, Found 0 potential units to recruit for operation 2068 at (22:41) with target at (21:28)
+116, Carthage, OP_FOUND_CITY, 2068, POST Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+116, America, OP_FOUND_CITY, 2028, PRE Moving To Target with Army 2029; center (56:20); target (56:19); Progress 100 percent
+116, America, OP_FOUND_CITY, 2028, Transition to target stage
+116, America, OP_FOUND_CITY, 2028, City founded (Philadelphia) at (56:19), plot value 60453, q-4
+116, America, OP_FOUND_CITY, 2028, Transition to finished stage
+116, America, OP_FOUND_CITY, 2028, POST Completed
+117, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (60:27); target (62:27); Progress 86 percent
+117, Polynesia, OP_FOUND_CITY, 1893, POST Moving To Target with Army 1894; center (61:27); target (62:27); Progress 100 percent
+117, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Gathering Forces for army 1852; center (30:37); variance (1.28:1.14); free slots 1
+117, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Transition to movement stage
+117, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Moving To Target with Army 1852; center (29:37); target (22:41); Progress 0 percent
+117, Austria, OP_FOUND_CITY, 2080, Ended: NoTarget; Distance -1; Duration 118
+117, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Gathering Forces for army 2025; center (23:31); variance (3.76:3.44); free slots 4
+117, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Contact with enemy!
+117, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Gathering Forces for army 2025; center (23:31); variance (5.20:3.84); free slots 4
+117, Carthage, OP_FOUND_CITY, 2068, PRE Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+117, Carthage, OP_FOUND_CITY, 2068, Found 0 potential units to recruit for operation 2068 at (22:41) with target at (21:28)
+117, Carthage, OP_FOUND_CITY, 2068, POST Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+117, America, OP_FOUND_CITY, 2028, Ended: Success; Distance 8; Duration 4
+118, Polynesia, OP_FOUND_CITY, 1893, PRE Moving To Target with Army 1894; center (61:27); target (62:27); Progress 100 percent
+118, Polynesia, OP_FOUND_CITY, 1893, Transition to target stage
+118, Polynesia, OP_FOUND_CITY, 1893, POST At Target
+118, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Moving To Target with Army 1852; center (29:37); target (22:41); Progress 0 percent
+118, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Moving To Target with Army 1852; center (29:37); target (22:41); Progress 0 percent
+118, Austria, OP_FOUND_CITY, 2096, Ended: NoTarget; Distance -1; Duration 119
+118, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Gathering Forces for army 2025; center (23:31); variance (5.20:3.84); free slots 4
+118, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Contact with enemy!
+118, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Gathering Forces for army 2025; center (22:31); variance (2.16:2.80); free slots 4
+118, Carthage, OP_FOUND_CITY, 2068, PRE Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+118, Carthage, OP_FOUND_CITY, 2068, Found 0 potential units to recruit for operation 2068 at (22:41) with target at (21:28)
+118, Carthage, OP_FOUND_CITY, 2068, POST Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+119, Polynesia, OP_FOUND_CITY, 1893, PRE At Target
+119, Polynesia, OP_FOUND_CITY, 1893, City founded (Tahiti) at (62:27), plot value 88127, q41
+119, Polynesia, OP_FOUND_CITY, 1893, Transition to finished stage
+119, Polynesia, OP_FOUND_CITY, 1893, Ended: Success; Distance 21; Duration 14
+119, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Moving To Target with Army 1852; center (29:37); target (22:41); Progress 0 percent
+119, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Moving To Target with Army 1852; center (29:37); target (22:41); Progress 0 percent
+119, Austria, OP_FOUND_CITY, 2110, Ended: NoTarget; Distance -1; Duration 120
+119, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Gathering Forces for army 2025; center (22:31); variance (2.16:2.80); free slots 4
+119, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Contact with enemy!
+119, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Gathering Forces for army 2025; center (22:31); variance (2.16:2.64); free slots 4
+119, Carthage, OP_FOUND_CITY, 2068, PRE Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+119, Carthage, OP_FOUND_CITY, 2068, Found 0 potential units to recruit for operation 2068 at (22:41) with target at (21:28)
+119, Carthage, OP_FOUND_CITY, 2068, POST Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Initial stage is recruiting
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Found 3 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Added Swordsman 1586 to slot 0 in army 2126. ETA at (29:37) is 1 
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Added Swordsman 1761 to slot 1 in army 2126. ETA at (29:37) is 4 
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Added Composite Bowman 1479 to slot 3 in army 2126. ETA at (29:37) is 1 
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Started Army 2126; Units Recruited 3; Max Formation Size 10; Recruiting Units
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Moving To Target with Army 1852; center (29:37); target (22:41); Progress 0 percent
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Moving To Target with Army 1852; center (28:39); target (22:41); Progress 20 percent
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, PRE Recruiting Units for army 2126; Swordsman 1586 at (33:33) - ETA 1; Swordsman 1761 at (35:42) - ETA 4; Open; Composite Bowman 1479 at (30:41) - ETA 1; Open; Open; Open; Open; Open; Open; 
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+120, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, POST Recruiting Units for army 2126; Swordsman 1586 at (33:35) - ETA 1; Swordsman 1761 at (35:41) - ETA 4; Open; Composite Bowman 1479 at (31:40) - ETA 1; Open; Open; Open; Open; Open; Open; 
+120, Austria, OP_FOUND_CITY, 2129, Ended: NoTarget; Distance -1; Duration 121
+120, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Gathering Forces for army 2025; center (22:31); variance (2.16:2.64); free slots 4
+120, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Gathering Forces for army 2025; center (23:30); variance (1.20:1.84); free slots 4
+120, Carthage, OP_FOUND_CITY, 2068, PRE Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+120, Carthage, OP_FOUND_CITY, 2068, Found 0 potential units to recruit for operation 2068 at (22:41) with target at (21:28)
+120, Carthage, OP_FOUND_CITY, 2068, POST Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+121, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Moving To Target with Army 1852; center (28:39); target (22:41); Progress 20 percent
+121, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Moving To Target with Army 1852; center (27:39); target (22:41); Progress 30 percent
+121, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, PRE Recruiting Units for army 2126; Swordsman 1586 at (33:35) - ETA 1; Swordsman 1761 at (35:41) - ETA 4; Open; Composite Bowman 1479 at (31:40) - ETA 1; Open; Open; Open; Open; Open; Open; 
+121, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+121, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, POST Recruiting Units for army 2126; Swordsman 1586 at (30:36) - ETA 0; Swordsman 1761 at (35:40) - ETA 3; Open; Composite Bowman 1479 at (31:38) - ETA 0; Open; Open; Open; Open; Open; Open; 
+121, Austria, OP_FOUND_CITY, 2147, Ended: NoTarget; Distance -1; Duration 122
+121, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Gathering Forces for army 2025; center (23:30); variance (1.20:1.84); free slots 4
+121, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Transition to movement stage
+121, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Moving To Target with Army 2025; center (22:30); target (32:35); Progress 0 percent
+121, Carthage, OP_FOUND_CITY, 2068, PRE Recruiting Units for army 2069; Settler 2009 at (22:41) - ETA 0; Open; 
+121, Carthage, OP_FOUND_CITY, 2068, Found 0 potential units to recruit for operation 2068 at (22:41) with target at (21:28)
+121, Carthage, OP_FOUND_CITY, 2068, No escort yet and the trip looks safe, going alone
+121, Carthage, OP_FOUND_CITY, 2068, Transition to gathering stage
+121, Carthage, OP_FOUND_CITY, 2068, Transition to movement stage
+121, Carthage, OP_FOUND_CITY, 2068, POST Moving To Target with Army 2069; center (22:41); target (21:28); Progress 0 percent
+122, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Moving To Target with Army 1852; center (27:39); target (22:41); Progress 30 percent
+122, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, DeclareWhenGathered: at their border, stalled 3 turns, furthest unit 3 tiles from the centre
+122, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, MarchOn: declaring, the army marches on; unit distance near 4; far 9
+122, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Moving To Target with Army 1852; center (28:39); target (22:41); Progress 20 percent
+122, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, PRE Recruiting Units for army 2126; Swordsman 1586 at (30:36) - ETA 0; Swordsman 1761 at (35:40) - ETA 3; Open; Composite Bowman 1479 at (31:38) - ETA 0; Open; Open; Open; Open; Open; Open; 
+122, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+122, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, POST Recruiting Units for army 2126; Swordsman 1586 at (30:36) - ETA 0; Swordsman 1761 at (34:40) - ETA 2; Open; Composite Bowman 1479 at (30:37) - ETA 0; Open; Open; Open; Open; Open; Open; 
+122, Austria, OP_FOUND_CITY, 2161, Ended: NoTarget; Distance -1; Duration 123
+122, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Moving To Target with Army 2025; center (22:30); target (32:35); Progress 0 percent
+122, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Moving To Target with Army 2025; center (23:30); target (32:35); Progress 8 percent
+122, Carthage, OP_FOUND_CITY, 2068, PRE Moving To Target with Army 2069; center (22:41); target (21:28); Progress 0 percent
+122, Carthage, OP_FOUND_CITY, 2068, POST Moving To Target with Army 2069; center (22:40); target (21:28); Progress 8 percent
+123, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Moving To Target with Army 1852; center (28:39); target (22:41); Progress 20 percent
+123, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, DeclareWhenGathered: at their border, stalled 3 turns, furthest unit 3 tiles from the centre
+123, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, MarchOn: declaring, the army marches on; unit distance near 4; far 9
+123, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Moving To Target with Army 1852; center (28:39); target (22:41); Progress 20 percent
+123, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, PRE Recruiting Units for army 2126; Swordsman 1586 at (30:36) - ETA 0; Swordsman 1761 at (34:40) - ETA 2; Open; Composite Bowman 1479 at (30:37) - ETA 0; Open; Open; Open; Open; Open; Open; 
+123, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+123, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, POST Recruiting Units for army 2126; Swordsman 1586 at (30:36) - ETA 0; Swordsman 1761 at (33:39) - ETA 2; Open; Composite Bowman 1479 at (29:37) - ETA 0; Open; Open; Open; Open; Open; Open; 
+123, Austria, OP_FOUND_CITY, 2176, Ended: NoTarget; Distance -1; Duration 124
+123, Carthage, OP_FOUND_CITY, 2068, no valid city site target found (no escort)!
+123, Carthage, OP_FOUND_CITY, 2068, Ended: NoTarget; Distance 14; Duration 7
+123, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Moving To Target with Army 2025; center (23:30); target (32:35); Progress 8 percent
+123, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Moving To Target with Army 2025; center (24:31); target (32:35); Progress 22 percent
+124, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Moving To Target with Army 1852; center (28:39); target (22:41); Progress 20 percent
+124, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Discovered by enemy
+124, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, MarchOn: declaring, the army marches on; unit distance near 4; far 9
+124, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Moving To Target with Army 1852; center (27:39); target (22:41); Progress 30 percent
+124, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, PRE Recruiting Units for army 2126; Swordsman 1586 at (30:36) - ETA 0; Swordsman 1761 at (33:39) - ETA 2; Open; Composite Bowman 1479 at (29:37) - ETA 0; Open; Open; Open; Open; Open; Open; 
+124, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Found 1 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+124, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Added Crossbowman 2189 to slot 4 in army 2126. ETA at (29:37) is 0 
+124, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, POST Recruiting Units for army 2126; Swordsman 1586 at (30:36) - ETA 0; Swordsman 1761 at (32:37) - ETA 1; Open; Composite Bowman 1479 at (30:37) - ETA 0; Crossbowman 2189 at (32:36) - ETA 0; Open; Open; Open; Open; Open; 
+124, Austria, OP_FOUND_CITY, 2190, Ended: NoTarget; Distance -1; Duration 125
+124, Carthage, OP_FOUND_CITY, 2193, Ended: NoTarget; Distance -1; Duration 125
+124, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Moving To Target with Army 2025; center (24:31); target (32:35); Progress 22 percent
+124, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Moving To Target with Army 2025; center (26:31); target (32:35); Progress 36 percent
+125, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, PRE Moving To Target with Army 1852; center (27:39); target (22:41); Progress 30 percent
+125, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, No progress to target
+125, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Discovered by enemy
+125, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Transition to finished stage; unit distance near 4; far 9
+125, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, POST Completed
+125, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, PRE Recruiting Units for army 2126; Swordsman 1586 at (30:36) - ETA 0; Swordsman 1761 at (32:37) - ETA 1; Open; Composite Bowman 1479 at (30:37) - ETA 0; Crossbowman 2189 at (32:36) - ETA 0; Open; Open; Open; Open; Open; 
+125, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+125, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, POST Recruiting Units for army 2126; Open; Swordsman 1761 at (31:37) - ETA 0; Open; Composite Bowman 1479 at (30:37) - ETA 0; Crossbowman 2189 at (29:36) - ETA 0; Open; Open; Open; Open; Open; 
+125, Austria, OP_FOUND_CITY, 2203, Ended: NoTarget; Distance -1; Duration 126
+125, Carthage, OP_FOUND_CITY, 2206, Ended: NoTarget; Distance -1; Duration 126
+125, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, PRE Moving To Target with Army 2025; center (26:31); target (32:35); Progress 36 percent
+125, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Discovered by enemy
+125, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, Transition to finished stage; unit distance near 4; far 11
+125, Carthage, OP_CITY_ATTACK_LAND_SNEAKY, 2024, POST Completed
+125, America, OP_FOUND_CITY, 2211, found target for settler, score 54342 (q-13)
+125, America, OP_FOUND_CITY, 2211, Initial stage is recruiting
+125, America, OP_FOUND_CITY, 2211, Found 1 potential units to recruit for operation 2211 at (54:24) with target at (45:24)
+125, America, OP_FOUND_CITY, 2211, Added Swordsman 1700 to slot 1 in army 2212. ETA at (54:24) is 0 
+125, America, OP_FOUND_CITY, 2211, Transition to gathering stage
+125, America, OP_FOUND_CITY, 2211, Started Army 2212; Units Recruited 2; Max Formation Size 2; Gathering Forces
+125, America, OP_FOUND_CITY, 2211, PRE Gathering Forces for army 2212; center (54:24); variance (2.25:2.25); free slots 0
+125, America, OP_FOUND_CITY, 2211, Transition to movement stage
+125, America, OP_FOUND_CITY, 2211, POST Moving To Target with Army 2212; center (54:24); target (45:24); Progress 0 percent
+126, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 1851, Ended: Success; Distance 10; Duration 23
+126, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, PRE Recruiting Units for army 2126; Open; Swordsman 1761 at (31:37) - ETA 0; Open; Composite Bowman 1479 at (30:37) - ETA 0; Crossbowman 2189 at (29:36) - ETA 0; Open; Open; Open; Open; Open; 
+126, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+126, Japan, OP_CITY_ATTACK_LAND_SNEAKY, 2125, POST Recruiting Units for army 2126; Open; Open; Open; Composite Bowman 1479 at (28:37) - ETA 0; Crossbowman 2189 at (29:36) - ETA 0; Open; Open; Open; Open; Open; 
+126, Austria, OP_FOUND_CITY, 2220, Ended: NoTarget; Distance -1; Duration 127
+126, Carthage, OP_RAPID_RESPONSE, 2221, Initial stage is recruiting
+126, Carthage, OP_RAPID_RESPONSE, 2221, Found 2 potential units to recruit for operation 2221 at (25:36) with target at (25:36)
+126, Carthage, OP_RAPID_RESPONSE, 2221, Added Pikeman 2197 to slot 0 in army 2222. ETA at (25:36) is 0 
+126, Carthage, OP_RAPID_RESPONSE, 2221, Added Pikeman 2214 to slot 1 in army 2222. ETA at (25:36) is 0 
+126, Carthage, OP_RAPID_RESPONSE, 2221, Transition to gathering stage
+126, Carthage, OP_RAPID_RESPONSE, 2221, Transition to movement stage
+126, Carthage, OP_RAPID_RESPONSE, 2221, Started Army 2222; Units Recruited 2; Max Formation Size 4; Moving To Target
+126, Carthage, OP_FOUND_CITY, 2226, found target for settler, score 46915 (q-25)
+126, Carthage, OP_FOUND_CITY, 2226, Initial stage is recruiting
+126, Carthage, OP_FOUND_CITY, 2226, Found 0 potential units to recruit for operation 2226 at (22:41) with target at (21:28)
+126, Carthage, OP_FOUND_CITY, 2226, Started Army 2227; Units Recruited 1; Max Formation Size 2; Recruiting Units
+126, Carthage, OP_CITY_ATTACK_LAND, 2024, Ended: Success; Distance 14; Duration 13
+126, Carthage, OP_RAPID_RESPONSE, 2221, PRE Moving To Target with Army 2222; center (23:32); target (25:36); Progress 0 percent
+126, Carthage, OP_RAPID_RESPONSE, 2221, Transition to finished stage; unit distance near 1; far 5
+126, Carthage, OP_RAPID_RESPONSE, 2221, POST Completed
+126, Carthage, OP_FOUND_CITY, 2226, PRE Recruiting Units for army 2227; Settler 2009 at (22:41) - ETA -1; Open; 
+126, Carthage, OP_FOUND_CITY, 2226, Found 0 potential units to recruit for operation 2226 at (22:41) with target at (21:28)
+126, Carthage, OP_FOUND_CITY, 2226, POST Recruiting Units for army 2227; Settler 2009 at (22:41) - ETA 0; Open; 
+126, America, OP_FOUND_CITY, 2211, PRE Moving To Target with Army 2212; center (54:24); target (45:24); Progress 0 percent
+126, America, OP_FOUND_CITY, 2211, POST Moving To Target with Army 2212; center (51:23); target (45:24); Progress 39 percent
+127, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Open; Open; Open; Composite Bowman 1479 at (28:37) - ETA 0; Crossbowman 2189 at (29:36) - ETA 0; Open; Open; Open; Open; Open; 
+127, Japan, OP_CITY_ATTACK_LAND, 2125, Found 3 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+127, Japan, OP_CITY_ATTACK_LAND, 2125, Added Samurai 2202 to slot 0 in army 2126. ETA at (29:37) is 0 
+127, Japan, OP_CITY_ATTACK_LAND, 2125, Added Crossbowman 2243 to slot 5 in army 2126. ETA at (29:37) is 0 
+127, Japan, OP_CITY_ATTACK_LAND, 2125, Added Composite Bowman 1987 to slot 6 in army 2126. ETA at (29:37) is 0 
+127, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+127, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (30:34) - ETA 0; Open; Open; Composite Bowman 1479 at (28:37) - ETA 0; Crossbowman 2189 at (29:37) - ETA 0; Crossbowman 2243 at (30:36) - ETA 0; Composite Bowman 1987 at (29:38) - ETA 0; Open; Open; Open; 
+127, Austria, OP_FOUND_CITY, 2245, Ended: NoTarget; Distance -1; Duration 128
+127, Carthage, OP_FOUND_CITY, 2226, no valid city site target found (with escort)!
+127, Carthage, OP_RAPID_RESPONSE, 2221, Ended: Success; Distance 5; Duration 1
+127, Carthage, OP_FOUND_CITY, 2226, Ended: NoTarget; Distance 14; Duration 1
+127, America, OP_FOUND_CITY, 2211, PRE Moving To Target with Army 2212; center (51:23); target (45:24); Progress 39 percent
+127, America, OP_FOUND_CITY, 2211, POST Moving To Target with Army 2212; center (50:22); target (45:24); Progress 47 percent
+128, Japan, OP_RAPID_RESPONSE, 2260, Initial stage is recruiting
+128, Japan, OP_RAPID_RESPONSE, 2260, Found 2 potential units to recruit for operation 2260 at (29:37) with target at (25:36)
+128, Japan, OP_RAPID_RESPONSE, 2260, Added Swordsman 1682 to slot 0 in army 2261. ETA at (29:37) is 0 
+128, Japan, OP_RAPID_RESPONSE, 2260, Added Horseman 2252 to slot 1 in army 2261. ETA at (29:37) is 0 
+128, Japan, OP_RAPID_RESPONSE, 2260, Transition to gathering stage
+128, Japan, OP_RAPID_RESPONSE, 2260, Started Army 2261; Units Recruited 2; Max Formation Size 4; Gathering Forces
+128, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (30:34) - ETA 0; Open; Open; Composite Bowman 1479 at (28:37) - ETA 0; Crossbowman 2189 at (29:37) - ETA 0; Crossbowman 2243 at (30:36) - ETA 0; Composite Bowman 1987 at (29:38) - ETA 0; Open; Open; Open; 
+128, Japan, OP_CITY_ATTACK_LAND, 2125, Found 2 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+128, Japan, OP_CITY_ATTACK_LAND, 2125, Added Catapult 1293 to slot 7 in army 2126. ETA at (29:37) is 0 
+128, Japan, OP_CITY_ATTACK_LAND, 2125, Added Trung Vuong (Great General) 2063 to slot 8 in army 2126. ETA at (29:37) is 0 
+128, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+128, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (29:34) - ETA 0; Open; Open; Composite Bowman 1479 at (27:35) - ETA 0; Crossbowman 2189 at (29:37) - ETA 0; Crossbowman 2243 at (28:35) - ETA 0; Composite Bowman 1987 at (28:36) - ETA 0; Catapult 1293 at (27:39) - ETA 0; Trung Vuong (Great General) 2063 at (28:36) - ETA 0; Open; 
+128, Japan, OP_RAPID_RESPONSE, 2260, PRE Gathering Forces for army 2261; center (30:37); variance (16.00:2.25); free slots 2
+128, Japan, OP_RAPID_RESPONSE, 2260, Transition to movement stage
+128, Japan, OP_RAPID_RESPONSE, 2260, POST Moving To Target with Army 2261; center (28:37); target (25:36); Progress 15 percent
+128, Austria, OP_FOUND_CITY, 2262, Ended: NoTarget; Distance -1; Duration 129
+128, Carthage, OP_FOUND_CITY, 2263, Ended: NoTarget; Distance -1; Duration 129
+128, America, OP_FOUND_CITY, 2211, PRE Moving To Target with Army 2212; center (50:22); target (45:24); Progress 47 percent
+128, America, OP_FOUND_CITY, 2211, POST Moving To Target with Army 2212; center (49:22); target (45:24); Progress 54 percent
+129, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (29:34) - ETA 0; Open; Open; Composite Bowman 1479 at (27:35) - ETA 0; Crossbowman 2189 at (29:37) - ETA 0; Crossbowman 2243 at (28:35) - ETA 0; Composite Bowman 1987 at (28:36) - ETA 0; Catapult 1293 at (27:39) - ETA 0; Trung Vuong (Great General) 2063 at (28:36) - ETA 0; Open; 
+129, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+129, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+129, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (27:35) - ETA 0; Open; Open; Composite Bowman 1479 at (28:35) - ETA 0; Crossbowman 2189 at (29:37) - ETA 0; Crossbowman 2243 at (28:34) - ETA 0; Composite Bowman 1987 at (28:36) - ETA 0; Catapult 1293 at (28:39) - ETA 0; Trung Vuong (Great General) 2063 at (29:36) - ETA 0; Open; 
+129, Japan, OP_RAPID_RESPONSE, 2260, PRE Moving To Target with Army 2261; center (28:37); target (25:36); Progress 15 percent
+129, Japan, OP_RAPID_RESPONSE, 2260, POST Moving To Target with Army 2261; center (28:37); target (25:36); Progress 15 percent
+129, Austria, OP_FOUND_CITY, 2280, Ended: NoTarget; Distance -1; Duration 130
+129, Carthage, OP_FOUND_CITY, 2281, Ended: NoTarget; Distance -1; Duration 130
+129, America, OP_FOUND_CITY, 2211, PRE Moving To Target with Army 2212; center (49:22); target (45:24); Progress 54 percent
+129, America, OP_FOUND_CITY, 2211, POST Moving To Target with Army 2212; center (48:22); target (45:24); Progress 62 percent
+130, Japan, OP_RAPID_RESPONSE, 2291, Initial stage is recruiting
+130, Japan, OP_RAPID_RESPONSE, 2291, Found 1 potential units to recruit for operation 2291 at (29:37) with target at (25:36)
+130, Japan, OP_RAPID_RESPONSE, 2291, Added Swordsman 1731 to slot 0 in army 2292. ETA at (29:37) is 0 
+130, Japan, OP_RAPID_RESPONSE, 2291, Started Army 2292; Units Recruited 1; Max Formation Size 4; Recruiting Units
+130, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (27:35) - ETA 0; Open; Open; Composite Bowman 1479 at (28:35) - ETA 0; Crossbowman 2189 at (29:37) - ETA 0; Crossbowman 2243 at (28:34) - ETA 0; Composite Bowman 1987 at (28:36) - ETA 0; Catapult 1293 at (28:39) - ETA 0; Trung Vuong (Great General) 2063 at (29:36) - ETA 0; Open; 
+130, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+130, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+130, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 0; Open; Open; Composite Bowman 1479 at (28:34) - ETA 0; Crossbowman 2189 at (29:36) - ETA 0; Crossbowman 2243 at (28:33) - ETA 0; Composite Bowman 1987 at (29:37) - ETA 0; Catapult 1293 at (28:39) - ETA 0; Trung Vuong (Great General) 2063 at (28:36) - ETA 0; Open; 
+130, Japan, OP_RAPID_RESPONSE, 2260, PRE Moving To Target with Army 2261; center (28:37); target (25:36); Progress 15 percent
+130, Japan, OP_RAPID_RESPONSE, 2260, Contact with enemy!
+130, Japan, OP_RAPID_RESPONSE, 2260, Transition to finished stage; unit distance near 3; far 3
+130, Japan, OP_RAPID_RESPONSE, 2260, POST Completed
+130, Japan, OP_RAPID_RESPONSE, 2291, PRE Recruiting Units for army 2292; Swordsman 1731 at (30:36) - ETA 0; Open; Open; Open; 
+130, Japan, OP_RAPID_RESPONSE, 2291, Found 2 potential units to recruit for operation 2291 at (29:37) with target at (25:36)
+130, Japan, OP_RAPID_RESPONSE, 2291, Added Samurai 2293 to slot 1 in army 2292. ETA at (29:37) is 0 
+130, Japan, OP_RAPID_RESPONSE, 2291, Added Swordsman 1682 to slot 2 in army 2292. ETA at (29:37) is 0 
+130, Japan, OP_RAPID_RESPONSE, 2291, Transition to gathering stage
+130, Japan, OP_RAPID_RESPONSE, 2291, POST Gathering Forces for army 2292; center (28:37); variance (0.89:0.22); free slots 1
+130, Austria, OP_FOUND_CITY, 2294, Ended: NoTarget; Distance -1; Duration 131
+130, Carthage, OP_FOUND_CITY, 2295, Ended: NoTarget; Distance -1; Duration 131
+130, Carthage, OP_FOUND_CITY, 2301, Ended: NoTarget; Distance -1; Duration 131
+130, Carthage, OP_FOUND_CITY, 2302, Ended: NoTarget; Distance -1; Duration 131
+130, America, OP_FOUND_CITY, 2211, PRE Moving To Target with Army 2212; center (48:22); target (45:24); Progress 62 percent
+130, America, OP_FOUND_CITY, 2211, POST Moving To Target with Army 2212; center (46:23); target (45:24); Progress 77 percent
+131, Japan, OP_RAPID_RESPONSE, 2260, Ended: Success; Distance 7; Duration 3
+131, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 0; Open; Open; Composite Bowman 1479 at (28:34) - ETA 0; Crossbowman 2189 at (29:36) - ETA 0; Crossbowman 2243 at (28:33) - ETA 0; Composite Bowman 1987 at (29:37) - ETA 0; Catapult 1293 at (28:39) - ETA 0; Trung Vuong (Great General) 2063 at (28:36) - ETA 0; Open; 
+131, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+131, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+131, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (28:35) - ETA 0; Crossbowman 2189 at (31:35) - ETA 0; Crossbowman 2243 at (28:34) - ETA 0; Composite Bowman 1987 at (29:37) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Trung Vuong (Great General) 2063 at (29:36) - ETA 0; Open; 
+131, Japan, OP_RAPID_RESPONSE, 2291, PRE Gathering Forces for army 2292; center (28:37); variance (1.00:0.25); free slots 2
+131, Japan, OP_RAPID_RESPONSE, 2291, Transition to movement stage
+131, Japan, OP_RAPID_RESPONSE, 2291, POST Moving To Target with Army 2292; center (28:37); target (25:36); Progress 0 percent
+131, Austria, OP_FOUND_CITY, 2312, Ended: NoTarget; Distance -1; Duration 132
+131, Carthage, OP_FOUND_CITY, 2313, Ended: NoTarget; Distance -1; Duration 132
+131, Carthage, OP_FOUND_CITY, 2314, Ended: NoTarget; Distance -1; Duration 132
+131, America, OP_FOUND_CITY, 2211, PRE Moving To Target with Army 2212; center (46:23); target (45:24); Progress 77 percent
+131, America, OP_FOUND_CITY, 2211, Transition to target stage
+131, America, OP_FOUND_CITY, 2211, POST At Target
+132, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (28:35) - ETA 0; Crossbowman 2189 at (31:35) - ETA 0; Crossbowman 2243 at (28:34) - ETA 0; Composite Bowman 1987 at (29:37) - ETA 0; Catapult 1293 at (29:38) - ETA 0; Trung Vuong (Great General) 2063 at (29:36) - ETA 0; Open; 
+132, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+132, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+132, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (27:34) - ETA 0; Crossbowman 2189 at (29:36) - ETA 0; Crossbowman 2243 at (27:33) - ETA 0; Composite Bowman 1987 at (30:37) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (28:36) - ETA 0; Open; 
+132, Japan, OP_RAPID_RESPONSE, 2291, PRE Moving To Target with Army 2292; center (28:37); target (25:36); Progress 0 percent
+132, Japan, OP_RAPID_RESPONSE, 2291, Transition to finished stage; unit distance near 3; far 3
+132, Japan, OP_RAPID_RESPONSE, 2291, POST Completed
+132, Austria, OP_FOUND_CITY, 2331, Ended: NoTarget; Distance -1; Duration 133
+132, Carthage, OP_FOUND_CITY, 2332, Ended: NoTarget; Distance -1; Duration 133
+132, Carthage, OP_FOUND_CITY, 2333, Ended: NoTarget; Distance -1; Duration 133
+132, Carthage, OP_RAPID_RESPONSE, 2334, Initial stage is recruiting
+132, Carthage, OP_RAPID_RESPONSE, 2334, Found 1 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+132, Carthage, OP_RAPID_RESPONSE, 2334, Added Pikeman 1942 to slot 0 in army 2335. ETA at (25:36) is 1 
+132, Carthage, OP_RAPID_RESPONSE, 2334, Started Army 2335; Units Recruited 1; Max Formation Size 4; Recruiting Units
+132, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (23:30) - ETA 1; Open; Open; Open; 
+132, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+132, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (23:33) - ETA 1; Open; Open; Open; 
+132, America, OP_FOUND_CITY, 2211, PRE At Target
+132, America, OP_FOUND_CITY, 2211, City founded (Atlanta) at (45:24), plot value 54342, q-13
+132, America, OP_FOUND_CITY, 2211, Transition to finished stage
+132, America, OP_FOUND_CITY, 2211, Ended: Success; Distance 13; Duration 7
+133, Japan, OP_RAPID_RESPONSE, 2375, Initial stage is recruiting
+133, Japan, OP_RAPID_RESPONSE, 2375, Found 1 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+133, Japan, OP_RAPID_RESPONSE, 2375, Added Samurai 2219 to slot 0 in army 2376. ETA at (29:37) is 1 
+133, Japan, OP_RAPID_RESPONSE, 2375, Started Army 2376; Units Recruited 1; Max Formation Size 4; Recruiting Units
+133, Japan, OP_RAPID_RESPONSE, 2291, Ended: Success; Distance 6; Duration 3
+133, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (27:34) - ETA 0; Crossbowman 2189 at (29:36) - ETA 0; Crossbowman 2243 at (27:33) - ETA 0; Composite Bowman 1987 at (30:37) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (28:36) - ETA 0; Open; 
+133, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+133, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+133, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (28:34) - ETA 0; Crossbowman 2189 at (31:35) - ETA 0; Crossbowman 2243 at (28:33) - ETA 0; Composite Bowman 1987 at (29:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (29:37) - ETA 0; Open; 
+133, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (35:39) - ETA 1; Open; Open; Open; 
+133, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+133, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (35:38) - ETA 1; Open; Open; Open; 
+133, Austria, OP_FOUND_CITY, 2381, Ended: NoTarget; Distance -1; Duration 134
+133, Carthage, OP_FOUND_CITY, 2383, Ended: NoTarget; Distance -1; Duration 134
+133, Carthage, OP_FOUND_CITY, 2384, Ended: NoTarget; Distance -1; Duration 134
+133, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (23:33) - ETA 1; Open; Open; Open; 
+133, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+133, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (24:35) - ETA 0; Open; Open; Open; 
+134, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (28:34) - ETA 0; Crossbowman 2189 at (31:35) - ETA 0; Crossbowman 2243 at (28:33) - ETA 0; Composite Bowman 1987 at (29:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (29:37) - ETA 0; Open; 
+134, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+134, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+134, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (29:34) - ETA 0; Crossbowman 2189 at (30:35) - ETA 0; Crossbowman 2243 at (28:34) - ETA 0; Composite Bowman 1987 at (30:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (28:36) - ETA 0; Open; 
+134, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (35:38) - ETA 1; Open; Open; Open; 
+134, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+134, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (34:37) - ETA 1; Open; Open; Open; 
+134, Austria, OP_FOUND_CITY, 2398, Ended: NoTarget; Distance -1; Duration 135
+134, Carthage, OP_FOUND_CITY, 2401, Ended: NoTarget; Distance -1; Duration 135
+134, Carthage, OP_FOUND_CITY, 2402, Ended: NoTarget; Distance -1; Duration 135
+134, Carthage, OP_CITY_DEFENSE, 2403, Initial stage is recruiting
+134, Carthage, OP_CITY_DEFENSE, 2403, Found 1 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+134, Carthage, OP_CITY_DEFENSE, 2403, Added Knight 2341 to slot 0 in army 2404. ETA at (25:36) is 1 
+134, Carthage, OP_CITY_DEFENSE, 2403, Started Army 2404; Units Recruited 1; Max Formation Size 7; Recruiting Units
+134, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (24:35) - ETA 0; Open; Open; Open; 
+134, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+134, Carthage, OP_RAPID_RESPONSE, 2334, Contact with enemy!
+134, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (25:36) - ETA 0; Open; Open; Open; 
+134, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (24:43) - ETA 1; Open; Open; Open; Open; Open; Open; 
+134, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+134, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (24:43) - ETA 1; Open; Open; Open; Open; Open; Open; 
+135, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (29:34) - ETA 0; Crossbowman 2189 at (30:35) - ETA 0; Crossbowman 2243 at (28:34) - ETA 0; Composite Bowman 1987 at (30:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (28:36) - ETA 0; Open; 
+135, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+135, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (28:37) - ETA 0; Crossbowman 2189 at (31:35) - ETA 0; Crossbowman 2243 at (28:35) - ETA 0; Composite Bowman 1987 at (29:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (30:36) - ETA 0; Open; 
+135, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (34:37) - ETA 1; Open; Open; Open; 
+135, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+135, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (33:37) - ETA 1; Open; Open; Open; 
+135, Carthage, OP_FOUND_CITY, 2421, Ended: NoTarget; Distance -1; Duration 136
+135, Carthage, OP_FOUND_CITY, 2422, Ended: NoTarget; Distance -1; Duration 136
+135, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (25:36) - ETA 0; Open; Open; Open; 
+135, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+135, Carthage, OP_RAPID_RESPONSE, 2334, Contact with enemy!
+135, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (25:36) - ETA 0; Open; Open; Open; 
+135, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (24:43) - ETA 1; Open; Open; Open; Open; Open; Open; 
+135, Carthage, OP_CITY_DEFENSE, 2403, Found 1 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+135, Carthage, OP_CITY_DEFENSE, 2403, Added Chariot Archer 1540 to slot 2 in army 2404. ETA at (25:36) is 0 
+135, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:40) - ETA 1; Open; Chariot Archer 1540 at (23:37) - ETA 0; Open; Open; Open; Open; 
+136, Japan, OP_RAPID_RESPONSE, 2437, Initial stage is recruiting
+136, Japan, OP_RAPID_RESPONSE, 2437, Found 1 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+136, Japan, OP_RAPID_RESPONSE, 2437, Added Horseman 2252 to slot 0 in army 2438. ETA at (29:37) is 0 
+136, Japan, OP_RAPID_RESPONSE, 2437, Started Army 2438; Units Recruited 1; Max Formation Size 4; Recruiting Units
+136, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 1; Open; Open; Composite Bowman 1479 at (28:37) - ETA 0; Crossbowman 2189 at (31:35) - ETA 0; Crossbowman 2243 at (28:35) - ETA 0; Composite Bowman 1987 at (29:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (30:36) - ETA 0; Open; 
+136, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (29:37) with target at (23:31)
+136, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+136, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA -1; Open; Open; Composite Bowman 1479 at (29:36) - ETA -1; Crossbowman 2189 at (28:35) - ETA -1; Crossbowman 2243 at (31:35) - ETA -1; Composite Bowman 1987 at (28:37) - ETA -1; Catapult 1293 at (29:37) - ETA -1; Trung Vuong (Great General) 2063 at (27:35) - ETA -1; Open; 
+136, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (33:37) - ETA 1; Open; Open; Open; 
+136, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+136, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (32:37) - ETA 1; Open; Open; Open; 
+136, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (29:35) - ETA 0; Open; Open; Open; 
+136, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+136, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+136, Carthage, OP_FOUND_CITY, 2442, Ended: NoTarget; Distance -1; Duration 137
+136, Carthage, OP_FOUND_CITY, 2443, Ended: NoTarget; Distance -1; Duration 137
+136, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (25:36) - ETA 0; Open; Open; Open; 
+136, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+136, Carthage, OP_RAPID_RESPONSE, 2334, Contact with enemy!
+136, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (25:36) - ETA 0; Open; Open; Open; 
+136, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:40) - ETA 1; Open; Chariot Archer 1540 at (23:37) - ETA 0; Open; Open; Open; Open; 
+136, Carthage, OP_CITY_DEFENSE, 2403, Found 1 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+136, Carthage, OP_CITY_DEFENSE, 2403, Added Balamber (Great General) 2448 to slot 6 in army 2404. ETA at (25:36) is 1 
+136, Carthage, OP_CITY_DEFENSE, 2403, Contact with enemy!
+136, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:39) - ETA 1; Open; Chariot Archer 1540 at (23:37) - ETA 0; Open; Open; Open; Balamber (Great General) 2448 at (22:41) - ETA 1; 
+137, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA -1; Open; Open; Composite Bowman 1479 at (29:36) - ETA -1; Crossbowman 2189 at (28:35) - ETA -1; Crossbowman 2243 at (31:35) - ETA -1; Composite Bowman 1987 at (28:37) - ETA -1; Catapult 1293 at (29:37) - ETA -1; Trung Vuong (Great General) 2063 at (27:35) - ETA -1; Open; 
+137, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (27:35) with target at (23:31)
+137, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+137, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 0; Open; Open; Composite Bowman 1479 at (30:36) - ETA 0; Crossbowman 2189 at (31:35) - ETA 0; Crossbowman 2243 at (29:36) - ETA 0; Composite Bowman 1987 at (28:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (27:34) - ETA 0; Open; 
+137, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (32:37) - ETA 1; Open; Open; Open; 
+137, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+137, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (31:38) - ETA 0; Open; Open; Open; 
+137, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+137, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+137, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+137, Austria, OP_FOUND_CITY, 2465, Ended: NoTarget; Distance -1; Duration 138
+137, Carthage, OP_FOUND_CITY, 2468, Ended: NoTarget; Distance -1; Duration 138
+137, Carthage, OP_FOUND_CITY, 2469, Ended: NoTarget; Distance -1; Duration 138
+137, Carthage, OP_RAPID_RESPONSE, 2470, Initial stage is recruiting
+137, Carthage, OP_RAPID_RESPONSE, 2470, Found 1 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+137, Carthage, OP_RAPID_RESPONSE, 2470, Added Landsknecht 2450 to slot 0 in army 2471. ETA at (25:36) is 0 
+137, Carthage, OP_RAPID_RESPONSE, 2470, Started Army 2471; Units Recruited 1; Max Formation Size 4; Recruiting Units
+137, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (25:36) - ETA 0; Open; Open; Open; 
+137, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+137, Carthage, OP_RAPID_RESPONSE, 2334, Contact with enemy!
+137, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (25:37) - ETA 0; Open; Open; Open; 
+137, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 1; Open; Chariot Archer 1540 at (23:37) - ETA 0; Open; Open; Open; Balamber (Great General) 2448 at (22:41) - ETA 1; 
+137, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+137, Carthage, OP_CITY_DEFENSE, 2403, Removing Balamber (Great General) 2448 from army 2404 because no progress to checkpoint (25:36). ETA 2; prev 1; prev 1
+137, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1540 at (23:37) - ETA 0; Open; Open; Open; Open; 
+137, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (23:32) - ETA 0; Open; Open; Open; 
+137, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+137, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (24:34) - ETA 0; Open; Open; Open; 
+138, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 0; Open; Open; Composite Bowman 1479 at (30:36) - ETA 0; Crossbowman 2189 at (31:35) - ETA 0; Crossbowman 2243 at (29:36) - ETA 0; Composite Bowman 1987 at (28:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (27:34) - ETA 0; Open; 
+138, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (27:35) with target at (23:31)
+138, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+138, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 0; Open; Open; Composite Bowman 1479 at (31:35) - ETA 0; Crossbowman 2189 at (29:35) - ETA 0; Crossbowman 2243 at (30:36) - ETA 0; Composite Bowman 1987 at (28:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (26:33) - ETA 0; Open; 
+138, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (31:38) - ETA 0; Open; Open; Open; 
+138, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+138, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (31:38) - ETA 0; Open; Open; Open; 
+138, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+138, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+138, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+138, Austria, OP_FOUND_CITY, 2492, Ended: NoTarget; Distance -1; Duration 139
+138, Carthage, OP_FOUND_CITY, 2494, Ended: NoTarget; Distance -1; Duration 139
+138, Carthage, OP_FOUND_CITY, 2495, Ended: NoTarget; Distance -1; Duration 139
+138, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (25:37) - ETA 0; Open; Open; Open; 
+138, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+138, Carthage, OP_RAPID_RESPONSE, 2334, Contact with enemy!
+138, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (26:38) - ETA 0; Open; Open; Open; 
+138, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1540 at (23:37) - ETA 0; Open; Open; Open; Open; 
+138, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+138, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1540 at (23:39) - ETA 0; Open; Open; Open; Open; 
+138, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (24:34) - ETA 0; Open; Open; Open; 
+138, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+138, Carthage, OP_RAPID_RESPONSE, 2470, Contact with enemy!
+138, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (24:35) - ETA 0; Open; Open; Open; 
+138, America, OP_FOUND_CITY, 2504, found target for settler, score 53804 (q-14)
+138, America, OP_FOUND_CITY, 2504, Initial stage is recruiting
+138, America, OP_FOUND_CITY, 2504, Found 0 potential units to recruit for operation 2504 at (54:24) with target at (46:15)
+138, America, OP_FOUND_CITY, 2504, Started Army 2505; Units Recruited 1; Max Formation Size 2; Recruiting Units
+138, America, OP_FOUND_CITY, 2504, PRE Recruiting Units for army 2505; Settler 2428 at (54:24) - ETA -1; Open; 
+138, America, OP_FOUND_CITY, 2504, Found 0 potential units to recruit for operation 2504 at (54:24) with target at (46:15)
+138, America, OP_FOUND_CITY, 2504, POST Recruiting Units for army 2505; Settler 2428 at (54:24) - ETA 0; Open; 
+139, Polynesia, OP_FOUND_CITY, 2511, found target for settler, score 82496 (q32)
+139, Polynesia, OP_FOUND_CITY, 2511, Initial stage is recruiting
+139, Polynesia, OP_FOUND_CITY, 2511, Found 6 potential units to recruit for operation 2511 at (51:28) with target at (46:33)
+139, Polynesia, OP_FOUND_CITY, 2511, Added Swordsman 1705 to slot 1 in army 2512. ETA at (51:28) is 0 
+139, Polynesia, OP_FOUND_CITY, 2511, Transition to gathering stage
+139, Polynesia, OP_FOUND_CITY, 2511, Transition to movement stage
+139, Polynesia, OP_FOUND_CITY, 2511, Started Army 2512; Units Recruited 2; Max Formation Size 2; Moving To Target
+139, Polynesia, OP_FOUND_CITY, 2511, PRE Moving To Target with Army 2512; center (51:28); target (46:33); Progress 0 percent
+139, Polynesia, OP_FOUND_CITY, 2511, POST Moving To Target with Army 2512; center (49:28); target (46:33); Progress 25 percent
+139, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 0; Open; Open; Composite Bowman 1479 at (31:35) - ETA 0; Crossbowman 2189 at (29:35) - ETA 0; Crossbowman 2243 at (30:36) - ETA 0; Composite Bowman 1987 at (28:36) - ETA 0; Catapult 1293 at (29:37) - ETA 0; Trung Vuong (Great General) 2063 at (26:33) - ETA 0; Open; 
+139, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (27:35) with target at (23:31)
+139, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 0; Open; Open; Composite Bowman 1479 at (29:35) - ETA 0; Crossbowman 2189 at (30:35) - ETA 0; Crossbowman 2243 at (29:37) - ETA 0; Composite Bowman 1987 at (28:37) - ETA 0; Catapult 1293 at (30:36) - ETA 0; Trung Vuong (Great General) 2063 at (28:33) - ETA 0; Open; 
+139, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (31:38) - ETA 0; Open; Open; Open; 
+139, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+139, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (31:38) - ETA 0; Open; Open; Open; 
+139, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+139, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+139, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+139, Austria, OP_FOUND_CITY, 2515, Ended: NoTarget; Distance -1; Duration 140
+139, Carthage, OP_FOUND_CITY, 2517, Ended: NoTarget; Distance -1; Duration 140
+139, Carthage, OP_FOUND_CITY, 2518, Ended: NoTarget; Distance -1; Duration 140
+139, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (26:38) - ETA 0; Open; Open; Open; 
+139, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+139, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (25:37) - ETA 0; Open; Open; Open; 
+139, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1540 at (23:39) - ETA 0; Open; Open; Open; Open; 
+139, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+139, Carthage, OP_CITY_DEFENSE, 2403, Contact with enemy!
+139, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1540 at (24:35) - ETA 0; Open; Open; Open; Open; 
+139, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+139, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+139, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+139, America, OP_FOUND_CITY, 2504, PRE Recruiting Units for army 2505; Settler 2428 at (54:24) - ETA 0; Open; 
+139, America, OP_FOUND_CITY, 2504, Found 0 potential units to recruit for operation 2504 at (54:24) with target at (46:15)
+139, America, OP_FOUND_CITY, 2504, POST Recruiting Units for army 2505; Settler 2428 at (54:24) - ETA 0; Open; 
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Initial stage is recruiting
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Found 7 potential units to recruit for operation 2529 at (54:31) with target at (54:24)
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Added Swordsman 1949 to slot 0 in army 2530. ETA at (54:31) is 0 
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Added Swordsman 1819 to slot 1 in army 2530. ETA at (54:31) is 0 
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Added Swordsman 2104 to slot 2 in army 2530. ETA at (54:31) is 0 
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Added Chariot Archer 2045 to slot 3 in army 2530. ETA at (54:31) is 0 
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Added Catapult 2201 to slot 4 in army 2530. ETA at (54:31) is 0 
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Added Swordsman 1741 to slot 5 in army 2530. ETA at (54:31) is 1 
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Added Swordsman 2075 to slot 6 in army 2530. ETA at (54:31) is 3 
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Transition to gathering stage
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Started Army 2530; Units Recruited 7; Max Formation Size 9; Gathering Forces
+140, Polynesia, OP_FOUND_CITY, 2511, PRE Moving To Target with Army 2512; center (49:28); target (46:33); Progress 25 percent
+140, Polynesia, OP_FOUND_CITY, 2511, POST Moving To Target with Army 2512; center (48:30); target (46:33); Progress 50 percent
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, PRE Gathering Forces for army 2530; center (53:33); variance (30.78:22.41); free slots 2
+140, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, POST Gathering Forces for army 2530; center (54:32); variance (11.35:8.57); free slots 2
+140, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:36) - ETA 0; Open; Open; Composite Bowman 1479 at (29:35) - ETA 0; Crossbowman 2189 at (30:35) - ETA 0; Crossbowman 2243 at (29:37) - ETA 0; Composite Bowman 1987 at (28:37) - ETA 0; Catapult 1293 at (30:36) - ETA 0; Trung Vuong (Great General) 2063 at (28:33) - ETA 0; Open; 
+140, Japan, OP_CITY_ATTACK_LAND, 2125, Found 0 potential units to recruit for operation 2125 at (27:35) with target at (23:31)
+140, Japan, OP_CITY_ATTACK_LAND, 2125, POST Recruiting Units for army 2126; Samurai 2202 at (26:37) - ETA 0; Open; Open; Composite Bowman 1479 at (28:37) - ETA 0; Crossbowman 2189 at (29:37) - ETA 0; Crossbowman 2243 at (28:35) - ETA 0; Composite Bowman 1987 at (29:36) - ETA 0; Catapult 1293 at (29:35) - ETA 0; Trung Vuong (Great General) 2063 at (28:34) - ETA 0; Open; 
+140, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (31:38) - ETA 0; Open; Open; Open; 
+140, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+140, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+140, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+140, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+140, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+140, Austria, OP_FOUND_CITY, 2534, Ended: NoTarget; Distance -1; Duration 141
+140, Carthage, OP_FOUND_CITY, 2535, Ended: NoTarget; Distance -1; Duration 141
+140, Carthage, OP_FOUND_CITY, 2536, Ended: NoTarget; Distance -1; Duration 141
+140, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (25:37) - ETA 0; Open; Open; Open; 
+140, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+140, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (24:38) - ETA 0; Open; Open; Open; 
+140, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1540 at (24:35) - ETA 0; Open; Open; Open; Open; 
+140, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+140, Carthage, OP_CITY_DEFENSE, 2403, Contact with enemy!
+140, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (24:35) - ETA 0; Open; Chariot Archer 1540 at (23:31) - ETA 0; Open; Open; Open; Open; 
+140, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (25:36) - ETA 0; Open; Open; Open; 
+140, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+140, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (25:36) - ETA 0; Open; Open; Open; 
+140, America, OP_FOUND_CITY, 2504, PRE Recruiting Units for army 2505; Settler 2428 at (54:24) - ETA 0; Open; 
+140, America, OP_FOUND_CITY, 2504, Found 1 potential units to recruit for operation 2504 at (54:24) with target at (46:15)
+140, America, OP_FOUND_CITY, 2504, Added Swordsman 1700 to slot 1 in army 2505. ETA at (54:24) is 4 
+140, America, OP_FOUND_CITY, 2504, Added Chariot Archer 1578 to slot 1 in army 2505. ETA at (54:24) is 0 
+140, America, OP_FOUND_CITY, 2504, Transition to gathering stage
+140, America, OP_FOUND_CITY, 2504, Transition to movement stage
+140, America, OP_FOUND_CITY, 2504, POST Moving To Target with Army 2505; center (54:24); target (46:15); Progress 100 percent
+141, Polynesia, OP_FOUND_CITY, 2511, PRE Moving To Target with Army 2512; center (48:30); target (46:33); Progress 50 percent
+141, Polynesia, OP_FOUND_CITY, 2511, POST Moving To Target with Army 2512; center (47:31); target (46:33); Progress 63 percent
+141, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, PRE Gathering Forces for army 2530; center (54:32); variance (11.35:8.57); free slots 2
+141, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, POST Gathering Forces for army 2530; center (54:32); variance (2.78:5.84); free slots 2
+141, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Recruiting Units for army 2126; Samurai 2202 at (26:37) - ETA 0; Open; Open; Composite Bowman 1479 at (28:37) - ETA 0; Crossbowman 2189 at (29:37) - ETA 0; Crossbowman 2243 at (28:35) - ETA 0; Composite Bowman 1987 at (29:36) - ETA 0; Catapult 1293 at (29:35) - ETA 0; Trung Vuong (Great General) 2063 at (28:34) - ETA 0; Open; 
+141, Japan, OP_CITY_ATTACK_LAND, 2125, Found 2 potential units to recruit for operation 2125 at (27:35) with target at (23:31)
+141, Japan, OP_CITY_ATTACK_LAND, 2125, Added Samurai 2553 to slot 1 in army 2126. ETA at (27:35) is 0 
+141, Japan, OP_CITY_ATTACK_LAND, 2125, Added Samurai 2551 to slot 2 in army 2126. ETA at (27:35) is 1 
+141, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+141, Japan, OP_CITY_ATTACK_LAND, 2125, Transition to gathering stage
+141, Japan, OP_CITY_ATTACK_LAND, 2125, POST Gathering Forces for army 2126; center (28:36); variance (2.44:1.33); free slots 1
+141, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+141, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+141, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+141, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+141, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+141, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+141, Austria, OP_FOUND_CITY, 2554, Ended: NoTarget; Distance -1; Duration 142
+141, Carthage, OP_FOUND_CITY, 2556, Ended: NoTarget; Distance -1; Duration 142
+141, Carthage, OP_FOUND_CITY, 2557, Ended: NoTarget; Distance -1; Duration 142
+141, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (24:38) - ETA 0; Open; Open; Open; 
+141, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+141, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+141, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (24:35) - ETA 0; Open; Chariot Archer 1540 at (23:31) - ETA 0; Open; Open; Open; Open; 
+141, Carthage, OP_CITY_DEFENSE, 2403, Found 1 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+141, Carthage, OP_CITY_DEFENSE, 2403, Added Balamber (Great General) 2448 to slot 6 in army 2404. ETA at (25:36) is 1 
+141, Carthage, OP_CITY_DEFENSE, 2403, Contact with enemy!
+141, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1540 at (25:31) - ETA 0; Open; Open; Open; Balamber (Great General) 2448 at (22:41) - ETA 1; 
+141, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (25:37) - ETA 0; Open; Open; Open; 
+141, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+141, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (25:37) - ETA 0; Open; Open; Open; 
+141, America, OP_FOUND_CITY, 2504, PRE Moving To Target with Army 2505; center (54:24); target (46:15); Progress 100 percent
+141, America, OP_FOUND_CITY, 2504, POST Moving To Target with Army 2505; center (52:22); target (46:15); Progress 100 percent
+142, Polynesia, OP_FOUND_CITY, 2511, PRE Moving To Target with Army 2512; center (47:31); target (46:33); Progress 63 percent
+142, Polynesia, OP_FOUND_CITY, 2511, POST Moving To Target with Army 2512; center (47:32); target (46:33); Progress 100 percent
+142, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, PRE Gathering Forces for army 2530; center (54:32); variance (2.78:5.84); free slots 2
+142, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Transition to movement stage
+142, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, POST Moving To Target with Army 2530; center (54:31); target (54:24); Progress 0 percent
+142, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Gathering Forces for army 2126; center (28:36); variance (2.44:1.33); free slots 1
+142, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+142, Japan, OP_CITY_ATTACK_LAND, 2125, POST Gathering Forces for army 2126; center (28:37); variance (2.22:1.43); free slots 1
+142, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+142, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+142, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+142, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+142, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+142, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+142, Austria, OP_FOUND_CITY, 2577, Ended: NoTarget; Distance -1; Duration 143
+142, Carthage, OP_FOUND_CITY, 2578, Ended: NoTarget; Distance -1; Duration 143
+142, Carthage, OP_FOUND_CITY, 2579, Ended: NoTarget; Distance -1; Duration 143
+142, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+142, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+142, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+142, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (22:41) - ETA 1; 
+142, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+142, Carthage, OP_CITY_DEFENSE, 2403, Contact with enemy!
+142, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (22:41) - ETA 1; 
+142, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+142, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+142, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+142, America, OP_FOUND_CITY, 2504, PRE Moving To Target with Army 2505; center (52:22); target (46:15); Progress 100 percent
+142, America, OP_FOUND_CITY, 2504, POST Moving To Target with Army 2505; center (50:22); target (46:15); Progress 100 percent
+143, Polynesia, OP_FOUND_CITY, 2511, PRE Moving To Target with Army 2512; center (47:32); target (46:33); Progress 100 percent
+143, Polynesia, OP_FOUND_CITY, 2511, Transition to target stage
+143, Polynesia, OP_FOUND_CITY, 2511, City founded (Hilo) at (46:33), plot value 82496, q32
+143, Polynesia, OP_FOUND_CITY, 2511, Transition to finished stage
+143, Polynesia, OP_FOUND_CITY, 2511, POST Completed
+143, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, PRE Moving To Target with Army 2530; center (54:31); target (54:24); Progress 0 percent
+143, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Discovered by enemy
+143, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, Transition to finished stage; unit distance near 4; far 7
+143, Polynesia, OP_CITY_ATTACK_LAND_SNEAKY, 2529, POST Completed
+143, Japan, OP_RAPID_RESPONSE, 2597, Initial stage is recruiting
+143, Japan, OP_RAPID_RESPONSE, 2597, Found 1 potential units to recruit for operation 2597 at (29:37) with target at (25:36)
+143, Japan, OP_RAPID_RESPONSE, 2597, Added Swordsman 1517 to slot 0 in army 2598. ETA at (29:37) is 0 
+143, Japan, OP_RAPID_RESPONSE, 2597, Started Army 2598; Units Recruited 1; Max Formation Size 4; Recruiting Units
+143, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Gathering Forces for army 2126; center (28:37); variance (2.22:1.43); free slots 1
+143, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+143, Japan, OP_CITY_ATTACK_LAND, 2125, Transition to movement stage
+143, Japan, OP_CITY_ATTACK_LAND, 2125, POST Moving To Target with Army 2126; center (28:37); target (23:31); Progress 0 percent
+143, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+143, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+143, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+143, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+143, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+143, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+143, Japan, OP_RAPID_RESPONSE, 2597, PRE Recruiting Units for army 2598; Swordsman 1517 at (28:34) - ETA 0; Open; Open; Open; 
+143, Japan, OP_RAPID_RESPONSE, 2597, Found 0 potential units to recruit for operation 2597 at (29:37) with target at (25:36)
+143, Japan, OP_RAPID_RESPONSE, 2597, POST Recruiting Units for army 2598; Swordsman 1517 at (28:34) - ETA 0; Open; Open; Open; 
+143, Austria, OP_FOUND_CITY, 2600, Ended: NoTarget; Distance -1; Duration 144
+143, Carthage, OP_FOUND_CITY, 2601, Ended: NoTarget; Distance -1; Duration 144
+143, Carthage, OP_FOUND_CITY, 2602, Ended: NoTarget; Distance -1; Duration 144
+143, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+143, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+143, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+143, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (22:41) - ETA 1; 
+143, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+143, Carthage, OP_CITY_DEFENSE, 2403, Contact with enemy!
+143, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (22:41) - ETA 1; 
+143, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+143, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+143, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+143, America, OP_FOUND_CITY, 2504, PRE Moving To Target with Army 2505; center (50:22); target (46:15); Progress 100 percent
+143, America, OP_FOUND_CITY, 2504, POST Moving To Target with Army 2505; center (49:22); target (46:15); Progress 100 percent
+144, America, OP_RAPID_RESPONSE, 2610, Initial stage is recruiting
+144, America, OP_RAPID_RESPONSE, 2610, Found 2 potential units to recruit for operation 2610 at (54:24) with target at (54:24)
+144, America, OP_RAPID_RESPONSE, 2610, Added Pikeman 1840 to slot 0 in army 2611. ETA at (54:24) is 3 
+144, America, OP_RAPID_RESPONSE, 2610, Added Swordsman 1700 to slot 1 in army 2611. ETA at (54:24) is 4 
+144, America, OP_RAPID_RESPONSE, 2610, Transition to gathering stage
+144, America, OP_RAPID_RESPONSE, 2610, Started Army 2611; Units Recruited 2; Max Formation Size 4; Gathering Forces
+144, Polynesia, OP_FOUND_CITY, 2511, Ended: Success; Distance 8; Duration 5
+144, Polynesia, OP_CITY_ATTACK_LAND, 2529, Ended: Success; Distance 9; Duration 4
+144, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Moving To Target with Army 2126; center (28:37); target (23:31); Progress 0 percent
+144, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+144, Japan, OP_CITY_ATTACK_LAND, 2125, POST Moving To Target with Army 2126; center (28:36); target (23:31); Progress 10 percent
+144, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+144, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+144, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+144, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+144, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+144, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+144, Japan, OP_RAPID_RESPONSE, 2597, PRE Recruiting Units for army 2598; Swordsman 1517 at (28:34) - ETA 0; Open; Open; Open; 
+144, Japan, OP_RAPID_RESPONSE, 2597, Found 0 potential units to recruit for operation 2597 at (29:37) with target at (25:36)
+144, Japan, OP_RAPID_RESPONSE, 2597, POST Recruiting Units for army 2598; Swordsman 1517 at (28:34) - ETA 0; Open; Open; Open; 
+144, Austria, OP_FOUND_CITY, 2614, Ended: NoTarget; Distance -1; Duration 145
+144, Carthage, OP_FOUND_CITY, 2615, Ended: NoTarget; Distance -1; Duration 145
+144, Carthage, OP_FOUND_CITY, 2616, Ended: NoTarget; Distance -1; Duration 145
+144, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+144, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+144, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+144, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (22:41) - ETA 1; 
+144, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+144, Carthage, OP_CITY_DEFENSE, 2403, Contact with enemy!
+144, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (24:38) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (23:40) - ETA 1; 
+144, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+144, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+144, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+144, America, OP_FOUND_CITY, 2504, PRE Moving To Target with Army 2505; center (49:22); target (46:15); Progress 100 percent
+144, America, OP_FOUND_CITY, 2504, POST Moving To Target with Army 2505; center (48:22); target (46:15); Progress 100 percent
+144, America, OP_RAPID_RESPONSE, 2610, PRE Gathering Forces for army 2611; center (47:20); variance (1.00:4.00); free slots 2
+144, America, OP_RAPID_RESPONSE, 2610, Transition to movement stage
+144, America, OP_RAPID_RESPONSE, 2610, POST Moving To Target with Army 2611; center (46:23); target (54:24); Progress 0 percent
+145, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Moving To Target with Army 2126; center (28:36); target (23:31); Progress 10 percent
+145, Japan, OP_CITY_ATTACK_LAND, 2125, POST Moving To Target with Army 2126; center (29:36); target (23:31); Progress 10 percent
+145, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+145, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+145, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+145, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+145, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+145, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+145, Japan, OP_RAPID_RESPONSE, 2597, PRE Recruiting Units for army 2598; Swordsman 1517 at (28:34) - ETA 0; Open; Open; Open; 
+145, Japan, OP_RAPID_RESPONSE, 2597, Found 0 potential units to recruit for operation 2597 at (29:37) with target at (25:36)
+145, Japan, OP_RAPID_RESPONSE, 2597, POST Recruiting Units for army 2598; Swordsman 1517 at (28:34) - ETA 0; Open; Open; Open; 
+145, Austria, OP_FOUND_CITY, 2638, Ended: NoTarget; Distance -1; Duration 146
+145, Carthage, OP_FOUND_CITY, 2639, Ended: NoTarget; Distance -1; Duration 146
+145, Carthage, OP_FOUND_CITY, 2640, Ended: NoTarget; Distance -1; Duration 146
+145, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+145, Carthage, OP_RAPID_RESPONSE, 2334, Found 0 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+145, Carthage, OP_RAPID_RESPONSE, 2334, POST Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+145, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (24:38) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (23:40) - ETA 1; 
+145, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+145, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (25:36) - ETA 0; 
+145, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+145, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+145, Carthage, OP_RAPID_RESPONSE, 2470, Contact with enemy!
+145, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (23:38) - ETA 0; Open; Open; Open; 
+145, America, OP_RAPID_RESPONSE, 2610, Ended: NoTarget; Distance 10; Duration 1
+145, America, OP_FOUND_CITY, 2504, PRE Moving To Target with Army 2505; center (48:22); target (46:15); Progress 100 percent
+145, America, OP_FOUND_CITY, 2504, POST Moving To Target with Army 2505; center (47:20); target (46:15); Progress 100 percent
+146, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Moving To Target with Army 2126; center (29:36); target (23:31); Progress 10 percent
+146, Japan, OP_CITY_ATTACK_LAND, 2125, POST Moving To Target with Army 2126; center (29:36); target (23:31); Progress 10 percent
+146, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+146, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+146, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+146, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+146, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+146, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+146, Japan, OP_RAPID_RESPONSE, 2597, PRE Recruiting Units for army 2598; Swordsman 1517 at (28:34) - ETA 0; Open; Open; Open; 
+146, Japan, OP_RAPID_RESPONSE, 2597, Found 0 potential units to recruit for operation 2597 at (29:37) with target at (25:36)
+146, Japan, OP_RAPID_RESPONSE, 2597, POST Recruiting Units for army 2598; Swordsman 1517 at (30:34) - ETA 0; Open; Open; Open; 
+146, Austria, OP_FOUND_CITY, 2657, Ended: NoTarget; Distance -1; Duration 147
+146, Carthage, OP_FOUND_CITY, 2659, Ended: NoTarget; Distance -1; Duration 147
+146, Carthage, OP_FOUND_CITY, 2660, Ended: NoTarget; Distance -1; Duration 147
+146, Carthage, OP_RAPID_RESPONSE, 2334, PRE Recruiting Units for army 2335; Pikeman 1942 at (22:37) - ETA 0; Open; Open; Open; 
+146, Carthage, OP_RAPID_RESPONSE, 2334, Found 1 potential units to recruit for operation 2334 at (25:36) with target at (25:36)
+146, Carthage, OP_RAPID_RESPONSE, 2334, Added Knight 2523 to slot 1 in army 2335. ETA at (25:36) is 0 
+146, Carthage, OP_RAPID_RESPONSE, 2334, Transition to gathering stage
+146, Carthage, OP_RAPID_RESPONSE, 2334, POST Gathering Forces for army 2335; center (22:37); variance (1.00:4.00); free slots 2
+146, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (25:36) - ETA 0; 
+146, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+146, Carthage, OP_CITY_DEFENSE, 2403, Contact with enemy!
+146, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (24:37) - ETA 0; 
+146, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (23:38) - ETA 0; Open; Open; Open; 
+146, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+146, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (23:38) - ETA 0; Open; Open; Open; 
+146, America, OP_FOUND_CITY, 2504, PRE Moving To Target with Army 2505; center (47:20); target (46:15); Progress 100 percent
+146, America, OP_FOUND_CITY, 2504, POST Moving To Target with Army 2505; center (46:19); target (46:15); Progress 100 percent
+147, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Moving To Target with Army 2126; center (29:36); target (23:31); Progress 10 percent
+147, Japan, OP_CITY_ATTACK_LAND, 2125, POST Moving To Target with Army 2126; center (29:36); target (23:31); Progress 10 percent
+147, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+147, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+147, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+147, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+147, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+147, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+147, Japan, OP_RAPID_RESPONSE, 2597, PRE Recruiting Units for army 2598; Swordsman 1517 at (30:34) - ETA 0; Open; Open; Open; 
+147, Japan, OP_RAPID_RESPONSE, 2597, Found 0 potential units to recruit for operation 2597 at (29:37) with target at (25:36)
+147, Japan, OP_RAPID_RESPONSE, 2597, POST Recruiting Units for army 2598; Swordsman 1517 at (29:38) - ETA 0; Open; Open; Open; 
+147, Austria, OP_FOUND_CITY, 2672, Ended: NoTarget; Distance -1; Duration 148
+147, Carthage, OP_FOUND_CITY, 2675, Ended: NoTarget; Distance -1; Duration 148
+147, Carthage, OP_FOUND_CITY, 2676, Ended: NoTarget; Distance -1; Duration 148
+147, Carthage, OP_RAPID_RESPONSE, 2334, PRE Gathering Forces for army 2335; center (22:37); variance (1.00:4.00); free slots 2
+147, Carthage, OP_RAPID_RESPONSE, 2334, Contact with enemy!
+147, Carthage, OP_RAPID_RESPONSE, 2334, Transition to movement stage
+147, Carthage, OP_RAPID_RESPONSE, 2334, POST Moving To Target with Army 2335; center (22:37); target (25:36); Progress 0 percent
+147, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Open; Open; Open; Open; Balamber (Great General) 2448 at (24:37) - ETA 0; 
+147, Carthage, OP_CITY_DEFENSE, 2403, Found 1 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+147, Carthage, OP_CITY_DEFENSE, 2403, Added Chariot Archer 1671 to slot 2 in army 2404. ETA at (25:36) is 0 
+147, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1671 at (25:37) - ETA 0; Open; Open; Open; Balamber (Great General) 2448 at (25:36) - ETA 0; 
+147, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (23:38) - ETA 0; Open; Open; Open; 
+147, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+147, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (23:38) - ETA 0; Open; Open; Open; 
+147, America, OP_FOUND_CITY, 2504, PRE Moving To Target with Army 2505; center (46:19); target (46:15); Progress 100 percent
+147, America, OP_FOUND_CITY, 2504, POST Moving To Target with Army 2505; center (46:17); target (46:15); Progress -200 percent
+148, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Moving To Target with Army 2126; center (29:36); target (23:31); Progress 10 percent
+148, Japan, OP_CITY_ATTACK_LAND, 2125, POST Moving To Target with Army 2126; center (29:35); target (23:31); Progress 10 percent
+148, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+148, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+148, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+148, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+148, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+148, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+148, Japan, OP_RAPID_RESPONSE, 2597, PRE Recruiting Units for army 2598; Swordsman 1517 at (29:38) - ETA 0; Open; Open; Open; 
+148, Japan, OP_RAPID_RESPONSE, 2597, Found 0 potential units to recruit for operation 2597 at (29:37) with target at (25:36)
+148, Japan, OP_RAPID_RESPONSE, 2597, POST Recruiting Units for army 2598; Swordsman 1517 at (29:38) - ETA 0; Open; Open; Open; 
+148, Austria, OP_FOUND_CITY, 2724, Ended: NoTarget; Distance -1; Duration 149
+148, Carthage, OP_FOUND_CITY, 2725, Ended: NoTarget; Distance -1; Duration 149
+148, Carthage, OP_FOUND_CITY, 2726, Ended: NoTarget; Distance -1; Duration 149
+148, Carthage, OP_RAPID_RESPONSE, 2334, PRE Moving To Target with Army 2335; center (22:37); target (25:36); Progress 0 percent
+148, Carthage, OP_RAPID_RESPONSE, 2334, Contact with enemy!
+148, Carthage, OP_RAPID_RESPONSE, 2334, Transition to finished stage; unit distance near 1; far 3
+148, Carthage, OP_RAPID_RESPONSE, 2334, POST Completed
+148, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1671 at (24:38) - ETA 0; Open; Open; Open; Balamber (Great General) 2448 at (25:36) - ETA 0; 
+148, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+148, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1671 at (24:38) - ETA 0; Open; Open; Open; Balamber (Great General) 2448 at (25:36) - ETA 0; 
+148, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (23:38) - ETA 0; Open; Open; Open; 
+148, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+148, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (24:37) - ETA 0; Open; Open; Open; 
+148, America, OP_FOUND_CITY, 2504, PRE Moving To Target with Army 2505; center (46:17); target (46:15); Progress -200 percent
+148, America, OP_FOUND_CITY, 2504, Transition to target stage
+148, America, OP_FOUND_CITY, 2504, POST At Target
+149, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Moving To Target with Army 2126; center (29:35); target (23:31); Progress 10 percent
+149, Japan, OP_CITY_ATTACK_LAND, 2125, POST Moving To Target with Army 2126; center (28:35); target (23:31); Progress 20 percent
+149, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+149, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+149, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+149, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+149, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+149, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+149, Japan, OP_RAPID_RESPONSE, 2597, PRE Recruiting Units for army 2598; Swordsman 1517 at (29:38) - ETA 0; Open; Open; Open; 
+149, Japan, OP_RAPID_RESPONSE, 2597, Found 0 potential units to recruit for operation 2597 at (29:37) with target at (25:36)
+149, Japan, OP_RAPID_RESPONSE, 2597, POST Recruiting Units for army 2598; Swordsman 1517 at (29:38) - ETA 0; Open; Open; Open; 
+149, Austria, OP_FOUND_CITY, 2749, Ended: NoTarget; Distance -1; Duration 150
+149, Carthage, OP_FOUND_CITY, 2750, Ended: NoTarget; Distance -1; Duration 150
+149, Carthage, OP_FOUND_CITY, 2751, Ended: NoTarget; Distance -1; Duration 150
+149, Carthage, OP_RAPID_RESPONSE, 2334, Ended: Success; Distance 4; Duration 17
+149, Carthage, OP_CITY_DEFENSE, 2403, PRE Recruiting Units for army 2404; Knight 2341 at (25:36) - ETA 0; Open; Chariot Archer 1671 at (24:38) - ETA 0; Open; Open; Open; Balamber (Great General) 2448 at (25:36) - ETA 0; 
+149, Carthage, OP_CITY_DEFENSE, 2403, Found 0 potential units to recruit for operation 2403 at (25:36) with target at (25:36)
+149, Carthage, OP_CITY_DEFENSE, 2403, Contact with enemy!
+149, Carthage, OP_CITY_DEFENSE, 2403, POST Recruiting Units for army 2404; Knight 2341 at (26:38) - ETA 0; Open; Chariot Archer 1671 at (25:37) - ETA 0; Open; Open; Open; Balamber (Great General) 2448 at (24:35) - ETA 0; 
+149, Carthage, OP_RAPID_RESPONSE, 2470, PRE Recruiting Units for army 2471; Landsknecht 2450 at (24:35) - ETA 0; Open; Open; Open; 
+149, Carthage, OP_RAPID_RESPONSE, 2470, Found 0 potential units to recruit for operation 2470 at (25:36) with target at (25:36)
+149, Carthage, OP_RAPID_RESPONSE, 2470, POST Recruiting Units for army 2471; Landsknecht 2450 at (24:35) - ETA 0; Open; Open; Open; 
+149, America, OP_FOUND_CITY, 2759, Ended: NoTarget; Distance -1; Duration 150
+149, America, OP_FOUND_CITY, 2504, PRE At Target
+149, America, OP_FOUND_CITY, 2504, City founded (Chicago) at (46:15), plot value 53804, q-14
+149, America, OP_FOUND_CITY, 2504, Transition to finished stage
+149, America, OP_FOUND_CITY, 2504, Ended: Success; Distance -1; Duration 11
+150, Japan, OP_CITY_ATTACK_LAND, 2125, PRE Moving To Target with Army 2126; center (28:35); target (23:31); Progress 20 percent
+150, Japan, OP_CITY_ATTACK_LAND, 2125, Contact with enemy!
+150, Japan, OP_CITY_ATTACK_LAND, 2125, No progress to target
+150, Japan, OP_CITY_ATTACK_LAND, 2125, POST Moving To Target with Army 2126; center (28:36); target (23:31); Progress 10 percent
+150, Japan, OP_RAPID_RESPONSE, 2375, PRE Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+150, Japan, OP_RAPID_RESPONSE, 2375, Found 0 potential units to recruit for operation 2375 at (29:37) with target at (25:36)
+150, Japan, OP_RAPID_RESPONSE, 2375, POST Recruiting Units for army 2376; Samurai 2219 at (30:36) - ETA 0; Open; Open; Open; 
+150, Japan, OP_RAPID_RESPONSE, 2437, PRE Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+150, Japan, OP_RAPID_RESPONSE, 2437, Found 0 potential units to recruit for operation 2437 at (29:37) with target at (25:36)
+150, Japan, OP_RAPID_RESPONSE, 2437, POST Recruiting Units for army 2438; Horseman 2252 at (30:37) - ETA 0; Open; Open; Open; 
+150, Japan, OP_RAPID_RESPONSE, 2597, PRE Recruiting Units for army 2598; Swordsman 1517 at (29:38) - ETA 0; Open; Open; Open; 
+150, Japan, OP_RAPID_RESPONSE, 2597, Found 0 potential units to recruit for operation 2597 at (29:37) with target at (25:36)
+150, Japan, OP_RAPID_RESPONSE, 2597, POST Recruiting Units for army 2598; Swordsman 1517 at (29:38) - ETA 0; Open; Open; Open; 
+150, Austria, OP_FOUND_CITY, 2775, Ended: NoTarget; Distance -1; Duration 151
+150, Carthage, OP_FOUND_CITY, 2777, Ended: NoTarget; Distance -1; Duration 151
+150, Carthage, OP_FOUND_CITY, 2778, Ended: NoTarget; Distance -1; Duration 151
