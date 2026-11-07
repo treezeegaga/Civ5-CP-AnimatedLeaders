@@ -1,0 +1,27 @@
+﻿Game 18FE908C18FE908C (AIABTest_c8e.csv), last logged turn 150
+c    Byzantium    tall      cities 3
+  builds to T80 (capital Constantinople; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T16 Warrior* | T21 Settler* | T32 Warrior | T37 Granary | T43 Monument* (Adrianople) | T44 Library* (Adrianople) | T47 Worker* | T48 Stonehenge | T49 Library* | T59 Worker | T60 Worker | T61 Worker | T62 Worker | T63 Worker | T64 Settler | T65 Worker | T69 Settler | T71 Shrine (Adrianople) | T76 Settler | T77 Writers' Guild | T77 Settler
+  settlers ordered T: 21,64,69,76,77,89,90,91,92,93,94,104,111   found-city ops started T: 32,77   cities founded T: 43,83
+  ops aborted: T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: Library 2   first: T048 Constantinople size 4 next Library | T049 Constantinople size 4 next Library
+  IDLE SETTLER turns: 3 (first T64)
+  settler timeline to T80: T21 settler (book) in Constantinople | T32 op started | T43 FOUNDED | T64 settler (AI) in Constantinople | T69 settler (AI) in Constantinople | T76 settler (AI) in Constantinople | T77 settler (AI) in Constantinople | T77 op started
+  saving gold for a settler: 33 turns (T6-T77)
+c    Japan        tall      cities 5
+  builds to T80 (capital Kyoto; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Worker* | T33 Settler* | T45 Great Library | T48 Library* | T48 Monument* (Osaka) | T49 Library* (Osaka) | T56 Granary | T62 Work Boat | T67 Work Boat | T71 Work Boat | T74 Settler | T79 Spearman | T80 Spearman
+  settlers ordered T: 33,74,81,82,95,123,124   found-city ops started T: 45,79,86,122   cities founded T: 48,89,90,136
+  ops aborted: T120 NoTarget, T121 NoTarget, T139 NoTarget
+  book SETTLER HELD to T80: 3 (one at a time 2, growth due 1)   built instead: Library 2, Worker 1   first: T024 Kyoto size 2 next Worker | T045 Kyoto size 3 next Library | T048 Kyoto size 3 next Library
+  IDLE SETTLER turns: 4 (first T74)
+  military ops ended (whole game): NoUnits 4, NoTarget 3
+  settler timeline to T80: T33 settler (book) in Kyoto | T45 op started | T48 FOUNDED | T74 settler (AI) in Kyoto | T79 op started
+  saving gold for a settler: 64 turns (T11-T79)
+c    Sweden       tall      cities 4
+  builds to T80 (capital Stockholm; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T16 Warrior* | T21 Settler* | T33 Granary | T41 Stonehenge | T46 Monument* (Sigtuna) | T47 Library* (Sigtuna) | T49 Worker* | T50 Library* | T56 Worker | T59 Temple | T66 Settler | T72 Warrior | T74 Granary (Sigtuna) | T75 Settler | T76 Granary (Helsinki) | T80 Worker
+  settlers ordered T: 21,66,75,102   found-city ops started T: 33,72,81   cities founded T: 46,76,83
+  ops aborted: T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 1 (unhappy 1)   built instead: Library 1   first: T050 Stockholm size 4 next Library
+  IDLE SETTLER turns: 5 (first T66)
+  military ops ended (whole game): NoUnits 3, HalfStrength 2, DiploOpinionChange 2, Success 1, NoTarget 1
+  settler timeline to T80: T21 settler (book) in Stockholm | T33 op started | T46 FOUNDED | T66 settler (AI) in Stockholm | T72 op started | T75 settler (AI) in Stockholm | T76 FOUNDED | T80 BOUGHT in Stockholm. Cost: 370
+  saving gold for a settler: 39 turns (T6-T79)

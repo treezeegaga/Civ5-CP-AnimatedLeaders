@@ -1,0 +1,27 @@
+﻿Game 18FE908C18FE908CF (AIABTest_c8e.csv), last logged turn 150
+b    Byzantium    tall      cities 4
+  builds to T80 (capital Constantinople; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T16 Warrior* | T21 Settler* | T32 Worker* | T35 Monument* (Adrianople) | T36 Stonehenge | T36 Library* (Adrianople) | T50 Library* | T60 Worker | T61 Worker (Adrianople) | T61 Settler | T62 Work Boat (Adrianople) | T62 Settler | T69 Worker | T70 Work Boat (Adrianople) | T70 Worker | T71 Work Boat (Adrianople) | T71 Settler | T72 Work Boat (Adrianople) | T72 Worker | T73 Work Boat (Adrianople) | T73 Worker | T74 Worker (Adrianople) | T74 Work Boat (Adrianople) | T74 Settler | T75 Worker (Adrianople) | T75 Settler | T76 Granary (Adrianople) | T76 Settler | T77 Monument (Nicaea) | T77 Worker | T78 Shrine (Nicaea) | T78 Worker | T79 Settler | T79 Worker | T80 Settler
+  settlers ordered T: 21,61,62,71,74,75,76,79,80,81,82,84,89   found-city ops started T: 32,69,84   cities founded T: 35,77,90
+  ops aborted: T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 1, growth due 1)   built instead: Library 2   first: T036 Constantinople size 3 next Library | T050 Constantinople size 4 next Library
+  IDLE SETTLER turns: 3 (first T61)
+  military ops ended (whole game): LostPath 1
+  settler timeline to T80: T21 settler (book) in Constantinople | T32 op started | T35 FOUNDED | T61 settler (AI) in Constantinople | T62 settler (AI) in Constantinople | T69 op started | T71 settler (AI) in Constantinople | T74 settler (AI) in Constantinople | T75 settler (AI) in Constantinople | T76 settler (AI) in Constantinople | T77 FOUNDED | T79 settler (AI) in Constantinople | T80 settler (AI) in Constantinople
+  saving gold for a settler: 37 turns (T6-T80)
+b    Japan        tall      cities 4
+  builds to T80 (capital Kyoto; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Worker* | T33 Settler* | T45 Stonehenge | T48 Monument* (Osaka) | T49 Library* (Osaka) | T50 Settler* | T51 Library* | T59 Work Boat | T64 Work Boat | T68 Work Boat | T73 Work Boat | T74 Water Mill (Tokyo) | T76 Worker
+  settlers ordered T: 33,50,108,140   found-city ops started T: 45,66,89,111,121,133,146   cities founded T: 48,74,92
+  ops aborted: T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget
+  book SETTLER HELD to T80: 3 (one at a time 2, growth due 1)   built instead: Library 2, Worker 1   first: T024 Kyoto size 2 next Worker | T045 Kyoto size 3 next Library | T051 Kyoto size 3 next Library
+  IDLE SETTLER turns: 6 (first T50)
+  military ops ended (whole game): NoUnits 42, LostPath 1
+  settler timeline to T80: T33 settler (book) in Kyoto | T45 op started | T48 FOUNDED | T50 settler (book) in Kyoto | T65 BOUGHT in Kyoto. Cost: 370 | T66 op started | T74 FOUNDED
+  saving gold for a settler: 57 turns (T11-T80)
+b    Sweden       tall      cities 3
+  builds to T80 (capital Stockholm; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T16 Warrior* | T21 Settler* | T33 Worker* | T36 Monument* (Sigtuna) | T37 Stonehenge | T37 Library* (Sigtuna) | T49 Library* | T56 Worker | T60 Scout | T63 Temple | T67 Settler (Sigtuna) | T71 Granary | T73 Granary (Sigtuna) | T75 Writers' Guild | T78 Monument (Helsinki) | T79 Shrine (Helsinki)
+  settlers ordered T: 21,67,91   found-city ops started T: 33,74   cities founded T: 36,78
+  ops aborted: T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: Library 2   first: T037 Stockholm size 3 next Library | T049 Stockholm size 3 next Library
+  IDLE SETTLER turns: 3 (first T68)
+  settler timeline to T80: T21 settler (book) in Stockholm | T33 op started | T36 FOUNDED | T67 settler (AI) in Sigtuna | T73 BOUGHT in Sigtuna. Cost: 370 | T74 op started | T78 FOUNDED
+  saving gold for a settler: 37 turns (T6-T80)
