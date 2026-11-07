@@ -1,0 +1,1778 @@
+010, Malacca, America, RECEIVED_UNIT_GIFT, Warrior
+013, Sidon, Spain, RECEIVED_UNIT_GIFT, Warrior
+019, Malacca, Polynesia, RECEIVED_UNIT_GIFT, Maori Warrior
+021, Kabul, Byzantium, RECEIVED_UNIT_GIFT, Warrior
+025, Spain, Melbourne, Gold Gift: 500, Friendship: -4 to -4, Culture, MINOR_CIV_MELBOURNE, (SAVING) 
+025, Byzantium, Kabul, SENT OUT QUEST, Type, 1
+025, Byzantium, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+025, The Maya, Antananarivo, SENT OUT QUEST, Type, 1
+025, The Maya, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+025, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 1
+025, The Aztecs, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+025, Byzantium, Kyiv, SENT OUT QUEST, Type, 3
+025, Byzantium, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: -3 to -3, MINOR_CIV_KIEV
+026, The Maya, Melbourne, SENT OUT QUEST, Type, 2
+026, The Maya, Melbourne, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+026, The Maya, Vilnius, SENT OUT QUEST, Type, 1
+026, The Maya, Vilnius, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+026, The Aztecs, Vilnius, SENT OUT QUEST, Type, 1
+026, The Aztecs, Vilnius, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+026, The Maya, Zanzibar, SENT OUT QUEST, Type, 2
+026, The Maya, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+026, Babylon, Cape Town, SENT OUT QUEST, Type, 7
+026, Babylon, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+026, Portugal, Kathmandu, SENT OUT QUEST, Type, 7
+026, Portugal, Kathmandu, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+026, Babylon, Byblos, SENT OUT QUEST, Type, 1
+026, Babylon, Byblos, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+026, Byzantium, Byblos, SENT OUT QUEST, Type, 1
+026, Byzantium, Byblos, RECEIVED QUEST, Kill Camp, Friendship: -3 to -3, MINOR_CIV_BYBLOS
+026, Byzantium, Kyiv, SENT OUT QUEST, Type, 1
+026, Byzantium, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: -1 to -1, MINOR_CIV_KIEV
+027, Melbourne, The Maya, RECEIVED_UNIT_GIFT, Warrior
+027, Babylon, Sidon, SENT OUT QUEST, Type, 1
+027, Babylon, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+027, Spain, Sidon, SENT OUT QUEST, Type, 1
+027, Spain, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_SIDON
+027, The Maya, Vilnius, SENT OUT QUEST, Type, 2
+027, The Maya, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+028, Babylon, Melbourne, era change yield update
+028, Babylon, Sidon, era change yield update
+028, Babylon, Vilnius, era change yield update
+028, Babylon, Zanzibar, era change yield update
+028, Babylon, Kabul, era change yield update
+028, Babylon, Malacca, era change yield update
+028, Babylon, Buenos Aires, era change yield update
+028, Babylon, Riga, era change yield update
+028, Babylon, Zurich, era change yield update
+028, Babylon, Singapore, era change yield update
+028, Babylon, Cape Town, era change yield update
+028, Babylon, Almaty, era change yield update
+028, Babylon, Kathmandu, era change yield update
+028, Babylon, Byblos, era change yield update
+028, Babylon, Antananarivo, era change yield update
+028, Babylon, Kyiv, era change yield update
+028, Babylon, Sidon, SENT OUT QUEST, Type, 1
+028, Babylon, Cape Town, SENT OUT QUEST, Type, 7
+028, Babylon, Byblos, SENT OUT QUEST, Type, 1
+028, The Aztecs, Vilnius, SENT OUT QUEST, Type, 2
+028, The Aztecs, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+028, Babylon, Byblos, SENT OUT QUEST, Type, 2
+028, Babylon, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+029, The Maya, Sidon, SENT OUT QUEST, Type, 1
+029, The Maya, Sidon, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+029, Byzantium, Kabul, SENT OUT QUEST, Type, 2
+029, Byzantium, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+029, America, Malacca, SENT OUT QUEST, Type, 7
+029, America, Malacca, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_MALACCA
+029, Babylon, Byblos, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+029, Byzantium, Byblos, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+029, Byzantium, Byblos, SENT OUT QUEST, Type, 3
+029, Byzantium, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+030, Babylon, Sidon, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+030, Spain, Sidon, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_SIDON
+030, The Maya, Sidon, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SIDON
+030, Polynesia, Malacca, SENT OUT QUEST, Type, 1
+030, Polynesia, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
+030, America, Malacca, SENT OUT QUEST, Type, 1
+030, America, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MALACCA
+030, Polynesia, Malacca, SENT OUT QUEST, Type, 3
+030, Polynesia, Malacca, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MALACCA
+030, Polynesia, Zurich, SENT OUT QUEST, Type, 3
+030, Polynesia, Zurich, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ZURICH
+031, America, Malacca, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_MALACCA, (SAVING) 
+031, Spain, Sidon, SENT OUT QUEST, Type, 2
+031, Spain, Sidon, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_SIDON
+031, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 2
+031, The Aztecs, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+031, Polynesia, Zurich, SENT OUT QUEST, Type, 1
+031, Polynesia, Zurich, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZURICH
+032, Babylon, Melbourne, SENT OUT QUEST, Type, 13
+032, Babylon, Melbourne, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+032, Spain, Melbourne, SENT OUT QUEST, Type, 13
+032, Spain, Melbourne, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_MELBOURNE
+032, The Maya, Melbourne, SENT OUT QUEST, Type, 13
+032, The Maya, Melbourne, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+032, The Aztecs, Melbourne, SENT OUT QUEST, Type, 13
+032, The Aztecs, Melbourne, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+032, Spain, Melbourne, SENT OUT QUEST, Type, 2
+032, Spain, Melbourne, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MELBOURNE
+032, Babylon, Cape Town, SENT OUT QUEST, Type, 1
+032, Babylon, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+032, Byzantium, Cape Town, SENT OUT QUEST, Type, 1
+032, Byzantium, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+033, Babylon, Antananarivo, SENT OUT QUEST, Type, 1
+033, Babylon, Antananarivo, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+034, The Aztecs, Melbourne, SENT OUT QUEST, Type, 2
+034, The Aztecs, Melbourne, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+034, The Maya, Zanzibar, SENT OUT QUEST, Type, 13
+034, The Maya, Zanzibar, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+034, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 13
+034, The Aztecs, Zanzibar, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+034, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 2
+034, Byzantium, Buenos Aires, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+034, Spain, Kathmandu, SENT OUT QUEST, Type, 1
+034, Spain, Kathmandu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+034, Portugal, Kathmandu, SENT OUT QUEST, Type, 1
+034, Portugal, Kathmandu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+035, Byzantium, Kyiv, SENT OUT QUEST, Type, 3
+035, Byzantium, Kyiv, SENT OUT QUEST, Type, 1
+035, The Maya, Melbourne, era change yield update
+035, The Maya, Sidon, era change yield update
+035, The Maya, Vilnius, era change yield update
+035, The Maya, Zanzibar, era change yield update
+035, The Maya, Kabul, era change yield update
+035, The Maya, Malacca, era change yield update
+035, The Maya, Buenos Aires, era change yield update
+035, The Maya, Riga, era change yield update
+035, The Maya, Zurich, era change yield update
+035, The Maya, Singapore, era change yield update
+035, The Maya, Cape Town, era change yield update
+035, The Maya, Almaty, era change yield update
+035, The Maya, Kathmandu, era change yield update
+035, The Maya, Byblos, era change yield update
+035, The Maya, Antananarivo, era change yield update
+035, The Maya, Kyiv, era change yield update
+035, The Maya, Melbourne, SENT OUT QUEST, Type, 2
+035, The Maya, Melbourne, SENT OUT QUEST, Type, 13
+035, The Maya, Vilnius, SENT OUT QUEST, Type, 1
+035, The Maya, Vilnius, SENT OUT QUEST, Type, 2
+035, The Maya, Zanzibar, SENT OUT QUEST, Type, 2
+035, The Maya, Zanzibar, SENT OUT QUEST, Type, 13
+035, The Maya, Antananarivo, SENT OUT QUEST, Type, 1
+035, The Aztecs, Melbourne, era change yield update
+035, The Aztecs, Sidon, era change yield update
+035, The Aztecs, Vilnius, era change yield update
+035, The Aztecs, Zanzibar, era change yield update
+035, The Aztecs, Kabul, era change yield update
+035, The Aztecs, Malacca, era change yield update
+035, The Aztecs, Buenos Aires, era change yield update
+035, The Aztecs, Riga, era change yield update
+035, The Aztecs, Zurich, era change yield update
+035, The Aztecs, Singapore, era change yield update
+035, The Aztecs, Cape Town, era change yield update
+035, The Aztecs, Almaty, era change yield update
+035, The Aztecs, Kathmandu, era change yield update
+035, The Aztecs, Byblos, era change yield update
+035, The Aztecs, Antananarivo, era change yield update
+035, The Aztecs, Kyiv, era change yield update
+035, The Aztecs, Melbourne, SENT OUT QUEST, Type, 13
+035, The Aztecs, Melbourne, SENT OUT QUEST, Type, 2
+035, The Aztecs, Vilnius, SENT OUT QUEST, Type, 1
+035, The Aztecs, Vilnius, SENT OUT QUEST, Type, 2
+035, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 2
+035, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 13
+035, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 1
+035, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 7
+035, The Aztecs, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+036, Babylon, Vilnius, SENT OUT QUEST, Type, 1
+036, Babylon, Vilnius, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+036, Portugal, Melbourne, era change yield update
+036, Portugal, Sidon, era change yield update
+036, Portugal, Vilnius, era change yield update
+036, Portugal, Zanzibar, era change yield update
+036, Portugal, Kabul, era change yield update
+036, Portugal, Malacca, era change yield update
+036, Portugal, Buenos Aires, era change yield update
+036, Portugal, Riga, era change yield update
+036, Portugal, Zurich, era change yield update
+036, Portugal, Singapore, era change yield update
+036, Portugal, Cape Town, era change yield update
+036, Portugal, Almaty, era change yield update
+036, Portugal, Kathmandu, era change yield update
+036, Portugal, Byblos, era change yield update
+036, Portugal, Antananarivo, era change yield update
+036, Portugal, Kyiv, era change yield update
+036, Portugal, Kathmandu, SENT OUT QUEST, Type, 7
+036, Portugal, Kathmandu, SENT OUT QUEST, Type, 1
+036, Babylon, Sidon, SENT OUT QUEST, Type, 2
+036, Babylon, Sidon, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SIDON
+036, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 1
+036, Byzantium, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+037, Babylon, Zanzibar, SENT OUT QUEST, Type, 13
+037, Babylon, Zanzibar, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+037, The Maya, Antananarivo, SENT OUT QUEST, Type, 7
+037, The Maya, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+038, Babylon, Sidon, SENT OUT QUEST, Type, 2
+038, Babylon, Cape Town, SENT OUT QUEST, Type, 7
+038, Babylon, Cape Town, SENT OUT QUEST, Type, 1
+038, Babylon, Byblos, SENT OUT QUEST, Type, 2
+038, Kathmandu, Portugal, RECEIVED_UNIT_GIFT, Warrior
+039, Portugal, Kathmandu, Gold Gift: 500, Friendship: 2 to 2, Diplomacy, MINOR_CIV_KATHMANDU, (SAVING) 
+039, Portugal, Kathmandu, SENT OUT QUEST, Type, 7
+039, Portugal, Kathmandu, SENT OUT QUEST, Type, 1
+040, Polynesia, Melbourne, era change yield update
+040, Polynesia, Sidon, era change yield update
+040, Polynesia, Vilnius, era change yield update
+040, Polynesia, Zanzibar, era change yield update
+040, Polynesia, Kabul, era change yield update
+040, Polynesia, Malacca, era change yield update
+040, Polynesia, Buenos Aires, era change yield update
+040, Polynesia, Riga, era change yield update
+040, Polynesia, Zurich, era change yield update
+040, Polynesia, Singapore, era change yield update
+040, Polynesia, Cape Town, era change yield update
+040, Polynesia, Almaty, era change yield update
+040, Polynesia, Kathmandu, era change yield update
+040, Polynesia, Byblos, era change yield update
+040, Polynesia, Antananarivo, era change yield update
+040, Polynesia, Kyiv, era change yield update
+040, Polynesia, Malacca, SENT OUT QUEST, Type, 1
+040, Polynesia, Malacca, SENT OUT QUEST, Type, 3
+040, Polynesia, Zurich, SENT OUT QUEST, Type, 3
+040, Polynesia, Zurich, SENT OUT QUEST, Type, 1
+040, The Maya, Zanzibar, SENT OUT QUEST, Type, 7
+040, The Maya, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+040, Byzantium, Byblos, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+040, Byzantium, Kyiv, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KIEV
+041, Byzantium, Melbourne, era change yield update
+041, Byzantium, Sidon, era change yield update
+041, Byzantium, Vilnius, era change yield update
+041, Byzantium, Zanzibar, era change yield update
+041, Byzantium, Kabul, era change yield update
+041, Byzantium, Malacca, era change yield update
+041, Byzantium, Buenos Aires, era change yield update
+041, Byzantium, Riga, era change yield update
+041, Byzantium, Zurich, era change yield update
+041, Byzantium, Singapore, era change yield update
+041, Byzantium, Cape Town, era change yield update
+041, Byzantium, Almaty, era change yield update
+041, Byzantium, Kathmandu, era change yield update
+041, Byzantium, Byblos, era change yield update
+041, Byzantium, Antananarivo, era change yield update
+041, Byzantium, Kyiv, era change yield update
+041, Byzantium, Kabul, SENT OUT QUEST, Type, 1
+041, Byzantium, Kabul, SENT OUT QUEST, Type, 2
+041, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 2
+041, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 1
+041, Byzantium, Cape Town, SENT OUT QUEST, Type, 1
+041, Byzantium, Kyiv, SENT OUT QUEST, Type, 1
+042, Polynesia, Zurich, SENT OUT QUEST, Type, 3
+042, Polynesia, Zurich, SENT OUT QUEST, Type, 1
+043, Spain, Melbourne, era change yield update
+043, Spain, Sidon, era change yield update
+043, Spain, Vilnius, era change yield update
+043, Spain, Zanzibar, era change yield update
+043, Spain, Kabul, era change yield update
+043, Spain, Malacca, era change yield update
+043, Spain, Buenos Aires, era change yield update
+043, Spain, Riga, era change yield update
+043, Spain, Zurich, era change yield update
+043, Spain, Singapore, era change yield update
+043, Spain, Cape Town, era change yield update
+043, Spain, Almaty, era change yield update
+043, Spain, Kathmandu, era change yield update
+043, Spain, Byblos, era change yield update
+043, Spain, Antananarivo, era change yield update
+043, Spain, Kyiv, era change yield update
+043, Spain, Melbourne, SENT OUT QUEST, Type, 13
+043, Spain, Melbourne, SENT OUT QUEST, Type, 2
+043, Spain, Sidon, SENT OUT QUEST, Type, 2
+043, Spain, Kathmandu, SENT OUT QUEST, Type, 1
+043, America, Melbourne, era change yield update
+043, America, Sidon, era change yield update
+043, America, Vilnius, era change yield update
+043, America, Zanzibar, era change yield update
+043, America, Kabul, era change yield update
+043, America, Malacca, era change yield update
+043, America, Buenos Aires, era change yield update
+043, America, Riga, era change yield update
+043, America, Zurich, era change yield update
+043, America, Singapore, era change yield update
+043, America, Cape Town, era change yield update
+043, America, Almaty, era change yield update
+043, America, Kathmandu, era change yield update
+043, America, Byblos, era change yield update
+043, America, Antananarivo, era change yield update
+043, America, Kyiv, era change yield update
+043, America, Malacca, SENT OUT QUEST, Type, 7
+043, America, Malacca, SENT OUT QUEST, Type, 1
+043, Byzantium, Kathmandu, SENT OUT QUEST, Type, 1
+043, Byzantium, Kathmandu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+043, Polynesia, Riga, SENT OUT QUEST, Type, 1
+043, Polynesia, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+043, Byzantium, Byblos, SENT OUT QUEST, Type, 2
+043, Byzantium, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+044, Polynesia, Zurich, Gold Gift: 500, Friendship: 2 to 2, Culture, MINOR_CIV_ZURICH, (SAVING) 
+044, The Maya, Sidon, SENT OUT QUEST, Type, 2
+044, The Maya, Sidon, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SIDON
+044, Babylon, Cape Town, SENT OUT QUEST, Type, 17
+044, Babylon, Cape Town, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_CAPE_TOWN
+045, Babylon, Sidon, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_SIDON, (SAVING) 
+045, Melbourne, The Maya, RECEIVED_UNIT_GIFT, Warrior
+046, Byzantium, Kabul, gained friend
+046, Byzantium, Kabul, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KABUL
+046, Portugal, Kathmandu, gained friend
+046, Portugal, Kathmandu, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_KATHMANDU
+046, Byzantium, Byblos, gained friend
+046, Byzantium, Byblos, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BYBLOS
+046, Babylon, Byblos, SENT OUT QUEST, Type, 17
+046, Babylon, Byblos, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+047, Byzantium, Kabul, SENT OUT QUEST, Type, 1
+047, The Maya, Vilnius, SENT OUT QUEST, Type, 17
+047, The Maya, Vilnius, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+047, Polynesia, Zurich, SENT OUT QUEST, Type, 17
+047, Polynesia, Zurich, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_ZURICH
+048, The Aztecs, Melbourne, SENT OUT QUEST, Type, 3
+048, The Aztecs, Melbourne, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+048, The Aztecs, Vilnius, SENT OUT QUEST, Type, 7
+048, The Aztecs, Vilnius, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+048, The Aztecs, Antananarivo, gained friend
+048, The Aztecs, Antananarivo, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_ANTANANARIVO
+048, Babylon, Antananarivo, SENT OUT QUEST, Type, 2
+048, Babylon, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+049, Babylon, Antananarivo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+049, The Maya, Antananarivo, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+049, Byzantium, Kyiv, SENT OUT QUEST, Type, 17
+049, Byzantium, Kyiv, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_KIEV
+050, Portugal, Kabul, SENT OUT QUEST, Type, 1
+050, Portugal, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+050, Portugal, Kabul, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+050, Byzantium, Kabul, cancelled, Kill Camp, Friendship: 34 to 34, MINOR_CIV_KABUL
+051, Portugal, Kyiv, SENT OUT QUEST, Type, 1
+051, Portugal, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+051, Byzantium, Byblos, lost friend
+052, Portugal, Kyiv, SENT OUT QUEST, Type, 1
+052, The Maya, Zanzibar, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_ZANZIBAR, (SAVING) 
+052, The Maya, Zanzibar, SENT OUT QUEST, Type, 2
+052, The Maya, Zanzibar, SENT OUT QUEST, Type, 13
+052, The Maya, Zanzibar, SENT OUT QUEST, Type, 7
+052, Spain, Melbourne, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_MELBOURNE
+052, Babylon, Melbourne, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+052, The Maya, Melbourne, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+052, The Aztecs, Melbourne, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+052, Polynesia, Malacca, SENT OUT QUEST, Type, 17
+052, Polynesia, Malacca, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_MALACCA
+053, Byzantium, Kabul, lost friend
+053, America, Malacca, SENT OUT QUEST, Type, 17
+053, America, Malacca, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MALACCA
+053, Byzantium, Cape Town, SENT OUT QUEST, Type, 2
+053, Byzantium, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+053, Portugal, Kathmandu, lost friend
+053, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+053, The Aztecs, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 42 to 42, MINOR_CIV_ANTANANARIVO
+054, Polynesia, Malacca, SENT OUT QUEST, Type, 1
+054, Polynesia, Malacca, SENT OUT QUEST, Type, 3
+054, Polynesia, Malacca, SENT OUT QUEST, Type, 17
+054, Portugal, Buenos Aires, SENT OUT QUEST, Type, 1
+054, Portugal, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+054, Babylon, Melbourne, SENT OUT QUEST, Type, 7
+054, Babylon, Melbourne, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+054, Babylon, Sidon, SENT OUT QUEST, Type, 7
+054, Babylon, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_SIDON
+054, The Maya, Zanzibar, FINISHED QUEST, Invest, Friendship: 4 to 4, MINOR_CIV_ZANZIBAR
+054, The Maya, Zanzibar, gained friend
+054, The Maya, Zanzibar, FINISHED QUEST, Find Natural Wonder, Friendship: 4 to 44, MINOR_CIV_ZANZIBAR
+054, Babylon, Zanzibar, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+054, The Aztecs, Zanzibar, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+054, The Maya, Antananarivo, gained friend
+054, The Maya, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+055, The Maya, Melbourne, SENT OUT QUEST, Type, 16
+055, The Maya, Melbourne, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+057, Byzantium, Kabul, Gold Gift: 500, Friendship: 25 to 25, Culture, MINOR_CIV_KABUL, (SAVING) , Passing Portugal
+057, The Aztecs, Kyiv, SENT OUT QUEST, Type, 1
+057, The Aztecs, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+057, Byzantium, Kabul, SENT OUT QUEST, Type, 2
+057, Byzantium, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 23 to 23, MINOR_CIV_KABUL
+058, Spain, Melbourne, SENT OUT QUEST, Type, 17
+058, Spain, Melbourne, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_MELBOURNE
+058, The Maya, Vilnius, gained friend
+058, The Maya, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+058, Babylon, Zanzibar, SENT OUT QUEST, Type, 2
+058, Babylon, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+058, Babylon, Byblos, SENT OUT QUEST, Type, 13
+058, Babylon, Byblos, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+058, Byzantium, Byblos, SENT OUT QUEST, Type, 13
+058, Byzantium, Byblos, RECEIVED QUEST, Invest, Friendship: 13 to 13, MINOR_CIV_BYBLOS
+059, Babylon, Sidon, SENT OUT QUEST, Type, 10
+059, Babylon, Sidon, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_SIDON
+059, Spain, Sidon, SENT OUT QUEST, Type, 10
+059, Spain, Sidon, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_SIDON
+059, The Maya, Sidon, SENT OUT QUEST, Type, 10
+059, The Maya, Sidon, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SIDON
+059, The Aztecs, Vilnius, gained friend
+059, The Aztecs, Vilnius, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+059, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 7
+059, The Aztecs, Zanzibar, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+059, The Aztecs, Antananarivo, gained ally
+059, The Maya, Antananarivo, lost friend
+059, The Aztecs, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 33 to 73, MINOR_CIV_ANTANANARIVO
+060, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+060, Spain, Sidon, SENT OUT QUEST, Type, 17
+060, Spain, Sidon, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_SIDON
+060, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 3
+060, Byzantium, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+062, The Maya, Kyiv, SENT OUT QUEST, Type, 1
+062, The Maya, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+062, Portugal, Kabul, SENT OUT QUEST, Type, 3
+062, Portugal, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KABUL
+062, Polynesia, Malacca, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MALACCA
+062, Polynesia, Zurich, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_ZURICH
+063, Babylon, Vilnius, SENT OUT QUEST, Type, 2
+063, Babylon, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+064, The Maya, Zanzibar, lost friend
+064, Portugal, Kathmandu, SENT OUT QUEST, Type, 17
+064, Portugal, Kathmandu, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+065, The Aztecs, Sidon, SENT OUT QUEST, Type, 10
+065, The Aztecs, Sidon, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SIDON
+065, The Maya, Vilnius, lost friend
+066, Byzantium, Kathmandu, SENT OUT QUEST, Type, 1
+066, The Aztecs, Sidon, SENT OUT QUEST, Type, 10
+066, The Aztecs, Vilnius, lost friend
+067, The Maya, Sidon, SENT OUT QUEST, Type, 4
+067, The Maya, Sidon, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SIDON
+067, Byzantium, Cape Town, SENT OUT QUEST, Type, 16
+067, Byzantium, Cape Town, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+067, Spain, Kathmandu, SENT OUT QUEST, Type, 3
+067, Spain, Kathmandu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+067, Babylon, Antananarivo, SENT OUT QUEST, Type, 3
+067, Babylon, Antananarivo, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+068, Byzantium, Kabul, SENT OUT QUEST, Type, 2
+069, The Maya, Melbourne, gained friend
+069, The Maya, Melbourne, FINISHED QUEST, Spread Religion, Friendship: 0 to 40, MINOR_CIV_MELBOURNE
+069, The Aztecs, Antananarivo, lost ally
+070, The Maya, Antananarivo, SENT OUT QUEST, Type, 2
+070, The Maya, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 16 to 16, MINOR_CIV_ANTANANARIVO
+071, Spain, Kyiv, SENT OUT QUEST, Type, 1
+071, Spain, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+072, Spain, Kyiv, SENT OUT QUEST, Type, 1
+072, Byzantium, Sidon, SENT OUT QUEST, Type, 10
+072, Byzantium, Sidon, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SIDON
+073, Byzantium, Kabul, SENT OUT QUEST, Type, 3
+073, Byzantium, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+073, The Aztecs, Kabul, SENT OUT QUEST, Type, 2
+073, The Aztecs, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+074, The Aztecs, Sidon, Gold Gift: 500, Friendship: 5 to 5, Conquest, MINOR_CIV_SIDON, (SAVING) 
+074, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+075, The Maya, Melbourne, era change yield update
+075, The Maya, Sidon, era change yield update
+075, The Maya, Vilnius, era change yield update
+075, The Maya, Zanzibar, era change yield update
+075, The Maya, Kabul, era change yield update
+075, The Maya, Malacca, era change yield update
+075, The Maya, Buenos Aires, era change yield update
+075, The Maya, Riga, era change yield update
+075, The Maya, Zurich, era change yield update
+075, The Maya, Singapore, era change yield update
+075, The Maya, Cape Town, era change yield update
+075, The Maya, Almaty, era change yield update
+075, The Maya, Kathmandu, era change yield update
+075, The Maya, Byblos, era change yield update
+075, The Maya, Antananarivo, era change yield update
+075, The Maya, Kyiv, era change yield update
+075, The Maya, Melbourne, SENT OUT QUEST, Type, 2
+075, The Maya, Sidon, SENT OUT QUEST, Type, 2
+075, The Maya, Sidon, SENT OUT QUEST, Type, 10
+075, The Maya, Sidon, SENT OUT QUEST, Type, 4
+075, The Maya, Vilnius, SENT OUT QUEST, Type, 1
+075, The Maya, Vilnius, SENT OUT QUEST, Type, 17
+075, The Maya, Zanzibar, SENT OUT QUEST, Type, 2
+075, The Maya, Antananarivo, SENT OUT QUEST, Type, 2
+075, The Maya, Kyiv, SENT OUT QUEST, Type, 1
+075, Babylon, Vilnius, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+075, The Maya, Vilnius, cancelled, Kill Camp, Friendship: 14 to 14, MINOR_CIV_VILNIUS
+075, The Aztecs, Vilnius, cancelled, Kill Camp, Friendship: 16 to 16, MINOR_CIV_VILNIUS
+075, Portugal, Buenos Aires, SENT OUT QUEST, Type, 3
+075, Portugal, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+075, Byzantium, Kyiv, SENT OUT QUEST, Type, 14
+075, Byzantium, Kyiv, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_KIEV
+075, The Maya, Kyiv, SENT OUT QUEST, Type, 2
+075, The Maya, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+076, Polynesia, Riga, SENT OUT QUEST, Type, 17
+076, Polynesia, Riga, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_RIGA
+076, Babylon, Byblos, gained friend
+076, Babylon, Byblos, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_BYBLOS
+076, Babylon, Antananarivo, gained friend
+076, Babylon, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+076, The Aztecs, Kyiv, SENT OUT QUEST, Type, 7
+076, The Aztecs, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+077, Babylon, Vilnius, SENT OUT QUEST, Type, 7
+077, Babylon, Vilnius, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+077, Portugal, Kyiv, SENT OUT QUEST, Type, 2
+077, Portugal, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_KIEV
+078, The Aztecs, Vilnius, SENT OUT QUEST, Type, 14
+078, The Aztecs, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 11 to 11, MINOR_CIV_VILNIUS
+078, Spain, Kabul, SENT OUT QUEST, Type, 13
+078, Spain, Kabul, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+078, Portugal, Kabul, SENT OUT QUEST, Type, 13
+078, Portugal, Kabul, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_KABUL
+078, Byzantium, Kabul, SENT OUT QUEST, Type, 13
+078, Byzantium, Kabul, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+078, The Maya, Kabul, SENT OUT QUEST, Type, 13
+078, The Maya, Kabul, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+078, The Aztecs, Kabul, SENT OUT QUEST, Type, 13
+078, The Aztecs, Kabul, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+078, Babylon, Byblos, FINISHED QUEST, Invest, Friendship: 40 to 40, MINOR_CIV_BYBLOS
+078, Byzantium, Byblos, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+079, The Aztecs, Cape Town, SENT OUT QUEST, Type, 1
+079, The Aztecs, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+079, The Maya, Melbourne, lost friend
+079, The Aztecs, Sidon, gained friend
+079, The Aztecs, Sidon, FINISHED QUEST, Contest Culture, Friendship: -4 to 35, MINOR_CIV_SIDON
+079, Babylon, Sidon, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_SIDON
+079, Spain, Sidon, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_SIDON
+079, Byzantium, Sidon, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SIDON
+079, The Maya, Sidon, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SIDON
+079, The Maya, Vilnius, SENT OUT QUEST, Type, 2
+079, The Maya, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 8 to 8, MINOR_CIV_VILNIUS
+079, Polynesia, Buenos Aires, SENT OUT QUEST, Type, 1
+079, Polynesia, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+079, Spain, Kathmandu, gained friend
+079, Spain, Kathmandu, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_KATHMANDU
+080, Babylon, Zanzibar, SENT OUT QUEST, Type, 4
+080, Babylon, Zanzibar, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+080, Portugal, Kabul, SENT OUT QUEST, Type, 16
+080, Portugal, Kabul, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_KABUL
+080, The Maya, Kabul, SENT OUT QUEST, Type, 2
+080, The Maya, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+081, The Maya, Kathmandu, SENT OUT QUEST, Type, 1
+081, The Maya, Kathmandu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+082, Babylon, Melbourne, SENT OUT QUEST, Type, 2
+082, Babylon, Melbourne, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+082, The Maya, Zanzibar, SENT OUT QUEST, Type, 14
+082, The Maya, Zanzibar, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+082, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 7
+082, The Aztecs, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 39 to 39, MINOR_CIV_ANTANANARIVO
+082, Kyiv, Spain, RECEIVED_UNIT_GIFT, Archer
+083, Babylon, Melbourne, SENT OUT QUEST, Type, 13
+083, Babylon, Melbourne, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+083, Spain, Melbourne, SENT OUT QUEST, Type, 13
+083, Spain, Melbourne, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_MELBOURNE
+083, The Maya, Melbourne, SENT OUT QUEST, Type, 13
+083, The Maya, Melbourne, RECEIVED QUEST, Invest, Friendship: 24 to 24, MINOR_CIV_MELBOURNE
+083, The Aztecs, Melbourne, SENT OUT QUEST, Type, 13
+083, The Aztecs, Melbourne, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+083, Byzantium, Kabul, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+083, Portugal, Buenos Aires, gained friend
+083, Portugal, Buenos Aires, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BUENOS_AIRES
+083, Byzantium, Buenos Aires, cancelled, Construct Wonder, Friendship: -3 to -3, MINOR_CIV_BUENOS_AIRES
+083, Polynesia, Zurich, SENT OUT QUEST, Type, 4
+083, Polynesia, Zurich, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_ZURICH
+083, Babylon, Byblos, lost friend
+083, Babylon, Antananarivo, lost friend
+084, The Aztecs, Sidon, lost friend
+084, Portugal, Buenos Aires, gained ally
+084, Portugal, Buenos Aires, FINISHED QUEST, Kill Camp, Friendship: 38 to 88, MINOR_CIV_BUENOS_AIRES
+084, Spain, Kathmandu, lost friend
+084, Portugal, Kathmandu, SENT OUT QUEST, Type, 16
+084, Portugal, Kathmandu, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+084, The Maya, Antananarivo, SENT OUT QUEST, Type, 14
+084, The Maya, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+085, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+085, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 7
+085, The Aztecs, Vilnius, cancelled, Bully City-State, Friendship: 1 to 1, MINOR_CIV_VILNIUS
+085, Polynesia, Buenos Aires, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+085, Byzantium, Buenos Aires, cancelled, Kill Camp, Friendship: -6 to -6, MINOR_CIV_BUENOS_AIRES
+085, Byzantium, Byblos, SENT OUT QUEST, Type, 14
+085, Byzantium, Byblos, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+086, The Aztecs, Kabul, SENT OUT QUEST, Type, 14
+086, The Aztecs, Kabul, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+086, Polynesia, Almaty, SENT OUT QUEST, Type, 4
+086, Polynesia, Almaty, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ALMATY
+086, Byzantium, Kathmandu, SENT OUT QUEST, Type, 16
+086, Byzantium, Kathmandu, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_KATHMANDU
+087, America, Riga, SENT OUT QUEST, Type, 1
+087, America, Riga, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+087, Polynesia, Kyiv, SENT OUT QUEST, Type, 1
+087, Polynesia, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+088, Polynesia, Kyiv, SENT OUT QUEST, Type, 1
+088, The Maya, Melbourne, SENT OUT QUEST, Type, 7
+088, The Maya, Melbourne, RECEIVED QUEST, Find Natural Wonder, Friendship: 18 to 18, MINOR_CIV_MELBOURNE
+088, Polynesia, Malacca, SENT OUT QUEST, Type, 3
+088, Polynesia, Malacca, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MALACCA
+089, Buenos Aires, Portugal, RECEIVED_UNIT_GIFT, Warrior
+089, The Aztecs, Antananarivo, lost friend
+089, Babylon, Antananarivo, SENT OUT QUEST, Type, 16
+089, Babylon, Antananarivo, RECEIVED QUEST, Spread Religion, Friendship: 20 to 20, MINOR_CIV_ANTANANARIVO
+089, Spain, Kyiv, SENT OUT QUEST, Type, 7
+089, Spain, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_KIEV
+089, The Maya, Kyiv, SENT OUT QUEST, Type, 3
+089, The Maya, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+090, Polynesia, Cape Town, SENT OUT QUEST, Type, 1
+090, Polynesia, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+090, America, Zurich, SENT OUT QUEST, Type, 1
+090, America, Zurich, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZURICH
+090, Byzantium, Sidon, SENT OUT QUEST, Type, 14
+090, Byzantium, Sidon, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SIDON
+090, Babylon, Vilnius, gained friend
+090, Babylon, Vilnius, FINISHED QUEST, Connect Resource, Friendship: -4 to 35, MINOR_CIV_VILNIUS
+090, Babylon, Antananarivo, SENT OUT QUEST, Type, 12
+090, Babylon, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 19 to 19, MINOR_CIV_ANTANANARIVO
+090, The Maya, Antananarivo, SENT OUT QUEST, Type, 12
+090, The Maya, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+090, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 12
+090, The Aztecs, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 27 to 27, MINOR_CIV_ANTANANARIVO
+091, Spain, Antananarivo, SENT OUT QUEST, Type, 12
+091, Spain, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+091, Polynesia, Melbourne, era change yield update
+091, Polynesia, Sidon, era change yield update
+091, Polynesia, Vilnius, era change yield update
+091, Polynesia, Zanzibar, era change yield update
+091, Polynesia, Kabul, era change yield update
+091, Polynesia, Malacca, era change yield update
+091, Polynesia, Buenos Aires, era change yield update
+091, Polynesia, Riga, era change yield update
+091, Polynesia, Zurich, era change yield update
+091, Polynesia, Singapore, era change yield update
+091, Polynesia, Cape Town, era change yield update
+091, Polynesia, Almaty, era change yield update
+091, Polynesia, Kathmandu, era change yield update
+091, Polynesia, Byblos, era change yield update
+091, Polynesia, Antananarivo, era change yield update
+091, Polynesia, Kyiv, era change yield update
+091, Polynesia, Malacca, SENT OUT QUEST, Type, 1
+091, Polynesia, Malacca, SENT OUT QUEST, Type, 17
+091, Polynesia, Malacca, SENT OUT QUEST, Type, 3
+091, Polynesia, Riga, SENT OUT QUEST, Type, 1
+091, Polynesia, Riga, SENT OUT QUEST, Type, 17
+091, Polynesia, Zurich, SENT OUT QUEST, Type, 1
+091, Polynesia, Zurich, SENT OUT QUEST, Type, 17
+091, Polynesia, Zurich, SENT OUT QUEST, Type, 4
+091, Polynesia, Cape Town, SENT OUT QUEST, Type, 1
+091, Polynesia, Almaty, SENT OUT QUEST, Type, 4
+091, Polynesia, Kyiv, SENT OUT QUEST, Type, 1
+092, Babylon, Melbourne, era change yield update
+092, Babylon, Sidon, era change yield update
+092, Babylon, Vilnius, era change yield update
+092, Babylon, Zanzibar, era change yield update
+092, Babylon, Kabul, era change yield update
+092, Babylon, Malacca, era change yield update
+092, Babylon, Buenos Aires, era change yield update
+092, Babylon, Riga, era change yield update
+092, Babylon, Zurich, era change yield update
+092, Babylon, Singapore, era change yield update
+092, Babylon, Cape Town, era change yield update
+092, Babylon, Almaty, era change yield update
+092, Babylon, Kathmandu, era change yield update
+092, Babylon, Byblos, era change yield update
+092, Babylon, Antananarivo, era change yield update
+092, Babylon, Kyiv, era change yield update
+092, Babylon, Melbourne, SENT OUT QUEST, Type, 7
+092, Babylon, Melbourne, SENT OUT QUEST, Type, 2
+092, Babylon, Melbourne, SENT OUT QUEST, Type, 13
+092, Babylon, Sidon, SENT OUT QUEST, Type, 2
+092, Babylon, Sidon, SENT OUT QUEST, Type, 7
+092, Babylon, Vilnius, SENT OUT QUEST, Type, 7
+092, Babylon, Zanzibar, SENT OUT QUEST, Type, 2
+092, Babylon, Zanzibar, SENT OUT QUEST, Type, 4
+092, Babylon, Cape Town, SENT OUT QUEST, Type, 7
+092, Babylon, Cape Town, SENT OUT QUEST, Type, 1
+092, Babylon, Cape Town, SENT OUT QUEST, Type, 17
+092, Babylon, Byblos, SENT OUT QUEST, Type, 17
+092, Babylon, Antananarivo, SENT OUT QUEST, Type, 3
+092, Babylon, Antananarivo, SENT OUT QUEST, Type, 16
+092, Babylon, Antananarivo, SENT OUT QUEST, Type, 12
+092, Spain, Antananarivo, SENT OUT QUEST, Type, 12
+092, Spain, Melbourne, gained friend
+092, Spain, Melbourne, FINISHED QUEST, Trade Route, Friendship: 5 to 45, MINOR_CIV_MELBOURNE
+092, Babylon, Zanzibar, SENT OUT QUEST, Type, 10
+092, Babylon, Zanzibar, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+092, Portugal, Zanzibar, SENT OUT QUEST, Type, 10
+092, Portugal, Zanzibar, RECEIVED QUEST, Contest Culture, Friendship: 4 to 4, MINOR_CIV_ZANZIBAR
+092, The Maya, Zanzibar, SENT OUT QUEST, Type, 10
+092, The Maya, Zanzibar, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+092, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 10
+092, The Aztecs, Zanzibar, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+092, America, Malacca, gained friend
+092, America, Malacca, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_MALACCA
+093, Babylon, Kabul, SENT OUT QUEST, Type, 13
+093, Babylon, Kabul, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+093, The Aztecs, Sidon, SENT OUT QUEST, Type, 7
+093, The Aztecs, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 15 to 15, MINOR_CIV_SIDON
+093, Portugal, Buenos Aires, SENT OUT QUEST, Type, 4
+093, Portugal, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 80 to 80, MINOR_CIV_BUENOS_AIRES
+094, Spain, Melbourne, era change yield update
+094, Spain, Sidon, era change yield update
+094, Spain, Vilnius, era change yield update
+094, Spain, Zanzibar, era change yield update
+094, Spain, Kabul, era change yield update
+094, Spain, Malacca, era change yield update
+094, Spain, Buenos Aires, era change yield update
+094, Spain, Riga, era change yield update
+094, Spain, Zurich, era change yield update
+094, Spain, Singapore, era change yield update
+094, Spain, Cape Town, era change yield update
+094, Spain, Almaty, era change yield update
+094, Spain, Kathmandu, era change yield update
+094, Spain, Byblos, era change yield update
+094, Spain, Antananarivo, era change yield update
+094, Spain, Kyiv, era change yield update
+094, Spain, Melbourne, SENT OUT QUEST, Type, 2
+094, Spain, Melbourne, SENT OUT QUEST, Type, 13
+094, Spain, Sidon, SENT OUT QUEST, Type, 2
+094, Spain, Sidon, SENT OUT QUEST, Type, 17
+094, Spain, Kabul, SENT OUT QUEST, Type, 13
+094, Spain, Kathmandu, SENT OUT QUEST, Type, 1
+094, Spain, Antananarivo, SENT OUT QUEST, Type, 12
+094, Spain, Kyiv, SENT OUT QUEST, Type, 1
+094, Spain, Kyiv, SENT OUT QUEST, Type, 7
+094, Portugal, Melbourne, era change yield update
+094, Portugal, Sidon, era change yield update
+094, Portugal, Vilnius, era change yield update
+094, Portugal, Zanzibar, era change yield update
+094, Portugal, Kabul, era change yield update
+094, Portugal, Malacca, era change yield update
+094, Portugal, Buenos Aires, era change yield update
+094, Portugal, Riga, era change yield update
+094, Portugal, Zurich, era change yield update
+094, Portugal, Singapore, era change yield update
+094, Portugal, Cape Town, era change yield update
+094, Portugal, Almaty, era change yield update
+094, Portugal, Kathmandu, era change yield update
+094, Portugal, Byblos, era change yield update
+094, Portugal, Antananarivo, era change yield update
+094, Portugal, Kyiv, era change yield update
+094, Portugal, Zanzibar, SENT OUT QUEST, Type, 10
+094, Portugal, Kabul, SENT OUT QUEST, Type, 3
+094, Portugal, Kabul, SENT OUT QUEST, Type, 13
+094, Portugal, Kabul, SENT OUT QUEST, Type, 16
+094, Portugal, Buenos Aires, SENT OUT QUEST, Type, 4
+094, Portugal, Kathmandu, SENT OUT QUEST, Type, 1
+094, Portugal, Kathmandu, SENT OUT QUEST, Type, 17
+094, Portugal, Kathmandu, SENT OUT QUEST, Type, 16
+094, Portugal, Kyiv, SENT OUT QUEST, Type, 1
+094, Portugal, Kyiv, SENT OUT QUEST, Type, 2
+094, Babylon, Vilnius, lost friend
+095, Byzantium, Melbourne, SENT OUT QUEST, Type, 13
+095, Byzantium, Melbourne, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+095, Polynesia, Singapore, SENT OUT QUEST, Type, 4
+095, Polynesia, Singapore, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+095, Byzantium, Kyiv, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_KIEV
+096, Spain, Cape Town, SENT OUT QUEST, Type, 1
+096, Spain, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+096, Polynesia, Zurich, gained friend
+096, Polynesia, Zurich, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_ZURICH
+096, Polynesia, Singapore, gained friend
+096, Polynesia, Singapore, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+096, Polynesia, Almaty, gained friend
+096, Polynesia, Almaty, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_ALMATY
+096, Byzantium, Melbourne, era change yield update
+096, Byzantium, Sidon, era change yield update
+096, Byzantium, Vilnius, era change yield update
+096, Byzantium, Zanzibar, era change yield update
+096, Byzantium, Kabul, era change yield update
+096, Byzantium, Malacca, era change yield update
+096, Byzantium, Buenos Aires, era change yield update
+096, Byzantium, Riga, era change yield update
+096, Byzantium, Zurich, era change yield update
+096, Byzantium, Singapore, era change yield update
+096, Byzantium, Cape Town, era change yield update
+096, Byzantium, Almaty, era change yield update
+096, Byzantium, Kathmandu, era change yield update
+096, Byzantium, Byblos, era change yield update
+096, Byzantium, Antananarivo, era change yield update
+096, Byzantium, Kyiv, era change yield update
+096, Byzantium, Melbourne, SENT OUT QUEST, Type, 13
+096, Byzantium, Sidon, SENT OUT QUEST, Type, 14
+096, Byzantium, Kabul, SENT OUT QUEST, Type, 2
+096, Byzantium, Kabul, SENT OUT QUEST, Type, 13
+096, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 2
+096, Byzantium, Cape Town, SENT OUT QUEST, Type, 1
+096, Byzantium, Cape Town, SENT OUT QUEST, Type, 2
+096, Byzantium, Cape Town, SENT OUT QUEST, Type, 16
+096, Byzantium, Kathmandu, SENT OUT QUEST, Type, 1
+096, Byzantium, Kathmandu, SENT OUT QUEST, Type, 16
+096, Byzantium, Byblos, SENT OUT QUEST, Type, 14
+096, Byzantium, Kyiv, SENT OUT QUEST, Type, 1
+096, Byzantium, Kyiv, SENT OUT QUEST, Type, 17
+096, Spain, Kabul, SENT OUT QUEST, Type, 2
+096, Spain, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+096, Polynesia, Riga, SENT OUT QUEST, Type, 7
+096, Polynesia, Riga, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_RIGA
+096, Spain, Kyiv, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KIEV
+096, Polynesia, Kyiv, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KIEV
+096, Portugal, Kyiv, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KIEV
+096, Byzantium, Kyiv, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KIEV
+096, The Maya, Kyiv, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+096, The Aztecs, Kyiv, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+096, The Aztecs, Kyiv, SENT OUT QUEST, Type, 4
+096, The Aztecs, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+097, America, Melbourne, era change yield update
+097, America, Sidon, era change yield update
+097, America, Vilnius, era change yield update
+097, America, Zanzibar, era change yield update
+097, America, Kabul, era change yield update
+097, America, Malacca, era change yield update
+097, America, Buenos Aires, era change yield update
+097, America, Riga, era change yield update
+097, America, Zurich, era change yield update
+097, America, Singapore, era change yield update
+097, America, Cape Town, era change yield update
+097, America, Almaty, era change yield update
+097, America, Kathmandu, era change yield update
+097, America, Byblos, era change yield update
+097, America, Antananarivo, era change yield update
+097, America, Kyiv, era change yield update
+097, America, Malacca, SENT OUT QUEST, Type, 1
+097, America, Malacca, SENT OUT QUEST, Type, 17
+097, America, Riga, SENT OUT QUEST, Type, 1
+097, America, Zurich, SENT OUT QUEST, Type, 1
+097, The Aztecs, Melbourne, era change yield update
+097, The Aztecs, Sidon, era change yield update
+097, The Aztecs, Vilnius, era change yield update
+097, The Aztecs, Zanzibar, era change yield update
+097, The Aztecs, Kabul, era change yield update
+097, The Aztecs, Malacca, era change yield update
+097, The Aztecs, Buenos Aires, era change yield update
+097, The Aztecs, Riga, era change yield update
+097, The Aztecs, Zurich, era change yield update
+097, The Aztecs, Singapore, era change yield update
+097, The Aztecs, Cape Town, era change yield update
+097, The Aztecs, Almaty, era change yield update
+097, The Aztecs, Kathmandu, era change yield update
+097, The Aztecs, Byblos, era change yield update
+097, The Aztecs, Antananarivo, era change yield update
+097, The Aztecs, Kyiv, era change yield update
+097, The Aztecs, Melbourne, SENT OUT QUEST, Type, 2
+097, The Aztecs, Melbourne, SENT OUT QUEST, Type, 3
+097, The Aztecs, Melbourne, SENT OUT QUEST, Type, 13
+097, The Aztecs, Sidon, SENT OUT QUEST, Type, 7
+097, The Aztecs, Vilnius, SENT OUT QUEST, Type, 2
+097, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 2
+097, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 7
+097, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 10
+097, The Aztecs, Kabul, SENT OUT QUEST, Type, 2
+097, The Aztecs, Kabul, SENT OUT QUEST, Type, 13
+097, The Aztecs, Kabul, SENT OUT QUEST, Type, 14
+097, The Aztecs, Cape Town, SENT OUT QUEST, Type, 1
+097, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+097, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 7
+097, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 12
+097, The Aztecs, Kyiv, SENT OUT QUEST, Type, 7
+097, The Aztecs, Kyiv, SENT OUT QUEST, Type, 4
+098, America, Malacca, gained ally
+098, America, Malacca, Gold Gift: 250, Friendship: 37 to 62, Conquest, MINOR_CIV_MALACCA, Boost! , Passing Polynesia
+098, Byzantium, Antananarivo, SENT OUT QUEST, Type, 12
+098, Byzantium, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+098, The Aztecs, Vilnius, SENT OUT QUEST, Type, 14
+098, The Aztecs, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+098, Portugal, Kabul, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_KABUL
+098, Babylon, Kabul, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+098, Spain, Kabul, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+098, Byzantium, Kabul, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+098, The Maya, Kabul, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KABUL
+098, The Aztecs, Kabul, FINISHED QUEST, Invest, Friendship: -1 to -1, MINOR_CIV_KABUL
+098, The Maya, Kabul, SENT OUT QUEST, Type, 4
+098, The Maya, Kabul, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KABUL
+098, Portugal, Antananarivo, SENT OUT QUEST, Type, 12
+098, Portugal, Antananarivo, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+098, Portugal, Kyiv, SENT OUT QUEST, Type, 3
+098, Portugal, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KIEV
+099, America, Malacca, Gold Gift: 250, Friendship: 61 to 61, Conquest, MINOR_CIV_MALACCA, (SAVING) , Boost! , Passing Polynesia
+099, Portugal, Antananarivo, SENT OUT QUEST, Type, 12
+099, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+099, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 7
+099, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 12
+099, America, Malacca, lost ally
+100, Byzantium, Zanzibar, SENT OUT QUEST, Type, 10
+100, Byzantium, Zanzibar, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+100, Buenos Aires, Portugal, RECEIVED_UNIT_GIFT, Spearman
+102, The Maya, Zanzibar, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+102, Spain, Zanzibar, SENT OUT QUEST, Type, 10
+102, Spain, Zanzibar, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+102, Polynesia, Singapore, lost friend
+102, Polynesia, Almaty, lost friend
+103, Spain, Zanzibar, SENT OUT QUEST, Type, 10
+103, Spain, Melbourne, lost friend
+103, Spain, Melbourne, FINISHED QUEST, Invest, Friendship: 28 to 28, MINOR_CIV_MELBOURNE
+103, The Maya, Melbourne, FINISHED QUEST, Invest, Friendship: 2 to 2, MINOR_CIV_MELBOURNE
+103, Babylon, Melbourne, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+103, Byzantium, Melbourne, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+103, The Aztecs, Melbourne, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+103, Byzantium, Sidon, SENT OUT QUEST, Type, 16
+103, Byzantium, Sidon, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_SIDON
+103, Babylon, Byblos, SENT OUT QUEST, Type, 0
+103, Babylon, Byblos, RECEIVED QUEST, Route, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+104, Spain, Kathmandu, SENT OUT QUEST, Type, 2
+104, Spain, Kathmandu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+104, The Maya, Antananarivo, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+105, Polynesia, Cape Town, SENT OUT QUEST, Type, 14
+105, Polynesia, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+105, Byzantium, Byblos, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+105, Spain, Antananarivo, SENT OUT QUEST, Type, 7
+105, Spain, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+106, The Aztecs, Kabul, cancelled, Bully City-State, Friendship: -4 to -4, MINOR_CIV_KABUL
+106, Polynesia, Zurich, lost friend
+106, The Aztecs, Cape Town, SENT OUT QUEST, Type, 2
+106, The Aztecs, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+106, The Aztecs, Byblos, SENT OUT QUEST, Type, 3
+106, The Aztecs, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+107, The Aztecs, Melbourne, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+107, Polynesia, Buenos Aires, SENT OUT QUEST, Type, 4
+107, Polynesia, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+107, Portugal, Kathmandu, gained friend
+107, Portugal, Kathmandu, gained ally
+107, Portugal, Kathmandu, FINISHED QUEST, Kill Camp, Friendship: 14 to 64, MINOR_CIV_KATHMANDU
+107, Polynesia, Kyiv, SENT OUT QUEST, Type, 7
+107, Polynesia, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_KIEV
+108, Byzantium, Kathmandu, SENT OUT QUEST, Type, 1
+108, Byzantium, Kathmandu, SENT OUT QUEST, Type, 16
+108, Babylon, Kabul, SENT OUT QUEST, Type, 7
+108, Babylon, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: -4 to -4, MINOR_CIV_KABUL
+108, Portugal, Kathmandu, FINISHED QUEST, Spread Religion, Friendship: 63 to 103, MINOR_CIV_KATHMANDU
+108, Spain, Kathmandu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+108, Byzantium, Kathmandu, cancelled, Kill Camp, Friendship: 2 to 2, MINOR_CIV_KATHMANDU
+108, The Maya, Kathmandu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+109, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 14
+109, Byzantium, Buenos Aires, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+109, Polynesia, Almaty, SENT OUT QUEST, Type, 7
+109, Polynesia, Almaty, RECEIVED QUEST, Find Natural Wonder, Friendship: 19 to 19, MINOR_CIV_ALMATY
+110, Byzantium, Sidon, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SIDON
+110, Portugal, Zanzibar, SENT OUT QUEST, Type, 17
+110, Portugal, Zanzibar, RECEIVED QUEST, Trade Route, Friendship: -10 to -10, MINOR_CIV_ZANZIBAR
+110, Byzantium, Kabul, gained friend
+110, Byzantium, Kabul, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KABUL
+110, Portugal, Kabul, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KABUL
+110, Polynesia, Malacca, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MALACCA
+110, Buenos Aires, Portugal, RECEIVED_UNIT_GIFT, Warrior
+110, Byzantium, Buenos Aires, gained friend
+110, Byzantium, Buenos Aires, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BUENOS_AIRES
+110, Spain, Antananarivo, gained friend
+110, Spain, Antananarivo, FINISHED QUEST, Contest Techs, Friendship: 5 to 45, MINOR_CIV_ANTANANARIVO
+110, Babylon, Antananarivo, gained friend
+110, Babylon, Antananarivo, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+110, The Maya, Antananarivo, gained friend
+110, The Maya, Antananarivo, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+110, The Aztecs, Antananarivo, gained friend
+110, The Aztecs, Antananarivo, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_ANTANANARIVO
+110, Babylon, Antananarivo, cancelled, Construct Wonder, Friendship: 40 to 40, MINOR_CIV_ANTANANARIVO
+110, Portugal, Antananarivo, cancelled, Contest Techs, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+110, Byzantium, Antananarivo, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+111, Babylon, Sidon, SENT OUT QUEST, Type, 13
+111, Babylon, Sidon, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_SIDON
+111, Spain, Sidon, SENT OUT QUEST, Type, 13
+111, Spain, Sidon, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_SIDON
+111, Polynesia, Sidon, SENT OUT QUEST, Type, 13
+111, Polynesia, Sidon, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SIDON
+111, Byzantium, Sidon, SENT OUT QUEST, Type, 13
+111, Byzantium, Sidon, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SIDON
+111, The Maya, Sidon, SENT OUT QUEST, Type, 13
+111, The Maya, Sidon, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SIDON
+111, The Aztecs, Sidon, SENT OUT QUEST, Type, 13
+111, The Aztecs, Sidon, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_SIDON
+111, The Aztecs, Sidon, SENT OUT QUEST, Type, 4
+111, The Aztecs, Sidon, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_SIDON
+111, Byzantium, Kabul, SENT OUT QUEST, Type, 4
+111, Byzantium, Kabul, RECEIVED QUEST, Great Person, Friendship: 38 to 38, MINOR_CIV_KABUL
+112, Byzantium, Melbourne, SENT OUT QUEST, Type, 2
+112, Byzantium, Melbourne, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+112, Portugal, Zanzibar, gained friend
+112, Portugal, Zanzibar, FINISHED QUEST, Contest Culture, Friendship: -7 to 32, MINOR_CIV_ZANZIBAR
+112, Babylon, Zanzibar, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+112, Spain, Zanzibar, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+112, Byzantium, Zanzibar, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+112, The Maya, Zanzibar, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+112, The Aztecs, Zanzibar, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+113, Babylon, Vilnius, SENT OUT QUEST, Type, 2
+113, Babylon, Vilnius, RECEIVED QUEST, Connect Resource, Friendship: 1 to 1, MINOR_CIV_VILNIUS
+113, America, Malacca, SENT OUT QUEST, Type, 2
+113, America, Malacca, RECEIVED QUEST, Connect Resource, Friendship: 38 to 38, MINOR_CIV_MALACCA
+113, Spain, Byblos, SENT OUT QUEST, Type, 14
+113, Spain, Byblos, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+113, Spain, Kyiv, SENT OUT QUEST, Type, 4
+113, Spain, Kyiv, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_KIEV
+114, Portugal, Sidon, SENT OUT QUEST, Type, 13
+114, Portugal, Sidon, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SIDON
+114, Byzantium, Kabul, gained ally
+114, Byzantium, Kabul, FINISHED QUEST, Great Person, Friendship: 35 to 75, MINOR_CIV_KABUL
+114, Portugal, Zanzibar, lost friend
+114, Portugal, Buenos Aires, lost ally
+114, Byzantium, Buenos Aires, cancelled, Bully City-State, Friendship: 34 to 34, MINOR_CIV_BUENOS_AIRES
+114, Byzantium, Kyiv, SENT OUT QUEST, Type, 4
+114, Byzantium, Kyiv, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_KIEV
+115, Babylon, Vilnius, SENT OUT QUEST, Type, 13
+115, Babylon, Vilnius, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+115, Spain, Vilnius, SENT OUT QUEST, Type, 13
+115, Spain, Vilnius, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_VILNIUS
+115, Byzantium, Vilnius, SENT OUT QUEST, Type, 13
+115, Byzantium, Vilnius, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+115, The Maya, Vilnius, SENT OUT QUEST, Type, 13
+115, The Maya, Vilnius, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+115, The Aztecs, Vilnius, SENT OUT QUEST, Type, 13
+115, The Aztecs, Vilnius, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+115, Spain, Kabul, SENT OUT QUEST, Type, 7
+115, Spain, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+115, Polynesia, Riga, gained friend
+115, Polynesia, Riga, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_RIGA
+116, Spain, Antananarivo, Gold Gift: 250, Friendship: 37 to 57, Diplomacy, MINOR_CIV_ANTANANARIVO, Boost! , Passing The Aztecs
+116, Spain, Vilnius, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_VILNIUS, (SAVING) 
+116, Polynesia, Riga, SENT OUT QUEST, Type, 17
+116, Polynesia, Riga, SENT OUT QUEST, Type, 7
+116, Byzantium, Vilnius, SENT OUT QUEST, Type, 16
+116, Byzantium, Vilnius, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+116, Portugal, Buenos Aires, SENT OUT QUEST, Type, 3
+116, Portugal, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 55 to 55, MINOR_CIV_BUENOS_AIRES
+116, America, Riga, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_RIGA
+116, Polynesia, Zurich, gained friend
+116, Polynesia, Zurich, FINISHED QUEST, Trade Route, Friendship: 7 to 47, MINOR_CIV_ZURICH
+116, Byzantium, Kathmandu, SENT OUT QUEST, Type, 17
+116, Byzantium, Kathmandu, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+116, The Aztecs, Byblos, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+116, The Maya, Kyiv, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+117, Portugal, Buenos Aires, SENT OUT QUEST, Type, 4
+117, Portugal, Buenos Aires, SENT OUT QUEST, Type, 3
+117, Spain, Melbourne, SENT OUT QUEST, Type, 7
+117, Spain, Melbourne, RECEIVED QUEST, Find Natural Wonder, Friendship: 7 to 7, MINOR_CIV_MELBOURNE
+117, Malacca, Polynesia, RECEIVED_UNIT_GIFT, Maori Warrior
+117, Malacca, America, RECEIVED_UNIT_GIFT, Archer
+117, Byzantium, Buenos Aires, lost friend
+117, America, Zurich, SENT OUT QUEST, Type, 17
+117, America, Zurich, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_ZURICH
+117, Polynesia, Singapore, SENT OUT QUEST, Type, 7
+117, Polynesia, Singapore, RECEIVED QUEST, Find Natural Wonder, Friendship: 7 to 7, MINOR_CIV_SINGAPORE
+117, Babylon, Byblos, SENT OUT QUEST, Type, 13
+117, Babylon, Byblos, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+117, Spain, Byblos, SENT OUT QUEST, Type, 13
+117, Spain, Byblos, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+117, Polynesia, Byblos, SENT OUT QUEST, Type, 13
+117, Polynesia, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+117, Byzantium, Byblos, SENT OUT QUEST, Type, 13
+117, Byzantium, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+117, The Aztecs, Byblos, SENT OUT QUEST, Type, 13
+117, The Aztecs, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+117, Babylon, Antananarivo, lost friend
+117, The Maya, Antananarivo, lost friend
+117, The Aztecs, Antananarivo, lost friend
+117, Kyiv, Polynesia, RECEIVED_UNIT_GIFT, Maori Warrior
+118, Polynesia, Vilnius, SENT OUT QUEST, Type, 13
+118, Polynesia, Vilnius, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+118, Portugal, Kabul, SENT OUT QUEST, Type, 16
+118, Portugal, Kabul, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_KABUL
+118, Byzantium, Kathmandu, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_KATHMANDU
+118, Byzantium, Kathmandu, cancelled, Trade Route, Friendship: -60 to -60, MINOR_CIV_KATHMANDU
+118, Spain, Melbourne, gained friend
+118, Spain, Melbourne, FINISHED QUEST, Find Natural Wonder, Friendship: 6 to 46, MINOR_CIV_MELBOURNE
+118, The Aztecs, Vilnius, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+118, Spain, Kabul, gained friend
+118, Spain, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+118, The Aztecs, Kabul, SENT OUT QUEST, Type, 7
+118, The Aztecs, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+118, Polynesia, Malacca, gained friend
+118, Polynesia, Malacca, FINISHED QUEST, Kill Camp, Friendship: 7 to 57, MINOR_CIV_MALACCA
+118, The Aztecs, Buenos Aires, SENT OUT QUEST, Type, 4
+118, The Aztecs, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+118, Polynesia, Zurich, gained ally
+118, Polynesia, Zurich, FINISHED QUEST, Kill Camp, Friendship: 44 to 94, MINOR_CIV_ZURICH
+118, Spain, Antananarivo, gained ally
+118, Spain, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 53 to 93, MINOR_CIV_ANTANANARIVO
+118, Spain, Kyiv, gained friend
+118, Spain, Kyiv, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_KIEV
+119, Polynesia, Buenos Aires, gained friend
+119, Polynesia, Buenos Aires, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_BUENOS_AIRES
+119, Portugal, Kyiv, SENT OUT QUEST, Type, 2
+119, Portugal, Kyiv, SENT OUT QUEST, Type, 3
+119, The Aztecs, Melbourne, SENT OUT QUEST, Type, 17
+119, The Aztecs, Melbourne, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+119, Spain, Sidon, gained friend
+119, Spain, Sidon, FINISHED QUEST, Connect Resource, Friendship: 1 to 41, MINOR_CIV_SIDON
+119, The Maya, Zanzibar, SENT OUT QUEST, Type, 3
+119, The Maya, Zanzibar, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+119, Byzantium, Kabul, lost ally
+119, Spain, Kabul, gained ally
+119, Spain, Kabul, FINISHED QUEST, Connect Resource, Friendship: 38 to 78, MINOR_CIV_KABUL
+119, America, Malacca, cancelled, Kill Camp, Friendship: 34 to 34, MINOR_CIV_MALACCA
+119, America, Zurich, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ZURICH
+119, Portugal, Antananarivo, SENT OUT QUEST, Type, 7
+119, Portugal, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+119, Portugal, Kyiv, gained friend
+119, Portugal, Kyiv, FINISHED QUEST, Construct Wonder, Friendship: 3 to 43, MINOR_CIV_KIEV
+120, The Aztecs, Melbourne, gained friend
+120, The Aztecs, Melbourne, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MELBOURNE
+120, America, Malacca, gained ally
+120, America, Malacca, FINISHED QUEST, Connect Resource, Friendship: 33 to 73, MINOR_CIV_MALACCA
+120, The Aztecs, Cape Town, gained friend
+120, The Aztecs, Cape Town, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_CAPE_TOWN
+120, Spain, Cape Town, SENT OUT QUEST, Type, 7
+120, Spain, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+121, Spain, Vilnius, gained friend
+121, Spain, Vilnius, gained ally
+121, Spain, Vilnius, Gold Gift: 500, Friendship: 5 to 80, Diplomacy, MINOR_CIV_VILNIUS
+121, Spain, Byblos, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_BYBLOS, (SAVING) 
+121, Spain, Melbourne, gained ally
+121, Spain, Melbourne, FINISHED QUEST, Connect Resource, Friendship: 41 to 81, MINOR_CIV_MELBOURNE
+121, Spain, Buenos Aires, SENT OUT QUEST, Type, 1
+121, Spain, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: -3 to -3, MINOR_CIV_BUENOS_AIRES
+121, Polynesia, Buenos Aires, SENT OUT QUEST, Type, 1
+121, Polynesia, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 35 to 35, MINOR_CIV_BUENOS_AIRES
+121, America, Buenos Aires, SENT OUT QUEST, Type, 1
+121, America, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+121, Portugal, Buenos Aires, SENT OUT QUEST, Type, 1
+121, Portugal, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 48 to 48, MINOR_CIV_BUENOS_AIRES
+121, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 1
+121, Byzantium, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 23 to 23, MINOR_CIV_BUENOS_AIRES
+121, The Aztecs, Buenos Aires, SENT OUT QUEST, Type, 1
+121, The Aztecs, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+121, Zurich, America, RECEIVED_UNIT_GIFT, Warrior
+121, Spain, Kathmandu, gained friend
+121, Spain, Kathmandu, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KATHMANDU
+121, Spain, Kathmandu, SENT OUT QUEST, Type, 7
+121, Spain, Kathmandu, RECEIVED QUEST, Find Natural Wonder, Friendship: 40 to 40, MINOR_CIV_KATHMANDU
+122, The Aztecs, Sidon, gained friend
+122, The Aztecs, Sidon, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SIDON
+122, The Aztecs, Zanzibar, gained friend
+122, The Aztecs, Zanzibar, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ZANZIBAR
+122, Byzantium, Zanzibar, SENT OUT QUEST, Type, 4
+122, Byzantium, Zanzibar, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+122, The Aztecs, Kabul, gained friend
+122, The Aztecs, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+122, The Aztecs, Antananarivo, gained friend
+122, The Aztecs, Antananarivo, FINISHED QUEST, Find Natural Wonder, Friendship: 22 to 62, MINOR_CIV_ANTANANARIVO
+122, The Aztecs, Kyiv, gained friend
+122, The Aztecs, Kyiv, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KIEV
+123, The Aztecs, Vilnius, gained friend
+123, The Aztecs, Vilnius, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+123, The Aztecs, Zanzibar, gained ally
+123, The Aztecs, Zanzibar, FINISHED QUEST, Connect Resource, Friendship: 38 to 78, MINOR_CIV_ZANZIBAR
+123, Spain, Zanzibar, SENT OUT QUEST, Type, 2
+123, Spain, Zanzibar, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ZANZIBAR
+123, Spain, Kabul, lost ally
+123, The Aztecs, Kabul, gained ally
+123, The Aztecs, Kabul, FINISHED QUEST, Connect Resource, Friendship: 38 to 78, MINOR_CIV_KABUL
+123, Polynesia, Zurich, SENT OUT QUEST, Type, 4
+123, Polynesia, Zurich, RECEIVED QUEST, Great Person, Friendship: 87 to 87, MINOR_CIV_ZURICH
+123, Spain, Antananarivo, lost ally
+123, The Aztecs, Antananarivo, gained ally
+123, The Aztecs, Antananarivo, FINISHED QUEST, Connect Resource, Friendship: 60 to 100, MINOR_CIV_ANTANANARIVO
+124, The Maya, Zanzibar, SENT OUT QUEST, Type, 2
+124, The Maya, Zanzibar, SENT OUT QUEST, Type, 3
+124, Polynesia, Sidon, SENT OUT QUEST, Type, 7
+124, Polynesia, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SIDON
+124, Polynesia, Riga, lost friend
+125, Polynesia, Buenos Aires, lost friend
+125, Polynesia, Cape Town, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+125, Byzantium, Antananarivo, SENT OUT QUEST, Type, 2
+125, Byzantium, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+125, The Maya, Antananarivo, SENT OUT QUEST, Type, 3
+125, The Maya, Antananarivo, RECEIVED QUEST, Construct Wonder, Friendship: 17 to 17, MINOR_CIV_ANTANANARIVO
+126, Polynesia, Riga, SENT OUT QUEST, Type, 17
+126, Polynesia, Riga, SENT OUT QUEST, Type, 7
+126, Byzantium, Melbourne, SENT OUT QUEST, Type, 4
+126, Byzantium, Melbourne, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+126, Portugal, Zanzibar, SENT OUT QUEST, Type, 4
+126, Portugal, Zanzibar, RECEIVED QUEST, Great Person, Friendship: 11 to 11, MINOR_CIV_ZANZIBAR
+126, America, Buenos Aires, SENT OUT QUEST, Type, 3
+126, America, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+126, Spain, Kathmandu, lost friend
+126, Portugal, Kathmandu, FINISHED QUEST, Trade Route, Friendship: 73 to 113, MINOR_CIV_KATHMANDU
+126, Portugal, Kathmandu, SENT OUT QUEST, Type, 4
+126, Portugal, Kathmandu, RECEIVED QUEST, Great Person, Friendship: 113 to 113, MINOR_CIV_KATHMANDU
+127, The Aztecs, Melbourne, lost friend
+127, America, Riga, SENT OUT QUEST, Type, 6
+127, America, Riga, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_RIGA
+127, Zurich, America, RECEIVED_UNIT_GIFT, Warrior
+127, The Aztecs, Cape Town, lost friend
+127, Spain, Antananarivo, SENT OUT QUEST, Type, 6
+127, Spain, Antananarivo, RECEIVED QUEST, Find Player, Friendship: 79 to 79, MINOR_CIV_ANTANANARIVO
+128, Spain, Sidon, gained ally
+128, Spain, Sidon, Gold Gift: 250, Friendship: 30 to 60, Diplomacy, MINOR_CIV_SIDON, Boost! , Passing Babylon
+128, Spain, Kyiv, Gold Gift: 250, Friendship: 31 to 31, Diplomacy, MINOR_CIV_KIEV, (SAVING) , Boost! , Passing Byzantium
+128, Spain, Sidon, lost ally
+128, Babylon, Kabul, SENT OUT QUEST, Type, 1
+128, Babylon, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+128, Spain, Kabul, SENT OUT QUEST, Type, 1
+128, Spain, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 65 to 65, MINOR_CIV_KABUL
+128, Portugal, Kabul, SENT OUT QUEST, Type, 1
+128, Portugal, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+128, Byzantium, Kabul, SENT OUT QUEST, Type, 1
+128, Byzantium, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 53 to 53, MINOR_CIV_KABUL
+128, The Maya, Kabul, SENT OUT QUEST, Type, 1
+128, The Maya, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+128, The Aztecs, Kabul, SENT OUT QUEST, Type, 1
+128, The Aztecs, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 71 to 71, MINOR_CIV_KABUL
+128, America, Riga, gained friend
+128, America, Riga, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_RIGA
+128, The Aztecs, Antananarivo, lost ally
+128, Spain, Antananarivo, gained ally
+128, Spain, Antananarivo, FINISHED QUEST, Find Player, Friendship: 78 to 113, MINOR_CIV_ANTANANARIVO
+129, Byzantium, Kyiv, gained friend
+129, Byzantium, Kyiv, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_KIEV
+129, Portugal, Kabul, SENT OUT QUEST, Type, 16
+129, Portugal, Kabul, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KABUL
+129, America, Malacca, lost ally
+129, Spain, Buenos Aires, SENT OUT QUEST, Type, 2
+129, Spain, Buenos Aires, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+129, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 4
+129, Byzantium, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 11 to 11, MINOR_CIV_BUENOS_AIRES
+129, Spain, Kyiv, lost friend
+129, Portugal, Kyiv, lost friend
+129, The Aztecs, Kyiv, lost friend
+129, Polynesia, Kyiv, SENT OUT QUEST, Type, 4
+129, Polynesia, Kyiv, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_KIEV
+130, Spain, Vilnius, Gold Gift: 250, Friendship: 66 to 96, Diplomacy, MINOR_CIV_VILNIUS, Boost! , Passing The Aztecs
+130, Spain, Byblos, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_BYBLOS, (SAVING) 
+130, The Aztecs, Vilnius, lost friend
+130, Spain, Vilnius, SENT OUT QUEST, Type, 4
+130, Spain, Vilnius, RECEIVED QUEST, Great Person, Friendship: 95 to 95, MINOR_CIV_VILNIUS
+130, Polynesia, Buenos Aires, SENT OUT QUEST, Type, 4
+130, Polynesia, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 22 to 22, MINOR_CIV_BUENOS_AIRES
+130, Byzantium, Byblos, SENT OUT QUEST, Type, 2
+130, Byzantium, Byblos, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+131, Byzantium, Zanzibar, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_ZANZIBAR
+131, Byzantium, Kabul, lost friend
+131, Byzantium, Kabul, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_KABUL
+131, Babylon, Melbourne, gained friend
+131, Babylon, Melbourne, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MELBOURNE
+131, Spain, Sidon, FINISHED QUEST, Invest, Friendship: 54 to 54, MINOR_CIV_SIDON
+131, Babylon, Sidon, gained friend
+131, Babylon, Sidon, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_SIDON
+131, Babylon, Sidon, FINISHED QUEST, Invest, Friendship: 45 to 45, MINOR_CIV_SIDON
+131, The Aztecs, Sidon, FINISHED QUEST, Invest, Friendship: 31 to 31, MINOR_CIV_SIDON
+131, Polynesia, Sidon, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SIDON
+131, Portugal, Sidon, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SIDON
+131, Byzantium, Sidon, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SIDON
+131, The Maya, Sidon, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_SIDON
+131, Babylon, Vilnius, gained friend
+131, Babylon, Vilnius, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+131, Zanzibar, Babylon, RECEIVED_UNIT_GIFT, Composite Bowman
+131, Babylon, Kabul, gained friend
+131, Babylon, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+131, America, Riga, lost friend
+131, Polynesia, Singapore, SENT OUT QUEST, Type, 17
+131, Polynesia, Singapore, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+131, Babylon, Cape Town, gained friend
+131, Babylon, Cape Town, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_CAPE_TOWN
+131, Polynesia, Cape Town, SENT OUT QUEST, Type, 7
+131, Polynesia, Cape Town, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+131, Babylon, Kyiv, SENT OUT QUEST, Type, 12
+131, Babylon, Kyiv, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_KIEV
+131, Spain, Kyiv, SENT OUT QUEST, Type, 12
+131, Spain, Kyiv, RECEIVED QUEST, Contest Techs, Friendship: 25 to 25, MINOR_CIV_KIEV
+131, Polynesia, Kyiv, SENT OUT QUEST, Type, 12
+131, Polynesia, Kyiv, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_KIEV
+131, Portugal, Kyiv, SENT OUT QUEST, Type, 12
+131, Portugal, Kyiv, RECEIVED QUEST, Contest Techs, Friendship: 25 to 25, MINOR_CIV_KIEV
+131, Byzantium, Kyiv, SENT OUT QUEST, Type, 12
+131, Byzantium, Kyiv, RECEIVED QUEST, Contest Techs, Friendship: 40 to 40, MINOR_CIV_KIEV
+131, The Maya, Kyiv, SENT OUT QUEST, Type, 12
+131, The Maya, Kyiv, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KIEV
+131, The Aztecs, Kyiv, SENT OUT QUEST, Type, 12
+131, The Aztecs, Kyiv, RECEIVED QUEST, Contest Techs, Friendship: 26 to 26, MINOR_CIV_KIEV
+132, Babylon, Buenos Aires, SENT OUT QUEST, Type, 1
+132, Babylon, Buenos Aires, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+132, Babylon, Kabul, SENT OUT QUEST, Type, 1
+132, Spain, Sidon, SENT OUT QUEST, Type, 4
+132, Spain, Sidon, RECEIVED QUEST, Great Person, Friendship: 52 to 52, MINOR_CIV_SIDON
+132, Portugal, Sidon, SENT OUT QUEST, Type, 16
+132, Portugal, Sidon, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_SIDON
+132, America, Zurich, SENT OUT QUEST, Type, 2
+132, America, Zurich, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ZURICH
+132, Antananarivo, Babylon, RECEIVED_UNIT_GIFT, Swordsman
+133, Spain, Melbourne, Gold Gift: 250, Friendship: 65 to 85, Diplomacy, MINOR_CIV_MELBOURNE, Boost! , Passing The Aztecs
+133, Spain, Byblos, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_BYBLOS, (SAVING) 
+133, Polynesia, Malacca, Gold Gift: 250, Friendship: 36 to 56, Diplomacy, MINOR_CIV_MALACCA, Boost! 
+133, Polynesia, Kyiv, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_KIEV, (SAVING) 
+133, America, Kyiv, SENT OUT QUEST, Type, 12
+133, America, Kyiv, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KIEV
+133, Melbourne, Babylon, RECEIVED_UNIT_GIFT, Swordsman
+133, The Aztecs, Sidon, lost friend
+133, Polynesia, Almaty, SENT OUT QUEST, Type, 17
+133, Polynesia, Almaty, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_ALMATY
+133, Babylon, Kathmandu, SENT OUT QUEST, Type, 13
+133, Babylon, Kathmandu, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+133, Spain, Kathmandu, SENT OUT QUEST, Type, 13
+133, Spain, Kathmandu, RECEIVED QUEST, Invest, Friendship: 13 to 13, MINOR_CIV_KATHMANDU
+133, Portugal, Kathmandu, SENT OUT QUEST, Type, 13
+133, Portugal, Kathmandu, RECEIVED QUEST, Invest, Friendship: 101 to 101, MINOR_CIV_KATHMANDU
+133, The Aztecs, Kathmandu, SENT OUT QUEST, Type, 13
+133, The Aztecs, Kathmandu, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+133, Spain, Byblos, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+133, Byzantium, Kyiv, gained ally
+133, Portugal, Kyiv, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_KIEV
+133, Portugal, Kyiv, cancelled, Contest Techs, Friendship: -60 to -60, MINOR_CIV_KIEV
+133, The Aztecs, Kyiv, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_KIEV
+133, The Aztecs, Kyiv, cancelled, Contest Techs, Friendship: -60 to -60, MINOR_CIV_KIEV
+133, Byzantium, Kyiv, FINISHED QUEST, Trade Route, Friendship: 37 to 77, MINOR_CIV_KIEV
+133, The Aztecs, Sidon, gained friend
+133, The Aztecs, Sidon, gained ally
+133, Byzantium, Sidon, cancelled, Spread Religion, Friendship: -60 to -60, MINOR_CIV_SIDON
+133, The Aztecs, Sidon, FINISHED QUEST, Great Person, Friendship: 28 to 68, MINOR_CIV_SIDON
+133, The Aztecs, Buenos Aires, gained friend
+133, The Aztecs, Buenos Aires, FINISHED QUEST, Great Person, Friendship: -7 to 32, MINOR_CIV_BUENOS_AIRES
+134, Portugal, Buenos Aires, gained ally
+134, Byzantium, Buenos Aires, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_BUENOS_AIRES
+134, Byzantium, Buenos Aires, cancelled, Great Person, Friendship: -60 to -60, MINOR_CIV_BUENOS_AIRES
+134, Portugal, Buenos Aires, FINISHED QUEST, Great Person, Friendship: 30 to 70, MINOR_CIV_BUENOS_AIRES
+134, Portugal, Kathmandu, FINISHED QUEST, Great Person, Friendship: 101 to 141, MINOR_CIV_KATHMANDU
+134, Portugal, Byblos, SENT OUT QUEST, Type, 13
+134, Portugal, Byblos, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+134, The Aztecs, Vilnius, SENT OUT QUEST, Type, 14
+134, The Aztecs, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: 23 to 23, MINOR_CIV_VILNIUS
+134, Zanzibar, Babylon, RECEIVED_UNIT_GIFT, Chariot Archer
+134, The Aztecs, Kabul, SENT OUT QUEST, Type, 0
+134, The Aztecs, Kabul, RECEIVED QUEST, Route, Friendship: 62 to 62, MINOR_CIV_KABUL
+134, The Aztecs, Cape Town, SENT OUT QUEST, Type, 14
+134, The Aztecs, Cape Town, RECEIVED QUEST, Bully City-State, Friendship: 19 to 19, MINOR_CIV_CAPE_TOWN
+134, Babylon, Kathmandu, SENT OUT QUEST, Type, 3
+134, Babylon, Kathmandu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+134, Babylon, Kyiv, SENT OUT QUEST, Type, 4
+134, Babylon, Kyiv, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_KIEV
+135, Polynesia, Kabul, SENT OUT QUEST, Type, 1
+135, Polynesia, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+135, Polynesia, Kathmandu, SENT OUT QUEST, Type, 13
+135, Polynesia, Kathmandu, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+135, Portugal, Buenos Aires, SENT OUT QUEST, Type, 3
+135, Portugal, Buenos Aires, SENT OUT QUEST, Type, 1
+135, The Aztecs, Melbourne, era change yield update
+135, The Aztecs, Sidon, era change yield update
+135, The Aztecs, Vilnius, era change yield update
+135, The Aztecs, Zanzibar, era change yield update
+135, The Aztecs, Kabul, era change yield update
+135, The Aztecs, Malacca, era change yield update
+135, The Aztecs, Buenos Aires, era change yield update
+135, The Aztecs, Riga, era change yield update
+135, The Aztecs, Zurich, era change yield update
+135, The Aztecs, Singapore, era change yield update
+135, The Aztecs, Cape Town, era change yield update
+135, The Aztecs, Almaty, era change yield update
+135, The Aztecs, Kathmandu, era change yield update
+135, The Aztecs, Byblos, era change yield update
+135, The Aztecs, Antananarivo, era change yield update
+135, The Aztecs, Kyiv, era change yield update
+135, The Aztecs, Melbourne, SENT OUT QUEST, Type, 17
+135, The Aztecs, Vilnius, SENT OUT QUEST, Type, 13
+135, The Aztecs, Vilnius, SENT OUT QUEST, Type, 14
+135, The Aztecs, Kabul, SENT OUT QUEST, Type, 1
+135, The Aztecs, Kabul, SENT OUT QUEST, Type, 0
+135, The Aztecs, Buenos Aires, SENT OUT QUEST, Type, 1
+135, The Aztecs, Cape Town, SENT OUT QUEST, Type, 1
+135, The Aztecs, Cape Town, SENT OUT QUEST, Type, 14
+135, The Aztecs, Kathmandu, SENT OUT QUEST, Type, 13
+135, The Aztecs, Byblos, SENT OUT QUEST, Type, 13
+135, The Aztecs, Sidon, SENT OUT QUEST, Type, 2
+135, The Aztecs, Sidon, RECEIVED QUEST, Connect Resource, Friendship: 65 to 65, MINOR_CIV_SIDON
+135, Spain, Vilnius, FINISHED QUEST, Invest, Friendship: 87 to 87, MINOR_CIV_VILNIUS
+135, Babylon, Vilnius, FINISHED QUEST, Invest, Friendship: 34 to 34, MINOR_CIV_VILNIUS
+135, The Aztecs, Vilnius, FINISHED QUEST, Invest, Friendship: 22 to 22, MINOR_CIV_VILNIUS
+135, Polynesia, Vilnius, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+135, The Maya, Vilnius, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+135, Byzantium, Vilnius, FINISHED QUEST, Invest, Friendship: -12 to -12, MINOR_CIV_VILNIUS
+135, Babylon, Kabul, SENT OUT QUEST, Type, 3
+135, Babylon, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 34 to 34, MINOR_CIV_KABUL
+135, The Aztecs, Buenos Aires, lost friend
+135, America, Buenos Aires, gained friend
+135, America, Buenos Aires, FINISHED QUEST, Construct Wonder, Friendship: -3 to 36, MINOR_CIV_BUENOS_AIRES
+135, Polynesia, Byblos, SENT OUT QUEST, Type, 4
+135, Polynesia, Byblos, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+135, The Maya, Kyiv, SENT OUT QUEST, Type, 4
+135, The Maya, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+136, Spain, Melbourne, era change yield update
+136, Spain, Sidon, era change yield update
+136, Spain, Vilnius, era change yield update
+136, Spain, Zanzibar, era change yield update
+136, Spain, Kabul, era change yield update
+136, Spain, Malacca, era change yield update
+136, Spain, Buenos Aires, era change yield update
+136, Spain, Riga, era change yield update
+136, Spain, Zurich, era change yield update
+136, Spain, Singapore, era change yield update
+136, Spain, Cape Town, era change yield update
+136, Spain, Almaty, era change yield update
+136, Spain, Kathmandu, era change yield update
+136, Spain, Byblos, era change yield update
+136, Spain, Antananarivo, era change yield update
+136, Spain, Kyiv, era change yield update
+136, Spain, Sidon, SENT OUT QUEST, Type, 17
+136, Spain, Sidon, SENT OUT QUEST, Type, 4
+136, Spain, Vilnius, SENT OUT QUEST, Type, 4
+136, Spain, Zanzibar, SENT OUT QUEST, Type, 2
+136, Spain, Kabul, SENT OUT QUEST, Type, 1
+136, Spain, Buenos Aires, SENT OUT QUEST, Type, 1
+136, Spain, Buenos Aires, SENT OUT QUEST, Type, 2
+136, Spain, Cape Town, SENT OUT QUEST, Type, 1
+136, Spain, Cape Town, SENT OUT QUEST, Type, 7
+136, Spain, Kathmandu, SENT OUT QUEST, Type, 7
+136, Spain, Kathmandu, SENT OUT QUEST, Type, 13
+136, Spain, Byblos, SENT OUT QUEST, Type, 13
+136, Spain, Kyiv, SENT OUT QUEST, Type, 4
+136, Spain, Kyiv, SENT OUT QUEST, Type, 12
+136, The Aztecs, Zanzibar, lost ally
+136, The Aztecs, Kabul, lost ally
+137, Polynesia, Zurich, Gold Gift: 250, Friendship: 67 to 87, Diplomacy, MINOR_CIV_ZURICH, Boost! 
+137, Polynesia, Kyiv, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_KIEV, (SAVING) 
+137, Byzantium, Kabul, gained friend
+137, The Aztecs, Kabul, SENT OUT QUEST, Type, 1
+137, The Aztecs, Kabul, SENT OUT QUEST, Type, 0
+137, Polynesia, Vilnius, SENT OUT QUEST, Type, 4
+137, Polynesia, Vilnius, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VILNIUS
+137, Byzantium, Kabul, SENT OUT QUEST, Type, 4
+137, Byzantium, Kabul, RECEIVED QUEST, Great Person, Friendship: 39 to 39, MINOR_CIV_KABUL
+137, Babylon, Byblos, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+137, Spain, Byblos, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_BYBLOS
+137, Polynesia, Byblos, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+137, Byzantium, Byblos, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+137, The Aztecs, Byblos, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+137, Portugal, Byblos, FINISHED QUEST, Invest, Friendship: -4 to -4, MINOR_CIV_BYBLOS
+137, Babylon, Antananarivo, SENT OUT QUEST, Type, 2
+137, Babylon, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+138, America, Melbourne, era change yield update
+138, America, Sidon, era change yield update
+138, America, Vilnius, era change yield update
+138, America, Zanzibar, era change yield update
+138, America, Kabul, era change yield update
+138, America, Malacca, era change yield update
+138, America, Buenos Aires, era change yield update
+138, America, Riga, era change yield update
+138, America, Zurich, era change yield update
+138, America, Singapore, era change yield update
+138, America, Cape Town, era change yield update
+138, America, Almaty, era change yield update
+138, America, Kathmandu, era change yield update
+138, America, Byblos, era change yield update
+138, America, Antananarivo, era change yield update
+138, America, Kyiv, era change yield update
+138, America, Malacca, SENT OUT QUEST, Type, 17
+138, America, Buenos Aires, SENT OUT QUEST, Type, 1
+138, America, Zurich, SENT OUT QUEST, Type, 17
+138, America, Zurich, SENT OUT QUEST, Type, 2
+138, America, Kyiv, SENT OUT QUEST, Type, 12
+138, Polynesia, Sidon, SENT OUT QUEST, Type, 14
+138, Polynesia, Sidon, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SIDON
+138, Babylon, Vilnius, lost friend
+138, Babylon, Kabul, lost friend
+138, Polynesia, Malacca, SENT OUT QUEST, Type, 7
+138, Polynesia, Malacca, RECEIVED QUEST, Find Natural Wonder, Friendship: 47 to 47, MINOR_CIV_MALACCA
+138, America, Malacca, SENT OUT QUEST, Type, 7
+138, America, Malacca, RECEIVED QUEST, Find Natural Wonder, Friendship: 46 to 46, MINOR_CIV_MALACCA
+138, Portugal, Antananarivo, SENT OUT QUEST, Type, 16
+138, Portugal, Antananarivo, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+139, Spain, Melbourne, SENT OUT QUEST, Type, 3
+139, Spain, Melbourne, RECEIVED QUEST, Construct Wonder, Friendship: 74 to 74, MINOR_CIV_MELBOURNE
+139, The Aztecs, Sidon, lost ally
+139, Spain, Kabul, SENT OUT QUEST, Type, 14
+139, Spain, Kabul, RECEIVED QUEST, Bully City-State, Friendship: 48 to 48, MINOR_CIV_KABUL
+139, The Aztecs, Buenos Aires, SENT OUT QUEST, Type, 3
+139, The Aztecs, Buenos Aires, RECEIVED QUEST, Construct Wonder, Friendship: 23 to 23, MINOR_CIV_BUENOS_AIRES
+140, Portugal, Cape Town, SENT OUT QUEST, Type, 1
+140, Portugal, Cape Town, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+140, Babylon, Melbourne, SENT OUT QUEST, Type, 11
+140, Babylon, Melbourne, RECEIVED QUEST, Contest Faith, Friendship: 31 to 31, MINOR_CIV_MELBOURNE
+140, Spain, Melbourne, SENT OUT QUEST, Type, 11
+140, Spain, Melbourne, RECEIVED QUEST, Contest Faith, Friendship: 73 to 73, MINOR_CIV_MELBOURNE
+140, Polynesia, Melbourne, SENT OUT QUEST, Type, 11
+140, Polynesia, Melbourne, RECEIVED QUEST, Contest Faith, Friendship: -1 to -1, MINOR_CIV_MELBOURNE
+140, Byzantium, Melbourne, SENT OUT QUEST, Type, 11
+140, Byzantium, Melbourne, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+140, The Maya, Melbourne, SENT OUT QUEST, Type, 11
+140, The Maya, Melbourne, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+140, The Aztecs, Melbourne, SENT OUT QUEST, Type, 11
+140, The Aztecs, Melbourne, RECEIVED QUEST, Contest Faith, Friendship: 10 to 10, MINOR_CIV_MELBOURNE
+140, Byzantium, Sidon, SENT OUT QUEST, Type, 7
+140, Byzantium, Sidon, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_SIDON
+140, Byzantium, Vilnius, SENT OUT QUEST, Type, 14
+140, Byzantium, Vilnius, RECEIVED QUEST, Bully City-State, Friendship: -16 to -16, MINOR_CIV_VILNIUS
+140, America, Buenos Aires, lost friend
+140, America, Riga, SENT OUT QUEST, Type, 2
+140, America, Riga, RECEIVED QUEST, Connect Resource, Friendship: 8 to 8, MINOR_CIV_RIGA
+140, Spain, Antananarivo, lost ally
+140, The Aztecs, Antananarivo, gained ally
+140, Byzantium, Antananarivo, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_ANTANANARIVO
+141, Spain, Zanzibar, gained friend
+141, Spain, Zanzibar, Gold Gift: 500, Friendship: 5 to 50, Spaceship, MINOR_CIV_ZANZIBAR
+141, Spain, Byblos, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_BYBLOS, (SAVING) 
+141, The Aztecs, Sidon, gained ally
+141, Byzantium, Sidon, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_SIDON
+141, The Aztecs, Sidon, FINISHED QUEST, Connect Resource, Friendship: 56 to 96, MINOR_CIV_SIDON
+141, The Aztecs, Vilnius, cancelled, Bully City-State, Friendship: 13 to 13, MINOR_CIV_VILNIUS
+141, Spain, Malacca, SENT OUT QUEST, Type, 2
+141, Spain, Malacca, RECEIVED QUEST, Connect Resource, Friendship: -7 to -7, MINOR_CIV_MALACCA
+141, Portugal, Buenos Aires, lost ally
+141, Polynesia, Zurich, SENT OUT QUEST, Type, 7
+141, Polynesia, Zurich, RECEIVED QUEST, Find Natural Wonder, Friendship: 80 to 80, MINOR_CIV_ZURICH
+142, Babylon, Melbourne, lost friend
+142, Babylon, Sidon, lost friend
+142, Polynesia, Zanzibar, SENT OUT QUEST, Type, 3
+142, Polynesia, Zanzibar, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+142, Zurich, America, RECEIVED_UNIT_GIFT, Swordsman
+142, Babylon, Cape Town, lost friend
+142, Byzantium, Kyiv, SENT OUT QUEST, Type, 3
+142, Byzantium, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 66 to 66, MINOR_CIV_KIEV
+143, Babylon, Melbourne, era change yield update
+143, Babylon, Sidon, era change yield update
+143, Babylon, Vilnius, era change yield update
+143, Babylon, Zanzibar, era change yield update
+143, Babylon, Kabul, era change yield update
+143, Babylon, Malacca, era change yield update
+143, Babylon, Buenos Aires, era change yield update
+143, Babylon, Riga, era change yield update
+143, Babylon, Zurich, era change yield update
+143, Babylon, Singapore, era change yield update
+143, Babylon, Cape Town, era change yield update
+143, Babylon, Almaty, era change yield update
+143, Babylon, Kathmandu, era change yield update
+143, Babylon, Byblos, era change yield update
+143, Babylon, Antananarivo, era change yield update
+143, Babylon, Kyiv, era change yield update
+143, Babylon, Melbourne, SENT OUT QUEST, Type, 2
+143, Babylon, Melbourne, SENT OUT QUEST, Type, 11
+143, Babylon, Sidon, SENT OUT QUEST, Type, 2
+143, Babylon, Vilnius, SENT OUT QUEST, Type, 2
+143, Babylon, Zanzibar, SENT OUT QUEST, Type, 2
+143, Babylon, Zanzibar, SENT OUT QUEST, Type, 4
+143, Babylon, Kabul, SENT OUT QUEST, Type, 1
+143, Babylon, Kabul, SENT OUT QUEST, Type, 3
+143, Babylon, Buenos Aires, SENT OUT QUEST, Type, 1
+143, Babylon, Cape Town, SENT OUT QUEST, Type, 1
+143, Babylon, Cape Town, SENT OUT QUEST, Type, 17
+143, Babylon, Kathmandu, SENT OUT QUEST, Type, 13
+143, Babylon, Kathmandu, SENT OUT QUEST, Type, 3
+143, Babylon, Byblos, SENT OUT QUEST, Type, 17
+143, Babylon, Byblos, SENT OUT QUEST, Type, 0
+143, Babylon, Antananarivo, SENT OUT QUEST, Type, 16
+143, Babylon, Antananarivo, SENT OUT QUEST, Type, 2
+143, Babylon, Kyiv, SENT OUT QUEST, Type, 12
+143, Babylon, Kyiv, SENT OUT QUEST, Type, 4
+143, Spain, Kabul, SENT OUT QUEST, Type, 1
+143, Spain, Kabul, SENT OUT QUEST, Type, 14
+143, Spain, Kyiv, SENT OUT QUEST, Type, 4
+143, Spain, Kyiv, SENT OUT QUEST, Type, 12
+143, America, Kabul, SENT OUT QUEST, Type, 1
+143, America, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+143, The Maya, Kyiv, gained friend
+143, The Maya, Kyiv, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KIEV
+143, The Maya, Vilnius, gained friend
+143, The Maya, Vilnius, FINISHED QUEST, Trade Route, Friendship: 0 to 40, MINOR_CIV_VILNIUS
+143, The Aztecs, Zanzibar, SENT OUT QUEST, Type, 4
+143, The Aztecs, Zanzibar, RECEIVED QUEST, Great Person, Friendship: 48 to 48, MINOR_CIV_ZANZIBAR
+143, Spain, Buenos Aires, SENT OUT QUEST, Type, 4
+143, Spain, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+143, Byzantium, Buenos Aires, SENT OUT QUEST, Type, 14
+143, Byzantium, Buenos Aires, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+143, Spain, Kathmandu, SENT OUT QUEST, Type, 3
+143, Spain, Kathmandu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+143, Babylon, Antananarivo, SENT OUT QUEST, Type, 10
+143, Babylon, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+143, Spain, Antananarivo, SENT OUT QUEST, Type, 10
+143, Spain, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 85 to 85, MINOR_CIV_ANTANANARIVO
+143, Polynesia, Antananarivo, SENT OUT QUEST, Type, 10
+143, Polynesia, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+143, Portugal, Antananarivo, SENT OUT QUEST, Type, 10
+143, Portugal, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_ANTANANARIVO
+143, The Maya, Antananarivo, SENT OUT QUEST, Type, 10
+143, The Maya, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+143, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 10
+143, The Aztecs, Antananarivo, RECEIVED QUEST, Contest Culture, Friendship: 90 to 90, MINOR_CIV_ANTANANARIVO
+143, Polynesia, Antananarivo, SENT OUT QUEST, Type, 14
+143, Polynesia, Antananarivo, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ANTANANARIVO
+144, Spain, Sidon, Gold Gift: 250, Friendship: 36 to 56, Spaceship, MINOR_CIV_SIDON, Boost! , Passing Babylon
+144, The Maya, Zanzibar, gained friend
+144, The Maya, Zanzibar, Gold Gift: 500, Friendship: 0 to 45, Diplomacy, MINOR_CIV_ZANZIBAR
+144, The Maya, Melbourne, era change yield update
+144, The Maya, Sidon, era change yield update
+144, The Maya, Vilnius, era change yield update
+144, The Maya, Zanzibar, era change yield update
+144, The Maya, Kabul, era change yield update
+144, The Maya, Malacca, era change yield update
+144, The Maya, Buenos Aires, era change yield update
+144, The Maya, Riga, era change yield update
+144, The Maya, Zurich, era change yield update
+144, The Maya, Singapore, era change yield update
+144, The Maya, Cape Town, era change yield update
+144, The Maya, Almaty, era change yield update
+144, The Maya, Kathmandu, era change yield update
+144, The Maya, Byblos, era change yield update
+144, The Maya, Antananarivo, era change yield update
+144, The Maya, Kyiv, era change yield update
+144, The Maya, Melbourne, SENT OUT QUEST, Type, 2
+144, The Maya, Melbourne, SENT OUT QUEST, Type, 7
+144, The Maya, Melbourne, SENT OUT QUEST, Type, 11
+144, The Maya, Sidon, SENT OUT QUEST, Type, 2
+144, The Maya, Sidon, SENT OUT QUEST, Type, 4
+144, The Maya, Vilnius, SENT OUT QUEST, Type, 2
+144, The Maya, Zanzibar, SENT OUT QUEST, Type, 2
+144, The Maya, Zanzibar, SENT OUT QUEST, Type, 3
+144, The Maya, Kabul, SENT OUT QUEST, Type, 2
+144, The Maya, Kabul, SENT OUT QUEST, Type, 4
+144, The Maya, Kabul, SENT OUT QUEST, Type, 1
+144, The Maya, Antananarivo, SENT OUT QUEST, Type, 2
+144, The Maya, Antananarivo, SENT OUT QUEST, Type, 3
+144, The Maya, Antananarivo, SENT OUT QUEST, Type, 10
+144, The Maya, Kyiv, SENT OUT QUEST, Type, 2
+144, The Maya, Kyiv, SENT OUT QUEST, Type, 12
+144, The Maya, Vilnius, SENT OUT QUEST, Type, 2
+144, The Maya, Zanzibar, SENT OUT QUEST, Type, 2
+144, The Maya, Zanzibar, SENT OUT QUEST, Type, 3
+144, Babylon, Melbourne, gained friend
+144, Babylon, Melbourne, FINISHED QUEST, Connect Resource, Friendship: 25 to 65, MINOR_CIV_MELBOURNE
+144, Byzantium, Kabul, lost friend
+144, Spain, Cape Town, SENT OUT QUEST, Type, 4
+144, Spain, Cape Town, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+144, The Aztecs, Byblos, SENT OUT QUEST, Type, 3
+144, The Aztecs, Byblos, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BYBLOS
+145, Portugal, Buenos Aires, SENT OUT QUEST, Type, 3
+145, Portugal, Buenos Aires, SENT OUT QUEST, Type, 1
+145, Melbourne, Babylon, RECEIVED_UNIT_GIFT, Catapult
+145, Spain, Melbourne, lost ally
+145, Babylon, Melbourne, gained ally
+145, Spain, Melbourne, cancelled, Construct Wonder, Friendship: 66 to 66, MINOR_CIV_MELBOURNE
+145, Portugal, Kabul, SENT OUT QUEST, Type, 7
+145, Portugal, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+145, America, Malacca, gained ally
+145, America, Malacca, FINISHED QUEST, Find Natural Wonder, Friendship: 36 to 76, MINOR_CIV_MALACCA
+145, The Aztecs, Buenos Aires, cancelled, Construct Wonder, Friendship: 14 to 14, MINOR_CIV_BUENOS_AIRES
+145, Babylon, Buenos Aires, SENT OUT QUEST, Type, 4
+145, Babylon, Buenos Aires, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BUENOS_AIRES
+145, America, Riga, gained friend
+145, America, Riga, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_RIGA
+145, America, Zurich, gained friend
+145, America, Zurich, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ZURICH
+145, Spain, Kathmandu, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+145, Spain, Antananarivo, SENT OUT QUEST, Type, 7
+145, Spain, Antananarivo, RECEIVED QUEST, Find Natural Wonder, Friendship: 82 to 82, MINOR_CIV_ANTANANARIVO
+146, Babylon, Melbourne, SENT OUT QUEST, Type, 11
+146, The Maya, Vilnius, Gold Gift: 250, Friendship: 37 to 57, Diplomacy, MINOR_CIV_VILNIUS, Boost! , Passing The Aztecs
+146, Babylon, Sidon, SENT OUT QUEST, Type, 3
+146, Babylon, Sidon, RECEIVED QUEST, Construct Wonder, Friendship: 22 to 22, MINOR_CIV_SIDON
+146, Spain, Kyiv, SENT OUT QUEST, Type, 3
+146, Spain, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 3 to 3, MINOR_CIV_KIEV
+147, Babylon, Melbourne, Gold Gift: 250, Friendship: 67 to 87, Spaceship, MINOR_CIV_MELBOURNE, Boost! , Passing The Aztecs
+147, Babylon, Cape Town, Gold Gift: 500, Friendship: 22 to 22, Spaceship, MINOR_CIV_CAPE_TOWN, (SAVING) , Passing The Aztecs
+147, Polynesia, Melbourne, era change yield update
+147, Polynesia, Sidon, era change yield update
+147, Polynesia, Vilnius, era change yield update
+147, Polynesia, Zanzibar, era change yield update
+147, Polynesia, Kabul, era change yield update
+147, Polynesia, Malacca, era change yield update
+147, Polynesia, Buenos Aires, era change yield update
+147, Polynesia, Riga, era change yield update
+147, Polynesia, Zurich, era change yield update
+147, Polynesia, Singapore, era change yield update
+147, Polynesia, Cape Town, era change yield update
+147, Polynesia, Almaty, era change yield update
+147, Polynesia, Kathmandu, era change yield update
+147, Polynesia, Byblos, era change yield update
+147, Polynesia, Antananarivo, era change yield update
+147, Polynesia, Kyiv, era change yield update
+147, Polynesia, Melbourne, SENT OUT QUEST, Type, 11
+147, Polynesia, Sidon, SENT OUT QUEST, Type, 7
+147, Polynesia, Sidon, SENT OUT QUEST, Type, 14
+147, Polynesia, Vilnius, SENT OUT QUEST, Type, 4
+147, Polynesia, Zanzibar, SENT OUT QUEST, Type, 3
+147, Polynesia, Kabul, SENT OUT QUEST, Type, 1
+147, Polynesia, Malacca, SENT OUT QUEST, Type, 17
+147, Polynesia, Malacca, SENT OUT QUEST, Type, 7
+147, Polynesia, Buenos Aires, SENT OUT QUEST, Type, 1
+147, Polynesia, Buenos Aires, SENT OUT QUEST, Type, 4
+147, Polynesia, Riga, SENT OUT QUEST, Type, 17
+147, Polynesia, Riga, SENT OUT QUEST, Type, 7
+147, Polynesia, Zurich, SENT OUT QUEST, Type, 4
+147, Polynesia, Zurich, SENT OUT QUEST, Type, 7
+147, Polynesia, Singapore, SENT OUT QUEST, Type, 7
+147, Polynesia, Singapore, SENT OUT QUEST, Type, 17
+147, Polynesia, Cape Town, SENT OUT QUEST, Type, 1
+147, Polynesia, Cape Town, SENT OUT QUEST, Type, 7
+147, Polynesia, Almaty, SENT OUT QUEST, Type, 7
+147, Polynesia, Almaty, SENT OUT QUEST, Type, 17
+147, Polynesia, Kathmandu, SENT OUT QUEST, Type, 13
+147, Polynesia, Byblos, SENT OUT QUEST, Type, 4
+147, Polynesia, Antananarivo, SENT OUT QUEST, Type, 10
+147, Polynesia, Antananarivo, SENT OUT QUEST, Type, 14
+147, Polynesia, Kyiv, SENT OUT QUEST, Type, 7
+147, Polynesia, Kyiv, SENT OUT QUEST, Type, 4
+147, Polynesia, Kyiv, SENT OUT QUEST, Type, 12
+147, The Maya, Melbourne, Gold Gift: 500, Friendship: 0 to 0, Diplomacy, MINOR_CIV_MELBOURNE, (SAVING) 
+147, The Maya, Melbourne, SENT OUT QUEST, Type, 2
+147, The Maya, Melbourne, SENT OUT QUEST, Type, 7
+147, The Maya, Melbourne, SENT OUT QUEST, Type, 11
+147, Polynesia, Singapore, SENT OUT QUEST, Type, 1
+147, Polynesia, Singapore, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SINGAPORE
+147, Polynesia, Almaty, SENT OUT QUEST, Type, 1
+147, Polynesia, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+148, The Aztecs, Melbourne, SENT OUT QUEST, Type, 2
+148, The Aztecs, Melbourne, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MELBOURNE
+148, Polynesia, Sidon, gained friend
+148, Polynesia, Sidon, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SIDON
+148, Polynesia, Kabul, SENT OUT QUEST, Type, 14
+148, Polynesia, Kabul, RECEIVED QUEST, Bully City-State, Friendship: -4 to -4, MINOR_CIV_KABUL
+148, America, Malacca, lost ally
+148, Polynesia, Malacca, gained ally
+148, Polynesia, Malacca, FINISHED QUEST, Find Natural Wonder, Friendship: 32 to 72, MINOR_CIV_MALACCA
+148, Polynesia, Riga, gained friend
+148, Polynesia, Riga, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_RIGA
+148, Polynesia, Zurich, FINISHED QUEST, Find Natural Wonder, Friendship: 70 to 110, MINOR_CIV_ZURICH
+148, Polynesia, Singapore, gained friend
+148, Polynesia, Singapore, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_SINGAPORE
+148, Polynesia, Cape Town, gained friend
+148, Polynesia, Cape Town, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_CAPE_TOWN
+148, Polynesia, Almaty, gained friend
+148, Polynesia, Almaty, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ALMATY
+148, Byzantium, Kyiv, lost ally
+148, Polynesia, Kyiv, gained friend
+148, Polynesia, Kyiv, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_KIEV
+149, Polynesia, Kyiv, gained ally
+149, Polynesia, Kyiv, FINISHED QUEST, Great Person, Friendship: 45 to 85, MINOR_CIV_KIEV
+149, Portugal, Melbourne, era change yield update
+149, Portugal, Sidon, era change yield update
+149, Portugal, Vilnius, era change yield update
+149, Portugal, Zanzibar, era change yield update
+149, Portugal, Kabul, era change yield update
+149, Portugal, Malacca, era change yield update
+149, Portugal, Buenos Aires, era change yield update
+149, Portugal, Riga, era change yield update
+149, Portugal, Zurich, era change yield update
+149, Portugal, Singapore, era change yield update
+149, Portugal, Cape Town, era change yield update
+149, Portugal, Almaty, era change yield update
+149, Portugal, Kathmandu, era change yield update
+149, Portugal, Byblos, era change yield update
+149, Portugal, Antananarivo, era change yield update
+149, Portugal, Kyiv, era change yield update
+149, Portugal, Sidon, SENT OUT QUEST, Type, 16
+149, Portugal, Zanzibar, SENT OUT QUEST, Type, 17
+149, Portugal, Zanzibar, SENT OUT QUEST, Type, 4
+149, Portugal, Kabul, SENT OUT QUEST, Type, 1
+149, Portugal, Kabul, SENT OUT QUEST, Type, 16
+149, Portugal, Kabul, SENT OUT QUEST, Type, 7
+149, Portugal, Buenos Aires, SENT OUT QUEST, Type, 3
+149, Portugal, Buenos Aires, SENT OUT QUEST, Type, 1
+149, Portugal, Cape Town, SENT OUT QUEST, Type, 1
+149, Portugal, Kathmandu, SENT OUT QUEST, Type, 13
+149, Portugal, Antananarivo, SENT OUT QUEST, Type, 7
+149, Portugal, Antananarivo, SENT OUT QUEST, Type, 16
+149, Portugal, Antananarivo, SENT OUT QUEST, Type, 10
+149, The Maya, Zanzibar, Gold Gift: 250, Friendship: 37 to 57, Diplomacy, MINOR_CIV_ZANZIBAR, Boost! , Passing Portugal
+149, The Maya, Melbourne, Gold Gift: 500, Friendship: 4 to 4, Diplomacy, MINOR_CIV_MELBOURNE, (SAVING) 
+149, The Aztecs, Kathmandu, SENT OUT QUEST, Type, 2
+149, The Aztecs, Kathmandu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+149, The Maya, Kyiv, lost friend
+149, Portugal, Kyiv, SENT OUT QUEST, Type, 16
+149, Portugal, Kyiv, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KIEV
+149, The Aztecs, Kyiv, SENT OUT QUEST, Type, 4
+149, The Aztecs, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+150, America, Kathmandu, SENT OUT QUEST, Type, 13
+150, America, Kathmandu, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_KATHMANDU
+150, Portugal, Kyiv, SENT OUT QUEST, Type, 16
+150, The Maya, Sidon, gained friend
+150, The Maya, Sidon, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_SIDON
+150, The Maya, Kabul, gained friend
+150, The Maya, Kabul, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_KABUL
+150, Babylon, Vilnius, SENT OUT QUEST, Type, 4
+150, Babylon, Vilnius, RECEIVED QUEST, Great Person, Friendship: 11 to 11, MINOR_CIV_VILNIUS
+150, Byzantium, Zanzibar, SENT OUT QUEST, Type, 3
+150, Byzantium, Zanzibar, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ZANZIBAR
+150, Spain, Malacca, SENT OUT QUEST, Type, 1
+150, Spain, Malacca, RECEIVED QUEST, Kill Camp, Friendship: -12 to -12, MINOR_CIV_MALACCA
+150, Polynesia, Malacca, SENT OUT QUEST, Type, 1
+150, Polynesia, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 69 to 69, MINOR_CIV_MALACCA
+150, America, Malacca, SENT OUT QUEST, Type, 1
+150, America, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 68 to 68, MINOR_CIV_MALACCA
+150, Byzantium, Malacca, SENT OUT QUEST, Type, 1
+150, Byzantium, Malacca, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MALACCA
+150, America, Buenos Aires, gained friend
+150, America, Riga, lost friend
+150, Polynesia, Zurich, SENT OUT QUEST, Type, 13
+150, Polynesia, Zurich, RECEIVED QUEST, Invest, Friendship: 107 to 107, MINOR_CIV_ZURICH
+150, America, Zurich, SENT OUT QUEST, Type, 13
+150, America, Zurich, RECEIVED QUEST, Invest, Friendship: 32 to 32, MINOR_CIV_ZURICH
+150, Babylon, Cape Town, gained friend
+150, The Aztecs, Cape Town, SENT OUT QUEST, Type, 2
+150, The Aztecs, Cape Town, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_CAPE_TOWN
+150, The Aztecs, Antananarivo, lost ally
+150, Spain, Antananarivo, gained ally
+150, The Aztecs, Antananarivo, SENT OUT QUEST, Type, 2
+150, The Aztecs, Antananarivo, RECEIVED QUEST, Connect Resource, Friendship: 75 to 75, MINOR_CIV_ANTANANARIVO
+151, Spain, Zanzibar, Gold Gift: 250, Friendship: 30 to 50, Spaceship, MINOR_CIV_ZANZIBAR, Boost! , Passing Portugal
+151, Spain, Vilnius, Gold Gift: 250, Friendship: 65 to 65, Spaceship, MINOR_CIV_VILNIUS, (SAVING) , Boost! , Passing The Maya
+151, Spain, Zurich, SENT OUT QUEST, Type, 13
+151, Spain, Zurich, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ZURICH
+151, America, Buenos Aires, Gold Gift: 250, Friendship: 34 to 54, Diplomacy, MINOR_CIV_BUENOS_AIRES, Boost! , Passing The Aztecs
+151, America, Buenos Aires, SENT OUT QUEST, Type, 1
