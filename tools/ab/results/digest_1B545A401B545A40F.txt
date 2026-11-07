@@ -1,0 +1,26 @@
+﻿Game 1B545A401B545A40F (AIABTest_c8e.csv), last logged turn 150
+b    France       tall      cities 5
+  builds to T80 (capital Paris; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T19 Settler* | T29 Worker* | T31 Monument* (Orleans) | T32 Settler* | T35 Library* (Orleans) | T42 Warrior | T46 Worker | T51 Monument* (Lyon) | T52 Library* (Lyon) | T53 Library* | T59 Warrior | T61 Shrine (Orleans) | T61 Worker | T66 Settler | T70 Shrine (Lyon) | T73 Granary | T74 Granary (Orleans) | T76 Worker (Lyon) | T77 Granary (Troyes) | T78 Settler
+  settlers ordered T: 19,32,66,78,126   found-city ops started T: 29,42,73,83   cities founded T: 31,51,77,87
+  book SETTLER HELD to T80: 1 (unhappy 1)   built instead: Library 1   first: T053 Paris size 4 next Library
+  IDLE SETTLER turns: 6 (first T32)
+  military ops ended (whole game): NoTarget 2
+  settler timeline to T80: T19 settler (book) in Paris | T29 op started | T31 FOUNDED | T32 settler (book) in Paris | T42 op started | T51 FOUNDED | T66 settler (AI) in Paris | T73 op started | T77 FOUNDED | T78 settler (AI) in Paris
+  saving gold for a settler: 37 turns (T10-T79)
+b    Portugal     wide      cities 7
+  builds to T80 (capital Lisbon; other cities named): T0 Scout* | T4 Warrior* | T9 Worker* | T17 Settler* | T26 Shrine* | T29 Monument* (Porto) | T30 Monument* | T34 Archer | T34 Monument (Porto) | T37 Settler | T42 Shrine (Porto) | T46 Warrior | T49 Library | T54 Work Boat (Porto) | T55 Worker | T58 Shrine (Braga) | T61 Settler | T64 Monument (Braga) | T65 Library (Porto) | T68 Granary (Braga) | T68 Granary | T71 Colosseum | T73 Granary (Coimbra) | T73 Granary (Porto) | T76 Water Mill | T77 Work Boat (Braga) | T78 Worker (Porto)
+  settlers ordered T: 17,37,61,83,111,116,118,132,133,147,153   found-city ops started T: 26,46,68,84,89,118,128,138,140,152   cities founded T: 29,58,73,89,93,134,150
+  ops aborted: T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T139 NoTarget
+  book SETTLER HELD to T80: 2 (growth due 1, size 1 1)   built instead: Monument 1, Worker 1   first: T009 Lisbon size 1 next Worker | T030 Lisbon size 2 next Monument
+  IDLE SETTLER turns: 7 (first T37)
+  military ops ended (whole game): WarStateChange 2, HalfStrength 1, Success 1, NoTarget 1
+  settler timeline to T80: T17 settler (book) in Lisbon | T26 op started | T29 FOUNDED | T37 settler (AI) in Lisbon | T46 op started | T58 FOUNDED | T61 settler (AI) in Lisbon | T68 op started | T73 FOUNDED
+  saving gold for a settler: 33 turns (T11-T75)
+b    Russia       tall      cities 3
+  builds to T80 (capital Moscow; other cities named): T0 Scout* | T3 Monument* | T7 Warrior* | T11 Shrine* | T15 Settler* | T25 Worker* | T28 Monument* (St. Petersburg) | T29 Stonehenge | T33 Library* (St. Petersburg) | T43 Settler* | T50 Worker* | T52 Great Library | T54 Granary | T55 Monument (Novgorod) | T56 Shrine (Novgorod) | T58 Worker (St. Petersburg) | T58 Spearman | T60 Spearman | T61 Stone Works (St. Petersburg) | T61 Spearman | T61 Spearman | T62 Monument (Rostov) | T63 Worker (Rostov) | T64 Worker | T68 Scout | T70 Warrior | T71 Warrior | T72 Worker | T72 Warrior | T76 Warrior | T78 Settler
+  settlers ordered T: 15,43,78,98   found-city ops started T: 25,50,57,82   cities founded T: 28,55,62,87
+  book SETTLER HELD to T80: 2 (one at a time 1, growth due 1)   built instead: Library 2   first: T029 Moscow size 2 next Library | T052 Moscow size 3 next Library
+  IDLE SETTLER turns: 5 (first T43)
+  military ops ended (whole game): LostPath 1, WarStateChange 1
+  settler timeline to T80: T15 settler (book) in Moscow | T25 op started | T28 FOUNDED | T43 settler (book) in Moscow | T50 op started | T55 FOUNDED | T56 BOUGHT in Moscow. Cost: 370 | T57 op started | T62 FOUNDED | T78 settler (AI) in Moscow
+  saving gold for a settler: 52 turns (T6-T80)
