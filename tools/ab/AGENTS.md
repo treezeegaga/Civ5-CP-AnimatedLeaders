@@ -103,6 +103,10 @@ flag. Expected: wide out-grows tall while nobody attacks; once attacks take citi
 - **All in, no retreat on losses (the user, 2026-11-06 ~9:30pm ET):** "there is no 2nd place in civ. you are either the
   champion or you are nothing. if an aggressive civ puts all their resources into a timing attack, they are ALL IN." The
   strike's war has no release by losing a city or the war going badly.
+- **Take walls with ranged, not melee (the user, 2026-11-07 7:50am ET):** the strike's "can we take it" estimate matches
+  the battlefield AI (option A). On Marrakesh: "my jaguars never attacked the city until the last hit. they killed units,
+  pillaged, and soaked hits while 4 archers slowly brought the city down." So ranged and siege units do the city damage;
+  melee screen, pillage and take the last hit. A walled city isn't takeable until enough ranged or siege units exist.
 - **City-state targets allowed (the user, 2026-11-06 morning):** when no major civ is in reach, the early strike may
   target a city-state.
 
