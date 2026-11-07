@@ -1,0 +1,1094 @@
+019, The_Ottomans, OP_FOUND_CITY, 1104, Ended: NoTarget; Distance -1; Duration 20
+020, The_Ottomans, OP_FOUND_CITY, 1109, found target for settler, score 118647 (q50)
+020, The_Ottomans, OP_FOUND_CITY, 1109, Skip recruiting, start with movement stage
+020, The_Ottomans, OP_FOUND_CITY, 1109, Found 0 potential units to recruit for operation 1109 at (50:37) with target at (54:38)
+020, The_Ottomans, OP_FOUND_CITY, 1109, Started Army 1110; Units Recruited 1; Max Formation Size 2; Moving To Target
+020, The_Ottomans, OP_FOUND_CITY, 1109, PRE Moving To Target with Army 1110; center (50:37); target (54:38); Progress 0 percent
+020, The_Ottomans, OP_FOUND_CITY, 1109, POST Moving To Target with Army 1110; center (51:37); target (54:38); Progress 20 percent
+021, The_Ottomans, OP_FOUND_CITY, 1109, PRE Moving To Target with Army 1110; center (51:37); target (54:38); Progress 20 percent
+021, The_Ottomans, OP_FOUND_CITY, 1109, POST Moving To Target with Army 1110; center (53:37); target (54:38); Progress 100 percent
+022, The_Ottomans, OP_FOUND_CITY, 1109, PRE Moving To Target with Army 1110; center (53:37); target (54:38); Progress 100 percent
+022, The_Ottomans, OP_FOUND_CITY, 1109, Transition to target stage
+022, The_Ottomans, OP_FOUND_CITY, 1109, City founded (Edirne) at (54:38), plot value 117717, q50
+022, The_Ottomans, OP_FOUND_CITY, 1109, Transition to finished stage
+022, The_Ottomans, OP_FOUND_CITY, 1109, POST Completed
+023, The_Ottomans, OP_FOUND_CITY, 1109, Ended: Success; Distance 5; Duration 3
+026, Carthage, OP_FOUND_CITY, 1146, found target for settler, score 116554 (q50)
+026, Carthage, OP_FOUND_CITY, 1146, Skip recruiting, start with movement stage
+026, Carthage, OP_FOUND_CITY, 1146, Found 1 potential units to recruit for operation 1146 at (33:40) with target at (33:44)
+026, Carthage, OP_FOUND_CITY, 1146, Added Warrior 1078 to slot 1 in army 1147. ETA at (33:40) is 0 
+026, Carthage, OP_FOUND_CITY, 1146, Started Army 1147; Units Recruited 2; Max Formation Size 2; Moving To Target
+026, Carthage, OP_FOUND_CITY, 1146, PRE Moving To Target with Army 1147; center (33:40); target (33:44); Progress 0 percent
+026, Carthage, OP_FOUND_CITY, 1146, POST Moving To Target with Army 1147; center (33:41); target (33:44); Progress 20 percent
+027, Carthage, OP_FOUND_CITY, 1146, PRE Moving To Target with Army 1147; center (33:41); target (33:44); Progress 20 percent
+027, Carthage, OP_FOUND_CITY, 1146, POST Moving To Target with Army 1147; center (33:43); target (33:44); Progress 100 percent
+028, Carthage, OP_FOUND_CITY, 1146, PRE Moving To Target with Army 1147; center (33:43); target (33:44); Progress 100 percent
+028, Carthage, OP_FOUND_CITY, 1146, Transition to target stage
+028, Carthage, OP_FOUND_CITY, 1146, POST At Target
+029, Carthage, OP_FOUND_CITY, 1146, PRE At Target
+029, Carthage, OP_FOUND_CITY, 1146, City founded (Utique) at (33:44), plot value 116167, q50
+029, Carthage, OP_FOUND_CITY, 1146, Transition to finished stage
+029, Carthage, OP_FOUND_CITY, 1146, Ended: Success; Distance 5; Duration 3
+029, The_Ottomans, OP_FOUND_CITY, 1166, found target for settler, score 120092 (q50)
+029, The_Ottomans, OP_FOUND_CITY, 1166, Initial stage is recruiting
+029, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+029, The_Ottomans, OP_FOUND_CITY, 1166, Started Army 1167; Units Recruited 1; Max Formation Size 2; Recruiting Units
+029, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA -1; Open; 
+029, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+029, The_Ottomans, OP_FOUND_CITY, 1166, POST Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+030, Poland, OP_FOUND_CITY, 1172, found target for settler, score 99878 (q50)
+030, Poland, OP_FOUND_CITY, 1172, Initial stage is recruiting
+030, Poland, OP_FOUND_CITY, 1172, Found 1 potential units to recruit for operation 1172 at (20:20) with target at (25:21)
+030, Poland, OP_FOUND_CITY, 1172, Added Warrior 1164 to slot 1 in army 1173. ETA at (20:20) is 0 
+030, Poland, OP_FOUND_CITY, 1172, Transition to gathering stage
+030, Poland, OP_FOUND_CITY, 1172, Transition to movement stage
+030, Poland, OP_FOUND_CITY, 1172, Started Army 1173; Units Recruited 2; Max Formation Size 2; Moving To Target
+030, Poland, OP_FOUND_CITY, 1172, PRE Moving To Target with Army 1173; center (20:20); target (25:21); Progress 0 percent
+030, Poland, OP_FOUND_CITY, 1172, POST Moving To Target with Army 1173; center (21:21); target (25:21); Progress 29 percent
+030, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+030, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+030, The_Ottomans, OP_FOUND_CITY, 1166, POST Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+030, Austria, OP_FOUND_CITY, 1175, found target for settler, score 122735 (q50)
+030, Austria, OP_FOUND_CITY, 1175, Initial stage is recruiting
+030, Austria, OP_FOUND_CITY, 1175, Found 1 potential units to recruit for operation 1175 at (36:20) with target at (40:21)
+030, Austria, OP_FOUND_CITY, 1175, Added Warrior 1132 to slot 1 in army 1176. ETA at (36:20) is 0 
+030, Austria, OP_FOUND_CITY, 1175, Transition to gathering stage
+030, Austria, OP_FOUND_CITY, 1175, Transition to movement stage
+030, Austria, OP_FOUND_CITY, 1175, Started Army 1176; Units Recruited 2; Max Formation Size 2; Moving To Target
+030, Austria, OP_FOUND_CITY, 1175, PRE Moving To Target with Army 1176; center (36:20); target (40:21); Progress 0 percent
+030, Austria, OP_FOUND_CITY, 1175, POST Moving To Target with Army 1176; center (37:20); target (40:21); Progress 17 percent
+031, Poland, OP_FOUND_CITY, 1172, PRE Moving To Target with Army 1173; center (21:21); target (25:21); Progress 29 percent
+031, Poland, OP_FOUND_CITY, 1172, POST Moving To Target with Army 1173; center (22:21); target (25:21); Progress 43 percent
+031, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+031, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+031, The_Ottomans, OP_FOUND_CITY, 1166, POST Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+031, Austria, OP_FOUND_CITY, 1175, PRE Moving To Target with Army 1176; center (37:20); target (40:21); Progress 17 percent
+031, Austria, OP_FOUND_CITY, 1175, POST Moving To Target with Army 1176; center (38:20); target (40:21); Progress 34 percent
+032, Poland, OP_FOUND_CITY, 1172, PRE Moving To Target with Army 1173; center (22:21); target (25:21); Progress 43 percent
+032, Poland, OP_FOUND_CITY, 1172, POST Moving To Target with Army 1173; center (24:21); target (25:21); Progress 100 percent
+032, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+032, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+032, The_Ottomans, OP_FOUND_CITY, 1166, POST Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+032, Austria, OP_FOUND_CITY, 1175, found better target for settler, old score 106554 (q50), new score 110734 (q50)
+032, Austria, OP_FOUND_CITY, 1175, setting new target (35:16)
+032, Austria, OP_FOUND_CITY, 1175, PRE Moving To Target with Army 1176; center (38:20); target (35:16); Progress -20 percent
+032, Austria, OP_FOUND_CITY, 1175, POST Moving To Target with Army 1176; center (37:19); target (35:16); Progress 0 percent
+033, Poland, OP_FOUND_CITY, 1172, PRE Moving To Target with Army 1173; center (24:21); target (25:21); Progress 100 percent
+033, Poland, OP_FOUND_CITY, 1172, Transition to target stage
+033, Poland, OP_FOUND_CITY, 1172, POST At Target
+033, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+033, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+033, The_Ottomans, OP_FOUND_CITY, 1166, POST Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+033, Austria, OP_FOUND_CITY, 1175, PRE Moving To Target with Army 1176; center (37:19); target (35:16); Progress 0 percent
+033, Austria, OP_FOUND_CITY, 1175, POST Moving To Target with Army 1176; center (37:18); target (35:16); Progress 20 percent
+034, Poland, OP_FOUND_CITY, 1172, PRE At Target
+034, Poland, OP_FOUND_CITY, 1172, City founded (Krakow) at (25:21), plot value 99878, q50
+034, Poland, OP_FOUND_CITY, 1172, Transition to finished stage
+034, Poland, OP_FOUND_CITY, 1172, Ended: Success; Distance 7; Duration 4
+034, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+034, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+034, The_Ottomans, OP_FOUND_CITY, 1166, POST Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+034, Austria, OP_FOUND_CITY, 1175, PRE Moving To Target with Army 1176; center (37:18); target (35:16); Progress 20 percent
+034, Austria, OP_FOUND_CITY, 1175, POST Moving To Target with Army 1176; center (36:16); target (35:16); Progress 100 percent
+035, France, OP_FOUND_CITY, 1205, found target for settler, score 97981 (q50)
+035, France, OP_FOUND_CITY, 1205, Initial stage is recruiting
+035, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (14:35)
+035, France, OP_FOUND_CITY, 1205, Started Army 1206; Units Recruited 1; Max Formation Size 2; Recruiting Units
+035, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA -1; Open; 
+035, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (14:35)
+035, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+035, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+035, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+035, The_Ottomans, OP_FOUND_CITY, 1166, POST Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+035, Austria, OP_FOUND_CITY, 1175, PRE Moving To Target with Army 1176; center (36:16); target (35:16); Progress 100 percent
+035, Austria, OP_FOUND_CITY, 1175, Transition to target stage
+035, Austria, OP_FOUND_CITY, 1175, City founded (Salzburg) at (35:16), plot value 111904, q50
+035, Austria, OP_FOUND_CITY, 1175, Transition to finished stage
+035, Austria, OP_FOUND_CITY, 1175, POST Completed
+036, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+036, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (14:35)
+036, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+036, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+036, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+036, The_Ottomans, OP_FOUND_CITY, 1166, POST Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+036, Austria, OP_FOUND_CITY, 1175, Ended: Success; Distance 5; Duration 6
+037, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+037, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (14:35)
+037, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+037, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+037, The_Ottomans, OP_FOUND_CITY, 1166, Found 0 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+037, The_Ottomans, OP_FOUND_CITY, 1166, POST Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+038, Carthage, OP_FOUND_CITY, 1230, found target for settler, score 89041 (q48)
+038, Carthage, OP_FOUND_CITY, 1230, Initial stage is recruiting
+038, Carthage, OP_FOUND_CITY, 1230, Found 1 potential units to recruit for operation 1230 at (33:40) with target at (29:42)
+038, Carthage, OP_FOUND_CITY, 1230, Added Warrior 1078 to slot 1 in army 1231. ETA at (33:40) is 0 
+038, Carthage, OP_FOUND_CITY, 1230, Transition to gathering stage
+038, Carthage, OP_FOUND_CITY, 1230, Transition to movement stage
+038, Carthage, OP_FOUND_CITY, 1230, Started Army 1231; Units Recruited 2; Max Formation Size 2; Moving To Target
+038, Carthage, OP_FOUND_CITY, 1230, PRE Moving To Target with Army 1231; center (33:40); target (29:42); Progress 0 percent
+038, Carthage, OP_FOUND_CITY, 1230, POST Moving To Target with Army 1231; center (32:40); target (29:42); Progress 17 percent
+038, France, OP_FOUND_CITY, 1205, found better target for settler, old score 97981 (q50), new score 102605 (q50)
+038, France, OP_FOUND_CITY, 1205, setting new target (18:30)
+038, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+038, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+038, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+038, The_Ottomans, OP_FOUND_CITY, 1166, PRE Recruiting Units for army 1167; Settler 1165 at (50:37) - ETA 0; Open; 
+038, The_Ottomans, OP_FOUND_CITY, 1166, Found 1 potential units to recruit for operation 1166 at (50:37) with target at (46:39)
+038, The_Ottomans, OP_FOUND_CITY, 1166, Added Spearman 1233 to slot 1 in army 1167. ETA at (50:37) is 0 
+038, The_Ottomans, OP_FOUND_CITY, 1166, Added Archer 1208 to slot 1 in army 1167. ETA at (50:37) is 0 
+038, The_Ottomans, OP_FOUND_CITY, 1166, Transition to gathering stage
+038, The_Ottomans, OP_FOUND_CITY, 1166, Transition to movement stage
+038, The_Ottomans, OP_FOUND_CITY, 1166, POST Moving To Target with Army 1167; center (50:37); target (46:39); Progress 0 percent
+039, Carthage, OP_FOUND_CITY, 1230, PRE Moving To Target with Army 1231; center (32:40); target (29:42); Progress 17 percent
+039, Carthage, OP_FOUND_CITY, 1230, POST Moving To Target with Army 1231; center (31:41); target (29:42); Progress 34 percent
+039, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+039, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+039, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+039, The_Ottomans, OP_FOUND_CITY, 1245, found target for settler, score 127356 (q50)
+039, The_Ottomans, OP_FOUND_CITY, 1245, Initial stage is recruiting
+039, The_Ottomans, OP_FOUND_CITY, 1245, Found 0 potential units to recruit for operation 1245 at (50:37) with target at (48:31)
+039, The_Ottomans, OP_FOUND_CITY, 1245, Started Army 1246; Units Recruited 1; Max Formation Size 2; Recruiting Units
+039, The_Ottomans, OP_FOUND_CITY, 1166, PRE Moving To Target with Army 1167; center (51:37); target (46:39); Progress -16 percent
+039, The_Ottomans, OP_FOUND_CITY, 1166, POST Moving To Target with Army 1167; center (49:37); target (46:39); Progress 17 percent
+039, The_Ottomans, OP_FOUND_CITY, 1245, PRE Recruiting Units for army 1246; Settler 1235 at (50:37) - ETA -1; Open; 
+039, The_Ottomans, OP_FOUND_CITY, 1245, Found 0 potential units to recruit for operation 1245 at (50:37) with target at (48:31)
+039, The_Ottomans, OP_FOUND_CITY, 1245, POST Recruiting Units for army 1246; Settler 1235 at (50:37) - ETA 0; Open; 
+040, Carthage, OP_FOUND_CITY, 1230, PRE Moving To Target with Army 1231; center (31:41); target (29:42); Progress 34 percent
+040, Carthage, OP_FOUND_CITY, 1230, POST Moving To Target with Army 1231; center (30:42); target (29:42); Progress 100 percent
+040, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+040, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+040, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+040, The_Ottomans, OP_FOUND_CITY, 1166, PRE Moving To Target with Army 1167; center (49:37); target (46:39); Progress 17 percent
+040, The_Ottomans, OP_FOUND_CITY, 1166, POST Moving To Target with Army 1167; center (48:38); target (46:39); Progress 50 percent
+040, The_Ottomans, OP_FOUND_CITY, 1245, PRE Recruiting Units for army 1246; Settler 1235 at (50:37) - ETA 0; Open; 
+040, The_Ottomans, OP_FOUND_CITY, 1245, Found 1 potential units to recruit for operation 1245 at (50:37) with target at (48:31)
+040, The_Ottomans, OP_FOUND_CITY, 1245, Added Spearman 1233 to slot 1 in army 1246. ETA at (50:37) is 0 
+040, The_Ottomans, OP_FOUND_CITY, 1245, Transition to gathering stage
+040, The_Ottomans, OP_FOUND_CITY, 1245, POST Gathering Forces for army 1246; center (50:37); variance (0.00:0.00); free slots 0
+041, Carthage, OP_FOUND_CITY, 1230, PRE Moving To Target with Army 1231; center (30:42); target (29:42); Progress 100 percent
+041, Carthage, OP_FOUND_CITY, 1230, Transition to target stage
+041, Carthage, OP_FOUND_CITY, 1230, City founded (Hippo Regius) at (29:42), plot value 89041, q48
+041, Carthage, OP_FOUND_CITY, 1230, Transition to finished stage
+041, Carthage, OP_FOUND_CITY, 1230, POST Completed
+041, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+041, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+041, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+041, The_Ottomans, OP_FOUND_CITY, 1166, PRE Moving To Target with Army 1167; center (48:38); target (46:39); Progress 50 percent
+041, The_Ottomans, OP_FOUND_CITY, 1166, POST Moving To Target with Army 1167; center (47:38); target (46:39); Progress 100 percent
+041, The_Ottomans, OP_FOUND_CITY, 1245, PRE Gathering Forces for army 1246; center (50:37); variance (0.00:0.00); free slots 0
+041, The_Ottomans, OP_FOUND_CITY, 1245, Transition to movement stage
+041, The_Ottomans, OP_FOUND_CITY, 1245, POST Moving To Target with Army 1246; center (50:37); target (48:31); Progress 100 percent
+042, Carthage, OP_FOUND_CITY, 1230, Ended: Success; Distance 6; Duration 4
+042, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+042, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+042, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+042, The_Ottomans, OP_FOUND_CITY, 1166, PRE Moving To Target with Army 1167; center (47:38); target (46:39); Progress 100 percent
+042, The_Ottomans, OP_FOUND_CITY, 1166, Transition to target stage
+042, The_Ottomans, OP_FOUND_CITY, 1166, POST At Target
+042, The_Ottomans, OP_FOUND_CITY, 1245, PRE Moving To Target with Army 1246; center (50:37); target (48:31); Progress 100 percent
+042, The_Ottomans, OP_FOUND_CITY, 1245, Ended: LostPath; Distance -1; Duration 3
+042, Austria, OP_FOUND_CITY, 1269, found target for settler, score 106671 (q50)
+042, Austria, OP_FOUND_CITY, 1269, Initial stage is recruiting
+042, Austria, OP_FOUND_CITY, 1269, Found 1 potential units to recruit for operation 1269 at (36:20) with target at (41:20)
+042, Austria, OP_FOUND_CITY, 1269, Added Warrior 1012 to slot 1 in army 1270. ETA at (36:20) is 1 
+042, Austria, OP_FOUND_CITY, 1269, Transition to gathering stage
+042, Austria, OP_FOUND_CITY, 1269, Started Army 1270; Units Recruited 2; Max Formation Size 2; Gathering Forces
+042, Austria, OP_FOUND_CITY, 1269, PRE Gathering Forces for army 1270; center (36:20); variance (0.00:6.25); free slots 0
+042, Austria, OP_FOUND_CITY, 1269, Transition to movement stage
+042, Austria, OP_FOUND_CITY, 1269, POST Moving To Target with Army 1270; center (36:20); target (41:20); Progress 0 percent
+043, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+043, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+043, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+043, The_Ottomans, OP_FOUND_CITY, 1279, found target for settler, score 127356 (q50)
+043, The_Ottomans, OP_FOUND_CITY, 1279, Initial stage is recruiting
+043, The_Ottomans, OP_FOUND_CITY, 1279, Found 2 potential units to recruit for operation 1279 at (50:37) with target at (48:31)
+043, The_Ottomans, OP_FOUND_CITY, 1279, Added Spearman 1233 to slot 1 in army 1280. ETA at (50:37) is 0 
+043, The_Ottomans, OP_FOUND_CITY, 1279, Transition to gathering stage
+043, The_Ottomans, OP_FOUND_CITY, 1279, Transition to movement stage
+043, The_Ottomans, OP_FOUND_CITY, 1279, Started Army 1280; Units Recruited 2; Max Formation Size 2; Moving To Target
+043, The_Ottomans, OP_RAPID_RESPONSE, 1281, Initial stage is recruiting
+043, The_Ottomans, OP_RAPID_RESPONSE, 1281, Found 1 potential units to recruit for operation 1281 at (54:38) with target at (54:38)
+043, The_Ottomans, OP_RAPID_RESPONSE, 1281, Added Spearman 1267 to slot 0 in army 1282. ETA at (54:38) is 1 
+043, The_Ottomans, OP_RAPID_RESPONSE, 1281, Started Army 1282; Units Recruited 1; Max Formation Size 4; Recruiting Units
+043, The_Ottomans, OP_FOUND_CITY, 1166, PRE At Target
+043, The_Ottomans, OP_FOUND_CITY, 1166, City founded (Ankara) at (46:39), plot value 114418, q50
+043, The_Ottomans, OP_FOUND_CITY, 1166, Transition to finished stage
+043, The_Ottomans, OP_FOUND_CITY, 1279, PRE Moving To Target with Army 1280; center (50:37); target (48:31); Progress 100 percent
+043, The_Ottomans, OP_RAPID_RESPONSE, 1281, PRE Recruiting Units for army 1282; Spearman 1267 at (50:36) - ETA 1; Open; Open; Open; 
+043, The_Ottomans, OP_RAPID_RESPONSE, 1281, Found 1 potential units to recruit for operation 1281 at (54:38) with target at (54:38)
+043, The_Ottomans, OP_RAPID_RESPONSE, 1281, Added Spearman 1233 to slot 1 in army 1282. ETA at (54:38) is 1 
+043, The_Ottomans, OP_RAPID_RESPONSE, 1281, Transition to gathering stage
+043, The_Ottomans, OP_RAPID_RESPONSE, 1281, POST Gathering Forces for army 1282; center (51:37); variance (0.25:0.00); free slots 2
+043, The_Ottomans, OP_FOUND_CITY, 1166, Ended: Success; Distance 6; Duration 14
+043, The_Ottomans, OP_FOUND_CITY, 1279, Ended: LostPath; Distance -1; Duration 0
+043, Austria, OP_FOUND_CITY, 1269, PRE Moving To Target with Army 1270; center (36:20); target (41:20); Progress 0 percent
+043, Austria, OP_FOUND_CITY, 1269, POST Moving To Target with Army 1270; center (35:19); target (41:20); Progress -16 percent
+044, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+044, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+044, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+044, The_Ottomans, OP_FOUND_CITY, 1294, found target for settler, score 127356 (q50)
+044, The_Ottomans, OP_FOUND_CITY, 1294, Initial stage is recruiting
+044, The_Ottomans, OP_FOUND_CITY, 1294, Found 0 potential units to recruit for operation 1294 at (50:37) with target at (48:31)
+044, The_Ottomans, OP_FOUND_CITY, 1294, Started Army 1295; Units Recruited 1; Max Formation Size 2; Recruiting Units
+044, The_Ottomans, OP_RAPID_RESPONSE, 1281, Ended: NoTarget; Distance 1; Duration 1
+044, The_Ottomans, OP_FOUND_CITY, 1294, PRE Recruiting Units for army 1295; Settler 1235 at (50:37) - ETA -1; Open; 
+044, The_Ottomans, OP_FOUND_CITY, 1294, Found 1 potential units to recruit for operation 1294 at (50:37) with target at (48:31)
+044, The_Ottomans, OP_FOUND_CITY, 1294, Added Spearman 1233 to slot 1 in army 1295. ETA at (50:37) is 0 
+044, The_Ottomans, OP_FOUND_CITY, 1294, Added Spearman 1267 to slot 1 in army 1295. ETA at (50:37) is 0 
+044, The_Ottomans, OP_FOUND_CITY, 1294, Transition to gathering stage
+044, The_Ottomans, OP_FOUND_CITY, 1294, Transition to movement stage
+044, The_Ottomans, OP_FOUND_CITY, 1294, POST Moving To Target with Army 1295; center (50:37); target (48:31); Progress 100 percent
+044, Austria, OP_FOUND_CITY, 1269, PRE Moving To Target with Army 1270; center (35:19); target (41:20); Progress -16 percent
+044, Austria, OP_FOUND_CITY, 1269, POST Moving To Target with Army 1270; center (36:20); target (41:20); Progress 0 percent
+045, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+045, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+045, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+045, The_Ottomans, OP_FOUND_CITY, 1294, PRE Moving To Target with Army 1295; center (50:37); target (48:31); Progress 100 percent
+045, The_Ottomans, OP_FOUND_CITY, 1294, Ended: LostPath; Distance -1; Duration 1
+045, Austria, OP_FOUND_CITY, 1269, PRE Moving To Target with Army 1270; center (36:20); target (41:20); Progress 0 percent
+045, Austria, OP_FOUND_CITY, 1269, POST Moving To Target with Army 1270; center (37:20); target (41:20); Progress 17 percent
+046, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+046, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+046, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+046, The_Ottomans, OP_FOUND_CITY, 1307, found target for settler, score 115683 (q50)
+046, The_Ottomans, OP_FOUND_CITY, 1307, Initial stage is recruiting
+046, The_Ottomans, OP_FOUND_CITY, 1307, Found 0 potential units to recruit for operation 1307 at (50:37) with target at (51:32)
+046, The_Ottomans, OP_FOUND_CITY, 1307, Started Army 1308; Units Recruited 1; Max Formation Size 2; Recruiting Units
+046, The_Ottomans, OP_FOUND_CITY, 1307, PRE Recruiting Units for army 1308; Settler 1235 at (50:37) - ETA -1; Open; 
+046, The_Ottomans, OP_FOUND_CITY, 1307, Found 0 potential units to recruit for operation 1307 at (50:37) with target at (51:32)
+046, The_Ottomans, OP_FOUND_CITY, 1307, POST Recruiting Units for army 1308; Settler 1235 at (50:37) - ETA 0; Open; 
+046, Austria, OP_FOUND_CITY, 1269, PRE Moving To Target with Army 1270; center (37:20); target (41:20); Progress 17 percent
+046, Austria, OP_FOUND_CITY, 1269, POST Moving To Target with Army 1270; center (38:20); target (41:20); Progress 34 percent
+047, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+047, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+047, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+047, The_Ottomans, OP_FOUND_CITY, 1307, PRE Recruiting Units for army 1308; Settler 1235 at (50:37) - ETA 0; Open; 
+047, The_Ottomans, OP_FOUND_CITY, 1307, Found 0 potential units to recruit for operation 1307 at (50:37) with target at (51:32)
+047, The_Ottomans, OP_FOUND_CITY, 1307, POST Recruiting Units for army 1308; Settler 1235 at (50:37) - ETA 0; Open; 
+047, Austria, OP_FOUND_CITY, 1269, PRE Moving To Target with Army 1270; center (38:20); target (41:20); Progress 34 percent
+047, Austria, OP_FOUND_CITY, 1269, POST Moving To Target with Army 1270; center (39:21); target (41:20); Progress 50 percent
+048, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+048, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+048, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+048, The_Ottomans, OP_FOUND_CITY, 1307, PRE Recruiting Units for army 1308; Settler 1235 at (50:37) - ETA 0; Open; 
+048, The_Ottomans, OP_FOUND_CITY, 1307, Found 0 potential units to recruit for operation 1307 at (50:37) with target at (51:32)
+048, The_Ottomans, OP_FOUND_CITY, 1307, POST Recruiting Units for army 1308; Settler 1235 at (50:37) - ETA 0; Open; 
+048, Austria, OP_FOUND_CITY, 1269, PRE Moving To Target with Army 1270; center (39:21); target (41:20); Progress 50 percent
+048, Austria, OP_FOUND_CITY, 1269, Transition to target stage
+048, Austria, OP_FOUND_CITY, 1269, POST At Target
+049, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+049, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+049, France, OP_FOUND_CITY, 1205, POST Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Initial stage is recruiting
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Found 7 potential units to recruit for operation 1324 at (50:37) with target at (53:29)
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Added Warrior 1010 to slot 0 in army 1325. ETA at (50:37) is 1 
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Added Spearman 1233 to slot 1 in army 1325. ETA at (50:37) is 4 
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Added Archer 1184 to slot 3 in army 1325. ETA at (50:37) is 0 
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Added Archer 1201 to slot 4 in army 1325. ETA at (50:37) is 0 
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Added Archer 1208 to slot 5 in army 1325. ETA at (50:37) is 0 
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Added Composite Bowman 1301 to slot 6 in army 1325. ETA at (50:37) is 1 
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Added Archer 1234 to slot 7 in army 1325. ETA at (50:37) is 2 
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, SiegeArmy: waiting for more units, expected damage 44 a turn, M_banza-Kongo needs 60
+049, The_Ottomans, OP_CITY_ATTACK_LAND_SNEAKY, 1324, Started Army 1325; Units Recruited 7; Max Formation Size 10; Recruiting Units
+049, The_Ottomans, OP_FOUND_CITY, 1307, found better target for settler, old score 115683 (q50), new score 64739 (q7)
+049, The_Ottomans, OP_FOUND_CITY, 1307, setting new target (52:42)
+049, The_Ottomans, OP_FOUND_CITY, 1307, PRE Recruiting Units for army 1308; Settler 1235 at (50:37) - ETA 0; Open; 
+049, The_Ottomans, OP_FOUND_CITY, 1307, Found 0 potential units to recruit for operation 1307 at (50:37) with target at (52:42)
+049, The_Ottomans, OP_FOUND_CITY, 1307, No escort yet and the trip looks safe, going alone
+049, The_Ottomans, OP_FOUND_CITY, 1307, Transition to gathering stage
+049, The_Ottomans, OP_FOUND_CITY, 1307, Transition to movement stage
+049, The_Ottomans, OP_FOUND_CITY, 1307, POST Moving To Target with Army 1308; center (50:37); target (52:42); Progress 0 percent
+049, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, PRE Recruiting Units for army 1325; Warrior 1010 at (53:40) - ETA 1; Spearman 1233 at (52:44) - ETA 4; Open; Archer 1184 at (51:35) - ETA 0; Archer 1201 at (52:35) - ETA 0; Archer 1208 at (50:35) - ETA 0; Composite Bowman 1301 at (52:41) - ETA 1; Archer 1234 at (52:42) - ETA 2; Open; Open; 
+049, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, Found 0 potential units to recruit for operation 1324 at (50:37) with target at (53:29)
+049, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, POST Recruiting Units for army 1325; Warrior 1010 at (53:39) - ETA 1; Spearman 1233 at (52:43) - ETA 4; Open; Archer 1184 at (51:36) - ETA 0; Open; Open; Composite Bowman 1301 at (52:41) - ETA 1; Archer 1234 at (53:40) - ETA 2; Open; Open; 
+049, Austria, OP_FOUND_CITY, 1269, PRE At Target
+049, Austria, OP_FOUND_CITY, 1269, City founded (Graz) at (41:20), plot value 106671, q50
+049, Austria, OP_FOUND_CITY, 1269, Transition to finished stage
+049, Austria, OP_FOUND_CITY, 1269, Ended: Success; Distance 6; Duration 7
+050, Carthage, OP_FOUND_CITY, 1335, Ended: NoTarget; Distance -1; Duration 51
+050, France, OP_FOUND_CITY, 1205, PRE Recruiting Units for army 1206; Settler 1204 at (19:36) - ETA 0; Open; 
+050, France, OP_FOUND_CITY, 1205, Found 0 potential units to recruit for operation 1205 at (19:36) with target at (18:30)
+050, France, OP_FOUND_CITY, 1205, No escort yet and the trip looks safe, going alone
+050, France, OP_FOUND_CITY, 1205, Transition to gathering stage
+050, France, OP_FOUND_CITY, 1205, Transition to movement stage
+050, France, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (19:36); target (18:30); Progress 0 percent
+050, The_Ottomans, OP_FOUND_CITY, 1307, PRE Moving To Target with Army 1308; center (50:37); target (52:42); Progress 0 percent
+050, The_Ottomans, OP_FOUND_CITY, 1307, POST Moving To Target with Army 1308; center (51:38); target (52:42); Progress 15 percent
+050, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, PRE Recruiting Units for army 1325; Warrior 1010 at (53:39) - ETA 1; Spearman 1233 at (52:43) - ETA 4; Open; Archer 1184 at (51:36) - ETA 0; Open; Open; Composite Bowman 1301 at (52:41) - ETA 1; Archer 1234 at (53:40) - ETA 2; Open; Open; 
+050, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, Found 2 potential units to recruit for operation 1324 at (50:37) with target at (53:29)
+050, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, Added Composite Bowman 1326 to slot 4 in army 1325. ETA at (50:37) is 0 
+050, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, Added Archer 1152 to slot 5 in army 1325. ETA at (50:37) is 3 
+050, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, Transition to gathering stage
+050, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, POST Gathering Forces for army 1325; center (53:38); variance (2.41:5.55); free slots 3
+051, Carthage, OP_FOUND_CITY, 1341, Ended: NoTarget; Distance -1; Duration 52
+051, France, OP_FOUND_CITY, 1205, PRE Moving To Target with Army 1206; center (19:36); target (18:30); Progress 0 percent
+051, France, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (19:34); target (18:30); Progress 29 percent
+051, The_Ottomans, OP_FOUND_CITY, 1307, PRE Moving To Target with Army 1308; center (51:38); target (52:42); Progress 15 percent
+051, The_Ottomans, OP_FOUND_CITY, 1307, POST Moving To Target with Army 1308; center (52:39); target (52:42); Progress 43 percent
+051, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, PRE Gathering Forces for army 1325; center (53:38); variance (2.41:5.55); free slots 3
+051, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, POST Gathering Forces for army 1325; center (53:38); variance (1.33:5.89); free slots 4
+052, Carthage, OP_FOUND_CITY, 1351, found target for settler, score 93303 (q50)
+052, Carthage, OP_FOUND_CITY, 1351, Initial stage is recruiting
+052, Carthage, OP_FOUND_CITY, 1351, Found 0 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+052, Carthage, OP_FOUND_CITY, 1351, Started Army 1352; Units Recruited 1; Max Formation Size 2; Recruiting Units
+052, Carthage, OP_FOUND_CITY, 1351, PRE Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA -1; Open; 
+052, Carthage, OP_FOUND_CITY, 1351, Found 0 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+052, Carthage, OP_FOUND_CITY, 1351, POST Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+052, France, OP_FOUND_CITY, 1205, PRE Moving To Target with Army 1206; center (19:34); target (18:30); Progress 29 percent
+052, France, OP_FOUND_CITY, 1205, POST Moving To Target with Army 1206; center (20:32); target (18:30); Progress 43 percent
+052, Poland, OP_FOUND_CITY, 1354, found target for settler, score 90470 (q50)
+052, Poland, OP_FOUND_CITY, 1354, Initial stage is recruiting
+052, Poland, OP_FOUND_CITY, 1354, Found 2 potential units to recruit for operation 1354 at (20:20) with target at (20:15)
+052, Poland, OP_FOUND_CITY, 1354, Added Warrior 1243 to slot 1 in army 1355. ETA at (20:20) is 0 
+052, Poland, OP_FOUND_CITY, 1354, Transition to gathering stage
+052, Poland, OP_FOUND_CITY, 1354, Transition to movement stage
+052, Poland, OP_FOUND_CITY, 1354, Started Army 1355; Units Recruited 2; Max Formation Size 2; Moving To Target
+052, Poland, OP_FOUND_CITY, 1354, PRE Moving To Target with Army 1355; center (20:20); target (20:15); Progress 0 percent
+052, Poland, OP_FOUND_CITY, 1354, POST Moving To Target with Army 1355; center (19:18); target (20:15); Progress 34 percent
+052, The_Ottomans, OP_FOUND_CITY, 1307, PRE Moving To Target with Army 1308; center (52:39); target (52:42); Progress 43 percent
+052, The_Ottomans, OP_FOUND_CITY, 1307, POST Moving To Target with Army 1308; center (52:41); target (52:42); Progress 100 percent
+052, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, PRE Gathering Forces for army 1325; center (53:38); variance (1.33:5.89); free slots 4
+052, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, POST Gathering Forces for army 1325; center (51:38); variance (0.89:3.67); free slots 4
+053, Carthage, OP_FOUND_CITY, 1351, PRE Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+053, Carthage, OP_FOUND_CITY, 1351, Found 0 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+053, Carthage, OP_FOUND_CITY, 1351, POST Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+053, France, OP_FOUND_CITY, 1205, Ended: LostCivilian; Distance 7; Duration 18
+053, Poland, OP_FOUND_CITY, 1354, PRE Moving To Target with Army 1355; center (19:18); target (20:15); Progress 34 percent
+053, Poland, OP_FOUND_CITY, 1354, POST Moving To Target with Army 1355; center (19:17); target (20:15); Progress 50 percent
+053, The_Ottomans, OP_FOUND_CITY, 1307, PRE Moving To Target with Army 1308; center (52:41); target (52:42); Progress 100 percent
+053, The_Ottomans, OP_FOUND_CITY, 1307, Transition to target stage
+053, The_Ottomans, OP_FOUND_CITY, 1307, POST At Target
+053, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, PRE Gathering Forces for army 1325; center (51:38); variance (0.89:3.67); free slots 4
+053, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, Transition to movement stage
+053, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, POST Moving To Target with Army 1325; center (51:38); target (53:29); Progress 0 percent
+054, Carthage, OP_FOUND_CITY, 1351, PRE Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+054, Carthage, OP_FOUND_CITY, 1351, Found 0 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+054, Carthage, OP_FOUND_CITY, 1351, POST Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+054, Poland, OP_FOUND_CITY, 1354, PRE Moving To Target with Army 1355; center (19:17); target (20:15); Progress 50 percent
+054, Poland, OP_FOUND_CITY, 1354, POST Moving To Target with Army 1355; center (20:16); target (20:15); Progress 100 percent
+054, The_Ottomans, OP_FOUND_CITY, 1307, PRE At Target
+054, The_Ottomans, OP_FOUND_CITY, 1307, City founded (Bursa) at (52:42), plot value 65531, q9
+054, The_Ottomans, OP_FOUND_CITY, 1307, Transition to finished stage
+054, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, PRE Moving To Target with Army 1325; center (51:38); target (53:29); Progress 0 percent
+054, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, POST Moving To Target with Army 1325; center (51:36); target (53:29); Progress 20 percent
+054, The_Ottomans, OP_FOUND_CITY, 1307, Ended: Success; Distance 7; Duration 8
+054, Austria, OP_FOUND_CITY, 1369, found target for settler, score 83619 (q39)
+054, Austria, OP_FOUND_CITY, 1369, Initial stage is recruiting
+054, Austria, OP_FOUND_CITY, 1369, Found 1 potential units to recruit for operation 1369 at (36:20) with target at (43:16)
+054, Austria, OP_FOUND_CITY, 1369, Added Warrior 1132 to slot 1 in army 1370. ETA at (36:20) is 0 
+054, Austria, OP_FOUND_CITY, 1369, Transition to gathering stage
+054, Austria, OP_FOUND_CITY, 1369, Started Army 1370; Units Recruited 2; Max Formation Size 2; Gathering Forces
+054, Austria, OP_FOUND_CITY, 1369, PRE Gathering Forces for army 1370; center (35:16); variance (0.25:4.00); free slots 0
+054, Austria, OP_FOUND_CITY, 1369, Transition to movement stage
+054, Austria, OP_FOUND_CITY, 1369, POST Moving To Target with Army 1370; center (36:20); target (43:16); Progress 0 percent
+055, Carthage, OP_FOUND_CITY, 1351, PRE Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+055, Carthage, OP_FOUND_CITY, 1351, Found 0 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+055, Carthage, OP_FOUND_CITY, 1351, POST Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+055, Poland, OP_FOUND_CITY, 1354, PRE Moving To Target with Army 1355; center (20:16); target (20:15); Progress 100 percent
+055, Poland, OP_FOUND_CITY, 1354, Transition to target stage
+055, Poland, OP_FOUND_CITY, 1354, POST At Target
+055, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, PRE Moving To Target with Army 1325; center (51:36); target (53:29); Progress 20 percent
+055, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, POST Moving To Target with Army 1325; center (52:34); target (53:29); Progress 40 percent
+055, Austria, OP_FOUND_CITY, 1369, PRE Moving To Target with Army 1370; center (36:20); target (43:16); Progress 0 percent
+055, Austria, OP_FOUND_CITY, 1369, POST Moving To Target with Army 1370; center (35:19); target (43:16); Progress 0 percent
+056, Carthage, OP_FOUND_CITY, 1351, PRE Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+056, Carthage, OP_FOUND_CITY, 1351, Found 0 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+056, Carthage, OP_FOUND_CITY, 1351, POST Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+056, Poland, OP_FOUND_CITY, 1354, PRE At Target
+056, Poland, OP_FOUND_CITY, 1354, City founded (Lodz) at (20:15), plot value 90470, q50
+056, Poland, OP_FOUND_CITY, 1354, Transition to finished stage
+056, Poland, OP_FOUND_CITY, 1354, Ended: Success; Distance 6; Duration 4
+056, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, PRE Moving To Target with Army 1325; center (52:34); target (53:29); Progress 40 percent
+056, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, POST Moving To Target with Army 1325; center (52:34); target (53:29); Progress 40 percent
+056, Austria, OP_FOUND_CITY, 1369, PRE Moving To Target with Army 1370; center (35:19); target (43:16); Progress 0 percent
+056, Austria, OP_FOUND_CITY, 1369, POST Moving To Target with Army 1370; center (35:17); target (43:16); Progress 10 percent
+057, Carthage, OP_FOUND_CITY, 1351, PRE Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+057, Carthage, OP_FOUND_CITY, 1351, Found 0 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+057, Carthage, OP_FOUND_CITY, 1351, POST Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+057, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, PRE Moving To Target with Army 1325; center (52:34); target (53:29); Progress 40 percent
+057, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, Transition to finished stage; unit distance near 1; far 5
+057, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, POST Completed
+057, Austria, OP_FOUND_CITY, 1369, PRE Moving To Target with Army 1370; center (35:17); target (43:16); Progress 10 percent
+057, Austria, OP_FOUND_CITY, 1369, POST Moving To Target with Army 1370; center (37:17); target (43:16); Progress 30 percent
+058, Carthage, OP_FOUND_CITY, 1351, PRE Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+058, Carthage, OP_FOUND_CITY, 1351, Found 0 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+058, Carthage, OP_FOUND_CITY, 1351, POST Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+058, France, OP_FOUND_CITY, 1386, found target for settler, score 98561 (q50)
+058, France, OP_FOUND_CITY, 1386, Initial stage is recruiting
+058, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (17:40)
+058, France, OP_FOUND_CITY, 1386, Started Army 1387; Units Recruited 1; Max Formation Size 2; Recruiting Units
+058, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA -1; Open; 
+058, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (17:40)
+058, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+058, Poland, OP_FOUND_CITY, 1389, found target for settler, score 64509 (q7)
+058, Poland, OP_FOUND_CITY, 1389, Initial stage is recruiting
+058, Poland, OP_FOUND_CITY, 1389, Found 1 potential units to recruit for operation 1389 at (20:20) with target at (20:25)
+058, Poland, OP_FOUND_CITY, 1389, Added Warrior 1164 to slot 1 in army 1390. ETA at (20:20) is 2 
+058, Poland, OP_FOUND_CITY, 1389, Transition to gathering stage
+058, Poland, OP_FOUND_CITY, 1389, Started Army 1390; Units Recruited 2; Max Formation Size 2; Gathering Forces
+058, Poland, OP_FOUND_CITY, 1389, PRE Gathering Forces for army 1390; center (25:21); variance (6.25:0.25); free slots 0
+058, Poland, OP_FOUND_CITY, 1389, POST Gathering Forces for army 1390; center (24:21); variance (4.00:0.25); free slots 0
+058, The_Ottomans, OP_CITY_ATTACK_LAND, 1324, Ended: Success; Distance 10; Duration 9
+058, Austria, OP_FOUND_CITY, 1369, PRE Moving To Target with Army 1370; center (37:17); target (43:16); Progress 30 percent
+058, Austria, OP_FOUND_CITY, 1369, POST Moving To Target with Army 1370; center (39:17); target (43:16); Progress 50 percent
+059, Carthage, OP_FOUND_CITY, 1351, PRE Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+059, Carthage, OP_FOUND_CITY, 1351, Found 0 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+059, Carthage, OP_FOUND_CITY, 1351, POST Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+059, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+059, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (17:40)
+059, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+059, Poland, OP_FOUND_CITY, 1389, PRE Gathering Forces for army 1390; center (24:21); variance (4.00:0.25); free slots 0
+059, Poland, OP_FOUND_CITY, 1389, Transition to movement stage
+059, Poland, OP_FOUND_CITY, 1389, POST Moving To Target with Army 1390; center (22:21); target (20:25); Progress 17 percent
+059, Austria, OP_FOUND_CITY, 1369, PRE Moving To Target with Army 1370; center (39:17); target (43:16); Progress 50 percent
+059, Austria, OP_FOUND_CITY, 1369, POST Moving To Target with Army 1370; center (41:16); target (43:16); Progress 70 percent
+060, Carthage, OP_FOUND_CITY, 1351, PRE Recruiting Units for army 1352; Settler 1334 at (33:40) - ETA 0; Open; 
+060, Carthage, OP_FOUND_CITY, 1351, Found 1 potential units to recruit for operation 1351 at (33:40) with target at (38:39)
+060, Carthage, OP_FOUND_CITY, 1351, Added Warrior 1405 to slot 1 in army 1352. ETA at (33:40) is 0 
+060, Carthage, OP_FOUND_CITY, 1351, Added Warrior 1379 to slot 1 in army 1352. ETA at (33:40) is 0 
+060, Carthage, OP_FOUND_CITY, 1351, Transition to gathering stage
+060, Carthage, OP_FOUND_CITY, 1351, Transition to movement stage
+060, Carthage, OP_FOUND_CITY, 1351, POST Moving To Target with Army 1352; center (33:40); target (38:39); Progress 0 percent
+060, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+060, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (17:40)
+060, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+060, Poland, OP_FOUND_CITY, 1389, PRE Moving To Target with Army 1390; center (22:21); target (20:25); Progress 17 percent
+060, Poland, OP_FOUND_CITY, 1389, POST Moving To Target with Army 1390; center (21:21); target (20:25); Progress 17 percent
+060, Austria, OP_FOUND_CITY, 1369, PRE Moving To Target with Army 1370; center (41:16); target (43:16); Progress 70 percent
+060, Austria, OP_FOUND_CITY, 1369, Transition to target stage
+060, Austria, OP_FOUND_CITY, 1369, POST At Target
+061, Carthage, OP_FOUND_CITY, 1351, PRE Moving To Target with Army 1352; center (33:40); target (38:39); Progress 0 percent
+061, Carthage, OP_FOUND_CITY, 1351, POST Moving To Target with Army 1352; center (34:40); target (38:39); Progress 15 percent
+061, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+061, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (17:40)
+061, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+061, Poland, OP_FOUND_CITY, 1389, PRE Moving To Target with Army 1390; center (21:21); target (20:25); Progress 17 percent
+061, Poland, OP_FOUND_CITY, 1389, POST Moving To Target with Army 1390; center (21:22); target (20:25); Progress 34 percent
+061, Austria, OP_FOUND_CITY, 1369, PRE At Target
+061, Austria, OP_FOUND_CITY, 1369, City founded (Linz) at (43:16), plot value 83168, q38
+061, Austria, OP_FOUND_CITY, 1369, Transition to finished stage
+061, Austria, OP_FOUND_CITY, 1369, Ended: Success; Distance 10; Duration 7
+062, Carthage, OP_FOUND_CITY, 1351, PRE Moving To Target with Army 1352; center (34:40); target (38:39); Progress 15 percent
+062, Carthage, OP_FOUND_CITY, 1351, POST Moving To Target with Army 1352; center (35:40); target (38:39); Progress 29 percent
+062, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+062, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (17:40)
+062, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+062, Poland, OP_FOUND_CITY, 1419, found target for settler, score 56970 (q-6)
+062, Poland, OP_FOUND_CITY, 1419, Initial stage is recruiting
+062, Poland, OP_FOUND_CITY, 1419, Found 1 potential units to recruit for operation 1419 at (20:20) with target at (17:18)
+062, Poland, OP_FOUND_CITY, 1419, Added Warrior 1243 to slot 1 in army 1420. ETA at (20:20) is 2 
+062, Poland, OP_FOUND_CITY, 1419, Transition to gathering stage
+062, Poland, OP_FOUND_CITY, 1419, Started Army 1420; Units Recruited 2; Max Formation Size 2; Gathering Forces
+062, Poland, OP_FOUND_CITY, 1389, PRE Moving To Target with Army 1390; center (21:22); target (20:25); Progress 34 percent
+062, Poland, OP_FOUND_CITY, 1389, POST Moving To Target with Army 1390; center (20:24); target (20:25); Progress 100 percent
+062, Poland, OP_FOUND_CITY, 1419, PRE Gathering Forces for army 1420; center (20:20); variance (0.00:6.25); free slots 0
+062, Poland, OP_FOUND_CITY, 1419, POST Gathering Forces for army 1420; center (20:20); variance (0.00:4.00); free slots 0
+062, The_Ottomans, OP_FOUND_CITY, 1425, Ended: NoTarget; Distance -1; Duration 63
+063, Carthage, OP_FOUND_CITY, 1351, PRE Moving To Target with Army 1352; center (35:40); target (38:39); Progress 29 percent
+063, Carthage, OP_FOUND_CITY, 1351, POST Moving To Target with Army 1352; center (37:40); target (38:39); Progress 58 percent
+063, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+063, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (17:40)
+063, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+063, Poland, OP_FOUND_CITY, 1389, found better target for settler, old score 80083 (q33), new score 92839 (q50)
+063, Poland, OP_FOUND_CITY, 1389, setting new target (19:26)
+063, Poland, OP_FOUND_CITY, 1419, found better target for settler, old score 56970 (q-6), new score 145186 (q50)
+063, Poland, OP_FOUND_CITY, 1419, setting new target (25:30)
+063, Poland, OP_FOUND_CITY, 1389, PRE Moving To Target with Army 1390; center (20:24); target (19:26); Progress 43 percent
+063, Poland, OP_FOUND_CITY, 1389, POST Moving To Target with Army 1390; center (18:24); target (19:26); Progress 58 percent
+063, Poland, OP_FOUND_CITY, 1419, PRE Gathering Forces for army 1420; center (20:20); variance (0.00:4.00); free slots 0
+063, Poland, OP_FOUND_CITY, 1419, Added Archer 1422 to slot 1 in army 1420. ETA at (20:20) is 0 
+063, Poland, OP_FOUND_CITY, 1419, Transition to movement stage
+063, Poland, OP_FOUND_CITY, 1419, Ended: LostPath; Distance -1; Duration 1
+063, The_Ottomans, OP_FOUND_CITY, 1430, Ended: NoTarget; Distance -1; Duration 64
+064, Carthage, OP_FOUND_CITY, 1351, PRE Moving To Target with Army 1352; center (37:40); target (38:39); Progress 58 percent
+064, Carthage, OP_FOUND_CITY, 1351, Transition to target stage
+064, Carthage, OP_FOUND_CITY, 1351, POST At Target
+064, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+064, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (17:40)
+064, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+064, Poland, OP_FOUND_CITY, 1438, found target for settler, score 145186 (q50)
+064, Poland, OP_FOUND_CITY, 1438, Initial stage is recruiting
+064, Poland, OP_FOUND_CITY, 1438, Found 1 potential units to recruit for operation 1438 at (20:20) with target at (25:30)
+064, Poland, OP_FOUND_CITY, 1438, Added Warrior 1006 to slot 1 in army 1439. ETA at (20:20) is 0 
+064, Poland, OP_FOUND_CITY, 1438, Transition to gathering stage
+064, Poland, OP_FOUND_CITY, 1438, Transition to movement stage
+064, Poland, OP_FOUND_CITY, 1438, Started Army 1439; Units Recruited 2; Max Formation Size 2; Moving To Target
+064, Poland, OP_FOUND_CITY, 1389, PRE Moving To Target with Army 1390; center (18:24); target (19:26); Progress 58 percent
+064, Poland, OP_FOUND_CITY, 1389, Transition to target stage
+064, Poland, OP_FOUND_CITY, 1389, POST At Target
+064, Poland, OP_FOUND_CITY, 1438, PRE Moving To Target with Army 1439; center (18:23); target (25:30); Progress 100 percent
+064, Poland, OP_FOUND_CITY, 1438, Ended: LostPath; Distance -1; Duration 0
+064, The_Ottomans, OP_FOUND_CITY, 1443, Ended: NoTarget; Distance -1; Duration 65
+065, Carthage, OP_FOUND_CITY, 1351, PRE At Target
+065, Carthage, OP_FOUND_CITY, 1351, City founded (Gades) at (38:39), plot value 94348, q50
+065, Carthage, OP_FOUND_CITY, 1351, Transition to finished stage
+065, Carthage, OP_FOUND_CITY, 1351, Ended: Success; Distance 7; Duration 13
+065, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+065, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (17:40)
+065, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+065, Poland, OP_FOUND_CITY, 1455, found target for settler, score 145186 (q50)
+065, Poland, OP_FOUND_CITY, 1455, Initial stage is recruiting
+065, Poland, OP_FOUND_CITY, 1455, Found 1 potential units to recruit for operation 1455 at (20:20) with target at (25:30)
+065, Poland, OP_FOUND_CITY, 1455, Added Warrior 1006 to slot 1 in army 1456. ETA at (20:20) is 0 
+065, Poland, OP_FOUND_CITY, 1455, Transition to gathering stage
+065, Poland, OP_FOUND_CITY, 1455, Transition to movement stage
+065, Poland, OP_FOUND_CITY, 1455, Started Army 1456; Units Recruited 2; Max Formation Size 2; Moving To Target
+065, Poland, OP_FOUND_CITY, 1389, PRE At Target
+065, Poland, OP_FOUND_CITY, 1389, City founded (Wroclaw) at (19:26), plot value 79342, q32
+065, Poland, OP_FOUND_CITY, 1389, Transition to finished stage
+065, Poland, OP_FOUND_CITY, 1455, PRE Moving To Target with Army 1456; center (20:20); target (25:30); Progress 100 percent
+065, Poland, OP_FOUND_CITY, 1455, found better target for settler, old score 145186 (q50), new score 100622 (q50)
+065, Poland, OP_FOUND_CITY, 1455, setting new target (23:30)
+065, Poland, OP_FOUND_CITY, 1389, Ended: Success; Distance 7; Duration 7
+065, Poland, OP_FOUND_CITY, 1455, Ended: LostPath; Distance -1; Duration 0
+065, The_Ottomans, OP_FOUND_CITY, 1459, Ended: NoTarget; Distance -1; Duration 66
+066, Carthage, OP_RAPID_RESPONSE, 1488, Initial stage is recruiting
+066, Carthage, OP_RAPID_RESPONSE, 1488, Found 2 potential units to recruit for operation 1488 at (38:39) with target at (38:39)
+066, Carthage, OP_RAPID_RESPONSE, 1488, Added Spearman 1452 to slot 0 in army 1489. ETA at (38:39) is 2 
+066, Carthage, OP_RAPID_RESPONSE, 1488, Added Warrior 1405 to slot 1 in army 1489. ETA at (38:39) is 2 
+066, Carthage, OP_RAPID_RESPONSE, 1488, Transition to gathering stage
+066, Carthage, OP_RAPID_RESPONSE, 1488, Transition to movement stage
+066, Carthage, OP_RAPID_RESPONSE, 1488, Started Army 1489; Units Recruited 2; Max Formation Size 4; Moving To Target
+066, Carthage, OP_RAPID_RESPONSE, 1488, PRE Moving To Target with Army 1489; center (33:40); target (38:39); Progress 0 percent
+066, Carthage, OP_RAPID_RESPONSE, 1488, POST Moving To Target with Army 1489; center (33:40); target (38:39); Progress 0 percent
+066, France, OP_FOUND_CITY, 1386, found better target for settler, old score 98561 (q50), new score 112272 (q50)
+066, France, OP_FOUND_CITY, 1386, setting new target (13:39)
+066, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+066, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (13:39)
+066, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+066, Poland, OP_FOUND_CITY, 1490, found target for settler, score 88784 (q47)
+066, Poland, OP_FOUND_CITY, 1490, Initial stage is recruiting
+066, Poland, OP_FOUND_CITY, 1490, Found 1 potential units to recruit for operation 1490 at (20:20) with target at (23:30)
+066, Poland, OP_FOUND_CITY, 1490, Added Warrior 1006 to slot 1 in army 1491. ETA at (20:20) is 0 
+066, Poland, OP_FOUND_CITY, 1490, Transition to gathering stage
+066, Poland, OP_FOUND_CITY, 1490, Transition to movement stage
+066, Poland, OP_FOUND_CITY, 1490, Started Army 1491; Units Recruited 2; Max Formation Size 2; Moving To Target
+066, Poland, OP_FOUND_CITY, 1490, PRE Moving To Target with Army 1491; center (20:20); target (23:30); Progress 100 percent
+066, Poland, OP_FOUND_CITY, 1490, Ended: LostPath; Distance -1; Duration 0
+066, The_Ottomans, OP_FOUND_CITY, 1493, Ended: NoTarget; Distance -1; Duration 67
+066, Austria, OP_FOUND_CITY, 1499, found target for settler, score 88233 (q46)
+066, Austria, OP_FOUND_CITY, 1499, Initial stage is recruiting
+066, Austria, OP_FOUND_CITY, 1499, Found 1 potential units to recruit for operation 1499 at (35:16) with target at (39:24)
+066, Austria, OP_FOUND_CITY, 1499, Added Spearman 1401 to slot 1 in army 1500. ETA at (35:16) is 1 
+066, Austria, OP_FOUND_CITY, 1499, Transition to gathering stage
+066, Austria, OP_FOUND_CITY, 1499, Started Army 1500; Units Recruited 2; Max Formation Size 2; Gathering Forces
+066, Austria, OP_FOUND_CITY, 1499, PRE Gathering Forces for army 1500; center (36:20); variance (0.25:4.00); free slots 0
+066, Austria, OP_FOUND_CITY, 1499, Transition to movement stage
+066, Austria, OP_FOUND_CITY, 1499, POST Moving To Target with Army 1500; center (35:19); target (39:24); Progress 23 percent
+067, Carthage, OP_RAPID_RESPONSE, 1488, PRE Moving To Target with Army 1489; center (33:40); target (38:39); Progress 0 percent
+067, Carthage, OP_RAPID_RESPONSE, 1488, POST Moving To Target with Army 1489; center (34:40); target (38:39); Progress 15 percent
+067, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+067, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (13:39)
+067, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+067, Poland, OP_FOUND_CITY, 1510, found target for settler, score 88784 (q47)
+067, Poland, OP_FOUND_CITY, 1510, Initial stage is recruiting
+067, Poland, OP_FOUND_CITY, 1510, Found 1 potential units to recruit for operation 1510 at (20:20) with target at (23:30)
+067, Poland, OP_FOUND_CITY, 1510, Added Warrior 1006 to slot 1 in army 1511. ETA at (20:20) is 0 
+067, Poland, OP_FOUND_CITY, 1510, Transition to gathering stage
+067, Poland, OP_FOUND_CITY, 1510, Transition to movement stage
+067, Poland, OP_FOUND_CITY, 1510, Started Army 1511; Units Recruited 2; Max Formation Size 2; Moving To Target
+067, Poland, OP_FOUND_CITY, 1510, PRE Moving To Target with Army 1511; center (20:20); target (23:30); Progress 100 percent
+067, Poland, OP_FOUND_CITY, 1510, Ended: LostPath; Distance -1; Duration 0
+067, The_Ottomans, OP_FOUND_CITY, 1513, Ended: NoTarget; Distance -1; Duration 68
+067, Austria, OP_FOUND_CITY, 1499, PRE Moving To Target with Army 1500; center (35:19); target (39:24); Progress 23 percent
+067, Austria, OP_FOUND_CITY, 1499, POST Moving To Target with Army 1500; center (35:18); target (39:24); Progress 12 percent
+068, Carthage, OP_RAPID_RESPONSE, 1488, PRE Moving To Target with Army 1489; center (34:40); target (38:39); Progress 15 percent
+068, Carthage, OP_RAPID_RESPONSE, 1488, POST Moving To Target with Army 1489; center (34:40); target (38:39); Progress 15 percent
+068, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+068, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (13:39)
+068, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+068, The_Ottomans, OP_FOUND_CITY, 1524, Ended: NoTarget; Distance -1; Duration 69
+068, Austria, OP_FOUND_CITY, 1499, PRE Moving To Target with Army 1500; center (35:18); target (39:24); Progress 12 percent
+068, Austria, OP_FOUND_CITY, 1499, POST Moving To Target with Army 1500; center (34:19); target (39:24); Progress 12 percent
+069, Carthage, OP_RAPID_RESPONSE, 1488, PRE Moving To Target with Army 1489; center (34:40); target (38:39); Progress 15 percent
+069, Carthage, OP_RAPID_RESPONSE, 1488, POST Moving To Target with Army 1489; center (34:39); target (38:39); Progress 29 percent
+069, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+069, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (13:39)
+069, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+069, The_Ottomans, OP_FOUND_CITY, 1535, Ended: NoTarget; Distance -1; Duration 70
+069, Austria, OP_FOUND_CITY, 1499, PRE Moving To Target with Army 1500; center (34:19); target (39:24); Progress 12 percent
+069, Austria, OP_FOUND_CITY, 1499, POST Moving To Target with Army 1500; center (35:21); target (39:24); Progress 23 percent
+070, Carthage, OP_RAPID_RESPONSE, 1488, Ended: NoTarget; Distance 7; Duration 4
+070, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+070, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (13:39)
+070, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+070, The_Ottomans, OP_FOUND_CITY, 1544, Ended: NoTarget; Distance -1; Duration 71
+070, Austria, OP_FOUND_CITY, 1499, PRE Moving To Target with Army 1500; center (35:21); target (39:24); Progress 23 percent
+070, Austria, OP_FOUND_CITY, 1499, POST Moving To Target with Army 1500; center (36:21); target (39:24); Progress 45 percent
+071, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+071, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (13:39)
+071, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+071, The_Ottomans, OP_FOUND_CITY, 1554, found target for settler, score 74419 (q23)
+071, The_Ottomans, OP_FOUND_CITY, 1554, Skip recruiting, start with movement stage
+071, The_Ottomans, OP_FOUND_CITY, 1554, Found 1 potential units to recruit for operation 1554 at (54:38) with target at (42:38)
+071, The_Ottomans, OP_FOUND_CITY, 1554, Added Spearman 1283 to slot 1 in army 1555. ETA at (50:37) is 0 
+071, The_Ottomans, OP_FOUND_CITY, 1554, Started Army 1555; Units Recruited 2; Max Formation Size 2; Moving To Target
+071, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (50:37); target (42:38); Progress 0 percent
+071, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (50:37); target (42:38); Progress 0 percent
+071, Austria, OP_FOUND_CITY, 1499, PRE Moving To Target with Army 1500; center (36:21); target (39:24); Progress 45 percent
+071, Austria, OP_FOUND_CITY, 1499, POST Moving To Target with Army 1500; center (38:22); target (39:24); Progress 67 percent
+072, France, OP_FOUND_CITY, 1386, found better target for settler, old score 112272 (q50), new score 146601 (q50)
+072, France, OP_FOUND_CITY, 1386, setting new target (24:32)
+072, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+072, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (24:32)
+072, France, OP_FOUND_CITY, 1386, POST Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+072, The_Ottomans, OP_FOUND_CITY, 1554, found better target for settler, old score 80439 (q33), new score 82508 (q37)
+072, The_Ottomans, OP_FOUND_CITY, 1554, setting new target (44:36)
+072, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (50:37); target (44:36); Progress 0 percent
+072, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (50:35); target (44:36); Progress 14 percent
+072, Austria, OP_FOUND_CITY, 1499, PRE Moving To Target with Army 1500; center (38:22); target (39:24); Progress 67 percent
+072, Austria, OP_FOUND_CITY, 1499, POST Moving To Target with Army 1500; center (38:23); target (39:24); Progress 100 percent
+073, France, OP_FOUND_CITY, 1386, PRE Recruiting Units for army 1387; Settler 1385 at (19:36) - ETA 0; Open; 
+073, France, OP_FOUND_CITY, 1386, Found 0 potential units to recruit for operation 1386 at (19:36) with target at (24:32)
+073, France, OP_FOUND_CITY, 1386, No escort yet and the trip looks safe, going alone
+073, France, OP_FOUND_CITY, 1386, Transition to gathering stage
+073, France, OP_FOUND_CITY, 1386, Transition to movement stage
+073, France, OP_FOUND_CITY, 1386, POST Moving To Target with Army 1387; center (19:36); target (24:32); Progress 0 percent
+073, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (50:35); target (44:36); Progress 18 percent
+073, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (51:33); target (44:36); Progress 27 percent
+073, Austria, OP_FOUND_CITY, 1499, PRE Moving To Target with Army 1500; center (38:23); target (39:24); Progress 100 percent
+073, Austria, OP_FOUND_CITY, 1499, Transition to target stage
+073, Austria, OP_FOUND_CITY, 1499, City founded (Klagenfurt) at (39:24), plot value 88233, q46
+073, Austria, OP_FOUND_CITY, 1499, Transition to finished stage
+073, Austria, OP_FOUND_CITY, 1499, POST Completed
+074, France, OP_FOUND_CITY, 1386, PRE Moving To Target with Army 1387; center (19:36); target (24:32); Progress 0 percent
+074, France, OP_FOUND_CITY, 1386, POST Moving To Target with Army 1387; center (20:36); target (24:32); Progress 13 percent
+074, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (51:33); target (44:36); Progress 31 percent
+074, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (51:32); target (44:36); Progress 35 percent
+074, Austria, OP_FOUND_CITY, 1499, Ended: Success; Distance 9; Duration 8
+075, France, OP_FOUND_CITY, 1386, PRE Moving To Target with Army 1387; center (20:36); target (24:32); Progress 13 percent
+075, France, OP_FOUND_CITY, 1386, POST Moving To Target with Army 1387; center (21:36); target (24:32); Progress 25 percent
+075, Poland, OP_FOUND_CITY, 1606, found target for settler, score 99611 (q50)
+075, Poland, OP_FOUND_CITY, 1606, Initial stage is recruiting
+075, Poland, OP_FOUND_CITY, 1606, Found 2 potential units to recruit for operation 1606 at (20:20) with target at (21:31)
+075, Poland, OP_FOUND_CITY, 1606, Added Warrior 1006 to slot 1 in army 1607. ETA at (20:20) is 0 
+075, Poland, OP_FOUND_CITY, 1606, Transition to gathering stage
+075, Poland, OP_FOUND_CITY, 1606, Started Army 1607; Units Recruited 2; Max Formation Size 2; Gathering Forces
+075, Poland, OP_FOUND_CITY, 1606, PRE Gathering Forces for army 1607; center (20:20); variance (1.00:4.00); free slots 0
+075, Poland, OP_FOUND_CITY, 1606, Transition to movement stage
+075, Poland, OP_FOUND_CITY, 1606, POST Moving To Target with Army 1607; center (20:20); target (21:31); Progress 100 percent
+075, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (51:32); target (44:36); Progress 44 percent
+075, The_Ottomans, OP_FOUND_CITY, 1554, found better target for settler, old score 118671 (q50), new score 132651 (q50)
+075, The_Ottomans, OP_FOUND_CITY, 1554, setting new target (44:35)
+075, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (50:31); target (44:35); Progress 39 percent
+076, France, OP_FOUND_CITY, 1386, PRE Moving To Target with Army 1387; center (21:36); target (24:32); Progress 25 percent
+076, France, OP_FOUND_CITY, 1386, POST Moving To Target with Army 1387; center (22:36); target (24:32); Progress 38 percent
+076, Poland, OP_FOUND_CITY, 1606, cannot found city at (21:31)
+076, Poland, OP_FOUND_CITY, 1606, no path to city site (21:31)
+076, Poland, OP_FOUND_CITY, 1606, found better target for settler, old score 107389 (q50), new score 101072 (q50)
+076, Poland, OP_FOUND_CITY, 1606, setting new target (23:30)
+076, Poland, OP_FOUND_CITY, 1606, PRE Moving To Target with Army 1607; center (20:20); target (23:30); Progress 0 percent
+076, Poland, OP_FOUND_CITY, 1606, Ended: LostPath; Distance 16; Duration 1
+076, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (50:31); target (44:35); Progress 39 percent
+076, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (50:30); target (44:35); Progress 45 percent
+077, France, OP_FOUND_CITY, 1386, PRE Moving To Target with Army 1387; center (22:36); target (24:32); Progress 38 percent
+077, France, OP_FOUND_CITY, 1386, POST Moving To Target with Army 1387; center (23:35); target (24:32); Progress 50 percent
+077, Poland, OP_FOUND_CITY, 1627, found target for settler, score 101072 (q50)
+077, Poland, OP_FOUND_CITY, 1627, Initial stage is recruiting
+077, Poland, OP_FOUND_CITY, 1627, Found 1 potential units to recruit for operation 1627 at (20:20) with target at (23:30)
+077, Poland, OP_FOUND_CITY, 1627, Added Warrior 1006 to slot 1 in army 1628. ETA at (20:20) is 0 
+077, Poland, OP_FOUND_CITY, 1627, Transition to gathering stage
+077, Poland, OP_FOUND_CITY, 1627, Transition to movement stage
+077, Poland, OP_FOUND_CITY, 1627, Started Army 1628; Units Recruited 2; Max Formation Size 2; Moving To Target
+077, Poland, OP_FOUND_CITY, 1627, PRE Moving To Target with Army 1628; center (20:20); target (23:30); Progress 0 percent
+077, Poland, OP_FOUND_CITY, 1627, Ended: LostPath; Distance 16; Duration 0
+077, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (50:30); target (44:35); Progress 45 percent
+077, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (49:29); target (44:35); Progress 50 percent
+077, Austria, OP_FOUND_CITY, 1633, Ended: NoTarget; Distance -1; Duration 78
+078, France, OP_FOUND_CITY, 1386, PRE Moving To Target with Army 1387; center (23:35); target (24:32); Progress 50 percent
+078, France, OP_FOUND_CITY, 1386, POST Moving To Target with Army 1387; center (25:34); target (24:32); Progress 63 percent
+078, Poland, OP_FOUND_CITY, 1635, found target for settler, score 103430 (q50)
+078, Poland, OP_FOUND_CITY, 1635, Initial stage is recruiting
+078, Poland, OP_FOUND_CITY, 1635, Found 1 potential units to recruit for operation 1635 at (20:20) with target at (21:31)
+078, Poland, OP_FOUND_CITY, 1635, Added Warrior 1006 to slot 1 in army 1636. ETA at (20:20) is 0 
+078, Poland, OP_FOUND_CITY, 1635, Transition to gathering stage
+078, Poland, OP_FOUND_CITY, 1635, Transition to movement stage
+078, Poland, OP_FOUND_CITY, 1635, Started Army 1636; Units Recruited 2; Max Formation Size 2; Moving To Target
+078, Poland, OP_FOUND_CITY, 1635, PRE Moving To Target with Army 1636; center (20:20); target (21:31); Progress 0 percent
+078, Poland, OP_FOUND_CITY, 1635, POST Moving To Target with Army 1636; center (21:22); target (21:31); Progress 8 percent
+078, The_Ottomans, OP_FOUND_CITY, 1645, found target for settler, score 80439 (q33)
+078, The_Ottomans, OP_FOUND_CITY, 1645, Skip recruiting, start with movement stage
+078, The_Ottomans, OP_FOUND_CITY, 1645, Found 0 potential units to recruit for operation 1645 at (50:37) with target at (42:38)
+078, The_Ottomans, OP_FOUND_CITY, 1645, Started Army 1646; Units Recruited 1; Max Formation Size 2; Moving To Target
+078, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (49:29); target (44:35); Progress 50 percent
+078, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (48:30); target (44:35); Progress 62 percent
+078, The_Ottomans, OP_FOUND_CITY, 1645, PRE Moving To Target with Army 1646; center (50:37); target (42:38); Progress 0 percent
+078, The_Ottomans, OP_FOUND_CITY, 1645, POST Moving To Target with Army 1646; center (47:38); target (42:38); Progress 34 percent
+078, Austria, OP_FOUND_CITY, 1648, Ended: NoTarget; Distance -1; Duration 79
+079, France, OP_FOUND_CITY, 1386, PRE Moving To Target with Army 1387; center (25:34); target (24:32); Progress 63 percent
+079, France, OP_FOUND_CITY, 1386, Transition to target stage
+079, France, OP_FOUND_CITY, 1386, POST At Target
+079, Poland, OP_FOUND_CITY, 1651, found target for settler, score 127383 (q50)
+079, Poland, OP_FOUND_CITY, 1651, Initial stage is recruiting
+079, Poland, OP_FOUND_CITY, 1651, Found 0 potential units to recruit for operation 1651 at (19:26) with target at (25:30)
+079, Poland, OP_FOUND_CITY, 1651, Started Army 1652; Units Recruited 1; Max Formation Size 2; Recruiting Units
+079, Poland, OP_FOUND_CITY, 1635, PRE Moving To Target with Army 1636; center (21:22); target (21:31); Progress 8 percent
+079, Poland, OP_FOUND_CITY, 1635, POST Moving To Target with Army 1636; center (20:24); target (21:31); Progress 22 percent
+079, Poland, OP_FOUND_CITY, 1651, PRE Recruiting Units for army 1652; Settler 1617 at (18:29) - ETA -1; Open; 
+079, Poland, OP_FOUND_CITY, 1651, Found 0 potential units to recruit for operation 1651 at (19:26) with target at (25:30)
+079, Poland, OP_FOUND_CITY, 1651, POST Recruiting Units for army 1652; Settler 1617 at (18:28) - ETA 0; Open; 
+079, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (48:30); target (44:35); Progress 62 percent
+079, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (47:31); target (44:35); Progress 67 percent
+079, The_Ottomans, OP_FOUND_CITY, 1645, PRE Moving To Target with Army 1646; center (47:38); target (42:38); Progress 34 percent
+079, The_Ottomans, OP_FOUND_CITY, 1645, POST Moving To Target with Army 1646; center (45:40); target (42:38); Progress 59 percent
+079, Austria, OP_FOUND_CITY, 1660, Ended: NoTarget; Distance -1; Duration 80
+080, France, OP_FOUND_CITY, 1386, PRE At Target
+080, France, OP_FOUND_CITY, 1386, City founded (Orleans) at (24:32), plot value 146601, q50
+080, France, OP_FOUND_CITY, 1386, Transition to finished stage
+080, France, OP_FOUND_CITY, 1386, Ended: Success; Distance 8; Duration 22
+080, Poland, OP_FOUND_CITY, 1635, cannot found city at (21:31)
+080, Poland, OP_FOUND_CITY, 1635, found better target for settler, old score -1 (q-50), new score 54758 (q-9)
+080, Poland, OP_FOUND_CITY, 1635, setting new target (17:18)
+080, Poland, OP_FOUND_CITY, 1651, cannot found city at (25:30)
+080, Poland, OP_FOUND_CITY, 1651, found better target for settler, old score -1 (q-50), new score 52689 (q-13)
+080, Poland, OP_FOUND_CITY, 1651, setting new target (19:11)
+080, Poland, OP_FOUND_CITY, 1635, PRE Moving To Target with Army 1636; center (20:24); target (17:18); Progress -60 percent
+080, Poland, OP_FOUND_CITY, 1635, POST Moving To Target with Army 1636; center (21:22); target (17:18); Progress -40 percent
+080, Poland, OP_FOUND_CITY, 1651, PRE Recruiting Units for army 1652; Settler 1617 at (18:28) - ETA 0; Open; 
+080, Poland, OP_FOUND_CITY, 1651, Found 0 potential units to recruit for operation 1651 at (19:26) with target at (19:11)
+080, Poland, OP_FOUND_CITY, 1651, POST Recruiting Units for army 1652; Settler 1617 at (19:26) - ETA 0; Open; 
+080, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (47:31); target (44:35); Progress 67 percent
+080, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (46:33); target (44:35); Progress 78 percent
+080, The_Ottomans, OP_FOUND_CITY, 1645, PRE Moving To Target with Army 1646; center (45:40); target (42:38); Progress 59 percent
+080, The_Ottomans, OP_FOUND_CITY, 1645, POST Moving To Target with Army 1646; center (43:39); target (42:38); Progress 75 percent
+080, Austria, OP_FOUND_CITY, 1676, Ended: NoTarget; Distance -1; Duration 81
+081, Poland, OP_FOUND_CITY, 1635, PRE Moving To Target with Army 1636; center (21:22); target (17:18); Progress -40 percent
+081, Poland, OP_FOUND_CITY, 1635, POST Moving To Target with Army 1636; center (19:21); target (17:18); Progress 0 percent
+081, Poland, OP_FOUND_CITY, 1651, PRE Recruiting Units for army 1652; Settler 1617 at (19:26) - ETA 0; Open; 
+081, Poland, OP_FOUND_CITY, 1651, Found 1 potential units to recruit for operation 1651 at (19:26) with target at (19:11)
+081, Poland, OP_FOUND_CITY, 1651, Added Warrior 1243 to slot 1 in army 1652. ETA at (19:26) is 5 
+081, Poland, OP_FOUND_CITY, 1651, Transition to gathering stage
+081, Poland, OP_FOUND_CITY, 1651, POST Gathering Forces for army 1652; center (20:16); variance (0.25:25.00); free slots 0
+081, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (46:33); target (44:35); Progress 78 percent
+081, The_Ottomans, OP_FOUND_CITY, 1554, POST Moving To Target with Army 1555; center (45:33); target (44:35); Progress 84 percent
+081, The_Ottomans, OP_FOUND_CITY, 1645, PRE Moving To Target with Army 1646; center (43:39); target (42:38); Progress 75 percent
+081, The_Ottomans, OP_FOUND_CITY, 1645, Transition to target stage
+081, The_Ottomans, OP_FOUND_CITY, 1645, POST At Target
+081, Austria, OP_FOUND_CITY, 1686, Ended: NoTarget; Distance -1; Duration 82
+081, Austria, OP_FOUND_CITY, 1687, Ended: NoTarget; Distance -1; Duration 82
+082, Poland, OP_FOUND_CITY, 1635, PRE Moving To Target with Army 1636; center (19:21); target (17:18); Progress 0 percent
+082, Poland, OP_FOUND_CITY, 1635, POST Moving To Target with Army 1636; center (18:19); target (17:18); Progress 40 percent
+082, Poland, OP_FOUND_CITY, 1651, PRE Gathering Forces for army 1652; center (20:16); variance (0.25:25.00); free slots 0
+082, Poland, OP_FOUND_CITY, 1651, POST Gathering Forces for army 1652; center (19:26); variance (0.25:20.25); free slots 0
+082, The_Ottomans, OP_FOUND_CITY, 1554, PRE Moving To Target with Army 1555; center (45:33); target (44:35); Progress 84 percent
+082, The_Ottomans, OP_FOUND_CITY, 1554, Transition to target stage
+082, The_Ottomans, OP_FOUND_CITY, 1554, POST At Target
+082, The_Ottomans, OP_FOUND_CITY, 1645, PRE At Target
+082, The_Ottomans, OP_FOUND_CITY, 1645, City founded (Konya) at (42:38), plot value 80439, q33
+082, The_Ottomans, OP_FOUND_CITY, 1645, Transition to finished stage
+082, The_Ottomans, OP_FOUND_CITY, 1645, Ended: Success; Distance 12; Duration 4
+082, Austria, OP_FOUND_CITY, 1696, found target for settler, score 86388 (q43)
+082, Austria, OP_FOUND_CITY, 1696, Initial stage is recruiting
+082, Austria, OP_FOUND_CITY, 1696, Found 3 potential units to recruit for operation 1696 at (35:16) with target at (42:29)
+082, Austria, OP_FOUND_CITY, 1696, Added Warrior 1012 to slot 1 in army 1697. ETA at (35:16) is 2 
+082, Austria, OP_FOUND_CITY, 1696, Transition to gathering stage
+082, Austria, OP_FOUND_CITY, 1696, Started Army 1697; Units Recruited 2; Max Formation Size 2; Gathering Forces
+082, Austria, OP_FOUND_CITY, 1698, found target for settler, score 60156 (q0)
+082, Austria, OP_FOUND_CITY, 1698, Initial stage is recruiting
+082, Austria, OP_FOUND_CITY, 1698, Found 2 potential units to recruit for operation 1698 at (36:20) with target at (45:22)
+082, Austria, OP_FOUND_CITY, 1698, Added Warrior 1661 to slot 1 in army 1699. ETA at (36:20) is 1 
+082, Austria, OP_FOUND_CITY, 1698, Transition to gathering stage
+082, Austria, OP_FOUND_CITY, 1698, Started Army 1699; Units Recruited 2; Max Formation Size 2; Gathering Forces
+082, Austria, OP_FOUND_CITY, 1696, PRE Gathering Forces for army 1697; center (40:20); variance (6.25:4.00); free slots 0
+082, Austria, OP_FOUND_CITY, 1696, Added Composite Bowman 1662 to slot 1 in army 1697. ETA at (35:16) is 0 
+082, Austria, OP_FOUND_CITY, 1696, Transition to movement stage
+082, Austria, OP_FOUND_CITY, 1696, POST Moving To Target with Army 1697; center (37:16); target (42:29); Progress 7 percent
+082, Austria, OP_FOUND_CITY, 1698, PRE Gathering Forces for army 1699; center (41:20); variance (6.25:0.00); free slots 0
+082, Austria, OP_FOUND_CITY, 1698, Added Composite Bowman 1568 to slot 1 in army 1699. ETA at (36:20) is 0 
+082, Austria, OP_FOUND_CITY, 1698, Transition to movement stage
+082, Austria, OP_FOUND_CITY, 1698, POST Moving To Target with Army 1699; center (37:20); target (45:22); Progress 10 percent
+083, Poland, OP_FOUND_CITY, 1635, PRE Moving To Target with Army 1636; center (18:19); target (17:18); Progress 40 percent
+083, Poland, OP_FOUND_CITY, 1635, Transition to target stage
+083, Poland, OP_FOUND_CITY, 1635, POST At Target
+083, Poland, OP_FOUND_CITY, 1651, PRE Gathering Forces for army 1652; center (19:26); variance (0.25:20.25); free slots 0
+083, Poland, OP_FOUND_CITY, 1651, POST Gathering Forces for army 1652; center (19:26); variance (0.25:12.25); free slots 0
+083, The_Ottomans, OP_FOUND_CITY, 1554, PRE At Target
+083, The_Ottomans, OP_FOUND_CITY, 1554, City founded (Samsun) at (44:35), plot value 107819, q50
+083, The_Ottomans, OP_FOUND_CITY, 1554, Transition to finished stage
+083, The_Ottomans, OP_FOUND_CITY, 1554, Ended: Success; Distance 18; Duration 12
+083, Austria, OP_FOUND_CITY, 1698, no valid city site target found (with escort)!
+083, Austria, OP_FOUND_CITY, 1698, Ended: NoTarget; Distance 11; Duration 1
+083, Austria, OP_FOUND_CITY, 1696, PRE Moving To Target with Army 1697; center (37:16); target (42:29); Progress 7 percent
+083, Austria, OP_FOUND_CITY, 1696, POST Moving To Target with Army 1697; center (38:18); target (42:29); Progress 20 percent
+084, Poland, OP_FOUND_CITY, 1635, PRE At Target
+084, Poland, OP_FOUND_CITY, 1635, City founded (Poznan) at (17:18), plot value 56693, q-6
+084, Poland, OP_FOUND_CITY, 1635, Transition to finished stage
+084, Poland, OP_FOUND_CITY, 1651, PRE Gathering Forces for army 1652; center (19:26); variance (0.25:12.25); free slots 0
+084, Poland, OP_FOUND_CITY, 1651, POST Gathering Forces for army 1652; center (19:26); variance (0.00:6.25); free slots 0
+084, Poland, OP_FOUND_CITY, 1635, Ended: Success; Distance 5; Duration 6
+084, Austria, OP_FOUND_CITY, 1717, Ended: NoTarget; Distance -1; Duration 85
+084, Austria, OP_FOUND_CITY, 1696, PRE Moving To Target with Army 1697; center (38:18); target (42:29); Progress 20 percent
+084, Austria, OP_FOUND_CITY, 1696, POST Moving To Target with Army 1697; center (38:19); target (42:29); Progress 27 percent
+085, Carthage, OP_RAPID_RESPONSE, 1718, Initial stage is recruiting
+085, Carthage, OP_RAPID_RESPONSE, 1718, Found 4 potential units to recruit for operation 1718 at (29:42) with target at (29:42)
+085, Carthage, OP_RAPID_RESPONSE, 1718, Added Warrior 1649 to slot 0 in army 1719. ETA at (29:42) is 1 
+085, Carthage, OP_RAPID_RESPONSE, 1718, Added Spearman 1521 to slot 1 in army 1719. ETA at (29:42) is 2 
+085, Carthage, OP_RAPID_RESPONSE, 1718, Added Warrior 1379 to slot 2 in army 1719. ETA at (29:42) is 2 
+085, Carthage, OP_RAPID_RESPONSE, 1718, Added Spearman 1452 to slot 3 in army 1719. ETA at (29:42) is 5 
+085, Carthage, OP_RAPID_RESPONSE, 1718, Transition to gathering stage
+085, Carthage, OP_RAPID_RESPONSE, 1718, Started Army 1719; Units Recruited 4; Max Formation Size 4; Gathering Forces
+085, Carthage, OP_RAPID_RESPONSE, 1718, PRE Gathering Forces for army 1719; center (35:43); variance (4.19:4.25); free slots 0
+085, Carthage, OP_RAPID_RESPONSE, 1718, POST Gathering Forces for army 1719; center (32:43); variance (3.69:2.25); free slots 0
+085, Poland, OP_FOUND_CITY, 1651, PRE Gathering Forces for army 1652; center (19:26); variance (0.00:6.25); free slots 0
+085, Poland, OP_FOUND_CITY, 1651, Transition to movement stage
+085, Poland, OP_FOUND_CITY, 1651, POST Moving To Target with Army 1652; center (19:26); target (19:11); Progress 0 percent
+085, Austria, OP_FOUND_CITY, 1729, found target for settler, score 65268 (q8)
+085, Austria, OP_FOUND_CITY, 1729, Initial stage is recruiting
+085, Austria, OP_FOUND_CITY, 1729, Found 2 potential units to recruit for operation 1729 at (36:20) with target at (38:29)
+085, Austria, OP_FOUND_CITY, 1729, Added Warrior 1012 to slot 1 in army 1730. ETA at (36:20) is 0 
+085, Austria, OP_FOUND_CITY, 1729, Transition to gathering stage
+085, Austria, OP_FOUND_CITY, 1729, Transition to movement stage
+085, Austria, OP_FOUND_CITY, 1729, Started Army 1730; Units Recruited 2; Max Formation Size 2; Moving To Target
+085, Austria, OP_FOUND_CITY, 1696, PRE Moving To Target with Army 1697; center (38:19); target (42:29); Progress 27 percent
+085, Austria, OP_FOUND_CITY, 1696, POST Moving To Target with Army 1697; center (39:21); target (42:29); Progress 40 percent
+085, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (36:20); target (38:29); Progress 0 percent
+085, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (36:21); target (38:29); Progress 10 percent
+086, Carthage, OP_RAPID_RESPONSE, 1718, PRE Gathering Forces for army 1719; center (32:43); variance (3.69:2.25); free slots 0
+086, Carthage, OP_RAPID_RESPONSE, 1718, Transition to movement stage
+086, Carthage, OP_RAPID_RESPONSE, 1718, POST Moving To Target with Army 1719; center (32:41); target (29:42); Progress 0 percent
+086, Poland, OP_FOUND_CITY, 1651, PRE Moving To Target with Army 1652; center (19:26); target (19:11); Progress 0 percent
+086, Poland, OP_FOUND_CITY, 1651, POST Moving To Target with Army 1652; center (18:24); target (19:11); Progress 13 percent
+086, Austria, OP_FOUND_CITY, 1696, PRE Moving To Target with Army 1697; center (39:21); target (42:29); Progress 40 percent
+086, Austria, OP_FOUND_CITY, 1696, POST Moving To Target with Army 1697; center (40:23); target (42:29); Progress 54 percent
+086, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (36:21); target (38:29); Progress 10 percent
+086, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (38:22); target (38:29); Progress 28 percent
+087, Carthage, OP_RAPID_RESPONSE, 1718, PRE Moving To Target with Army 1719; center (32:41); target (29:42); Progress 0 percent
+087, Carthage, OP_RAPID_RESPONSE, 1718, POST Moving To Target with Army 1719; center (32:43); target (29:42); Progress 0 percent
+087, Poland, OP_FOUND_CITY, 1651, PRE Moving To Target with Army 1652; center (18:24); target (19:11); Progress 13 percent
+087, Poland, OP_FOUND_CITY, 1651, POST Moving To Target with Army 1652; center (17:22); target (19:11); Progress 25 percent
+087, The_Ottomans, OP_FOUND_CITY, 1749, found target for settler, score 82980 (q38)
+087, The_Ottomans, OP_FOUND_CITY, 1749, Initial stage is recruiting
+087, The_Ottomans, OP_FOUND_CITY, 1749, Found 0 potential units to recruit for operation 1749 at (54:38) with target at (41:30)
+087, The_Ottomans, OP_FOUND_CITY, 1749, Started Army 1750; Units Recruited 1; Max Formation Size 2; Recruiting Units
+087, The_Ottomans, OP_FOUND_CITY, 1749, PRE Recruiting Units for army 1750; Settler 1748 at (54:38) - ETA -1; Open; 
+087, The_Ottomans, OP_FOUND_CITY, 1749, Found 0 potential units to recruit for operation 1749 at (54:38) with target at (41:30)
+087, The_Ottomans, OP_FOUND_CITY, 1749, POST Recruiting Units for army 1750; Settler 1748 at (54:38) - ETA 0; Open; 
+087, Austria, OP_FOUND_CITY, 1696, PRE Moving To Target with Army 1697; center (40:23); target (42:29); Progress 54 percent
+087, Austria, OP_FOUND_CITY, 1696, POST Moving To Target with Army 1697; center (40:25); target (42:29); Progress 67 percent
+087, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (38:22); target (38:29); Progress 28 percent
+087, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (38:23); target (38:29); Progress 37 percent
+088, Carthage, OP_RAPID_RESPONSE, 1718, PRE Moving To Target with Army 1719; center (32:43); target (29:42); Progress 0 percent
+088, Carthage, OP_RAPID_RESPONSE, 1718, POST Moving To Target with Army 1719; center (32:41); target (29:42); Progress 0 percent
+088, France, OP_FOUND_CITY, 1757, found target for settler, score 112272 (q50)
+088, France, OP_FOUND_CITY, 1757, Initial stage is recruiting
+088, France, OP_FOUND_CITY, 1757, Found 0 potential units to recruit for operation 1757 at (19:36) with target at (13:39)
+088, France, OP_FOUND_CITY, 1757, Started Army 1758; Units Recruited 1; Max Formation Size 2; Recruiting Units
+088, France, OP_FOUND_CITY, 1757, PRE Recruiting Units for army 1758; Settler 1756 at (19:36) - ETA -1; Open; 
+088, France, OP_FOUND_CITY, 1757, Found 0 potential units to recruit for operation 1757 at (19:36) with target at (13:39)
+088, France, OP_FOUND_CITY, 1757, POST Recruiting Units for army 1758; Settler 1756 at (19:36) - ETA 0; Open; 
+088, Poland, OP_FOUND_CITY, 1651, PRE Moving To Target with Army 1652; center (17:22); target (19:11); Progress 25 percent
+088, Poland, OP_FOUND_CITY, 1651, POST Moving To Target with Army 1652; center (16:20); target (19:11); Progress 38 percent
+088, The_Ottomans, OP_FOUND_CITY, 1749, PRE Recruiting Units for army 1750; Settler 1748 at (54:38) - ETA 0; Open; 
+088, The_Ottomans, OP_FOUND_CITY, 1749, Found 0 potential units to recruit for operation 1749 at (54:38) with target at (41:30)
+088, The_Ottomans, OP_FOUND_CITY, 1749, POST Recruiting Units for army 1750; Settler 1748 at (54:38) - ETA 0; Open; 
+088, Austria, OP_FOUND_CITY, 1696, PRE Moving To Target with Army 1697; center (40:25); target (42:29); Progress 67 percent
+088, Austria, OP_FOUND_CITY, 1696, POST Moving To Target with Army 1697; center (41:26); target (42:29); Progress 74 percent
+088, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (38:23); target (38:29); Progress 37 percent
+088, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (39:25); target (38:29); Progress 55 percent
+089, Carthage, OP_RAPID_RESPONSE, 1718, PRE Moving To Target with Army 1719; center (32:41); target (29:42); Progress 0 percent
+089, Carthage, OP_RAPID_RESPONSE, 1718, POST Moving To Target with Army 1719; center (32:41); target (29:42); Progress 0 percent
+089, France, OP_FOUND_CITY, 1757, PRE Recruiting Units for army 1758; Settler 1756 at (19:36) - ETA 0; Open; 
+089, France, OP_FOUND_CITY, 1757, Found 0 potential units to recruit for operation 1757 at (19:36) with target at (13:39)
+089, France, OP_FOUND_CITY, 1757, POST Recruiting Units for army 1758; Settler 1756 at (19:36) - ETA 0; Open; 
+089, Poland, OP_FOUND_CITY, 1651, PRE Moving To Target with Army 1652; center (16:20); target (19:11); Progress 38 percent
+089, Poland, OP_FOUND_CITY, 1651, POST Moving To Target with Army 1652; center (17:18); target (19:11); Progress 50 percent
+089, The_Ottomans, OP_FOUND_CITY, 1749, PRE Recruiting Units for army 1750; Settler 1748 at (54:38) - ETA 0; Open; 
+089, The_Ottomans, OP_FOUND_CITY, 1749, Found 2 potential units to recruit for operation 1749 at (54:38) with target at (41:30)
+089, The_Ottomans, OP_FOUND_CITY, 1749, Added Spearman 1283 to slot 1 in army 1750. ETA at (54:38) is 2 
+089, The_Ottomans, OP_FOUND_CITY, 1749, Transition to gathering stage
+089, The_Ottomans, OP_FOUND_CITY, 1749, POST Gathering Forces for army 1750; center (48:38); variance (9.00:0.00); free slots 0
+089, Austria, OP_FOUND_CITY, 1696, PRE Moving To Target with Army 1697; center (41:26); target (42:29); Progress 74 percent
+089, Austria, OP_FOUND_CITY, 1696, POST Moving To Target with Army 1697; center (41:27); target (42:29); Progress 80 percent
+089, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (39:25); target (38:29); Progress 55 percent
+089, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (40:26); target (38:29); Progress 64 percent
+090, Carthage, OP_RAPID_RESPONSE, 1718, PRE Moving To Target with Army 1719; center (32:41); target (29:42); Progress 0 percent
+090, Carthage, OP_RAPID_RESPONSE, 1718, POST Moving To Target with Army 1719; center (32:41); target (29:42); Progress 0 percent
+090, France, OP_FOUND_CITY, 1757, PRE Recruiting Units for army 1758; Settler 1756 at (19:36) - ETA 0; Open; 
+090, France, OP_FOUND_CITY, 1757, Found 1 potential units to recruit for operation 1757 at (19:36) with target at (13:39)
+090, France, OP_FOUND_CITY, 1757, Added Spearman 1788 to slot 1 in army 1758. ETA at (19:36) is 0 
+090, France, OP_FOUND_CITY, 1757, Transition to gathering stage
+090, France, OP_FOUND_CITY, 1757, POST Gathering Forces for army 1758; center (17:36); variance (0.00:0.00); free slots 0
+090, Poland, OP_FOUND_CITY, 1651, PRE Moving To Target with Army 1652; center (17:18); target (19:11); Progress 50 percent
+090, Poland, OP_FOUND_CITY, 1651, POST Moving To Target with Army 1652; center (18:17); target (19:11); Progress 57 percent
+090, India, OP_FOUND_CITY, 1789, found target for settler, score 73556 (q22)
+090, India, OP_FOUND_CITY, 1789, Initial stage is recruiting
+090, India, OP_FOUND_CITY, 1789, Found 0 potential units to recruit for operation 1789 at (51:22) with target at (48:27)
+090, India, OP_FOUND_CITY, 1789, Started Army 1790; Units Recruited 1; Max Formation Size 2; Recruiting Units
+090, India, OP_FOUND_CITY, 1789, PRE Recruiting Units for army 1790; Settler 1182 at (51:22) - ETA -1; Open; 
+090, India, OP_FOUND_CITY, 1789, Found 0 potential units to recruit for operation 1789 at (51:22) with target at (48:27)
+090, India, OP_FOUND_CITY, 1789, POST Recruiting Units for army 1790; Settler 1182 at (51:22) - ETA 0; Open; 
+090, The_Ottomans, OP_FOUND_CITY, 1749, PRE Gathering Forces for army 1750; center (48:38); variance (9.00:0.00); free slots 0
+090, The_Ottomans, OP_FOUND_CITY, 1749, Transition to movement stage
+090, The_Ottomans, OP_FOUND_CITY, 1749, POST Moving To Target with Army 1750; center (54:38); target (41:30); Progress 0 percent
+090, Austria, OP_FOUND_CITY, 1696, PRE Moving To Target with Army 1697; center (41:27); target (42:29); Progress 80 percent
+090, Austria, OP_FOUND_CITY, 1696, Transition to target stage
+090, Austria, OP_FOUND_CITY, 1696, POST At Target
+090, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (40:26); target (38:29); Progress 64 percent
+090, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (40:27); target (38:29); Progress 64 percent
+091, Carthage, OP_FOUND_CITY, 1802, found target for settler, score 86867 (q44)
+091, Carthage, OP_FOUND_CITY, 1802, Initial stage is recruiting
+091, Carthage, OP_FOUND_CITY, 1802, Found 0 potential units to recruit for operation 1802 at (29:42) with target at (25:40)
+091, Carthage, OP_FOUND_CITY, 1802, Started Army 1803; Units Recruited 1; Max Formation Size 2; Recruiting Units
+091, Carthage, OP_RAPID_RESPONSE, 1718, PRE Moving To Target with Army 1719; center (32:41); target (29:42); Progress 0 percent
+091, Carthage, OP_RAPID_RESPONSE, 1718, Transition to finished stage; unit distance near 3; far 5
+091, Carthage, OP_RAPID_RESPONSE, 1718, POST Completed
+091, Carthage, OP_FOUND_CITY, 1802, PRE Recruiting Units for army 1803; Settler 1801 at (29:42) - ETA -1; Open; 
+091, Carthage, OP_FOUND_CITY, 1802, Found 0 potential units to recruit for operation 1802 at (29:42) with target at (25:40)
+091, Carthage, OP_FOUND_CITY, 1802, POST Recruiting Units for army 1803; Settler 1801 at (29:42) - ETA 0; Open; 
+091, France, OP_FOUND_CITY, 1757, PRE Gathering Forces for army 1758; center (17:36); variance (0.00:0.00); free slots 0
+091, France, OP_FOUND_CITY, 1757, Transition to movement stage
+091, France, OP_FOUND_CITY, 1757, POST Moving To Target with Army 1758; center (16:38); target (13:39); Progress 0 percent
+091, Poland, OP_FOUND_CITY, 1651, PRE Moving To Target with Army 1652; center (18:17); target (19:11); Progress 57 percent
+091, Poland, OP_FOUND_CITY, 1651, POST Moving To Target with Army 1652; center (19:15); target (19:11); Progress 63 percent
+091, India, OP_FOUND_CITY, 1789, PRE Recruiting Units for army 1790; Settler 1182 at (51:22) - ETA 0; Open; 
+091, India, OP_FOUND_CITY, 1789, Found 0 potential units to recruit for operation 1789 at (51:22) with target at (48:27)
+091, India, OP_FOUND_CITY, 1789, POST Recruiting Units for army 1790; Settler 1182 at (51:22) - ETA 0; Open; 
+091, The_Ottomans, OP_FOUND_CITY, 1749, PRE Moving To Target with Army 1750; center (54:38); target (41:30); Progress 0 percent
+091, The_Ottomans, OP_FOUND_CITY, 1749, POST Moving To Target with Army 1750; center (51:37); target (41:30); Progress 6 percent
+091, Austria, OP_FOUND_CITY, 1696, found better target for settler, old score 88394 (q47), new score 103185 (q50)
+091, Austria, OP_FOUND_CITY, 1696, setting new target (43:29)
+091, Austria, OP_FOUND_CITY, 1729, found better target for settler, old score 67544 (q12), new score 71639 (q19)
+091, Austria, OP_FOUND_CITY, 1729, setting new target (39:29)
+091, Austria, OP_FOUND_CITY, 1696, PRE Moving To Target with Army 1697; center (42:29); target (43:29); Progress 100 percent
+091, Austria, OP_FOUND_CITY, 1696, Transition to target stage
+091, Austria, OP_FOUND_CITY, 1696, POST At Target
+091, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (40:27); target (39:29); Progress 73 percent
+091, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (40:28); target (39:29); Progress 100 percent
+092, Carthage, OP_RAPID_RESPONSE, 1718, Ended: Success; Distance 5; Duration 7
+092, Carthage, OP_FOUND_CITY, 1802, PRE Recruiting Units for army 1803; Settler 1801 at (29:42) - ETA 0; Open; 
+092, Carthage, OP_FOUND_CITY, 1802, Found 0 potential units to recruit for operation 1802 at (29:42) with target at (25:40)
+092, Carthage, OP_FOUND_CITY, 1802, POST Recruiting Units for army 1803; Settler 1801 at (29:42) - ETA 0; Open; 
+092, France, OP_FOUND_CITY, 1757, PRE Moving To Target with Army 1758; center (16:38); target (13:39); Progress 0 percent
+092, France, OP_FOUND_CITY, 1757, POST Moving To Target with Army 1758; center (14:39); target (13:39); Progress 100 percent
+092, Poland, OP_FOUND_CITY, 1651, PRE Moving To Target with Army 1652; center (19:15); target (19:11); Progress 63 percent
+092, Poland, OP_FOUND_CITY, 1651, POST Moving To Target with Army 1652; center (20:14); target (19:11); Progress 75 percent
+092, India, OP_FOUND_CITY, 1789, PRE Recruiting Units for army 1790; Settler 1182 at (51:22) - ETA 0; Open; 
+092, India, OP_FOUND_CITY, 1789, Found 0 potential units to recruit for operation 1789 at (51:22) with target at (48:27)
+092, India, OP_FOUND_CITY, 1789, POST Recruiting Units for army 1790; Settler 1182 at (51:22) - ETA 0; Open; 
+092, The_Ottomans, OP_FOUND_CITY, 1749, PRE Moving To Target with Army 1750; center (50:37); target (41:30); Progress 0 percent
+092, The_Ottomans, OP_FOUND_CITY, 1749, POST Moving To Target with Army 1750; center (51:37); target (41:30); Progress 6 percent
+092, Austria, OP_FOUND_CITY, 1696, PRE At Target
+092, Austria, OP_FOUND_CITY, 1696, City founded (Bregenz) at (43:29), plot value 103185, q50
+092, Austria, OP_FOUND_CITY, 1696, Transition to finished stage
+092, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (40:28); target (39:29); Progress 100 percent
+092, Austria, OP_FOUND_CITY, 1729, found better target for settler, old score 71639 (q19), new score 142601 (q50)
+092, Austria, OP_FOUND_CITY, 1729, setting new target (47:31)
+092, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (41:28); target (47:31); Progress 53 percent
+092, Austria, OP_FOUND_CITY, 1696, Ended: Success; Distance 16; Duration 10
+093, Carthage, OP_FOUND_CITY, 1802, found better target for settler, old score 86867 (q44), new score 72565 (q20)
+093, Carthage, OP_FOUND_CITY, 1802, setting new target (25:41)
+093, Carthage, OP_FOUND_CITY, 1802, PRE Recruiting Units for army 1803; Settler 1801 at (29:42) - ETA 0; Open; 
+093, Carthage, OP_FOUND_CITY, 1802, Found 1 potential units to recruit for operation 1802 at (29:42) with target at (25:41)
+093, Carthage, OP_FOUND_CITY, 1802, Added Warrior 1405 to slot 1 in army 1803. ETA at (29:42) is 5 
+093, Carthage, OP_FOUND_CITY, 1802, Added Warrior 1078 to slot 1 in army 1803. ETA at (29:42) is 0 
+093, Carthage, OP_FOUND_CITY, 1802, Transition to gathering stage
+093, Carthage, OP_FOUND_CITY, 1802, Transition to movement stage
+093, Carthage, OP_FOUND_CITY, 1802, POST Moving To Target with Army 1803; center (29:42); target (25:41); Progress 0 percent
+093, France, OP_FOUND_CITY, 1757, PRE Moving To Target with Army 1758; center (14:39); target (13:39); Progress 100 percent
+093, France, OP_FOUND_CITY, 1757, Transition to target stage
+093, France, OP_FOUND_CITY, 1757, City founded (Lyon) at (13:39), plot value 81781, q36
+093, France, OP_FOUND_CITY, 1757, Transition to finished stage
+093, France, OP_FOUND_CITY, 1757, POST Completed
+093, Poland, OP_FOUND_CITY, 1651, PRE Moving To Target with Army 1652; center (20:14); target (19:11); Progress 75 percent
+093, Poland, OP_FOUND_CITY, 1651, POST Moving To Target with Army 1652; center (20:12); target (19:11); Progress 100 percent
+093, India, OP_FOUND_CITY, 1789, PRE Recruiting Units for army 1790; Settler 1182 at (51:22) - ETA 0; Open; 
+093, India, OP_FOUND_CITY, 1789, Found 1 potential units to recruit for operation 1789 at (51:22) with target at (48:27)
+093, India, OP_FOUND_CITY, 1789, Added Warrior 1008 to slot 1 in army 1790. ETA at (51:22) is 0 
+093, India, OP_FOUND_CITY, 1789, Added Chariot Archer 1446 to slot 1 in army 1790. ETA at (51:22) is 0 
+093, India, OP_FOUND_CITY, 1789, Transition to gathering stage
+093, India, OP_FOUND_CITY, 1789, Transition to movement stage
+093, India, OP_FOUND_CITY, 1789, POST Moving To Target with Army 1790; center (51:22); target (48:27); Progress 0 percent
+093, The_Ottomans, OP_FOUND_CITY, 1749, cannot found city at (41:30)
+093, The_Ottomans, OP_FOUND_CITY, 1749, found better target for settler, old score -1 (q-50), new score 64916 (q8)
+093, The_Ottomans, OP_FOUND_CITY, 1749, setting new target (41:32)
+093, The_Ottomans, OP_FOUND_CITY, 1749, PRE Moving To Target with Army 1750; center (51:37); target (41:32); Progress 5 percent
+093, The_Ottomans, OP_FOUND_CITY, 1749, POST Moving To Target with Army 1750; center (48:38); target (41:32); Progress -5 percent
+093, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (41:28); target (47:31); Progress 53 percent
+093, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (43:28); target (47:31); Progress 64 percent
+094, Carthage, OP_FOUND_CITY, 1802, PRE Moving To Target with Army 1803; center (29:42); target (25:41); Progress 0 percent
+094, Carthage, OP_FOUND_CITY, 1802, POST Moving To Target with Army 1803; center (27:41); target (25:41); Progress 40 percent
+094, France, OP_FOUND_CITY, 1757, Ended: Success; Distance 4; Duration 6
+094, Poland, OP_FOUND_CITY, 1840, found target for settler, score 65706 (q9)
+094, Poland, OP_FOUND_CITY, 1840, Initial stage is recruiting
+094, Poland, OP_FOUND_CITY, 1840, Found 1 potential units to recruit for operation 1840 at (20:15) with target at (26:29)
+094, Poland, OP_FOUND_CITY, 1840, Added Swordsman 1760 to slot 1 in army 1841. ETA at (20:15) is 0 
+094, Poland, OP_FOUND_CITY, 1840, Transition to gathering stage
+094, Poland, OP_FOUND_CITY, 1840, Transition to movement stage
+094, Poland, OP_FOUND_CITY, 1840, Started Army 1841; Units Recruited 2; Max Formation Size 2; Moving To Target
+094, Poland, OP_FOUND_CITY, 1651, PRE Moving To Target with Army 1652; center (20:12); target (19:11); Progress 100 percent
+094, Poland, OP_FOUND_CITY, 1651, Transition to target stage
+094, Poland, OP_FOUND_CITY, 1651, POST At Target
+094, Poland, OP_FOUND_CITY, 1840, PRE Moving To Target with Army 1841; center (20:15); target (26:29); Progress 0 percent
+094, Poland, OP_FOUND_CITY, 1840, POST Moving To Target with Army 1841; center (19:19); target (26:29); Progress 16 percent
+094, India, OP_FOUND_CITY, 1789, PRE Moving To Target with Army 1790; center (51:22); target (48:27); Progress 0 percent
+094, India, OP_FOUND_CITY, 1789, POST Moving To Target with Army 1790; center (50:24); target (48:27); Progress 34 percent
+094, The_Ottomans, OP_FOUND_CITY, 1749, PRE Moving To Target with Army 1750; center (48:38); target (41:32); Progress -5 percent
+094, The_Ottomans, OP_FOUND_CITY, 1749, POST Moving To Target with Army 1750; center (46:38); target (41:32); Progress -15 percent
+094, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (43:28); target (47:31); Progress 64 percent
+094, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (44:29); target (47:31); Progress 74 percent
+095, Carthage, OP_FOUND_CITY, 1802, PRE Moving To Target with Army 1803; center (27:41); target (25:41); Progress 40 percent
+095, Carthage, OP_FOUND_CITY, 1802, POST Moving To Target with Army 1803; center (27:43); target (25:41); Progress 20 percent
+095, France, OP_FOUND_CITY, 1853, found target for settler, score 91747 (q50)
+095, France, OP_FOUND_CITY, 1853, Initial stage is recruiting
+095, France, OP_FOUND_CITY, 1853, Found 0 potential units to recruit for operation 1853 at (19:36) with target at (17:42)
+095, France, OP_FOUND_CITY, 1853, Started Army 1854; Units Recruited 1; Max Formation Size 2; Recruiting Units
+095, France, OP_FOUND_CITY, 1853, PRE Recruiting Units for army 1854; Settler 1852 at (19:36) - ETA -1; Open; 
+095, France, OP_FOUND_CITY, 1853, Found 0 potential units to recruit for operation 1853 at (19:36) with target at (17:42)
+095, France, OP_FOUND_CITY, 1853, POST Recruiting Units for army 1854; Settler 1852 at (19:36) - ETA 0; Open; 
+095, Poland, OP_FOUND_CITY, 1651, PRE At Target
+095, Poland, OP_FOUND_CITY, 1651, City founded (Gdansk) at (19:11), plot value 52689, q-13
+095, Poland, OP_FOUND_CITY, 1651, Transition to finished stage
+095, Poland, OP_FOUND_CITY, 1840, PRE Moving To Target with Army 1841; center (19:19); target (26:29); Progress 16 percent
+095, Poland, OP_FOUND_CITY, 1840, POST Moving To Target with Army 1841; center (21:22); target (26:29); Progress 24 percent
+095, Poland, OP_FOUND_CITY, 1651, Ended: Success; Distance 16; Duration 16
+095, India, OP_FOUND_CITY, 1789, PRE Moving To Target with Army 1790; center (50:24); target (48:27); Progress 34 percent
+095, India, OP_FOUND_CITY, 1789, POST Moving To Target with Army 1790; center (49:25); target (48:27); Progress 50 percent
+095, The_Ottomans, OP_FOUND_CITY, 1749, PRE Moving To Target with Army 1750; center (46:38); target (41:32); Progress -15 percent
+095, The_Ottomans, OP_FOUND_CITY, 1749, POST Moving To Target with Army 1750; center (44:37); target (41:32); Progress 65 percent
+095, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (44:29); target (47:31); Progress 74 percent
+095, Austria, OP_FOUND_CITY, 1729, POST Moving To Target with Army 1730; center (46:30); target (47:31); Progress 85 percent
+096, Carthage, OP_FOUND_CITY, 1802, PRE Moving To Target with Army 1803; center (27:43); target (25:41); Progress 20 percent
+096, Carthage, OP_FOUND_CITY, 1802, POST Moving To Target with Army 1803; center (26:41); target (25:41); Progress 100 percent
+096, France, OP_FOUND_CITY, 1853, PRE Recruiting Units for army 1854; Settler 1852 at (19:36) - ETA 0; Open; 
+096, France, OP_FOUND_CITY, 1853, Found 0 potential units to recruit for operation 1853 at (19:36) with target at (17:42)
+096, France, OP_FOUND_CITY, 1853, POST Recruiting Units for army 1854; Settler 1852 at (19:36) - ETA 0; Open; 
+096, Poland, OP_FOUND_CITY, 1840, PRE Moving To Target with Army 1841; center (21:22); target (26:29); Progress 24 percent
+096, Poland, OP_FOUND_CITY, 1840, POST Moving To Target with Army 1841; center (19:23); target (26:29); Progress 32 percent
+096, India, OP_FOUND_CITY, 1789, PRE Moving To Target with Army 1790; center (49:25); target (48:27); Progress 50 percent
+096, India, OP_FOUND_CITY, 1789, POST Moving To Target with Army 1790; center (49:26); target (48:27); Progress 100 percent
+096, The_Ottomans, OP_FOUND_CITY, 1749, PRE Moving To Target with Army 1750; center (44:37); target (41:32); Progress 65 percent
+096, The_Ottomans, OP_FOUND_CITY, 1749, POST Moving To Target with Army 1750; center (44:34); target (41:32); Progress 75 percent
+096, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (46:30); target (47:31); Progress 85 percent
+096, Austria, OP_FOUND_CITY, 1729, Transition to target stage
+096, Austria, OP_FOUND_CITY, 1729, POST At Target
+097, Carthage, OP_FOUND_CITY, 1802, found better target for settler, old score 72565 (q20), new score 88702 (q47)
+097, Carthage, OP_FOUND_CITY, 1802, setting new target (25:39)
+097, Carthage, OP_FOUND_CITY, 1802, PRE Moving To Target with Army 1803; center (26:41); target (25:39); Progress 50 percent
+097, Carthage, OP_FOUND_CITY, 1802, POST Moving To Target with Army 1803; center (26:40); target (25:39); Progress 100 percent
+097, France, OP_FOUND_CITY, 1853, PRE Recruiting Units for army 1854; Settler 1852 at (19:36) - ETA 0; Open; 
+097, France, OP_FOUND_CITY, 1853, Found 0 potential units to recruit for operation 1853 at (19:36) with target at (17:42)
+097, France, OP_FOUND_CITY, 1853, POST Recruiting Units for army 1854; Settler 1852 at (19:36) - ETA 0; Open; 
+097, Poland, OP_FOUND_CITY, 1840, PRE Moving To Target with Army 1841; center (19:23); target (26:29); Progress 32 percent
+097, Poland, OP_FOUND_CITY, 1840, POST Moving To Target with Army 1841; center (18:25); target (26:29); Progress 40 percent
+097, India, OP_FOUND_CITY, 1789, PRE Moving To Target with Army 1790; center (49:26); target (48:27); Progress 100 percent
+097, India, OP_FOUND_CITY, 1789, Transition to target stage
+097, India, OP_FOUND_CITY, 1789, City founded (Mumbai) at (48:27), plot value 65894, q9
+097, India, OP_FOUND_CITY, 1789, Transition to finished stage
+097, India, OP_FOUND_CITY, 1789, POST Completed
+097, The_Ottomans, OP_FOUND_CITY, 1749, PRE Moving To Target with Army 1750; center (44:34); target (41:32); Progress 75 percent
+097, The_Ottomans, OP_FOUND_CITY, 1749, POST Moving To Target with Army 1750; center (42:33); target (41:32); Progress 85 percent
+097, Austria, OP_FOUND_CITY, 1729, found better target for settler, old score 0 (q-50), new score 99190 (q50)
+097, Austria, OP_FOUND_CITY, 1729, setting new target (48:31)
+097, Austria, OP_FOUND_CITY, 1729, PRE Moving To Target with Army 1730; center (47:31); target (48:31); Progress 100 percent
+097, Austria, OP_FOUND_CITY, 1729, Transition to target stage
+097, Austria, OP_FOUND_CITY, 1729, POST At Target
+098, Carthage, OP_FOUND_CITY, 1802, PRE Moving To Target with Army 1803; center (26:40); target (25:39); Progress 100 percent
+098, Carthage, OP_FOUND_CITY, 1802, Transition to target stage
+098, Carthage, OP_FOUND_CITY, 1802, POST At Target
+098, France, OP_FOUND_CITY, 1853, PRE Recruiting Units for army 1854; Settler 1852 at (19:36) - ETA 0; Open; 
+098, France, OP_FOUND_CITY, 1853, Found 1 potential units to recruit for operation 1853 at (19:36) with target at (17:42)
+098, France, OP_FOUND_CITY, 1853, Added Spearman 1886 to slot 1 in army 1854. ETA at (19:36) is 0 
+098, France, OP_FOUND_CITY, 1853, Transition to gathering stage
+098, France, OP_FOUND_CITY, 1853, POST Gathering Forces for army 1854; center (18:38); variance (0.25:0.25); free slots 0
+098, Poland, OP_FOUND_CITY, 1840, PRE Moving To Target with Army 1841; center (18:25); target (26:29); Progress 40 percent
+098, Poland, OP_FOUND_CITY, 1840, POST Moving To Target with Army 1841; center (18:27); target (26:29); Progress 48 percent
