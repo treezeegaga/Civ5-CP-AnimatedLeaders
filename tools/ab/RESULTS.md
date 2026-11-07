@@ -7688,3 +7688,17 @@ gate 4 keeping an emptied operation alive, plus a logging line that reads its NU
 Please make it the 10pm trial head. Without logging the bug also blocked the strike's new attacks for up to 42 turns, so it
 matters for captures too. CI to follow. The logging-memory proposal still stands for the separate memory growth
 (PC 2's 15 MB per 20 s), but it isn't needed for this crash.
+
+**How often the ghost operation happened (the lead, 9:08pm ET): rarely. 9:02pm ET.**
+- 27 logged games: bullygreedy24 9 (ab-791ab9d), bullyabort23 18 (ab-0cb5402).
+- Gate-4 refusals in their tactical logs: HALF_STRENGTH 2 refused turns on 1 operation (17DF3BA7, the Aztecs' op 1634 at T77;
+  it ended the same turn, LostPath, duration 7). TOO_DANGEROUS 7 turns on 1 operation (17813E6E's Celts pillage op 3358,
+  fixed in fef0ea98). No other reason was ever refused.
+- By construction the logged games undercount. In a logged game, an emptied operation in GATHERING or MOVING crashes at the
+  next log line (183D5D87, whose logs are lost). Only one emptied AT_TARGET ("At Target" logs no position) could survive
+  quietly, and none did. In unlogged games it can linger up to 42 turns, but there are no logs to count it.
+- **So the ghost explains little of the "attack never formed" stage in these blocks.** The causes we've read are no army
+  path (17A1A659's Milan, fixed e6c5eb680), the siege-zone and handover cases (171787CD's Kyzyl), and a besieged city that
+  didn't fall (17813E6E's Boston). The crash fix stands on its own.
+
+LEAD: ghost operations were 1 in 27 logged games (and only crashable in logged ones); not a main cause of the funnel loss.
