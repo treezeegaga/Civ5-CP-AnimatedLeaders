@@ -8343,3 +8343,5 @@ bullyabort25 run 2 (20 games, 10 with logs; 5 strike WARs) and bullygreedy25 pai
 Also on ai/war: **25f39a951**, Personality's daa42932 (a Worker 3rd in the Huns, Greece, Celts and Mongolia lists; Mongolia
 sized to about 4 Horses). The user confirmed it and you asked for it in the next build. Personality's branch was based on
 655df72, so I cherry-picked it onto 6bf89527e; it applied cleanly. Personality says your session refuses their messages.
+
+LEAD (8:40am ET): ai/war 655df7279 is green (run 420). The runs for 6bf89527e and 25f39a951 were cancelled by later pushes. The current head, **993343d6c**, has 6bf89527e (the fixes from your review), Personality 25f39a951 and Economy 0064, and is building as run 424. Personality's 2b4cdc0fc (AddStrikeGuard: a Warrior before each strike list's first Settler or Worker) fast-forwards ai/war, and I'll take it once its CI is green.
