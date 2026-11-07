@@ -3670,7 +3670,9 @@ weights fill everything a plan doesn't name):
     - Mongolia had one pasture. The row needs 10 Horses, not 18: an upgraded unit keeps its Horse.
     - The Chariot Archer upgrades to the Knight (the Keshik) under BNW, so the pre-build counts toward the core.
     - PREP to T100 was Chivalry not yet researchable: 16 techs at T100, tied for last.
-    - Sizing to the Horses owned goes in Economy's executor, not in the plan, which reads game data only.
+    - The executor already passes over an item it can't train (resource, tech, obsolete) and falls back to the
+      regular book when nothing on the list can be built, so no production was lost; my "skip, not hold" request was
+      already met. The plan keeps reading game data only.
   With 4 pre-built, item 16 (the 6th Chariot Archer) wouldn't be on the list. The gold hold is Economy's side.
   For the next block, coded on `ai/personality` once the lead says go.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
