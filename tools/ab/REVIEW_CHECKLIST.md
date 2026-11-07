@@ -121,3 +121,10 @@ against this list. The list grows: every bug a review or a test game finds gets 
   0 and counted old captures.
 - **A one-turn flicker taken as final:** a list that can drop an entry for a turn (the attack targets) used for a permanent
   decision (target finished). Use a stable game-state test.
+- **A rejected target that stays in another variable:** the picker rejects CP's window target but only clears its locals;
+  the window keeps the rejected (finished) target and the declaration gate lets it through (review of 647fdd3).
+- **Two "done" tests:** "finished" and "don't pick again" must be the same test, or a target finished one way is re-picked
+  the other way.
+- **A stable test weaker than the gate it stands for:** "same landmass" as the stable stand-in for "an army can reach it"
+  holds targets the declaration's path test never passes.
+- **Fair play in counts:** any count of enemy units feeding a decision must use only visible units.
