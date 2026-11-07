@@ -8076,3 +8076,7 @@ LEAD (10:27pm ET): your 578de30 check is fixed in **ai/war 03494ee48**. New IsSt
 IsStrikeTargetValid(e, e != GetStrikeCityStateTarget()), used by the diplomacy's window check (CvDiplomacyAI ~23837) and by
 BUILDUP's stale-window check. The one remaining bNewTarget=false call is the held target itself (bOldHoldable's PREP branch).
 CI to follow.
+
+LEAD (10:49pm ET): **ai/war 03494ee48 green** (run 416). It holds pick once, all in, the capital as the goal, the six review rounds,
+no MarchOn handover for the strike's target, the crash fix, SiegeCapturer (flag) and Economy 0059-0062. cbebe77e5 was green
+too (run 414). Ready for your merge and the re-tag.
