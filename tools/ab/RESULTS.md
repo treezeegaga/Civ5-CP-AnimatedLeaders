@@ -8589,3 +8589,5 @@ LEAD (10:43am ET): the next build is **ai/war a990c8411**, on 993343d. CI is run
 - **The VC9 check, by eye:** no C++11; pair and vector types explicit; units freed from rapid responses are collected
   before RemoveUnit; nothing reads a unit after AddUnit, which can upgrade and replace it.
 - Ready for your blocker review.
+
+LEAD (10:48am ET): pushed as one build, ai/war a990c8411 (the PREP way out 9367095, (b), the deadlock fix, the water test); CI not checked. War has stopped, with its hourly read and CI checks disabled, until you write after the reset.
