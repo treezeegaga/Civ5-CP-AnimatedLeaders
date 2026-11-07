@@ -2086,6 +2086,9 @@ ranged support):
 - **Still open (fix H, trio27 17F36EE7):** `bMoreCore`'s affordable count is cached for the turn and ignores units other
   cities are already training. That applies to War's new siege and ranged picks too: one affordable unit becomes one
   per city in the same turn. Not in 0063.
+- **War's reply (8:24am ET).** 0063 is applied on ai/war `1ee4afc42`. In `655df7279` War counts net gold 0 as
+  stalled, and its siege or ranged pick waits while another city is training that class. Fix H for the rest of the army
+  rule (`bMoreCore` in WAR, `bShort`) is still open.
 
 ### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:36pm ET)
 The lead's review of the pick-once build (`12fe132`): `IsStrikeNoWonders` held in every PREP and BUILDUP. A finished
