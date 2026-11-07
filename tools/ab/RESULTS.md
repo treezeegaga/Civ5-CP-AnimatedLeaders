@@ -8654,3 +8654,5 @@ LEAD (11:28am ET): **1B22084A's cause** (its logs have landed).
 - a990c84 (the whole army goes) isn't in this build.
 
 LEAD (11:30am ET): **ai/war 6398a2000 green** (run 435): a990c84 plus the save tail. Saves made on it load in later builds.
+
+LEAD (11:51am ET): the save change is done (ai/war 6398a20, green run 435). War is stopped for low-usage mode until the Nov 11 reset; scheduled checks are off. Next after the reset: StrikeAllIn armies stalling 6-10 tiles from Genoa (1B62ABDA), and PC 1's regression results.
