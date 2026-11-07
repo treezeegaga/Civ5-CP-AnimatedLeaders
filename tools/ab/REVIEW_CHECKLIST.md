@@ -135,3 +135,6 @@ against this list. The list grows: every bug a review or a test game finds gets 
   nearest city is an island colony.
 - **A timeout as the planned exit:** removing a handover so the only way out is the operation's 42-turn timeout is a turn
   count in a decision.
+- **A path filter written for one target reused for another:** ArmyPathIsGood's "wrong city" plots counted the target's
+  own cities once the goal moved to the capital behind them, rejecting most majors (review of 68df55d).
+- **Fog in target picking:** requiring the capital to be revealed rules out targets an early scout never reached.
