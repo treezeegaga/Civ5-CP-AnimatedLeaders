@@ -1,0 +1,70 @@
+From 03ddc4e89d54287967517725f452841d12e6c24b Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sat, 7 Nov 2026 02:36:51 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0062: the bans before the first
+ declaration and in the strike's war only
+
+The lead's review of War's pick-once build (12fe132): IsStrikeNoWonders included
+IsStrikePending (PREP or BUILDUP), IsEarlyStrikeSmallEmpire and IsLateStrikeSaving. A finished
+target now sends WAR back to BUILDUP for the next one and OVER is rare, so every later
+BUILDUP brought the wonder and city-state gold bans back, which made them all-game. The
+user's rule bans them only before the strike civ's first own declaration.
+
+IsStrikeNoWonders is now: a strike civ (strike state not NONE), and either the strike's WAR
+(0058) or no confirmed declaration of ours yet (HasStrikeDeclared, 0045/0052), in PREP,
+BUILDUP or OVER. All 11 chokepoints read it. IsStrikePending had no other reader.
+Production and gold ownership keep their own tests (the executor's IsStrikeActive, the
+purchase and tile gates' IsEarlyStrikeSmallEmpire and IsLateStrikeSaving), as the lead asked.
+None of my patches assume the target's elimination. The user's "the goal is the enemy
+capital" (War's "finished" = the original capital taken) changes nothing here.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 29 ++++++++++++++-------------
+ 1 file changed, 15 insertions(+), 14 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index 63ce658..d2971a3 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -33961,21 +33961,22 @@ bool CvPlayer::IsStrikePending() const
+ /// Germany's Munich took Heroic Epic (T61) and the Temple of Artemis (T62) in PREP, through the fallback
+ bool CvPlayer::IsStrikeNoWonders() const
+ {
+-	if (IsStrikePending() || IsEarlyStrikeSmallEmpire() || IsLateStrikeSaving())
+-		return true;
+-	// (0058, the lead) nor while the strike's war is on: the strike owns production until OVER. bullygreedy24 17813E6E: the
+-	// Celts' WAR (T73-T150) chose the Terracotta Army, the Mausoleum, the Statue of Zeus and Circus Maximus while gold per
+-	// turn fell to -48. Every chokepoint reads this, so no city-state gold in the war either
+-	if (!isHuman() && GetMilitaryAI() && GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_WAR)
+-		return true;
+-	// AI_AB_TEST (Economy 0044; the lead's check: no wonder and no city-state gold "before its first declaration"): a strike
+-	// that ended OVER before we declared anything keeps the ban until our first declaration. bullygreedy21 15A7D14F: Persia's
+-	// strike went OVER at T70 (a major declared on us first), then Persia built the Terracotta Army (T72), the Pyramids (T75),
+-	// the Writers' Guild and Chichen Itza and saved for a city-state gift (T96) before its own first declaration at T129.
+-	// "Declared": War's saved CvMilitaryAI::HasStrikeDeclared (the strike's declaration, its city-state's, or any war of our
+-	// own since the game began; Economy 0045, replacing 0044's proxy)
+-	if (!isMajorCiv() || isHuman() || !GetMilitaryAI() || GetMilitaryAI()->GetStrikeState() != CvMilitaryAI::STRIKE_OVER)
++	// (0062, the lead's review of the pick-once build) the user's rule: no world or national wonder and no city-state gold
++	// before the strike civ's first own declaration, and (0058) none during the strike's war. Since a finished target sends WAR
++	// back to BUILDUP for the next one and OVER is rare, the earlier "PREP or BUILDUP" (IsStrikePending, IsEarlyStrikeSmallEmpire,
++	// IsLateStrikeSaving) brought the bans back in every later BUILDUP, making them all-game. Production and gold ownership
++	// (the executor, the purchase and tile gates) keep their own tests; this is the bans only
++	if (!MOD_AI_AB_TEST || !isMajorCiv() || isHuman() || !GetMilitaryAI())
+ 		return false;
++	const CvMilitaryAI::StrikeStateTypes eState = GetMilitaryAI()->GetStrikeState();
++	if (eState == CvMilitaryAI::STRIKE_NONE)
++		return false;	// not a strike civ
++	// (0058) the strike's war: the strike owns production until it's done. bullygreedy24 17813E6E: the Celts' WAR chose four
++	// wonders while gold per turn fell to -48
++	if (eState == CvMilitaryAI::STRIKE_WAR)
++		return true;
++	// (0044, 0045, 0052) before the first confirmed declaration of our own, in PREP, BUILDUP or OVER: a civ that never fights
++	// stays banned (the user). bullygreedy21 15A7D14F, bullygreedy23 16DAE4CC
+ 	return !GetMilitaryAI()->HasStrikeDeclared();
+ }
+ 
+-- 
+2.43.0
+

@@ -1950,6 +1950,21 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:49pm ET)
+The lead's review of the pick-once build (`12fe132`): `IsStrikeNoWonders` held in every PREP and BUILDUP. A finished
+target now sends WAR back to BUILDUP for the next one, so the wonder and city-state gold bans came back in every later
+BUILDUP and became all-game. The user's rule bans them only before the first own declaration. This corrects my 0061
+note, which said the bans holding through BUILDUP was intended.
+
+**0062.** `IsStrikeNoWonders` is now: a strike civ, and either
+- the strike's WAR (0058), or
+- no confirmed declaration of ours yet (0045, 0052), in any state.
+
+All 11 chokepoints read it. Production and gold ownership keep their own tests, as the lead asked. None of my patches
+assume the target's elimination, so the user's "the goal is the enemy capital" changes nothing here.
+
+**Status:** patch 0062 on ai/war `c8c224e`, 1 file, +15/-14. Not compiled here.
+
 ### Patch 0061: the city cap ends at the first declaration (Economy, Nov 6, 9:27pm ET)
 The user's ruling, via War: "no flip flopping. aggressive civs choose targets and then eliminate them. completely" / "we
 take the capital every time". On ai/war `d750180`, a finished target sends WAR back to BUILDUP for the next one, and
@@ -1963,7 +1978,7 @@ game, so a strike civ waiting in a BUILDUP with no target could neither expand n
 - 0050's complete army waits.
 - 0055's hold applies as before.
 - In a BUILDUP after WAR, the capital's list resumes and rebuilds only real losses.
-- The bans hold through BUILDUP.
+- The bans hold through BUILDUP. (Corrected in 0062: only before the first declaration and in WAR.)
 
 **Status:** patch 0061 on ai/war `d750180`, 1 file, +5/-2. Not compiled here.
 
