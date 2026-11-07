@@ -8224,3 +8224,57 @@ LEAD (1:29am ET): STOP 18FA5DFB read above.
   in 3 turns with the same army.
 - The fix design is above (no stall exit while the target is takeable, plus logging); it's a strike change for after the
   block. Pair 3 has no strike WAR row. Reading only.
+
+### War: the takeable math, the WAR request and the stall exit, coded (ai/war ae8e9aeef) (War, 2026-11-07 7:57am ET)
+
+These implement the lead's 7:50am ET message and the user's ruling ("A: make the estimate match the battlefield AI";
+"my jaguars never attacked the city until the last hit ... 4 archers slowly brought the city down"). All are strike
+changes, with no new flag.
+
+1. **StrikeArmyTakesCity / StrikeUnitsTakeCity (fix 2):**
+   - City damage comes from ranged and siege units. A melee hit counts only where the tactical AI would make it (its
+     suicide test: damage > self-damage, or 2 x damage > self-damage with more than half the unit's HP left), and then
+     every other turn.
+   - The garrison's share comes off, using the game's formula (CORE_GARRISON_DAMAGE_ABSORPTION). The city's heal is CP's
+     20, plus its population in VP, the same as the tactical gate.
+   - Takeable only if the turns needed are 13 or fewer (STRIKE_TACTICAL_SIEGE_TURNS). That is the tactical AI's "too
+     early" gate.
+   - A capturer (a melee unit) is required.
+   - For the army on hand and for an operation's army, each unit's hit is the tactical AI's own simulation
+     (TacticalAIHelpers::GetSimulatedDamageFromAttackOnCity: promotions, the garrison and its share). For the plan's
+     army, it is DoDamageMath on the unit types as before, now with the garrison's share and the melee test.
+   - Defenders still tie up one of ours each: melee first, the one that does least to the walls.
+2. **Production (the lead's check):** when the build-up is too weak for its target and the plan's counts are met, the
+   extra unit was always more core, which is melee. That is how Greece reached 29-32 units. It is now siege (the plan's
+   class, else the Catapult line) while we have fewer siege than ranged support, otherwise the ranged support line, and
+   the core only if neither can be trained. The siege tech already comes first in research when the siege target is set
+   (0053). So "not takeable" now leads to building the units that make it takeable, not to a readiness that never
+   passes.
+3. **The WAR request (fix 1):**
+   - "An attack under way" now means a city attack operation (land, naval or combined) against the target
+     (HasStrikeCityAttackUnderWay). A rapid response no longer counts; before, it held off the strike's request on 32
+     turns in 18BE1E3E and 7 in 18DA3905.
+   - The request may leave 3 units to build: the formation's 3 required melee slots.
+   - SiegeFeed skips the strike's target only while our ranged strength is in the zone.
+   - The strike's line now says "not started: under siege already (SiegeFeed)" instead of "not possible".
+4. **The stall exit (STOP 18FA5DFB):**
+   - No BUILDUP -> OVER while the target is takeable (m_bTakeable).
+   - IsStrikeAsReadyAsItGets now also passes for a stalled build-up (IsStrikeBuildupStalled: the unit hold, income
+     negative, no income item) whose target is takeable, provided home is safe. The strike then declares.
+   - The OVER line names what was short (GetStrikeReadinessGaps): not takeable / a city in danger / field / melee /
+     more affordable.
+
+**Expected in the next games:**
+- More "the plan's army can't take X" lines against walled targets, followed by siege and ranged builds.
+- Later declarations against walled cities, and earlier ones where a stall used to end the strike.
+- In WAR, the strike's request is no longer held off by rapid responses.
+
+**Risk:** a target that stays not takeable while gold is short now ends in OVER through the stall exit, as before. That
+is the "can't take it" outcome, not a retreat.
+
+LEAD (7:57am ET): **ai/war ae8e9aeef** (on 03494ee48) holds:
+- fix 2: the takeable math matches the tactical AI, per the user's ruling;
+- the build-up adds siege or ranged units when the army is too weak;
+- fix 1: the WAR request;
+- the Zulu stall exit.
+CI is running, and I'll post the result. It's ready for your pre-flight review.
