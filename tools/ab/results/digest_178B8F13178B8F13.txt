@@ -1,0 +1,39 @@
+﻿Game 178B8F13178B8F13 (AIABTest_c8e.csv), last logged turn 150
+b    Austria      none      cities 6
+  builds to T80 (capital Vienna; other cities named): T0 Worker | T10 Monument | T16 Granary | T22 Settler | T29 Warrior | T32 Stonehenge | T36 Granary (Salzburg) | T43 Warrior | T44 Warrior | T45 Warrior | T45 Warrior | T46 Warrior | T47 Warrior | T47 Warrior | T48 Warrior | T49 Monument (Salzburg) | T49 Library | T49 Warrior | T50 Shrine (Graz) | T54 Settler | T55 Spearman (Salzburg) | T55 Settler | T56 Spearman (Salzburg) | T57 Settler | T58 Monument (Graz) | T58 Shrine | T60 Worker (Salzburg) | T60 Settler | T63 Granary (Graz) | T64 Walls (Linz) | T64 Walls | T68 Settler (Salzburg) | T69 Walls (Klagenfurt) | T69 Worker (Graz) | T69 Pyramids | T74 Circus (Graz) | T75 Walls (Salzburg) | T78 Worker (Linz) | T79 Settler (Graz) | T80 Work Boat (Salzburg)
+  settlers ordered T: 22,54,55,57,60,68,79   found-city ops started T: 33,42,58,64,75,85   cities founded T: 36,50,64,69,87
+  ops aborted: T87 NoTarget, T88 NoTarget, T91 NoTarget, T92 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget, T96 NoTarget, T97 NoTarget, T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T136 NoTarget, T137 NoTarget, T141 NoTarget, T145 NoTarget
+  IDLE SETTLER turns: 4 (first T30)
+  military ops ended (whole game): Success 2, NoTarget 1
+  settler timeline to T80: T22 settler (AI) in Vienna | T33 op started | T36 FOUNDED | T42 op started | T50 FOUNDED | T54 settler (AI) in Vienna | T55 settler (AI) in Vienna | T57 settler (AI) in Vienna | T58 op started | T60 settler (AI) in Vienna | T64 FOUNDED | T64 op started | T68 settler (AI) in Salzburg | T69 FOUNDED | T75 op started | T79 settler (AI) in Graz
+b    Brazil       none      cities 5
+  builds to T80 (capital Rio de Janeiro; other cities named): T0 Worker | T11 Monument | T16 Shrine | T21 Settler | T32 Granary | T38 Walls | T45 Library | T49 Monument (Sao Paulo) | T51 Spearman | T55 Settler | T60 Archer | T61 Shrine (Sao Paulo) | T63 Spearman | T66 Spearman | T69 Water Mill | T71 Granary (Sao Paulo) | T73 Caravan | T77 Temple of Artemis
+  settlers ordered T: 21,55,82,83,104   found-city ops started T: 46,70,93,95,107,117   cities founded T: 49,83,97,100
+  ops aborted: T60 NoTarget, T61 NoTarget, T62 NoTarget, T63 NoTarget, T68 NoTarget, T109 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget
+  IDLE SETTLER turns: 5 (first T33)
+  military ops ended (whole game): Success 1
+  settler timeline to T80: T21 settler (AI) in Rio de Janeiro | T46 op started | T49 FOUNDED | T55 settler (AI) in Rio de Janeiro | T60 op ended: NoTarget | T61 op ended: NoTarget | T62 op ended: NoTarget | T63 op ended: NoTarget | T68 op ended: NoTarget | T70 op started
+b    France       none      cities 6
+  builds to T80 (capital Paris; other cities named): T1 Worker | T13 Monument | T19 Shrine | T24 Settler | T32 Warrior | T34 Granary | T38 Library | T43 Great Library | T53 Settler | T55 Granary (Orleans) | T55 Writers' Guild | T61 Water Mill | T67 Walls (Orleans) | T67 Walls | T71 Parthenon | T73 Walls (Lyon) | T77 Settler (Orleans)
+  settlers ordered T: 24,53,77,100,125   found-city ops started T: 47,62,67,77,91,105   cities founded T: 55,73,85,109,110
+  ops aborted: T63 NoTarget, T64 NoTarget, T65 NoTarget, T66 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  IDLE SETTLER turns: 6 (first T33)
+  military ops ended (whole game): WarStateChange 1, Success 1
+  settler timeline to T80: T24 settler (AI) in Paris | T47 op started | T53 settler (AI) in Paris | T55 FOUNDED | T62 op started | T63 op ended: NoTarget | T64 op ended: NoTarget | T65 op ended: NoTarget | T66 op ended: NoTarget | T67 op started | T73 FOUNDED | T77 op started | T77 settler (AI) in Orleans
+c    Indonesia    wide      cities 5
+  builds to T80 (capital Jakarta; other cities named): T0 Worker | T10 Scout* | T12 Warrior* | T16 Settler* | T24 Granary | T29 Shrine | T31 Library | T36 Monument | T38 Warrior | T41 Settler* | T43 Monument* (Surabaya) | T44 Warrior* | T46 Settler* | T51 Great Library | T53 Settler* | T57 Monument* (Medan) | T59 Settler* | T62 Work Boat (Surabaya) | T62 Monument* (Makassar) | T66 Work Boat (Medan) | T66 Work Boat | T68 Monument (Makassar) | T70 Colossus | T71 Work Boat (Medan) | T71 Work Boat (Surabaya) | T72 Work Boat (Medan) | T74 Work Boat (Medan) | T78 Market (Surabaya)
+  settlers ordered T: 16,41,46,53,59   found-city ops started T: 24,51,59,66,71,86,93,111,123   cities founded T: 43,57,62,92,106
+  ops aborted: T68 NoTarget, T69 NoTarget, T70 NoTarget, T84 NoTarget, T85 NoTarget, T90 NoTarget, T91 NoTarget, T92 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T113 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget
+  IDLE SETTLER turns: 4 (first T46)
+  military ops ended (whole game): LostPath 2, NoTarget 2, WarStateChange 1, TargetAlreadyCaptured 1, HalfStrength 1
+  settler timeline to T80: T16 settler (book) in Jakarta | T24 op started | T41 settler (book) in Jakarta | T43 FOUNDED | T46 settler (book) in Jakarta | T51 op started | T53 settler (book) in Jakarta | T57 FOUNDED | T59 op started | T59 settler (book) in Jakarta | T62 FOUNDED | T66 op started | T68 op ended: NoTarget | T69 op ended: NoTarget | T70 op ended: NoTarget | T71 op started
+  saving gold for a settler: 30 turns (T5-T65)
+c    Poland       wide      cities 7
+  builds to T80 (capital Warsaw; other cities named): T0 Worker | T10 Scout* | T12 Warrior* | T17 Settler* | T28 Worker* | T31 Monument* (Krakow) | T32 Shrine* | T35 Warrior* | T37 Monument* | T40 Shrine (Krakow) | T40 Library* | T45 Archer | T47 Archer | T48 Scout (Krakow) | T49 Settler (Krakow) | T50 Granary | T53 Water Mill | T58 Warrior (Krakow) | T58 Caravan | T62 Warrior | T62 Warrior (Krakow) | T65 Market | T66 Market (Krakow) | T66 Monument* (Lodz) | T68 Market (Wroclaw) | T70 Worker | T73 Caravan | T74 Market (Lodz) | T75 Library (Krakow) | T77 Settler | T79 Settler
+  settlers ordered T: 17,49,77,79,81,85,86,87,93,102,120   found-city ops started T: 28,58,65,81,87,96,111,124,130,139   cities founded T: 31,66,68,86,98,98
+  ops aborted: T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T129 HalfStrength, T133 NoTarget, T149 LostCivilian
+  book SETTLER HELD to T80: 8 (unhappy 4, growth due 2, one at a time 2)   built instead: the normal AI choice 6, Monument 1, Library 1   first: T037 Warsaw size 3 next Monument | T040 Warsaw size 3 next Library | T045 Warsaw size 3 next the normal AI choice
+  IDLE SETTLER turns: 4 (first T50)
+  military ops ended (whole game): NoUnits 7, HalfStrength 2, LostPath 1, WarStateChange 1, NoTarget 1, Success 1
+  settler timeline to T80: T17 settler (book) in Warsaw | T28 op started | T31 FOUNDED | T49 settler (AI) in Krakow | T58 op started | T65 op started | T66 FOUNDED | T68 FOUNDED | T77 settler (AI) in Warsaw | T79 settler (AI) in Warsaw
+  saving gold for a settler: 27 turns (T11-T80)
