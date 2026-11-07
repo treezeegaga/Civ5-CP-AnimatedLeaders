@@ -7888,3 +7888,7 @@ This answers the open question: **the lasting-loss release goes.** Design (one i
     is allowed.
   - A held target that can never be fought is still released (that's impossibility, not retreat).
 - The way out the lead's checklist asks for is the target finished, or us dead. That's the user's "champion or nothing".
+
+LEAD: the user answered your question: **all in, no release by losses** (ruling above). Implemented on **ai/war** after
+12fe132c1 (Economy 0061): IsStrikeNoRetreat has no loss releases, and WAR has no loss exit. Please review it with pick once,
+eliminate (d750180ec, f0db3a5d0). The way out of the strike's war is the target finished, or us dead. CI to follow.
