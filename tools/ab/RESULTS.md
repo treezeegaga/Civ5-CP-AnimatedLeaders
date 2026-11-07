@@ -8080,3 +8080,79 @@ CI to follow.
 LEAD (10:49pm ET): **ai/war 03494ee48 green** (run 416). It holds pick once, all in, the capital as the goal, the six review rounds,
 no MarchOn handover for the strike's target, the crash fix, SiegeCapturer (flag) and Economy 0059-0062. cbebe77e5 was green
 too (run 414). Ready for your merge and the re-tag.
+
+### War: 18BE1E3E, Greece vs La Venta: why the strike's city attack "is not possible" (War, 2026-11-06 11:35pm ET)
+
+Logs: `logs_18BE1E3E18BE1E3E` (bullygreedy25 pair 1, ab-03494ee). The flip game ran with AILog 0, so it has no logs. Greece is the
+only strike civ that reached WAR in this game: it declared on T81, WAR T82 to T151, 70 WAR turns.
+
+**The lead's questions**
+- **In m_potentialAttackTargets?** Yes, every turn: "preferred attack target: La_Venta, muster: Corinth, army type: Land Army,
+  score 5170-5879". So the army type is right (land) and the muster city is there.
+- **What fails?** The strike logged "not possible this turn" on 10 WAR turns: T83, 91, 92, 113, 119-124. There are two causes:
+  - **T83, 91, 92, 113: lack of units.** addAIOperation drops the op when `GetNumUnitsNeededToBeBuilt() > iMaxMissing`. The strike
+    passes 2 (`RequestCityAttack(e, 2, false, ...)`). The land formation's 3 required melee slots were empty. Greece's 3-4
+    Hoplites were in OP_RAPID_RESPONSE armies mustered at Corinth (43:24) with target La Venta (39:27): 1763, 1879, 1952, 2336,
+    2362 and 2607. Those ops recruit first in the turn. T84 shows it plainly: op 1882 took the Catapult, 4 Composite Bowmen and
+    the Great General (6 units), had 3 melee missing, and was deleted ("Ended: NoUnits; Duration 0"). Op 1927 on T86 went the
+    same way.
+  - **T119-124: the SiegeFeed skip, not lack of units.** MilitaryAILog has "SiegeFeed: La_Venta is under siege (5-6 units in
+    the zone)". The zone was friendly-dominant with 3 or more units, but they were 3-4 idle melee units with **ranged 0** and
+    expected city damage 0. The strike logs this skip as "not possible this turn", because pass 0 sets bPreferredListed and
+    returns false. SiegeFeed then skipped again every turn T128-T151.
+- **A third gap, with no log line:** on T84-89, T104-112 and T114-118 the strike made no request at all.
+  `getFirstOffensiveAIOperation(La Venta)` counts any op whose target plot is outside our land. The rapid-response ops target
+  La Venta's plot, so a 1-2 Hoplite rapid response counted as "an attack under way".
+- **Does the takeable check count the same target entry?** It looks at the same city (La Venta's only city). It doesn't look at
+  the entry or the formation: ComputeStrikeTargetTakeable counts every field unit, including units held by rapid responses, and
+  never asks whether the formation's required slots can be filled. That mismatch is behind the lack-of-units turns.
+
+**The bigger problem: the attack reaches the walls, and the city still can't fall**
+- Two ops did form, from other callers' requests: 2076 (T93, at the walls T106) and 2846 (T125, at the walls T133). After
+  T133, 29-32 Greek units stood around La Venta, mostly melee (melee strength about 60,000, ranged about 5,000).
+- Over 70 WAR turns, Greece's capture plans made **0 melee attacks and 17 ranged attacks on the city**. The tactical log has
+  "too early for attacking La_Venta" on 33 turns, with expected damage of 0-17 a turn against 248-275 HP. The city never
+  dropped below 231 HP.
+- The cause is that the two calculations disagree:
+  - The tactical gate (CvTacticalAI.cpp:970) wants `(expected - heal 20) x 13 >= HP`.
+  - ComputeTotalExpectedDamage drops any melee attack whose self-damage beats its damage. Hoplites and Pikemen against a walled
+    city at defence 22-23 always fail that test, so only the 1-3 ranged units in reach count.
+  - The strike's StrikeArmyTakesCity counts every melee unit at half damage each turn, ignores the garrison's share of the
+    damage, and has no 13-turn cap. It said "the plan's army takes it in about 3-4 turns" (T75-T80) and Greece declared.
+- So the declaration was made on a city the tactical AI will never assault with this army. Fixing the request alone would only
+  get ops to the walls sooner, which ops 2076 and 2846 already did.
+
+**Smallest fixes (design only; the block is frozen)**
+1. **The request (strike flag, about 3 lines in UpdateStrikeState's WAR branch and RequestCityAttack):**
+   - "An attack under way" should mean a CITY_ATTACK op (land, naval or combined) against the target, not any offensive op.
+   - The strike's request allows the formation's 3 required melee slots to be built (iNumUnitsWillingToBuild 3, not 2). T83,
+     T84 (6 units), T86, T91, T92 and T113 would then have formed.
+   - SiegeFeed skips the strike's target only while the zone has friendly ranged strength
+     (`GetFriendlyRangedStrength() > 0`), so 3 idle melee units no longer count as a siege. The strike should also log
+     "SiegeFeed: under siege" instead of "not possible".
+2. **The takeable math (the real fix, also a strike change):** StrikeArmyTakesCity should predict what the tactical AI will
+   actually do:
+   - count a melee unit's city damage only if the tactical AI would make that attack (damage > self-damage, or 2 x damage >
+     self-damage with more than half its HP left, at full HP);
+   - take the garrison's share of the damage off;
+   - say "takeable" only if `(damage - heal) x 13 >= HP`, the tactical AI's own siege gate.
+   With these, La Venta reads not takeable until Greece has enough ranged or siege units, so the build-up keeps building them
+   instead of declaring.
+   - **LEAD, a ruling needed:** the user ruled "having a turn limit is bad. just calculate if you can take the city". The 13 is
+     CP's tactical rule for when units attack, not a horizon on the strike. If takeable doesn't match it, takeable stops meaning
+     "our AI will take it". I recommend matching it. The other option is to lift the 13 in the tactical gate for the strike's
+     target only, which brute-forces the walls the way the user did at Marrakesh. That is a bigger change and costs units.
+3. **Not in the smallest fix, worth watching:** with 29 units in the zone, only 1-3 ranged units were in reach each turn. Ranged
+   positioning around a walled city may be a separate problem. I'll check it once the block's other games come in.
+
+**Count so far:** across the block's logged games, "not possible this turn" WAR turns: 18BE1E3E Greece 10 of 70 (4 lack of
+units, 6 SiegeFeed), plus 18 WAR turns with no request because a rapid response counted as the attack. The flip game has no
+logs. I'll add more games as they land.
+
+LEAD (11:35pm ET): the 18BE1E3E read is above:
+- RequestCityAttack fails in three ways: rapid responses take the melee (lack of units), SiegeFeed counts idle melee as a
+  siege, and rapid responses count as "an attack under way".
+- The bigger finding is that La Venta was never assaulted even with 29-32 units at the walls: 0 melee city attacks and 33
+  "too early" turns. The strike's takeable math counts melee hits that the tactical AI refuses to make.
+- Fix designs 1 (the request) and 2 (the takeable math) are ready to code when the block unfreezes. **Please rule on the
+  13-turn gate in fix 2.**
