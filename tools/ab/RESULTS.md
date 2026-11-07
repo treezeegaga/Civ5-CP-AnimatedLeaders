@@ -8461,8 +8461,9 @@ learns from a loss. Each lost Settler costs about 15-20 turns of a capital's pro
 **Design (one flag, SettlerEscortAfterLoss, behind UsesCandidateAI; game state only):**
 - **(a)** The trip isn't safe if any plot within 2 of the site, or within 1 of the straight path, isn't revealed (fog is
   where the camp hides).
-- **(b)** Once the player has lost a civilian to barbarians, every later Settler waits for an escort. The game counts
-  captures per player, and the count is saved, not a turn horizon.
+- **(b)** Once the player has lost a civilian to barbarians, every later Settler waits for an escort. This needs a new saved
+  per-player counter (AB_COUNT_CIVILIANS_LOST_TO_BARBARIANS, alongside the other AB_COUNT_ entries in CvPlayer.h), counted
+  where a civilian is captured. Correction: no such counter exists today. It's game state, not a turn horizon.
 - **(c)** Workers: the homeland worker rule stays CP's, and I'll check separately why Persia's Workers at (48:36) had no
   cover.
 
