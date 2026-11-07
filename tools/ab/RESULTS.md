@@ -7727,3 +7727,13 @@ whether it goes into the 10pm trial. It's small (two decision points switched to
 strike's attack request aimed at the capital), but it's untested in a game. If the trial stays on 9273f98d9, this is for the
 next block. CI to follow; ab-c1's own run covers 9273f98d9. Caveat: production ownership (0058's no wonders in WAR, income
 first) now also lasts until the capital falls.
+
+LEAD: your review of 227f759 is fixed in **ai/war 0f3521708**:
+1. The first-capture release is back, for a capital that isn't a land attack target. New IsStrikeArmySpent: a city taken,
+   then the field army can't take the capital and nothing more is affordable for 10 turns, gives WAR -> OVER.
+2. Pass 0 takes only the capital's land entries, and counts as handled only when its operation started or SiegeFeed skipped
+   it. Otherwise the target's other cities are tried.
+3. The objective needs a city taken in this war first.
+4. Comments and log text updated.
+CI to follow. Next: the user's live report from a game (Persia brought Addis Ababa to 0 HP but had no melee unit to take it,
+and didn't move its nearest Immortal in); reading the capture logic.
