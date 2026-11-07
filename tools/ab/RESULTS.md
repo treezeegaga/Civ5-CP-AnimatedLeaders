@@ -5248,3 +5248,17 @@ running block (bullygreedy23 / bullyabort23, ab-0cb5402) is untouched.
   OVER; Persia T94). CP's flipped games: 0.
 - **Next:** PC 1 runs trial26 on `ab-acd891f` now. If it's clean, bullyabort25 (PC 1) and bullygreedy25 (PC 2, after its
   block) run on `ab-acd891f`.
+
+### bullygreedy24 final, and a crash (PC 2, ab-791ab9d; lead, 8:52pm ET Nov 6)
+- **Ends at 9 complete pairs** (2160 rows, pushed). Pair 10 stopped: its first game crashed.
+- **Our aggressor took a city in 3 of 9 first games:** Mongolia 172518A7 (T123, T146); Carthage 17C055EE (T125, after
+  OVER, through CP's war); Persia 17FF3C04 (T94). **CP's flipped games: 0 aggressor captures.**
+- **No capture, and why:** Zulu (never ready: CP's field target); Assyria (OVER on an obsolete core); Celts and the
+  Aztec x3 (the attack never formed: unreachable target, a dead operation). All fixed on `ab-acd891f`.
+- **Crash:** game 183D5D87 at T120, access violation reading 0x00000002 at +0x00932ed7, with the address space
+  nearly full (Sub2G free 25 MB). The minidump and crashes.log are in `crash-20261106-204721` (031dd31). War is
+  checking the strike code for per-turn memory growth (caches, operation re-forms, log strings). A leak would fail
+  every long game, so it comes before new features.
+- **Next:** PC 2 runs bullygreedy25 on `ab-acd891f` (20 games, logging on), with each game's peak process memory in
+  its report. A second crash with the address space nearly full stops the block. PC 1 runs trio27 (6 games on
+  `ab-acd891f`) for the user to watch, then resumes bullyabort25.
