@@ -1,0 +1,2097 @@
+011, Kabul, Spain, RECEIVED_UNIT_GIFT, Warrior
+014, Antwerp, The Netherlands, RECEIVED_UNIT_GIFT, Warrior
+016, Wellington, The Shoshone, RECEIVED_UNIT_GIFT, Warrior
+021, Jerusalem, Greece, RECEIVED_UNIT_GIFT, Warrior
+022, Wellington, Spain, RECEIVED_UNIT_GIFT, Warrior
+022, Antwerp, The Netherlands, RECEIVED_UNIT_GIFT, Warrior
+023, Wittenberg, Japan, RECEIVED_UNIT_GIFT, Warrior
+025, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 2
+025, The Netherlands, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+025, The Shoshone, Wellington, SENT OUT QUEST, Type, 7
+025, The Shoshone, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+025, The Shoshone, Kyiv, SENT OUT QUEST, Type, 1
+025, The Shoshone, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+025, Spain, Kyiv, SENT OUT QUEST, Type, 1
+025, Spain, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+025, Spain, Kabul, SENT OUT QUEST, Type, 3
+025, Spain, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+025, Almaty, Songhai, RECEIVED_UNIT_GIFT, Warrior
+025, Songhai, Almaty, SENT OUT QUEST, Type, 6
+025, Songhai, Almaty, RECEIVED QUEST, Find Player, Friendship: 3 to 3, MINOR_CIV_ALMATY
+025, The Aztecs, Sydney, SENT OUT QUEST, Type, 2
+025, The Aztecs, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+025, The Netherlands, Lhasa, SENT OUT QUEST, Type, 12
+025, The Netherlands, Lhasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_LHASA
+025, Morocco, Lhasa, SENT OUT QUEST, Type, 12
+025, Morocco, Lhasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_LHASA
+025, Greece, Lhasa, SENT OUT QUEST, Type, 12
+025, Greece, Lhasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_LHASA
+025, The Netherlands, Antwerp, SENT OUT QUEST, Type, 12
+025, The Netherlands, Antwerp, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+025, Morocco, Antwerp, SENT OUT QUEST, Type, 12
+025, Morocco, Antwerp, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+025, Greece, Antwerp, SENT OUT QUEST, Type, 12
+025, Greece, Antwerp, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+025, Morocco, Antwerp, SENT OUT QUEST, Type, 2
+025, Morocco, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+026, The Netherlands, Prague, SENT OUT QUEST, Type, 1
+026, The Netherlands, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+026, The Shoshone, Prague, SENT OUT QUEST, Type, 1
+026, The Shoshone, Prague, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+026, The Shoshone, Kyiv, SENT OUT QUEST, Type, 7
+026, The Shoshone, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+026, Songhai, Almaty, gained friend
+026, Songhai, Almaty, FINISHED QUEST, Find Player, Friendship: 2 to 37, MINOR_CIV_ALMATY
+026, Morocco, Lhasa, SENT OUT QUEST, Type, 2
+026, Morocco, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
+026, Greece, Antwerp, SENT OUT QUEST, Type, 2
+026, Greece, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+027, Spain, Kyiv, SENT OUT QUEST, Type, 2
+027, Spain, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+027, Japan, Wittenberg, SENT OUT QUEST, Type, 1
+027, Japan, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+027, Spain, Wittenberg, SENT OUT QUEST, Type, 1
+027, Spain, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+027, Songhai, Almaty, SENT OUT QUEST, Type, 1
+027, Songhai, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 35 to 35, MINOR_CIV_ALMATY
+027, The Netherlands, Antwerp, SENT OUT QUEST, Type, 3
+027, The Netherlands, Antwerp, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+029, The Aztecs, Sydney, SENT OUT QUEST, Type, 1
+029, The Aztecs, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+029, Spain, Sydney, SENT OUT QUEST, Type, 1
+029, Spain, Sydney, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+030, The Aztecs, Bogota, SENT OUT QUEST, Type, 7
+030, The Aztecs, Bogota, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+030, Songhai, Bogota, SENT OUT QUEST, Type, 2
+030, Songhai, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+030, The Shoshone, Mombasa, SENT OUT QUEST, Type, 1
+030, The Shoshone, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+030, The Shoshone, Mombasa, SENT OUT QUEST, Type, 6
+030, The Shoshone, Mombasa, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+031, Songhai, Almaty, lost friend
+031, The Aztecs, Bogota, SENT OUT QUEST, Type, 1
+031, The Aztecs, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+031, Songhai, Bogota, SENT OUT QUEST, Type, 1
+031, Songhai, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+031, The Shoshone, Mombasa, gained friend
+031, The Shoshone, Mombasa, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_MOMBASA
+032, The Netherlands, Antwerp, Gold Gift: 500, Friendship: 0 to 0, Culture, MINOR_CIV_ANTWERP, (SAVING) 
+032, The Netherlands, Lhasa, SENT OUT QUEST, Type, 12
+032, The Netherlands, Antwerp, SENT OUT QUEST, Type, 12
+032, The Netherlands, Antwerp, SENT OUT QUEST, Type, 3
+032, Songhai, Mombasa, SENT OUT QUEST, Type, 1
+032, Songhai, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+032, The Shoshone, Prague, SENT OUT QUEST, Type, 7
+032, The Shoshone, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+032, Spain, Wittenberg, SENT OUT QUEST, Type, 3
+032, Spain, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+032, Mombasa, The Shoshone, RECEIVED_UNIT_GIFT, Warrior
+032, Spain, Sydney, SENT OUT QUEST, Type, 2
+032, Spain, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+032, The Netherlands, Lhasa, SENT OUT QUEST, Type, 2
+032, The Netherlands, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 1 to 1, MINOR_CIV_LHASA
+033, The Aztecs, Sydney, gained friend
+033, The Aztecs, Sydney, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_SYDNEY
+033, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 3
+033, The Netherlands, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 2 to 2, MINOR_CIV_MOGADISHU
+034, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 1
+034, The Netherlands, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+034, Morocco, Jerusalem, SENT OUT QUEST, Type, 1
+034, Morocco, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+034, Greece, Jerusalem, SENT OUT QUEST, Type, 1
+034, Greece, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+034, Greece, Jerusalem, SENT OUT QUEST, Type, 2
+034, Greece, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+034, The Netherlands, Valletta, SENT OUT QUEST, Type, 1
+034, The Netherlands, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 4 to 4, MINOR_CIV_VALLETTA
+034, The Shoshone, Valletta, SENT OUT QUEST, Type, 1
+034, The Shoshone, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+034, Spain, Valletta, SENT OUT QUEST, Type, 1
+034, Spain, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+034, Greece, Valletta, SENT OUT QUEST, Type, 1
+034, Greece, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+034, The Shoshone, Valletta, SENT OUT QUEST, Type, 2
+034, The Shoshone, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+034, The Aztecs, Kabul, SENT OUT QUEST, Type, 1
+034, The Aztecs, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+034, Songhai, Kabul, SENT OUT QUEST, Type, 1
+034, Songhai, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+034, Japan, Kabul, SENT OUT QUEST, Type, 1
+034, Japan, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+034, Spain, Kabul, SENT OUT QUEST, Type, 1
+034, Spain, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+034, The Netherlands, Genoa, SENT OUT QUEST, Type, 1
+034, The Netherlands, Genoa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_GENOA
+034, Spain, Sydney, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+034, Greece, Lhasa, SENT OUT QUEST, Type, 2
+034, Greece, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
+035, The Netherlands, Genoa, SENT OUT QUEST, Type, 1
+035, Japan, Wittenberg, SENT OUT QUEST, Type, 2
+035, Japan, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+035, The Aztecs, Kabul, SENT OUT QUEST, Type, 7
+035, The Aztecs, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+035, Songhai, Kabul, SENT OUT QUEST, Type, 2
+035, Songhai, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+036, The Netherlands, Prague, SENT OUT QUEST, Type, 1
+036, Morocco, Jerusalem, SENT OUT QUEST, Type, 2
+036, Morocco, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+036, The Shoshone, Wellington, SENT OUT QUEST, Type, 10
+036, The Shoshone, Wellington, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+036, Spain, Wellington, SENT OUT QUEST, Type, 10
+036, Spain, Wellington, RECEIVED QUEST, Contest Culture, Friendship: -1 to -1, MINOR_CIV_WELLINGTON
+036, Greece, Wellington, SENT OUT QUEST, Type, 10
+036, Greece, Wellington, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+036, Spain, Wellington, SENT OUT QUEST, Type, 2
+036, Spain, Wellington, RECEIVED QUEST, Connect Resource, Friendship: -1 to -1, MINOR_CIV_WELLINGTON
+036, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 1
+036, The Netherlands, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+036, Greece, Mogadishu, SENT OUT QUEST, Type, 1
+036, Greece, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+036, Antwerp, Greece, RECEIVED_UNIT_GIFT, Warrior
+037, Greece, Wellington, SENT OUT QUEST, Type, 7
+037, Greece, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+038, The Netherlands, Jerusalem, era change yield update
+038, The Netherlands, Wellington, era change yield update
+038, The Netherlands, Prague, era change yield update
+038, The Netherlands, Valletta, era change yield update
+038, The Netherlands, Kyiv, era change yield update
+038, The Netherlands, Colombo, era change yield update
+038, The Netherlands, Wittenberg, era change yield update
+038, The Netherlands, Kabul, era change yield update
+038, The Netherlands, Genoa, era change yield update
+038, The Netherlands, Almaty, era change yield update
+038, The Netherlands, Bogota, era change yield update
+038, The Netherlands, Mombasa, era change yield update
+038, The Netherlands, Sydney, era change yield update
+038, The Netherlands, Lhasa, era change yield update
+038, The Netherlands, Mogadishu, era change yield update
+038, The Netherlands, Antwerp, era change yield update
+038, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 2
+038, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 1
+038, The Netherlands, Prague, SENT OUT QUEST, Type, 1
+038, The Netherlands, Valletta, SENT OUT QUEST, Type, 1
+038, The Netherlands, Genoa, SENT OUT QUEST, Type, 1
+038, The Netherlands, Lhasa, SENT OUT QUEST, Type, 12
+038, The Netherlands, Lhasa, SENT OUT QUEST, Type, 2
+038, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 3
+038, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 1
+038, The Netherlands, Antwerp, SENT OUT QUEST, Type, 12
+038, The Netherlands, Antwerp, SENT OUT QUEST, Type, 3
+038, The Netherlands, Prague, SENT OUT QUEST, Type, 3
+038, The Netherlands, Prague, RECEIVED QUEST, Construct Wonder, Friendship: 4 to 4, MINOR_CIV_PRAGUE
+038, Wittenberg, Japan, RECEIVED_UNIT_GIFT, Warrior
+038, The Shoshone, Mombasa, lost friend
+039, Morocco, Almaty, SENT OUT QUEST, Type, 1
+039, Morocco, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+039, Morocco, Bogota, SENT OUT QUEST, Type, 1
+039, Morocco, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+039, Japan, Mombasa, SENT OUT QUEST, Type, 1
+039, Japan, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+039, Greece, Kyiv, SENT OUT QUEST, Type, 1
+039, Greece, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+039, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 7
+039, The Netherlands, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+039, Greece, Wellington, gained friend
+039, Greece, Wellington, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_WELLINGTON
+039, Almaty, Songhai, RECEIVED_UNIT_GIFT, Warrior
+040, The Netherlands, Jerusalem, gained friend
+040, The Netherlands, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+040, The Shoshone, Wellington, SENT OUT QUEST, Type, 6
+040, The Shoshone, Wellington, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+041, Japan, Jerusalem, era change yield update
+041, Japan, Wellington, era change yield update
+041, Japan, Prague, era change yield update
+041, Japan, Valletta, era change yield update
+041, Japan, Kyiv, era change yield update
+041, Japan, Colombo, era change yield update
+041, Japan, Wittenberg, era change yield update
+041, Japan, Kabul, era change yield update
+041, Japan, Genoa, era change yield update
+041, Japan, Almaty, era change yield update
+041, Japan, Bogota, era change yield update
+041, Japan, Mombasa, era change yield update
+041, Japan, Sydney, era change yield update
+041, Japan, Lhasa, era change yield update
+041, Japan, Mogadishu, era change yield update
+041, Japan, Antwerp, era change yield update
+041, Japan, Wittenberg, SENT OUT QUEST, Type, 1
+041, Japan, Wittenberg, SENT OUT QUEST, Type, 2
+041, Japan, Kabul, SENT OUT QUEST, Type, 1
+041, Japan, Mombasa, SENT OUT QUEST, Type, 1
+041, Spain, Jerusalem, era change yield update
+041, Spain, Wellington, era change yield update
+041, Spain, Prague, era change yield update
+041, Spain, Valletta, era change yield update
+041, Spain, Kyiv, era change yield update
+041, Spain, Colombo, era change yield update
+041, Spain, Wittenberg, era change yield update
+041, Spain, Kabul, era change yield update
+041, Spain, Genoa, era change yield update
+041, Spain, Almaty, era change yield update
+041, Spain, Bogota, era change yield update
+041, Spain, Mombasa, era change yield update
+041, Spain, Sydney, era change yield update
+041, Spain, Lhasa, era change yield update
+041, Spain, Mogadishu, era change yield update
+041, Spain, Antwerp, era change yield update
+041, Spain, Wellington, SENT OUT QUEST, Type, 10
+041, Spain, Wellington, SENT OUT QUEST, Type, 2
+041, Spain, Valletta, SENT OUT QUEST, Type, 1
+041, Spain, Kyiv, SENT OUT QUEST, Type, 1
+041, Spain, Kyiv, SENT OUT QUEST, Type, 2
+041, Spain, Wittenberg, SENT OUT QUEST, Type, 1
+041, Spain, Wittenberg, SENT OUT QUEST, Type, 3
+041, Spain, Kabul, SENT OUT QUEST, Type, 3
+041, Spain, Kabul, SENT OUT QUEST, Type, 1
+041, Spain, Sydney, SENT OUT QUEST, Type, 2
+041, The Shoshone, Wellington, gained friend
+041, The Shoshone, Wellington, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_WELLINGTON
+041, Greece, Antwerp, SENT OUT QUEST, Type, 7
+041, Greece, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+042, The Shoshone, Jerusalem, era change yield update
+042, The Shoshone, Wellington, era change yield update
+042, The Shoshone, Prague, era change yield update
+042, The Shoshone, Valletta, era change yield update
+042, The Shoshone, Kyiv, era change yield update
+042, The Shoshone, Colombo, era change yield update
+042, The Shoshone, Wittenberg, era change yield update
+042, The Shoshone, Kabul, era change yield update
+042, The Shoshone, Genoa, era change yield update
+042, The Shoshone, Almaty, era change yield update
+042, The Shoshone, Bogota, era change yield update
+042, The Shoshone, Mombasa, era change yield update
+042, The Shoshone, Sydney, era change yield update
+042, The Shoshone, Lhasa, era change yield update
+042, The Shoshone, Mogadishu, era change yield update
+042, The Shoshone, Antwerp, era change yield update
+042, The Shoshone, Wellington, SENT OUT QUEST, Type, 7
+042, The Shoshone, Wellington, SENT OUT QUEST, Type, 10
+042, The Shoshone, Prague, SENT OUT QUEST, Type, 1
+042, The Shoshone, Prague, SENT OUT QUEST, Type, 7
+042, The Shoshone, Valletta, SENT OUT QUEST, Type, 1
+042, The Shoshone, Valletta, SENT OUT QUEST, Type, 2
+042, The Shoshone, Kyiv, SENT OUT QUEST, Type, 1
+042, The Shoshone, Kyiv, SENT OUT QUEST, Type, 7
+042, The Shoshone, Mombasa, SENT OUT QUEST, Type, 1
+042, Greece, Jerusalem, era change yield update
+042, Greece, Wellington, era change yield update
+042, Greece, Prague, era change yield update
+042, Greece, Valletta, era change yield update
+042, Greece, Kyiv, era change yield update
+042, Greece, Colombo, era change yield update
+042, Greece, Wittenberg, era change yield update
+042, Greece, Kabul, era change yield update
+042, Greece, Genoa, era change yield update
+042, Greece, Almaty, era change yield update
+042, Greece, Bogota, era change yield update
+042, Greece, Mombasa, era change yield update
+042, Greece, Sydney, era change yield update
+042, Greece, Lhasa, era change yield update
+042, Greece, Mogadishu, era change yield update
+042, Greece, Antwerp, era change yield update
+042, Greece, Jerusalem, SENT OUT QUEST, Type, 1
+042, Greece, Jerusalem, SENT OUT QUEST, Type, 2
+042, Greece, Wellington, SENT OUT QUEST, Type, 10
+042, Greece, Valletta, SENT OUT QUEST, Type, 1
+042, Greece, Kyiv, SENT OUT QUEST, Type, 1
+042, Greece, Lhasa, SENT OUT QUEST, Type, 12
+042, Greece, Lhasa, SENT OUT QUEST, Type, 2
+042, Greece, Mogadishu, SENT OUT QUEST, Type, 1
+042, Greece, Antwerp, SENT OUT QUEST, Type, 12
+042, Greece, Antwerp, SENT OUT QUEST, Type, 2
+042, Greece, Antwerp, SENT OUT QUEST, Type, 7
+042, Mombasa, Japan, RECEIVED_UNIT_GIFT, Warrior
+042, The Aztecs, Sydney, lost friend
+043, Morocco, Jerusalem, era change yield update
+043, Morocco, Wellington, era change yield update
+043, Morocco, Prague, era change yield update
+043, Morocco, Valletta, era change yield update
+043, Morocco, Kyiv, era change yield update
+043, Morocco, Colombo, era change yield update
+043, Morocco, Wittenberg, era change yield update
+043, Morocco, Kabul, era change yield update
+043, Morocco, Genoa, era change yield update
+043, Morocco, Almaty, era change yield update
+043, Morocco, Bogota, era change yield update
+043, Morocco, Mombasa, era change yield update
+043, Morocco, Sydney, era change yield update
+043, Morocco, Lhasa, era change yield update
+043, Morocco, Mogadishu, era change yield update
+043, Morocco, Antwerp, era change yield update
+043, Morocco, Jerusalem, SENT OUT QUEST, Type, 1
+043, Morocco, Jerusalem, SENT OUT QUEST, Type, 2
+043, Morocco, Almaty, SENT OUT QUEST, Type, 1
+043, Morocco, Bogota, SENT OUT QUEST, Type, 1
+043, Morocco, Lhasa, SENT OUT QUEST, Type, 12
+043, Morocco, Lhasa, SENT OUT QUEST, Type, 2
+043, Morocco, Antwerp, SENT OUT QUEST, Type, 12
+043, Morocco, Antwerp, SENT OUT QUEST, Type, 2
+043, Songhai, Jerusalem, era change yield update
+043, Songhai, Wellington, era change yield update
+043, Songhai, Prague, era change yield update
+043, Songhai, Valletta, era change yield update
+043, Songhai, Kyiv, era change yield update
+043, Songhai, Colombo, era change yield update
+043, Songhai, Wittenberg, era change yield update
+043, Songhai, Kabul, era change yield update
+043, Songhai, Genoa, era change yield update
+043, Songhai, Almaty, era change yield update
+043, Songhai, Bogota, era change yield update
+043, Songhai, Mombasa, era change yield update
+043, Songhai, Sydney, era change yield update
+043, Songhai, Lhasa, era change yield update
+043, Songhai, Mogadishu, era change yield update
+043, Songhai, Antwerp, era change yield update
+043, Songhai, Kabul, SENT OUT QUEST, Type, 1
+043, Songhai, Kabul, SENT OUT QUEST, Type, 2
+043, Songhai, Almaty, SENT OUT QUEST, Type, 1
+043, Songhai, Bogota, SENT OUT QUEST, Type, 2
+043, Songhai, Bogota, SENT OUT QUEST, Type, 1
+043, Songhai, Mombasa, SENT OUT QUEST, Type, 1
+043, The Netherlands, Valletta, SENT OUT QUEST, Type, 2
+043, The Netherlands, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+043, The Netherlands, Genoa, cancelled, Kill Camp, Friendship: 11 to 11, MINOR_CIV_GENOA
+044, Morocco, Antwerp, Gold Gift: 500, Friendship: 0 to 0, Culture, MINOR_CIV_ANTWERP, (SAVING) 
+044, Morocco, Jerusalem, SENT OUT QUEST, Type, 1
+044, Morocco, Jerusalem, SENT OUT QUEST, Type, 2
+044, Morocco, Lhasa, SENT OUT QUEST, Type, 12
+044, Morocco, Lhasa, SENT OUT QUEST, Type, 2
+044, Morocco, Antwerp, SENT OUT QUEST, Type, 12
+044, Morocco, Antwerp, SENT OUT QUEST, Type, 2
+044, The Shoshone, Lhasa, SENT OUT QUEST, Type, 12
+044, The Shoshone, Lhasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_LHASA
+044, Spain, Mogadishu, SENT OUT QUEST, Type, 1
+044, Spain, Mogadishu, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+044, Wellington, The Shoshone, RECEIVED_UNIT_GIFT, Warrior
+044, Greece, Valletta, SENT OUT QUEST, Type, 7
+044, Greece, Valletta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+044, Songhai, Bogota, SENT OUT QUEST, Type, 7
+044, Songhai, Bogota, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+045, The Aztecs, Jerusalem, era change yield update
+045, The Aztecs, Wellington, era change yield update
+045, The Aztecs, Prague, era change yield update
+045, The Aztecs, Valletta, era change yield update
+045, The Aztecs, Kyiv, era change yield update
+045, The Aztecs, Colombo, era change yield update
+045, The Aztecs, Wittenberg, era change yield update
+045, The Aztecs, Kabul, era change yield update
+045, The Aztecs, Genoa, era change yield update
+045, The Aztecs, Almaty, era change yield update
+045, The Aztecs, Bogota, era change yield update
+045, The Aztecs, Mombasa, era change yield update
+045, The Aztecs, Sydney, era change yield update
+045, The Aztecs, Lhasa, era change yield update
+045, The Aztecs, Mogadishu, era change yield update
+045, The Aztecs, Antwerp, era change yield update
+045, The Aztecs, Kabul, SENT OUT QUEST, Type, 1
+045, The Aztecs, Kabul, SENT OUT QUEST, Type, 7
+045, The Aztecs, Bogota, SENT OUT QUEST, Type, 7
+045, The Aztecs, Bogota, SENT OUT QUEST, Type, 1
+045, The Aztecs, Sydney, SENT OUT QUEST, Type, 2
+045, The Aztecs, Kyiv, SENT OUT QUEST, Type, 1
+045, The Aztecs, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+045, Spain, Kyiv, SENT OUT QUEST, Type, 3
+045, Spain, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+045, Japan, Kabul, SENT OUT QUEST, Type, 2
+045, Japan, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+045, Morocco, Genoa, SENT OUT QUEST, Type, 2
+045, Morocco, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 1 to 1, MINOR_CIV_GENOA
+045, The Netherlands, Lhasa, gained friend
+045, The Netherlands, Lhasa, FINISHED QUEST, Contest Techs, Friendship: 5 to 45, MINOR_CIV_LHASA
+045, Morocco, Lhasa, cancelled, Contest Techs, Friendship: 2 to 2, MINOR_CIV_LHASA
+045, The Shoshone, Lhasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_LHASA
+045, Greece, Lhasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_LHASA
+045, Morocco, Lhasa, SENT OUT QUEST, Type, 7
+045, Morocco, Lhasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 2 to 2, MINOR_CIV_LHASA
+045, The Netherlands, Mogadishu, gained friend
+045, The Netherlands, Mogadishu, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_MOGADISHU
+045, The Netherlands, Antwerp, gained friend
+045, The Netherlands, Antwerp, FINISHED QUEST, Contest Techs, Friendship: 5 to 45, MINOR_CIV_ANTWERP
+045, The Netherlands, Antwerp, gained ally
+045, The Netherlands, Antwerp, FINISHED QUEST, Construct Wonder, Friendship: 45 to 85, MINOR_CIV_ANTWERP
+045, Morocco, Antwerp, cancelled, Contest Techs, Friendship: 2 to 2, MINOR_CIV_ANTWERP
+045, Greece, Antwerp, cancelled, Contest Techs, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+046, The Netherlands, Antwerp, SENT OUT QUEST, Type, 0
+046, The Netherlands, Antwerp, RECEIVED QUEST, Route, Friendship: 83 to 83, MINOR_CIV_ANTWERP
+047, The Netherlands, Jerusalem, lost friend
+047, Spain, Kyiv, gained friend
+047, Spain, Kyiv, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KIEV
+048, Morocco, Kyiv, SENT OUT QUEST, Type, 1
+048, Morocco, Kyiv, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+048, The Shoshone, Wellington, lost friend
+048, The Shoshone, Kyiv, SENT OUT QUEST, Type, 2
+048, The Shoshone, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KIEV
+049, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 1
+049, The Aztecs, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+049, Spain, Wittenberg, gained friend
+049, Spain, Wittenberg, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+049, Spain, Kabul, gained friend
+049, Spain, Kabul, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+050, Morocco, Wittenberg, SENT OUT QUEST, Type, 1
+050, Morocco, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+050, Greece, Jerusalem, SENT OUT QUEST, Type, 7
+050, Greece, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+050, Songhai, Almaty, SENT OUT QUEST, Type, 7
+050, Songhai, Almaty, RECEIVED QUEST, Find Natural Wonder, Friendship: 6 to 6, MINOR_CIV_ALMATY
+051, The Aztecs, Bogota, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_BOGOTA
+051, The Aztecs, Bogota, cancelled, Kill Camp, Friendship: -60 to -60, MINOR_CIV_BOGOTA
+051, Spain, Valletta, SENT OUT QUEST, Type, 4
+051, Spain, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+051, Spain, Sydney, SENT OUT QUEST, Type, 4
+051, Spain, Sydney, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+051, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 4
+051, The Netherlands, Mogadishu, RECEIVED QUEST, Great Person, Friendship: 36 to 36, MINOR_CIV_MOGADISHU
+052, Greece, Wittenberg, SENT OUT QUEST, Type, 1
+052, Greece, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+052, Songhai, Kabul, SENT OUT QUEST, Type, 7
+052, Songhai, Kabul, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+052, The Aztecs, Sydney, SENT OUT QUEST, Type, 17
+052, The Aztecs, Sydney, RECEIVED QUEST, Trade Route, Friendship: 7 to 7, MINOR_CIV_SYDNEY
+052, The Netherlands, Lhasa, lost friend
+053, Greece, Wellington, SENT OUT QUEST, Type, 7
+053, Greece, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 34 to 34, MINOR_CIV_WELLINGTON
+053, Spain, Wittenberg, SENT OUT QUEST, Type, 4
+053, Spain, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 34 to 34, MINOR_CIV_WITTENBERG
+053, Spain, Kabul, SENT OUT QUEST, Type, 17
+053, Spain, Kabul, RECEIVED QUEST, Trade Route, Friendship: 31 to 31, MINOR_CIV_KABUL
+053, The Aztecs, Bogota, SENT OUT QUEST, Type, 3
+053, The Aztecs, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: -55 to -55, MINOR_CIV_BOGOTA
+053, Greece, Mogadishu, SENT OUT QUEST, Type, 2
+053, Greece, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+053, Morocco, Antwerp, SENT OUT QUEST, Type, 7
+053, Morocco, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+054, Spain, Kyiv, lost friend
+054, Spain, Kabul, lost friend
+054, Almaty, Songhai, RECEIVED_UNIT_GIFT, Warrior
+056, Spain, Wellington, gained friend
+056, Spain, Wellington, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_WELLINGTON
+056, The Shoshone, Wellington, cancelled, Contest Culture, Friendship: 17 to 17, MINOR_CIV_WELLINGTON
+056, Greece, Wellington, cancelled, Contest Culture, Friendship: 32 to 32, MINOR_CIV_WELLINGTON
+056, The Netherlands, Prague, SENT OUT QUEST, Type, 2
+056, The Netherlands, Prague, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+056, The Shoshone, Valletta, SENT OUT QUEST, Type, 7
+056, The Shoshone, Valletta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+056, Greece, Kyiv, SENT OUT QUEST, Type, 7
+056, Greece, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+056, Spain, Wittenberg, lost friend
+056, The Netherlands, Mogadishu, lost friend
+057, The Aztecs, Kabul, SENT OUT QUEST, Type, 6
+057, The Aztecs, Kabul, RECEIVED QUEST, Find Player, Friendship: 0 to 0, MINOR_CIV_KABUL
+057, The Shoshone, Mombasa, SENT OUT QUEST, Type, 7
+057, The Shoshone, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 1 to 1, MINOR_CIV_MOMBASA
+057, The Netherlands, Mogadishu, cancelled, Kill Camp, Friendship: 27 to 27, MINOR_CIV_MOGADISHU
+057, Spain, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+057, Greece, Mogadishu, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+058, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 1
+058, The Netherlands, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+058, The Shoshone, Wellington, SENT OUT QUEST, Type, 7
+058, Spain, Wellington, SENT OUT QUEST, Type, 4
+058, Spain, Wellington, RECEIVED QUEST, Great Person, Friendship: 37 to 37, MINOR_CIV_WELLINGTON
+058, Japan, Wittenberg, SENT OUT QUEST, Type, 7
+058, Japan, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+058, Almaty, Songhai, RECEIVED_UNIT_GIFT, Warrior
+058, Bogota, The Aztecs, RECEIVED_UNIT_GIFT, Archer
+058, Songhai, Mombasa, SENT OUT QUEST, Type, 3
+058, Songhai, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+059, The Shoshone, Prague, SENT OUT QUEST, Type, 2
+059, The Shoshone, Prague, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+059, Spain, Kyiv, gained friend
+059, Spain, Kyiv, gained ally
+059, Spain, Kyiv, FINISHED QUEST, Construct Wonder, Friendship: 22 to 62, MINOR_CIV_KIEV
+059, The Netherlands, Genoa, SENT OUT QUEST, Type, 17
+059, The Netherlands, Genoa, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_GENOA
+059, The Shoshone, Antwerp, SENT OUT QUEST, Type, 2
+059, The Shoshone, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+060, Songhai, Wittenberg, SENT OUT QUEST, Type, 1
+060, Songhai, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+060, The Shoshone, Wellington, Gold Gift: 500, Friendship: 13 to 13, Diplomacy, MINOR_CIV_WELLINGTON, (SAVING) 
+060, Spain, Kyiv, SENT OUT QUEST, Type, 1
+060, Greece, Wellington, lost friend
+060, The Shoshone, Wellington, SENT OUT QUEST, Type, 2
+060, The Shoshone, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 11 to 11, MINOR_CIV_WELLINGTON
+060, Greece, Lhasa, SENT OUT QUEST, Type, 17
+060, Greece, Lhasa, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_LHASA
+061, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 7
+061, The Netherlands, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 8 to 8, MINOR_CIV_JERUSALEM
+061, Spain, Kyiv, lost ally
+061, Morocco, Almaty, SENT OUT QUEST, Type, 7
+061, Morocco, Almaty, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+062, Morocco, Jerusalem, SENT OUT QUEST, Type, 17
+062, Morocco, Jerusalem, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+062, Morocco, Bogota, SENT OUT QUEST, Type, 3
+062, Morocco, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+062, The Netherlands, Antwerp, lost ally
+063, Japan, Jerusalem, SENT OUT QUEST, Type, 1
+063, Japan, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+063, Greece, Antwerp, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_ANTWERP, (SAVING) 
+063, Greece, Jerusalem, SENT OUT QUEST, Type, 1
+063, Greece, Jerusalem, SENT OUT QUEST, Type, 2
+063, Greece, Jerusalem, SENT OUT QUEST, Type, 7
+063, Greece, Valletta, SENT OUT QUEST, Type, 1
+063, Greece, Valletta, SENT OUT QUEST, Type, 7
+063, Greece, Kyiv, SENT OUT QUEST, Type, 1
+063, Greece, Kyiv, SENT OUT QUEST, Type, 7
+063, Greece, Wittenberg, SENT OUT QUEST, Type, 1
+063, Greece, Lhasa, SENT OUT QUEST, Type, 2
+063, Greece, Lhasa, SENT OUT QUEST, Type, 17
+063, Greece, Mogadishu, SENT OUT QUEST, Type, 2
+063, Spain, Wellington, lost friend
+063, Morocco, Valletta, SENT OUT QUEST, Type, 1
+063, Morocco, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+063, Morocco, Genoa, SENT OUT QUEST, Type, 7
+063, Morocco, Genoa, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_GENOA
+064, Greece, Wittenberg, SENT OUT QUEST, Type, 16
+064, Greece, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+064, Spain, Mogadishu, SENT OUT QUEST, Type, 2
+064, Spain, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+064, The Shoshone, Antwerp, gained friend
+064, The Shoshone, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+065, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 2
+065, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 1
+065, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 7
+065, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 1
+065, Spain, Kyiv, SENT OUT QUEST, Type, 2
+065, Spain, Kyiv, RECEIVED QUEST, Connect Resource, Friendship: 53 to 53, MINOR_CIV_KIEV
+065, Morocco, Genoa, gained friend
+065, Morocco, Genoa, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_GENOA
+065, Morocco, Almaty, gained friend
+065, Morocco, Almaty, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ALMATY
+065, Morocco, Lhasa, gained friend
+065, Morocco, Lhasa, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_LHASA
+065, Morocco, Antwerp, gained friend
+065, Morocco, Antwerp, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_ANTWERP
+066, Greece, Valletta, SENT OUT QUEST, Type, 16
+066, Greece, Valletta, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+066, The Netherlands, Lhasa, SENT OUT QUEST, Type, 16
+066, The Netherlands, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_LHASA
+067, The Netherlands, Kabul, SENT OUT QUEST, Type, 1
+067, The Netherlands, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+067, The Shoshone, Jerusalem, SENT OUT QUEST, Type, 1
+067, The Shoshone, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+067, The Aztecs, Kyiv, SENT OUT QUEST, Type, 3
+067, The Aztecs, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+067, Spain, Colombo, SENT OUT QUEST, Type, 1
+067, Spain, Colombo, RECEIVED QUEST, Kill Camp, Friendship: 1 to 1, MINOR_CIV_COLOMBO
+067, Japan, Mombasa, SENT OUT QUEST, Type, 7
+067, Japan, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+067, The Shoshone, Lhasa, SENT OUT QUEST, Type, 14
+067, The Shoshone, Lhasa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_LHASA
+067, Spain, Antwerp, SENT OUT QUEST, Type, 3
+067, Spain, Antwerp, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+069, Morocco, Kyiv, SENT OUT QUEST, Type, 16
+069, Morocco, Kyiv, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KIEV
+069, Songhai, Almaty, SENT OUT QUEST, Type, 2
+069, Songhai, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ALMATY
+070, Spain, Kyiv, SENT OUT QUEST, Type, 1
+070, Spain, Kyiv, SENT OUT QUEST, Type, 2
+070, Greece, Kabul, SENT OUT QUEST, Type, 1
+070, Greece, Kabul, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+070, Greece, Kyiv, SENT OUT QUEST, Type, 14
+070, Greece, Kyiv, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_KIEV
+070, The Netherlands, Genoa, SENT OUT QUEST, Type, 12
+070, The Netherlands, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_GENOA
+070, Morocco, Genoa, SENT OUT QUEST, Type, 12
+070, Morocco, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 37 to 37, MINOR_CIV_GENOA
+070, Spain, Genoa, SENT OUT QUEST, Type, 12
+070, Spain, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+070, The Netherlands, Antwerp, SENT OUT QUEST, Type, 4
+070, The Netherlands, Antwerp, RECEIVED QUEST, Great Person, Friendship: 47 to 47, MINOR_CIV_ANTWERP
+071, Greece, Kabul, SENT OUT QUEST, Type, 1
+071, Spain, Jerusalem, SENT OUT QUEST, Type, 1
+071, Spain, Jerusalem, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+071, Greece, Kyiv, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_KIEV
+071, The Shoshone, Antwerp, lost friend
+072, The Netherlands, Valletta, SENT OUT QUEST, Type, 17
+072, The Netherlands, Valletta, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+072, Morocco, Almaty, lost friend
+072, Spain, Bogota, SENT OUT QUEST, Type, 1
+072, Spain, Bogota, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+072, Morocco, Lhasa, lost friend
+072, The Netherlands, Antwerp, SENT OUT QUEST, Type, 13
+072, The Netherlands, Antwerp, RECEIVED QUEST, Invest, Friendship: 44 to 44, MINOR_CIV_ANTWERP
+072, Morocco, Antwerp, SENT OUT QUEST, Type, 13
+072, Morocco, Antwerp, RECEIVED QUEST, Invest, Friendship: 34 to 34, MINOR_CIV_ANTWERP
+072, The Shoshone, Antwerp, SENT OUT QUEST, Type, 13
+072, The Shoshone, Antwerp, RECEIVED QUEST, Invest, Friendship: 28 to 28, MINOR_CIV_ANTWERP
+072, Spain, Antwerp, SENT OUT QUEST, Type, 13
+072, Spain, Antwerp, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+072, Greece, Antwerp, SENT OUT QUEST, Type, 13
+072, Greece, Antwerp, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+073, The Aztecs, Mombasa, SENT OUT QUEST, Type, 1
+073, The Aztecs, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+073, Greece, Wellington, SENT OUT QUEST, Type, 17
+073, Greece, Wellington, RECEIVED QUEST, Trade Route, Friendship: 19 to 19, MINOR_CIV_WELLINGTON
+073, Morocco, Wittenberg, SENT OUT QUEST, Type, 16
+073, Morocco, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+073, Songhai, Wittenberg, SENT OUT QUEST, Type, 4
+073, Songhai, Wittenberg, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+074, The Aztecs, Almaty, SENT OUT QUEST, Type, 1
+074, The Aztecs, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+074, Songhai, Wittenberg, cancelled, Great Person, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+074, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 2
+074, The Aztecs, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+074, Songhai, Kabul, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+074, Songhai, Kabul, cancelled, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+074, Spain, Genoa, SENT OUT QUEST, Type, 3
+074, Spain, Genoa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_GENOA
+074, Songhai, Almaty, cancelled, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+074, Songhai, Almaty, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ALMATY
+074, Songhai, Bogota, cancelled, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+074, Songhai, Bogota, cancelled, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+074, Songhai, Mombasa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+074, Morocco, Sydney, SENT OUT QUEST, Type, 2
+074, Morocco, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+075, Kyiv, The Aztecs, RECEIVED_UNIT_GIFT, Jaguar
+075, The Aztecs, Kabul, gained friend
+075, The Aztecs, Kabul, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+075, The Shoshone, Antwerp, SENT OUT QUEST, Type, 2
+075, The Shoshone, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 23 to 23, MINOR_CIV_ANTWERP
+076, The Netherlands, Jerusalem, gained friend
+076, The Netherlands, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 5 to 45, MINOR_CIV_JERUSALEM
+076, Morocco, Genoa, lost friend
+076, Morocco, Antwerp, lost friend
+076, Spain, Antwerp, gained friend
+076, Spain, Antwerp, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+077, Japan, Antwerp, SENT OUT QUEST, Type, 13
+077, Japan, Antwerp, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+077, Spain, Colombo, Gold Gift: 500, Friendship: 5 to 5, Spaceship, MINOR_CIV_COLOMBO, (SAVING) 
+077, Morocco, Wellington, SENT OUT QUEST, Type, 2
+077, Morocco, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+077, The Netherlands, Valletta, gained friend
+077, The Netherlands, Valletta, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_VALLETTA
+077, Almaty, The Aztecs, RECEIVED_UNIT_GIFT, Jaguar
+077, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 2
+077, The Netherlands, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+077, Greece, Mogadishu, SENT OUT QUEST, Type, 3
+077, Greece, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+078, The Netherlands, Antwerp, gained ally
+078, The Netherlands, Antwerp, Gold Gift: 250, Friendship: 37 to 72, Diplomacy, MINOR_CIV_ANTWERP, Boost! , Passing Greece
+078, The Netherlands, Genoa, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_GENOA, (SAVING) 
+078, The Shoshone, Antwerp, SENT OUT QUEST, Type, 13
+078, The Shoshone, Antwerp, SENT OUT QUEST, Type, 2
+078, Jerusalem, Greece, RECEIVED_UNIT_GIFT, Warrior
+078, The Aztecs, Bogota, SENT OUT QUEST, Type, 2
+078, The Aztecs, Bogota, RECEIVED QUEST, Connect Resource, Friendship: -13 to -13, MINOR_CIV_BOGOTA
+079, Spain, Mombasa, SENT OUT QUEST, Type, 1
+079, Spain, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+079, Kabul, The Aztecs, RECEIVED_UNIT_GIFT, Jaguar
+079, Morocco, Almaty, SENT OUT QUEST, Type, 2
+079, Morocco, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 19 to 19, MINOR_CIV_ALMATY
+080, Japan, Jerusalem, SENT OUT QUEST, Type, 3
+080, Japan, Jerusalem, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+080, Spain, Valletta, SENT OUT QUEST, Type, 2
+080, Spain, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+080, Japan, Genoa, SENT OUT QUEST, Type, 12
+080, Japan, Genoa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+080, Japan, Mombasa, SENT OUT QUEST, Type, 2
+080, Japan, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+080, The Netherlands, Lhasa, SENT OUT QUEST, Type, 11
+080, The Netherlands, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_LHASA
+080, Morocco, Lhasa, SENT OUT QUEST, Type, 11
+080, Morocco, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 11 to 11, MINOR_CIV_LHASA
+080, The Shoshone, Lhasa, SENT OUT QUEST, Type, 11
+080, The Shoshone, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LHASA
+080, Japan, Lhasa, SENT OUT QUEST, Type, 11
+080, Japan, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LHASA
+080, Spain, Lhasa, SENT OUT QUEST, Type, 11
+080, Spain, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LHASA
+080, Greece, Lhasa, SENT OUT QUEST, Type, 11
+080, Greece, Lhasa, RECEIVED QUEST, Contest Faith, Friendship: 5 to 5, MINOR_CIV_LHASA
+080, The Shoshone, Lhasa, SENT OUT QUEST, Type, 2
+080, The Shoshone, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
+081, Spain, Almaty, SENT OUT QUEST, Type, 1
+081, Spain, Almaty, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+081, The Netherlands, Jerusalem, gained ally
+081, The Netherlands, Jerusalem, FINISHED QUEST, Connect Resource, Friendship: 37 to 77, MINOR_CIV_JERUSALEM
+081, The Shoshone, Jerusalem, SENT OUT QUEST, Type, 2
+081, The Shoshone, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+081, Spain, Kyiv, lost friend
+081, Spain, Wittenberg, SENT OUT QUEST, Type, 14
+081, Spain, Wittenberg, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+081, Japan, Kabul, SENT OUT QUEST, Type, 14
+081, Japan, Kabul, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+081, The Netherlands, Lhasa, gained friend
+081, The Netherlands, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_LHASA
+081, Spain, Mogadishu, SENT OUT QUEST, Type, 3
+081, Spain, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+081, Antwerp, Japan, RECEIVED_UNIT_GIFT, Warrior
+081, Morocco, Antwerp, SENT OUT QUEST, Type, 0
+081, Morocco, Antwerp, RECEIVED QUEST, Route, Friendship: 21 to 21, MINOR_CIV_ANTWERP
+082, The Aztecs, Kabul, lost friend
+083, Morocco, Valletta, SENT OUT QUEST, Type, 7
+083, Morocco, Valletta, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+083, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 14
+083, The Netherlands, Wittenberg, RECEIVED QUEST, Bully City-State, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+083, The Shoshone, Mombasa, SENT OUT QUEST, Type, 4
+083, The Shoshone, Mombasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+083, The Shoshone, Lhasa, gained friend
+083, The Shoshone, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_LHASA
+083, Spain, Mogadishu, gained friend
+083, Spain, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOGADISHU
+083, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 2
+083, The Shoshone, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+083, Spain, Antwerp, lost friend
+084, Greece, Mombasa, SENT OUT QUEST, Type, 1
+084, Greece, Mombasa, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+085, Greece, Mombasa, SENT OUT QUEST, Type, 1
+085, Greece, Wittenberg, SENT OUT QUEST, Type, 7
+085, Greece, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+085, Spain, Kabul, SENT OUT QUEST, Type, 3
+085, Spain, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+085, Morocco, Genoa, gained friend
+085, Morocco, Genoa, FINISHED QUEST, Connect Resource, Friendship: 15 to 55, MINOR_CIV_GENOA
+085, The Netherlands, Genoa, SENT OUT QUEST, Type, 16
+085, The Netherlands, Genoa, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_GENOA
+085, Almaty, The Aztecs, RECEIVED_UNIT_GIFT, Composite Bowman
+085, Morocco, Almaty, gained friend
+085, Morocco, Almaty, FINISHED QUEST, Connect Resource, Friendship: 10 to 50, MINOR_CIV_ALMATY
+085, Morocco, Sydney, gained friend
+085, Morocco, Sydney, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+085, Morocco, Antwerp, gained friend
+085, Morocco, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 15 to 55, MINOR_CIV_ANTWERP
+086, Spain, Jerusalem, era change yield update
+086, Spain, Wellington, era change yield update
+086, Spain, Prague, era change yield update
+086, Spain, Valletta, era change yield update
+086, Spain, Kyiv, era change yield update
+086, Spain, Colombo, era change yield update
+086, Spain, Wittenberg, era change yield update
+086, Spain, Kabul, era change yield update
+086, Spain, Genoa, era change yield update
+086, Spain, Almaty, era change yield update
+086, Spain, Bogota, era change yield update
+086, Spain, Mombasa, era change yield update
+086, Spain, Sydney, era change yield update
+086, Spain, Lhasa, era change yield update
+086, Spain, Mogadishu, era change yield update
+086, Spain, Antwerp, era change yield update
+086, Spain, Jerusalem, SENT OUT QUEST, Type, 1
+086, Spain, Wellington, SENT OUT QUEST, Type, 2
+086, Spain, Wellington, SENT OUT QUEST, Type, 4
+086, Spain, Valletta, SENT OUT QUEST, Type, 1
+086, Spain, Valletta, SENT OUT QUEST, Type, 4
+086, Spain, Valletta, SENT OUT QUEST, Type, 2
+086, Spain, Kyiv, SENT OUT QUEST, Type, 1
+086, Spain, Kyiv, SENT OUT QUEST, Type, 2
+086, Spain, Colombo, SENT OUT QUEST, Type, 1
+086, Spain, Wittenberg, SENT OUT QUEST, Type, 1
+086, Spain, Wittenberg, SENT OUT QUEST, Type, 4
+086, Spain, Wittenberg, SENT OUT QUEST, Type, 14
+086, Spain, Kabul, SENT OUT QUEST, Type, 1
+086, Spain, Kabul, SENT OUT QUEST, Type, 17
+086, Spain, Kabul, SENT OUT QUEST, Type, 3
+086, Spain, Genoa, SENT OUT QUEST, Type, 12
+086, Spain, Genoa, SENT OUT QUEST, Type, 3
+086, Spain, Almaty, SENT OUT QUEST, Type, 1
+086, Spain, Bogota, SENT OUT QUEST, Type, 1
+086, Spain, Mombasa, SENT OUT QUEST, Type, 1
+086, Spain, Sydney, SENT OUT QUEST, Type, 2
+086, Spain, Sydney, SENT OUT QUEST, Type, 4
+086, Spain, Lhasa, SENT OUT QUEST, Type, 11
+086, Spain, Mogadishu, SENT OUT QUEST, Type, 3
+086, Spain, Antwerp, SENT OUT QUEST, Type, 13
+086, Spain, Jerusalem, SENT OUT QUEST, Type, 7
+086, Spain, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+086, Japan, Valletta, SENT OUT QUEST, Type, 1
+086, Japan, Valletta, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+086, The Netherlands, Antwerp, lost ally
+086, Spain, Antwerp, SENT OUT QUEST, Type, 4
+086, Spain, Antwerp, RECEIVED QUEST, Great Person, Friendship: 25 to 25, MINOR_CIV_ANTWERP
+087, Morocco, Wellington, SENT OUT QUEST, Type, 1
+087, Morocco, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+087, The Shoshone, Wellington, SENT OUT QUEST, Type, 1
+087, The Shoshone, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+087, Spain, Wellington, SENT OUT QUEST, Type, 1
+087, Spain, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+087, Greece, Wellington, SENT OUT QUEST, Type, 1
+087, Greece, Wellington, RECEIVED QUEST, Kill Camp, Friendship: 9 to 9, MINOR_CIV_WELLINGTON
+087, The Netherlands, Prague, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+087, The Aztecs, Kyiv, SENT OUT QUEST, Type, 7
+087, The Aztecs, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+087, The Aztecs, Almaty, SENT OUT QUEST, Type, 14
+087, The Aztecs, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ALMATY
+087, Morocco, Bogota, gained friend
+087, Morocco, Bogota, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+087, Spain, Bogota, SENT OUT QUEST, Type, 2
+087, Spain, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+087, The Shoshone, Lhasa, cancelled, Bully City-State, Friendship: 31 to 31, MINOR_CIV_LHASA
+087, Antwerp, The Shoshone, RECEIVED_UNIT_GIFT, Archer
+088, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 2
+088, The Netherlands, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 67 to 67, MINOR_CIV_JERUSALEM
+088, The Netherlands, Valletta, lost friend
+088, Spain, Colombo, cancelled, Kill Camp, Friendship: 8 to 8, MINOR_CIV_COLOMBO
+088, Morocco, Bogota, SENT OUT QUEST, Type, 3
+088, Morocco, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 38 to 38, MINOR_CIV_BOGOTA
+088, The Netherlands, Lhasa, lost friend
+088, The Shoshone, Lhasa, lost friend
+089, Morocco, Jerusalem, gained friend
+089, Morocco, Jerusalem, FINISHED QUEST, Kill Camp, Friendship: 15 to 65, MINOR_CIV_JERUSALEM
+089, The Netherlands, Sydney, SENT OUT QUEST, Type, 10
+089, The Netherlands, Sydney, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+089, Morocco, Sydney, SENT OUT QUEST, Type, 10
+089, Morocco, Sydney, RECEIVED QUEST, Contest Culture, Friendship: 31 to 31, MINOR_CIV_SYDNEY
+089, The Aztecs, Sydney, SENT OUT QUEST, Type, 10
+089, The Aztecs, Sydney, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+089, Spain, Sydney, SENT OUT QUEST, Type, 10
+089, Spain, Sydney, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+089, Greece, Sydney, SENT OUT QUEST, Type, 10
+089, Greece, Sydney, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+090, The Netherlands, Jerusalem, cancelled, Kill Camp, Friendship: 64 to 64, MINOR_CIV_JERUSALEM
+090, The Shoshone, Jerusalem, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+090, Japan, Jerusalem, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+090, Spain, Jerusalem, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+090, Greece, Jerusalem, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+090, Morocco, Wellington, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+090, The Shoshone, Wellington, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+090, Spain, Wellington, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+090, Greece, Wellington, cancelled, Kill Camp, Friendship: 7 to 7, MINOR_CIV_WELLINGTON
+090, The Netherlands, Prague, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+090, The Shoshone, Prague, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+090, Morocco, Kyiv, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+090, The Aztecs, Kyiv, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+090, The Shoshone, Kyiv, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KIEV
+090, Spain, Kyiv, cancelled, Kill Camp, Friendship: 15 to 15, MINOR_CIV_KIEV
+090, Greece, Kyiv, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KIEV
+090, The Aztecs, Kabul, SENT OUT QUEST, Type, 2
+090, The Aztecs, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 11 to 11, MINOR_CIV_KABUL
+090, Morocco, Genoa, gained ally
+090, Morocco, Genoa, FINISHED QUEST, Contest Techs, Friendship: 47 to 87, MINOR_CIV_GENOA
+090, The Netherlands, Genoa, cancelled, Contest Techs, Friendship: 5 to 5, MINOR_CIV_GENOA
+090, Japan, Genoa, cancelled, Contest Techs, Friendship: -4 to -4, MINOR_CIV_GENOA
+090, Spain, Genoa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_GENOA
+090, Morocco, Genoa, SENT OUT QUEST, Type, 16
+090, Morocco, Genoa, RECEIVED QUEST, Spread Religion, Friendship: 87 to 87, MINOR_CIV_GENOA
+090, The Aztecs, Bogota, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+090, Morocco, Sydney, lost friend
+090, Spain, Mogadishu, lost friend
+090, Greece, Mogadishu, gained friend
+090, Greece, Mogadishu, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_MOGADISHU
+090, Japan, Antwerp, SENT OUT QUEST, Type, 2
+090, Japan, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+091, Spain, Antwerp, gained friend
+091, Spain, Antwerp, FINISHED QUEST, Great Person, Friendship: 19 to 59, MINOR_CIV_ANTWERP
+091, The Netherlands, Prague, gained friend
+091, The Netherlands, Prague, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_PRAGUE
+091, Japan, Wittenberg, gained friend
+091, Japan, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+091, Morocco, Wittenberg, SENT OUT QUEST, Type, 14
+091, Morocco, Wittenberg, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+091, Spain, Genoa, SENT OUT QUEST, Type, 14
+091, Spain, Genoa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_GENOA
+091, Japan, Mombasa, gained friend
+091, Japan, Mombasa, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+092, Japan, Jerusalem, gained friend
+092, Japan, Jerusalem, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+092, Spain, Jerusalem, gained friend
+092, Spain, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+092, Spain, Kyiv, SENT OUT QUEST, Type, 7
+092, Spain, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 12 to 12, MINOR_CIV_KIEV
+092, Spain, Antwerp, FINISHED QUEST, Invest, Friendship: 56 to 56, MINOR_CIV_ANTWERP
+092, The Netherlands, Antwerp, FINISHED QUEST, Invest, Friendship: 49 to 49, MINOR_CIV_ANTWERP
+092, Morocco, Antwerp, FINISHED QUEST, Invest, Friendship: 44 to 44, MINOR_CIV_ANTWERP
+092, Japan, Antwerp, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+092, Japan, Antwerp, gained friend
+092, Japan, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+092, Greece, Antwerp, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+092, The Shoshone, Antwerp, FINISHED QUEST, Invest, Friendship: 3 to 3, MINOR_CIV_ANTWERP
+093, The Netherlands, Jerusalem, lost ally
+093, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 10
+093, The Netherlands, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+093, Morocco, Mogadishu, SENT OUT QUEST, Type, 10
+093, Morocco, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 1 to 1, MINOR_CIV_MOGADISHU
+093, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 10
+093, The Shoshone, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+093, Spain, Mogadishu, SENT OUT QUEST, Type, 10
+093, Spain, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 25 to 25, MINOR_CIV_MOGADISHU
+093, Greece, Mogadishu, SENT OUT QUEST, Type, 10
+093, Greece, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 42 to 42, MINOR_CIV_MOGADISHU
+094, The Shoshone, Wittenberg, SENT OUT QUEST, Type, 1
+094, The Shoshone, Wittenberg, RECEIVED QUEST, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+094, Spain, Wittenberg, SENT OUT QUEST, Type, 1
+094, Spain, Wittenberg, SENT OUT QUEST, Type, 4
+094, Spain, Wittenberg, SENT OUT QUEST, Type, 14
+094, Japan, Jerusalem, SENT OUT QUEST, Type, 3
+094, Japan, Jerusalem, RECEIVED QUEST, Construct Wonder, Friendship: 37 to 37, MINOR_CIV_JERUSALEM
+094, Spain, Colombo, SENT OUT QUEST, Type, 2
+094, Spain, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+094, Morocco, Bogota, lost friend
+094, Spain, Mombasa, SENT OUT QUEST, Type, 14
+094, Spain, Mombasa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+094, Japan, Lhasa, SENT OUT QUEST, Type, 2
+094, Japan, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_LHASA
+094, Morocco, Mogadishu, SENT OUT QUEST, Type, 3
+094, Morocco, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 3 to 3, MINOR_CIV_MOGADISHU
+095, The Netherlands, Jerusalem, era change yield update
+095, The Netherlands, Wellington, era change yield update
+095, The Netherlands, Prague, era change yield update
+095, The Netherlands, Valletta, era change yield update
+095, The Netherlands, Kyiv, era change yield update
+095, The Netherlands, Colombo, era change yield update
+095, The Netherlands, Wittenberg, era change yield update
+095, The Netherlands, Kabul, era change yield update
+095, The Netherlands, Genoa, era change yield update
+095, The Netherlands, Almaty, era change yield update
+095, The Netherlands, Bogota, era change yield update
+095, The Netherlands, Mombasa, era change yield update
+095, The Netherlands, Sydney, era change yield update
+095, The Netherlands, Lhasa, era change yield update
+095, The Netherlands, Mogadishu, era change yield update
+095, The Netherlands, Antwerp, era change yield update
+095, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 2
+095, The Netherlands, Valletta, SENT OUT QUEST, Type, 1
+095, The Netherlands, Valletta, SENT OUT QUEST, Type, 17
+095, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 1
+095, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 14
+095, The Netherlands, Kabul, SENT OUT QUEST, Type, 1
+095, The Netherlands, Genoa, SENT OUT QUEST, Type, 17
+095, The Netherlands, Genoa, SENT OUT QUEST, Type, 16
+095, The Netherlands, Sydney, SENT OUT QUEST, Type, 10
+095, The Netherlands, Lhasa, SENT OUT QUEST, Type, 16
+095, The Netherlands, Lhasa, SENT OUT QUEST, Type, 11
+095, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 4
+095, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 2
+095, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 10
+095, The Netherlands, Antwerp, SENT OUT QUEST, Type, 0
+095, The Netherlands, Antwerp, SENT OUT QUEST, Type, 4
+095, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 1
+095, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 2
+095, The Shoshone, Mombasa, gained friend
+095, The Shoshone, Mombasa, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+095, Japan, Wittenberg, SENT OUT QUEST, Type, 1
+095, Japan, Wittenberg, SENT OUT QUEST, Type, 2
+095, Morocco, Valletta, gained friend
+095, Morocco, Valletta, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+095, The Netherlands, Valletta, SENT OUT QUEST, Type, 4
+095, The Netherlands, Valletta, RECEIVED QUEST, Great Person, Friendship: 18 to 18, MINOR_CIV_VALLETTA
+095, Japan, Kabul, gained friend
+095, Japan, Kabul, FINISHED QUEST, Kill Camp, Friendship: 0 to 50, MINOR_CIV_KABUL
+095, Japan, Kabul, cancelled, Bully City-State, Friendship: 50 to 50, MINOR_CIV_KABUL
+095, The Netherlands, Kabul, SENT OUT QUEST, Type, 14
+095, The Netherlands, Kabul, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+095, The Aztecs, Mombasa, SENT OUT QUEST, Type, 3
+095, The Aztecs, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+096, Morocco, Valletta, SENT OUT QUEST, Type, 1
+096, Morocco, Sydney, SENT OUT QUEST, Type, 10
+096, The Aztecs, Wittenberg, Gold Gift: 500, Friendship: 1 to 1, Conquest, MINOR_CIV_WITTENBERG, (SAVING) 
+096, The Shoshone, Sydney, SENT OUT QUEST, Type, 10
+096, The Shoshone, Sydney, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+096, The Aztecs, Kabul, gained friend
+096, The Aztecs, Kabul, FINISHED QUEST, Find Player, Friendship: 0 to 35, MINOR_CIV_KABUL
+096, The Netherlands, Kabul, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+096, The Aztecs, Kabul, cancelled, Kill Camp, Friendship: 35 to 35, MINOR_CIV_KABUL
+096, Songhai, Kabul, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+096, Spain, Kabul, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_KABUL
+096, Greece, Kabul, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_KABUL
+096, Greece, Mombasa, SENT OUT QUEST, Type, 7
+096, Greece, Mombasa, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+096, The Netherlands, Lhasa, SENT OUT QUEST, Type, 4
+096, The Netherlands, Lhasa, RECEIVED QUEST, Great Person, Friendship: 11 to 11, MINOR_CIV_LHASA
+096, The Shoshone, Lhasa, SENT OUT QUEST, Type, 16
+096, The Shoshone, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 11 to 11, MINOR_CIV_LHASA
+096, Spain, Lhasa, SENT OUT QUEST, Type, 4
+096, Spain, Lhasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_LHASA
+097, Morocco, Lhasa, gained friend
+097, Morocco, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_LHASA
+098, Morocco, Wellington, SENT OUT QUEST, Type, 3
+098, Morocco, Wellington, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+098, Morocco, Kyiv, SENT OUT QUEST, Type, 4
+098, Morocco, Kyiv, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KIEV
+098, Greece, Kyiv, SENT OUT QUEST, Type, 3
+098, Greece, Kyiv, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KIEV
+098, Japan, Wittenberg, lost friend
+098, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 7
+098, The Aztecs, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+098, Japan, Genoa, SENT OUT QUEST, Type, 2
+098, Japan, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_GENOA
+098, Japan, Mombasa, lost friend
+098, Morocco, Lhasa, SENT OUT QUEST, Type, 2
+098, Morocco, Lhasa, RECEIVED QUEST, Connect Resource, Friendship: 42 to 42, MINOR_CIV_LHASA
+099, Japan, Jerusalem, lost friend
+099, Spain, Jerusalem, lost friend
+099, The Aztecs, Kabul, lost friend
+099, Morocco, Almaty, lost friend
+099, Japan, Antwerp, lost friend
+100, Japan, Wittenberg, Gold Gift: 500, Friendship: 28 to 28, Conquest, MINOR_CIV_WITTENBERG, (SAVING) , Passing Greece
+100, Japan, Jerusalem, era change yield update
+100, Japan, Wellington, era change yield update
+100, Japan, Prague, era change yield update
+100, Japan, Valletta, era change yield update
+100, Japan, Kyiv, era change yield update
+100, Japan, Colombo, era change yield update
+100, Japan, Wittenberg, era change yield update
+100, Japan, Kabul, era change yield update
+100, Japan, Genoa, era change yield update
+100, Japan, Almaty, era change yield update
+100, Japan, Bogota, era change yield update
+100, Japan, Mombasa, era change yield update
+100, Japan, Sydney, era change yield update
+100, Japan, Lhasa, era change yield update
+100, Japan, Mogadishu, era change yield update
+100, Japan, Antwerp, era change yield update
+100, Japan, Jerusalem, SENT OUT QUEST, Type, 3
+100, Japan, Valletta, SENT OUT QUEST, Type, 1
+100, Japan, Wittenberg, SENT OUT QUEST, Type, 1
+100, Japan, Wittenberg, SENT OUT QUEST, Type, 2
+100, Japan, Kabul, SENT OUT QUEST, Type, 2
+100, Japan, Genoa, SENT OUT QUEST, Type, 2
+100, Japan, Mombasa, SENT OUT QUEST, Type, 1
+100, Japan, Mombasa, SENT OUT QUEST, Type, 2
+100, Japan, Lhasa, SENT OUT QUEST, Type, 11
+100, Japan, Lhasa, SENT OUT QUEST, Type, 2
+100, Morocco, Valletta, SENT OUT QUEST, Type, 3
+100, Morocco, Valletta, RECEIVED QUEST, Construct Wonder, Friendship: 32 to 32, MINOR_CIV_VALLETTA
+100, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 2
+100, The Netherlands, Wittenberg, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+100, Spain, Sydney, gained friend
+100, Spain, Sydney, FINISHED QUEST, Connect Resource, Friendship: -9 to 30, MINOR_CIV_SYDNEY
+100, Greece, Sydney, SENT OUT QUEST, Type, 3
+100, Greece, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+100, The Netherlands, Lhasa, gained friend
+100, The Netherlands, Lhasa, FINISHED QUEST, Contest Faith, Friendship: 5 to 45, MINOR_CIV_LHASA
+100, Morocco, Lhasa, cancelled, Contest Faith, Friendship: 38 to 38, MINOR_CIV_LHASA
+100, The Shoshone, Lhasa, cancelled, Contest Faith, Friendship: 2 to 2, MINOR_CIV_LHASA
+100, Japan, Lhasa, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LHASA
+100, Spain, Lhasa, cancelled, Contest Faith, Friendship: 0 to 0, MINOR_CIV_LHASA
+100, Greece, Lhasa, cancelled, Contest Faith, Friendship: 5 to 5, MINOR_CIV_LHASA
+101, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 4
+101, The Netherlands, Jerusalem, RECEIVED QUEST, Great Person, Friendship: 47 to 47, MINOR_CIV_JERUSALEM
+101, Spain, Wittenberg, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+101, Genoa, Spain, RECEIVED_UNIT_GIFT, Spearman
+101, Spain, Almaty, SENT OUT QUEST, Type, 14
+101, Spain, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ALMATY
+101, Spain, Bogota, SENT OUT QUEST, Type, 3
+101, Spain, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+101, The Shoshone, Mombasa, lost friend
+101, Spain, Sydney, lost friend
+101, The Netherlands, Sydney, SENT OUT QUEST, Type, 14
+101, The Netherlands, Sydney, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+101, The Netherlands, Mogadishu, gained friend
+101, The Netherlands, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_MOGADISHU
+102, The Netherlands, Jerusalem, gained ally
+102, The Netherlands, Jerusalem, FINISHED QUEST, Great Person, Friendship: 47 to 87, MINOR_CIV_JERUSALEM
+102, Morocco, Jerusalem, era change yield update
+102, Morocco, Wellington, era change yield update
+102, Morocco, Prague, era change yield update
+102, Morocco, Valletta, era change yield update
+102, Morocco, Kyiv, era change yield update
+102, Morocco, Colombo, era change yield update
+102, Morocco, Wittenberg, era change yield update
+102, Morocco, Kabul, era change yield update
+102, Morocco, Genoa, era change yield update
+102, Morocco, Almaty, era change yield update
+102, Morocco, Bogota, era change yield update
+102, Morocco, Mombasa, era change yield update
+102, Morocco, Sydney, era change yield update
+102, Morocco, Lhasa, era change yield update
+102, Morocco, Mogadishu, era change yield update
+102, Morocco, Antwerp, era change yield update
+102, Morocco, Jerusalem, SENT OUT QUEST, Type, 2
+102, Morocco, Jerusalem, SENT OUT QUEST, Type, 17
+102, Morocco, Wellington, SENT OUT QUEST, Type, 2
+102, Morocco, Wellington, SENT OUT QUEST, Type, 3
+102, Morocco, Valletta, SENT OUT QUEST, Type, 1
+102, Morocco, Valletta, SENT OUT QUEST, Type, 3
+102, Morocco, Kyiv, SENT OUT QUEST, Type, 16
+102, Morocco, Kyiv, SENT OUT QUEST, Type, 4
+102, Morocco, Wittenberg, SENT OUT QUEST, Type, 1
+102, Morocco, Wittenberg, SENT OUT QUEST, Type, 16
+102, Morocco, Wittenberg, SENT OUT QUEST, Type, 14
+102, Morocco, Genoa, SENT OUT QUEST, Type, 16
+102, Morocco, Almaty, SENT OUT QUEST, Type, 1
+102, Morocco, Bogota, SENT OUT QUEST, Type, 1
+102, Morocco, Bogota, SENT OUT QUEST, Type, 3
+102, Morocco, Sydney, SENT OUT QUEST, Type, 10
+102, Morocco, Lhasa, SENT OUT QUEST, Type, 2
+102, Morocco, Mogadishu, SENT OUT QUEST, Type, 10
+102, Morocco, Mogadishu, SENT OUT QUEST, Type, 3
+102, Morocco, Antwerp, SENT OUT QUEST, Type, 0
+102, The Shoshone, Jerusalem, era change yield update
+102, The Shoshone, Wellington, era change yield update
+102, The Shoshone, Prague, era change yield update
+102, The Shoshone, Valletta, era change yield update
+102, The Shoshone, Kyiv, era change yield update
+102, The Shoshone, Colombo, era change yield update
+102, The Shoshone, Wittenberg, era change yield update
+102, The Shoshone, Kabul, era change yield update
+102, The Shoshone, Genoa, era change yield update
+102, The Shoshone, Almaty, era change yield update
+102, The Shoshone, Bogota, era change yield update
+102, The Shoshone, Mombasa, era change yield update
+102, The Shoshone, Sydney, era change yield update
+102, The Shoshone, Lhasa, era change yield update
+102, The Shoshone, Mogadishu, era change yield update
+102, The Shoshone, Antwerp, era change yield update
+102, The Shoshone, Jerusalem, SENT OUT QUEST, Type, 2
+102, The Shoshone, Wellington, SENT OUT QUEST, Type, 7
+102, The Shoshone, Wellington, SENT OUT QUEST, Type, 2
+102, The Shoshone, Prague, SENT OUT QUEST, Type, 7
+102, The Shoshone, Prague, SENT OUT QUEST, Type, 2
+102, The Shoshone, Valletta, SENT OUT QUEST, Type, 1
+102, The Shoshone, Valletta, SENT OUT QUEST, Type, 2
+102, The Shoshone, Valletta, SENT OUT QUEST, Type, 7
+102, The Shoshone, Kyiv, SENT OUT QUEST, Type, 7
+102, The Shoshone, Kyiv, SENT OUT QUEST, Type, 2
+102, The Shoshone, Wittenberg, SENT OUT QUEST, Type, 1
+102, The Shoshone, Mombasa, SENT OUT QUEST, Type, 1
+102, The Shoshone, Mombasa, SENT OUT QUEST, Type, 7
+102, The Shoshone, Sydney, SENT OUT QUEST, Type, 10
+102, The Shoshone, Lhasa, SENT OUT QUEST, Type, 16
+102, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 2
+102, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 10
+102, The Shoshone, Antwerp, SENT OUT QUEST, Type, 2
+102, The Netherlands, Prague, lost friend
+102, Morocco, Valletta, lost friend
+102, Morocco, Bogota, cancelled, Kill Camp, Friendship: 17 to 17, MINOR_CIV_BOGOTA
+102, Songhai, Bogota, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+102, Spain, Bogota, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+102, The Aztecs, Mombasa, cancelled, Kill Camp, Friendship: -36 to -36, MINOR_CIV_MOMBASA
+102, Songhai, Mombasa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+102, The Shoshone, Mombasa, cancelled, Kill Camp, Friendship: 28 to 28, MINOR_CIV_MOMBASA
+102, Japan, Mombasa, cancelled, Kill Camp, Friendship: 23 to 23, MINOR_CIV_MOMBASA
+102, Spain, Mombasa, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+102, Greece, Mombasa, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+102, Morocco, Antwerp, lost friend
+103, Spain, Jerusalem, SENT OUT QUEST, Type, 14
+103, Spain, Jerusalem, RECEIVED QUEST, Bully City-State, Friendship: 23 to 23, MINOR_CIV_JERUSALEM
+103, The Netherlands, Wittenberg, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+103, Morocco, Almaty, cancelled, Kill Camp, Friendship: 23 to 23, MINOR_CIV_ALMATY
+103, The Aztecs, Almaty, cancelled, Kill Camp, Friendship: 9 to 9, MINOR_CIV_ALMATY
+103, Songhai, Almaty, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+103, Spain, Almaty, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_ALMATY
+103, The Aztecs, Bogota, SENT OUT QUEST, Type, 3
+103, The Aztecs, Bogota, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+103, Morocco, Sydney, SENT OUT QUEST, Type, 16
+103, Morocco, Sydney, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+104, Japan, Valletta, gained friend
+104, Japan, Valletta, FINISHED QUEST, Kill Camp, Friendship: -1 to 48, MINOR_CIV_VALLETTA
+104, Japan, Wittenberg, gained friend
+104, Japan, Wittenberg, gained ally
+104, Japan, Wittenberg, FINISHED QUEST, Kill Camp, Friendship: 20 to 70, MINOR_CIV_WITTENBERG
+104, Japan, Kabul, lost friend
+104, Morocco, Bogota, SENT OUT QUEST, Type, 4
+104, Morocco, Bogota, RECEIVED QUEST, Great Person, Friendship: 14 to 14, MINOR_CIV_BOGOTA
+104, Morocco, Lhasa, lost friend
+104, The Shoshone, Antwerp, SENT OUT QUEST, Type, 7
+104, The Shoshone, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+105, Jerusalem, Japan, RECEIVED_UNIT_GIFT, Warrior
+105, The Netherlands, Valletta, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+105, Morocco, Valletta, cancelled, Kill Camp, Friendship: 25 to 25, MINOR_CIV_VALLETTA
+105, The Shoshone, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+105, Spain, Valletta, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+105, Greece, Valletta, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+105, The Netherlands, Wittenberg, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+105, Morocco, Wittenberg, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+105, The Aztecs, Wittenberg, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+105, Songhai, Wittenberg, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+105, The Shoshone, Wittenberg, cancelled, Kill Camp, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+105, Spain, Wittenberg, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+105, Greece, Wittenberg, cancelled, Kill Camp, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+105, Morocco, Almaty, SENT OUT QUEST, Type, 16
+105, Morocco, Almaty, RECEIVED QUEST, Spread Religion, Friendship: 20 to 20, MINOR_CIV_ALMATY
+105, The Aztecs, Almaty, SENT OUT QUEST, Type, 3
+105, The Aztecs, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 6 to 6, MINOR_CIV_ALMATY
+106, Greece, Kabul, SENT OUT QUEST, Type, 3
+106, Greece, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KABUL
+106, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 16
+106, The Shoshone, Mogadishu, RECEIVED QUEST, Spread Religion, Friendship: -13 to -13, MINOR_CIV_MOGADISHU
+106, The Netherlands, Antwerp, lost friend
+106, Morocco, Antwerp, SENT OUT QUEST, Type, 2
+106, Morocco, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 23 to 23, MINOR_CIV_ANTWERP
+106, Japan, Antwerp, SENT OUT QUEST, Type, 16
+106, Japan, Antwerp, RECEIVED QUEST, Spread Religion, Friendship: 19 to 19, MINOR_CIV_ANTWERP
+107, Japan, Sydney, SENT OUT QUEST, Type, 10
+107, Japan, Sydney, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+107, Greece, Mogadishu, Gold Gift: 250, Friendship: 33 to 58, Diplomacy, MINOR_CIV_MOGADISHU, Boost! , Passing Spain
+107, Greece, Antwerp, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_ANTWERP, (SAVING) 
+107, The Aztecs, Almaty, cancelled, Bully City-State, Friendship: 3 to 3, MINOR_CIV_ALMATY
+107, The Netherlands, Lhasa, lost friend
+108, Morocco, Genoa, SENT OUT QUEST, Type, 17
+108, Morocco, Genoa, RECEIVED QUEST, Trade Route, Friendship: 60 to 60, MINOR_CIV_GENOA
+108, The Aztecs, Bogota, gained friend
+108, The Aztecs, Bogota, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+108, Japan, Mombasa, SENT OUT QUEST, Type, 3
+108, Japan, Mombasa, RECEIVED QUEST, Construct Wonder, Friendship: 14 to 14, MINOR_CIV_MOMBASA
+108, Spain, Mogadishu, SENT OUT QUEST, Type, 2
+108, Spain, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 2 to 2, MINOR_CIV_MOGADISHU
+109, Morocco, Bogota, gained friend
+109, Morocco, Bogota, FINISHED QUEST, Great Person, Friendship: 8 to 48, MINOR_CIV_BOGOTA
+109, The Shoshone, Jerusalem, SENT OUT QUEST, Type, 4
+109, The Shoshone, Jerusalem, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+109, Morocco, Genoa, lost ally
+109, The Netherlands, Sydney, gained friend
+109, The Netherlands, Sydney, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+109, Morocco, Sydney, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+109, The Aztecs, Sydney, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+109, The Shoshone, Sydney, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+109, Japan, Sydney, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+109, Spain, Sydney, cancelled, Contest Culture, Friendship: -18 to -18, MINOR_CIV_SYDNEY
+109, Greece, Sydney, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+110, The Netherlands, Sydney, SENT OUT QUEST, Type, 14
+110, Japan, Valletta, SENT OUT QUEST, Type, 3
+110, Japan, Valletta, RECEIVED QUEST, Construct Wonder, Friendship: 39 to 39, MINOR_CIV_VALLETTA
+110, The Netherlands, Kabul, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+110, Genoa, Japan, RECEIVED_UNIT_GIFT, Spearman
+110, Spain, Antwerp, lost friend
+110, Spain, Antwerp, SENT OUT QUEST, Type, 3
+110, Spain, Antwerp, RECEIVED QUEST, Construct Wonder, Friendship: 29 to 29, MINOR_CIV_ANTWERP
+111, The Netherlands, Valletta, gained friend
+111, The Netherlands, Valletta, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_VALLETTA
+111, The Netherlands, Lhasa, gained friend
+111, The Netherlands, Lhasa, gained ally
+111, The Netherlands, Lhasa, FINISHED QUEST, Great Person, Friendship: 22 to 62, MINOR_CIV_LHASA
+111, The Netherlands, Mogadishu, gained ally
+111, The Netherlands, Mogadishu, FINISHED QUEST, Great Person, Friendship: 35 to 75, MINOR_CIV_MOGADISHU
+111, The Netherlands, Antwerp, gained friend
+111, The Netherlands, Antwerp, gained ally
+111, The Netherlands, Antwerp, FINISHED QUEST, Great Person, Friendship: 23 to 63, MINOR_CIV_ANTWERP
+111, Morocco, Wittenberg, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+111, Spain, Genoa, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_GENOA
+111, The Aztecs, Mombasa, SENT OUT QUEST, Type, 2
+111, The Aztecs, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: -23 to -23, MINOR_CIV_MOMBASA
+111, Morocco, Lhasa, SENT OUT QUEST, Type, 16
+111, Morocco, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 13 to 13, MINOR_CIV_LHASA
+112, The Shoshone, Jerusalem, gained friend
+112, The Shoshone, Jerusalem, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+112, Japan, Wittenberg, lost ally
+112, Japan, Genoa, gained friend
+112, Japan, Genoa, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_GENOA
+112, The Netherlands, Lhasa, lost ally
+113, The Aztecs, Jerusalem, era change yield update
+113, The Aztecs, Wellington, era change yield update
+113, The Aztecs, Prague, era change yield update
+113, The Aztecs, Valletta, era change yield update
+113, The Aztecs, Kyiv, era change yield update
+113, The Aztecs, Colombo, era change yield update
+113, The Aztecs, Wittenberg, era change yield update
+113, The Aztecs, Kabul, era change yield update
+113, The Aztecs, Genoa, era change yield update
+113, The Aztecs, Almaty, era change yield update
+113, The Aztecs, Bogota, era change yield update
+113, The Aztecs, Mombasa, era change yield update
+113, The Aztecs, Sydney, era change yield update
+113, The Aztecs, Lhasa, era change yield update
+113, The Aztecs, Mogadishu, era change yield update
+113, The Aztecs, Antwerp, era change yield update
+113, The Aztecs, Kyiv, SENT OUT QUEST, Type, 3
+113, The Aztecs, Kyiv, SENT OUT QUEST, Type, 7
+113, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 2
+113, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 7
+113, The Aztecs, Kabul, SENT OUT QUEST, Type, 2
+113, The Aztecs, Almaty, SENT OUT QUEST, Type, 3
+113, The Aztecs, Bogota, SENT OUT QUEST, Type, 3
+113, The Aztecs, Mombasa, SENT OUT QUEST, Type, 3
+113, The Aztecs, Mombasa, SENT OUT QUEST, Type, 2
+113, The Aztecs, Sydney, SENT OUT QUEST, Type, 2
+113, The Aztecs, Sydney, SENT OUT QUEST, Type, 17
+113, Morocco, Jerusalem, lost friend
+113, The Netherlands, Jerusalem, FINISHED QUEST, Connect Resource, Friendship: 69 to 109, MINOR_CIV_JERUSALEM
+113, Japan, Jerusalem, SENT OUT QUEST, Type, 14
+113, Japan, Jerusalem, RECEIVED QUEST, Bully City-State, Friendship: 13 to 13, MINOR_CIV_JERUSALEM
+113, The Netherlands, Prague, SENT OUT QUEST, Type, 17
+113, The Netherlands, Prague, RECEIVED QUEST, Trade Route, Friendship: 12 to 12, MINOR_CIV_PRAGUE
+113, Spain, Bogota, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+113, Morocco, Mogadishu, gained friend
+113, Morocco, Mogadishu, FINISHED QUEST, Contest Culture, Friendship: 5 to 45, MINOR_CIV_MOGADISHU
+113, The Netherlands, Mogadishu, cancelled, Contest Culture, Friendship: 71 to 71, MINOR_CIV_MOGADISHU
+113, The Shoshone, Mogadishu, cancelled, Contest Culture, Friendship: -3 to -3, MINOR_CIV_MOGADISHU
+113, Spain, Mogadishu, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_MOGADISHU
+113, Greece, Mogadishu, cancelled, Contest Culture, Friendship: 55 to 55, MINOR_CIV_MOGADISHU
+113, The Netherlands, Antwerp, lost ally
+114, Morocco, Wellington, gained friend
+114, Morocco, Wellington, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_WELLINGTON
+114, Morocco, Valletta, gained friend
+114, Morocco, Valletta, FINISHED QUEST, Construct Wonder, Friendship: 11 to 51, MINOR_CIV_VALLETTA
+114, Wittenberg, Morocco, RECEIVED_UNIT_GIFT, Warrior
+114, Morocco, Bogota, gained ally
+114, Morocco, Bogota, FINISHED QUEST, Construct Wonder, Friendship: 39 to 79, MINOR_CIV_BOGOTA
+114, Spain, Mombasa, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+114, The Netherlands, Sydney, lost friend
+114, The Netherlands, Mogadishu, lost ally
+114, Morocco, Mogadishu, gained ally
+114, Morocco, Mogadishu, FINISHED QUEST, Construct Wonder, Friendship: 43 to 83, MINOR_CIV_MOGADISHU
+114, Morocco, Mogadishu, SENT OUT QUEST, Type, 7
+114, Morocco, Mogadishu, RECEIVED QUEST, Find Natural Wonder, Friendship: 83 to 83, MINOR_CIV_MOGADISHU
+114, Morocco, Antwerp, gained friend
+114, Morocco, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 11 to 51, MINOR_CIV_ANTWERP
+115, Spain, Wellington, gained friend
+115, Spain, Wellington, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_WELLINGTON
+115, Spain, Valletta, gained friend
+115, Spain, Valletta, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+115, Spain, Wittenberg, gained friend
+115, Spain, Wittenberg, FINISHED QUEST, Great Person, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+115, Spain, Sydney, FINISHED QUEST, Great Person, Friendship: -35 to 4, MINOR_CIV_SYDNEY
+115, The Aztecs, Bogota, lost friend
+116, Greece, Jerusalem, era change yield update
+116, Greece, Wellington, era change yield update
+116, Greece, Prague, era change yield update
+116, Greece, Valletta, era change yield update
+116, Greece, Kyiv, era change yield update
+116, Greece, Colombo, era change yield update
+116, Greece, Wittenberg, era change yield update
+116, Greece, Kabul, era change yield update
+116, Greece, Genoa, era change yield update
+116, Greece, Almaty, era change yield update
+116, Greece, Bogota, era change yield update
+116, Greece, Mombasa, era change yield update
+116, Greece, Sydney, era change yield update
+116, Greece, Lhasa, era change yield update
+116, Greece, Mogadishu, era change yield update
+116, Greece, Antwerp, era change yield update
+116, Greece, Jerusalem, SENT OUT QUEST, Type, 2
+116, Greece, Jerusalem, SENT OUT QUEST, Type, 7
+116, Greece, Wellington, SENT OUT QUEST, Type, 7
+116, Greece, Wellington, SENT OUT QUEST, Type, 17
+116, Greece, Valletta, SENT OUT QUEST, Type, 7
+116, Greece, Valletta, SENT OUT QUEST, Type, 16
+116, Greece, Kyiv, SENT OUT QUEST, Type, 7
+116, Greece, Kyiv, SENT OUT QUEST, Type, 3
+116, Greece, Wittenberg, SENT OUT QUEST, Type, 16
+116, Greece, Wittenberg, SENT OUT QUEST, Type, 7
+116, Greece, Kabul, SENT OUT QUEST, Type, 3
+116, Greece, Mombasa, SENT OUT QUEST, Type, 7
+116, Greece, Sydney, SENT OUT QUEST, Type, 3
+116, Greece, Lhasa, SENT OUT QUEST, Type, 2
+116, Greece, Lhasa, SENT OUT QUEST, Type, 17
+116, Greece, Mogadishu, SENT OUT QUEST, Type, 2
+116, Greece, Antwerp, SENT OUT QUEST, Type, 2
+116, Greece, Antwerp, SENT OUT QUEST, Type, 7
+116, The Netherlands, Wittenberg, gained friend
+116, The Netherlands, Wittenberg, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_WITTENBERG
+116, Japan, Wittenberg, SENT OUT QUEST, Type, 3
+116, Japan, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 52 to 52, MINOR_CIV_WITTENBERG
+116, Greece, Kabul, gained friend
+116, Greece, Kabul, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_KABUL
+116, Bogota, The Aztecs, RECEIVED_UNIT_GIFT, Jaguar
+116, The Aztecs, Bogota, gained friend
+116, Greece, Mogadishu, SENT OUT QUEST, Type, 3
+116, Greece, Mogadishu, RECEIVED QUEST, Construct Wonder, Friendship: 54 to 54, MINOR_CIV_MOGADISHU
+117, Spain, Jerusalem, SENT OUT QUEST, Type, 7
+117, Spain, Jerusalem, RECEIVED QUEST, Find Natural Wonder, Friendship: 2 to 2, MINOR_CIV_JERUSALEM
+117, The Shoshone, Wellington, gained friend
+117, The Shoshone, Wellington, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_WELLINGTON
+117, Valletta, The Aztecs, RECEIVED_UNIT_GIFT, Horseman
+117, Japan, Valletta, lost friend
+117, The Shoshone, Kyiv, gained friend
+117, The Shoshone, Kyiv, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KIEV
+117, The Netherlands, Genoa, SENT OUT QUEST, Type, 10
+117, The Netherlands, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_GENOA
+117, Morocco, Genoa, SENT OUT QUEST, Type, 10
+117, Morocco, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 47 to 47, MINOR_CIV_GENOA
+117, Japan, Genoa, SENT OUT QUEST, Type, 10
+117, Japan, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 33 to 33, MINOR_CIV_GENOA
+117, Spain, Genoa, SENT OUT QUEST, Type, 10
+117, Spain, Genoa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_GENOA
+117, The Shoshone, Mombasa, SENT OUT QUEST, Type, 4
+117, The Shoshone, Mombasa, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+117, Greece, Mombasa, SENT OUT QUEST, Type, 2
+117, Greece, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+117, The Shoshone, Mogadishu, gained friend
+117, The Shoshone, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_MOGADISHU
+118, The Shoshone, Jerusalem, lost friend
+118, Japan, Kyiv, SENT OUT QUEST, Type, 17
+118, Japan, Kyiv, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_KIEV
+118, Wittenberg, The Aztecs, RECEIVED_UNIT_GIFT, Pikeman
+118, The Shoshone, Wittenberg, SENT OUT QUEST, Type, 3
+118, The Shoshone, Wittenberg, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+118, Japan, Genoa, SENT OUT QUEST, Type, 4
+118, Japan, Genoa, RECEIVED QUEST, Great Person, Friendship: 31 to 31, MINOR_CIV_GENOA
+119, The Aztecs, Wellington, SENT OUT QUEST, Type, 17
+119, The Aztecs, Wellington, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+119, The Aztecs, Bogota, lost friend
+120, The Netherlands, Sydney, SENT OUT QUEST, Type, 14
+120, The Aztecs, Valletta, SENT OUT QUEST, Type, 14
+120, The Aztecs, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+120, The Netherlands, Kabul, SENT OUT QUEST, Type, 14
+120, The Netherlands, Kabul, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+120, Japan, Genoa, lost friend
+121, Spain, Wellington, lost friend
+121, Morocco, Wellington, gained ally
+121, Morocco, Wellington, FINISHED QUEST, Connect Resource, Friendship: 34 to 74, MINOR_CIV_WELLINGTON
+121, The Netherlands, Valletta, lost friend
+121, Spain, Valletta, lost friend
+121, Japan, Kabul, SENT OUT QUEST, Type, 4
+121, Japan, Kabul, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_KABUL
+121, Spain, Almaty, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_ALMATY
+121, The Netherlands, Sydney, cancelled, Bully City-State, Friendship: 13 to 13, MINOR_CIV_SYDNEY
+122, Japan, Jerusalem, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+122, Japan, Valletta, cancelled, Construct Wonder, Friendship: 21 to 21, MINOR_CIV_VALLETTA
+122, Greece, Kyiv, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_KIEV
+122, Japan, Wittenberg, gained ally
+122, Japan, Wittenberg, FINISHED QUEST, Construct Wonder, Friendship: 43 to 83, MINOR_CIV_WITTENBERG
+122, Japan, Mombasa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+122, Spain, Mombasa, SENT OUT QUEST, Type, 2
+122, Spain, Mombasa, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+122, Greece, Sydney, cancelled, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+122, Greece, Mogadishu, cancelled, Construct Wonder, Friendship: 51 to 51, MINOR_CIV_MOGADISHU
+122, Spain, Antwerp, cancelled, Construct Wonder, Friendship: 11 to 11, MINOR_CIV_ANTWERP
+123, The Shoshone, Wittenberg, SENT OUT QUEST, Type, 3
+123, Spain, Jerusalem, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+123, Morocco, Wellington, SENT OUT QUEST, Type, 13
+123, Morocco, Wellington, RECEIVED QUEST, Invest, Friendship: 71 to 71, MINOR_CIV_WELLINGTON
+123, The Aztecs, Wellington, SENT OUT QUEST, Type, 13
+123, The Aztecs, Wellington, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+123, The Shoshone, Wellington, SENT OUT QUEST, Type, 13
+123, The Shoshone, Wellington, RECEIVED QUEST, Invest, Friendship: 36 to 36, MINOR_CIV_WELLINGTON
+123, Japan, Wellington, SENT OUT QUEST, Type, 13
+123, Japan, Wellington, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+123, Spain, Wellington, SENT OUT QUEST, Type, 13
+123, Spain, Wellington, RECEIVED QUEST, Invest, Friendship: 26 to 26, MINOR_CIV_WELLINGTON
+123, Greece, Wellington, SENT OUT QUEST, Type, 13
+123, Greece, Wellington, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+123, Greece, Prague, SENT OUT QUEST, Type, 17
+123, Greece, Prague, RECEIVED QUEST, Trade Route, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+123, The Aztecs, Colombo, SENT OUT QUEST, Type, 13
+123, The Aztecs, Colombo, RECEIVED QUEST, Invest, Friendship: 2 to 2, MINOR_CIV_COLOMBO
+123, Spain, Colombo, SENT OUT QUEST, Type, 13
+123, Spain, Colombo, RECEIVED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+123, Spain, Colombo, SENT OUT QUEST, Type, 3
+123, Spain, Colombo, RECEIVED QUEST, Construct Wonder, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+123, The Shoshone, Kabul, SENT OUT QUEST, Type, 14
+123, The Shoshone, Kabul, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+123, Greece, Lhasa, gained friend
+123, Greece, Lhasa, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_LHASA
+123, The Netherlands, Antwerp, SENT OUT QUEST, Type, 2
+123, The Netherlands, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 44 to 44, MINOR_CIV_ANTWERP
+124, Morocco, Valletta, SENT OUT QUEST, Type, 14
+124, Morocco, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 36 to 36, MINOR_CIV_VALLETTA
+124, The Shoshone, Kyiv, lost friend
+124, Spain, Wittenberg, SENT OUT QUEST, Type, 14
+124, Spain, Wittenberg, RECEIVED QUEST, Bully City-State, Friendship: 30 to 30, MINOR_CIV_WITTENBERG
+124, The Shoshone, Lhasa, SENT OUT QUEST, Type, 3
+124, The Shoshone, Lhasa, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
+124, The Shoshone, Mogadishu, lost friend
+124, The Netherlands, Antwerp, SENT OUT QUEST, Type, 12
+124, The Netherlands, Antwerp, RECEIVED QUEST, Contest Techs, Friendship: 43 to 43, MINOR_CIV_ANTWERP
+124, Morocco, Antwerp, SENT OUT QUEST, Type, 12
+124, Morocco, Antwerp, RECEIVED QUEST, Contest Techs, Friendship: 37 to 37, MINOR_CIV_ANTWERP
+124, The Shoshone, Antwerp, SENT OUT QUEST, Type, 12
+124, The Shoshone, Antwerp, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+124, Japan, Antwerp, SENT OUT QUEST, Type, 12
+124, Japan, Antwerp, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+124, Spain, Antwerp, SENT OUT QUEST, Type, 12
+124, Spain, Antwerp, RECEIVED QUEST, Contest Techs, Friendship: 8 to 8, MINOR_CIV_ANTWERP
+124, Greece, Antwerp, SENT OUT QUEST, Type, 12
+124, Greece, Antwerp, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_ANTWERP
+125, Japan, Wellington, SENT OUT QUEST, Type, 2
+125, Japan, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+125, Spain, Wittenberg, lost friend
+125, The Netherlands, Kabul, SENT OUT QUEST, Type, 12
+125, The Netherlands, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+125, The Aztecs, Kabul, SENT OUT QUEST, Type, 12
+125, The Aztecs, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+125, The Shoshone, Kabul, SENT OUT QUEST, Type, 12
+125, The Shoshone, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+125, Japan, Kabul, SENT OUT QUEST, Type, 12
+125, Japan, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+125, Spain, Kabul, SENT OUT QUEST, Type, 12
+125, Spain, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+125, Greece, Kabul, SENT OUT QUEST, Type, 12
+125, Greece, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 40 to 40, MINOR_CIV_KABUL
+125, The Netherlands, Lhasa, lost friend
+126, The Aztecs, Almaty, SENT OUT QUEST, Type, 2
+126, The Aztecs, Almaty, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ALMATY
+126, Spain, Almaty, SENT OUT QUEST, Type, 3
+126, Spain, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+126, Morocco, Bogota, SENT OUT QUEST, Type, 16
+126, Morocco, Bogota, RECEIVED QUEST, Spread Religion, Friendship: 61 to 61, MINOR_CIV_BOGOTA
+126, Spain, Bogota, SENT OUT QUEST, Type, 4
+126, Spain, Bogota, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+126, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 7
+126, The Netherlands, Mogadishu, RECEIVED QUEST, Find Natural Wonder, Friendship: 57 to 57, MINOR_CIV_MOGADISHU
+127, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 10
+127, The Netherlands, Jerusalem, RECEIVED QUEST, Contest Culture, Friendship: 89 to 89, MINOR_CIV_JERUSALEM
+127, Morocco, Jerusalem, SENT OUT QUEST, Type, 10
+127, Morocco, Jerusalem, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+127, The Shoshone, Jerusalem, SENT OUT QUEST, Type, 10
+127, The Shoshone, Jerusalem, RECEIVED QUEST, Contest Culture, Friendship: 16 to 16, MINOR_CIV_JERUSALEM
+127, Japan, Jerusalem, SENT OUT QUEST, Type, 10
+127, Japan, Jerusalem, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+127, Spain, Jerusalem, SENT OUT QUEST, Type, 10
+127, Spain, Jerusalem, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+127, Greece, Jerusalem, SENT OUT QUEST, Type, 10
+127, Greece, Jerusalem, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+127, The Netherlands, Prague, SENT OUT QUEST, Type, 4
+127, The Netherlands, Prague, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+127, Japan, Prague, SENT OUT QUEST, Type, 7
+127, Japan, Prague, RECEIVED QUEST, Find Natural Wonder, Friendship: -1 to -1, MINOR_CIV_PRAGUE
+127, The Netherlands, Wittenberg, lost friend
+127, Japan, Kabul, gained friend
+127, Japan, Kabul, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_KABUL
+127, The Netherlands, Genoa, gained friend
+127, The Netherlands, Genoa, FINISHED QUEST, Spread Religion, Friendship: 5 to 45, MINOR_CIV_GENOA
+127, The Netherlands, Sydney, SENT OUT QUEST, Type, 2
+127, The Netherlands, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+127, Morocco, Sydney, SENT OUT QUEST, Type, 2
+127, Morocco, Sydney, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+128, The Shoshone, Wellington, lost friend
+128, Morocco, Bogota, lost ally
+129, Morocco, Bogota, SENT OUT QUEST, Type, 16
+129, Morocco, Valletta, lost friend
+129, Spain, Valletta, SENT OUT QUEST, Type, 4
+129, Spain, Valletta, RECEIVED QUEST, Great Person, Friendship: 17 to 17, MINOR_CIV_VALLETTA
+129, Morocco, Genoa, lost friend
+129, The Aztecs, Mombasa, SENT OUT QUEST, Type, 12
+129, The Aztecs, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, The Shoshone, Mombasa, SENT OUT QUEST, Type, 12
+129, The Shoshone, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, Japan, Mombasa, SENT OUT QUEST, Type, 12
+129, Japan, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, Spain, Mombasa, SENT OUT QUEST, Type, 12
+129, Spain, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+129, Greece, Mombasa, SENT OUT QUEST, Type, 12
+129, Greece, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_MOMBASA
+129, The Shoshone, Sydney, SENT OUT QUEST, Type, 3
+129, The Shoshone, Sydney, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+129, Morocco, Mogadishu, SENT OUT QUEST, Type, 2
+129, Morocco, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 61 to 61, MINOR_CIV_MOGADISHU
+129, Morocco, Antwerp, lost friend
+130, Greece, Kabul, gained ally
+130, The Aztecs, Kabul, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_KABUL
+130, The Aztecs, Kabul, cancelled, Contest Techs, Friendship: -60 to -60, MINOR_CIV_KABUL
+130, Greece, Kabul, Gold Gift: 250, Friendship: 37 to 62, Diplomacy, MINOR_CIV_KABUL, Boost! , Passing Japan
+130, Greece, Antwerp, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_ANTWERP, (SAVING) , Passing Spain
+130, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 2
+130, The Netherlands, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 84 to 84, MINOR_CIV_JERUSALEM
+130, The Netherlands, Valletta, SENT OUT QUEST, Type, 10
+130, The Netherlands, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 15 to 15, MINOR_CIV_VALLETTA
+130, Morocco, Valletta, SENT OUT QUEST, Type, 10
+130, Morocco, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 27 to 27, MINOR_CIV_VALLETTA
+130, The Aztecs, Valletta, SENT OUT QUEST, Type, 10
+130, The Aztecs, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+130, The Shoshone, Valletta, SENT OUT QUEST, Type, 10
+130, The Shoshone, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+130, Japan, Valletta, SENT OUT QUEST, Type, 10
+130, Japan, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 9 to 9, MINOR_CIV_VALLETTA
+130, Spain, Valletta, SENT OUT QUEST, Type, 10
+130, Spain, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 16 to 16, MINOR_CIV_VALLETTA
+130, Greece, Valletta, SENT OUT QUEST, Type, 10
+130, Greece, Valletta, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+130, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 16
+130, The Netherlands, Wittenberg, RECEIVED QUEST, Spread Religion, Friendship: 24 to 24, MINOR_CIV_WITTENBERG
+130, Greece, Sydney, SENT OUT QUEST, Type, 16
+130, Greece, Sydney, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+130, Morocco, Mogadishu, lost ally
+130, Morocco, Antwerp, SENT OUT QUEST, Type, 2
+130, Morocco, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 28 to 28, MINOR_CIV_ANTWERP
+131, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 16
+131, The Shoshone, Colombo, SENT OUT QUEST, Type, 13
+131, The Shoshone, Colombo, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+131, Morocco, Wellington, lost ally
+131, The Netherlands, Prague, SENT OUT QUEST, Type, 10
+131, The Netherlands, Prague, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+131, Morocco, Prague, SENT OUT QUEST, Type, 10
+131, Morocco, Prague, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+131, The Shoshone, Prague, SENT OUT QUEST, Type, 10
+131, The Shoshone, Prague, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+131, Japan, Prague, SENT OUT QUEST, Type, 10
+131, Japan, Prague, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+131, Greece, Prague, SENT OUT QUEST, Type, 10
+131, Greece, Prague, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+131, Japan, Valletta, SENT OUT QUEST, Type, 16
+131, Japan, Valletta, RECEIVED QUEST, Spread Religion, Friendship: 8 to 8, MINOR_CIV_VALLETTA
+131, Morocco, Kyiv, SENT OUT QUEST, Type, 10
+131, Morocco, Kyiv, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KIEV
+131, The Aztecs, Kyiv, SENT OUT QUEST, Type, 10
+131, The Aztecs, Kyiv, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KIEV
+131, The Shoshone, Kyiv, SENT OUT QUEST, Type, 10
+131, The Shoshone, Kyiv, RECEIVED QUEST, Contest Culture, Friendship: 19 to 19, MINOR_CIV_KIEV
+131, Japan, Kyiv, SENT OUT QUEST, Type, 10
+131, Japan, Kyiv, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KIEV
+131, Spain, Kyiv, SENT OUT QUEST, Type, 10
+131, Spain, Kyiv, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KIEV
+131, Greece, Kyiv, SENT OUT QUEST, Type, 10
+131, Greece, Kyiv, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_KIEV
+131, The Aztecs, Bogota, SENT OUT QUEST, Type, 2
+131, The Aztecs, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 10 to 10, MINOR_CIV_BOGOTA
+131, Greece, Lhasa, gained ally
+131, Greece, Lhasa, FINISHED QUEST, Trade Route, Friendship: 40 to 80, MINOR_CIV_LHASA
+131, Morocco, Antwerp, gained friend
+131, Morocco, Antwerp, gained ally
+131, Morocco, Antwerp, FINISHED QUEST, Connect Resource, Friendship: 26 to 66, MINOR_CIV_ANTWERP
+132, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 2
+132, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 7
+132, Japan, Kabul, lost friend
+132, Greece, Kabul, SENT OUT QUEST, Type, 2
+132, Greece, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 61 to 61, MINOR_CIV_KABUL
+132, Japan, Sydney, SENT OUT QUEST, Type, 17
+132, Japan, Sydney, RECEIVED QUEST, Trade Route, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+132, Spain, Antwerp, SENT OUT QUEST, Type, 7
+132, Spain, Antwerp, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+133, Morocco, Kabul, SENT OUT QUEST, Type, 12
+133, Morocco, Kabul, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+133, Japan, Jerusalem, era change yield update
+133, Japan, Wellington, era change yield update
+133, Japan, Prague, era change yield update
+133, Japan, Valletta, era change yield update
+133, Japan, Kyiv, era change yield update
+133, Japan, Colombo, era change yield update
+133, Japan, Wittenberg, era change yield update
+133, Japan, Kabul, era change yield update
+133, Japan, Genoa, era change yield update
+133, Japan, Almaty, era change yield update
+133, Japan, Bogota, era change yield update
+133, Japan, Mombasa, era change yield update
+133, Japan, Sydney, era change yield update
+133, Japan, Lhasa, era change yield update
+133, Japan, Mogadishu, era change yield update
+133, Japan, Antwerp, era change yield update
+133, Japan, Jerusalem, SENT OUT QUEST, Type, 14
+133, Japan, Jerusalem, SENT OUT QUEST, Type, 10
+133, Japan, Wellington, SENT OUT QUEST, Type, 13
+133, Japan, Wellington, SENT OUT QUEST, Type, 2
+133, Japan, Prague, SENT OUT QUEST, Type, 7
+133, Japan, Prague, SENT OUT QUEST, Type, 10
+133, Japan, Valletta, SENT OUT QUEST, Type, 10
+133, Japan, Valletta, SENT OUT QUEST, Type, 16
+133, Japan, Kyiv, SENT OUT QUEST, Type, 17
+133, Japan, Kyiv, SENT OUT QUEST, Type, 10
+133, Japan, Wittenberg, SENT OUT QUEST, Type, 2
+133, Japan, Kabul, SENT OUT QUEST, Type, 4
+133, Japan, Kabul, SENT OUT QUEST, Type, 12
+133, Japan, Genoa, SENT OUT QUEST, Type, 10
+133, Japan, Genoa, SENT OUT QUEST, Type, 4
+133, Japan, Mombasa, SENT OUT QUEST, Type, 2
+133, Japan, Mombasa, SENT OUT QUEST, Type, 12
+133, Japan, Sydney, SENT OUT QUEST, Type, 17
+133, Japan, Lhasa, SENT OUT QUEST, Type, 2
+133, Japan, Antwerp, SENT OUT QUEST, Type, 16
+133, Japan, Antwerp, SENT OUT QUEST, Type, 12
+133, Japan, Jerusalem, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+133, Morocco, Almaty, SENT OUT QUEST, Type, 3
+133, Morocco, Almaty, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+133, Spain, Sydney, SENT OUT QUEST, Type, 17
+133, Spain, Sydney, RECEIVED QUEST, Trade Route, Friendship: -58 to -58, MINOR_CIV_SYDNEY
+133, Japan, Antwerp, SENT OUT QUEST, Type, 2
+133, Japan, Antwerp, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+134, The Netherlands, Valletta, SENT OUT QUEST, Type, 16
+134, The Netherlands, Valletta, RECEIVED QUEST, Spread Religion, Friendship: 9 to 9, MINOR_CIV_VALLETTA
+134, The Shoshone, Wittenberg, SENT OUT QUEST, Type, 7
+134, The Shoshone, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+134, Spain, Genoa, SENT OUT QUEST, Type, 14
+134, Spain, Genoa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_GENOA
+134, The Netherlands, Lhasa, SENT OUT QUEST, Type, 10
+134, The Netherlands, Lhasa, RECEIVED QUEST, Contest Culture, Friendship: 9 to 9, MINOR_CIV_LHASA
+134, Morocco, Lhasa, SENT OUT QUEST, Type, 10
+134, Morocco, Lhasa, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_LHASA
+134, The Shoshone, Lhasa, SENT OUT QUEST, Type, 10
+134, The Shoshone, Lhasa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_LHASA
+134, Japan, Lhasa, SENT OUT QUEST, Type, 10
+134, Japan, Lhasa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_LHASA
+134, Spain, Lhasa, SENT OUT QUEST, Type, 10
+134, Spain, Lhasa, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_LHASA
+134, Greece, Lhasa, SENT OUT QUEST, Type, 10
+134, Greece, Lhasa, RECEIVED QUEST, Contest Culture, Friendship: 78 to 78, MINOR_CIV_LHASA
+135, The Shoshone, Jerusalem, SENT OUT QUEST, Type, 14
+135, The Shoshone, Jerusalem, RECEIVED QUEST, Bully City-State, Friendship: 4 to 4, MINOR_CIV_JERUSALEM
+135, Greece, Kabul, lost ally
+135, The Netherlands, Kabul, SENT OUT QUEST, Type, 3
+135, The Netherlands, Kabul, RECEIVED QUEST, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_KABUL
+135, Morocco, Genoa, gained friend
+135, Morocco, Genoa, gained ally
+135, Morocco, Genoa, FINISHED QUEST, Trade Route, Friendship: 20 to 60, MINOR_CIV_GENOA
+135, Greece, Mogadishu, SENT OUT QUEST, Type, 7
+135, Greece, Mogadishu, RECEIVED QUEST, Find Natural Wonder, Friendship: 47 to 47, MINOR_CIV_MOGADISHU
+136, Morocco, Wittenberg, SENT OUT QUEST, Type, 7
+136, Morocco, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+136, The Aztecs, Kabul, SENT OUT QUEST, Type, 2
+136, The Aztecs, Kabul, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_KABUL
+136, Morocco, Genoa, lost ally
+136, The Netherlands, Antwerp, lost friend
+136, Morocco, Antwerp, lost ally
+137, The Netherlands, Genoa, Gold Gift: 250, Friendship: 35 to 55, Diplomacy, MINOR_CIV_GENOA, Boost! , Passing Japan
+137, The Netherlands, Antwerp, Gold Gift: 500, Friendship: 29 to 29, Diplomacy, MINOR_CIV_ANTWERP, (SAVING) , Passing Greece
+137, The Shoshone, Wellington, SENT OUT QUEST, Type, 4
+137, The Shoshone, Wellington, RECEIVED QUEST, Great Person, Friendship: 15 to 15, MINOR_CIV_WELLINGTON
+137, Japan, Kyiv, SENT OUT QUEST, Type, 7
+137, Japan, Kyiv, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_KIEV
+137, Spain, Colombo, gained friend
+137, Spain, Colombo, FINISHED QUEST, Construct Wonder, Friendship: 5 to 45, MINOR_CIV_COLOMBO
+137, Japan, Wittenberg, SENT OUT QUEST, Type, 0
+137, Japan, Wittenberg, RECEIVED QUEST, Route, Friendship: 61 to 61, MINOR_CIV_WITTENBERG
+137, Spain, Kabul, gained friend
+137, Spain, Kabul, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+137, Morocco, Genoa, gained ally
+137, Morocco, Genoa, FINISHED QUEST, Contest Culture, Friendship: 57 to 97, MINOR_CIV_GENOA
+137, Spain, Genoa, gained friend
+137, Spain, Genoa, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_GENOA
+137, The Netherlands, Genoa, cancelled, Contest Culture, Friendship: 53 to 53, MINOR_CIV_GENOA
+137, Japan, Genoa, cancelled, Contest Culture, Friendship: 3 to 3, MINOR_CIV_GENOA
+137, Spain, Genoa, cancelled, Contest Culture, Friendship: 40 to 40, MINOR_CIV_GENOA
+137, Spain, Almaty, gained friend
+137, Spain, Almaty, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_ALMATY
+137, The Shoshone, Lhasa, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_LHASA
+137, Spain, Mogadishu, gained friend
+137, Spain, Mogadishu, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_MOGADISHU
+138, The Shoshone, Wittenberg, cancelled, Construct Wonder, Friendship: -60 to -60, MINOR_CIV_WITTENBERG
+138, The Shoshone, Wittenberg, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_WITTENBERG
+138, The Shoshone, Jerusalem, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_JERUSALEM
+138, The Shoshone, Jerusalem, cancelled, Contest Culture, Friendship: -60 to -60, MINOR_CIV_JERUSALEM
+138, The Shoshone, Jerusalem, cancelled, Bully City-State, Friendship: -60 to -60, MINOR_CIV_JERUSALEM
+138, The Shoshone, Wellington, SENT OUT QUEST, Type, 7
+138, The Shoshone, Wellington, SENT OUT QUEST, Type, 13
+138, The Shoshone, Wellington, SENT OUT QUEST, Type, 4
+138, Japan, Wittenberg, Gold Gift: 250, Friendship: 61 to 81, Conquest, MINOR_CIV_WITTENBERG, Boost! , Passing Greece
+138, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 12
+138, The Netherlands, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 12 to 12, MINOR_CIV_WITTENBERG
+138, Morocco, Wittenberg, SENT OUT QUEST, Type, 12
+138, Morocco, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+138, The Aztecs, Wittenberg, SENT OUT QUEST, Type, 12
+138, The Aztecs, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+138, Japan, Wittenberg, SENT OUT QUEST, Type, 12
+138, Japan, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 79 to 79, MINOR_CIV_WITTENBERG
+138, Spain, Wittenberg, SENT OUT QUEST, Type, 12
+138, Spain, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 9 to 9, MINOR_CIV_WITTENBERG
+138, Greece, Wittenberg, SENT OUT QUEST, Type, 12
+138, Greece, Wittenberg, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+138, Spain, Lhasa, SENT OUT QUEST, Type, 14
+138, Spain, Lhasa, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_LHASA
+139, The Netherlands, Wellington, SENT OUT QUEST, Type, 13
+139, The Netherlands, Wellington, RECEIVED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+139, Japan, Jerusalem, SENT OUT QUEST, Type, 2
+139, Japan, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_JERUSALEM
+139, Greece, Kyiv, SENT OUT QUEST, Type, 4
+139, Greece, Kyiv, RECEIVED QUEST, Great Person, Friendship: 5 to 5, MINOR_CIV_KIEV
+140, The Netherlands, Wellington, SENT OUT QUEST, Type, 13
+140, Morocco, Wellington, SENT OUT QUEST, Type, 2
+140, Morocco, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 46 to 46, MINOR_CIV_WELLINGTON
+140, Japan, Prague, SENT OUT QUEST, Type, 4
+140, Japan, Prague, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+140, Greece, Prague, SENT OUT QUEST, Type, 16
+140, Greece, Prague, RECEIVED QUEST, Spread Religion, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+140, The Aztecs, Valletta, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+140, Spain, Colombo, gained ally
+140, Spain, Wittenberg, SENT OUT QUEST, Type, 17
+140, Spain, Wittenberg, RECEIVED QUEST, Trade Route, Friendship: 6 to 6, MINOR_CIV_WITTENBERG
+140, Japan, Kabul, gained friend
+140, Spain, Kabul, lost friend
+140, The Netherlands, Kabul, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_KABUL
+140, Japan, Genoa, SENT OUT QUEST, Type, 7
+140, Japan, Genoa, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_GENOA
+140, Spain, Bogota, gained friend
+140, Spain, Bogota, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_BOGOTA
+140, The Shoshone, Sydney, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+140, The Netherlands, Sydney, SENT OUT QUEST, Type, 12
+140, The Netherlands, Sydney, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+140, Morocco, Sydney, SENT OUT QUEST, Type, 12
+140, Morocco, Sydney, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+140, The Aztecs, Sydney, SENT OUT QUEST, Type, 12
+140, The Aztecs, Sydney, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+140, The Shoshone, Sydney, SENT OUT QUEST, Type, 12
+140, The Shoshone, Sydney, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+140, Japan, Sydney, SENT OUT QUEST, Type, 12
+140, Japan, Sydney, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_SYDNEY
+140, Spain, Sydney, SENT OUT QUEST, Type, 12
+140, Spain, Sydney, RECEIVED QUEST, Contest Techs, Friendship: -58 to -58, MINOR_CIV_SYDNEY
+140, Greece, Sydney, SENT OUT QUEST, Type, 12
+140, Greece, Sydney, RECEIVED QUEST, Contest Techs, Friendship: 5 to 5, MINOR_CIV_SYDNEY
+140, The Netherlands, Lhasa, gained friend
+140, The Netherlands, Lhasa, FINISHED QUEST, Spread Religion, Friendship: 5 to 45, MINOR_CIV_LHASA
+140, Japan, Lhasa, SENT OUT QUEST, Type, 16
+140, Japan, Lhasa, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_LHASA
+141, The Netherlands, Kyiv, SENT OUT QUEST, Type, 10
+141, The Netherlands, Kyiv, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KIEV
+141, Spain, Colombo, lost ally
+141, Japan, Kabul, lost friend
+141, Spain, Genoa, lost friend
+141, Morocco, Almaty, SENT OUT QUEST, Type, 10
+141, Morocco, Almaty, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ALMATY
+141, The Aztecs, Almaty, SENT OUT QUEST, Type, 10
+141, The Aztecs, Almaty, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ALMATY
+141, The Shoshone, Almaty, SENT OUT QUEST, Type, 10
+141, The Shoshone, Almaty, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ALMATY
+141, Spain, Almaty, SENT OUT QUEST, Type, 10
+141, Spain, Almaty, RECEIVED QUEST, Contest Culture, Friendship: 34 to 34, MINOR_CIV_ALMATY
+142, Spain, Jerusalem, era change yield update
+142, Spain, Wellington, era change yield update
+142, Spain, Prague, era change yield update
+142, Spain, Valletta, era change yield update
+142, Spain, Kyiv, era change yield update
+142, Spain, Colombo, era change yield update
+142, Spain, Wittenberg, era change yield update
+142, Spain, Kabul, era change yield update
+142, Spain, Genoa, era change yield update
+142, Spain, Almaty, era change yield update
+142, Spain, Bogota, era change yield update
+142, Spain, Mombasa, era change yield update
+142, Spain, Sydney, era change yield update
+142, Spain, Lhasa, era change yield update
+142, Spain, Mogadishu, era change yield update
+142, Spain, Antwerp, era change yield update
+142, Spain, Jerusalem, SENT OUT QUEST, Type, 7
+142, Spain, Jerusalem, SENT OUT QUEST, Type, 10
+142, Spain, Wellington, SENT OUT QUEST, Type, 2
+142, Spain, Wellington, SENT OUT QUEST, Type, 13
+142, Spain, Valletta, SENT OUT QUEST, Type, 2
+142, Spain, Valletta, SENT OUT QUEST, Type, 4
+142, Spain, Valletta, SENT OUT QUEST, Type, 10
+142, Spain, Kyiv, SENT OUT QUEST, Type, 2
+142, Spain, Kyiv, SENT OUT QUEST, Type, 7
+142, Spain, Kyiv, SENT OUT QUEST, Type, 10
+142, Spain, Colombo, SENT OUT QUEST, Type, 2
+142, Spain, Colombo, SENT OUT QUEST, Type, 13
+142, Spain, Wittenberg, SENT OUT QUEST, Type, 14
+142, Spain, Wittenberg, SENT OUT QUEST, Type, 12
+142, Spain, Wittenberg, SENT OUT QUEST, Type, 17
+142, Spain, Kabul, SENT OUT QUEST, Type, 17
+142, Spain, Kabul, SENT OUT QUEST, Type, 12
+142, Spain, Genoa, SENT OUT QUEST, Type, 14
+142, Spain, Almaty, SENT OUT QUEST, Type, 10
+142, Spain, Bogota, SENT OUT QUEST, Type, 4
+142, Spain, Mombasa, SENT OUT QUEST, Type, 2
+142, Spain, Mombasa, SENT OUT QUEST, Type, 12
+142, Spain, Sydney, SENT OUT QUEST, Type, 17
+142, Spain, Sydney, SENT OUT QUEST, Type, 12
+142, Spain, Lhasa, SENT OUT QUEST, Type, 4
+142, Spain, Lhasa, SENT OUT QUEST, Type, 10
+142, Spain, Lhasa, SENT OUT QUEST, Type, 14
+142, Spain, Mogadishu, SENT OUT QUEST, Type, 2
+142, Spain, Antwerp, SENT OUT QUEST, Type, 12
+142, Spain, Antwerp, SENT OUT QUEST, Type, 7
+142, Spain, Jerusalem, gained friend
+142, Spain, Jerusalem, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+142, Spain, Jerusalem, SENT OUT QUEST, Type, 2
+142, Spain, Jerusalem, RECEIVED QUEST, Connect Resource, Friendship: 40 to 40, MINOR_CIV_JERUSALEM
+142, Spain, Kyiv, gained friend
+142, Spain, Kyiv, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_KIEV
+142, The Aztecs, Colombo, SENT OUT QUEST, Type, 2
+142, The Aztecs, Colombo, RECEIVED QUEST, Connect Resource, Friendship: 4 to 4, MINOR_CIV_COLOMBO
+142, Morocco, Bogota, SENT OUT QUEST, Type, 11
+142, Morocco, Bogota, RECEIVED QUEST, Contest Faith, Friendship: 38 to 38, MINOR_CIV_BOGOTA
+142, The Aztecs, Bogota, SENT OUT QUEST, Type, 11
+142, The Aztecs, Bogota, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+142, The Shoshone, Bogota, SENT OUT QUEST, Type, 11
+142, The Shoshone, Bogota, RECEIVED QUEST, Contest Faith, Friendship: 0 to 0, MINOR_CIV_BOGOTA
+142, Spain, Bogota, SENT OUT QUEST, Type, 11
+142, Spain, Bogota, RECEIVED QUEST, Contest Faith, Friendship: 37 to 37, MINOR_CIV_BOGOTA
+142, Spain, Antwerp, gained friend
+142, Spain, Antwerp, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_ANTWERP
+143, The Shoshone, Jerusalem, era change yield update
+143, The Shoshone, Wellington, era change yield update
+143, The Shoshone, Prague, era change yield update
+143, The Shoshone, Valletta, era change yield update
+143, The Shoshone, Kyiv, era change yield update
+143, The Shoshone, Colombo, era change yield update
+143, The Shoshone, Wittenberg, era change yield update
+143, The Shoshone, Kabul, era change yield update
+143, The Shoshone, Genoa, era change yield update
+143, The Shoshone, Almaty, era change yield update
+143, The Shoshone, Bogota, era change yield update
+143, The Shoshone, Mombasa, era change yield update
+143, The Shoshone, Sydney, era change yield update
+143, The Shoshone, Lhasa, era change yield update
+143, The Shoshone, Mogadishu, era change yield update
+143, The Shoshone, Antwerp, era change yield update
+143, The Shoshone, Wellington, SENT OUT QUEST, Type, 7
+143, The Shoshone, Wellington, SENT OUT QUEST, Type, 13
+143, The Shoshone, Wellington, SENT OUT QUEST, Type, 4
+143, The Shoshone, Prague, SENT OUT QUEST, Type, 7
+143, The Shoshone, Prague, SENT OUT QUEST, Type, 2
+143, The Shoshone, Prague, SENT OUT QUEST, Type, 10
+143, The Shoshone, Valletta, SENT OUT QUEST, Type, 2
+143, The Shoshone, Valletta, SENT OUT QUEST, Type, 7
+143, The Shoshone, Valletta, SENT OUT QUEST, Type, 10
+143, The Shoshone, Kyiv, SENT OUT QUEST, Type, 7
+143, The Shoshone, Kyiv, SENT OUT QUEST, Type, 10
+143, The Shoshone, Colombo, SENT OUT QUEST, Type, 13
+143, The Shoshone, Kabul, SENT OUT QUEST, Type, 14
+143, The Shoshone, Kabul, SENT OUT QUEST, Type, 12
+143, The Shoshone, Almaty, SENT OUT QUEST, Type, 10
+143, The Shoshone, Bogota, SENT OUT QUEST, Type, 11
+143, The Shoshone, Mombasa, SENT OUT QUEST, Type, 7
+143, The Shoshone, Mombasa, SENT OUT QUEST, Type, 4
+143, The Shoshone, Mombasa, SENT OUT QUEST, Type, 12
+143, The Shoshone, Sydney, SENT OUT QUEST, Type, 12
+143, The Shoshone, Lhasa, SENT OUT QUEST, Type, 16
+143, The Shoshone, Lhasa, SENT OUT QUEST, Type, 10
+143, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 16
+143, The Shoshone, Antwerp, SENT OUT QUEST, Type, 2
+143, The Shoshone, Antwerp, SENT OUT QUEST, Type, 7
+143, The Shoshone, Antwerp, SENT OUT QUEST, Type, 12
+143, Japan, Prague, gained friend
+143, Japan, Prague, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_PRAGUE
+143, Japan, Kabul, gained friend
+143, Japan, Kabul, gained ally
+143, The Shoshone, Kabul, cancelled, Bully City-State, Friendship: -60 to -60, MINOR_CIV_KABUL
+143, The Shoshone, Kabul, cancelled, Contest Techs, Friendship: -60 to -60, MINOR_CIV_KABUL
+143, Japan, Kabul, FINISHED QUEST, Great Person, Friendship: 26 to 66, MINOR_CIV_KABUL
+143, Japan, Genoa, gained friend
+143, Japan, Genoa, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_GENOA
+143, Greece, Antwerp, gained friend
+143, Greece, Antwerp, gained ally
+143, Greece, Antwerp, Gold Gift: 500, Friendship: 5 to 60, Diplomacy, MINOR_CIV_ANTWERP
+143, Greece, Wellington, Gold Gift: 500, Friendship: 5 to 5, Diplomacy, MINOR_CIV_WELLINGTON, (SAVING) , Passing The Netherlands
+143, Morocco, Wellington, FINISHED QUEST, Invest, Friendship: 41 to 41, MINOR_CIV_WELLINGTON
+143, The Shoshone, Wellington, FINISHED QUEST, Invest, Friendship: 6 to 6, MINOR_CIV_WELLINGTON
+143, The Netherlands, Wellington, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+143, Greece, Wellington, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_WELLINGTON
+143, The Aztecs, Wellington, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+143, Japan, Wellington, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+143, Spain, Wellington, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+143, The Aztecs, Wellington, SENT OUT QUEST, Type, 2
+143, The Aztecs, Wellington, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+143, Japan, Wellington, SENT OUT QUEST, Type, 4
+143, Japan, Wellington, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+143, Spain, Wellington, SENT OUT QUEST, Type, 7
+143, Spain, Wellington, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WELLINGTON
+143, Spain, Colombo, FINISHED QUEST, Invest, Friendship: 56 to 56, MINOR_CIV_COLOMBO
+143, The Aztecs, Colombo, FINISHED QUEST, Invest, Friendship: 5 to 5, MINOR_CIV_COLOMBO
+143, The Shoshone, Colombo, FINISHED QUEST, Invest, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+143, The Netherlands, Mogadishu, SENT OUT QUEST, Type, 10
+143, The Netherlands, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 38 to 38, MINOR_CIV_MOGADISHU
+143, Morocco, Mogadishu, SENT OUT QUEST, Type, 10
+143, Morocco, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 40 to 40, MINOR_CIV_MOGADISHU
+143, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 10
+143, The Shoshone, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+143, Spain, Mogadishu, SENT OUT QUEST, Type, 10
+143, Spain, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 31 to 31, MINOR_CIV_MOGADISHU
+143, Greece, Mogadishu, SENT OUT QUEST, Type, 10
+143, Greece, Mogadishu, RECEIVED QUEST, Contest Culture, Friendship: 44 to 44, MINOR_CIV_MOGADISHU
+143, Greece, Antwerp, lost ally
+144, The Shoshone, Mombasa, gained friend
+144, The Shoshone, Mombasa, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+144, Japan, Kabul, SENT OUT QUEST, Type, 12
+144, The Netherlands, Jerusalem, SENT OUT QUEST, Type, 16
+144, The Netherlands, Jerusalem, RECEIVED QUEST, Spread Religion, Friendship: 63 to 63, MINOR_CIV_JERUSALEM
+144, Morocco, Valletta, cancelled, Bully City-State, Friendship: 6 to 6, MINOR_CIV_VALLETTA
+144, The Shoshone, Kyiv, SENT OUT QUEST, Type, 16
+144, The Shoshone, Kyiv, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_KIEV
+144, Spain, Wittenberg, cancelled, Bully City-State, Friendship: 5 to 5, MINOR_CIV_WITTENBERG
+144, The Netherlands, Genoa, SENT OUT QUEST, Type, 2
+144, The Netherlands, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 66 to 66, MINOR_CIV_GENOA
+144, Spain, Almaty, lost friend
+144, Morocco, Bogota, SENT OUT QUEST, Type, 2
+144, Morocco, Bogota, RECEIVED QUEST, Connect Resource, Friendship: 35 to 35, MINOR_CIV_BOGOTA
+144, The Netherlands, Lhasa, SENT OUT QUEST, Type, 0
+144, The Netherlands, Lhasa, RECEIVED QUEST, Route, Friendship: 38 to 38, MINOR_CIV_LHASA
+144, Spain, Mogadishu, lost friend
+144, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 2
+144, The Shoshone, Mogadishu, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_MOGADISHU
+144, Morocco, Antwerp, gained ally
+144, Morocco, Antwerp, FINISHED QUEST, Contest Techs, Friendship: 47 to 87, MINOR_CIV_ANTWERP
+144, The Netherlands, Antwerp, cancelled, Contest Techs, Friendship: 20 to 20, MINOR_CIV_ANTWERP
+144, The Shoshone, Antwerp, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+144, Japan, Antwerp, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_ANTWERP
+144, Spain, Antwerp, cancelled, Contest Techs, Friendship: 37 to 37, MINOR_CIV_ANTWERP
+144, Greece, Antwerp, cancelled, Contest Techs, Friendship: 59 to 59, MINOR_CIV_ANTWERP
+145, Spain, Valletta, gained friend
+145, Spain, Valletta, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+145, Spain, Bogota, gained ally
+145, Spain, Bogota, FINISHED QUEST, Great Person, Friendship: 34 to 74, MINOR_CIV_BOGOTA
+145, Spain, Wellington, gained friend
+145, Spain, Wellington, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_WELLINGTON
+145, Morocco, Prague, SENT OUT QUEST, Type, 2
+145, Morocco, Prague, RECEIVED QUEST, Connect Resource, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+145, Spain, Valletta, gained ally
+145, Spain, Valletta, FINISHED QUEST, Connect Resource, Friendship: 38 to 78, MINOR_CIV_VALLETTA
+145, Spain, Kyiv, gained ally
+145, Spain, Kyiv, FINISHED QUEST, Connect Resource, Friendship: 35 to 75, MINOR_CIV_KIEV
+145, The Aztecs, Kyiv, gained friend
+145, The Aztecs, Kyiv, FINISHED QUEST, Find Natural Wonder, Friendship: 11 to 51, MINOR_CIV_KIEV
+145, The Aztecs, Wittenberg, gained friend
+145, The Aztecs, Wittenberg, FINISHED QUEST, Find Natural Wonder, Friendship: 0 to 40, MINOR_CIV_WITTENBERG
+145, Japan, Kabul, lost ally
+145, Japan, Kabul, gained ally
+145, Japan, Kabul, FINISHED QUEST, Contest Techs, Friendship: 59 to 99, MINOR_CIV_KABUL
+145, The Netherlands, Kabul, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+145, Morocco, Kabul, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_KABUL
+145, Spain, Kabul, cancelled, Contest Techs, Friendship: 17 to 17, MINOR_CIV_KABUL
+145, Greece, Kabul, cancelled, Contest Techs, Friendship: 49 to 49, MINOR_CIV_KABUL
+145, Japan, Mombasa, SENT OUT QUEST, Type, 4
+145, Japan, Mombasa, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+145, Spain, Lhasa, cancelled, Bully City-State, Friendship: 0 to 0, MINOR_CIV_LHASA
+146, Morocco, Valletta, SENT OUT QUEST, Type, 10
+146, Spain, Valletta, SENT OUT QUEST, Type, 10
+146, Spain, Kyiv, SENT OUT QUEST, Type, 10
+146, Spain, Bogota, SENT OUT QUEST, Type, 11
+146, Japan, Valletta, SENT OUT QUEST, Type, 2
+146, Japan, Valletta, RECEIVED QUEST, Connect Resource, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+146, The Shoshone, Almaty, SENT OUT QUEST, Type, 16
+146, The Shoshone, Almaty, RECEIVED QUEST, Spread Religion, Friendship: 0 to 0, MINOR_CIV_ALMATY
+146, Spain, Almaty, SENT OUT QUEST, Type, 14
+146, Spain, Almaty, RECEIVED QUEST, Bully City-State, Friendship: 26 to 26, MINOR_CIV_ALMATY
+147, The Netherlands, Almaty, SENT OUT QUEST, Type, 10
+147, The Netherlands, Almaty, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_ALMATY
+147, The Netherlands, Jerusalem, lost ally
+147, Japan, Jerusalem, gained friend
+147, Japan, Jerusalem, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_JERUSALEM
+147, The Netherlands, Jerusalem, cancelled, Contest Culture, Friendship: 59 to 59, MINOR_CIV_JERUSALEM
+147, Morocco, Jerusalem, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+147, Spain, Jerusalem, cancelled, Contest Culture, Friendship: 32 to 32, MINOR_CIV_JERUSALEM
+147, Greece, Jerusalem, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_JERUSALEM
+147, The Aztecs, Valletta, SENT OUT QUEST, Type, 14
+147, The Aztecs, Valletta, RECEIVED QUEST, Bully City-State, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+147, The Netherlands, Kabul, gained friend
+147, The Netherlands, Kabul, FINISHED QUEST, Construct Wonder, Friendship: 0 to 40, MINOR_CIV_KABUL
+147, Morocco, Almaty, cancelled, Construct Wonder, Friendship: 0 to 0, MINOR_CIV_ALMATY
+147, The Netherlands, Mombasa, SENT OUT QUEST, Type, 12
+147, The Netherlands, Mombasa, RECEIVED QUEST, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+148, Morocco, Prague, gained friend
+148, Morocco, Prague, FINISHED QUEST, Connect Resource, Friendship: 3 to 43, MINOR_CIV_PRAGUE
+148, The Netherlands, Wittenberg, SENT OUT QUEST, Type, 7
+148, The Netherlands, Wittenberg, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_WITTENBERG
+148, Morocco, Bogota, lost friend
+148, Morocco, Sydney, gained friend
+148, Morocco, Sydney, FINISHED QUEST, Connect Resource, Friendship: 0 to 40, MINOR_CIV_SYDNEY
+148, Morocco, Mogadishu, gained ally
+148, Morocco, Mogadishu, FINISHED QUEST, Connect Resource, Friendship: 32 to 72, MINOR_CIV_MOGADISHU
+149, The Aztecs, Prague, SENT OUT QUEST, Type, 10
+149, The Aztecs, Prague, RECEIVED QUEST, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+149, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 16
+149, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 10
+149, The Shoshone, Mogadishu, SENT OUT QUEST, Type, 2
+149, Spain, Jerusalem, lost friend
+149, Japan, Prague, lost friend
+149, Morocco, Valletta, SENT OUT QUEST, Type, 4
+149, Morocco, Valletta, RECEIVED QUEST, Great Person, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+149, Japan, Genoa, lost friend
+149, Japan, Mombasa, gained friend
+149, Japan, Mombasa, FINISHED QUEST, Contest Techs, Friendship: 0 to 40, MINOR_CIV_MOMBASA
+149, The Netherlands, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+149, The Aztecs, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+149, The Shoshone, Mombasa, cancelled, Contest Techs, Friendship: 31 to 31, MINOR_CIV_MOMBASA
+149, Spain, Mombasa, cancelled, Contest Techs, Friendship: 0 to 0, MINOR_CIV_MOMBASA
+149, Greece, Mombasa, cancelled, Contest Techs, Friendship: 21 to 21, MINOR_CIV_MOMBASA
+149, The Netherlands, Lhasa, lost friend
+149, Spain, Antwerp, lost friend
+150, Japan, Valletta, gained friend
+150, Japan, Valletta, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_VALLETTA
+150, The Netherlands, Valletta, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+150, Morocco, Valletta, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+150, The Aztecs, Valletta, cancelled, Contest Culture, Friendship: -1 to -1, MINOR_CIV_VALLETTA
+150, The Shoshone, Valletta, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_VALLETTA
+150, Spain, Valletta, cancelled, Contest Culture, Friendship: 71 to 71, MINOR_CIV_VALLETTA
+150, Greece, Valletta, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_VALLETTA
+150, The Shoshone, Colombo, SENT OUT QUEST, Type, 7
+150, The Shoshone, Colombo, RECEIVED QUEST, Find Natural Wonder, Friendship: 0 to 0, MINOR_CIV_COLOMBO
+150, Morocco, Genoa, SENT OUT QUEST, Type, 2
+150, Morocco, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 73 to 73, MINOR_CIV_GENOA
+150, Spain, Genoa, SENT OUT QUEST, Type, 2
+150, Spain, Genoa, RECEIVED QUEST, Connect Resource, Friendship: 15 to 15, MINOR_CIV_GENOA
+150, The Shoshone, Mombasa, lost friend
+150, Greece, Mombasa, gained friend
+151, Spain, Lhasa, gained friend
+151, Spain, Lhasa, FINISHED QUEST, Great Person, Friendship: 0 to 40, MINOR_CIV_LHASA
+151, Morocco, Jerusalem, gained friend
+151, Morocco, Jerusalem, FINISHED QUEST, Connect Resource, Friendship: 5 to 45, MINOR_CIV_JERUSALEM
+151, Morocco, Wellington, lost friend
+151, Morocco, Wellington, gained friend
+151, Morocco, Wellington, gained ally
+151, Morocco, Wellington, FINISHED QUEST, Connect Resource, Friendship: 29 to 69, MINOR_CIV_WELLINGTON
+151, Japan, Prague, gained friend
+151, Japan, Prague, gained ally
+151, The Shoshone, Prague, cancelled, Find Natural Wonder, Friendship: -60 to -60, MINOR_CIV_PRAGUE
+151, The Shoshone, Prague, cancelled, Connect Resource, Friendship: -60 to -60, MINOR_CIV_PRAGUE
+151, The Shoshone, Prague, cancelled, Contest Culture, Friendship: -60 to -60, MINOR_CIV_PRAGUE
+151, Japan, Prague, FINISHED QUEST, Contest Culture, Friendship: 26 to 66, MINOR_CIV_PRAGUE
+151, The Netherlands, Prague, cancelled, Contest Culture, Friendship: 5 to 5, MINOR_CIV_PRAGUE
+151, Morocco, Prague, cancelled, Contest Culture, Friendship: 39 to 39, MINOR_CIV_PRAGUE
+151, The Aztecs, Prague, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_PRAGUE
+151, Greece, Prague, cancelled, Contest Culture, Friendship: 7 to 7, MINOR_CIV_PRAGUE
+151, Japan, Kyiv, gained friend
+151, Japan, Kyiv, FINISHED QUEST, Contest Culture, Friendship: 0 to 40, MINOR_CIV_KIEV
+151, The Netherlands, Kyiv, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KIEV
+151, Morocco, Kyiv, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KIEV
+151, The Aztecs, Kyiv, cancelled, Contest Culture, Friendship: 42 to 42, MINOR_CIV_KIEV
+151, The Shoshone, Kyiv, cancelled, Contest Culture, Friendship: 0 to 0, MINOR_CIV_KIEV
+151, Spain, Kyiv, cancelled, Contest Culture, Friendship: 66 to 66, MINOR_CIV_KIEV
+151, Greece, Kyiv, cancelled, Contest Culture, Friendship: 7 to 7, MINOR_CIV_KIEV
