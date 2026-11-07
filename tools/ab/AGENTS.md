@@ -96,6 +96,13 @@ flag. Expected: wide out-grows tall while nobody attacks; once attacks take citi
 - **No strike around a spike out of reach (the user, 2026-11-06 morning):** "you cant do a turn 227 timing attack. germany
   would either need to use normal units for an attack earlier or not be aggressive at all." A civ whose unique spike
   comes too late gets the generic Archer-to-Composite-Bowman timing at Construction, or no strike plan.
+- **Pick a target and eliminate it (the user, 2026-11-06 9:23pm ET):** "no, no flip flopping. aggressive civs choose targets
+  and then eliminate them. completely." and "we can leave a single minor settlement, and then get a peace deal. but we
+  take the capital every time." A strike holds its target until it's finished (dead, or the capital taken and at most one
+  city left, or nothing reachable by land), then picks the next one.
+- **All in, no retreat on losses (the user, 2026-11-06 ~9:30pm ET):** "there is no 2nd place in civ. you are either the
+  champion or you are nothing. if an aggressive civ puts all their resources into a timing attack, they are ALL IN." The
+  strike's war has no release by losing a city or the war going badly.
 - **City-state targets allowed (the user, 2026-11-06 morning):** when no major civ is in reach, the early strike may
   target a city-state.
 

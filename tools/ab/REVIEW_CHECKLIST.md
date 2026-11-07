@@ -64,8 +64,9 @@ against this list. The list grows: every bug a review or a test game finds gets 
   take-the-city check 100x too strict (0cb5402). Check the units of every value fed into a comparison.
 - **Silent refusal after the caller acted:** a low-level gate refuses after the payments, force-peace flags or
   UnitProcessed are already applied. Deal validity and unit selection must use the same check as the gate.
-- **No exit on losing:** every no-peace or no-retreat lock needs a release when we're losing (a city lost, the capital
-  in danger, a nearly-defeated war state), not only "capture or die".
+- **No exit on losing, superseded for the strike's war (the user, 2026-11-06 9:30pm ET: "they are ALL IN"):** a strike at
+  war holds no-retreat until its target is finished, with no release by losses. Other locks (before the war, or outside
+  the strike) still need a release when we're losing. Don't report the strike's war having no loss exit as a finding.
 - **A state that outlives its purpose:** WAR keeping its ownership of production and gold until peace with everyone.
 - **Dead guard:** a new branch put behind a condition that already rules out its success.
 - **Mixed-team gates:** loops that skip humans but still block the human's own actions.
