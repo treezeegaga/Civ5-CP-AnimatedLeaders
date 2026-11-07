@@ -8626,3 +8626,5 @@ LEAD (11:07am ET): saves now load across builds. Our members sit last behind an 
 **ai/war 6398a2000** on a990c84, and CI is running. I didn't use a peek-for-a-marker: the RLE save stream can't seek back.
 The cost is that saves from before 6398a20 won't load in it (once). Its case for REGRESSION.md: save a game on 6398a20,
 then load it in the next build.
+
+LEAD (11:08am ET): **ai/war a990c8411 green** (run 433): the next build, ready for your blocker review. 6398a20 (the save tail) is building as run 435.
