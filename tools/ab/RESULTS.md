@@ -2056,6 +2056,37 @@ late strike).
 **War's side, for the lead:** the Ottomans sat in WAR on Geneva for 94 turns with "city attack requested (not possible
 this turn)" on 61 of them, and never took it.
 
+### Patch 0063: the capital's worker rule, before its list (Economy, Nov 7, 8:22am ET)
+Fix G from the trial29 analysis above. The patch is on top of ai/war `ae8e9ae` and applies cleanly there.
+- **Why.** Mongolia's list has no Worker, and the executor's "a worker (none in this area)" rule skipped the capital. Its
+  first Worker came at T53. Its Horse tile, inside its borders since T25, was pastured only then, and the list's
+  Chariot Archer waited from T29 to T60.
+- **What changes.** The worker rule runs right after the danger defender, in every city including the capital. A capital
+  whose list has a Worker item still follows the list ("literally just follow the list"). That's every list once
+  Personality's next block adds a Worker 3rd for the Huns, Greece, the Celts and Mongolia, so this becomes a backstop.
+- **Side effect.** In a late strike's PREP, the other cities now take the worker rule before the regular book. Before,
+  they went to the book first and never reached it.
+
+**0053 and 0055 against War's `ae8e9ae`** (BUILDUP too weak for the target with the plan's counts met trains siege or
+ranged support):
+- **The production redirect doesn't block it.** `pushOrder` only swaps CP's pick for the executor's own pick. War's
+  siege or ranged pick *is* the executor's pick, so it goes through. When the executor has nothing, CP's pick stands.
+- **The holds agree.** 0053's siege (War's siege target unmet) comes first and runs only while `!IsStrikeUnitHold()`.
+  War's ranged or siege pick needs `bMoreCore`, so `GetAffordableWarUnits(10) >= 1`. Outside a war with a major,
+  `IsStrikeUnitHold` is the same test (`affordable < 1`). So both open and close together: no case where one picks a unit
+  the other's hold forbids.
+- **The capital comes last for these units.** In BUILDUP the capital builds its remaining list items first, and only then
+  siege or ranged. The other cities take them at once. That's the list order, by design.
+- **Can readiness stall for good?** Only in one narrow case. BUILDUP too weak, no unit affordable:
+  - the capital builds a Market or Caravan (income first) while one is possible;
+  - with net gold below 0 and no income item left, War's stall exit ends the strike;
+  - with net gold above 0, the treasury grows and a unit becomes affordable.
+  - **The gap:** net gold exactly 0 with under about 10-20 gold in the treasury. Nothing changes, and the stall exit
+    (`CalculateBaseNetGold() < 0`) never fires. Proposed for War: `<= 0` in that test.
+- **Still open (fix H, trio27 17F36EE7):** `bMoreCore`'s affordable count is cached for the turn and ignores units other
+  cities are already training. That applies to War's new siege and ranged picks too: one affordable unit becomes one
+  per city in the same turn. Not in 0063.
+
 ### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:36pm ET)
 The lead's review of the pick-once build (`12fe132`): `IsStrikeNoWonders` held in every PREP and BUILDUP. A finished
 target now sends WAR back to BUILDUP for the next one, so the wonder and city-state gold bans came back in every later

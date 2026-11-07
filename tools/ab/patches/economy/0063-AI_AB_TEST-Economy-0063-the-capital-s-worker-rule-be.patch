@@ -1,0 +1,87 @@
+From 37219313aa4bdb89009282d6a2c2b42ff2aff74e Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sat, 7 Nov 2026 13:22:24 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0063: the capital's worker rule, before
+ its list
+
+Fix G (trial29 18B3086C, ab-03494ee):
+- Mongolia's expert list has no Worker, and the executor's "a worker (none in this area)"
+  rule skipped the capital. Its first Worker came at T53. Its Horse tile, inside its
+  borders since T25, was pastured only then, and the list's Chariot Archer waited T29-T60.
+- The worker rule now runs right after the danger defender, for every city. A capital
+  whose list has a Worker item still follows the list ("literally just follow the list").
+- Side effect: in a late strike's PREP, other cities now take the worker rule before the
+  regular book. Before, they went to the book first.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 45 +++++++++++++++++----------
+ 1 file changed, 28 insertions(+), 17 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index f81e4a5..d3d69c3 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -35339,6 +35339,34 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 		return false;
+ 	}
+ 
++	// a worker where a city has none in its area
++	// (0063) the capital too, and before its list: Mongolia's list (trial29 18B3086C, ab-03494ee) has no Worker and this
++	// rule skipped the capital, so its first Worker came at T53; its Horse tile, in its borders since T25, was pastured
++	// only then and the list's Chariot Archer waited T29-T60. A city in danger takes its defender first (above). A capital
++	// whose list has a Worker item follows the list (the user: "literally just follow the list")
++	bool bListHasWorker = false;
++	if (pCity->isCapital())
++	{
++		const UnitClassTypes eWorkerClass = (UnitClassTypes)GC.getInfoTypeForString("UNITCLASS_WORKER", true);
++		for (int i = 0; i < kPlan.iNumBuilds && !bListHasWorker; i++)
++			bListHasWorker = kPlan.aBuilds[i].bUnit && kPlan.aBuilds[i].iClass == (int)eWorkerClass;
++	}
++	if (!bListHasWorker)
++	{
++		bool bWorker = false;
++		int iLoop = 0;
++		for (const CvUnit* pUnit = firstUnit(&iLoop); pUnit != NULL && !bWorker; pUnit = nextUnit(&iLoop))
++			bWorker = pUnit->AI_getUnitAIType() == UNITAI_WORKER && pUnit->plot() && pUnit->plot()->getArea() == pCity->plot()->getArea();
++		const UnitTypes eWorker = bWorker ? NO_UNIT : GetSpecificUnitType("UNITCLASS_WORKER", true);
++		if (eWorker != NO_UNIT && pCity->canTrain(eWorker) && getUnitClassMaking((UnitClassTypes)GC.getUnitInfo(eWorker)->GetUnitClassType()) == 0)
++		{
++			eOrder = ORDER_TRAIN;
++			iData = eWorker;
++			LogStrikeList(*this, pCity, "a worker (none in this area)", NULL);
++			return true;
++		}
++	}
++
+ 	// (0054) a late strike's PREP held for income (net gold under +2, IsLateStrikeUnitHold): an income item comes first, a
+ 	// Market, else a Caravan where a trade route is free, so the hold lifts. Trial ab-791ab9d 172518A7: Karakorum's list
+ 	// waited on its held Chariot Archer from T29 to T85 with net gold at 0
+@@ -35447,23 +35475,6 @@ bool CvPlayer::GetStrikeListProduction(CvCity* pCity, OrderTypes& eOrder, int& i
+ 		return false;
+ 	}
+ 
+-	// a worker where a city has none in its area
+-	if (!pCity->isCapital())
+-	{
+-		bool bWorker = false;
+-		int iLoop = 0;
+-		for (const CvUnit* pUnit = firstUnit(&iLoop); pUnit != NULL && !bWorker; pUnit = nextUnit(&iLoop))
+-			bWorker = pUnit->AI_getUnitAIType() == UNITAI_WORKER && pUnit->plot() && pUnit->plot()->getArea() == pCity->plot()->getArea();
+-		const UnitTypes eWorker = bWorker ? NO_UNIT : GetSpecificUnitType("UNITCLASS_WORKER", true);
+-		if (eWorker != NO_UNIT && pCity->canTrain(eWorker) && getUnitClassMaking((UnitClassTypes)GC.getUnitInfo(eWorker)->GetUnitClassType()) == 0)
+-		{
+-			eOrder = ORDER_TRAIN;
+-			iData = eWorker;
+-			LogStrikeList(*this, pCity, "a worker (none in this area)", NULL);
+-			return true;
+-		}
+-	}
+-
+ 	const CvMilitaryAI::StrikeStateTypes eStrikeState = GetMilitaryAI()->GetStrikeState();
+ 	// (0053, the lead's review of 0050) BUILDUP with the plan's army too weak for its target and no easier city: War asks for
+ 	// siege (GetTimingBuildupSiegeTarget, from its m_iStrikeSiege). The list only knew the plan's own siege count, so the
+-- 
+2.43.0
+
