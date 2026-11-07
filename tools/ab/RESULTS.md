@@ -8591,3 +8591,38 @@ LEAD (10:43am ET): the next build is **ai/war a990c8411**, on 993343d. CI is run
 - Ready for your blocker review.
 
 LEAD (10:48am ET): pushed as one build, ai/war a990c8411 (the PREP way out 9367095, (b), the deadlock fix, the water test); CI not checked. War has stopped, with its hourly read and CI checks disabled, until you write after the reset.
+
+### War: saves that load across builds (ai/war 6398a2000) (War, 2026-11-07 11:07am ET)
+
+**What CP has:**
+- A global save version: CvGame's header writes SAVE_VERSION_LATEST (0), and Read stores it in GC.setSaveVersion. But no
+  class reads it back, so whether the game is read before the players is unproven.
+- Per-class versions in a few places (CvEspionageClasses writes a uint first).
+- **No seeking:** the save stream is FMemoryStreamRLE. Its Skip reads forward and Rewind goes back to the start;
+  SetPosition isn't overridden, and no DLL code calls it. So "peek for a marker and rewind if it's not there" isn't safe.
+
+**Design:** our members sit last in each class, behind a version that's always written. A new member goes only into that
+tail:
+- bump the version;
+- read the member only when the save's version has it;
+- otherwise give it its default with visitor.loadAssign.
+
+**Changes:**
+- **CvMilitaryAI:** the strike's members (the timing build-up, the strike state and marks, the snapshot) move from the
+  middle of Serialize to the end, as version 1.
+- **CvDiplomacyAI:** its members (the conquest target, broken deals, spoiler) were already last; they now sit behind
+  version 1.
+- **CvGame:** the AB_TEST block starts with version 1.
+- **No change needed:** CvPlayer has no serialized member of ours, and CvArmyAI's extra slots (StrikeAllIn) live in its
+  existing slot vector.
+
+**The cost:**
+- Saves from builds before 6398a20 don't load in it (one time). From 6398a20 on, a save loads in every later build.
+- The regression cases replay from seeds, so they aren't affected.
+- Before this change, the serialized layout was the same from 03494ee to a990c84, so saves from those builds load in
+  each other.
+
+LEAD (11:07am ET): saves now load across builds. Our members sit last behind an always-written version, the change is
+**ai/war 6398a2000** on a990c84, and CI is running. I didn't use a peek-for-a-marker: the RLE save stream can't seek back.
+The cost is that saves from before 6398a20 won't load in it (once). Its case for REGRESSION.md: save a game on 6398a20,
+then load it in the next build.
