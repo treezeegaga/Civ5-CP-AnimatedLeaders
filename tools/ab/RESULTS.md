@@ -8160,6 +8160,9 @@ only strike civ that reached WAR in this game: it declared on T81, WAR T82 to T1
 | 18E7F265 (bullyabort25) | Huns vs Genoa (city-state) | T58-151, 94 | 10 (2 / 8) | 29 | 0 / 2 | 47 | 187 |
 | 1AA2D0DF (bullygreedy25 pair 4) | Persia vs Kuala Lumpur (city-state) | T51-152, 102 | 38 (25 / 15) | 63 | 1 / 5 | 68 | 181 |
 | 1AC16A50 (bullygreedy25 pair 5) | Assyria vs the Huns (at Yangjiang) | T116-151, 36 | 11 (11 / 0) | 0 | 0 / 1 | 5 | - |
+| 1A46A642 (bullyabort26, **993343d**) | Ottomans vs Antananarivo (city-state) | T58-150, 93 | 2 (2 / 0) | 0 | 0 / 15 | 41 | 250 (never damaged) |
+| 1A5C4C1E (bullyabort26, **993343d**) | Persia vs Vancouver (defence 27-28) | T91-152, 62 | 6 (6 / 0) | 0 | 0 / 10 | 26 | 250 (never damaged) |
+| 1B02BA85 (bullygreedy26, **993343d**) | Assyria vs the Netherlands (Amsterdam) | T92-150, 59 | 0 | 0 | 0 / 1 | 11 | 250 (see the 1B02BA85 read) |
 
 - **Correction:** the first count said 18 rapid-response turns for Greece. T135-151 were missed; ten rapid responses ran back
   to back there. The right count is 32.
@@ -8536,3 +8539,33 @@ LEAD (10:23am ET): 1B22084A read above.
   "PREP holds" line naming the failing part.
 - **The exact cause** needs the game's logs; I'll name it when they land.
 - **Count:** 1 of 4 first games so far stayed in PREP past T80.
+
+LEAD (10:28am ET): the first three games on 993343d with logs (bullyabort26 games 1-2, bullygreedy26 game 1). Reading only.
+
+**What's fixed:**
+- Rapid responses no longer stand in for the attack: 0 such turns in all three wars.
+- "Not possible" is down to 2, 6 and 0 turns, all lack of units.
+- strike_leftovers.py finds no deadlock candidate and no no-land-zone case.
+
+**The new problem:** all three declared "as ready as it got", which needs the new takeable math to say yes. All three ended
+with **no damage to the city**:
+- **Ottomans vs Antananarivo:** 41 "too early" turns, 0-26 expected damage a turn against 250 HP.
+- **Persia vs Vancouver:** 26 "too early" turns, 0-5 expected a turn.
+- Each civ's first strike operation **timed out after 21 turns, still recruiting, 9-10 tiles from the city**: Ottoman 1505
+  (T58-79) and Persian 1761 (T93-114). It had 3-5 units, while the field army was 10.
+
+**Why:**
+- The declaration's takeable answer (m_bTakeable) counts every field unit (GetStrikeFieldUnits: any land combat unit not
+  garrisoned, wherever it is).
+- The attack operation's own test (IsArmyTooWeakForTarget -> StrikeUnitsTakeCity on the operation's army) counts only
+  the 3-5 units it recruited. So it waits for more, SiegeAbort times it out at 20 turns, and gate 4 lets TIMED_OUT through.
+- So the strike declares on an army it never assembles.
+
+**Design for the next build, for your call:**
+- **(a)** The declaration counts only units an attack could recruit: free (not in another army), in reach of the muster
+  point, healthy. That's IsUnitSuitableForRecruitment's test.
+- **(b)** Or the strike's own attack recruits every strike field unit: no formation cap, and rapid responses give way.
+- I lean to (a), since the declaration then matches what arrives. (b) is the user's "all in", taken literally.
+
+**Persia vs Vancouver:** "the plan's army can't take it" (T86-91), with one "too weak for the target, ranged or siege"
+STRIKE LIST line. Persia still declared on its units on hand.
