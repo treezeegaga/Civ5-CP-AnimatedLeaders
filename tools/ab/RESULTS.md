@@ -7758,3 +7758,48 @@ closest immortal to help").** Design:
 LEAD: flag **SiegeCapturer** (design above; the user's live Persia / Addis Ababa report) is on **ai/war** after 0f3521708.
 It's off in the bundle. I'd run it with the strike roles in the next block (it only acts at a city down to a third of its HP
 with no melee unit able to strike it). It adds an entry at the end of the flag table. CI to follow, together with 0f3521708.
+
+**trio27 178B8F13 (the Huns' strike ended at T40, "no target in reach"; the lead, 9:16pm ET): read, 9:16pm ET. Design only, no code.**
+(1) **Why Hong Kong, and why it ended.**
+- The Huns met Indonesia at T14 (Diplomacy log: proximity Distant). Jakarta wasn't in the Huns' attack targets until T42
+  (MilitaryAILog: "preferred attack target: Jakarta" from T42 on; Surabaya from T49). Before that it was unrevealed or out of
+  army-path range. So at T14 there was no major in reach, and the strike pinned the nearest city-state, Hong Kong (7 tiles);
+  BUILDUP followed at T34.
+- Then **the Huns allied their own target.** They finished Hong Kong's quests: Kill Camp at T38, which the strike's own
+  barbarian hunt helps, then Find Player. "Gained ally" at T39. An allied city-state can't be a target
+  (IsStrikeTargetValid / FindStrikeCityState), and it also dropped out of their attack targets at T40.
+- BUILDUP's per-turn check found nothing else and went OVER at T40. Jakarta came into reach two turns later. After OVER the
+  bans lifted, CP's own war logic declared on Indonesia at T68, took Jakarta, and nothing marched on.
+(2) **Yes, a temporary state taken as a permanent exit.** It's the most common exit we log: 7 of 25 strike endings across all
+logged games:
+- bullyabort22 156D0CAA Greece T49 (PREP)
+- bullyabort23 1717EB23 Celts T53 (PREP)
+- bullyabort23 172E5E0E Songhai T129 (BUILDUP)
+- bullygreedy23 16BB7263 Denmark T95 (BUILDUP)
+- bullygreedy24 17C055EE Carthage T91 (BUILDUP)
+- trial23 164B7CEA Persia T45 (PREP)
+- trio27 178B8F13 Huns T40 (BUILDUP)
+
+The others: the core obsolete 6, a war of our own before the build-up 4, a major declared first 2, peace after a capture 2,
+a city taken 2, walls 1, army halved 1. Some are older builds. The same pattern also sits in PREP's "the army is built and no
+target is in reach" exit, and in the target-specific exits (the target fields the counter; the plan's city-strength, counter
+and hill exits). Each drops the whole strike because of one target.
+(3) **Design (one idea: no target is a wait, never an end). Game state only:**
+- BUILDUP with no valid target: back to PREP ("no target in reach: waiting for one"), not OVER. The window and target are
+  cleared and the siege and takeable answers reset.
+- PREP's "the army is built and no target is in reach": removed. PREP simply waits.
+- PREP already re-picks every turn: a major in reach first, then a city-state. It goes BUILDUP again as soon as it's
+  economy-ready and a target is in reach. In 178B8F13 that would have been about T42, with Jakarta.
+- The strike isn't over meanwhile. The bans hold (the user's "banned all game"), CP's own declarations stay blocked
+  (IsStrikeDeclarationBlocked), and the army is kept (IsStrikeKeepingUnit). Economy's affordability hold (IsStrikeUnitHold)
+  stops the army growing past what the treasury carries.
+- I'd treat the target-specific exits the same way, as a second idea: drop that target (it can't be re-picked while the
+  reason holds) and go back to PREP. I'll send that separately if you want it.
+- The takeover of CP's wars after OVER isn't needed for this game. With the change above, the strike is still alive, CP
+  can't declare, and the strike picks Indonesia itself. It would only matter after a real OVER (an obsolete core, a capital
+  taken). I'd leave it out unless the block shows those.
+- Untouched: the real exits (the core line obsolete, the core untrainable, a stalled BUILDUP, the WAR exits).
+
+LEAD: 178B8F13's strike ended because the Huns allied their own target (Hong Kong's quests, T39), and Jakarta came into reach
+at T42. "No target in reach" is the most common strike exit (7 of 25 logged). Design above: no target means back to PREP and
+wait, never OVER. Waiting for your go before coding.
