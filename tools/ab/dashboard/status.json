@@ -4,26 +4,26 @@
    "section": "headline",
    "order": 1,
    "name": "Now",
-   "detail": "The strike now follows the experts' build lists strictly. On that build Greece built its list in order, declared at T50 with its planned army and took a Dutch city at T59, the first early-strike capture. Your wonder/gift stop rule caught three leaks this morning; each is fixed. Build ab-04ab581 has everything and starts on both PCs once it compiles.",
+   "detail": "Today's fixes are in: no own wars before the strike, CP cut out of the strike's decisions, readiness by the take-the-city check, reachable targets only. Tonight two catches from your trio game: the strike now lasts until the target's capital falls (with releases when the capital can't be reached), and a crash in logged games is fixed (an empty army kept alive). Build ab-0f35217 is compiling; PC 2 plays one trial game on it, then 20 games vs greedy civs.",
    "state": "running"
   },
   {
    "section": "tile",
    "order": 1,
    "name": "Testing next",
-   "value": "ab-04ab581: expert lists strictly, strength check (walls aren't an exit), no retreat, wonder/gift bans airtight"
+   "value": "ab-0f35217: crash fix + the strike lasts until the target's capital falls. Next: SiegeCapturer (melee comes to a city at 1/3 HP), in review"
   },
   {
    "section": "tile",
    "order": 2,
    "name": "Best result so far",
-   "value": "Greece: expert list, declared T50, took a city T59 (CP's AI on the same map: nothing)"
+   "value": "bullygreedy24: our aggressor took cities in 3 of 9 games (Mongolia, Persia, Carthage); CP's AI in the same seats: 0"
   },
   {
    "section": "tile",
    "order": 3,
-   "name": "Overnight expert blocks",
-   "value": "3 captures in 20 games (2 by T100); 4 games void (non-warmonger aggressors), since fixed"
+   "name": "Trio27 game 1 (Huns)",
+   "value": "Huns top at T150 (19.1%), took Jakarta. But their strike had ended at T40 (no target in reach), so CP ran the war: War is fixing that early exit"
   },
   {
    "section": "funnel",
@@ -74,7 +74,7 @@
    "section": "session",
    "order": 1,
    "name": "Lead",
-   "detail": "Runs the tests and reads results across many games, not one (your rule). Built the attack funnel below. Freezes each build for a 20-game block.",
+   "detail": "Reviews every build before the PCs (fresh reviewer + checklist). Tonight: merged the crash fix and the capital rule after a review caught 3 deadlocks; trio for you on PC 1.",
    "chat": "Civ V AI optimization experiment lead",
    "state": "running"
   },
@@ -82,9 +82,9 @@
    "section": "session",
    "order": 2,
    "name": "War",
-   "detail": "Strength check from your Marrakesh game (city ~19, walls, no siege); city-state targets attacked; declare only when the army can take it; no retreat until a city falls.",
+   "detail": "Crash found (empty army + logging) and fixed; the strike lasts until the capital falls; SiegeCapturer coded (off, in review). Next: why strikes end early with 'no target in reach'.",
    "chat": "Civ V AI: War session",
-   "state": "waiting"
+   "state": "running"
   },
   {
    "section": "session",
@@ -106,7 +106,7 @@
    "section": "session",
    "order": 5,
    "name": "Economy",
-   "detail": "Follow-the-list executor; the build order trains the plan's army on time; wonder and city-state gift bans at their chokepoints until the first declaration.",
+   "detail": "0029-0060 in the build: list executor, gold and wonder bans, policy order, income first, build what the target needs. Checks the first trial games at 10:45pm.",
    "chat": "Civ V AI: Economy & victory session",
    "state": "waiting"
   },
@@ -114,15 +114,15 @@
    "section": "session",
    "order": 6,
    "name": "PC runner",
-   "detail": "PC 1 (BOX): waiting for ab-04ab581, then 20 games vs normal civs (bullyabort22).",
+   "detail": "PC 1 (BOX): trio27 for you to watch (6 games; game 1 done, Huns top). Games 3-6 on ab-0f35217, then back to bullyabort25.",
    "chat": "Civ V AI optimization PC runner",
-   "state": "waiting"
+   "state": "running"
   },
   {
    "section": "session",
    "order": 7,
    "name": "PC runner 2",
-   "detail": "PC 2 (TREEDESKTOP): waiting for ab-04ab581, then 20 games vs greedy civs (bullygreedy22). Wonder/gift and list checks after each first game.",
+   "detail": "PC 2 (TREEDESKTOP): bullygreedy24 done (9 pairs, a crash in pair 10, fixed). Next: trial28 on ab-0f35217 to T100, then bullygreedy25 (20 games).",
    "chat": "Civ V AI optimization PC runner 2",
    "state": "waiting"
   },
@@ -192,9 +192,9 @@
   {
    "section": "queue",
    "order": 1,
-   "name": "Strike block on ab-04ab581",
-   "detail": "Both PCs, 20 games each, stop on any wonder or gift before a strike. Judged by captures, and how many by T100.",
-   "state": "running"
+   "name": "Strike block on ab-0f35217",
+   "detail": "PC 2, 20 games vs greedy civs after trial28. Stops on any wonder or gift before the strike's declaration. Judged by captures, and how many by T80.",
+   "state": "waiting"
   },
   {
    "section": "queue",
@@ -221,7 +221,7 @@
    "section": "goal",
    "order": 1,
    "name": "Trio: one of our three styles wins",
-   "target": "In a 6-player game with our greedy, balanced and aggressive civs and 3 CP civs, one of ours wins \u2265 90% of full games (the user's aim: every game)",
+   "target": "In a 6-player game with our greedy, balanced and aggressive civs and 3 CP civs, one of ours wins ≥ 90% of full games (the user's aim: every game)",
    "detail": "Built. A first look (4 games to T150) had one of ours on top in 3 (75%), but our aggressor never attacked there. The real 20-game run waits until attacks take cities.",
    "state": "first look"
   },
@@ -229,7 +229,7 @@
    "section": "goal",
    "order": 2,
    "name": "Strength against CP",
-   "target": "\u2265 60% strength share against CP's AI (a milestone; strength is now the guard and quick test for each change)",
+   "target": "≥ 60% strength share against CP's AI (a milestone; strength is now the guard and quick test for each change)",
    "detail": "50.4% (C8, the 12 flags that passed, 6 pairs on PC 2). Economy and diplomacy fixes moved it only about half a point by T150; the big lever left is war, cities changing hands.",
    "state": "not met"
   },
@@ -261,7 +261,7 @@
    "section": "goal",
    "order": 8,
    "name": "AI turn speed",
-   "target": "AI turns \u2264 1.25\u00d7 B's",
+   "target": "AI turns ≤ 1.25× B's",
    "detail": "C8 games average 5.6 s per AI turn. In split games both groups share one turn, so this needs an all-C run against an all-B run; not run yet.",
    "state": "not measured"
   }
