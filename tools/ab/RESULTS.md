@@ -5360,3 +5360,17 @@ Plus a cheap PC 2 test (Logs\ size vs private bytes) to confirm logging is the p
    retreat.
 2. LogOperationStatus null-checks GetArmy and GetCenterOfMass in its recruiting, gathering and moving branches (logging
    must never crash).
+
+### Crash fix merged: claude/ab-c1 = 9273f98 (lead, 9:08pm ET Nov 6)
+- **The 791ab9d crash was ours.** Gate 4 refused the half-strength abort of a strike operation whose last unit had died.
+  The empty operation stayed in MOVING_TO_TARGET, and with AI logging on, LogOperationStatus read its NULL center of mass.
+  Without logging there's no crash, but the empty operation counted as "an attack under way" and blocked the strike's new
+  attacks for up to 42 turns. That may explain part of the "attack never formed" funnel stage. War is counting how often
+  it happened in the logs.
+- **The fix (War 9273f98, reviewed by the lead):** an operation with no units left isn't refused its abort, and the
+  logging null-checks the army and its center. A crash fix with no behaviour flag, so no trial game.
+- **Memory is a separate question.** PC 2 saw 1.6 GB private by about T70 with logging on. bullygreedy25 runs its
+  flipped games with AILog = 0 to compare.
+- **Builds:** PC 2's bullygreedy25 starts on `ab-9273f98` (not acd891f) once the release is up. PC 1's trio27 moves to it
+  after game 1.
+- REVIEW_CHECKLIST.md gets a new bug kind: a refusal that keeps a dead object alive.

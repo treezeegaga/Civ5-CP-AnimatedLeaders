@@ -94,3 +94,7 @@ against this list. The list grows: every bug a review or a test game finds gets 
 - **A temporary block taken as a dead end:** an era gate triggering a fallback meant for a finished order.
 - **An exit testing one blocker while another holds:** the stall exit checks "not takeable", but readiness can also be
   held by the upgrade bill or the field count.
+- **A refusal that keeps a dead object alive:** gate 4 refused the half-strength abort of an operation whose last unit had
+  died. The empty operation stayed "under way", blocked new attacks for up to 42 turns and crashed the logging on its
+  NULL centre of mass (183D5D87). Every refusal must let an object with nothing left in it end, and logging must
+  null-check what it prints.
