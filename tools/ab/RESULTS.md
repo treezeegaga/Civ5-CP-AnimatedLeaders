@@ -2020,6 +2020,42 @@ Nothing is coded yet.
 - **F (Economy, only if D and E aren't enough).** 0058's WAR income rule runs in every city without a Market while net
   gold is below 0, not only the capital.
 
+### Trio27 games 5-6 on ab-03494ee: checks (Economy, Nov 6, 11:35pm ET)
+The first games on a build with 12fe132, 0061 and 0062: `17F36EE7` (Ottoman, early strike) and `17FE0A1A` (Mongolia,
+late strike).
+
+| Check | Ottoman 17F36EE7 | Mongolia 17FE0A1A |
+|---|---|---|
+| Strike | Target Geneva (city-state) from T3. BUILDUP T40, declared T56 (confirmed T57), WAR T57-T150. 61 turns of "city attack requested (not possible this turn)"; Geneva never fell. | PREP to T101 (Chivalry), BUILDUP T101 on Carthage, WAR T108 (Carthage declared on us). "City attack not possible" T109-T114 and T145. |
+| Captures | Athens T141 (Greece's capital, in Greece's T121 war on us) | Saguntum T141 (not Carthage's capital) |
+| Next-target BUILDUP | **Not tested**: the target's capital was never taken | **Not tested** |
+| Settling after the first declaration (0061) | **Works**: cities founded T74 and T90, after the T56 declaration | Cities founded T111 and T149 (WAR from T108) |
+| Bans in a later BUILDUP (0062) | **Not tested** (no later BUILDUP). No wonders or gifts all game: WAR from T57 keeps them banned, as the rule says | **Not tested**. No wonders or gifts (the two gift lines naming Mongolia are other civs') |
+| Policy | Liberty, then Honor T112: the plan's order | Honor, then Tradition T104: the plan's order |
+| REDIRECT lines | 0 | 0 |
+
+**Gold: the Ottomans were broke from T60 to T150.**
+- The treasury was 354 at T55. Upgrades at the declaration took it to 3 at T60, and it stayed at 0-21 for the rest of
+  the game.
+- Net gold was -3 to -43 from T60 to T120. Unit upkeep went from 21 to 66 while CP's own picks ("LIST NORMAL, army
+  complete, no more affordable", 64 lines) and the Greek war added units.
+- **New bug (fix H):** net gold turned positive at T125-T135 (+4 to +15). On those turns every city built "more core" in
+  the same turn: 24 Composite Bowmen from T125 to T141, up to 4 a turn. Units went from 31 to 48, unit upkeep from 68 to
+  132, and net gold to -29 by T145.
+- The cause: `bMoreCore` asks `GetAffordableWarUnits(10) >= 1`. That number is cached for the turn and doesn't count the
+  units other cities are already training, so one affordable unit turns into one per city.
+- **Fix H (Economy, small):** the army rule compares the affordable count with the military units already in production
+  across our cities (`bMoreCore`, and the same for `bShort`'s hold). An extra unit is started only while affordable minus
+  in production is at least 1.
+
+**Mongolia** (this game is on the old list, before Personality's change):
+- Again no Worker in the list. One city until T54, gross gold 4-6 a turn up to T60.
+- The Caravan (item 5) waited T28-T52: no Animal Husbandry yet.
+- Fix G (the capital's Worker) and Personality's Worker-3rd lists both apply.
+
+**War's side, for the lead:** the Ottomans sat in WAR on Geneva for 94 turns with "city attack requested (not possible
+this turn)" on 61 of them, and never took it.
+
 ### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:36pm ET)
 The lead's review of the pick-once build (`12fe132`): `IsStrikeNoWonders` held in every PREP and BUILDUP. A finished
 target now sends WAR back to BUILDUP for the next one, so the wonder and city-state gold bans came back in every later
