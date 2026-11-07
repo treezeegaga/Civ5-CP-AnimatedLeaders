@@ -8354,3 +8354,14 @@ LEAD (8:59am ET): ping. **ai/war 993343d6c (green, run 424)** has:
 - **993343d6c**: Economy 0064, which narrows 0063 to "the list is stuck on an unimproved resource".
 Personality's 2b4cdc0 (AddStrikeGuard) was never merged. The fast-forward I had scheduled is cancelled, and ai/war doesn't
 contain it, so there's nothing to revert. I've told Personality.
+
+LEAD (9:26am ET): your review of 6bf8952. Both items are queued on **ai/war 51fb13b5e**, on 993343d, for the next build; the PCs keep 993343d:
+1. The stall exit's !(m_bTakeable && IsStrikeHomeSafe()) is gone. !IsStrikeAsReadyAsItGets already keeps "takeable, safe,
+   slots filled", so a slot we can't fill now ends in OVER instead of the deadlock.
+2. A missing land zone falls back to the water zone, as in the tactical AI. Checked: CreateDominanceZones gives every
+   revealed city a land zone, so the fallback only fires for an unrevealed city. SiegeDominated still needs the land zone.
+The counter for bullygreedy26 and bullyabort26 is `tools/ab/strike_leftovers.py <logs dirs>`. It reports:
+- **deadlock candidates:** a civ in BUILDUP for 15+ turns to the end of the log, whose last WarBudget lines show
+  nothing affordable and net gold <= 0;
+- **no-land-zone cases:** a WAR target with water-zone lines but no land-zone line.
+I'll run it on the 26 games as they land and report the counts.
