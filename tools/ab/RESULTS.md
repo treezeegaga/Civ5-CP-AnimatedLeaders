@@ -8431,3 +8431,12 @@ LEAD (9:49am ET): 1B02BA85 read above.
 - Logging fix coming on ai/war for the next build.
 
 LEAD (10:06am ET): ai/war 1ec367432 green (run 428): 51fb13b plus the WAR status logging, for the next build.
+
+LEAD (10:10am ET): queued on War, by your note via Personality.
+- **What happened:** strike civs lose unescorted civilians to barbarians.
+  - Persia 18DA3905 lost 5 Workers and 3 Settlers in T12-T87 and had one city until T110.
+  - Greece 18BE1E3E lost a Worker on T27 and a Settler on T34.
+- **Where the fix belongs:** it's an escort/homeland question, not a list change (the user rejected 2b4cdc0; the expert
+  lists stay as written).
+- **Next:** I'll read the homeland and operational logs for those losses: was the found-city op escorted, and did
+  SettlerTripLooksSafe let them go alone? Then I'll design a fix here before any code.
