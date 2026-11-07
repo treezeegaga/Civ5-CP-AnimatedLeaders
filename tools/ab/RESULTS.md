@@ -1974,6 +1974,45 @@ None of them is on 12fe132 or later yet, so the pick-once flow, the next-target 
 To check next, on 12fe132 or later: the next-target BUILDUP, settling after the first declaration (0061), and the bans
 not returning in a later BUILDUP (0062).
 
+### Trial29 18B3086C (Mongolia) and the Aztecs' gold: causes and proposed fixes (Economy, Nov 6, 10:58pm ET)
+The lead asked why Mongolia's late strike was still in PREP at T100 on ab-03494ee, and why the Aztecs went broke in WAR (186D5858).
+Nothing is coded yet.
+
+**Mongolia** (plan: core Knight x8, Horseman x2, Chivalry; pre-build Chariot Archer x8)
+- **PREP to T100 is a tech wait, not the list.** A late strike moves to BUILDUP when Chivalry is researchable and it has 3
+  cities (`IsStrikeEconomyReady`). Mongolia had 3 cities from T65. Chivalry needs Philosophy, Currency and Engineering, and
+  Mongolia had 16 techs at T100, last place tied with the Iroquois (the others had 18-22). While the capital's list has
+  nothing it can build, a late strike's PREP falls back to the regular book. So the WAIT lines cost no production.
+- **Item 6 (Chariot Archer), T29-T60, waited on Horses.**
+  - Not The Wheel: in VP The Wheel needs only Agriculture.
+  - Not the hold: net gold was +2 to +7, and T47 is the only LIST HOLD line.
+  - The first Pasture plan line is T53, after a tech finished at T52 (presumably Animal Husbandry). The first Chariot
+    Archer was built at T60.
+  - 0054's research rule asks only for a unit's own tech, not the tech its resource needs.
+- **Item 16, T81-T100.** T81, T98 and T100 are plain WAITs: not trainable, so the Horses were used up (5 Chariot Archers and
+  2 Horsemen on one pasture). T84-T95 are LIST HOLD at net 0 to -3: upkeep rose from 17 to 29, the Market was already
+  built (T53) and the one trade route was in use, so there was no income item to build.
+
+**The Aztecs** (186D5858, ab-227f759)
+- The treasury fell from 234 at T40 to 0 at T100. Gross gold stayed at 6-14 all game while unit upkeep went from 9 to 22.
+- **2 cities all game:** the early-strike city cap, which 0061 lifts after the first declaration (T66 here).
+- **No Market until T92.**
+- **The trade routes were lost.** The two Caravans' routes gave +4 to +6 at T80-T85 and were gone by T90 (trade units 2 to 0).
+- **The army rebuild at a loss.** From T86 every city rebuilt the army ("short of the plan") at net -10. The unit hold
+  didn't fire: the war was with a city-state, and `IsStrikeUnitHold` needs `!IsAtWarAnyMajor`.
+
+**Proposed fixes** (production and economy only; no gold buys)
+- **A (Economy).** In `GetStrikeListTech`, a unit item whose strategic resource we don't have asks for that resource's
+  reveal tech first: Animal Husbandry for Horses, Bronze Working for Iron.
+- **B (Personality).** 8 Chariot Archers, 2 Horsemen and 8 Knights need about 18 Horses, and Mongolia had one pasture.
+  Size the pre-build to the Horses owned, or move it to a class that needs no resource. Also check whether the Chariot
+  Archer's upgrade line reaches the Knight in VP; if it doesn't, the pre-build adds nothing to the core.
+- **D (Economy).** In WAR, the "short of the plan" rebuild runs only while one more unit is affordable for 10 turns (the
+  same `GetAffordableWarUnits(10)` test as `bMoreCore`).
+- **E (Economy).** Once BUILDUP starts, the 0054 research rule puts the list's Market tech (Currency) first.
+- **F (Economy, only if D and E aren't enough).** 0058's WAR income rule runs in every city without a Market while net
+  gold is below 0, not only the capital.
+
 ### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:36pm ET)
 The lead's review of the pick-once build (`12fe132`): `IsStrikeNoWonders` held in every PREP and BUILDUP. A finished
 target now sends WAR back to BUILDUP for the next one, so the wonder and city-state gold bans came back in every later
