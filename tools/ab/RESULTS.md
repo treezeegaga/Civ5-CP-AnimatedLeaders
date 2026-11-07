@@ -3686,6 +3686,16 @@ weights fill everything a plan doesn't name):
     - 2 Spearmen to take the city instead of the 2 Horsemen;
     - Composite Bowmen and a Catapult for the rest of the army;
     - with more Horses, the list can add Keshiks after Chivalry; with fewer, the executor passes over Horse units.
+  - **A Warrior before the first civilian** (Economy for the lead, 8:38am ET 2026-11-07: lists run 40-60 turns late):
+    - Persia `18DA3905`'s default list (Worker, Settler, Settler, Immortal) lost 5 Workers and 3 Settlers to barbarians
+      T12-T87 and had 1 city until T110.
+    - Greece `18BE1E3E` (Monument, Settler, Settler, Hoplite) lost a Worker at T27 and a Settler at T34.
+    - The ordered list puts the Hoplite after Bronze Working, so the civilians go out alone.
+    - Hypothesis: one Warrior before the first Settler or Worker cuts captured civilians and brings the 2nd city 10+
+      turns sooner where barbarians are near. Measure: civilians captured and the 2nd city's turn per strike civ.
+    - Coded: `AddStrikeGuard`, `ai/personality` `2b4cdc0` on `ai/war` `993343d`; patch 0002 here. Every list, expert and
+      default: a trainable-from-start combat unit (not a Scout) must be ahead of the first civilian, otherwise the
+      civ's Warrior goes in. Economy's executor backstop is separate.
   With 4 pre-built, item 16 (the 6th Chariot Archer) wouldn't be on the list. The gold hold is Economy's side.
   For the next block, coded on `ai/personality` once the lead says go.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
