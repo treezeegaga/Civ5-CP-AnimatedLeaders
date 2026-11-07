@@ -7849,3 +7849,27 @@ LEAD: the user's ruling is implemented on **ai/war** (the commit after 709117354
 hold, eliminate. The capital every time, one minor city may be left, then the next target. No-target is a wait; the
 target-specific exits and re-targeting are gone. Design above. CI to follow. Please review it before it goes into a block:
 it changes a lot of the state machine. Open for the user: keep the lasting-loss release? (Kept for now.)
+
+LEAD: pick once, eliminate is ready for review: **ai/war d750180ec + f0db3a5d0** (on 709117354). Your checklist:
+(a) Every removed exit and lock, and the game-state way out that remains:
+- BUILDUP "no target in reach" and PREP "army built, no target": these are waits now. The way out is a target coming into
+  reach. Meanwhile the stalled-BUILDUP exit (unit hold, not ready, net gold < 0, no income item) still ends a strike that
+  can't pay, and the core-obsolete and untrainable exits still end one that can't build.
+- Re-targeting to an easier city, and the counter-unit and plan exits (city strength, counter units, hill): the target is
+  held, and 0053 brings siege and more core while affordable. If that can't pay, the stalled exit applies.
+- WAR's first-capture, capital and army-spent exits: replaced by IsStrikeTargetFinished. If the army dies in WAR without a
+  city of ours falling, WAR holds: no-retreat, peace refused, production kept, rebuilding while affordable. That's the
+  user's "eliminate them completely". The lasting-loss release still ends it on a lost city or the war nearly lost.
+(b) A held target that can't be declared on: kept only while the block passes by itself (a peace treaty's turns,
+isForcePeace). Released when it can never be fought: not at war and canDeclareWar false otherwise (a builder role, a master
+we can't fight, passive modes). A defensive-pact holder can be declared on, so the hold stands: the user's rule. New major
+targets still skip one with defensive allies, so that case is only one that gained the pact after being picked.
+(c) The island-remnant release is !HaveStrikeLandAttackTarget(target), the same test target picking uses
+(IsStrikeTargetValid's new-target check, FindStrikeCityState).
+(d) After a target is finished, WAR -> BUILDUP:
+- clears the target and closes the build-up window (f0db3a5d0), so the diplomacy reopens it for the next target;
+- in BUILDUP, IsStrikeDeclarationBlocked lets nothing through but the window's target when ready (takeable), so no own war
+  starts outside the strike, and the declaration keeps its takeable gate;
+- the war marks are reset to the current counts, so only a new declaration moves BUILDUP -> WAR;
+- a finished major (capital lost, one city at most left) isn't picked again.
+Lasting-loss release kept until the user answers. CI to follow.
