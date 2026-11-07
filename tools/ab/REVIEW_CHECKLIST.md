@@ -98,3 +98,10 @@ against this list. The list grows: every bug a review or a test game finds gets 
   died. The empty operation stayed "under way", blocked new attacks for up to 42 turns and crashed the logging on its
   NULL centre of mass (183D5D87). Every refusal must let an object with nothing left in it end, and logging must
   null-check what it prints.
+- **A widened lock without the old release:** moving an exit later (the first capture to the target's capital, 227f759)
+  kept every lock (no peace, no other wars, gate 4, WAR production) on when the capital can't be reached by land, or when the
+  capital's attack fails and nothing else is requested. A later goal needs a release for when it can't be reached.
+- **A "preferred" pass that blocks the fallback:** a flag set when the preferred target is listed, not when its attack
+  actually started, so the normal pass never runs.
+- **A goal that's already met at the start:** "the capital is ours" was true from the first turn when we already held it,
+  so WAR went straight to OVER. Count only what changed during this strike (the per-war capture mark).
