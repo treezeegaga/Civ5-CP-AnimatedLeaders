@@ -113,3 +113,11 @@ against this list. The list grows: every bug a review or a test game finds gets 
   so the very case it was written for (nobody can strike) never reached it.
 - **Unit filters that admit units that can't do the job:** "combat and not ranged" lets in defensive-only units that can't
   attack or capture.
+- **A new release undone by an old fallback:** a "can never be fought" release placed before old branches that keep the
+  previous target whenever it's alive (review of d750180).
+- **A guard on only one of two paths:** "don't pick a finished target" applied only to new picks, while a fallback path
+  re-pinned the finished target.
+- **A mark computed before the state it measures:** the per-war capture mark taken before the target was pinned, so it read
+  0 and counted old captures.
+- **A one-turn flicker taken as final:** a list that can drop an entry for a turn (the attack targets) used for a permanent
+  decision (target finished). Use a stable game-state test.
