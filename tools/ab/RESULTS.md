@@ -8159,6 +8159,7 @@ only strike civ that reached WAR in this game: it declared on T81, WAR T82 to T1
 | 18D1C365 (bullyabort25) | Carthage vs Rome | T82-95, 14 | 8 (1 / 7) | 1 | 0 / 15 | 3 | 21 (1 HP on T89 and 4 on T90, no capture; dropped T95) |
 | 18E7F265 (bullyabort25) | Huns vs Genoa (city-state) | T58-151, 94 | 10 (2 / 8) | 29 | 0 / 2 | 47 | 187 |
 | 1AA2D0DF (bullygreedy25 pair 4) | Persia vs Kuala Lumpur (city-state) | T51-152, 102 | 38 (25 / 15) | 63 | 1 / 5 | 68 | 181 |
+| 1AC16A50 (bullygreedy25 pair 5) | Assyria vs the Huns (at Yangjiang) | T116-151, 36 | 11 (11 / 0) | 0 | 0 / 1 | 5 | - |
 
 - **Correction:** the first count said 18 rapid-response turns for Greece. T135-151 were missed; ten rapid responses ran back
   to back there. The right count is 32.
@@ -8365,3 +8366,12 @@ The counter for bullygreedy26 and bullyabort26 is `tools/ab/strike_leftovers.py 
   nothing affordable and net gold <= 0;
 - **no-land-zone cases:** a WAR target with water-zone lines but no land-zone line.
 I'll run it on the 26 games as they land and report the counts.
+
+LEAD (9:28am ET): bullygreedy25 pairs 5 and 6 (ab-03494ee, the old build). Reading only.
+- **1AC16A50, Assyria vs the Huns:** declared on T116, "as ready as it got".
+  - Op 2076 ended "Success" at distance 5 on T141 after 37 turns.
+  - Then T141-151 were all "not possible" for lack of units.
+  - At Yangjiang: 1 capture attempt, 1 ranged city attack, 0 melee, 5 "too early" turns, no capture.
+- **1ADFE06A:** the Huns' early strike went BUILDUP -> OVER, "stalled", on T59, so there was no strike war.
+- No bullygreedy26 or bullyabort26 game (993343d, the new takeable math) has landed yet. strike_leftovers.py runs on them
+  when they do.
