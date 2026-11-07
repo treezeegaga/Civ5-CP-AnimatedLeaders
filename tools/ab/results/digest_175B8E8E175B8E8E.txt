@@ -1,0 +1,53 @@
+﻿Game 175B8E8E175B8E8E (AIABTest_c8e.csv), last logged turn 80
+b    Babylon      tall      cities 3
+  builds to T80 (capital Babylon; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T18 Settler* | T30 Worker* | T35 Monument* (Akkad) | T36 Library* (Akkad) | T36 Settler* | T40 Worker* | T43 Stonehenge | T47 Library* | T52 Granary (Akkad) | T53 Settler* | T59 Granary | T62 Monument (Dur-Kurigalzu) | T62 Worker (Akkad) | T63 Shrine (Dur-Kurigalzu) | T63 Settler | T70 Warrior (Akkad) | T70 Hanging Gardens | T77 Worker (Akkad) | T79 Walls of Babylon (Dur-Kurigalzu)
+  settlers ordered T: 18,36,53,63   found-city ops started T: 30,59,80   cities founded T: 35,62
+  ops aborted: T70 NoTarget, T71 NoTarget, T72 NoTarget, T73 NoTarget, T74 NoTarget, T75 NoTarget, T76 NoTarget, T77 NoTarget, T78 NoTarget, T79 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 1, growth due 1)   built instead: Library 2   first: T043 Babylon size 2 next Library | T047 Babylon size 3 next Library
+  IDLE SETTLER turns: 2 (first T36)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T18 settler (book) in Babylon | T30 op started | T35 FOUNDED | T36 settler (book) in Babylon | T53 settler (book) in Babylon | T59 op started | T62 FOUNDED | T63 settler (AI) in Babylon | T70 op ended: NoTarget | T71 op ended: NoTarget | T72 op ended: NoTarget | T73 op ended: NoTarget | T74 op ended: NoTarget | T75 op ended: NoTarget | T76 op ended: NoTarget | T77 op ended: NoTarget | T78 op ended: NoTarget | T79 op ended: NoTarget | T80 op started
+  saving gold for a settler: 49 turns (T11-T70)
+b    Denmark      wide      cities 3
+  builds to T80 (capital Copenhagen; other cities named): T0 Scout* | T4 Monument* | T8 Worker* | T16 Settler* | T25 Caravan* | T32 Settler* | T38 Scout* | T41 Caravan* | T48 Monument* (Aarhus) | T48 Settler* | T49 Granary (Aarhus) | T49 Granary* | T52 Settler* | T58 Market* | T64 Shrine* | T66 Archer* | T69 Caravan* | T70 Market (Aarhus) | T73 Library* | T74 Monument (Kaupang) | T75 Shrine (Kaupang) | T76 Archer* | T77 Archer* | T79 Barracks*
+  settlers ordered T: 16,32,48,52   found-city ops started T: 25,38,58   cities founded T: 48,74
+  ops aborted: T27 LostCivilian
+  IDLE SETTLER turns: 1 (first T52)
+  settler timeline to T80: T16 settler (book) in Copenhagen | T25 op started | T27 op ended: LostCivilian | T32 settler (book) in Copenhagen | T38 op started | T48 settler (book) in Copenhagen | T48 FOUNDED | T52 settler (book) in Copenhagen | T58 op started | T74 FOUNDED
+  saving gold for a settler: 39 turns (T6-T55)
+c    Arabia       tall      cities 2
+  builds to T80 (capital Mecca; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T18 Settler* | T28 Worker* | T30 Monument* (Medina) | T31 Great Library | T34 Library* (Medina) | T45 Worker | T50 Warrior | T53 Writers' Guild | T54 Shrine (Medina) | T63 Granary (Medina) | T64 Granary | T72 Scout | T74 Work Boat (Medina) | T75 Settler
+  settlers ordered T: 18,75   found-city ops started T: 28,82   cities founded T: 30
+  book SETTLER HELD to T80: 4 (unhappy 4)   built instead: the normal AI choice 3, Library 1   first: T031 Mecca size 3 next Library | T045 Mecca size 3 next the normal AI choice | T050 Mecca size 3 next the normal AI choice
+  IDLE SETTLER turns: 1 (first T75)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T18 settler (book) in Mecca | T28 op started | T30 FOUNDED | T75 settler (AI) in Mecca
+  saving gold for a settler: 59 turns (T6-T80)
+c    England      tall      cities 3
+  builds to T80 (capital London; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T18 Settler* | T28 Worker* | T30 Monument* (York) | T31 Stonehenge | T34 Library* (York) | T47 Library* | T55 Worker | T61 Archer | T64 Monument (Nottingham) | T65 Shrine (Nottingham) | T66 Worker | T66 Archer | T67 Warrior | T68 Worker | T69 Worker | T69 Warrior | T77 Granary (Nottingham) | T77 Scout | T80 Settler
+  settlers ordered T: 18,80   found-city ops started T: 28,61   cities founded T: 30,64
+  book SETTLER HELD to T80: 2 (unhappy 2)   built instead: Library 2   first: T031 London size 3 next Library | T047 London size 3 next Library
+  IDLE SETTLER turns: 2 (first T60)
+  settler timeline to T80: T18 settler (book) in London | T28 op started | T30 FOUNDED | T60 BOUGHT in London. Cost: 370 | T61 op started | T64 FOUNDED | T80 settler (AI) in London
+  saving gold for a settler: 44 turns (T6-T80)
+c    Poland       tall      cities 3
+  builds to T80 (capital Warsaw; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T18 Settler* | T28 Worker* | T31 Monument* (Krakow) | T32 Settler* | T35 Library* (Krakow) | T42 Warrior | T46 Worker* | T47 Monument* (Lodz) | T48 Library* (Lodz) | T50 Library* | T51 Worker (Krakow) | T52 Shrine (Krakow) | T57 Worker | T59 Worker (Krakow) | T63 Warrior | T66 Temple | T69 Warrior (Krakow) | T73 Scout (Krakow) | T73 Worker | T74 Temple (Krakow) | T75 Shrine (Lodz) | T78 Spearman | T80 Worker
+  settlers ordered T: 18,32   found-city ops started T: 28,42   cities founded T: 31,47
+  book SETTLER HELD to T80: 1 (unhappy 1)   built instead: Library 1   first: T050 Warsaw size 3 next Library
+  IDLE SETTLER turns: 1 (first T32)
+  settler timeline to T80: T18 settler (book) in Warsaw | T28 op started | T31 FOUNDED | T32 settler (book) in Warsaw | T42 op started | T47 FOUNDED
+  saving gold for a settler: 31 turns (T10-T61)
+c    Rome         tall      cities 4
+  builds to T80 (capital Rome; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T16 Warrior* | T21 Settler* | T33 Granary | T41 Settler* | T50 Temple | T59 Worker | T62 Shrine (Antium) | T63 Settler | T69 Granary (Cumae) | T70 Worker | T71 Worker | T72 Settler | T72 Worker | T74 Granary (Neapolis) | T77 Worker (Antium) | T78 Worker (Antium) | T79 Worker (Antium) | T80 Worker (Antium) | T80 Worker
+  settlers ordered T: 21,41,63,72   found-city ops started T: 33,50,66,70,80   cities founded T: 62,69,74
+  ops aborted: T39 LostCivilian
+  IDLE SETTLER turns: 2 (first T64)
+  settler timeline to T80: T21 settler (book) in Rome | T33 op started | T39 op ended: LostCivilian | T41 settler (book) in Rome | T50 op started | T62 FOUNDED | T63 settler (AI) in Rome | T66 op started | T69 FOUNDED | T70 op started | T72 settler (AI) in Rome | T74 FOUNDED | T80 op started
+  saving gold for a settler: 47 turns (T6-T80)
+c    Siam         tall      cities 3
+  builds to T80 (capital Sukhothai; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T20 Settler* | T30 Warrior | T33 Shrine (Si Satchanalai) | T34 Worker* | T40 Stonehenge | T47 Library* | T49 Monument* (Muang Saluang) | T50 Library* (Muang Saluang) | T54 Worker (Si Satchanalai) | T55 Worker (Si Satchanalai) | T55 Warrior | T56 Worker (Si Satchanalai) | T56 Worker | T56 Warrior | T57 Worker (Si Satchanalai) | T57 Warrior | T58 Worker (Si Satchanalai) | T58 Warrior | T59 Worker (Si Satchanalai) | T59 Warrior | T60 Worker (Si Satchanalai) | T60 Warrior | T61 Worker (Si Satchanalai) | T61 Warrior | T62 Worker (Si Satchanalai) | T62 Worker | T62 Warrior | T63 Temple (Si Satchanalai) | T64 Warrior | T67 Worker | T68 Granary (Muang Saluang) | T70 Settler | T71 Settler | T72 Settler | T73 Settler | T74 Worker | T75 Scout | T78 Settler | T80 Worker
+  settlers ordered T: 20,70,71,72,73,78   found-city ops started T: 30,46,80   cities founded T: 33,49,82
+  book SETTLER HELD to T80: 2 (one at a time 1, unhappy 1)   built instead: Library 2   first: T040 Sukhothai size 3 next Library | T047 Sukhothai size 3 next Library
+  IDLE SETTLER turns: 2 (first T45)
+  settler timeline to T80: T20 settler (book) in Sukhothai | T30 op started | T33 FOUNDED | T45 BOUGHT in Sukhothai. Cost: 370 | T46 op started | T49 FOUNDED | T70 settler (AI) in Sukhothai | T71 settler (AI) in Sukhothai | T72 settler (AI) in Sukhothai | T73 settler (AI) in Sukhothai | T78 settler (AI) in Sukhothai | T80 op started
+  saving gold for a settler: 42 turns (T10-T80)

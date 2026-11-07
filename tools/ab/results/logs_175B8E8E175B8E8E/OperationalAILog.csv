@@ -1,0 +1,649 @@
+023, The_Shoshone, OP_FOUND_CITY, 1125, found target for settler, score 131489 (q50)
+023, The_Shoshone, OP_FOUND_CITY, 1125, Initial stage is recruiting
+023, The_Shoshone, OP_FOUND_CITY, 1125, Found 1 potential units to recruit for operation 1125 at (64:23) with target at (59:23)
+023, The_Shoshone, OP_FOUND_CITY, 1125, Added Warrior 1084 to slot 1 in army 1126. ETA at (64:23) is 0 
+023, The_Shoshone, OP_FOUND_CITY, 1125, Transition to gathering stage
+023, The_Shoshone, OP_FOUND_CITY, 1125, Transition to movement stage
+023, The_Shoshone, OP_FOUND_CITY, 1125, Started Army 1126; Units Recruited 2; Max Formation Size 2; Moving To Target
+023, The_Shoshone, OP_FOUND_CITY, 1125, PRE Moving To Target with Army 1126; center (64:23); target (59:23); Progress 0 percent
+023, The_Shoshone, OP_FOUND_CITY, 1125, POST Moving To Target with Army 1126; center (63:23); target (59:23); Progress 15 percent
+024, The_Shoshone, OP_FOUND_CITY, 1125, PRE Moving To Target with Army 1126; center (63:23); target (59:23); Progress 15 percent
+024, The_Shoshone, OP_FOUND_CITY, 1125, POST Moving To Target with Army 1126; center (62:23); target (59:23); Progress 29 percent
+025, The_Shoshone, OP_FOUND_CITY, 1125, PRE Moving To Target with Army 1126; center (62:23); target (59:23); Progress 29 percent
+025, The_Shoshone, OP_FOUND_CITY, 1125, POST Moving To Target with Army 1126; center (61:23); target (59:23); Progress 58 percent
+025, Denmark, OP_FOUND_CITY, 1133, found target for settler, score 100607 (q50)
+025, Denmark, OP_FOUND_CITY, 1133, Skip recruiting, start with movement stage
+025, Denmark, OP_FOUND_CITY, 1133, Found 0 potential units to recruit for operation 1133 at (29:19) with target at (30:14)
+025, Denmark, OP_FOUND_CITY, 1133, Started Army 1134; Units Recruited 1; Max Formation Size 2; Moving To Target
+025, Denmark, OP_FOUND_CITY, 1133, PRE Moving To Target with Army 1134; center (29:19); target (30:14); Progress 0 percent
+025, Denmark, OP_FOUND_CITY, 1133, POST Moving To Target with Army 1134; center (30:17); target (30:14); Progress 34 percent
+026, The_Shoshone, OP_FOUND_CITY, 1125, PRE Moving To Target with Army 1126; center (61:23); target (59:23); Progress 58 percent
+026, The_Shoshone, OP_FOUND_CITY, 1125, POST Moving To Target with Army 1126; center (60:23); target (59:23); Progress 100 percent
+026, Denmark, OP_FOUND_CITY, 1133, PRE Moving To Target with Army 1134; center (30:17); target (30:14); Progress 34 percent
+026, Denmark, OP_FOUND_CITY, 1133, cannot found city at (30:14)
+026, Denmark, OP_FOUND_CITY, 1133, no path to city site (30:14)
+026, Denmark, OP_FOUND_CITY, 1133, found better target for settler, old score 100607 (q50), new score 88058 (q50)
+026, Denmark, OP_FOUND_CITY, 1133, setting new target (29:15)
+026, Denmark, OP_FOUND_CITY, 1133, Transition to target stage
+026, Denmark, OP_FOUND_CITY, 1133, POST At Target
+027, The_Shoshone, OP_FOUND_CITY, 1125, PRE Moving To Target with Army 1126; center (60:23); target (59:23); Progress 100 percent
+027, The_Shoshone, OP_FOUND_CITY, 1125, Transition to target stage
+027, The_Shoshone, OP_FOUND_CITY, 1125, POST At Target
+027, Denmark, OP_FOUND_CITY, 1133, Ended: LostCivilian; Distance 5; Duration 2
+028, The_Shoshone, OP_FOUND_CITY, 1125, PRE At Target
+028, The_Shoshone, OP_FOUND_CITY, 1125, City founded (Te-Moak) at (59:23), plot value 103046, q50
+028, The_Shoshone, OP_FOUND_CITY, 1125, Transition to finished stage
+028, The_Shoshone, OP_FOUND_CITY, 1125, Ended: Success; Distance 7; Duration 5
+028, Arabia, OP_FOUND_CITY, 1146, found target for settler, score 79212 (q36)
+028, Arabia, OP_FOUND_CITY, 1146, Initial stage is recruiting
+028, Arabia, OP_FOUND_CITY, 1146, Found 1 potential units to recruit for operation 1146 at (34:33) with target at (30:32)
+028, Arabia, OP_FOUND_CITY, 1146, Added Warrior 1106 to slot 1 in army 1147. ETA at (34:33) is 0 
+028, Arabia, OP_FOUND_CITY, 1146, Transition to gathering stage
+028, Arabia, OP_FOUND_CITY, 1146, Transition to movement stage
+028, Arabia, OP_FOUND_CITY, 1146, Started Army 1147; Units Recruited 2; Max Formation Size 2; Moving To Target
+028, Arabia, OP_FOUND_CITY, 1146, PRE Moving To Target with Army 1147; center (34:33); target (30:32); Progress 0 percent
+028, Arabia, OP_FOUND_CITY, 1146, POST Moving To Target with Army 1147; center (33:32); target (30:32); Progress 34 percent
+028, England, OP_FOUND_CITY, 1149, found target for settler, score 112087 (q50)
+028, England, OP_FOUND_CITY, 1149, Skip recruiting, start with movement stage
+028, England, OP_FOUND_CITY, 1149, Found 1 potential units to recruit for operation 1149 at (60:40) with target at (57:37)
+028, England, OP_FOUND_CITY, 1149, Added Warrior 1107 to slot 1 in army 1150. ETA at (60:40) is 0 
+028, England, OP_FOUND_CITY, 1149, Started Army 1150; Units Recruited 2; Max Formation Size 2; Moving To Target
+028, England, OP_FOUND_CITY, 1149, PRE Moving To Target with Army 1150; center (60:40); target (57:37); Progress 0 percent
+028, England, OP_FOUND_CITY, 1149, POST Moving To Target with Army 1150; center (58:39); target (57:37); Progress 40 percent
+028, Poland, OP_FOUND_CITY, 1152, found target for settler, score 187933 (q50)
+028, Poland, OP_FOUND_CITY, 1152, Initial stage is recruiting
+028, Poland, OP_FOUND_CITY, 1152, Found 1 potential units to recruit for operation 1152 at (42:20) with target at (46:18)
+028, Poland, OP_FOUND_CITY, 1152, Added Warrior 1108 to slot 1 in army 1153. ETA at (42:20) is 0 
+028, Poland, OP_FOUND_CITY, 1152, Transition to gathering stage
+028, Poland, OP_FOUND_CITY, 1152, Transition to movement stage
+028, Poland, OP_FOUND_CITY, 1152, Started Army 1153; Units Recruited 2; Max Formation Size 2; Moving To Target
+028, Poland, OP_FOUND_CITY, 1152, PRE Moving To Target with Army 1153; center (42:20); target (46:18); Progress 0 percent
+028, Poland, OP_FOUND_CITY, 1152, POST Moving To Target with Army 1153; center (43:18); target (46:18); Progress 34 percent
+029, Arabia, OP_FOUND_CITY, 1146, PRE Moving To Target with Army 1147; center (33:32); target (30:32); Progress 34 percent
+029, Arabia, OP_FOUND_CITY, 1146, POST Moving To Target with Army 1147; center (31:32); target (30:32); Progress 100 percent
+029, England, OP_FOUND_CITY, 1149, PRE Moving To Target with Army 1150; center (58:39); target (57:37); Progress 40 percent
+029, England, OP_FOUND_CITY, 1149, Transition to target stage
+029, England, OP_FOUND_CITY, 1149, POST At Target
+029, Poland, OP_FOUND_CITY, 1152, PRE Moving To Target with Army 1153; center (43:18); target (46:18); Progress 34 percent
+029, Poland, OP_FOUND_CITY, 1152, POST Moving To Target with Army 1153; center (45:18); target (46:18); Progress 100 percent
+030, Siam, OP_FOUND_CITY, 1161, found target for settler, score 108239 (q50)
+030, Siam, OP_FOUND_CITY, 1161, Skip recruiting, start with movement stage
+030, Siam, OP_FOUND_CITY, 1161, Found 0 potential units to recruit for operation 1161 at (41:38) with target at (45:40)
+030, Siam, OP_FOUND_CITY, 1161, Started Army 1162; Units Recruited 1; Max Formation Size 2; Moving To Target
+030, Siam, OP_FOUND_CITY, 1161, PRE Moving To Target with Army 1162; center (41:38); target (45:40); Progress 0 percent
+030, Siam, OP_FOUND_CITY, 1161, POST Moving To Target with Army 1162; center (43:38); target (45:40); Progress 34 percent
+030, Babylon, OP_FOUND_CITY, 1164, found target for settler, score 125788 (q50)
+030, Babylon, OP_FOUND_CITY, 1164, Skip recruiting, start with movement stage
+030, Babylon, OP_FOUND_CITY, 1164, Found 1 potential units to recruit for operation 1164 at (52:22) with target at (47:22)
+030, Babylon, OP_FOUND_CITY, 1164, Added Warrior 1105 to slot 1 in army 1165. ETA at (52:22) is 0 
+030, Babylon, OP_FOUND_CITY, 1164, Started Army 1165; Units Recruited 2; Max Formation Size 2; Moving To Target
+030, Babylon, OP_FOUND_CITY, 1164, PRE Moving To Target with Army 1165; center (52:22); target (47:22); Progress 0 percent
+030, Babylon, OP_FOUND_CITY, 1164, POST Moving To Target with Army 1165; center (50:22); target (47:22); Progress 29 percent
+030, Arabia, OP_FOUND_CITY, 1146, PRE Moving To Target with Army 1147; center (31:32); target (30:32); Progress 100 percent
+030, Arabia, OP_FOUND_CITY, 1146, Transition to target stage
+030, Arabia, OP_FOUND_CITY, 1146, City founded (Medina) at (30:32), plot value 79212, q36
+030, Arabia, OP_FOUND_CITY, 1146, Transition to finished stage
+030, Arabia, OP_FOUND_CITY, 1146, POST Completed
+030, England, OP_FOUND_CITY, 1149, PRE At Target
+030, England, OP_FOUND_CITY, 1149, City founded (York) at (57:37), plot value 112325, q50
+030, England, OP_FOUND_CITY, 1149, Transition to finished stage
+030, England, OP_FOUND_CITY, 1149, Ended: Success; Distance 5; Duration 2
+030, Poland, OP_FOUND_CITY, 1152, PRE Moving To Target with Army 1153; center (45:18); target (46:18); Progress 100 percent
+030, Poland, OP_FOUND_CITY, 1152, Transition to target stage
+030, Poland, OP_FOUND_CITY, 1152, POST At Target
+031, Siam, OP_FOUND_CITY, 1161, PRE Moving To Target with Army 1162; center (43:38); target (45:40); Progress 34 percent
+031, Siam, OP_FOUND_CITY, 1161, POST Moving To Target with Army 1162; center (43:39); target (45:40); Progress 50 percent
+031, Babylon, OP_FOUND_CITY, 1164, PRE Moving To Target with Army 1165; center (50:22); target (47:22); Progress 29 percent
+031, Babylon, OP_FOUND_CITY, 1164, POST Moving To Target with Army 1165; center (49:22); target (47:22); Progress 43 percent
+031, Arabia, OP_FOUND_CITY, 1146, Ended: Success; Distance 6; Duration 3
+031, Poland, OP_FOUND_CITY, 1152, PRE At Target
+031, Poland, OP_FOUND_CITY, 1152, City founded (Krakow) at (46:18), plot value 187933, q50
+031, Poland, OP_FOUND_CITY, 1152, Transition to finished stage
+031, Poland, OP_FOUND_CITY, 1152, Ended: Success; Distance 6; Duration 3
+032, Siam, OP_FOUND_CITY, 1161, PRE Moving To Target with Army 1162; center (43:39); target (45:40); Progress 50 percent
+032, Siam, OP_FOUND_CITY, 1161, Transition to target stage
+032, Siam, OP_FOUND_CITY, 1161, POST At Target
+032, Babylon, OP_FOUND_CITY, 1164, found better target for settler, old score 79123 (q35), new score 90733 (q50)
+032, Babylon, OP_FOUND_CITY, 1164, setting new target (48:24)
+032, Babylon, OP_FOUND_CITY, 1164, PRE Moving To Target with Army 1165; center (49:22); target (48:24); Progress 50 percent
+032, Babylon, OP_FOUND_CITY, 1164, POST Moving To Target with Army 1165; center (49:23); target (48:24); Progress 50 percent
+033, Siam, OP_FOUND_CITY, 1161, PRE At Target
+033, Siam, OP_FOUND_CITY, 1161, City founded (Si Satchanalai) at (45:40), plot value 108239, q50
+033, Siam, OP_FOUND_CITY, 1161, Transition to finished stage
+033, Siam, OP_FOUND_CITY, 1161, Ended: Success; Distance 6; Duration 3
+033, Babylon, OP_FOUND_CITY, 1164, PRE Moving To Target with Army 1165; center (49:23); target (48:24); Progress 50 percent
+033, Babylon, OP_FOUND_CITY, 1164, POST Moving To Target with Army 1165; center (49:24); target (48:24); Progress 100 percent
+033, Rome, OP_FOUND_CITY, 1181, found target for settler, score 135286 (q50)
+033, Rome, OP_FOUND_CITY, 1181, Initial stage is recruiting
+033, Rome, OP_FOUND_CITY, 1181, Found 0 potential units to recruit for operation 1181 at (49:36) with target at (47:32)
+033, Rome, OP_FOUND_CITY, 1181, Started Army 1182; Units Recruited 1; Max Formation Size 2; Recruiting Units
+033, Rome, OP_FOUND_CITY, 1181, PRE Recruiting Units for army 1182; Settler 1180 at (49:36) - ETA -1; Open; 
+033, Rome, OP_FOUND_CITY, 1181, Found 0 potential units to recruit for operation 1181 at (49:36) with target at (47:32)
+033, Rome, OP_FOUND_CITY, 1181, POST Recruiting Units for army 1182; Settler 1180 at (49:36) - ETA 0; Open; 
+034, Babylon, OP_FOUND_CITY, 1164, PRE Moving To Target with Army 1165; center (49:24); target (48:24); Progress 100 percent
+034, Babylon, OP_FOUND_CITY, 1164, Transition to target stage
+034, Babylon, OP_FOUND_CITY, 1164, POST At Target
+034, The_Shoshone, OP_RAPID_RESPONSE, 1190, Initial stage is recruiting
+034, The_Shoshone, OP_RAPID_RESPONSE, 1190, Found 1 potential units to recruit for operation 1190 at (64:23) with target at (64:23)
+034, The_Shoshone, OP_RAPID_RESPONSE, 1190, Added Warrior 1084 to slot 0 in army 1191. ETA at (64:23) is 1 
+034, The_Shoshone, OP_RAPID_RESPONSE, 1190, Started Army 1191; Units Recruited 1; Max Formation Size 4; Recruiting Units
+034, The_Shoshone, OP_RAPID_RESPONSE, 1190, PRE Recruiting Units for army 1191; Warrior 1084 at (59:23) - ETA 1; Open; Open; Open; 
+034, The_Shoshone, OP_RAPID_RESPONSE, 1190, Found 0 potential units to recruit for operation 1190 at (64:23) with target at (64:23)
+034, The_Shoshone, OP_RAPID_RESPONSE, 1190, POST Recruiting Units for army 1191; Warrior 1084 at (59:23) - ETA 1; Open; Open; Open; 
+034, Rome, OP_FOUND_CITY, 1181, PRE Recruiting Units for army 1182; Settler 1180 at (49:36) - ETA 0; Open; 
+034, Rome, OP_FOUND_CITY, 1181, Found 0 potential units to recruit for operation 1181 at (49:36) with target at (47:32)
+034, Rome, OP_FOUND_CITY, 1181, POST Recruiting Units for army 1182; Settler 1180 at (49:36) - ETA 0; Open; 
+035, Babylon, OP_FOUND_CITY, 1164, PRE At Target
+035, Babylon, OP_FOUND_CITY, 1164, City founded (Akkad) at (48:24), plot value 90733, q50
+035, Babylon, OP_FOUND_CITY, 1164, Transition to finished stage
+035, Babylon, OP_FOUND_CITY, 1164, Ended: Success; Distance 6; Duration 5
+035, The_Shoshone, OP_RAPID_RESPONSE, 1190, Ended: NoTarget; Distance 1; Duration 1
+035, Rome, OP_FOUND_CITY, 1181, PRE Recruiting Units for army 1182; Settler 1180 at (49:36) - ETA 0; Open; 
+035, Rome, OP_FOUND_CITY, 1181, Found 0 potential units to recruit for operation 1181 at (49:36) with target at (47:32)
+035, Rome, OP_FOUND_CITY, 1181, POST Recruiting Units for army 1182; Settler 1180 at (49:36) - ETA 0; Open; 
+036, Rome, OP_FOUND_CITY, 1181, cannot found city at (47:32)
+036, Rome, OP_FOUND_CITY, 1181, no path to city site (47:32)
+036, Rome, OP_FOUND_CITY, 1181, found better target for settler, old score 135286 (q50), new score 131222 (q50)
+036, Rome, OP_FOUND_CITY, 1181, setting new target (46:31)
+036, Rome, OP_FOUND_CITY, 1181, PRE Recruiting Units for army 1182; Settler 1180 at (49:36) - ETA 0; Open; 
+036, Rome, OP_FOUND_CITY, 1181, Found 0 potential units to recruit for operation 1181 at (49:36) with target at (46:31)
+036, Rome, OP_FOUND_CITY, 1181, POST Recruiting Units for army 1182; Settler 1180 at (49:36) - ETA 0; Open; 
+037, Rome, OP_FOUND_CITY, 1181, PRE Recruiting Units for army 1182; Settler 1180 at (49:36) - ETA 0; Open; 
+037, Rome, OP_FOUND_CITY, 1181, Found 1 potential units to recruit for operation 1181 at (49:36) with target at (46:31)
+037, Rome, OP_FOUND_CITY, 1181, Added Warrior 1118 to slot 1 in army 1182. ETA at (49:36) is 0 
+037, Rome, OP_FOUND_CITY, 1181, Transition to gathering stage
+037, Rome, OP_FOUND_CITY, 1181, POST Gathering Forces for army 1182; center (47:37); variance (0.25:2.25); free slots 0
+038, Denmark, OP_FOUND_CITY, 1215, found target for settler, score 92426 (q50)
+038, Denmark, OP_FOUND_CITY, 1215, Initial stage is recruiting
+038, Denmark, OP_FOUND_CITY, 1215, Found 0 potential units to recruit for operation 1215 at (29:19) with target at (26:23)
+038, Denmark, OP_FOUND_CITY, 1215, Started Army 1216; Units Recruited 1; Max Formation Size 2; Recruiting Units
+038, Denmark, OP_FOUND_CITY, 1215, PRE Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA -1; Open; 
+038, Denmark, OP_FOUND_CITY, 1215, Found 0 potential units to recruit for operation 1215 at (29:19) with target at (26:23)
+038, Denmark, OP_FOUND_CITY, 1215, POST Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+038, Rome, OP_FOUND_CITY, 1181, PRE Gathering Forces for army 1182; center (47:37); variance (0.25:2.25); free slots 0
+038, Rome, OP_FOUND_CITY, 1181, Transition to movement stage
+038, Rome, OP_FOUND_CITY, 1181, POST Moving To Target with Army 1182; center (48:35); target (46:31); Progress 29 percent
+039, Denmark, OP_FOUND_CITY, 1215, PRE Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+039, Denmark, OP_FOUND_CITY, 1215, Found 0 potential units to recruit for operation 1215 at (29:19) with target at (26:23)
+039, Denmark, OP_FOUND_CITY, 1215, POST Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+039, Rome, OP_FOUND_CITY, 1181, cannot found city at (46:31)
+039, Rome, OP_FOUND_CITY, 1181, found no suitable target in area 4
+039, Rome, OP_FOUND_CITY, 1181, Ended: LostCivilian; Distance 7; Duration 6
+040, The_Shoshone, OP_RAPID_RESPONSE, 1229, Initial stage is recruiting
+040, The_Shoshone, OP_RAPID_RESPONSE, 1229, Found 1 potential units to recruit for operation 1229 at (64:23) with target at (64:23)
+040, The_Shoshone, OP_RAPID_RESPONSE, 1229, Added Warrior 1084 to slot 0 in army 1230. ETA at (64:23) is 1 
+040, The_Shoshone, OP_RAPID_RESPONSE, 1229, Started Army 1230; Units Recruited 1; Max Formation Size 4; Recruiting Units
+040, The_Shoshone, OP_RAPID_RESPONSE, 1229, PRE Recruiting Units for army 1230; Warrior 1084 at (59:23) - ETA 1; Open; Open; Open; 
+040, The_Shoshone, OP_RAPID_RESPONSE, 1229, Found 0 potential units to recruit for operation 1229 at (64:23) with target at (64:23)
+040, The_Shoshone, OP_RAPID_RESPONSE, 1229, POST Recruiting Units for army 1230; Warrior 1084 at (60:22) - ETA 1; Open; Open; Open; 
+040, Denmark, OP_FOUND_CITY, 1215, PRE Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+040, Denmark, OP_FOUND_CITY, 1215, Found 0 potential units to recruit for operation 1215 at (29:19) with target at (26:23)
+040, Denmark, OP_FOUND_CITY, 1215, POST Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+041, The_Shoshone, OP_RAPID_RESPONSE, 1229, Ended: NoTarget; Distance 1; Duration 1
+041, Denmark, OP_FOUND_CITY, 1215, PRE Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+041, Denmark, OP_FOUND_CITY, 1215, Found 0 potential units to recruit for operation 1215 at (29:19) with target at (26:23)
+041, Denmark, OP_FOUND_CITY, 1215, POST Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+042, Denmark, OP_FOUND_CITY, 1215, PRE Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+042, Denmark, OP_FOUND_CITY, 1215, Found 0 potential units to recruit for operation 1215 at (29:19) with target at (26:23)
+042, Denmark, OP_FOUND_CITY, 1215, POST Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+042, Poland, OP_FOUND_CITY, 1250, found target for settler, score 116861 (q50)
+042, Poland, OP_FOUND_CITY, 1250, Initial stage is recruiting
+042, Poland, OP_FOUND_CITY, 1250, Found 0 potential units to recruit for operation 1250 at (42:20) with target at (46:14)
+042, Poland, OP_FOUND_CITY, 1250, Started Army 1251; Units Recruited 1; Max Formation Size 2; Recruiting Units
+042, Poland, OP_FOUND_CITY, 1250, PRE Recruiting Units for army 1251; Settler 1249 at (42:20) - ETA -1; Open; 
+042, Poland, OP_FOUND_CITY, 1250, Found 0 potential units to recruit for operation 1250 at (42:20) with target at (46:14)
+042, Poland, OP_FOUND_CITY, 1250, POST Recruiting Units for army 1251; Settler 1249 at (42:20) - ETA 0; Open; 
+043, Denmark, OP_FOUND_CITY, 1215, PRE Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+043, Denmark, OP_FOUND_CITY, 1215, Found 0 potential units to recruit for operation 1215 at (29:19) with target at (26:23)
+043, Denmark, OP_FOUND_CITY, 1215, POST Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+043, Poland, OP_FOUND_CITY, 1250, Added Warrior 1259 to slot 1 in army 1251. ETA at (42:20) is 0 
+043, Poland, OP_FOUND_CITY, 1250, Transition to gathering stage
+043, Poland, OP_FOUND_CITY, 1250, PRE Gathering Forces for army 1251; center (42:20); variance (0.00:0.00); free slots 0
+043, Poland, OP_FOUND_CITY, 1250, Transition to movement stage
+043, Poland, OP_FOUND_CITY, 1250, POST Moving To Target with Army 1251; center (43:18); target (46:14); Progress 0 percent
+044, Denmark, OP_FOUND_CITY, 1215, PRE Recruiting Units for army 1216; Settler 1214 at (29:19) - ETA 0; Open; 
+044, Denmark, OP_FOUND_CITY, 1215, Found 0 potential units to recruit for operation 1215 at (29:19) with target at (26:23)
+044, Denmark, OP_FOUND_CITY, 1215, No escort yet and the trip looks safe, going alone
+044, Denmark, OP_FOUND_CITY, 1215, Transition to gathering stage
+044, Denmark, OP_FOUND_CITY, 1215, Transition to movement stage
+044, Denmark, OP_FOUND_CITY, 1215, POST Moving To Target with Army 1216; center (29:19); target (26:23); Progress 0 percent
+044, Poland, OP_FOUND_CITY, 1250, PRE Moving To Target with Army 1251; center (43:18); target (46:14); Progress 0 percent
+044, Poland, OP_FOUND_CITY, 1250, POST Moving To Target with Army 1251; center (43:18); target (46:14); Progress 0 percent
+045, Denmark, OP_FOUND_CITY, 1215, PRE Moving To Target with Army 1216; center (29:19); target (26:23); Progress 0 percent
+045, Denmark, OP_FOUND_CITY, 1215, POST Moving To Target with Army 1216; center (29:20); target (26:23); Progress 17 percent
+045, Poland, OP_FOUND_CITY, 1250, PRE Moving To Target with Army 1251; center (43:18); target (46:14); Progress 0 percent
+045, Poland, OP_FOUND_CITY, 1250, POST Moving To Target with Army 1251; center (44:16); target (46:14); Progress 34 percent
+046, Siam, OP_FOUND_CITY, 1277, found target for settler, score 79721 (q36)
+046, Siam, OP_FOUND_CITY, 1277, Initial stage is recruiting
+046, Siam, OP_FOUND_CITY, 1277, Found 1 potential units to recruit for operation 1277 at (41:38) with target at (38:42)
+046, Siam, OP_FOUND_CITY, 1277, Added Warrior 1115 to slot 1 in army 1278. ETA at (41:38) is 0 
+046, Siam, OP_FOUND_CITY, 1277, Transition to gathering stage
+046, Siam, OP_FOUND_CITY, 1277, Transition to movement stage
+046, Siam, OP_FOUND_CITY, 1277, Started Army 1278; Units Recruited 2; Max Formation Size 2; Moving To Target
+046, Siam, OP_FOUND_CITY, 1277, PRE Moving To Target with Army 1278; center (41:38); target (38:42); Progress 0 percent
+046, Siam, OP_FOUND_CITY, 1277, POST Moving To Target with Army 1278; center (40:39); target (38:42); Progress 17 percent
+046, Denmark, OP_FOUND_CITY, 1215, PRE Moving To Target with Army 1216; center (29:20); target (26:23); Progress 17 percent
+046, Denmark, OP_FOUND_CITY, 1215, POST Moving To Target with Army 1216; center (28:22); target (26:23); Progress 50 percent
+046, Poland, OP_FOUND_CITY, 1250, PRE Moving To Target with Army 1251; center (44:16); target (46:14); Progress 34 percent
+046, Poland, OP_FOUND_CITY, 1250, POST Moving To Target with Army 1251; center (45:15); target (46:14); Progress 100 percent
+047, Siam, OP_FOUND_CITY, 1277, PRE Moving To Target with Army 1278; center (40:39); target (38:42); Progress 17 percent
+047, Siam, OP_FOUND_CITY, 1277, POST Moving To Target with Army 1278; center (39:41); target (38:42); Progress 50 percent
+047, The_Shoshone, OP_FOUND_CITY, 1284, found target for settler, score 115757 (q50)
+047, The_Shoshone, OP_FOUND_CITY, 1284, Initial stage is recruiting
+047, The_Shoshone, OP_FOUND_CITY, 1284, Found 0 potential units to recruit for operation 1284 at (64:23) with target at (56:22)
+047, The_Shoshone, OP_FOUND_CITY, 1284, Started Army 1285; Units Recruited 1; Max Formation Size 2; Recruiting Units
+047, The_Shoshone, OP_FOUND_CITY, 1284, PRE Recruiting Units for army 1285; Settler 1283 at (64:23) - ETA -1; Open; 
+047, The_Shoshone, OP_FOUND_CITY, 1284, Found 0 potential units to recruit for operation 1284 at (64:23) with target at (56:22)
+047, The_Shoshone, OP_FOUND_CITY, 1284, POST Recruiting Units for army 1285; Settler 1283 at (64:23) - ETA 0; Open; 
+047, Denmark, OP_FOUND_CITY, 1215, PRE Moving To Target with Army 1216; center (28:22); target (26:23); Progress 50 percent
+047, Denmark, OP_FOUND_CITY, 1215, Transition to target stage
+047, Denmark, OP_FOUND_CITY, 1215, POST At Target
+047, Poland, OP_FOUND_CITY, 1250, PRE Moving To Target with Army 1251; center (45:15); target (46:14); Progress 100 percent
+047, Poland, OP_FOUND_CITY, 1250, Transition to target stage
+047, Poland, OP_FOUND_CITY, 1250, City founded (Lodz) at (46:14), plot value 116861, q50
+047, Poland, OP_FOUND_CITY, 1250, Transition to finished stage
+047, Poland, OP_FOUND_CITY, 1250, POST Completed
+048, Siam, OP_FOUND_CITY, 1277, PRE Moving To Target with Army 1278; center (39:41); target (38:42); Progress 50 percent
+048, Siam, OP_FOUND_CITY, 1277, Transition to target stage
+048, Siam, OP_FOUND_CITY, 1277, POST At Target
+048, The_Shoshone, OP_FOUND_CITY, 1284, PRE Recruiting Units for army 1285; Settler 1283 at (64:23) - ETA 0; Open; 
+048, The_Shoshone, OP_FOUND_CITY, 1284, Found 0 potential units to recruit for operation 1284 at (64:23) with target at (56:22)
+048, The_Shoshone, OP_FOUND_CITY, 1284, POST Recruiting Units for army 1285; Settler 1283 at (64:23) - ETA 0; Open; 
+048, Denmark, OP_FOUND_CITY, 1215, PRE At Target
+048, Denmark, OP_FOUND_CITY, 1215, City founded (Aarhus) at (26:23), plot value 92426, q50
+048, Denmark, OP_FOUND_CITY, 1215, Transition to finished stage
+048, Denmark, OP_FOUND_CITY, 1215, Ended: Success; Distance 6; Duration 10
+048, Poland, OP_FOUND_CITY, 1250, Ended: Success; Distance 6; Duration 6
+049, Siam, OP_FOUND_CITY, 1277, PRE At Target
+049, Siam, OP_FOUND_CITY, 1277, City founded (Muang Saluang) at (38:42), plot value 82096, q41
+049, Siam, OP_FOUND_CITY, 1277, Transition to finished stage
+049, Siam, OP_FOUND_CITY, 1277, Ended: Success; Distance 6; Duration 3
+049, The_Shoshone, OP_FOUND_CITY, 1284, PRE Recruiting Units for army 1285; Settler 1283 at (64:23) - ETA 0; Open; 
+049, The_Shoshone, OP_FOUND_CITY, 1284, Found 0 potential units to recruit for operation 1284 at (64:23) with target at (56:22)
+049, The_Shoshone, OP_FOUND_CITY, 1284, POST Recruiting Units for army 1285; Settler 1283 at (64:23) - ETA 0; Open; 
+050, The_Shoshone, OP_FOUND_CITY, 1284, PRE Recruiting Units for army 1285; Settler 1283 at (64:23) - ETA 0; Open; 
+050, The_Shoshone, OP_FOUND_CITY, 1284, Found 1 potential units to recruit for operation 1284 at (64:23) with target at (56:22)
+050, The_Shoshone, OP_FOUND_CITY, 1284, Added Warrior 1074 to slot 1 in army 1285. ETA at (64:23) is 0 
+050, The_Shoshone, OP_FOUND_CITY, 1284, Transition to gathering stage
+050, The_Shoshone, OP_FOUND_CITY, 1284, POST Gathering Forces for army 1285; center (64:23); variance (0.00:0.00); free slots 0
+050, Rome, OP_FOUND_CITY, 1306, found target for settler, score 135286 (q50)
+050, Rome, OP_FOUND_CITY, 1306, Initial stage is recruiting
+050, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+050, Rome, OP_FOUND_CITY, 1306, Started Army 1307; Units Recruited 1; Max Formation Size 2; Recruiting Units
+050, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA -1; Open; 
+050, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+050, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+051, The_Shoshone, OP_FOUND_CITY, 1284, PRE Gathering Forces for army 1285; center (64:23); variance (0.00:0.00); free slots 0
+051, The_Shoshone, OP_FOUND_CITY, 1284, Transition to movement stage
+051, The_Shoshone, OP_FOUND_CITY, 1284, POST Moving To Target with Army 1285; center (63:23); target (56:22); Progress 0 percent
+051, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+051, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+051, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+052, The_Shoshone, OP_FOUND_CITY, 1284, PRE Moving To Target with Army 1285; center (63:23); target (56:22); Progress 0 percent
+052, The_Shoshone, OP_FOUND_CITY, 1284, POST Moving To Target with Army 1285; center (63:22); target (56:22); Progress 10 percent
+052, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+052, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+052, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+053, The_Shoshone, OP_FOUND_CITY, 1284, PRE Moving To Target with Army 1285; center (63:22); target (56:22); Progress 10 percent
+053, The_Shoshone, OP_FOUND_CITY, 1284, POST Moving To Target with Army 1285; center (61:22); target (56:22); Progress 30 percent
+053, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+053, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+053, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+054, The_Shoshone, OP_FOUND_CITY, 1284, PRE Moving To Target with Army 1285; center (61:22); target (56:22); Progress 30 percent
+054, The_Shoshone, OP_FOUND_CITY, 1284, POST Moving To Target with Army 1285; center (59:22); target (56:22); Progress 60 percent
+054, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+054, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+054, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+055, The_Shoshone, OP_FOUND_CITY, 1284, PRE Moving To Target with Army 1285; center (59:22); target (56:22); Progress 60 percent
+055, The_Shoshone, OP_FOUND_CITY, 1284, POST Moving To Target with Army 1285; center (58:22); target (56:22); Progress 70 percent
+055, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+055, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+055, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+056, The_Shoshone, OP_FOUND_CITY, 1284, PRE Moving To Target with Army 1285; center (58:22); target (56:22); Progress 70 percent
+056, The_Shoshone, OP_FOUND_CITY, 1284, Transition to target stage
+056, The_Shoshone, OP_FOUND_CITY, 1284, POST At Target
+056, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+056, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+056, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+057, The_Shoshone, OP_FOUND_CITY, 1284, PRE At Target
+057, The_Shoshone, OP_FOUND_CITY, 1284, City founded (Agaidika) at (56:22), plot value 119188, q50
+057, The_Shoshone, OP_FOUND_CITY, 1284, Transition to finished stage
+057, The_Shoshone, OP_FOUND_CITY, 1284, Ended: Success; Distance 10; Duration 10
+057, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+057, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+057, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+058, Arabia, OP_RAPID_RESPONSE, 1370, Initial stage is recruiting
+058, Arabia, OP_RAPID_RESPONSE, 1370, Found 1 potential units to recruit for operation 1370 at (34:33) with target at (34:33)
+058, Arabia, OP_RAPID_RESPONSE, 1370, Added Warrior 1106 to slot 0 in army 1371. ETA at (34:33) is 1 
+058, Arabia, OP_RAPID_RESPONSE, 1370, Started Army 1371; Units Recruited 1; Max Formation Size 4; Recruiting Units
+058, Arabia, OP_RAPID_RESPONSE, 1370, PRE Recruiting Units for army 1371; Warrior 1106 at (30:32) - ETA 1; Open; Open; Open; 
+058, Arabia, OP_RAPID_RESPONSE, 1370, Found 0 potential units to recruit for operation 1370 at (34:33) with target at (34:33)
+058, Arabia, OP_RAPID_RESPONSE, 1370, POST Recruiting Units for army 1371; Warrior 1106 at (31:32) - ETA 1; Open; Open; Open; 
+058, Denmark, OP_FOUND_CITY, 1376, found target for settler, score 87404 (q50)
+058, Denmark, OP_FOUND_CITY, 1376, Initial stage is recruiting
+058, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+058, Denmark, OP_FOUND_CITY, 1376, Started Army 1377; Units Recruited 1; Max Formation Size 2; Recruiting Units
+058, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA -1; Open; 
+058, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+058, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+058, Rome, OP_FOUND_CITY, 1306, cannot found city at (47:32)
+058, Rome, OP_FOUND_CITY, 1306, no path to city site (47:32)
+058, Rome, OP_FOUND_CITY, 1306, found better target for settler, old score 135286 (q50), new score 134246 (q50)
+058, Rome, OP_FOUND_CITY, 1306, setting new target (46:31)
+058, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+058, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (46:31)
+058, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+059, Babylon, OP_FOUND_CITY, 1381, found target for settler, score 84915 (q45)
+059, Babylon, OP_FOUND_CITY, 1381, Initial stage is recruiting
+059, Babylon, OP_FOUND_CITY, 1381, Found 1 potential units to recruit for operation 1381 at (52:22) with target at (51:17)
+059, Babylon, OP_FOUND_CITY, 1381, Added Warrior 1105 to slot 1 in army 1382. ETA at (52:22) is 0 
+059, Babylon, OP_FOUND_CITY, 1381, Transition to gathering stage
+059, Babylon, OP_FOUND_CITY, 1381, Transition to movement stage
+059, Babylon, OP_FOUND_CITY, 1381, Started Army 1382; Units Recruited 2; Max Formation Size 2; Moving To Target
+059, Babylon, OP_FOUND_CITY, 1381, PRE Moving To Target with Army 1382; center (52:22); target (51:17); Progress 0 percent
+059, Babylon, OP_FOUND_CITY, 1381, POST Moving To Target with Army 1382; center (52:21); target (51:17); Progress 17 percent
+059, Arabia, OP_RAPID_RESPONSE, 1370, PRE Recruiting Units for army 1371; Warrior 1106 at (31:32) - ETA 1; Open; Open; Open; 
+059, Arabia, OP_RAPID_RESPONSE, 1370, Found 0 potential units to recruit for operation 1370 at (34:33) with target at (34:33)
+059, Arabia, OP_RAPID_RESPONSE, 1370, POST Recruiting Units for army 1371; Warrior 1106 at (32:32) - ETA 0; Open; Open; Open; 
+059, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+059, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+059, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+059, Rome, OP_FOUND_CITY, 1306, found better target for settler, old score 133521 (q50), new score 133458 (q50)
+059, Rome, OP_FOUND_CITY, 1306, setting new target (47:32)
+059, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+059, Rome, OP_FOUND_CITY, 1306, Found 0 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+059, Rome, OP_FOUND_CITY, 1306, POST Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+060, Babylon, OP_FOUND_CITY, 1381, PRE Moving To Target with Army 1382; center (52:21); target (51:17); Progress 17 percent
+060, Babylon, OP_FOUND_CITY, 1381, POST Moving To Target with Army 1382; center (52:19); target (51:17); Progress 50 percent
+060, Arabia, OP_RAPID_RESPONSE, 1370, PRE Recruiting Units for army 1371; Warrior 1106 at (32:32) - ETA 0; Open; Open; Open; 
+060, Arabia, OP_RAPID_RESPONSE, 1370, Found 0 potential units to recruit for operation 1370 at (34:33) with target at (34:33)
+060, Arabia, OP_RAPID_RESPONSE, 1370, POST Recruiting Units for army 1371; Warrior 1106 at (33:32) - ETA 0; Open; Open; Open; 
+060, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+060, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+060, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+060, Rome, OP_FOUND_CITY, 1306, PRE Recruiting Units for army 1307; Settler 1305 at (49:36) - ETA 0; Open; 
+060, Rome, OP_FOUND_CITY, 1306, Found 1 potential units to recruit for operation 1306 at (49:36) with target at (47:32)
+060, Rome, OP_FOUND_CITY, 1306, Added Warrior 1014 to slot 1 in army 1307. ETA at (49:36) is 0 
+060, Rome, OP_FOUND_CITY, 1306, Transition to gathering stage
+060, Rome, OP_FOUND_CITY, 1306, POST Gathering Forces for army 1307; center (48:34); variance (0.00:0.00); free slots 0
+061, Babylon, OP_FOUND_CITY, 1381, PRE Moving To Target with Army 1382; center (52:19); target (51:17); Progress 50 percent
+061, Babylon, OP_FOUND_CITY, 1381, POST Moving To Target with Army 1382; center (52:18); target (51:17); Progress 100 percent
+061, Arabia, OP_RAPID_RESPONSE, 1370, PRE Recruiting Units for army 1371; Warrior 1106 at (33:32) - ETA 0; Open; Open; Open; 
+061, Arabia, OP_RAPID_RESPONSE, 1370, Found 0 potential units to recruit for operation 1370 at (34:33) with target at (34:33)
+061, Arabia, OP_RAPID_RESPONSE, 1370, POST Recruiting Units for army 1371; Warrior 1106 at (34:34) - ETA 0; Open; Open; Open; 
+061, England, OP_FOUND_CITY, 1397, found target for settler, score 96741 (q50)
+061, England, OP_FOUND_CITY, 1397, Initial stage is recruiting
+061, England, OP_FOUND_CITY, 1397, Found 1 potential units to recruit for operation 1397 at (60:40) with target at (54:41)
+061, England, OP_FOUND_CITY, 1397, Added Warrior 1010 to slot 1 in army 1398. ETA at (60:40) is 0 
+061, England, OP_FOUND_CITY, 1397, Transition to gathering stage
+061, England, OP_FOUND_CITY, 1397, Transition to movement stage
+061, England, OP_FOUND_CITY, 1397, Started Army 1398; Units Recruited 2; Max Formation Size 2; Moving To Target
+061, England, OP_FOUND_CITY, 1397, PRE Moving To Target with Army 1398; center (60:40); target (54:41); Progress 0 percent
+061, England, OP_FOUND_CITY, 1397, POST Moving To Target with Army 1398; center (58:40); target (54:41); Progress 29 percent
+061, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+061, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+061, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+061, Rome, OP_FOUND_CITY, 1306, PRE Gathering Forces for army 1307; center (48:34); variance (0.00:0.00); free slots 0
+061, Rome, OP_FOUND_CITY, 1306, Transition to movement stage
+061, Rome, OP_FOUND_CITY, 1306, POST Moving To Target with Army 1307; center (47:33); target (47:32); Progress 100 percent
+062, Babylon, OP_FOUND_CITY, 1381, PRE Moving To Target with Army 1382; center (52:18); target (51:17); Progress 100 percent
+062, Babylon, OP_FOUND_CITY, 1381, Transition to target stage
+062, Babylon, OP_FOUND_CITY, 1381, City founded (Dur-Kurigalzu) at (51:17), plot value 85603, q47
+062, Babylon, OP_FOUND_CITY, 1381, Transition to finished stage
+062, Babylon, OP_FOUND_CITY, 1381, POST Completed
+062, Arabia, OP_RAPID_RESPONSE, 1370, Ended: NoTarget; Distance 1; Duration 4
+062, England, OP_FOUND_CITY, 1397, PRE Moving To Target with Army 1398; center (58:40); target (54:41); Progress 29 percent
+062, England, OP_FOUND_CITY, 1397, POST Moving To Target with Army 1398; center (56:41); target (54:41); Progress 58 percent
+062, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+062, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+062, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+062, Rome, OP_FOUND_CITY, 1306, PRE Moving To Target with Army 1307; center (47:33); target (47:32); Progress 100 percent
+062, Rome, OP_FOUND_CITY, 1306, Transition to target stage
+062, Rome, OP_FOUND_CITY, 1306, City founded (Antium) at (47:32), plot value 133458, q50
+062, Rome, OP_FOUND_CITY, 1306, Transition to finished stage
+062, Rome, OP_FOUND_CITY, 1306, POST Completed
+063, Babylon, OP_FOUND_CITY, 1381, Ended: Success; Distance 6; Duration 4
+063, England, OP_FOUND_CITY, 1397, PRE Moving To Target with Army 1398; center (56:41); target (54:41); Progress 58 percent
+063, England, OP_FOUND_CITY, 1397, Transition to target stage
+063, England, OP_FOUND_CITY, 1397, POST At Target
+063, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+063, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+063, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+063, Rome, OP_FOUND_CITY, 1306, Ended: Success; Distance 2; Duration 13
+064, England, OP_FOUND_CITY, 1397, PRE At Target
+064, England, OP_FOUND_CITY, 1397, City founded (Nottingham) at (54:41), plot value 96741, q50
+064, England, OP_FOUND_CITY, 1397, Transition to finished stage
+064, England, OP_FOUND_CITY, 1397, Ended: Success; Distance 7; Duration 3
+064, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+064, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+064, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+065, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+065, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+065, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+066, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+066, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+066, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+066, Rome, OP_FOUND_CITY, 1441, found target for settler, score 66467 (q14)
+066, Rome, OP_FOUND_CITY, 1441, Skip recruiting, start with movement stage
+066, Rome, OP_FOUND_CITY, 1441, Found 0 potential units to recruit for operation 1441 at (48:30) with target at (44:29)
+066, Rome, OP_FOUND_CITY, 1441, Started Army 1442; Units Recruited 1; Max Formation Size 2; Moving To Target
+066, Rome, OP_FOUND_CITY, 1441, PRE Moving To Target with Army 1442; center (48:30); target (44:29); Progress 0 percent
+066, Rome, OP_FOUND_CITY, 1441, POST Moving To Target with Army 1442; center (46:29); target (44:29); Progress 40 percent
+067, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+067, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (33:22)
+067, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+067, Rome, OP_FOUND_CITY, 1441, PRE Moving To Target with Army 1442; center (46:29); target (44:29); Progress 40 percent
+067, Rome, OP_FOUND_CITY, 1441, POST Moving To Target with Army 1442; center (45:29); target (44:29); Progress 100 percent
+068, Denmark, OP_FOUND_CITY, 1376, found better target for settler, old score 73297 (q25), new score 79697 (q36)
+068, Denmark, OP_FOUND_CITY, 1376, setting new target (29:15)
+068, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+068, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (29:15)
+068, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+068, Rome, OP_FOUND_CITY, 1441, PRE Moving To Target with Army 1442; center (45:29); target (44:29); Progress 100 percent
+068, Rome, OP_FOUND_CITY, 1441, Transition to target stage
+068, Rome, OP_FOUND_CITY, 1441, POST At Target
+069, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+069, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (29:15)
+069, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+069, Rome, OP_FOUND_CITY, 1441, PRE At Target
+069, Rome, OP_FOUND_CITY, 1441, City founded (Cumae) at (44:29), plot value 88823, q50
+069, Rome, OP_FOUND_CITY, 1441, Transition to finished stage
+069, Rome, OP_FOUND_CITY, 1441, Ended: Success; Distance 5; Duration 3
+070, Babylon, OP_FOUND_CITY, 1487, Ended: NoTarget; Distance -1; Duration 71
+070, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+070, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (29:15)
+070, Denmark, OP_FOUND_CITY, 1376, POST Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+070, Rome, OP_FOUND_CITY, 1492, found target for settler, score 61429 (q5)
+070, Rome, OP_FOUND_CITY, 1492, Skip recruiting, start with movement stage
+070, Rome, OP_FOUND_CITY, 1492, Found 2 potential units to recruit for operation 1492 at (49:36) with target at (53:36)
+070, Rome, OP_FOUND_CITY, 1492, Added Spearman 1462 to slot 1 in army 1493. ETA at (49:36) is 0 
+070, Rome, OP_FOUND_CITY, 1492, Started Army 1493; Units Recruited 2; Max Formation Size 2; Moving To Target
+070, Rome, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (49:36); target (53:36); Progress 0 percent
+070, Rome, OP_FOUND_CITY, 1492, POST Moving To Target with Army 1493; center (49:34); target (53:36); Progress -20 percent
+071, Babylon, OP_FOUND_CITY, 1544, Ended: NoTarget; Distance -1; Duration 72
+071, Denmark, OP_FOUND_CITY, 1376, PRE Recruiting Units for army 1377; Settler 1375 at (29:19) - ETA 0; Open; 
+071, Denmark, OP_FOUND_CITY, 1376, Found 0 potential units to recruit for operation 1376 at (29:19) with target at (29:15)
+071, Denmark, OP_FOUND_CITY, 1376, No escort yet and the trip looks safe, going alone
+071, Denmark, OP_FOUND_CITY, 1376, Transition to gathering stage
+071, Denmark, OP_FOUND_CITY, 1376, Transition to movement stage
+071, Denmark, OP_FOUND_CITY, 1376, POST Moving To Target with Army 1377; center (29:19); target (29:15); Progress 0 percent
+071, Rome, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (49:34); target (53:36); Progress -20 percent
+071, Rome, OP_FOUND_CITY, 1492, POST Moving To Target with Army 1493; center (50:34); target (53:36); Progress 0 percent
+072, Babylon, OP_FOUND_CITY, 1568, Ended: NoTarget; Distance -1; Duration 73
+072, The_Shoshone, OP_FOUND_CITY, 1571, found target for settler, score 76177 (q30)
+072, The_Shoshone, OP_FOUND_CITY, 1571, Initial stage is recruiting
+072, The_Shoshone, OP_FOUND_CITY, 1571, Found 0 potential units to recruit for operation 1571 at (59:23) with target at (55:27)
+072, The_Shoshone, OP_FOUND_CITY, 1571, Started Army 1572; Units Recruited 1; Max Formation Size 2; Recruiting Units
+072, The_Shoshone, OP_FOUND_CITY, 1571, Ended: LostPath; Distance 8; Duration 0
+072, Denmark, OP_FOUND_CITY, 1376, PRE Moving To Target with Army 1377; center (29:19); target (29:15); Progress 0 percent
+072, Denmark, OP_FOUND_CITY, 1376, POST Moving To Target with Army 1377; center (29:17); target (29:15); Progress 40 percent
+072, Rome, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (50:34); target (53:36); Progress 0 percent
+072, Rome, OP_FOUND_CITY, 1492, POST Moving To Target with Army 1493; center (51:35); target (53:36); Progress 40 percent
+073, Babylon, OP_FOUND_CITY, 1583, Ended: NoTarget; Distance -1; Duration 74
+073, The_Shoshone, OP_FOUND_CITY, 1586, found target for settler, score 65665 (q12)
+073, The_Shoshone, OP_FOUND_CITY, 1586, Initial stage is recruiting
+073, The_Shoshone, OP_FOUND_CITY, 1586, Found 0 potential units to recruit for operation 1586 at (56:22) with target at (54:27)
+073, The_Shoshone, OP_FOUND_CITY, 1586, Started Army 1587; Units Recruited 1; Max Formation Size 2; Recruiting Units
+073, The_Shoshone, OP_FOUND_CITY, 1586, Ended: LostPath; Distance 6; Duration 0
+073, Denmark, OP_FOUND_CITY, 1376, PRE Moving To Target with Army 1377; center (29:17); target (29:15); Progress 40 percent
+073, Denmark, OP_FOUND_CITY, 1376, Transition to target stage
+073, Denmark, OP_FOUND_CITY, 1376, POST At Target
+073, Rome, OP_FOUND_CITY, 1492, PRE Moving To Target with Army 1493; center (51:35); target (53:36); Progress 40 percent
+073, Rome, OP_FOUND_CITY, 1492, Transition to target stage
+073, Rome, OP_FOUND_CITY, 1492, POST At Target
+074, Babylon, OP_FOUND_CITY, 1596, Ended: NoTarget; Distance -1; Duration 75
+074, The_Shoshone, OP_FOUND_CITY, 1599, found target for settler, score 74529 (q28)
+074, The_Shoshone, OP_FOUND_CITY, 1599, Initial stage is recruiting
+074, The_Shoshone, OP_FOUND_CITY, 1599, Found 0 potential units to recruit for operation 1599 at (56:22) with target at (55:27)
+074, The_Shoshone, OP_FOUND_CITY, 1599, Started Army 1600; Units Recruited 1; Max Formation Size 2; Recruiting Units
+074, The_Shoshone, OP_FOUND_CITY, 1599, Added Spearman 1601 to slot 1 in army 1600. ETA at (56:22) is 0 
+074, The_Shoshone, OP_FOUND_CITY, 1599, Transition to gathering stage
+074, The_Shoshone, OP_FOUND_CITY, 1599, Ended: LostPath; Distance 6; Duration 0
+074, Denmark, OP_FOUND_CITY, 1376, PRE At Target
+074, Denmark, OP_FOUND_CITY, 1376, City founded (Kaupang) at (29:15), plot value 79697, q36
+074, Denmark, OP_FOUND_CITY, 1376, Transition to finished stage
+074, Denmark, OP_FOUND_CITY, 1376, Ended: Success; Distance 5; Duration 16
+074, Rome, OP_FOUND_CITY, 1492, PRE At Target
+074, Rome, OP_FOUND_CITY, 1492, City founded (Neapolis) at (53:36), plot value 61429, q5
+074, Rome, OP_FOUND_CITY, 1492, Transition to finished stage
+074, Rome, OP_FOUND_CITY, 1492, Ended: Success; Distance 5; Duration 4
+075, Babylon, OP_FOUND_CITY, 1611, Ended: NoTarget; Distance -1; Duration 76
+075, The_Shoshone, OP_FOUND_CITY, 1614, found target for settler, score 74529 (q28)
+075, The_Shoshone, OP_FOUND_CITY, 1614, Initial stage is recruiting
+075, The_Shoshone, OP_FOUND_CITY, 1614, Found 1 potential units to recruit for operation 1614 at (59:23) with target at (55:27)
+075, The_Shoshone, OP_FOUND_CITY, 1614, Added Spearman 1601 to slot 1 in army 1615. ETA at (59:23) is 0 
+075, The_Shoshone, OP_FOUND_CITY, 1614, Transition to gathering stage
+075, The_Shoshone, OP_FOUND_CITY, 1614, Started Army 1615; Units Recruited 2; Max Formation Size 2; Gathering Forces
+075, The_Shoshone, OP_FOUND_CITY, 1614, Ended: LostPath; Distance 8; Duration 0
+076, Babylon, OP_FOUND_CITY, 1627, Ended: NoTarget; Distance -1; Duration 77
+076, The_Shoshone, OP_FOUND_CITY, 1645, found target for settler, score 74529 (q28)
+076, The_Shoshone, OP_FOUND_CITY, 1645, Initial stage is recruiting
+076, The_Shoshone, OP_FOUND_CITY, 1645, Found 1 potential units to recruit for operation 1645 at (56:22) with target at (55:27)
+076, The_Shoshone, OP_FOUND_CITY, 1645, Added Spearman 1601 to slot 1 in army 1646. ETA at (56:22) is 0 
+076, The_Shoshone, OP_FOUND_CITY, 1645, Transition to gathering stage
+076, The_Shoshone, OP_FOUND_CITY, 1645, Started Army 1646; Units Recruited 2; Max Formation Size 2; Gathering Forces
+076, The_Shoshone, OP_FOUND_CITY, 1645, PRE Gathering Forces for army 1646; center (55:21); variance (100.00:12.25); free slots 0
+076, The_Shoshone, OP_FOUND_CITY, 1645, POST Gathering Forces for army 1646; center (55:21); variance (90.25:6.25); free slots 0
+077, Babylon, OP_FOUND_CITY, 1659, Ended: NoTarget; Distance -1; Duration 78
+077, Babylon, OP_RAPID_RESPONSE, 1660, Initial stage is recruiting
+077, Babylon, OP_RAPID_RESPONSE, 1660, Found 1 potential units to recruit for operation 1660 at (52:22) with target at (56:22)
+077, Babylon, OP_RAPID_RESPONSE, 1660, Added Warrior 1004 to slot 0 in army 1661. ETA at (52:22) is 2 
+077, Babylon, OP_RAPID_RESPONSE, 1660, Started Army 1661; Units Recruited 1; Max Formation Size 4; Recruiting Units
+077, Babylon, OP_RAPID_RESPONSE, 1660, PRE Recruiting Units for army 1661; Warrior 1004 at (48:24) - ETA 2; Open; Open; Open; 
+077, Babylon, OP_RAPID_RESPONSE, 1660, Found 1 potential units to recruit for operation 1660 at (52:22) with target at (56:22)
+077, Babylon, OP_RAPID_RESPONSE, 1660, Added Warrior 1662 to slot 1 in army 1661. ETA at (52:22) is 2 
+077, Babylon, OP_RAPID_RESPONSE, 1660, Transition to gathering stage
+077, Babylon, OP_RAPID_RESPONSE, 1660, POST Gathering Forces for army 1661; center (49:24); variance (0.25:0.25); free slots 2
+077, The_Shoshone, OP_FOUND_CITY, 1663, found target for settler, score 73632 (q26)
+077, The_Shoshone, OP_FOUND_CITY, 1663, Initial stage is recruiting
+077, The_Shoshone, OP_FOUND_CITY, 1663, Found 0 potential units to recruit for operation 1663 at (64:23) with target at (68:24)
+077, The_Shoshone, OP_FOUND_CITY, 1663, Started Army 1664; Units Recruited 1; Max Formation Size 2; Recruiting Units
+077, The_Shoshone, OP_FOUND_CITY, 1645, Ended: LostPath; Distance 6; Duration 1
+077, The_Shoshone, OP_FOUND_CITY, 1663, PRE Recruiting Units for army 1664; Settler 1651 at (64:23) - ETA -1; Open; 
+077, The_Shoshone, OP_FOUND_CITY, 1663, Found 1 potential units to recruit for operation 1663 at (64:23) with target at (68:24)
+077, The_Shoshone, OP_FOUND_CITY, 1663, Added Spearman 1601 to slot 1 in army 1664. ETA at (64:23) is 4 
+077, The_Shoshone, OP_FOUND_CITY, 1663, Added Archer 1396 to slot 1 in army 1664. ETA at (64:23) is 0 
+077, The_Shoshone, OP_FOUND_CITY, 1663, Transition to gathering stage
+077, The_Shoshone, OP_FOUND_CITY, 1663, Transition to movement stage
+077, The_Shoshone, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (64:23); target (68:24); Progress 0 percent
+078, Babylon, OP_FOUND_CITY, 1675, Ended: NoTarget; Distance -1; Duration 79
+078, Babylon, OP_RAPID_RESPONSE, 1660, PRE Gathering Forces for army 1661; center (49:24); variance (0.25:0.25); free slots 2
+078, Babylon, OP_RAPID_RESPONSE, 1660, Transition to movement stage
+078, Babylon, OP_RAPID_RESPONSE, 1660, POST Moving To Target with Army 1661; center (49:24); target (56:22); Progress 0 percent
+078, The_Shoshone, OP_FOUND_CITY, 1678, found target for settler, score 74529 (q28)
+078, The_Shoshone, OP_FOUND_CITY, 1678, Initial stage is recruiting
+078, The_Shoshone, OP_FOUND_CITY, 1678, Found 0 potential units to recruit for operation 1678 at (56:22) with target at (55:27)
+078, The_Shoshone, OP_FOUND_CITY, 1678, Started Army 1679; Units Recruited 1; Max Formation Size 2; Recruiting Units
+078, The_Shoshone, OP_FOUND_CITY, 1678, Ended: LostPath; Distance 6; Duration 0
+078, The_Shoshone, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (64:23); target (68:24); Progress 0 percent
+078, The_Shoshone, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (65:23); target (68:24); Progress 20 percent
+079, Babylon, OP_FOUND_CITY, 1691, Ended: NoTarget; Distance -1; Duration 80
+079, Babylon, OP_RAPID_RESPONSE, 1660, PRE Moving To Target with Army 1661; center (49:24); target (56:22); Progress 0 percent
+079, Babylon, OP_RAPID_RESPONSE, 1660, POST Moving To Target with Army 1661; center (49:22); target (56:22); Progress 12 percent
+079, The_Shoshone, OP_FOUND_CITY, 1694, found target for settler, score 74529 (q28)
+079, The_Shoshone, OP_FOUND_CITY, 1694, Initial stage is recruiting
+079, The_Shoshone, OP_FOUND_CITY, 1694, Found 0 potential units to recruit for operation 1694 at (56:22) with target at (55:27)
+079, The_Shoshone, OP_FOUND_CITY, 1694, Started Army 1695; Units Recruited 1; Max Formation Size 2; Recruiting Units
+079, The_Shoshone, OP_FOUND_CITY, 1694, Ended: LostPath; Distance 6; Duration 0
+079, The_Shoshone, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (65:23); target (68:24); Progress 20 percent
+079, The_Shoshone, OP_FOUND_CITY, 1663, POST Moving To Target with Army 1664; center (67:23); target (68:24); Progress 100 percent
+080, Siam, OP_FOUND_CITY, 1707, found target for settler, score 56856 (q-3)
+080, Siam, OP_FOUND_CITY, 1707, Skip recruiting, start with movement stage
+080, Siam, OP_FOUND_CITY, 1707, Found 3 potential units to recruit for operation 1707 at (41:38) with target at (43:35)
+080, Siam, OP_FOUND_CITY, 1707, Added Warrior 1357 to slot 1 in army 1708. ETA at (41:38) is 0 
+080, Siam, OP_FOUND_CITY, 1707, Started Army 1708; Units Recruited 2; Max Formation Size 2; Moving To Target
+080, Siam, OP_FOUND_CITY, 1707, PRE Moving To Target with Army 1708; center (41:38); target (43:35); Progress 0 percent
+080, Siam, OP_FOUND_CITY, 1707, POST Moving To Target with Army 1708; center (42:37); target (43:35); Progress 40 percent
+080, Babylon, OP_FOUND_CITY, 1709, found target for settler, score 53368 (q-9)
+080, Babylon, OP_FOUND_CITY, 1709, Initial stage is recruiting
+080, Babylon, OP_FOUND_CITY, 1709, Found 0 potential units to recruit for operation 1709 at (52:22) with target at (54:13)
+080, Babylon, OP_FOUND_CITY, 1709, Started Army 1710; Units Recruited 1; Max Formation Size 2; Recruiting Units
+080, Babylon, OP_RAPID_RESPONSE, 1660, PRE Moving To Target with Army 1661; center (49:22); target (56:22); Progress 12 percent
+080, Babylon, OP_RAPID_RESPONSE, 1660, POST Moving To Target with Army 1661; center (50:22); target (56:22); Progress 23 percent
+080, Babylon, OP_FOUND_CITY, 1709, PRE Recruiting Units for army 1710; Settler 1486 at (52:22) - ETA -1; Open; 
+080, Babylon, OP_FOUND_CITY, 1709, Found 0 potential units to recruit for operation 1709 at (52:22) with target at (54:13)
+080, Babylon, OP_FOUND_CITY, 1709, POST Recruiting Units for army 1710; Settler 1486 at (52:22) - ETA 0; Open; 
+080, The_Shoshone, OP_FOUND_CITY, 1713, found target for settler, score 74529 (q28)
+080, The_Shoshone, OP_FOUND_CITY, 1713, Initial stage is recruiting
+080, The_Shoshone, OP_FOUND_CITY, 1713, Found 0 potential units to recruit for operation 1713 at (56:22) with target at (55:27)
+080, The_Shoshone, OP_FOUND_CITY, 1713, Started Army 1714; Units Recruited 1; Max Formation Size 2; Recruiting Units
+080, The_Shoshone, OP_FOUND_CITY, 1713, Ended: LostPath; Distance 6; Duration 0
+080, The_Shoshone, OP_FOUND_CITY, 1663, PRE Moving To Target with Army 1664; center (67:23); target (68:24); Progress 100 percent
+080, The_Shoshone, OP_FOUND_CITY, 1663, Transition to target stage
+080, The_Shoshone, OP_FOUND_CITY, 1663, POST At Target
+080, Rome, OP_FOUND_CITY, 1721, found target for settler, score 49151 (q-16)
+080, Rome, OP_FOUND_CITY, 1721, Skip recruiting, start with movement stage
+080, Rome, OP_FOUND_CITY, 1721, Found 1 potential units to recruit for operation 1721 at (49:36) with target at (44:35)
+080, Rome, OP_FOUND_CITY, 1721, Added Warrior 1014 to slot 1 in army 1722. ETA at (49:36) is 2 
+080, Rome, OP_FOUND_CITY, 1721, Started Army 1722; Units Recruited 2; Max Formation Size 2; Moving To Target
+080, Rome, OP_FOUND_CITY, 1721, PRE Moving To Target with Army 1722; center (49:36); target (44:35); Progress 0 percent
+080, Rome, OP_FOUND_CITY, 1721, POST Moving To Target with Army 1722; center (48:34); target (44:35); Progress 17 percent
+081, Siam, OP_FOUND_CITY, 1707, PRE Moving To Target with Army 1708; center (42:37); target (43:35); Progress 40 percent
+081, Siam, OP_FOUND_CITY, 1707, POST Moving To Target with Army 1708; center (43:36); target (43:35); Progress 100 percent
+081, Babylon, OP_RAPID_RESPONSE, 1660, Ended: NoTarget; Distance 9; Duration 4
+081, Babylon, OP_FOUND_CITY, 1709, PRE Recruiting Units for army 1710; Settler 1486 at (52:22) - ETA 0; Open; 
+081, Babylon, OP_FOUND_CITY, 1709, Found 1 potential units to recruit for operation 1709 at (52:22) with target at (54:13)
+081, Babylon, OP_FOUND_CITY, 1709, Added Warrior 1004 to slot 1 in army 1710. ETA at (52:22) is 2 
+081, Babylon, OP_FOUND_CITY, 1709, Transition to gathering stage
+081, Babylon, OP_FOUND_CITY, 1709, POST Gathering Forces for army 1710; center (52:22); variance (2.25:1.00); free slots 0
+081, The_Shoshone, OP_FOUND_CITY, 1737, found target for settler, score 74529 (q28)
+081, The_Shoshone, OP_FOUND_CITY, 1737, Initial stage is recruiting
+081, The_Shoshone, OP_FOUND_CITY, 1737, Found 0 potential units to recruit for operation 1737 at (56:22) with target at (55:27)
+081, The_Shoshone, OP_FOUND_CITY, 1737, Started Army 1738; Units Recruited 1; Max Formation Size 2; Recruiting Units
+081, The_Shoshone, OP_FOUND_CITY, 1663, PRE At Target
+081, The_Shoshone, OP_FOUND_CITY, 1663, City founded (Goshute) at (68:24), plot value 76795, q31
+081, The_Shoshone, OP_FOUND_CITY, 1663, Transition to finished stage
+081, The_Shoshone, OP_FOUND_CITY, 1737, PRE Recruiting Units for army 1738; Settler 1548 at (38:21) - ETA -1; Open; 
+081, The_Shoshone, OP_FOUND_CITY, 1737, Found 0 potential units to recruit for operation 1737 at (56:22) with target at (55:27)
+081, The_Shoshone, OP_FOUND_CITY, 1737, found better target for settler, old score 74529 (q28), new score 93836 (q50)
+081, The_Shoshone, OP_FOUND_CITY, 1737, setting new target (64:29)
+081, The_Shoshone, OP_FOUND_CITY, 1737, POST Recruiting Units for army 1738; Settler 1548 at (39:21) - ETA 2147483647; Open; 
+081, The_Shoshone, OP_FOUND_CITY, 1663, Ended: Success; Distance 5; Duration 4
+081, Rome, OP_FOUND_CITY, 1721, PRE Moving To Target with Army 1722; center (48:34); target (44:35); Progress 17 percent
+081, Rome, OP_FOUND_CITY, 1721, POST Moving To Target with Army 1722; center (46:33); target (44:35); Progress 34 percent
+082, Siam, OP_FOUND_CITY, 1707, PRE Moving To Target with Army 1708; center (43:36); target (43:35); Progress 100 percent
+082, Siam, OP_FOUND_CITY, 1707, Transition to target stage
+082, Siam, OP_FOUND_CITY, 1707, City founded (Lampang) at (43:35), plot value 56856, q-3
+082, Siam, OP_FOUND_CITY, 1707, Transition to finished stage
+082, Siam, OP_FOUND_CITY, 1707, POST Completed
+082, Babylon, OP_FOUND_CITY, 1709, PRE Gathering Forces for army 1710; center (52:22); variance (2.25:1.00); free slots 0
+082, Babylon, OP_FOUND_CITY, 1709, Transition to movement stage
+082, Babylon, OP_FOUND_CITY, 1709, POST Moving To Target with Army 1710; center (52:22); target (54:13); Progress 0 percent
+082, The_Shoshone, OP_FOUND_CITY, 1737, PRE Recruiting Units for army 1738; Settler 1548 at (39:21) - ETA 2147483647; Open; 
+082, The_Shoshone, OP_FOUND_CITY, 1737, Found 0 potential units to recruit for operation 1737 at (56:22) with target at (64:29)
+082, The_Shoshone, OP_FOUND_CITY, 1737, POST Recruiting Units for army 1738; Settler 1548 at (39:20) - ETA 2147483647; Open; 
+082, Arabia, OP_FOUND_CITY, 1763, found target for settler, score 61574 (q5)
+082, Arabia, OP_FOUND_CITY, 1763, Initial stage is recruiting
+082, Arabia, OP_FOUND_CITY, 1763, Found 2 potential units to recruit for operation 1763 at (34:33) with target at (32:27)
+082, Arabia, OP_FOUND_CITY, 1763, Added Warrior 1332 to slot 1 in army 1764. ETA at (34:33) is 0 
+082, Arabia, OP_FOUND_CITY, 1763, Transition to gathering stage
+082, Arabia, OP_FOUND_CITY, 1763, Transition to movement stage
+082, Arabia, OP_FOUND_CITY, 1763, Started Army 1764; Units Recruited 2; Max Formation Size 2; Moving To Target
+082, Arabia, OP_FOUND_CITY, 1763, PRE Moving To Target with Army 1764; center (34:33); target (32:27); Progress 0 percent
+082, Arabia, OP_FOUND_CITY, 1763, POST Moving To Target with Army 1764; center (33:31); target (32:27); Progress 29 percent
+082, Rome, OP_FOUND_CITY, 1721, cannot found city at (44:35)
+082, Rome, OP_FOUND_CITY, 1721, no path to city site (44:35)
+082, Rome, OP_FOUND_CITY, 1721, found better target for settler, old score -1 (q-50), new score 50399 (q-14)
+082, Rome, OP_FOUND_CITY, 1721, setting new target (55:31)
+082, Rome, OP_FOUND_CITY, 1721, PRE Moving To Target with Army 1722; center (47:32); target (55:31); Progress 0 percent
+082, Rome, OP_FOUND_CITY, 1721, POST Moving To Target with Army 1722; center (47:32); target (55:31); Progress 0 percent
