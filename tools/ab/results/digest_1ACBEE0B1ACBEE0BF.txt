@@ -1,0 +1,44 @@
+﻿Game 1ACBEE0B1ACBEE0BF (AIABTest_c8e.csv), last logged turn 150
+b    Egypt        tall      cities 4
+  builds to T80 (capital Thebes; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T17 Settler* | T26 Worker* | T30 Monument* (Memphis) | T31 Stonehenge | T31 Library* (Memphis) | T45 Great Library | T47 Library* | T52 Worker* | T54 Warrior | T57 Burial Tomb | T61 Settler (Memphis) | T66 War Chariot | T70 Scout | T72 War Chariot | T76 Worker | T79 Granary (Memphis)
+  settlers ordered T: 17,61,86,93   found-city ops started T: 26,79,90   cities founded T: 30,84,93
+  ops aborted: T98 NoTarget, T99 NoTarget, T100 NoTarget, T101 NoTarget, T102 NoTarget, T103 NoTarget, T104 NoTarget, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 3 (unhappy 3)   built instead: Library 3   first: T031 Thebes size 3 next Library | T045 Thebes size 4 next Library | T047 Thebes size 4 next Library
+  IDLE SETTLER turns: 3 (first T62)
+  military ops ended (whole game): NoTarget 5, HalfStrength 3, WarStateChange 2, Success 1, LostPath 1
+  settler timeline to T80: T17 settler (book) in Thebes | T26 op started | T30 FOUNDED | T61 settler (AI) in Memphis | T79 op started
+  saving gold for a settler: 44 turns (T6-T79)
+b    Morocco      tall      cities 4
+  builds to T80 (capital Marrakech; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T22 Settler* | T34 Worker* | T36 Monument* (Rabat) | T37 Stonehenge | T37 Library* (Rabat) | T45 Settler* | T46 Worker* | T51 Settler* | T58 Spearman | T61 Monument (Fes) | T61 Spearman | T62 Granary (Fes) | T65 Warrior | T68 Warrior | T71 Scout | T73 Worker | T77 Granary (Rabat) | T79 Settler
+  settlers ordered T: 22,45,51,79,106   found-city ops started T: 34,58,85   cities founded T: 36,61,88
+  ops aborted: T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Library 1   first: T037 Marrakech size 3 next Library
+  IDLE SETTLER turns: 3 (first T45)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T22 settler (book) in Marrakech | T34 op started | T36 FOUNDED | T45 settler (book) in Marrakech | T51 settler (book) in Marrakech | T58 op started | T61 FOUNDED | T79 settler (AI) in Marrakech
+  saving gold for a settler: 70 turns (T6-T80)
+b    Persia       tall      cities 5
+  builds to T80 (capital Persepolis; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Settler* | T37 Worker* | T40 Monument* (Pasargadae) | T41 Library* (Pasargadae) | T41 Settler* | T52 Worker* | T56 Monument (Susa) | T57 Shrine (Susa) | T58 Granary (Pasargadae) | T59 Settler | T67 Work Boat (Susa) | T69 Immortal | T71 Worker (Pasargadae) | T72 Monument (Ecbatana) | T73 Shrine (Ecbatana) | T76 Granary (Susa) | T76 Worker
+  settlers ordered T: 24,41,59,93,114   found-city ops started T: 37,52,69,104   cities founded T: 40,56,72,108
+  ops aborted: T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget
+  IDLE SETTLER turns: 5 (first T41)
+  military ops ended (whole game): NoUnits 4, Success 2, LostPath 1, DiploOpinionChange 1, NoTarget 1
+  settler timeline to T80: T24 settler (book) in Persepolis | T37 op started | T40 FOUNDED | T41 settler (book) in Persepolis | T52 op started | T56 FOUNDED | T59 settler (AI) in Persepolis | T69 op started | T72 FOUNDED
+  saving gold for a settler: 65 turns (T6-T80)
+b    Polynesia    wide      cities 7
+  builds to T80 (capital Honolulu; other cities named): T0 Scout* | T4 Maori Warrior* | T9 Settler* | T19 Worker* | T22 Monument* (Samoa) | T25 Shrine* | T28 Settler* | T31 Granary (Samoa) | T31 Monument* | T34 Great Library | T44 Maori Warrior (Samoa) | T47 Settler* | T48 Library* | T48 Water Mill (Samoa) | T54 Granary | T55 Settler (Samoa) | T59 Worker | T60 Library (Samoa) | T61 Temple of Artemis | T62 Monument* (Tonga) | T63 Chariot Archer (Samoa) | T66 Market (Samoa) | T67 Monument* (Nuku Hiva) | T69 Work Boat (Tonga) | T71 Worker (Samoa) | T71 Work Boat | T72 Work Boat | T73 Work Boat | T74 Granary (Nuku Hiva) | T74 Scout (Samoa) | T75 Granary (Tonga) | T75 Colosseum (Samoa) | T76 Work Boat | T78 Great Lighthouse | T80 Barracks (Samoa)
+  settlers ordered T: 9,28,47,55,82,88,140   found-city ops started T: 19,49,60,75,86,96   cities founded T: 22,62,67,81,101,107
+  ops aborted: T70 NoTarget, T71 NoTarget, T72 NoTarget, T73 NoTarget, T74 NoTarget, T92 NoTarget, T93 NoTarget, T94 NoTarget, T95 NoTarget
+  book SETTLER HELD to T80: 5 (one at a time 3, growth due 2)   built instead: the normal AI choice 3, Library 2   first: T034 Honolulu size 2 next Library | T048 Honolulu size 3 next Library | T054 Honolulu size 3 next the normal AI choice
+  IDLE SETTLER turns: 4 (first T28)
+  military ops ended (whole game): NoTarget 2, Success 1
+  settler timeline to T80: T9 settler (book) in Honolulu | T19 op started | T22 FOUNDED | T28 settler (book) in Honolulu | T47 settler (book) in Honolulu | T48 BOUGHT in Honolulu. Cost: 370 | T49 op started | T55 settler (AI) in Samoa | T60 op started | T62 FOUNDED | T67 FOUNDED | T70 op ended: NoTarget | T71 op ended: NoTarget | T72 op ended: NoTarget | T73 op ended: NoTarget | T74 op ended: NoTarget | T75 op started
+  saving gold for a settler: 41 turns (T6-T69)
+b    Siam         tall      cities 6
+  builds to T80 (capital Sukhothai; other cities named): T0 Scout* | T4 Monument* | T11 Shrine* | T17 Warrior* | T24 Settler* | T34 Warrior | T39 Worker | T46 Monument* (Si Satchanalai) | T47 Settler* | T47 Library* (Si Satchanalai) | T54 Worker | T55 Settler | T57 Monument (Muang Saluang) | T58 Shrine (Muang Saluang) | T61 Spearman | T64 Shrine (Si Satchanalai) | T64 Worker | T65 Monument (Lampang) | T66 Work Boat (Lampang) | T68 Worker (Si Satchanalai) | T68 Scout | T69 Temple | T74 Worker | T76 Temple (Si Satchanalai) | T77 Work Boat (Lampang) | T77 Writers' Guild | T78 Work Boat (Lampang) | T78 Barracks (Muang Saluang) | T79 Work Boat (Lampang)
+  settlers ordered T: 24,47,55,89,103,139   found-city ops started T: 34,54,61,96,130   cities founded T: 46,57,65,104,139
+  ops aborted: T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget
+  IDLE SETTLER turns: 6 (first T47)
+  military ops ended (whole game): LostPath 1, NoTarget 1
+  settler timeline to T80: T24 settler (book) in Sukhothai | T34 op started | T46 FOUNDED | T47 settler (book) in Sukhothai | T54 op started | T55 settler (AI) in Sukhothai | T57 FOUNDED | T61 op started | T65 FOUNDED
+  saving gold for a settler: 40 turns (T6-T60)
