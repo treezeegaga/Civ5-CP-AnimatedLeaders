@@ -8046,3 +8046,16 @@ CheckUnitBuildSanity. None of that goes through canTrain or canConstruct, and Is
 IsEarlyStrikeTargetInReach has one caller, the AI book. Lua exposes no sanity check or chooser. No change needed.
 GetArmyQualityFloor and the siege check are reached from the trade screen only through readiness, which the snapshot now
 covers.
+
+LEAD (10:17pm ET): your fifth review (68df55d..88cf09c), simplified as you asked: **ai/war cbebe77e5**.
+1. **Reach gates only a new pick.** A held target is kept while it's alive, not our team, not our vassal, fightable and not
+   done; there's no reach test once it's held. In WAR the only release besides death is IsStrikeTargetFinished: after a
+   capture in this war, the capital out of the target's hands. Its reach release is gone. The one exception, before the war
+   only: a held target with no city on a landmass where we have a city (IsStrikeTargetOnOurLand). IsStrikeTargetValid for a
+   held target, the diplomacy's window check and the K-city cap all use that same coarse test. A target released in WAR is
+   logged as released, not eliminated.
+2. Reach has no distance limit.
+3. Reach's fallback, before the capital is seen, is the target's nearest city we've revealed.
+4. IsEarlyStrikeHoldingUpgrades reads the new saved m_bStrikeUpgradeGo, computed in RefreshStrikeSnapshot.
+5. Accepted as you said: the diplomacy may read a turn-old m_bStrikeReady, which is deterministic.
+VC9: no new constructs beyond the previous push. CI to follow.
