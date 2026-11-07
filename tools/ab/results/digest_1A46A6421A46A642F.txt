@@ -1,0 +1,41 @@
+﻿Game 1A46A6421A46A642F (AIABTest_c8e.csv), last logged turn 150
+b    Byzantium    tall      cities 5
+  builds to T80 (capital Constantinople; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T12 Warrior* | T15 Worker* | T21 Settler* | T29 Great Library | T33 Monument* (Adrianople) | T34 Library* (Adrianople) | T43 Warrior | T44 Warrior | T45 Writers' Guild | T51 Scout | T53 Settler | T57 Work Boat (Adrianople) | T63 Granary | T68 Granary (Adrianople) | T69 Monument (Nicaea) | T70 Shrine (Nicaea) | T71 Settler | T75 Worker (Adrianople) | T79 Water Mill
+  settlers ordered T: 21,53,71,86,116,117   found-city ops started T: 29,63,79,94   cities founded T: 33,69,83,97
+  ops aborted: T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 7 (unhappy 5, growth due 1, one at a time 1)   built instead: the normal AI choice 5, Worker 1, Library 1   first: T015 Constantinople size 2 next Worker | T029 Constantinople size 3 next Library | T043 Constantinople size 3 next the normal AI choice
+  IDLE SETTLER turns: 5 (first T53)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T21 settler (book) in Constantinople | T29 op started | T33 FOUNDED | T53 settler (AI) in Constantinople | T63 op started | T69 FOUNDED | T71 settler (AI) in Constantinople | T79 op started
+  saving gold for a settler: 41 turns (T9-T79)
+b    China        tall      cities 6
+  builds to T80 (capital Beijing; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T14 Warrior* | T19 Worker* | T29 Stonehenge | T41 Settler* | T49 Granary | T55 Settler | T56 Granary (Shanghai) | T57 Settler | T62 Spearman | T67 Granary (Guangzhou) | T68 Worker | T72 Temple | T79 Settler
+  settlers ordered T: 41,55,57,79,106,117,152   found-city ops started T: 49,62,84,111,130   cities founded T: 56,67,86,118,144
+  ops aborted: T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget
+  book SETTLER HELD to T80: 2 (growth due 2)   built instead: Paper Maker 1, Worker 1   first: T019 Beijing size 2 next Worker | T029 Beijing size 3 next Paper Maker
+  IDLE SETTLER turns: 5 (first T57)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T41 settler (book) in Beijing | T49 op started | T55 settler (AI) in Beijing | T56 FOUNDED | T57 settler (AI) in Beijing | T62 op started | T67 FOUNDED | T79 settler (AI) in Beijing
+  saving gold for a settler: 51 turns (T10-T80)
+b    Indonesia    wide      cities 6
+  builds to T80 (capital Jakarta; other cities named): T0 Scout* | T4 Warrior* | T9 Settler* | T19 Granary | T22 Granary (Surabaya) | T26 Shrine* | T30 Settler* | T31 Monument* | T32 Monument* (Surabaya) | T34 Great Library | T38 Shrine (Surabaya) | T43 Worker (Surabaya) | T44 Library* | T48 Settler* | T51 Library (Surabaya) | T53 Temple of Artemis | T57 Market (Surabaya) | T64 Work Boat | T65 Work Boat (Surabaya) | T65 Work Boat | T67 Settler | T69 Barracks (Surabaya) | T71 Warrior | T73 Granary (Medan) | T74 Settler | T74 Monument (Makassar) | T76 Worker (Surabaya) | T78 Trireme | T79 Water Mill (Makassar) | T79 Scout | T80 Writers' Guild
+  settlers ordered T: 9,30,48,67,74,121   found-city ops started T: 19,53,71,74,77,78   cities founded T: 22,73,74,82,85
+  ops aborted: T66 LostCivilian
+  book SETTLER HELD to T80: 4 (growth due 2, one at a time 1, unhappy 1)   built instead: the normal AI choice 2, Library 2   first: T034 Jakarta size 3 next Library | T044 Jakarta size 4 next Library | T065 Jakarta size 5 next the normal AI choice
+  IDLE SETTLER turns: 5 (first T30)
+  military ops ended (whole game): NoTarget 1, Success 1
+  settler timeline to T80: T9 settler (book) in Jakarta | T19 op started | T22 FOUNDED | T30 settler (book) in Jakarta | T48 settler (book) in Jakarta | T53 op started | T66 op ended: LostCivilian | T67 settler (AI) in Jakarta | T71 op started | T73 FOUNDED | T74 FOUNDED | T74 op started | T74 settler (AI) in Jakarta | T77 op started | T78 op started
+  saving gold for a settler: 39 turns (T6-T75)
+b    Morocco      tall      cities 6
+  builds to T80 (capital Marrakech; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T18 Worker* | T25 Settler* | T35 Warrior | T40 Granary | T44 Monument* (Rabat) | T45 Library* (Rabat) | T46 Library* | T51 Settler* | T57 Temple | T60 Granary (Fes) | T63 Scout | T64 Settler | T69 Granary (Rabat) | T70 Worker | T73 Monument (Casablanca) | T74 Shrine (Casablanca) | T74 Warrior | T75 Library (Fes) | T76 Worker | T77 Water Mill | T80 Worker
+  settlers ordered T: 25,51,64,96,109   found-city ops started T: 35,57,70,75,106   cities founded T: 44,60,73,82,111
+  ops aborted: T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 2 (unhappy 1, growth due 1)   built instead: Library 1, Worker 1   first: T018 Marrakech size 2 next Worker | T046 Marrakech size 4 next Library
+  IDLE SETTLER turns: 6 (first T51)
+  settler timeline to T80: T25 settler (book) in Marrakech | T35 op started | T44 FOUNDED | T51 settler (book) in Marrakech | T57 op started | T60 FOUNDED | T64 settler (AI) in Marrakech | T70 op started | T73 FOUNDED | T74 BOUGHT in Marrakech. Cost: 370 | T75 op started
+  saving gold for a settler: 46 turns (T6-T70)
+b    Venice       tall      cities 4
+  builds to T80 (capital Venice; other cities named): T0 Scout* | T4 Monument* | T9 Shrine* | T13 Warrior* | T17 Worker* | T24 Library* | T31 Stonehenge | T42 National College* | T51 Shrine (Manila) | T51 Monument* (Manila) | T54 Caravan | T55 Walls (Manila) | T59 Mausoleum of Halicarnassus | T61 Caravan (Manila) | T66 Caravan (Manila) | T66 Caravan | T67 Caravan | T70 Great Lighthouse | T73 Temple (Manila) | T79 Hagia Sophia
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  book SETTLER HELD to T80: 1 (growth due 1)   built instead: Worker 1   first: T017 Venice size 3 next Worker
+  military ops ended (whole game): Success 3, NoTarget 1
