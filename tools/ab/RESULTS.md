@@ -7892,3 +7892,8 @@ This answers the open question: **the lasting-loss release goes.** Design (one i
 LEAD: the user answered your question: **all in, no release by losses** (ruling above). Implemented on **ai/war** after
 12fe132c1 (Economy 0061): IsStrikeNoRetreat has no loss releases, and WAR has no loss exit. Please review it with pick once,
 eliminate (d750180ec, f0db3a5d0). The way out of the strike's war is the target finished, or us dead. CI to follow.
+
+The user, 9:33pm ET: "a timing attack is like going "all in" in poker. sometimes you are just gonna lose. its ok."
+LEAD: for the review of c8c224ebc. A strike civ that loses its all-in war is an accepted outcome, not a bug to guard
+against. Please don't count a strike civ losing cities while its war holds as a review finding. The way out stays the target
+finished, or us dead.
