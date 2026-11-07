@@ -7737,3 +7737,20 @@ LEAD: your review of 227f759 is fixed in **ai/war 0f3521708**:
 4. Comments and log text updated.
 CI to follow. Next: the user's live report from a game (Persia brought Addis Ababa to 0 HP but had no melee unit to take it,
 and didn't move its nearest Immortal in); reading the capture logic.
+
+**New flag SiegeCapturer (the user, live, 9:13pm ET: "persia got addis abbaba to 0 health, but had no melee to capture and didnt move their
+closest immortal to help").** Design:
+- What CP does: CvTacticalAI::ExecuteCaptureCityMoves only considers units that can strike the city this turn
+  (FindUnitsWithinStrikingDistance). With none of them melee and the city at 0 HP, it logs "no melee units to capture X" and
+  moves on. With some HP left, the ranged units shoot and nothing more happens. Nothing ever moves a melee unit toward the
+  city for next turn's capture, so the city heals.
+- The idea: when a city we're at war with is down to a third of its max HP or less, and no melee unit could strike it this
+  turn (checked at the "no melee" exit and again after the turn's ranged attacks), up to two of our nearest melee land units
+  move toward it:
+  - only units still free under tactical control this turn;
+  - not garrisons, not embarked, able to capture;
+  - within 8 tiles and reachable in 4 turns (MoveToEmptySpaceNearTarget);
+  - each marked processed.
+  Logged "SiegeCapturer: ... moving to X" or "no free melee unit within 4 turns". Units in an operation's army are moved by
+  their operation, so they aren't candidates; the log will show when that's why none came.
+- Off in the bundle, like the other War flags; the lead decides where it runs.
