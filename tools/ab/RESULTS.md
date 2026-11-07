@@ -7844,3 +7844,8 @@ Design point 3 becomes: **the strike is finished with its target when, after a c
 
 A dead target is finished too. No-retreat holds until then, so peace is refused. After that, peace is CP's choice (a single
 minor city can be left), and the strike moves on to its next target (point 4). Attacks still aim at the capital first.
+
+LEAD: the user's ruling is implemented on **ai/war** (the commit after 709117354, the SiegeCapturer review fixes): pick once,
+hold, eliminate. The capital every time, one minor city may be left, then the next target. No-target is a wait; the
+target-specific exits and re-targeting are gone. Design above. CI to follow. Please review it before it goes into a block:
+it changes a lot of the state machine. Open for the user: keep the lasting-loss release? (Kept for now.)
