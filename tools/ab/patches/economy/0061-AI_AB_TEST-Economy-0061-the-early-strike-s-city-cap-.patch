@@ -1,0 +1,50 @@
+From b4b5b4a725659585b22e864d7bd14c5da35d96fa Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Sat, 7 Nov 2026 02:27:14 +0000
+Subject: [PATCH] AI_AB_TEST Economy 0061: the early strike's city cap ends at
+ its first declaration
+
+War's d750180 (the user: "no flip flopping. aggressive civs choose targets and then eliminate
+them"): a finished target sends WAR back to BUILDUP for the next one, and OVER is now rare.
+IsEarlyStrikeCityCapReached held "until OVER", so the plan's K-city settler cap became an
+all-game cap, and a strike civ in a target-less BUILDUP could neither expand nor fight. K is
+the plan's cities before the strike, so the cap now also ends at the strike's first
+confirmed declaration (HasStrikeDeclared).
+
+Checked against the new state flow, nothing else to change:
+- 0053 skips a missing or unreachable target (0060; HaveStrikeLandAttackTarget(NO_PLAYER)
+  is false);
+- 0050's complete army waits;
+- 0055's hold applies as before;
+- the capital's list resumes in a BUILDUP after WAR and rebuilds only real losses (items
+  count built units incl. upgrades);
+- the bans hold through BUILDUP (IsStrikePending).
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01G2NZj2nf4FeZTEHWjvnhhA
+---
+ CvGameCoreDLL_Expansion2/CvPlayer.cpp | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/CvGameCoreDLL_Expansion2/CvPlayer.cpp b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+index a34c24b..63ce658 100644
+--- a/CvGameCoreDLL_Expansion2/CvPlayer.cpp
++++ b/CvGameCoreDLL_Expansion2/CvPlayer.cpp
+@@ -34054,9 +34054,12 @@ TechTypes CvPlayer::GetLateStrikeTech() const
+ /// EarlyStrike: K cities before the strike; past K, no settlers until it's over
+ bool CvPlayer::IsEarlyStrikeCityCapReached() const
+ {
+-	// the cap holds until the strike is OVER (War's game-state exits), through the war itself; no turn limit
++	// the cap holds until the strike is OVER (War's game-state exits), through the war itself; no turn limit.
++	// (0061) And only until the strike's first declaration: K is the plan's cities BEFORE the strike. Since the user's "no flip
++	// flopping" (War: a finished target sends WAR back to BUILDUP for the next one, OVER is rare), "until OVER" became all
++	// game, and a strike civ waiting in a target-less BUILDUP could neither expand nor fight
+ 	if (!MOD_AI_AB_TEST || !IsCandidateWarmonger(FIX_EARLY_STRIKE) || GetEarlyStrikeCoreClass() == NO_UNITCLASS || !GetMilitaryAI() ||
+-		GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_OVER)
++		GetMilitaryAI()->GetStrikeState() == CvMilitaryAI::STRIKE_OVER || GetMilitaryAI()->HasStrikeDeclared())
+ 		return false;
+ 	CvEarlyStrikePlan kPlan;
+ 	return GetEarlyStrikePlan(kPlan) && getNumCities() >= kPlan.iMaxCities;
+-- 
+2.43.0
+

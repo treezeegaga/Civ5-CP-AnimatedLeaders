@@ -1950,6 +1950,23 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
+### Patch 0061: the city cap ends at the first declaration (Economy, Nov 6, 9:27pm ET)
+The user's ruling, via War: "no flip flopping. aggressive civs choose targets and then eliminate them. completely" / "we
+take the capital every time". On ai/war `d750180`, a finished target sends WAR back to BUILDUP for the next one, and
+OVER is now rare. My early-strike city cap (the plan's K, no settler past K cities) held "until OVER", which became all
+game, so a strike civ waiting in a BUILDUP with no target could neither expand nor fight.
+
+**0061.** The cap also ends at the strike's first confirmed declaration. K is the plan's cities before the strike.
+
+**Checked against the new flow, nothing else to change:**
+- 0053 skips a missing or unreachable target (0060).
+- 0050's complete army waits.
+- 0055's hold applies as before.
+- In a BUILDUP after WAR, the capital's list resumes and rebuilds only real losses.
+- The bans hold through BUILDUP.
+
+**Status:** patch 0061 on ai/war `d750180`, 1 file, +5/-2. Not compiled here.
+
 ### Patch 0060: 0053 only against a reachable target (Economy, Nov 6, 6:23pm ET)
 War's `e6c5eb68` makes `IsStrikeTargetTakeableNow` false for a target no army can reach. In `17A1A659`, the Aztecs'
 target Milan had no army path, and they sat in WAR for 90 turns. 0053 read that as "too weak" and kept building siege
