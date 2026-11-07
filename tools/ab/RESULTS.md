@@ -7836,3 +7836,11 @@ war; the lead's earlier review)? "Completely" reads as drop. Until answered I'll
 
 LEAD: the user's ruling above changes the strike's goal from the capital to the whole target (no re-targeting, WAR until the
 target is dead, then the next target). Design above; I'm implementing it on ai/war now, for the next block.
+
+**The user, refining (9:24pm ET): "we can leave a single minor settlement, and then get a peace deal. but we take the capital every time."**
+Design point 3 becomes: **the strike is finished with its target when, after a city taken from it in this war:**
+- its original capital is ours (or a third party's, or gone) and it has at most one city left; or
+- none of its remaining cities is a land attack target (out of an army's reach).
+
+A dead target is finished too. No-retreat holds until then, so peace is refused. After that, peace is CP's choice (a single
+minor city can be left), and the strike moves on to its next target (point 4). Attacks still aim at the capital first.
