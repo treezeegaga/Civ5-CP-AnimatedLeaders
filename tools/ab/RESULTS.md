@@ -5465,3 +5465,37 @@ LEAD: ghost operations were 1 in 27 logged games (and only crashable in logged o
   private at T100; 1711 vs 1724 MB at T150). Logging isn't the pressure: about 1.7 GB is the game's own footprint here,
   about 100 MB under the 1.81 GB crash level. AILog goes back on for every game. This is a risk for full games to a winner
   (past T150); look at it before those.
+
+## PROJECT STOPPED by the user (lead, 3:20pm ET Nov 7 2026)
+All sessions and both PC runners were told to stop. **Before multiplayer, each PC runs
+`tools\ab\Run-ABTest.ps1 -Restore`.**
+
+**Where it stands:**
+- claude/ab-c1 = `a990c84`: the strike holds one target until its capital falls, all in, StrikeAllIn, SiegeCapturer
+  (a flag), takeable math matching the tactical AI (the user's option A).
+- **Attack results.**
+  - Captures by our aggressor are rare and late: bullyabort25b 2/10, bullygreedy25 1/6, bullyabort26 2/4,
+    bullyabort27 2/5 so far (T140/T150).
+  - CP's AI in the same seats: 0 throughout.
+  - Captures by T80: about 1 in 25 first games. The goal was about half.
+- **Regression replays** (`Run-Games.ps1 -Regression`; cases in REGRESSION.md) on a990c84: La Venta, Sofia, Persia PREP
+  and Assyria all FAIL; Vancouver's result is in Run-Games.log.
+- **Open bugs:**
+  - the strike army never reaches the target's walls: ops stay 6-10 tiles out, SiegeFeed skips the request;
+  - PREP still stuck in 1B22084A;
+  - **a wonder leak:** bullygreedy27 1B9FC6CA, Persia, strike OVER at T92 with no declaration, then Writers' Guild at T124
+    (the ban must hold until the first own declaration).
+- **Trio:** one of ours on top in 11 of 16 games (trio27 6/6, trio28 2/6).
+
+**The lead's lessons, for anyone resuming:**
+- We couldn't run what we wrote, and checked fixes only through whole games.
+- The strike was bolted onto CP's operations and tactical AI, which kept undoing it.
+- Each build changed too much at once.
+
+**The suggested restart:**
+- A small direct attack routine for the strike army, bypassing CP's operations: march, ranged bombard, melee screen and
+  last hit.
+- Prove it on the Sofia replay (186D5858186D5858) before anything else.
+- Keep REGRESSION.md cases as the gate; make saves load across builds for 20-turn tests.
+
+The usage cap: under 90% of weekly plan usage (it was 84% at stop).
