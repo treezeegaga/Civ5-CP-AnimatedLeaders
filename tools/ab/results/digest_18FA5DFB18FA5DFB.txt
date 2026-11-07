@@ -1,0 +1,37 @@
+﻿Game 18FA5DFB18FA5DFB (AIABTest_c8e.csv), last logged turn 150
+c    America      wide      cities 5
+  builds to T80 (capital Washington; other cities named): T0 Scout* | T4 Warrior* | T11 Settler* | T20 Granary | T26 Warrior* | T28 Monument* (New York) | T29 Shrine* | T32 Warrior* | T33 Monument* | T36 Settler* | T41 Water Mill (New York) | T41 Great Library | T45 Granary (Boston) | T51 Archer | T52 Worker | T52 Archer | T55 Work Boat | T57 Artists' Guild | T59 Library (New York) | T63 Colossus | T67 Market (New York) | T68 Monument (Boston) | T74 Settler (New York) | T74 Terracotta Army | T80 Scout (Boston)
+  settlers ordered T: 11,36,74,112,149   found-city ops started T: 20,41,78,81,120,147   cities founded T: 28,45,94,96
+  ops aborted: T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 7 (unhappy 6, growth due 1)   built instead: the normal AI choice 6, Monument 1   first: T033 Washington size 4 next Monument | T051 Washington size 5 next the normal AI choice | T052 Washington size 5 next the normal AI choice
+  IDLE SETTLER turns: 5 (first T36)
+  military ops ended (whole game): NoTarget 4, Success 3, LostPath 1, WarStateChange 1
+  settler timeline to T80: T11 settler (book) in Washington | T20 op started | T28 FOUNDED | T36 settler (book) in Washington | T41 op started | T45 FOUNDED | T74 settler (AI) in New York | T78 op started
+  saving gold for a settler: 33 turns (T5-T77)
+c    Austria      tall      cities 6
+  builds to T80 (capital Vienna; other cities named): T0 Scout* | T4 Monument* | T8 Shrine* | T13 Warrior* | T17 Worker* | T27 Warrior* | T32 Stonehenge | T46 Warrior* | T50 Settler* | T56 Granary | T60 Spearman | T64 Shrine (Salzburg) | T64 Mausoleum of Halicarnassus | T73 Library | T75 Oracle | T76 Granary (Salzburg)
+  settlers ordered T: 50,93,101,112,113,119   found-city ops started T: 57,79,95,103,117   cities founded T: 64,82,99,112,126
+  ops aborted: T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 2 (growth due 2)   built instead: Library 1, Worker 1   first: T017 Vienna size 2 next Worker | T032 Vienna size 3 next Library
+  IDLE SETTLER turns: 5 (first T56)
+  military ops ended (whole game): NoUnits 7, HalfStrength 2
+  settler timeline to T80: T50 settler (book) in Vienna | T56 BOUGHT in Vienna. Cost: 370 | T57 op started | T64 FOUNDED | T78 BOUGHT in Vienna. Cost: 370 | T79 op started
+  saving gold for a settler: 63 turns (T6-T77)
+c    England      wide      cities 4
+  builds to T80 (capital London; other cities named): T0 Scout* | T4 Warrior* | T10 Settler* | T22 Granary | T24 Granary (York) | T29 Warrior* | T30 Shrine* | T33 Warrior* | T34 Monument* | T37 Warrior* | T40 Settler* | T42 Monument* (York) | T47 Great Library | T50 Water Mill (York) | T51 Monument* (Nottingham) | T52 Archer | T52 Temple of Artemis (Nottingham) | T53 Worker | T54 Archer | T55 Worker | T56 Worker | T57 Worker | T58 Worker | T59 Work Boat | T60 Work Boat (York) | T60 Work Boat | T61 Work Boat | T62 Work Boat | T63 Work Boat | T63 Work Boat | T64 Work Boat | T65 Work Boat | T66 Work Boat (York) | T66 Worker | T67 Archer | T68 Worker | T70 Settler (York) | T70 Work Boat | T72 Spearman | T74 Water Mill | T77 Library (York) | T77 Library | T80 Granary (Hastings) | T80 Scout
+  settlers ordered T: 10,40,70,93,111   found-city ops started T: 22,47,77,94,114   cities founded T: 24,51,80,97
+  ops aborted: T115 LostCivilian
+  book SETTLER HELD to T80: 2 (one at a time 1, growth due 1)   built instead: Library 1, Monument 1   first: T034 London size 2 next Monument | T047 London size 3 next Library
+  IDLE SETTLER turns: 5 (first T40)
+  military ops ended (whole game): WarStateChange 3, NoTarget 1, Success 1
+  settler timeline to T80: T10 settler (book) in London | T22 op started | T24 FOUNDED | T40 settler (book) in London | T47 op started | T51 FOUNDED | T70 settler (AI) in York | T77 op started | T80 FOUNDED
+  saving gold for a settler: 46 turns (T6-T77)
+c    Morocco      tall      cities 4
+  builds to T80 (capital Marrakech; other cities named): T1 Scout* | T5 Monument* | T12 Shrine* | T18 Warrior* | T22 Worker* | T30 Settler* | T44 Granary | T47 Monument* (Rabat) | T48 Library* (Rabat) | T53 Library* | T61 Settler | T69 Shrine (Rabat) | T69 Spearman | T70 Spearman | T71 Spearman | T73 Monument (Fes) | T74 Shrine (Fes) | T74 Spearman | T75 Warrior | T75 Spearman | T76 Temple (Rabat) | T78 Settler
+  settlers ordered T: 30,61,78,96   found-city ops started T: 44,69,72,84   cities founded T: 47,73,87
+  ops aborted: T71 HalfStrength, T105 NoTarget, T106 NoTarget, T107 NoTarget, T108 NoTarget, T109 NoTarget, T110 NoTarget, T111 NoTarget, T112 NoTarget, T113 NoTarget, T114 NoTarget, T115 NoTarget, T116 NoTarget, T117 NoTarget, T118 NoTarget, T119 NoTarget, T120 NoTarget, T121 NoTarget, T122 NoTarget, T123 NoTarget, T124 NoTarget, T125 NoTarget, T126 NoTarget, T127 NoTarget, T128 NoTarget, T129 NoTarget, T130 NoTarget, T131 NoTarget, T132 NoTarget, T133 NoTarget, T134 NoTarget, T135 NoTarget, T136 NoTarget, T137 NoTarget, T138 NoTarget, T139 NoTarget, T140 NoTarget, T141 NoTarget, T142 NoTarget, T143 NoTarget, T144 NoTarget, T145 NoTarget, T146 NoTarget, T147 NoTarget, T148 NoTarget, T149 NoTarget, T150 NoTarget, T151 NoTarget, T152 NoTarget
+  book SETTLER HELD to T80: 2 (growth due 2)   built instead: Library 1, Worker 1   first: T022 Marrakech size 3 next Worker | T053 Marrakech size 4 next Library
+  IDLE SETTLER turns: 4 (first T61)
+  military ops ended (whole game): NoTarget 1
+  settler timeline to T80: T30 settler (book) in Marrakech | T44 op started | T47 FOUNDED | T61 settler (AI) in Marrakech | T69 op started | T71 op ended: HalfStrength | T72 op started | T73 FOUNDED | T78 settler (AI) in Marrakech
+  saving gold for a settler: 63 turns (T7-T79)
