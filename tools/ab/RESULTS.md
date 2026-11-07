@@ -7936,3 +7936,31 @@ Economy 0062, on e6850905a, the capital clarification):
    - City-state ally or protector: no lock. They bring no automatic war, so the strike declares when ready.
 7. Economy 0062 is in.
 CI to follow.
+
+**trial28 186D5858 (Aztecs vs the city-state Sofia, ab-227f759; the lead, 9:49pm ET): read, 9:41pm ET.**
+- **Sofia was never besieged.** Its HP is 250/250 from T66 to T100, and its land zone holds 0 Aztec units on almost every
+  turn (1 at T75 and T78). The capture code's only line, every other turn, is "Zone -1046, City of Sofia, is in enemy
+  dominated zone - won't try to capture". Posture P_WITHDRAW. No capture attempt, no "too early", no SiegeDominated (that flag
+  covers majors' cities only, and there were no units anyway). Melee at a low Sofia never came up, so SiegeCapturer had
+  nothing to do here.
+- **Op 1405 (8 units)** gathered T67-70 and moved T70-73, centre (38:29) -> (39:34), target (40:39). From T73 it has
+  "Contact with enemy!" every turn (Sofia's field units: 2000 melee strength in the zone at T75), and its progress went
+  28 -> 46 -> 37%. At T77 MarchOn's at-war rule fired: **"stalled near the target at war, handing over"**, with the centre
+  about 6 tiles out (near 3, far 10, within 2x the deploy range). The operation ended Success and the units went to the
+  tactical AI. The tactical AI judges Sofia's zone by the units in it (none), so it withdraws, and the army dissolves into
+  other zones. That's the same failure as 171787CD's Kyzyl (handover 4-6 tiles out) and 17813E6E's Boston.
+- **Op 1442 (4 units + 2 open slots)** waited 13 turns at SiegeArmy's bar ("expected damage 30 a turn, Sofia needs 40") until
+  "close to the bar after 20 turns (36 of 40), marching" at T91. Then it made "No progress to target" against the same
+  contact.
+- The "takes it in about 2 turns" math was right about the city (defence 14), but the army never got to the city: Sofia's
+  field units 4-6 tiles out stopped it, and the handover gave up the march.
+
+**Smallest fix (one idea, proposal; no code yet):** for an operation against the strike's target (IsStrikeNoRetreat), MarchOn's
+at-war "stalled near the target" handover is off. Only at the walls (bAtTheWalls) does it hand over. Stalled on contact, the
+operation stays one army and keeps fighting its way in (CP's army combat moves engage what blocks it). The way out is the
+operation's own 42-turn timeout, after which the strike requests the next attack. A second idea, if you want it: the
+strike's take-the-city math counts the target's field units within 6 tiles (not 3), since those are what stop the march.
+
+LEAD: trial28's Sofia, read above. Cause: MarchOn handed the army over 6 tiles out after 3 turns of contact with Sofia's
+field units, and the tactical AI withdrew from the empty zone. Same as Kyzyl and Boston. Proposed smallest fix: no
+stalled-near handover for the strike's target, only at the walls. Say go and I'll code it on ai/war after 647fdd371.
