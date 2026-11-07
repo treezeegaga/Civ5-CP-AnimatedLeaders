@@ -8468,3 +8468,29 @@ learns from a loss. Each lost Settler costs about 15-20 turns of a capital's pro
   cover.
 
 LEAD: a design for the escort question. Coding waits for your go.
+
+### War: StrikeEscort, the user's ruling on lost Settlers (War, 2026-11-07 10:15am ET)
+
+**The user:** "i think this should never happen to an aggressive early strike civ who has been barb hunting".
+
+**Why it happened anyway:** neither civ was hunting when the Settlers fell.
+- **Persia, 18DA3905:** its default list builds no combat unit before its Immortal. By T80 it had built only Workers and
+  Settlers (the digest: Worker, Settler, Worker, Settler, ...). Each loss sent the list back to rebuild the civilian.
+  - Its homeland knew the camp at (44:35) from T46 ("Trying to remove barbarian camp") but had nothing to send.
+  - Its first BarbHunt line is T108: an Immortal after a Swordsman at (44:35).
+- **Greece, 18BE1E3E:** its list is Monument, Settler, Settler, Hoplite. The Settler went alone on T31 and was lost on T35.
+
+**Hypothesis:** a strike civ never sends a Settler without an escort, while it has a land combat unit to escort it with.
+That ends the losses at a cost of a few turns' wait. A civ with no combat unit at all keeps the old rules (otherwise a
+Settler can wait for an escort nobody builds). The lists stay as the user wrote them (2b4cdc0 was rejected).
+
+**Code:** flag **StrikeEscort** (FIX_STRIKE_ESCORT), ai/war 0fd37c408, CvAIOperation's found-city wait. For an
+early or late strike civ with any land combat unit, bGoAlone is forced false: the safe-trip test, the 5-turn rule and the
+15-turn timeout. It logs "StrikeEscort: a strike civ's Settler waits for its escort". Off in the bundle.
+
+**Not covered:**
+- **Persia's case:** it had no combat unit at all, so its default list still sends Settlers out before any unit. That's a
+  list question for Personality and you, given the user's ruling on lists.
+- **Workers lost next to the capital:** a separate homeland read.
+
+LEAD (10:15am ET): new flag **StrikeEscort** on ai/war 0fd37c408, from the user's ruling. A strike civ's Settler never goes alone while the civ has a land combat unit. Off in the bundle; please put it in the next block's RoleFixes. CI is running.
