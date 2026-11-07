@@ -103,6 +103,10 @@ flag. Expected: wide out-grows tall while nobody attacks; once attacks take citi
 - **All in, no retreat on losses (the user, 2026-11-06 ~9:30pm ET):** "there is no 2nd place in civ. you are either the
   champion or you are nothing. if an aggressive civ puts all their resources into a timing attack, they are ALL IN." The
   strike's war has no release by losing a city or the war going badly.
+- **The expert lists stay as written (the user, 2026-11-07 ~9:05am ET):** a Warrior before every first Settler or Worker
+  was rejected ("this is stupid"). The only approved addition is the Worker in the Huns, Greece, Celts and Mongolia lists,
+  plus Mongolia's resized row, and Economy's off-list Worker fires only when a list is stuck on an unimproved resource. No
+  other list item goes in without the user's OK.
 - **Take walls with ranged, not melee (the user, 2026-11-07 7:50am ET):** the strike's "can we take it" estimate matches
   the battlefield AI (option A). On Marrakesh: "my jaguars never attacked the city until the last hit. they killed units,
   pillaged, and soaked hits while 4 archers slowly brought the city down." So ranged and siege units do the city damage;
