@@ -1950,7 +1950,7 @@ What this shows:
   the Aztec capital's T1-T44 builds follow the expert list (Jaguar x3, Worker, Settler, Archer x4, Jaguar x2), so the
   army at BUILDUP should be near full instead of 5 of 10.
 
-### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:49pm ET)
+### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:36pm ET)
 The lead's review of the pick-once build (`12fe132`): `IsStrikeNoWonders` held in every PREP and BUILDUP. A finished
 target now sends WAR back to BUILDUP for the next one, so the wonder and city-state gold bans came back in every later
 BUILDUP and became all-game. The user's rule bans them only before the first own declaration. This corrects my 0061
