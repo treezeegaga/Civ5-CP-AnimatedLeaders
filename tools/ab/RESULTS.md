@@ -5290,3 +5290,52 @@ LEAD: **ai/war acd891f95 green** (run 393), the trial head for 10pm (e6c5eb680 g
 
 LEAD: the crash's memory picture predates the strike code (2d949f8 and 1c3ab74 crashed the same way), and the strike code
 holds no growing state. Symbols for the stack to follow. I don't see a reason to hold the 10pm trial on acd891f95 for this.
+
+**Logging as the memory pressure (the lead, 9:01pm ET): read and proposal, 8:58pm ET. No code yet.**
+(a) **The logs our checks read**
+- Run-Games.ps1 -SaveLogs pushes these, and expert_block.py, attack_funnel.py, walls.py, bigarmy_block.py and diplo_logs.py
+  read only from them: OperationalAILog, MilitaryAILog, DiplomacyAI_*.csv, *TacticalAI*.csv, CitySpecializationLog,
+  CityStrategyAIProductionLog, PlayerHomelandAILog, ReligionLog, PlayerBeliefReligionLog, StrategyProfile_Log, PolicyAILog
+  and GoldBreakdown_Log.
+- Digest-ABLogs.ps1 also reads CityStrategyAILog.csv, for one line (AICITYSTRATEGY_ENOUGH_SETTLERS).
+- Nothing reads the rest of Logs\: tech, builder, trade, culture, espionage, leagues, corporations, the economic strategy
+  log and so on.
+
+(b) **Heaviest**
+- Of the pushed logs (17813E6E, 150 turns): PlayerTacticalAILog 3.2 MB, MilitaryAILog 1.5 MB, OperationalAILog 0.3 MB. That's
+  small: about 35 KB a turn.
+- The unpushed ones I can't size from here. Please ask PC 2 for a file-size listing of one LogsArchive\<game> folder.
+- Suspects:
+  - CityStrategyAILog: every city, every strategy, every turn.
+  - RandLog: every random call, if config.ini's RandLog is set; please check.
+  - Per turn, per civ, the tactical AI writes c:\temp\DominanceZones_<civ>_<turn>.txt with an ofstream. That's disk only,
+    closed each turn.
+  - CitySites_<civ>_<turn>.txt is already deleted from the manager after writing (an upstream CP fix, see below).
+
+(c) **How the logger holds memory**
+- FILogFile and its manager are in the engine (FirePlace, closed source). The DLL only asks for a log by name.
+- The manager keeps one FILogFile per distinct name until shutdown. A CP developer's comment at CvPlayer.cpp:50102 says
+  the manager keeps a log "and its grown write buffer" until shutdown, which is why the per-turn CitySites log is
+  DeleteLog'd after writing.
+- Every other log name in the DLL is fixed, or per player or per city (with AILogSplit on). So the number of live log
+  objects is bounded, and debug-only per-turn names (AssetsTurn, Unit..._Danger, PathfindingRun, MapAreas) are off.
+- On the DLL side, nothing grows with logging: no member container fills only when logging (checked every
+  getLogging/getAILogging site), and the formatted lines are temporary CvStrings.
+- So if logging is the pressure, it's the engine's per-log buffers. Bounded files and steady growth would mean the
+  buffers keep what's written.
+- **Cheap test for PC 2:** sample the Logs\ folder's total size next to private bytes (every 20 s, or per turn). If they climb
+  together (15 MB per 20 s each), the engine keeps what it writes, and fewer log bytes means proportionally less memory.
+
+**Proposal: a test option that writes only the logs our checks read. One idea, off by default.**
+- A CustomModOption row in the pack's NewCustomModOptions.xml (the runner already ships it), e.g. AB_LOG_CHECKED_ONLY = 1.
+- With it on, the DLL's LOGFILEMGR (the macro in FirePlace/include/FireWorks/FILogFile.h, FXS_IS_DLL branch) goes through a
+  small DLL-side facade. GetLog passes through for names starting with the list in (a), plus CityStrategyAILog and
+  WorldState. Any other name gets a static no-op FILogFile (Msg and the rest do nothing), so the engine never creates or
+  buffers that log. Callers that skip the NULL check are safe too.
+- About 40 lines in one new header and the macro, no call sites touched. Logging off is unchanged.
+- If RandLog is on in the runner's config.ini, set it to 0 as well (nothing reads it).
+- If PC 2's test shows memory tracking log bytes, this should cut the growth by the unread share. If it doesn't track,
+  logging isn't the cause and I'd look at the engine's own growth with logging off (PC 2's unlogged peaks).
+
+LEAD: logging proposal above (no code yet): an AB_LOG_CHECKED_ONLY option that writes only the logs our checks read.
+Plus a cheap PC 2 test (Logs\ size vs private bytes) to confirm logging is the pressure first. Waiting for your go.
