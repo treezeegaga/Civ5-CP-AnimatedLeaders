@@ -1,0 +1,34 @@
+﻿Game 1A191EC21A191EC2 (AIABTest_c8e.csv), last logged turn 150
+b    Korea        none      cities 8
+  builds to T80 (capital Seoul; other cities named): T1 Worker | T12 Monument | T18 Granary | T27 Settler | T37 Warrior | T41 Warrior | T45 Monument (Busan) | T45 Stonehenge | T46 Shrine (Busan) | T52 Archer | T53 Archer | T54 Archer | T56 Spearman | T57 Granary (Busan) | T60 Scout | T62 Settler | T67 Hanging Gardens | T69 Monument (Jeonju) | T69 Work Boat (Busan) | T70 Shrine (Jeonju) | T75 Worker (Busan) | T77 Caravan | T78 Caravan
+  settlers ordered T: 27,62,82,87,88,109,118,137   found-city ops started T: 42,67,87,94,113,121,141   cities founded T: 45,69,95,103,125,129,146
+  IDLE SETTLER turns: 5 (first T38)
+  settler timeline to T80: T27 settler (AI) in Seoul | T42 op started | T45 FOUNDED | T62 settler (AI) in Seoul | T67 op started | T69 FOUNDED
+b    Venice       none      cities 5
+  builds to T80 (capital Venice; other cities named): T0 Worker | T7 Monument | T11 Granary | T16 Warrior | T20 Warrior | T24 Shrine | T27 Worker | T32 Scout | T34 Scout | T36 Scout | T38 Scout | T40 Scout | T41 Great Library | T49 Stonehenge | T53 Writers' Guild | T57 Water Mill | T61 Parthenon | T73 Temple of Artemis | T78 Walls (Cahokia) | T78 Market (Cahokia)
+  settlers ordered T:    found-city ops started T:    cities founded T: 
+  military ops ended (whole game): Success 4
+c    Assyria      wide      cities 6
+  builds to T80 (capital Assur; other cities named): T0 Worker | T11 Scout* | T14 Scout* | T17 Shrine* | T23 Archer* | T27 Caravan* | T34 Settler* | T41 Granary* | T46 Archer* | T49 Archer* | T53 Siege Tower* | T59 Archer* | T62 Royal Library* | T65 Settler* | T66 Monument* (Nineveh) | T66 Market* | T67 Shrine (Nineveh) | T73 Composite Bowman* | T74 Granary (Nimrud) | T75 Spearman* | T77 Composite Bowman* | T79 Spearman*
+  settlers ordered T: 34,65,90,124   found-city ops started T: 42,66,82,94,131   cities founded T: 66,74,90,98,142
+  IDLE SETTLER turns: 4 (first T41)
+  military ops ended (whole game): Success 5, NoTarget 2, HalfStrength 1
+  settler timeline to T80: T34 settler (book) in Assur | T41 BOUGHT in Assur. Cost: 370 | T42 op started | T65 settler (book) in Assur | T66 FOUNDED | T66 op started | T74 FOUNDED
+  saving gold for a settler: 36 turns (T6-T75)
+c    Spain        wide      cities 6
+  builds to T80 (capital Madrid; other cities named): T0 Worker | T10 Scout* | T13 Warrior* | T18 Settler* | T26 Granary | T34 Warrior* | T38 Shrine* | T42 Warrior* | T45 Settler* | T51 Warrior | T55 Monument | T58 Warrior* | T60 Monument* (Barcelona) | T61 Market | T67 Warrior* | T68 Mausoleum of Halicarnassus | T73 Granary (Barcelona) | T77 Settler | T78 Settler
+  settlers ordered T: 18,45,77,78,88,110   found-city ops started T: 26,29,51,83,92,104,115   cities founded T: 60,94,97,116,121
+  ops aborted: T28 NoTarget, T31 LostCivilian
+  book SETTLER HELD to T80: 2 (unhappy 1, growth due 1)   built instead: the normal AI choice 1, Shrine 1   first: T038 Madrid size 4 next Shrine | T061 Madrid size 7 next the normal AI choice
+  IDLE SETTLER turns: 1 (first T77)
+  military ops ended (whole game): Success 1, NoTarget 1, LostPath 1
+  settler timeline to T80: T18 settler (book) in Madrid | T26 op started | T28 op ended: NoTarget | T29 op started | T31 op ended: LostCivilian | T45 settler (book) in Madrid | T51 op started | T60 FOUNDED | T77 settler (AI) in Madrid | T78 settler (AI) in Madrid
+  saving gold for a settler: 47 turns (T11-T80)
+c    Sweden       wide      cities 7
+  builds to T80 (capital Stockholm; other cities named): T0 Worker | T10 Scout* | T13 Warrior* | T17 Settler* | T26 Shrine* | T28 Monument* (Sigtuna) | T29 Settler* | T38 Warrior | T40 Shrine (Sigtuna) | T41 Monument* | T45 Settler* | T46 Granary (Sigtuna) | T47 Settler* | T50 Library* | T55 Monument* (Helsinki) | T56 Granary | T57 Settler (Sigtuna) | T62 Market | T63 Settler (Sigtuna) | T68 Work Boat (Helsinki) | T69 Market (Sigtuna) | T71 Mint | T73 Work Boat (Birka) | T74 Work Boat (Birka) | T77 Worker (Helsinki) | T79 Spearman (Sigtuna) | T79 Settler
+  settlers ordered T: 17,29,45,47,57,63,79,119,140   found-city ops started T: 26,47,69,86,88,129,147   cities founded T: 28,55,73,90,92,134
+  book SETTLER HELD to T80: 4 (one at a time 2, unhappy 2)   built instead: the normal AI choice 2, Monument 1, Library 1   first: T041 Stockholm size 3 next Monument | T050 Stockholm size 3 next Library | T056 Stockholm size 3 next the normal AI choice
+  IDLE SETTLER turns: 8 (first T30)
+  military ops ended (whole game): NoTarget 3, LostPath 1
+  settler timeline to T80: T17 settler (book) in Stockholm | T26 op started | T28 FOUNDED | T29 settler (book) in Stockholm | T45 settler (book) in Stockholm | T47 settler (book) in Stockholm | T47 op started | T55 FOUNDED | T57 settler (AI) in Sigtuna | T63 settler (AI) in Sigtuna | T69 op started | T73 FOUNDED | T79 settler (AI) in Stockholm
+  saving gold for a settler: 31 turns (T6-T80)
