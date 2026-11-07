@@ -128,3 +128,10 @@ against this list. The list grows: every bug a review or a test game finds gets 
 - **A stable test weaker than the gate it stands for:** "same landmass" as the stable stand-in for "an army can reach it"
   holds targets the declaration's path test never passes.
 - **Fair play in counts:** any count of enemy units feeding a decision must use only visible units.
+- **A per-turn cache filled from the trade screen:** a mutable "once a turn" cache reachable through CvLuaDeal (deal
+  validity, then declaration block, then no-retreat, then finished, then reach) gets filled on one client mid-turn (review of 677f7a4).
+  Compute in the owner's turn update, store in saved members, read the stored values everywhere else.
+- **One pair vs every pair:** a reach test on one city pair against a gate that tries every pair disagrees whenever the
+  nearest city is an island colony.
+- **A timeout as the planned exit:** removing a handover so the only way out is the operation's 42-turn timeout is a turn
+  count in a decision.
