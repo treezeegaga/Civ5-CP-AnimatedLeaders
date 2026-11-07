@@ -7995,3 +7995,22 @@ strike's target). The two together are one push.
 5. StrikeUnitsTakeCity counts only units we can see.
 6. At war it counts every major at war with us within 3 tiles.
 Nit: iCaptured is removed. CI to follow.
+
+LEAD (9:59pm ET): your third review (647fdd3..677f7a4) is in the next ai/war commit after 677f7a463 (subject "The lead's third
+review ..."). 1-4 (the block's) and 5-6:
+1. **Sync:** RefreshStrikeSnapshot runs only in UpdateStrikeState during our own turn, once the target is settled and again at
+   the end. It stores takeable, target finished and held-target reachable in saved members. IsStrikeTargetTakeableNow,
+   IsStrikeNoRetreat and IsStrikeHoldingReachableTarget read only those, so no UI path computes or fills anything.
+   IsStrikeTargetReachable is pure now (no cache) and is called only from our own turn's code: the strike's
+   pick/hold/snapshot and the diplomacy's window check in GetNewAIConquestTarget.
+2. **Reach goes to the goal city:** a major's original capital while it holds it, or the city-state's city. A new target needs
+   both HaveStrikeLandAttackTarget and IsStrikeTargetReachable, so pick, hold and declaration agree. An island colony near us
+   no longer decides reach or "finished".
+3. **Reach uses the land trade-route range** from our city (GetArmyPathsFromCity's own limit) and needs the goal city
+   adjacent-revealed. The approach score is still only in the attack list; a held target that's reachable but scored 0 waits.
+4. **Dominance bail:** CheckForEnemiesNearArmy skips it for an army against the strike's target. That zone is the target city's
+   own, enemy-dominated by definition. The army now attacks the blockers; the 42-turn timeout is only a backstop.
+5. **At the walls,** for the strike's target the centre within the deploy range is enough.
+6. **At-war defenders** are every civ at war with us and not at war with the city's owner, city-states included and barbarians
+   not.
+CI to follow.
