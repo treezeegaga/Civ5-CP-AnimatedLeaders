@@ -2108,6 +2108,39 @@ opening (the user asked whether the Celts would). Not wanted. The patch is on ai
   Animal Husbandry known and no Worker. So the capital would have built one then, not at T1. At T81-T100 the Horses were
   used up on an improved pasture, so the capital follows its list.
 
+### Why the strike lists run 40-60 turns behind their plans (Economy, Nov 7, 9:15am ET)
+The lead asked for the biggest cause across bullygreedy25 games 1 and 3, trial29 and 1AC16A50. 1AC16A50 (Assyria) isn't
+pushed to any branch yet, so it isn't covered here. Logs read:
+- 18BE1E3E (Greece, game 1) and 18DA3905 (Persia, game 3);
+- 18FA5DFB (the Zulus, a late strike) and 18B3086C (Mongolia, trial29);
+- 1AA2D0DF (Persia, pair 4) for comparison.
+
+| Game | Behind by | What held the capital's list |
+|---|---|---|
+| Persia 18DA3905 (early) | PREP to T111; window opened T34 | **Barbarians captured 5 Workers and 3 Settlers (T12-T87).** The list's first items are Worker, Settler, Settler, then Immortal (item 4). Persia had 1-3 units and **1 city until T110**. Each loss made its item short again, so the capital rebuilt Workers and Settlers from T12 to T94 (items 1 and 3, four times each). |
+| Greece 18BE1E3E (early) | PREP to T74; window opened T33 | **1 city until about T55.** List: Monument, Settler, Settler, Hoplite. Barbarians took a Worker (T27) and a Settler (T34), and item 3 was rebuilt at T41. Economy-ready needs K=3 cities. |
+| The Zulus 18FA5DFB (late) | BUILDUP only at T107; window opened T60; OVER T109 | **The unit hold (net gold under +2).** Item 10 (Archer) was held from T37 to T82, 45 turns of LIST HOLD and "nothing can be done". Gross gold was 8-12 a turn with 4 cities; net 0 to -9. |
+| Mongolia 18B3086C (late) | PREP to T100+; window opened T63 | No Worker until T53 (Horses not pastured; fixed by 0064 and Personality's Workers), then the hold at T84-T95. PREP itself waited on Chivalry. |
+
+**The obsolete-unit wait isn't a cause.** A "Composite Bowman (for Archer, obsolete)" line is the substitute being
+*built*. The Zulus' long wait on item 10 was the hold, not obsolescence: the substitute came at T82, the turn the hold
+lifted.
+
+**The biggest cause: the start doesn't grow.** One city for 50-110 turns in the early strikes, and a 1-4 city economy
+too poor to keep units in the late ones. Two mechanisms:
+1. **Unescorted civilians early** (Persia, Greece). The lists send Workers and Settlers out before any combat unit, on
+   maps with barbarians. Each capture costs the item's whole build time and a city's worth of growth.
+   - **Design fix, Personality:** one combat unit before the first Settler or Worker in every list.
+   - **Design fix, Economy:** while barbarians are near and no combat unit of ours is in the capital's area, a civilian
+     list item gives way to the list's next combat item.
+2. **The late-strike unit hold** (Zulus, Mongolia). The hold is right not to buy units on credit, but the list then
+   idles for 20-45 turns because income never reaches +2.
+   - **Production fix:** the capital builds the list's economy items in the hold (it already does), and the income items
+     run before the hold freezes the list. That is 0054/0057's "income first", which needs a Market's tech (Currency)
+     early; the Zulus got their Market at T57.
+
+The list's economy items aren't the problem: the expert lists' Granaries and Shrines took only a few turns each.
+
 ### Patch 0062: the bans only before the first declaration and in the strike's war (Economy, Nov 6, 9:36pm ET)
 The lead's review of the pick-once build (`12fe132`): `IsStrikeNoWonders` held in every PREP and BUILDUP. A finished
 target now sends WAR back to BUILDUP for the next one, so the wonder and city-state gold bans came back in every later
