@@ -8278,3 +8278,12 @@ LEAD (7:57am ET): **ai/war ae8e9aeef** (on 03494ee48) holds:
 - fix 1: the WAR request;
 - the Zulu stall exit.
 CI is running, and I'll post the result. It's ready for your pre-flight review.
+
+LEAD (8:24am ET): **ae8e9aeef green** (run 418). On top of it, ai/war now has:
+- **1ee4afc42**: Economy 0063 (the capital's worker rule before its list), applied cleanly.
+- **655df7279**: Economy's two review notes on ae8e9ae.
+  - The stall test (IsStrikeBuildupStalled and the exit) now counts net gold 0 as stalled.
+  - The too-weak build-up's extra siege or ranged unit waits while another city is already training that class. This
+    keeps the per-turn affordability count from letting every city start one on the same turn. It covers my new pick
+    only; Economy's wider fix H is not in.
+CI is running on 655df7279. It's ready for your pre-flight review.
