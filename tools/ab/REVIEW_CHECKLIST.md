@@ -138,3 +138,11 @@ against this list. The list grows: every bug a review or a test game finds gets 
 - **A path filter written for one target reused for another:** ArmyPathIsGood's "wrong city" plots counted the target's
   own cities once the goal moved to the capital behind them, rejecting most majors (review of 68df55d).
 - **Fog in target picking:** requiring the capital to be revealed rules out targets an early scout never reached.
+- **A requirement the build-up can't produce:** the estimate needs a capturer (melee), but with the counts met the
+  build-up trains only ranged and siege, so a melee shortfall never closes (review of ae8e9ae).
+- **A declaration on an army that can't form:** a stall branch that skips the counts can declare with an army that can't
+  fill the operation's required slots, and the unit hold then blocks building them.
+- **A mirror of only one of the gates:** copying the tactical AI's 13-turn gate but not its enemy-dominated skip or its
+  3-turn rule.
+- **Calibrate against the user's game:** Marrakesh (4 Composite Bowmen, a walled defence-19 city, a Warrior inside) must
+  read clearly takeable.
