@@ -1983,12 +1983,16 @@ Nothing is coded yet.
   cities (`IsStrikeEconomyReady`). Mongolia had 3 cities from T65. Chivalry needs Philosophy, Currency and Engineering, and
   Mongolia had 16 techs at T100, last place tied with the Iroquois (the others had 18-22). While the capital's list has
   nothing it can build, a late strike's PREP falls back to the regular book. So the WAIT lines cost no production.
-- **Item 6 (Chariot Archer), T29-T60, waited on Horses.**
-  - Not The Wheel: in VP The Wheel needs only Agriculture.
-  - Not the hold: net gold was +2 to +7, and T47 is the only LIST HOLD line.
-  - The first Pasture plan line is T53, after a tech finished at T52 (presumably Animal Husbandry). The first Chariot
-    Archer was built at T60.
-  - 0054's research rule asks only for a unit's own tech, not the tech its resource needs.
+- **Item 6 (Chariot Archer), T29-T60, waited on Horses.** Corrected at 11:15pm ET: these games run Community Patch on
+  the BNW rules, not Vox Populi, as Personality pointed out.
+  - The real cause: **Mongolia had no Worker until about T53.** Its list has no Worker item, and the executor's worker
+    rule ("a worker (none in this area)") skips the capital. The first Worker was chosen at T47, in a LIST HOLD turn.
+  - The Horse tile (48,38) had been inside Karakorum's borders since T25. Its Pasture was first planned at T53, when the
+    Worker existed, and the first Chariot Archer followed at T60.
+  - Not the hold (net gold +2 to +7; only T47 is LIST HOLD).
+  - Not a tech: the Caravan at T22 needs Animal Husbandry, so Horses were already revealed (BNW: The Wheel <- Animal
+    Husbandry).
+  - Without a Worker, no tiles were improved for 53 turns. That also fits Mongolia's low science and gold.
 - **Item 16, T81-T100.** T81, T98 and T100 are plain WAITs: not trainable, so the Horses were used up (5 Chariot Archers and
   2 Horsemen on one pasture). T84-T95 are LIST HOLD at net 0 to -3: upkeep rose from 17 to 29, the Market was already
   built (T53) and the one trade route was in use, so there was no income item to build.
@@ -2002,11 +2006,14 @@ Nothing is coded yet.
   didn't fire: the war was with a city-state, and `IsStrikeUnitHold` needs `!IsAtWarAnyMajor`.
 
 **Proposed fixes** (production and economy only; no gold buys)
-- **A (Economy).** In `GetStrikeListTech`, a unit item whose strategic resource we don't have asks for that resource's
-  reveal tech first: Animal Husbandry for Horses, Bronze Working for Iron.
-- **B (Personality).** 8 Chariot Archers, 2 Horsemen and 8 Knights need about 18 Horses, and Mongolia had one pasture.
-  Size the pre-build to the Horses owned, or move it to a class that needs no resource. Also check whether the Chariot
-  Archer's upgrade line reaches the Knight in VP; if it doesn't, the pre-build adds nothing to the core.
+- **G (Economy, first).** The executor's worker rule ("a worker (none in this area)") covers the capital too, and runs
+  before the capital's list: a civ with no Worker builds one before the next list item. This would have pastured the Horse
+  tile by about T30.
+- **A (Economy, lower).** In `GetStrikeListTech`, a unit item whose strategic resource we don't have asks for that
+  resource's reveal tech first. It wasn't the cause here (Animal Husbandry was in by T22), so it's a safety net only.
+- **B (Personality).** In BNW an upgrade keeps its Horse, and the Chariot Archer upgrades into the Knight (Mongolia's
+  Keshik). So the row needs 10 Horses, against one pasture. Personality cuts the pre-build to 4 next block. The plan
+  can't read the Horses owned (multiplayer rule), and the executor already passes over an item it can't train.
 - **D (Economy).** In WAR, the "short of the plan" rebuild runs only while one more unit is affordable for 10 turns (the
   same `GetAffordableWarUnits(10)` test as `bMoreCore`).
 - **E (Economy).** Once BUILDUP starts, the 0054 research rule puts the list's Market tech (Currency) first.
