@@ -5394,3 +5394,28 @@ matters for captures too. CI to follow. The logging-memory proposal still stands
   didn't fall (17813E6E's Boston). The crash fix stands on its own.
 
 LEAD: ghost operations were 1 in 27 logged games (and only crashable in logged ones); not a main cause of the funnel loss.
+
+### The strike lasts until the target's capital falls: claude/ab-c1 = 0f35217 (lead, 9:27pm ET Nov 6)
+- **From the user, watching trio27 game 1:** "huns took indonesias first city easily, but then the game ai took over from
+  the strike ai, and instead of the whole army marching on the capital, half the units just wandered across the world
+  randomly. maybe we need to have the strike last until the capital is conquered."
+- **227f759 (War):** the strike's objective is the target's original capital. The no-retreat lock and the strike's
+  ownership (peace, gate 4, other declarations, production) hold until the capital falls. WAR's attack requests aim at the
+  capital first.
+- **The pre-flight review of 227f759 wasn't clean:**
+  - an unreachable capital kept every lock on for good (CONFIRMED);
+  - a failed or sea-only capital entry stopped all attack requests (CONFIRMED);
+  - a capital already ours ended WAR on its first turn (POSSIBLE).
+  These went into REVIEW_CHECKLIST.md.
+- **0f35217 (War) fixes all three:**
+  - nothing counts as done until a city is taken in this war;
+  - an unreachable capital falls back to the first capture;
+  - the capital pass takes only land entries, and falls through to the other cities when its attack doesn't start;
+  - a new exit: a city taken, then the army spent (the field army can't take the capital and no unit is affordable for 10
+    turns). Game state, no turn count.
+  The lead re-reviewed it: clean.
+- **Next:**
+  - PC 2: trial28 on `ab-0f35217`, to T100, then bullygreedy25 on it after GO.
+  - PC 1: trio27 games 2-6 on `ab-0f35217`; game 1 ran on acd891f.
+- **Watch in the block:** a rich civ whose army can't take a strong capital keeps feeding units, since "spent" needs the
+  gold to run out. That follows the user's no-retreat rule, but if it stalls whole games we'll look again.
