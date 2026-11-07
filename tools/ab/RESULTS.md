@@ -2108,7 +2108,7 @@ opening (the user asked whether the Celts would). Not wanted. The patch is on ai
   Animal Husbandry known and no Worker. So the capital would have built one then, not at T1. At T81-T100 the Horses were
   used up on an improved pasture, so the capital follows its list.
 
-### Why the strike lists run 40-60 turns behind their plans (Economy, Nov 7, 9:15am ET)
+### Why the strike lists run 40-60 turns behind their plans (Economy, Nov 7, 8:37am ET)
 The lead asked for the biggest cause across bullygreedy25 games 1 and 3, trial29 and 1AC16A50. 1AC16A50 (Assyria) isn't
 pushed to any branch yet, so it isn't covered here. Logs read:
 - 18BE1E3E (Greece, game 1) and 18DA3905 (Persia, game 3);
