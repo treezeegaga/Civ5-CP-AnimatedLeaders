@@ -3673,6 +3673,18 @@ weights fill everything a plan doesn't name):
     - The executor already passes over an item it can't train (resource, tech, obsolete) and falls back to the
       regular book when nothing on the list can be built, so no production was lost; my "skip, not hold" request was
       already met. The plan keeps reading game data only.
+  - **The real cause of item 6** (Economy, 11:15pm ET): Mongolia had no Worker until about T53. Its Horse tile had
+    been in Karakorum's borders since T25 and Animal Husbandry was in by T22 (the Caravan). The first Pasture came at
+    T53. Mongolia's list has no Worker, and Economy's worker rule skipped the capital (Economy's fix G).
+    - Lists with no Worker: **Huns, Greece, Celts, Mongolia**. Aztec, Inca, Zulu, Assyria, Japan, Songhai and China
+      have one, and the late default adds one.
+    - Next block: a Worker as the 3rd item in those four lists [I]. Fils' Mongol order is kept otherwise.
+  - **Mongolia's army sized to about 4 Horses** (the user, 11:20pm ET: "horses arent that rare, but having 10 seems very
+    unlikely"; a Horse tile gives 2, so one or two pastures). Next block:
+    - 4 Chariot Archers pre-built, upgraded to Keshiks at Chivalry;
+    - 2 Spearmen to take the city instead of the 2 Horsemen;
+    - Composite Bowmen and a Catapult for the rest of the army;
+    - with more Horses, the list can add Keshiks after Chivalry; with fewer, the executor passes over Horse units.
   With 4 pre-built, item 16 (the 6th Chariot Archer) wouldn't be on the list. The gold hold is Economy's side.
   For the next block, coded on `ai/personality` once the lead says go.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
