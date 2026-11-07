@@ -3662,6 +3662,15 @@ weights fill everything a plan doesn't name):
        target, upgrade to Keshiks when Chivalry lands.
      - Keep the late row, with 1 and the 4-unit pre-build.
 
+  - **Correction after Economy's read** (11:10pm ET, RESULTS on `claude/economy-expansion`):
+    - Item 6 waited for Horses: Animal Husbandry came at T52, the Pasture right after, and the first Chariot Archer
+      at T60. Under these games' rules (Community Patch on BNW; the profile logs the Keshik as Mongolia's unit at
+      Chivalry), The Wheel needs Animal Husbandry. So moving Animal Husbandry up is the fix. Economy proposes the
+      general rule: the research list also asks for a missing resource's reveal tech.
+    - Mongolia had one pasture. The row needs 10 Horses, not 18: an upgraded unit keeps its Horse.
+    - The Chariot Archer upgrades to the Knight (the Keshik) under BNW, so the pre-build counts toward the core.
+    - PREP to T100 was Chivalry not yet researchable: 16 techs at T100, tied for last.
+    - Sizing to the Horses owned goes in Economy's executor, not in the plan, which reads game data only.
   With 4 pre-built, item 16 (the 6th Chariot Archer) wouldn't be on the list. The gold hold is Economy's side.
   For the next block, coded on `ai/personality` once the lead says go.
 - **Status:** `da1a760` (the lists) live in `ab-8555f21`; `184fe09` (to the strike) merged into `ai/war`; `b8ac94f`
